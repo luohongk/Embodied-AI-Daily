@@ -124,3 +124,20 @@ for keyword in keywords:
 f_rm.close()
 f_is.close()
 remove_backups()
+
+# 将markdown转化成pdf
+# 读取 Markdown 文件
+
+
+def convert_markdown_to_pdf(markdown_file, pdf_file):
+    with open(markdown_file, "r", encoding="utf-8") as f:
+        markdown_text = f.read()
+
+    # 将 Markdown 转换为 HTML
+    html = markdown.markdown(markdown_text)
+
+    # 使用 pdfkit 将 HTML 转换为 PDF
+    pdfkit.from_string(html, pdf_file)
+
+
+convert_markdown_to_pdf("README.md", "README.pdf")
