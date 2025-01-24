@@ -1,3 +1,5 @@
 easydict
 feedparser
 pytz
+markdown
+pdfkit
