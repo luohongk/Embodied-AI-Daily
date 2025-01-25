@@ -63,7 +63,7 @@ keywords = [
 ]  # TODO add more keywords
 
 max_result = 100  # maximum query results from arXiv API for each keyword
-issues_result = 5  # maximum papers to be included in the issue
+issues_result = 10  # maximum papers to be included in the issue
 
 # all columns: Title, Authors, Abstract, Link, Tags, Comment, Date
 # fixed_columns = ["Title", "Link", "Date"]
