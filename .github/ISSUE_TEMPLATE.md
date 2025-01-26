@@ -57,6 +57,13 @@ labels: documentation
 | **[Learning Interpretable BEV Based VIO without Deep Neural Networks](http://arxiv.org/abs/2109.12292v2)** | 2022-09-17 |  |
 | **[VIO-UWB-Based Collaborative Localization and Dense Scene Reconstruction within Heterogeneous Multi-Robot Systems](http://arxiv.org/abs/2011.00830v2)** | 2022-04-10 |  |
 
+## LIO
+| **Title** | **Date** | **Comment** |
+| --- | --- | --- |
+| **[Lio -- A Personal Robot Assistant for Human-Robot Interaction and Care Applications](http://arxiv.org/abs/2006.09019v1)** | 2020-06-16 | <details><summary>Accep...</summary><p>Accepted submission at IEEE Robotics and Automation Letters (RA-L), submitted to IEEE IROS 2020</p></details> |
+| **[LIO*: Low Level Information Flow Control in F*](http://arxiv.org/abs/2004.12885v1)** | 2020-04-27 | Submitted to ICFP |
+| **[liOS: Lifting iOS apps for fun and profit](http://arxiv.org/abs/2003.12901v1)** | 2020-03-28 |  |
+
 ## GNSS
 | **Title** | **Date** | **Comment** |
 | --- | --- | --- |
@@ -148,16 +155,6 @@ labels: documentation
 | **[NEDS-SLAM: A Neural Explicit Dense Semantic SLAM Framework using 3D Gaussian Splatting](http://arxiv.org/abs/2403.11679v3)** | 2024-09-01 | <details><summary>accep...</summary><p>accepted by RA-L, IEEE Robotics and Automation Letters</p></details> |
 | **[MAP-ADAPT: Real-Time Quality-Adaptive Semantic 3D Maps](http://arxiv.org/abs/2406.05849v1)** | 2024-06-09 |  |
 | **[SemGauss-SLAM: Dense Semantic Gaussian Splatting SLAM](http://arxiv.org/abs/2403.07494v3)** | 2024-05-29 |  |
-
-## Deep Learning SLAM
-| **Title** | **Date** | **Comment** |
-| --- | --- | --- |
-| **[LP-SLAM: Language-Perceptive RGB-D SLAM system based on Large Language Model](http://arxiv.org/abs/2303.10089v1)** | 2023-03-17 | 12 pages, 16 figures |
-
-## Dynamic Semantic SLAM
-| **Title** | **Date** | **Comment** |
-| --- | --- | --- |
-| **[TwistSLAM++: Fusing multiple modalities for accurate dynamic semantic SLAM](http://arxiv.org/abs/2209.07888v2)** | 2023-03-22 |  |
 
 ## Loop Closure Detection
 | **Title** | **Date** | **Comment** |
