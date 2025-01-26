@@ -41,8 +41,8 @@ logging.info("获取关键词列表")
 
 keywords = [
     "Visual SLAM",
-    "Visual-Inertial SLAM",
-    "Visual-Inertial Odometry",
+    "Visual Inertial SLAM",
+    "Visual Inertial Odometry",
     "Lidar SLAM",
     "LiDAR Odometry",
     "SLAMMOT" "GNSS",
