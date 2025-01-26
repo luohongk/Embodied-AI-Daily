@@ -50,6 +50,9 @@ keywords = [
     "Graph Optimization",
     "Dynamic SLAM",
     "Semantic SLAM",
+    "Gaussian SLAM",
+    "Autonomous Driving",
+    "Multi-object tracking",
     "Kalman Filter",
     "Loop Closure Detection",
     "Visual Place Recognition",
@@ -59,6 +62,7 @@ keywords = [
     "VLN",
     "VLA",
     "Deep Learning",
+    "LLM",
 ]  # TODO add more keywords
 
 max_result = 100  # maximum query results from arXiv API for each keyword
