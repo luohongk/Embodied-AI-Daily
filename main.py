@@ -41,16 +41,14 @@ logging.info("获取关键词列表")
 
 keywords = [
     "Visual SLAM",
+    "Visual-Inertial SLAM",
+    "Visual-Inertial Odometry",
     "Lidar SLAM",
-    "VINS",
-    "VIO",
-    "GNSS",
     "LiDAR Odometry",
+    "SLAMMOT" "GNSS",
     "Graph Optimization",
-    "Deep Learning",
     "Dynamic SLAM",
     "Semantic SLAM",
-    "Multi sensor SLAM",
     "Kalman Filter",
     "Loop Closure Detection",
     "Visual Place Recognition",
@@ -59,6 +57,7 @@ keywords = [
     "Embodied AI",
     "VLN",
     "VLA",
+    "Deep Learning",
 ]  # TODO add more keywords
 
 max_result = 100  # maximum query results from arXiv API for each keyword
