@@ -52,7 +52,6 @@ keywords = [
     "Semantic SLAM",
     "Gaussian SLAM",
     "Autonomous Driving",
-    "Multi-object tracking",
     "Kalman Filter",
     "Loop Closure Detection",
     "Visual Place Recognition",
