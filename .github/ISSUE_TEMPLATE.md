@@ -137,6 +137,34 @@ labels: documentation
 | **[MAP-ADAPT: Real-Time Quality-Adaptive Semantic 3D Maps](http://arxiv.org/abs/2406.05849v1)** | 2024-06-09 |  |
 | **[SemGauss-SLAM: Dense Semantic Gaussian Splatting SLAM](http://arxiv.org/abs/2403.07494v3)** | 2024-05-29 |  |
 
+## Gaussian SLAM
+| **Title** | **Date** | **Comment** |
+| --- | --- | --- |
+| **[VINGS-Mono: Visual-Inertial Gaussian Splatting Monocular SLAM in Large Scenes](http://arxiv.org/abs/2501.08286v1)** | 2025-01-14 |  |
+| **[PanoSLAM: Panoptic 3D Scene Reconstruction via Gaussian SLAM](http://arxiv.org/abs/2501.00352v1)** | 2024-12-31 |  |
+| **[HI-SLAM2: Geometry-Aware Gaussian SLAM for Fast Monocular Scene Reconstruction](http://arxiv.org/abs/2411.17982v1)** | 2024-11-27 | Under review process |
+| **[Gaussian Scenes: Pose-Free Sparse-View Scene Reconstruction using Depth-Enhanced Diffusion Priors](http://arxiv.org/abs/2411.15966v1)** | 2024-11-24 | <details><summary>17 pa...</summary><p>17 pages, 6 figures, 3 tables</p></details> |
+| **[OVO-SLAM: Open-Vocabulary Online Simultaneous Localization and Mapping](http://arxiv.org/abs/2411.15043v1)** | 2024-11-22 |  |
+| **[IG-SLAM: Instant Gaussian SLAM](http://arxiv.org/abs/2408.01126v2)** | 2024-08-07 | <details><summary>8 pag...</summary><p>8 pages, 3 page ref, 5 figures</p></details> |
+| **[Structure Gaussian SLAM with Manhattan World Hypothesis](http://arxiv.org/abs/2405.20031v2)** | 2024-06-22 |  |
+| **[Monocular Gaussian SLAM with Language Extended Loop Closure](http://arxiv.org/abs/2405.13748v1)** | 2024-05-22 |  |
+| **[RTG-SLAM: Real-time 3D Reconstruction at Scale using Gaussian Splatting](http://arxiv.org/abs/2404.19706v3)** | 2024-05-09 | <details><summary>To be...</summary><p>To be published in ACM SIGGRAPH 2024</p></details> |
+| **[GAPSLAM: Blending Gaussian Approximation and Particle Filters for Real-Time Non-Gaussian SLAM](http://arxiv.org/abs/2303.14283v2)** | 2023-08-09 | <details><summary>8 pag...</summary><p>8 pages, 5 figures. To appear in IROS 2023</p></details> |
+
+## Autonomous Driving
+| **Title** | **Date** | **Comment** |
+| --- | --- | --- |
+| **[Efficient Domain Augmentation for Autonomous Driving Testing Using Diffusion Models](http://arxiv.org/abs/2409.13661v2)** | 2025-01-23 |  |
+| **[OmniHD-Scenes: A Next-Generation Multimodal Dataset for Autonomous Driving](http://arxiv.org/abs/2412.10734v4)** | 2025-01-23 |  |
+| **[Black-Box Adversarial Attack on Vision Language Models for Autonomous Driving](http://arxiv.org/abs/2501.13563v1)** | 2025-01-23 |  |
+| **[Text-driven Online Action Detection](http://arxiv.org/abs/2501.13518v1)** | 2025-01-23 | <details><summary>Publi...</summary><p>Published in Integrated Computer-Aided Engineering</p></details> |
+| **[Knowledge-Informed Multi-Agent Trajectory Prediction at Signalized Intersections for Infrastructure-to-Everything](http://arxiv.org/abs/2501.13461v1)** | 2025-01-23 |  |
+| **[TASAR: Transfer-based Attack on Skeletal Action Recognition](http://arxiv.org/abs/2409.02483v3)** | 2025-01-23 | <details><summary>arXiv...</summary><p>arXiv admin note: text overlap with arXiv:2407.08572</p></details> |
+| **[GeomGS: LiDAR-Guided Geometry-Aware Gaussian Splatting for Robot Localization](http://arxiv.org/abs/2501.13417v1)** | 2025-01-23 | <details><summary>Prepr...</summary><p>Preprint, Under review</p></details> |
+| **[AdaWM: Adaptive World Model based Planning for Autonomous Driving](http://arxiv.org/abs/2501.13072v2)** | 2025-01-23 | ICLR 2025 |
+| **[QuFeX: Quantum feature extraction module for hybrid quantum-classical deep neural networks](http://arxiv.org/abs/2501.13165v1)** | 2025-01-22 | 12 pages, 10 figures |
+| **[Int2Planner: An Intention-based Multi-modal Motion Planner for Integrated Prediction and Planning](http://arxiv.org/abs/2501.12799v1)** | 2025-01-22 |  |
+
 ## Kalman Filter
 | **Title** | **Date** | **Comment** |
 | --- | --- | --- |
@@ -249,4 +277,18 @@ labels: documentation
 | **[Integrating Causality with Neurochaos Learning: Proposed Approach and Research Agenda](http://arxiv.org/abs/2501.13763v1)** | 2025-01-23 | 9 pages |
 | **[Invariance Principle Meets Vicinal Risk Minimization](http://arxiv.org/abs/2407.05765v2)** | 2025-01-23 |  |
 | **[An Empirical Study of Retrieval-Augmented Code Generation: Challenges and Opportunities](http://arxiv.org/abs/2501.13742v1)** | 2025-01-23 | <details><summary>This ...</summary><p>This paper is accepted by TOSEM</p></details> |
+
+## LLM
+| **Title** | **Date** | **Comment** |
+| --- | --- | --- |
+| **[Analysis of Indic Language Capabilities in LLMs](http://arxiv.org/abs/2501.13912v1)** | 2025-01-23 | <details><summary>17 pa...</summary><p>17 pages, 2 figures, 5 tables</p></details> |
+| **[NESTFUL: A Benchmark for Evaluating LLMs on Nested Sequences of API Calls](http://arxiv.org/abs/2409.03797v2)** | 2025-01-23 |  |
+| **[Exploring Finetuned Audio-LLM on Heart Murmur Features](http://arxiv.org/abs/2501.13884v1)** | 2025-01-23 | <details><summary>5 pag...</summary><p>5 pages, 1 figure, and 3 tables. Submitted to IEEE/ACM Conference on Connected Health: Applications, Systems , and Engineering Technologies</p></details> |
+| **[Take Caution in Using LLMs as Human Surrogates: Scylla Ex Machina](http://arxiv.org/abs/2410.19599v3)** | 2025-01-23 |  |
+| **[Enhancing LLMs for Governance with Human Oversight: Evaluating and Aligning LLMs on Expert Classification of Climate Misinformation for Detecting False or Misleading Claims about Climate Change](http://arxiv.org/abs/2501.13802v1)** | 2025-01-23 | <details><summary>Accep...</summary><p>Accepted to the AI Governance Workshop at AAAI 2025</p></details> |
+| **[Explainable XR: Understanding User Behaviors of XR Environments using LLM-assisted Analytics Framework](http://arxiv.org/abs/2501.13778v1)** | 2025-01-23 | <details><summary>11 pa...</summary><p>11 pages, 8 figures. This is the author's version of the article that has been accepted for publication in IEEE Transactions on Visualization and Computer Graphics</p></details> |
+| **[Can LLMs Solve longer Math Word Problems Better?](http://arxiv.org/abs/2405.14804v2)** | 2025-01-23 | <details><summary>Accep...</summary><p>Accepted to ICLR 2025</p></details> |
+| **[Evaluating LLMs for Quotation Attribution in Literary Texts: A Case Study of LLaMa3](http://arxiv.org/abs/2406.11380v2)** | 2025-01-23 | <details><summary>NAACL...</summary><p>NAACL 2025 Main Conference -- short paper</p></details> |
+| **[EICopilot: Search and Explore Enterprise Information over Large-scale Knowledge Graphs with LLM-driven Agents](http://arxiv.org/abs/2501.13746v1)** | 2025-01-23 |  |
+| **[Pseudocode-Injection Magic: Enabling LLMs to Tackle Graph Computational Tasks](http://arxiv.org/abs/2501.13731v1)** | 2025-01-23 | 24 pages |
 
