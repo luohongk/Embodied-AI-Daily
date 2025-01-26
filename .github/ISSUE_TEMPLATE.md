@@ -57,13 +57,6 @@ labels: documentation
 | **[Learning Interpretable BEV Based VIO without Deep Neural Networks](http://arxiv.org/abs/2109.12292v2)** | 2022-09-17 |  |
 | **[VIO-UWB-Based Collaborative Localization and Dense Scene Reconstruction within Heterogeneous Multi-Robot Systems](http://arxiv.org/abs/2011.00830v2)** | 2022-04-10 |  |
 
-## LIO
-| **Title** | **Date** | **Comment** |
-| --- | --- | --- |
-| **[Lio -- A Personal Robot Assistant for Human-Robot Interaction and Care Applications](http://arxiv.org/abs/2006.09019v1)** | 2020-06-16 | <details><summary>Accep...</summary><p>Accepted submission at IEEE Robotics and Automation Letters (RA-L), submitted to IEEE IROS 2020</p></details> |
-| **[LIO*: Low Level Information Flow Control in F*](http://arxiv.org/abs/2004.12885v1)** | 2020-04-27 | Submitted to ICFP |
-| **[liOS: Lifting iOS apps for fun and profit](http://arxiv.org/abs/2003.12901v1)** | 2020-03-28 |  |
-
 ## GNSS
 | **Title** | **Date** | **Comment** |
 | --- | --- | --- |
@@ -78,27 +71,19 @@ labels: documentation
 | **[Time Synchronization of TESLA-enabled GNSS Receivers](http://arxiv.org/abs/2407.13386v2)** | 2024-11-30 | 16 pages, 15 figures |
 | **[Road User Classification from High-Frequency GNSS Data Using Distributed Edge Intelligence](http://arxiv.org/abs/2412.00132v1)** | 2024-11-28 |  |
 
-## Multi sensor SLAM
+## LiDAR Odometry
 | **Title** | **Date** | **Comment** |
 | --- | --- | --- |
-| **[FusionPortableV2: A Unified Multi-Sensor Dataset for Generalized SLAM Across Diverse Platforms and Scalable Environments](http://arxiv.org/abs/2404.08563v2)** | 2024-10-30 | <details><summary>21 pa...</summary><p>21 pages, 17 figures, 7 tables. Accepted by International Journal of Robotics Research (IJRR)</p></details> |
-| **[Ground-Challenge: A Multi-sensor SLAM Dataset Focusing on Corner Cases for Ground Robots](http://arxiv.org/abs/2307.03890v1)** | 2023-07-08 |  |
-| **[VECtor: A Versatile Event-Centric Benchmark for Multi-Sensor SLAM](http://arxiv.org/abs/2207.01404v1)** | 2022-07-04 |  |
-| **[The Aqualoc Dataset: Towards Real-Time Underwater Localization from a Visual-Inertial-Pressure Acquisition System](http://arxiv.org/abs/1809.07076v1)** | 2018-09-19 |  |
-
-## Kalman Filter
-| **Title** | **Date** | **Comment** |
-| --- | --- | --- |
-| **[FAST-LIVO2 on Resource-Constrained Platforms: LiDAR-Inertial-Visual Odometry with Efficient Memory and Computation](http://arxiv.org/abs/2501.13876v1)** | 2025-01-23 |  |
-| **[Communication-Efficient Distributed Kalman Filtering using ADMM](http://arxiv.org/abs/2501.13003v1)** | 2025-01-22 | 8 pages |
-| **[Robust Data-Driven Kalman Filtering for Unknown Linear Systems using Maximum Likelihood Optimization](http://arxiv.org/abs/2311.18096v2)** | 2025-01-22 |  |
-| **[Orbit-Attitude Predictive Control in the Vicinity of Asteroids with In Situ Gravity Estimation](http://arxiv.org/abs/2501.12830v1)** | 2025-01-22 |  |
-| **[Optimal Spatial-Temporal Triangulation for Bearing-Only Cooperative Motion Estimation](http://arxiv.org/abs/2310.15846v4)** | 2025-01-21 |  |
-| **[MambaMOT: State-Space Model as Motion Predictor for Multi-Object Tracking](http://arxiv.org/abs/2403.10826v2)** | 2025-01-21 | <details><summary>Accep...</summary><p>Accepted by ICASSP 2025. Previous version paper title: Exploring Learning-based Motion Models in Multi-Object Tracking</p></details> |
-| **[PD-SORT: Occlusion-Robust Multi-Object Tracking Using Pseudo-Depth Cues](http://arxiv.org/abs/2501.11288v1)** | 2025-01-20 |  |
-| **[Reconstructing East Asian Temperatures from 1368 to 1911 Using Historical Documents, Climate Models, and Data Assimilation](http://arxiv.org/abs/2410.21790v2)** | 2025-01-18 | <details><summary>28 pa...</summary><p>28 pages, 16 figures, 1 table</p></details> |
-| **[PO-GVINS: Tightly Coupled GNSS-Visual-Inertial Integration with Pose-Only Representation](http://arxiv.org/abs/2501.07259v2)** | 2025-01-16 |  |
-| **[GS-LIVO: Real-Time LiDAR, Inertial, and Visual Multi-sensor Fused Odometry with Gaussian Mapping](http://arxiv.org/abs/2501.08672v1)** | 2025-01-15 |  |
+| **[OpenLiDARMap: Zero-Drift Point Cloud Mapping using Map Priors](http://arxiv.org/abs/2501.11111v1)** | 2025-01-19 |  |
+| **[A flexible framework for accurate LiDAR odometry, map manipulation, and localization](http://arxiv.org/abs/2407.20465v2)** | 2024-12-27 | 45 pages, 35 figures |
+| **[UA-MPC: Uncertainty-Aware Model Predictive Control for Motorized LiDAR Odometry](http://arxiv.org/abs/2412.13873v1)** | 2024-12-18 |  |
+| **[A Real-time Degeneracy Sensing and Compensation Method for Enhanced LiDAR SLAM](http://arxiv.org/abs/2412.07513v1)** | 2024-12-10 | 13 pages |
+| **[Adaptive LiDAR Odometry and Mapping for Autonomous Agricultural Mobile Robots in Unmanned Farms](http://arxiv.org/abs/2412.02899v1)** | 2024-12-03 |  |
+| **[LiDAR-based Registration against Georeferenced Models for Globally Consistent Allocentric Maps](http://arxiv.org/abs/2412.02533v1)** | 2024-12-03 | <details><summary>Prese...</summary><p>Presented at IEEE International Symposium on Safety, Security, and Rescue Robotics (SSRR), New York City, USA, November 2024</p></details> |
+| **[Efficient Dynamic LiDAR Odometry for Mobile Robots with Structured Point Clouds](http://arxiv.org/abs/2411.18443v1)** | 2024-11-27 | <details><summary>Accep...</summary><p>Accepted at 2024 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)</p></details> |
+| **[Performance Assessment of Lidar Odometry Frameworks: A Case Study at the Australian Botanic Garden Mount Annan](http://arxiv.org/abs/2411.16931v1)** | 2024-11-25 | <details><summary>Redac...</summary><p>Redacted with respect to the Australian Conference on Robotics and Automoation 2024's writing criteria. Style file: acra.sty, template: acra.tex, bibtex: named.bst 10 pages, 18 figures</p></details> |
+| **[GenZ-ICP: Generalizable and Degeneracy-Robust LiDAR Odometry Using an Adaptive Weighting](http://arxiv.org/abs/2411.06766v1)** | 2024-11-11 | <details><summary>8 pag...</summary><p>8 pages, 5 figures, Accepted to IEEE Robotics and Automation Letters (RA-L)</p></details> |
+| **[Automatic Target-Less Camera-LiDAR Calibration From Motion and Deep Point Correspondences](http://arxiv.org/abs/2404.17298v3)** | 2024-11-04 |  |
 
 ## Graph Optimization
 | **Title** | **Date** | **Comment** |
@@ -155,6 +140,28 @@ labels: documentation
 | **[NEDS-SLAM: A Neural Explicit Dense Semantic SLAM Framework using 3D Gaussian Splatting](http://arxiv.org/abs/2403.11679v3)** | 2024-09-01 | <details><summary>accep...</summary><p>accepted by RA-L, IEEE Robotics and Automation Letters</p></details> |
 | **[MAP-ADAPT: Real-Time Quality-Adaptive Semantic 3D Maps](http://arxiv.org/abs/2406.05849v1)** | 2024-06-09 |  |
 | **[SemGauss-SLAM: Dense Semantic Gaussian Splatting SLAM](http://arxiv.org/abs/2403.07494v3)** | 2024-05-29 |  |
+
+## Multi sensor SLAM
+| **Title** | **Date** | **Comment** |
+| --- | --- | --- |
+| **[FusionPortableV2: A Unified Multi-Sensor Dataset for Generalized SLAM Across Diverse Platforms and Scalable Environments](http://arxiv.org/abs/2404.08563v2)** | 2024-10-30 | <details><summary>21 pa...</summary><p>21 pages, 17 figures, 7 tables. Accepted by International Journal of Robotics Research (IJRR)</p></details> |
+| **[Ground-Challenge: A Multi-sensor SLAM Dataset Focusing on Corner Cases for Ground Robots](http://arxiv.org/abs/2307.03890v1)** | 2023-07-08 |  |
+| **[VECtor: A Versatile Event-Centric Benchmark for Multi-Sensor SLAM](http://arxiv.org/abs/2207.01404v1)** | 2022-07-04 |  |
+| **[The Aqualoc Dataset: Towards Real-Time Underwater Localization from a Visual-Inertial-Pressure Acquisition System](http://arxiv.org/abs/1809.07076v1)** | 2018-09-19 |  |
+
+## Kalman Filter
+| **Title** | **Date** | **Comment** |
+| --- | --- | --- |
+| **[FAST-LIVO2 on Resource-Constrained Platforms: LiDAR-Inertial-Visual Odometry with Efficient Memory and Computation](http://arxiv.org/abs/2501.13876v1)** | 2025-01-23 |  |
+| **[Communication-Efficient Distributed Kalman Filtering using ADMM](http://arxiv.org/abs/2501.13003v1)** | 2025-01-22 | 8 pages |
+| **[Robust Data-Driven Kalman Filtering for Unknown Linear Systems using Maximum Likelihood Optimization](http://arxiv.org/abs/2311.18096v2)** | 2025-01-22 |  |
+| **[Orbit-Attitude Predictive Control in the Vicinity of Asteroids with In Situ Gravity Estimation](http://arxiv.org/abs/2501.12830v1)** | 2025-01-22 |  |
+| **[Optimal Spatial-Temporal Triangulation for Bearing-Only Cooperative Motion Estimation](http://arxiv.org/abs/2310.15846v4)** | 2025-01-21 |  |
+| **[MambaMOT: State-Space Model as Motion Predictor for Multi-Object Tracking](http://arxiv.org/abs/2403.10826v2)** | 2025-01-21 | <details><summary>Accep...</summary><p>Accepted by ICASSP 2025. Previous version paper title: Exploring Learning-based Motion Models in Multi-Object Tracking</p></details> |
+| **[PD-SORT: Occlusion-Robust Multi-Object Tracking Using Pseudo-Depth Cues](http://arxiv.org/abs/2501.11288v1)** | 2025-01-20 |  |
+| **[Reconstructing East Asian Temperatures from 1368 to 1911 Using Historical Documents, Climate Models, and Data Assimilation](http://arxiv.org/abs/2410.21790v2)** | 2025-01-18 | <details><summary>28 pa...</summary><p>28 pages, 16 figures, 1 table</p></details> |
+| **[PO-GVINS: Tightly Coupled GNSS-Visual-Inertial Integration with Pose-Only Representation](http://arxiv.org/abs/2501.07259v2)** | 2025-01-16 |  |
+| **[GS-LIVO: Real-Time LiDAR, Inertial, and Visual Multi-sensor Fused Odometry with Gaussian Mapping](http://arxiv.org/abs/2501.08672v1)** | 2025-01-15 |  |
 
 ## Loop Closure Detection
 | **Title** | **Date** | **Comment** |
