@@ -9,7 +9,7 @@ on:
       - main
   workflow_dispatch:
   schedule:
-      - cron: '30 16 * * 0-4' # 00:30 Beijing time every Monday to Friday
+      - cron: '30 16 * * *' # 00:30 Beijing time (16:30 UTC)
   watch:
     types: [started]
 
