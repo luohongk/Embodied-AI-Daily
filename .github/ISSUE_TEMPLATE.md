@@ -1,5 +1,5 @@
 ---
-title: Latest 10 Papers - February 09, 2025
+title: Latest 10 Papers - February 10, 2025
 labels: documentation
 ---
 **Please check the [Github](https://github.com/luohongk/DailyArXiv) page for a better reading experience and more papers.**
@@ -64,15 +64,6 @@ labels: documentation
 | **Title** | **Date** | **Comment** |
 | --- | --- | --- |
 | **[DOC-Depth: A novel approach for dense depth ground truth generation](http://arxiv.org/abs/2502.02144v1)** | 2025-02-04 | <details><summary>Prepr...</summary><p>Preprint. Code and dataset available on the project page : https://simondemoreau.github.io/DOC-Depth/</p></details> |
-| **[OpenLiDARMap: Zero-Drift Point Cloud Mapping using Map Priors](http://arxiv.org/abs/2501.11111v2)** | 2025-02-01 |  |
-| **[Performance Assessment of Lidar Odometry Frameworks: A Case Study at the Australian Botanic Garden Mount Annan](http://arxiv.org/abs/2411.16931v2)** | 2025-01-26 | <details><summary>The 2...</summary><p>The 2024 Australasian Conference on Robotics and Automation (ACRA 2024)</p></details> |
-| **[A flexible framework for accurate LiDAR odometry, map manipulation, and localization](http://arxiv.org/abs/2407.20465v2)** | 2024-12-27 | 45 pages, 35 figures |
-| **[UA-MPC: Uncertainty-Aware Model Predictive Control for Motorized LiDAR Odometry](http://arxiv.org/abs/2412.13873v1)** | 2024-12-18 |  |
-| **[A Real-time Degeneracy Sensing and Compensation Method for Enhanced LiDAR SLAM](http://arxiv.org/abs/2412.07513v1)** | 2024-12-10 | 13 pages |
-| **[Adaptive LiDAR Odometry and Mapping for Autonomous Agricultural Mobile Robots in Unmanned Farms](http://arxiv.org/abs/2412.02899v1)** | 2024-12-03 |  |
-| **[LiDAR-based Registration against Georeferenced Models for Globally Consistent Allocentric Maps](http://arxiv.org/abs/2412.02533v1)** | 2024-12-03 | <details><summary>Prese...</summary><p>Presented at IEEE International Symposium on Safety, Security, and Rescue Robotics (SSRR), New York City, USA, November 2024</p></details> |
-| **[Efficient Dynamic LiDAR Odometry for Mobile Robots with Structured Point Clouds](http://arxiv.org/abs/2411.18443v1)** | 2024-11-27 | <details><summary>Accep...</summary><p>Accepted at 2024 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)</p></details> |
-| **[GenZ-ICP: Generalizable and Degeneracy-Robust LiDAR Odometry Using an Adaptive Weighting](http://arxiv.org/abs/2411.06766v1)** | 2024-11-11 | <details><summary>8 pag...</summary><p>8 pages, 5 figures, Accepted to IEEE Robotics and Automation Letters (RA-L)</p></details> |
 
 ## SLAMMOT
 | **Title** | **Date** | **Comment** |
