@@ -1,5 +1,5 @@
 ---
-title: Latest 10 Papers - March 13, 2025
+title: Latest 10 Papers - March 14, 2025
 labels: documentation
 ---
 **Please check the [Github](https://github.com/luohongk/DailyArXiv) page for a better reading experience and more papers.**
@@ -7,6 +7,7 @@ labels: documentation
 ## Visual SLAM
 | **Title** | **Date** | **Comment** |
 | --- | --- | --- |
+| **[MonoSLAM: Robust Monocular SLAM with Global Structure Optimization](http://arxiv.org/abs/2503.09296v1)** | 2025-03-12 |  |
 | **[AirSwarm: Enabling Cost-Effective Multi-UAV Research with COTS drones](http://arxiv.org/abs/2503.06890v1)** | 2025-03-10 |  |
 | **[OpenGV 2.0: Motion prior-assisted calibration and SLAM with vehicle-mounted surround-view systems](http://arxiv.org/abs/2503.03230v1)** | 2025-03-05 |  |
 | **[Monocular visual simultaneous localization and mapping: (r)evolution from geometry to deep learning-based pipelines](http://arxiv.org/abs/2503.02955v1)** | 2025-03-04 |  |
@@ -16,7 +17,6 @@ labels: documentation
 | **[Action-Consistent Decentralized Belief Space Planning with Inconsistent Beliefs and Limited Data Sharing: Framework and Simplification Algorithms with Formal Guarantees](http://arxiv.org/abs/2403.05962v2)** | 2025-03-02 | <details><summary>The n...</summary><p>The new version has been extended from the existing arxiv version of the paper in the following way: - The old (base) algorithm VerifyAC has been retained in the new version. - Added two new algorithms R-VerifyAC and R-VerifyAC-simp along with their performance guarantees. - A new formulation in continuous spaces have been added. - Experimental results for the new approaches have been added</p></details> |
 | **[AirSLAM: An Efficient and Illumination-Robust Point-Line Visual SLAM System](http://arxiv.org/abs/2408.03520v4)** | 2025-02-27 | <details><summary>20 pa...</summary><p>20 pages, 15 figures, 9 tables</p></details> |
 | **[Increasing the Task Flexibility of Heavy-Duty Manipulators Using Visual 6D Pose Estimation of Objects](http://arxiv.org/abs/2502.19169v1)** | 2025-02-26 |  |
-| **[SLAM in the Dark: Self-Supervised Learning of Pose, Depth and Loop-Closure from Thermal Images](http://arxiv.org/abs/2502.18932v1)** | 2025-02-26 |  |
 
 ## Visual Inertial SLAM
 | **Title** | **Date** | **Comment** |
@@ -98,6 +98,7 @@ labels: documentation
 ## Graph Optimization
 | **Title** | **Date** | **Comment** |
 | --- | --- | --- |
+| **[MAC-VO: Metrics-aware Covariance for Learning-based Stereo Visual Odometry](http://arxiv.org/abs/2409.09479v2)** | 2025-03-12 |  |
 | **[Distributed Pose Graph Optimization using the Splitting Method based on the Alternating Direction Method of Multipliers](http://arxiv.org/abs/2503.06912v1)** | 2025-03-10 | 20 pages, 4 figures |
 | **[Optimizing Minimum Vertex Cover Solving via a GCN-assisted Heuristic Algorithm](http://arxiv.org/abs/2503.06396v1)** | 2025-03-09 |  |
 | **[Learning-based GNSS Uncertainty Quantification using Continuous-Time Factor Graph Optimization](http://arxiv.org/abs/2503.04933v1)** | 2025-03-06 | <details><summary>This ...</summary><p>This extended abstract has been accepted to the 1st German Robotic Conference</p></details> |
@@ -107,7 +108,6 @@ labels: documentation
 | **[Balancing Accuracy and Efficiency for Large-Scale SLAM: A Minimal Subset Approach for Scalable Loop Closures](http://arxiv.org/abs/2501.01791v2)** | 2025-03-01 | <details><summary>8 pag...</summary><p>8 pages, 7 Figures, 2 Tables. Submitted</p></details> |
 | **[A Real-time Spatio-Temporal Trajectory Planner for Autonomous Vehicles with Semantic Graph Optimization](http://arxiv.org/abs/2502.18151v1)** | 2025-02-25 | <details><summary>This ...</summary><p>This work has been accepted for publication in IEEE Robotics and Automation Letters (RA-L). The final published version is available in IEEE Xplore (DOI: 10.1109/LRA.2024.3504239)</p></details> |
 | **[OptiRefine: Densest subgraphs and maximum cuts with $k$ refinements](http://arxiv.org/abs/2502.14532v2)** | 2025-02-25 | <details><summary>submi...</summary><p>submitted under review. Add acknowledgement</p></details> |
-| **[Open-Source Factor Graph Optimization Package for GNSS: Examples and Applications](http://arxiv.org/abs/2502.08158v1)** | 2025-02-12 | <details><summary>Accep...</summary><p>Accepted to the 2025 IEEE/ION Position, Location and Navigation Symposium (PLANS)</p></details> |
 
 ## Dynamic SLAM
 | **Title** | **Date** | **Comment** |
@@ -154,20 +154,23 @@ labels: documentation
 ## Autonomous Driving
 | **Title** | **Date** | **Comment** |
 | --- | --- | --- |
-| **[CoLMDriver: LLM-based Negotiation Benefits Cooperative Autonomous Driving](http://arxiv.org/abs/2503.08683v1)** | 2025-03-11 |  |
-| **[Language-Depth Navigated Thermal and Visible Image Fusion](http://arxiv.org/abs/2503.08676v1)** | 2025-03-11 |  |
-| **[Task-Oriented Co-Design of Communication, Computing, and Control for Edge-Enabled Industrial Cyber-Physical Systems](http://arxiv.org/abs/2503.08661v1)** | 2025-03-11 | <details><summary>This ...</summary><p>This paper has been accepted for publication in IEEE Journal on Selected Areas in Communications (JSAC), with publication expected in 2025</p></details> |
-| **[HiP-AD: Hierarchical and Multi-Granularity Planning with Deformable Attention for Autonomous Driving in a Single Decoder](http://arxiv.org/abs/2503.08612v1)** | 2025-03-11 |  |
-| **[LiSu: A Dataset and Method for LiDAR Surface Normal Estimation](http://arxiv.org/abs/2503.08601v1)** | 2025-03-11 | <details><summary>Accep...</summary><p>Accepted at CVPR 2025</p></details> |
-| **[ApproxABFT: Approximate Algorithm-Based Fault Tolerance for Neural Network Processing](http://arxiv.org/abs/2302.10469v4)** | 2025-03-11 |  |
-| **[Critic-V: VLM Critics Help Catch VLM Errors in Multimodal Reasoning](http://arxiv.org/abs/2411.18203v4)** | 2025-03-11 | 16 pages, 11 figures |
-| **[Q-PETR: Quant-aware Position Embedding Transformation for Multi-View 3D Object Detection](http://arxiv.org/abs/2502.15488v2)** | 2025-03-11 |  |
-| **[JiSAM: Alleviate Labeling Burden and Corner Case Problems in Autonomous Driving via Minimal Real-World Data](http://arxiv.org/abs/2503.08422v1)** | 2025-03-11 |  |
-| **[V-Max: Making RL practical for Autonomous Driving](http://arxiv.org/abs/2503.08388v1)** | 2025-03-11 |  |
+| **[SimLingo: Vision-Only Closed-Loop Autonomous Driving with Language-Action Alignment](http://arxiv.org/abs/2503.09594v1)** | 2025-03-12 | <details><summary>CVPR ...</summary><p>CVPR 2025. 1st Place @ CARLA Challenge 2024. Challenge tech report (preliminary version of SimLingo): arXiv:2406.10165</p></details> |
+| **[HERMES: A Unified Self-Driving World Model for Simultaneous 3D Scene Understanding and Generation](http://arxiv.org/abs/2501.14729v2)** | 2025-03-12 | <details><summary>The c...</summary><p>The code will be available at https://github.com/LMD0311/HERMES</p></details> |
+| **[Hybrid Rendering for Multimodal Autonomous Driving: Merging Neural and Physics-Based Simulation](http://arxiv.org/abs/2503.09464v1)** | 2025-03-12 |  |
+| **[RS2V-L: Vehicle-Mounted LiDAR Data Generation from Roadside Sensor Observations](http://arxiv.org/abs/2503.07085v2)** | 2025-03-12 | <details><summary>Upon ...</summary><p>Upon self-examination, we have found that the data in the experimental section of our paper is uncertain. To ensure academic rigor, we are applying for the withdrawal of the paper. We will resubmit it after reconfirming and correcting the data. Thank you for your understanding</p></details> |
+| **[Object-Centric World Model for Language-Guided Manipulation](http://arxiv.org/abs/2503.06170v2)** | 2025-03-12 |  |
+| **[PCLA: A Framework for Testing Autonomous Agents in the CARLA Simulator](http://arxiv.org/abs/2503.09385v1)** | 2025-03-12 | <details><summary>This ...</summary><p>This work will be published at the FSE 2025 demonstration track</p></details> |
+| **[Post-interactive Multimodal Trajectory Prediction for Autonomous Driving](http://arxiv.org/abs/2503.09366v1)** | 2025-03-12 |  |
+| **[A Case Study on Model Checking and Runtime Verification for Awkernel](http://arxiv.org/abs/2503.09282v1)** | 2025-03-12 |  |
+| **[Other Vehicle Trajectories Are Also Needed: A Driving World Model Unifies Ego-Other Vehicle Trajectories in Video Latant Space](http://arxiv.org/abs/2503.09215v1)** | 2025-03-12 | 8 pages, 7 figures |
+| **[HisTrackMap: Global Vectorized High-Definition Map Construction via History Map Tracking](http://arxiv.org/abs/2503.07168v2)** | 2025-03-12 |  |
 
 ## Kalman Filter
 | **Title** | **Date** | **Comment** |
 | --- | --- | --- |
+| **[DeepUKF-VIN: Adaptively-tuned Deep Unscented Kalman Filter for 3D Visual-Inertial Navigation based on IMU-Vision-Net](http://arxiv.org/abs/2502.00575v2)** | 2025-03-12 |  |
+| **[Computation-Aware Kalman Filtering and Smoothing](http://arxiv.org/abs/2405.08971v2)** | 2025-03-12 |  |
+| **[Solving Functional Optimization with Deep Networks and Variational Principles](http://arxiv.org/abs/2410.06277v4)** | 2025-03-11 | 16 pages, 4 figures |
 | **[Online Control-Informed Learning](http://arxiv.org/abs/2410.03924v2)** | 2025-03-11 |  |
 | **[Geometric Nonlinear Filtering with Almost Global Convergence for Attitude and Bias Estimation on the Special Orthogonal Group](http://arxiv.org/abs/2503.08255v1)** | 2025-03-11 |  |
 | **[Online Learning of Nonlinear Parametric Models under Non-smooth Regularization using EKF and ADMM](http://arxiv.org/abs/2503.01282v2)** | 2025-03-11 | 11 pages, 5 figures |
@@ -175,9 +178,6 @@ labels: documentation
 | **[NeRF-VIO: Map-Based Visual-Inertial Odometry with Initialization Leveraging Neural Radiance Fields](http://arxiv.org/abs/2503.07952v1)** | 2025-03-11 |  |
 | **[Intelligent Framework for Human-Robot Collaboration: Safety, Dynamic Ergonomics, and Adaptive Decision-Making](http://arxiv.org/abs/2503.07901v1)** | 2025-03-10 | <details><summary>14 pa...</summary><p>14 pagine, 10 figure, 3 tabelle, formato conferenza IEEE</p></details> |
 | **[Split Covariance Intersection Filter Based Visual Localization With Accurate AprilTag Map For Warehouse Robot Navigation](http://arxiv.org/abs/2310.17879v2)** | 2025-03-10 |  |
-| **[AKF-LIO: LiDAR-Inertial Odometry with Gaussian Map by Adaptive Kalman Filter](http://arxiv.org/abs/2503.06891v1)** | 2025-03-10 | <details><summary>Submi...</summary><p>Submitted to IROS 2025 Conference, https://github.com/xpxie/AKF-LIO.git</p></details> |
-| **[Recursive Estimation for Dynamical Systems with Measurement Bias, Outliers and Constraints](http://arxiv.org/abs/2503.06825v1)** | 2025-03-10 |  |
-| **[Bayesian Optimization for Robust Identification of Ornstein-Uhlenbeck Model](http://arxiv.org/abs/2503.06381v1)** | 2025-03-09 |  |
 
 ## Loop Closure Detection
 | **Title** | **Date** | **Comment** |
@@ -210,16 +210,16 @@ labels: documentation
 ## 3D Gaussian Splatting
 | **Title** | **Date** | **Comment** |
 | --- | --- | --- |
-| **[RealmDreamer: Text-Driven 3D Scene Generation with Inpainting and Depth Diffusion](http://arxiv.org/abs/2404.07199v2)** | 2025-03-11 | <details><summary>Publi...</summary><p>Published at 3DV 2025</p></details> |
-| **[PCGS: Progressive Compression of 3D Gaussian Splatting](http://arxiv.org/abs/2503.08511v1)** | 2025-03-11 | <details><summary>Proje...</summary><p>Project Page: https://yihangchen-ee.github.io/project_pcgs/ Code: https://github.com/YihangChen-ee/PCGS</p></details> |
-| **[HRAvatar: High-Quality and Relightable Gaussian Head Avatar](http://arxiv.org/abs/2503.08224v1)** | 2025-03-11 | <details><summary>Proje...</summary><p>Project page: https://eastbeanzhang.github.io/HRAvatar</p></details> |
-| **[S3R-GS: Streamlining the Pipeline for Large-Scale Street Scene Reconstruction](http://arxiv.org/abs/2503.08217v1)** | 2025-03-11 |  |
-| **[Dynamic Scene Reconstruction: Recent Advance in Real-time Rendering and Streaming](http://arxiv.org/abs/2503.08166v1)** | 2025-03-11 | 20 pages, 6 figures |
-| **[ArticulatedGS: Self-supervised Digital Twin Modeling of Articulated Objects using 3D Gaussian Splatting](http://arxiv.org/abs/2503.08135v1)** | 2025-03-11 |  |
-| **[Efficient Density Control for 3D Gaussian Splatting](http://arxiv.org/abs/2411.10133v3)** | 2025-03-11 |  |
-| **[Make-It-Animatable: An Efficient Framework for Authoring Animation-Ready 3D Characters](http://arxiv.org/abs/2411.18197v3)** | 2025-03-11 | <details><summary>CVPR ...</summary><p>CVPR 2025. Project page: https://jasongzy.github.io/Make-It-Animatable/</p></details> |
-| **[MVGSR: Multi-View Consistency Gaussian Splatting for Robust Surface Reconstruction](http://arxiv.org/abs/2503.08093v1)** | 2025-03-11 | <details><summary>proje...</summary><p>project page \url{https://mvgsr.github.io}</p></details> |
-| **[GigaSLAM: Large-Scale Monocular SLAM with Hierachical Gaussian Splats](http://arxiv.org/abs/2503.08071v1)** | 2025-03-11 |  |
+| **[Hybrid Rendering for Multimodal Autonomous Driving: Merging Neural and Physics-Based Simulation](http://arxiv.org/abs/2503.09464v1)** | 2025-03-12 |  |
+| **[Online Language Splatting](http://arxiv.org/abs/2503.09447v1)** | 2025-03-12 |  |
+| **[Fast Feedforward 3D Gaussian Splatting Compression](http://arxiv.org/abs/2410.08017v3)** | 2025-03-12 | <details><summary>Proje...</summary><p>Project Page: https://yihangchen-ee.github.io/project_fcgs/ Code: https://github.com/yihangchen-ee/fcgs/</p></details> |
+| **[Close-up-GS: Enhancing Close-Up View Synthesis in 3D Gaussian Splatting with Progressive Self-Training](http://arxiv.org/abs/2503.09396v1)** | 2025-03-12 |  |
+| **[DoF-Gaussian: Controllable Depth-of-Field for 3D Gaussian Splatting](http://arxiv.org/abs/2503.00746v2)** | 2025-03-12 | CVPR 2025 |
+| **[EVA-Gaussian: 3D Gaussian-based Real-time Human Novel View Synthesis under Diverse Multi-view Camera Settings](http://arxiv.org/abs/2410.01425v2)** | 2025-03-12 |  |
+| **[Locality-aware Gaussian Compression for Fast and High-quality Rendering](http://arxiv.org/abs/2501.05757v3)** | 2025-03-12 | <details><summary>Accep...</summary><p>Accepted to ICLR 2025. Project page: https://seungjooshin.github.io/LocoGS</p></details> |
+| **[DynOMo: Online Point Tracking by Dynamic Online Monocular Gaussian Reconstruction](http://arxiv.org/abs/2409.02104v2)** | 2025-03-12 | Accepted to 3DV 2025 |
+| **[TrackGS: Optimizing COLMAP-Free 3D Gaussian Splatting with Global Track Constraints](http://arxiv.org/abs/2502.19800v2)** | 2025-03-12 |  |
+| **[EigenGS Representation: From Eigenspace to Gaussian Image Space](http://arxiv.org/abs/2503.07446v2)** | 2025-03-12 |  |
 
 ## MVS
 | **Title** | **Date** | **Comment** |
@@ -238,6 +238,7 @@ labels: documentation
 ## Embodied AI
 | **Title** | **Date** | **Comment** |
 | --- | --- | --- |
+| **[EmBARDiment: an Embodied AI Agent for Productivity in XR](http://arxiv.org/abs/2408.08158v2)** | 2025-03-11 |  |
 | **[HO-Cap: A Capture System and Dataset for 3D Reconstruction and Pose Tracking of Hand-Object Interaction](http://arxiv.org/abs/2406.06843v4)** | 2025-03-11 |  |
 | **[CogNav: Cognitive Process Modeling for Object Goal Navigation with LLMs](http://arxiv.org/abs/2412.10439v2)** | 2025-03-11 |  |
 | **[Reasoning in visual navigation of end-to-end trained agents: a dynamical systems approach](http://arxiv.org/abs/2503.08306v1)** | 2025-03-11 |  |
@@ -247,7 +248,6 @@ labels: documentation
 | **[SonicSim: A customizable simulation platform for speech processing in moving sound source scenarios](http://arxiv.org/abs/2410.01481v2)** | 2025-03-06 | <details><summary>Accep...</summary><p>Accepted by ICLR 2025</p></details> |
 | **[A Survey on Vision-Language-Action Models for Embodied AI](http://arxiv.org/abs/2405.14093v4)** | 2025-03-04 | <details><summary>Proje...</summary><p>Project page: https://github.com/yueen-ma/Awesome-VLA</p></details> |
 | **[WMNav: Integrating Vision-Language Models into World Models for Object Goal Navigation](http://arxiv.org/abs/2503.02247v1)** | 2025-03-04 | 8 pages, 5 figures |
-| **[From Screens to Scenes: A Survey of Embodied AI in Healthcare](http://arxiv.org/abs/2501.07468v3)** | 2025-03-02 | <details><summary>56 pa...</summary><p>56 pages, 11 figures, manuscript accepted by Information Fusion</p></details> |
 
 ## VLN
 | **Title** | **Date** | **Comment** |
@@ -272,28 +272,28 @@ labels: documentation
 ## Deep Learning
 | **Title** | **Date** | **Comment** |
 | --- | --- | --- |
-| **[Birds look like cars: Adversarial analysis of intrinsically interpretable deep learning](http://arxiv.org/abs/2503.08636v1)** | 2025-03-11 | Preprint |
-| **[Going Beyond Conventional OOD Detection](http://arxiv.org/abs/2411.10794v3)** | 2025-03-11 |  |
-| **[Vision Transformer for Intracranial Hemorrhage Classification in CT Scans Using an Entropy-Aware Fuzzy Integral Strategy for Adaptive Scan-Level Decision Fusion](http://arxiv.org/abs/2503.08609v1)** | 2025-03-11 |  |
-| **[Integration of nested cross-validation, automated hyperparameter optimization, high-performance computing to reduce and quantify the variance of test performance estimation of deep learning models](http://arxiv.org/abs/2503.08589v1)** | 2025-03-11 |  |
-| **[Posterior-Mean Denoising Diffusion Model for Realistic PET Image Reconstruction](http://arxiv.org/abs/2503.08546v1)** | 2025-03-11 | 12 pages, 2 figures |
-| **[Machine Learning for Predicting Chaotic Systems](http://arxiv.org/abs/2407.20158v3)** | 2025-03-11 |  |
-| **[ChromaFormer: A Scalable and Accurate Transformer Architecture for Land Cover Classification](http://arxiv.org/abs/2503.08534v1)** | 2025-03-11 |  |
-| **[Prediction of Frozen Region Growth in Kidney Cryoablation Intervention Using a 3D Flow-Matching Model](http://arxiv.org/abs/2503.04966v2)** | 2025-03-11 | <details><summary>MICCA...</summary><p>MICCAI 2025 submitted version (author list included)</p></details> |
-| **[Segmentation-Guided CT Synthesis with Pixel-Wise Conformal Uncertainty Bounds](http://arxiv.org/abs/2503.08515v1)** | 2025-03-11 | <details><summary>MICCA...</summary><p>MICCAI 2025 Conference Submission. Follows the required LNCS format. 12 pages including references. Contains 4 figures and 1 table</p></details> |
-| **[A Triple-Inertial Accelerated Alternating Optimization Method for Deep Learning Training](http://arxiv.org/abs/2503.08489v1)** | 2025-03-11 |  |
+| **[DeepUKF-VIN: Adaptively-tuned Deep Unscented Kalman Filter for 3D Visual-Inertial Navigation based on IMU-Vision-Net](http://arxiv.org/abs/2502.00575v2)** | 2025-03-12 |  |
+| **[RRWNet: Recursive Refinement Network for effective retinal artery/vein segmentation and classification](http://arxiv.org/abs/2402.03166v5)** | 2025-03-12 |  |
+| **[Evaluating Multi-Instance DNN Inferencing on Multiple Accelerators of an Edge Device](http://arxiv.org/abs/2503.09546v1)** | 2025-03-12 | 5 pages, 1 figure |
+| **[Large Language Models for Multi-Facility Location Mechanism Design](http://arxiv.org/abs/2503.09533v1)** | 2025-03-12 | Under review |
+| **[Double-Stage Feature-Level Clustering-Based Mixture of Experts Framework](http://arxiv.org/abs/2503.09504v1)** | 2025-03-12 | <details><summary>14 Pa...</summary><p>14 Pages, 1 Figure, and 3 Tables</p></details> |
+| **[Multiscale Stochastic Gradient Descent: Efficiently Training Convolutional Neural Networks](http://arxiv.org/abs/2501.12739v2)** | 2025-03-12 | <details><summary>24 pa...</summary><p>24 pages, 16 figures, 11 tables</p></details> |
+| **[Towards Robust Multimodal Representation: A Unified Approach with Adaptive Experts and Alignment](http://arxiv.org/abs/2503.09498v1)** | 2025-03-12 |  |
+| **[Learning Spatially Adaptive $\ell_1$-Norms Weights for Convolutional Synthesis Regularization](http://arxiv.org/abs/2503.09483v1)** | 2025-03-12 | <details><summary>To be...</summary><p>To be submitted to the EUSIPCO 2025 conference</p></details> |
+| **[Mixture of Experts based Multi-task Supervise Learning from Crowds](http://arxiv.org/abs/2407.13268v2)** | 2025-03-12 |  |
+| **[A Strategy for Label Alignment in Deep Neural Networks](http://arxiv.org/abs/2410.04722v2)** | 2025-03-12 |  |
 
 ## LLM
 | **Title** | **Date** | **Comment** |
 | --- | --- | --- |
-| **[Randomness, Not Representation: The Unreliability of Evaluating Cultural Alignment in LLMs](http://arxiv.org/abs/2503.08688v1)** | 2025-03-11 |  |
-| **[CoLMDriver: LLM-based Negotiation Benefits Cooperative Autonomous Driving](http://arxiv.org/abs/2503.08683v1)** | 2025-03-11 |  |
-| **[DeepReview: Improving LLM-based Paper Review with Human-like Deep Thinking Process](http://arxiv.org/abs/2503.08569v1)** | 2025-03-11 |  |
-| **[RAAD-LLM: Adaptive Anomaly Detection Using LLMs and RAG Integration](http://arxiv.org/abs/2503.02800v3)** | 2025-03-11 | <details><summary>arXiv...</summary><p>arXiv admin note: substantial text overlap with arXiv:2411.00914</p></details> |
-| **[Reasoning and Sampling-Augmented MCQ Difficulty Prediction via LLMs](http://arxiv.org/abs/2503.08551v1)** | 2025-03-11 |  |
-| **[Graph of AI Ideas: Leveraging Knowledge Graphs and LLMs for AI Research Idea Generation](http://arxiv.org/abs/2503.08549v1)** | 2025-03-11 | Work in progress |
-| **[DAFE: LLM-Based Evaluation Through Dynamic Arbitration for Free-Form Question-Answering](http://arxiv.org/abs/2503.08542v1)** | 2025-03-11 |  |
-| **[Chemical reasoning in LLMs unlocks steerable synthesis planning and reaction mechanism elucidation](http://arxiv.org/abs/2503.08537v1)** | 2025-03-11 |  |
-| **[ChatRex: Taming Multimodal LLM for Joint Perception and Understanding](http://arxiv.org/abs/2411.18363v3)** | 2025-03-11 | 35 pages, 19 figures |
-| **[FastCache: Optimizing Multimodal LLM Serving through Lightweight KV-Cache Compression Framework](http://arxiv.org/abs/2503.08461v1)** | 2025-03-11 | 14 pages, 14 figures |
+| **[How to Protect Yourself from 5G Radiation? Investigating LLM Responses to Implicit Misinformation](http://arxiv.org/abs/2503.09598v1)** | 2025-03-12 |  |
+| **[Cost-Optimal Grouped-Query Attention for Long-Context LLMs](http://arxiv.org/abs/2503.09579v1)** | 2025-03-12 | 16 pages, 17 figures |
+| **[Search-R1: Training LLMs to Reason and Leverage Search Engines with Reinforcement Learning](http://arxiv.org/abs/2503.09516v1)** | 2025-03-12 | 16 pages |
+| **[ReMA: Learning to Meta-think for LLMs with Multi-Agent Reinforcement Learning](http://arxiv.org/abs/2503.09501v1)** | 2025-03-12 |  |
+| **[Explicit Learning and the LLM in Machine Translation](http://arxiv.org/abs/2503.09454v1)** | 2025-03-12 |  |
+| **[CASTLE: Benchmarking Dataset for Static Code Analyzers and LLMs towards CWE Detection](http://arxiv.org/abs/2503.09433v1)** | 2025-03-12 |  |
+| **[Got Compute, but No Data: Lessons From Post-training a Finnish LLM](http://arxiv.org/abs/2503.09407v1)** | 2025-03-12 | 7 pages |
+| **[Asking Again and Again: Exploring LLM Robustness to Repeated Questions](http://arxiv.org/abs/2412.07923v3)** | 2025-03-12 |  |
+| **[Towards Next-Generation Recommender Systems: A Benchmark for Personalized Recommendation Assistant with LLMs](http://arxiv.org/abs/2503.09382v1)** | 2025-03-12 |  |
+| **[RetSTA: An LLM-Based Approach for Standardizing Clinical Fundus Image Reports](http://arxiv.org/abs/2503.09358v1)** | 2025-03-12 |  |
 
