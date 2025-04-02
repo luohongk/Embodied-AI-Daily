@@ -1,5 +1,5 @@
 ---
-title: Latest 10 Papers - April 02, 2025
+title: Latest 10 Papers - April 03, 2025
 labels: documentation
 ---
 **Please check the [Github](https://github.com/luohongk/DailyArXiv) page for a better reading experience and more papers.**
@@ -154,6 +154,8 @@ labels: documentation
 ## Autonomous Driving
 | **Title** | **Date** | **Comment** |
 | --- | --- | --- |
+| **[Fine-Grained Behavior and Lane Constraints Guided Trajectory Prediction Method](http://arxiv.org/abs/2503.21477v2)** | 2025-04-01 | <details><summary>This ...</summary><p>This work has been submitted to the IEEE for possible publication</p></details> |
+| **[Diffusion Models in 3D Vision: A Survey](http://arxiv.org/abs/2410.04738v3)** | 2025-04-01 |  |
 | **[UniOcc: A Unified Benchmark for Occupancy Forecasting and Prediction in Autonomous Driving](http://arxiv.org/abs/2503.24381v1)** | 2025-03-31 | <details><summary>14 pa...</summary><p>14 pages; Dataset: https://huggingface.co/datasets/tasl-lab/uniocc; Code: https://github.com/tasl-lab/UniOcc</p></details> |
 | **[Can Test-Time Scaling Improve World Foundation Model?](http://arxiv.org/abs/2503.24320v1)** | 2025-03-31 |  |
 | **[CALMM-Drive: Confidence-Aware Autonomous Driving with Large Multimodal Model](http://arxiv.org/abs/2412.04209v2)** | 2025-03-31 | 14 pages, 7 figures |
@@ -162,8 +164,6 @@ labels: documentation
 | **[Video-based Traffic Light Recognition by Rockchip RV1126 for Autonomous Driving](http://arxiv.org/abs/2503.23965v1)** | 2025-03-31 | <details><summary>Accep...</summary><p>Accepted by IEEE IV'25</p></details> |
 | **[A Benchmark for Vision-Centric HD Mapping by V2I Systems](http://arxiv.org/abs/2503.23963v1)** | 2025-03-31 | <details><summary>Accep...</summary><p>Accepted by IEEE IV'25</p></details> |
 | **[GLane3D : Detecting Lanes with Graph of 3D Keypoints](http://arxiv.org/abs/2503.23882v1)** | 2025-03-31 | <details><summary>Accep...</summary><p>Accepted to CVPR 2025</p></details> |
-| **[Resilient Sensor Fusion under Adverse Sensor Failures via Multi-Modal Expert Fusion](http://arxiv.org/abs/2503.19776v2)** | 2025-03-31 | <details><summary>Accep...</summary><p>Accepted to CVPR 2025</p></details> |
-| **[Mitigating Covariate Shift in Imitation Learning for Autonomous Vehicles Using Latent Space Generative World Models](http://arxiv.org/abs/2409.16663v3)** | 2025-03-31 | <details><summary>8 pag...</summary><p>8 pages, 6 figures, updated in March 2025, original published in September 2024, for ICRA 2025 submission, for associated video file, see https://youtu.be/7m3bXzlVQvU</p></details> |
 
 ## Kalman Filter
 | **Title** | **Date** | **Comment** |
@@ -210,16 +210,16 @@ labels: documentation
 ## 3D Gaussian Splatting
 | **Title** | **Date** | **Comment** |
 | --- | --- | --- |
+| **[ActiveGAMER: Active GAussian Mapping through Efficient Rendering](http://arxiv.org/abs/2501.06897v2)** | 2025-04-01 | Accepted to CVPR2025 |
+| **[GaussianRoom: Improving 3D Gaussian Splatting with SDF Guidance and Monocular Cues for Indoor Scene Reconstruction](http://arxiv.org/abs/2405.19671v2)** | 2025-04-01 |  |
+| **[Feed-Forward Bullet-Time Reconstruction of Dynamic Scenes from Monocular Videos](http://arxiv.org/abs/2412.03526v2)** | 2025-04-01 | <details><summary>Proje...</summary><p>Project website: https://research.nvidia.com/labs/toronto-ai/bullet-timer/</p></details> |
+| **[Visual Acoustic Fields](http://arxiv.org/abs/2503.24270v2)** | 2025-04-01 |  |
 | **[StochasticSplats: Stochastic Rasterization for Sorting-Free 3D Gaussian Splatting](http://arxiv.org/abs/2503.24366v1)** | 2025-03-31 |  |
-| **[Visual Acoustic Fields](http://arxiv.org/abs/2503.24270v1)** | 2025-03-31 |  |
 | **[DiET-GS: Diffusion Prior and Event Stream-Assisted Motion Deblurring 3D Gaussian Splatting](http://arxiv.org/abs/2503.24210v1)** | 2025-03-31 | <details><summary>CVPR ...</summary><p>CVPR 2025. Project Page: https://diet-gs.github.io</p></details> |
 | **[Learning 3D-Gaussian Simulators from RGB Videos](http://arxiv.org/abs/2503.24009v1)** | 2025-03-31 |  |
 | **[ExScene: Free-View 3D Scene Reconstruction with Gaussian Splatting from a Single Image](http://arxiv.org/abs/2503.23881v1)** | 2025-03-31 | ICME 2025 |
 | **[Synthetic Prior for Few-Shot Drivable Head Avatar Inversion](http://arxiv.org/abs/2501.06903v3)** | 2025-03-31 | <details><summary>Accep...</summary><p>Accepted to CVPR25 Website: https://zielon.github.io/synshot/</p></details> |
 | **[3D-GSW: 3D Gaussian Splatting for Robust Watermarking](http://arxiv.org/abs/2409.13222v4)** | 2025-03-31 |  |
-| **[Drag Your Gaussian: Effective Drag-Based Editing with Score Distillation for 3D Gaussian Splatting](http://arxiv.org/abs/2501.18672v5)** | 2025-03-31 | <details><summary>Visit...</summary><p>Visit our project page at https://quyans.github.io/Drag-Your-Gaussian</p></details> |
-| **[Disentangled 4D Gaussian Splatting: Towards Faster and More Efficient Dynamic Scene Rendering](http://arxiv.org/abs/2503.22159v2)** | 2025-03-31 |  |
-| **[Gaussian Blending Unit: An Edge GPU Plug-in for Real-Time Gaussian-Based Rendering in AR/VR](http://arxiv.org/abs/2503.23625v1)** | 2025-03-30 | <details><summary>Accep...</summary><p>Accepted by HPCA 2025</p></details> |
 
 ## MVS
 | **Title** | **Date** | **Comment** |
@@ -272,28 +272,28 @@ labels: documentation
 ## Deep Learning
 | **Title** | **Date** | **Comment** |
 | --- | --- | --- |
-| **[NoProp: Training Neural Networks without Back-propagation or Forward-propagation](http://arxiv.org/abs/2503.24322v1)** | 2025-03-31 |  |
-| **[A Double Deep Learning-based Solution for Efficient Event Data Coding and Classification](http://arxiv.org/abs/2407.15531v2)** | 2025-03-31 |  |
-| **[Reversible Decoupling Network for Single Image Reflection Removal](http://arxiv.org/abs/2410.08063v2)** | 2025-03-31 | <details><summary>To ap...</summary><p>To appear at CVPR 2025</p></details> |
-| **[The impact of internal variability on benchmarking deep learning climate emulators](http://arxiv.org/abs/2408.05288v2)** | 2025-03-31 |  |
-| **[GPU-centric Communication Schemes for HPC and ML Applications](http://arxiv.org/abs/2503.24230v1)** | 2025-03-31 | <details><summary>A sur...</summary><p>A surveyor on Communication Schemes for Distributed HPC and ML Applications. Article in consideration for journal publication</p></details> |
-| **[Evolutionary Optimization of Physics-Informed Neural Networks: Survey and Prospects](http://arxiv.org/abs/2501.06572v2)** | 2025-03-31 | <details><summary>20 pa...</summary><p>20 pages, 8 figures, 1 table</p></details> |
-| **[Moving Edge for On-Demand Edge Computing: An Uncertainty-aware Approach](http://arxiv.org/abs/2503.24214v1)** | 2025-03-31 |  |
-| **[Computational Orthodontic Force Simulation: A Review](http://arxiv.org/abs/2503.24195v1)** | 2025-03-31 | <details><summary>19 pa...</summary><p>19 pages, 4 figure, 1 table</p></details> |
-| **[NeuRaLaTeX: A machine learning library written in pure LaTeX](http://arxiv.org/abs/2503.24187v1)** | 2025-03-31 |  |
-| **[Foundation Models For Seismic Data Processing: An Extensive Review](http://arxiv.org/abs/2503.24166v1)** | 2025-03-31 |  |
+| **[Oriented Object Detection in Optical Remote Sensing Images using Deep Learning: A Survey](http://arxiv.org/abs/2302.10473v5)** | 2025-04-01 |  |
+| **[Statistically Testing Training Data for Unwanted Error Patterns using Rule-Oriented Regression](http://arxiv.org/abs/2503.18497v2)** | 2025-04-01 |  |
+| **[SVInvNet: A Densely Connected Encoder-Decoder Architecture for Seismic Velocity Inversion](http://arxiv.org/abs/2312.08194v2)** | 2025-04-01 | <details><summary>This ...</summary><p>This is the preprint of the accepted manuscript to appear in IEEE Transactions on Geoscience and Remote Sensing</p></details> |
+| **[DG-TTA: Out-of-domain Medical Image Segmentation through Augmentation and Descriptor-driven Domain Generalization and Test-Time Adaptation](http://arxiv.org/abs/2312.06275v4)** | 2025-04-01 |  |
+| **[Introducing the Short-Time Fourier Kolmogorov Arnold Network: A Dynamic Graph CNN Approach for Tree Species Classification in 3D Point Clouds](http://arxiv.org/abs/2503.23647v2)** | 2025-04-01 |  |
+| **[Machine Unlearning Fails to Remove Data Poisoning Attacks](http://arxiv.org/abs/2406.17216v2)** | 2025-04-01 | <details><summary>Publi...</summary><p>Published at ICLR 2025</p></details> |
+| **[Causal Concept Graph Models: Beyond Causal Opacity in Deep Learning](http://arxiv.org/abs/2405.16507v6)** | 2025-04-01 |  |
+| **[Lie Detector: Unified Backdoor Detection via Cross-Examination Framework](http://arxiv.org/abs/2503.16872v2)** | 2025-04-01 |  |
+| **[OncoReg: Medical Image Registration for Oncological Challenges](http://arxiv.org/abs/2503.23179v2)** | 2025-04-01 | 26 pages, 6 figures |
+| **[Phaedrus: Predicting Dynamic Application Behavior with Lightweight Generative Models and LLMs](http://arxiv.org/abs/2412.06994v2)** | 2025-04-01 |  |
 
 ## LLM
 | **Title** | **Date** | **Comment** |
 | --- | --- | --- |
-| **[EQ-Negotiator: An Emotion-Reasoning LLM Agent in Credit Dialogues](http://arxiv.org/abs/2503.21080v3)** | 2025-03-31 |  |
-| **[A Systematic Evaluation of LLM Strategies for Mental Health Text Analysis: Fine-tuning vs. Prompt Engineering vs. RAG](http://arxiv.org/abs/2503.24307v1)** | 2025-03-31 |  |
-| **[CASTLE: Benchmarking Dataset for Static Code Analyzers and LLMs towards CWE Detection](http://arxiv.org/abs/2503.09433v2)** | 2025-03-31 |  |
-| **[Enhancing Large Language Models (LLMs) for Telecommunications using Knowledge Graphs and Retrieval-Augmented Generation](http://arxiv.org/abs/2503.24245v1)** | 2025-03-31 | <details><summary>This ...</summary><p>This work has been accepted to ICC 2025 IEEE International Conference on Communications. copyright 2025 IEEE</p></details> |
-| **[Output Constraints as Attack Surface: Exploiting Structured Generation to Bypass LLM Safety Mechanisms](http://arxiv.org/abs/2503.24191v1)** | 2025-03-31 | <details><summary>15 pa...</summary><p>15 pages, 13 figures, 4 tables Work In Progress</p></details> |
-| **[Is LLM the Silver Bullet to Low-Resource Languages Machine Translation?](http://arxiv.org/abs/2503.24102v1)** | 2025-03-31 |  |
-| **[Truth or Mirage? Towards End-to-End Factuality Evaluation with LLM-Oasis](http://arxiv.org/abs/2411.19655v3)** | 2025-03-31 | <details><summary>15 pa...</summary><p>15 pages. To be submitted to CL journal</p></details> |
-| **[Teola: Towards End-to-End Optimization of LLM-based Applications](http://arxiv.org/abs/2407.00326v3)** | 2025-03-31 |  |
-| **[TestART: Improving LLM-based Unit Testing via Co-evolution of Automated Generation and Repair Iteration](http://arxiv.org/abs/2408.03095v6)** | 2025-03-31 |  |
-| **[Towards Scientific Intelligence: A Survey of LLM-based Scientific Agents](http://arxiv.org/abs/2503.24047v1)** | 2025-03-31 | 34 pages, 10 figures |
+| **[Leveraging LLMS for Top-Down Sector Allocation In Automated Trading](http://arxiv.org/abs/2503.09647v3)** | 2025-04-01 |  |
+| **[LLM-Human Pipeline for Cultural Context Grounding of Conversations](http://arxiv.org/abs/2410.13727v2)** | 2025-04-01 | <details><summary>Oral ...</summary><p>Oral at NAACL 2025 Main conference. Albuquerque, USA. Apr 29 - May 4, 2025. 19 pages, 9 figures, 7 tables</p></details> |
+| **[TOMG-Bench: Evaluating LLMs on Text-based Open Molecule Generation](http://arxiv.org/abs/2412.14642v2)** | 2025-04-01 | <details><summary>The f...</summary><p>The first benchmark for text-based open molecule generation</p></details> |
+| **[LLMs Lost in Translation: M-ALERT uncovers Cross-Linguistic Safety Gaps](http://arxiv.org/abs/2412.15035v2)** | 2025-04-01 |  |
+| **[BALROG: Benchmarking Agentic LLM and VLM Reasoning On Games](http://arxiv.org/abs/2411.13543v2)** | 2025-04-01 | <details><summary>Publi...</summary><p>Published as a conference paper at ICLR 2025</p></details> |
+| **[TOBUGraph: Knowledge Graph-Based Retrieval for Enhanced LLM Performance Beyond RAG](http://arxiv.org/abs/2412.05447v2)** | 2025-04-01 |  |
+| **[Towards Robust and Parameter-Efficient Knowledge Unlearning for LLMs](http://arxiv.org/abs/2408.06621v4)** | 2025-04-01 | <details><summary>ICLR ...</summary><p>ICLR 2025 camera-ready version</p></details> |
+| **[Forest-of-Thought: Scaling Test-Time Compute for Enhancing LLM Reasoning](http://arxiv.org/abs/2412.09078v5)** | 2025-04-01 | Preprint |
+| **[HRET: A Self-Evolving LLM Evaluation Toolkit for Korean](http://arxiv.org/abs/2503.22968v2)** | 2025-04-01 |  |
+| **[A Highly Scalable LLM Clusters with Optical Interconnect](http://arxiv.org/abs/2411.01503v3)** | 2025-04-01 |  |
 
