@@ -40,7 +40,7 @@ with open("README.md", "r") as f:
 logging.info("获取关键词列表")
 
 keywords = [
-    "Visual Language Navigation",
+    "visual language navigation",
     "Vision Language Action",
     "Embodied AI",
     "Visual SLAM",
