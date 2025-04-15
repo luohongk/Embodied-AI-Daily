@@ -1,5 +1,5 @@
 ---
-title: Latest 10 Papers - April 15, 2025
+title: Latest 10 Papers - April 16, 2025
 labels: documentation
 ---
 **Please check the [Github](https://github.com/luohongk/DailyArXiv) page for a better reading experience and more papers.**
@@ -254,6 +254,7 @@ labels: documentation
 | **[Towards Scenario- and Capability-Driven Dataset Development and Evaluation: An Approach in the Context of Mapless Automated Driving](http://arxiv.org/abs/2404.19656v2)** | 2025-04-14 |  |
 | **[PG-DPIR: An efficient plug-and-play method for high-count Poisson-Gaussian inverse problems](http://arxiv.org/abs/2504.10375v1)** | 2025-04-14 |  |
 | **[DUE: A Deep Learning Framework and Library for Modeling Unknown Equations](http://arxiv.org/abs/2504.10373v1)** | 2025-04-14 | 28 pages |
+| **[Improving Tropical Cyclone Forecasting With Video Diffusion Models](http://arxiv.org/abs/2501.16003v4)** | 2025-04-14 | <details><summary>Accep...</summary><p>Accepted for spotlight presentation at the ICLR 2025 workshop on Tackling Climate Change with Machine Learning. 7 pages, 7 figures</p></details> |
 
 ## LLM
 | **Title** | **Date** | **Comment** |
