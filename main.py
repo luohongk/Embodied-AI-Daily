@@ -42,7 +42,6 @@ logging.info("获取关键词列表")
 keywords = [
     "Vision and Language Navigation",
     "Vision Language Action",
-    "Embodied AI",
     "Visual SLAM",
     "Visual Inertial SLAM",
     "Visual Inertial Odometry",
@@ -58,7 +57,6 @@ keywords = [
     "Loop Closure Detection",
     "Visual Place Recognition",
     "3D Gaussian Splatting",
-    "MVS",
     "Deep Learning",
     "LLM",
 ]  # TODO add more keywords
