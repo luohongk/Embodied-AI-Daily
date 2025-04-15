@@ -85,7 +85,7 @@ labels: documentation
 | **Title** | **Date** | **Comment** |
 | --- | --- | --- |
 | **[Robust Statistics vs. Machine Learning vs. Bayesian Inference: Insights into Handling Faulty GNSS Measurements in Field Robotics](http://arxiv.org/abs/2504.06015v1)** | 2025-04-08 |  |
-| **[Towards Simple Machine Learning Baselines for GNSS RFI Detection](http://arxiv.org/abs/2504.07993v1)** | 2025-04-08 | <details><summary>arXiv...</summary><p>arXiv admin note: text overlap with arXiv:2405.02678 by other authors</p></details> |
+| **[Towards Simple Machine Learning Baselines for GNSS RFI Detection](http://arxiv.org/abs/2504.07993v2)** | 2025-04-14 |  |
 | **[Evaluation of (Un-)Supervised Machine Learning Methods for GNSS Interference Classification with Real-World Data Discrepancies](http://arxiv.org/abs/2503.23775v1)** | 2025-03-31 | 34 pages, 25 figures |
 | **[Design and Experimental Validation of an Autonomous USV for Sensor Fusion-Based Navigation in GNSS-Denied Environments](http://arxiv.org/abs/2503.23445v1)** | 2025-03-30 | <details><summary>submi...</summary><p>submitted to IEEE OCEANS 2025 Brest</p></details> |
 | **[Learning-based GNSS Uncertainty Quantification using Continuous-Time Factor Graph Optimization](http://arxiv.org/abs/2503.04933v1)** | 2025-03-06 | <details><summary>This ...</summary><p>This extended abstract has been accepted to the 1st German Robotic Conference</p></details> |
@@ -265,7 +265,7 @@ labels: documentation
 | **[RaceVLA: VLA-based Racing Drone Navigation with Human-like Behaviour](http://arxiv.org/abs/2503.02572v1)** | 2025-03-04 | <details><summary>6 pag...</summary><p>6 pages, 6 figures. Submitted to IROS 2025</p></details> |
 | **[CognitiveDrone: A VLA Model and Evaluation Benchmark for Real-Time Cognitive Task Solving and Reasoning in UAVs](http://arxiv.org/abs/2503.01378v1)** | 2025-03-03 | <details><summary>Paper...</summary><p>Paper submitted to the IEEE conference</p></details> |
 | **[VLAS: Vision-Language-Action Model With Speech Instructions For Customized Robot Manipulation](http://arxiv.org/abs/2502.13508v2)** | 2025-02-21 | <details><summary>Accep...</summary><p>Accepted as a conference paper at ICLR 2025</p></details> |
-| **[ConRFT: A Reinforced Fine-tuning Method for VLA Models via Consistency Policy](http://arxiv.org/abs/2502.05450v1)** | 2025-02-08 |  |
+| **[ConRFT: A Reinforced Fine-tuning Method for VLA Models via Consistency Policy](http://arxiv.org/abs/2502.05450v2)** | 2025-04-14 |  |
 | **[A Dual Process VLA: Efficient Robotic Manipulation Leveraging VLM](http://arxiv.org/abs/2410.15549v1)** | 2024-10-21 | 10 page |
 | **[Mobility VLA: Multimodal Instruction Navigation with Long-Context VLMs and Topological Graphs](http://arxiv.org/abs/2407.07775v2)** | 2024-07-12 |  |
 
@@ -286,14 +286,14 @@ labels: documentation
 ## LLM
 | **Title** | **Date** | **Comment** |
 | --- | --- | --- |
-| **[Visual Chronicles: Using Multimodal LLMs to Analyze Massive Collections of Images](http://arxiv.org/abs/2504.08727v1)** | 2025-04-11 | <details><summary>Proje...</summary><p>Project page: https://boyangdeng.com/visual-chronicles; second and third listed authors have equal contributions</p></details> |
+| **[Visual Chronicles: Using Multimodal LLMs to Analyze Massive Collections of Images](http://arxiv.org/abs/2504.08727v2)** | 2025-04-14 | <details><summary>Proje...</summary><p>Project page: https://boyangdeng.com/visual-chronicles , second and third listed authors have equal contributions</p></details> |
 | **[MCP Safety Audit: LLMs with the Model Context Protocol Allow Major Security Exploits](http://arxiv.org/abs/2504.03767v2)** | 2025-04-11 | <details><summary>27 pa...</summary><p>27 pages, 21 figures, and 2 Tables. Cleans up the TeX source</p></details> |
 | **[Variability-Driven User-Story Generation using LLM and Triadic Concept Analysis](http://arxiv.org/abs/2504.08666v1)** | 2025-04-11 | <details><summary>20th ...</summary><p>20th International Conference on Evaluation of Novel Approaches to Software Engineering April 4-6, 2025, in Porto, Portugal</p></details> |
 | **[Do LLMs trust AI regulation? Emerging behaviour of game-theoretic LLM agents](http://arxiv.org/abs/2504.08640v1)** | 2025-04-11 |  |
 | **[An Empirical Study of Conformal Prediction in LLM with ASP Scaffolds for Robust Reasoning](http://arxiv.org/abs/2503.05439v2)** | 2025-04-11 |  |
 | **[MooseAgent: A LLM Based Multi-agent Framework for Automating Moose Simulation](http://arxiv.org/abs/2504.08621v1)** | 2025-04-11 | 7 pages, 2 Figs |
-| **[Analyzing 16,193 LLM Papers for Fun and Profits](http://arxiv.org/abs/2504.08619v1)** | 2025-04-11 |  |
-| **[Task Memory Engine (TME): Enhancing State Awareness for Multi-Step LLM Agent Tasks](http://arxiv.org/abs/2504.08525v1)** | 2025-04-11 | <details><summary>14 pa...</summary><p>14 pages, 5 figures. Preprint prepared for future submission. Includes implementation and token-efficiency analysis. Code at https://github.com/biubiutomato/TME-Agent</p></details> |
+| **[Analyzing 16,193 LLM Papers for Fun and Profits](http://arxiv.org/abs/2504.08619v2)** | 2025-04-14 |  |
+| **[Task Memory Engine (TME): A Structured Memory Framework with Graph-Aware Extensions for Multi-Step LLM Agent Tasks](http://arxiv.org/abs/2504.08525v2)** | 2025-04-14 | <details><summary>14 pa...</summary><p>14 pages, 5 figures. Preprint prepared for future submission. Includes implementation and token-efficiency analysis. Code at https://github.com/biubiutomato/TME-Agent</p></details> |
 | **[SemEval-2025 Task 5: LLMs4Subjects -- LLM-based Automated Subject Tagging for a National Technical Library's Open-Access Catalog](http://arxiv.org/abs/2504.07199v2)** | 2025-04-11 | <details><summary>10 pa...</summary><p>10 pages, 4 figures, Accepted as SemEval 2025 Task 5 description paper</p></details> |
 | **[Using LLMs for Analyzing AIS Data](http://arxiv.org/abs/2504.07557v2)** | 2025-04-11 |  |
 
