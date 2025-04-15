@@ -40,12 +40,14 @@ with open("README.md", "r") as f:
 logging.info("获取关键词列表")
 
 keywords = [
+    "Visual language Navigation",
+    "Vision Language Action",
+    "Embodied AI",
     "Visual SLAM",
     "Visual Inertial SLAM",
     "Visual Inertial Odometry",
     "Lidar SLAM",
     "LiDAR Odometry",
-    "SLAMMOT",
     "GNSS",
     "Graph Optimization",
     "Dynamic SLAM",
@@ -57,9 +59,6 @@ keywords = [
     "Visual Place Recognition",
     "3D Gaussian Splatting",
     "MVS",
-    "Embodied AI",
-    "VLN",
-    "VLA",
     "Deep Learning",
     "LLM",
 ]  # TODO add more keywords
