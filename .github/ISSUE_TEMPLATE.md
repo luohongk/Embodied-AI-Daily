@@ -1,5 +1,5 @@
 ---
-title: Latest 10 Papers - April 20, 2025
+title: Latest 10 Papers - April 21, 2025
 labels: documentation
 ---
 **Please check the [Github](https://github.com/luohongk/DailyArXiv) page for a better reading experience and more papers.**
@@ -35,6 +35,7 @@ labels: documentation
 ## Visual SLAM
 | **Title** | **Date** | **Comment** |
 | --- | --- | --- |
+| **[GroundSLAM: A Robust Visual SLAM System for Warehouse Robots Using Ground Textures](http://arxiv.org/abs/1710.05502v4)** | 2025-04-16 |  |
 | **[Survey on Monocular Metric Depth Estimation](http://arxiv.org/abs/2501.11841v3)** | 2025-04-10 |  |
 | **[VSLAM-LAB: A Comprehensive Framework for Visual SLAM Methods and Datasets](http://arxiv.org/abs/2504.04457v1)** | 2025-04-06 |  |
 | **[SuperEvent: Cross-Modal Learning of Event-based Keypoint Detection](http://arxiv.org/abs/2504.00139v1)** | 2025-03-31 | In Review for ICCV25 |
@@ -44,7 +45,6 @@ labels: documentation
 | **[NF-SLAM: Effective, Normalizing Flow-supported Neural Field representations for object-level visual SLAM in automotive applications](http://arxiv.org/abs/2503.11199v1)** | 2025-03-14 | <details><summary>9 pag...</summary><p>9 pages, 5 figures, IROS 2024</p></details> |
 | **[MonoSLAM: Robust Monocular SLAM with Global Structure Optimization](http://arxiv.org/abs/2503.09296v1)** | 2025-03-12 |  |
 | **[AirSwarm: Enabling Cost-Effective Multi-UAV Research with COTS drones](http://arxiv.org/abs/2503.06890v1)** | 2025-03-10 |  |
-| **[OpenGV 2.0: Motion prior-assisted calibration and SLAM with vehicle-mounted surround-view systems](http://arxiv.org/abs/2503.03230v1)** | 2025-03-05 |  |
 
 ## Visual Inertial SLAM
 | **Title** | **Date** | **Comment** |
