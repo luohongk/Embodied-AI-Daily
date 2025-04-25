@@ -1,5 +1,5 @@
 ---
-title: Latest 10 Papers - April 25, 2025
+title: Latest 10 Papers - April 26, 2025
 labels: documentation
 ---
 **Please check the [Github](https://github.com/luohongk/DailyArXiv) page for a better reading experience and more papers.**
@@ -121,6 +121,14 @@ labels: documentation
 | --- | --- | --- |
 | **[Tightly-Coupled LiDAR-IMU-Wheel Odometry with an Online Neural Kinematic Model Learning via Factor Graph Optimization](http://arxiv.org/abs/2407.08907v5)** | 2025-04-23 | <details><summary>Accep...</summary><p>Accepted by the journal, Robotics and Autonomous Systems</p></details> |
 | **[Disentangled Graph Representation Based on Substructure-Aware Graph Optimal Matching Kernel Convolutional Networks](http://arxiv.org/abs/2504.16360v1)** | 2025-04-23 |  |
+| **[Doppler-SLAM: Doppler-Aided Radar-Inertial and LiDAR-Inertial Simultaneous Localization and Mapping](http://arxiv.org/abs/2504.11634v2)** | 2025-04-18 | 8 pages, 7 figures |
+| **[Region Based SLAM-Aware Exploration: Efficient and Robust Autonomous Mapping Strategy That Can Scale](http://arxiv.org/abs/2504.10416v1)** | 2025-04-14 | 8 pages, 9 figures |
+| **[Experimental Analysis of Quadcopter Drone Hover Constraints for Localization Improvements](http://arxiv.org/abs/2504.07843v1)** | 2025-04-10 |  |
+| **[Semantic SLAM with Rolling-Shutter Cameras and Low-Precision INS in Outdoor Environments](http://arxiv.org/abs/2504.01997v1)** | 2025-04-01 | <details><summary>Accep...</summary><p>Accepted by IEEE IV'25</p></details> |
+| **[Robust simultaneous UWB-anchor calibration and robot localization for emergency situations](http://arxiv.org/abs/2503.22272v1)** | 2025-03-28 |  |
+| **[SLIM: Scalable and Lightweight LiDAR Mapping in Urban Environments](http://arxiv.org/abs/2409.08681v2)** | 2025-03-26 | <details><summary>Accep...</summary><p>Accepted for publication in IEEE Transactions on Robotics. Video: https://youtu.be/8HQnYMf_BWI Code: https://github.com/HKUST-Aerial-Robotics/SLIM</p></details> |
+| **[DynOPETs: A Versatile Benchmark for Dynamic Object Pose Estimation and Tracking in Moving Camera Scenarios](http://arxiv.org/abs/2503.19625v1)** | 2025-03-25 |  |
+| **[MCVO: A Generic Visual Odometry for Arbitrarily Arranged Multi-Cameras](http://arxiv.org/abs/2412.03146v2)** | 2025-03-25 | 8 pages, 8 figures |
 
 ## Dynamic SLAM
 | **Title** | **Date** | **Comment** |
