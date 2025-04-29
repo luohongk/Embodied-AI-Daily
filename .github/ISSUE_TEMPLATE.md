@@ -231,7 +231,7 @@ labels: documentation
 ## 3D Gaussian Splatting
 | **Title** | **Date** | **Comment** |
 | --- | --- | --- |
-| **[RGS-DR: Reflective Gaussian Surfels with Deferred Rendering for Shiny Objects](http://arxiv.org/abs/2504.18468v1)** | 2025-04-25 |  |
+| **[RGS-DR: Reflective Gaussian Surfels with Deferred Rendering for Shiny Objects](http://arxiv.org/abs/2504.18468v2)** | 2025-04-28 |  |
 | **[PerfCam: Digital Twinning for Production Lines Using 3D Gaussian Splatting and Vision Models](http://arxiv.org/abs/2504.18165v1)** | 2025-04-25 |  |
 | **[iVR-GS: Inverse Volume Rendering for Explorable Visualization via Editable 3D Gaussian Splatting](http://arxiv.org/abs/2504.17954v1)** | 2025-04-24 | <details><summary>Accep...</summary><p>Accepted by IEEE Transactions on Visualization and Computer Graphics (TVCG)</p></details> |
 | **[CasualHDRSplat: Robust High Dynamic Range 3D Gaussian Splatting from Casually Captured Videos](http://arxiv.org/abs/2504.17728v1)** | 2025-04-24 | <details><summary>Sourc...</summary><p>Source Code: https://github.com/WU-CVGL/CasualHDRSplat</p></details> |
