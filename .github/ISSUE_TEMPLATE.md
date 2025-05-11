@@ -1,5 +1,5 @@
 ---
-title: Latest 10 Papers - May 11, 2025
+title: Latest 10 Papers - May 12, 2025
 labels: documentation
 ---
 **Please check the [Github](https://github.com/luohongk/DailyArXiv) page for a better reading experience and more papers.**
@@ -253,8 +253,8 @@ labels: documentation
 | **[Advanced Stock Market Prediction Using Long Short-Term Memory Networks: A Comprehensive Deep Learning Framework](http://arxiv.org/abs/2505.05325v1)** | 2025-05-08 | <details><summary>11 pa...</summary><p>11 pages, 17 figures, submitted as a pre-final year undergraduate project at Indian Institute of Information Technology, Gwalior. The paper integrates LSTM-based time series forecasting with sentiment analysis using VADER and includes a working web interface for real-time prediction</p></details> |
 | **[Feature-Augmented Deep Networks for Multiscale Building Segmentation in High-Resolution UAV and Satellite Imagery](http://arxiv.org/abs/2505.05321v1)** | 2025-05-08 | <details><summary>in pr...</summary><p>in preparation for journal submission, 25 pages, 11 figures</p></details> |
 | **[CottonSim: Development of an autonomous visual-guided robotic cotton-picking system in the Gazebo](http://arxiv.org/abs/2505.05317v1)** | 2025-05-08 | <details><summary>45 pa...</summary><p>45 pages, 15 figures, 4 tables</p></details> |
+| **[Deep Optimal Transport for Domain Adaptation on SPD Manifolds](http://arxiv.org/abs/2201.05745v6)** | 2025-05-08 | <details><summary>18 pa...</summary><p>18 pages, 4 figures, 3 tables. This work has been accepted by the Artificial Intelligence. Copyright will be transferred without notice, after which this version may no longer be accessible</p></details> |
 | **[A Dataset and Toolkit for Multiparameter Cardiovascular Physiology Sensing on Rings](http://arxiv.org/abs/2505.04172v2)** | 2025-05-08 |  |
-| **[AirMorph: Topology-Preserving Deep Learning for Pulmonary Airway Analysis](http://arxiv.org/abs/2412.11039v2)** | 2025-05-08 | Under Review |
 
 ## LLM
 | **Title** | **Date** | **Comment** |
