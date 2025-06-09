@@ -5,6 +5,8 @@ import shutil
 import datetime
 from typing import List, Dict
 import urllib, urllib.request
+from urllib.error import URLError, HTTPError
+import logging
 
 import feedparser
 from easydict import EasyDict
