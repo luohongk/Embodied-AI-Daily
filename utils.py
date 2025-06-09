@@ -13,7 +13,7 @@ from easydict import EasyDict
 def remove_duplicated_spaces(text: str) -> str:
     return " ".join(text.split())
 
-def request_paper_with_arXiv_api(keyword: str, max_results: int, link: str = "OR") -> List[Dict[str, str]]:
+def request_paper_with_arXiv_api(keyword: str, max_results: int, link: str = "OR", retries: int = 3, delay: int = 10) -> List[Dict[str, str]]:
     assert link in ["OR", "AND"], "link should be 'OR' or 'AND'"
     keyword = f"\"{keyword}\""
     url = "http://export.arxiv.org/api/query?search_query=ti:{0}+{2}+abs:{0}&max_results={1}&sortBy=lastUpdatedDate".format(
@@ -21,11 +21,20 @@ def request_paper_with_arXiv_api(keyword: str, max_results: int, link: str = "OR
     )
     url = urllib.parse.quote(url, safe="%/:=&?~#+!$,;'@()*[]")
 
-    # ✅ 添加 User-Agent 以避免 arXiv 拒绝连接
     headers = {'User-Agent': 'Mozilla/5.0 (compatible; ArxivFetcher/1.0)'}
     req = urllib.request.Request(url, headers=headers)
-    response = urllib.request.urlopen(req).read().decode('utf-8')
 
+    for attempt in range(retries):
+        try:
+            response = urllib.request.urlopen(req, timeout=20).read().decode('utf-8')
+            break  # 成功则跳出循环
+        except (ConnectionResetError, URLError, HTTPError) as e:
+            logging.warning(f"[尝试 {attempt+1}/{retries}] arXiv 请求失败: {e}")
+            if attempt < retries - 1:
+                time.sleep(delay)
+            else:
+                raise RuntimeError(f"获取 arXiv 数据失败：重试 {retries} 次仍然失败。")
+    
     feed = feedparser.parse(response)
     papers = []
     for entry in feed.entries:
@@ -41,6 +50,7 @@ def request_paper_with_arXiv_api(keyword: str, max_results: int, link: str = "OR
         paper.Date = entry.updated
 
         papers.append(paper)
+
     return papers
 
 def filter_tags(papers: List[Dict[str, str]], target_fileds: List[str]=["cs", "stat"]) -> List[Dict[str, str]]:
