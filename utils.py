@@ -26,16 +26,18 @@ def request_paper_with_arXiv_api(keyword: str, max_results: int, link: str = "OR
     headers = {'User-Agent': 'Mozilla/5.0 (compatible; ArxivFetcher/1.0)'}
     req = urllib.request.Request(url, headers=headers)
 
-    for attempt in range(retries):
+    MAX_RETRIES = 3
+    for attempt in range(MAX_RETRIES):
         try:
+            req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
             response = urllib.request.urlopen(req, timeout=20).read().decode('utf-8')
             break  # 成功则跳出循环
-        except (ConnectionResetError, URLError, HTTPError) as e:
-            logging.warning(f"[尝试 {attempt+1}/{retries}] arXiv 请求失败: {e}")
-            if attempt < retries - 1:
-                time.sleep(delay)
+        except (ConnectionResetError, URLError, HTTPError, socket.timeout) as e:
+            logging.warning(f"Attempt {attempt+1}/{MAX_RETRIES} failed: {e}")
+            if attempt < MAX_RETRIES - 1:
+                time.sleep(2 * (attempt + 1))  # 指数退避
             else:
-                raise RuntimeError(f"获取 arXiv 数据失败：重试 {retries} 次仍然失败。")
+                raise  # 重试结束后仍失败，抛出异常
     
     feed = feedparser.parse(response)
     papers = []
