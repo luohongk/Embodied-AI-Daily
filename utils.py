@@ -26,7 +26,7 @@ def request_paper_with_arXiv_api(keyword: str, max_results: int, link: str = "OR
     headers = {'User-Agent': 'Mozilla/5.0 (compatible; ArxivFetcher/1.0)'}
     req = urllib.request.Request(url, headers=headers)
 
-    MAX_RETRIES = 3
+    MAX_RETRIES = 6
     for attempt in range(MAX_RETRIES):
         try:
             req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})

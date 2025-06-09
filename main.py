@@ -118,7 +118,7 @@ for keyword in keywords:
     f_rm.write("\n\n")
     f_is.write(is_table)
     f_is.write("\n\n")
-    time.sleep(10)  # avoid being blocked by arXiv API
+    time.sleep(7)  # avoid being blocked by arXiv API
 
 f_rm.close()
 f_is.close()
