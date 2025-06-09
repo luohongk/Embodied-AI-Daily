@@ -61,7 +61,7 @@ keywords = [
     "LLM",
 ]  # TODO add more keywords
 
-max_result = 100  # maximum query results from arXiv API for each keyword
+max_result = 80  # maximum query results from arXiv API for each keyword
 issues_result = 10  # maximum papers to be included in the issue
 
 # all columns: Title, Authors, Abstract, Link, Tags, Comment, Date
