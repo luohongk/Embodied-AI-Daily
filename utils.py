@@ -14,33 +14,30 @@ def remove_duplicated_spaces(text: str) -> str:
     return " ".join(text.split())
 
 def request_paper_with_arXiv_api(keyword: str, max_results: int, link: str = "OR") -> List[Dict[str, str]]:
-    # keyword = keyword.replace(" ", "+")
     assert link in ["OR", "AND"], "link should be 'OR' or 'AND'"
-    keyword = "\"" + keyword + "\""
-    url = "http://export.arxiv.org/api/query?search_query=ti:{0}+{2}+abs:{0}&max_results={1}&sortBy=lastUpdatedDate".format(keyword, max_results, link)
+    keyword = f"\"{keyword}\""
+    url = "http://export.arxiv.org/api/query?search_query=ti:{0}+{2}+abs:{0}&max_results={1}&sortBy=lastUpdatedDate".format(
+        keyword, max_results, link
+    )
     url = urllib.parse.quote(url, safe="%/:=&?~#+!$,;'@()*[]")
-    response = urllib.request.urlopen(url).read().decode('utf-8')
-    feed = feedparser.parse(response)
 
-    # NOTE default columns: Title, Authors, Abstract, Link, Tags, Comment, Date
+    # ✅ 添加 User-Agent 以避免 arXiv 拒绝连接
+    headers = {'User-Agent': 'Mozilla/5.0 (compatible; ArxivFetcher/1.0)'}
+    req = urllib.request.Request(url, headers=headers)
+    response = urllib.request.urlopen(req).read().decode('utf-8')
+
+    feed = feedparser.parse(response)
     papers = []
     for entry in feed.entries:
         entry = EasyDict(entry)
         paper = EasyDict()
 
-        # title
         paper.Title = remove_duplicated_spaces(entry.title.replace("\n", " "))
-        # abstract
         paper.Abstract = remove_duplicated_spaces(entry.summary.replace("\n", " "))
-        # authors
         paper.Authors = [remove_duplicated_spaces(_["name"].replace("\n", " ")) for _ in entry.authors]
-        # link
         paper.Link = remove_duplicated_spaces(entry.link.replace("\n", " "))
-        # tags
         paper.Tags = [remove_duplicated_spaces(_["term"].replace("\n", " ")) for _ in entry.tags]
-        # comment
         paper.Comment = remove_duplicated_spaces(entry.get("arxiv_comment", "").replace("\n", " "))
-        # date
         paper.Date = entry.updated
 
         papers.append(paper)
