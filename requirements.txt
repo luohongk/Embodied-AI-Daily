@@ -1,4 +1,3 @@
 easydict
 feedparser
 pytz
-socket
