@@ -109,12 +109,6 @@ labels: documentation
 | **[GNSS Spoofing Detection Based on Opportunistic Position Information](http://arxiv.org/abs/2506.12580v1)** | 2025-06-14 |  |
 | **[GNSS-inertial state initialization by distance residuals](http://arxiv.org/abs/2506.11534v1)** | 2025-06-13 | <details><summary>8 pag...</summary><p>8 pages, 8 figures, RA-L submission</p></details> |
 | **[Automatic Operation of an Articulated Dump Truck: State Estimation by Combined QZSS CLAS and Moving-Base RTK Using Multiple GNSS Receivers](http://arxiv.org/abs/2506.02877v1)** | 2025-06-03 | <details><summary>Accep...</summary><p>Accepted to the ION 2024 Pacific PNT Meeting</p></details> |
-| **[Tram Positioning with Map-Enabled GNSS Data Reconciliation](http://arxiv.org/abs/2506.08032v1)** | 2025-06-02 | <details><summary>Submi...</summary><p>Submitted to European Control Conference 2025</p></details> |
-| **[Long Duration Inspection of GNSS-Denied Environments with a Tethered UAV-UGV Marsupial System](http://arxiv.org/abs/2505.23457v1)** | 2025-05-29 | <details><summary>30 pa...</summary><p>30 pages, 15 figures, 3 tables, 1 algorithm. Submitted to Journal of Intelligent & Robotic Systems</p></details> |
-| **[Robust 2D lidar-based SLAM in arboreal environments without IMU/GNSS](http://arxiv.org/abs/2505.10847v1)** | 2025-05-16 |  |
-| **[Probabilistic detection of GNSS spoofing using opportunistic information](http://arxiv.org/abs/2305.05404v2)** | 2025-05-11 |  |
-| **[Self-Supervised Federated GNSS Spoofing Detection with Opportunistic Data](http://arxiv.org/abs/2505.06171v1)** | 2025-05-09 |  |
-| **[Scalable Aerial GNSS Localization for Marine Robots](http://arxiv.org/abs/2505.04095v1)** | 2025-05-07 | <details><summary>Inter...</summary><p>International Conference on Robotics and Automation 2025 Workshop Robots in the Wild</p></details> |
 
 ## Graph Optimization
 | **Title** | **Date** | **Comment** |
