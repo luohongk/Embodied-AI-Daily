@@ -7,7 +7,7 @@ Only the most recent articles for each keyword are retained, up to a maximum of 
 
 You can click the 'Watch' button to receive daily email notifications.
 
-Last update: 2025-07-03
+Last update: 2025-07-04
 
 ## Vision and Language Navigation
 | **Title** | **Date** | **Abstract** | **Comment** |
