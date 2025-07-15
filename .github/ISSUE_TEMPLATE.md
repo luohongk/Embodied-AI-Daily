@@ -177,7 +177,7 @@ labels: documentation
 | --- | --- | --- |
 | **[GoalNet: Goal Areas Oriented Pedestrian Trajectory Prediction](http://arxiv.org/abs/2402.19002v2)** | 2025-07-11 |  |
 | **[Unreal is all you need: Multimodal ISAC Data Simulation with Only One Engine](http://arxiv.org/abs/2507.08716v1)** | 2025-07-11 |  |
-| **[STRAP: Spatial-Temporal Risk-Attentive Vehicle Trajectory Prediction for Autonomous Driving](http://arxiv.org/abs/2507.08563v1)** | 2025-07-11 | <details><summary>6 pag...</summary><p>6 pages, 3 figures, accepted at ITSC 2025</p></details> |
+| **[STRAP: Spatial-Temporal Risk-Attentive Vehicle Trajectory Prediction for Autonomous Driving](http://arxiv.org/abs/2507.08563v2)** | 2025-07-14 | <details><summary>6 pag...</summary><p>6 pages, 3 figures, accepted at ITSC 2025</p></details> |
 | **[Review of Feed-forward 3D Reconstruction: From DUSt3R to VGGT](http://arxiv.org/abs/2507.08448v1)** | 2025-07-11 |  |
 | **[TPK: Trustworthy Trajectory Prediction Integrating Prior Knowledge For Interpretability and Kinematic Feasibility](http://arxiv.org/abs/2505.06743v2)** | 2025-07-11 | <details><summary>Accep...</summary><p>Accepted in the 36th IEEE Intelligent Vehicles Symposium (IV 2025) for oral presentation. Winner of the best paper award</p></details> |
 | **[Balancing Progress and Safety: A Novel Risk-Aware Objective for RL in Autonomous Driving](http://arxiv.org/abs/2505.06737v2)** | 2025-07-11 | <details><summary>Accep...</summary><p>Accepted in the 36th IEEE Intelligent vehicles Symposium (IV 2025)</p></details> |
@@ -191,9 +191,9 @@ labels: documentation
 | --- | --- | --- |
 | **[LiDAR, GNSS and IMU Sensor Alignment through Dynamic Time Warping to Construct 3D City Maps](http://arxiv.org/abs/2507.08420v1)** | 2025-07-11 | <details><summary>Prepa...</summary><p>Preparing to submit to International Journal of Applied Earth Observation and Geoinformation</p></details> |
 | **[Perspective Chapter: Insights from Kalman Filtering with Correlated Noises Recursive Least-Square Algorithm for State and Parameter Estimation](http://arxiv.org/abs/2507.07588v1)** | 2025-07-10 | Book Chapter |
-| **[Stream Function-Based Navigation for Complex Quadcopter Obstacle Avoidance](http://arxiv.org/abs/2507.06787v1)** | 2025-07-09 |  |
+| **[Stream Function-Based Navigation for Complex Quadcopter Obstacle Avoidance](http://arxiv.org/abs/2507.06787v2)** | 2025-07-13 |  |
 | **[When Trackers Date Fish: A Benchmark and Framework for Underwater Multiple Fish Tracking](http://arxiv.org/abs/2507.06400v1)** | 2025-07-08 |  |
-| **[Transformers Can Solve Non-Linear and Non-Markovian Filtering Problems in Continuous Time For Conditionally Gaussian Signals](http://arxiv.org/abs/2310.19603v3)** | 2025-07-07 |  |
+| **[Transformers Can Solve Non-Linear and Non-Markovian Filtering Problems in Continuous Time For Conditionally Gaussian Signals](http://arxiv.org/abs/2310.19603v4)** | 2025-07-14 |  |
 | **[Kalman Filter Aided Federated Koopman Learning](http://arxiv.org/abs/2507.04808v1)** | 2025-07-07 |  |
 | **[Direct Integration of Recursive Gaussian Process Regression Into Extended Kalman Filters With Application to Vapor Compression Cycle Control](http://arxiv.org/abs/2506.06065v2)** | 2025-07-07 | <details><summary>Accep...</summary><p>Accepted at NOLCOS 2025 (13th IFAC Symposium on Nonlinear Control Systems)</p></details> |
 | **[The Difference between the Left and Right Invariant Extended Kalman Filter](http://arxiv.org/abs/2507.04568v1)** | 2025-07-06 | 20 pages, 4 figures |
