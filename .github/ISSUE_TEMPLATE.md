@@ -1,5 +1,5 @@
 ---
-title: Latest 10 Papers - August 07, 2025
+title: Latest 10 Papers - August 08, 2025
 labels: documentation
 ---
 **Please check the [Github](https://github.com/luohongk/DailyArXiv) page for a better reading experience and more papers.**
@@ -120,6 +120,15 @@ labels: documentation
 | **Title** | **Date** | **Comment** |
 | --- | --- | --- |
 | **[RiemanLine: Riemannian Manifold Representation of 3D Lines for Factor Graph Optimization](http://arxiv.org/abs/2508.04335v1)** | 2025-08-06 |  |
+| **[Doppler-SLAM: Doppler-Aided Radar-Inertial and LiDAR-Inertial Simultaneous Localization and Mapping](http://arxiv.org/abs/2504.11634v3)** | 2025-08-05 | 8 pages, 7 figures |
+| **[Polymath: A Self-Optimizing Agent with Dynamic Hierarchical Workflow](http://arxiv.org/abs/2508.02959v1)** | 2025-08-04 | <details><summary>18 pa...</summary><p>18 pages, 12 figures, under review for AAAI2026</p></details> |
+| **[SGAD: Semantic and Geometric-aware Descriptor for Local Feature Matching](http://arxiv.org/abs/2508.02278v1)** | 2025-08-04 |  |
+| **[Flow Sensitivity without Control Flow Graph: An Efficient Andersen-Style Flow-Sensitive Pointer Analysis](http://arxiv.org/abs/2508.01974v1)** | 2025-08-04 |  |
+| **[GSFusion:Globally Optimized LiDAR-Inertial-Visual Mapping for Gaussian Splatting](http://arxiv.org/abs/2507.23273v1)** | 2025-07-31 |  |
+| **[Cycles Protocol: A Peer-to-Peer Electronic Clearing System](http://arxiv.org/abs/2507.22309v1)** | 2025-07-30 | 28 pages, 15 figures |
+| **[Uni-Mapper: Unified Mapping Framework for Multi-modal LiDARs in Complex and Dynamic Environments](http://arxiv.org/abs/2507.20538v1)** | 2025-07-28 | 18 pages, 14 figures |
+| **[AF-RLIO: Adaptive Fusion of Radar-LiDAR-Inertial Information for Robust Odometry in Challenging Environments](http://arxiv.org/abs/2507.18317v1)** | 2025-07-24 |  |
+| **[Leveraging Semantic Graphs for Efficient and Robust LiDAR SLAM](http://arxiv.org/abs/2503.11145v2)** | 2025-07-21 | <details><summary>8 pag...</summary><p>8 pages, 4 figures,Accpted for IROS 2025</p></details> |
 
 ## Dynamic SLAM
 | **Title** | **Date** | **Comment** |
