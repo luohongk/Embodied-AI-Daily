@@ -1,5 +1,5 @@
 ---
-title: Latest 10 Papers - August 19, 2025
+title: Latest 10 Papers - August 20, 2025
 labels: documentation
 ---
 **Please check the [Github](https://github.com/luohongk/DailyArXiv) page for a better reading experience and more papers.**
@@ -50,6 +50,15 @@ labels: documentation
 | **Title** | **Date** | **Comment** |
 | --- | --- | --- |
 | **[Scalable Outdoors Autonomous Drone Flight with Visual-Inertial SLAM and Dense Submaps Built without LiDAR](http://arxiv.org/abs/2403.09596v2)** | 2025-08-01 | 8 pages, 8 figures |
+| **[AQUA-SLAM: Tightly-Coupled Underwater Acoustic-Visual-Inertial SLAM with Sensor Calibration](http://arxiv.org/abs/2503.11420v1)** | 2025-03-14 |  |
+| **[Visual-Inertial SLAM for Unstructured Outdoor Environments: Benchmarking the Benefits and Computational Costs of Loop Closing](http://arxiv.org/abs/2408.01716v2)** | 2025-03-07 | <details><summary>22 pa...</summary><p>22 pages, 8 figures, 7 tables</p></details> |
+| **[Uncertainty-Aware Visual-Inertial SLAM with Volumetric Occupancy Mapping](http://arxiv.org/abs/2409.12051v3)** | 2025-03-07 | <details><summary>7 pag...</summary><p>7 pages, 4 figures, 5 tables, accepted in ICRA 2025</p></details> |
+| **[Efficient Submap-based Autonomous MAV Exploration using Visual-Inertial SLAM Configurable for LiDARs or Depth Cameras](http://arxiv.org/abs/2409.16972v2)** | 2025-03-05 | <details><summary>In pr...</summary><p>In proceedings of the IEEE International Conference on Robotics and Automation, 2025. 7 pages, 8 figures, for the accompanying video see https://youtu.be/Uf5fwmYcuq4</p></details> |
+| **[MLINE-VINS: Robust Monocular Visual-Inertial SLAM With Flow Manhattan and Line Features](http://arxiv.org/abs/2503.01571v1)** | 2025-03-03 |  |
+| **[RUSSO: Robust Underwater SLAM with Sonar Optimization against Visual Degradation](http://arxiv.org/abs/2503.01434v1)** | 2025-03-03 |  |
+| **[LVI-GS: Tightly-coupled LiDAR-Visual-Inertial SLAM using 3D Gaussian Splatting](http://arxiv.org/abs/2411.02703v1)** | 2024-11-05 |  |
+| **[SuperVINS: A Real-Time Visual-Inertial SLAM Framework for Challenging Imaging Conditions](http://arxiv.org/abs/2407.21348v2)** | 2024-11-03 |  |
+| **[Visual-Inertial SLAM as Simple as A, B, VINS](http://arxiv.org/abs/2406.05969v3)** | 2024-09-22 | Submitted to T-RO |
 
 ## Visual Inertial Odometry
 | **Title** | **Date** | **Comment** |
@@ -129,11 +138,6 @@ labels: documentation
 | **[GARAD-SLAM: 3D GAussian splatting for Real-time Anti Dynamic SLAM](http://arxiv.org/abs/2502.03228v2)** | 2025-02-18 | <details><summary>The p...</summary><p>The paper was accepted by ICRA 2025</p></details> |
 | **[DynoSAM: Open-Source Smoothing and Mapping Framework for Dynamic SLAM](http://arxiv.org/abs/2501.11893v2)** | 2025-02-14 | <details><summary>20 pa...</summary><p>20 pages, 10 figures. Submitted to T-RO Visual SLAM SI 2025</p></details> |
 | **[TivNe-SLAM: Dynamic Mapping and Tracking via Time-Varying Neural Radiance Fields](http://arxiv.org/abs/2310.18917v7)** | 2025-02-10 |  |
-| **[DGS-SLAM: Gaussian Splatting SLAM in Dynamic Environment](http://arxiv.org/abs/2411.10722v1)** | 2024-11-16 | <details><summary>Prepr...</summary><p>Preprint, Under review</p></details> |
-| **[MLP-SLAM: Multilayer Perceptron-Based Simultaneous Localization and Mapping With a Dynamic and Static Object Discriminator](http://arxiv.org/abs/2410.10669v1)** | 2024-10-14 | Dynamic SLAM |
-| **[The Importance of Coordinate Frames in Dynamic SLAM](http://arxiv.org/abs/2312.04031v2)** | 2024-09-30 | <details><summary>7 pag...</summary><p>7 pages, 4 figures, accepted by ICRA 2024</p></details> |
-| **[DynORecon: Dynamic Object Reconstruction for Navigation](http://arxiv.org/abs/2409.19928v1)** | 2024-09-30 | <details><summary>7 pag...</summary><p>7 pages, 6 figures, submitted to ICRA 2025</p></details> |
-| **[D$^3$FlowSLAM: Self-Supervised Dynamic SLAM with Flow Motion Decomposition and DINO Guidance](http://arxiv.org/abs/2207.08794v4)** | 2024-08-21 | <details><summary>Homep...</summary><p>Homepage: https://zju3dv.github.io/deflowslam</p></details> |
 
 ## Semantic SLAM
 | **Title** | **Date** | **Comment** |
@@ -157,11 +161,6 @@ labels: documentation
 | **[UP-SLAM: Adaptively Structured Gaussian SLAM with Uncertainty Prediction in Dynamic Environments](http://arxiv.org/abs/2505.22335v1)** | 2025-05-28 |  |
 | **[VPGS-SLAM: Voxel-based Progressive 3D Gaussian SLAM in Large-Scale Scenes](http://arxiv.org/abs/2505.18992v1)** | 2025-05-25 |  |
 | **[HI-SLAM2: Geometry-Aware Gaussian SLAM for Fast Monocular Scene Reconstruction](http://arxiv.org/abs/2411.17982v2)** | 2025-04-29 | Under review process |
-| **[Gaussian Scenes: Pose-Free Sparse-View Scene Reconstruction using Depth-Enhanced Diffusion Priors](http://arxiv.org/abs/2411.15966v2)** | 2025-04-05 | <details><summary>Proje...</summary><p>Project page is available at https://gaussianscenes.github.io/</p></details> |
-| **[MonoGS++: Fast and Accurate Monocular RGB Gaussian SLAM](http://arxiv.org/abs/2504.02437v1)** | 2025-04-03 |  |
-| **[MG-SLAM: Structure Gaussian Splatting SLAM with Manhattan World Hypothesis](http://arxiv.org/abs/2405.20031v3)** | 2025-03-20 |  |
-| **[Open-Vocabulary Online Semantic Mapping for SLAM](http://arxiv.org/abs/2411.15043v2)** | 2025-03-10 |  |
-| **[DenseSplat: Densifying Gaussian Splatting SLAM with Neural Radiance Prior](http://arxiv.org/abs/2502.09111v1)** | 2025-02-13 |  |
 
 ## Autonomous Driving
 | **Title** | **Date** | **Comment** |
@@ -171,11 +170,6 @@ labels: documentation
 | **[RIFT: Closed-Loop RL Fine-Tuning for Realistic and Controllable Traffic Simulation](http://arxiv.org/abs/2505.03344v2)** | 2025-08-18 |  |
 | **[SpotVLM: Cloud-edge Collaborative Real-time VLM based on Context Transfer](http://arxiv.org/abs/2508.12638v1)** | 2025-08-18 |  |
 | **[DCT-MARL: A Dynamic Communication Topology-Based MARL Algorithm for Connected Vehicle Platoon Control](http://arxiv.org/abs/2508.12633v1)** | 2025-08-18 |  |
-| **[ViLaD: A Large Vision Language Diffusion Framework for End-to-End Autonomous Driving](http://arxiv.org/abs/2508.12603v1)** | 2025-08-18 |  |
-| **[HQ-OV3D: A High Box Quality Open-World 3D Detection Framework based on Diffision Model](http://arxiv.org/abs/2508.10935v2)** | 2025-08-18 |  |
-| **[XAMT: Cross-Framework API Matching for Testing Deep Learning Libraries](http://arxiv.org/abs/2508.12546v1)** | 2025-08-18 |  |
-| **[An Initial Study of Bird's-Eye View Generation for Autonomous Vehicles using Cross-View Transformers](http://arxiv.org/abs/2508.12520v1)** | 2025-08-17 | <details><summary>12 pa...</summary><p>12 pages,submitted in ENIAC 2025</p></details> |
-| **[LMAD: Integrated End-to-End Vision-Language Model for Explainable Autonomous Driving](http://arxiv.org/abs/2508.12404v1)** | 2025-08-17 | 7 pages, 4 figures, |
 
 ## Kalman Filter
 | **Title** | **Date** | **Comment** |
@@ -223,15 +217,6 @@ labels: documentation
 | **Title** | **Date** | **Comment** |
 | --- | --- | --- |
 | **[IntelliCap: Intelligent Guidance for Consistent View Sampling](http://arxiv.org/abs/2508.13043v1)** | 2025-08-18 | <details><summary>This ...</summary><p>This work is a pre-print version of a paper that has been accepted to the IEEE International Symposium on Mixed and Augmented Reality for future publication. Project Page: https://mediated-reality.github.io/projects/yasunaga_ismar25/</p></details> |
-| **[Casual3DHDR: Deblurring High Dynamic Range 3D Gaussian Splatting from Casually Captured Videos](http://arxiv.org/abs/2504.17728v3)** | 2025-08-18 | <details><summary>Accep...</summary><p>Accepted to ACM Multimedia 2025. Project page: https://lingzhezhao.github.io/CasualHDRSplat/</p></details> |
-| **[Quantifying and Alleviating Co-Adaptation in Sparse-View 3D Gaussian Splatting](http://arxiv.org/abs/2508.12720v1)** | 2025-08-18 | <details><summary>Under...</summary><p>Under review. Project page: https://chenkangjie1123.github.io/Co-Adaptation-3DGS/</p></details> |
-| **[TiP4GEN: Text to Immersive Panorama 4D Scene Generation](http://arxiv.org/abs/2508.12415v1)** | 2025-08-17 |  |
-| **[Improving Densification in 3D Gaussian Splatting for High-Fidelity Rendering](http://arxiv.org/abs/2508.12313v1)** | 2025-08-17 | <details><summary>Proje...</summary><p>Project page: https://xiaobin2001.github.io/improved-gs-web</p></details> |
-| **[InstDrive: Instance-Aware 3D Gaussian Splatting for Driving Scenes](http://arxiv.org/abs/2508.12015v1)** | 2025-08-16 |  |
-| **[ComplicitSplat: Downstream Models are Vulnerable to Blackbox Attacks by 3D Gaussian Splat Camouflages](http://arxiv.org/abs/2508.11854v1)** | 2025-08-16 | 7 pages, 6 figures |
-| **[Remove360: Benchmarking Residuals After Object Removal in 3D Gaussian Splatting](http://arxiv.org/abs/2508.11431v1)** | 2025-08-15 | <details><summary>arXiv...</summary><p>arXiv admin note: substantial text overlap with arXiv:2503.17574</p></details> |
-| **[Multi-Sample Anti-Aliasing and Constrained Optimization for 3D Gaussian Splatting](http://arxiv.org/abs/2508.10507v1)** | 2025-08-14 |  |
-| **[Speedy-Splat: Fast 3D Gaussian Splatting with Sparse Pixels and Sparse Primitives](http://arxiv.org/abs/2412.00578v3)** | 2025-08-14 | <details><summary>CVPR ...</summary><p>CVPR 2025, Project Page: https://speedysplat.github.io/</p></details> |
 
 ## Deep Learning
 | **Title** | **Date** | **Comment** |
@@ -244,8 +229,6 @@ labels: documentation
 | **[An MRP Formulation for Supervised Learning: Generalized Temporal Difference Learning Models](http://arxiv.org/abs/2404.15518v4)** | 2025-08-18 | <details><summary>Accep...</summary><p>Accepted by JAIR. The abstract above is more concise than the one in the paper to meet the requirements of the arXiv website</p></details> |
 | **[When Deep Learning Fails: Limitations of Recurrent Models on Stroke-Based Handwriting for Alzheimer's Disease Detection](http://arxiv.org/abs/2508.03773v2)** | 2025-08-18 |  |
 | **[Synchronization and semantization in deep spiking networks](http://arxiv.org/abs/2508.12975v1)** | 2025-08-18 | <details><summary>16 pa...</summary><p>16 pages, 4 figures, 4 supplementary figures</p></details> |
-| **[Multi-Phase Automated Segmentation of Dental Structures in CBCT Using a Lightweight Auto3DSeg and SegResNet Implementation](http://arxiv.org/abs/2508.12962v1)** | 2025-08-18 | <details><summary>MICCA...</summary><p>MICCAI. ToothFairy3, 16 pages, 5 figures, 1 table</p></details> |
-| **[FoleySpace: Vision-Aligned Binaural Spatial Audio Generation](http://arxiv.org/abs/2508.12918v1)** | 2025-08-18 |  |
 
 ## LLM
 | **Title** | **Date** | **Comment** |
