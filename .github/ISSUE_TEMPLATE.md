@@ -1,5 +1,5 @@
 ---
-title: Latest 10 Papers - August 31, 2025
+title: Latest 10 Papers - September 01, 2025
 labels: documentation
 ---
 **Please check the [Github](https://github.com/luohongk/DailyArXiv) page for a better reading experience and more papers.**
@@ -246,6 +246,15 @@ labels: documentation
 | **Title** | **Date** | **Comment** |
 | --- | --- | --- |
 | **[From Promise to Practical Reality: Transforming Diffusion MRI Analysis with Fast Deep Learning Enhancement](http://arxiv.org/abs/2508.10950v2)** | 2025-08-28 | 24 pages, 5 figures |
+| **[ExpertSim: Fast Particle Detector Simulation Using Mixture-of-Generative-Experts](http://arxiv.org/abs/2508.20991v1)** | 2025-08-28 | <details><summary>Accep...</summary><p>Accepted at ECAI 2025 28th European Conference on Artificial Intelligence</p></details> |
+| **[InterAct-Video: Reasoning-Rich Video QA for Urban Traffic](http://arxiv.org/abs/2507.14743v3)** | 2025-08-28 |  |
+| **[SaRoHead: Detecting Satire in a Multi-Domain Romanian News Headline Dataset](http://arxiv.org/abs/2504.07612v2)** | 2025-08-28 | 13 pages, 2 figures |
+| **[Efficient Large-Scale Cross-Domain Sequential Recommendation with Dynamic State Representations](http://arxiv.org/abs/2508.20945v1)** | 2025-08-28 | 4 pages |
+| **[An MLP Baseline for Handwriting Recognition Using Planar Curvature and Gradient Orientation](http://arxiv.org/abs/2508.11803v3)** | 2025-08-28 | 5 pages, No figure |
+| **[Deep Learning Based Concurrency Bug Detection and Localization](http://arxiv.org/abs/2508.20911v1)** | 2025-08-28 |  |
+| **[HAS-GPU: Efficient Hybrid Auto-scaling with Fine-grained GPU Allocation for SLO-aware Serverless Inferences](http://arxiv.org/abs/2505.01968v2)** | 2025-08-28 | <details><summary>The p...</summary><p>The paper has been accepted by Euro-Par 2025</p></details> |
+| **[Deep Learning Framework for Early Detection of Pancreatic Cancer Using Multi-Modal Medical Imaging Analysis](http://arxiv.org/abs/2508.20877v1)** | 2025-08-28 | 21 pages, 17 figure |
+| **[AI Agentic Vulnerability Injection And Transformation with Optimized Reasoning](http://arxiv.org/abs/2508.20866v1)** | 2025-08-28 |  |
 
 ## LLM
 | **Title** | **Date** | **Comment** |
