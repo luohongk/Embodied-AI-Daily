@@ -81,12 +81,18 @@ f_rm.write(
 
 _Automatically fetches the latest arXiv papers on **VLN · VLA · SLAM · 3D · Embodied AI**_
 
-![Daily Update](https://img.shields.io/badge/Update-Daily-brightgreen.svg)
-![Arxiv Source](https://img.shields.io/badge/Source-arXiv-red.svg)
-![Topics](https://img.shields.io/badge/Papers-VLN·VLA·SLAM·3D-blue.svg)
-![Stars](https://img.shields.io/github/stars/luohongk/Embodied-AI-Daily?style=social)
-![Author](https://img.shields.io/badge/Author-luohongk-blueviolet.svg)
-![Homepage](https://img.shields.io/badge/Homepage-GitHub-9cf.svg?link=https%3A%2F%2Fgithub.com%2Fluohongk)
+<p>
+  <img src="https://img.shields.io/badge/Update-Daily-brightgreen.svg" alt="每日更新">
+  <img src="https://img.shields.io/badge/Source-arXiv-red.svg" alt="来源：arXiv">
+  <img src="https://img.shields.io/badge/Papers-VLN·VLA·SLAM·3D-blue.svg" alt="论文主题：VLN·VLA·SLAM·3D">
+  <img src="https://img.shields.io/github/stars/luohongk/Embodied-AI-Daily?style=social" alt="GitHub Stars">
+  <a href="https://github.com/luohongk" target="_blank">
+    <img src="https://img.shields.io/badge/Author-luohongkun-blueviolet.svg" alt="作者：luohongk">
+  </a>
+  <a href="https://luohongkun.top/resume/" target="_blank">
+    <img src="https://img.shields.io/badge/Homepage-www.luohongkun.top-9cf.svg" alt="主页：GitHub">
+  </a>
+</p>
 
 
 </div>
