@@ -1,5 +1,5 @@
 ---
-title: Latest 10 Papers - September 02, 2025
+title: Latest 10 Papers - September 03, 2025
 labels: documentation
 ---
 **Please check the [Github](https://github.com/luohongk/DailyArXiv) page for a better reading experience and more papers.**
@@ -195,6 +195,15 @@ labels: documentation
 | **Title** | **Date** | **Comment** |
 | --- | --- | --- |
 | **[ROVER: Robust Loop Closure Verification with Trajectory Prior in Repetitive Environments](http://arxiv.org/abs/2508.13488v1)** | 2025-08-19 | 8 pages, 9 figures |
+| **[A Pseudo Global Fusion Paradigm-Based Cross-View Network for LiDAR-Based Place Recognition](http://arxiv.org/abs/2508.08917v1)** | 2025-08-12 |  |
+| **[DRACo-SLAM2: Distributed Robust Acoustic Communication-efficient SLAM for Imaging Sonar EquippedUnderwater Robot Teams with Object Graph Matching](http://arxiv.org/abs/2507.23629v1)** | 2025-07-31 |  |
+| **[Uni-Mapper: Unified Mapping Framework for Multi-modal LiDARs in Complex and Dynamic Environments](http://arxiv.org/abs/2507.20538v1)** | 2025-07-28 | 18 pages, 14 figures |
+| **[LoopNet: A Multitasking Few-Shot Learning Approach for Loop Closure in Large Scale SLAM](http://arxiv.org/abs/2507.15109v1)** | 2025-07-20 |  |
+| **[SlideSLAM: Sparse, Lightweight, Decentralized Metric-Semantic SLAM for Multi-Robot Navigation](http://arxiv.org/abs/2406.17249v6)** | 2025-07-19 | <details><summary>Xu Li...</summary><p>Xu Liu, Jiuzhou Lei, and Ankit Prabhu contributed equally to this work</p></details> |
+| **[BEV-LIO(LC): BEV Image Assisted LiDAR-Inertial Odometry with Loop Closure](http://arxiv.org/abs/2502.19242v2)** | 2025-07-17 |  |
+| **[LiDAR, GNSS and IMU Sensor Alignment through Dynamic Time Warping to Construct 3D City Maps](http://arxiv.org/abs/2507.08420v1)** | 2025-07-11 | <details><summary>Prepa...</summary><p>Preparing to submit to International Journal of Applied Earth Observation and Geoinformation</p></details> |
+| **[CU-Multi: A Dataset for Multi-Robot Data Association](http://arxiv.org/abs/2505.17576v2)** | 2025-07-02 | <details><summary>8 pag...</summary><p>8 pages, 6 figures, 4 tables</p></details> |
+| **[BEVPlace++: Fast, Robust, and Lightweight LiDAR Global Localization for Unmanned Ground Vehicles](http://arxiv.org/abs/2408.01841v3)** | 2025-06-25 | <details><summary>Accep...</summary><p>Accepted to IEEE Transactions on Robotics</p></details> |
 
 ## Visual Place Recognition
 | **Title** | **Date** | **Comment** |
@@ -228,15 +237,6 @@ labels: documentation
 | **Title** | **Date** | **Comment** |
 | --- | --- | --- |
 | **[Single Domain Generalization for Multimodal Cross-Cancer Prognosis via Dirac Rebalancer and Distribution Entanglement](http://arxiv.org/abs/2507.08340v2)** | 2025-08-29 | Accepted by ACMMM 25 |
-| **[CHaRM: Conditioned Heatmap Regression Methodology for Accurate and Fast Dental Landmark Localization](http://arxiv.org/abs/2501.13073v5)** | 2025-08-29 |  |
-| **[Quantized Neural Networks for Microcontrollers: A Comprehensive Review of Methods, Platforms, and Applications](http://arxiv.org/abs/2508.15008v2)** | 2025-08-29 | <details><summary>39 pa...</summary><p>39 pages, 16 figures, 8 Tables, submitted to the Proceedings of the IEEE</p></details> |
-| **[Unfolding Framework with Complex-Valued Deformable Attention for High-Quality Computer-Generated Hologram Generation](http://arxiv.org/abs/2508.21657v1)** | 2025-08-29 |  |
-| **[Detecting Stealthy Data Poisoning Attacks in AI Code Generators](http://arxiv.org/abs/2508.21636v1)** | 2025-08-29 | <details><summary>Accep...</summary><p>Accepted to the 3rd IEEE International Workshop on Reliable and Secure AI for Software Engineering (ReSAISE, 2025), co-located with ISSRE 2025</p></details> |
-| **[Physics-Informed Spectral Modeling for Hyperspectral Imaging](http://arxiv.org/abs/2508.21618v1)** | 2025-08-29 |  |
-| **[Adaptive Visual Navigation Assistant in 3D RPGs](http://arxiv.org/abs/2508.18539v2)** | 2025-08-29 |  |
-| **[Integrating Pathology and CT Imaging for Personalized Recurrence Risk Prediction in Renal Cancer](http://arxiv.org/abs/2508.21581v1)** | 2025-08-29 | <details><summary>12 pa...</summary><p>12 pages, 2 figures, 1 table. Accepted at the Multimodal Learning and Fusion Across Scales for Clinical Decision Support (ML-CDS) Workshop, MICCAI 2025. This is the submitted version with authors, affiliations, and acknowledgements included; it has not undergone peer review or revisions. The final version will appear in the Springer Lecture Notes in Computer Science (LNCS) proceedings</p></details> |
-| **[Temporal Flow Matching for Learning Spatio-Temporal Trajectories in 4D Longitudinal Medical Imaging](http://arxiv.org/abs/2508.21580v1)** | 2025-08-29 |  |
-| **[Maximising Kidney Glomeruli Segmentation using Minimal Labels via Self-Supervision](http://arxiv.org/abs/2412.15389v2)** | 2025-08-29 | <details><summary>35 pa...</summary><p>35 pages, 10 figures, 3 Tables</p></details> |
 
 ## LLM
 | **Title** | **Date** | **Comment** |
