@@ -73,12 +73,36 @@ back_up_files()  # back up README.md and ISSUE_TEMPLATE.md
 
 logging.info("获取每日论文")
 # write to README.md
-f_rm = open("README.md", "w")  # file for README.md
-f_rm.write("# Daily Papers\n")
+f_rm = open("README.md", "w", encoding="utf-8")
 f_rm.write(
-    "The project automatically fetches the latest papers from arXiv based on keywords.\n\nThe subheadings in the README file represent the search keywords.\n\nOnly the most recent articles for each keyword are retained, up to a maximum of 100 papers.\n\nYou can click the 'Watch' button to receive daily email notifications.\n\nLast update: {0}\n\n".format(
-        current_date
-    )
+    """<div align="center">
+
+# 🚀 Embodied-AI-Daily
+
+_Automatically fetches the latest arXiv papers on **VLN · VLA · SLAM · 3D · Embodied AI**_
+
+![Daily Update](https://img.shields.io/badge/Update-Daily-brightgreen.svg)
+![Arxiv Source](https://img.shields.io/badge/Source-arXiv-red.svg)
+![Topics](https://img.shields.io/badge/Papers-VLN·VLA·SLAM·3D-blue.svg)
+![License](https://img.shields.io/github/license/luohongk/Embodied-AI-Daily)
+![Stars](https://img.shields.io/github/stars/luohongk/Embodied-AI-Daily?style=social)
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/9/95/ArXiv_logo_2022.svg" height="80">
+
+</div>
+
+---
+
+## 📌 About
+This project automatically fetches the latest papers from **arXiv** based on predefined keywords.  
+- Each section in the README corresponds to a **search keyword**.  
+- Only the most recent papers are kept (up to **100 per keyword**).  
+- Click **Watch** (👀) on the repo to get **daily email notifications**.
+
+_Last update: {0}_
+
+---
+""".format(current_date)
 )
 logging.info("生成readme")
 # write to ISSUE_TEMPLATE.md
