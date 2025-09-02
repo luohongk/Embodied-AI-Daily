@@ -84,10 +84,10 @@ _Automatically fetches the latest arXiv papers on **VLN · VLA · SLAM · 3D · 
 ![Daily Update](https://img.shields.io/badge/Update-Daily-brightgreen.svg)
 ![Arxiv Source](https://img.shields.io/badge/Source-arXiv-red.svg)
 ![Topics](https://img.shields.io/badge/Papers-VLN·VLA·SLAM·3D-blue.svg)
-![License](https://img.shields.io/github/license/luohongk/Embodied-AI-Daily)
 ![Stars](https://img.shields.io/github/stars/luohongk/Embodied-AI-Daily?style=social)
+![Author](https://img.shields.io/badge/Author-luohongk-blueviolet.svg)
+![Homepage](https://img.shields.io/badge/Homepage-GitHub-9cf.svg?link=https%3A%2F%2Fgithub.com%2Fluohongk)
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/9/95/ArXiv_logo_2022.svg" height="80">
 
 </div>
 
