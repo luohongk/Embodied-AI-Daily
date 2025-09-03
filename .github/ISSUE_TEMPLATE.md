@@ -1,5 +1,5 @@
 ---
-title: Latest 10 Papers - September 03, 2025
+title: Latest 10 Papers - September 04, 2025
 labels: documentation
 ---
 **Please check the [Github](https://github.com/luohongk/DailyArXiv) page for a better reading experience and more papers.**
@@ -264,9 +264,4 @@ labels: documentation
 | **[Agent Trading Arena: A Study on Numerical Understanding in LLM-Based Agents](http://arxiv.org/abs/2502.17967v2)** | 2025-09-02 |  |
 | **[Benchmarking LLM Privacy Recognition for Social Robot Decision Making](http://arxiv.org/abs/2507.16124v2)** | 2025-09-01 | <details><summary>18 pa...</summary><p>18 pages, 7 figures. Dakota Sullivan and Shirley Zhang contributed equally to this work</p></details> |
 | **[ExCyTIn-Bench: Evaluating LLM agents on Cyber Threat Investigation](http://arxiv.org/abs/2507.14201v2)** | 2025-09-01 | Add code link |
-| **[TRACE-CS: A Hybrid Logic-LLM System for Explainable Course Scheduling](http://arxiv.org/abs/2409.03671v3)** | 2025-09-01 |  |
-| **[RALLY: Role-Adaptive LLM-Driven Yoked Navigation for Agentic UAV Swarms](http://arxiv.org/abs/2507.01378v2)** | 2025-09-01 |  |
-| **[Multiple LLM Agents Debate for Equitable Cultural Alignment](http://arxiv.org/abs/2505.24671v2)** | 2025-09-01 | ACL 2025 (Oral) |
-| **[MSNav: Zero-Shot Vision-and-Language Navigation with Dynamic Memory and LLM Spatial Reasoning](http://arxiv.org/abs/2508.16654v2)** | 2025-09-01 | 19 pages, 15 figures |
-| **[Adaptively Robust LLM Inference Optimization under Prediction Uncertainty](http://arxiv.org/abs/2508.14544v2)** | 2025-09-01 |  |
 
