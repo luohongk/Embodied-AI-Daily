@@ -25,7 +25,7 @@ labels: documentation
 | **[FPC-VLA: A Vision-Language-Action Framework with a Supervisor for Failure Prediction and Correction](http://arxiv.org/abs/2509.04018v1)** | 2025-09-04 |  |
 | **[ClutterDexGrasp: A Sim-to-Real System for General Dexterous Grasping in Cluttered Scenes](http://arxiv.org/abs/2506.14317v3)** | 2025-09-04 | <details><summary>Accep...</summary><p>Accepted at CoRL 2025</p></details> |
 | **[ANNIE: Be Careful of Your Robots](http://arxiv.org/abs/2509.03383v1)** | 2025-09-03 |  |
-| **[Align-Then-stEer: Adapting the Vision-Language Action Models through Unified Latent Guidance](http://arxiv.org/abs/2509.02055v1)** | 2025-09-02 | <details><summary>The f...</summary><p>The first three authors contributed equally</p></details> |
+| **[Align-Then-stEer: Adapting the Vision-Language Action Models through Unified Latent Guidance](http://arxiv.org/abs/2509.02055v2)** | 2025-09-05 | <details><summary>The f...</summary><p>The first three authors contributed equally</p></details> |
 | **[AutoDrive-R$^2$: Incentivizing Reasoning and Self-Reflection Capacity for VLA Model in Autonomous Driving](http://arxiv.org/abs/2509.01944v1)** | 2025-09-02 |  |
 | **[Large VLM-based Vision-Language-Action Models for Robotic Manipulation: A Survey](http://arxiv.org/abs/2508.13073v2)** | 2025-09-01 | <details><summary>Proje...</summary><p>Project Page: https://github.com/JiuTian-VL/Large-VLM-based-VLA-for-Robotic-Manipulation</p></details> |
 | **[EmbodiedOneVision: Interleaved Vision-Text-Action Pretraining for General Robot Control](http://arxiv.org/abs/2508.21112v2)** | 2025-09-01 |  |
@@ -122,7 +122,7 @@ labels: documentation
 | **[Articulated Object Estimation in the Wild](http://arxiv.org/abs/2509.01708v1)** | 2025-09-01 | <details><summary>9th C...</summary><p>9th Conference on Robot Learning (CoRL), 2025</p></details> |
 | **[Partitioned Combinatorial Optimization Games](http://arxiv.org/abs/2508.18449v1)** | 2025-08-25 | <details><summary>Exten...</summary><p>Extended abstract accepted at ECAI 2025</p></details> |
 | **[Robust simultaneous UWB-anchor calibration and robot localization for emergency situations](http://arxiv.org/abs/2503.22272v2)** | 2025-08-20 | <details><summary>Submi...</summary><p>Submit to IEEE SMC 2025. This work has been submitted to the IEEE for possible publication</p></details> |
-| **[LEGO: Learning and Graph-Optimized Modular Tracker for Online Multi-Object Tracking with Point Clouds](http://arxiv.org/abs/2308.09908v5)** | 2025-08-19 |  |
+| **[LEGO: Learning and Graph-Optimized Modular Tracker for Online Multi-Object Tracking with Point Clouds](http://arxiv.org/abs/2308.09908v6)** | 2025-09-05 | <details><summary>Accep...</summary><p>Accept by IEEE Transactions on Circuits and Systems for Video Technology</p></details> |
 | **[ROVER: Robust Loop Closure Verification with Trajectory Prior in Repetitive Environments](http://arxiv.org/abs/2508.13488v1)** | 2025-08-19 | 8 pages, 9 figures |
 | **[SGAD: Semantic and Geometric-aware Descriptor for Local Feature Matching](http://arxiv.org/abs/2508.02278v2)** | 2025-08-09 | <details><summary>Accep...</summary><p>Accepted to ICCV 2025 (Highlight)</p></details> |
 | **[Multi-Omics Analysis for Cancer Subtype Inference via Unrolling Graph Smoothness Priors](http://arxiv.org/abs/2508.06257v1)** | 2025-08-08 |  |
