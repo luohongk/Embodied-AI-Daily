@@ -1,5 +1,5 @@
 ---
-title: Latest 10 Papers - September 18, 2025
+title: Latest 10 Papers - September 19, 2025
 labels: documentation
 ---
 **Please check the [Github](https://github.com/luohongk/DailyArXiv) page for a better reading experience and more papers.**
@@ -253,8 +253,6 @@ labels: documentation
 | **[A Deep Learning Pipeline for Solid Waste Detection in Remote Sensing Images](http://arxiv.org/abs/2502.06607v4)** | 2025-09-17 |  |
 | **[Exploring the Relationship between Brain Hemisphere States and Frequency Bands through Deep Learning Optimization Techniques](http://arxiv.org/abs/2509.14078v1)** | 2025-09-17 |  |
 | **[Noise2Ghost: Self-supervised deep convolutional reconstruction for ghost imaging](http://arxiv.org/abs/2504.10288v2)** | 2025-09-17 |  |
-| **[HAM: Hierarchical Adapter Merging for Scalable Continual Learning](http://arxiv.org/abs/2509.13211v2)** | 2025-09-17 |  |
-| **[Locally Explaining Prediction Behavior via Gradual Interventions and Measuring Property Gradients](http://arxiv.org/abs/2503.05424v2)** | 2025-09-17 | <details><summary>Accep...</summary><p>Accepted at WACV-2026, 45 pages, 39 figures, 15 tables</p></details> |
 
 ## LLM
 | **Title** | **Date** | **Comment** |
