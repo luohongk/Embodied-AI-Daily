@@ -1,5 +1,5 @@
 ---
-title: Latest 10 Papers - September 27, 2025
+title: Latest 10 Papers - September 28, 2025
 labels: documentation
 ---
 **Please check the [Github](https://github.com/luohongk/DailyArXiv) page for a better reading experience and more papers.**
