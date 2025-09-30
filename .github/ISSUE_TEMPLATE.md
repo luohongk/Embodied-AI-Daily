@@ -176,6 +176,15 @@ labels: documentation
 | **Title** | **Date** | **Comment** |
 | --- | --- | --- |
 | **[Diffusion-Based mmWave Radar Point Cloud Enhancement Driven by Range Images](http://arxiv.org/abs/2503.02300v2)** | 2025-09-29 | <details><summary>8 pag...</summary><p>8 pages, 7 figures. This work has been submitted to the IEEE for possible publication</p></details> |
+| **[StreamForest: Efficient Online Video Understanding with Persistent Event Memory](http://arxiv.org/abs/2509.24871v1)** | 2025-09-29 | <details><summary>Accep...</summary><p>Accepted as a Spotlight at NeurIPS 2025</p></details> |
+| **[TACO-Net: Topological Signatures Triumph in 3D Object Classification](http://arxiv.org/abs/2509.24802v1)** | 2025-09-29 |  |
+| **[S2S-Net: Addressing the Domain Gap of Heterogeneous Sensor Systems in LiDAR-Based Collective Perception](http://arxiv.org/abs/2504.17399v2)** | 2025-09-29 |  |
+| **[3DGAA: Realistic and Robust 3D Gaussian-based Adversarial Attack for Autonomous Driving](http://arxiv.org/abs/2507.09993v3)** | 2025-09-29 | <details><summary>Submi...</summary><p>Submitted to WACV 2026</p></details> |
+| **[A Multi-Modality Evaluation of the Reality Gap in Autonomous Driving Systems](http://arxiv.org/abs/2509.22379v2)** | 2025-09-29 | <details><summary>In pr...</summary><p>In proceedings of the 40th IEEE/ACM International Conference on Automated Software Engineering (ASE '25)</p></details> |
+| **[FuncPoison: Poisoning Function Library to Hijack Multi-agent Autonomous Driving Systems](http://arxiv.org/abs/2509.24408v1)** | 2025-09-29 |  |
+| **[Learning to Sample: Reinforcement Learning-Guided Sampling for Autonomous Vehicle Motion Planning](http://arxiv.org/abs/2509.24313v1)** | 2025-09-29 | <details><summary>8 pag...</summary><p>8 pages, submitted to the IEEE ICRA 2026, Vienna, Austria</p></details> |
+| **[Multi-Scenario Highway Lane-Change Intention Prediction: A Physics-Informed AI Framework for Three-Class Classification](http://arxiv.org/abs/2509.17354v2)** | 2025-09-29 |  |
+| **[Skeleton-based Robust Registration Framework for Corrupted 3D Point Clouds](http://arxiv.org/abs/2509.24273v1)** | 2025-09-29 |  |
 
 ## Kalman Filter
 | **Title** | **Date** | **Comment** |
