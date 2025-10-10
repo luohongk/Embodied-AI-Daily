@@ -77,7 +77,7 @@ labels: documentation
 ## Lidar SLAM
 | **Title** | **Date** | **Comment** |
 | --- | --- | --- |
-| **[SiLVR: Scalable Lidar-Visual Radiance Field Reconstruction with Uncertainty Quantification](http://arxiv.org/abs/2502.02657v2)** | 2025-09-10 | <details><summary>Accep...</summary><p>Accepted by T-RO. Webpage: https://dynamic.robots.ox.ac.uk/projects/silvr/</p></details> |
+| **[SiLVR: Scalable Lidar-Visual Radiance Field Reconstruction with Uncertainty Quantification](http://arxiv.org/abs/2502.02657v3)** | 2025-10-08 | <details><summary>Accep...</summary><p>Accepted by T-RO. Webpage: https://dynamic.robots.ox.ac.uk/projects/silvr/</p></details> |
 | **[A flexible framework for accurate LiDAR odometry, map manipulation, and localization](http://arxiv.org/abs/2407.20465v3)** | 2025-08-15 | 44 pages, 35 figures |
 | **[Task-driven SLAM Benchmarking For Robot Navigation](http://arxiv.org/abs/2409.16573v3)** | 2025-08-07 | <details><summary>7 pag...</summary><p>7 pages, 8 figures, 1 table. Accepted to IROS 2025</p></details> |
 | **[Doppler-SLAM: Doppler-Aided Radar-Inertial and LiDAR-Inertial Simultaneous Localization and Mapping](http://arxiv.org/abs/2504.11634v3)** | 2025-08-05 | 8 pages, 7 figures |
@@ -236,7 +236,7 @@ labels: documentation
 | **[Capture and Interact: Rapid 3D Object Acquisition and Rendering with Gaussian Splatting in Unity](http://arxiv.org/abs/2510.06802v1)** | 2025-10-08 |  |
 | **[SCas4D: Structural Cascaded Optimization for Boosting Persistent 4D Novel View Synthesis](http://arxiv.org/abs/2510.06694v1)** | 2025-10-08 | <details><summary>Publi...</summary><p>Published in Transactions on Machine Learning Research (06/2025)</p></details> |
 | **[DWTGS: Rethinking Frequency Regularization for Sparse-view 3D Gaussian Splatting](http://arxiv.org/abs/2507.15690v3)** | 2025-10-08 | <details><summary>Accep...</summary><p>Accepted to VCIP 2025</p></details> |
-| **[RTGS: Real-Time 3D Gaussian Splatting SLAM via Multi-Level Redundancy Reduction](http://arxiv.org/abs/2510.06644v1)** | 2025-10-08 | <details><summary>Accep...</summary><p>Accepted by MICRO2025</p></details> |
+| **[RTGS: Real-Time 3D Gaussian Splatting SLAM via Multi-Level Redundancy Reduction](http://arxiv.org/abs/2510.06644v2)** | 2025-10-09 | <details><summary>Accep...</summary><p>Accepted by MICRO2025</p></details> |
 | **[Robust Neural Rendering in the Wild with Asymmetric Dual 3D Gaussian Splatting](http://arxiv.org/abs/2506.03538v3)** | 2025-10-08 | <details><summary>NeurI...</summary><p>NeurIPS 2025 Spotlight; Project page: https://steveli88.github.io/AsymGS/</p></details> |
 | **[Active Next-Best-View Optimization for Risk-Averse Path Planning](http://arxiv.org/abs/2510.06481v1)** | 2025-10-07 |  |
 | **[ExGS: Extreme 3D Gaussian Compression with Diffusion Priors](http://arxiv.org/abs/2509.24758v4)** | 2025-10-07 |  |
@@ -264,7 +264,7 @@ labels: documentation
 | **[Empowering LLMs with Pseudo-Untrimmed Videos for Audio-Visual Temporal Understanding](http://arxiv.org/abs/2403.16276v3)** | 2025-10-08 | <details><summary>Accep...</summary><p>Accepted to AAAI 2025</p></details> |
 | **[LeMAJ (Legal LLM-as-a-Judge): Bridging Legal Reasoning and LLM Evaluation](http://arxiv.org/abs/2510.07243v1)** | 2025-10-08 | <details><summary>Publi...</summary><p>Published in Natural Legal Language Processing - EMNLP Workshop 2025</p></details> |
 | **[Red-Bandit: Test-Time Adaptation for LLM Red-Teaming via Bandit-Guided LoRA Experts](http://arxiv.org/abs/2510.07239v1)** | 2025-10-08 |  |
-| **[Benchmarking LLM Causal Reasoning with Scientifically Validated Relationships](http://arxiv.org/abs/2510.07231v1)** | 2025-10-08 |  |
+| **[Benchmarking LLM Causal Reasoning with Scientifically Validated Relationships](http://arxiv.org/abs/2510.07231v2)** | 2025-10-09 |  |
 | **[Customer-R1: Personalized Simulation of Human Behaviors via RL-based LLM Agent in Online Shopping](http://arxiv.org/abs/2510.07230v1)** | 2025-10-08 |  |
 | **[Poisoning Attacks on LLMs Require a Near-constant Number of Poison Samples](http://arxiv.org/abs/2510.07192v1)** | 2025-10-08 |  |
 | **[Biasless Language Models Learn Unnaturally: How LLMs Fail to Distinguish the Possible from the Impossible](http://arxiv.org/abs/2510.07178v1)** | 2025-10-08 | 15 pages, 4 figures |
