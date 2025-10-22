@@ -24,12 +24,12 @@ labels: documentation
 | **[RESample: A Robust Data Augmentation Framework via Exploratory Sampling for Robotic Manipulation](http://arxiv.org/abs/2510.17640v1)** | 2025-10-20 | <details><summary>9 pag...</summary><p>9 pages,7 figures, submitted to ICRA2026</p></details> |
 | **[From Spatial to Actions: Grounding Vision-Language-Action Model in Spatial Foundation Priors](http://arxiv.org/abs/2510.17439v1)** | 2025-10-20 | <details><summary>Proje...</summary><p>Project page: https://falcon-vla.github.io/</p></details> |
 | **[Bridging Embodiment Gaps: Deploying Vision-Language-Action Models on Soft Robots](http://arxiv.org/abs/2510.17369v1)** | 2025-10-20 | <details><summary>Accep...</summary><p>Accepted by NeurIPS 2025 SpaVLE workshop. 4 pages, 2 figures(in main paper, excluding references and supplements)</p></details> |
-| **[DiffVLA++: Bridging Cognitive Reasoning and End-to-End Driving through Metric-Guided Alignment](http://arxiv.org/abs/2510.17148v1)** | 2025-10-20 |  |
+| **[DiffVLA++: Bridging Cognitive Reasoning and End-to-End Driving through Metric-Guided Alignment](http://arxiv.org/abs/2510.17148v2)** | 2025-10-21 |  |
 | **[Efficient Vision-Language-Action Models for Embodied Manipulation: A Systematic Survey](http://arxiv.org/abs/2510.17111v1)** | 2025-10-20 |  |
 | **[Exploring the Limits of Vision-Language-Action Manipulations in Cross-task Generalization](http://arxiv.org/abs/2505.15660v3)** | 2025-10-19 | <details><summary>Proje...</summary><p>Project Page: https://jiaming-zhou.github.io/AGNOSTOS</p></details> |
 | **[MoS-VLA: A Vision-Language-Action Model with One-Shot Skill Adaptation](http://arxiv.org/abs/2510.16617v1)** | 2025-10-18 |  |
 | **[Do What You Say: Steering Vision-Language-Action Models via Runtime Reasoning-Action Alignment Verification](http://arxiv.org/abs/2510.16281v1)** | 2025-10-18 |  |
-| **[NEBULA: Do We Evaluate Vision-Language-Action Agents Correctly?](http://arxiv.org/abs/2510.16263v1)** | 2025-10-17 | <details><summary>Homep...</summary><p>Homepage: https://vulab-ai.github.io/NEBULA-Alpha/</p></details> |
+| **[NEBULA: Do We Evaluate Vision-Language-Action Agents Correctly?](http://arxiv.org/abs/2510.16263v2)** | 2025-10-21 | <details><summary>Homep...</summary><p>Homepage: https://vulab-ai.github.io/NEBULA-Alpha/</p></details> |
 | **[Cosmos-Surg-dVRK: World Foundation Model-based Automated Online Evaluation of Surgical Robot Policy Learning](http://arxiv.org/abs/2510.16240v1)** | 2025-10-17 |  |
 
 ## Visual SLAM
@@ -180,7 +180,7 @@ labels: documentation
 | **[Enhanced Motion Forecasting with Plug-and-Play Multimodal Large Language Models](http://arxiv.org/abs/2510.17274v1)** | 2025-10-20 | <details><summary>In pr...</summary><p>In proceedings of IROS 2025</p></details> |
 | **[Explainability of Large Language Models: Opportunities and Challenges toward Generating Trustworthy Explanations](http://arxiv.org/abs/2510.17256v1)** | 2025-10-20 |  |
 | **[SimpleVSF: VLM-Scoring Fusion for Trajectory Prediction of End-to-End Autonomous Driving](http://arxiv.org/abs/2510.17191v1)** | 2025-10-20 | <details><summary>6 pag...</summary><p>6 pages, 2 figures, 2 tables</p></details> |
-| **[DiffVLA++: Bridging Cognitive Reasoning and End-to-End Driving through Metric-Guided Alignment](http://arxiv.org/abs/2510.17148v1)** | 2025-10-20 |  |
+| **[DiffVLA++: Bridging Cognitive Reasoning and End-to-End Driving through Metric-Guided Alignment](http://arxiv.org/abs/2510.17148v2)** | 2025-10-21 |  |
 | **[ProDAT: Progressive Density-Aware Tail-Drop for Point Cloud Coding](http://arxiv.org/abs/2510.17068v1)** | 2025-10-20 |  |
 | **[UNDREAM: Bridging Differentiable Rendering and Photorealistic Simulation for End-to-end Adversarial Attacks](http://arxiv.org/abs/2510.16923v1)** | 2025-10-19 |  |
 | **[Unsupervised Monocular Road Segmentation for Autonomous Driving via Scene Geometry](http://arxiv.org/abs/2510.16790v1)** | 2025-10-19 | 7 pages, 3 figures |
@@ -259,7 +259,7 @@ labels: documentation
 ## LLM
 | **Title** | **Date** | **Comment** |
 | --- | --- | --- |
-| **[Enabling Fine-Grained Operating Points for Black-Box LLMs](http://arxiv.org/abs/2510.17727v1)** | 2025-10-20 | 35 pages |
+| **[Enabling Fine-Grained Operating Points for Black-Box LLMs](http://arxiv.org/abs/2510.17727v2)** | 2025-10-21 | <details><summary>Under...</summary><p>Under review at ICLR 2026. 36 pages, 17 figures</p></details> |
 | **[Rethinking Search: A Study of University Students' Perspectives on Using LLMs and Traditional Search Engines in Academic Problem Solving](http://arxiv.org/abs/2510.17726v1)** | 2025-10-20 | <details><summary>Accte...</summary><p>Acctepted at the EMNLP 2025 HCI+NLP Workshop</p></details> |
 | **[AcademicEval: Live Long-Context LLM Benchmark](http://arxiv.org/abs/2510.17725v1)** | 2025-10-20 | <details><summary>Accep...</summary><p>Accepted by TMLR. Code is available at https://github.com/ulab-uiuc/AcademicEval</p></details> |
 | **[Evolving LLMs' Self-Refinement Capability via Iterative Preference Optimization](http://arxiv.org/abs/2502.05605v5)** | 2025-10-20 |  |
