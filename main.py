@@ -89,8 +89,8 @@ _Automatically fetches the latest arXiv papers on **VLN · VLA · SLAM · 3D · 
   <img src="https://img.shields.io/github/stars/luohongk/Embodied-AI-Daily?style=social" alt="GitHub Stars">
   <a href="https://github.com/luohongk" target="_blank">
     <img src="https://img.shields.io/badge/Author-luohongkun-blueviolet.svg" alt="作者：luohongk">
-  </a>
-  <a href="https://luohongkun.top/resume/" target="_blank">
+  </a
+  <a href="https://luohongkun.top/me/" target="_blank">
     <img src="https://img.shields.io/badge/Homepage-www.luohongkun.top/me/-9cf.svg" alt="主页：GitHub">
   </a>
 </p>
