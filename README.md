@@ -13,7 +13,7 @@ _Automatically fetches the latest arXiv papers on **VLN · VLA · SLAM · 3D · 
     <img src="https://img.shields.io/badge/Author-luohongkun-blueviolet.svg" alt="作者：luohongk">
   </a>
   <a href="https://luohongkun.top/resume/" target="_blank">
-    <img src="https://img.shields.io/badge/Homepage-www.luohongkun.top-9cf.svg" alt="主页：GitHub">
+    <img src="https://img.shields.io/badge/Homepage-www.luohongkun.top/me/-9cf.svg" alt="主页：GitHub">
   </a>
 </p>
 
