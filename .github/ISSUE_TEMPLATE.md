@@ -32,6 +32,20 @@ labels: documentation
 | **[VLA-Cache: Efficient Vision-Language-Action Manipulation via Adaptive Token Caching](http://arxiv.org/abs/2502.02175v2)** | 2025-10-21 | <details><summary>Accep...</summary><p>Accepted to NeurIPS 2025</p></details> |
 | **[DiffVLA++: Bridging Cognitive Reasoning and End-to-End Driving through Metric-Guided Alignment](http://arxiv.org/abs/2510.17148v2)** | 2025-10-21 |  |
 
+## World Model
+| **Title** | **Date** | **Comment** |
+| --- | --- | --- |
+| **[From Masks to Worlds: A Hitchhiker's Guide to World Models](http://arxiv.org/abs/2510.20668v1)** | 2025-10-23 | <details><summary>Githu...</summary><p>Github: https://github.com/M-E-AGI-Lab/Awesome-World-Models</p></details> |
+| **[Benchmarking World-Model Learning](http://arxiv.org/abs/2510.19788v2)** | 2025-10-23 | 30 pages, 10 figures |
+| **[DMWM: Dual-Mind World Model with Long-Term Imagination](http://arxiv.org/abs/2502.07591v2)** | 2025-10-23 |  |
+| **[Semantic World Models](http://arxiv.org/abs/2510.19818v1)** | 2025-10-22 |  |
+| **[Masked Generative Priors Improve World Models Sequence Modelling Capabilities](http://arxiv.org/abs/2410.07836v6)** | 2025-10-22 |  |
+| **[From Forecasting to Planning: Policy World Model for Collaborative State-Action Prediction](http://arxiv.org/abs/2510.19654v1)** | 2025-10-22 | <details><summary>Accep...</summary><p>Accepted by NuerIPS 2025 (Poster)</p></details> |
+| **[SparseWorld: A Flexible, Adaptive, and Efficient 4D Occupancy World Model Powered by Sparse and Dynamic Queries](http://arxiv.org/abs/2510.17482v2)** | 2025-10-22 | Under Review |
+| **[OmniNWM: Omniscient Driving Navigation World Models](http://arxiv.org/abs/2510.18313v2)** | 2025-10-22 | <details><summary>https...</summary><p>https://arlo0o.github.io/OmniNWM/</p></details> |
+| **[GigaBrain-0: A World Model-Powered Vision-Language-Action Model](http://arxiv.org/abs/2510.19430v1)** | 2025-10-22 | <details><summary>https...</summary><p>https://gigabrain0.github.io/</p></details> |
+| **[ProTerrain: Probabilistic Physics-Informed Rough Terrain World Modeling](http://arxiv.org/abs/2510.19364v1)** | 2025-10-22 | <details><summary>This ...</summary><p>This paper is submitted to IEEE International Conference on Robotics and Automation (ICRA) 2026</p></details> |
+
 ## Visual SLAM
 | **Title** | **Date** | **Comment** |
 | --- | --- | --- |
@@ -218,6 +232,15 @@ labels: documentation
 | **Title** | **Date** | **Comment** |
 | --- | --- | --- |
 | **[Joint Multi-Condition Representation Modelling via Matrix Factorisation for Visual Place Recognition](http://arxiv.org/abs/2510.17739v1)** | 2025-10-20 | 13 pages |
+| **[Through the Lens of Doubt: Robust and Efficient Uncertainty Estimation for Visual Place Recognition](http://arxiv.org/abs/2510.13464v1)** | 2025-10-15 |  |
+| **[Flexible and Efficient Spatio-Temporal Transformer for Sequential Visual Place Recognition](http://arxiv.org/abs/2510.04282v1)** | 2025-10-05 | 8 pages, 6 figures |
+| **[The Overlooked Value of Test-time Reference Sets in Visual Place Recognition](http://arxiv.org/abs/2510.03751v1)** | 2025-10-04 | <details><summary>Accep...</summary><p>Accepted at ICCV 2025 Workshop CrocoDL</p></details> |
+| **[Hierarchical place recognition with omnidirectional images and curriculum learning-based loss functions](http://arxiv.org/abs/2404.14117v3)** | 2025-10-01 |  |
+| **[SAGE: Spatial-visual Adaptive Graph Exploration for Visual Place Recognition](http://arxiv.org/abs/2509.25723v1)** | 2025-09-30 |  |
+| **[Prepare for Warp Speed: Sub-millisecond Visual Place Recognition Using Event Cameras](http://arxiv.org/abs/2509.24094v1)** | 2025-09-28 |  |
+| **[Event-LAB: Towards Standardized Evaluation of Neuromorphic Localization Methods](http://arxiv.org/abs/2509.14516v1)** | 2025-09-18 | <details><summary>8 pag...</summary><p>8 pages, 6 figures, under review</p></details> |
+| **[Semantic-Enhanced Cross-Modal Place Recognition for Robust Robot Localization](http://arxiv.org/abs/2509.13474v1)** | 2025-09-16 |  |
+| **[Scale, Don't Fine-tune: Guiding Multimodal LLMs for Efficient Visual Place Recognition at Test-Time](http://arxiv.org/abs/2509.02129v1)** | 2025-09-02 |  |
 
 ## 3D Gaussian Splatting
 | **Title** | **Date** | **Comment** |
