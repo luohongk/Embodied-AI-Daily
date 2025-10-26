@@ -1,5 +1,5 @@
 ---
-title: Latest 10 Papers - October 26, 2025
+title: Latest 10 Papers - October 27, 2025
 labels: documentation
 ---
 **Please check the [Github](https://github.com/luohongk/DailyArXiv) page for a better reading experience and more papers.**
@@ -236,11 +236,6 @@ labels: documentation
 | **[Flexible and Efficient Spatio-Temporal Transformer for Sequential Visual Place Recognition](http://arxiv.org/abs/2510.04282v1)** | 2025-10-05 | 8 pages, 6 figures |
 | **[The Overlooked Value of Test-time Reference Sets in Visual Place Recognition](http://arxiv.org/abs/2510.03751v1)** | 2025-10-04 | <details><summary>Accep...</summary><p>Accepted at ICCV 2025 Workshop CrocoDL</p></details> |
 | **[Hierarchical place recognition with omnidirectional images and curriculum learning-based loss functions](http://arxiv.org/abs/2404.14117v3)** | 2025-10-01 |  |
-| **[SAGE: Spatial-visual Adaptive Graph Exploration for Visual Place Recognition](http://arxiv.org/abs/2509.25723v1)** | 2025-09-30 |  |
-| **[Prepare for Warp Speed: Sub-millisecond Visual Place Recognition Using Event Cameras](http://arxiv.org/abs/2509.24094v1)** | 2025-09-28 |  |
-| **[Event-LAB: Towards Standardized Evaluation of Neuromorphic Localization Methods](http://arxiv.org/abs/2509.14516v1)** | 2025-09-18 | <details><summary>8 pag...</summary><p>8 pages, 6 figures, under review</p></details> |
-| **[Semantic-Enhanced Cross-Modal Place Recognition for Robust Robot Localization](http://arxiv.org/abs/2509.13474v1)** | 2025-09-16 |  |
-| **[Scale, Don't Fine-tune: Guiding Multimodal LLMs for Efficient Visual Place Recognition at Test-Time](http://arxiv.org/abs/2509.02129v1)** | 2025-09-02 |  |
 
 ## 3D Gaussian Splatting
 | **Title** | **Date** | **Comment** |
