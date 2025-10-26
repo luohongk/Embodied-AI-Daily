@@ -42,6 +42,7 @@ logging.info("获取关键词列表")
 keywords = [
     "Vision and Language Navigation",
     "Vision Language Action",
+    "World Model",
     "Visual SLAM",
     "Visual Inertial SLAM",
     "Visual Inertial Odometry",
