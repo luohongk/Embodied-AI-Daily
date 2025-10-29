@@ -1,5 +1,5 @@
 ---
-title: Latest 10 Papers - October 29, 2025
+title: Latest 10 Papers - October 30, 2025
 labels: documentation
 ---
 **Please check the [Github](https://github.com/luohongk/DailyArXiv) page for a better reading experience and more papers.**
@@ -38,13 +38,6 @@ labels: documentation
 | **[Evolving Diagnostic Agents in a Virtual Clinical Environment](http://arxiv.org/abs/2510.24654v1)** | 2025-10-28 |  |
 | **[Dual-Mind World Models: A General Framework for Learning in Dynamic Wireless Networks](http://arxiv.org/abs/2510.24546v1)** | 2025-10-28 |  |
 | **[Multimodal Dreaming: A Global Workspace Approach to World Model-Based Reinforcement Learning](http://arxiv.org/abs/2502.21142v2)** | 2025-10-28 | Under review |
-| **[Affordance Representation and Recognition for Autonomous Agents](http://arxiv.org/abs/2510.24459v1)** | 2025-10-28 |  |
-| **[LongCat-Video Technical Report](http://arxiv.org/abs/2510.22200v2)** | 2025-10-28 |  |
-| **[Is Sora a World Simulator? A Comprehensive Survey on General World Models and Beyond](http://arxiv.org/abs/2405.03520v2)** | 2025-10-28 | <details><summary>This ...</summary><p>This survey will be regularly updated at: https://github.com/GigaAI-research/General-World-Models-Survey</p></details> |
-| **[Human Machine Social Hybrid Intelligence:A Collaborative Decision Making Framework for Large Model Agent Groups and Human Experts](http://arxiv.org/abs/2510.24030v1)** | 2025-10-28 |  |
-| **[COMPASS: Cross-embodiment Mobility Policy via Residual RL and Skill Synthesis](http://arxiv.org/abs/2502.16372v3)** | 2025-10-27 |  |
-| **[Deductive Chain-of-Thought Augmented Socially-aware Robot Navigation World Model](http://arxiv.org/abs/2510.23509v1)** | 2025-10-27 |  |
-| **[World-Env: Leveraging World Model as a Virtual Environment for VLA Post-Training](http://arxiv.org/abs/2509.24948v2)** | 2025-10-27 |  |
 
 ## Visual SLAM
 | **Title** | **Date** | **Comment** |
