@@ -1,5 +1,5 @@
 ---
-title: Latest 10 Papers - October 31, 2025
+title: Latest 10 Papers - November 01, 2025
 labels: documentation
 ---
 **Please check the [Github](https://github.com/luohongk/DailyArXiv) page for a better reading experience and more papers.**
@@ -138,6 +138,11 @@ labels: documentation
 | **[Underwater Visual-Inertial-Acoustic-Depth SLAM with DVL Preintegration for Degraded Environments](http://arxiv.org/abs/2510.21215v1)** | 2025-10-24 | 10 pages, 10 figures |
 | **[How to Auto-optimize Prompts for Domain Tasks? Adaptive Prompting and Reasoning through Evolutionary Domain Knowledge Adaptation](http://arxiv.org/abs/2510.21148v1)** | 2025-10-24 |  |
 | **[Exploration through Generation: Applying GFlowNets to Structured Search](http://arxiv.org/abs/2510.21886v1)** | 2025-10-23 | 12 pages |
+| **[LiDAR, GNSS and IMU Sensor Alignment through Dynamic Time Warping to Construct 3D City Maps](http://arxiv.org/abs/2507.08420v2)** | 2025-10-23 |  |
+| **[When LLM Agents Meet Graph Optimization: An Automated Data Quality Improvement Approach](http://arxiv.org/abs/2510.08952v2)** | 2025-10-20 | 12 pages, 7figures |
+| **[Traversability-aware Consistent Situational Graphs for Indoor Localization and Mapping](http://arxiv.org/abs/2510.15319v1)** | 2025-10-17 | <details><summary>Accep...</summary><p>Accepted by RiTA 2024</p></details> |
+| **[TACS-Graphs: Traversability-Aware Consistent Scene Graphs for Ground Robot Localization and Mapping](http://arxiv.org/abs/2506.14178v2)** | 2025-10-16 | <details><summary>Accep...</summary><p>Accepted by IROS 2025</p></details> |
+| **[Aligning Language Models with Investor and Market Behavior for Financial Recommendations](http://arxiv.org/abs/2510.15993v1)** | 2025-10-14 |  |
 
 ## Dynamic SLAM
 | **Title** | **Date** | **Comment** |
