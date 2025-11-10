@@ -1,5 +1,5 @@
 ---
-title: Latest 10 Papers - November 10, 2025
+title: Latest 10 Papers - November 11, 2025
 labels: documentation
 ---
 **Please check the [Github](https://github.com/luohongk/DailyArXiv) page for a better reading experience and more papers.**
@@ -22,15 +22,6 @@ labels: documentation
 | **Title** | **Date** | **Comment** |
 | --- | --- | --- |
 | **[Visual Spatial Tuning](http://arxiv.org/abs/2511.05491v1)** | 2025-11-07 |  |
-| **[EveryDayVLA: A Vision-Language-Action Model for Affordable Robotic Manipulation](http://arxiv.org/abs/2511.05397v1)** | 2025-11-07 | <details><summary>Submi...</summary><p>Submitted to ICRA 2026</p></details> |
-| **[TwinVLA: Data-Efficient Bimanual Manipulation with Twin Single-Arm Vision-Language-Action Models](http://arxiv.org/abs/2511.05275v1)** | 2025-11-07 | <details><summary>Proje...</summary><p>Project webpage : https://jellyho.github.io/TwinVLA/</p></details> |
-| **[GeoAware-VLA: Implicit Geometry Aware Vision-Language-Action Model](http://arxiv.org/abs/2509.14117v3)** | 2025-11-07 | <details><summary>Under...</summary><p>Under Review, Project Page https://alisharey.github.io/GeoAware-VLA/</p></details> |
-| **[Evo-1: Lightweight Vision-Language-Action Model with Preserved Semantic Alignment](http://arxiv.org/abs/2511.04555v1)** | 2025-11-06 | <details><summary>Githu...</summary><p>Github: https://github.com/MINT-SJTU/Evo-1</p></details> |
-| **[GraSP-VLA: Graph-based Symbolic Action Representation for Long-Horizon Planning with VLA Policies](http://arxiv.org/abs/2511.04357v1)** | 2025-11-06 |  |
-| **[SafeVLA: Towards Safety Alignment of Vision-Language-Action Model via Constrained Learning](http://arxiv.org/abs/2503.03480v3)** | 2025-11-06 | <details><summary>Accep...</summary><p>Accepted by NeurIPS 2025 Spotlight Presentation</p></details> |
-| **[OmniVLA: Physically-Grounded Multimodal VLA with Unified Multi-Sensor Perception for Robotic Manipulation](http://arxiv.org/abs/2511.01210v2)** | 2025-11-06 |  |
-| **[AutoVLA: A Vision-Language-Action Model for End-to-End Autonomous Driving with Adaptive Reasoning and Reinforcement Fine-Tuning](http://arxiv.org/abs/2506.13757v3)** | 2025-11-05 | <details><summary>NeurI...</summary><p>NeurIPS 2025; Website link:https://autovla.github.io/</p></details> |
-| **[XRoboToolkit: A Cross-Platform Framework for Robot Teleoperation](http://arxiv.org/abs/2508.00097v2)** | 2025-11-05 | <details><summary>6 pag...</summary><p>6 pages, 6 figures, accepted at The 2026 IEEE/SICE International Symposium on System Integration, project link: http://xr-robotics.github.io/</p></details> |
 
 ## World Model
 | **Title** | **Date** | **Comment** |
