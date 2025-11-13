@@ -1,5 +1,5 @@
 ---
-title: Latest 10 Papers - November 13, 2025
+title: Latest 10 Papers - November 14, 2025
 labels: documentation
 ---
 **Please check the [Github](https://github.com/luohongk/DailyArXiv) page for a better reading experience and more papers.**
@@ -13,8 +13,8 @@ labels: documentation
 | **[Cross-Lingual Vision-Language Navigation](https://arxiv.org/pdf/1910.11301v3)** | 2020-12-08 |  |
 | **[Vision-and-Language Navigation: Interpreting visually-grounded navigation instructions in real environments](https://arxiv.org/pdf/1711.07280v3)** | 2018-04-09 | <details><summary>CVPR ...</summary><p>CVPR 2018 Spotlight presentation</p></details> |
 | **[Iterative Vision-and-Language Navigation](https://arxiv.org/pdf/2210.03087v3)** | 2023-12-27 | <details><summary>Accep...</summary><p>Accepted by CVPR 2023</p></details> |
-| **[VALAN: Vision and Language Agent Navigation](https://arxiv.org/pdf/1912.03241v1)** | 2019-12-09 |  |
 | **[Cross-modal Map Learning for Vision and Language Navigation](https://arxiv.org/pdf/2203.05137v3)** | 2022-03-22 |  |
+| **[VALAN: Vision and Language Agent Navigation](https://arxiv.org/pdf/1912.03241v1)** | 2019-12-09 |  |
 | **[A Navigation Framework Utilizing Vision-Language Models](https://arxiv.org/pdf/2506.10172v1)** | 2025-06-13 |  |
 | **[Transferable Representation Learning in Vision-and-Language Navigation](https://arxiv.org/pdf/1908.03409v2)** | 2019-08-14 | <details><summary>To ap...</summary><p>To appear in ICCV 2019</p></details> |
 
@@ -142,7 +142,7 @@ labels: documentation
 | **[Extremal Optimization for Graph Partitioning](https://arxiv.org/pdf/cond-mat/0104214v1)** | 2009-11-06 | <details><summary>34 pa...</summary><p>34 pages, RevTex4, 1 table and 20 ps-figures included, related papers available at http://www.physics.emory.edu/faculty/boettcher/</p></details> |
 | **[Optimality Clue for Graph Coloring Problem](https://arxiv.org/pdf/1812.07734v1)** | 2018-12-20 |  |
 | **[Energy-Aware DNN Graph Optimization](https://arxiv.org/pdf/2005.05837v1)** | 2020-05-13 |  |
-| **[Discrete Optimal Graph Clustering](https://arxiv.org/pdf/1904.11266v1)** | 2019-04-26 |  |
+| **[Graph Diffusion Policy Optimization](https://arxiv.org/pdf/2402.16302v2)** | 2024-10-28 | NeurIPS 2024 |
 
 ## Dynamic SLAM
 | **Title** | **Date** | **Comment** |
@@ -152,8 +152,8 @@ labels: documentation
 | **[DDN-SLAM: Real-time Dense Dynamic Neural Implicit SLAM](https://arxiv.org/pdf/2401.01545v2)** | 2024-03-12 | 11pages, 4figures |
 | **[DS-SLAM: A Semantic Visual SLAM towards Dynamic Environments](https://arxiv.org/pdf/1809.08379v2)** | 2019-02-19 | <details><summary>7 pag...</summary><p>7 pages, accepted at the 2018 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2018). Now the code is available at our github: https://github.com/ivipsourcecode/DS-SLAM</p></details> |
 | **[Panoptic-SLAM: Visual SLAM in Dynamic Environments using Panoptic Segmentation](https://arxiv.org/pdf/2405.02177v1)** | 2024-05-06 |  |
-| **[Det-SLAM: A semantic visual SLAM for highly dynamic scenes using Detectron2](https://arxiv.org/pdf/2210.00278v1)** | 2023-12-07 | 5 pages, 2 figures |
 | **[The Importance of Coordinate Frames in Dynamic SLAM](https://arxiv.org/pdf/2312.04031v2)** | 2024-10-01 | <details><summary>7 pag...</summary><p>7 pages, 4 figures, accepted by ICRA 2024</p></details> |
+| **[Det-SLAM: A semantic visual SLAM for highly dynamic scenes using Detectron2](https://arxiv.org/pdf/2210.00278v1)** | 2023-12-07 | 5 pages, 2 figures |
 | **[VDO-SLAM: A Visual Dynamic Object-aware SLAM System](https://arxiv.org/pdf/2005.11052v3)** | 2021-12-16 | <details><summary>15 pa...</summary><p>15 pages, 11 figures, 5 tables</p></details> |
 | **[VAR-SLAM: Visual Adaptive and Robust SLAM for Dynamic Environments](https://arxiv.org/pdf/2510.16205v1)** | 2025-10-21 | <details><summary>Code ...</summary><p>Code available at https://github.com/iit-DLSLab/VAR-SLAM</p></details> |
 | **[Dy3DGS-SLAM: Monocular 3D Gaussian Splatting SLAM for Dynamic Environments](https://arxiv.org/pdf/2506.05965v1)** | 2025-06-09 |  |
