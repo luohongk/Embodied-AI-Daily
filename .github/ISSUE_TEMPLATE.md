@@ -142,7 +142,7 @@ labels: documentation
 | **[Extremal Optimization for Graph Partitioning](https://arxiv.org/pdf/cond-mat/0104214v1)** | 2009-11-06 | <details><summary>34 pa...</summary><p>34 pages, RevTex4, 1 table and 20 ps-figures included, related papers available at http://www.physics.emory.edu/faculty/boettcher/</p></details> |
 | **[Optimality Clue for Graph Coloring Problem](https://arxiv.org/pdf/1812.07734v1)** | 2018-12-20 |  |
 | **[Energy-Aware DNN Graph Optimization](https://arxiv.org/pdf/2005.05837v1)** | 2020-05-13 |  |
-| **[Graph Diffusion Policy Optimization](https://arxiv.org/pdf/2402.16302v2)** | 2024-10-28 | NeurIPS 2024 |
+| **[Discrete Optimal Graph Clustering](https://arxiv.org/pdf/1904.11266v1)** | 2019-04-26 |  |
 
 ## Dynamic SLAM
 | **Title** | **Date** | **Comment** |
