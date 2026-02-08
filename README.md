@@ -28,7 +28,7 @@ This project automatically fetches the latest papers from **arXiv** based on pre
 - Only the most recent papers are kept (up to **100 per keyword**).  
 - Click **Watch** (👀) on the repo to get **daily email notifications**.
 
-_Last update: 2026-02-08_
+_Last update: 2026-02-09_
 
 ---
 ## Vision and Language Navigation
