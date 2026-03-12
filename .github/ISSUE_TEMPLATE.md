@@ -35,6 +35,7 @@ labels: documentation
 ## World Model
 | **Title** | **Date** | **Comment** |
 | --- | --- | --- |
+| **[PPGuide: Steering Diffusion Policies with Performance Predictive Guidance](https://arxiv.org/abs/2603.10980v1)** | 2026-03-11 | Accepted by ICRA'26 |
 | **[X-WIN: Building Chest Radiograph World Model via Predictive Sensing](https://arxiv.org/abs/2511.14918v2)** | 2026-03-11 | <details><summary>Accep...</summary><p>Accepted by CVPR 2026</p></details> |
 | **[From Next Token Prediction to (STRIPS) World Models](https://arxiv.org/abs/2509.13389v4)** | 2026-03-11 |  |
 | **[World Model for Battery Degradation Prediction Under Non-Stationary Aging](https://arxiv.org/abs/2603.10527v1)** | 2026-03-11 | 18 pages, 3 figures |
@@ -44,7 +45,6 @@ labels: documentation
 | **[SPIRAL: A Closed-Loop Framework for Self-Improving Action World Models via Reflective Planning Agents](https://arxiv.org/abs/2603.08403v2)** | 2026-03-11 | 22 Pages, 11 Figures |
 | **[PlayWorld: Learning Robot World Models from Autonomous Play](https://arxiv.org/abs/2603.09030v2)** | 2026-03-11 | <details><summary>https...</summary><p>https://robot-playworld.github.io/</p></details> |
 | **[World Models That Know When They Don't Know - Controllable Video Generation with Calibrated Uncertainty](https://arxiv.org/abs/2512.05927v2)** | 2026-03-10 |  |
-| **[Grounding Generated Videos in Feasible Plans via World Models](https://arxiv.org/abs/2602.01960v2)** | 2026-03-10 |  |
 
 ## Visual SLAM
 | **Title** | **Date** | **Comment** |
@@ -189,6 +189,8 @@ labels: documentation
 ## Autonomous Driving
 | **Title** | **Date** | **Comment** |
 | --- | --- | --- |
+| **[DynVLA: Learning World Dynamics for Action Reasoning in Autonomous Driving](https://arxiv.org/abs/2603.11041v1)** | 2026-03-11 | 18 pages, 10 figures |
+| **[STADA: Specification-based Testing for Autonomous Driving Agents](https://arxiv.org/abs/2603.10940v1)** | 2026-03-11 |  |
 | **[Evaluating randomized smoothing as a defense against adversarial attacks in trajectory prediction](https://arxiv.org/abs/2603.10821v1)** | 2026-03-11 |  |
 | **[Recover to Predict: Progressive Retrospective Learning for Variable-Length Trajectory Prediction](https://arxiv.org/abs/2603.10597v1)** | 2026-03-11 | <details><summary>Paper...</summary><p>Paper is accepted by CVPR 2026</p></details> |
 | **[IntrinsicWeather: Controllable Weather Editing in Intrinsic Space](https://arxiv.org/abs/2508.06982v6)** | 2026-03-11 |  |
@@ -197,8 +199,6 @@ labels: documentation
 | **[A Survey on Interpretability in Visual Recognition](https://arxiv.org/abs/2507.11099v2)** | 2026-03-11 | <details><summary>20 pa...</summary><p>20 pages, 8 figures, 7 tables. Accepted by IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)</p></details> |
 | **[AD-R1: Closed-Loop Reinforcement Learning for End-to-End Autonomous Driving with Impartial World Models](https://arxiv.org/abs/2511.20325v3)** | 2026-03-11 |  |
 | **[An Overview about Emerging Technologies of Autonomous Driving](https://arxiv.org/abs/2306.13302v5)** | 2026-03-11 |  |
-| **[PC-Diffuser: Path-Consistent Capsule CBF Safety Filtering for Diffusion-Based Trajectory Planner](https://arxiv.org/abs/2603.10330v1)** | 2026-03-11 |  |
-| **[HG-Lane: High-Fidelity Generation of Lane Scenes under Adverse Weather and Lighting Conditions without Re-annotation](https://arxiv.org/abs/2603.10128v1)** | 2026-03-10 | <details><summary>Accep...</summary><p>Accepted by CVPR 2026</p></details> |
 
 ## Kalman Filter
 | **Title** | **Date** | **Comment** |
@@ -245,6 +245,7 @@ labels: documentation
 ## 3D Gaussian Splatting
 | **Title** | **Date** | **Comment** |
 | --- | --- | --- |
+| **[InstantSfM: Towards GPU-Native SfM for the Deep Learning Era](https://arxiv.org/abs/2510.13310v2)** | 2026-03-11 |  |
 | **[S2D: Sparse to Dense Lifting for 3D Reconstruction with Minimal Inputs](https://arxiv.org/abs/2603.10893v1)** | 2026-03-11 |  |
 | **[SEGA: Drivable 3D Gaussian Head Avatar from a Single Image](https://arxiv.org/abs/2504.14373v3)** | 2026-03-11 |  |
 | **[PolGS++: Physically-Guided Polarimetric Gaussian Splatting for Fast Reflective Surface Reconstruction](https://arxiv.org/abs/2603.10801v1)** | 2026-03-11 | <details><summary>arXiv...</summary><p>arXiv admin note: substantial text overlap with arXiv:2509.19726</p></details> |
@@ -254,33 +255,32 @@ labels: documentation
 | **[GSStream: 3D Gaussian Splatting based Volumetric Scene Streaming System](https://arxiv.org/abs/2603.09718v1)** | 2026-03-10 |  |
 | **[ProGS: Towards Progressive Coding for 3D Gaussian Splatting](https://arxiv.org/abs/2603.09703v1)** | 2026-03-10 |  |
 | **[VarSplat: Uncertainty-aware 3D Gaussian Splatting for Robust RGB-D SLAM](https://arxiv.org/abs/2603.09673v1)** | 2026-03-10 | <details><summary>Accep...</summary><p>Accepted to CVPR 2026</p></details> |
-| **[DiffWind: Physics-Informed Differentiable Modeling of Wind-Driven Object Dynamics](https://arxiv.org/abs/2603.09668v1)** | 2026-03-10 | <details><summary>Accep...</summary><p>Accepted by ICLR 2026. Project page: https://zju3dv.github.io/DiffWind/</p></details> |
 
 ## Deep Learning
 | **Title** | **Date** | **Comment** |
 | --- | --- | --- |
+| **[ForwardFlow: Simulation only statistical inference using deep learning](https://arxiv.org/abs/2603.10991v1)** | 2026-03-11 |  |
+| **[Enhancing Tree Species Classification: Insights from YOLOv8 and Explainable AI Applied to TLS Point Cloud Projections](https://arxiv.org/abs/2512.16950v2)** | 2026-03-11 | <details><summary>34 pa...</summary><p>34 pages, 17 figures, submitted to Forestry: An International Journal of Forest Research</p></details> |
+| **[InstantSfM: Towards GPU-Native SfM for the Deep Learning Era](https://arxiv.org/abs/2510.13310v2)** | 2026-03-11 |  |
+| **[Inferring Clinically Relevant Molecular Subtypes of Pancreatic Cancer from Routine Histopathology Using Deep Learning](https://arxiv.org/abs/2601.03410v2)** | 2026-03-11 |  |
 | **[Segmentation of Retinal Low-Cost Optical Coherence Tomography Images using Deep Learning](https://arxiv.org/abs/2001.08480v2)** | 2026-03-11 | <details><summary>Accep...</summary><p>Accepted for SPIE Medical Imaging 2020: Computer-Aided Diagnosis</p></details> |
 | **[Comparative Analysis of Modern Machine Learning Models for Retail Sales Forecasting](https://arxiv.org/abs/2506.05941v2)** | 2026-03-11 | <details><summary>12 to...</summary><p>12 total pages, 12 pages article</p></details> |
 | **[Protein Counterfactuals via Diffusion-Guided Latent Optimization](https://arxiv.org/abs/2603.10811v1)** | 2026-03-11 | <details><summary>16 pa...</summary><p>16 pages, 7 figures, accepted at the Gen2 Workshop at ICLR 2026</p></details> |
 | **[Dynamics-Informed Deep Learning for Predicting Extreme Events](https://arxiv.org/abs/2603.10777v1)** | 2026-03-11 |  |
 | **[Average Calibration Losses for Reliable Uncertainty in Medical Image Segmentation](https://arxiv.org/abs/2506.03942v4)** | 2026-03-11 | <details><summary>15 pa...</summary><p>15 pages, 6 figures, IEEE TMI submission. This version originally appeared in error as arXiv:2403.06759(v2)</p></details> |
 | **[Deep Randomized Distributed Function Computation (DeepRDFC): Neural Distributed Channel Simulation](https://arxiv.org/abs/2603.10750v1)** | 2026-03-11 |  |
-| **[CUPID: A Plug-in Framework for Joint Aleatoric and Epistemic Uncertainty Estimation with a Single Model](https://arxiv.org/abs/2603.10745v1)** | 2026-03-11 |  |
-| **[A Systematic Evaluation of Self-Supervised Learning for Label-Efficient Sleep Staging with Wearable EEG](https://arxiv.org/abs/2510.07960v3)** | 2026-03-11 | 15 pages, 4 figures |
-| **[Beyond Accuracy: Reliability and Uncertainty Estimation in Convolutional Neural Networks](https://arxiv.org/abs/2603.10731v1)** | 2026-03-11 | 30 pages, 39 figures |
-| **[Enhancing Brain Source Reconstruction by Initializing 3D Neural Networks with Physical Inverse Solutions](https://arxiv.org/abs/2411.00143v2)** | 2026-03-11 | <details><summary>Accep...</summary><p>Accepted in IEEE Transactions on Medical Imaging</p></details> |
 
 ## LLM
 | **Title** | **Date** | **Comment** |
 | --- | --- | --- |
+| **[Beyond the Illusion of Consensus: From Surface Heuristics to Knowledge-Grounded Evaluation in LLM-as-a-Judge](https://arxiv.org/abs/2603.11027v1)** | 2026-03-11 |  |
+| **[LLMGreenRec: LLM-Based Multi-Agent Recommender System for Sustainable E-Commerce](https://arxiv.org/abs/2603.11025v1)** | 2026-03-11 | <details><summary>Accep...</summary><p>Accepted to the Proceedings of the Conference on Digital Economy and Fintech Innovation (DEFI 2025). To appear in IEEE Xplore</p></details> |
+| **[Leech Lattice Vector Quantization for Efficient LLM Compression](https://arxiv.org/abs/2603.11021v1)** | 2026-03-11 |  |
+| **[Task-Aware Delegation Cues for LLM Agents](https://arxiv.org/abs/2603.11011v1)** | 2026-03-11 | <details><summary>Accep...</summary><p>Accepeted by CHI'26 Workshop on Developing Standards and Documentation For LLM Use as Simulated Research Participants</p></details> |
+| **[A Systematic Study of Pseudo-Relevance Feedback with LLMs](https://arxiv.org/abs/2603.11008v1)** | 2026-03-11 |  |
+| **[Ranking Reasoning LLMs under Test-Time Scaling](https://arxiv.org/abs/2603.10960v1)** | 2026-03-11 | <details><summary>Code ...</summary><p>Code is available at https://github.com/mohsenhariri/scorio</p></details> |
+| **[Online LLM watermark detection via e-processes](https://arxiv.org/abs/2602.14286v2)** | 2026-03-11 |  |
+| **[From Law to Gherkin: A Human-Centred Quasi-Experiment on the Quality of LLM-Generated Behavioural Specifications from Food-Safety Regulations](https://arxiv.org/abs/2508.20744v2)** | 2026-03-11 | <details><summary>This ...</summary><p>This article has been accepted for publication in Information and Software Technology (IST)</p></details> |
+| **[EoRA: Fine-tuning-free Compensation for Compressed LLM with Eigenspace Low-Rank Approximation](https://arxiv.org/abs/2410.21271v5)** | 2026-03-11 | <details><summary>ICLR ...</summary><p>ICLR 2026 workshops. Code: https://github.com/NVlabs/EoRA</p></details> |
 | **[PathoScribe: Transforming Pathology Data into a Living Library with a Unified LLM-Driven Framework for Semantic Retrieval and Clinical Integration](https://arxiv.org/abs/2603.08935v2)** | 2026-03-11 |  |
-| **[KV Cache Transform Coding for Compact Storage in LLM Inference](https://arxiv.org/abs/2511.01815v2)** | 2026-03-11 | <details><summary>Accep...</summary><p>Accepted to ICLR 2026</p></details> |
-| **[When Fine-Tuning Fails and when it Generalises: Role of Data Diversity and Mixed Training in LLM-based TTS](https://arxiv.org/abs/2603.10904v1)** | 2026-03-11 | <details><summary>We fi...</summary><p>We finetune the Qwen 0.5B backbone in an LLM TTS with LoRA to raise MOS speaker similarity and SNR. It works best with diverse training audio with uniform data it can amplify noise so tune decoding and use GGUF quantization for low latency stable quality</p></details> |
-| **[Autoencoding-Free Context Compression for LLMs via Contextual Semantic Anchors](https://arxiv.org/abs/2510.08907v4)** | 2026-03-11 | 23 pages,10 figures |
-| **[Burn-After-Use for Preventing Data Leakage through a Secure Multi-Tenant Architecture in Enterprise LLM](https://arxiv.org/abs/2601.06627v3)** | 2026-03-11 | 16 pages, 5 figures |
-| **[Speaker Verification with Speech-Aware LLMs: Evaluation and Augmentation](https://arxiv.org/abs/2603.10827v1)** | 2026-03-11 | <details><summary>3 Tab...</summary><p>3 Tables, 1 Figure, Under review</p></details> |
-| **[Risk-Adjusted Harm Scoring for Automated Red Teaming for LLMs in Financial Services](https://arxiv.org/abs/2603.10807v1)** | 2026-03-11 |  |
-| **[Interpretable Chinese Metaphor Identification via LLM-Assisted MIPVU Rule Script Generation: A Comparative Protocol Study](https://arxiv.org/abs/2603.10784v1)** | 2026-03-11 |  |
-| **[AttriGuard: Defeating Indirect Prompt Injection in LLM Agents via Causal Attribution of Tool Invocations](https://arxiv.org/abs/2603.10749v1)** | 2026-03-11 | 24 pages, 3 figures |
-| **[CacheSolidarity: Preventing Prefix Caching Side Channels in Multi-tenant LLM Serving Systems](https://arxiv.org/abs/2603.10726v1)** | 2026-03-11 |  |
 
