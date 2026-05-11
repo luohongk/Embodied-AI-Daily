@@ -16,6 +16,16 @@ from easydict import EasyDict
 def remove_duplicated_spaces(text: str) -> str:
     return " ".join(text.split())
 
+def escape_nunjucks(text: str) -> str:
+    """Escape sequences that Nunjucks would try to interpret as template tags.
+    {{ }} are variable tags, {% %} are block tags, {# #} are comment tags.
+    Replace the opening brace-pairs so Nunjucks never starts parsing them."""
+    text = text.replace("{{{", "{ { {")
+    text = text.replace("{{", "{ {")
+    text = text.replace("{%", "{ %")
+    text = text.replace("{#", "{ #")
+    return text
+
 def request_paper_with_arXiv_api(keyword: str, max_results: int, link: str = "OR", retries: int = 3, delay: int = 10) -> List[Dict[str, str]]:
     assert link in ["OR", "AND"], "link should be 'OR' or 'AND'"
     keyword = f"\"{keyword}\""
@@ -106,7 +116,7 @@ def generate_table(papers: List[Dict[str, str]], ignore_keys: List[str] = []) ->
                 continue
             elif key == "Abstract":
                 # add show/hide button for abstract
-                formatted_paper[key] = "<details><summary>Show</summary><p>{0}</p></details>".format(paper[key])
+                formatted_paper[key] = "<details><summary>Show</summary><p>{0}</p></details>".format(escape_nunjucks(paper[key]))
             elif key == "Authors":
                 # NOTE only use the first author
                 formatted_paper[key] = paper[key][0] + " et al."
@@ -120,9 +130,9 @@ def generate_table(papers: List[Dict[str, str]], ignore_keys: List[str] = []) ->
                 if paper[key] == "":
                     formatted_paper[key] = ""
                 elif len(paper[key]) > 20:
-                    formatted_paper[key] = "<details><summary>{0}...</summary><p>{1}</p></details>".format(paper[key][:5], paper[key])
+                    formatted_paper[key] = "<details><summary>{0}...</summary><p>{1}</p></details>".format(paper[key][:5], escape_nunjucks(paper[key]))
                 else:
-                    formatted_paper[key] = paper[key]
+                    formatted_paper[key] = escape_nunjucks(paper[key])
         formatted_papers.append(formatted_paper)
 
     # generate header
