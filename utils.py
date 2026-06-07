@@ -167,6 +167,7 @@ def generate_html(all_papers: Dict[str, List[Dict[str, str]]], current_date: str
 
     # Build topic navigation items
     nav_items = ""
+    mobile_nav_items = ""
     content_sections = ""
 
     # Color palette for topic tags
@@ -184,12 +185,19 @@ def generate_html(all_papers: Dict[str, List[Dict[str, str]]], current_date: str
         color = topic_colors[i % len(topic_colors)]
         count = len(papers)
 
-        # Navigation item
+        # Navigation item (desktop sidebar)
         nav_items += f"""            <a href="#{topic_id}" class="nav-item">
                 <span class="nav-dot" style="background:{color}"></span>
                 <span class="nav-label">{keyword}</span>
                 <span class="nav-count">{count}</span>
             </a>\n"""
+
+        # Navigation item (mobile overlay)
+        mobile_nav_items += f"""                <a href="#{topic_id}" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:{color}"></span>
+                    <span class="nav-label">{keyword}</span>
+                    <span class="nav-count">{count}</span>
+                </a>\n"""
 
         # Build paper cards
         cards = ""
@@ -487,27 +495,130 @@ def generate_html(all_papers: Dict[str, List[Dict[str, str]]], current_date: str
             margin-top: 20px;
         }}
 
+        /* Mobile top bar */
+        .mobile-bar {{
+            display: none;
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            height: 52px;
+            background: var(--surface);
+            border-bottom: 1px solid var(--border);
+            z-index: 200;
+            padding: 0 16px;
+            align-items: center;
+            justify-content: space-between;
+        }}
+        .mobile-bar .mobile-title {{
+            font-weight: 700;
+            font-size: .95rem;
+            background: linear-gradient(135deg, #6366f1, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }}
+        .menu-toggle {{
+            background: none;
+            border: none;
+            font-size: 1.4rem;
+            cursor: pointer;
+            color: var(--text);
+            padding: 4px 8px;
+            border-radius: 6px;
+            line-height: 1;
+            transition: background .15s;
+        }}
+        .menu-toggle:hover {{
+            background: var(--bg);
+        }}
+
+        /* Mobile nav overlay */
+        .mobile-nav-overlay {{
+            display: none;
+            position: fixed;
+            top: 52px; left: 0; right: 0; bottom: 0;
+            background: var(--surface);
+            z-index: 199;
+            overflow-y: auto;
+            padding: 8px 16px 24px;
+            flex-direction: column;
+        }}
+        .mobile-nav-overlay.open {{
+            display: flex;
+        }}
+        .mobile-nav-header {{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0 12px;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 4px;
+            font-weight: 600;
+            font-size: .85rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: .04em;
+        }}
+        .mobile-nav-item {{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 13px 8px;
+            border-radius: 8px;
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: .88rem;
+            border-bottom: 1px solid var(--border);
+            transition: background .1s;
+        }}
+        .mobile-nav-item:active {{
+            background: var(--bg);
+        }}
+
         /* Responsive */
         @media (max-width: 900px) {{
             .sidebar {{
                 display: none;
             }}
+            .mobile-bar {{
+                display: flex;
+            }}
             .main {{
                 margin-left: 0;
                 max-width: 100%;
-                padding: 20px 16px;
+                padding: 68px 16px 20px;
             }}
             .hero h2 {{
                 font-size: 1.4rem;
+            }}
+            .hero {{
+                padding: 20px 0 32px;
             }}
             .paper-header {{
                 flex-direction: column;
                 gap: 4px;
             }}
+            .topic-header {{
+                top: 52px;
+            }}
         }}
     </style>
 </head>
 <body>
+    <!-- Mobile top bar -->
+    <div class="mobile-bar">
+        <span class="mobile-title">🚀 Embodied AI Daily</span>
+        <button class="menu-toggle" id="menuToggle" onclick="toggleMenu()" aria-label="Toggle menu">☰</button>
+    </div>
+
+    <!-- Mobile nav overlay -->
+    <div class="mobile-nav-overlay" id="mobileNav">
+        <div class="mobile-nav-header">
+            <span>Topics</span>
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Close menu">✕</button>
+        </div>
+{mobile_nav_items}    </div>
+
+    <!-- Desktop sidebar -->
     <nav class="sidebar">
         <div class="sidebar-header">
             <h1>🚀 Embodied AI Daily</h1>
@@ -533,6 +644,27 @@ def generate_html(all_papers: Dict[str, List[Dict[str, str]]], current_date: str
             <p style="margin-top:4px">Last update: {current_date} (Beijing Time)</p>
         </footer>
     </main>
+
+    <script>
+        function toggleMenu() {{
+            var overlay = document.getElementById('mobileNav');
+            var btn = document.getElementById('menuToggle');
+            var open = overlay.classList.toggle('open');
+            btn.textContent = open ? '✕' : '☰';
+            if (open) {{
+                document.body.style.overflow = 'hidden';
+            }} else {{
+                document.body.style.overflow = '';
+            }}
+        }}
+        function closeMenu() {{
+            var overlay = document.getElementById('mobileNav');
+            var btn = document.getElementById('menuToggle');
+            overlay.classList.remove('open');
+            btn.textContent = '☰';
+            document.body.style.overflow = '';
+        }}
+    </script>
 </body>
 </html>"""
 
