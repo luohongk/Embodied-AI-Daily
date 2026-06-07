@@ -127,6 +127,23 @@
             font-size: 1.05rem;
             margin-bottom: 16px;
         }
+        .author-line {
+            margin-top: 14px;
+            font-size: .88rem;
+            color: var(--text-secondary);
+        }
+        .author-line a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .author-line a:hover {
+            text-decoration: underline;
+        }
+        .author-sep {
+            color: var(--border);
+            margin: 0 8px;
+        }
         .badges {
             display: flex;
             justify-content: center;
@@ -482,7 +499,8 @@
     <nav class="sidebar">
         <div class="sidebar-header">
             <h1>🚀 Embodied AI Daily</h1>
-            <div class="update">Last update: 2026-06-07</div>
+            <div class="update">by <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent);text-decoration:none;font-weight:500;">Hongkun Luo</a> (罗宏昆)</div>
+            <div class="update" style="margin-top:2px">Last update: 2026-06-07</div>
         </div>
             <a href="#Vision-and-Language-Navigation" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
@@ -596,6 +614,13 @@
                 <img src="https://img.shields.io/badge/Papers-VLN·VLA·SLAM·3D-blue.svg" alt="Topics">
                 <img src="https://img.shields.io/github/stars/luohongk/Embodied-AI-Daily?style=social" alt="GitHub Stars">
             </div>
+            <p class="author-line">
+                👤 <a href="https://luohongkun.top/scholar/" target="_blank">Hongkun Luo (罗宏昆)</a>
+                <span class="author-sep">·</span>
+                🎓 <a href="https://luohongkun.top/scholar/" target="_blank">Academic Page</a>
+                <span class="author-sep">·</span>
+                🐙 <a href="https://github.com/luohongk" target="_blank">GitHub</a>
+            </p>
         </section>
 
         <section id="Vision-and-Language-Navigation" class="topic-section">
@@ -16303,7 +16328,8 @@
         </section>
 
         <footer class="footer">
-            <p>🤖 Generated automatically from <a href="https://arxiv.org" style="color:var(--accent)">arXiv</a> · <a href="https://github.com/luohongk/Embodied-AI-Daily" style="color:var(--accent)">GitHub Repo</a></p>
+            <p>👤 <strong>Hongkun Luo (罗宏昆)</strong> · <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent)">Academic Page</a> · <a href="https://github.com/luohongk" target="_blank" style="color:var(--accent)">GitHub</a></p>
+            <p style="margin-top:8px">🤖 Generated automatically from <a href="https://arxiv.org" style="color:var(--accent)">arXiv</a> · <a href="https://github.com/luohongk/Embodied-AI-Daily" style="color:var(--accent)">GitHub Repo</a></p>
             <p style="margin-top:4px">Last update: 2026-06-07 (Beijing Time)</p>
         </footer>
     </main>
