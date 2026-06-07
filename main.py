@@ -1,3 +1,4 @@
+import os
 import sys
 import time
 import pytz
@@ -63,6 +64,7 @@ keywords = [
 ]  # TODO add more keywords
 
 max_result = 80  # maximum query results from arXiv API for each keyword
+readme_max_result = 20  # maximum papers to be included in README.md for each keyword
 issues_result = 10  # maximum papers to be included in the issue
 
 # all columns: Title, Authors, Abstract, Link, Tags, Comment, Date
@@ -102,14 +104,14 @@ _Automatically fetches the latest arXiv papers on **VLN · VLA · SLAM · 3D · 
 
 ## 📌 About
 This project automatically fetches the latest papers from **arXiv** based on predefined keywords.  
-- Each section in the README corresponds to a **search keyword**.  
-- Only the most recent papers are kept (up to **100 per keyword**).  
+- Each section in the README corresponds to a **search keyword** (up to **{1} per keyword**).
+- The full list (up to **{2} per keyword**) is available in the [`papers/`](papers/) directory.
 - Click **Watch** (👀) on the repo to get **daily email notifications**.
 
 _Last update: {0}_
 
 ---
-""".format(current_date)
+""".format(current_date, readme_max_result, max_result)
 )
 logging.info("生成readme")
 # write to ISSUE_TEMPLATE.md
@@ -121,6 +123,9 @@ f_is.write("---\n")
 f_is.write(
     "**Please check the [Github](https://github.com/luohongk/DailyArXiv) page for a better reading experience and more papers.**\n\n"
 )
+
+# create papers directory if not exists
+os.makedirs("papers", exist_ok=True)
 
 for keyword in keywords:
     logging.info(f"正在处理关键词: {keyword}")
@@ -143,10 +148,26 @@ for keyword in keywords:
         sys.exit("Failed to get papers!")
 
     logging.info(f"成功获取 {len(papers)} 篇论文，正在生成表格。")
-    rm_table = generate_table(papers)
-    is_table = generate_table(papers[:issues_result], ignore_keys=["Abstract"])
+
+    # Write to README.md (only first `readme_max_result` papers)
+    rm_table = generate_table(papers[:readme_max_result])
     f_rm.write(rm_table)
-    f_rm.write("\n\n")
+    # Add link to full topic page
+    topic_filename = keyword.replace(" ", "-") + ".md"
+    f_rm.write(f"\n\n> 📄 [View all {len(papers)} papers for {keyword}](papers/{topic_filename})\n\n")
+
+    # Write full topic page to papers/{keyword}.md
+    with open(f"papers/{topic_filename}", "w", encoding="utf-8") as f_topic:
+        f_topic.write(f"# {keyword}\n\n")
+        f_topic.write(f"> **{len(papers)} papers** fetched from arXiv for the keyword **{keyword}**.\n\n")
+        f_topic.write(f"> Last update: {current_date}\n\n")
+        f_topic.write(f"[← Back to README](../README.md)\n\n")
+        f_topic.write("---\n\n")
+        f_topic.write(generate_table(papers))
+        f_topic.write("\n")
+
+    # Write to ISSUE_TEMPLATE.md
+    is_table = generate_table(papers[:issues_result], ignore_keys=["Abstract"])
     f_is.write(is_table)
     f_is.write("\n\n")
     time.sleep(7)  # avoid being blocked by arXiv API
