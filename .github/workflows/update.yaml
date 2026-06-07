@@ -47,6 +47,21 @@ jobs:
         name: HongkunLuo
         email: luohongkun0715@gmail.com
 
+    - name: Deploy to GitHub Pages
+      run: |
+        mkdir -p /tmp/gh-pages-deploy
+        cp index.html /tmp/gh-pages-deploy/
+        cp -r papers /tmp/gh-pages-deploy/ 2>/dev/null || true
+        touch /tmp/gh-pages-deploy/.nojekyll
+    - name: Publish to gh-pages branch
+      uses: peaceiris/actions-gh-pages@v4
+      with:
+        github_token: ${{ secrets.PERSONAL_TOKEN }}
+        publish_dir: /tmp/gh-pages-deploy
+        publish_branch: gh-pages
+        force_orphan: true
+        enable_jekyll: false
+
     - name: Create an issue to notify
       uses: JasonEtco/create-an-issue@v2
       env:
