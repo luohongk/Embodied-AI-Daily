@@ -8,6 +8,7 @@ import logging
 from utils import (
     get_daily_papers_by_keyword_with_retries,
     generate_table,
+    generate_html,
     back_up_files,
     restore_files,
     remove_backups,
@@ -127,6 +128,9 @@ f_is.write(
 # create papers directory if not exists
 os.makedirs("papers", exist_ok=True)
 
+# collect all papers for HTML generation
+all_papers = {}
+
 for keyword in keywords:
     logging.info(f"正在处理关键词: {keyword}")
     f_rm.write("## {0}\n".format(keyword))
@@ -148,6 +152,9 @@ for keyword in keywords:
         sys.exit("Failed to get papers!")
 
     logging.info(f"成功获取 {len(papers)} 篇论文，正在生成表格。")
+
+    # Store papers for HTML generation
+    all_papers[keyword] = papers
 
     # Write to README.md (only first `readme_max_result` papers)
     rm_table = generate_table(papers[:readme_max_result])
@@ -171,6 +178,12 @@ for keyword in keywords:
     f_is.write(is_table)
     f_is.write("\n\n")
     time.sleep(7)  # avoid being blocked by arXiv API
+
+# Generate index.html
+logging.info("生成 index.html")
+html_content = generate_html(all_papers, current_date)
+with open("index.html", "w", encoding="utf-8") as f_html:
+    f_html.write(html_content)
 
 f_rm.close()
 f_is.close()

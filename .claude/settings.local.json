@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -c \"import ast; ast.parse\\(open\\('utils.py'\\).read\\(\\)\\); print\\('utils.py: OK'\\)\")",
+      "Bash(python3 -c \"import ast; ast.parse\\(open\\('main.py'\\).read\\(\\)\\); print\\('main.py: OK'\\)\")"
+    ]
+  }
+}

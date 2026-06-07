@@ -43,7 +43,7 @@ jobs:
         push-branch: 'main'
         commit-message: '✏️ Update papers automatically.'
         force-add: 'true'
-        files: README.md .github/ISSUE_TEMPLATE.md papers/
+        files: README.md .github/ISSUE_TEMPLATE.md papers/ index.html
         name: HongkunLuo
         email: luohongkun0715@gmail.com
 
