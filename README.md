@@ -17,6 +17,10 @@ _Automatically fetches the latest arXiv papers on **VLN · VLA · SLAM · 3D · 
   </a>
 </p>
 
+<p> 
+Embodied-AI-Daily Web:http://luohongkun.top/Embodied-AI-Daily/
+</p>
+
 
 </div>
 
