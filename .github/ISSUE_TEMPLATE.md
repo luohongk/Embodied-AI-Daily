@@ -259,6 +259,7 @@ labels: documentation
 ## Deep Learning
 | **Title** | **Date** | **Comment** |
 | --- | --- | --- |
+| **[Predicting Dynamic Map States from Limited Field-of-View Sensor Data](https://arxiv.org/abs/2602.12360v2)** | 2026-06-05 | <details><summary>6 pag...</summary><p>6 pages, 4 figures. Accepted to the 2026 International Conference on Advanced Visual and Signal-Based Systems (AVSS)</p></details> |
 | **[Trace Reconstruction with Language Models](https://arxiv.org/abs/2507.12927v2)** | 2026-06-05 |  |
 | **[Unregistered Spectral Image Fusion: Unmixing, Adversarial Learning, and Recoverability](https://arxiv.org/abs/2603.21510v3)** | 2026-06-05 |  |
 | **[Generative Modeling of Discrete Latent Structures via Dynamic Policy Gradients](https://arxiv.org/abs/2606.07400v1)** | 2026-06-05 | ICML 2026 |
@@ -268,11 +269,11 @@ labels: documentation
 | **[A Comparative Study of Deep Learning Models for Geological Carbon Sequestration](https://arxiv.org/abs/2606.07215v1)** | 2026-06-05 |  |
 | **[I-SAFE: Wasserstein Coherence Metrics for Structural Auditing of Scientific AI Models](https://arxiv.org/abs/2605.21731v2)** | 2026-06-05 |  |
 | **[DIFFRACT: Neuralized Utility Maximization for Wireless Networks by Differentiable Programming](https://arxiv.org/abs/2606.07114v1)** | 2026-06-05 | IEEE INFOCOM 2026 |
-| **[Bias in Filter Feature Selection Evaluation: A Meta-Analysis of Datasets, Baselines, and Experimental Design Choices](https://arxiv.org/abs/2606.07068v1)** | 2026-06-05 |  |
 
 ## LLM
 | **Title** | **Date** | **Comment** |
 | --- | --- | --- |
+| **[How reliable are LLMs when it comes to playing dice?](https://arxiv.org/abs/2606.07515v1)** | 2026-06-05 |  |
 | **[LLM as a Meta-Judge: Synthetic Data for NLP Evaluation Metric Validation](https://arxiv.org/abs/2603.09403v3)** | 2026-06-05 | <details><summary>16 pa...</summary><p>16 pages, 1 figure, 14 tables</p></details> |
 | **[LLM-Guided Search for Deletion-Correcting Codes](https://arxiv.org/abs/2504.00613v2)** | 2026-06-05 |  |
 | **[Extracting Recurring Vulnerabilities from Black-Box LLM-Generated Software](https://arxiv.org/abs/2602.04894v4)** | 2026-06-05 | <details><summary>ICML ...</summary><p>ICML 2026, Second Workshop on Agents in the Wild: Safety, Security, and Beyond (AIWILD)</p></details> |
@@ -282,5 +283,4 @@ labels: documentation
 | **[LLM-Guided Evolution for Medical Decision Pipelines](https://arxiv.org/abs/2606.07342v1)** | 2026-06-05 |  |
 | **[Beyond tokens: a unified framework for latent communication in LLM-based multi-agent systems](https://arxiv.org/abs/2606.05711v2)** | 2026-06-05 |  |
 | **[Hierarchical Certified Semantic Commitment for Byzantine-Resilient LLM-Agent Collaboration](https://arxiv.org/abs/2606.07316v1)** | 2026-06-05 | <details><summary>27 pa...</summary><p>27 pages, 3 figures, 8 tables</p></details> |
-| **[QBugLM: An Agentic Benchmarking Framework for LLM-based Quantum Software Debugging](https://arxiv.org/abs/2606.07314v1)** | 2026-06-05 | <details><summary>This ...</summary><p>This paper was accepted at IEEE QSW 2026</p></details> |
 

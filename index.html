@@ -486,7 +486,7 @@
                 <a href="#Deep-Learning" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">70</span>
+                    <span class="nav-count">69</span>
                 </a>
                 <a href="#LLM" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#d946ef"></span>
@@ -595,7 +595,7 @@
             <a href="#Deep-Learning" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">70</span>
+                <span class="nav-count">69</span>
             </a>
             <a href="#LLM" class="nav-item">
                 <span class="nav-dot" style="background:#d946ef"></span>
@@ -14663,9 +14663,20 @@
         <section id="Deep-Learning" class="topic-section">
             <div class="topic-header">
                 <span class="topic-badge" style="background:#a855f7">Deep Learning</span>
-                <span class="topic-count">70 papers</span>
+                <span class="topic-count">69 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2602.12360v2" target="_blank" class="paper-title">Predicting Dynamic Map States from Limited Field-of-View Sensor Data</a>
+                        <span class="paper-date">2026-06-05</span>
+                    </div>
+                                        <span class="paper-comment">📝 6 pages, 4 figures. Accepted to the 2026 International Conference on Advanced Visual and Signal-Based Systems (AVSS)</span>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>When autonomous systems are deployed in real-world scenarios, sensors are often subject to limited field-of-view (FOV) constraints, either naturally through system design, or through unexpected occlusions or sensor failures. In conditions where a large FOV is unavailable, it is important to be able to infer information about the environment and predict the state of nearby surroundings based on available data to maintain safe and accurate operation. In this work, we explore the effectiveness of deep learning for dynamic map state prediction based on limited FOV time series data. We show that by representing dynamic sensor data in a simple single-image format that captures both spatial and temporal information, we can effectively use a wide variety of existing image-to-image learning models to predict map states with high accuracy in a diverse set of sensing scenarios.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2507.12927v2" target="_blank" class="paper-title">Trace Reconstruction with Language Models</a>
@@ -15414,28 +15425,6 @@
                         <p>In structural health monitoring (SHM) systems, data is collected from a multitude of sensors measuring, for example, vibration or strain in the structure, along with additional features that capture environmental or operational information. It is well known that changes in the measured sensor outputs do not necessarily originate from structural damage but are often induced by environmental changes. One popular approach to account for these effects is regressing the system outputs on the confounding factors, also known as "response surface modeling". Afterward, the predicted values are subtracted from the observed ones to obtain corrected data with the environmental effects (supposedly) removed. However, the evaluation of real-world SHM data shows that environmental conditions may affect not only the expected output values but also higher-order statistical moments, particularly the variances of and the covariances and correlations between the output quantities, such as eigenfrequencies of different modes or strain sensors at different locations. By construction, the (supervised) machine learning techniques commonly used for response surface modeling cannot account for those higher-order effects. To address these issues, we present and discuss several approaches for identifying and quantifying multivariate confounding effects on output covariances and correlations: a nonparametric, kernel-based estimator, a random forest, a semiparametric additive model, and a deep learning approach. Furthermore, we show how the resulting conditional covariance matrices can be used in an SHM pipeline. We compare the competing methods on both artificial data and real-world load test data from the Vahrendorfer Stadtweg bridge in Hamburg, Germany, as well as eigenfrequency data from the railway bridge KW51 near Leuven, Belgium.</p>
                     </details>
                 </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2511.21035v2" target="_blank" class="paper-title">RAVQ-HoloNet: Rate-Adaptive Vector-Quantized Hologram Compression</a>
-                        <span class="paper-date">2026-06-03</span>
-                    </div>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Holography offers significant potential for AR/VR applications. However, its adoption is limited by the high demand for data compression. Existing deep learning approaches generally lack rate adaptivity within a single network and often require multiple models to cover different bandwidth requirements. We present RAVQ-HoloNet, a rate-adaptive vector quantization framework that integrates the rate-adaptive compression with the transformation of image data into phase-only hologram. RAVQ-HoloNet achieves high-fidelity reconstructions, outperforming current state-of-the-art methods implemented via two distinct architectural configurations: a standard model optimized for low bit rates and a deeper, extended variant tailored for ultra low bit rate setting. To evaluate these models, we utilized the DIV2K dataset as a benchmark for high-fidelity holographic reconstruction. Quantitative analysis in the simulation reveals that our approach significantly surpasses current benchmarks. Specifically, in the low bit rate domain, our method achieves a BD-Rate reduction of -33.91% and a BD-PSNR gain of 1.02dB relative to the state-of-the-art method. Additionally, experimental results on the SLM device show that our method achieves higher contrast and improved quality.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2509.25289v4" target="_blank" class="paper-title">ClustRecNet: A Novel End-to-End Deep Learning Framework for Clustering Algorithm Recommendation</a>
-                        <span class="paper-date">2026-06-03</span>
-                    </div>
-                                        <span class="paper-comment">📝 Published in IEEE Access</span>
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Identifying an effective clustering algorithm for a given dataset remains a fundamental unsupervised learning issue. We introduce ClustRecNet, a novel end-to-end deep learning framework that recommends suitable clustering algorithm(s) by directly learning high-order representations of raw tabular data. To facilitate robust meta-learning, we first construct a comprehensive repository of 34,000 synthetic datasets encompassing a large variety of clustering scenarios, run 10 popular clustering algorithms, and use Adjusted Rand Index (ARI) to establish ground-truth labels. ClustRecNet's architecture incorporates a convolution block, two residual blocks, and an attention block to capture local and global structural patterns, effectively bypassing the knowledge bottleneck associated with manual feature engineering. Extensive evaluation on both synthetic and real-world benchmarks demonstrates that ClustRecNet consistently outperforms traditional internal cluster validity indices such as Silhouette, Calinski-Harabasz, Davies-Bouldin, and Dunn as well as state-of-the-art Automated Machine Learning (AutoML) approaches such as ML2DAC, AutoCluster, and AutoML4Clust. For example, our framework achieves an average 0.497 ARI gain over the Calinski-Harabasz cluster validity index on synthetic data and an average 44.16% ARI improvement over the leading AutoML approach (ML2DAC) on real-world benchmarks. Code and data are available at: https://github.com/mrbakhtyari/ClustRecNet</p>
-                    </details>
-                </div>
             </div>
         </section>
         <section id="LLM" class="topic-section">
@@ -15444,6 +15433,17 @@
                 <span class="topic-count">80 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2606.07515v1" target="_blank" class="paper-title">How reliable are LLMs when it comes to playing dice?</a>
+                        <span class="paper-date">2026-06-05</span>
+                    </div>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>We investigate the probabilistic reasoning capabilities of large language models through a controlled benchmarking study on discrete probability problems. We constructed two datasets, respectively a set of standard exercises and a set of counterintuitive exercises, designed to trigger heuristic reasoning, and evaluated 8 state-of-the-art models, each tested with and without Chain-of-Thought prompting. Models achieve an average accuracy of 0.96 on standard problems but only 0.59 on counterintuitive ones. We further provide empirical evidence of token bias: performance drops by over 20% when canonical formulations are replaced by disguised variants. Embedding misleading suggestions in the prompt reduces performance by up to 34%, with no model proving immune. Taken together, the reported findings suggest that current LLMs are not yet genuine probabilistic reasoners, despite their success in advanced mathematical problems.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2603.09403v3" target="_blank" class="paper-title">LLM as a Meta-Judge: Synthetic Data for NLP Evaluation Metric Validation</a>
@@ -16311,17 +16311,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Persistent memory for an LLM agent is a write-heavy substrate: every belief update is a versioned write, and a new claim may contradict a stored one. Production systems use four resolution heuristics (last-writer-wins, evidence-weighted merge, await-confirmation, per-rule policy), yet none declares the isolation level it assumes or the write-time anomalies it admits. We show that contradiction resolution is write-time concurrency control and make the missing contract explicit. TOKI types the four heuristics as one family of bitemporal operators over a dual-row schema, each with an isolation precondition and a provenance annotation that preserves the losing fact in an audit row. Four soundness theorems close the contract across isolation, schema, and provenance, lift the guarantees to operator pipelines, and extend the fold operators to n-ary conflict sets. A tightness companion proves that, within the relational schedule model, keyed logging of the adjudicating judge is necessary for replay consistency, which every audited baseline omits. A verdict matrix over eight systems localizes the gap: every baseline that keeps a language-model judge on the write path admits at least one of three write-time anomalies (replay inconsistency, belief-drift skew, audit erasure); a content-addressed engine-layer comparator avoids them only by removing the judge, and TOKI alone excludes all three while keeping it. On its one natural-workload slice the audit-row defence moves LoCoMo by 0.86, and ablating the typed memory layer removes 0.49 accuracy on 1,444 answerable LoCoMo questions; the cross-system comparison stays underpowered and claims no superiority. The contribution is the contract: a write-time correctness specification, proved sound across isolation, schema, and provenance, pinning the guarantee every production heuristic assumes but no deployed system makes explicit.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.06235v1" target="_blank" class="paper-title">Design a Reliable LLM-Integrated Interface for Mortality Forecasting</a>
-                        <span class="paper-date">2026-06-04</span>
-                    </div>
-                                        <span class="paper-comment">📝 7 pages, 7 figures</span>
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Mortality forecasting plays an important role in actuarial and policy decision-making, but its implementation remains technically complex and inaccessible to non-expert users. This project proposes a reliable large language model (LLM)-integrated interface that improves usability while maintaining statistical power. The LLM is designed as a constrained orchestration layer that translates natural-language inputs into structured configurations for a deterministic forecasting pipeline. A three-phase methodology is employed to ensure accuracy, usability, and transparency. First, a baseline pipeline is implemented using the CoMoMo package, reproducing established mortality forecasting results. Second, the pipeline is extended to generate multi-step forecasts using rolling-origin evaluation and mean squared error (MSE). Third, a prototype interface uses a local LLM to handle users' forecasting requests in plain language. The system demonstrates that LLMs can enhance accessibility without compromising reproducibility, transparency, or actuarial validity in high-stakes analytical workflows.</p>
                     </details>
                 </div>
             </div>
