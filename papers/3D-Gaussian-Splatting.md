@@ -2,7 +2,7 @@
 
 > **77 papers** fetched from arXiv for the keyword **3D Gaussian Splatting**.
 
-> Last update: 2026-06-08
+> Last update: 2026-06-09
 
 [← Back to README](../README.md)
 
