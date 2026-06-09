@@ -795,18 +795,18 @@ _MATHJAX = r"""    <!-- MathJax for rendering LaTeX math in AI summaries -->
     <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>"""
 
 
-# Menu toggle script (plain string, literal braces).
-_MENU_SCRIPT = """    <script>
+# Page scripts (menu toggle + lazy AI-summary renderer).
+# marked.js renders markdown in the browser; MathJax handles math.
+# Using a raw string so backslashes in regex literals stay literal.
+_MENU_SCRIPT = r"""    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+        /* ── Mobile menu ── */
         function toggleMenu() {
             var overlay = document.getElementById('mobileNav');
             var btn = document.getElementById('menuToggle');
             var open = overlay.classList.toggle('open');
             btn.textContent = open ? '✕' : '☰';
-            if (open) {
-                document.body.style.overflow = 'hidden';
-            } else {
-                document.body.style.overflow = '';
-            }
+            document.body.style.overflow = open ? 'hidden' : '';
         }
         function closeMenu() {
             var overlay = document.getElementById('mobileNav');
@@ -815,6 +815,67 @@ _MENU_SCRIPT = """    <script>
             btn.textContent = '☰';
             document.body.style.overflow = '';
         }
+
+        /* ── Lazy AI-summary renderer ── */
+        // Render markdown + re-typeset MathJax only when a summary is opened.
+        // Math spans ($...$, $$...$$, \(...\), \[...\]) are stashed as
+        // placeholders before marked runs so Markdown never mangles LaTeX.
+        function renderAISummary(details) {
+            if (!details.dataset.lazy) return;   // already rendered
+            var rawMd = details.dataset.md || '';
+
+            // Decode HTML entities we encoded in Python.
+            // Order matters: &amp; must be last (it re-encodes other entities).
+            rawMd = rawMd
+                .replace(/&#10;/g, '\n')
+                .replace(/&quot;/g, '"')
+                .replace(/&lt;/g, '<')
+                .replace(/&gt;/g, '>')
+                .replace(/&amp;/g, '&');
+
+            // 1. Stash math spans.
+            var store = [];
+            function stash(m) { store.push(m); return '\x02MATH' + (store.length - 1) + 'END\x03'; }
+            var protected_ = rawMd
+                .replace(/\$\$[\s\S]+?\$\$/g, stash)
+                .replace(/\\\[[\s\S]+?\\\]/g, stash)
+                .replace(/\$[^$\n]+?\$/g, stash)
+                .replace(/\\\([\s\S]+?\\\)/g, stash);
+
+            // 2. Render markdown.
+            var html = (typeof marked !== 'undefined')
+                ? marked.parse(protected_)
+                : '<pre>' + protected_.replace(/</g, '&lt;') + '</pre>';
+
+            // 3. Restore math spans verbatim.
+            store.forEach(function(expr, i) {
+                html = html.split('\x02MATH' + i + 'END\x03').join(expr);
+            });
+
+            // 4. Inject into DOM.
+            var container = details.querySelector('.ai-content');
+            if (container) container.innerHTML = html;
+
+            // 5. Ask MathJax to typeset just this element.
+            if (window.MathJax && MathJax.typesetPromise) {
+                MathJax.typesetPromise([container]).catch(function(e) {
+                    console.warn('MathJax typeset error:', e);
+                });
+            }
+
+            // Mark done so we never re-render.
+            delete details.dataset.lazy;
+            delete details.dataset.md;
+        }
+
+        // Wire up all existing .ai-summary elements.
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('details.ai-summary[data-lazy]').forEach(function(det) {
+                det.addEventListener('toggle', function () {
+                    if (det.open) renderAISummary(det);
+                }, { once: true });
+            });
+        });
     </script>"""
 
 
@@ -931,10 +992,19 @@ def _render_paper_card(paper: Dict[str, str]) -> str:
 
     ai_summary_html = ""
     if ai_summary:
-        rendered = render_markdown(ai_summary)
-        ai_summary_html = f"""                    <details class="ai-summary">
+        # Store raw markdown in a data attribute; JS renders on first expand.
+        # Encode characters that would break the HTML attribute value.
+        safe_md = (ai_summary
+                   .replace("&", "&amp;")    # must be first
+                   .replace("<", "&lt;")
+                   .replace(">", "&gt;")
+                   .replace('"', "&quot;")
+                   .replace("\n", "&#10;"))
+        # Protect Nunjucks template markers ({{ etc.) in case of SSG pipeline.
+        safe_md = escape_nunjucks(safe_md)
+        ai_summary_html = f"""                    <details class="ai-summary" data-lazy="1" data-md="{safe_md}">
                         <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body">{rendered}</div>
+                        <div class="ai-content markdown-body"></div>
                     </details>"""
 
     return f"""                <div class="paper-card">
