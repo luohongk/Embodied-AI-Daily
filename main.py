@@ -50,7 +50,7 @@ logging.info("获取关键词列表")
 
 keywords = [
     "Vision and Language Navigation",
-    "Feed Forward",
+    "Feed Forward Reconstruction",
     "Vision Language Action",
     "World Model",
     "3D Foundation Model",
