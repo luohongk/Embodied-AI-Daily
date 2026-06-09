@@ -212,6 +212,10 @@ def render_markdown(md_text: str) -> str:
         logging.warning(f"markdown render failed, falling back to <pre>: {e}")
         html = f"<pre style='white-space:pre-wrap'>{escape_nunjucks(protected)}</pre>"
 
+    # 2b. Escape Nunjucks template markers in the prose ONLY. Math spans are
+    #     still placeholders here, so LaTeX braces like {{ never get mangled.
+    html = escape_nunjucks(html)
+
     # 3. Restore the original math spans verbatim for MathJax.
     for i, expr in enumerate(math_store):
         html = html.replace(f"MATHJAXPLACEHOLDER{i}ENDPLACEHOLDER", expr)
@@ -279,7 +283,7 @@ def generate_html(all_papers: Dict[str, List[Dict[str, str]]], current_date: str
 
             ai_summary_html = ""
             if ai_summary:
-                rendered = escape_nunjucks(render_markdown(ai_summary))
+                rendered = render_markdown(ai_summary)
                 ai_summary_html = f"""                    <details class="ai-summary">
                         <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
                         <div class="ai-content markdown-body">{rendered}</div>
