@@ -18,19 +18,19 @@ labels: documentation
 | **[AwareVLN: Reasoning with Self-awareness for Vision-Language Navigation](https://arxiv.org/abs/2605.22816v1)** | 2026-05-21 | <details><summary>Accep...</summary><p>Accepted to CVPR 2026. Project page: https://gwxuan.github.io/AwareVLN/</p></details> |
 | **[P2DNav: Panorama-to-Downview Reasoning for Zero-shot Vision-and-Language Navigation](https://arxiv.org/abs/2605.19634v1)** | 2026-05-19 |  |
 
-## Feed Forward
+## Feed Forward Reconstruction
 | **Title** | **Date** | **Comment** |
 | --- | --- | --- |
-| **[Learning Dynamics Reveal a Hierarchy of Weight-Induced Layerwise Gram Metrics](https://arxiv.org/abs/2606.09744v1)** | 2026-06-08 | 23 pages |
-| **[Real-Time AttentionBender: Granular Interactive Network Bending of Video Diffusion Transformers](https://arxiv.org/abs/2606.06497v2)** | 2026-06-08 | <details><summary>5 pag...</summary><p>5 pages, 4 figures. Accepted to ACM Creativity & Cognition XAIxArts Workshop 2026</p></details> |
 | **[HDRAgent: An Agentic Framework for Multi-Exposure HDR Imaging](https://arxiv.org/abs/2606.09110v1)** | 2026-06-08 |  |
-| **[Holo360D: A Large-Scale Real-World Dataset with Continuous Trajectories for Advancing Panoramic 3D Reconstruction and Beyond](https://arxiv.org/abs/2604.22482v2)** | 2026-06-08 | <details><summary>Datas...</summary><p>Datasets Link: https://github.com/Jou719/Holo360D</p></details> |
-| **[EPS3D: End-to-End Feed-Forward 3D Panoptic Segmentation](https://arxiv.org/abs/2606.08980v1)** | 2026-06-08 | <details><summary>ICML ...</summary><p>ICML 2026. The code is publicly available at \href{https://github.com/Runsong123/EPS3D}{https://github.com/Runsong123/EPS3D}</p></details> |
-| **[Silicon Photonics Testing: Design for Testability, Fault Detection, and Manufacturing Variation Analysis in Photonic Integrated Circuits](https://arxiv.org/abs/2606.08885v1)** | 2026-06-08 | <details><summary>A sho...</summary><p>A short version of this paper is presented at a conference. P. Agnihotri, P. Kalla and S. Blair, "Design-for-Test for Silicon Photonic Circuits," 2024 IEEE International Test Conference (ITC), San Diego, CA, USA, 2024, pp. 86-90, doi: 10.1109/ITC51657.2024.00025</p></details> |
-| **[NGram-MoSE: Efficient Remote Sensing Super-Resolution via N-Gram Context and Mixture-of-Experts](https://arxiv.org/abs/2606.08535v1)** | 2026-06-07 |  |
-| **[Look Less, Reason More: Block-wise Attention Skipping for Efficient Multimodal LLMs](https://arxiv.org/abs/2606.08511v1)** | 2026-06-07 |  |
-| **[Topological Effective Connectivity Modeling in Brain Networks](https://arxiv.org/abs/2606.08407v1)** | 2026-06-07 | 45 pages, 15 figures |
-| **[UAOR: Uncertainty-aware Observation Reinjection for Vision-Language-Action Models](https://arxiv.org/abs/2602.18020v2)** | 2026-06-06 |  |
+| **[Empowering Feed-Forward Reconstruction Models with Metric Scale via Satellite Images](https://arxiv.org/abs/2606.08205v1)** | 2026-06-06 |  |
+| **[Anchor3R: Streaming 3D Reconstruction with Transient Anchors for Long-Horizon Visual Mapping](https://arxiv.org/abs/2606.05035v1)** | 2026-06-03 |  |
+| **[Fast and Lightweight Novel View Synthesis with Differentiable Multiplane Image](https://arxiv.org/abs/2606.02068v1)** | 2026-06-01 |  |
+| **[Xiaomi Auto World Model: A Joint World Model Integrating Reconstruction and Generation for Autonomous Driving](https://arxiv.org/abs/2605.18137v5)** | 2026-05-27 |  |
+| **[TriSplat: Simulation-Ready Feed-Forward 3D Scene Reconstruction](https://arxiv.org/abs/2605.26115v1)** | 2026-05-25 | <details><summary>Proje...</summary><p>Project Page: https://lhmd.top/trisplat, Code: https://github.com/ziplab/TriSplat</p></details> |
+| **[Ray-Aware Pointer Memory with Adaptive Updates for Streaming 3D Reconstruction](https://arxiv.org/abs/2605.05749v3)** | 2026-05-21 |  |
+| **[UAVFF3D: A Geometry-Aware Benchmark for Feed-Forward UAV 3D Reconstruction](https://arxiv.org/abs/2605.17942v2)** | 2026-05-19 | <details><summary>19 pa...</summary><p>19 pages, 16 figures, 16 tables</p></details> |
+| **[AdaptSplat: Adapting Vision Foundation Models for Feed-Forward 3D Gaussian Splatting](https://arxiv.org/abs/2605.10239v2)** | 2026-05-18 |  |
+| **[LongDPM: Overlap-Aware 4D Reconstruction from Long Monocular Videos](https://arxiv.org/abs/2605.17303v1)** | 2026-05-17 |  |
 
 ## Vision Language Action
 | **Title** | **Date** | **Comment** |
