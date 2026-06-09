@@ -4,6 +4,7 @@ import time
 import pytz
 from datetime import datetime
 import logging
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 from utils import (
     get_daily_papers_by_keyword_with_retries,
@@ -77,11 +78,54 @@ issues_result = 10  # maximum papers to be included in the issue
 DEEPSEEK_API_KEY = os.environ.get("DEEPSEEK_API_KEY", "")
 AI_SUMMARY_TOP_N = int(os.environ.get("AI_SUMMARY_TOP_N", "5"))
 AI_FULLTEXT = os.environ.get("AI_FULLTEXT", "1") == "1"  # 1=read full PDF, 0=abstract only
+AI_WORKERS = int(os.environ.get("AI_WORKERS", "4"))  # concurrent summary threads
 if DEEPSEEK_API_KEY:
     mode = "全文深度阅读" if AI_FULLTEXT else "仅摘要"
-    logging.info(f"DeepSeek AI 总结已启用（{mode}），每个关键词最多总结前 {AI_SUMMARY_TOP_N} 篇论文")
+    logging.info(f"DeepSeek AI 总结已启用（{mode}），每个关键词最多总结前 {AI_SUMMARY_TOP_N} 篇论文，并发 {AI_WORKERS} 线程")
 else:
     logging.info("未设置 DEEPSEEK_API_KEY，仅复用已有缓存，不调用 API")
+
+
+def process_paper_summary(paper):
+    """Resolve one paper's AI summary (cache-first, then generate).
+
+    Runs inside a thread pool. Mutates and returns the paper dict with
+    an ``AI_Summary`` field when a summary is available.
+    """
+    title = paper.get("Title", "")
+    abstract = paper.get("Abstract", "")
+    link = paper.get("Link", "")
+    arxiv_id = extract_arxiv_id(link)
+
+    # 1. Cache hit -> reuse, zero cost.
+    cached = get_cached_summary(arxiv_id)
+    if cached:
+        paper["AI_Summary"] = cached
+        logging.info(f"  [缓存命中] {arxiv_id}")
+        return paper
+
+    # 2. No API key -> can only use cache, skip generation.
+    if not DEEPSEEK_API_KEY:
+        return paper
+
+    # 3. Generate: full-text deep read when possible.
+    summary = ""
+    if AI_FULLTEXT and arxiv_id:
+        logging.info(f"  [下载全文] {arxiv_id}")
+        fulltext = download_and_extract_pdf(arxiv_id)
+        if fulltext:
+            summary = summarize_fulltext_with_ai(title, fulltext, DEEPSEEK_API_KEY)
+
+    # 4. Fallback to abstract-based summary when full text is unavailable.
+    if not summary and abstract:
+        summary = summarize_paper_with_ai(title, abstract, DEEPSEEK_API_KEY)
+
+    # 5. Store in cache ("database") and attach for HTML.
+    if summary:
+        paper["AI_Summary"] = summary
+        save_summary(arxiv_id, title, link, summary)
+    return paper
+
 
 # all columns: Title, Authors, Abstract, Link, Tags, Comment, Date
 # fixed_columns = ["Title", "Link", "Date"]
@@ -113,11 +157,22 @@ _Automatically fetches the latest arXiv papers on **VLN · VLA · SLAM · 3D · 
   </a>
 </p>
 
-<p> 
+<p>
 Embodied-AI-Daily Web:http://luohongkun.top/Embodied-AI-Daily/
 </p>
 
 
+</div>
+
+---
+
+## ☕ 支持本项目 / Support this project
+
+每篇论文的 **AI 深度总结**都会调用大量 [DeepSeek](https://www.deepseek.com/) API（需付费）。如果这个项目对你有帮助，欢迎请作者喝杯咖啡，支持服务器与 API 开销 🙏
+
+<div align="center">
+  <img src="images/wechat_pay.jpg" alt="WeChat Pay QR code" width="240">
+  <p><em>💚 微信赞助 / Sponsor via WeChat Pay</em></p>
 </div>
 
 ---
@@ -172,48 +227,19 @@ for keyword in keywords:
 
     logging.info(f"成功获取 {len(papers)} 篇论文，正在生成表格。")
 
-    # Generate / reuse AI summaries for top N papers.
+    # Generate / reuse AI summaries for top N papers, concurrently.
     # Cache-first: if summaries/<arxiv_id>.md exists, reuse it (no API call).
     if papers:
-        logging.info(f"正在处理 '{keyword}' 前 {AI_SUMMARY_TOP_N} 篇论文的 AI 总结...")
-        for i in range(min(AI_SUMMARY_TOP_N, len(papers))):
-            title = papers[i].get("Title", "")
-            abstract = papers[i].get("Abstract", "")
-            link = papers[i].get("Link", "")
-            arxiv_id = extract_arxiv_id(link)
-
-            # 1. Cache hit -> reuse, zero cost.
-            cached = get_cached_summary(arxiv_id)
-            if cached:
-                papers[i]["AI_Summary"] = cached
-                logging.info(f"  [缓存命中] {arxiv_id}")
-                continue
-
-            # 2. No API key -> can only use cache, skip generation.
-            if not DEEPSEEK_API_KEY:
-                continue
-
-            # 3. Generate: full-text deep read when possible.
-            summary = ""
-            if AI_FULLTEXT and arxiv_id:
-                logging.info(f"  [下载全文] {arxiv_id}")
-                fulltext = download_and_extract_pdf(arxiv_id)
-                if fulltext:
-                    summary = summarize_fulltext_with_ai(
-                        title, fulltext, DEEPSEEK_API_KEY
-                    )
-
-            # 4. Fallback to abstract-based summary when full text is unavailable.
-            if not summary and abstract:
-                summary = summarize_paper_with_ai(
-                    title, abstract, DEEPSEEK_API_KEY
-                )
-
-            # 5. Store in cache ("database") and attach for HTML.
-            if summary:
-                papers[i]["AI_Summary"] = summary
-                save_summary(arxiv_id, title, link, summary)
-            time.sleep(1)  # avoid rate limit / arXiv throttling
+        n = min(AI_SUMMARY_TOP_N, len(papers))
+        logging.info(f"正在并发处理 '{keyword}' 前 {n} 篇论文的 AI 总结（{AI_WORKERS} 线程）...")
+        with ThreadPoolExecutor(max_workers=AI_WORKERS) as executor:
+            # papers[i] dicts are mutated in place by process_paper_summary.
+            futures = [executor.submit(process_paper_summary, papers[i]) for i in range(n)]
+            for future in as_completed(futures):
+                try:
+                    future.result()
+                except Exception as e:
+                    logging.warning(f"AI summary task failed: {e}")
 
     # Store papers for HTML generation
     all_papers[keyword] = papers

@@ -37,6 +37,7 @@ jobs:
         DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
         AI_SUMMARY_TOP_N: "5"
         AI_FULLTEXT: "1"
+        AI_WORKERS: "4"
       run: |
         python main.py
 
@@ -57,6 +58,7 @@ jobs:
         cp index.html /tmp/gh-pages-deploy/
         cp -r papers /tmp/gh-pages-deploy/ 2>/dev/null || true
         cp -r summaries /tmp/gh-pages-deploy/ 2>/dev/null || true
+        cp -r images /tmp/gh-pages-deploy/ 2>/dev/null || true
         touch /tmp/gh-pages-deploy/.nojekyll
     - name: Publish to gh-pages branch
       uses: peaceiris/actions-gh-pages@v4

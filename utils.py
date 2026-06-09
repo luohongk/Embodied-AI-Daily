@@ -243,8 +243,8 @@ def generate_html(all_papers: Dict[str, List[Dict[str, str]]], current_date: str
             ai_summary_html = ""
             if ai_summary:
                 rendered = escape_nunjucks(render_markdown(ai_summary))
-                ai_summary_html = f"""                    <details class="ai-summary" open>
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）</summary>
+                ai_summary_html = f"""                    <details class="ai-summary">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
                         <div class="ai-content markdown-body">{rendered}</div>
                     </details>"""
 
@@ -610,6 +610,53 @@ def generate_html(all_papers: Dict[str, List[Dict[str, str]]], current_date: str
             margin-top: 20px;
         }}
 
+        /* Sponsor banner */
+        .sponsor {{
+            margin: 0 auto 8px;
+            max-width: 640px;
+            background: linear-gradient(135deg, rgba(16,185,129,0.10), rgba(99,102,241,0.10));
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 16px 20px;
+            text-align: center;
+        }}
+        .sponsor-title {{
+            font-size: .95rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 6px;
+        }}
+        .sponsor-desc {{
+            font-size: .82rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }}
+        .sponsor details {{ margin-top: 4px; }}
+        .sponsor summary {{
+            cursor: pointer;
+            display: inline-block;
+            background: #07c160;
+            color: #fff;
+            font-size: .82rem;
+            font-weight: 600;
+            padding: 7px 18px;
+            border-radius: 20px;
+            user-select: none;
+            list-style: none;
+        }}
+        .sponsor summary::-webkit-details-marker {{ display: none; }}
+        .sponsor summary:hover {{ opacity: .9; }}
+        .sponsor-qr {{
+            margin-top: 14px;
+        }}
+        .sponsor-qr img {{
+            width: 220px;
+            max-width: 80%;
+            border-radius: 10px;
+            box-shadow: var(--shadow-md);
+        }}
+
         /* Mobile top bar */
         .mobile-bar {{
             display: none;
@@ -767,6 +814,19 @@ def generate_html(all_papers: Dict[str, List[Dict[str, str]]], current_date: str
                 <span class="author-sep">·</span>
                 🐙 <a href="https://github.com/luohongk" target="_blank">GitHub</a>
             </p>
+            <div class="sponsor">
+                <div class="sponsor-title">☕ 支持本项目 · Support this project</div>
+                <div class="sponsor-desc">
+                    每篇论文的 AI 深度总结都会调用大量 DeepSeek API（需付费）。<br>
+                    如果这个项目对你有帮助，欢迎请作者喝杯咖啡，支持服务器与 API 开销 🙏
+                </div>
+                <details>
+                    <summary>💚 微信赞助 / Sponsor via WeChat Pay</summary>
+                    <div class="sponsor-qr">
+                        <img src="images/wechat_pay.jpg" alt="WeChat Pay QR code">
+                    </div>
+                </details>
+            </div>
         </section>
 
 {content_sections}
