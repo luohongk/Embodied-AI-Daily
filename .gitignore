@@ -2,6 +2,10 @@
 __pycache__/
 .vscode/
 
+# NOTE: summaries/ is the AI summary cache "database" and IS tracked by git
+# (committed so each paper is summarized only once). PDFs are processed in
+# memory and never written to disk, so nothing extra needs ignoring here.
+
 # file
 *.npz
 *.npy

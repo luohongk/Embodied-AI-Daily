@@ -162,6 +162,26 @@ def remove_backups():
     os.remove("README.md.bk")
     os.remove(".github/ISSUE_TEMPLATE.md.bk")
 
+def render_markdown(md_text: str) -> str:
+    """Render markdown text to HTML for embedding in the page.
+
+    Uses the `markdown` library when available; falls back to a minimal
+    escaped <pre> block so the build never fails if the dependency is missing.
+    Math expressions ($...$ / $$...$$) are left intact for MathJax.
+    """
+    if not md_text:
+        return ""
+    try:
+        import markdown as _markdown
+        return _markdown.markdown(
+            md_text,
+            extensions=["extra", "sane_lists", "nl2br"],
+        )
+    except Exception as e:
+        logging.warning(f"markdown render failed, falling back to <pre>: {e}")
+        return f"<pre style='white-space:pre-wrap'>{escape_nunjucks(md_text)}</pre>"
+
+
 def generate_html(all_papers: Dict[str, List[Dict[str, str]]], current_date: str) -> str:
     """Generate a beautiful self-contained HTML page from all papers data."""
 
@@ -207,6 +227,7 @@ def generate_html(all_papers: Dict[str, List[Dict[str, str]]], current_date: str
             abstract = paper.get("Abstract", "")
             date_str = paper.get("Date", "").split("T")[0] if paper.get("Date") else ""
             comment = paper.get("Comment", "")
+            ai_summary = paper.get("AI_Summary", "")
 
             abstract_html = ""
             if abstract:
@@ -219,12 +240,21 @@ def generate_html(all_papers: Dict[str, List[Dict[str, str]]], current_date: str
             if comment:
                 comment_html = f'                    <span class="paper-comment">📝 {escape_nunjucks(comment)}</span>'
 
+            ai_summary_html = ""
+            if ai_summary:
+                rendered = escape_nunjucks(render_markdown(ai_summary))
+                ai_summary_html = f"""                    <details class="ai-summary" open>
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）</summary>
+                        <div class="ai-content markdown-body">{rendered}</div>
+                    </details>"""
+
             cards += f"""                <div class="paper-card">
                     <div class="paper-header">
                         <a href="{link}" target="_blank" class="paper-title">{escape_nunjucks(title)}</a>
                         <span class="paper-date">{date_str}</span>
                     </div>
                     {comment_html}
+                    {ai_summary_html}
                     {abstract_html}
                 </div>\n"""
 
@@ -502,6 +532,74 @@ def generate_html(all_papers: Dict[str, List[Dict[str, str]]], current_date: str
             border-left: 3px solid var(--accent);
         }}
 
+        /* AI Summary */
+        .ai-summary {{
+            margin-top: 10px;
+            padding: 10px 14px;
+            background: linear-gradient(135deg, rgba(99,102,241,0.07), rgba(168,85,247,0.07));
+            border-radius: 8px;
+            border-left: 3px solid var(--accent);
+        }}
+        .ai-label {{
+            font-size: .8rem;
+            font-weight: 600;
+            color: var(--accent);
+            cursor: pointer;
+            user-select: none;
+            letter-spacing: .02em;
+        }}
+        .ai-label:hover {{
+            text-decoration: underline;
+        }}
+        .ai-content {{
+            font-size: .85rem;
+            color: var(--text);
+            line-height: 1.75;
+            margin-top: 10px;
+            max-height: 480px;
+            overflow-y: auto;
+            padding-right: 6px;
+        }}
+        /* Rendered markdown inside AI summary */
+        .markdown-body h2 {{
+            font-size: 1rem;
+            margin: 14px 0 6px;
+            padding-bottom: 4px;
+            border-bottom: 1px solid var(--border);
+            color: var(--text);
+        }}
+        .markdown-body h3 {{
+            font-size: .9rem;
+            margin: 10px 0 4px;
+            color: var(--accent);
+        }}
+        .markdown-body p {{ margin: 6px 0; }}
+        .markdown-body ul, .markdown-body ol {{ margin: 6px 0 6px 20px; }}
+        .markdown-body li {{ margin: 3px 0; }}
+        .markdown-body strong {{ color: var(--text); }}
+        .markdown-body code {{
+            background: var(--bg);
+            padding: 1px 5px;
+            border-radius: 4px;
+            font-size: .82em;
+        }}
+        .markdown-body pre {{
+            background: var(--bg);
+            padding: 10px 12px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-size: .8em;
+        }}
+        .markdown-body table {{
+            border-collapse: collapse;
+            margin: 8px 0;
+            font-size: .82em;
+        }}
+        .markdown-body th, .markdown-body td {{
+            border: 1px solid var(--border);
+            padding: 4px 8px;
+        }}
+
         /* Footer */
         .footer {{
             text-align: center;
@@ -619,6 +717,14 @@ def generate_html(all_papers: Dict[str, List[Dict[str, str]]], current_date: str
             }}
         }}
     </style>
+    <!-- MathJax for rendering LaTeX math in AI summaries -->
+    <script>
+        window.MathJax = {{
+            tex: {{ inlineMath: [['$', '$']], displayMath: [['$$', '$$']] }},
+            options: {{ skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'] }}
+        }};
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
 </head>
 <body>
     <!-- Mobile top bar -->
@@ -702,3 +808,143 @@ def get_daily_date():
     beijing_timezone = pytz.timezone('Asia/Shanghai')
     today = datetime.datetime.now(beijing_timezone)
     return today.strftime("%B %d, %Y")
+
+
+def summarize_paper_with_ai(title: str, abstract: str, api_key: str,
+                             model: str = "deepseek-chat") -> str:
+    """Call DeepSeek API (OpenAI-compatible) to generate a concise Chinese summary.
+
+    Returns a structured bilingual summary string, or empty string on failure.
+    """
+    try:
+        from openai import OpenAI
+        client = OpenAI(api_key=api_key, base_url="https://api.deepseek.com")
+
+        prompt = (
+            "请为以下学术论文提供简洁的中文总结。\n\n"
+            f"论文标题：{title}\n"
+            f"英文摘要：{abstract}\n\n"
+            "请按以下格式输出（每部分1-2句，简洁明了）：\n"
+            "🔍 **核心问题**：（解决什么问题）\n"
+            "🛠 **方法**：（采用什么技术/方法）\n"
+            "✨ **主要贡献**：（关键创新或结果）"
+        )
+
+        response = client.chat.completions.create(
+            model=model,
+            messages=[
+                {
+                    "role": "system",
+                    "content": (
+                        "你是计算机视觉、机器人与AI领域的学术论文阅读助手，"
+                        "请用中文提供简洁准确的论文总结。"
+                    ),
+                },
+                {"role": "user", "content": prompt},
+            ],
+            max_tokens=350,
+            temperature=0.3,
+        )
+        return response.choices[0].message.content.strip()
+    except Exception as e:
+        logging.warning(f"AI summary failed for '{title[:50]}': {e}")
+        return ""
+
+
+def extract_arxiv_id(link: str) -> str:
+    """Extract version-stripped arXiv id used as the cache key.
+
+    https://arxiv.org/abs/2606.07515v1 -> 2606.07515
+    """
+    import re
+    m = re.search(r"arxiv\.org/abs/([0-9]+\.[0-9]+)", link)
+    return m.group(1) if m else ""
+
+
+def download_and_extract_pdf(arxiv_id: str, max_chars: int = 50000) -> str:
+    """Download an arXiv PDF and extract its text.
+
+    Truncates to max_chars to stay within DeepSeek's context window.
+    Returns empty string on any failure (caller falls back to abstract).
+    """
+    try:
+        import io
+        from pypdf import PdfReader
+
+        url = f"https://arxiv.org/pdf/{arxiv_id}"
+        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+        data = urllib.request.urlopen(req, timeout=60).read()
+        reader = PdfReader(io.BytesIO(data))
+        text = "\n".join(page.extract_text() or "" for page in reader.pages)
+        text = remove_duplicated_spaces(text)
+        if not text.strip():
+            logging.warning(f"PDF {arxiv_id} produced empty text after extraction")
+            return ""
+        return text[:max_chars]
+    except Exception as e:
+        logging.warning(f"PDF download/parse failed for {arxiv_id}: {e}")
+        return ""
+
+
+# Structured reading prompt adapted from Research-Paper-Skills
+# (skills/paper-reading-summary/references/reading-report-prompt.md).
+FULLTEXT_READING_PROMPT = """你是人工智能研究与学术论文分析专家。请仔细阅读并分析下面这篇论文的全文，给出详细的中文解读，严格按照以下章节顺序与标题输出（Markdown 格式）：
+
+## 0. 概览（Concise Summary）
+- **主题（Topic）**：论文所属的 AI 领域/任务/问题设定
+- **问题（Problem）**：所解决的关键挑战或空白
+- **方法（Method）**：提出的方法或框架
+- **创新（Innovation）**：相较已有工作的新意
+- **意义（Significance）**：为什么重要、带来什么价值
+- **一句话总结**：用一句中文概括全文
+
+## 1. 研究动机（Motivation）
+说明研究动机：解决领域中的什么问题或空白？为什么重要？挑战在哪里？
+
+## 2. 创新点（Innovation）
+识别并描述论文的关键创新或新贡献：提出了什么新方法/技术？与现有方案有何不同？为什么能奏效？
+
+## 3. 主要内容（Main Content）【重点】
+### 3.1 设计架构与方法
+### 3.2 关键算法与数学推导（公式用 LaTeX，行内用 $...$，独立公式用 $$...$$）
+### 3.3 模型、训练与数据集
+### 3.4 实验设置与结果
+### 3.5 技术细节
+
+## 4. 意义与影响（Significance and Impact）
+解决了什么问题、贡献是什么？对未来研究/应用的影响？作者提到的局限与开放问题？
+
+## 5. 澄清与简化（Clarifications and Simplifications）
+对高度技术性或复杂的部分用通俗解释或类比帮助理解。
+
+## 6. 补充说明（Additional Notes）
+简述相关工作的关联；指出对理解论文最重要的图表。
+
+要求：全程用中文；数学公式用 LaTeX 并加 $ 或 $$；尽量提及重要的图与表。若论文文本被截断或缺失，基于已有内容合理解读并注明假设。"""
+
+
+def summarize_fulltext_with_ai(title: str, fulltext: str, api_key: str,
+                                model: str = "deepseek-chat") -> str:
+    """Call DeepSeek API to generate a full 0-6 section deep reading note in Chinese."""
+    try:
+        from openai import OpenAI
+        client = OpenAI(api_key=api_key, base_url="https://api.deepseek.com")
+
+        user_content = (
+            f"论文标题：{title}\n\n"
+            f"论文全文（可能被截断）：\n{fulltext}"
+        )
+
+        response = client.chat.completions.create(
+            model=model,
+            messages=[
+                {"role": "system", "content": FULLTEXT_READING_PROMPT},
+                {"role": "user", "content": user_content},
+            ],
+            max_tokens=4000,
+            temperature=0.3,
+        )
+        return response.choices[0].message.content.strip()
+    except Exception as e:
+        logging.warning(f"AI fulltext summary failed for '{title[:50]}': {e}")
+        return ""

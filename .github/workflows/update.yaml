@@ -33,6 +33,10 @@ jobs:
       run: pip install -r requirements.txt
 
     - name: Update papers
+      env:
+        DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+        AI_SUMMARY_TOP_N: "5"
+        AI_FULLTEXT: "1"
       run: |
         python main.py
 
@@ -43,7 +47,7 @@ jobs:
         push-branch: 'main'
         commit-message: '✏️ Update papers automatically.'
         force-add: 'true'
-        files: README.md .github/ISSUE_TEMPLATE.md papers/ index.html
+        files: README.md .github/ISSUE_TEMPLATE.md papers/ index.html summaries/
         name: HongkunLuo
         email: luohongkun0715@gmail.com
 
@@ -52,6 +56,7 @@ jobs:
         mkdir -p /tmp/gh-pages-deploy
         cp index.html /tmp/gh-pages-deploy/
         cp -r papers /tmp/gh-pages-deploy/ 2>/dev/null || true
+        cp -r summaries /tmp/gh-pages-deploy/ 2>/dev/null || true
         touch /tmp/gh-pages-deploy/.nojekyll
     - name: Publish to gh-pages branch
       uses: peaceiris/actions-gh-pages@v4

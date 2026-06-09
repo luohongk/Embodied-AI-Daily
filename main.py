@@ -13,7 +13,12 @@ from utils import (
     restore_files,
     remove_backups,
     get_daily_date,
+    summarize_paper_with_ai,
+    extract_arxiv_id,
+    download_and_extract_pdf,
+    summarize_fulltext_with_ai,
 )
+from summary_cache import get_cached_summary, save_summary
 
 
 # 设置基本日志
@@ -43,30 +48,40 @@ logging.info("获取关键词列表")
 
 keywords = [
     "Vision and Language Navigation",
-    "Vision Language Action",
-    "World Model",
-    "Visual SLAM",
-    "Visual Inertial SLAM",
-    "Visual Inertial Odometry",
-    "Lidar SLAM",
-    "LiDAR Odometry",
-    "GNSS",
-    "Graph Optimization",
-    "Dynamic SLAM",
-    "Semantic SLAM",
-    "Gaussian SLAM",
-    "Autonomous Driving",
-    "Kalman Filter",
-    "Loop Closure Detection",
-    "Visual Place Recognition",
-    "3D Gaussian Splatting",
-    "Deep Learning",
-    "LLM",
+    # "Vision Language Action",
+    # "World Model",
+    # "Visual SLAM",
+    # "Visual Inertial SLAM",
+    # "Visual Inertial Odometry",
+    # "Lidar SLAM",
+    # "LiDAR Odometry",
+    # "GNSS",
+    # "Graph Optimization",
+    # "Dynamic SLAM",
+    # "Semantic SLAM",
+    # "Gaussian SLAM",
+    # "Autonomous Driving",
+    # "Kalman Filter",
+    # "Loop Closure Detection",
+    # "Visual Place Recognition",
+    # "3D Gaussian Splatting",
+    # "Deep Learning",
+    # "LLM",
 ]  # TODO add more keywords
 
 max_result = 80  # maximum query results from arXiv API for each keyword
 readme_max_result = 20  # maximum papers to be included in README.md for each keyword
 issues_result = 10  # maximum papers to be included in the issue
+
+# AI summary configuration — read from environment variables
+DEEPSEEK_API_KEY = os.environ.get("DEEPSEEK_API_KEY", "")
+AI_SUMMARY_TOP_N = int(os.environ.get("AI_SUMMARY_TOP_N", "5"))
+AI_FULLTEXT = os.environ.get("AI_FULLTEXT", "1") == "1"  # 1=read full PDF, 0=abstract only
+if DEEPSEEK_API_KEY:
+    mode = "全文深度阅读" if AI_FULLTEXT else "仅摘要"
+    logging.info(f"DeepSeek AI 总结已启用（{mode}），每个关键词最多总结前 {AI_SUMMARY_TOP_N} 篇论文")
+else:
+    logging.info("未设置 DEEPSEEK_API_KEY，仅复用已有缓存，不调用 API")
 
 # all columns: Title, Authors, Abstract, Link, Tags, Comment, Date
 # fixed_columns = ["Title", "Link", "Date"]
@@ -156,6 +171,49 @@ for keyword in keywords:
         sys.exit("Failed to get papers!")
 
     logging.info(f"成功获取 {len(papers)} 篇论文，正在生成表格。")
+
+    # Generate / reuse AI summaries for top N papers.
+    # Cache-first: if summaries/<arxiv_id>.md exists, reuse it (no API call).
+    if papers:
+        logging.info(f"正在处理 '{keyword}' 前 {AI_SUMMARY_TOP_N} 篇论文的 AI 总结...")
+        for i in range(min(AI_SUMMARY_TOP_N, len(papers))):
+            title = papers[i].get("Title", "")
+            abstract = papers[i].get("Abstract", "")
+            link = papers[i].get("Link", "")
+            arxiv_id = extract_arxiv_id(link)
+
+            # 1. Cache hit -> reuse, zero cost.
+            cached = get_cached_summary(arxiv_id)
+            if cached:
+                papers[i]["AI_Summary"] = cached
+                logging.info(f"  [缓存命中] {arxiv_id}")
+                continue
+
+            # 2. No API key -> can only use cache, skip generation.
+            if not DEEPSEEK_API_KEY:
+                continue
+
+            # 3. Generate: full-text deep read when possible.
+            summary = ""
+            if AI_FULLTEXT and arxiv_id:
+                logging.info(f"  [下载全文] {arxiv_id}")
+                fulltext = download_and_extract_pdf(arxiv_id)
+                if fulltext:
+                    summary = summarize_fulltext_with_ai(
+                        title, fulltext, DEEPSEEK_API_KEY
+                    )
+
+            # 4. Fallback to abstract-based summary when full text is unavailable.
+            if not summary and abstract:
+                summary = summarize_paper_with_ai(
+                    title, abstract, DEEPSEEK_API_KEY
+                )
+
+            # 5. Store in cache ("database") and attach for HTML.
+            if summary:
+                papers[i]["AI_Summary"] = summary
+                save_summary(arxiv_id, title, link, summary)
+            time.sleep(1)  # avoid rate limit / arXiv throttling
 
     # Store papers for HTML generation
     all_papers[keyword] = papers
