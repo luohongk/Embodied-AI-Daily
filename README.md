@@ -17,11 +17,22 @@ _Automatically fetches the latest arXiv papers on **VLN · VLA · SLAM · 3D · 
   </a>
 </p>
 
-<p> 
+<p>
 Embodied-AI-Daily Web:http://luohongkun.top/Embodied-AI-Daily/
 </p>
 
 
+</div>
+
+---
+
+## ☕ 支持本项目 / Support this project
+
+每篇论文的 **AI 深度总结**都会调用大量 [DeepSeek](https://www.deepseek.com/) API（需付费）。如果这个项目对你有帮助，欢迎请作者喝杯咖啡，支持服务器与 API 开销 🙏
+
+<div align="center">
+  <img src="images/wechat_pay.jpg" alt="WeChat Pay QR code" width="240">
+  <p><em>💚 微信赞助 / Sponsor via WeChat Pay</em></p>
 </div>
 
 ---
