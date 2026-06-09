@@ -9,7 +9,8 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from utils import (
     get_daily_papers_by_keyword_with_retries,
     generate_table,
-    generate_html,
+    generate_index_html,
+    generate_topic_html,
     back_up_files,
     restore_files,
     remove_backups,
@@ -270,11 +271,25 @@ for keyword in keywords:
     f_is.write("\n\n")
     time.sleep(7)  # avoid being blocked by arXiv API
 
-# Generate index.html
-logging.info("生成 index.html")
-html_content = generate_html(all_papers, current_date)
+# Generate split HTML site: a directory index + one page per keyword.
+logging.info("生成 HTML 站点（目录页 + 各关键词子页）")
+os.makedirs("topics", exist_ok=True)
+all_keywords = [k for k, v in all_papers.items() if v]
+counts = {k: len(v) for k, v in all_papers.items() if v}
+
+# 1. Summary directory page.
+index_html = generate_index_html(all_papers, current_date)
 with open("index.html", "w", encoding="utf-8") as f_html:
-    f_html.write(html_content)
+    f_html.write(index_html)
+
+# 2. One page per keyword under topics/.
+for keyword in all_keywords:
+    topic_html = generate_topic_html(
+        keyword, all_papers[keyword], all_keywords, counts, current_date
+    )
+    slug = keyword.replace(" ", "-")
+    with open(f"topics/{slug}.html", "w", encoding="utf-8") as f_topic_html:
+        f_topic_html.write(topic_html)
 
 f_rm.close()
 f_is.close()

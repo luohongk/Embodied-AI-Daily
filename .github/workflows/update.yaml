@@ -48,7 +48,7 @@ jobs:
         push-branch: 'main'
         commit-message: '✏️ Update papers automatically.'
         force-add: 'true'
-        files: README.md .github/ISSUE_TEMPLATE.md papers/ index.html summaries/
+        files: README.md .github/ISSUE_TEMPLATE.md papers/ index.html summaries/ topics/
         name: HongkunLuo
         email: luohongkun0715@gmail.com
 
@@ -57,6 +57,7 @@ jobs:
         mkdir -p /tmp/gh-pages-deploy
         cp index.html /tmp/gh-pages-deploy/
         cp -r papers /tmp/gh-pages-deploy/ 2>/dev/null || true
+        cp -r topics /tmp/gh-pages-deploy/ 2>/dev/null || true
         cp -r summaries /tmp/gh-pages-deploy/ 2>/dev/null || true
         cp -r images /tmp/gh-pages-deploy/ 2>/dev/null || true
         touch /tmp/gh-pages-deploy/.nojekyll

@@ -223,73 +223,721 @@ def render_markdown(md_text: str) -> str:
     return html
 
 
-def generate_html(all_papers: Dict[str, List[Dict[str, str]]], current_date: str) -> str:
-    """Generate a beautiful self-contained HTML page from all papers data."""
+# ---------------------------------------------------------------------------
+# Shared HTML building blocks for the split site (index + per-topic pages).
+# ---------------------------------------------------------------------------
 
-    # Build topic navigation items
+TOPIC_COLORS = [
+    "#6366f1", "#8b5cf6", "#a855f7", "#d946ef", "#ec4899",
+    "#f43f5e", "#ef4444", "#f97316", "#f59e0b", "#84cc16",
+    "#22c55e", "#10b981", "#14b8a6", "#06b6d4", "#0ea5e9",
+    "#3b82f6", "#6366f1", "#8b5cf6", "#a855f7", "#d946ef",
+]
+
+
+def _slug(keyword: str) -> str:
+    """Stable file/anchor name for a keyword, e.g. 'Visual SLAM' -> 'Visual-SLAM'."""
+    return keyword.replace(" ", "-")
+
+
+# All CSS lives in a plain (non-f) string, so literal braces need no escaping.
+_CSS = """    <style>
+        :root {
+            --bg: #f8fafc;
+            --surface: #ffffff;
+            --text: #1e293b;
+            --text-secondary: #64748b;
+            --border: #e2e8f0;
+            --accent: #6366f1;
+            --sidebar-width: 280px;
+            --radius: 12px;
+            --shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04);
+            --shadow-md: 0 4px 12px rgba(0,0,0,.08);
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0f172a;
+                --surface: #1e293b;
+                --text: #e2e8f0;
+                --text-secondary: #94a3b8;
+                --border: #334155;
+                --shadow: 0 1px 3px rgba(0,0,0,.3);
+                --shadow-md: 0 4px 12px rgba(0,0,0,.4);
+            }
+        }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        html { scroll-behavior:smooth; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            display: flex;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            position: fixed;
+            top: 0; left: 0;
+            width: var(--sidebar-width);
+            height: 100vh;
+            background: var(--surface);
+            border-right: 1px solid var(--border);
+            overflow-y: auto;
+            padding: 24px 20px;
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        .sidebar-header {
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 8px;
+        }
+        .sidebar-header h1 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #6366f1, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 4px;
+        }
+        .sidebar-header h1 a { text-decoration: none; }
+        .sidebar-header .update {
+            font-size: .75rem;
+            color: var(--text-secondary);
+        }
+        .nav-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 12px;
+            border-radius: 8px;
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: .85rem;
+            transition: all .15s;
+        }
+        .nav-item:hover {
+            background: var(--bg);
+            color: var(--text);
+        }
+        .nav-item.active {
+            background: var(--bg);
+            color: var(--text);
+            font-weight: 600;
+        }
+        .nav-dot {
+            width: 8px; height: 8px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+        .nav-label {
+            flex: 1;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .nav-count {
+            font-size: .72rem;
+            background: var(--bg);
+            padding: 2px 7px;
+            border-radius: 10px;
+            font-weight: 600;
+        }
+
+        /* Main content */
+        .main {
+            margin-left: var(--sidebar-width);
+            flex: 1;
+            padding: 40px 48px;
+            max-width: calc(100% - var(--sidebar-width));
+        }
+        .hero {
+            text-align: center;
+            padding: 40px 0 48px;
+        }
+        .hero h2 {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+        .hero .subtitle {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            margin-bottom: 16px;
+        }
+        .author-line {
+            margin-top: 14px;
+            font-size: .88rem;
+            color: var(--text-secondary);
+        }
+        .author-line a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .author-line a:hover {
+            text-decoration: underline;
+        }
+        .author-sep {
+            color: var(--border);
+            margin: 0 8px;
+        }
+        .badges {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .badges img {
+            height: 20px;
+        }
+
+        /* Topic directory grid (index page) */
+        .topic-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 16px;
+            margin-bottom: 40px;
+        }
+        .topic-card {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 18px 20px;
+            text-decoration: none;
+            color: var(--text);
+            box-shadow: var(--shadow);
+            transition: box-shadow .2s, transform .15s;
+        }
+        .topic-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+        .topic-card-name {
+            font-weight: 700;
+            font-size: 1rem;
+        }
+        .topic-card-count {
+            font-size: .8rem;
+            color: var(--text-secondary);
+        }
+        .topic-card-go {
+            margin-top: 4px;
+            font-size: .82rem;
+            font-weight: 600;
+            color: var(--accent);
+        }
+
+        /* Topic page header */
+        .topic-section {
+            margin-bottom: 48px;
+        }
+        .topic-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--border);
+            flex-wrap: wrap;
+        }
+        .topic-badge {
+            display: inline-block;
+            color: #fff;
+            padding: 5px 14px;
+            border-radius: 20px;
+            font-size: .85rem;
+            font-weight: 600;
+            letter-spacing: .01em;
+        }
+        .topic-count {
+            font-size: .82rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 18px;
+            font-size: .85rem;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .back-link:hover { text-decoration: underline; }
+
+        /* Paper cards */
+        .paper-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .paper-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 16px 20px;
+            box-shadow: var(--shadow);
+            transition: box-shadow .2s, transform .15s;
+        }
+        .paper-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-1px);
+        }
+        .paper-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .paper-title {
+            font-weight: 600;
+            font-size: .95rem;
+            color: var(--text);
+            text-decoration: none;
+            flex: 1;
+            min-width: 0;
+        }
+        .paper-title:hover {
+            color: var(--accent);
+            text-decoration: underline;
+        }
+        .paper-date {
+            font-size: .78rem;
+            color: var(--text-secondary);
+            white-space: nowrap;
+            font-variant-numeric: tabular-nums;
+        }
+        .paper-comment {
+            display: inline-block;
+            margin-top: 6px;
+            font-size: .78rem;
+            color: var(--text-secondary);
+            background: var(--bg);
+            padding: 2px 10px;
+            border-radius: 6px;
+        }
+        .paper-abstract {
+            margin-top: 10px;
+            font-size: .85rem;
+            color: var(--text-secondary);
+        }
+        .paper-abstract summary {
+            cursor: pointer;
+            font-weight: 500;
+            color: var(--accent);
+            font-size: .82rem;
+            user-select: none;
+        }
+        .paper-abstract summary:hover {
+            text-decoration: underline;
+        }
+        .paper-abstract p {
+            margin-top: 8px;
+            line-height: 1.7;
+            padding: 12px 16px;
+            background: var(--bg);
+            border-radius: 8px;
+            border-left: 3px solid var(--accent);
+        }
+
+        /* AI Summary */
+        .ai-summary {
+            margin-top: 10px;
+            padding: 10px 14px;
+            background: linear-gradient(135deg, rgba(99,102,241,0.07), rgba(168,85,247,0.07));
+            border-radius: 8px;
+            border-left: 3px solid var(--accent);
+        }
+        .ai-label {
+            font-size: .8rem;
+            font-weight: 600;
+            color: var(--accent);
+            cursor: pointer;
+            user-select: none;
+            letter-spacing: .02em;
+        }
+        .ai-label:hover {
+            text-decoration: underline;
+        }
+        .ai-content {
+            font-size: .85rem;
+            color: var(--text);
+            line-height: 1.75;
+            margin-top: 10px;
+            max-height: 480px;
+            overflow-y: auto;
+            padding-right: 6px;
+        }
+        /* Rendered markdown inside AI summary */
+        .markdown-body h2 {
+            font-size: 1rem;
+            margin: 14px 0 6px;
+            padding-bottom: 4px;
+            border-bottom: 1px solid var(--border);
+            color: var(--text);
+        }
+        .markdown-body h3 {
+            font-size: .9rem;
+            margin: 10px 0 4px;
+            color: var(--accent);
+        }
+        .markdown-body p { margin: 6px 0; }
+        .markdown-body ul, .markdown-body ol { margin: 6px 0 6px 20px; }
+        .markdown-body li { margin: 3px 0; }
+        .markdown-body strong { color: var(--text); }
+        .markdown-body code {
+            background: var(--bg);
+            padding: 1px 5px;
+            border-radius: 4px;
+            font-size: .82em;
+        }
+        .markdown-body pre {
+            background: var(--bg);
+            padding: 10px 12px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-size: .8em;
+        }
+        .markdown-body table {
+            border-collapse: collapse;
+            margin: 8px 0;
+            font-size: .82em;
+        }
+        .markdown-body th, .markdown-body td {
+            border: 1px solid var(--border);
+            padding: 4px 8px;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 40px 0 20px;
+            color: var(--text-secondary);
+            font-size: .82rem;
+            border-top: 1px solid var(--border);
+            margin-top: 20px;
+        }
+
+        /* Sponsor banner */
+        .sponsor {
+            margin: 0 auto 8px;
+            max-width: 640px;
+            background: linear-gradient(135deg, rgba(16,185,129,0.10), rgba(99,102,241,0.10));
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 16px 20px;
+            text-align: center;
+        }
+        .sponsor-title {
+            font-size: .95rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 6px;
+        }
+        .sponsor-desc {
+            font-size: .82rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        .sponsor details { margin-top: 4px; }
+        .sponsor summary {
+            cursor: pointer;
+            display: inline-block;
+            background: #07c160;
+            color: #fff;
+            font-size: .82rem;
+            font-weight: 600;
+            padding: 7px 18px;
+            border-radius: 20px;
+            user-select: none;
+            list-style: none;
+        }
+        .sponsor summary::-webkit-details-marker { display: none; }
+        .sponsor summary:hover { opacity: .9; }
+        .sponsor-qr {
+            margin-top: 14px;
+        }
+        .sponsor-qr img {
+            width: 220px;
+            max-width: 80%;
+            border-radius: 10px;
+            box-shadow: var(--shadow-md);
+        }
+
+        /* Mobile top bar */
+        .mobile-bar {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            height: 52px;
+            background: var(--surface);
+            border-bottom: 1px solid var(--border);
+            z-index: 200;
+            padding: 0 16px;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .mobile-bar .mobile-title {
+            font-weight: 700;
+            font-size: .95rem;
+            background: linear-gradient(135deg, #6366f1, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .menu-toggle {
+            background: none;
+            border: none;
+            font-size: 1.4rem;
+            cursor: pointer;
+            color: var(--text);
+            padding: 4px 8px;
+            border-radius: 6px;
+            line-height: 1;
+            transition: background .15s;
+        }
+        .menu-toggle:hover {
+            background: var(--bg);
+        }
+
+        /* Mobile nav overlay */
+        .mobile-nav-overlay {
+            display: none;
+            position: fixed;
+            top: 52px; left: 0; right: 0; bottom: 0;
+            background: var(--surface);
+            z-index: 199;
+            overflow-y: auto;
+            padding: 8px 16px 24px;
+            flex-direction: column;
+        }
+        .mobile-nav-overlay.open {
+            display: flex;
+        }
+        .mobile-nav-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0 12px;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 4px;
+            font-weight: 600;
+            font-size: .85rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: .04em;
+        }
+        .mobile-nav-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 13px 8px;
+            border-radius: 8px;
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: .88rem;
+            border-bottom: 1px solid var(--border);
+            transition: background .1s;
+        }
+        .mobile-nav-item:active {
+            background: var(--bg);
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .sidebar {
+                display: none;
+            }
+            .mobile-bar {
+                display: flex;
+            }
+            .main {
+                margin-left: 0;
+                max-width: 100%;
+                padding: 68px 16px 20px;
+            }
+            .hero h2 {
+                font-size: 1.4rem;
+            }
+            .hero {
+                padding: 20px 0 32px;
+            }
+            .paper-header {
+                flex-direction: column;
+                gap: 4px;
+            }
+        }
+    </style>"""
+
+
+# MathJax config — raw string so backslashes in the delimiters stay literal.
+_MATHJAX = r"""    <!-- MathJax for rendering LaTeX math in AI summaries -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true
+            },
+            options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'] }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>"""
+
+
+# Menu toggle script (plain string, literal braces).
+_MENU_SCRIPT = """    <script>
+        function toggleMenu() {
+            var overlay = document.getElementById('mobileNav');
+            var btn = document.getElementById('menuToggle');
+            var open = overlay.classList.toggle('open');
+            btn.textContent = open ? '✕' : '☰';
+            if (open) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
+        }
+        function closeMenu() {
+            var overlay = document.getElementById('mobileNav');
+            var btn = document.getElementById('menuToggle');
+            overlay.classList.remove('open');
+            btn.textContent = '☰';
+            document.body.style.overflow = '';
+        }
+    </script>"""
+
+
+def _build_head(title: str) -> str:
+    """Return <!DOCTYPE> + <head>...</head> with shared CSS and MathJax."""
+    return (
+        "<!DOCTYPE html>\n"
+        '<html lang="en">\n'
+        "<head>\n"
+        '    <meta charset="UTF-8">\n'
+        '    <meta name="viewport" content="width=device-width, initial-scale=1.0">\n'
+        f"    <title>{title}</title>\n"
+        f"{_CSS}\n"
+        f"{_MATHJAX}\n"
+        "</head>"
+    )
+
+
+def _build_nav(all_keywords, counts, current_keyword, link_prefix):
+    """Build desktop sidebar items + mobile overlay items (cross-page links)."""
     nav_items = ""
     mobile_nav_items = ""
-    content_sections = ""
-
-    # Color palette for topic tags
-    topic_colors = [
-        "#6366f1", "#8b5cf6", "#a855f7", "#d946ef", "#ec4899",
-        "#f43f5e", "#ef4444", "#f97316", "#f59e0b", "#84cc16",
-        "#22c55e", "#10b981", "#14b8a6", "#06b6d4", "#0ea5e9",
-        "#3b82f6", "#6366f1", "#8b5cf6", "#a855f7", "#d946ef",
-    ]
-
-    for i, (keyword, papers) in enumerate(all_papers.items()):
-        if not papers:
-            continue
-        topic_id = keyword.replace(" ", "-")
-        color = topic_colors[i % len(topic_colors)]
-        count = len(papers)
-
-        # Navigation item (desktop sidebar)
-        nav_items += f"""            <a href="#{topic_id}" class="nav-item">
+    for i, kw in enumerate(all_keywords):
+        slug = _slug(kw)
+        color = TOPIC_COLORS[i % len(TOPIC_COLORS)]
+        count = counts.get(kw, 0)
+        href = f"{link_prefix}{slug}.html"
+        active = " active" if kw == current_keyword else ""
+        nav_items += f"""            <a href="{href}" class="nav-item{active}">
                 <span class="nav-dot" style="background:{color}"></span>
-                <span class="nav-label">{keyword}</span>
+                <span class="nav-label">{kw}</span>
                 <span class="nav-count">{count}</span>
             </a>\n"""
-
-        # Navigation item (mobile overlay)
-        mobile_nav_items += f"""                <a href="#{topic_id}" class="mobile-nav-item" onclick="closeMenu()">
+        mobile_nav_items += f"""                <a href="{href}" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:{color}"></span>
-                    <span class="nav-label">{keyword}</span>
+                    <span class="nav-label">{kw}</span>
                     <span class="nav-count">{count}</span>
                 </a>\n"""
+    return nav_items, mobile_nav_items
 
-        # Build paper cards
-        cards = ""
-        for paper in papers:
-            title = paper.get("Title", "")
-            link = paper.get("Link", "")
-            abstract = paper.get("Abstract", "")
-            date_str = paper.get("Date", "").split("T")[0] if paper.get("Date") else ""
-            comment = paper.get("Comment", "")
-            ai_summary = paper.get("AI_Summary", "")
 
-            abstract_html = ""
-            if abstract:
-                abstract_html = f"""                    <details class="paper-abstract">
+def _mobile_bar() -> str:
+    return """    <!-- Mobile top bar -->
+    <div class="mobile-bar">
+        <span class="mobile-title">🚀 Embodied AI Daily</span>
+        <button class="menu-toggle" id="menuToggle" onclick="toggleMenu()" aria-label="Toggle menu">☰</button>
+    </div>"""
+
+
+def _mobile_nav(mobile_nav_items: str) -> str:
+    return f"""    <!-- Mobile nav overlay -->
+    <div class="mobile-nav-overlay" id="mobileNav">
+        <div class="mobile-nav-header">
+            <span>Topics</span>
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Close menu">✕</button>
+        </div>
+{mobile_nav_items}    </div>"""
+
+
+def _sidebar(nav_items: str, current_date: str, home_href: str) -> str:
+    return f"""    <!-- Desktop sidebar -->
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <h1><a href="{home_href}" style="background:linear-gradient(135deg,#6366f1,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">🚀 Embodied AI Daily</a></h1>
+            <div class="update">by <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent);text-decoration:none;font-weight:500;">Hongkun Luo</a> (罗宏昆)</div>
+            <div class="update" style="margin-top:2px">Last update: {current_date}</div>
+        </div>
+{nav_items}    </nav>"""
+
+
+def _sponsor_block(asset_prefix: str) -> str:
+    return f"""            <div class="sponsor">
+                <div class="sponsor-title">☕ 支持本项目 · Support this project</div>
+                <div class="sponsor-desc">
+                    每篇论文的 AI 深度总结都会调用大量 DeepSeek API（需付费）。<br>
+                    如果这个项目对你有帮助，欢迎请作者喝杯咖啡，支持服务器与 API 开销 🙏
+                </div>
+                <details>
+                    <summary>💚 微信赞助 / Sponsor via WeChat Pay</summary>
+                    <div class="sponsor-qr">
+                        <img src="{asset_prefix}images/wechat_pay.jpg" alt="WeChat Pay QR code">
+                    </div>
+                </details>
+            </div>"""
+
+
+def _footer(current_date: str) -> str:
+    return f"""        <footer class="footer">
+            <p>👤 <strong>Hongkun Luo (罗宏昆)</strong> · <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent)">Academic Page</a> · <a href="https://github.com/luohongk" target="_blank" style="color:var(--accent)">GitHub</a></p>
+            <p style="margin-top:8px">🤖 Generated automatically from <a href="https://arxiv.org" style="color:var(--accent)">arXiv</a> · <a href="https://github.com/luohongk/Embodied-AI-Daily" style="color:var(--accent)">GitHub Repo</a></p>
+            <p style="margin-top:4px">Last update: {current_date} (Beijing Time)</p>
+        </footer>"""
+
+
+def _render_paper_card(paper: Dict[str, str]) -> str:
+    """Render a single paper card (shared by topic pages)."""
+    title = paper.get("Title", "")
+    link = paper.get("Link", "")
+    abstract = paper.get("Abstract", "")
+    date_str = paper.get("Date", "").split("T")[0] if paper.get("Date") else ""
+    comment = paper.get("Comment", "")
+    ai_summary = paper.get("AI_Summary", "")
+
+    abstract_html = ""
+    if abstract:
+        abstract_html = f"""                    <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>{escape_nunjucks(abstract)}</p>
                     </details>"""
 
-            comment_html = ""
-            if comment:
-                comment_html = f'                    <span class="paper-comment">📝 {escape_nunjucks(comment)}</span>'
+    comment_html = ""
+    if comment:
+        comment_html = f'                    <span class="paper-comment">📝 {escape_nunjucks(comment)}</span>'
 
-            ai_summary_html = ""
-            if ai_summary:
-                rendered = render_markdown(ai_summary)
-                ai_summary_html = f"""                    <details class="ai-summary">
+    ai_summary_html = ""
+    if ai_summary:
+        rendered = render_markdown(ai_summary)
+        ai_summary_html = f"""                    <details class="ai-summary">
                         <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
                         <div class="ai-content markdown-body">{rendered}</div>
                     </details>"""
 
-            cards += f"""                <div class="paper-card">
+    return f"""                <div class="paper-card">
                     <div class="paper-header">
                         <a href="{link}" target="_blank" class="paper-title">{escape_nunjucks(title)}</a>
                         <span class="paper-date">{date_str}</span>
@@ -299,16 +947,110 @@ def generate_html(all_papers: Dict[str, List[Dict[str, str]]], current_date: str
                     {abstract_html}
                 </div>\n"""
 
-        # Content section
-        content_sections += f"""        <section id="{topic_id}" class="topic-section">
+
+def generate_index_html(all_papers: Dict[str, List[Dict[str, str]]], current_date: str) -> str:
+    """Generate the lightweight directory/portal page linking to each topic page."""
+    all_keywords = [k for k, v in all_papers.items() if v]
+    counts = {k: len(v) for k, v in all_papers.items() if v}
+    nav_items, mobile_nav_items = _build_nav(all_keywords, counts, None, "topics/")
+
+    grid = ""
+    for i, kw in enumerate(all_keywords):
+        slug = _slug(kw)
+        color = TOPIC_COLORS[i % len(TOPIC_COLORS)]
+        grid += f"""            <a href="topics/{slug}.html" class="topic-card" style="border-top:4px solid {color}">
+                <span class="topic-card-name">{kw}</span>
+                <span class="topic-card-count">{counts[kw]} papers</span>
+                <span class="topic-card-go">进入 →</span>
+            </a>\n"""
+
+    head = _build_head("Embodied AI Daily — Latest arXiv Papers")
+    body = f"""<body>
+{_mobile_bar()}
+
+{_mobile_nav(mobile_nav_items)}
+
+{_sidebar(nav_items, current_date, "index.html")}
+
+    <main class="main">
+        <section class="hero">
+            <h2>📄 Latest arXiv Papers</h2>
+            <p class="subtitle">VLN · VLA · SLAM · 3D · Embodied AI — auto-updated daily</p>
+            <div class="badges">
+                <img src="https://img.shields.io/badge/Update-Daily-brightgreen.svg" alt="Daily Update">
+                <img src="https://img.shields.io/badge/Source-arXiv-red.svg" alt="Source: arXiv">
+                <img src="https://img.shields.io/badge/Papers-VLN·VLA·SLAM·3D-blue.svg" alt="Topics">
+                <img src="https://img.shields.io/github/stars/luohongk/Embodied-AI-Daily?style=social" alt="GitHub Stars">
+            </div>
+            <p class="author-line">
+                👤 <a href="https://luohongkun.top/scholar/" target="_blank">Hongkun Luo (罗宏昆)</a>
+                <span class="author-sep">·</span>
+                🎓 <a href="https://luohongkun.top/scholar/" target="_blank">Academic Page</a>
+                <span class="author-sep">·</span>
+                🐙 <a href="https://github.com/luohongk" target="_blank">GitHub</a>
+            </p>
+{_sponsor_block("")}
+        </section>
+
+        <section class="topic-grid">
+{grid}        </section>
+
+{_footer(current_date)}
+    </main>
+
+{_MENU_SCRIPT}
+</body>
+</html>"""
+    return head + "\n" + body
+
+
+def generate_topic_html(keyword: str, papers: List[Dict[str, str]],
+                        all_keywords: List[str], counts: Dict[str, int],
+                        current_date: str) -> str:
+    """Generate a single-keyword page with all its papers and AI summaries."""
+    nav_items, mobile_nav_items = _build_nav(all_keywords, counts, keyword, "")
+    color = TOPIC_COLORS[all_keywords.index(keyword) % len(TOPIC_COLORS)] if keyword in all_keywords else TOPIC_COLORS[0]
+    count = len(papers)
+
+    cards = ""
+    for paper in papers:
+        cards += _render_paper_card(paper)
+
+    head = _build_head(f"{keyword} — Embodied AI Daily")
+    body = f"""<body>
+{_mobile_bar()}
+
+{_mobile_nav(mobile_nav_items)}
+
+{_sidebar(nav_items, current_date, "../index.html")}
+
+    <main class="main">
+        <a href="../index.html" class="back-link">← 返回汇总 / Back to all topics</a>
+        <section class="hero" style="padding:20px 0 24px">
+{_sponsor_block("../")}
+        </section>
+        <section class="topic-section">
             <div class="topic-header">
                 <span class="topic-badge" style="background:{color}">{keyword}</span>
                 <span class="topic-count">{count} papers</span>
             </div>
             <div class="paper-list">
 {cards}            </div>
-        </section>\n"""
+        </section>
 
+{_footer(current_date)}
+    </main>
+
+{_MENU_SCRIPT}
+</body>
+</html>"""
+    return head + "\n" + body
+
+
+def _generate_html_unused(all_papers, current_date):
+    """Deprecated single-page generator. Superseded by generate_index_html /
+    generate_topic_html. Body kept below for reference but never executed."""
+    return ""  # noqa: dead code below is unreachable and intentionally unused
     html = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
