@@ -49,8 +49,13 @@ logging.info("获取关键词列表")
 
 keywords = [
     "Vision and Language Navigation",
-    # "Vision Language Action",
-    # "World Model",
+    "Feed Forward",
+    "Vision Language Action",
+    "World Model",
+    # "3D Foundation Model",
+    # "LLM",
+    # "World Action Model",
+    # "Gaussian Splatting",
     # "Visual SLAM",
     # "Visual Inertial SLAM",
     # "Visual Inertial Odometry",
@@ -65,9 +70,7 @@ keywords = [
     # "Kalman Filter",
     # "Loop Closure Detection",
     # "Visual Place Recognition",
-    # "3D Gaussian Splatting",
     # "Deep Learning",
-    # "LLM",
 ]  # TODO add more keywords
 
 max_result = 80  # maximum query results from arXiv API for each keyword

@@ -165,21 +165,58 @@ def remove_backups():
 def render_markdown(md_text: str) -> str:
     """Render markdown text to HTML for embedding in the page.
 
+    Math expressions are protected BEFORE markdown conversion and restored
+    afterwards, so markdown never mangles LaTeX (e.g. ``_``, ``*``, ``^``,
+    ``\\(`` are inside formulas would otherwise be eaten as emphasis markers).
+    MathJax then renders the restored, intact LaTeX.
+
+    Supported delimiters: ``$$...$$``, ``\\[...\\]`` (display) and
+    ``$...$``, ``\\(...\\)`` (inline).
+
     Uses the `markdown` library when available; falls back to a minimal
     escaped <pre> block so the build never fails if the dependency is missing.
-    Math expressions ($...$ / $$...$$) are left intact for MathJax.
     """
     if not md_text:
         return ""
+
+    import re
+
+    # 1. Extract math spans into placeholders that markdown will not touch.
+    #    Order matters: match display delimiters before inline ones.
+    math_store = []
+
+    def _stash(match):
+        math_store.append(match.group(0))
+        # Pure-alphanumeric token: markdown leaves it untouched, and it
+        # cannot be confused with emphasis/underscore syntax.
+        return f"MATHJAXPLACEHOLDER{len(math_store) - 1}ENDPLACEHOLDER"
+
+    patterns = [
+        r"\$\$(?:.|\n)+?\$\$",   # $$ ... $$  (display)
+        r"\\\[(?:.|\n)+?\\\]",    # \[ ... \]  (display)
+        r"\$(?:[^$\n]|\n)+?\$",   # $ ... $    (inline)
+        r"\\\((?:.|\n)+?\\\)",    # \( ... \)  (inline)
+    ]
+    protected = md_text
+    for pat in patterns:
+        protected = re.sub(pat, _stash, protected)
+
+    # 2. Run markdown on the math-free text.
     try:
         import markdown as _markdown
-        return _markdown.markdown(
-            md_text,
+        html = _markdown.markdown(
+            protected,
             extensions=["extra", "sane_lists", "nl2br"],
         )
     except Exception as e:
         logging.warning(f"markdown render failed, falling back to <pre>: {e}")
-        return f"<pre style='white-space:pre-wrap'>{escape_nunjucks(md_text)}</pre>"
+        html = f"<pre style='white-space:pre-wrap'>{escape_nunjucks(protected)}</pre>"
+
+    # 3. Restore the original math spans verbatim for MathJax.
+    for i, expr in enumerate(math_store):
+        html = html.replace(f"MATHJAXPLACEHOLDER{i}ENDPLACEHOLDER", expr)
+
+    return html
 
 
 def generate_html(all_papers: Dict[str, List[Dict[str, str]]], current_date: str) -> str:
@@ -767,7 +804,11 @@ def generate_html(all_papers: Dict[str, List[Dict[str, str]]], current_date: str
     <!-- MathJax for rendering LaTeX math in AI summaries -->
     <script>
         window.MathJax = {{
-            tex: {{ inlineMath: [['$', '$']], displayMath: [['$$', '$$']] }},
+            tex: {{
+                inlineMath: [['$', '$'], ['\\\\(', '\\\\)']],
+                displayMath: [['$$', '$$'], ['\\\\[', '\\\\]']],
+                processEscapes: true
+            }},
             options: {{ skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'] }}
         }};
     </script>
