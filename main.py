@@ -49,12 +49,14 @@ with open("README.md", "r") as f:
 logging.info("获取关键词列表")
 
 keywords = [
-    "Vision and Language Navigation",
+    "Continuous Learning",
     "Feed Forward Reconstruction",
+    "Vision and Language Navigation",
     "Vision Language Action",
     "World Model",
     "3D Foundation Model",
     "LLM",
+    "VLM",
     "World Action Model",
     "Gaussian Splatting",
     "Visual SLAM",
@@ -72,7 +74,24 @@ keywords = [
     "Loop Closure Detection",
     "Visual Place Recognition",
     "Deep Learning",
-]  # TODO add more keywords
+    "Reinforcement Learning",
+    "PPO",
+    "Hierarchical Reinforcement Learning",
+    "Model-Based RL",
+    "Imitation Learning",
+    "Behavior Cloning",
+    "Diffusion Policy",
+    "Model Predictive Control",
+    "Whole-Body Control",
+    "Motion Planning",
+    "Path Planning",
+    "Multimodal Fusion",
+    "Scene Understanding",
+    "Domain Randomization",
+    "Bipedal Locomotion",
+    "Dexterous Manipulation",
+    "Mobile Manipulation"
+]
 
 max_result = 80  # maximum query results from arXiv API for each keyword
 readme_max_result = 20  # maximum papers to be included in README.md for each keyword
