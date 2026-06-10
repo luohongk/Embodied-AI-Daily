@@ -320,5 +320,23 @@ for keyword in all_keywords:
         f_topic_html.write(topic_html)
 
 f_rm.close()
+
+# GitHub Issues have a hard 65536-character body limit.
+# Truncate the issue template if needed and append a link to the full list.
+ISSUE_BODY_LIMIT = 63000
+f_is.flush()
 f_is.close()
+with open(".github/ISSUE_TEMPLATE.md", "r", encoding="utf-8") as _f:
+    _issue_content = _f.read()
+if len(_issue_content) > ISSUE_BODY_LIMIT:
+    _issue_content = _issue_content[:ISSUE_BODY_LIMIT]
+    # Back-trim to the last complete line so we don't cut mid-row.
+    _issue_content = _issue_content.rsplit("\n", 1)[0]
+    _issue_content += (
+        "\n\n> ⚠️ Issue body truncated to fit GitHub's 65 536-character limit. "
+        "**[View the full paper list on the website »](http://luohongkun.top/Embodied-AI-Daily/)**\n"
+    )
+    with open(".github/ISSUE_TEMPLATE.md", "w", encoding="utf-8") as _f:
+        _f.write(_issue_content)
+
 remove_backups()
