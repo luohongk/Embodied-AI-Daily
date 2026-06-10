@@ -2,7 +2,7 @@
 
 > **76 papers** fetched from arXiv for the keyword **Visual Inertial SLAM**.
 
-> Last update: 2026-06-10
+> Last update: 2026-06-11
 
 [← Back to README](../README.md)
 
