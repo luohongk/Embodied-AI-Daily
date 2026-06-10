@@ -182,12 +182,21 @@ Embodied-AI-Daily Web:http://luohongkun.top/Embodied-AI-Daily/
 ---
 
 ## 📌 About
-This project automatically fetches the latest papers from **arXiv** based on predefined keywords.  
+This project automatically fetches the latest papers from **arXiv** based on predefined keywords.
 - Each section in the README corresponds to a **search keyword** (up to **{1} per keyword**).
 - The full list (up to **{2} per keyword**) is available in the [`papers/`](papers/) directory.
 - Click **Watch** (👀) on the repo to get **daily email notifications**.
 
 _Last update: {0}_
+
+---
+
+## 🙏 References & Acknowledgements
+
+This project is inspired by and builds upon the following excellent works:
+
+- [**Research-Paper-Skills**](https://github.com/Charles-Donne/Research-Paper-Skills) — Reusable Codex skills for academic paper reading and structured Chinese summarization, whose reading report prompt structure is referenced in this project's AI deep-summary feature.
+- [**cv-arxiv-daily**](https://github.com/Vincentqyw/cv-arxiv-daily) — A great daily arXiv paper tracker for computer vision, which inspired the automated daily-fetch workflow of this project.
 
 ---
 """.format(current_date, readme_max_result, max_result)

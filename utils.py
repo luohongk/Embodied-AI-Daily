@@ -1057,7 +1057,7 @@ def generate_index_html(all_papers: Dict[str, List[Dict[str, str]]], current_dat
                 <span class="author-sep">·</span>
                 🎓 <a href="https://luohongkun.top/scholar/" target="_blank">Academic Page</a>
                 <span class="author-sep">·</span>
-                🐙 <a href="https://github.com/luohongk" target="_blank">GitHub</a>
+                🐙 <a href="https://github.com/luohongk/Embodied-AI-Daily" target="_blank">GitHub</a>
             </p>
 {_sponsor_block("")}
         </section>
