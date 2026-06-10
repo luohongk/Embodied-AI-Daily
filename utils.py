@@ -1727,16 +1727,41 @@ def get_daily_date():
     return today.strftime("%B %d, %Y")
 
 
+def _call_deepseek_with_retry(client, model: str, messages: list,
+                              max_tokens: int, temperature: float,
+                              label: str) -> str:
+    """Call the DeepSeek chat API with exponential back-off on 429 / transient errors."""
+    import time as _time
+
+    MAX_RETRIES = 4
+    for attempt in range(MAX_RETRIES):
+        try:
+            response = client.chat.completions.create(
+                model=model,
+                messages=messages,
+                max_tokens=max_tokens,
+                temperature=temperature,
+            )
+            return response.choices[0].message.content.strip()
+        except Exception as e:
+            err = str(e).lower()
+            is_rate_limit = "429" in err or "rate limit" in err or "too many" in err
+            wait = (30 if is_rate_limit else 5) * (attempt + 1)
+            if attempt < MAX_RETRIES - 1:
+                logging.warning(f"DeepSeek call failed [{label}] attempt {attempt+1}/{MAX_RETRIES}: {e} — retrying in {wait}s")
+                _time.sleep(wait)
+            else:
+                logging.warning(f"DeepSeek call gave up [{label}]: {e}")
+                return ""
+    return ""
+
+
 def summarize_paper_with_ai(title: str, abstract: str, api_key: str,
                              model: str = "deepseek-chat") -> str:
-    """Call DeepSeek API (OpenAI-compatible) to generate a concise Chinese summary.
-
-    Returns a structured bilingual summary string, or empty string on failure.
-    """
+    """Call DeepSeek API (OpenAI-compatible) to generate a concise Chinese summary."""
     try:
         from openai import OpenAI
         client = OpenAI(api_key=api_key, base_url="https://api.deepseek.com")
-
         prompt = (
             "请为以下学术论文提供简洁的中文总结。\n\n"
             f"论文标题：{title}\n"
@@ -1746,25 +1771,13 @@ def summarize_paper_with_ai(title: str, abstract: str, api_key: str,
             "🛠 **方法**：（采用什么技术/方法）\n"
             "✨ **主要贡献**：（关键创新或结果）"
         )
-
-        response = client.chat.completions.create(
-            model=model,
-            messages=[
-                {
-                    "role": "system",
-                    "content": (
-                        "你是计算机视觉、机器人与AI领域的学术论文阅读助手，"
-                        "请用中文提供简洁准确的论文总结。"
-                    ),
-                },
-                {"role": "user", "content": prompt},
-            ],
-            max_tokens=350,
-            temperature=0.3,
-        )
-        return response.choices[0].message.content.strip()
+        messages = [
+            {"role": "system", "content": "你是计算机视觉、机器人与AI领域的学术论文阅读助手，请用中文提供简洁准确的论文总结。"},
+            {"role": "user", "content": prompt},
+        ]
+        return _call_deepseek_with_retry(client, model, messages, 350, 0.3, title[:40])
     except Exception as e:
-        logging.warning(f"AI summary failed for '{title[:50]}': {e}")
+        logging.warning(f"AI summary setup failed for '{title[:50]}': {e}")
         return ""
 
 
@@ -1781,16 +1794,40 @@ def extract_arxiv_id(link: str) -> str:
 def download_and_extract_pdf(arxiv_id: str, max_chars: int = 50000) -> str:
     """Download an arXiv PDF and extract its text.
 
-    Truncates to max_chars to stay within DeepSeek's context window.
+    Retries up to 4 times with exponential back-off; respects 429 rate-limit
+    responses by waiting longer before retrying.
     Returns empty string on any failure (caller falls back to abstract).
     """
-    try:
-        import io
-        from pypdf import PdfReader
+    import io
+    import time as _time
+    from urllib.error import HTTPError
 
-        url = f"https://arxiv.org/pdf/{arxiv_id}"
-        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-        data = urllib.request.urlopen(req, timeout=60).read()
+    url = f"https://arxiv.org/pdf/{arxiv_id}"
+    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (compatible; ArxivFetcher/1.0)"})
+
+    MAX_RETRIES = 4
+    for attempt in range(MAX_RETRIES):
+        try:
+            data = urllib.request.urlopen(req, timeout=60).read()
+            break
+        except HTTPError as e:
+            if e.code == 429:
+                wait = 30 * (attempt + 1)   # 30s, 60s, 90s, 120s
+                logging.warning(f"PDF 429 rate-limited for {arxiv_id}, waiting {wait}s (attempt {attempt+1}/{MAX_RETRIES})")
+                _time.sleep(wait)
+            else:
+                logging.warning(f"PDF download failed for {arxiv_id}: {e}")
+                return ""
+        except Exception as e:
+            wait = 5 * (attempt + 1)
+            logging.warning(f"PDF download error for {arxiv_id}: {e}, retrying in {wait}s")
+            _time.sleep(wait)
+    else:
+        logging.warning(f"PDF download gave up after {MAX_RETRIES} attempts for {arxiv_id}")
+        return ""
+
+    try:
+        from pypdf import PdfReader
         reader = PdfReader(io.BytesIO(data))
         text = "\n".join(page.extract_text() or "" for page in reader.pages)
         text = remove_duplicated_spaces(text)
@@ -1799,7 +1836,7 @@ def download_and_extract_pdf(arxiv_id: str, max_chars: int = 50000) -> str:
             return ""
         return text[:max_chars]
     except Exception as e:
-        logging.warning(f"PDF download/parse failed for {arxiv_id}: {e}")
+        logging.warning(f"PDF parse failed for {arxiv_id}: {e}")
         return ""
 
 
@@ -1846,22 +1883,15 @@ def summarize_fulltext_with_ai(title: str, fulltext: str, api_key: str,
     try:
         from openai import OpenAI
         client = OpenAI(api_key=api_key, base_url="https://api.deepseek.com")
-
         user_content = (
             f"论文标题：{title}\n\n"
             f"论文全文（可能被截断）：\n{fulltext}"
         )
-
-        response = client.chat.completions.create(
-            model=model,
-            messages=[
-                {"role": "system", "content": FULLTEXT_READING_PROMPT},
-                {"role": "user", "content": user_content},
-            ],
-            max_tokens=4000,
-            temperature=0.3,
-        )
-        return response.choices[0].message.content.strip()
+        messages = [
+            {"role": "system", "content": FULLTEXT_READING_PROMPT},
+            {"role": "user", "content": user_content},
+        ]
+        return _call_deepseek_with_retry(client, model, messages, 4000, 0.3, title[:40])
     except Exception as e:
-        logging.warning(f"AI fulltext summary failed for '{title[:50]}': {e}")
+        logging.warning(f"AI fulltext summary setup failed for '{title[:50]}': {e}")
         return ""

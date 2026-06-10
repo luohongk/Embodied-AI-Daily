@@ -37,7 +37,7 @@ jobs:
         DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
         AI_SUMMARY_TOP_N: "80"
         AI_FULLTEXT: "1"
-        AI_WORKERS: "48"
+        AI_WORKERS: "32"
       run: |
         python main.py
 
