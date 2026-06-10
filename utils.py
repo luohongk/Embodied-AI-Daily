@@ -1794,13 +1794,18 @@ def extract_arxiv_id(link: str) -> str:
 def download_and_extract_pdf(arxiv_id: str, max_chars: int = 50000) -> str:
     """Download an arXiv PDF and extract its text.
 
-    Retries up to 4 times with exponential back-off; respects 429 rate-limit
-    responses by waiting longer before retrying.
+    Adds a small random stagger before each request so concurrent threads
+    don't all hit arXiv at the same instant, plus exponential back-off on
+    429 rate-limit responses.
     Returns empty string on any failure (caller falls back to abstract).
     """
     import io
     import time as _time
+    import random
     from urllib.error import HTTPError
+
+    # Stagger concurrent threads: wait 1–5 s before each PDF request.
+    _time.sleep(random.uniform(1, 5))
 
     url = f"https://arxiv.org/pdf/{arxiv_id}"
     req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (compatible; ArxivFetcher/1.0)"})
@@ -1812,7 +1817,7 @@ def download_and_extract_pdf(arxiv_id: str, max_chars: int = 50000) -> str:
             break
         except HTTPError as e:
             if e.code == 429:
-                wait = 30 * (attempt + 1)   # 30s, 60s, 90s, 120s
+                wait = 30 * (attempt + 1)   # 30 s, 60 s, 90 s, 120 s
                 logging.warning(f"PDF 429 rate-limited for {arxiv_id}, waiting {wait}s (attempt {attempt+1}/{MAX_RETRIES})")
                 _time.sleep(wait)
             else:
