@@ -43,7 +43,7 @@ This project automatically fetches the latest papers from **arXiv** based on pre
 - The full list (up to **80 per keyword**) is available in the [`papers/`](papers/) directory.
 - Click **Watch** (👀) on the repo to get **daily email notifications**.
 
-_Last update: 2026-06-11_
+_Last update: 2026-06-12_
 
 ---
 

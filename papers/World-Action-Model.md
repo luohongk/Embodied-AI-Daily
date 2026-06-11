@@ -2,7 +2,7 @@
 
 > **64 papers** fetched from arXiv for the keyword **World Action Model**.
 
-> Last update: 2026-06-11
+> Last update: 2026-06-12
 
 [← Back to README](../README.md)
 
