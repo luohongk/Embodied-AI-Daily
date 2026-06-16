@@ -1882,8 +1882,27 @@ FULLTEXT_READING_PROMPT = """你是人工智能研究与学术论文分析专家
 要求：全程用中文；数学公式用 LaTeX 并加 $ 或 $$；尽量提及重要的图与表。若论文文本被截断或缺失，基于已有内容合理解读并注明假设。"""
 
 
+COMPACT_FULLTEXT_READING_PROMPT = """你是机器人、计算机视觉与AI领域的论文阅读助手。请基于给定论文文本输出中文精简解读，控制篇幅，避免复述全文。
+
+按以下 Markdown 结构输出：
+
+## 核心结论
+- 用 3-5 条说明论文解决的问题、方法、创新和结果。
+
+## 方法要点
+- 说明模型/系统/算法的关键设计。
+- 只保留理解论文必需的公式或技术细节。
+
+## 实验与价值
+- 概括主要实验结论、适用场景、局限。
+
+要求：中文；简洁；不要编造缺失信息；若文本被截断，注明“基于截断文本判断”。"""
+
+
 def summarize_fulltext_with_ai(title: str, fulltext: str, api_key: str,
-                                model: str = "deepseek-chat") -> str:
+                                model: str = "deepseek-chat",
+                                max_tokens: int = 1200,
+                                detail: str = "compact") -> str:
     """Call DeepSeek API to generate a full 0-6 section deep reading note in Chinese."""
     try:
         from openai import OpenAI
@@ -1892,11 +1911,15 @@ def summarize_fulltext_with_ai(title: str, fulltext: str, api_key: str,
             f"论文标题：{title}\n\n"
             f"论文全文（可能被截断）：\n{fulltext}"
         )
+        system_prompt = (
+            FULLTEXT_READING_PROMPT if detail == "full"
+            else COMPACT_FULLTEXT_READING_PROMPT
+        )
         messages = [
-            {"role": "system", "content": FULLTEXT_READING_PROMPT},
+            {"role": "system", "content": system_prompt},
             {"role": "user", "content": user_content},
         ]
-        return _call_deepseek_with_retry(client, model, messages, 4000, 0.3, title[:40])
+        return _call_deepseek_with_retry(client, model, messages, max_tokens, 0.3, title[:40])
     except Exception as e:
         logging.warning(f"AI fulltext summary setup failed for '{title[:50]}': {e}")
         return ""

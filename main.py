@@ -97,14 +97,23 @@ max_result = 80  # maximum query results from arXiv API for each keyword
 readme_max_result = 20  # maximum papers to be included in README.md for each keyword
 issues_result = 10  # maximum papers to be included in the issue
 
-# AI summary configuration — read from environment variables
+# AI summary configuration — read from environment variables.
+# Defaults are intentionally conservative because full-paper prompts are the
+# dominant DeepSeek token cost.
 DEEPSEEK_API_KEY = os.environ.get("DEEPSEEK_API_KEY", "")
-AI_SUMMARY_TOP_N = int(os.environ.get("AI_SUMMARY_TOP_N", "5"))
-AI_FULLTEXT = os.environ.get("AI_FULLTEXT", "1") == "1"  # 1=read full PDF, 0=abstract only
-AI_WORKERS = int(os.environ.get("AI_WORKERS", "4"))  # concurrent summary threads
+AI_SUMMARY_TOP_N = int(os.environ.get("AI_SUMMARY_TOP_N", "2"))
+AI_FULLTEXT = os.environ.get("AI_FULLTEXT", "0") == "1"  # 1=read full PDF, 0=abstract only
+AI_FULLTEXT_MAX_CHARS = int(os.environ.get("AI_FULLTEXT_MAX_CHARS", "12000"))
+AI_FULLTEXT_MAX_TOKENS = int(os.environ.get("AI_FULLTEXT_MAX_TOKENS", "1200"))
+AI_SUMMARY_DETAIL = os.environ.get("AI_SUMMARY_DETAIL", "compact").lower()  # compact|full
+AI_WORKERS = int(os.environ.get("AI_WORKERS", "2"))  # concurrent summary threads
 if DEEPSEEK_API_KEY:
     mode = "全文深度阅读" if AI_FULLTEXT else "仅摘要"
-    logging.info(f"DeepSeek AI 总结已启用（{mode}），每个关键词最多总结前 {AI_SUMMARY_TOP_N} 篇论文，并发 {AI_WORKERS} 线程")
+    logging.info(
+        f"DeepSeek AI 总结已启用（{mode}/{AI_SUMMARY_DETAIL}），"
+        f"每个关键词最多总结前 {AI_SUMMARY_TOP_N} 篇论文，并发 {AI_WORKERS} 线程，"
+        f"全文输入最多 {AI_FULLTEXT_MAX_CHARS} 字符，输出最多 {AI_FULLTEXT_MAX_TOKENS} tokens"
+    )
 else:
     logging.info("未设置 DEEPSEEK_API_KEY，仅复用已有缓存，不调用 API")
 
@@ -135,9 +144,15 @@ def process_paper_summary(paper):
     summary = ""
     if AI_FULLTEXT and arxiv_id:
         logging.info(f"  [下载全文] {arxiv_id}")
-        fulltext = download_and_extract_pdf(arxiv_id)
+        fulltext = download_and_extract_pdf(arxiv_id, max_chars=AI_FULLTEXT_MAX_CHARS)
         if fulltext:
-            summary = summarize_fulltext_with_ai(title, fulltext, DEEPSEEK_API_KEY)
+            summary = summarize_fulltext_with_ai(
+                title,
+                fulltext,
+                DEEPSEEK_API_KEY,
+                max_tokens=AI_FULLTEXT_MAX_TOKENS,
+                detail=AI_SUMMARY_DETAIL,
+            )
 
     # 4. Fallback to abstract-based summary when full text is unavailable.
     if not summary and abstract:

@@ -35,9 +35,12 @@ jobs:
     - name: Update papers
       env:
         DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
-        AI_SUMMARY_TOP_N: "80"
-        AI_FULLTEXT: "1"
-        AI_WORKERS: "32"
+        AI_SUMMARY_TOP_N: "2"
+        AI_FULLTEXT: "0"
+        AI_FULLTEXT_MAX_CHARS: "12000"
+        AI_FULLTEXT_MAX_TOKENS: "1200"
+        AI_SUMMARY_DETAIL: "compact"
+        AI_WORKERS: "10"
       run: |
         python main.py
 
