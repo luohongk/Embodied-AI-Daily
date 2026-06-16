@@ -1057,7 +1057,10 @@
                         <span class="paper-date">2026-06-15</span>
                     </div>
                                         <span class="paper-comment">📝 19 pages, 22 figures, ICML 2026</span>
-                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：端到端自动驾驶模型在模仿学习（IL）下泛化能力差，尤其在长尾场景中缺乏专家演示，而强化学习（RL）在离线环境下难以直接应用。&#10;&#10;🛠 **方法**：提出CoIRL-AD框架，采用竞争性双策略结构，将模仿学习和奖励优化解耦到独立智能体，通过潜在世界模型进行未来轨迹推演，并引入竞争机制选择性迁移有益行为，同时保持RL贴近专家驾驶模式。&#10;&#10;✨ **主要贡献**：在nuScenes基准测试中，CoIRL-AD显著提升了鲁棒性，尤其在跨城市泛化和长尾场景中表现突出，优于强模仿学习基线。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>End-to-end autonomous driving models trained with imitation learning (IL) often generalize poorly, particularly in long-tail scenarios where expert demonstrations are sparse. Reinforcement learning (RL) can provide complementary task-level supervision, but applying RL to real-world autonomous driving is challenging in offline settings without interactive simulators, where datasets are dominated by expert actions and provide limited behavioral diversity. We propose CoIRL-AD, a competitive dual-policy framework that integrates IL and RL under a unified offline training regime. CoIRL-AD decouples imitation and reward optimization into separate actors to alleviate objective conflicts, uses imagined future rollouts for long-horizon reward estimation, and introduces a competition mechanism that selectively transfers beneficial behaviors while keeping RL anchored to expert-like driving. Experiments on the nuScenes benchmark show that CoIRL-AD consistently improves robustness over strong IL-based baselines, with especially large gains in cross-city generalization and long-tail scenarios. Code is available at: https://github.com/SEU-zxj/CoIRL-AD.</p>
@@ -1069,7 +1072,10 @@
                         <span class="paper-date">2026-06-15</span>
                     </div>
                                         <span class="paper-comment">📝 20 pages, 9 figures, 4 tables</span>
-                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现代模仿学习策略（如视觉运动策略和视觉-语言-动作模型）在训练时缺乏对底层控制动态的感知，导致策略输出的高层参考与底层控制器实际执行的动作之间存在系统性偏差，影响高精度操作任务。&#10;&#10;🛠 **方法**：提出APEX（自适应策略执行）框架，作为策略与控制器之间的即插即用模块，通过从策略输出中重构动态可行的参考信号，并在测试时根据底层状态反馈进行自适应调整，同时提供可证明的收敛保证。&#10;&#10;✨ **主要贡献**：在演示回放中减少41.2%的控制器跟踪误差，并在四种视觉运动策略和视觉-语言-动作策略类上，将操作成功率提升4.8至25.8个百分点，且无需修改预训练策略或控制器。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Modern imitation learning methods, including visuomotor and Vision-Language-Action (VLA) policies, typically output high-level action references that are executed by low-level controllers. However, the absence of higher-order reference signals, together with the policy's lack of awareness of the underlying low-level control dynamics during training, inevitably induces an execution gap. As a result, realized actions deviate systematically from policy-commanded ones, with a critical impact on precision-sensitive manipulation. Prior work either modifies the policy architecture or the low-level controller, both requiring intrusive changes to the pretrained policy or packaged controller. This raises a natural question: when the policy and controller are both treated as inaccessible black boxes, can we bridge the execution gap? We propose Adaptive Policy Execution (APEX), a plug-and-play framework inserted between the policy and the controller that reconstructs a dynamically feasible reference from policy outputs and adapts at test-time according to low-level state feedback, with a provable convergence guarantee. Extensive empirical studies show that APEX reduces controller-induced tracking error by 41.2% on demonstration replay and improves manipulation success by 4.8--25.8 percentage points across four visuomotor and VLA policy classes.</p>
@@ -1081,7 +1087,10 @@
                         <span class="paper-date">2026-06-15</span>
                     </div>
                     
-                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：研究模仿学习中策略模型在长上下文条件下的性能表现，解决现有方法因观察历史过短而无法处理需要记忆的任务或重复执行失败动作的问题。  &#10;🛠 **方法**：通过逐步增加上下文长度进行基准测试，提出联合训练多上下文长度的算法，并采用UNet+交叉注意力作为条件化与去噪骨干网络。  &#10;✨ **主要贡献**：首次系统性地分析模仿学习中上下文长度的影响，发现简单扩展上下文长度并非如先前文献所述脆弱，且所提算法能降低长上下文学习的样本复杂度。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Imitation learning has enabled highly-dexterous robotic manipulation from RGB observations. Policies trained with these methods, however, typically condition robot actions on only a short history of observations. These policies cannot solve tasks that require memory and can get stuck repeatedly executing the same failing motions. In this work, we first benchmark policy performance as context length is incrementally increased from short to long, across a spectrum of tasks with varying local stability and memory requirements, and in multiple data regimes. To our knowledge, this is the first study to investigate context length in imitation learning at this level of detail. Our results challenge prior claims: naively scaling context length is not as brittle as advertised in literature. With an appropriate conditioning method and denoising backbone (UNet+Cross-Attention), single-task policies achieve high success rates on many tasks in the usual data regime even with naive scaling. Next, we propose a training algorithm to jointly train policies at multiple context lengths, further reducing the sample complexity of long-context learning. Finally, we apply our findings to re-evaluate some previously proposed solutions to long-context imitation learning.</p>
@@ -1093,7 +1102,10 @@
                         <span class="paper-date">2026-06-15</span>
                     </div>
                     
-                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：Flow Matching（FM）策略在模仿学习中表现优异，但未直接优化期望回报，导致测试时性能仍有提升空间。&#10;&#10;🛠 **方法**：提出FlowMPC框架，结合模仿学习的FM策略与学习的世界模型（基于TD-MPC2），在测试时通过模型预测路径积分（MPPI）对候选动作序列进行规划。&#10;&#10;✨ **主要贡献**：在ManiSkill操作任务（如PickCube和PickSingleYCB）中，引入世界模型后，FM策略的最终成功率显著提升，验证了基于世界模型的规划能有效补充流式模仿策略，且无需修改FM训练目标。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Flow Matching (FM) is a powerful approach for behavior cloning in multimodal action spaces [Jiang et al., 2025], but because it is not trained to directly maximize expected return, there is still room to improve how FM policies act at test time. This work investigates whether a learned world model can improve FM policies by enabling Model Predictive Path Integral (MPPI) planning over candidate action sequences proposed by the policy. Building on TD-MPC2 [Hansen et al., 2024], I introduce FlowMPC, a framework that combines an imitation-learned FM policy with a learned world model for test-time planning in ManiSkill manipulation tasks [Tao et al., 2025]. Across PickCube and PickSingleYCB, adding the world model improved performance over the FM policy alone, with especially clear gains in end-of-episode success. These results suggest that world-model-based planning can effectively complement flow-based imitation policies without modifying the FM training objective.</p>
@@ -1105,7 +1117,10 @@
                         <span class="paper-date">2026-06-15</span>
                     </div>
                     
-                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在机器人模仿学习中，将影响函数扩展到十亿参数级别的视觉-语言-动作（VLA）模型时，面临计算开销大和多任务瓶颈的挑战。&#10;&#10;🛠 **方法**：提出ATHENA框架，利用线性层梯度的Kronecker结构降低投影成本，并采用秩r随机截断近似来逼近稠密Hessian逆矩阵，实现约313.4倍的影响计算加速；同时设计全局与局部交互影响机制，平衡50个联合训练任务的数据筛选。&#10;&#10;✨ **主要贡献**：在模拟和真实机器人实验中，仅使用50%的模拟演示数据和66.7%的真实任务数据，即可达到或超越全数据联合微调的性能，验证了其在十亿参数多任务VLA微调中数据筛选的有效性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>In robot imitation learning, influence functions provide a principled approach to quantify each demonstration's effect on robot task outcomes, yet scaling them to billion-parameter Vision-Language-Action (VLA) models is limited by computational and multitask bottlenecks. To this end, we propose ATHENA, an influence function framework tailored for multitask VLA data curation at a billion-parameter scale. Concretely, it leverages the Kronecker structure of linear-layer gradients to reduce projection cost, and approximates dense Hessian inversion with a rank-r Random Truncated Approximation, achieving about a 313.4x speedup in influence computation. Furthermore, ATHENA formulates global and local interactive influence to balance data curation across 50 jointly trained tasks. Extensive evaluations on RoboTwin 2.0 and real-robot deployment, covering 9.34 and 6.90 hours of demonstrations, respectively, show that ATHENA matches or exceeds full-data joint fine-tuning using only 50% of demonstrations in simulation and 66.7% of data across six real-robot tasks. Overall, ATHENA demonstrates its effectiveness for data curation in billion-parameter multitask VLA fine-tuning.</p>
@@ -1117,7 +1132,10 @@
                         <span class="paper-date">2026-06-15</span>
                     </div>
                                         <span class="paper-comment">📝 14 pages, 9 Figures, 8 Tables</span>
-                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有视触觉策略在模仿学习中仅依赖即时感官输入，缺乏利用短期记忆来指导长时程任务决策的能力。&#10;&#10;🛠 **方法**：提出PRISM架构，基于Transformer设计，包含门控注意力机制（过滤历史信息中的无关细节）和分层架构（先压缩局部信息为紧凑令牌，再整合捕捉长程依赖），以高效扩展短期记忆至两分钟。&#10;&#10;✨ **主要贡献**：在ReMemBench基准（含8项家务任务、4类短期记忆）上，PRISM相比最强基线提升5%-12%，在RoboCasa和LIBERO上比无记忆变体及微调VLA模型（如GR00T-N1-3B、OpenVLA）提升11%-15%，且无需大规模预训练，为长时程任务中的记忆增强视触觉策略提供了评估基础。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Many robotic tasks require short-term memory, whether it's retrieving an object that's no longer visible or turning off an appliance after a set period. Yet, most visuomotor policies trained via imitation learning rely only on immediate sensory input without using past experiences to guide decisions. We present PRISM, a transformer-based architecture for visuomotor policies to effectively use short-term memory via two key components: (i) gated attention, which filters retrieved information to suppress irrelevant details, improving performance by reducing the spurious correlations between the history and current action prediction, (ii) a hierarchical architecture that first compresses local information into compact tokens and then integrates them to capture temporally extended dependencies, improving its compute and memory footprint. Together, these mechanisms enable us to scale short-term memory in visuomotor policies for up to two minutes. To systematically evaluate memory in visuomotor control, we introduce ReMemBench -- a benchmark of eight diverse household manipulation tasks spanning four categories of short-term memory -- designed to foster general memory mechanisms rather than siloed, task-specific solutions. PRISM consistently outperforms prior works, including recurrent architectures, transformers, and their variants -- achieving an absolute improvement of 5%--12% over the strongest baseline. On the RoboCasa and LIBERO benchmarks, it achieves absolute improvements of 11%--15% over its no-memory variant and fine-tuned Vision-Language-Action baselines such as GR00T-N1-3B and OpenVLA, despite not leveraging any large-scale pretraining. Together, PRISM and ReMemBench establish a foundation for developing and evaluating short-term memory-augmented visuomotor policies that scale to long-horizon tasks. Additional materials are available at https://shahrutav.github.io/short-term-memory</p>
@@ -1129,7 +1147,10 @@
                         <span class="paper-date">2026-06-15</span>
                     </div>
                                         <span class="paper-comment">📝 Accepted by ICML 2026</span>
-                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有模仿学习方法将观测仅作为去噪网络的高层条件，而非融入扩散过程的随机动力学中，导致采样从随机噪声开始，削弱了感知与控制的耦合，性能欠佳。&#10;&#10;🛠 **方法**：提出BridgePolicy，通过扩散桥公式将观测直接整合到随机动力学中，构建观测信息轨迹，使采样从丰富先验而非随机噪声开始；并引入语义对齐器统一异构观测与动作表示，使扩散桥适用于机器人数据。&#10;&#10;✨ **主要贡献**：在52个模拟任务和5个真实世界任务中，BridgePolicy持续优于现有生成式策略，显著提升了控制精度与可靠性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Imitation learning with diffusion models has advanced robotic control by capturing the multi-modal action distributions. However, existing methods typically treat observations only as high-level conditions to the denoising network, rather than integrating them into the stochastic dynamics of the diffusion process itself. As a result, the sampling is forced to begin from random noise, weakening the coupling between perception and control and often yielding suboptimal performance. We propose BridgePolicy, a generative visuomotor policy that directly integrates observations into the stochastic dynamics via a diffusion-bridge formulation. By constructing an observation-informed trajectory, BridgePolicy enables sampling to start from a rich and informative prior rather than random noise, substantially improving precision and reliability in control. A key difficulty is that diffusion bridge normally connects distributions of matched dimensionality, while robotic observations are heterogeneous and not naturally aligned with actions. To overcome this, we introduce a semantic aligner to unify the visual and state inputs and align the observations with action representations, making diffusion bridge applicable to heterogeneous robot data. Extensive experiments across 52 simulation tasks on three benchmarks and 5 real-world tasks demonstrate that BridgePolicy consistently outperforms state-of-the-art generative policies. Our code is available at https://jianghcsr.github.io/BridgePolicy_page/.</p>
@@ -1141,7 +1162,10 @@
                         <span class="paper-date">2026-06-14</span>
                     </div>
                     
-                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在机器人精细操作任务中，流畅的专家演示反而导致策略学习失败，因为关键的对齐与恢复动作被压缩在极短时间窗口内，而大量冗余的自由空间运动占据了训练数据，使策略在决定成败的精确时刻缺乏监督。&#10;&#10;🛠 **方法**：在数据层面，通过减慢对齐附近的速度和重采样关键片段来扩展恢复状态的覆盖范围；在表征层面，提出STAIR（时空特征作为机器人学习接口），将轨迹中已记录的短时运动蒸馏为密集的运动感知监督，桥接视觉语言模型与动作专家。&#10;&#10;✨ **主要贡献**：发现数据层面的改进主要来自拓宽恢复状态覆盖而非重新加权帧；STAIR仅使用流畅数据即可恢复大部分刻意演示的性能提升（从50.0%提升至62.2%，接近刻意演示的64.4%），呼吁机器人数据应优化机器可学习性而非仅人类效率。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Expert demonstrations are widely assumed to be the gold standard for robot imitation learning. Yet for fine-grained manipulation such as insertion, stacking, and alignment, we uncover a counterintuitive failure mode: fluent demonstrations can be poor teachers. A skilled teleoperator compresses the decisive moments of alignment and recovery into a brief temporal window, leaving the policy flooded with redundant free-space motion and starved of supervision exactly where precision determines success. We address this bottleneck at two levels. At the data level, slowing down near alignment and resampling critical segments both help, yet the gain comes mainly from broadening the coverage of recovery states the policy must learn, not from reweighting frames it already has. Such data-side fixes, however, leave the policy's per-frame view untouched: a single image still maps directly to an action, and the local motion that governs correction stays implicit. We therefore turn to the representation level and introduce STAIR (\textbf{S}patio-\textbf{T}emporal feature \textbf{A}s an \textbf{I}nterface for \textbf{R}obot learning), a compact dynamic feature that bridges the vision-language model and the action expert, distilling the short-horizon motion already recorded in each trajectory into dense, motion-aware supervision. Trained on fluent data alone, STAIR recovers most of the deliberate-demonstration gain ($50.0$ to $62.2\%$ overall, approaching the $64.4\%$ of deliberate demonstrations). These results call for a more pedagogical view of robot data, optimized for machine learnability rather than human efficiency alone.</p>

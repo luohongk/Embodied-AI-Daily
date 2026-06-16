@@ -1057,7 +1057,10 @@
                         <span class="paper-date">2026-06-15</span>
                     </div>
                                         <span class="paper-comment">📝 IEEE TPAMI, GitHub Repo: https://github.com/heshuting555/Awesome-3DGS-Applications</span>
-                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：针对3D高斯泼溅（3DGS）在神经辐射场（NeRF）之外的下游应用缺乏系统性总结的问题，梳理其在分割、编辑和生成三大任务中的进展。&#10;&#10;🛠 **方法**：通过回顾3DGS重建基础、问题公式化、2D基础模型及NeRF相关研究，将应用分为分割、编辑和生成三类，并总结代表性方法、监督策略和学习范式。&#10;&#10;✨ **主要贡献**：首次全面综述3DGS在分割、编辑和生成领域的应用，归纳共享设计原则与新兴趋势，提供公开基准上的方法对比，并维护持续更新的资源库（含论文、代码）。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>In the context of novel view synthesis, 3D Gaussian Splatting (3DGS) has recently emerged as an efficient and competitive counterpart to Neural Radiance Field (NeRF), enabling high-fidelity photorealistic rendering in real time. Beyond novel view synthesis, the explicit and compact nature of 3DGS enables a wide range of downstream applications that require geometric and semantic understanding. This survey provides a comprehensive overview of recent progress in 3DGS applications. It first reviews the reconstruction preliminaries of 3DGS, followed by the problem formulation, 2D foundation models, and related NeRF-based research areas that inform downstream 3DGS applications. We then categorize 3DGS applications into three foundational tasks: segmentation, editing, and generation, alongside additional functional applications built upon or tightly coupled with these foundational capabilities. For each, we summarize representative methods, supervision strategies, and learning paradigms, highlighting shared design principles and emerging trends. Commonly used datasets and evaluation protocols are also summarized, along with comparative analyses of recent methods across public benchmarks. To support ongoing research and development, a continually updated repository of papers, code, and resources is maintained at https://github.com/heshuting555/Awesome-3DGS-Applications.</p>
@@ -1069,7 +1072,10 @@
                         <span class="paper-date">2026-06-15</span>
                     </div>
                     
-                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：可编辑3D高斯泼溅（3DGS）生成的驾驶仿真视频存在显著的“仿真到真实”差距，包括渲染伪影、前景资产退化、光照不一致和时序闪烁，现有方法无法同时修复这些特定伪影并提升真实感与时间一致性。&#10;&#10;🛠 **方法**：提出RealityBridge框架，利用多模态控制（渲染视频、前景掩码、边缘图和语义掩码）结合轻量级GateNet自适应分配条件，并构建针对性训练数据，采用自回归长视频训练与奖励引导的后训练来优化修复质量、时序稳定性和幻觉抑制。&#10;&#10;✨ **主要贡献**：在内部和公开驾驶数据集上，RealityBridge在伪影去除、光照协调和长序列时间一致性方面显著优于现有方法，有效弥合了编辑3DGS仿真视频与真实世界视频之间的差距。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Long-tail hazardous scenarios are essential for safety-oriented autonomous driving, yet they are difficult to collect and reproduce at scale. Editable 3D Gaussian Splatting (3DGS) simulation offers a promising alternative by reconstructing real driving scenes and supporting controllable scene editing. However, edited 3DGS-rendered videos still suffer from a significant Sim-to-Real gap, including rendering artifacts, degraded foreground assets, inconsistent illumination, and temporal flickering. Existing restoration and video generation methods are insufficient for this task, as they often fail to jointly repair 3DGS-specific artifacts, improve visual realism, and ensure temporal consistency. To fill this gap, we propose RealityBridge, a structure-preserving and asset-aware Sim-to-Real framework for edited 3DGS driving videos. RealityBridge uses multimodal controls, including rendered videos, foreground masks, edge maps, and semantic masks, together with a lightweight GateNet for adaptive condition allocation across backbone layers. We further construct targeted training data and introduce autoregressive long-video training with reward-guided post-training to improve restoration quality, temporal stability, and hallucination suppression. Extensive experiments on internal and public driving datasets show that RealityBridge outperforms existing methods in artifact removal, illumination harmonization, and long-sequence temporal consistency.</p>
@@ -1081,7 +1087,10 @@
                         <span class="paper-date">2026-06-15</span>
                     </div>
                     
-                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在资源受限的无人机等平台上，基于高保真3D高斯泼溅（3DGS）的障碍物感知与路径规划面临内存和计算开销过大的问题，难以实现实时安全导航。&#10;&#10;🛠 **方法**：提出PolyMerge方法，将大规模3DGS场景模型转换为由凸多面体覆盖的轻量级表示，该表示可证明地过度逼近原始模型中的所有障碍物，并通过调整多面体数量来平衡保守性与计算成本，同时结合控制障碍函数（CBF）规划无碰撞路径。&#10;&#10;✨ **主要贡献**：在Crazyflie无人机上验证了PolyMerge能在严苛的机载计算约束下实时计算并跟踪安全轨迹，在保证安全性的同时速度优于基线方法，实现了可证明安全的资源受限导航。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Obstacle avoidance is essential for safe navigation and motion planning. Recent radiance field reconstruction methods enable object detection and modeling with high fidelity, but remain too memory- and compute-intensive for on-board perception-based path planning. To address these limitations, we propose PolyMerge to convert a large, photorealistic 3D Gaussian Splatting (3DGS) model of a scene into a lightweight representation of convex polytopes whose union provably over-approximates all obstacles in the original 3DGS model. PolyMerge tunes the polytope count to trade off conservativeness and compute cost, and integrates with control barrier functions (CBFs) to plan collision-free paths. We showcase PolyMerge in simulation and hardware experiments on a Crazyflie drone, which uses PolyMerge to compute and follow safe trajectories in real time under severe onboard compute constraints, outperforming baselines in speed while guaranteeing safety. For our code and videos, visit https://athlon76.github.io/PolyMerge-website/.</p>
@@ -1093,7 +1102,10 @@
                         <span class="paper-date">2026-06-15</span>
                     </div>
                     
-                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：单图像去雾面临高频细节丢失和物理散射模型建模困难的问题。  &#10;🛠 **方法**：提出Fi-Gaussian网络，采用频域感知的隐式高斯泼溅模块，在频域解耦低频结构与高频纹理，并通过复值权重自适应聚合恢复细节；同时引入物理驱动的散射重归一化机制，利用隐式高斯先验估计透射图和大气光。  &#10;✨ **主要贡献**：在多个基准数据集上取得最优量化性能，生成视觉更优的去雾结果，验证了隐式高斯泼溅在低级视觉任务中的有效性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Single image dehazing continues to be hindered by the loss of high-frequency details and the difficulty of accurate physical scattering modeling. To address these issues, we propose Fi-Gaussian, a frequency-aware implicit Gaussian splatting network for single image dehazing. Unlike explicit rendering methods that rely on 3D point clouds, our method employs implicit Gaussian splatting to adaptively model the underlying distribution of clear images as a continuous representation in 2D feature space. The core of the network is a frequency-aware implicit Gaussian splatting module, which decouples low-frequency structural information and high-frequency texture information in the frequency domain and then performs adaptive Gaussian aggregation with complex-valued weights to recover fine details. In addition, a physics-driven scattering renormalization mechanism is introduced to estimate the transmission map and atmospheric light under the guidance of implicit Gaussian priors. Extensive experiments on multiple benchmark datasets demonstrate that Fi-Gaussian achieves state-of-the-art quantitative performance and produces visually superior dehazed results, validating the effectiveness of implicit Gaussian splatting for low-level vision tasks.</p>
@@ -1105,7 +1117,10 @@
                         <span class="paper-date">2026-06-15</span>
                     </div>
                     
-                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有单图像去雾方法在像素级优化中存在计算冗余，且隐式神经网络缺乏物理可解释性，难以兼顾表示效率与重建保真度。&#10;&#10;🛠 **方法**：提出Dehaze-GaussianImage，首个将2D高斯泼溅（2DGS）引入图像去雾的零样本框架，通过将雾霾图像建模为连续可演化的各向异性高斯场，并嵌入大气散射模型到高斯参数空间，实现传输介质与清晰纹理的几何级解耦。&#10;&#10;✨ **主要贡献**：在完全无监督且参数极少的条件下达到最先进性能，通过显式结构保持约束抑制传统物理先验的伪影，展示了显式高斯表示在低级视觉任务中的潜力。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Existing single image dehazing methods are often constrained by computational redundancy in pixel-level optimization and the lack of physical interpretability in implicit neural networks. These limitations hinder the balance between representation efficiency and reconstruction fidelity. To address these issues, we propose Dehaze-GaussianImage, the first zero-shot framework that introduces 2D Gaussian Splatting (2DGS) into the image dehazing domain to break the traditional pixel-grid processing paradigm. Distinct from static convolutional neural networks (CNNs) or Transformers, our approach models hazy images as continuous and dynamically evolvable anisotropic Gaussian fields. Specifically, we propose a novel reconstruction-decoupling zero-shot learning strategy that embeds the atmospheric scattering model into the Gaussian parameter space. This strategy drives Gaussian primitives to adaptively split, clone, and prune during optimization, achieving geometric-level decoupling of the transmission medium and clear textures. Furthermore, explicit structure-preserving constraints are introduced to suppress artifacts commonly caused by traditional physical priors. Experimental results demonstrate that the proposed method achieves state-of-the-art (SOTA) performance in a fully unsupervised manner with minimal parameters, highlighting the potential of explicit Gaussian representation for low-level vision tasks.</p>
@@ -1117,7 +1132,10 @@
                         <span class="paper-date">2026-06-15</span>
                     </div>
                     
-                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有低光照图像增强方法在平衡全局光照平滑调整与局部高频细节恢复时，容易出现颜色失真和结构伪影。&#10;&#10;🛠 **方法**：提出CGS-Retinex框架，首次将连续高斯泼溅与Retinex理论结合，通过连续高斯渲染器估计全局光照分布，并利用隐式神经表示独立建模反射率，引入物理启发的亮度一致性与光照平滑约束。&#10;&#10;✨ **主要贡献**：实现了对光照与纹理的精确解耦，显著抑制暗区噪声和过曝，同时恢复高频结构与颜色，为低光照增强建立了新的连续物理表示范式。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Low-light image enhancement aims to recover clear images from low-illumination observations and is crucial for high-level downstream vision tasks. However, existing methods frequently encounter color distortion and structural artifacts when balancing global smooth illumination adjustment and local high-frequency detail recovery. To address these issues, we propose CGS-Retinex as the first low-light image enhancement framework based on explicit-implicit joint modeling. Our framework deeply integrates continuous Gaussian splatting with Retinex theory. Specifically, we represent the image grid as a continuous parameter field and propose a continuous Gaussian renderer to estimate the spatially continuous global illumination distribution. This approach fundamentally eliminates grid artifacts caused by discrete Gaussian sampling. Furthermore, we introduce an implicit neural representation to model reflectance independently. We leverage shallow high-frequency features to guide the network in accurately reconstructing degraded texture details. Within the Retinex framework, we incorporate physics-inspired brightness consistency constraints and illumination smoothness regularization to enable explicit illumination and implicit reflectance to maintain proper exposure and achieve high-fidelity recovery of high-frequency structures and colors. Extensive experiments demonstrate that CGS-Retinex significantly suppresses dark-region noise and overexposure while achieving exceptional high-frequency structural fidelity and color restoration by precisely decoupling illumination and texture. This work establishes a novel continuous physical representation paradigm for low-light image enhancement.</p>
@@ -1129,7 +1147,10 @@
                         <span class="paper-date">2026-06-14</span>
                     </div>
                                         <span class="paper-comment">📝 Accepted by ICML2026. Project page: https://zhengdong.site/projects/TurboGS/</span>
-                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有3D高斯泼溅（3DGS）加速方法在冗余像素上计算量大，且牺牲了细节质量，导致优化速度与渲染保真度难以兼顾。&#10;&#10;🛠 **方法**：提出TurboGS框架，包含四个核心组件：基于训练误差的瓦片级稀疏像素采样、结合稀疏归一化互相关的结构感知损失、误差驱动的高斯密度控制策略，以及融合Hessian信息与Adam动量的混合优化器。&#10;&#10;✨ **主要贡献**：在单张RTX 5090 GPU上，TurboGS可在100秒内达到与原始3DGS相当或更优的渲染质量，训练速度提升高达10倍。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Consumer-level applications require fast optimization of 3D Gaussian Splatting (3DGS) with high-fidelity novel view rendering. However, existing 3DGS acceleration approaches still incur substantial computation on redundant pixels while sacrificing fine details. In this paper, we present TurboGS, an error-guided training framework that accelerates 3DGS by concentrating optimization on perceptually informative pixels. TurboGS is built upon four core components: (1) a tile-wise sparse pixel sampling, which, driven by multi-view reconstruction errors during training, prioritizes challenging regions and skips well-reconstructed ones to avoid redundant gradient computation; (2) a tile-wise structure-aware loss with sparse Normalized Cross-Correlation, which provides sparse yet effective supervision to preserve fine details and stabilize training; (3) an error-driven Gaussian density control strategy, which dynamically allocates model capacity and removes redundant primitives; and (4) a tailored hybrid optimizer that couples Hessian-informed updates with Adam moment damping to stabilize and improve convergence under sparse supervision. Experiments on standard benchmarks demonstrate that TurboGS can deliver on par or superior rendering quality within 100 seconds on a single RTX 5090 GPU card (up to 10x training speedup over vanilla 3DGS).</p>
@@ -1141,7 +1162,10 @@
                         <span class="paper-date">2026-06-14</span>
                     </div>
                     
-                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有音频驱动说话头生成方法难以实现精细、可解释且可编辑的面部表情控制，主要由于语音驱动动态与显式表情信号之间存在冲突，导致空间耦合和时间不稳定。&#10;&#10;🛠 **方法**：提出EmoZone-Talker框架，通过协同区域与优先注意力偏置（SZ-PAB）显式解耦不同模态贡献，并设计通道独立时间AU编码器（CIT-AE）建模时间连贯的面部动作单元动态，最终将表示集成到3D高斯变形中。&#10;&#10;✨ **主要贡献**：实现了精确且可解释的面部表情控制，显著提升上半脸准确性和时间连贯性，同时保持高渲染质量和准确唇同步，代码将开源。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>3D Gaussian Splatting (3DGS) has shown strong potential for high-fidelity talking head synthesis. However, enabling fine-grained, interpretable, and editable facial expression control remains fundamentally challenging due to intrinsic conflicts between speech-driven facial dynamics and explicit expression signals. Existing methods rely on implicit multimodal fusion, leading to spatial entanglement and temporal instability. We present EmoZone-Talker, a novel framework that reformulates audio-driven facial animation as a structured spatial-temporal coordination problem under cross-modal conflicts. Our approach introduces an explicit spatial disentanglement and temporal dynamics modeling of facial motion. Specifically, we propose Synergy Zones with Prioritized Attention Bias (SZ-PAB) to explicitly decouple modality contributions via region-wise constraints guided by anatomical priors, and a Channel-Independent Temporal AU Encoder (CIT-AE) to model temporally coherent AU dynamics. By integrating these representations into 3D Gaussian deformation, EmoZone-Talker enables precise and interpretable control over facial expressions. Extensive experiments demonstrate that our method improves expression controllability and realism, with notable gains in upper-face accuracy and temporal coherence, while preserving high rendering quality and accurate lip synchronization. Code will be publicly released to facilitate reproducibility and further research.</p>
