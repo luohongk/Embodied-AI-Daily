@@ -2,7 +2,7 @@
 
 > **43 papers** fetched from arXiv for the keyword **Dynamic SLAM**.
 
-> Last update: 2026-06-18
+> Last update: 2026-06-19
 
 [← Back to README](../README.md)
 

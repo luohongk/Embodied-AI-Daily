@@ -1,5 +1,5 @@
 ---
-title: Latest 10 Papers - June 18, 2026
+title: Latest 10 Papers - June 19, 2026
 labels: documentation
 ---
 **Please check the [Github](https://github.com/luohongk/DailyArXiv) page for a better reading experience and more papers.**
