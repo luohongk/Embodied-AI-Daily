@@ -955,8 +955,15 @@ def _sponsor_block(asset_prefix: str) -> str:
                 </div>
                 <details>
                     <summary>💚 微信赞助 / Sponsor via WeChat Pay</summary>
-                    <div class="sponsor-qr">
-                        <img src="{asset_prefix}images/wechat_pay.jpg" alt="WeChat Pay QR code">
+                    <div class="sponsor-qr" style="display:flex;gap:16px;align-items:flex-start;flex-wrap:wrap;">
+                        <div style="text-align:center;">
+                            <img src="{asset_prefix}images/qr_code.png" alt="QR Code" style="max-width:180px;">
+                            <div style="font-size:13px;color:#888;">🔗 二维码</div>
+                        </div>
+                        <div style="text-align:center;">
+                            <img src="{asset_prefix}images/wechat_pay.jpg" alt="WeChat Pay QR code" style="max-width:180px;">
+                            <div style="font-size:13px;color:#888;">💚 微信赞助</div>
+                        </div>
                     </div>
                 </details>
             </div>"""
@@ -1679,8 +1686,15 @@ def _generate_html_unused(all_papers, current_date):
                 </div>
                 <details>
                     <summary>💚 微信赞助 / Sponsor via WeChat Pay</summary>
-                    <div class="sponsor-qr">
-                        <img src="images/wechat_pay.jpg" alt="WeChat Pay QR code">
+                    <div class="sponsor-qr" style="display:flex;gap:16px;align-items:flex-start;flex-wrap:wrap;">
+                        <div style="text-align:center;">
+                            <img src="images/qr_code.png" alt="QR Code" style="max-width:180px;">
+                            <div style="font-size:13px;color:#888;">🔗 二维码</div>
+                        </div>
+                        <div style="text-align:center;">
+                            <img src="images/wechat_pay.jpg" alt="WeChat Pay QR code" style="max-width:180px;">
+                            <div style="font-size:13px;color:#888;">💚 微信赞助</div>
+                        </div>
                     </div>
                 </details>
             </div>

@@ -31,8 +31,18 @@ Embodied-AI-Daily Web:http://luohongkun.top/Embodied-AI-Daily/
 每篇论文的 **AI 深度总结**都会调用大量 [DeepSeek](https://www.deepseek.com/) API（需付费）。如果这个项目对你有帮助，欢迎请作者喝杯咖啡，支持服务器与 API 开销 🙏
 
 <div align="center">
-  <img src="images/wechat_pay.jpg" alt="WeChat Pay QR code" width="240">
-  <p><em>💚 微信赞助 / Sponsor via WeChat Pay</em></p>
+  <table>
+    <tr>
+      <td align="center">
+        <img src="images/qr_code.png" alt="QR Code" width="200"><br>
+        <em>🔗 二维码</em>
+      </td>
+      <td align="center">
+        <img src="images/wechat_pay.jpg" alt="WeChat Pay QR code" width="200"><br>
+        <em>💚 微信赞助 / Sponsor via WeChat Pay</em>
+      </td>
+    </tr>
+  </table>
 </div>
 
 ---
