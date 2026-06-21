@@ -2,7 +2,7 @@
 
 > **76 papers** fetched from arXiv for the keyword **Multimodal Fusion**.
 
-> Last update: 2026-06-21
+> Last update: 2026-06-22
 
 [← Back to README](../README.md)
 
