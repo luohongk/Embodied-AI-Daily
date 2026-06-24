@@ -2,7 +2,7 @@
 
 > **80 papers** fetched from arXiv for the keyword **Whole-Body Control**.
 
-> Last update: 2026-06-24
+> Last update: 2026-06-25
 
 [← Back to README](../README.md)
 
