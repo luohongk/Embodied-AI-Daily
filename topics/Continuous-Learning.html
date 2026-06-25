@@ -675,7 +675,7 @@
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Kalman Filter</span>
-                    <span class="nav-count">56</span>
+                    <span class="nav-count">59</span>
                 </a>
                 <a href="Loop-Closure-Detection.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -690,12 +690,12 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">69</span>
+                    <span class="nav-count">67</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">77</span>
+                    <span class="nav-count">79</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -745,12 +745,12 @@
                 <a href="Path-Planning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#3b82f6"></span>
                     <span class="nav-label">Path Planning</span>
-                    <span class="nav-count">67</span>
+                    <span class="nav-count">68</span>
                 </a>
                 <a href="Multimodal-Fusion.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#6366f1"></span>
                     <span class="nav-label">Multimodal Fusion</span>
-                    <span class="nav-count">74</span>
+                    <span class="nav-count">73</span>
                 </a>
                 <a href="Scene-Understanding.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
@@ -894,7 +894,7 @@
             <a href="Kalman-Filter.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Kalman Filter</span>
-                <span class="nav-count">56</span>
+                <span class="nav-count">59</span>
             </a>
             <a href="Loop-Closure-Detection.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -909,12 +909,12 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">69</span>
+                <span class="nav-count">67</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">77</span>
+                <span class="nav-count">79</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -964,12 +964,12 @@
             <a href="Path-Planning.html" class="nav-item">
                 <span class="nav-dot" style="background:#3b82f6"></span>
                 <span class="nav-label">Path Planning</span>
-                <span class="nav-count">67</span>
+                <span class="nav-count">68</span>
             </a>
             <a href="Multimodal-Fusion.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
                 <span class="nav-label">Multimodal Fusion</span>
-                <span class="nav-count">74</span>
+                <span class="nav-count">73</span>
             </a>
             <a href="Scene-Understanding.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
@@ -1030,6 +1030,96 @@
             <div class="paper-list">
                 <div class="paper-card">
                     <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2606.25342v1" target="_blank" class="paper-title">Lifelong In-Context Learning with Transformers Requires Parametric Forms of Attention</a>
+                        <span class="paper-date">2026-06-24</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：如何让Transformer在固定硬件资源下实现终身持续学习，避免因上下文无限增长导致的计算和存储瓶颈。&#10;&#10;🛠 **方法**：提出使用参数化注意力机制（如线性注意力、状态空间模型、快速权重编程器、测试时训练层）替代非参数化的softmax注意力，通过在线可训练的神经网络替代不断增长的键值缓存，保持恒定内存占用。&#10;&#10;✨ **主要贡献**：论证了参数化注意力是扩展上下文学习到终身场景的必要条件，并指出现有方法在记忆容量和在线更新效率上的不足，提出了引导长期智能体研究的关键开放问题。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Lifelong continual learning remains an obstacle on the path to human-like intelligence. Modern transformers show sparks of intelligence with in-context learning. The quadratic nature of attention, however, prohibits transformers from performing this process on arbitrarily long sequences. In this work, we argue that extending in-context learning to lifelong settings is a practical solution for continual learning in AI agents. In particular, we argue that \emph{parametric forms of attention} are needed to understand a lifetime of context with transformers on a fixed hardware budget. These attention mechanisms learn the relationship between keys and their associated values at test-time with parametric regression. Our generalization of parametric approaches (linear attention, state-space models, fast weight programmers, and test-time training layers) contrasts with nonparametric counterparts like softmax attention. They replace the ever-growing key-value cache with an online-trainable neural network, maintaining a constant memory footprint. We highlight how parametric attention currently fall short of lifelong learning due to limited memory capacity or costly online updates. To address these issues, we pose a set of open questions with novel insights to guide the field toward long-horizon agents.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2512.18471v2" target="_blank" class="paper-title">The Urysohn Ladder: Recursive Metric Contraction for Scalable Continual Learning</a>
+                        <span class="paper-date">2026-06-23</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：持续学习系统在固定容量表示空间中，随着经验积累，覆盖数线性增长，导致表征重叠和灾难性干扰。&#10;&#10;🛠 **方法**：提出**Urysohn Ladder**，一种递归度量收缩的层次化商映射结构，将已验证的度量邻域压缩为紧凑令牌，把无界空间搜索转化为有界低维内在支架上的导航。&#10;&#10;✨ **主要贡献**：证明了该方法在每一商层级上实现线性可分性、覆盖数保持O(1)常数、通过奇偶分区实现无干扰可塑性，以及推理成本仅依赖商距离而非环境距离，并通过预训练模型和真实数据集验证了可扩展性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Continual learning systems face a fundamental geometric obstacle: as experience accumulates on a fixed-capacity manifold, covering numbers grow linearly with time, eventually forcing representational overlap and catastrophic interference. Prevailing approaches attack this problem by \emph{expansion} - projecting into higher-dimensional spaces via kernels, overparameterization, or replay. We argue the solution is the opposite: \emph{contraction}. We formalize abstraction as the \textbf{Urysohn Ladder}, a hierarchy of quotient maps that recursively collapse validated metric neighborhoods into compact tokens, converting unbounded ambient-space search into bounded navigation on a low-dimensional intrinsic scaffold. Geometrically, each collapsed token acts as a shortcut - a region of extreme metric contraction that bridges distant experiences, much like a wormhole in the representational manifold. We establish four results that collectively guarantee \emph{separability} (metric contraction renders nonlinearly entangled structure linearly separable at each quotient level, and this separability propagates faithfully through the entire hierarchy), \emph{bounded capacity} (covering numbers remain $O(1)$ per quotient level, independent of stream length), \emph{stability} (parity-partitioned flow/scaffold subspaces enable unbounded plasticity without catastrophic interference), and \emph{scalability} (inference cost scales with quotient distance, not ambient distance). We validate each claim empirically with pretrained models and real-world datasets. Moreover, we demonstrate the potential of Urysohn Ladder for scalable continual learning via scaffold amortization.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2606.25165v1" target="_blank" class="paper-title">The Gentle Collapse: Distributional Metrics for Continual Learning</a>
+                        <span class="paper-date">2026-06-23</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：传统灾难性遗忘评估指标（如准确率）在任务边界处离散下降，无法揭示遗忘的内部结构，且在高/低准确率区间趋于饱和。&#10;&#10;🛠 **方法**：提出六种基于softmax的连续指标（包括真实标签排名、预测置信度、分布散度），每个指标归一化至[0,1]且不修改训练过程，并利用指标斜率进行小窗口采样。&#10;&#10;✨ **主要贡献**：在CIFAR-100上，这些指标在准确率为0%时仍能区分不同类别的遗忘程度（混淆区间四分位距[0.32,0.50]）；作为损失权重时，遗忘率比均匀经验回放降低1.3个百分点；基于对数TLR斜率的小窗口采样在TinyImageNet上比基线降低7.7个百分点的遗忘率。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Accuracy degradation is the standard metric for Catastrophic Forgetting (CF), however, it records only whether forgetting occurred or not. It saturates at the extremes and collapses discretely at task boundaries, hiding the internal structure of what is being forgotten. We introduce six softmax-derived metrics spanning true-label rank (TLR), predictive confidence, and distributional divergence that characterize forgetting continuously, each normalized to [0, 1] with no modification to training. On CIFAR-100, these metrics carry information where accuracy does not: at 0% accuracy, the Confusion Margin spans an IQR of [0.32, 0.50] across classes that accuracy treats identically. We demonstrate that this richer signal is actionable in mitigating catastrophic forgetting. Per-sample metric scores used as loss weights reduce forgetting by 1.3 percentage points over uniform experience replay (ER) on CIFAR-100. Furthermore, the slope of a metric over a small window provides a stable sampling criterion: at a small-window size (e.g. 3 epochs), accuracy-trend degrades to 34.79% (std. = 2.32) while log-TLR achieves 41.07% (std. = 0.57). This gap is structural since reliable small-window trend estimation requires a continuous signal. On TinyImageNet, log-TLR trend sampling reduces forgetting by 7.7 percentage points over the ER baseline.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2606.25115v1" target="_blank" class="paper-title">Forget to Improve: On-Device LLM-Agent Continual Learning via Budget-Curated Memory</a>
+                        <span class="paper-date">2026-06-23</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：设备端语言模型代理在持续学习时，面临内存预算有限、上行带宽不足以及易受恶意注入攻击的问题，现有方法未能统一解决这些挑战。&#10;&#10;🛠 **方法**：提出一个名为“净价值每字节”的评分机制，通过预算作为策展者，统一决定内存中条目的保留、共享和信任，具体包括低价值条目驱逐、高价值洞察分享以及基于来源的信任门控。&#10;&#10;✨ **主要贡献**：在任务漂移基准和真实异构Jetson测试平台上，该方法将内存占用减少2.7倍、上行流量减少2.4倍，将注入攻击成功率从0.75降至零，同时提升受污染或过时内存影响的准确率，证明通过净价值遗忘能增强而非削弱代理性能。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>On-device language-model agents improve by accumulating experience in retrieved memory rather than by updating weights. This memory is hard-bounded and exposed: it consumes RAM and energy, reaches peers through a thin uplink, and becomes an attack surface because it is writable by what the agent reads. Existing systems each cover one part of this problem: agentic memories grow without a budget, on-device methods keep entries by success alone, and poisoning is studied mainly as an attack rather than as a memory-governance problem. We propose \sys{}, a single net-value-per-byte score that governs an agent's experience-memory lifecycle. The main idea is to let the budget act as the curator: each entry is scored as value minus harm, per byte, so one ruler decides what to keep, share, and trust. \sys{} makes three decisions: (1) \textbf{KEEP} evicts low-value bytes under the RAM and energy budget; (2) \textbf{SHARE} sends an insight only when its value exceeds its uplink cost; and (3) \textbf{TRUST} gates a peer entry by provenance. On language-model-agent task-drift benchmarks and a real heterogeneous Jetson testbed with two robot-arm nodes and a hub, \sys{} reduces memory by $2.7\times$ and uplink by $2.4\times$, drives injection success from 0.75 to zero, and raises accuracy on cases corrupted by poison or stale memory. Curating by net value reduces footprint, energy, uplink, and injection success together without reducing accuracy. In this setting, forgetting by net value improves the agent rather than weakening it.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2606.25073v1" target="_blank" class="paper-title">GCT-MARL: Graph-Based Contrastive Transfer for Sample-Efficient Cooperative Multi-Agent Reinforcement Learning</a>
+                        <span class="paper-date">2026-06-23</span>
+                    </div>
+                                        <span class="paper-comment">📝 Accepted at The Continual RL Workshop, RLC 2026</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在合作多智能体强化学习（MARL）中，为每个新环境或任务从头训练智能体成本高且效率低，现有迁移方法难以应对不同规模和组成的智能体群体。  &#10;🛠 **方法**：提出GCT-MARL框架，基于MAIL的多视图图对比骨干，引入自适应加权对齐损失和两阶段训练协议，支持同质与异质群体间的迁移学习。  &#10;✨ **主要贡献**：在目标任务上显著加速收敛（相比从头训练），适用于同质/异质迁移场景，并支持通过连续两阶段协议实现持续学习，为MARL迁移方法提供了统一解决方案。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>In cooperative multi-agent reinforcement learning (MARL), from a deployment perspective, it is challenging and expensive to train agents from scratch for each new environment or task. In this work, we propose GCT-MARL, a transfer learning framework that builds on the multi-view graph contrastive backbone of MAIL and augments it with a per-view, adaptively weighted alignment loss and a two-phase training protocol specifically designed for transfer across populations of varying sizes and compositions. We empirically demonstrate that the proposed framework markedly accelerates convergence on the target task relative to from-scratch training, in both homogeneous (within-faction, varying N) and heterogeneous (cross-faction and mixed unit-type) transfer scenarios. Furthermore, we show that the framework naturally supports continual learning by sequentially chaining the two-phase transfer protocol across a series of related tasks. Overall, this work provides a unified approach to mitigating key limitations in current MARL transfer methods with new insights at both methodological and empirical levels.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2511.11421v2" target="_blank" class="paper-title">BOFA: Bridge-Layer Orthogonal Low-Rank Fusion for CLIP-Based Class-Incremental Learning</a>
+                        <span class="paper-date">2026-06-23</span>
+                    </div>
+                                        <span class="paper-comment">📝 Accepted by AAAI 2026</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决基于CLIP的类增量学习中，模型适应下游任务时参数增加导致遗忘，以及视觉与文本模态融合不充分的问题。&#10;&#10;🛠 **方法**：提出BOFA框架，仅通过CLIP的跨模态桥接层进行正交低秩融合，将参数更新约束在正交于旧任务特征的低秩“安全子空间”中，无需数据回放；同时采用跨模态混合原型，融合稳定文本原型与适配后的视觉原型。&#10;&#10;✨ **主要贡献**：在不增加额外参数和推理成本的前提下，实现了高效且无遗忘的类增量学习，在标准基准测试中取得了优于现有方法的准确率和效率。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Class-Incremental Learning (CIL) aims to continually learn new categories without forgetting previously acquired knowledge. Vision-language models such as CLIP offer strong transferable representations via multi-modal supervision, making them promising for CIL. However, applying CLIP to CIL poses two major challenges: (1) adapting to downstream tasks often requires additional learnable modules, increasing model complexity and susceptibility to forgetting; and (2) while multi-modal representations offer complementary strengths, existing methods have yet to fully realize their potential in effectively integrating visual and textual modalities. To address these issues, we propose BOFA (Bridge-layer Orthogonal Fusion for Adaptation), a novel framework for CIL. BOFA confines all model adaptation exclusively to CLIP's existing cross-modal bridge-layer, thereby adding no extra parameters or inference cost. To prevent forgetting within this layer, it leverages Orthogonal Low-Rank Fusion, a mechanism that constrains parameter updates to a low-rank ``safe subspace" mathematically constructed to be orthogonal to past task features. This ensures stable knowledge accumulation without data replay. Furthermore, BOFA employs a cross-modal hybrid prototype that synergizes stable textual prototypes with visual counterparts derived from our stably adapted bridge-layer, enhancing classification performance. Extensive experiments on standard benchmarks show that BOFA achieves superior accuracy and efficiency compared to existing methods.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
                         <a href="https://arxiv.org/abs/2606.24752v1" target="_blank" class="paper-title">Can Scale Save Us From Plasticity Loss in Large Language Models?</a>
                         <span class="paper-date">2026-06-23</span>
                     </div>
@@ -1041,6 +1131,21 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>The loss of plasticity - the ability of a network to learn new information after having already learned older information - is a fundamental challenge in creating artificial neural networks capable of continual learning. Although this phenomenon has been known for decades, it has mostly been studied in older, relatively small architectures and rarely in natural-language domains. To determine whether loss of plasticity remains a problem in the modern transformer-based LLM paradigm, we study plasticity loss in GPT-style Transformer models trained on a multilingual continual learning problem. Consistent with prior work, we find evidence of plasticity loss across models ranging from 5M to 314M non-embedding parameters, as measured by deterioration on a held-out Vietnamese probing task. We further find that the onset of plasticity loss follows a predictable scaling law, growing sublinearly with model size. These results suggest that larger models may delay the measurable effects of plasticity loss, but that increasing parameter count alone is likely to be insufficient to completely prevent it. We also find evidence of plasticity loss under stationary multilingual training, challenging the view that the phenomenon is exclusive to continual learning with abrupt task changes. Overall, our results suggest that even large Transformer language models trained on natural-language will eventually lose the ability to efficiently adapt to new data after sufficiently long training, in both continual and stationary settings.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2606.24955v1" target="_blank" class="paper-title">Towards Continuous Power Forecasting: Practical Continual Learning for Real-World Energy Systems in Nonstationary Time Series</a>
+                        <span class="paper-date">2026-06-23</span>
+                    </div>
+                                        <span class="paper-comment">📝 The submission is under review</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决电力预测模型在非平稳时间序列中因数据分布持续变化（如天气、基础设施升级、消费行为改变）而难以长期稳定运行的问题，同时满足历史数据有限和需不间断服务的实际约束。&#10;&#10;🛠 **方法**：提出“连续电力预测”范式，将电力预测视为持续学习问题，并基于自适应持续学习框架，系统评估了三种方法论类别下的六种代表性持续学习方法，在不同数据可访问性和更新策略下进行实验验证。&#10;&#10;✨ **主要贡献**：证明持续学习能使模型自适应分布漂移、积累知识并缓解灾难性遗忘，无需依赖大规模历史数据存储；同时提供了不同方法在实际操作约束下的稳定性和适应行为洞察，为工业电力预测管线的长期部署提供了可扩展且可持续的解决方案。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Power forecasting models deployed in real-world energy markets must operate under nonstationary conditions, where data distributions continually evolve due to weather variability, infrastructure upgrades, and changing consumption behaviors. In practice, these models face strict operational constraints: historical data may be limited or unavailable for repeated retraining, and uninterrupted long-term service is often required. This paper addresses these challenges by proposing the paradigm of Continuous Power Forecasting, which views power forecasting as a continual learning problem rather than a static offline task. Based on an adaptive continual learning framework for regression, we systematically investigate the practical effectiveness of six representative continual learning approaches from three methodological categories. These approaches are evaluated under different realistic assumptions regarding data accessibility and update policies. Experimental validation on real-world power datasets demonstrates that continual learning enables forecasting models to self-adapt to distributional drift, accumulate knowledge over time, and mitigate catastrophic forgetting without relying on large-scale historical data storage. Beyond performance gains, our study provides practical insights into the stability and adaptation behaviors of different continual learning approaches under realistic operational constraints. Overall, this work illustrates how continual learning can be pragmatically integrated into industrial power forecasting pipelines, offering a scalable and sustainable solution for long-term deployment in dynamic environments.</p>
                     </details>
                 </div>
                 <div class="paper-card">
@@ -1079,10 +1184,7 @@
                         <span class="paper-date">2026-06-22</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：当前视觉-语言-动作模型（VLA）通过被动模仿学习微调时，需等待机器人失败才收集数据，且无法区分哪些状态需要监督，导致冗余数据浪费和适应效率低下。&#10;&#10;🛠 **方法**：提出主动持续学习范式，利用不确定性引导的数据收集策略，结合重放数据混合与弹性权重巩固等持续学习技术，在主动收集的恢复数据上微调VLA模型。&#10;&#10;✨ **主要贡献**：实证表明不确定性引导的恢复演示能显著提升微调效率，同时揭示了主动学习与灾难性遗忘之间的权衡，为大型机器人策略中定向新数据的整合提供了开放挑战分析。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Vision-Language-Action (VLA) models are commonly fine-tuned through passive imitation learning, where additional demonstrations are collected for tasks where the policy performs poorly. This approach incurs several downsides: it requires the robot to fail before data collection is triggered, provides little guidance about which states require supervision, and wastes demonstrator effort on redundant parts of the task where the policy already performs well. In this paper, we propose an active, continual learning paradigm for VLAs. We demonstrate that active, uncertainty-guided data collection leads to more efficient fine-tuning than when using passively-collected demonstrations. However, we also find that fine-tuning only on actively-collected recovery data leads to catastrophic forgetting. We evaluate techniques for continual learning, including replay-based data mixing and elastic weight consolidation, and identify tradeoffs between plasticity to uncertainty-guided recovery data and retention of previously learned behaviors. Overall, our work contributes an empirical study of active continual learning for autoregressive VLAs, establishing that uncertainty-guided recovery demonstrations can improve adaptation efficiency while also revealing open challenges when targeted new data is incorporated into large robot policies.</p>
@@ -1094,10 +1196,7 @@
                         <span class="paper-date">2026-06-22</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：多模态大语言模型在持续微调时，会严重遗忘先前学到的跨模态技能，现有方法对内部注意力模式的漂移控制不足。&#10;&#10;🛠 **方法**：提出无回放的持续学习框架ASR，将跨模态注意力图视为二维信号，提取其频谱统计作为技能原型分布，并通过相位不变频谱正则化约束有害漂移。&#10;&#10;✨ **主要贡献**：理论上证明频谱漂移控制可缓解遗忘，实验在多个持续VQA和指令微调基准上，ASR一致提升最终性能并减少遗忘，且无需存储旧数据或模型快照。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Multimodal large language models (MLLMs) are increasingly required to adapt to non-stationary streams of visual domains, question types, and user instructions, yet continual fine-tuning often causes severe forgetting of previously acquired multimodal skills. Existing continual vision-language methods mainly preserve outputs, replay data or pseudo-data, regularize embedding geometry, or allocate task-specific parameters, but they provide limited control over how internal cross-modal attention patterns supporting old skills drift during adaptation. We propose Attention-Spectrum Regularization (ASR), a replay-free continual learning framework that preserves skill-conditioned structures of cross-modal attention. ASR treats cross-attention maps as two-dimensional signals, summarizes their scale and directional properties into compact spectral statistics, and stores only skill-wise prototype distributions instead of replaying past image-question pairs, generated pseudo-examples, or old-stage teacher snapshots. In later stages, a phase-invariant spectral regularizer constrains harmful drift of these prototypes while allowing instance-level attention to adapt to new tasks. We provide theoretical analysis showing that skill-conditioned spectral drift controls forgetting under a spectral sufficiency assumption, and that Fourier power spectra are stable to spatial translations and bounded perturbations. Experiments on continual VQA and multimodal instruction-tuning benchmarks, including VQA v2, VQACL, CLT-VQA, CoIN, and UCIT, show that ASR consistently improves final performance and reduces forgetting over strong replay-, regularization-, and adapter-based baselines. Preserving skill-level attention structure is an effective and lightweight mechanism for continual MLLMs. Code is available at https://github.com/Creative-zcx/attention-spectrum-replay</p>
@@ -1109,10 +1208,7 @@
                         <span class="paper-date">2026-06-22</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：针对视觉语言模型在动态环境中部署时面临的持续学习挑战，传统白盒方法因无法访问模型权重、架构和梯度而失效，本文旨在解决黑盒场景下的持续学习问题。&#10;&#10;🛠 **方法**：提出BETA方法，通过仅优化文本原型实现持续学习，包含三个核心组件：语义投影累积（SPA）用于增量知识获取、潜在分布回放（LDR）防止灾难性遗忘、测试时原型自适应（TTPA）动态调整分类边界。&#10;&#10;✨ **主要贡献**：构建了更贴近实际的黑盒持续学习基准Black-CL，并证明BETA仅需0.05M可训练参数（比竞品减少180-3000倍）即可达到甚至超越白盒方法的性能，为持续学习从学术研究向实际系统过渡提供了基础框架。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>The rapid deployment of Vision-Language Models (VLMs) in dynamic environments necessitates the ability to learn continuously without forgetting. However, traditional continual learning (CL) settings often rely on white-box paradigms, which is increasingly invalidated by the shift toward cloud-hosted models. In this paper, we introduce Black-CL, a more realistic benchmark for VLMs that enforces three primary real-world challenges: weight and architecture inaccessibility, constrained computation, and task-agnostic inference. The learner can query only output embeddings or logits, with no gradient flow through or structural modification of the backbone. Current CL methodologies, which rely on backbone backpropagation or complex parameter expansion, are fundamentally incompatible with these constraints. Under this setting, we propose BETA, a simple yet effective baseline built on the key insight that solely optimizing textual prototypes can navigate the complexities of CL. BETA integrates three core components: Semantic Projection Accumulation (SPA) for incremental knowledge acquisition, Latent Distribution Replay (LDR) for anchoring the embedding space against catastrophic forgetting, and Test-Time Prototype Adaptation (TTPA) for dynamic, instance-aware boundary refinement. Extensive experiments across ten diverse datasets and various backbones demonstrate that BETA significantly outperforms existing black-box tuners. Remarkably, with only 0.05 M trainable parameters, a 180--3000$\times$ reduction compared to competitive methods, BETA achieves performance on par with or even exceeding white-box CL methods. We believe Black-CL and BETA provide a foundational framework for future advancements in continual learning and accelerates the transition of continual learning from academia to real-world systems.</p>
@@ -1124,10 +1220,7 @@
                         <span class="paper-date">2026-06-21</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：联邦持续学习（FCL）中，分布式客户端在顺序到达的任务上协作训练时，常因灾难性遗忘、依赖可能违反隐私的回放缓冲区或生成模型，以及推理时需已知任务身份而受限。&#10;&#10;🛠 **方法**：提出FedProTIP框架，客户端通过随机奇异值分解提取中间激活的低秩核心基，上传至服务器聚合为全局任务子空间；训练时将更新投影到先前子空间的正交补上以减少干扰，推理时通过子空间相关性估计任务身份。&#10;&#10;✨ **主要贡献**：无需回放或任务标签，在CIFAR100、ImageNet-R和DomainNet上持续优于现有联邦持续学习方法，同时降低训练时间、内存占用和通信成本。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Federated continual learning (FCL) enables collaborative model training across distributed clients on sequentially arriving tasks without revisiting past data. However, existing approaches often suffer from catastrophic forgetting, rely on replay buffers or generative models that may violate privacy constraints, or assume knowledge of task identities during inference. We propose FedProTIP (Federated Projection-based Continual Learning with Task Identity Prediction), a replay-free FCL framework that maintains shared task-specific feature subspaces across clients. Each client extracts low-rank core bases from intermediate activations using randomized singular value decomposition, capturing dominant feature directions associated with the current task. These bases are transmitted to the server and aggregated to construct global task subspaces that capture shared feature directions across clients without requiring data sharing. During training, client updates are projected onto the orthogonal complement of previously learned subspaces to reduce cross-task interference and mitigate catastrophic forgetting. The learned subspaces are also reused during inference to estimate task identity via subspace relevance, enabling task-agnostic prediction without requiring explicit task labels. Experiments on CIFAR100, ImageNet-R, and DomainNet demonstrate that FedProTIP consistently outperforms state-of-the-art federated continual learning baselines while maintaining lower training time, memory footprint, and communication cost.</p>
@@ -1139,10 +1232,7 @@
                         <span class="paper-date">2026-06-20</span>
                     </div>
                                         <span class="paper-comment">📝 Code: https://codeberg.org/mwspratling/HEMLoss</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决深度神经网络在分类任务中广泛使用的交叉熵损失函数在训练动态和特定视觉任务（如未知类拒绝、对抗鲁棒性、不平衡学习、持续学习和语义分割）上的局限性。&#10;&#10;🛠 **方法**：提出一种基于边界的损失函数——高错误边际损失（HEM），通过修改损失设计来改善神经网络的训练动态，并在多种架构和基准数据集上使用文献中的标准超参数进行广泛评估。&#10;&#10;✨ **主要贡献**：HEM在未知类拒绝、对抗鲁棒性、不平衡数据学习、持续学习和语义分割等任务上优于交叉熵损失，尤其在持续学习和语义分割上表现显著；与专用损失（如LogitNorm、Logit-adjusted loss、DICE）相比，HEM在多个任务上具有竞争力或更优性能，仅在平衡数据下的干净/损坏图像分类中略逊于交叉熵。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Training deep neural networks (DNNs) on classification tasks can be performed with a number of different losses, but cross-entropy (CE) loss is the de-facto standard. Here, we propose an alternative loss, high error margin (HEM), which is a margin based loss modified to improve the training dynamics of neural networks. HEM loss is evaluated extensively using a wide range of DNN architectures and benchmark datasets with all experimental settings and training hyper-parameters taken from the literature, and hence, optimised for CE loss. HEM is found to be more effective than CE loss across a range of image-based tasks: unknown class rejection, adversarial robustness, learning with imbalanced data, continual learning, and semantic segmentation (a pixel-wise classification task). HEM is inferior to CE only in terms of clean and corrupt image classification with balanced training data, and this difference is small. We also compare HEM to specialised losses that have previously been proposed to improve performance for specific vision tasks. LogitNorm, a loss achieving state-of-the-art performance on unknown class rejection, produces similar performance to HEM for this task, but is much poorer for continual learning and semantic segmentation. Logit-adjusted loss, designed for imbalanced data, has superior results to HEM for that task, but performs worse on unknown class rejection and semantic segmentation. DICE, a popular loss for semantic segmentation, is inferior to HEM loss on all tasks, including semantic segmentation. Overall, HEM is competitive with the best alternative loss for all the tasks we have used and performs better than all other tested losses in terms of rejecting out-of-distribution examples, for continual learning, and by a substantial margin for semantic segmentation.</p>
@@ -1154,10 +1244,7 @@
                         <span class="paper-date">2026-06-19</span>
                     </div>
                                         <span class="paper-comment">📝 Preprint to IEEE Transactions on Smart Grid</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="好的，作为一名人工智能研究与学术论文分析专家，我将严格按照您的要求，对这篇题为《Decision-Focused Continual Learning for Seaport Power-Logistics Scheduling: Generalization across Varying Tasks》的论文进行详细的中文解读。&#10;&#10;---&#10;&#10;## 0. 概览（Concise Summary）&#10;&#10;- **主题（Topic）**：智能电网、港口能源-物流协同调度、决策聚焦学习、持续学习。&#10;- **问题（Problem）**：传统的“预测-然后-优化”范式中的决策聚焦学习（DFL）模型是针对单一、固定的优化任务训练的。当港口调度任务因船舶到港情况变化而动态演变时，模型会遭遇“灾难性遗忘”，导致在新任务上决策性能下降，无法泛化。&#10;- **方法（Method）**：提出一个决策聚焦持续学习（DFCL）框架。该框架在线地适应不断到来的调度任务流。核心是引入基于Fisher信息矩阵的正则化项，在适应新任务时，约束对先前任务决策性能至关重要的模型参数，防止遗忘。同时，为解决嵌入式混合整数规划问题的不可微性，开发了一个可微的凸松弛代理模型，以稳定梯度反向传播。&#10;- **创新（Innovation）**：&#10;    1.  首次将持续学习（CL）与决策聚焦学习（DFL）结合，用于解决动态变化的调度任务泛化问题。&#10;    2.  提出了基于Fisher信息的正则化方法，在不依赖数据回放的情况下，实现了跨任务的决策知识保留。&#10;    3.  针对港口调度问题的非凸性，设计了一个基于K近邻的可微凸代理模型，使得端到端的梯度训练成为可能。&#10;- **意义（Significance）**：解决了实际港口运营中任务结构动态变化这一关键挑战，使得预测模型能够持续学习并适应新场景，同时保持对旧场景的良好决策性能。这为将DFL应用于更广泛的、任务不断演化的现实世界问题铺平了道路，并显著降低了计算和内存开销。&#10;- **一句话总结**：本文提出了一种决策聚焦持续学习框架，通过Fisher信息正则化和可微凸代理模型，使港口电力-物流调度模型能够在线适应不断变化的船舶到港任务，实现了良好的跨任务泛化。&#10;&#10;## 1. 研究动机（Motivation）&#10;&#10;- **问题与空白**：现代港口的电力-物流调度（PLS）通常采用“预测-然后-优化”的流程。为了提升预测对下游决策的价值，决策聚焦学习（DFL）被提出，它直接根据决策结果（如运营成本）来训练预测模型。然而，现有的DFL方法都是针对一个**固定、已知**的优化任务设计的。在港口实际运营中，调度任务会随着船舶到港情况（如船舶数量、货物类型、时间约束）的变化而动态演变。每个新的到港配置都构成了一个结构不同的新任务（例如，决策变量的维度、可行域的形状都可能改变）。将一个在旧任务上训练好的DFL模型直接应用于新任务，其决策性能会显著下降，即模型无法泛化到结构变化的任务上。&#10;- **为什么重要**：港口运营的效率和成本高度依赖于对动态变化的船舶到港计划的适应性。如果不能有效泛化，DFL的优势将无法在长期、动态的运营环境中发挥，限制了其在实际中的应用价值。&#10;- **挑战**：&#10;    1.  **任务结构变化**：任务变化不仅是参数（如预测值）的变化，更是**结构性的**（如决策变量维度、约束条件），这使得传统的多任务学习或鲁棒优化方法难以适用，因为它们通常假设任务结构已知或变化有限。&#10;    2.  **灾难性遗忘**：当模型顺序学习新任务时，会覆盖掉对旧任务有用的知识，导致在旧任务上的决策性能急剧下降。&#10;    3.  **计算与内存开销**：传统的持续学习方法（如基于数据回放）在DFL场景下计算成本极高，因为每次回放都需要重新求解并微分复杂的优化问题。参数隔离或动态扩展架构则会导致模型规模增长或需要任务标识符，这在开放式的任务流中不现实。&#10;&#10;## 2. 创新点（Innovation）&#10;&#10;- **新方法/技术**：提出了**决策聚焦持续学习（DFCL）** 框架。其核心创新在于：&#10;    1.  **Fisher信息正则化**：受弹性权重巩固（EWC）启发，提出了一种基于Fisher信息矩阵的正则化方法。在训练新任务时，该正则化项会惩罚对旧任务决策性能重要的参数发生大的改变。这些“重要性”由Fisher信息矩阵的对角线元素衡量，它反映了参数对决策损失（regret）的敏感度。这避免了数据回放带来的巨大计算开销。&#10;    2.  **可微凸代理模型**：针对港口调度问题中的非凸、混合整数规划（MIP）部分（如泊位分配、岸桥调度），提出了一个基于K近邻（KNN）的可微凸代理模型。该模型直接预测非凸部分的决策变量（如岸桥功率），从而将原问题松弛为一个凸优化问题，使得可以通过隐式微分（Implicit Differentiation）计算梯度，实现端到端训练。&#10;- **与现有方案的不同**：&#10;    -   与**传统DFL**相比，DFCL能够处理**动态演变的任务流**，而不仅仅是单一固定任务。&#10;    -   与**决策聚焦微调**相比，DFCL不仅适应新任务，还通过正则化**显式地保留**对旧任务的知识，防止遗忘。&#10;    -   与**多任务DFL**相比，DFCL不需要预先知道所有可能的任务结构，能够**在线适应**未知的新任务。&#10;    -   与**通用持续学习**（如回放、参数隔离）相比，DFCL的Fisher正则化方法在DFL场景下**计算和内存效率更高**，因为它避免了重复求解优化问题或模型规模膨胀。&#10;- **为什么能奏效**：Fisher信息矩阵能够有效识别出对决策性能至关重要的参数方向。通过约束这些参数，模型在学习新任务时，其决策知识空间会向所有已学任务的低损失区域的重叠部分移动（如图3所示），从而在适应新任务的同时，保持对旧任务的泛化能力。可微代理模型则解决了梯度传播的障碍，使得整个DFCL框架能够通过标准的梯度下降法进行优化。&#10;&#10;## 3. 主要内容（Main Content）【重点】&#10;&#10;### 3.1 设计架构与方法&#10;&#10;论文提出的DFCL框架是一个端到端的三层架构，如图4所示：&#10;&#10;1.  **预测层（Forecasting Layer）**：使用Transformer编码器和MLP，根据上下文特征（历史负荷、价格、天气等）和动态船舶特征（$ξ_d$）预测日前电价（$\hat{\pi}$）和净负荷（$\hat{p}$）。&#10;2.  **代理层（Surrogate Layer）**：使用一个基于KNN的可微代理模型。该模型接收上游预测值（$\hat{\pi}, \hat{p}$），从内存缓冲区中检索最相似的K个历史调度样本，并输出一个软加权平均的代理决策，即岸桥功率（$\hat{P}_{QC}$）和泊位分配变量（$\hat{V}$）。这步将非凸的物流调度部分“凸化”。&#10;3.  **优化层（Optimization Layer）**：基于预测值（$\hat{\pi}, \hat{p}$）和代理层的输出（$\hat{P}_{QC}, \hat{V}$），求解一个凸化的日前调度问题（公式2的凸松弛版本）和实时调度问题（公式3）。然后计算决策遗憾（regret）损失，并通过隐式微分计算梯度，反向传播更新预测层和代理层的参数。&#10;&#10;### 3.2 关键算法与数学推导&#10;&#10;1.  **决策聚焦持续学习（DFCL）目标函数**：&#10;    对于任务流 $\{\tau_1, \tau_2, ..., \tau_K\}$，学习第 $k$ 个任务时的目标是：&#10;    $$ \min_{\Theta} \left\{ \mathbb{E} \left[ \mathcal{L}_{reg}(\hat{\pi}, \pi, \hat{p}, p; \Theta) | \mathcal{D}_k \right] + \frac{\lambda}{2} (\Theta - \Theta^*_{k-1})^\top \Lambda_{k-1} (\Theta - \Theta^*_{k-1}) \right\} $$&#10;    - 第一项：最小化当前任务 $\mathcal{D}_k$ 上的期望遗憾损失。&#10;    - 第二项：**Fisher信息正则化项**。$\Theta^*_{k-1}$ 是学习完前 $k-1$ 个任务后的最优参数。$\Lambda_{k-1}$ 是基于前 $k-1$ 个任务数据估计的**Fisher信息矩阵**（或其近似），它衡量了每个参数对先前任务决策性能的重要性。$\lambda$ 是平衡新旧任务重要性的超参数。&#10;&#10;2.  **Fisher信息矩阵的近似计算**：&#10;    由于遗憾损失 $\mathcal{L}_{reg}$ 不是对数似然，论文通过一个伪似然假设（Assumption 1）来近似Fisher信息矩阵。对于任务 $t$，其经验Fisher矩阵 $\hat{\mathbf{F}}_t$ 计算如下：&#10;    $$ \hat{\mathbf{F}}_t(\Theta^*_{k-1}) = \frac{1}{|\mathcal{D}_t|} \sum_{n=1}^{|\mathcal{D}_t|} \nabla_\Theta \mathcal{L}_{reg}(z_n^{(t)}; \Theta^*_{k-1}) \nabla_\Theta \mathcal{L}_{reg}(z_n^{(t)}; \Theta^*_{k-1})^\top $$&#10;    其中 $z_n^{(t)}$ 是任务 $t$ 的第 $n$ 个样本。然后，累积的Fisher信息矩阵 $\Lambda_{k-1}$ 是所有先前任务Fisher矩阵的加权和：&#10;    $$ \Lambda_{k-1} = \sum_{t=1}^{k-1} \beta_t \hat{\mathbf{F}}_t(\Theta^*_{k-1}) $$&#10;    $\beta_t$ 是缩放因子（如任务样本数）。这个矩阵的对角线元素越大，表示对应参数对先前任务的决策损失越敏感，因此在学习新任务时应受到更强的约束。&#10;&#10;3.  **通过隐式微分计算梯度**：&#10;    为了计算遗憾损失 $\mathcal{L}_{reg}$ 对预测值 $\eta = [\hat{\pi}, \hat{p}, \hat{P}_{QC}, \hat{V}]$ 的梯度，论文利用链式法则和优化问题的KKT条件。&#10;    $$ \frac{d\mathcal{L}_{reg}}{d\eta} = \frac{\partial \mathcal{L}_{reg}}{\partial \eta} + \frac{\partial \mathcal{L}_{reg}}{\partial x^*_D} \frac{dx^*_D}{d\eta} + \frac{\partial \mathcal{L}_{reg}}{\partial x^*_R} \frac{dx^*_R}{d\eta} $$&#10;    其中 $x^*_D$ 和 $x^*_R$ 分别是日前和实时问题的最优解。关键项 $\frac{dx^*_D}{d\eta}$ 和 $\frac{dx^*_R}{d\eta}$ 通过求解KKT系统的线性化方程得到：&#10;    $$ \mathbf{K} \frac{dz^*}{d\eta} = -\mathbf{J}_\eta $$&#10;    其中 $z^* = (x^*, s^*, \lambda^*)$ 是原始-对偶最优解，$\mathbf{K}$ 是KKT矩阵，$\mathbf{J}_\eta$ 是残差对 $\eta$ 的雅可比矩阵。通过求解这个线性系统，可以得到所有决策变量对输入参数的敏感性。&#10;&#10;### 3.3 模型、训练与数据集&#10;&#10;- **模型**：预测模型采用Transformer编码器+MLP的结构。代理模型采用带可微soft top-K操作的KNN回归。&#10;- **训练**：采用端到端的梯度下降法（如Adam）进行训练。在DFCL中，训练损失函数包含当前任务的遗憾损失和Fisher正则化项。&#10;- **数据集**：&#10;    - **港口数据**：基于新加坡裕廊港的真实运营记录（船舶到港、岸电使用等）。&#10;    - **预测数据**：由于缺乏公开的联合数据集，论文构建了一个可复现的基准。PV数据来自英格兰东部PES区域10（2020.9-2024.1），电价数据来自英国日前市场，居民负荷数据来自GEFCom2014竞赛的Zone 1。&#10;    - **任务设置**：构建了6个不同的任务场景，每个任务共享相同的负荷和电价数据集，但**仅改变船舶到港条件**（如船舶数量、到港时间、货物量等），以隔离任务结构变化的影响。每个任务包含402天训练数据和400天测试数据。&#10;&#10;### 3.4 实验设置与结果&#10;&#10;- **实验1：DFL vs. SBL（单一任务）**&#10;    - **目的**：验证DFL在单一任务上相比统计学习（SBL）的优势。&#10;    - **结果**（表II）：在任务1上，所有DFL变体都降低了运营成本。提出的DFL方法实现了最低的成本（$71,252.49）和最低的遗憾（$3,106.71, 4.56%），优于SBL（$71,451.64, $3,305.85, 4.85%）。&#10;&#10;- **实验2：可微代理模型验证**&#10;    - **目的**：验证所提出的代理模型在反向传播中提供的梯度是否有效。&#10;    - **方法**：比较SBL方向、DFL代理梯度方向和随机方向对遗憾损失的“一步降低”效果。&#10;    - **结果**（图5）：SBL方向最优，DFL代理梯度方向显著优于随机方向，在70.3%的样本上实现了遗憾降低。这表明代理梯度提供了有用的下降方向。&#10;&#10;- **实验3：DFL在连续任务上的性能退化**&#10;    - **目的**：展示单一DFL模型在任务演变时的泛化失败。&#10;    - **方法**：在任务1上训练DFL模型，然后直接部署到任务2-6上测试。&#10;    - **结果**（图6）：损失热力图显示不同任务的损失景观不同。模型在任务1上表现好，但在任务2-6上性能退化2.20%到8.67%，证明了跨任务泛化的必要性。&#10;&#10;- **实验4：DFCL性能评估**&#10;    - **目的**：评估提出的DFCL框架在连续任务流上的表现。&#10;    - **方法**：比较SBL、DFL（Adam，无遗忘缓解）、DFCL（Adam-F，冻结部分层）和提出的DFCL（EWC）。&#10;    - **结果**（表III，论文中未完整展示，但根据上下文推断）：提出的DFCL（EWC）在所有指标（如累计遗憾、遗憾率、遗忘度量）上均优于其他基线，特别是在**遗忘度量（FM）** 上，DFCL（EWC）显著低于其他方法，证明其有效缓解了灾难性遗忘，实现了良好的跨任务泛化。&#10;&#10;### 3.5 技术细节&#10;&#10;- **可微soft top-K**：为了从KNN内存中获取可微的代理输出，论文使用了一个可微的soft top-K操作。它不是硬性地选择K个最近邻，而是为所有M个样本分配一个软权重，使得最相似的K个样本获得绝大部分权重，从而保证整个操作是可微的。&#10;- **Tikhonov正则化**：为了确保优化问题的KKT矩阵 $\mathbf{K}$ 在求逆时是良态的（well-conditioned），论文在目标函数中添加了一个小的二次正则项 $\frac{\epsilon}{2}||x||^2$（即 $P = \epsilon I$）。这保证了梯度的数值稳定性。&#10;&#10;## 4. 意义与影响（Significance and Impact）&#10;&#10;- **解决的问题与贡献**：&#10;    1.  首次将持续学习的思想引入决策聚焦学习，解决了DFL模型在动态任务流中泛化能力差的核心问题。&#10;    2.  提出了一个计算和内存高效的解决方案（Fisher正则化 + 可微代理），避免了数据回放或模型扩展带来的高昂成本，使其更适用于实际在线部署。&#10;    3.  为港口电力-物流调度这类具有复杂、非凸优化结构的应用场景，提供了一个可行的端到端DFL解决方案。&#10;- **对未来研究/应用的影响**：&#10;    - 为将DFL应用于其他任务结构动态变化的领域（如机器人控制、自动驾驶、供应链管理）提供了新的思路和范式。&#10;    - 提出的Fisher信息正则化方法可以推广到其他需要跨任务泛化的预测-优化问题中。&#10;    - 可微代理模型的设计思想，为处理更广泛的非凸、组合优化问题中的梯度计算提供了借鉴。&#10;- **局限与开放问题**（作者提及或可推断）：&#10;    - 论文中的Fisher信息矩阵是基于一个伪似然假设进行近似的，其理论严谨性有待进一步探讨。&#10;    - 代理模型的性能依赖于内存缓冲区中历史样本的质量和覆盖范围。在极端新颖的任务上，代理模型可能失效。&#10;    - 超参数 $\lambda$（正则化强度）的选取对性能有较大影响，如何自适应地调整 $\lambda$ 是一个开放问题。&#10;    - 实验数据是跨区域组装的，虽然不影响算法比较，但与真实场景存在差距。&#10;&#10;## 5. 澄清与简化（Clarifications and Simplifications）&#10;&#10;- **Fisher信息矩阵的类比**：可以把模型的参数想象成一根根琴弦。Fisher信息矩阵告诉我们，哪些琴弦（参数）对于弹奏出优美的“旧任务”旋律至关重要。当我们学习一首“新任务”的曲子时，我们不想把这些关键琴弦拧得太松或太紧，否则旧曲子就弹不好了。Fisher正则化就像是一个“松紧提醒器”，它会强烈惩罚那些对旧曲子至关重要的琴弦发生大的改变，而对不重要的琴弦则允许自由调整。&#10;- **可微代理模型的类比**：想象一下，你是一个厨师，需要根据预测的客人数量（预测值）来决定采购多少食材（优化问题）。但是，有些菜品的制作过程非常复杂，比如需要精确的刀工和火候（非凸的MIP问题），这让你无法直接计算“如果客人数量预测错了，会浪费多少钱”。可微代理模型就像一个经验丰富的助手，他根据你过去的经验（内存缓冲区），直接告诉你“根据这个预测，大概需要多少刀工和火候”，从而让你可以轻松地估算出整个流程的成本，并反向调整你的预测模型。&#10;- **Regret（遗憾）损失**：简单来说，就是“因为预测不准而多花的冤枉">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Power-logistics scheduling in modern seaports typically follows a predict-then-optimize pipeline. To enhance the decision quality of predictions, decision-focused learning has been proposed, which aligns the training of forecasting models with downstream decision outcomes. However, this end-to-end design inherently restricts the value of forecasting models to a specific task structure and therefore generalizes poorly to evolving tasks induced by varying vessel arrivals. We address this gap with a decision-focused continual learning framework that adapts online to a stream of scheduling tasks. Specifically, we introduce Fisher-information-based regularization to enhance cross-task generalization by preserving parameters critical to prior tasks. A differentiable convex surrogate is also developed to stabilize gradient backpropagation. The proposed approach enables learning a decision-aligned forecasting model across a varying task stream with sustainable long-term computational and memory requirements. Experiments calibrated to Jurong Port show improved decision performance and cross-task generalization over existing methods, together with reduced computational cost and a bounded memory footprint.</p>
@@ -1169,10 +1256,7 @@
                         <span class="paper-date">2026-06-19</span>
                     </div>
                                         <span class="paper-comment">📝 13 pages, 2 figures</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：当前社交智能研究主要关注静态能力评估，缺乏可持续学习范式，且社交交互轨迹缺乏统一结构化表示，能力提升与保持常被孤立研究。&#10;&#10;🛠 **方法**：提出社交世界模型，将社交交互分解为场景设置、观察、心理状态、行动和对话五个维度，构建闭环学习框架，通过收集交互经验转化为偏好信号更新模型，并持续部署学习。&#10;&#10;✨ **主要贡献**：提供了可复用的数据合成机制和终身学习基准，在ASCENT-Bench上，Qwen2.5-7B模型五项核心指标均超越基线，完成率媲美Gemini 3 Flash，通过率更高，且实现零遗忘，证明小模型可可持续获取竞争性社交协调能力。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Social intelligence is a core competency for language agents, yet current research primarily focuses on static capability evaluation rather than how these skills are continuously shaped and accumulated. This gap calls for a shift toward sustainable learning paradigms. Currently, two methodological pain points exist: social interaction trajectories lack unified structured representations to form iterable learning signals, and capability improvement and retention are typically studied in isolation, hindering the assessment of continuous evolution. To bridge this gap, we propose the Social World Model. We decompose social interaction into five dimensions (scene setting, observation, mental state, action, and dialogue) to build a closed-loop learning framework. In this setup, agents collect interaction experiences, convert them into preference signals for model updating, and redeploy the updated policy for continued learning. Additionally, we provide a reusable data synthesis mechanism and a lifelong learning benchmark, transforming social capabilities from an "object of evaluation" into an "object of sustainable training". Validating our framework on the ASCENT-Bench, the interactively trained Qwen2.5-7B model outperforms its baseline across all five core metrics. Notably, it matches the closed-source Gemini 3 Flash in completion rate, exceeds it in pass rate, and achieves zero forgetting across three difficulty levels. Unlike prior works that merely report static comparisons or capability decay, this end-to-end approach provides a trainable, verifiable, and retainable pathway, demonstrating that small open-source models can sustainably acquire competitive social coordination capabilities.</p>
@@ -1540,6 +1624,18 @@
                 </div>
                 <div class="paper-card">
                     <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2606.24901v1" target="_blank" class="paper-title">LLM Evolution as an Industry-Scale Ecosystem: A Lifecycle Perspective on Continual Learning</a>
+                        <span class="paper-date">2026-06-12</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Continual learning capability is critical for Industrial LLMs, as deployed models must be continuously updated to meet evolving requirements and environments, rather than repeatedly retrained from scratch. However, most existing research focuses on improvements on static benchmarks, failing to capture real industrial needs. In this survey, we reformulate Industrial Continual Learning (ICL) for LLMs as a closed-loop update-and-release problem in a versioned ecosystem, where updates propagate hierarchically to industrial, application-specific models and LLM-powered applications, with capability inheritance and transfer across versions and model families. From this ecosystem perspective, we identify three core challenges: repeated adaptation erodes model plasticity, foundation-model upgrades break capability inheritance, and long-term sustainability is constrained by deployment requirements. We then organize the technical landscape of ICL around five lifecycle design principles: preserving plasticity headroom, treating upgrades as capability transfer, enabling trustworthy continual reinforcement learning, making training recipes self-optimizing, and building accountability as a base layer for long-term iteration. For each principle, we synthesize representative technical directions. Finally, we evaluate the maturity of each principle and its technical components via an evidence-based lens, identify key gaps hindering real-world deployment, and outline a practical ICL deployment blueprint and a pathway for feeding industrial realities back into academic research.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
                         <a href="https://arxiv.org/abs/2606.14391v1" target="_blank" class="paper-title">Learning to Hear Hesitation: Continual Learning for Disfluency-Aware ASR</a>
                         <span class="paper-date">2026-06-12</span>
                     </div>
@@ -1896,102 +1992,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Parameter-efficient finetuning methods based on spectral decomposition have enabled progress in Continual Learning. In this paper we introduce TailLoR, which utilizes the singular bases U and V of the pre-trained weights as a fixed reference frame to learn a low-rank update applied to the singular value matrix. A soft spectral penalty discourages updates aligned with dominant singular directions, reducing interference while routing fine-grained adaptation into the highly flexible, long-tail spectral coordinates.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2605.13075v3" target="_blank" class="paper-title">Scaling few-shot spoken word classification with generative meta-continual learning</a>
-                        <span class="paper-date">2026-06-04</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Few-shot spoken word classification has largely been developed for applications where a small number of classes is considered, and so the potential of larger-scale few-shot spoken word classification remains untapped. This paper investigates the potential of a spoken word classifier to sequentially learn to distinguish between 1000 classes when it is given only five shots per class. We demonstrate that this scaling capability exists by training a model using the Generative Meta-Continual Learning (GeMCL) algorithm and comparing it to repeatedly trained or finetuned baselines. We find that GeMCL produces exceptionally stable performance, and although it does not always outperform a repeatedly fully-finetuned HuBERT model nor a frozen HuBERT model with a repeatedly trained classifier head, it produces comparable performance to the latter while adapting 2000 times faster, having been trained less than half of the data for two orders of magnitude less time.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.14746v1" target="_blank" class="paper-title">Style-CCL: Content-Preserving Style Transfer via Curriculum Continual Learning</a>
-                        <span class="paper-date">2026-06-04</span>
-                    </div>
-                                        <span class="paper-comment">📝 code and models of QwenStyle are released at https://github.com/witcherofresearch/Qwen-Image-Style-Transfer/ and https://github.com/Tele-AI/TeleStyle/</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Content-Preserving Style transfer, given content and style references, remains challenging for Diffusion Transformers (DiTs) due to entangled content and style features. With a reverse triplet synthesis pipeline to build a million-scale training set and a dual-branch Style-Content DiT (SC-DiT) that decouples style and content via separate ROPE embeddings and causal masking, we observe that such a one-stage training paradigm on mixed style categories causes semantic styles to dominate, hindering texture style learning, and harming content preservation. To address these issues, we propose Style-CCL, a Multi-Stage Curriculum Continual Learning framework that trains SC-DiT from semantic (easy) to texture (hard) styles, and from clean to synthetic data, with Random Memory Rehearsal across stages to avoid catastrophic forgetting. Extensive experiments demonstrate that our Style-CCL achieves state-of-the-art performance in three core metrics: style similarity, content consistency, and aesthetic quality.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.06032v1" target="_blank" class="paper-title">Catastrophic Forgetting as Accessibility Collapse: A Three-Level Framework for Knowledge Persistence in Continual Learning</a>
-                        <span class="paper-date">2026-06-04</span>
-                    </div>
-                                        <span class="paper-comment">📝 14 pages, 6 figures, 8 tables. Sequential continual-learning experiments on CIFAR-100 using ResNet-18</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Catastrophic forgetting is commonly interpreted as the irreversible erasure of previously acquired knowledge during sequential learning. In this work, we investigate an alternative perspective: that forgetting may arise not from complete destruction of task representations but from a loss of accessibility to preserved information. We introduce a three-level framework separating knowledge storage, representation, and accessibility, and evaluate each component through a series of continual-learning experiments on sequential CIFAR-100 classification using ResNet-18. Our analysis combines checkpoint persistence, linear probing, representation geometry, classifier-reset recovery, and layer-wise recoverability experiments. We observe complete behavioral forgetting of earlier tasks, with task accuracy collapsing from 54.8% to 0%, while linear probe performance retains approximately 76% of the original representational information. Furthermore, retraining only the final classifier restores 75.7% of the original task performance without modifying the backbone network. Layer-wise analysis reveals that early and intermediate layers preserve highly recoverable task information despite severe degradation at later stages. Projection-energy and principal-angle analyses indicate that retained knowledge persists as distributed high-dimensional representations rather than through preservation of a small dominant subspace. These findings suggest that catastrophic forgetting is better characterized as an accessibility failure than complete representational erasure, and that substantial task-relevant information remains embedded within neural representations even after functional forgetting has occurred.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2512.15231v3" target="_blank" class="paper-title">CangLing-KnowFlow: A Unified Knowledge-and-Flow-fused Agent for Comprehensive Remote Sensing Applications</a>
-                        <span class="paper-date">2026-06-04</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>The automated and intelligent processing of massive remote sensing (RS) datasets is critical in Earth observation (EO). Existing automated systems are normally task-specific, lacking a unified framework to manage diverse, end-to-end workflows--from data preprocessing to advanced interpretation--across diverse RS applications. To address this gap, this paper introduces CangLing-KnowFlow, a unified intelligent agent framework that integrates a Procedural Knowledge Base (PKB), Dynamic Workflow Adjustment, and an Evolutionary Memory Module. The PKB, comprising 1,008 expert-validated workflow cases across 162 practical RS tasks, guides planning and substantially reduces hallucinations common in general-purpose agents. During runtime failures, the Dynamic Workflow Adjustment autonomously diagnoses and replans recovery strategies, while the Evolutionary Memory Module continuously learns from these events, iteratively enhancing the agent's knowledge and performance. This synergy enables CangLing-KnowFlow to adapt, learn, and operate reliably across diverse, complex tasks. We evaluated CangLing-KnowFlow on the KnowFlow-Bench, a novel benchmark of 324 workflows inspired by real-world applications, testing its performance across 13 top Large Language Model (LLM) backbones, from open-source to commercial. Across all complex tasks, CangLing-KnowFlow surpassed the Reflexion baseline by at least 4% in Task Success Rate. As the first most comprehensive validation along this emerging field, this research demonstrates the great potential of CangLing-KnowFlow as a robust, efficient, and scalable automated solution for complex EO challenges by leveraging expert knowledge (Knowledge) into adaptive and verifiable procedures (Flow).</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.05695v1" target="_blank" class="paper-title">Revisiting Prototype Rehearsal for Exemplar-Free Continual Learning: Manifold-Aware Boundary Sampling with Adaptive Class-Balanced Loss</a>
-                        <span class="paper-date">2026-06-04</span>
-                    </div>
-                                        <span class="paper-comment">📝 Published in CVPR 2026 Findings. 10 pages, 6 figures. CVF version: https://openaccess.thecvf.com/content/CVPR2026F/html/Xu_Revisiting_Prototype_Rehearsal_for_Exemplar-Free_Continual_Learning_Manifold-Aware_Boundary_Sampling_CVPRF_2026_paper.html. Code: https://github.com/HXuSz11/ACB_CEOS_CVPR2026_Findings</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Exemplar-free class-incremental learning (EFCIL) aims to acquire new classes over time without storing raw data. Historically, prototype rehearsal, which samples around stored class prototypes and mixes them with current-task data, has been a popular strategy to reduce catastrophic forgetting. However, recent drift-compensation methods that explicitly realign prototypes in the evolving feature space consistently outperform prototype-based rehearsal, raising the question of whether rehearsal itself is fundamentally limited. We argue that the performance gap stems not from the idea of prototype rehearsal per se, but from how it is typically instantiated: existing approaches treat prototypes as isolated class summaries that ignore information from nearby enemy classes, and fail to correct the emerging class imbalance between a handful of synthetic old-class samples and hundreds of real instances from newly introduced classes. Building on this hypothesis, we revisit prototype rehearsal and propose a manifold-aware variant that restores its competitiveness in EFCIL. First, we introduce Constrained Expansive Over-Sampling, which interpolates each old-class prototype toward its nearest enemy features from new classes, generating boundary-aware rehearsal samples that better follow the underlying data manifold while preserving inter-class separation. Second, we design an Adaptive Class-Balanced loss that performs time-based class weighting, amplifying gradients from older prototypes when they are most informative and gradually annealing their influence as richer supervision from later tasks accumulates. Together, these components turn prototype rehearsal into a drift-resilient, imbalance-aware mechanism that closes, and often reverses, the gap to recent drift-compensation methods, achieving state-of-the-art performance across multiple EFCIL benchmarks.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.05675v1" target="_blank" class="paper-title">Two-Way Is Better Than One: Bidirectional Alignment with Cycle Consistency for Exemplar-Free Class-Incremental Learning</a>
-                        <span class="paper-date">2026-06-04</span>
-                    </div>
-                                        <span class="paper-comment">📝 Published as a conference paper at ICLR 2026. 23 pages, 8 figures. Code: https://github.com/HXuSz11/BiCyc_ICLR2026</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Continual learning (CL) seeks models that acquire new skills without erasing prior knowledge. In exemplar-free class-incremental learning (EFCIL), this challenge is amplified because past data cannot be stored, making representation drift for old classes particularly harmful. Prototype-based EFCIL is attractive for its efficiency, yet prototypes drift as the embedding space evolves; therefore, projection-based drift compensation has become a popular remedy. We show, however, that existing one-directional projections introduce systematic bias: they either retroactively distort the current feature geometry or align past classes only locally, leaving cycle inconsistencies that accumulate across tasks. We introduce BiCyc, a bidirectional projector alignment approach with a cycle-consistency objective. BiCyc jointly optimizes two maps, old-to-new and new-to-old, with stop-gradient gating so that transport and representation co-evolve. Analytically, we show that the cycle loss contracts the singular spectrum toward unity in whitened space, and that improved transport of class means and covariances yields smaller perturbations of classification log-odds, preserving old-class decisions and mitigating catastrophic forgetting. Empirically, across standard EFCIL benchmarks, BiCyc substantially reduces forgetting and improves accuracy in from-scratch settings, while remaining competitive in the pretrained fine-grained regime.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.05661v1" target="_blank" class="paper-title">Continual Learning Bench: Evaluating Frontier AI Systems in Real-World Stateful Environments</a>
-                        <span class="paper-date">2026-06-04</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Continual learning, the ability of AI systems to improve through sequential experience, has attracted substantial interest, but no high-quality benchmark exists to evaluate it. We introduce Continual Learning Bench (CL-Bench), the first difficult, expert-validated benchmark designed to measure whether LLM-based systems genuinely improve with experience. CL-Bench spans six diverse domains (software engineering, signal processing, disease outbreak forecasting, database querying, strategic game-playing, and demand forecasting), each validated by domain experts and designed so that tasks share a learnable latent structure (codebase layout, disease outbreak dynamics, opponent strategies) that a stateful system can discover online but a stateless one cannot. We evaluate frontier models across several agent architectures, from naive in-context learning (ICL) to dedicated memory systems, introducing a gain metric to isolate learning from prior capabilities. We find that these systems leave headroom for improved continual learning: agents frequently overfit to immediate observations or fail to reuse knowledge across instances, and dedicated memory systems do not fix this -- in fact, naive ICL outperforms systems dedicated to memory management. CL-Bench is the first benchmark to evaluate continual learning across diverse real-world domains with expert-validated tasks and isolate online learning from underlying model capability, showing a need for better continual learning systems.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.05559v1" target="_blank" class="paper-title">CLaaS: Continual learning as a service for sample efficient online learning</a>
-                        <span class="paper-date">2026-06-04</span>
-                    </div>
-                                        <span class="paper-comment">📝 4 pages main content, 7 figures</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Deployed large language model agents must adapt to distribution shift in dynamic environments. Ideally, adaptation can be performed from accumulated agent experiences and retain prior capabilities while transferring to future tasks. However, agent actions and environmental transitions can only be sampled once per scenario, as real-world environments cannot be trivially reset. To this end, we investigate an experiential and online continual learning setting in which agents learn from a stream of scenarios. We propose continual learning as-a-service (CLaaS), a system which enables agents to improve during deployment, abstracted behind a chat API. To increase sample efficiency, CLaaS stores rollouts in an experience replay buffer for gradient reuse during asynchronous training. We evaluate CLaaS on an adversarial task, demonstrating that parametric updates lead to superior forward transfer and less forgetting than in-context learning, with replay being a critical choice for sample efficiency.</p>
                     </details>
                 </div>
             </div>

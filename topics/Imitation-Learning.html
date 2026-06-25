@@ -675,7 +675,7 @@
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Kalman Filter</span>
-                    <span class="nav-count">56</span>
+                    <span class="nav-count">59</span>
                 </a>
                 <a href="Loop-Closure-Detection.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -690,12 +690,12 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">69</span>
+                    <span class="nav-count">67</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">77</span>
+                    <span class="nav-count">79</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -745,12 +745,12 @@
                 <a href="Path-Planning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#3b82f6"></span>
                     <span class="nav-label">Path Planning</span>
-                    <span class="nav-count">67</span>
+                    <span class="nav-count">68</span>
                 </a>
                 <a href="Multimodal-Fusion.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#6366f1"></span>
                     <span class="nav-label">Multimodal Fusion</span>
-                    <span class="nav-count">74</span>
+                    <span class="nav-count">73</span>
                 </a>
                 <a href="Scene-Understanding.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
@@ -894,7 +894,7 @@
             <a href="Kalman-Filter.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Kalman Filter</span>
-                <span class="nav-count">56</span>
+                <span class="nav-count">59</span>
             </a>
             <a href="Loop-Closure-Detection.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -909,12 +909,12 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">69</span>
+                <span class="nav-count">67</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">77</span>
+                <span class="nav-count">79</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -964,12 +964,12 @@
             <a href="Path-Planning.html" class="nav-item">
                 <span class="nav-dot" style="background:#3b82f6"></span>
                 <span class="nav-label">Path Planning</span>
-                <span class="nav-count">67</span>
+                <span class="nav-count">68</span>
             </a>
             <a href="Multimodal-Fusion.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
                 <span class="nav-label">Multimodal Fusion</span>
-                <span class="nav-count">74</span>
+                <span class="nav-count">73</span>
             </a>
             <a href="Scene-Understanding.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
@@ -1030,6 +1030,126 @@
             <div class="paper-list">
                 <div class="paper-card">
                     <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2606.26017v1" target="_blank" class="paper-title">G2DP: Diffusion Planning with Spatio-Temporal Grid Guidance</a>
+                        <span class="paper-date">2026-06-24</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有基于扩散模型的自动驾驶规划器在去噪过程中缺乏对密集环境约束的有效引导，导致在交互场景中安全性不足和闭环性能脆弱。&#10;&#10;🛠 **方法**：提出G2DP框架，通过融合概率性未来占用分布与路线进度图构建可微分的时空代价体积，并将其作为连续安全能量函数，在去噪循环中注入密集梯度，主动引导轨迹生成避开碰撞并优化进度。&#10;&#10;✨ **主要贡献**：在nuPlan上实现最先进的闭环性能，反应得分比最强模仿学习基线高7.2分；在interPlan和DeepScenario零样本迁移中保持最高分，碰撞避免比无引导方法提升10.15分，证明时空代价网格是扩散规划中鲁棒引导的有效表示。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>In autonomous driving, diffusion-based planners have emerged as a promising paradigm for robust motion planning in dense and interactive traffic, as they can effectively model diverse driving behaviors. However, their inherent stochasticity often requires explicit guidance during denoising to ensure safety and route adherence for robust closed-loop execution. Existing guidance typically relies on sparse, entity-centric geometric queries or post-hoc refinement, yielding limited situational awareness and fragile performance in interactive scenes. To address this issue, we propose G2DP (Grid-Guided Diffusion Planning), a diffusion-based planner that directly enforces dense environmental constraints through inference-time guidance. Specifically, G2DP constructs a differentiable spatio-temporal cost volume by fusing probabilistic future occupancy distributions with a route-progress map. By formulating this volume as a continuous safety energy functional, it injects dense gradients directly into the denoising loop, actively steering trajectory generation toward collision-free and progress-optimal regions. Extensive closed-loop evaluations show that G2DP achieves state-of-the-art performance on nuPlan, outperforming the strongest imitation-learning baseline by +7.2 points in reactive score. It further maintains top scores in zero-shot transfers to interPlan and DeepScenario benchmarks, with collision avoidance improving by +10.15 over the unguided approach on interPlan. These results demonstrate that spatio-temporal cost grids serve as an effective representation for robust guidance in diffusion-based planning.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2606.25754v1" target="_blank" class="paper-title">Stage-Aware and Roughness-Constrained Diffusion Policy for Multi-Stage Robotic Polishing</a>
+                        <span class="paper-date">2026-06-24</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决多阶段机器人抛光中长时序依赖、阶段转换不确定以及耦合工艺参数难以建模与调控的问题。&#10;&#10;🛠 **方法**：提出阶段感知与粗糙度约束扩散策略（SRDP），通过多模态观测历史推断工艺阶段后验，并用于条件化共享逆扩散过程，同时引入粗糙度导向的工艺约束扩散采样方法，生成受约束的进给速度与法向接触力。&#10;&#10;✨ **主要贡献**：在航天器舱体涂层抛光和内腔结构表面精加工两个场景中，SRDP相比先进基线方法显著提升了阶段转换稳定性、工艺参数一致性和最终表面质量，并通过消融实验与真实机器人验证了有效性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Polishing is a critical finishing process in high-end manufacturing fields such as aerospace, where surface quality directly affects the service performance and reliability of components. Robotic imitation learning provides a flexible solution for such tasks, but current methods remain limited in industrial polishing because of long-horizon dependencies, uncertain stage transitions, and the difficulty of modeling and regulating coupled process parameters. To address these issues, this paper proposes a Stage-Aware and Roughness-Constrained Diffusion Policy (SRDP) for robotic polishing. SRDP infers the process-stage posterior from multimodal observation histories and uses it to condition the shared reverse denoising process, enabling stage-consistent action generation without external stage labels during execution. Furthermore, a roughness-oriented process-constrained diffusion sampling method is incorporated to generate constrained feed speed and normal contact force under stage-wise preset spindle speeds, thereby improving process consistency and physical feasibility. Systematic experiments are conducted on two representative scenarios, namely spacecraft cabin coating-surface polishing and inner-cavity structural surface finishing. Comparisons with advanced baselines, ablation studies, and real-robot validations comprehensively evaluate the proposed method. The results show that SRD improves stage-transition stability, process-parameter consistency, and final surface quality across different polishing scenarios.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2501.14622v5" target="_blank" class="paper-title">ACT-JEPA: Novel Joint-Embedding Predictive Architecture for Efficient Policy Representation Learning</a>
+                        <span class="paper-date">2026-06-24</span>
+                    </div>
+                                        <span class="paper-comment">📝 Published version</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：模仿学习依赖昂贵的专家演示，且缺乏对环境的显式理解，导致世界模型不完善，限制了策略表征的学习效率。&#10;&#10;🛠 **方法**：提出ACT-JEPA架构，将模仿学习与自监督学习统一，通过联合嵌入预测架构在潜在空间中端到端地同时预测动作序列和潜在观测序列，从而过滤无关细节并学习鲁棒的世界模型。&#10;&#10;✨ **主要贡献**：在多个环境和任务中，ACT-JEPA相比最强基线实现了最高40%的世界模型理解提升和10%的任务成功率提高，并证明潜在观测序列预测能有效泛化到动作序列预测，展示了融合模仿学习与自监督学习的高效性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Learning efficient representations for decision-making policies is a challenge in imitation learning (IL). Current IL methods require expert demonstrations, which are expensive to collect. Additionally, they are not explicitly trained to understand the environment. Consequently, they have underdeveloped world models. Self-supervised learning (SSL) offers an alternative, as it can learn a world model from diverse, unlabeled data. However, most SSL methods are inefficient because they operate in raw input space. In this work, we propose ACT-JEPA, a novel architecture that unifies IL and SSL to enhance policy representations. It is trained end-to-end to jointly predict 1) action sequences and 2) latent observation sequences. To learn in latent space, we utilize Joint-Embedding Predictive Architecture, which allows the model to filter out irrelevant details and learn a robust world model. We evaluate ACT-JEPA in different environments and across multiple tasks. Our results show that it outperforms the strongest baseline in all environments. ACT-JEPA achieves up to 40% improvement in world model understanding and up to 10% higher task success rate. Finally, we show that predicting latent observation sequences effectively generalizes to predicting action sequences. This work demonstrates how integrating IL and SSL leads to efficient policy representation learning, an improved world model, and a higher task success rate.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2510.09036v2" target="_blank" class="paper-title">RoDyn: Taming Interactive Robot-Dynamic 2.5D World Model for Robotic Manipulation</a>
+                        <span class="paper-date">2026-06-24</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有2D视频世界模型缺乏空间与运动推理能力，难以支持机器人操作任务中的物理交互。&#10;&#10;🛠 **方法**：提出RoDyn模型，通过机器人动态分词器将语义视觉与空间、智能体先验耦合，并采用掩码引导的自回归架构聚焦机器人-物体交互区域。&#10;&#10;✨ **主要贡献**：在大规模数据集上实现最先进的生成保真度，将预测能力转化为下游任务提升，使模型强化学习加速，真实世界模仿学习成功率较纯2D基线提升42%。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Learned world models hold significant potential as neural simulators for robotic manipulation. However, prevalent 2D video-based models inherently lack the spatial and kinematic reasoning crucial for physical interactions. We introduce RoDyn, a novel Robot-Dynamic 2.5D World Model that formulates environmental dynamics within a highly efficient, geometry-aware latent space. Through the proposed Robot-Dynamic Tokenizer, we explicitly couple semantic visual appearances with spatial and agent-centric priors via an RGB-dominated cross-attention mechanism and dynamic mask guidance. Furthermore, by injecting these mask priors directly into sequence transitions, our Mask-guided Autoregressive architecture drives the model to focus on active robot-object interaction regions. Extensive experiments demonstrate that RoDyn establishes SOTA generation fidelity across large-scale datasets. Crucially, it translates these predictive capabilities into substantial downstream gains, accelerating model-based reinforcement learning and achieving a 42\% improvement in real-world imitation learning success rates over pure 2D baselines.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2606.25360v1" target="_blank" class="paper-title">Decoupling Semantics and Geometric Grounding: Spatial Visual Prompts for Language-Conditioned Imitation Learning</a>
+                        <span class="paper-date">2026-06-24</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有端到端视觉-语言-动作模型在机器人操作中耦合了语义推理与空间控制，导致数据有限的模仿学习中难以精确区分目标。&#10;&#10;🛠 **方法**：提出SVP-IL解耦架构，利用视觉-语言基础模型将指令解析为零样本几何掩码，生成显式空间视觉提示，并通过轻量级特征级融合机制注入连续动作生成器。&#10;&#10;✨ **主要贡献**：在50-100次演示的低数据条件下，将高歧义语言条件任务的平均成功率从24.0%提升至39.5%，标准基准达67.8%，并在真实机器人实验中验证了鲁棒性与数据效率。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>While end-to-end Vision-Language-Action (VLA) models show promise in robotic manipulation, their monolithic paradigm inherently couples semantic reasoning and spatial control. This creates a severe alignment bottleneck, limiting precise target disambiguation in data-constrained imitation learning. To overcome this, we propose SVP-IL, a decoupled architecture that explicitly extracts spatial visual grounding from the action generation loop. By leveraging vision-language foundation models, we parse instructions into zero-shot geometric masks, translating language into explicit Spatial Visual Prompts (SVP). These priors are injected into a continuous action generator via a lightweight direct feature-level fusion mechanism. This integration provides explicit and uncorrupted spatial gradient guidance while ensuring highly stable optimization under low-data regimes. Extensive experiments demonstrate that SVP-IL significantly outperforms state-of-the-art VLAs and pure visuomotor baselines. Trained on as few as 50 to 100 demonstrations, SVP-IL improves average success rates on highly ambiguous language-conditioned tasks from 24.0% to 39.5%, achieving 67.8% on standard benchmarks. Real-world robotic experiments further validate its robustness and data efficiency in unstructured physical environments.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2510.17059v2" target="_blank" class="paper-title">Consistent Zero-Shot Imitation with Contrastive Goal Inference</a>
+                        <span class="paper-date">2026-06-24</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决零样本模仿学习中，智能体仅凭一次专家演示就能复现行为，而无需测试时与环境交互或梯度更新的难题。&#10;&#10;🛠 **方法**：提出对比逆强化学习（CIRL）框架，通过对比RL学习最大熵目标条件策略、自动目标提议机制（GoalKDE）驱动探索，以及平均场变分模型从轨迹中推断目标，将多任务逆RL转化为目标推断问题。&#10;&#10;✨ **主要贡献**：理论证明该方法能通过考虑不同状态可达的相对难度，一致恢复演示者意图；实验表明在目标条件和标准奖励最大化控制任务中，CIRL优于现有零样本模仿方法，验证了目标作为行为紧凑摘要的表达力。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Zero-shot imitation learning requires an agent to reproduce expert behavior from a single demonstration without additional environment interaction or gradient updates at test time. We introduce Contrastive Inverse Reinforcement Learning (CIRL), a self-supervised framework for pre-training zero-shot imitation agents. Our methods rests on a key observation that many useful tasks can be summarized by a single goal state. We can thus convert the multi-task inverse RL problem into a more tractable goal-inference problem, and utilize state-of-the-art goal-conditioned RL methods to recover a policy that reaches the goal. During pre-training, CIRL jointly employs three components to learn without any rewards or demonstrations: (1) a variant of contrastive RL designed to learn maximum-entropy goal-conditioned policies, (2) an automatic goal proposal mechanism (GoalKDE) that drives exploration, and (3) a mean-field variational model that performs amortized goal inference from trajectories. We prove that this procedure consistently recovers the demonstrator's intent by accounting for the relative difficulty of reaching different states and show how structurally similar prior work may otherwise fail to infer the correct reward. Experiments on goal-conditioned and standard reward-maximizing control tasks show that CIRL outperforms prior zero-shot imitation methods, supporting the expressiveness of goals as a compact summary of behavior.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2606.25224v1" target="_blank" class="paper-title">Spatio-Temporal Retrieval-based Priors for Adaptive Computational Teaching in Driving</a>
+                        <span class="paper-date">2026-06-23</span>
+                    </div>
+                                        <span class="paper-comment">📝 20 pages, 8 figures</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有基于学习的驾驶教学系统缺乏适应性，仅依赖局部上下文推理，无法考虑学生学习的长期时间特性及师生互动的累积影响。&#10;&#10;🛠 **方法**：提出基于模仿学习的自适应教学计算模型，包含时序推理模块，通过最近邻检索和交叉注意力先验，在低数据条件下仅对语义相似的过往交互进行推理，并结合编码器-解码器的并发教学模型。&#10;&#10;✨ **主要贡献**：构建了半合成闭环纵向师生交互数据集和真实世界模拟赛车教学数据集，验证了所提模型在自适应教学上持续优于非自适应基线及多种不同先验与时序融合机制的对比模型。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Learning-based automated coaching systems for complex motor tasks such as high-performance driving remain limited in the ability to be adaptive by their reliance only on local, context-dependent reasoning, failing to account for the long-term temporal nature of student learning and the cumulative impact of repeated teacher-student interactions. In this paper, we propose an imitation learning based computational model for adaptive teaching with a dedicated temporal reasoning module that can reason over the interaction history under low-data regimes. To compensate for limited amounts of interactive training data, and based on the repetitive nature of the teaching process, the model relies on a nearest neighbor retrieval and cross attention prior, reasoning only on a narrowed-down set of semantically similar past interactions with an encoder-decoder based concurrent teaching model. We validate our approach with (i) a novel semi-synthetic closed-loop longitudinal student-teacher interaction dataset based on Waymo Open Motion Dataset and (ii) a small-scale real-world naturalistic simulator race coaching dataset. Our results reveal the consistent advantage of our adaptive teaching model with the nearest neighbor retrieval and cross-attention prior over a non-adaptive baseline as well as a suite of adaptive models that differ in their choice of priors and temporal fusion mechanisms.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2606.25136v1" target="_blank" class="paper-title">Memory Retrieval in Visuomotor Policies for Long-Horizon Robot Control</a>
+                        <span class="paper-date">2026-06-23</span>
+                    </div>
+                                        <span class="paper-comment">📝 16 pages, 5 tables, 8 figures</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在部分可观测环境中（如家庭），机器人需要从长期历史记忆中检索多样化信息以支持自主控制，但现有方法面临两个挑战：策略可能学习到过去信息与动作之间的虚假相关性，以及记忆误差累积导致模型漂移和级联失败。&#10;&#10;🛠 **方法**：提出HALO框架，结合基于注意力的记忆检索机制。通过蒸馏视觉-语言模型（VLM）先验，利用演示轨迹生成记忆相关的问答对，并联合视频问答目标训练以抑制虚假相关性；同时采用稀疏注意力机制，仅检索历史中最相关的部分，减少闭环控制中记忆误差的影响。&#10;&#10;✨ **主要贡献**：HALO实现了从长达8分钟的历史经验中可靠检索任务相关信息，显著提升了长期控制任务的鲁棒性，并通过实验验证了其在抑制虚假相关性和缓解误差累积方面的有效性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>General-purpose robots operating in partially observable environments, such as homes, require memory to support autonomy. They must recall diverse information from the past, such as where objects were placed, which tasks a human partner has completed, and when an appliance was turned on. Achieving this versatility requires a general memory retrieval mechanism. Transformer architectures that use attention over long contexts for memory retrieval provide a promising approach, as they learn retrieval from data rather than relying on task-specific or hand-designed rules. However, directly incorporating them into imitation learning from offline data introduces two key challenges: (1) the policy may learn spurious correlations between past information and predicted actions, and (2) errors accumulate in memory due to prediction inaccuracies and their compounding interactions with the environment, causing model drift and cascading failures. To address both challenges, we introduce HALO, a visuomotor policy with an attention-based memory retrieval mechanism for long-horizon control. First, to suppress spurious correlations, HALO distills vision-language model (VLM) priors into the policy. It generates memory-dependent question--answer pairs from demonstration trajectories and trains jointly with a video question--answering objective, steering retrieval toward task-relevant information. Second, to reduce the impact of accumulated errors in memory during closed-loop control, HALO uses sparse attention that restricts retrieval to only the most relevant parts of the history. Together, these components enable more reliable long-horizon control by guiding the policy to retrieve task-relevant information from up to eight minutes of past experience. Project website: https://robin-lab.cs.utexas.edu/HALO</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
                         <a href="https://arxiv.org/abs/2606.24633v1" target="_blank" class="paper-title">Beyond Monotonic Progress: Retry-Supervised Value Learning for Robot Imitation</a>
                         <span class="paper-date">2026-06-23</span>
                     </div>
@@ -1064,10 +1184,7 @@
                         <span class="paper-date">2026-06-23</span>
                     </div>
                                         <span class="paper-comment">📝 18 pages including supplementary material. Main manuscript and supplementary material included in this version</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有灵巧手操作数据采集系统存在运动重定向不准确、采集效率低、缺乏高分辨率指尖触觉感知等问题，限制了模仿学习的有效性。&#10;&#10;🛠 **方法**：提出MILE系统，通过从人手到外骨骼再到机械手的机械同构设计，实现关节位置的一对一映射，避免非线性重定向；外骨骼基于人体测量学设计，机械手集成紧凑指尖视觉触觉模块，采集多模态数据（触觉、RGB-D图像、关节位置）。&#10;&#10;✨ **主要贡献**：外骨骼多关节平均绝对角度误差低于1度，遥操作成功率平均提升64%；加入指尖触觉观测后，相比纯视觉基线成功率再提升25%，验证了数据集的高保真度和实用性。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Dexterous robotic hands are expected to perform complex, contact-rich object manipulation, but learning such skills remains challenging because high-dimensional hands require high-fidelity demonstrations. Imitation learning provides a practical route for acquiring dexterous manipulation skills from human demonstrations, yet collecting synchronized multimodal demonstrations with accurate hand actions and tactile observations remains a key bottleneck. We present MILE, a teleoperation-based data-collection system comprising the human-first MILE exoskeleton and the mechanically corresponding MILE-Tac robotic hand. The system integrates custom-designed and fabricated modular joint encoders and compact MILE fingertip visuotactile sensor modules. The exoskeleton is informed by human-hand anatomy and ergonomic constraints, while the robotic hand is co-designed to preserve the selected four-finger kinematic topology. This correspondence enables joint-space command transfer and reduces reliance on task-space IK-based retargeting. The system synchronously records task-specific visual observations, four fingertip visuotactile streams, robot-hand proprioception, and exoskeleton-derived action commands. We evaluate MILE through a four-task teleoperation benchmark against representative glove-based and vision-based interfaces, and through imitation-learning experiments that compare policies trained with and without fingertip tactile input. The project page is available at https://sites.google.com/view/mile-system.</p>
@@ -1079,10 +1196,7 @@
                         <span class="paper-date">2026-06-23</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：因果推断与强化学习长期独立发展，缺乏统一框架来利用因果结构提升策略学习效率，尤其在反事实推理和机制不变性方面存在空白。&#10;&#10;🛠 **方法**：将强化学习环境分解为具有因果不变性的自主机制集合，并用结构因果模型形式化建模，从而统一在线学习、离线策略学习与因果演算学习，并引入广义策略学习、模仿学习与反事实学习等新范式。&#10;&#10;✨ **主要贡献**：提出因果强化学习（CRL）概念，揭示因果推断与强化学习的本质联系，拓展了反事实学习的维度，为结合因果推理与试错学习开辟了新研究方向。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Causal inference provides a set of principles and tools that allow one to combine data and knowledge about an environment to reason with questions of counterfactual nature, i.e., what would have happened had reality been different, even when no data of this unrealized reality is currently available. Reinforcement learning provides methods to learn a policy that optimizes a specific measure (e.g., reward, regret) when the agent is deployed in an environment and pursues an exploratory, trial-and-error approach. These two disciplines have evolved independently and with virtually no interaction between them. We note that they operate over different aspects of the same building block, counterfactual relations, which makes them umbilically connected. Based on these observations, novel learning opportunities arise when this connection is explicitly acknowledged and mathematized. To realize this potential, we note that any environment where the RL agent is deployed can be decomposed as a collection of autonomous mechanisms with different causal invariances, parsimoniously modeled as a structural causal model; any standard RL setting implicitly encodes such a model. This formalization allows us to put under a unifying treatment different modes of learning, including online, off-policy, and causal calculus learning, which appear unrelated in the literature. However, these modalities are not exhaustive: we introduce several natural and pervasive classes of learning settings that entail novel dimensions of analysis. Specifically, we introduce and discuss through causal lenses generalized policy learning, where to intervene, imitation learning, and counterfactual learning. These tasks lead to a broader view of counterfactual learning and suggest great potential for studying causal inference and reinforcement learning side by side, which we call causal reinforcement learning (CRL).</p>
@@ -1094,10 +1208,7 @@
                         <span class="paper-date">2026-06-23</span>
                     </div>
                                         <span class="paper-comment">📝 8 pages, 7 figures, conference</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决随机褶皱织物在双机械臂操作中同时实现展平与位姿对齐的难题，两者相互耦合（展平会改变位姿，对齐会引入褶皱）。&#10;&#10;🛠 **方法**：提出混合模仿学习-视觉伺服（IL-VS）策略，通过将当前与目标织物状态锚定到同一模板网格实现顶点级评估，并设计网格动作分块变换器（MACT）进行粗对齐，再通过视觉伺服实现精确收敛。&#10;&#10;✨ **主要贡献**：首次定义随机到目标织物展平任务，提出无需配准的网格表示方法，并在真实双机械臂遥操作系统中验证了对未见目标位姿、织物类型和尺度的精准对齐能力。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Robotic fabric manipulation remains challenging due to fabric deformability and occlusions from wrinkles and the manipulator. This paper defines Random-to-Target Fabric Flattening (RTFF) as the task of bringing a randomly wrinkled fabric to an arbitrary user-specified wrinkle-free target pose. RTFF requires simultaneous flattening and pose alignment, where the two objectives are inherently coupled since flattening the fabric displaces its pose, while realigning it tends to introduce wrinkles. To solve this task, this paper anchors both the current and target fabric states to the same template mesh, enabling direct vertex-level wrinkle and pose assessment without registration. Building on this representation, a hybrid Imitation Learning--Visual Servoing (IL--VS) RTFF policy is proposed. A novel Mesh Action Chunking Transformer (MACT) leverages structured mesh observations to achieve goal-conditioned coarse alignment from a compact demonstration set, after which VS ensures precise convergence to the target. The policy is validated on a real dual-arm teleoperation system, demonstrating precise alignment to unseen target poses, fabric types, and scales. Code and videos: https://kaitang98.github.io/RTFF_Policy/</p>
@@ -1109,10 +1220,7 @@
                         <span class="paper-date">2026-06-23</span>
                     </div>
                                         <span class="paper-comment">📝 Accepted by IEEE CASE 2026</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：模仿学习中的轨迹级数据增强方法在拼接不同专家演示时，会引入非专家插值片段，降低生成数据的质量，影响策略学习效果。&#10;&#10;🛠 **方法**：提出MinInter方法，通过为每个采样的初始配置选择需要最少插值量的源演示来生成完整轨迹，从而在数据生成过程中显式最小化插值。&#10;&#10;✨ **主要贡献**：在MimicGen基准的12个操作任务（26个变体）上，MinInter一致提升了数据生成成功率和策略成功率，尤其在接触密集、长时域和高方差场景中效果显著；相比SkillGen框架，MinInter以更简单的设计实现了更高的策略成功率。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Imitation learning enables robots to acquire complex manipulation skills from demonstrations, but its effectiveness is limited by the cost of collecting high-quality data. Trajectory-level data augmentation methods alleviate this challenge by recombining expert demonstrations under varied initial states. However, such methods typically insert interpolations or other non-expert transition segments between disjoint parts, and such non-expert segments could reduce the quality of the generated data. This paper introduces Minimizing Interpolation (MinInter), an effective trajectory selection method that, for each sampled initial configuration, chooses the source demonstration requiring the least interpolation to form a complete trajectory. By explicitly minimizing interpolations during data generation, MinInter produces higher-quality synthetic demonstrations while remaining compatible with existing data generation frameworks. Experiments on 12 manipulation tasks with 26 variants from the MimicGen benchmark show that MinInter consistently improves both data generation success rates and policy success rates, with the largest gains on contact-rich, long-horizon and high-variance settings. Compared to the recent SkillGen framework, MinInter achieves higher policy success rates despite its conceptual simplicity, underscoring the value of interpolation minimization for data augmentation.</p>
@@ -1124,10 +1232,7 @@
                         <span class="paper-date">2026-06-23</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在多智能体模仿学习中，现有理论分析依赖于状态-动作层面的“所有策略偏差集中系数”，该系数可能非常大，且缺乏高效交互式算法。&#10;&#10;🛠 **方法**：利用线性马尔可夫博弈的结构（转移动态和奖励函数均为特征线性），将集中系数降至特征层面；并设计首个计算高效的交互式多智能体模仿学习算法，其样本复杂度仅与特征维度d相关。&#10;&#10;✨ **主要贡献**：理论上证明了特征层面集中系数可远小于状态-动作层面系数，并提出了首个交互式算法（包括深度版本），在井字棋和四子棋等游戏中显著优于行为克隆（BC）。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>In this work, we present the first theoretical analysis of multi-agent imitation learning (MAIL) in linear Markov games where both the transition dynamics and each agent's reward function are linear in some given features. We demonstrate that by leveraging this structure, it is possible to replace the state-action level "all policy deviation concentrability coefficient" (Freihaut et al., arXiv:2510.09325) with a concentrability coefficient defined at the feature level which can be much smaller than the state-action analog when the features are informative about states' similarity. Furthermore, to circumvent the need for any concentrability coefficient, we turn to the interactive setting. We provide the first, computationally efficient, interactive MAIL algorithm for linear Markov games and show that its sample complexity depends only on the dimension of the feature map $d$. Building on these theoretical findings, we propose a deep MAIL interactive algorithm which clearly outperforms BC on games such as Tic-Tac-Toe and Connect4.</p>
@@ -1139,10 +1244,7 @@
                         <span class="paper-date">2026-06-23</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决模型预测控制（MPC）在GPU上高效运行、可微分、支持复杂约束（如状态/控制不等式、隐式积分、跨时间耦合成本）的规模化计算难题。&#10;&#10;🛠 **方法**：结合序列二次规划（SQP）、交替方向乘子法（ADMM）内层求解器、隐式微分技术，并利用JAX-CUDA协同设计实现全GPU加速的MPC求解器TurboMPC。&#10;&#10;✨ **主要贡献**：在约束规划、人形机器人模仿学习、神经网络成本强化学习等任务中，比最先进的CPU和GPU可微分求解器分别快15倍和58倍；在实车极限竞速中，通过贝叶斯优化批量调参实现显著更快的驾驶性能，且支持超过8000个节点的规划时域。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Robotics increasingly relies on GPUs for parallel simulation, large-scale learning, and neural-network inference. For model predictive control (MPC) to scale with this paradigm, solvers must run efficiently on this hardware while remaining fast, differentiable, and compatible with expressive MPC formulations used in robotics. We present TurboMPC, a differentiable MPC solver that runs entirely on the GPU and supports state and control inequality constraints, implicit integrators, cross-time-coupled costs, and slack variables. TurboMPC combines sequential quadratic programming (SQP), an alternating direction method of multipliers (ADMM) inner solver, implicit differentiation, and a co-designed JAX-CUDA implementation for efficiency and ease of use. In simulation, we validate TurboMPC on constrained planning, humanoid imitation learning, and reinforcement learning with neural-network cost function tasks, achieving up to $15\times$ and $58\times$ speedups over state-of-the-art CPU and GPU differentiable solvers, respectively. We deploy TurboMPC on a full-scale car for minimum-time racing and find that batched, GPU-accelerated tuning of MPC parameters via Bayesian optimization yields significantly faster driving than a hand-tuned baseline. TurboMPC also scales to planning horizons of over $8000$ knot points while maintaining control of the vehicle. We open-source TurboMPC at: https://github.com/ToyotaResearchInstitute/turbompc</p>
@@ -1154,10 +1256,7 @@
                         <span class="paper-date">2026-06-22</span>
                     </div>
                                         <span class="paper-comment">📝 Project website: see2act.github.io</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在机器人模仿学习中，物体常被遮挡导致部分可观测，现有方法难以从有限演示中同时学习搜索和操作行为。&#10;&#10;🛠 **方法**：提出See2Act方法，通过将动作去噪与视角优化耦合，在测试时基于主动推断的视角序列预测动作，并利用离线演示中锚定关键帧动作的相机位姿隐式学习“看哪里”与“如何做”。&#10;&#10;✨ **主要贡献**：在Ravens任务中，该方法在严重遮挡下恢复信息性视角；在RLBench任务中性能提升高达34%；在真实世界通过数字孪生收集50次演示，实现零样本仿真到真实迁移，验证了学习视角推理对鲁棒操作的有效性。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Most imitation learning methods assume full observability in table-top settings. In practice, objects are often occluded, requiring robots to both search and act, and learning this coupled behavior from limited demonstrations remains challenging. We propose See2Act, an imitation learning approach that conditions action prediction on a sequence of actively-inferred viewpoints at test time, by coupling action denoising with viewpoint refinement. The policy is trained using camera poses anchored to keyframe actions from offline demonstrations, enabling implicit learning of where to see, while learning how to act. We empirically demonstrate that in Ravens the policy recovers informative viewpoints under severe occlusions, and on RLBench tasks it improves performance by up to 34% over prior methods. In the real world, we collect 50 demonstrations in a digital twin and achieve zero-shot sim-to-real transfer on pick-and-place tasks using depth observations. The policy handles significant occlusions, showing that learned viewpoint reasoning enables robust manipulation under partial observability.</p>
@@ -1169,10 +1268,7 @@
                         <span class="paper-date">2026-06-22</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：当前视觉-语言-动作模型（VLA）通过被动模仿学习微调时，需等待机器人失败才收集数据，且无法区分哪些状态需要监督，导致冗余数据浪费和适应效率低下。&#10;&#10;🛠 **方法**：提出主动持续学习范式，利用不确定性引导的数据收集策略，结合重放数据混合与弹性权重巩固等持续学习技术，在主动收集的恢复数据上微调VLA模型。&#10;&#10;✨ **主要贡献**：实证表明不确定性引导的恢复演示能显著提升微调效率，同时揭示了主动学习与灾难性遗忘之间的权衡，为大型机器人策略中定向新数据的整合提供了开放挑战分析。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Vision-Language-Action (VLA) models are commonly fine-tuned through passive imitation learning, where additional demonstrations are collected for tasks where the policy performs poorly. This approach incurs several downsides: it requires the robot to fail before data collection is triggered, provides little guidance about which states require supervision, and wastes demonstrator effort on redundant parts of the task where the policy already performs well. In this paper, we propose an active, continual learning paradigm for VLAs. We demonstrate that active, uncertainty-guided data collection leads to more efficient fine-tuning than when using passively-collected demonstrations. However, we also find that fine-tuning only on actively-collected recovery data leads to catastrophic forgetting. We evaluate techniques for continual learning, including replay-based data mixing and elastic weight consolidation, and identify tradeoffs between plasticity to uncertainty-guided recovery data and retention of previously learned behaviors. Overall, our work contributes an empirical study of active continual learning for autoregressive VLAs, establishing that uncertainty-guided recovery demonstrations can improve adaptation efficiency while also revealing open challenges when targeted new data is incorporated into large robot policies.</p>
@@ -1920,102 +2016,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Multi-objective reinforcement learning for humanoid robots must coordinate locomotion and manipulation within a single policy. A natural design choice is whether to use a single (unified) critic that estimates the combined value of all objectives, or separate (dual) critics with disjoint reward signals. We present a controlled comparison on the Unitree G1 humanoid (23 active DoF) in NVIDIA Isaac Lab, training loco-manipulation policies through a sequential curriculum spanning 13 levels from stationary reaching to walking with variable-orientation targets. In standardized evaluation, dual-critic policies reach targets 3.5$\times$ faster (6.5 vs. 22.6 simulation steps), achieve 2$\times$ higher throughput (14.3 vs. 7.0 validated reaches per 1,000 steps), and attain higher validated reach rates (65.2% vs. 53.8%) compared to the unified-critic policy. Notably, additional anti-gaming reward mechanisms provide no further improvement beyond the architectural change alone (60.9% vs. 65.2%). These results have direct implications for the emerging paradigm of RL fine-tuning of imitation-learned policies: when refining a pre-trained manipulation policy with RL, a unified critic risks suppressing the learned behavior through competing locomotion gradients. These findings demonstrate that critic architecture is a primary - and often overlooked - design choice in multi-objective humanoid RL, with greater impact than reward engineering on reaching efficiency.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2505.03296v2" target="_blank" class="paper-title">The Unreasonable Effectiveness of Discrete-Time Gaussian Process Mixtures for Robot Policy Learning</a>
-                        <span class="paper-date">2026-06-10</span>
-                    </div>
-                                        <span class="paper-comment">📝 Submitted for publication to IEEE Transaction on Robotics</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>We present Mixture of Discrete-time Gaussian Processes (MiDiGap), a novel approach for flexible policy representation and imitation learning in robot manipulation. MiDiGap enables learning from as few as five demonstrations using only camera observations and generalizes across a wide range of challenging tasks. It excels at long-horizon behaviors such as making coffee, highly constrained motions such as opening doors, dynamic actions such as scooping with a spatula, and multimodal tasks such as hanging a mug. MiDiGap learns these tasks on a CPU in less than a minute and scales linearly to large datasets. We also develop a rich suite of tools for inference-time steering using evidence such as collision signals and robot kinematic constraints. This steering enables novel generalization capabilities, including obstacle avoidance and cross-embodiment policy transfer. MiDiGap achieves state-of-the-art performance on diverse few-shot manipulation benchmarks. On constrained RLBench tasks, it improves policy success by 76 percentage points and reduces trajectory cost by 67%. On multimodal tasks, it improves policy success by 48 percentage points and increases sample efficiency by a factor of 20. In cross-embodiment transfer, it more than doubles policy success. We make the code publicly available at https://midigap.cs.uni-freiburg.de.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.12485v1" target="_blank" class="paper-title">Speculative Rollback Correction for Quality-Diverse Web Agent Imitation</a>
-                        <span class="paper-date">2026-06-10</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Training interactive web agents through imitation learning from expert trajectories has emerged as a highly effective approach. However, determining the optimal timing for expert intervention presents a critical challenge in this context. Delayed intervention often leads to the accumulation of early-stage errors, pushing the page state into an irrecoverable regime. Conversely, premature or excessive intervention causes the agent to become overly reliant on expert policies, trapping the model in local optima characterized by a single, rigid trajectory. We propose Speculative Rollback Correction (SRC), a branch-level imitation framework for resettable agent environments. Instead of requesting teacher labels at every visited state or correcting only after a completed trajectory, SRC uses fixed-horizon branch review: the student executes a short speculative segment before teacher review, and the teacher localizes the first harmful deviation only when local progress breaks. Rollback preserves useful prefixes, while successful rollouts are filtered by a hard verifier and retained in a lightweight quality-diversity archive. The resulting data supports next-action supervised fine-tuning on both localized corrections and verifier-passing trajectories. On WebArena-Infinity, SRC collects 977 verifier-passing trajectories and 9,183 next-action examples; fixed-horizon review improves the recovery-versus-query tradeoff over step-level review while retaining verifier-passing solution variants. Code is available at https://github.com/LongkunHao/SRC_gui_agent.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2511.20216v6" target="_blank" class="paper-title">CostNav: A Navigation Benchmark for Real-World Economic-Cost Evaluation of Physical AI Agents</a>
-                        <span class="paper-date">2026-06-10</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Current navigation benchmarks focus on task success but do not capture the economic constraints essential for commercializing autonomous delivery systems. We introduce CostNav, an Economic Navigation Benchmark that evaluates physical AI agents on a cost-revenue and break-even analysis, pairing Isaac Sim's collision and cargo dynamics with industry-standard data such as Securities and Exchange Commission (SEC) filings and Abbreviated Injury Scale (AIS) injury reports. To our knowledge, CostNav is the first physics-grounded economic benchmark to use regulatory and financial data to quantify the gap between navigation metrics and commercial deployment, revealing that high task-success rates alone do not ensure economic viability. Evaluating seven baselines (two rule-based and five imitation-learning methods), we find no method economically viable: all yield negative contribution margins. CANVAS, using only an RGB camera and GPS, attains the highest task success and the least-negative margin among methods with non-zero Service-Level Agreement (SLA) compliance (-\$28.40/run), outperforming LiDAR-equipped Nav2 w/ GPS (-\$37.34/run). A sim-trained policy evaluated on a real delivery robot yields SLA compliance close to its simulation result, indicating that policy performance in CostNav's simulation transfers to real-world deployment. We challenge the community to achieve economic viability on CostNav, which scores methods by cost-revenue outcomes. All resources are available at https://github.com/worv-ai/CostNav.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.12475v1" target="_blank" class="paper-title">Learning to Assist: Collaborative VLAs for Implicit Human-Robot Collaboration</a>
-                        <span class="paper-date">2026-06-10</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Human-robot collaboration (HRC) combines the complementary strengths of humans and robots to improve task efficiency. However, many existing collaborative systems rely on hand-engineered pipelines, limiting their scalability and flexibility for new tasks. In this work, we show that models trained end-to-end with imitation learning, specifically vision-language-action (VLA) models, can support collaborative manipulation, and characterize the key factors affecting their real-world performance. We evaluate two state-of-the-art models and identify a failure mode of action-chunking policies in implicit HRC, where demonstration action leakage (i.e., action chunks crossing latent task transitions) can cause premature assistive behavior. We find that this issue increases with longer execution horizons and occurs in real-world collaborative VLA systems, such as when a robot attempts to hand over a tool before the person is ready. We propose an inference-time steering method to mitigate these erroneous assistive actions while preserving policy performance. Finally, through a 16-participant user study on a long-horizon collaborative assembly task, we show that steering enables a longer execution horizon while mitigating premature assistance, leading to faster collaboration and fewer failures compared to a shorter-horizon policy.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.11577v1" target="_blank" class="paper-title">Distortion-Resilient Robotic Imitation Learning for Autonomous Cable Routing</a>
-                        <span class="paper-date">2026-06-10</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>The rapid development of intelligent control methodologies has endowed robots with powerful autonomous intelligence. Cable routing, a ubiquitous foundational task in industry, provides a rigorous benchmark for robotic dexterity and sequential decision-making. In these practical scenarios, image observation distortion frequently occurs. Samples characterized by low-quality image observations often hinder accurate model training, posing challenges to the reliability and accuracy of intelligent control systems. Nevertheless, no dedicated intelligent control solution has been proposed for scenarios of image signal distortion. Meanwhile, image quality information has not been sufficiently exploited to further enhance the performance of intelligent control methodologies. To this end, we propose a novel robotic imitation learning framework that comprises an image quality assessment module, a confidence-based learning mechanism, and a decision-making module, which is designed to maintain high performance even under distorted image observations. In the proposed framework, the image quality assessment module synergizes with the confidence-based learning mechanism to enhance the efficacy of the decision-making module. Specifically, the image quality assessment module is incorporated to extract image quality information from image observations, while the confidence-based learning mechanism adaptively prioritizes challenging samples to improve learning effectiveness. The decision-making module determines appropriate discrete skills or continuous actions. Experimental results demonstrate that our formulated framework enhances the overall performance of the decision-making module.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.11184v1" target="_blank" class="paper-title">TacForeSight: Force-Guided Tactile World Model for Contact-Rich Manipulation</a>
-                        <span class="paper-date">2026-06-09</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Contact-rich manipulation requires robots to continuously perceive and regulate evolving physical interactions under dynamic contact transitions or complex surface geometries. Recent imitation learning methods improve contact-aware control by incorporating tactile or force feedback, but they rarely model the asymmetric spatiotemporal roles of global force and local tactile sensing. To address this, we propose TacForeSight, a lightweight force-conditioned tactile foresight framework for real-time manipulation. The core component is TacForceWM, a tactile world model that predicts short-horizon tactile latent dynamics from dual-finger tactile observations conditioned on high-frequency wrist force and torque signals. Another key component, the Predictive Tactile-Conditioned Policy, leverages the predicted latents as anticipatory contact priors, models the current-to-future tactile evolution via cross-attention, and adaptively fuses visuo-tactile features through a tactile-guided gating module. By forecasting purely within a compact latent space, TacForeSight enables proactive contact reasoning with efficient real-time inference suitable for high-frequency manipulation control. Real-robot experiments on five representative tasks and three in-process perturbation settings show that TacForeSight consistently outperforms existing baselines, particularly under dynamic contact disturbances. All models and datasets will be made publicly available on the project website at https://tacforesight.github.io/ProjectPage.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.11087v1" target="_blank" class="paper-title">Test-Time Gradient Guidance of Flow Policies in Reinforcement Learning</a>
-                        <span class="paper-date">2026-06-09</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Expressive continuous control policies, such as diffusion and flow models, form the backbone of recent advances in scaling imitation learning for simulated and real robot control. While they are known to scale stably in the supervised imitation learning setting, incorporating them into reinforcement learning (RL) pipelines for policy improvement has proven more difficult. It often requires specialized training objectives or backpropagating through denoising processes, which cause well-known issues with stability and affect scalability. In this paper we study the question of whether simple policy improvement schemes at test time alone, leaving stable supervised policy training intact, can be a competitive alternative which sidesteps these issues. To this end, we propose QGF (Q-Guided Flow), an RL algorithm that performs policy optimization entirely at test time. QGF works by pre-training both a reference flow policy (via a standard behavioral cloning objective) and a value function critic and, at test time, using the value gradient to guide the reference policy to generate higher-value actions without any additional policy learning. Empirically, QGF outperforms prior test-time RL methods on single-task and goal-conditioned offline RL benchmarks with high-dimensional action spaces, and is competitive with state-of-the-art training-time algorithms while being much cheaper to run. Moreover, it exhibits favorable scaling with model size by avoiding the instability of actor-critic training, offering a practical and effective alternative RL algorithm with expressive policies.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.06323v2" target="_blank" class="paper-title">VOLT: Vision and Language Trajectory Segmentation for Faster-than-Demonstration Policies</a>
-                        <span class="paper-date">2026-06-09</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Humans often take longer to demonstrate a task than a robot would need to execute it. Rather than learning to replicate the demonstration at the same pace, many industrial and practical applications require robots to perform tasks as quickly as possible. In this paper, we investigate several hypotheses for learning policies that operate faster-than-demonstrations. Our experiments show that the most effective strategy is to downsample recorded demonstrations and train the robot's policy on this accelerated data. However, uniformly downsampling an entire trajectory can be problematic. Some parts of a task can be safely sped up (e.g., unconstrained motion), while others demand slower, more precise motion (e.g., object interactions or fine manipulation). To address this challenge, we introduce VOLT, a vision-and-language trajectory segmentation method that reasons over video demonstrations, and leverages contextual cues to determine when acceleration is appropriate and when careful precision is required. VOLT identifies segments where slow, deliberate motion is necessary, then selectively downsamples the remaining segments. The resulting reformatted trajectories can be used with standard imitation learning approaches, such as diffusion policies. Our results highlight that segmentation quality is critical -- baseline methods often misidentify when acceleration is possible, leading to overly cautious or unreliable policies. Compared to state-of-the-art alternatives, VOLT allows robots to execute tasks faster while maintaining strong performance.</p>
                     </details>
                 </div>
             </div>

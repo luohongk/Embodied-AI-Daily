@@ -675,7 +675,7 @@
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Kalman Filter</span>
-                    <span class="nav-count">56</span>
+                    <span class="nav-count">59</span>
                 </a>
                 <a href="Loop-Closure-Detection.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -690,12 +690,12 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">69</span>
+                    <span class="nav-count">67</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">77</span>
+                    <span class="nav-count">79</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -745,12 +745,12 @@
                 <a href="Path-Planning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#3b82f6"></span>
                     <span class="nav-label">Path Planning</span>
-                    <span class="nav-count">67</span>
+                    <span class="nav-count">68</span>
                 </a>
                 <a href="Multimodal-Fusion.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#6366f1"></span>
                     <span class="nav-label">Multimodal Fusion</span>
-                    <span class="nav-count">74</span>
+                    <span class="nav-count">73</span>
                 </a>
                 <a href="Scene-Understanding.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
@@ -894,7 +894,7 @@
             <a href="Kalman-Filter.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Kalman Filter</span>
-                <span class="nav-count">56</span>
+                <span class="nav-count">59</span>
             </a>
             <a href="Loop-Closure-Detection.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -909,12 +909,12 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">69</span>
+                <span class="nav-count">67</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">77</span>
+                <span class="nav-count">79</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -964,12 +964,12 @@
             <a href="Path-Planning.html" class="nav-item">
                 <span class="nav-dot" style="background:#3b82f6"></span>
                 <span class="nav-label">Path Planning</span>
-                <span class="nav-count">67</span>
+                <span class="nav-count">68</span>
             </a>
             <a href="Multimodal-Fusion.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
                 <span class="nav-label">Multimodal Fusion</span>
-                <span class="nav-count">74</span>
+                <span class="nav-count">73</span>
             </a>
             <a href="Scene-Understanding.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
@@ -1028,6 +1028,21 @@
                 <span class="topic-count">79 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2606.25699v1" target="_blank" class="paper-title">SA-LIVO: Efficient LiDAR-Inertial-Visual Odometry with Subspace-Aware Degeneracy Handling</a>
+                        <span class="paper-date">2026-06-24</span>
+                    </div>
+                                        <span class="paper-comment">📝 20 pages, 12 figures, 5 tables</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有紧耦合LiDAR-视觉-惯性里程计（LIVO）中，LiDAR和视觉传感器各自存在独立失效模式（如LiDAR在几何约束不足时退化，视觉在光照差或无纹理时退化），但现有方法仅在模态层面处理退化，未考虑联合信息矩阵的方向依赖性，导致视觉残差在LiDAR已良好约束的方向上仍被引入，而在退化方向上视觉补偿分散于全状态空间而非集中所需方向。&#10;&#10;🛠 **方法**：提出SA-LIVO系统，通过子空间感知信息融合（SAIF）框架对联合LiDAR-视觉信息矩阵进行特征分解，并在每个特征方向上应用线性-钳位软门控，衰减退化方向同时保持可观测方向的全强度；随后在一个共享线性化点的InEKF循环中联合优化LiDAR和视觉残差，且视觉雅可比矩阵仅在循环前组装一次并在迭代中复用，避免传统迭代滤波器的逐次计算开销。&#10;&#10;✨ **主要贡献**：在三个基准（HILTI'22、New College、Oxford Spires）的29个序列及并发退化场景中，SA-LIVO达到与最强基线相当的精度，并在竞争系统发散时保持有界漂移；在笔记本电脑CPU上平均每帧12.3毫秒，嵌入式ARM板上26.8毫秒，峰值内存降低3.6-6.3倍，代码将开源。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Tightly coupled LiDAR-visual-inertial odometry (LIVO) fuses precise geometric depth with complementary visual measurements, yet its exteroceptive sensors face independent failure modes: LiDAR degenerates when scan geometry is under-constrained, while visual measurements degrade under adverse illumination or texture absence. Existing countermeasures, including binary degeneracy detection, covariance inflation, and scene-level quality gating, operate at the modality level and leave the direction-dependent structure of the joint information matrix unaddressed. Consequently, visual residuals enter pose directions where LiDAR is well-constrained, while in deficient directions visual compensation disperses across the full state space rather than concentrating where needed. We propose SA-LIVO, a LiDAR-inertial-visual odometry system addressing these limitations through direction-selective fusion and information-efficient processing. The Subspace-Aware Information Fusion (SAIF) framework eigendecomposes the joint LiDAR-visual information matrix and applies a linear-clamp soft gate per eigendirection, attenuating degenerate directions while preserving observable ones at full strength. LiDAR and visual residuals are then jointly optimized in one InEKF loop at a shared linearization point. Since visual information contributes only where LiDAR is deficient, photometric Jacobians are assembled once before the loop and reused across iterations, avoiding the per-iteration cost of conventional iterated filters. Experiments on 29 sequences from three benchmarks (HILTI'22, New College, Oxford Spires) and concurrent-degradation scenarios show accuracy competitive with the strongest baselines and bounded drift where competing systems diverge. SA-LIVO averages 12.3 ms per frame on a laptop CPU and 26.8 ms on an embedded ARM board without GPU, with 3.6-6.3x lower peak memory. The code will be open-sourced.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2606.09292v1" target="_blank" class="paper-title">Dual Quaternion-Based Unscented Kalman Filter with Visual Inertial Odometry for Navigation in GPS-Denied Environments</a>
@@ -1169,10 +1184,7 @@
                         <span class="paper-date">2026-04-22</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="好的，作为一名人工智能研究与学术论文分析专家，我将严格按照您的要求，对这篇论文进行详细的中文解读。&#10;&#10;---&#10;&#10;## 0. 概览（Concise Summary）&#10;&#10;- **主题（Topic）**：机器人导航、超宽带（UWB）辅助定位、未知锚点在线标定。&#10;- **问题（Problem）**：在UWB辅助导航系统中，如何在不依赖人工预标定和专用初始化阶段的情况下，实时、鲁棒地自动发现并校准位置未知的UWB锚点。&#10;- **方法（Method）**：提出一个完整的在线初始化框架，核心包括：1）一个基于“最近点”的实时位置精度因子（PDOP）估计方法，用于保守地判断初始化时机；2）一个轻量级的基于三角不等式的离群值剔除方法；3）结合自适应鲁棒核的非线性最小二乘优化。&#10;- **创新（Innovation）**：1）提出一种**无需已知锚点位置**的实时PDOP估计方法，该方法被证明是**保守的**（即估计值总是大于或等于真实值），从而避免了因几何条件不佳而导致的过早或错误的初始化。2）将PDOP作为**初始化触发条件**，而非事后评估指标。&#10;- **意义（Significance）**：该方法实现了UWB锚点的全自动、在线初始化，消除了人工干预，显著提升了UWB辅助导航系统的实用性和鲁棒性。在自主叉车和四旋翼无人机两种平台上均验证了其有效性，并开源了代码。&#10;- **一句话总结**：本文提出了一种通过保守的实时PDOP估计来智能触发UWB锚点初始化的框架，实现了无需人工干预的鲁棒、快速在线标定。&#10;&#10;## 1. 研究动机（Motivation）&#10;&#10;- **问题与空白**：在GNSS拒止环境下，UWB技术是实现精准定位的关键。然而，UWB系统的精度高度依赖于固定锚点位置的精确标定。传统方法需要操作员在任务前进行耗时的人工测量和标定，这在大型部署或动态环境中不切实际。现有的一些自动标定方法要么需要锚点间测量（增加部署复杂度），要么需要专门的初始化阶段（如让机器人飞过特定航点），限制了其实用性。&#10;- **重要性**：实现UWB锚点的**在线、自动、鲁棒**初始化，是推动UWB辅助导航系统走向实际应用的关键一步。它允许机器人在未知环境中自主部署和运行，无需人工干预。&#10;- **挑战**：核心挑战在于**何时**以及**如何**利用机器人运动过程中收集的UWB测距数据来初始化一个未知锚点。过早初始化（几何条件差）会导致巨大的定位误差，甚至使系统发散。现有方法通常使用线性或非线性最小二乘的初始解来评估几何质量，但这些解本身可能不准确，导致对几何条件的评估过于乐观（overconfident），从而触发错误的初始化。&#10;&#10;## 2. 创新点（Innovation）&#10;&#10;- **核心创新：保守的实时PDOP估计**：&#10;    - **新方法**：提出了一种无需知道锚点真实位置即可实时计算PDOP的方法。该方法利用机器人轨迹上**距离锚点最近的点**（即测得最小距离的标签位置）来近似替代锚点位置，构建几何矩阵 $\tilde{G}$。&#10;    - **与现有方案的不同**：现有工作（如[26]）是在**估计出锚点位置后**，再用该估计值计算PDOP来评估精度。而本文的方法是在**初始化之前**，仅用已知的标签位置和测距值来估计PDOP，并将其作为**是否启动初始化的决策依据**。&#10;    - **为何能奏效**：作者通过定理3.1证明，在满足一定条件下（即轨迹上的所有点到“最近点”的距离都小于到锚点的真实距离），该方法估计出的PDOP总是**大于或等于**真实PDOP。这意味着该估计是**保守的**（underconfident），即它认为几何条件比实际更差。这确保了系统只会在几何条件**确实非常好**（真实PDOP很低）时才触发初始化，从而避免了因乐观估计而导致的糟糕初始化。&#10;&#10;- **其他创新**：&#10;    - **轻量级离群值剔除**：将2D场景中的三角不等式一致性检查扩展到3D，通过比较连续两次测距的变化和标签位置的变化来快速剔除异常值，计算效率极高。&#10;    - **自适应鲁棒核**：在非线性优化阶段，引入自适应鲁棒核函数，自动调整核形状以适应残差分布，进一步抑制残余离群值和噪声的影响，提高了最终标定结果的鲁棒性。&#10;&#10;## 3. 主要内容（Main Content）【重点】&#10;&#10;### 3.1 设计架构与方法&#10;&#10;整个框架如图2所示，是一个在线处理流程：&#10;&#10;1.  **数据输入**：系统接收来自UWB标签的测距值 $d_k$ 和来自机器人定位系统（如VIO、GPS+轮式里程计）的标签位置 $p_{U_k}$。&#10;2.  **离群值剔除**：对输入的UWB测距数据进行在线一致性检查，剔除异常值。&#10;3.  **实时PDOP估计**：对每个未知锚点，利用经过滤的数据，通过“最近点”方法实时计算其PDOP值。&#10;4.  **初始化决策**：当某个锚点的估计PDOP值低于预设阈值时，触发该锚点的初始化过程。&#10;5.  **锚点位置估计**：&#10;    - **粗估计**：使用“最优双点法”（Optimal Double Method）求解一个线性最小二乘问题，得到锚点位置和常值偏差的初始解。&#10;    - **精估计**：以粗估计为初值，使用带有自适应鲁棒核的非线性最小二乘（NLS）优化器（如Levenberg-Marquardt算法）进行迭代优化，得到最终的锚点位置。&#10;6.  **集成使用**：初始化后的锚点即可用于UWB辅助导航，提供测距约束，修正定位漂移。&#10;&#10;### 3.2 关键算法与数学推导&#10;&#10;**1. 离群值剔除（三角不等式一致性检查）**&#10;&#10;对于连续两次测量 $k-1$ 和 $k$，定义：&#10;- $\Delta p = \|p_{U_k} - p_{U_{k-1}}\|$ （标签移动距离）&#10;- $\Delta d = |d_k - d_{k-1}|$ （测距变化绝对值）&#10;&#10;一致性条件为：&#10;$$&#10;\Delta d \leq \Delta p + \tau&#10;$$&#10;其中 $\tau$ 是一个可调阈值（如 $2\sigma_d$）。如果条件不满足，则 $d_k$ 被视为离群值并被剔除。其原理基于三角形两边之差小于第三边，如图3所示。&#10;&#10;**2. 保守的实时PDOP估计**&#10;&#10;- **真实PDOP**：需要已知锚点位置 $p_A$，几何矩阵 $G$ 为：&#10;  $$&#10;  G = \begin{bmatrix} \frac{(p_{U_1} - p_A)^\top}{d_1} \\ \frac{(p_{U_2} - p_A)^\top}{d_2} \\ \vdots \\ \frac{(p_{U_N} - p_A)^\top}{d_N} \end{bmatrix}&#10;  $$&#10;  PDOP $= \sqrt{\text{tr}((G^\top G)^{-1})}$。&#10;&#10;- **本文的保守PDOP**：用“最近点” $p_C$（即对应最小测距值 $d_{min}$ 的标签位置）替代未知的 $p_A$，并移除 $p_C$ 对应的行，构建新矩阵 $\tilde{G}$：&#10;  $$&#10;  \tilde{G} = \begin{bmatrix} \vdots \\ \frac{(p_{U_k} - p_C)^\top}{d_k} \\ \vdots \end{bmatrix} \in \mathbb{R}^{(N-1) \times 3}&#10;  $$&#10;  然后计算 $\text{PDOP}_{\text{est}} = \sqrt{\text{tr}((\tilde{G}^\top \tilde{G})^{-1})}$。&#10;&#10;- **定理3.1证明**：如果对于所有 $k$，都有 $\|p_{U_k} - p_C\| \leq \|p_{U_k} - p_A\|$，则 $\tilde{G}^\top \tilde{G} \preceq G^\top G$，进而 $(\tilde{G}^\top \tilde{G})^{-1} \succeq (G^\top G)^{-1}$，因此 $\text{PDOP}_{\text{est}} \geq \text{PDOP}_{\text{true}}$。这证明了该估计是保守的。&#10;&#10;**3. 锚点位置估计**&#10;&#10;- **粗估计（线性最小二乘）**：使用“最优双点法”，通过选择任意一个测量索引 $j$ 作为“枢轴点”，构建线性方程组 $Ax = b$，其中 $x = [p_A, \gamma]^\top$。&#10;  $$&#10;  A_k = [-(p_{U_k} - p_{U_j})^\top, (d_k - d_j)]&#10;  $$&#10;  $$&#10;  b_k = \frac{1}{2} \left( (d_k^2 - d_j^2) - (\|p_{U_k}\|^2 - \|p_{U_j}\|^2) \right)&#10;  $$&#10;&#10;- **精估计（非线性最小二乘）**：使用自适应鲁棒核函数 $\rho(r, \alpha)$ 优化：&#10;  $$&#10;  (\bar{\theta}, \bar{\alpha}) = \min_{\theta, \alpha} \sum_{k=1}^N \rho(r_k(\theta), \alpha)&#10;  $$&#10;  其中 $\theta = (p_A, \gamma)$，$r_k(\theta) = \hat{d}_k(\theta) - d_k$ 是残差。鲁棒核函数 $\rho$ 定义为：&#10;  $$&#10;  \rho(r, \alpha, c) = \frac{|\alpha - 2|}{\alpha} \left( \left( \frac{(r/c)^2}{|\alpha - 2|} + 1 \right)^{\alpha/2} - 1 \right)&#10;  $$&#10;  $\alpha$ 是控制核形状的自适应参数，$c$ 是固定尺度参数。该方法能自动适应噪声水平，有效抑制离群值影响。&#10;&#10;### 3.3 模型、训练与数据集&#10;&#10;- **模型**：本文提出的不是一个需要训练的机器学习模型，而是一个**基于几何和优化的算法框架**。核心是UWB测距模型（公式1）和基于PDOP的决策模型。&#10;- **训练**：无传统意义上的训练过程。参数（如PDOP阈值 $\tau$）是根据经验或传感器噪声特性设定的。&#10;- **数据集**：&#10;    - **仿真数据**：在模拟的隧道环境中生成，包含随机轨迹、不同噪声水平（$\sigma_d = 0.1-0.5m$）和离群值比例。&#10;    - **真实世界数据**：&#10;        - **AMR（自主叉车）**：在室外约 $40 \times 20 m^2$ 区域，部署11个UWB锚点。使用RTK GPS-INS提供真值，经纬仪测量锚点真值。&#10;        - **UAV（四旋翼）**：在室内 $4 \times 6.5 \times 7 m^3$ 空间，部署4个UWB锚点。使用Optitrack运动捕捉系统提供真值。&#10;&#10;### 3.4 实验设置与结果&#10;&#10;- **仿真实验（Table I）**：&#10;    - **目的**：对比本文的PDOP触发策略与固定时间窗口策略。&#10;    - **结果**：在4种不同噪声/离群值设置下，本文方法虽然初始化次数较少（更保守），但平均初始化误差显著更低，且误差超过1m的比例远低于固定窗口方法。这表明PDOP触发策略有效避免了在几何条件差时进行初始化。&#10;&#10;- **AMR真实实验**：&#10;    - **离群值剔除对比（Table II）**：对比本文方法与RANSAC方法。两者在最终锚点位置RMSE上性能接近，但本文方法计算速度快了**463倍**，更适合计算受限平台。&#10;    - **PDOP估计对比（Figure 7）**：对比本文方法、基于LS估计的PDOP和基于NLS估计的PDOP。结果显示，本文方法的PDOP估计值（蓝色）始终为正（保守），而LS方法（红色）和NLS方法（黄色）在某些时刻会出现负值（过于乐观），证明了本文方法的稳定性和保守性。&#10;    - **初始化效果（Figure 8, 9）**：在良好轨迹上，所有锚点均被成功初始化（误差&lt;0.5m）。在次优轨迹上，只有几何条件好的锚点被初始化，避免了大的定位误差。&#10;&#10;- **UAV真实实验**：&#10;    - **初始化性能（Table III）**：与[2]中的方法相比，本文方法在**更短的平均初始化时间**（88s vs 220s）内实现了**更低的平均初始化误差**（0.167m vs 0.251m）。&#10;    - **对VIO系统的影响（Figure 10, 11, Table IV）**：将本文方法集成到UVIO系统（称为UVIO*）中。与纯VIO（OpenVINS）相比，UVIO*的位置RMSE平均降低了**46%**。图10清晰地展示了在UWB锚点初始化后（虚线处），定位误差（ATE）显著下降并保持稳定。&#10;&#10;### 3.5 技术细节&#10;&#10;- **PDOP阈值**：在实验中设置为1。这是一个经验值，用户可根据对精度的要求进行调整。&#10;- **离群值剔除阈值 $\tau$**：设置为 $0.1m \approx 2\sigma_d$，其中 $\sigma_d$ 是UWB测距噪声的标准差。&#10;- **“最近点” $p_C$ 的选取**：选择对应最小测距值 $d_{min}$ 的标签位置。这个点通常是最接近锚点的，因此满足定理3.1的假设条件（轨迹上的点不会比这个点更接近锚点）。&#10;- **计算效率**：离群值剔除和PDOP估计的计算复杂度极低，非常适合在嵌入式平台（如Raspberry Pi 4）上实时运行。&#10;&#10;## 4. 意义与影响（Significance and Impact）&#10;&#10;- **解决的问题与贡献**：&#10;    1.  **解决了UWB锚点在线自动标定的核心难题**：即如何在不依赖初始位置估计的情况下，可靠地判断初始化时机。&#10;    2.  **提出了一个新颖、保守的实时PDOP估计方法**，这是本文最核心的理论贡献。它从数学上保证了初始化决策的可靠性。&#10;    3.  **提供了一个完整、高效、鲁棒的框架**，集成了离群值剔除、保守决策和自适应优化，并已在两种不同类型的机器人上得到验证。&#10;    4.  **开源了代码**，促进了相关领域的研究和应用。&#10;&#10;- **对未来研究/应用的影响**：&#10;    - **提升UWB辅助导航系统的实用性**：使得机器人在未知环境中可以自主部署UWB网络，无需人工干预，这对于仓库物流、搜索救援、无人机巡检等应用至关重要。&#10;    - **为其他传感器标定提供思路**：这种“先评估几何条件，再执行标定”的保守策略，可以推广到其他需要在线标定的传感器系统（如声呐、激光雷达的某些参数标定）。&#10;    - **推动更鲁棒的SLAM系统发展**：快速、准确的UWB锚点初始化可以显著提升VIO或LIO等SLAM系统的长期稳定性和精度。&#10;&#10;- **局限与开放问题**：&#10;    - **对“最近点”假设的依赖**：定理3.1的证明依赖于 $\|p_{U_k} - p_C\| \leq \|p_{U_k} - p_A\|$ 这一假设。虽然作者论证了这在大多数场景下成立（如锚点固定在墙上），但在某些极端情况下（如机器人轨迹完全“环绕”锚点），该假设可能不成立，导致估计变得略微乐观。作者也承认了这一点，并指出此时几何条件本身已经很好，乐观的影响可以忽略。&#10;    - **PDOP阈值的设定**：阈值需要根据具体应用和传感器精度进行手动调整，缺乏自适应机制。&#10;    - **多锚点同时初始化**：论文主要聚焦于单个锚点的初始化，虽然框架可以扩展到多个，但多锚点之间的相互影响和联合优化问题值得进一步研究。&#10;&#10;## 5. 澄清与简化（Clarifications and Simplifications）&#10;&#10;- **PDOP是什么？**：可以把PDOP想象成“定位的几何质量分”。想象一下，你要用几个已知位置的“朋友”（标签位置）告诉你他们离一个“神秘人”（锚点）有多远，来定位这个神秘人。如果这些朋友都站在神秘人的同一侧，那么你只能大致知道神秘人在那个方向，但距离很难确定，这时的PDOP就很高。如果这些朋友从四面八方包围了神秘人，那么你就能非常精确地定位他，这时的PDOP就很低。PDOP值越低，定位越准。&#10;&#10;- **为什么“保守”是好的？**：在初始化锚点时，我们宁愿多等一会儿，收集更多数据，确保几何条件非常好（PDOP很低）再开始计算，也不愿意在几何条件很差时匆忙计算，得到一个错误的位置。一个“保守”的PDOP估计器就像一个谨慎的司机，它总是假设路况比实际更差，因此只在路况确实非常好的时候才加速，从而避免了风险。本文的方法就是这样一个“谨慎的司机”。&#10;&#10;- **“最近点”方法如何工作？**：我们不知道神秘人在哪，但我们知道所有朋友的位置和他们测得的距离。其中，测得距离最短的那个朋友，肯定是最靠近神秘人的。我们就**假设**这个朋友就是神秘人，然后用其他朋友相对于这个“假神秘人”的位置来计算PDOP。由于这个“假神秘人”比真神秘人更靠近其他朋友，计算出的几何条件看起来会比实际更差（PDOP更高），这就实现了“保守”估计。&#10;&#10;## 6. 补充说明（Additional Notes）&#10;&#10;- **相关工作关联**：本文与[2]（UVIO）和[26]（使用PDOP评估）的工作关系最为密切。本文直接改进了[2]中需要长时间初始化过程的缺点，并解决了[26]中PDOP评估依赖于不准确的初始估计的问题。与[23]和[24]等需要规划特定路径的方法相比，本文的方法更加灵活和实用。&#10;- **重要图表**：&#10;    - **Figure 2**">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>This paper presents a framework for the real-time initialization of unknown Ultra-Wideband (UWB) anchors in UWB-aided navigation systems. The method is designed for localization solutions where UWB modules act as supplementary sensors. Our approach enables the automatic detection and calibration of previously unknown anchors during operation, removing the need for manual setup. By combining an online Positional Dilution of Precision (PDOP) estimation, a lightweight outlier detection method, and an adaptive robust kernel for non-linear optimization, our approach significantly improves robustness and suitability for real-world applications compared to state-of-the-art. In particular, we show that our metric which triggers an initialization decision is more conservative than current ones commonly based on initial linear or non-linear initialization guesses. This allows for better initialization geometry and subsequently lower initialization errors. We demonstrate the proposed approach on two different mobile robots: an autonomous forklift and a quadcopter equipped with a UWB-aided Visual-Inertial Odometry (VIO) framework. The results highlight the effectiveness of the proposed method with robust initialization and low positioning error. We open-source our code in a C++ library including a ROS wrapper.</p>
@@ -1992,18 +2004,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>This paper presents a visual-inertial odometry (VIO) method using long-tracked features. Long-tracked features can constrain more visual frames, reducing localization drift. However, they may also lead to accumulated matching errors and drift in feature tracking. Current VIO methods adjust observation weights based on re-projection errors, yet this approach has flaws. Re-projection errors depend on estimated camera poses and map points, so increased errors might come from estimation inaccuracies, not actual feature tracking errors. This can mislead the optimization process and make long-tracked features ineffective for suppressing localization drift. Furthermore, long-tracked features constrain a larger number of frames, which poses a significant challenge to real-time performance of the system. To tackle these issues, we propose an active decoupling mechanism for accumulated errors in long-tracked feature utilization. We introduce a visual reference frame reset strategy to eliminate accumulated tracking errors and a depth prediction strategy to leverage the long-term constraint. To ensure real time preformane, we implement three strategies for efficient system state estimation: a parallel elimination strategy based on predefined elimination order, an inverse-depth elimination simplification strategy, and an elimination skipping strategy. Experiments on various datasets show that our method offers higher positioning accuracy with relatively short consumption time, making it more suitable for edge-enabled low-altitude IoT navigation, where high-accuracy positioning and real-time operation on edge device are required. The code will be published at github.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2504.20380v1" target="_blank" class="paper-title">LPVIMO-SAM: Tightly-coupled LiDAR/Polarization Vision/Inertial/Magnetometer/Optical Flow Odometry via Smoothing and Mapping</a>
-                        <span class="paper-date">2025-04-29</span>
-                    </div>
-                                        <span class="paper-comment">📝 submitted to IROS2025</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>We propose a tightly-coupled LiDAR/Polarization Vision/Inertial/Magnetometer/Optical Flow Odometry via Smoothing and Mapping (LPVIMO-SAM) framework, which integrates LiDAR, polarization vision, inertial measurement unit, magnetometer, and optical flow in a tightly-coupled fusion. This framework enables high-precision and highly robust real-time state estimation and map construction in challenging environments, such as LiDAR-degraded, low-texture regions, and feature-scarce areas. The LPVIMO-SAM comprises two subsystems: a Polarized Vision-Inertial System and a LiDAR/Inertial/Magnetometer/Optical Flow System. The polarized vision enhances the robustness of the Visual/Inertial odometry in low-feature and low-texture scenarios by extracting the polarization information of the scene. The magnetometer acquires the heading angle, and the optical flow obtains the speed and height to reduce the accumulated error. A magnetometer heading prior factor, an optical flow speed observation factor, and a height observation factor are designed to eliminate the cumulative errors of the LiDAR/Inertial odometry through factor graph optimization. Meanwhile, the LPVIMO-SAM can maintain stable positioning even when one of the two subsystems fails, further expanding its applicability in LiDAR-degraded, low-texture, and low-feature environments. Code is available on https://github.com/junxiaofanchen/LPVIMO-SAM.</p>
                     </details>
                 </div>
             </div>

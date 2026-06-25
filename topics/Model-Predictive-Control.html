@@ -675,7 +675,7 @@
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Kalman Filter</span>
-                    <span class="nav-count">56</span>
+                    <span class="nav-count">59</span>
                 </a>
                 <a href="Loop-Closure-Detection.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -690,12 +690,12 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">69</span>
+                    <span class="nav-count">67</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">77</span>
+                    <span class="nav-count">79</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -745,12 +745,12 @@
                 <a href="Path-Planning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#3b82f6"></span>
                     <span class="nav-label">Path Planning</span>
-                    <span class="nav-count">67</span>
+                    <span class="nav-count">68</span>
                 </a>
                 <a href="Multimodal-Fusion.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#6366f1"></span>
                     <span class="nav-label">Multimodal Fusion</span>
-                    <span class="nav-count">74</span>
+                    <span class="nav-count">73</span>
                 </a>
                 <a href="Scene-Understanding.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
@@ -894,7 +894,7 @@
             <a href="Kalman-Filter.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Kalman Filter</span>
-                <span class="nav-count">56</span>
+                <span class="nav-count">59</span>
             </a>
             <a href="Loop-Closure-Detection.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -909,12 +909,12 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">69</span>
+                <span class="nav-count">67</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">77</span>
+                <span class="nav-count">79</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -964,12 +964,12 @@
             <a href="Path-Planning.html" class="nav-item">
                 <span class="nav-dot" style="background:#3b82f6"></span>
                 <span class="nav-label">Path Planning</span>
-                <span class="nav-count">67</span>
+                <span class="nav-count">68</span>
             </a>
             <a href="Multimodal-Fusion.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
                 <span class="nav-label">Multimodal Fusion</span>
-                <span class="nav-count">74</span>
+                <span class="nav-count">73</span>
             </a>
             <a href="Scene-Understanding.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
@@ -1028,6 +1028,51 @@
                 <span class="topic-count">56 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2606.25629v1" target="_blank" class="paper-title">Event-Adaptive Motion Planning with Distilled Vision-Language Model in Safety-Critical Situations</a>
+                        <span class="paper-date">2026-06-24</span>
+                    </div>
+                                        <span class="paper-comment">📝 8 pages, 8 figures, 4 tables. Accepted by IROS 2026</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在安全关键场景中，机器人导航面临动态代理不可预测行为引发的碰撞风险，而频繁调用大视觉语言模型（VLM）会导致计算延迟，破坏实时控制稳定性。&#10;&#10;🛠 **方法**：提出事件自适应运动规划（EAMP）框架，包含三个模块：可配置提示的语义事件触发器（PC-SET）监控短时行为异常；事件触发的蒸馏SemNav-VLM将异常映射为策略级决策；语义模型预测控制（SMPC）将策略转化为优化目标和几何参考的动态重构。&#10;&#10;✨ **主要贡献**：通过物理验证的语义蒸馏实现VLM轻量化，仅在异常事件触发时启用高层推理，在安全关键物流场景中显著提升动态安全裕度，同时保持实时效率。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Robot navigation in safety-critical scenarios faces significant challenges from unforeseen semantic events, where collisions arise primarily from the unpredictable behaviors of dynamic agents rather than unseen objects. While large vision-language models (VLMs) offer remarkable capabilities in commonsense reasoning, frequently invoking them within the continuous control loop introduces severe computational latency, fundamentally destabilizing physical execution. To address these challenges, we propose event-adaptive motion planning (EAMP), an efficient framework for VLM-based robot navigation. Specifically, a prompt-configurable semantic event trigger (PC-SET) selectively activates semantic intervention by continuously monitoring short temporal clips for behavioral anomalies. Upon triggering, an event-triggered distilled SemNav-VLM, fine-tuned via physically verified semantic distillation, maps detected anomalies into discrete strategy-level decisions. Subsequently, a semantic model predictive control (SMPC) module translates these strategies into dynamic reconfigurations of optimization objectives and geometric references. Extensive experiments in safety-critical logistics scenarios demonstrate that EAMP effectively aligns high-level reasoning with low-level control, significantly improving dynamic safety margins over existing baselines while preserving real-time efficiency.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2602.12024v3" target="_blank" class="paper-title">Adaptive-Horizon Conflict-Based Search for Closed-Loop Multi-Agent Path Finding</a>
+                        <span class="paper-date">2026-06-23</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有多智能体路径规划方法要么是开环规划，存在较大计算延迟，要么是闭环启发式方法，缺乏可靠性能保证，难以用于安全关键场景。&#10;&#10;🛠 **方法**：提出一种基于有限时域冲突搜索的闭环算法ACCBS，借鉴模型预测控制中的迭代时域加深思想，动态调整规划时域以适应计算预算，并复用单一约束树实现时域无缝切换。&#10;&#10;✨ **主要贡献**：ACCBS能快速生成高质量可行解，随预算增加渐近最优，具备任意时间行为；在计算效率、解质量和执行灵活性间取得良好平衡，并通过闭环形式自然适应在线扰动。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Multi-Agent Path Finding (MAPF) is a core coordination problem for large robot fleets in automated warehouses and logistics. Existing approaches are typically either open-loop planners, which must compute complete trajectories before execution and therefore may incur substantial planning latency before actions can be taken, or closed-loop heuristics without reliable performance guarantees, limiting their use in safety-critical deployments. This paper presents Anytime Closed-Loop Conflict-Based Search (ACCBS), a closed-loop algorithm built on a finite-horizon variant of Conflict-Based Search (CBS) with a horizon-changing mechanism inspired by iterative horizon-deepening in Model Predictive Control (MPC). ACCBS dynamically adjusts the planning horizon based on the available computational budget, and reuses a single constraint tree to enable seamless transitions between horizons. As a result, it produces high-quality feasible solutions quickly while being asymptotically optimal as the budget increases, exhibiting anytime behavior. Extensive case studies demonstrate that ACCBS achieves a favorable balance between computational efficiency, solution quality, and execution flexibility, while naturally accommodating online disturbances through its closed-loop formulation.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2606.24991v1" target="_blank" class="paper-title">Solving Markov Decision Processes with Future Information via MPC</a>
+                        <span class="paper-date">2026-06-23</span>
+                    </div>
+                                        <span class="paper-comment">📝 6 pages, accepted to IFAC World Congress 2026</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：如何将未来信息（如预测、价格或参考轨迹）纳入模型预测控制（MPC），使其能够为带有未来信息的马尔可夫决策过程（MDP）生成最优策略。&#10;&#10;🛠 **方法**：通过建立参数化MPC能够精确表示MDP最优值函数和策略的结构性条件，并将MPC作为结构化函数近似器，利用强化学习（RL）调整其参数。&#10;&#10;✨ **主要贡献**：首次从理论上阐明了参数化MPC在包含未来信息的MDP中实现最优性的结构要求，并通过点质量赛车任务验证了该方法在利用未来参考信息时的有效性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Model Predictive Control (MPC) is widely used in industrial and robotic systems for enforcing constraints and embedding domain knowledge through finite-horizon optimization-based planning. However, despite these strengths, an MPC scheme typically does not yield optimal policies for sequential decision-making problems formulated as Markov Decision Processes (MDPs). Recent combinations of MPC with Reinforcement Learning (RL) alleviate this issue by treating MPC as a parameterized model of the optimal policy of an MDP and adjusting its parameters using data. While these approaches typically consider classical MDPs, many real-world problems include future information--such as forecasts, prices, or reference trajectories--at decision time, which must be included in the MDP state for optimal decision-making. Current MPC-RL approaches do not directly account for this augmented-state structure, raising the question of how to incorporate future information into MPC to obtain an optimal policy. This work establishes the structural requirements under which a parameterized MPC can exactly represent the optimal value functions and policy of an MDP with future information. We further demonstrate that such a parameterized MPC can serve as a structured function approximator, with its parameters learned using RL. The approach is illustrated on a point-mass racing task with future reference information.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2606.24632v1" target="_blank" class="paper-title">Parallel Dynamic Programming for Conic Linear Quadratic Control</a>
@@ -1139,10 +1184,7 @@
                         <span class="paper-date">2026-06-22</span>
                     </div>
                                         <span class="paper-comment">📝 13 pages, 5 figures, 10 tables</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：揭示视觉-语言-动作（VLA）策略中“先想象后行动”世界模型的安全漏洞，即攻击者可通过扰动观测值破坏模型对未来轨迹的预测，从而绕过依赖该预测的下游安全模块。&#10;&#10;🛠 **方法**：采用基于L∞范数约束的观测扰动攻击，通过可微的观测-想象映射执行投影梯度下降（PGD），并设计参数无关的去噪检测器识别离流形攻击；同时评估非定向破坏与定向操控两种攻击模式。&#10;&#10;✨ **主要贡献**：首次证明非定向攻击可将想象轨迹破坏强度提升约60倍（AUC=1.0检测率），而定向攻击精度受限；发现下游模型预测控制器（MPC）在极小扰动下（ε=0.01）任务成功率从0.70骤降至0.05，但反应式策略仍保持鲁棒性。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Many recent vision-language-action (VLA) policies adopt an imagine-then-act design. A world-action model (WAM) first imagines a short future as a latent trajectory z~, on which the action is then conditioned. We identify this trusted imagination, rather than the reactive policy, as the exposed attack surface. A downstream oracle, such as a safety gate, a visual model-predictive-control (MPC) planner, or an imagine-then-check verifier, consumes z~ as a prediction of the future. The robustness of the policy therefore does not entail the robustness of systems that rely on the WAM. The underlying phenomenon is an asymmetry. Corrupting the imagination is easy, since it requires only displacing z~ from its natural-future manifold. Steering it precisely is hard, since it must reach a specified on-manifold target. We adopt a capability-based threat model with an L-infinity-bounded observation perturbation. The attacker applies projected gradient descent through the fully differentiable observation-to-imagination map. The same off-manifold property motivates a parameter-free denoiser detector. We evaluate three targets: RynnVLA-002, LingBot-VA, and LaDi-WM. Untargeted corruption is roughly 60x stronger than random and is detected at AUC 1.0. Targeted control remains bounded. An adaptive attacker evades detection only by forgoing corruption. The reactive policy remains robust to corrupted imagination. A native imagination-driven MPC, however, exhibits the first adversary-specific task failure (at epsilon=0.01, success 0.70 versus 0.05; Fisher p < 10^-4).</p>
@@ -1154,10 +1196,7 @@
                         <span class="paper-date">2026-06-21</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：针对品牌竞价广告中缺乏专门利用其稳定用户参与模式和快速反馈特性进行实时竞价优化的算法问题。  &#10;🛠 **方法**：提出轻量级模型预测控制（MPC）框架，通过在线等渗回归直接从流数据构建单调的出价-花费和出价-转化模型，无需复杂机器学习模型。  &#10;✨ **主要贡献**：实现全在线、低计算开销的竞价策略，显著提升花费效率和成本控制能力，为品牌广告平台提供可扩展且易部署的解决方案。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Brand advertising plays a critical role in building long-term consumer awareness and loyalty, making it a key objective for advertisers across digital platforms. Although real-time bidding has been extensively studied, there is limited literature on algorithms specifically tailored for brand auction ads that fully leverage their unique characteristics. In this paper, we propose a lightweight Model Predictive Control (MPC) framework designed for brand advertising campaigns, exploiting the inherent attributes of brand ads -- such as stable user engagement patterns and fast feedback loops -- to simplify modeling and improve efficiency. Our approach utilizes online isotonic regression to construct monotonic bid-to-spend and bid-to-conversion models directly from streaming data, eliminating the need for complex machine learning models. The algorithm operates fully online with low computational overhead, making it highly practical for real-world deployment. Simulation results demonstrate that our approach significantly improves spend efficiency and cost control compared to baseline strategies, providing a scalable and easily implementable solution for modern brand advertising platforms.</p>
@@ -1169,10 +1208,7 @@
                         <span class="paper-date">2026-06-20</span>
                     </div>
                                         <span class="paper-comment">📝 Accepted to Robotics: Science and Systems (RSS), 2026</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="好的，作为人工智能研究与学术论文分析专家，我将严格按照您要求的格式，对这篇论文进行详细的中文解读。&#10;&#10;---&#10;&#10;## 0. 概览（Concise Summary）&#10;&#10;- **主题（Topic）**：接触隐式轨迹优化（Contact-Implicit Trajectory Optimization, CITO）与接触隐式模型预测控制（Contact-Implicit Model Predictive Control, CI-MPC）。&#10;- **问题（Problem）**：现有的CITO方法在处理由互补约束（Complementarity Constraints）引起的数值病态问题时，计算效率低、鲁棒性差，难以扩展到实时控制和高维任务。&#10;- **方法（Method）**：提出了一种名为IMPACT的框架，它结合了**带安全保护的增广拉格朗日方法（Safeguarded Augmented Lagrangian, AuLa）** 作为外层循环，和一个**块坐标下降法（Block Coordinate Descent, BCD）** 作为内层求解器。该方法在优化过程中隐式地识别接触模式（接触/非接触），而不是预先指定或通过平滑化处理。&#10;- **创新（Innovation）**：&#10;    1.  提出了一种针对MPCC（带互补约束的数学规划）的、具有**平稳性保证**的增广拉格朗日方法。&#10;    2.  设计了一个高效的BCD内层求解器，其**闭式解**能够快速更新松弛变量，从而隐式地选择接触模式。&#10;    3.  提供了一个高效的C++实现，在标准基准测试中实现了**数量级的速度提升**。&#10;- **意义（Significance）**：IMPACT显著提高了CITO的计算效率，使其从离线规划扩展到实时闭环控制成为可能，并在仿真和真实机器人上展示了优越的性能，为接触丰富的机器人任务（如灵巧操作）提供了更实用、更强大的优化框架。&#10;- **一句话总结**：本文提出IMPACT，一种通过隐式接触模式选择的增广拉格朗日方法，在保证理论收敛性的同时，将接触隐式轨迹优化的速度提升了**一个数量级**，并成功应用于实时模型预测控制。&#10;&#10;## 1. 研究动机（Motivation）&#10;&#10;- **问题与空白**：在机器人接触丰富的任务（如灵巧操作、腿部运动）中，运动规划需要同时处理连续动力学和离散的接触事件（建立、保持、断开接触）。这种混合、非光滑的特性使得问题难以被建模为标准的连续优化问题。&#10;    - **传统方法**：通常需要预先指定接触模式序列（接触调度），但这限制了机器人的自主性，且对于复杂任务难以手动设计。&#10;    - **接触隐式轨迹优化（CITO）**：允许优化器自动推断接触模式，无需预设调度。然而，CITO通常被建模为**带互补约束的数学规划（MPCC）**，其核心是 `0 ≤ G(x) ⊥ H(x) ≥ 0` 条件。这个条件在可行点处会导致退化，违反标准非线性规划（NLP）所需的约束规格（如LICQ、MFCQ），导致拉格朗日乘子无界，KKT条件失效。因此，现成的NLP求解器在处理MPCC时数值上非常脆弱，对初始值敏感且收敛不可靠。&#10;- **重要性**：开发更高效、更稳健的求解器对于将CITO从离线规划推广到实时模型预测控制（CI-MPC）至关重要，从而提升机器人在复杂接触任务中的自主性和性能。&#10;- **挑战**：现有方法（如平滑化、松弛、惩罚法）虽然改善了数值行为，但会降低控制质量，引入额外的启发式参数，且在逼近原始互补条件时，退化问题会重新出现。需要一种既能保留原始非光滑结构，又能高效、稳健求解的方法。&#10;&#10;## 2. 创新点（Innovation）&#10;&#10;- **关键创新**：提出了一种名为IMPACT的框架，其核心创新在于**隐式接触模式选择**机制。&#10;- **新方法/技术**：&#10;    1.  **带安全保护的增广拉格朗日外层循环**：不同于将互补约束平滑化或直接惩罚，IMPACT保留了原始的非光滑互补约束，并将其作为内层子问题的硬约束。外层循环通过更新拉格朗日乘子和惩罚参数，引导内层求解器逐步逼近最优解，同时通过“安全保护”（safeguarding）机制防止乘子爆炸，保证了理论上的平稳性收敛。&#10;    2.  **块坐标下降（BCD）内层求解器**：将增广拉格朗日子问题分解为两个块交替求解：&#10;        - **X-更新**：固定松弛变量，使用带全局化的高斯-牛顿法更新轨迹变量（状态、控制、接触力）。&#10;        - **(Y, Z)-更新**：固定轨迹变量，通过**闭式解**直接更新松弛变量。这个闭式解（公式5和6）是在当前拉格朗日乘子和惩罚参数的引导下，从两个候选解（`y&gt;0, z=0` 或 `y=0, z&gt;0`）中选择一个，从而**隐式地决定了当前时间步的接触模式**（是接触还是非接触）。&#10;- **与现有方案的不同**：&#10;    - 与**平滑/松弛法**（如Scholtes Relaxation）不同，IMPACT不修改原始问题结构，避免了因近似而引入的误差和数值问题。&#10;    - 与**纯惩罚法**（如Squared Penalty Method）不同，IMPACT通过增广拉格朗日项引入了乘子信息，避免了因惩罚过大导致的病态问题，并且具有理论收敛保证。&#10;    - 与**ADMM类方法**（如C3+）不同，IMPACT的(Y, Z)-更新不是简单的可行性投影，而是**带乘子偏移的映射**，能更有效地利用当前优化信息，加速收敛（如图2所示）。&#10;- **为什么能奏效**：该方法巧妙地将复杂的MPCC问题分解为两个更易处理的子问题。外层AuLa保证了全局收敛性，内层BCD中的闭式解使得接触模式选择变得高效且与优化过程融为一体，避免了昂贵的组合搜索。&#10;&#10;## 3. 主要内容（Main Content）【重点】&#10;&#10;### 3.1 设计架构与方法&#10;&#10;IMPACT的整体架构是一个双层优化框架：&#10;&#10;1.  **外层：带安全保护的增广拉格朗日方法（Algorithm 1）**&#10;    - **输入**：初始乘子、惩罚参数、安全保护边界等。&#10;    - **循环**：在每次外层迭代 `k` 中：&#10;        1.  **安全保护**：将乘子裁剪到预设的边界内，防止其发散。&#10;        2.  **内层求解**：调用BCD内层求解器，近似求解增广拉格朗日子问题（公式4），得到新的解 `w^{k+1}`。&#10;        3.  **乘子更新**：根据约束违反程度更新拉格朗日乘子。&#10;        4.  **惩罚更新**：如果约束违反程度没有充分下降，则增加惩罚参数。&#10;    - **输出**：满足收敛条件的解。&#10;&#10;2.  **内层：块坐标下降求解器（Algorithm 2）**&#10;    - **输入**：当前外层的乘子和惩罚参数，初始解。&#10;    - **循环**：在每次内层迭代 `j` 中：&#10;        1.  **X-更新**：固定松弛变量 `(Y, Z)`，使用**阻尼高斯-牛顿法**（带Armijo线搜索）优化轨迹变量 `X`。&#10;        2.  **(Y, Z)-更新**：固定 `X`，对每个互补对 `(y_{t,i}, z_{t,i})`，通过公式(5)和(6)计算两个候选解，并选择使目标函数值更小的那个，得到新的松弛变量。&#10;        3.  **停止判断**：如果目标函数变化小于阈值，则停止内层循环。&#10;    - **输出**：近似最优解 `w^k`。&#10;&#10;### 3.2 关键算法与数学推导&#10;&#10;**1. 问题定义（MPCC）**：&#10;原始CITO问题被建模为：&#10;$$&#10;\begin{aligned}&#10;\min_{X} &amp;\quad \frac{1}{2} \sum_{t=1}^{T} r(x_t)^\top r(x_t) \\&#10;\text{s.t.} &amp;\quad h(x_t, x_{t+1}) = 0, \\&#10;&amp;\quad g(x_t) \le 0, \\&#10;&amp;\quad 0 \le G(x_t) \perp H(x_t) \ge 0.&#10;\end{aligned}&#10;$$&#10;其中，`0 ≤ G(x) ⊥ H(x) ≥ 0` 是互补约束，表示 `G(x) ≥ 0`, `H(x) ≥ 0`, 且 `G(x) \circ H(x) = 0`。&#10;&#10;**2. 垂直形式（Vertical Form）**：&#10;引入松弛变量 `Y` 和 `Z`，将问题转化为更易处理的形式：&#10;$$&#10;\begin{aligned}&#10;\min_{X,Y,Z} &amp;\quad \frac{1}{2} \sum_{t=1}^{T} r(x_t)^\top r(x_t) \\&#10;\text{s.t.} &amp;\quad h(x_t, x_{t+1}) = 0, \\&#10;&amp;\quad g(x_t) \le 0, \\&#10;&amp;\quad G(x_t) = y_t, \\&#10;&amp;\quad H(x_t) = z_t, \\&#10;&amp;\quad 0 \le y_t \perp z_t \ge 0.&#10;\end{aligned}&#10;$$&#10;&#10;**3. 增广拉格朗日子问题（AuLa Subproblem）**：&#10;外层循环需要求解的子问题为：&#10;$$&#10;\begin{aligned}&#10;\min_{X,Y,Z} &amp;\quad \frac{1}{2} \sum_{t=1}^{T} r_t^\top r_t + \frac{\rho_{\bar{h}}}{2} \left\| \bar{h}_t + \frac{\kappa_t}{\rho_{\bar{h}}} \right\|^2 + \frac{\rho_g}{2} \left\| \left( g_t + \frac{\mu_t}{\rho_g} \right)_+ \right\|^2 \\&#10;\text{s.t.} &amp;\quad 0 \le y_t \perp z_t \ge 0, \quad t \in \{1, \dots, T\}.&#10;\end{aligned}&#10;$$&#10;其中，`\bar{h}_t` 包含了动力学约束 `h` 和等式约束 `G(x_t) = y_t, H(x_t) = z_t`。`\kappa_t` 和 `\mu_t` 是拉格朗日乘子，`\rho_{\bar{h}}` 和 `\rho_g` 是惩罚参数。`(\cdot)_+` 表示取正部。&#10;&#10;**4. 闭式解（Closed-form Update for (Y, Z)）**：&#10;对于第 `i` 个互补对 `(y_{t,i}, z_{t,i})`，其闭式更新为：&#10;- **情况1（`z_{t,i} = 0`）**：&#10;  $$y_{t,i}^\star = \max\left(0, G_i(x_t) + \frac{1}{\rho_{\bar{h}}} \kappa_{G,t,i}\right), \quad z_{t,i}^\star = 0$$&#10;- **情况2（`y_{t,i} = 0`）**：&#10;  $$z_{t,i}^\star = \max\left(0, H_i(x_t) + \frac{1}{\rho_{\bar{h}}} \kappa_{H,t,i}\right), \quad y_{t,i}^\star = 0$$&#10;然后选择使目标函数值更小的那个解。这个更新是**精确最小化**，因此永远不会增加目标函数值。&#10;&#10;### 3.3 模型、训练与数据集&#10;&#10;- **模型**：本文不涉及训练一个显式的模型（如神经网络）。它关注的是**优化求解器**本身。使用的模型是**基于物理的接触模型**，具体为：&#10;    - **CITO基准测试**：使用非线性动力学和一般约束，接触模型被抽象为通用的MPCC形式。&#10;    - **CI-MPC基准测试**：采用**线性互补问题（LCP）** 接触模型，基于Anitescu的冲量-速度公式（公式2）。该模型将摩擦锥近似为多面体，使得接触条件成为决策变量的仿射函数。&#10;- **训练**：无。IMPACT是一个优化算法，不需要训练过程。&#10;- **数据集**：使用两个公开基准测试：&#10;    1.  **CRISP CITO基准测试**：包含三个长时域规划任务：Push Box, Cart Transport, Push T。每个任务有随机采样的起始/目标位姿。&#10;    2.  **Allegro Hand CI-MPC基准测试**：包含17个不同形状的物体（如飞机、兔子、杯子等），用于评估灵巧手重新定向物体的能力。每个物体进行10次试验。&#10;&#10;### 3.4 实验设置与结果&#10;&#10;- **实验设置**：&#10;    - **硬件**：AMD Ryzen 9 7950X3D CPU，无GPU加速。&#10;    - **实现**：C++，使用CasADi进行符号微分，Eigen进行线性代数运算。&#10;    - **对比方法**：&#10;        - **CITO基准**：Scholtes Relaxation (SR), Squared Penalty Method (PM), CRISP。&#10;        - **CI-MPC基准**：`cfree`（一种基于平滑接触模型和IPOPT求解器的方法），对比了两种控制边界 `[−0.1, 0.1]` 和 `[−0.2, 0.2]`。&#10;    - **评价指标**：&#10;        - **CITO**：成功率、跟踪误差、迭代次数、运行时间。&#10;        - **CI-MPC**：成功率、控制方差、控制平滑度、控制能耗。&#10;&#10;- **主要结果**：&#10;    - **CITO基准（Table I）**：&#10;        - **速度**：IMPACT在所有三个任务上均实现了最快的运行时间。相对于CRISP，加速比为16.8倍（Box）、25.0倍（T）、34.0倍（Cart），几何平均为24.3倍。相对于最快的基线（PM），加速比范围为2.9倍到70倍，几何平均为13.8倍。&#10;        - **质量**：IMPACT的跟踪误差与最佳方法（SR或CRISP）相当，表现具有竞争力。&#10;        - **成功率**：IMPACT在所有任务上均达到100%成功率。&#10;    - **CI-MPC基准（Fig. 4）**：&#10;        - **成功率**：IMPACT的平均成功率为91.8%，与`cfree`（91.2%和92.9%）相当。&#10;        - **控制质量**：IMPACT在所有三个控制质量指标（方差、平滑度、能耗）上均显著优于`cfree`，表明其产生的轨迹更平滑、更稳定、更节能。&#10;        - **控制频率**：IMPACT的运行频率约为9.53 Hz，低于`cfree`的50-60 Hz，但足以进行实时控制，且求解的是更复杂的非光滑MPCC问题。&#10;    - **真实机器人实验**：在T形物体推动任务中，IMPACT在10次试验中均成功将物体推至目标位姿，成功率为100%。&#10;&#10;### 3.5 技术细节&#10;&#10;- **安全保护（Safeguarding）**：在每次外层迭代开始时，将乘子 `\kappa` 和 `\mu` 裁剪到预定义的区间 `[\kappa_{min}, \kappa_{max}]` 和 `[0, \mu_{max}]` 内。这是保证算法全局收敛的关键。&#10;- **惩罚更新策略**：如果当前迭代的约束违反程度（`\|\zeta^{k+1}\|_\infty` 和 `\|\bar{h}(w^{k+1})\|_\infty`）相比上一次迭代没有显著下降（由参数 `\eta` 控制），则增加惩罚参数 `\rho`。这是一种自适应的策略，避免了手动调整惩罚参数。&#10;- **内层求解器停止准则**：在实际实现中，内层BCD循环并非严格检查KKT残差，而是当增广拉格朗日目标函数值 `\Phi_k` 的变化小于一个阈值 `\tau_k` 时停止。这是一种实用的“预算化”停止策略，在实验中表现良好。&#10;- **初始化**：所有CITO基准测试均使用**全零初始化**，以确保公平比较。CI-MPC基准测试则使用与`cfree`相同的随机扰动初始化策略。&#10;&#10;## 4. 意义与影响（Significance and Impact）&#10;&#10;- **解决的问题与贡献**：&#10;    1.  **效率革命**：IMPACT首次在CITO领域实现了数量级的加速，将求解时间从秒级降至亚秒级，使得CITO从离线规划走向实时控制成为可能。&#10;    2.  **理论保证**：提供了在标准假设下，算法收敛到MPCC一阶平稳点的理论保证，这在基于惩罚或松弛的CITO方法中是罕见的。&#10;    3.  **实践验证**：不仅在标准仿真基准测试中取得了优异结果，还在真实机器人上成功演示，证明了其在实际应用中的潜力。&#10;- **对未来研究/应用的影响**：&#10;    - **机器人操作**：为灵巧操作、多指抓取、复杂装配等任务提供了更强大、更快速的规划与控制工具。&#10;    - **腿部运动**：有望应用于四足或双足机器人的复杂地形运动规划，自动发现和利用接触模式。&#10;    - **模型预测控制**：IMPACT的CI-MPC应用展示了其在实时闭环控制中的潜力，未来可能成为接触丰富任务的标准MPC求解器。&#10;- **局限与开放问题**：&#10;    1.  **接触模式稳定性**：在计算资源有限时，优化器可能在相近的接触模式间切换，导致不稳定。作者提出可以引入信任域或滞后机制来缓解。&#10;    2.  **局部规划与成本函数依赖**：IMPACT在CI-MPC中作为局部规划器，对接触鼓励成本函数敏感，易陷入局部最优。作者建议结合离线强化学习或更好的物体表征来提供全局引导。&#10;    3.  **计算频率**：虽然速度有巨大提升，但9.53 Hz的控制频率相比50-60 Hz的平滑方法仍有差距，对于需要极高带宽的任务可能不够。&#10;&#10;## 5. 澄清与简化（Clarifications and Simplifications）&#10;&#10;- **什么是互补约束（Complementarity Constraints）？**&#10;    - **通俗解释**：想象一个开关，要么是开（接触），要么是关（不接触），不能同时既是开又是关">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Contact-implicit trajectory optimization (CITO) has attracted growing attention as a unified framework for planning and control in contact-rich robotic tasks. Recent approaches have demonstrated promising results in manipulation and locomotion without requiring a prescribed contact-mode schedule. It is well known that the underlying mathematical programs with complementarity constraints (MPCCs) remain numerically ill-conditioned, and systematic, scalable solution strategies for CITO remain an active area of research. More efficient and principled solvers that can handle contact constraints are therefore essential to broaden the applicability of CITO. In this work, we develop an augmented-Lagrangian approach to CITO for solving MPCC-based CITO with stationarity guarantees. The method can be interpreted as identifying the implicit contact-mode branches on the fly during the trajectory optimization (TO) iterations; we call this approach IMPACT (IMPlicit contact ACtive-set Trajectory optimization). We provide an efficient C++ implementation tailored to trajectory-optimization workloads and evaluate it on the open-source CITO and contact-implicit model predictive control (CI-MPC) benchmarks. On CITO, IMPACT achieves 2.9x-70x speedups over strong baselines (geometric mean 13.8x). On CI-MPC, we show improved control quality for contact-rich trajectories on dexterous manipulation tasks in simulation. Finally, we demonstrate the proposed method on real robotic hardware on a T-shaped object pushing task.</p>
@@ -1692,42 +1728,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Robots operating in human environments must not only ensure physical safety but also exhibit behaviors that are understandable, fluent, and acceptable to human partners. This paper investigates motion generation strategies that combine safety guarantees with interaction quality considerations, such as motion smoothness and human comfort. While the design of robots capable of ensuring safety in shared human-robot environments has enabled closer and more advanced forms of interaction, these new proximity-based tasks require moving beyond purely technical considerations. In particular, robot behavior must also be addressed from psycho-cognitive and social perspectives. In this context, we argue for the relevance of integrating social-aware motion control into robotic systems. First, we identify the motion parameters that influence human perception and operator experience. Then, we implement a Model Predictive Control (MPC) framework that generates four distinct socially-informed robot behaviors. Finally, we conduct a user study to evaluate and validate these behaviors and assess their social impact on non-expert participants. The results demonstrate that variations in robot behavior significantly affect the perceived social acceptability of the system. These findings highlight the importance of incorporating human-centered considerations into motion generation strategies for robots operating in shared environments.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.08136v1" target="_blank" class="paper-title">Learning Predictive Control with Deep Koopman Operators for Autonomous Vehicle Motion Planning</a>
-                        <span class="paper-date">2026-06-06</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Model Predictive Control (MPC) is widely used for autonomous-vehicle (AV) motion planning, but its real-time applicability is often limited by the need for accurate models and online solution of nonlinear, nonconvex optimization problems in dynamic road environments. Actor-critic reinforcement learning offers a promising alternative for online policy generation, yet its policy-learning process often lacks explicit control-theoretic structure. This article proposes a learning predictive control (LPC) framework with deep Koopman operators for efficient real-time motion planning under nonconvex constraints. To address nonlinear and uncertain vehicle dynamics, a deep-Koopman-based predictor is used to lift the system into an interpretable linear observable space in a data-driven manner. Unlike traditional MPC, which computes open-loop control sequences, the proposed LPC framework yields a closed-loop state-feedback policy within each prediction interval through receding-horizon actor-critic learning. To ensure safety under nonconvex environmental constraints, LPC constructs convex local surrogate representations of obstacles and defines corresponding potential-field functions. These functions and their gradients are directly embedded into the actor-critic structure, enabling efficient, safety-aware policy learning. Extensive simulations and real-world experiments on the HongQi-EHS3 platform demonstrate favorable performance in diverse obstacle-avoidance scenarios in terms of safety, computational efficiency, and driving comfort, compared with benchmark methods such as CBF-MPC and LMPCC.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.07934v1" target="_blank" class="paper-title">X-OP: Cross-Morphology Whole-Body Teleoperation via MPC Retargeting</a>
-                        <span class="paper-date">2026-06-06</span>
-                    </div>
-                                        <span class="paper-comment">📝 9 pages, 4 figures</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Whole-body teleoperation is essential for scalable robot data collection in loco-manipulation tasks, yet existing approaches relying on exoskeleton suits or multi-camera setups impose prohibitive cost, complexity, and environmental constraints. Recent methods using a single extended reality (XR) device with end-to-end reinforcement learning policies partially address these limitations but require robot-specific retraining, suffer from out-of-distribution failures, and rely on motion retargeting that neglects dynamic feasibility. We propose a hierarchical whole-body teleoperation framework driven by a single XR device that generalizes across diverse robot morphologies without retraining robot-specific policies. A Model Predictive Control (MPC)-based motion retargeter jointly optimizes alignment with the operator's intent and the robot's dynamic feasibility, generating optimal commands for existing low-level controllers. To ensure robust online execution, we introduce a state synchronization method that resets the simulator state at each MPC step to handle noisy real-world measurements and contact sensitivity, and integrate SLAM-based global pose feedback to mitigate long-term drift. Simulation results show higher success rates on whole-body control tasks for both a humanoid (over 30% lower completion time and 20% lower power consumption) and a mobile manipulator (zero collisions) compared to baselines. Real-world experiments further validate the effectiveness and flexibility of our method, demonstrating the successful deployment of the proposed retargeter on both platforms for whole-body control tasks and the ease of allowing users to adjust teleoperation behavior based on their preferences. This plug-and-play framework offers a scalable, morphology-agnostic solution for whole-body robot teleoperation, enabling real-time behavioral customization and broad applicability across platforms.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.07424v1" target="_blank" class="paper-title">Rapid co-design of Buoyancy-assisted robots for Challenging Locomotion using Gaussian Evolutionary Specialists</a>
-                        <span class="paper-date">2026-06-05</span>
-                    </div>
-                                        <span class="paper-comment">📝 Submitted to RA-L</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Designing high-performance legged robots requires jointly optimizing morphology and control. Model-free Reinforcement Learning (RL) offers an alternative to model-predictive control for developing robust controllers without explicitly specifying robot dynamics. Thus, we have seen theuse of RL to train controllers and evaluate designs for robot morphology optimization. While RL has shown success inlocomotion, using it in the co-design inner loop is expensive due to repeated policy training. Universal policies conditioned on morphology offer a promising alternative, but suffer from behavioral diversity collapse, converging to a single strategy that performs sub-optimally across designs. On the other hand, end-to-end Mixture-of-Experts (MoE) architectures fail due to a collapse in its representation. We propose Gaussian Evolutionary Specialists (GES), a framework that decouples design-space partitioning from policy learning to capture diverse behaviors explicitly. GES assigns specialist policies to evolving Gaussian regions and iteratively refines them via training, probing, and territory expansion. The resulting specialists are integrated into a design sampling loop, replacing costly re-training with direct evaluation. When tested on the Buoyancy-Assisted Light Legged Unit (BALLU), GES discovers designs with 5 - 25% higher performance than naive universal policies. On hardware, a GES optimized design overcomes a 24 cm tall obstacle - 3x improvement over the baseline BALLU design. Moreover, GES curtails design optimization time by 37%.</p>
                     </details>
                 </div>
             </div>

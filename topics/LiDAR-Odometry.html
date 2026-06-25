@@ -675,7 +675,7 @@
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Kalman Filter</span>
-                    <span class="nav-count">56</span>
+                    <span class="nav-count">59</span>
                 </a>
                 <a href="Loop-Closure-Detection.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -690,12 +690,12 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">69</span>
+                    <span class="nav-count">67</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">77</span>
+                    <span class="nav-count">79</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -745,12 +745,12 @@
                 <a href="Path-Planning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#3b82f6"></span>
                     <span class="nav-label">Path Planning</span>
-                    <span class="nav-count">67</span>
+                    <span class="nav-count">68</span>
                 </a>
                 <a href="Multimodal-Fusion.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#6366f1"></span>
                     <span class="nav-label">Multimodal Fusion</span>
-                    <span class="nav-count">74</span>
+                    <span class="nav-count">73</span>
                 </a>
                 <a href="Scene-Understanding.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
@@ -894,7 +894,7 @@
             <a href="Kalman-Filter.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Kalman Filter</span>
-                <span class="nav-count">56</span>
+                <span class="nav-count">59</span>
             </a>
             <a href="Loop-Closure-Detection.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -909,12 +909,12 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">69</span>
+                <span class="nav-count">67</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">77</span>
+                <span class="nav-count">79</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -964,12 +964,12 @@
             <a href="Path-Planning.html" class="nav-item">
                 <span class="nav-dot" style="background:#3b82f6"></span>
                 <span class="nav-label">Path Planning</span>
-                <span class="nav-count">67</span>
+                <span class="nav-count">68</span>
             </a>
             <a href="Multimodal-Fusion.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
                 <span class="nav-label">Multimodal Fusion</span>
-                <span class="nav-count">74</span>
+                <span class="nav-count">73</span>
             </a>
             <a href="Scene-Understanding.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
@@ -1028,6 +1028,21 @@
                 <span class="topic-count">80 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2606.26010v1" target="_blank" class="paper-title">FAR-LIO: Enabling High-Speed Autonomy through Fast, Accurate, and Robust LiDAR-Inertial Odometry</a>
+                        <span class="paper-date">2026-06-24</span>
+                    </div>
+                                        <span class="paper-comment">📝 8 pages, accepted for publication at IROS2026 (IEEE/RSJ International Conference on Intelligent Robots and Systems 2026)</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决高速自动驾驶场景中（如赛车速度达250 km/h）因动态运动和传感器噪声导致的里程计估计延迟大、精度低的问题。&#10;&#10;🛠 **方法**：提出FAR-LIO框架，采用CUDA加速的体素哈希图实现并行近邻搜索与高效地图更新，结合稀疏感知的广义迭代最近点算法和自适应阈值，并通过扩展卡尔曼滤波器融合高频IMU数据，利用上采样与延迟补偿策略输出鲁棒平滑的里程计。&#10;&#10;✨ **主要贡献**：在四种传感器配置和公共数据集上，相比现有方法平均位置误差降低6.9%，运行时间减少38.4%，且仅需单一参数集即可适用，代码已开源。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Robust and accurate odometry estimation is essential in modern robotics. In environments characterized by highly dynamic motion and sensor noise, odometry estimation becomes increasingly challenging. Autonomous racing combines both factors in an unstructured setting, where minimizing odometry latency is essential for stable closed-loop control. This paper introduces FAR-LIO, a highly optimized CUDA-accelerated LiDAR-inertial odometry framework developed for Fast, Accurate, and Robust performance. Our system leverages a novel CUDA-based voxel hashmap to enable parallelized nearest-neighbor search and efficient map updates. We employ a sparsity-aware Generalized Iterative Closest Point algorithm with adaptive thresholding on top of the CUDA-based voxel hashmap with adaptive density to achieve low-latency without compromising accuracy. An Extended Kalman Filter serves as a robust backend. It utilizes an upsampling and delay compensation strategy to fuse the LiDAR odometry with high-frequency IMU data, thereby ensuring a robust and smooth odometry output. We evaluate FAR-LIO across four different sensor setups, using both public datasets and data from two autonomous racecars driving at speeds of up to 250 km/h. FAR-LIO achieves an average 6.9% reduction in the positional error and 38.4% lower runtime compared to state-of-the-art baselines on target hardware using a single parameter set. This demonstrates its computational efficiency and broad applicability. To build upon our work, our code is available open-source on https://github.com/TUMFTM/FAR-LIO.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2606.19929v1" target="_blank" class="paper-title">Motor Angular Speed Preintegration for Multirotor UAV State Estimation</a>
@@ -1169,10 +1184,7 @@
                         <span class="paper-date">2025-11-25</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="好的，作为一名人工智能研究与学术论文分析专家，我将严格按照您的要求，对这篇论文进行详细的中文解读。&#10;&#10;---&#10;&#10;## 0. 概览（Concise Summary）&#10;&#10;- **主题（Topic）**：机器人自主导航，具体为在粒子加速器隧道这种长、单调、GPS受限环境下的视觉里程计。&#10;- **问题（Problem）**：MARWIN机器人在欧洲XFEL加速器隧道中执行辐射监测任务时，其现有的基于2D激光雷达、轮式里程计和QR码的导航系统缺乏灵活性，难以适应未知几何形状和障碍物，且依赖于预先部署的基础设施。&#10;- **方法（Method）**：提出并概念性地评估了**深度视觉立体里程计（DVSO）** 作为一种替代或补充方案。DVSO是一种纯视觉、自监督的方法，利用立体视差、光流和3D几何约束来联合估计深度和自运动。&#10;- **创新（Innovation）**：本文的创新点不在于提出全新的算法，而在于**首次对DVSO在极端单调的加速器隧道环境中的适用性进行了概念性评估和实验验证**。它通过对比实验，量化了DVSO、轮式里程计和2D激光雷达里程计在该特定环境下的误差特性，并基于实验结果提出了一个更具实用性的未来研究方向。&#10;- **意义（Significance）**：该研究为在类似极端环境下（如矿井、管道）的机器人导航提供了宝贵的实验数据和设计指导。其核心发现——DVSO在平移精度上与轮式里程计相当，但计算开销巨大，且旋转估计更差——直接否定了直接使用DVSO进行传感器融合的设想，并引导未来研究转向更轻量级的方案（如轮式里程计+低成本激光雷达+语义地标）。&#10;- **一句话总结**：本文通过实验证明，在单调的加速器隧道中，计算昂贵的深度视觉立体里程计（DVSO）并未比简单的轮式里程计提供显著的平移精度优势，因此建议未来研究应优先考虑更轻量级的传感器融合与自监督地标发现方案。&#10;&#10;## 1. 研究动机（Motivation）&#10;&#10;- **问题与空白**：欧洲XFEL加速器隧道长达数公里，环境单调、GPS信号缺失，对自主辐射监测机器人MARWIN的导航提出了巨大挑战。MARWIN当前系统依赖2D激光雷达、轮式里程计和每隔10米安装的QR码进行定位。这种方案虽然有效，但**缺乏灵活性**：它无法适应未知的隧道布局或动态变化，且需要预先部署QR码基础设施，限制了其应用范围。&#10;- **重要性**：解决这个问题对于提高加速器运行时间、减少人员辐射暴露风险至关重要。一个更灵活、自主的导航系统可以显著提升机器人的任务适应性和部署效率。&#10;- **挑战**：加速器隧道环境对SLAM系统提出了多重挑战：&#10;    - **几何约束**：长直、单调的走廊导致特征重复，缺乏回环闭合机会，里程计误差会无限累积。&#10;    - **感知约束**：低纹理的混凝土墙面和金属外壳导致视觉特征稀疏，光照条件差。&#10;    - **硬件约束**：辐射环境要求使用加固硬件，计算能力有限，且需满足实时性和能效要求。&#10;    - **环境约束**：GPS信号缺失，空间狭窄，存在电磁干扰。&#10;&#10;## 2. 创新点（Innovation）&#10;&#10;- **核心创新**：本文的创新在于**系统性地评估了DVSO这一前沿视觉里程计方法在极端、非传统环境（加速器隧道）中的实际表现**，并基于实验结果提出了颠覆性的见解。&#10;- **与现有方案的不同**：现有研究多关注在特征丰富的城市或室内场景中提升SLAM性能。本文则聚焦于一个被忽视的“反例”环境，通过精心设计的实验（100米直线往返+旋转），直接对比了DVSO、轮式里程计和2D激光雷达里程计的性能。&#10;- **为何能奏效**：论文没有提出一个“更好”的算法，而是通过实验揭示了“什么方法在此环境下不奏效以及原因”。其创新在于**提供了关键的实验证据和设计洞察**，从而引导了更合理的未来研究方向。例如，它证明了2D激光雷达在无障碍直道中无法估计平移运动，以及DVSO的旋转估计是其短板。&#10;&#10;## 3. 主要内容（Main Content）【重点】&#10;&#10;### 3.1 设计架构与方法&#10;&#10;本文的整体架构是一个**概念验证与实验评估**。其方法流程如下：&#10;1.  **问题定义**：明确加速器隧道导航的挑战。&#10;2.  **文献分析**：系统回顾现有SLAM方法，识别出研究空白（缺乏同时满足资源高效、鲁棒、自监督地标发现的方法）。&#10;3.  **提出假设**：DVSO作为一种自监督、纯视觉方法，可能成为MARWIN现有系统的替代或补充。&#10;4.  **实验设计**：在真实的XFEL隧道中，使用搭载了轮式里程计、2D激光雷达和立体相机的机器人平台，执行一条100米直线往返并旋转的轨迹。&#10;5.  **数据采集与处理**：同步记录三种里程计数据，并利用部署在18米间隔处的“PuzzlePole”高精度标记提供地面真值。&#10;6.  **图优化验证**：构建位姿图，将里程计测量作为边，PuzzlePole观测作为约束，通过图优化计算使轨迹与地标一致所需的最小修正量，以此量化每种里程计的误差。&#10;7.  **结果分析与结论**：对比分析误差，得出结论并提出未来研究方向。&#10;&#10;### 3.2 关键算法与数学推导&#10;&#10;本文的核心算法是**图优化（Graph Optimization）**，用于验证里程计精度。其数学基础如下：&#10;&#10;- **位姿图构建**：&#10;  - 节点 $x_i$ 表示机器人在时刻 $i$ 的位姿（位置和朝向）。&#10;  - 边 $e_{ij}$ 表示从位姿 $x_i$ 到 $x_j$ 的里程计测量变换 $z_{ij}$。&#10;  - 约束边 $c_{kl}$ 表示当机器人经过PuzzlePole时，观测到的位姿 $x_k$ 与地标 $l$ 之间的相对变换。&#10;&#10;- **优化目标**：&#10;  图优化的目标是找到一组最优的位姿 $\mathcal{X}^* = \{x_1, x_2, ..., x_n\}$，使得所有测量误差的平方和最小。误差函数通常定义为：&#10;  $$E(\mathcal{X}) = \sum_{i,j} e_{ij}(x_i, x_j)^T \Omega_{ij} e_{ij}(x_i, x_j) + \sum_{k,l} e_{kl}(x_k, l)^T \Omega_{kl} e_{kl}(x_k, l)$$&#10;  其中：&#10;  - $e_{ij}(x_i, x_j) = \text{Log}(z_{ij}^{-1} \oplus (x_i^{-1} \oplus x_j))$ 是里程计误差，表示测量变换与预测变换之间的差异在流形上的对数映射。&#10;  - $\Omega_{ij}$ 是信息矩阵，表示该测量的不确定性（权重）。&#10;  - $e_{kl}(x_k, l)$ 是地标观测误差。&#10;  - 优化算法（如Levenberg-Marquardt）通过迭代调整 $\mathcal{X}$ 来最小化 $E(\mathcal{X})$。&#10;&#10;- **误差量化**：&#10;  优化完成后，每个里程计帧的平均修正量（即优化前后位姿的差异）被用来量化该里程计的误差。例如，平移误差 $t_{error}$ 和旋转误差 $r_{error}$ 可以通过计算所有帧修正量的均方根得到。&#10;&#10;### 3.3 模型、训练与数据集&#10;&#10;- **模型**：本文评估的DVSO模型是作者之前工作[7]中提出的。它是一个自监督的深度神经网络，输入为立体图像对，输出为深度图、光流和视觉里程计（6-DOF位姿）。训练通过最小化光度一致性损失和3D几何一致性损失来完成，无需标注数据。&#10;- **训练**：论文未详细说明DVSO模型的训练细节，但指出其是在自然环境中开发的，并假设可以针对隧道环境进行微调。**（假设：DVSO模型可能是在KITTI等数据集上预训练的，然后直接用于隧道测试，未进行微调，这可能是其性能不佳的原因之一）**。&#10;- **数据集**：本文的实验数据是在欧洲XFEL的特定隧道段采集的。这是一个小规模、针对性的数据集，包含约100米直线轨迹的同步轮式里程计、2D激光雷达和立体图像数据，以及4个PuzzlePole地标的观测。&#10;&#10;### 3.4 实验设置与结果&#10;&#10;- **实验设置**：&#10;  - **环境**：欧洲XFEL加速器隧道的一个单调段（图1）。&#10;  - **平台**：一个替代移动机器人平台（图2），搭载了轮式里程计、2D激光雷达和立体相机（两台Basler相机）。&#10;  - **轨迹**：约100米直线前进 → 原地旋转 → 直线返回起点。&#10;  - **地面真值**：4个PuzzlePole标记，间隔18米，提供6-DOF位姿参考。&#10;  - **验证方法**：图优化，计算每个里程计帧的平均修正误差。&#10;&#10;- **实验结果**：&#10;  - **2D激光雷达里程计**：由于隧道直道无障碍，缺乏垂直于扫描平面的几何特征，无法估计沿隧道方向的平移运动，因此被排除在分析之外。&#10;  - **DVSO性能**：&#10;    - 原始轨迹（图3左）存在明显的向下漂移和旋转误差，导致起点和终点不重合。&#10;    - 图优化后的轨迹（图3右）通过PuzzlePole约束得到了显著改善。&#10;  - **轮式里程计性能**：&#10;    - 原始轨迹（图4左）存在累积漂移，但起点和终点距离比DVSO更近，表明旋转一致性更好。&#10;    - 图优化后的轨迹（图4右）成功与地标对齐。&#10;  - **定量对比（表2）**：&#10;    - **平移误差**：DVSO为0.0074 m/s，轮式里程计为0.009 m/s。两者非常接近。&#10;    - **旋转误差**：DVSO为0.215 °/s，轮式里程计为0.1 °/s。轮式里程计表现更好。&#10;&#10;### 3.5 技术细节&#10;&#10;- **传感器同步**：所有传感器（轮式、激光雷达、相机）在时间上是同步的，这对于后续的数据对齐和误差分析至关重要。&#10;- **PuzzlePole**：这是一种基于PuzzleBoard校准图案的圆柱形标记，能够提供高精度的6-DOF位姿估计，作为地面真值。&#10;- **图优化框架**：论文未指定具体的图优化库（如g2o, GTSAM），但描述了其原理：将里程计作为边，PuzzlePole观测作为约束，通过优化最小化误差。&#10;- **DVSO的局限性**：论文指出DVSO的原始轨迹存在“向下漂移”，这可能是因为其训练的神经网络（可能基于自然场景）未能很好地泛化到隧道这种平面几何结构主导的环境。&#10;&#10;## 4. 意义与影响（Significance and Impact）&#10;&#10;- **解决的问题与贡献**：&#10;  - **核心贡献**：通过实验数据，**否定了在单调隧道环境中直接使用计算昂贵的DVSO替代简单轮式里程计的价值**。这一反直觉的发现是本文最重要的贡献。&#10;  - **提供了关键洞察**：明确了2D激光雷达在无障碍直道中的失效模式，以及DVSO在旋转估计上的弱点。&#10;  - **指导了未来方向**：基于实验结果，论文提出了一个更务实、更高效的未来研究路线：**优先使用轮式里程计进行平移估计，结合低成本激光雷达进行旋转修正，并重点发展自监督语义地标发现**。&#10;&#10;- **对未来研究/应用的影响**：&#10;  - 对于在类似极端环境（如矿井、下水道、长管道）中工作的机器人，本研究提供了一个重要的设计参考：不要盲目追求复杂的视觉SLAM方案，而应首先评估简单、可靠的传感器（如轮式里程计）的性能，并针对其弱点进行补充。&#10;  - 它强调了**环境特异性评估**的重要性。一个在标准数据集上表现优异的算法，在特定部署环境中可能表现不佳。&#10;  - 它推动了**自监督地标发现**的研究，因为实验表明，周期性的绝对位置修正（如通过地标）对于抑制漂移至关重要。&#10;&#10;- **局限与开放问题**：&#10;  - **实验规模有限**：仅基于一条100米的轨迹，结论的普适性需要更多、更长的轨迹来验证。&#10;  - **DVSO模型未微调**：DVSO模型可能未针对隧道环境进行微调，这可能是其性能不佳的原因之一。未来工作应测试微调后的DVSO。&#10;  - **计算成本未量化**：论文定性讨论了DVSO的计算开销，但未给出具体的功耗或延迟数据，这削弱了“资源效率”方面的论证。&#10;  - **未涉及辐射影响**：实验是在正常环境下进行的，未考虑辐射对相机和电子设备的长期影响。&#10;&#10;## 5. 澄清与简化（Clarifications and Simplifications）&#10;&#10;- **什么是DVSO？**：可以把它想象成一个“会看路”的AI。它用两个摄像头（像人的双眼）看世界，通过比较左右眼看到的图像差异（立体视差）来感知深度。然后，它通过比较连续几帧图像的变化（光流），来推断自己是在前进、后退还是转弯（视觉里程计）。最厉害的是，它不需要别人告诉它“这是正确的路”，而是通过“预测下一张图应该长什么样，再和实际拍到的图对比”来自我学习，就像一个通过不断试错来学会走路的婴儿。&#10;&#10;- **为什么DVSO表现不如预期？**：想象一下，让一个在繁华城市里训练出来的导航AI，突然被扔进一条笔直、雪白、没有任何路标和行人的地下隧道里。它会“懵掉”。因为它熟悉的特征（汽车、行人、路牌）全都不见了，只剩下重复的墙壁和管道。它很难找到可靠的“锚点”来估计自己的运动，尤其是在转弯时，更容易出错。这就是DVSO在隧道里旋转误差大的原因。&#10;&#10;- **图优化是如何工作的？**：可以把机器人的轨迹想象成用一根有弹性的绳子串起来的珠子（每个珠子是一个位置）。里程计告诉珠子之间应该相距多远（边的约束）。PuzzlePole地标就像钉在墙上的钉子，告诉某个珠子必须经过某个精确的点（地标约束）。图优化就是同时拉紧所有绳子和钉子，找到一个让所有约束都尽可能满足的、最平滑的珠子排列。优化后，每个珠子被移动了多少，就反映了原始里程计在那个位置上的误差大小。&#10;&#10;## 6. 补充说明（Additional Notes）&#10;&#10;- **相关工作关联**：&#10;  - 本文与[2]（MARWIN原始系统）直接相关，是其工作的延续和批判性评估。&#10;  - 与[5]（CERN隧道中的图SLAM）和[9]（隧道中的RGB-D SLAM）形成对比，本文更侧重于评估一种特定的、自监督的视觉方法。&#10;  - 与[1]和[4]（自监督激光雷达SLAM）相比，本文探索了视觉替代方案，并得出了不同结论。&#10;  - 本文提出的未来方向（自监督地标发现）与[1]中的对比学习思想有潜在联系，但目标从几何特征转向了语义文本。&#10;&#10;- **最重要的图表**：&#10;  - **图3和图4**：这两个图是本文的核心证据。它们直观地展示了DVSO和轮式里程计原始轨迹的漂移模式，以及图优化后的校正效果。对比两图的“原始轨迹”部分，可以清晰地看到轮式里程计的起点和终点更接近，而DVSO的轨迹则严重发散。&#10;  - **表2**：这是本文的定量结论。它用数字证实了图3和图4的视觉观察：DVSO和轮式里程计的平移误差（m/s）非常接近，但DVSO的旋转误差（°/s）是轮式里程计的两倍多。这个表格是支撑论文核心论点（DVSO不实用）的关键证据。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>The MARWIN robot operates at the European XFEL to perform autonomous radiation monitoring in long, monotonous accelerator tunnels where conventional localization approaches struggle. Its current navigation concept combines lidar-based edge detection, wheel/lidar odometry with periodic QR-code referencing, and fuzzy control of wall distance, rotation, and longitudinal position. While robust in predefined sections, this design lacks flexibility for unknown geometries and obstacles. This paper explores deep visual stereo odometry (DVSO) with 3D-geometric constraints as a focused alternative. DVSO is purely vision-based, leveraging stereo disparity, optical flow, and self-supervised learning to jointly estimate depth and ego-motion without labeled data. For global consistency, DVSO can subsequently be fused with absolute references (e.g., landmarks) or other sensors. We provide a conceptual evaluation for accelerator tunnel environments, using the European XFEL as a case study. Expected benefits include reduced scale drift via stereo, low-cost sensing, and scalable data collection, while challenges remain in low-texture surfaces, lighting variability, computational load, and robustness under radiation. The paper defines a research agenda toward enabling MARWIN to navigate more autonomously in constrained, safety-critical infrastructures.</p>
@@ -2004,18 +2016,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>LiDAR SLAM has become one of the major localization systems for ground vehicles since LiDAR Odometry And Mapping (LOAM). Many extension works on LOAM mainly leverage one specific constraint to improve the performance, e.g., information from on-board sensors such as loop closure and inertial state; prior conditions such as ground level and motion dynamics. In many robotic applications, these conditions are often known partially, hence a SLAM system can be a comprehensive problem due to the existence of numerous constraints. Therefore, we can achieve a better SLAM result by fusing them properly. In this paper, we propose a hybrid LiDAR-inertial SLAM framework that leverages both the on-board perception system and prior information such as motion dynamics to improve localization performance. In particular, we consider the case for ground vehicles, which are commonly used for autonomous driving and warehouse logistics. We present a computationally efficient LiDAR-inertial odometry method that directly parameterizes ground vehicle poses on SE(2). The out-of-SE(2) motion perturbations are not neglected but incorporated into an integrated noise term of a novel SE(2)-constraints model. For odometric measurement processing, we propose a versatile, tightly coupled LiDAR-inertial odometry to achieve better pose estimation than traditional LiDAR odometry. Thorough experiments are performed to evaluate our proposed method's performance in different scenarios, including localization for both indoor and outdoor environments. The proposed method achieves superior performance in accuracy and robustness.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2311.07291v1" target="_blank" class="paper-title">LiLO: Lightweight and low-bias LiDAR Odometry method based on spherical range image filtering</a>
-                        <span class="paper-date">2023-11-13</span>
-                    </div>
-                                        <span class="paper-comment">📝 This paper is under review at the journal "Autonomous Robots" (Springer)</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>In unstructured outdoor environments, robotics requires accurate and efficient odometry with low computational time. Existing low-bias LiDAR odometry methods are often computationally expensive. To address this problem, we present a lightweight LiDAR odometry method that converts unorganized point cloud data into a spherical range image (SRI) and filters out surface, edge, and ground features in the image plane. This substantially reduces computation time and the required features for odometry estimation in LOAM-based algorithms. Our odometry estimation method does not rely on global maps or loop closure algorithms, which further reduces computational costs. Experimental results generate a translation and rotation error of 0.86\% and 0.0036°/m on the KITTI dataset with an average runtime of 78ms. In addition, we tested the method with our data, obtaining an average closed-loop error of 0.8m and a runtime of 27ms over eight loops covering 3.5Km.</p>
                     </details>
                 </div>
             </div>

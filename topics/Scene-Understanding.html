@@ -675,7 +675,7 @@
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Kalman Filter</span>
-                    <span class="nav-count">56</span>
+                    <span class="nav-count">59</span>
                 </a>
                 <a href="Loop-Closure-Detection.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -690,12 +690,12 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">69</span>
+                    <span class="nav-count">67</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">77</span>
+                    <span class="nav-count">79</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -745,12 +745,12 @@
                 <a href="Path-Planning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#3b82f6"></span>
                     <span class="nav-label">Path Planning</span>
-                    <span class="nav-count">67</span>
+                    <span class="nav-count">68</span>
                 </a>
                 <a href="Multimodal-Fusion.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#6366f1"></span>
                     <span class="nav-label">Multimodal Fusion</span>
-                    <span class="nav-count">74</span>
+                    <span class="nav-count">73</span>
                 </a>
                 <a href="Scene-Understanding.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
@@ -894,7 +894,7 @@
             <a href="Kalman-Filter.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Kalman Filter</span>
-                <span class="nav-count">56</span>
+                <span class="nav-count">59</span>
             </a>
             <a href="Loop-Closure-Detection.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -909,12 +909,12 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">69</span>
+                <span class="nav-count">67</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">77</span>
+                <span class="nav-count">79</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -964,12 +964,12 @@
             <a href="Path-Planning.html" class="nav-item">
                 <span class="nav-dot" style="background:#3b82f6"></span>
                 <span class="nav-label">Path Planning</span>
-                <span class="nav-count">67</span>
+                <span class="nav-count">68</span>
             </a>
             <a href="Multimodal-Fusion.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
                 <span class="nav-label">Multimodal Fusion</span>
-                <span class="nav-count">74</span>
+                <span class="nav-count">73</span>
             </a>
             <a href="Scene-Understanding.html" class="nav-item active">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
@@ -1028,6 +1028,51 @@
                 <span class="topic-count">80 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2606.26046v1" target="_blank" class="paper-title">RoboAtlas: Contextual Active SLAM</a>
+                        <span class="paper-date">2026-06-24</span>
+                    </div>
+                                        <span class="paper-comment">📝 Alexander Schperberg and Shivam K. Panda made equal contribution</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决主动SLAM中如何自适应平衡几何探索与语义推理的问题，提升机器人在大规模未知环境中的任务成功率。&#10;&#10;🛠 **方法**：提出RoboAtlas框架，结合可扩展的3D语义建图系统OpenRoboVox，通过上下文多臂赌博机算法动态融合前沿探索、全局语义地图推理和基于视觉语言模型（VLM）的自我中心推理，实现从探索到语义导航的平滑过渡。&#10;&#10;✨ **主要贡献**：在超过1800平方米、约3万个语义实例的真实环境中实现100%任务成功率；在GOAT-Bench基准上使用GPT-4o达到90.6%的成功率，比最强基线提升17.8个百分点；使用小型模型Qwen2.5-VL-7B仍达88.8%成功率，证明大规模3D语义地图对基础模型的关键增强作用。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>We present RoboAtlas, a contextual Active SLAM framework that adaptively balances geometric exploration and semantic reasoning using a scalable 3D semantic mapping system, OpenRoboVox. RoboAtlas integrates frontier exploration, global semantic-map reasoning, and egocentric VLM-based reasoning through a contextual multi-armed bandit that transitions from exploration to semantically guided navigation as scene understanding improves. We evaluate the system in simulation and on a Unitree Go2 robot in large-scale real-world environments exceeding 1800 m2 with approx. 30k mapped semantic instances, achieving a 100% task success rate. On the GOAT-Bench "Val Unseen" benchmark, RoboAtlas achieves state-of-the-art performance with highest reported success rate (SR) of 90.6%, using GPT-4o, improving over the strongest prior baseline by 17.8 percentage points in SR. Using the much smaller Qwen2.5-VL-7B model, it still achieves 88.8% SR, outperforming all baselines using GPT-4o in SR, and revealing the importance of the information gained by our semantic mapping framework over simply replacing the underlying foundation model. The results demonstrate that grounding foundation models with large-scale 3D semantic maps enables robust and efficient contextual Active SLAM.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2603.28090v2" target="_blank" class="paper-title">To View Transform or Not to View Transform: NeRF-based Pre-training Perspective</a>
+                        <span class="paper-date">2026-06-24</span>
+                    </div>
+                                        <span class="paper-comment">📝 The Fourteenth International Conference on Learning Representations (ICLR'26)</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有基于NeRF的自动驾驶预训练方法将NeRF与视图变换耦合，导致离散刚性与连续自适应表示之间的冲突，产生模糊的3D表示，限制了场景理解能力，且预训练网络在下游任务中被丢弃，造成表示利用效率低下。&#10;&#10;🛠 **方法**：提出NeRP3D，一种基于点云的NeRF式3D检测器，避免视图变换，直接学习连续3D表示，并在下游任务中保留预训练的NeRF网络，持续利用连续表示学习原则。&#10;&#10;✨ **主要贡献**：在nuScenes数据集上，NeRP3D显著超越现有最先进方法，不仅提升了预训练场景重建任务性能，还改进了下游检测任务效果，实现了连续3D表示的高效复用。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Neural radiance fields (NeRFs) have emerged as a prominent pre-training paradigm for vision-centric autonomous driving, which enhances 3D geometry and appearance understanding in a fully self-supervised manner. To apply NeRF-based pretraining to 3D perception models, recent approaches have simply applied NeRFs to volumetric features obtained from view transformation. However, coupling NeRFs with view transformation inherits conflicting priors; view transformation imposes discrete and rigid representations, whereas radiance fields assume continuous and adaptive functions. When these opposing assumptions are forced into a single pipeline, the misalignment surfaces as blurry and ambiguous 3D representations that ultimately limit 3D scene understanding. Moreover, the NeRF network for pre-training is discarded during downstream tasks, resulting in inefficient utilization of enhanced 3D representations through NeRF. In this paper, we propose a novel NeRF-Resembled Point-based 3D detector that can learn continuous 3D representation and thus avoid the misaligned priors from view transformation. NeRP3D preserves the pre-trained NeRF network regardless of the tasks, inheriting the principle of continuous 3D representation learning and leading to greater potentials for both scene reconstruction and detection tasks. Experiments on nuScenes dataset demonstrate that our proposed approach significantly improves previous state-of-the-art methods, outperforming not only pretext scene reconstruction tasks but also downstream detection tasks.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2606.25391v1" target="_blank" class="paper-title">From Sounds to Scenes: A Benchmark for Evaluating Context-Aware Auditory Scene Understanding in Large Audio Language Models</a>
+                        <span class="paper-date">2026-06-24</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有音频大语言模型（LALMs）的基准测试仅孤立评估单一声学层（如语音、声音或音乐），缺乏对真实场景中多声源共存时上下文关系的理解能力，因此需要评估模型在复杂听觉场景中的整体理解能力。&#10;&#10;🛠 **方法**：提出CASU基准，通过可扩展的流水线构建时间精确的半合成音频流（融合真实场景声音与合成语音），并设计四项任务（上下文问答、实体提取、说话者角色推理、反事实推理）来测试场景理解。&#10;&#10;✨ **主要贡献**：实验表明，有效的听觉场景理解需要整合所有声学层（而非仅依赖语音或声音），揭示了CASU对推动LALMs复杂音频理解的关键必要性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Recent Large Audio Language Models (LALMs) have achieved remarkable progress in audio perceptual tasks across individual acoustic layers, including speech, sound, and music. However, existing benchmarks predominantly evaluate these layers in isolation, overlooking the complex contextual relationships that arise when multiple acoustic sources co-occur in real-world auditory scenes. Real-world auditory interpretation requires Context-Aware Auditory Scene Understanding (CASU): the ability to comprehend the holistic scene by integrating sound layers. To evaluate this capability, we introduce the CASU benchmark, which assesses whether Audio LLMs can interpret auditory scenes composed of speech, acoustic events (e.g., announcements), and background environments (e.g., traffic), and reason about the logical relationships between these layers. We propose a scalable pipeline for constructing time-accurate, semi-synthetic audio streams by composing real-world scene sounds with synthetic speech. Building on this data, we design four tasks that probe scene understanding: contextual question answering, entity extraction from the scene, speaker role inference, and counterfactual reasoning where scene is manipulated. Experiments across multiple LALMs demonstrate that effective auditory scene understanding requires integration over all auditory layers, rather than reliance on speech or sound alone, underscoring the necessity of CASU for advancing complex audio understanding in LALMs.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2606.24784v1" target="_blank" class="paper-title">AerialFusionMapNet: Online HD Map Construction with Aerial-Onboard BEV Fusion</a>
@@ -1139,10 +1184,7 @@
                         <span class="paper-date">2026-06-22</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：如何让机器人理解自然语言指令并执行相应的操作，实现人机无缝协作。  &#10;🛠 **方法**：系统梳理了语言与机器人结合的四类方法——语言用于状态评估、作为策略条件、用于认知规划与推理，以及统一视觉-语言-动作模型，并从动作粒度、数据监督、系统成本、环境评估和任务规范五个维度分析现有技术。  &#10;✨ **主要贡献**：全面总结了语言条件机器人操作的最新进展，揭示了领域内的关键争论，并指出了提升泛化能力和解决安全问题的未来研究方向。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Language-conditioned robot manipulation is an emerging field aimed at enabling seamless communication and cooperation between humans and robotic agents by teaching robots to comprehend and execute instructions conveyed in natural language. This interdisciplinary area integrates scene understanding, language processing, and policy learning to bridge the gap between human instructions and robot actions. In this comprehensive survey, we systematically explore recent advancements in language-conditioned robot manipulation. We categorize existing methods based on the primary ways language is integrated into the robot system, namely language for state evaluation, language as a policy condition, language for cognitive planning and reasoning, and language in unified vision-language-action models. Specifically, we further analyze state-of-the-art techniques from five axes of action granularity, data and supervision regimes, system cost and latency, environments and evaluations, and task specification. Additionally, we highlight the key debates in the field. Finally, we discuss open challenges and future research directions, focusing on potentially enhancing generalization capabilities and addressing safety issues in language-conditioned robot manipulators.</p>
@@ -1154,10 +1196,7 @@
                         <span class="paper-date">2026-06-22</span>
                     </div>
                                         <span class="paper-comment">📝 To be published in the Proceedings of the IEEE/RSJ International Conference on Intelligent Robots & Systems (IEEE IROS 2026)</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有3D场景图方法局限于预定义的刚性关系类别，无法捕捉因果连接、环境上下文等重要的开放语义关系，限制了机器人对复杂环境的深层理解。&#10;&#10;🛠 **方法**：利用视觉语言模型（VLM）识别实例级概念节点与关系，再通过大语言模型（LLM）推理出更抽象的概念节点与关系，最终将这些节点与关系组装成包含概念节点的分层3D场景图森林。&#10;&#10;✨ **主要贡献**：在uHumans2和ScanNet数据集上验证了生成关系的准确性与相关性；通过开放词汇物体检索任务（含Boston Dynamics Spot真实部署）证明了场景图森林在机器人下游任务中的适用性，显著提升了语义与环境理解的表达能力。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Operating in complex real-world environments requires robots to understand their surroundings on a functional semantic level. This demands a detailed multi-layer world model capturing the complex relations of its surroundings. Hierarchical 3D scene graphs address this challenge by integrating geometric, semantic, and relational data within a unified spatial framework. However, current 3D scene graph approaches often restrict themselves to rigid structures of pre-determined relationship classes, mostly neglecting important semantic connections, like causal connections or environmental contexts. This paper explores the potential of foundation models to build forests of 3D scene graphs with open semantic relationships to improve scene understanding and robotic task execution. We propose a method where instance-specific concept-nodes and relationships are first identified by a VLM and extended upon by a LLM, inferring broader, more abstract concept-nodes and relationships through reasoning. These object-nodes, concept-nodes, and relationships are then assembled into a forest of hierarchical 3D scene graphs, enhanced with concept-nodes to represent abstract concepts. Evaluations were conducted on the uHumans2 and ScanNet indoor dataset, validating the accuracy and relevance of the generated relationships. Downstream suitability of scene-graph forests for robotics applications is demonstrated in an open-vocabulary object-retrieval task utilizing both ScanNet data and a real-world indoor deployment using a Boston Dynamics Spot. This paper leverages foundation models to create more expressive, semantically deep 3D hierarchical scene graphs and demonstrates their potential to advance semantic and environmental understanding in robotics.</p>
@@ -1169,10 +1208,7 @@
                         <span class="paper-date">2026-06-22</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：针对ICRA 2026 GOOSE挑战赛中，从四个相机平台解析非结构化户外场景并细分为56个类别的语义分割任务。&#10;&#10;🛠 **方法**：采用DINOv3、SigLIP2和InternImage等基础视觉编码器，搭配Mask2Former解码器，通过长训练周期、指数移动平均、大裁剪尺寸及多尺度翻转测试增强进行训练，并基于每类验证IoU加权集成编码器。&#10;&#10;✨ **主要贡献**：在官方测试集上达到75.40%复合mIoU，获得第二名；发现编码器的预训练策略（而非参数量或解码器设计）是精度主导因素。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>This report presents our solution for the ICRA 2026 GOOSE 2D Fine-Grained Semantic Segmentation Challenge, which requires parsing unstructured outdoor scenes from four camera platforms into 56 fine-grained categories. Our approach pairs foundation vision encoders (including DINOv3, SigLIP2, and InternImage) with a Mask2Former decoder, and trains them with a strong recipe including long training schedules, exponential moving average, a larger crop size, and multi-scale plus flip test-time augmentation. The three encoders, chosen for their complementary pretraining objectives, are combined into a pretraining-diverse ensemble through per-class validation-IoU weighting. Evaluated on the official GOOSE test set, our submission achieves 75.40% composite mIoU and wins the second place of the challenge. Our study further shows that the encoder's pretraining recipe, rather than its parameter count or the decoder design, is the dominant factor for accuracy on this benchmark.</p>
@@ -1980,42 +2016,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Integrating open-vocabulary semantic information into dynamic 3D scene representations is essential for long-term embodied scene understanding. However, existing methods often suffer from fragile instance association due to incomplete cross-view cues, while their limited ability to handle object-level topological changes restricts long-term robotic task execution. Moreover, current 3D scene understanding methods either rely on simple feature matching without explicit spatial reasoning or assume offline ground-truth 3D geometry. To address these challenges, we present DGSG-Mind, a hybrid instance-aware 3D Gaussian dynamic scene graph system with an embodied reasoning agent. Our system couples a probabilistic voxel grid with explicit 3D Gaussians to enable robust cross-modal instance fusion and incremental semantic mapping. It handles dynamic changes through Gaussian-based visual relocalization and localized masked refinement guided by geometric-semantic consistency. Built on the instance Gaussian map, DGSG-Mind further constructs a hierarchical scene graph and develops the 3D Gaussian Mind, which integrates structural relations, spatial-semantic information, and visually annotated RoI Gaussian renderings for multimodal reasoning. Extensive experiments show that DGSG-Mind achieves the best zero-shot 3DVG performance among methods operating on self-reconstructed maps, while also delivering strong performance in 3D open-vocabulary semantic segmentation and scene reconstruction. We further deploy DGSG-Mind on real-world robots to demonstrate its target-oriented reasoning and dynamic update capabilities. The project page of DGSG-Mind is available at https://icr-lab.github.io/DGSG-Mind</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2507.15777v4" target="_blank" class="paper-title">Label tree semantic losses for rich multi-class medical image segmentation</a>
-                        <span class="paper-date">2026-05-28</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Rich and accurate medical image segmentation is poised to underpin the next generation of AI-defined clinical practice by delineating critical anatomy for pre-operative planning, guiding real-time intra-operative navigation, and supporting precise post-operative assessment. However, commonly used learning methods for medical and surgical imaging segmentation tasks penalise all errors equivalently and thus fail to exploit any inter-class semantics in the label space. This becomes particularly problematic as the cardinality and richness of labels increases to include subtly different classes. In this work, we propose two tree-based semantic loss functions which take advantage of a hierarchical organisation of the labels. We further incorporate our losses in a recently proposed approach for training with sparse, background-free annotations to extend the applicability of our proposed losses. Extensive experiments are reported on two medical and surgical imaging segmentation tasks, namely head MRI for whole brain parcellation with full supervision and neurosurgical hyperspectral imaging for scene understanding with sparse annotations. Results demonstrate consistent improvements over the evaluated task-specific baselines, with the strongest support for the Wasserstein-based compound loss in whole-brain parcellation and for hierarchy-weighted top-level supervision in the sparse HSI setting.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2605.30512v1" target="_blank" class="paper-title">PhyDrawGen: Physically Grounded Diagram Generation from Natural Language</a>
-                        <span class="paper-date">2026-05-28</span>
-                    </div>
-                                        <span class="paper-comment">📝 9 figures, 7 tables. Under review at EMNLP 2026</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Generating physics diagrams from text requires strict adherence to physical laws. While current generative models produce visually plausible outputs, they systematically hallucinate force vectors, ignore conservation laws, and violate geometric constraints. We present PhyDrawGen, a neuro-symbolic pipeline that decouples semantic scene understanding from physical constraint satisfaction. First, a large language model extracts a typed scene graph from the problem text. A deterministic solver then converts this graph into a Planar Straight-Line Graph (PSLG), encoding force balance, optical paths, and field topologies as exact geometric primitives. Finally, a fine-tuned Qwen-VL model implements a visually grounded propose-verify loop to iteratively correct any constraint violations. Evaluated on a benchmark of 1,449 problems spanning mechanics, optics, and electromagnetism, PhyDrawGen significantly outperforms GPT-5-image, Gemini 2.5 Flash, and Gemini 3 Pro, demonstrating robust physical accuracy even on unusual-object problems.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2605.30338v1" target="_blank" class="paper-title">REST3D: Reconstructing Physically Stable 3D Scenes from a Single Image</a>
-                        <span class="paper-date">2026-05-28</span>
-                    </div>
-                                        <span class="paper-comment">📝 Project page: https://shirleymaxx.github.io/REST3D/</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Reconstructing physically stable 3D scenes from a single RGB image enables casual images to be converted into simulation-ready digital assets for applications such as immersive interaction and content creation. However, existing single-image reconstruction methods fall short in capturing the physical structure of a scene. As a result, they often produce geometrically plausible but physically inconsistent results, including object floating and penetration, which lead to unstable behavior in physics simulations. Image-conditioned scene generation methods improve physical plausibility but often rely on strong scene priors, yielding plausible yet inaccurate object arrangements that fail to match the input image. We propose REST3D, a single-image reconstruction framework that can reconstruct physically stable 3D scenes by integrating physical scene understanding with physics-constrained refinement. We first introduce an agentic physical scene understanding technique that constructs a scene-tree representation capturing object physical states and inter-object relationships from a gravity-support perspective, providing a structural prior for reconstruction. Leveraging this structure, we initialize the scene using image-to-3D models, followed by scene-tree-guided alignment and physics-constrained optimization to resolve physical violations while preserving visual consistency with the input image. Experiments show that our method significantly reduces physical errors and improves simulation stability on both synthetic and real-world datasets while maintaining strong reconstruction quality. We further demonstrate the reconstructed scenes in VR-based human-object interaction, showing their potential for immersive applications.</p>
                     </details>
                 </div>
             </div>

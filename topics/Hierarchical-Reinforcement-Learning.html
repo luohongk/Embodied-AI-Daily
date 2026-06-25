@@ -675,7 +675,7 @@
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Kalman Filter</span>
-                    <span class="nav-count">56</span>
+                    <span class="nav-count">59</span>
                 </a>
                 <a href="Loop-Closure-Detection.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -690,12 +690,12 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">69</span>
+                    <span class="nav-count">67</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">77</span>
+                    <span class="nav-count">79</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -745,12 +745,12 @@
                 <a href="Path-Planning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#3b82f6"></span>
                     <span class="nav-label">Path Planning</span>
-                    <span class="nav-count">67</span>
+                    <span class="nav-count">68</span>
                 </a>
                 <a href="Multimodal-Fusion.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#6366f1"></span>
                     <span class="nav-label">Multimodal Fusion</span>
-                    <span class="nav-count">74</span>
+                    <span class="nav-count">73</span>
                 </a>
                 <a href="Scene-Understanding.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
@@ -894,7 +894,7 @@
             <a href="Kalman-Filter.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Kalman Filter</span>
-                <span class="nav-count">56</span>
+                <span class="nav-count">59</span>
             </a>
             <a href="Loop-Closure-Detection.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -909,12 +909,12 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">69</span>
+                <span class="nav-count">67</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">77</span>
+                <span class="nav-count">79</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -964,12 +964,12 @@
             <a href="Path-Planning.html" class="nav-item">
                 <span class="nav-dot" style="background:#3b82f6"></span>
                 <span class="nav-label">Path Planning</span>
-                <span class="nav-count">67</span>
+                <span class="nav-count">68</span>
             </a>
             <a href="Multimodal-Fusion.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
                 <span class="nav-label">Multimodal Fusion</span>
-                <span class="nav-count">74</span>
+                <span class="nav-count">73</span>
             </a>
             <a href="Scene-Understanding.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
@@ -1028,6 +1028,21 @@
                 <span class="topic-count">79 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2606.26002v1" target="_blank" class="paper-title">Hierarchical Reinforcement Learning for Neural Network Compression (HiReLC): Pruning and Quantization</a>
+                        <span class="paper-date">2026-06-24</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：针对深度神经网络压缩中剪枝与量化联合优化搜索空间大、计算成本高的问题，提出自动化联合压缩方法。&#10;&#10;🛠 **方法**：提出HiReLC分层强化学习框架，底层代理独立为每个块选择位宽、剪枝保留比等配置，高层代理基于Fisher信息灵敏度估计通过集成投票协调全局预算分配，并采用迭代主动学习循环结合轻量级MLP代理进行奖励塑造以降低策略评估成本。&#10;&#10;✨ **主要贡献**：在Vision Transformer和CNN基准上实现5.99-6.72倍参数存储压缩比，在一种设置下准确率提升3.83%，其他设置下仅下降0.55-5.62%，验证了分层策略分解与灵敏度感知引导在联合压缩中的有效性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>We present HiReLC, a hierarchical ensemble-reinforcement learning framework for automated joint quantization and structured pruning of deep neural networks. The framework decomposes the compression search across two levels of abstraction: low-level agents (LLAs) operate independently per block, selecting per-kernel configurations over a multi-discrete action space spanning bitwidth, pruning keep-ratio, quantization type, and granularity, while high-level agents (HLAs) coordinate global budget allocation via ensemble voting guided by Fisher Information-based sensitivity estimates. To mitigate the computational cost of policy evaluation, an iterative active learning loop interleaves surrogate-guided RL optimization with post-compression fine-tuning, using a lightweight MLP surrogate to amortize expensive evaluations and a logit-MSE proxy during cold-start. The surrogate is used for reward shaping rather than as a replacement for final post-compression evaluation. The controller is architecture-agnostic by design, with a modular layer abstraction decoupling the RL environment from the underlying network topology. Experiments across Vision Transformer and CNN benchmarks demonstrate effective parameter-storage compression ratios of 5.99 - 6.72$\times$ with a 3.83 % gain in one setting and 0.55 - 5.62 % accuracy drops elsewhere, supporting hierarchical policy decomposition and sensitivity-aware guidance as practical design choices for joint neural network compression.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2606.22922v1" target="_blank" class="paper-title">Hierarchical Reinforcement Learning for Sparse-Reward Search in Commutative Algebra</a>
@@ -1169,10 +1184,7 @@
                         <span class="paper-date">2026-06-03</span>
                     </div>
                                         <span class="paper-comment">📝 Published as a conference paper at ICLR 2026</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="好的，作为一名人工智能研究与学术论文分析专家，我将严格按照您的要求，对这篇题为《SUSD: Structured Unsupervised Skill Discovery through State Factorization》的论文进行详细的中文解读。&#10;&#10;---&#10;&#10;## 0. 概览（Concise Summary）&#10;&#10;- **主题（Topic）**：无监督技能发现（Unsupervised Skill Discovery, USD），特别是在具有结构化状态空间（如多物体环境）的强化学习（RL）任务中。&#10;- **问题（Problem）**：现有的无监督技能发现方法，尤其是基于距离最大化（DSD）的方法，倾向于只关注环境中容易控制的因素，而忽略了更复杂或更难控制的因素，导致学到的技能集不够全面和多样化。基于互信息（MI）的方法则倾向于学习静态、简单的技能。&#10;- **方法（Method）**：提出一个名为SUSD的框架。它通过**状态分解（State Factorization）** 将状态空间分解为独立的因子（如物体），并为每个因子分配独立的技能变量。同时，引入一个**基于好奇心的因子加权机制（Curiosity-based Factor Weighting）**，动态调整对不同因子的学习重点，鼓励探索未充分开发的因子。&#10;- **创新（Innovation）**：1) 首次将状态分解的思想引入DSD方法中，实现了对每个可控因子的细粒度控制。2) 提出了一种因子级别的、基于好奇心的自适应加权机制，解决了DSD方法在复杂环境中技能多样性不足的问题。3) 学习到的分解式技能表示天然支持组合，便于通过分层强化学习（HRL）高效地解决下游任务。&#10;- **意义（Significance）**：SUSD显著提升了在复杂、多因子环境中无监督技能发现的质量和多样性。它为利用环境的结构化先验知识来引导探索和技能学习提供了新的有效范式，对于机器人操作、多智能体系统等现实应用具有重要价值。&#10;- **一句话总结**：SUSD通过将状态空间分解为独立因子并引入因子级别的自适应好奇心权重，解决了现有无监督技能发现方法在复杂环境中技能多样性不足的问题，学习到了更丰富、更可控的技能集。&#10;&#10;## 1. 研究动机（Motivation）&#10;&#10;- **解决的问题**：在复杂的、包含多个可控实体（如多个物体、多个智能体）的环境中，现有的无监督技能发现方法（USD）表现不佳。&#10;- **为什么重要**：现实世界的强化学习任务（如机器人厨房操作、多智能体协作）通常具有稀疏奖励和长时域的特点。无监督技能发现旨在让智能体在没有外部奖励的情况下自主学习一系列多样化的技能，这些技能可以作为解决下游任务的“基石”。因此，学习到全面、多样的技能集对于提高样本效率和泛化能力至关重要。&#10;- **挑战在哪里**：&#10;    1.  **基于互信息（MI）的方法的局限性**：这类方法（如DIAYN）倾向于学习对状态变换具有不变性的技能，即它们偏好那些导致状态分布变化不大、易于区分的静态技能，而忽略了动态、复杂的行为。&#10;    2.  **基于距离最大化（DSD）的方法的局限性**：这类方法（如METRA, CSD）通过最大化状态空间中的距离来鼓励动态行为，但它们存在一个“偏见”问题。在复杂环境中，不同因子（如机器人的手臂、锅、肉丸）的可控性不同。DSD方法会倾向于优先学习那些最容易控制、对状态变化贡献最大的因子（如移动手臂），而忽略那些更难控制或响应更慢的因子（如精确地将肉丸放入锅中）。这导致学到的技能集不全面，无法覆盖所有可控因素。&#10;- **核心空白**：现有DSD方法缺乏一种显式的机制来确保技能多样性能够覆盖所有可控因子，导致技能潜在空间对“困难”因子的表征不足。&#10;&#10;## 2. 创新点（Innovation）&#10;&#10;- **关键创新1：分解式DSD（Factorized DSD）**：将环境的状态空间分解为 $N$ 个独立的因子（例如，每个物体或实体对应一个因子）。相应地，将技能潜在变量 $z$ 也分解为 $N$ 个部分，每个部分 $z_i$ 专门负责控制一个特定的状态因子 $s_i$。映射函数 $\phi$ 也被分解为 $N$ 个独立的网络 $\phi_i$，每个网络只处理对应的因子 $s_i$。&#10;    - **与现有方案的不同**：传统的DSD方法（如METRA）将整个状态空间视为一个整体，用一个单一的映射函数 $\phi$ 和一个整体的技能变量 $z$ 来学习。SUSD则利用环境的组合结构作为归纳偏置，实现了对每个因子的解耦控制。&#10;    - **为什么能奏效**：这种分解结构迫使智能体必须为每个因子都学习相应的技能，从而避免了DSD方法只关注“简单”因子的偏见。同时，分解后的技能表示天然支持组合，例如，可以组合“移动手臂”和“抓取肉丸”这两个因子级别的技能来完成更复杂的任务。&#10;&#10;- **关键创新2：基于好奇心的因子加权（Curiosity-based Factor Weighting）**：引入一个密度模型 $q_\theta(s'|s)$ 来预测给定当前状态 $s$ 下，下一个状态 $s'$ 的概率。利用负对数似然 $-\log q_\theta(s'_{t+1}|s_t)$ 作为衡量一个状态转移“困难”或“新奇”程度的指标。关键创新在于，将这个指标**分解到每个因子**上，即 $-\log q_\theta(s^i_{t+1}|s_t)$，其中 $s^i_{t+1}$ 是下一个状态的第 $i$ 个因子。&#10;    - **与现有方案的不同**：之前的工作（如CSD）使用一个单一的、粗粒度的好奇心分数来加权整个状态转移。SUSD则实现了因子级别的细粒度加权。&#10;    - **为什么能奏效**：当一个因子（如肉丸的位置）的转移难以被密度模型预测（即 $-\log q_\theta$ 值高）时，说明智能体对这个因子的控制还不够熟练，因此会获得更高的权重。这就像一个“好奇心”机制，引导智能体将更多的学习精力投入到那些尚未掌握或更难控制的因子上，从而促进对所有因子的均衡探索和技能学习。&#10;&#10;## 3. 主要内容（Main Content）【重点】&#10;&#10;### 3.1 设计架构与方法&#10;&#10;SUSD的整体架构如图1所示，包含两个阶段：技能学习阶段和任务学习阶段。&#10;&#10;- **技能学习阶段**：&#10;    1.  **状态分解**：将当前状态 $s_t$ 和下一状态 $s_{t+1}$ 分解为 $N$ 个因子 $\{s^i_t\}_{i=1}^N$ 和 $\{s^i_{t+1}\}_{i=1}^N$。&#10;    2.  **因子嵌入**：每个因子 $s^i$ 通过一个独立的映射网络 $\phi_i$ 映射到其嵌入空间 $\phi_i(s^i)$。&#10;    3.  **内在奖励计算**：对于每个因子 $i$，计算一个基础奖励 $r^{SUSD}_i = (\phi_i(s^i_{t+1}) - \phi_i(s^i_t))^\top z_i$，其中 $z_i$ 是技能 $z$ 中对应因子 $i$ 的部分。这个奖励鼓励技能 $z_i$ 沿着 $\phi_i$ 空间中的特定方向移动因子 $i$。&#10;    4.  **好奇心加权**：密度模型 $q_\theta(s'|s)$ 接收当前状态 $s_t$，输出预测的下一状态分布。通过分解该分布的参数，计算出每个因子 $i$ 的负对数似然 $-\log q_\theta(s^i_{t+1}|s_t)$，作为该因子的好奇心权重。&#10;    5.  **最终内在奖励**：最终的奖励 $R$ 是所有因子加权奖励的总和：$R = \sum_{i=1}^N \sqrt{-\log q_\theta(s^i_{t+1}|s_t)} \cdot r^{SUSD}_i$。这个奖励用于训练技能策略 $\pi(a|s, z)$。&#10;- **任务学习阶段**：技能策略被冻结作为低级策略。一个高级策略 $\pi_{high}$ 每隔 $L$ 步选择一个技能 $z$，以最大化任务奖励 $r_{task}$。这构成了一个分层强化学习（HRL）框架。&#10;&#10;### 3.2 关键算法与数学推导&#10;&#10;SUSD的核心是优化一个分解后的DSD目标函数。&#10;&#10;1.  **原始DSD目标**（公式2）：&#10;    $$&#10;    \sup_{\pi, \phi} \mathbb{E}_{p(\tau,z)} \left[ \sum_{t=0}^{T-1} (\phi(s_{t+1}) - \phi(s_t))^\top z \right] \quad \text{s.t.} \quad \|\phi(s) - \phi(s')\|_L \leq d(s', s), \forall (s, s') \in \mathcal{S}_{adj}&#10;    $$&#10;    该目标旨在最大化沿着技能 $z$ 方向的嵌入空间变化，同时约束嵌入函数 $\phi$ 是Lipschitz连续的。&#10;&#10;2.  **引理4.1**：将距离度量 $d(s', s)$ 从约束中移入目标函数，作为系数。&#10;    $$&#10;    \sup_{\pi, \phi} \mathbb{E}_{p(\tau,z)} \left[ \sum_{t=0}^{T-1} d(s', s) (\phi(s_{t+1}) - \phi(s_t))^\top z \right] \quad \text{s.t.} \quad \|\phi(s) - \phi(s')\|_L \leq 1, \forall (s, s') \in \mathcal{S}_{adj}&#10;    $$&#10;&#10;3.  **SUSD的分解目标**（公式3 &amp; 6）：&#10;    - 首先，将状态和技能分解，得到分解后的DSD目标（公式3）：&#10;        $$&#10;        \sup_{\pi, \{\phi_i\}_{i=1}^N} \mathbb{E}_{p(\tau,z)} \sum_{i=1}^N \sum_{t=0}^{T-1} (\phi_i(s^i_{t+1}) - \phi_i(s^i_t))^\top z_i \quad \text{s.t.} \quad \sum_{i=1}^N \|\phi_i(s'^i) - \phi_i(s^i)\|_2 \leq 1&#10;        $$&#10;    - 然后，根据引理4.1，将好奇心权重 $\sqrt{-\log q_\theta(s^i_{t+1}|s_t)}$ 作为距离度量 $d(s', s)$ 的替代，并分解到每个因子，得到SUSD的最终目标（公式6）：&#10;        $$&#10;        \sup_{\pi, \{\phi_i\}_{i=1}^N} \mathbb{E}_{p(\tau,z)} \sum_{t=0}^{T-1} \sum_{i=1}^N \sqrt{-\log q_\theta(s^i_{t+1}|s_t)} (\phi_i(s^i_{t+1}) - \phi_i(s^i_t))^\top z_i \quad \text{s.t.} \quad \sum_{i=1}^N \|\phi_i(s'^i) - \phi_i(s^i)\|_2 \leq 1&#10;        $$&#10;&#10;4.  **好奇心权重的计算**（公式5）：&#10;    密度模型 $q_\theta(s'|s) = \mathcal{N}(\mu_\theta(s), \Sigma_\theta(s))$ 是一个高斯分布。对于因子 $i$，其负对数似然可以简化为马氏距离的形式：&#10;    $$&#10;    -\log q_\theta(s^i_{t+1}|s_t) \propto (s^i_{t+1} - \mu^i_\theta(s_t))^\top \Sigma^i_\theta(s_t)^{-1} (s^i_{t+1} - \mu^i_\theta(s_t))&#10;    $$&#10;    其中 $\mu^i_\theta(s_t)$ 和 $\Sigma^i_\theta(s_t)$ 是从整体分布的参数中分解出的对应于因子 $i$ 的均值和协方差。&#10;&#10;5.  **训练目标**（公式7-10）：&#10;    使用对偶梯度下降法进行优化。&#10;    - 因子基础奖励：$r^{SUSD}_i := (\phi_i(s^i_{t+1}) - \phi_i(s^i_t))^\top z_i$&#10;    - 嵌入函数 $\phi_i$ 的损失：$J^{SUSD, \phi_i} := \mathbb{E} \left[ r^{SUSD}_i + \lambda \cdot \min(\varepsilon, 1 - \|\phi(s^i_{t+1}) - \phi(s^i_t)\|) \right]$&#10;    - 拉格朗日乘子 $\lambda$ 的损失：$J^{SUSD, \lambda} := -\lambda \cdot \mathbb{E} \left[ \min(\varepsilon, 1 - \|\phi(s^i_{t+1}) - \phi(s^i_t)\|) \right]$&#10;    - 技能策略的总内在奖励：$R := \sum_{i=1}^N \sqrt{-\log q_\theta(s^i_{t+1}|s_t)} r^{SUSD}_i$&#10;&#10;### 3.3 模型、训练与数据集&#10;&#10;- **模型**：&#10;    - **技能策略 $\pi(a|s, z)$**：一个共享的、以状态和完整技能向量为条件的策略网络，使用SAC算法训练。&#10;    - **因子嵌入网络 $\{\phi_i\}_{i=1}^N$**：$N$ 个独立的神经网络，每个网络将对应因子 $s^i$ 映射到一个低维嵌入。&#10;    - **条件密度模型 $q_\theta(s'|s)$**：一个神经网络，输入当前状态 $s$，输出预测的下一状态 $s'$ 的高斯分布参数（均值 $\mu_\theta(s)$ 和对角协方差 $\Sigma_\theta(s)$）。&#10;    - **拉格朗日乘子 $\lambda$**：一个可学习的标量参数。&#10;- **训练**：&#10;    - 算法1（SUSD）描述了训练过程。在每个epoch，智能体使用当前策略收集轨迹。然后，依次更新密度模型、因子嵌入网络、拉格朗日乘子和技能策略。&#10;    - 技能策略使用SAC算法，以公式10中的 $R$ 作为内在奖励进行更新。&#10;    - 其他组件使用随机梯度下降法更新。&#10;- **数据集**：训练数据完全由智能体在与环境交互过程中生成的轨迹组成。没有使用外部数据集。环境包括：&#10;    - **因子化环境**：Multi-Particle（10个智能体，10个站点）、Kitchen（机器人手臂和多个厨房物品）、2D-Gunner（智能体、弹药、目标）。&#10;    - **非因子化环境**：Ant、HalfCheetah（用于验证方法在非结构化环境中的通用性）。&#10;&#10;### 3.4 实验设置与结果&#10;&#10;- **实验设置**：将SUSD与5个基线方法（DIAYN, DUSDi, LSD, CSD, METRA）在5个环境上进行比较。主要评估指标是下游任务的回报（Return）和状态覆盖率。&#10;- **主要结果**：&#10;    1.  **Q1: 因子化环境中的下游任务性能**（图3）：在Multi-Particle和Kitchen环境的多个下游任务中，SUSD的训练曲线显著优于所有基线方法，尤其是在更复杂的Kitchen环境中，性能差距更大。这表明SUSD能有效利用环境结构学习到更有效的技能。&#10;    2.  **Q2: 非因子化环境中的性能**（图6）：在Ant和HalfCheetah的零样本目标到达任务中，SUSD与最先进的DSD方法（如METRA）性能相当，甚至略有优势。这表明SUSD在非结构化环境中也具有竞争力，没有因为引入分解而损失性能。&#10;    3.  **Q3: 技能丰富度评估**：&#10;        - **状态覆盖率**（图4）：在Multi-Particle环境中，SUSD在“最差智能体状态覆盖率”和“平均智能体状态覆盖率”两个指标上均大幅领先于所有基线，包括另一个因子化方法DUSDi。这说明SUSD确实促进了所有因子的均衡探索。&#10;        - **因子解码误差**（表1）：训练一个解码器从学到的嵌入 $\phi(s)$ 重建原始状态。SUSD在所有因子化环境中的重建误差（MSE）都最低，表明其嵌入空间捕获了关于所有因子的最全面、最丰富的信息。&#10;    4.  **技能学习阶段的有效性**（表2）：在Kitchen环境中，仅使用学到的技能策略随机执行，SUSD能够“意外地”完成一些任务（如将黄油放入锅中），而其他基线方法几乎无法完成任何任务。这直接证明了SUSD学到的技能更加多样化和实用。&#10;&#10;### 3.5 技术细节&#10;&#10;- **潜在空间维度**：对于非因子化环境，所有方法的技能维度 $D=2$。对于因子化环境，SUSD为每个因子设置 $D=2$，因此总维度为 $2N$。&#10;- **因子化策略**：在Multi-Particle中，每个智能体及其对应的站点作为一个因子。在Kitchen中，机器人手臂、锅、肉丸、按钮、炉子、目标等每个实体作为一个因子。&#10;- **密度模型**：使用一个神经网络来建模 $q_\theta(s'|s)$，输出一个对角高斯分布的均值和方差。通过分解输出的均值和方差向量来获得每个因子的分布参数。&#10;- **优化器**：使用Adam优化器（Kinga et al., 2015）。&#10;- **代码**：论文提供了开源代码仓库。&#10;&#10;## 4. 意义与影响（Significance and Impact）&#10;&#10;- **解决了什么问题**：解决了现有无监督技能发现方法（特别是DSD方法）在复杂、多因子环境中技能多样性不足和覆盖不全的核心问题。&#10;- **贡献是什么**：&#10;    1.  提出了一个新颖的、利用状态分解的DSD框架，实现了对每个可控因子的解耦技能学习。&#10;    2.  设计了一个因子级别的、基于好奇心的自适应加权机制，引导智能体均衡地探索所有因子。&#10;    3.  通过大量实验证明了该方法在因子化环境中的显著优势，并在非因子化环境中保持了竞争力。&#10;- **对未来研究/应用的影响**：&#10;    - **研究影响**：为利用环境结构进行无监督技能发现">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Unsupervised Skill Discovery (USD) aims to autonomously learn a diverse set of skills without relying on extrinsic rewards. One of the most common USD approaches is to maximize the Mutual Information (MI) between skill latent variables and states. However, MI-based methods tend to favor simple, static skills due to their invariance properties, limiting the discovery of dynamic, task-relevant behaviors. Distance-Maximizing Skill Discovery (DSD) promotes more dynamic skills by leveraging state-space distances, yet still fall short in encouraging comprehensive skill sets that engage all controllable factors or entities in the environment. In this work, we introduce SUSD, a novel framework that harnesses the compositional structure of environments by factorizing the state space into independent components (e.g., objects or controllable entities). SUSD allocates distinct skill variables to different factors, enabling more fine-grained control on the skill discovery process. A dynamic model also tracks learning across factors, adaptively steering the agent's focus toward underexplored factors. This structured approach not only promotes the discovery of richer and more diverse skills, but also yields a factorized skill representation that enables fine-grained and disentangled control over individual entities which facilitates efficient training of compositional downstream tasks via Hierarchical Reinforcement Learning (HRL). Our experimental results across three environments, with factors ranging from 1 to 10, demonstrate that our method can discover diverse and complex skills without supervision, significantly outperforming existing unsupervised skill discovery methods in factorized and complex environments. Code is publicly available at: https://github.com/hadi-hosseini/SUSD.</p>
@@ -1992,18 +2004,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Nonprehensile manipulation, such as pushing objects across cluttered environments, presents a challenging control problem due to complex contact dynamics and long-horizon planning requirements. In this work, we propose HeRD, a hierarchical reinforcement learning-diffusion policy that decomposes pushing tasks into two levels: high-level goal selection and low-level trajectory generation. We employ a high-level reinforcement learning (RL) agent to select intermediate spatial goals, and a low-level goal-conditioned diffusion model to generate feasible, efficient trajectories to reach them. This architecture combines the long-term reward maximizing behaviour of RL with the generative capabilities of diffusion models. We evaluate our method in a 2D simulation environment and show that it outperforms the state-of-the-art baseline in success rate, path efficiency, and generalization across multiple environment configurations. Our results suggest that hierarchical control with generative low-level planning is a promising direction for scalable, goal-directed nonprehensile manipulation. Code, documentation, and trained models are available: https://github.com/carosteven/HeRD.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2512.13715v1" target="_blank" class="paper-title">Meta Hierarchical Reinforcement Learning for Scalable Resource Management in O-RAN</a>
-                        <span class="paper-date">2025-12-08</span>
-                    </div>
-                                        <span class="paper-comment">📝 This paper is submitted to IEEE Open Journal of the Communications Society</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>The increasing complexity of modern applications demands wireless networks capable of real time adaptability and efficient resource management. The Open Radio Access Network (O-RAN) architecture, with its RAN Intelligent Controller (RIC) modules, has emerged as a pivotal solution for dynamic resource management and network slicing. While artificial intelligence (AI) driven methods have shown promise, most approaches struggle to maintain performance under unpredictable and highly dynamic conditions. This paper proposes an adaptive Meta Hierarchical Reinforcement Learning (Meta-HRL) framework, inspired by Model Agnostic Meta Learning (MAML), to jointly optimize resource allocation and network slicing in O-RAN. The framework integrates hierarchical control with meta learning to enable both global and local adaptation: the high-level controller allocates resources across slices, while low level agents perform intra slice scheduling. The adaptive meta-update mechanism weights tasks by temporal difference error variance, improving stability and prioritizing complex network scenarios. Theoretical analysis establishes sublinear convergence and regret guarantees for the two-level learning process. Simulation results demonstrate a 19.8% improvement in network management efficiency compared with baseline RL and meta-RL approaches, along with faster adaptation and higher QoS satisfaction across eMBB, URLLC, and mMTC slices. Additional ablation and scalability studies confirm the method's robustness, achieving up to 40% faster adaptation and consistent fairness, latency, and throughput performance as network scale increases.</p>
                     </details>
                 </div>
             </div>

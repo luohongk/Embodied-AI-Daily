@@ -675,7 +675,7 @@
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Kalman Filter</span>
-                    <span class="nav-count">56</span>
+                    <span class="nav-count">59</span>
                 </a>
                 <a href="Loop-Closure-Detection.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -690,12 +690,12 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">69</span>
+                    <span class="nav-count">67</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">77</span>
+                    <span class="nav-count">79</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -745,12 +745,12 @@
                 <a href="Path-Planning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#3b82f6"></span>
                     <span class="nav-label">Path Planning</span>
-                    <span class="nav-count">67</span>
+                    <span class="nav-count">68</span>
                 </a>
                 <a href="Multimodal-Fusion.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#6366f1"></span>
                     <span class="nav-label">Multimodal Fusion</span>
-                    <span class="nav-count">74</span>
+                    <span class="nav-count">73</span>
                 </a>
                 <a href="Scene-Understanding.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
@@ -894,7 +894,7 @@
             <a href="Kalman-Filter.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Kalman Filter</span>
-                <span class="nav-count">56</span>
+                <span class="nav-count">59</span>
             </a>
             <a href="Loop-Closure-Detection.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -909,12 +909,12 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">69</span>
+                <span class="nav-count">67</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">77</span>
+                <span class="nav-count">79</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -964,12 +964,12 @@
             <a href="Path-Planning.html" class="nav-item">
                 <span class="nav-dot" style="background:#3b82f6"></span>
                 <span class="nav-label">Path Planning</span>
-                <span class="nav-count">67</span>
+                <span class="nav-count">68</span>
             </a>
             <a href="Multimodal-Fusion.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
                 <span class="nav-label">Multimodal Fusion</span>
-                <span class="nav-count">74</span>
+                <span class="nav-count">73</span>
             </a>
             <a href="Scene-Understanding.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
@@ -1028,6 +1028,81 @@
                 <span class="topic-count">80 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2602.06566v3" target="_blank" class="paper-title">SPARC: Separating Perception And Reasoning Circuits for Test-time Scaling of VLMs</a>
+                        <span class="paper-date">2026-06-24</span>
+                    </div>
+                                        <span class="paper-comment">📝 Accepted at the 43rd International Conference on Machine Learning (ICML 2026)</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：视觉语言模型（VLM）在推理时扩展计算资源时，感知与推理过程混杂，导致上下文混乱、小错误级联放大，且依赖昂贵的手工奖励强化学习。&#10;&#10;🛠 **方法**：提出SPARC框架，将视觉感知与推理明确解耦为两阶段流水线：先进行显式视觉搜索定位问题相关区域，再基于这些区域进行推理，支持独立扩展和不对称计算分配。&#10;&#10;✨ **主要贡献**：在V* VQA基准上使Qwen3VL 4B提升6.7分，在分布外场景中以200倍更少token预算超越“图像思考”方法4.6分，并支持选择性优化和压缩上下文。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Despite recent successes, test-time scaling -- i.e., dynamically expanding the token budget during inference as needed -- remains brittle for vision-language models (VLMs). Unstructured visual reasoning chains entangle perception and reasoning, leading to long, disorganized contexts where small perceptual mistakes may cascade into completely wrong answers. Reasoning also requires expensive reinforcement learning with hand-crafted rewards. Here, we introduce SPARC (Separating Perception And Reasoning Circuits), a modular framework that explicitly decouples visual perception from reasoning. Inspired by sequential sensory-to-cognitive processing in the brain, SPARC implements a two-stage pipeline where the model first performs explicit visual search to localize question-relevant regions, then conditions its reasoning on those regions to produce the final answer. This separation enables independent test-time scaling with asymmetric compute allocation (e.g., prioritizing perceptual processing under distribution shift), and supports selective optimization (e.g., improving the perceptual stage alone when it is the bottleneck for end-to-end performance). It also accommodates compressed contexts by running global search at lower image resolutions and allocating high-resolution processing only to selected regions, thereby reducing visual token count and compute. SPARC outperforms monolithic baselines and strong visual-grounding approaches across challenging visual reasoning tasks, such as improving Qwen3VL 4B on the $V^*$ VQA benchmark by 6.7 points and surpassing "thinking with images" by 4.6 points in an OOD setting with a $200\times$ lower token budget.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2606.17412v3" target="_blank" class="paper-title">Enhancing Pathological VLMs with Cross-scale Reasoning</a>
+                        <span class="paper-date">2026-06-24</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：病理图像具有多尺度特性，但现有视觉语言模型（VLM）数据集缺乏明确的跨尺度推理目标，导致模型无法捕捉关键的多尺度表征并学习基于证据的推理。&#10;&#10;🛠 **方法**：提出首个跨尺度训练与评估范式，将病理诊断建模为多倍率推理任务；设计泄漏感知数据筛选流程，结合对抗性文本筛选与约束引导问题构建，避免文本捷径；基于此构建Scale-VQA基准，并训练ScaleReasoner-R1模型（通过强化学习优化）。&#10;&#10;✨ **主要贡献**：构建了高质量跨尺度VQA基准（Scale-VQA，含4685个问题与2537张图像），ScaleReasoner-R1在该基准及现有单尺度基准上均达到最优性能，证明有限跨尺度监督能显著提升病理理解能力。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Pathological images are inherently multi-scale, requiring pathologists to integrate evidence from global tissue architecture at low magnification to cellular morphology at higher magnification for accurate diagnosis. While existing pathological datasets for vision-language models (VLMs) include various scales, they often lack explicit cross-scale reasoning objectives. This limitation prevents VLMs from capturing essential cross-scale representations and learning evidence-based reasoning. To bridge this gap, we introduce the first cross-scale training and evaluation paradigm that formulates pathology interpretation as multi-magnification reasoning. However, creating such a task reveals a critical challenge: multi-image visual question answering (VQA) is prone to text-only shortcuts, which allow models to guess answers using magnification-dependent artifacts rather than visual evidence. To address this, we propose a leakage-aware curation pipeline that combines adversarial text-only screening with constraint-guided question design. Using this pipeline, we construct Scale-VQA, a high-quality benchmark with 4,685 multiple-choice questions grounded in 2,537 pathology images across multiple magnification levels. Finally, we present ScaleReasoner-R1, a model trained via reinforcement learning to optimize performance on cross-scale VQA tasks. ScaleReasoner-R1 achieves state-of-the-art performance on our cross-scale reasoning benchmark and generalizes to SOTA performance on established single-scale benchmarks. Findings suggest that even the limited cross-scale supervision can significantly improve pathological understanding. Code is available at https://github.com/iMVR-PL/ScaleReasoner-R1.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2606.25432v1" target="_blank" class="paper-title">Brevity is the Soul of Inference Efficiency: Inducing Concision in VLMs via Data Curation</a>
+                        <span class="paper-date">2026-06-24</span>
+                    </div>
+                                        <span class="paper-comment">📝 36 pages, see https://datologyai.com for more information</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：当前视觉语言模型（VLM）的推理效率优化主要聚焦于降低单token计算成本，却忽视了输出长度膨胀导致的整体效率下降，即“简洁性”这一关键杠杆未被利用。&#10;&#10;🛠 **方法**：通过数据筛选（Data Curation）构建简洁、正确的预训练数据集，训练模型学会用更少token回答，从而降低每个正确答案的推理成本（Cost-of-Pass），并采用回归方法控制输出长度以分离简洁性与质量。&#10;&#10;✨ **主要贡献**：在1B-4B参数规模的14个VLM上，数据筛选使简洁模型相比最冗长的4B模型（Qwen3.5-4B）获得35倍成本优势（0.41 vs 14.58 TFLOPs/正确答案），准确率仅差约1个百分点（0.691 vs 0.704）；同时，简洁性提升随模型规模扩大而增强（从1B的+16.7%到4B的+21.2%准确率增益），且不牺牲质量——通用冗长性不带来准确率收益，而推理式冗长性仅在较小模型和少数能力组中有效。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Inference efficiency is typically pursued by shrinking the model: distillation, pruning, quantization, and sparse routing each lower per-token cost while treating token count as fixed. But output length has been inflating, and it is precisely the component the standard toolkit leaves untouched. Here, we argue that brevity is the missing inference-efficiency lever, and that pretraining data curation is a practical way to pull it: a model trained on concise, correct data learns to answer in fewer tokens; i.e. it has a lower Cost-of-Pass. We apply our VLM curation pipeline to the MAmmoTH-VL single-image subset, and compare models trained on our curated data, the standard MAmmoTH-VL data, and external open-weight frontier VLMs. On a controlled 20-evaluation set and 14 VLMs at 1B-4B activated parameters, we hold output length fixed with a per-model regression, separating brevity from quality, and price models in FLOPs per correct answer. Curation buys a 35x Cost-of-Pass advantage over the most verbose 4B comparator (Qwen3.5-4B) within $\sim$1 pp of accuracy (0.41 vs 14.58 TFLOPs per correct answer; 0.691 vs 0.704 mean accuracy). Curation also buys a +17.55-percentage-point matched-length accuracy gain over the uncurated baseline that grows with model scale (from +16.7 pp at 1B to +21.2 pp at 4B). This brevity improvement concedes no quality: generic verbosity buys no accuracy at any capability or scale, and the window where reasoning-structured verbosity still earns its tokens shrinks from 4 of 8 capability groups at 2B to 1 of 8 at 4B. Per example, the concise model even reaches correct answers the verbose reasoning model misses, marking reasoning as a distinct curation target rather than something brevity gives up. Inference efficiency in this regime is a tokens-per-correct problem, and brevity is the lever that targets it directly.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2606.25212v1" target="_blank" class="paper-title">RigPI: Dynamic Parameter Identification of Rigid Body via VLM-Seeded Differentiable Simulation</a>
+                        <span class="paper-date">2026-06-23</span>
+                    </div>
+                                        <span class="paper-comment">📝 Accepted to IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2027)</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决机器人操作中物体（刚体及多连杆刚体）的物理参数（惯性、摩擦等）难以从真实交互中准确识别的问题，克服传感噪声、建模误差和先验知识不足的挑战。&#10;&#10;🛠 **方法**：提出RigPI框架，集成视觉语言模型（VLM）提供语义先验和约束搜索空间，结合可微物理模拟器的梯度信息，采用两阶段优化策略，从力-力矩测量和运动观测中高效稳定地识别动态参数。&#10;&#10;✨ **主要贡献**：首次将VLM与可微模拟结合用于刚体动态参数识别，通过两阶段优化提升噪声鲁棒性和物理合理性；在真实机器人实验中，对旋转和滑动关节物体实现精确参数估计，并成功复现操作轨迹，验证了系统的有效性和鲁棒性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Accurate physical parameter identification of manipulated objects is fundamental to advanced robotic manipulation and the construction of faithful digital twins. However, acquiring physically consistent inertial and frictional properties from real-world interactions remains challenging due to sensing noise, modeling errors, and limited prior knowledge. This paper presents \textbf{RigPI}, a systematic framework for identifying dynamic parameters of both unconstrained rigid bodies and multi-link rigid bodies during robot-object interaction. RigPI integrates vision-based semantic priors, force-torque measurements, and motion observations within a differentiable simulation pipeline. A vision-language model (VLM) provides informed initialization and a constrained search space, while gradient information from a differentiable physics simulator enables efficient and stable parameter refinement. The proposed two-stage optimization strategy alleviates sensitivity to noise and avoids physically implausible solutions. Extensive real-world experiments on objects with revolute and prismatic joints demonstrate that RigPI achieves accurate and stable parameter estimates, and successfully reproduces manipulation trajectories on a real robot with parameter-aware predictive validity. These results highlight the effectiveness and robustness of RigPI for real-world robotic system identification tasks.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2601.17037v2" target="_blank" class="paper-title">AMVICC: A Novel Benchmark for Cross-Modal Failure Mode Profiling for VLMs and IGMs</a>
+                        <span class="paper-date">2026-06-23</span>
+                    </div>
+                                        <span class="paper-comment">📝 14 pages, 4 figures, 8 tables. Presented at the 39th Conference on Neural Information Processing Systems Workshop: VLM4RWD. Presented at the 43th International Conference on Machine Learning Workshops: ICML 2026 CTB, ICML 2026 FAGEN, ICML 2026 EMM-QA. Authors Aahana Basappa and Pranay Goel contributed equally. Code: https://github.com/AahanaB24/AMVICC, Data: https://doi.org/10.5281/zenodo.17646068</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：多模态大语言模型和图像生成模型在基本视觉推理（如物体方向、数量、空间关系）中仍存在系统性失败，且缺乏跨模态评估这些失败模式的统一基准。&#10;&#10;🛠 **方法**：通过改编MMVP基准问题为显式和隐式提示，构建了名为AMVICC的新基准，用于系统比较11个多模态大语言模型和3个图像生成模型在9类视觉推理任务中的失败模式。&#10;&#10;✨ **主要贡献**：发现失败模式在模型和模态间常共享，但部分失败是模型或模态特有的；图像生成模型在显式提示中尤其难以操控细粒度视觉属性，为未来跨模态对齐研究和统一视觉语言建模提供了评估框架。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>We investigate visual reasoning limitations of both multimodal large language models (MLLMs) and image generation models (IGMs) by creating a novel benchmark to systematically compare failure modes across image-to-text and text-to-image tasks, enabling cross-modal evaluation of visual understanding. Despite rapid growth in machine learning, vision language models (VLMs) still fail to understand basic visual concepts such as object orientation, quantity, and spatial relationships, which highlights gaps in elementary visual reasoning. By adapting MMVP benchmark questions into explicit and implicit prompts, we create \textit{AMVICC}, a novel benchmark for profiling failure modes across various modalities. After testing 11 MLLMs and 3 IGMs in 9 categories of visual reasoning, our results show that failure modes are often shared between models and modalities. However, certain failures are model-specific and modality-specific, and this can potentially be attributed to various factors. IGMs consistently struggle to manipulate specific visual components in response to prompts, especially in explicit prompts, suggesting poor control over fine-grained visual attributes. Our findings apply most directly to the evaluation of existing state-of-the-art models on structured visual reasoning tasks. This work lays the foundation for future cross-modal alignment studies, offering a framework to probe whether image generation and visual interpretation failures stem from shared limitations. These insights can guide future improvements in unified vision-language modeling.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2606.24335v1" target="_blank" class="paper-title">Ill-Posed by Design: Probing Evidence Use in VLMs</a>
@@ -1109,10 +1184,7 @@
                         <span class="paper-date">2026-06-21</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有视觉-语言模型（VLM）的归因热图仅显示模型关注区域，但无法区分这些证据是否真正基于查询的空间关系，还是仅仅反映了图像的整体布局。&#10;&#10;🛠 **方法**：提出CREG（罗盘关系证据图），一种无需训练的诊断框架，将词元级归因转换为以参考点为中心的罗盘分布，并测量其方向对齐程度，同时与几何控制进行显式比较。&#10;&#10;✨ **主要贡献**：实验表明，纯框几何方法的方向对齐误差比最佳模型归因方法低28.4至34.4度，揭示当前归因方法的方向结构有限且常与图像布局混合；此外，任务准确率的提升并不保证方向归因的改善，为评估空间推理改进提供了可控协议。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Standard attribution heatmaps show where a vision-language model (VLM) focuses, but they do not reveal whether the recovered evidence is organized by the queried spatial relation or merely reflects image layout. To address this problem, we introduce CREG (Compass Relational Evidence Graph), a training-free diagnostic framework that converts token-level attribution into a reference-centered compass distribution and measures its directional alignment. CREG provides a shared directional readout across attribution methods and makes comparison with geometric controls explicit. Across three spatial-relation benchmarks, box-only geometry achieves Direction Alignment Error 28.4 to 34.4 degrees lower than the best current model-based attribution method on each dataset, leaving a substantial gap between attribution structure and simple target localization. To examine this gap, we apply a diagnostic battery including target intervention, reference-center randomization, and variance partition. Taken together, the results suggest that the directional structure recoverable from current attribution methods is limited and often mixed with image layout. We further find that higher task accuracy does not reliably coincide with better directional attribution: small-scale LoRA training and newer model generations can improve task accuracy while leaving Direction Alignment Error unchanged or worse. These findings characterize what current attribution methods reveal rather than the model's internal spatial representation. CREG provides a controlled protocol for testing whether improvements in spatial reasoning are accompanied by more directionally organized evidence.</p>
@@ -1124,10 +1196,7 @@
                         <span class="paper-date">2026-06-21</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有机器人系统难以从宽视角图像中准确理解人类细粒度动作、意图和上下文线索，而当前视觉语言模型（VLM）在信息丰富性与事实准确性之间存在权衡，无法满足可靠的人机交互需求。&#10;&#10;🛠 **方法**：提出Gold Points Sniper（GPS）框架，包含三个模块：Gold Points Extractor（提取关键动作细节）、Selective Socratic Questioner（通过选择性自问验证并优化细节）、Semantic Entailment Evaluator（利用语义蕴含分类量化事实一致性），从而赋予轻量级VLM自引导的多模态推理能力。&#10;&#10;✨ **主要贡献**：在CAP基准数据集上，GPS增强的轻量级VLM在细粒度动作理解任务中性能显著提升，部分模型达到与GPT-4o相当的水平，同时保持更高的事实准确性，为家庭机器人安全理解人类行为提供了可靠基础。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Robots operating in everyday environments must understand fine-grained human actions, intentions, and contextual cues from broad views where people occupy only small regions, a capability unmet by current systems. While open-vocabulary action recognition methods remain limited to assigning predefined labels, and vision-language models (VLMs) face an inherent trade-off between informational richness and factual fidelity in their outputs, neither approach achieves the deep semantic interpretation required for reliable human-robot interaction. We propose Gold Points Sniper (GPS), a novel framework that empowers lightweight VLMs with self-guided multimodal reasoning capabilities for fine-grained human action understanding. Our approach comprises three key modules: Gold Points Extractor trains VLMs to identify critical action-relevant details, Selective Socratic Questioner validates and refines these details through selective self-questioning, and Semantic Entailment Evaluator quantitatively assesses factual consistency using semantic entailment classification. Extensive experiments on our curated instruction-tuning dataset based on the CAP benchmark demonstrate that GPS-enhanced lightweight VLMs achieve substantial performance improvements, with some models reaching performance comparable to proprietary GPT-4o while maintaining superior factual accuracy. Our work establishes a reliable foundation for fine-grained action understanding in domestic robotics, enabling robots to safely interpret human behavior through information-dense yet factually grounded descriptions. Source code, training configurations, annotation prompts, and dataset details are released at https://github.com/Haodi-Liu/GPS-Gold-Point-Sniper.</p>
@@ -1139,10 +1208,7 @@
                         <span class="paper-date">2026-06-20</span>
                     </div>
                                         <span class="paper-comment">📝 submitted to MICCAI 2026</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决基于视觉语言模型（VLM）的零样本异常定位在医学影像中因缺乏正常解剖背景而性能受限的问题。&#10;&#10;🛠 **方法**：提出WALDO框架，基于最优传输理论，通过熵加权切片Wasserstein距离进行解剖感知参考选择、Goldilocks区域采样利用参考相似度与定位精度的非单调关系，以及自一致性聚合加权非极大值抑制，实现无训练的比较推理。&#10;&#10;✨ **主要贡献**：在NOVA脑MRI基准上，WALDO结合Qwen2.5-VL-72B达到43.5% mAP@30，较零样本基线提升19%；跨模型验证（GPT-4o、Qwen3-VL-32B）均显示一致增益，且统计显著性检验p&lt;0.01。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Zero-shot anomaly localisation via vision-language models (VLMs) offers a compelling approach for rare pathology detection, yet its performance is fundamentally limited by the absence of healthy anatomical context. We reformulate zero-shot localisation as a comparative inference problem in which anomalies are identified through structured comparison against reference distributions of normal anatomy. We introduce WALDO, a training-free framework grounded in optimal transport theory that enables comparative reasoning through: (i) entropy-weighted Sliced Wasserstein distances for anatomically-aware reference selection from DINOv2 patch distributions, (ii) Goldilocks zone sampling exploiting the non-monotonic relationship between reference similarity and localisation accuracy, and (iii) self-consistency aggregation via weighted non-maximum suppression. We theoretically analyse the Goldilocks effect through distributional divergence, and show that references with moderate similarity minimize a bias-variance trade-off in comparative visual reasoning. On the NOVA brain MRI benchmark, WALDO with Qwen2.5-VL-72B achieves $43.5_{\pm1.6}\%$ mAP@30 (95\% CI: [40.4, 46.7]), representing a 19\% relative improvement over zero-shot baselines. Cross-model evaluation shows consistent gains: GPT-4o achieves $32.0_{\pm6.5}\%$ and Qwen3-VL-32B achieves $32.0_{\pm6.6}\%$ mAP@30. Paired McNemar tests confirm statistical significance ($p<0.01$). Source code is available at https://github.com/bkainz/WALDO_MICCAI26_demo .</p>
@@ -1154,10 +1220,7 @@
                         <span class="paper-date">2026-06-19</span>
                     </div>
                                         <span class="paper-comment">📝 Website: https://felixomahony.github.io/vdaworld/</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：生成式视频模型作为世界建模的主流方法，存在违反物理/逻辑规则、缺乏交互性、且作为黑箱难以构建结构化可查询世界的问题。&#10;&#10;🛠 **方法**：提出VDAWorld框架，利用视觉语言模型（VLM）作为智能代理，自主选择视觉工具构建2D/3D场景表示，并匹配兼容的物理模拟器（如刚体、流体），从静态场景推断潜在动态以预测未来状态。&#10;&#10;✨ **主要贡献**：将图像-文本对蒸馏为可模拟的抽象表示，实现智能抽象与自适应模拟的结合，在交互控制、反事实生成及物理/逻辑推理等基准上达到最优性能。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Generative video models, a leading approach to world modelling, face fundamental limitations. They often violate physical and logical rules, lack interactivity, and operate as opaque black boxes ill-suited for building structured, queryable worlds. To overcome these challenges, we propose a new paradigm focused on distilling an image caption pair into a tractable, abstract representation optimized for simulation. We introduce VDAWorld, a framework where a Vision-Language Model (VLM) acts as an intelligent agent to orchestrate this process. The VLM autonomously constructs a grounded (2D or 3D) scene representation by selecting from a suite of vision tools, and accordingly chooses a compatible physics simulator (e.g., rigid body, fluid) to act upon it. VDAWorld can then infer latent dynamics from the static scene to predict plausible future states. Our experiments show that this combination of intelligent abstraction and adaptive simulation results in a versatile world model capable of producing high quality simulations across a wide range of scenarios. We demonstrate several applications of VDAWorld across interactive control and counterfactual generation, and physical and logical reasoning, achieving state-of-the-art results on several benchmarks.</p>
@@ -1169,10 +1232,7 @@
                         <span class="paper-date">2026-06-19</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有程序性错误检测方法依赖多阶段流水线和监督训练数据，限制了其通用性和零样本应用能力。&#10;&#10;🛠 **方法**：提出ZeProM框架，利用单一预训练视频-语言模型（VLM）联合解决零样本程序性错误检测和时间动作分割任务。&#10;&#10;✨ **主要贡献**：在EgoPER和CaptainCook4D基准上，ZeProM在零样本设置下接近甚至超越全监督方法，例如在EgoPER任务中平均提升EDA 4.4点、F1@.5 2.0点，展示了统一方法替代复杂流水线的潜力。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Procedural mistake detection is important for quality control and user assistance across many disciplines. Recent work in this field has achieved significant gains by using the reasoning capabilities of Video-Language Models (VLMs) as components within multi-stage pipelines, which consist of separate modules for supervised temporal action segmentation, error detection, and explainability. Consequently, they remain dependent on tailored training datasets and require task-specific training, limiting their wider applicability. To remedy this, we introduce zero-shot procedural mistake detection and propose a unified Zero-shot Procedural Mistake detection (ZeProM) framework that jointly solves procedural mistake detection and temporal action segmentation with a single pre-trained VLM. By evaluating our framework on two canonical mistake detection benchmarks, EgoPER and CaptainCook4D, we find that ZeProM can perform these tasks successfully, while approaching, or even outperforming, the performance of fully supervised methods. For instance, we achieve a 4.4 point improvement in EDA and a 2.0 point improvement in F1@.5 on average over all five EgoPER tasks compared to the strongest supervised methods. Overall, our results show the potential of unified methods for procedural mistake detection, and we hope this will steer the field away from highly complex pipelines and toward more generally applicable solutions.</p>
@@ -1380,18 +1440,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Vision-Language models (VLMs) reliability in medical diagnosis is challenged by trust-undermining hallucinations. Existing hallucination detection approaches mainly focus on identifying factual inconsistencies between generated text and reference data. While some studies analyze where models attend in images, they seldom verify whether such attention truly reflects the visual evidence supporting the generated text. To address this gap, we propose Co}unter-Evidence Verification (CoEV), a training-free plug-and-play framework that detects and corrects hallucinations through evidence-based factual consistency verification. CoEV performs bidirectional verification between textual assertions and visual evidence, testing whether each statement is supported by its corresponding evidence region, and assigns each statement into a four-quadrant diagnostic map capturing combinations of text factuality and visual grounding. CoEV detects hallucinated content and serves as a post hoc refinement tool, correcting hallucinations without retraining. Extensive experiments on four medical datasets show that CoEV combats hallucinations in VLMs.For hallucination detection, CoEV consistently outperforms existing methods, improving average PR-AUC and ROC-AUC by 3.0% and 3.9% absolute points respectively, with notable gains of up to 18.5% in specific VQA scenarios. For hallucination correction, it improves Micro-F1 by up to 12.5%, reduces hallucination rates by over 11.9% on medical report generation, and also boosts medical VQA accuracy. These results show that CoEV enables reliable detection and correction of hallucinations, providing clinicians with dependable, evidence-based cues for diagnosis. Code will be released upon acceptance.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.17412v2" target="_blank" class="paper-title">Enhancing Pathological VLMs with Cross-scale Reasoning</a>
-                        <span class="paper-date">2026-06-17</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Pathological images are inherently multi-scale, requiring pathologists to integrate evidence from global tissue architecture at low magnification to cellular morphology at higher magnification for accurate diagnosis. While existing pathological datasets for vision-language model (VLM) include various scales, they often lack an explicit cross-scale reasoning objective. This limitation prevents VLMs from capturing essential cross-scale representations and learning evidence-based reasoning. To bridge this gap, we introduce the first cross-scale training and evaluation paradigm that formulates pathology interpretation as multi-magnification reasoning. However, creating such a task reveals a critical challenge: multi-image visual question answering (VQA) is prone to text-only shortcuts, which allow models to guess answers using magnification-dependent artifacts rather than visual evidence. To address this, we propose a leakage-aware curation pipeline that combines adversarial text-only screening with constraint-guided question design. Using this pipeline, we construct Scale-VQA, a high-quality benchmark with 4,685 multiple-choice questions grounded in 2,537 pathology images across multiple magnification levels. Finally, we present ScaleReasoner-R1, a model trained via reinforcement learning to optimize performance on the cross-scale VQA task. ScaleReasoner-R1 achieves state-of-the-art performance on our cross-scale reasoning benchmark and generalizes to SOTA performance on established single-scale benchmarks. Findings suggest that even the limited cross-scale supervision can significantly improve pathological understanding. The code and demos will be open-sourced.</p>
                     </details>
                 </div>
                 <div class="paper-card">
@@ -1968,54 +2016,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Video vision-language models (VLMs) are increasingly used in long-horizon and streaming settings, yet most video encoders still rely on spatiotemporal self-attention, causing compute and latency to grow quadratically with the number of frames. Existing efficiency methods improve scalability but often lose accuracy relative to full self-attention, for example through aggressive frame/token dropping or coarse attention approximations. We introduce StateKV, an inference-time method that adapts pretrained long-video VLMs to linear-time video prefill by carrying cross-frame context in a fixed-capacity, importance-based recurrent state, paired with a second full per-frame cache used for decoding. Across three long-video benchmarks and seven models spanning three families and multiple scales, StateKV remains close to full self-attention and consistently outperforms dominant sliding-window / recency-based streaming approximations, without fine-tuning or architectural changes. StateKV also reduces video-prefill cost measured FLOPs, enabling stronger accuracy at a fixed compute budget by running larger models. These results suggest a practical step toward scalable long-video understanding.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2510.22067v3" target="_blank" class="paper-title">Capturing Gaze Shifts for Guidance: Cross-Modal Fusion Enhancement for VLM Hallucination Mitigation</a>
-                        <span class="paper-date">2026-05-29</span>
-                    </div>
-                                        <span class="paper-comment">📝 ICML 2026</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Vision language models (VLMs) often generate hallucination, i.e., content that cannot be substantiated by either textual or visual inputs. Prior work primarily attributes this to over-reliance on linguistic prior knowledge rather than visual inputs. Some methods attempt to mitigate hallucination by amplifying visual token attention proportionally to their attention scores. However, these methods overlook the visual attention sink problem, where attention is frequently misallocated to task-irrelevant visual regions, and neglect cross-modal fusion balance by enhancing only visual attention without adjusting attention to the user query. This can result in amplifying incorrect areas while failing to properly interpret the user query. To address these challenges, we propose a simple yet effective method called Gaze Shift-Guided Cross-modal Fusion Enhancement (GIFT). GIFT pre-computes a holistic visual saliency map by tracking positive changes in visual attention, or "gaze shifts", during user query comprehension, and leverages this map to amplify attention to both salient visual information and the user query at each decoding step. This reduces the impact of visual attention sink, as irrelevant tokens exhibit minimal shifts, while ensuring balanced cross-modal fusion for well-integrated representation. Extensive experiments show that GIFT effectively mitigates hallucination in VLMs across both generative and classification tasks, achieving up to 20.7% improvement over greedy decoding, while maintaining general vision-language performance with low computational overhead.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2605.31387v1" target="_blank" class="paper-title">Multi-Turn Multi-Agent Dialogue for Collaborative Reconstruction Improves VLM Performance on Spatial Reasoning, But Only Barely</a>
-                        <span class="paper-date">2026-05-29</span>
-                    </div>
-                                        <span class="paper-comment">📝 Preprint</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Robots operating in diverse environments rely on visual input to interpret objects and spatial layouts. In human-collaborative tasks, they are expected to communicate this understanding through language. Vision-language models (VLMs) support robotic tasks involving visual interpretation, question answering, and instruction following, but their capabilities in collaborative dialogue tasks requiring spatial reasoning remain underexplored. We study this gap through a collaborative structure-building task that combines visual interpretation, grounding, language-guided interaction, and action generation. We develop a framework in which VLMs use dialogue to reconstruct a target structure from visual and textual inputs. We evaluate open-weight and closed VLMs across interaction settings, input modalities, and image representations. Results show that spatial reasoning over visual representations remains difficult for the evaluated VLMs. Detailed text representations of the target yield higher reconstruction success across modality conditions, while decomposed image representations improve performance. These findings reveal limits in visual spatial grounding and grounded instruction generation for collaborative VLM agents.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2605.31351v1" target="_blank" class="paper-title">A Visually Impaired Assistance Benchmark for VLM-as-a-Judge Evaluation</a>
-                        <span class="paper-date">2026-05-29</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>AI-based Visually Impaired Assistance (VIA) remains challenging, largely due to the high cost of human evaluation. The VLM-as-a-Judge paradigm may offer a promising alternative, although it has mostly been studied in general domains. We therefore ask whether such judges can be trusted for VIA tasks. To investigate this question, we introduce VIABLE (Visually Impaired Assistance Benchmark for VLM-as-a-Judge Evaluation), the first benchmark for VLM-as-a-Judge evaluation in VIA. VIABLE contains over 300K judgment samples across three scenarios and introduces an Effectiveness--Impartiality--Stability framework with a 12-mode failure taxonomy. Based on VIABLE, our systematic study of seven judges across different model scales shows that existing models are largely unreliable across all evaluation axes. The strongest judge, GPT-5.4, achieves only 52.6% single-failure diagnostic accuracy, yet exhibits the highest self-preference rate at 94.2%; while open-source judges are strongly biased and adversarially fragile. To address these issues, we propose VIA-Judge-Agent, a model-agnostic inference-time harness that augments judges with visual evidence extraction and a taxonomy-guided workflow. It enables positive improvements in diagnostic accuracy and downstream VIA responses more preferred by BLV users. Data and code are available at: https://github.com/YiyiyiZhao/VIABLE</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2605.31349v1" target="_blank" class="paper-title">FBHM: Functional Benchmarking and Steering of VLMs for Hateful Meme Detection</a>
-                        <span class="paper-date">2026-05-29</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Hateful meme detection remains a formidable challenge for vision-language models, as existing benchmarks are structurally observational - confounding rhetorical hate mechanisms with target community features and preventing causal evaluation of model vulnerabilities. To address this, we introduce FBHM, a systematically curated benchmark of Functionality Based Hateful Memes constructed along two orthogonal axes: 25 distinct rhetorical functionalities and 10 target communities (5,000 memes total). Benchmarking state-of-the-art VLMs reveals a severe generalization gap: models highly accurate on standard datasets catastrophically drop to near-random performance on FBHM, proving they exploit dataset-specific heuristics rather than robust multimodal reasoning. To efficiently close this gap, we propose LSV (learnable steering vectors), an ultra-low data regime strategy that applies a causal intervention objective on as few as 500 steering samples (50 unique base memes), boosting FBHM performance by ~30 Macro-F1 points while outperforming in-context learning and PEFT without degrading source-domain performance.</p>
                     </details>
                 </div>
             </div>
