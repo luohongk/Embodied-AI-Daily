@@ -570,7 +570,7 @@
                 <a href="Continuous-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#6366f1"></span>
                     <span class="nav-label">Continuous Learning</span>
-                    <span class="nav-count">78</span>
+                    <span class="nav-count">79</span>
                 </a>
                 <a href="Feed-Forward-Reconstruction.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
@@ -675,7 +675,7 @@
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Kalman Filter</span>
-                    <span class="nav-count">59</span>
+                    <span class="nav-count">55</span>
                 </a>
                 <a href="Loop-Closure-Detection.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -690,17 +690,17 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">67</span>
+                    <span class="nav-count">68</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">79</span>
+                    <span class="nav-count">75</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
                     <span class="nav-label">PPO</span>
-                    <span class="nav-count">77</span>
+                    <span class="nav-count">76</span>
                 </a>
                 <a href="Hierarchical-Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f97316"></span>
@@ -740,7 +740,7 @@
                 <a href="Motion-Planning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#0ea5e9"></span>
                     <span class="nav-label">Motion Planning</span>
-                    <span class="nav-count">78</span>
+                    <span class="nav-count">79</span>
                 </a>
                 <a href="Path-Planning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#3b82f6"></span>
@@ -789,7 +789,7 @@
             <a href="Continuous-Learning.html" class="nav-item active">
                 <span class="nav-dot" style="background:#6366f1"></span>
                 <span class="nav-label">Continuous Learning</span>
-                <span class="nav-count">78</span>
+                <span class="nav-count">79</span>
             </a>
             <a href="Feed-Forward-Reconstruction.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
@@ -894,7 +894,7 @@
             <a href="Kalman-Filter.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Kalman Filter</span>
-                <span class="nav-count">59</span>
+                <span class="nav-count">55</span>
             </a>
             <a href="Loop-Closure-Detection.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -909,17 +909,17 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">67</span>
+                <span class="nav-count">68</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">79</span>
+                <span class="nav-count">75</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
                 <span class="nav-label">PPO</span>
-                <span class="nav-count">77</span>
+                <span class="nav-count">76</span>
             </a>
             <a href="Hierarchical-Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f97316"></span>
@@ -959,7 +959,7 @@
             <a href="Motion-Planning.html" class="nav-item">
                 <span class="nav-dot" style="background:#0ea5e9"></span>
                 <span class="nav-label">Motion Planning</span>
-                <span class="nav-count">78</span>
+                <span class="nav-count">79</span>
             </a>
             <a href="Path-Planning.html" class="nav-item">
                 <span class="nav-dot" style="background:#3b82f6"></span>
@@ -1025,9 +1025,54 @@
         <section class="topic-section">
             <div class="topic-header">
                 <span class="topic-badge" style="background:#6366f1">Continuous Learning</span>
-                <span class="topic-count">78 papers</span>
+                <span class="topic-count">79 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2606.27353v1" target="_blank" class="paper-title">Continual Robot Policy Learning via Variational Neural Dynamics</a>
+                        <span class="paper-date">2026-06-25</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：机器人在真实环境中部署时，其动力学模型会因风、负载、电池、硬件磨损等因素持续变化，而现有学习控制器无法利用部署经验持续改进策略，导致性能下降。&#10;&#10;🛠 **方法**：提出一种持续学习框架，结合解析物理先验与神经网络残差学习条件感知动力学模型；通过循环编码器从近期交互中推断隐藏条件，并基于该条件采样多样化动力学进行可微分仿真训练策略；部署时用在线推断的条件替换采样条件，通过识别而非残差重拟合恢复重复出现的动力学。&#10;&#10;✨ **主要贡献**：在真实四旋翼轨迹跟踪实验中，该方法能在约1秒内从重复扰动中恢复，比在线残差重拟合快约5倍；相比最先进的在线自适应方法，大幅扰动下的悬停和跟踪误差分别降低65.7%和53.3%。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Robots deployed in the real world rarely operate under a single fixed dynamics model: wind changes, payloads vary, batteries drain, contacts shift, and hardware wears. Yet most learning-based controllers are trained once and deployed as if learning were complete. This prevents the robot from using deployment experience to further improve task performance. In this work, we propose a continual learning framework that uses real-world experience to improve robot policies under hidden and recurring dynamics. Our method learns a condition-aware dynamics model from real state-action trajectories by combining an analytical physics prior with a neural residual for unmodeled effects. A recurrent encoder infers the current hidden condition from recent interaction, and this estimate conditions both the residual model and the policy. Policy learning is performed via differentiable simulation using diverse learned dynamics sampled from the latent model. At deployment, these sampled conditions are replaced by conditions inferred online from recent real interaction, allowing the policy to recover recurring dynamics by recognition rather than residual re-fitting. Through extensive simulation studies and real-world experiments, we demonstrate that the framework improves policy performance under diverse unobserved disturbances. On real quadrotor trajectory tracking under changing wind, the policy recovers from recurring disturbances in roughly 1s, about 5x faster than online residual re-fitting. It also reduces large-disturbance hover and tracking errors by 65.7% and 53.3% over the state-of-the-art online adaptation approaches</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2606.27095v1" target="_blank" class="paper-title">Data-Free Reservoir Features for Efficient Long-Horizon Cold-Start Continual Learning</a>
+                        <span class="paper-date">2026-06-25</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决冷启动无样本类增量学习中，现有方法在长任务序列下计算成本高或性能弱的问题，特别是避免回放、外部预训练或大初始任务的需求。&#10;&#10;🛠 **方法**：提出CIRCLE方法，使用固定的双向二维储层特征（BiRC2D）作为特征提取器，结合流式线性判别分析（SLDA）分类头，并通过多随机储层实例集成和软输出平均来平衡偏差-方差。&#10;&#10;✨ **主要贡献**：在CIFAR-100、TinyImageNet等数据集上，CIRCLE在10-20任务分割时表现竞争力，在50、100、500任务分割时大幅超越强基线，且训练速度远快于基于骨干网络漂移补偿的方法。消融实验证实BiRC2D提取器、SLDA头和集成策略均贡献显著。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Cold-start exemplar-free class-incremental learning requires learning a growing set of classes without replay, external pretraining, or a large initial task. Existing cold-start methods typically either train the backbone throughout the stream and compensate for semantic drift, or freeze a backbone after the first task, producing features biased toward the initial classes. These choices also create a computational tension: drift-compensation methods require repeated backbone training and increasingly expensive updates as the task horizon grows, while frozen-backbone methods are cheap but weak under cold start. We study a third option: a feature extractor that is never fit to image data at all. We propose CIRCLE, a class-incremental classifier built from fixed bidirectional two-dimensional reservoir features, adapted from BiRC2D for image classification, and streaming linear discriminant analysis heads. CIRCLE groups multiple random reservoir instantiations into feature ensembles and averages the softmax outputs of independent SLDA heads, yielding a tunable bias-variance tradeoff between richer random features and prediction-level ensembling. Because the feature extractor is fixed and the head admits streaming closed-form updates, CIRCLE performs sample-wise training without replay, task-boundary information, or backbone backpropagation. On CIFAR-100, TinyImageNet, ImageNet-Subset, and ImageNet-1k, CIRCLE is competitive at 10-20 task splits and substantially outperforms strong CS-EFCIL baselines at 50, 100, and 500 task splits, while training much faster than trained-backbone drift-compensation methods. Ablations show that the BiRC2D-style extractor, SLDA head, and balanced feature/prediction ensembling each contribute to the final performance.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2606.26629v1" target="_blank" class="paper-title">From Weights to Features: SAE-Guided Activation Regularization for LLM Continual Learning</a>
+                        <span class="paper-date">2026-06-25</span>
+                    </div>
+                                        <span class="paper-comment">📝 21 pages, 4 figures, 6 tables</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决大语言模型在持续学习中因权重空间正则化方法（如EWC）过于粗糙而导致的灾难性遗忘问题，特别是权重多义性导致知识保护不精准。&#10;&#10;🛠 **方法**：提出基于稀疏自编码器（SAE）的激活空间正则化方法，利用SAE作为单义特征字典，通过约束优化推导新损失函数，在激活空间中显式平衡稳定性与可塑性，并仅保留紧凑的SAE特征掩码，无需存储先前任务数据。&#10;&#10;✨ **主要贡献**：在TRACE和MedCL基准上超越EWC等传统方法，且无需任务特定架构；实验证明任务相关表示在SAE特征空间线性可分，而权重空间保护几乎无概念选择性，验证了多义性假说。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Weight-space regularization methods such as Elastic Weight Consolidation (EWC) are the standard approach to catastrophic forgetting in continual learning. However, those methods tend to underperform when applied to large language models. We argue that such underperformance can be partly explained by the ``polysemantic'' nature of large language models: per-weight importance estimates utilized by EWC-style regularization are too coarse and cannot isolate the knowledge that needs protection. In this paper, we propose regularizing instead in the model's activation space, using pretrained Sparse Autoencoders (SAEs) as a monosemantic feature dictionary. From the perspective of constrained optimization, we derive a new loss function that uses the SAE feature dictionary to explicitly balance stability and plasticity, and show that EWC is a special case in the one-sided weight-space penalty setting. Unlike replay-based methods that store or revisit examples from earlier tasks, our method requires no previous-task data after mask construction: current-task data is used to compute a compact SAE feature mask, and only this mask is retained for later training. Further, since the feature space has significantly lower dimensionality than the parameter space, the proposed method is more memory efficient. On the TRACE and MedCL continual learning benchmarks, the method achieves the strongest result among approaches without introducing task-specific architectural components, also surpassing traditional weight-space regularization methods like EWC. Beyond performance comparisons, we provide empirical evidence for the polysemanticity thesis: task-relevant representations are linearly separable in the SAE feature basis but indistinguishable from chance in the weight basis, and weight-space protection is nearly non-selective at the concept level.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2606.25342v1" target="_blank" class="paper-title">Lifelong In-Context Learning with Transformers Requires Parametric Forms of Attention</a>
@@ -1139,10 +1184,7 @@
                         <span class="paper-date">2026-06-23</span>
                     </div>
                                         <span class="paper-comment">📝 The submission is under review</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决电力预测模型在非平稳时间序列中因数据分布持续变化（如天气、基础设施升级、消费行为改变）而难以长期稳定运行的问题，同时满足历史数据有限和需不间断服务的实际约束。&#10;&#10;🛠 **方法**：提出“连续电力预测”范式，将电力预测视为持续学习问题，并基于自适应持续学习框架，系统评估了三种方法论类别下的六种代表性持续学习方法，在不同数据可访问性和更新策略下进行实验验证。&#10;&#10;✨ **主要贡献**：证明持续学习能使模型自适应分布漂移、积累知识并缓解灾难性遗忘，无需依赖大规模历史数据存储；同时提供了不同方法在实际操作约束下的稳定性和适应行为洞察，为工业电力预测管线的长期部署提供了可扩展且可持续的解决方案。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Power forecasting models deployed in real-world energy markets must operate under nonstationary conditions, where data distributions continually evolve due to weather variability, infrastructure upgrades, and changing consumption behaviors. In practice, these models face strict operational constraints: historical data may be limited or unavailable for repeated retraining, and uninterrupted long-term service is often required. This paper addresses these challenges by proposing the paradigm of Continuous Power Forecasting, which views power forecasting as a continual learning problem rather than a static offline task. Based on an adaptive continual learning framework for regression, we systematically investigate the practical effectiveness of six representative continual learning approaches from three methodological categories. These approaches are evaluated under different realistic assumptions regarding data accessibility and update policies. Experimental validation on real-world power datasets demonstrates that continual learning enables forecasting models to self-adapt to distributional drift, accumulate knowledge over time, and mitigate catastrophic forgetting without relying on large-scale historical data storage. Beyond performance gains, our study provides practical insights into the stability and adaptation behaviors of different continual learning approaches under realistic operational constraints. Overall, this work illustrates how continual learning can be pragmatically integrated into industrial power forecasting pipelines, offering a scalable and sustainable solution for long-term deployment in dynamic environments.</p>
@@ -1154,10 +1196,7 @@
                         <span class="paper-date">2026-06-23</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在标注数据稀缺的情况下，现有基于层次对比损失（HCL）的恶意软件检测方法因依赖完全标注数据，在概念漂移和弱语义结构场景下性能显著下降，难以有效检测未知恶意软件。&#10;&#10;🛠 **方法**：提出SEED方法，结合定制二元交叉熵损失、半监督持续学习与主动学习。对部分标注任务，利用奇异值分解构建表示空间并配对未标注与标注样本；对完全未标注任务，基于余弦距离量化不确定性，选择最不确定样本供分析师标注。&#10;&#10;✨ **主要贡献**：在仅使用20%标注数据的情况下，SEED在BODMAS和AndroZoo数据集上对未知恶意软件检测的平均AUT分别提升40%和14%，优于半监督HCL*方法；同时引入延迟缓冲区更新策略，减少重放中的标签噪声传播，提升学习稳定性。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Machine learning based malware detectors become obsolete over time due to concept drift in benign and malware applications. Recent methods rely on fully labeled data and use hierarchical contrastive loss (HCL) with active learning to improve robustness against drift by exploiting semantic structure in malware representations. However, obtaining labeled data in the security domain is difficult. Under partially labeled settings, HCL suffers significant performance degradation in detecting unseen malware, especially on datasets such as BODMAS where strong semantic structure may not exist. In this paper, we propose SEED, a semantic-structure-agnostic method for malware detection under limited supervision. SEED combines a tailored binary cross-entropy objective with semi-supervised continual learning and active learning. For partially labeled seen tasks, unlabeled samples are projected into a representation space constructed from previously seen data using singular value decomposition, and paired with suitable labeled samples to encourage representation consistency. For unseen tasks with fully unlabeled data, uncertainty is quantified using cosine distance in representation space, and the most uncertain samples are selected for analyst labeling. We evaluate SEED on both Windows and Android malware datasets. Using only 20% labeled data on seen tasks, SEED achieves average AUT improvements of 40% on BODMAS and 14% on AndroZoo for unseen malware detection compared to HCL* (the semi-supervised adaptation of HCL), while remaining competitive on APIGraph. Finally, we introduce a delayed buffer update strategy to reduce label noise propagation during replay and improve learning stability.</p>
@@ -1169,10 +1208,7 @@
                         <span class="paper-date">2026-06-22</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：深度学习模型在持续学习中面临稳定性与可塑性平衡的挑战，现有优化器缺乏内在的持续适应机制。&#10;&#10;🛠 **方法**：提出CoVON优化器，基于变分持续学习（VCL）框架，通过合并历史后验分布实现慢速知识漂移，并将合并后的后验作为先验用于快速权重更新，该过程无缝集成于IVON优化器中。&#10;&#10;✨ **主要贡献**：CoVON优化器在域增量学习、持续预训练和大语言模型微调中，不仅一致优于现有VCL优化器，还超越了其他权重正则化策略，且计算成本与Adam几乎相同。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Continual learning remains a major challenge for modern deep networks, partly because commonly used optimizers lack inherent mechanisms for continual adaptation. One such natural mechanism is fast and slow adaptation to balance stability and plasticity. This mechanism has deep roots in neuroscience and biology, but there is no consensus on how to best incorporate it in commonly used optimizers. Here, we show that this can be easily done via the VCL framework, where past posteriors are used as priors in the future. Our key idea is to incorporate slow adaptation via merging of past posteriors to slow down the drift in the knowledge as learning progresses. The merged posterior is then used as the prior in the VCL update to implement the fast-weight updates. These steps can be seamlessly implemented in the IVON optimizer, whose form and costs are nearly identical to that of Adam. We call this new optimizer the Continual IVON (CoVON) optimizer and show that it not only consistently improves over existing VCL optimizers, but also performs better than other weight-regularization strategies across domain-incremental learning, continual pre-training, and fine-tuning of large language models.</p>
@@ -1968,30 +2004,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Continual Object Detection (COD) requires a detector to acquire new categories over time while preserving previously learned ones. This goal is closely related to open-vocabulary detection, since both settings require reasoning over categories that are not fully covered by the annotations available at the current training stage. Recent CLIP-based open-vocabulary detectors have shown strong zero-shot generalization, and frameworks such as F-ViT demonstrate that vision-language pretraining can provide powerful zero-shot detection ability for unseen categories. However, real-world deployments cannot remain purely zero-shot: once these detectors are continually updated on newly introduced categories, they suffer severe catastrophic forgetting and quickly lose their previously calibrated detection ability. We therefore propose CL-CLIP, a CLIP-based COD framework that equips open-vocabulary detectors with better continual learning ability through cost-volume-guided category decoupling. Specifically, following CAT-Seg, we compute a CLIP image-text similarity cost volume, defined as dense category-wise response maps between visual tokens and class text embeddings. This zero-shot spatial prior decomposes shared region features into class-specific pathways, which are then processed by a Multi-Expert RoI head. Extensive experiments on PASCAL VOC and MS-COCO show that CL-CLIP substantially improves the F-ViT baseline under continual fine-tuning and achieves competitive performance with existing continual object detectors, especially in adapting to newly introduced categories while preserving competitive base-class performance.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2512.01362v2" target="_blank" class="paper-title">Directed evolution algorithm drives neural prediction</a>
-                        <span class="paper-date">2026-06-05</span>
-                    </div>
-                                        <span class="paper-comment">📝 43 pages, 5 figures</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Neural prediction offers a promising approach to forecasting the individual variability of neurocognitive functions and disorders and providing prognostic indicators for personalized invention. However, it is challenging to translate neural predictive models into medical artificial intelligent applications due to the limitations of domain shift and label scarcity. Here, we propose the directed evolution model (DEM), a novel computational model that mimics the trial-and-error processes of biological directed evolution to approximate optimal solutions for predictive modeling tasks. We demonstrated that the directed evolution algorithm is an effective strategy for uncertainty exploration, enhancing generalization in reinforcement learning. Furthermore, by incorporating replay buffer and continual backpropagate methods into DEM, we provide evidence of achieving better trade-off between exploitation and exploration in continuous learning settings. We conducted experiments on four different datasets for children with cochlear implants whose spoken language developmental outcomes vary considerably on the individual-child level. Preoperative neural MRI data has shown to accurately predict the post-operative outcome of these children within but not across datasets. Our results show that DEM can efficiently improve the performance of cross-domain pre-implantation neural predictions while addressing the challenge of label scarcity in target domain.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.06494v1" target="_blank" class="paper-title">TailLoR: Protecting Principal Components in Parameter-Efficient Continual Learning</a>
-                        <span class="paper-date">2026-06-04</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Parameter-efficient finetuning methods based on spectral decomposition have enabled progress in Continual Learning. In this paper we introduce TailLoR, which utilizes the singular bases U and V of the pre-trained weights as a fixed reference frame to learn a low-rank update applied to the singular value matrix. A soft spectral penalty discourages updates aligned with dominant singular directions, reducing interference while routing fine-grained adaptation into the highly flexible, long-tail spectral coordinates.</p>
                     </details>
                 </div>
             </div>
