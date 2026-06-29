@@ -2,7 +2,7 @@
 
 > **80 papers** fetched from arXiv for the keyword **Mobile Manipulation**.
 
-> Last update: 2026-06-29
+> Last update: 2026-06-30
 
 [← Back to README](../README.md)
 
