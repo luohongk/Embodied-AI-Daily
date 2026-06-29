@@ -590,7 +590,7 @@
                 <a href="World-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">World Model</span>
-                    <span class="nav-count">76</span>
+                    <span class="nav-count">77</span>
                 </a>
                 <a href="3D-Foundation-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
@@ -670,12 +670,12 @@
                 <a href="Autonomous-Driving.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#6366f1"></span>
                     <span class="nav-label">Autonomous Driving</span>
-                    <span class="nav-count">77</span>
+                    <span class="nav-count">78</span>
                 </a>
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Kalman Filter</span>
-                    <span class="nav-count">55</span>
+                    <span class="nav-count">54</span>
                 </a>
                 <a href="Loop-Closure-Detection.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -695,7 +695,7 @@
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">75</span>
+                    <span class="nav-count">79</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -750,7 +750,7 @@
                 <a href="Multimodal-Fusion.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#6366f1"></span>
                     <span class="nav-label">Multimodal Fusion</span>
-                    <span class="nav-count">73</span>
+                    <span class="nav-count">74</span>
                 </a>
                 <a href="Scene-Understanding.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
@@ -809,7 +809,7 @@
             <a href="World-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">World Model</span>
-                <span class="nav-count">76</span>
+                <span class="nav-count">77</span>
             </a>
             <a href="3D-Foundation-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
@@ -889,12 +889,12 @@
             <a href="Autonomous-Driving.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
                 <span class="nav-label">Autonomous Driving</span>
-                <span class="nav-count">77</span>
+                <span class="nav-count">78</span>
             </a>
             <a href="Kalman-Filter.html" class="nav-item active">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Kalman Filter</span>
-                <span class="nav-count">55</span>
+                <span class="nav-count">54</span>
             </a>
             <a href="Loop-Closure-Detection.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -914,7 +914,7 @@
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">75</span>
+                <span class="nav-count">79</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -969,7 +969,7 @@
             <a href="Multimodal-Fusion.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
                 <span class="nav-label">Multimodal Fusion</span>
-                <span class="nav-count">73</span>
+                <span class="nav-count">74</span>
             </a>
             <a href="Scene-Understanding.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
@@ -1025,9 +1025,39 @@
         <section class="topic-section">
             <div class="topic-header">
                 <span class="topic-badge" style="background:#8b5cf6">Kalman Filter</span>
-                <span class="topic-count">55 papers</span>
+                <span class="topic-count">54 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2606.27811v1" target="_blank" class="paper-title">LXD-SLAM: LiDAR+X Dense SLAM with $\sum_{i=0}^{5}C_5^i$ Configurable Sensor Combinations</a>
+                        <span class="paper-date">2026-06-26</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有SLAM系统在复杂环境中易受几何退化与传感器漂移影响，且缺乏模块化能力，难以适配不同平台，融合方式或地图表示不够优化。&#10;&#10;🛠 **方法**：提出LXD-SLAM框架，以3D LiDAR为核心，支持LiDAR、相机、IMU、轮式编码器和GNSS的即插即用组合（最多32种），采用统一迭代误差状态卡尔曼滤波、自适应分层预测、点-网格距离与视觉重投影误差优化，并利用连续多层高斯过程子网格建模环境，结合扩展扫描上下文描述符与双向PnP优化实现多模态闭环。&#10;&#10;✨ **主要贡献**：实现了高度模块化的多传感器融合SLAM，支持多种传感器组合，在公开数据集和真实实验中达到或超越现有专业里程计方案，实时生成高保真、全局一致的三维稠密网格。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Simultaneous Localization and Mapping (SLAM) is essential for autonomous systems, yet achieving reliable, globally consistent pose estimation and dense mapping in complex environments remains challenging due to geometric degeneracy and sensor drift. While multi-sensor fusion addresses these issues, existing systems often lack the modularity to adapt to diverse platforms and rely on mathematically inconsistent fusion or suboptimal map representations. To address these limitations, we propose LXD-SLAM (LiDAR+X Dense SLAM), a highly versatile and unified multi-sensor fusion framework. Centered around 3D LiDAR, our system allows for the plug-and-play integration of LiDAR, Camera, IMU, Wheel Encoder, and GNSS, supporting up to 32 distinct sensor combinations. We employ a mathematically unified Iterative Error-Sate Kalman Filter with an adaptive hierarchical prediction strategy and an update step that minimizes point-to-mesh distances and visual reprojection errors. To support this, the environment is modeled using continuous multi-layered Gaussian Process (GP) sub-meshes, which enables efficient ray-to-mesh depth recovery for visual features. For global consistency, we introduce an Extended Scan Context (ESC) descriptor derived from the GP sub-meshes alongside a Bidirectional PnP optimization for robust multi-modal loop closure within a hybrid pose graph. Extensive evaluations on public datasets and real-world experiments demonstrate that LXD-SLAM matches or exceeds state-of-the-art specialized odometry solutions across various configurations while generating high-fidelity, globally consistent dense meshes in real-time. The relevant codes and data will be made available at https://github.com/peterWon/LXD-SLAM upon publication.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2605.29072v3" target="_blank" class="paper-title">Diffusion Model-Based Data Assimilation for Real-World Energy Consumption Forecasting</a>
+                        <span class="paper-date">2026-06-26</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="好的，作为一名人工智能研究与学术论文分析专家，我将严格按照您的要求，对这篇论文进行详细的中文解读。&#10;&#10;---&#10;&#10;## 0. 概览（Concise Summary）&#10;&#10;- **主题（Topic）**：数据同化（Data Assimilation）在能源消耗预测中的应用。具体来说，是将集成分数滤波器（Ensemble Score Filter, EnSF）应用于修正由预训练时空预测模型生成的实时能源消耗预测结果。&#10;&#10;- **问题（Problem）**：预训练的深度学习预测模型在长期开环（open-loop）预测中，误差会累积并导致预测结果不可靠。同时，现实世界中的观测数据往往是部分、有噪声和非线性的，如何有效融合模型预测与不完美的观测数据以提升状态估计的准确性是一个关键挑战。&#10;&#10;- **方法（Method）**：提出一个结合预训练时空大语言模型（STLLM）和集成分数滤波器（EnSF）的框架。将STLLM视为一个黑盒状态传播器，然后使用EnSF作为数据同化工具，通过贝叶斯滤波框架，在每一步利用新的观测数据来修正STLLM的预测轨迹。&#10;&#10;- **创新（Innovation）**：&#10;    1.  **应用创新**：首次将EnSF应用于高维的实时能源消耗预测修正问题。&#10;    2.  **方法组合**：将预训练的、复杂的深度学习预测模型（STLLM）与一个无需重新训练评分网络的、基于扩散模型的数据同化方法（EnSF）相结合。&#10;    3.  **性能优势**：在非线性观测设置下，证明了EnSF相比经典的集成卡尔曼滤波器（EnKF）具有更强的修正能力。&#10;&#10;- **意义（Significance）**：该工作展示了数据同化在提升深度学习预测模型长期可靠性方面的巨大潜力。它为解决高维、非线性、观测不完美的实时预测问题提供了一个有效且实用的框架，对于电力系统运行、规划和需求侧管理具有重要的应用价值。&#10;&#10;- **一句话总结**：本文提出了一种结合预训练时空预测模型和集成分数滤波器的数据同化框架，通过有效融合部分、有噪声的观测数据，显著修正了长期能源消耗预测的误差，并优于传统的集成卡尔曼滤波器。&#10;&#10;## 1. 研究动机（Motivation）&#10;&#10;- **解决的问题**：高维、实时的能源消耗预测问题。具体而言，是解决预训练的深度学习预测模型在长期递归预测中，由于误差累积而导致的预测轨迹偏离真实状态的问题。&#10;&#10;- **为什么重要**：准确的能源消耗预测对电力系统的运行、规划和需求侧管理至关重要。然而，现实中的数据往往不完整、有噪声或延迟。仅依赖模型进行开环预测（即模型输出作为下一次输入）在长期预测中会变得不可靠。因此，需要一种系统性的方法，将模型预测与不断到来的、不完美的观测数据相结合，以持续修正和提升状态估计的准确性。&#10;&#10;- **挑战在哪里**：&#10;    1.  **高维性**：状态空间维度高（本文中为5000个用户），传统滤波方法（如粒子滤波）会遭遇“维数灾难”。&#10;    2.  **非线性**：状态演化（由深度学习模型表示）和观测模型（如本文中的反正切函数）都可能具有强非线性，导致后验分布非高斯，使得基于高斯假设的卡尔曼滤波器（如EnKF）效果不佳。&#10;    3.  **模型与数据融合**：如何有效地将预训练的、复杂的黑盒预测模型（STLLM）与数据同化方法无缝集成，而无需重新训练模型。&#10;    4.  **计算效率**：数据同化过程需要实时或近实时地进行，因此方法必须具有计算可行性，避免在每一步都进行昂贵的模型重训练。&#10;&#10;## 2. 创新点（Innovation）&#10;&#10;- **关键创新**：&#10;    1.  **EnSF应用于能源预测修正**：首次将集成分数滤波器（EnSF）这一先进的、基于分数的扩散模型的数据同化方法，应用于高维实时能源消耗预测的修正任务。&#10;    2.  **“黑盒预测器 + 无训练评分滤波器”的组合**：将预训练的STLLM作为固定的、黑盒的状态传播器，与EnSF相结合。EnSF的核心优势在于，它通过一个闭式评分表示和蒙特卡洛近似来逼近滤波分布，**无需在数据同化过程中重新训练神经网络评分模型**，这极大地提升了计算效率。&#10;    3.  **在非线性观测下的性能优势**：通过实验证明，在混合了直接观测和非线性（反正切）观测的复杂场景下，EnSF的修正效果显著优于传统的集成卡尔曼滤波器（EnKF）。这是因为EnSF能够更好地逼近非高斯的滤波分布，而EnKF的更新步骤本质上是基于高斯假设的。&#10;&#10;- **与现有方案的不同**：&#10;    - 相比于仅使用开环预测，本文通过数据同化引入了观测信息进行修正。&#10;    - 相比于使用EnKF，本文的EnSF方法在处理非线性观测时，能提供更灵活、更准确的修正，因为它不依赖于高斯近似。&#10;    - 相比于传统的基于神经网络的扩散滤波方法，EnSF避免了在每一步滤波中重新训练评分网络，从而在计算上更加高效。&#10;&#10;- **为什么能奏效**：EnSF利用分数扩散模型强大的分布表示能力，通过一个训练自由的蒙特卡洛评分近似，能够灵活地逼近任意复杂的非高斯滤波分布。这使得它在处理由非线性模型和观测引起的复杂后验分布时，比基于高斯近似的EnKF更具优势。&#10;&#10;## 3. 主要内容（Main Content）【重点】&#10;&#10;### 3.1 设计架构与方法&#10;&#10;整个框架是一个两阶段的过程：&#10;&#10;1.  **预测阶段（由STLLM完成）**：一个预训练的时空大语言模型（STLLM）作为前向传播器。它接收历史能耗数据，预测下一个时间步所有用户的状态。其参数在整个数据同化过程中是固定的。&#10;2.  **修正阶段（由EnSF完成）**：EnSF作为一个数据同化滤波器，在每个时间步执行以下操作：&#10;    - **预测步骤**：将上一时间步的后验状态样本通过STLLM传播，得到当前时间步的先验状态样本集合。&#10;    - **更新步骤**：利用当前时间步的观测数据，通过贝叶斯规则更新先验分布，得到后验分布。EnSF通过一个闭式评分函数和蒙特卡洛近似来实现这一更新，避免了训练神经网络。&#10;&#10;**流程图（概念性）**：&#10;`真实状态` -&gt; `部分、有噪声的观测` -&gt; `EnSF更新步骤` -&gt; `后验状态估计`&#10;^ |&#10;| v&#10;`STLLM预测步骤` &lt;-- `上一时间步的后验状态`&#10;&#10;### 3.2 关键算法与数学推导&#10;&#10;**1. 问题形式化（贝叶斯滤波）**&#10;&#10;- **状态方程**：$X_{t_{n+1}} = f_\theta(X_{t_n}, \eta_{t_n})$，其中 $f_\theta$ 是预训练的STLLM模型，$\eta_{t_n}$ 是模型误差。&#10;- **观测方程**：$Y_{t_{n+1}} = H_{n+1}(X_{t_{n+1}}) + \epsilon_{t_{n+1}}$，其中 $H_{n+1}$ 是观测算子，$\epsilon_{t_{n+1}}$ 是观测噪声。&#10;- **目标**：近似滤波分布 $p(X_{t_{n+1}} | Y_{t_1:t_{n+1}})$，其条件期望即为最优状态估计 $\hat{X}_{t_{n+1}} := \mathbb{E}[X_{t_{n+1}} | Y_{t_1:t_{n+1}}]$。&#10;&#10;**2. 分数扩散模型与训练自由评分近似**&#10;&#10;- **前向SDE**（将目标分布映射到标准高斯分布）：&#10;  $$dZ_\tau = b(\tau) Z_\tau d\tau + \sigma(\tau) dW_\tau$$&#10;  其中 $\tau \in [0,1]$ 是伪时间，$b(\tau)$ 和 $\sigma(\tau)$ 是精心选择的漂移和扩散系数，使得条件分布为 $Q_\tau(Z_\tau | Z_0) = \mathcal{N}(\alpha_\tau Z_0, \beta_\tau^2 I_{d_x})$，其中 $\alpha_\tau = 1-\tau, \beta_\tau^2 = \tau$。&#10;&#10;- **反向SDE**（从高斯噪声恢复目标分布样本）：&#10;  $$dZ_\tau = [b(\tau) Z_\tau - \sigma^2(\tau) S(Z_\tau, \tau)] d\tau + \sigma(\tau) d\overleftarrow{W}_\tau$$&#10;  其中 $S(z, \tau) := \nabla_z \log Q_\tau(z)$ 是**评分函数**。&#10;&#10;- **训练自由的评分近似**：评分函数可以表示为对目标分布 $Q_0$ 的期望：&#10;  $$S(z, \tau) = \int_{\mathbb{R}^{d_x}} \frac{-z - \alpha_\tau z_0}{\beta_\tau^2} w_\tau(z, z_0) Q_0(z_0) dz_0$$&#10;  其中权重 $w_\tau(z, z_0) = \frac{Q_\tau(z|z_0)}{\int Q_\tau(z|z_0') Q_0(z_0') dz_0'}$。&#10;&#10;  给定来自 $Q_0$ 的样本集合 $\{z^{(m)}\}_{m=1}^M$，可以用小批量蒙特卡洛估计来近似评分：&#10;  $$\bar{S}(z, \tau) := \sum_{j=1}^J \frac{-z - \alpha_\tau z^{(j)}}{\beta_\tau^2} \bar{w}_\tau(z, z^{(j)})$$&#10;  其中经验权重 $\bar{w}_\tau(z, z^{(j)}) = \frac{Q_\tau(z|z^{(j)})}{\sum_{\ell=1}^J Q_\tau(z|z^{(\ell)})}$。&#10;&#10;**3. EnSF滤波步骤**&#10;&#10;- **预测步骤**：将后验样本 $\{z^{(m)}_{n|n}\}$ 通过STLLM传播，得到先验样本 $\{z^{(m)}_{n+1|n}\}$。&#10;- **先验评分构建**：使用先验样本 $\{z^{(m)}_{n+1|n}\}$ 通过上述训练自由近似构建先验评分函数 $\bar{S}_{n+1|n}(z, \tau)$。&#10;- **后验评分更新**：通过贝叶斯规则，后验评分由先验评分和观测似然的梯度组合而成：&#10;  $$\bar{S}_{n+1|n+1}(z, \tau) = \bar{S}_{n+1|n}(z, \tau) + g(\tau) \nabla_z \log p(Y_{t_{n+1}} | X_{t_{n+1}})(z)$$&#10;  其中 $g(\tau)$ 是一个阻尼函数（如 $g(\tau)=1-\tau$），用于控制观测信息在扩散过程中的融入程度。对于高斯观测噪声，似然梯度为：&#10;  $$\nabla_z \log p(Y_{t_{n+1}} | X_{t_{n+1}})(z) = -DH_{n+1}(z)^\top R_{n+1}^{-1} (H_{n+1}(z) - Y_{t_{n+1}})$$&#10;- **后验样本生成**：使用后验评分 $\bar{S}_{n+1|n+1}$ 驱动反向SDE（公式19），从高斯噪声生成后验样本 $\{z^{(m)}_{n+1|n+1}\}$。&#10;- **状态估计**：后验状态的估计值为后验样本的均值 $\hat{X}_{t_{n+1}} = \frac{1}{M} \sum_{m=1}^M z^{(m)}_{n+1|n+1}$。&#10;&#10;### 3.3 模型、训练与数据集&#10;&#10;- **数据集**：美国佛罗里达州塔拉哈西市5000个用户的真实小时级能耗数据，包含8,736个时间步（约364天）。数据经过LogMinMax归一化处理。&#10;- **前向模型（STLLM）**：&#10;    - **架构**：一种时空大语言模型，包含输入嵌入层、多个STLLM块和输出投影层。&#10;    - **核心组件**：使用RMSNorm、旋转位置编码（RoPE）、SwiGLU前馈网络，以及**分解的注意力结构**（分别处理时间和空间依赖性）。&#10;    - **配置**：模型维度64，8个注意力头，4个STLLM块，总参数量749,057。&#10;    - **训练**：使用AdamW优化器，学习率从$10^{-3}$衰减到$10^{-6}$，损失函数为掩码平均绝对误差（MAE）。训练了不同历史序列长度（1步、4步、12步）的模型。&#10;- **EnSF配置**：集成大小 $M=50$，反向扩散过程离散化步数 $L=500$，阻尼函数 $g(\tau)=1-\tau$。&#10;&#10;### 3.4 实验设置与结果&#10;&#10;- **实验设置**：&#10;    - **对比方法**：开环预测（No-DA）、EnSF修正、EnKF修正。&#10;    - **观测设置**：&#10;        - **直接部分观测**：在每个时间步，只观测状态向量的一部分（25%， 50%， 100%）。&#10;        - **混合非线性观测**：在观测到的分量中，一半是直接观测，另一半通过反正切函数（$\arctan$）观测。&#10;    - **评估指标**：平均绝对误差（MAE）、平均绝对百分比误差（MAPE）、均方根误差（RMSE）。&#10;&#10;- **主要结果**：&#10;    1.  **模型对比（Example 1）**：&#10;        - 在一步预测中，12-to-1模型表现最好。&#10;        - 在开环预测中，所有模型误差都显著增大，且12-to-1模型表现最差。这证明了长期开环预测的不可靠性，以及数据同化的必要性。&#10;    2.  **EnSF修正效果（Example 2）**：&#10;        - 对于训练不足和充分训练的4-to-1模型，EnSF都能显著降低RMSE，修正开环预测的偏差。&#10;        - 观测信息越多（从25%到100%），修正效果越好。&#10;        - 轨迹图（图6）直观展示了EnSF如何使预测轨迹更贴近真实值。&#10;    3.  **EnSF vs. EnKF（Example 3）**：&#10;        - 在混合非线性观测设置下，EnSF的RMSE远低于EnKF（图7）。&#10;        - 轨迹对比（图8）显示，EnKF的修正轨迹在某些维度上仍然偏离真实值，而EnSF的轨迹与真实值吻合得更好。这证明了EnSF在处理非线性观测时的优势。&#10;&#10;### 3.5 技术细节&#10;&#10;- **数据预处理**：采用LogMinMax归一化，先对数据取对数 $x' = \log(1+x)$ 以减轻右偏，再缩放到[0,1]区间。所有误差指标在逆归一化后的原始数据尺度上计算。&#10;- **观测掩码**：采用分块观测策略。将5000个用户分成 $B$ 个连续块，在每个时间步只观测一个块，循环进行。例如，25%的观测意味着 $B=4$，每4步每个用户被观测一次。&#10;- **EnSF的阻尼函数**：$g(\tau)=1-\tau$ 确保了在反向扩散的起点（$\tau=1$，接近高斯分布）观测信息的影响为零，而在终点（$\tau=0$，目标分布）观测信息被完全融入。&#10;- **计算效率**：EnSF的核心优势在于其评分近似是训练自由的，仅依赖于前向传播的样本集合，避免了在每一步滤波中训练昂贵的神经网络。&#10;&#10;## 4. 意义与影响（Significance and Impact）&#10;&#10;- **解决的问题与贡献**：&#10;    1.  解决了高维、非线性、观测不完美的实时能源消耗预测修正问题。&#10;    2.  提出了一个将复杂深度学习预测模型与先进数据同化方法有效结合的实用框架。&#10;    3.  通过实验证明，EnSF在非线性观测下优于经典的EnKF，为处理非高斯滤波问题提供了更强大的工具。&#10;    4.  强调了数据同化在提升深度学习模型长期预测可靠性中的关键作用。&#10;&#10;- **对未来研究/应用的影响**：&#10;    - **应用层面**：该框架可直接应用于电力系统的实时状态估计、负荷预测修正、异常检测等场景，提升电网运行的安全性和经济性。&#10;    - **方法层面**：为其他高维时间序列预测问题（如交通流量、气象、金融）提供了一个有效的模型-数据融合范式。特别是，它展示了如何将“黑盒”深度学习模型与可解释的、基于物理或统计的滤波方法相结合。&#10;    - **研究方向**：启发了将EnSF与其他类型的预训练模型（如GNN、Transformer）结合的研究。&#10;&#10;- **局限与开放问题**：&#10;    - **外部变量**：作者指出，未来工作可以纳入温度等外部变量，以处理天气依赖的负荷模式。&#10;    - **数据集验证**：需要在更多真实世界的能源数据集上进行验证。&#10;    - **复杂观测模式**：需要研究更复杂的观测模式和缺失数据机制。&#10;    - **计算成本**：虽然避免了训练评分网络，但EnSF的反向扩散过程（500步）本身仍有一定的计算成本，未来可以研究加速策略。&#10;&#10;## 5. 澄清与简化（Clarifications and Simplifications）&#10;&#10;- **什么是“开环预测”？**&#10;    - **通俗解释**：想象你开车时，如果只看地图（模型）而不看路况（观测），你可能会因为地图的微小误差而越走越偏。这就是开环预测。模型预测的结果被当作下一次预测的输入，误差会像滚雪球一样越来越大。&#10;&#10;- **什么是“数据同化”？**&#10;    - **通俗解释**：就像你开车时，一边看地图，一边看路况。地图告诉你大概方向，但路况（观测）告诉你当前实际位置。数据同化就是不断将地图预测和路况信息结合起来，修正你的位置估计，让你始终走在正确的路上。&#10;&#10;- **EnSF和EnKF的区别是什么？**&#10;    - **类比**：想象你要估计一个形状不规则的物体的位置。&#10;        - **EnKF**：它假设这个物体">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Accurate estimation and forecasting of energy consumption are important for power-system operation, planning, and demand-side management. In practice, however, complete and timely measurements may not always be available, and the observed data can be partial, noisy, or delayed. This motivates the use of learned forecasting models for predicting the evolving consumption state, together with data assimilation methods for sequential forecast correction. In this work, we study a high-dimensional data assimilation problem for real energy-consumption data. \modeltext{The forward prediction is supplied by a pretrained black-box spatio-temporal forecasting model, which is treated as the state propagator in the filtering procedure.} We employ the Ensemble Score Filter (EnSF) to assimilate partial and noisy observations and to correct the forecast trajectory over time. The EnSF uses score-based diffusion models to approximate filtering distributions and avoids retraining neural-network score models during assimilation by using a closed-form score representation and Monte Carlo approximation. Numerical experiments demonstrate that open-loop propagation of the learned forecasting model can become unreliable over long horizons, while EnSF-based correction substantially improves state estimation. Comparisons with the Ensemble Kalman Filter (EnKF) further show that EnSF provides stronger correction under the nonlinear observation setting considered in this work.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2601.18992v2" target="_blank" class="paper-title">Mixture-Weighted Ensemble Kalman Filter with Quasi-Monte Carlo Transport</a>
@@ -1154,10 +1184,7 @@
                         <span class="paper-date">2026-06-23</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：针对多IMU（惯性测量单元）铰接刚体系统（如机器人或人体）的扩展位姿（姿态、速度、位置）估计，现有不变扩展卡尔曼滤波（IEKF）仅适用于单刚体，无法直接处理多体间的位姿耦合与关节运动学约束。&#10;&#10;🛠 **方法**：提出相对L-扩展位姿的李群表示，将每个刚体上的IMU数据建模为群仿射动力学，并通过无噪声伪测量将关节约束以不变形式融入迭代IEKF（IterIEKF）框架中。&#10;&#10;✨ **主要贡献**：在UR5e机器人和人体腿部实验中，所提方法相比所有EKF、IterEKF及绝对位姿IterIEKF基线，收敛更快、运行变异性更低，且均方根误差（RMSE）至少降低50%。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Accurate extended pose estimation (orientation, velocity, and position) for IMU-instrumented articulated rigid-body systems is a key challenge in robotics and human motion analysis. The invariant extended Kalman filter (IEKF) addresses this problem for a single rigid body with convergence guarantees and consistency under unobservability, but extending these properties to articulated systems is nontrivial: inter-body pose coupling prevents a direct application, and incorporating joint kinematic constraints within the invariant framework remains an open problem. To address this gap, we introduce the relative L-extended pose, a Lie group representation for kinematic-tree systems. With one IMU per body, it yields group-affine dynamics and allows joint constraints to be expressed in invariant form. We incorporate these constraints as noise-free pseudo-measurements within an iterated IEKF (IterIEKF), thereby preserving the convergence and consistency guarantees of invariant filtering. Validated on both a UR5e robot and a human leg, the proposed IterIEKF outperforms all EKF, IterEKF, and absolute-pose IterIEKF baselines. It converges faster, exhibits lower run-to-run variability, and consistently achieves the lowest RMSE, with reductions of at least 50% compared to the second-best filter across all scenarios considered in this work.</p>
@@ -1169,10 +1196,7 @@
                         <span class="paper-date">2026-06-23</span>
                     </div>
                                         <span class="paper-comment">📝 Authors in alphabetical order</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：针对古气候研究中底栖有孔虫δ¹⁸O和δ¹³C时间序列存在的记录稀疏不均、非平稳性及多站点差异等问题，提出有效的分析方法。  &#10;🛠 **方法**：采用连续时间状态空间框架，通过卡尔曼滤波进行信号提取和最大似然估计参数，将模型解释为时域巴特沃斯滤波器，并引入测量误差方差区分与气候状态分段。  &#10;✨ **主要贡献**：实现了对非均匀时间序列的稳健分析，揭示了“冰室期”（3.3–0.0006 Ma）期间δ¹⁸O与δ¹³C信号由正相关转为负相关的显著变化，并扩展了高阶滤波与双变量联合分析。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Time series analysis of d18O and d13C from benthic foraminifera for paleoclimatology poses significant challenges. The data span tens of millions of years, with sparse early records, dense later ones, uneven time stamps, and occasional multiples. These time series are largely non-stationary, exhibiting temporary, varying trends. We propose a continuous-time state space framework that handles these irregularities effectively. Univariate signal-plus-noise models are specified for d18O and d13C, with parameters estimated via maximum likelihood using Kalman filter recursions for signal extraction and likelihood evaluation. The framework interprets state space models as time-domain Butterworth filters. Measurement-error variances are differentiated by deep-sea drill site, including site-specific level offsets, and the record is partitioned into sub-periods reflecting the distinct climate states that drive the transition variance. Two extensions of the univariate model are explored: (i) modifying the signal specification for the Kalman filter to approximate a Butterworth filter of any order, and (ii) specifying a bivariate signal-plus-noise model for joint analysis. Results reveal substantial signal changes during the ``icehouse'' period (3.3 to 0.0006 Ma); the correlation between d18O and d13C signals is generally positive but turns negative during this period.</p>
@@ -1680,42 +1704,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>In fulfillment centers, diverse objects move continuously from inbound to outbound operations and can become jammed due to excessive conveyor friction, incorrect orientation, or mechanical failures. Traditional jam detection approaches rely on object detection models to identify objects, followed by tracking algorithms (such as IoU overlap and Kalman filtering) to monitor motion over time. This pipeline requires thousands of manual annotations, consuming approximately two weeks of effort, and is limited to annotated object classes. We present a training-free, object-agnostic jam detection method that eliminates the need for labeled data. Our approach uniformly samples reference points within the monitoring region when no objects are present. As objects occlude these points, we detect motion. When a sufficient fraction remains occluded beyond a temporal threshold, we classify the event as a jam. Unlike conventional point tracking--which treats occlusion as a failure case--our approach repurposes occlusion as a detection signal, monitoring whether reference points remain persistently occluded rather than tracking where they move. Our experimental evaluation on 1,069 videos demonstrates that AllTracker achieves 100.00% precision and 93.33% F1 score, significantly outperforming classical sparse tracking methods while maintaining training-free deployment. This approach offers three key advantages: (1) no training data or manual annotations, (2) object-agnostic generalization to arbitrary object types, and (3) significantly reduced development time.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.03690v1" target="_blank" class="paper-title">On Secure EKF-enhanced UAV-ISAC Systems</a>
-                        <span class="paper-date">2026-06-02</span>
-                    </div>
-                                        <span class="paper-comment">📝 13 pages, 6 figures, submitted to IEEE Journal for review</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Integrated sensing and communication (ISAC) has emerged as a promising key technology for future wireless networks, enabling the efficient coordination of sensing and communication functions within limited resources. This work investigates a secure ISAC system assisted by an uncrewed aerial vehicle (UAV). By incorporating the extended Kalman filter (EKF), the proposed system is capable of delivering communication services to legitimate users while simultaneously jamming eavesdroppers and performing joint prediction and tracking of the trajectories of both legitimate and illegitimate users. Considering practical constraints such as {sensing beamwidth}, transmit power, and UAV's propulsion energy consumption, the secrecy rate is maximized through the joint design of transmit beamforming and UAV trajectory. To tackle the resulting highly non-convex optimization problem, an efficient iterative algorithm is developed by integrating block coordinate descent, successive convex approximation, and EKF, thereby yielding a high-quality suboptimal solution. Extensive simulation results validate the superior performance of the proposed scheme compared to benchmarks.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.03590v1" target="_blank" class="paper-title">CANMOT: Class-Aware Noise Modeling for Multi-Object Tracking in Autonomous Driving</a>
-                        <span class="paper-date">2026-06-02</span>
-                    </div>
-                                        <span class="paper-comment">📝 submitted to IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2026)</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Kalman filter (KF)-based multi-object tracking (MOT) remains a strong baseline for autonomous driving due to its strong performance, computational efficiency and interpretability. In most practical systems, the process noise and measurement noise covariances are defined globally and shared across object classes, presuming identical uncertainty characteristics across heterogeneous traffic participants. This work revisits this assumption and proposes CANMOT, a class-aware and object-aligned noise modeling framework for KF-based 3D MOT. Class-specific diagonal process and measurement covariance matrices are introduced and optionally expressed in the object coordinate frame to preserve longitudinal-lateral anisotropy. Systematic experiments on the nuScenes benchmark show that class-aware and object-aligned noise modeling improves tracking performance and substantially reduces identity switches compared to state-of-the-art (SotA). In addition, the consistency of the estimated uncertainty is analyzed using the Average Normalized Estimation Error Squared (ANEES) and $χ^2$-based violation tests. The results reveal severe overconfidence in standard KF-based MOT baselines. While the proposed formulation improves calibration without modifying the underlying filtering framework, it still exhibits substantial inconsistency, highlighting the need for further research in this area. Code is available at https://github.com/rst-tu-dortmund/learned-3d-nms.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.03265v1" target="_blank" class="paper-title">Wheel-Mounted/GNSS Fusion with AI-Aided Position Updates</a>
-                        <span class="paper-date">2026-06-02</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Accurate and robust localization remains a fundamental challenge for autonomous ground vehicles. In this work, we propose a hybrid neural inertial navigation framework that integrates a wheel-mounted inertial sensors, enforced periodic trajectories, and a simple, efficient neural network capable of regressing vehicle displacement with GNSS position updates in an error-state extended Kalman filter. The periodic trajectories increase the inertial signal-to-noise ratio, allowing the network to use only inertial readings to estimate displacement. The approach is validated through real-world experiments using multiple wheel-mounted inertial sensors. Experimental results demonstrate that the proposed method achieves a significant improvement in positioning accuracy, reducing the position root mean squared error by approximately 46 % compared to standard wheel-mounted inertial sensor fusion with GNSS updates.</p>
                     </details>
                 </div>
             </div>

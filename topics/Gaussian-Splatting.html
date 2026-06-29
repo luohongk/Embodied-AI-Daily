@@ -590,7 +590,7 @@
                 <a href="World-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">World Model</span>
-                    <span class="nav-count">76</span>
+                    <span class="nav-count">77</span>
                 </a>
                 <a href="3D-Foundation-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
@@ -670,12 +670,12 @@
                 <a href="Autonomous-Driving.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#6366f1"></span>
                     <span class="nav-label">Autonomous Driving</span>
-                    <span class="nav-count">77</span>
+                    <span class="nav-count">78</span>
                 </a>
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Kalman Filter</span>
-                    <span class="nav-count">55</span>
+                    <span class="nav-count">54</span>
                 </a>
                 <a href="Loop-Closure-Detection.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -695,7 +695,7 @@
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">75</span>
+                    <span class="nav-count">79</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -750,7 +750,7 @@
                 <a href="Multimodal-Fusion.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#6366f1"></span>
                     <span class="nav-label">Multimodal Fusion</span>
-                    <span class="nav-count">73</span>
+                    <span class="nav-count">74</span>
                 </a>
                 <a href="Scene-Understanding.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
@@ -809,7 +809,7 @@
             <a href="World-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">World Model</span>
-                <span class="nav-count">76</span>
+                <span class="nav-count">77</span>
             </a>
             <a href="3D-Foundation-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
@@ -889,12 +889,12 @@
             <a href="Autonomous-Driving.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
                 <span class="nav-label">Autonomous Driving</span>
-                <span class="nav-count">77</span>
+                <span class="nav-count">78</span>
             </a>
             <a href="Kalman-Filter.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Kalman Filter</span>
-                <span class="nav-count">55</span>
+                <span class="nav-count">54</span>
             </a>
             <a href="Loop-Closure-Detection.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -914,7 +914,7 @@
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">75</span>
+                <span class="nav-count">79</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -969,7 +969,7 @@
             <a href="Multimodal-Fusion.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
                 <span class="nav-label">Multimodal Fusion</span>
-                <span class="nav-count">73</span>
+                <span class="nav-count">74</span>
             </a>
             <a href="Scene-Understanding.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
@@ -1030,6 +1030,141 @@
             <div class="paper-list">
                 <div class="paper-card">
                     <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2606.28321v1" target="_blank" class="paper-title">StructSplat: Generalizable 3D Gaussian Splatting from Uncalibrated Sparse Views</a>
+                        <span class="paper-date">2026-06-26</span>
+                    </div>
+                                        <span class="paper-comment">📝 Project page: https://structsplat.github.io Code: https://github.com/J-C-Zhao/StructSplat</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有3D高斯重建方法依赖每场景优化或已知相机参数，且常将几何与外观耦合在统一框架中，限制了重建保真度和泛化能力。本文旨在从无标定的稀疏视图直接进行可泛化的3D高斯重建。&#10;&#10;🛠 **方法**：提出StructSplat框架，采用结构化表示，明确分离几何、语义和纹理线索的角色。具体包括像素对齐特征注入机制（精确纹理建模）、语义感知先验（提升全局一致性）和相机对齐策略（防止信息泄露并增强泛化）。&#10;&#10;✨ **主要贡献**：在DL3DV基准上PSNR达28.045，比AnySplat提升5.67 dB；跨数据集评估中，在ACID和RealEstate10K上分别提升1.94 dB和1.72 dB，显著超越现有方法。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>We present StructSplat, a feed-forward and generalizable 3D Gaussian reconstruction framework that operates directly on uncalibrated images without requiring camera parameters. Existing methods either rely on per-scene optimization or assume known camera poses, and often entangle geometry and appearance within a unified backbone, limiting reconstruction fidelity and generalization. Our key idea is to adopt a structured representation that organizes geometry, semantic, and texture cues with explicit roles in the reconstruction process. Specifically, we introduce a pixel-aligned feature injection mechanism to enable accurate texture modeling from 2D observations, incorporate semantic-aware priors to improve global consistency, and design a camera alignment strategy to prevent information leakage and improve generalization. Experiments show that our method significantly outperforms prior approaches on challenging benchmarks. On DL3DV, our method achieves 28.045 PSNR, surpassing AnySplat (22.377) by +5.67 dB. In cross-dataset evaluation, our method achieves +1.94 dB over AnySplat on ACID and +1.72 dB on RealEstate10K. Project page: https://structsplat.github.io Code: https://github.com/J-C-Zhao/StructSplat</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2512.16893v2" target="_blank" class="paper-title">Instant Expressive Gaussian Head Avatars at Over 100 FPS</a>
+                        <span class="paper-date">2026-06-26</span>
+                    </div>
+                                        <span class="paper-comment">📝 Project website is https://research.nvidia.com/labs/amri/projects/instant4d</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有肖像动画方法难以同时兼顾高帧率、三维一致性和丰富表情细节，存在“速度-三维一致性-表现力”的三难困境。&#10;&#10;🛠 **方法**：提出一种基于前馈编码器的流水线，将单张野外图像快速转换为三维一致且可动画化的高斯表示，采用轻量级局部融合策略替代计算密集的全局融合机制，并解耦动画表示与三维人脸表示，从数据中隐式学习运动。&#10;&#10;✨ **主要贡献**：在保持与现有方法相当动画质量的前提下，实现107.31 FPS的动画与姿态控制速度，较当前最优方法提速3-4个数量级，同时兼顾三维一致性与表现力。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Portrait animation has witnessed tremendous quality improvements thanks to recent advances in video diffusion models. However, these 2D methods often compromise 3D consistency and speed, limiting their applicability in real-world scenarios, such as digital twins or telepresence. In contrast, 3D-aware feedforward facial animation methods -- built upon 3D representations, such as neural radiance fields or Gaussian splatting -- ensure 3D consistency and achieve faster inference speed, but come with inferior expression details. In this paper, we address this portrait animation trilemma (speed, 3D consistency, and expressiveness) and propose a pipeline that instantly converts an in-the-wild single image into a 3D-consistent, fast yet expressive animatable representation via a feed-forward encoder. Unlike previous computationally intensive global fusion mechanisms (e.g., multiple attention layers) for fusing 3D structural and animation information, our design employs an efficient lightweight local fusion strategy to achieve high animation expressivity. Furthermore, our animation representation is decoupled from the face's 3D representation and learns motion implicitly from data, eliminating the dependency on pre-defined parametric models that often constrain animation capabilities. Our method runs at 107.31 FPS for animation and pose control, representing a 3-4 order of magnitude speedup versus the state of the art while achieving comparable animation quality, thus surpassing alternative designs that trade speed for quality or vice versa.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2603.13910v2" target="_blank" class="paper-title">Scene Generation at Absolute Scale: Utilizing Semantic and Geometric Guidance From Text for Accurate and Interpretable 3D Indoor Scene Generation</a>
+                        <span class="paper-date">2026-06-26</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有文本驱动的3D室内场景生成方法存在几何漂移和尺度模糊问题，无法生成度量准确、全局一致且语义可解释的场景。&#10;&#10;🛠 **方法**：提出GuidedSceneGen框架，先根据文本预测全局3D布局作为引导，再用语义和深度条件化的全景扩散模型合成360°图像，并通过视频扩散模型结合优化相机轨迹探索未观测区域，最后用3D高斯泼溅融合生成绝对尺度的可导航3D场景。&#10;&#10;✨ **主要贡献**：实现了绝对世界坐标系下的度量准确生成，支持对象姿态和语义标签的精确传递，场景可渐进扩展无需重对齐，相比基线方法在3D一致性和布局合理性上显著提升，且采样速度提升达10倍。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>We present GuidedSceneGen, a text-to-3D generation framework that produces metrically accurate, globally consistent, and semantically interpretable indoor scenes. Unlike prior text-driven methods that often suffer from geometric drift or scale ambiguity, our approach maintains an absolute world coordinate frame throughout the entire generation process. Starting from a textual scene description, we predict a global 3D layout encoding both semantic and geometric structure, which serves as a guiding proxy for downstream stages. A semantics- and depth-conditioned panoramic diffusion model then synthesizes 360° imagery aligned with the global layout, substantially improving spatial coherence. To explore unobserved regions, we employ a video diffusion model guided by optimized camera trajectories that balances coverage and collision avoidance, achieving up to 10x faster sampling compared to exhaustive path exploration. The generated views are fused using 3D Gaussian Splatting, yielding a consistent and fully navigable 3D scene in absolute scale. GuidedSceneGen enables accurate transfer of object poses and semantic labels from layout to reconstruction, and supports progressive scene expansion without re-alignment. Quantitative results and a user study demonstrate greater 3D consistency and layout plausibility compared to recent panoramic text-to-3D baselines.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2606.09074v3" target="_blank" class="paper-title">REFINE: Super-efficient 3D Gaussian Splatting Pruning via Rendering-Free Primitive Importance</a>
+                        <span class="paper-date">2026-06-26</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="好的，作为人工智能研究与学术论文分析专家，我将严格按照您的要求，对这篇论文进行详细的中文解读。&#10;&#10;---&#10;&#10;## 0. 概览（Concise Summary）&#10;&#10;- **主题（Topic）**：3D高斯泼溅（3D Gaussian Splatting, 3DGS）模型的剪枝（Pruning）与压缩。&#10;- **问题（Problem）**：现有的3DGS剪枝方法在计算效率和感知质量之间存在不可调和的矛盾。基于参数的方法速度快但质量差，而基于渲染的方法质量好但计算开销巨大。&#10;- **方法（Method）**：提出一种名为REFINE的、完全免渲染的剪枝框架。其核心是通过解析近似一个“渲染感知的Hessian场”（rendering-aware Hessian field）来量化每个高斯原语（primitive）的重要性，从而完全避免了昂贵的正向渲染过程。&#10;- **创新（Innovation）**：&#10;    1.  提出了一种**免渲染的原语重要性度量**，通过解析分解Hessian矩阵，将重要性解耦为可见性、几何投影和内容自适应超参数三个物理可解释的组件。&#10;    2.  设计了一个**内容自适应超参数**机制，能够根据场景内容动态校准不同属性（如颜色、几何、不透明度）的敏感度。&#10;    3.  实现了**超高效**的剪枝，计算复杂度相比最先进的基于渲染的方法降低了**3000倍以上**。&#10;- **意义（Significance）**：REFINE首次在3DGS剪枝中打破了“效率”与“质量”的权衡，使得在资源受限设备（如VR/AR头显、手机）上部署高质量3DGS成为可能，并为实时3DGS流媒体传输和训练加速提供了新思路。&#10;- **一句话总结**：本文提出REFINE，一种通过解析计算免渲染重要性分数来实现3DGS超高效剪枝的方法，在保持与渲染方法相当质量的同时，将剪枝计算开销降低了三个数量级。&#10;&#10;## 1. 研究动机（Motivation）&#10;&#10;- **问题与空白**：3DGS虽然渲染速度快、质量高，但其显式表示方式导致模型存储量巨大（可达GB级别），包含大量冗余的高斯原语。这严重限制了其在资源受限环境（如移动设备、VR/AR头显）和网络流媒体传输中的应用。因此，剪枝冗余原语以压缩模型，同时保持渲染质量，成为一个关键需求。&#10;- **现有方法的矛盾**：&#10;    - **基于参数的方法**（如LightGaussian）：直接在参数空间评估重要性（如基于不透明度、体积等）。优点是计算高效，但缺点是忽略了渲染管线中参数到图像的复杂非线性映射，容易错误地剪掉重要的高频原语，导致渲染模糊。&#10;    - **基于渲染的方法**（如PUP 3D-GS）：通过正向渲染来累积每个原语对最终图像的敏感度。优点是感知准确，但缺点是必须执行昂贵的渲染循环，导致极高的处理时间和计算开销。&#10;- **挑战**：核心挑战在于如何在不进行实际渲染的情况下，准确评估每个高斯原语对最终渲染图像质量的贡献，即设计一个既高效又准确的**免渲染重要性度量**。&#10;&#10;## 2. 创新点（Innovation）&#10;&#10;1.  **免渲染的Hessian场近似**：论文的核心创新在于提出了一种全新的、完全免渲染的原语重要性评估方法。它不依赖正向渲染，而是通过解析方式近似一个“渲染感知的Hessian场”。这个Hessian场将原语移除导致的图像空间误差，通过一阶泰勒展开和Fisher信息矩阵，映射回参数空间，从而量化每个参数的重要性。&#10;2.  **物理可解释的重要性分解**：为了高效计算Hessian场，论文创新性地将其分解为两个物理可解释的独立组件：&#10;    - **视图依赖的可见性**：通过原语的不透明度（$α_i$）来近似其在混合过程中的可见度，并采用保守的零遮挡假设（$T_i ≈ 1$）来避免复杂的深度排序。&#10;    - **几何投影**：通过分析透视投影的雅可比矩阵，推导出原语的视觉影响与其深度的平方成反比（$1/(z_i^v)^2$），即距离相机越近的原语越重要。&#10;3.  **内容自适应超参数**：不同场景中，颜色、几何、不透明度等属性对最终图像质量的影响权重不同。论文提出了一种基于场景统计特征（颜色方差、不透明度模糊度、尺度各向异性）的动态超参数校准机制，自动调整不同属性的敏感度，避免了手动调参的繁琐和次优性。&#10;4.  **超高效的计算复杂度**：由于完全避免了渲染，REFINE的计算复杂度仅为$O(N)$（N为原语数量），而基于渲染的方法复杂度为$O(N \times |V|)$（|V|为视图数量）。这使得REFINE的计算开销（GFLOPs）相比SOTA方法降低了超过3000倍。&#10;&#10;## 3. 主要内容（Main Content）【重点】&#10;&#10;### 3.1 设计架构与方法&#10;&#10;REFINE的整体架构如图2所示，它是一个纯后处理剪枝框架，可以无缝应用于任何预训练的3DGS模型。其核心流程如下：&#10;&#10;1.  **输入**：一个预训练好的3DGS场景，包含N个高斯原语。&#10;2.  **免渲染Hessian场计算**：对于每个原语，不进行渲染，而是通过解析公式（公式19）计算其重要性权重。该计算过程分解为：&#10;    - **可见性建模**：使用原语的不透明度$α_i$作为可见性的代理。&#10;    - **几何投影建模**：使用原语相对于相机的深度$z_i^v$来计算其投影影响。&#10;    - **内容自适应超参数**：根据整个场景的统计特征（$F_{col}, F_{opa}, F_{gem}$）动态计算不同属性（几何、颜色、不透明度）的敏感度权重$λ_k$。&#10;3.  **重要性分数计算**：将计算出的Hessian权重与对应的属性值（如尺度、SH系数、不透明度）耦合，得到每个原语的最终重要性分数$D(G_i)$。&#10;4.  **全局排序与剪枝**：根据重要性分数对所有原语进行全局排序。给定一个目标剪枝比例$β$，永久移除分数最低的$β·N$个原语。&#10;&#10;### 3.2 关键算法与数学推导&#10;&#10;**1. 重要性建模：从图像空间到参数空间**&#10;&#10;- 原语移除导致的图像变化：$ΔI ≈ J_R · ΔG$，其中$J_R$是渲染函数的雅可比矩阵。&#10;- 图像质量退化（$L_2$范数）：&#10;  $$Q(ΔG) = \|ΔI\|_2^2 ≈ ΔG^T (J_R^T J_R) ΔG = ΔG^T H ΔG$$&#10;  其中$H = J_R^T J_R$是Hessian矩阵的Gauss-Newton近似，它定义了参数空间的重要性度量张量。&#10;- 与Fisher信息矩阵的联系：在假设图像噪声为高斯白噪声的情况下，$H$与Fisher信息矩阵$F$成正比：$F ≈ \frac{1}{σ^2} H$。因此，$H$直接量化了每个参数对最终渲染图像的信息贡献。&#10;&#10;**2. 免渲染重要性度量**&#10;&#10;- **结构化近似**：为了计算$H$，引入两个假设：&#10;    1.  **原语独立性**：忽略不同高斯原语之间的相互作用。&#10;    2.  **属性正交性**：忽略同一原语内不同属性（如位置、颜色）之间的二阶耦合。&#10;  基于此，$H$可近似为对角矩阵$W = diag(H)$，其对角元素$w_i$即为原语$i$的重要性权重。&#10;- **原语重要性分数**：&#10;  $$D(G_i) = \sum_{k \in \{gem, col, opa\}} w_i^k \cdot \tilde{G}_i^k$$&#10;  其中$\tilde{G}_i^k$是原语$i$的第$k$个属性子集，$w_i^k$是对应的Hessian权重。&#10;- **Hessian权重的解析计算**：&#10;  $$w_i^k = \mathbb{E}_{v \in V} \left[ \left\| \frac{\partial R_v}{\partial \tilde{G}_i^k} \right\|_2^2 \right]$$&#10;  其中$\mathbb{E}[\cdot]$表示对采样视图$V$的期望。&#10;- **分解梯度**：将梯度分解为可见性$V_i^v$和几何投影$P_i^v$：&#10;  $$\frac{\partial R_v}{\partial \tilde{G}_i^k} ≈ V_i^v \cdot P_i^v$$&#10;- **可见性建模**：采用保守的零遮挡近似，$V_i^v ≈ α_i$。&#10;- **几何投影建模**：通过局部线性化透视投影，其雅可比矩阵的Frobenius范数近似为：&#10;  $$P_i^v ∝ \frac{1}{(z_i^v)^2 + η}$$&#10;  其中$z_i^v$是原语在相机$v$下的深度，$η$是稳定性常数。&#10;- **最终Hessian权重**：&#10;  $$w_i^k = λ_k \cdot \frac{1}{|V|} \sum_{v \in V} \left[ \frac{α_i}{(z_i^v)^2 + η} \right]$$&#10;  其中$λ_k$是内容自适应超参数。&#10;&#10;**3. 内容自适应超参数**&#10;&#10;- 从场景中提取三个统计特征：&#10;    - 颜色方差$F_{col}$：衡量高频纹理丰富度。&#10;    - 不透明度模糊度$F_{opa} = \frac{1}{N} \sum α_i(1-α_i)$：衡量半透明区域比例。&#10;    - 尺度各向异性$F_{gem}$：衡量原语的平均结构拉伸程度。&#10;- 通过归一化得到$λ_k$：&#10;  $$\tilde{λ}_{gem} = \frac{\ln(F_{gem} + η)}{\mathbb{E}[\ln(F_{gem})]}, \quad \tilde{λ}_{col} = \frac{F_{col}}{\mathbb{E}[F_{col}]}, \quad \tilde{λ}_{opa} = \frac{F_{opa}}{\mathbb{E}[F_{opa}]}$$&#10;  $$λ_k = \frac{\tilde{λ}_k}{\sum_{k} \tilde{λ}_k}$$&#10;&#10;### 3.3 模型、训练与数据集&#10;&#10;- **模型**：基于标准的3D Gaussian Splatting (3DGS) 模型。&#10;- **训练**：REFINE是一个**后处理**剪枝框架，不参与原始3DGS模型的训练。它直接作用于一个**预训练好的**3DGS模型。&#10;- **数据集**：&#10;    - **Mip-NeRF 360**：包含5个室外和4个室内场景，场景复杂。&#10;    - **Tanks &amp; Temples**：2个室外场景（`truck`, `train`）。&#10;    - **Deep Blending**：2个室内场景（`drjohnson`, `playroom`）。&#10;- **基线方法**：GHAP, LightGaussian, MesonGS, PUP 3D-GS。&#10;&#10;### 3.4 实验设置与结果&#10;&#10;- **设置**：在**零样本（zero-shot）** 条件下进行，即剪枝后不进行任何微调，以公平比较不同重要性度量的有效性。剪枝比例从10%到70%。&#10;- **渲染质量对比（表1）**：&#10;    - 在低剪枝率（10%）下，REFINE与基于渲染的SOTA方法PUP性能完全持平（如MipNeRF360上PSNR均为27.34）。&#10;    - 在中等剪枝率（50%）下，REFINE在多个数据集上仍能保持高度竞争力，甚至在某些指标上超越PUP（如MipNeRF360上PSNR 26.61 vs 26.07）。&#10;    - 在极端剪枝率（70%）下，REFINE在Deep Blending数据集上出现性能下降，作者解释为此时被忽略的原语间耦合效应变得显著。&#10;- **计算复杂度对比（表2）**：&#10;    - REFINE的计算开销（GFLOPs）在所有数据集和剪枝率下都极低（如MipNeRF360上仅为3.14 GFLOPs）。&#10;    - 相比之下，基于渲染的方法（PUP, MesonGS）需要高达~11,000 GFLOPs。&#10;    - REFINE实现了**超过3000倍**的GFLOPs降低。处理时间也最快，最快仅需1.36秒。&#10;- **消融研究（表3，图4）**：&#10;    - 验证了可见性（$V_i^v$）和几何投影（$P_i^v$）两个组件的必要性，单独使用任何一个都会导致性能下降。&#10;    - 验证了内容自适应超参数（$λ_k$）的有效性，其性能优于静态权重（Equal $λ_k$）。&#10;    - 验证了结构化近似的合理性：通过计算Hessian矩阵的对角能量比（DER），证明原语独立性和属性正交性假设在大多数情况下成立（平均DER分别为86%和79%）。&#10;&#10;### 3.5 技术细节&#10;&#10;- **免渲染实现**：公式(19)是REFINE的核心，它仅需原语的不透明度$α_i$、深度$z_i^v$和场景统计特征，无需任何渲染操作。&#10;- **计算流程**：对于每个视图$v$，只需计算每个原语的深度$z_i^v$，然后代入公式(19)即可。这是一个纯粹的$O(N)$代数运算。&#10;- **超参数**：$η=0.05$用于数值稳定性。视图集合$V$可以是从训练视图中均匀采样的子集，进一步降低计算量。&#10;- **GFLOPs vs. 延迟**：论文在补充材料中解释了GFLOPs降低3000倍但延迟只降低20倍的原因。这是因为基于渲染的方法充分利用了GPU的高度并行化，掩盖了其巨大的计算负担；而REFINE的计算是轻量级的，GPU利用率不高，延迟受限于I/O等固定开销。GFLOPs更能反映在资源受限设备上的真实硬件负担。&#10;&#10;## 4. 意义与影响（Significance and Impact）&#10;&#10;- **解决的问题与贡献**：&#10;    - 解决了3DGS剪枝中“效率”与“质量”不可兼得的根本矛盾。&#10;    - 提出了第一个完全免渲染、且能达到渲染方法质量水平的剪枝框架。&#10;    - 将剪枝的计算复杂度降低了三个数量级，使得在边缘设备上进行实时3DGS压缩成为可能。&#10;- **对未来研究/应用的影响**：&#10;    - **资源受限部署**：为VR/AR、移动机器人、自动驾驶等场景下的3DGS应用铺平了道路。&#10;    - **网络流媒体**：超高效的剪枝可以用于实时3DGS流媒体传输，降低带宽需求。&#10;    - **训练加速**：可以作为动态正则化器，在训练过程中引导模型生成更紧凑的表示，从而加速标准3DGS的训练过程。&#10;    - **率失真优化**：可以无缝集成到率失真优化框架中，指导更高效的压缩。&#10;- **局限与开放问题**：&#10;    - **极端剪枝下的性能下降**：在极高剪枝率（如70%）和高度密集、遮挡严重的场景下，由于忽略了原语间的耦合效应，REFINE的质量会有所下降。&#10;    - **未来方向**：作者提出未来可以探索引入轻量级的局部重渲染或低秩非对角近似，以在保持实时效率的同时，缓解极端情况下的耦合问题。&#10;&#10;## 5. 澄清与简化（Clarifications and Simplifications）&#10;&#10;- **Hessian矩阵的类比**：可以把Hessian矩阵想象成一个“重要性地图”。在3DGS中，它告诉我们，如果稍微改变某个高斯原语的参数（比如位置或颜色），最终渲染的图像会变化多少。计算这个地图通常需要渲染图像并反向传播，非常耗时。REFINE的聪明之处在于，它不直接计算这个地图，而是通过分析3DGS的渲染公式，推导出一个近似的、但可以直接用公式算出来的“重要性地图”，从而省去了渲染的步骤。&#10;- **可见性与投影的分解**：想象一个高斯原语是一个小“彩球”。它的重要性取决于两个因素：&#10;    1.  **它是否被看到（可见性）**：如果它被前面的球完全挡住了，那它被剪掉也没关系。REFINE用它的不透明度（$α$）来近似这个可见度，假设它没有被挡住。&#10;    2.  **它在屏幕上看起来有多大（投影）**：一个离相机很近的球，在屏幕上会显得很大，剪掉它会产生明显的空洞。而一个很远的球，在屏幕上只是一个点，剪掉它影响很小。REFINE用距离的平方（$1/z^2$）来量化这个影响。&#10;- **内容自适应超参数的直觉**：不同类型的场景，对原语的不同属性敏感度不同。比如，一个细节丰富的彩色玻璃窗，颜色属性就非常重要；而一个半透明的纱窗，不透明度属性就更关键。REFINE通过分析整个场景的统计特征（比如颜色变化是否剧烈、半透明区域是否多），自动判断应该更看重哪个属性，就像一个智能的“调音师”，为不同场景找到最佳的剪枝策略。&#10;&#10;## 6. 补充说明（Additional Notes）&#10;&#10;- **相关工作关联**：本文的工作与以下领域紧密相关：&#10;    - **3DGS压缩**：REFINE属于后处理剪枝方法，与参数压缩（如量化、熵编码）和结构重构（如Scaffold-GS）等方法互补，可以结合使用以达到更高的压缩率。&#10;    - **模型剪枝**：本文的思想与深度学习模型剪枝中的“基于重要性”的剪枝方法（如基于权重大小、梯度、Hessian矩阵）一脉相承，但将其成功应用到了非神经网络的3DGS表示中。&#10;- **最重要的图表**：&#10;    - **图1**：直观展示了REFINE在“质量 vs. 效率”权衡上的巨大优势，是论文核心论点的视觉总结。&#10;    - **图2**：展示了REFINE的整体框架和流程，清晰地说明了其免渲染的核心思想。&#10;    - **表1和表2**：是论文的核心实验结果，分别从渲染质量和计算效率两个维度，定量证明了REFINE的优越性。&#10;    - **">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Existing pruning methods for 3D Gaussian splatting (3DGS) suffer from either severe quality degradation or prohibitive computational overhead. In this paper, we propose REFINE, a highly accelerated 3DGS pruning framework centered on a novel rendering-free primitive importance metric. Our approach leverages an analytically approximated, rendering-aware Hessian field to quantify the expected perceptual error induced by the removal of individual primitives. By modeling the joint modulation of visibility, projection geometry and the content adaptive hyperparameter, we entirely bypass costly forward rendering passes and derive an anisotropic perceptual weight field that serves as a high-fidelity proxy for primitive importance. Extensive experiments across multiple benchmark datasets demonstrate that REFINE maintains highly competitive rendering quality while achieving a $3,000\times$ reduction in pruning-related computational complexity, translating to a practical $\sim 20\times$ speedup in device latency compared to state-of-the-art pruning methods.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2605.22536v2" target="_blank" class="paper-title">SpaceDG: Benchmarking Spatial Intelligence under Visual Degradation</a>
+                        <span class="paper-date">2026-06-26</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有空间推理基准假设视觉输入完美无瑕，忽视了现实部署中常见的视觉退化（如运动模糊、低光照等），导致多模态大模型（MLLMs）的空间智能鲁棒性未知。&#10;&#10;🛠 **方法**：提出SpaceDG数据集，基于物理退化合成引擎，将退化过程嵌入3D高斯泼溅（3DGS）渲染，模拟9种退化类型；并构建含1,102个人工验证问题的SpaceDG-Bench基准。&#10;&#10;✨ **主要贡献**：评估25个MLLMs发现视觉退化显著损害空间推理能力；在SpaceDG上微调可提升退化鲁棒性，甚至超越人类在退化条件下的表现，且不损失干净图像性能。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Multimodal Large Language Models (MLLMs) have made rapid progress in spatial intelligence, yet existing spatial reasoning benchmarks largely assume pristine visual inputs and overlook the degradations that commonly occur in real-world deployment, such as motion blur, low light, adverse weather, lens distortion, and compression artifacts. This raises a fundamental question: how robust is the spatial intelligence of current MLLMs when visual observations are imperfect? To answer this question, we introduce SpaceDG, the first large-scale dataset for degradation-aware spatial understanding. It is constructed with a physically grounded degradation synthesis engine that embeds degradation formation process into 3D Gaussian Splatting (3DGS) rendering, enabling realistic simulation of nine degradation types. The resulting dataset contains approximately 1M QA pairs from nearly 1,000 indoor scenes. We further introduce SpaceDG-Bench, an human-verified benchmark with 1,102 questions spanning 11 reasoning categories and 9 visual degradation types, yielding over 10K VQA instances. Evaluating 25 open- and closed-source MLLMs reveals that visual degradations consistently and substantially impair spatial reasoning, exposing a critical robustness gap. Finally, we show that finetuning on SpaceDG markedly improves degradation robustness and can even surpass human performance under degraded conditions without any performance drop on clean images, highlighting the promise of degradation-aware training for robust spatial intelligence.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2410.02103v4" target="_blank" class="paper-title">MVGS: Multi-view Regulated Gaussian Splatting for Novel View Synthesis</a>
+                        <span class="paper-date">2026-06-26</span>
+                    </div>
+                                        <span class="paper-comment">📝 ECCV2026, Project Page:https://xiaobiaodu.github.io/mvgs-project/</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有3D高斯泼溅（3DGS）方法在训练时仅使用单视图监督，导致某些视图过拟合，影响新视角合成的质量和3D几何的精度。&#10;&#10;🛠 **方法**：提出多视图调控的3DGS优化方法，包括多视图训练策略、跨内参引导方案、跨射线稠密化策略以及多视图增强稠密化策略。&#10;&#10;✨ **主要贡献**：1) 将单视图训练转变为多视图训练，避免过拟合，提升多种场景下的精度；2) 引入跨内参引导，实现从粗到细的分辨率训练；3) 提出跨射线稠密化，在视图交集区域增加高斯核；4) 提出多视图增强稠密化，在视图差异显著时增加高斯数量，提高重建精度。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Recent works in volume rendering, \textit{e.g.} NeRF and 3D Gaussian Splatting (3DGS), significantly advance the rendering quality and efficiency with the help of the learned implicit neural radiance field or 3D Gaussians. Rendering on top of an explicit representation, the vanilla 3DGS and its variants deliver real-time efficiency by optimizing the parametric model with single-view supervision per iteration during training which is adopted from NeRF. Consequently, certain views are overfitted, leading to unsatisfying appearance in novel-view synthesis and imprecise 3D geometries. To solve aforementioned problems, we propose a new 3DGS optimization method embodying four key novel contributions: 1) We transform the conventional single-view training paradigm into a multi-view training strategy. With our proposed multi-view regulation, 3D Gaussian attributes are further optimized without overfitting certain training views. As a general solution, we improve the overall accuracy in a variety of scenarios and different Gaussian variants. 2) Inspired by the benefit introduced by additional views, we further propose a cross-intrinsic guidance scheme, leading to a coarse-to-fine training procedure concerning different resolutions. 3) Built on top of our multi-view regulated training, we further propose a cross-ray densification strategy, densifying more Gaussian kernels in the ray-intersect regions from a selection of views. 4) By further investigating the densification strategy, we found that the effect of densification should be enhanced when certain views are distinct dramatically. As a solution, we propose a novel multi-view augmented densification strategy, where 3D Gaussians are encouraged to get densified to a sufficient number accordingly, resulting in improved reconstruction accuracy.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2406.09733v3" target="_blank" class="paper-title">Unified Gaussian Primitives for Scene Representation and Rendering</a>
+                        <span class="paper-date">2026-06-26</span>
+                    </div>
+                                        <span class="paper-comment">📝 Accepted to ACM Transactions on Graphics (June 2026). Project page: https://mangosister.github.io/gsr_site/</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有场景表示方法（如网格或体素）难以同时高效处理光滑表面、模糊元素及高频细节，且缺乏统一的渲染框架支持全局光照和外观编辑。&#10;&#10;🛠 **方法**：提出基于3D高斯分布的统一渲染基元，利用非指数传输理论构建渲染模型，并设计兼容蒙特卡洛路径追踪的高效渲染操作，支持从网格或3D高斯泼溅转换，并通过透射率优化进行可微调优。&#10;&#10;✨ **主要贡献**：首次实现从光泽表面到模糊元素的统一场景表示，支持物理散射的全局光照、任意光照条件下的外观编辑，并在辐射场重建中通过简化方法保持细节与聚合元素的表示效率。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Searching for a unified scene representation remains a research challenge in computer graphics. Traditional mesh-based representations are unsuitable for dense, fuzzy elements and introduce additional complexity for filtering and differentiable rendering. Conversely, voxel-based representations struggle to model hard surfaces and high-frequency details. We propose a general-purpose rendering primitive based on 3D Gaussian distributions for unified scene representation, featuring versatile appearance ranging from glossy surfaces to fuzzy elements, as well as physically based scattering to enable accurate global illumination. We formulate the rendering theory for the primitive based on non-exponential transport and derive efficient rendering operations to be compatible with Monte Carlo path tracing. The new representation can be converted from different sources, including meshes and 3D Gaussian splatting, and further refined via transmittance optimization thanks to its differentiability. We demonstrate the versatility of our representation in various rendering applications such as global illumination and appearance editing, while naturally supporting arbitrary lighting conditions. With suitable simplification, we further adapt our method to radiance field reconstruction and rendering. We conduct comprehensive comparisons of our representation with existing scene representations, highlighting its efficiency in capturing details and representing aggregate elements.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2606.27584v1" target="_blank" class="paper-title">CoIn: Comprehensive 2D-3D Inpainting with Gaussian Splatting Guidance</a>
+                        <span class="paper-date">2026-06-25</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有基于高斯泼溅的3D场景修复方法依赖精确的多视角分割掩码，且仅能处理物体移除任务，无法支持任意形状掩码和物体插入等多样化需求。&#10;&#10;🛠 **方法**：提出CoIn框架，通过多阶段一致性流程连接2D修复模型与3DGS。首先用扩散模型生成初始修复图像，再引入参考自适应高斯泼溅与特征注意力机制构建粗糙3D场景（2D→3D），接着利用基于GS的参考特征扭曲为扩散过程提供几何约束（3D→2D），最后通过纹理增强判别器优化3D场景的光度真实感（2D→3D）。&#10;&#10;✨ **主要贡献**：有效利用双向信息流，在物体移除和插入任务上均达到最优性能，且支持灵活掩码输入，无需精确多视角分割。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>3D scene inpainting is essential for reconstructing areas corrupted by occlusions or limited viewpoints. While recent methods leverage Gaussian Splatting (GS) for efficient 3D editing, they often depend on precise multi-view segmentation masks and are inherently constrained to object removal tasks. We propose CoIn, a novel framework that bridges 2D inpainting models and 3DGS through a multi-stage consistency pipeline. Our approach first generates initial inpainted images using a diffusion model, enabling the use of arbitrary-shaped masks and diverse tasks like object insertion. We then introduce Reference Adaptive GS with Feature Attention to reconstruct a coarse 3D scene by adaptively weighing towards a reference view (2D -> 3D). This 3D representation provides geometric guidance to the diffusion process via GS-based Reference Feature Warping, ensuring multi-view consistency (3D -> 2D). Finally, a Texture-Enhancing Discriminator refines the 3D scene to achieve high photometric realism (2D -> 3D). Experiments show that CoIn, effectively leveraging bidirectional information flow, achieves state-of-the-art performance and effectively handles both object removal and object insertion with flexible mask input.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2606.27509v1" target="_blank" class="paper-title">Structured-Li-GS: Structured 3D Gaussians Splatting with LiDAR Incorporation and Spatial Constraints</a>
+                        <span class="paper-date">2026-06-25</span>
+                    </div>
+                                        <span class="paper-comment">📝 9 pages, ISPRS Congress 2026</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有3D高斯泼溅方法在重建时通常需要大量高斯体素，且缺乏对LiDAR点云几何信息的有效利用，导致模型体积大、重建精度受限。&#10;&#10;🛠 **方法**：提出Structured-Li-GS框架，将LiDAR-惯性-视觉SLAM生成的精确稠密彩色点云作为输入，通过子采样点云锚定高斯原语，并利用局部表面几何初始化椭球参数；训练时结合光度、扁平化、偏移、深度和法向损失，无需高斯密集化即可完成重建。&#10;&#10;✨ **主要贡献**：在保持中等模型尺寸的同时，实现了尺度一致的高保真重建；通过自研硬件同步LiDAR-相机手持扫描仪，在基准数据集和真实场景中均以更少高斯体素超越现有最优方法。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>In this study, we develop a Structured framework for Gaussian Splatting (3DGS) with LiDAR integration (Structured-Li-GS). It is a lightweight Gaussian Splatting pipeline that leverages LiDAR-inertial-visual SLAM. Structured-Li-GS achieves high-quality 3D reconstructions with fewer Gaussians by training on accurate, dense, colorized point clouds. Gaussian primitives are anchored using sub-sampled point clouds, and their ellipsoidal parameters are initialized from local surface geometry. Our training strategy integrates a comprehensive set of loss terms, including photometric, flattening, offset, depth, and normal losses, guided by the dense point cloud, enabling accurate reconstruction without Gaussian densification. This approach produces up-to-scale, high-fidelity results with a moderate model size. For experimental validation, we develop a custom hardware-synchronized LiDAR-camera handheld scanner. Experiments on both benchmark datasets and our real-world in-house dataset demonstrate that Structured-Li-GS surpasses state-of-the-art methods while using fewer Gaussians.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
                         <a href="https://arxiv.org/abs/2603.10446v4" target="_blank" class="paper-title">SignSparK: Efficient Multilingual Sign Language Production via Sparse Keyframe Learning</a>
                         <span class="paper-date">2026-06-25</span>
                     </div>
@@ -1049,10 +1184,7 @@
                         <span class="paper-date">2026-06-25</span>
                     </div>
                                         <span class="paper-comment">📝 23 pages, 15 figures</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：卫星图像因视角有限导致建筑立面监督不足，产生表面空洞和视觉保真度下降，且现有生成式精化方法会破坏几何一致性，引发幻觉和几何退化。&#10;&#10;🛠 **方法**：提出SatSplatDiff，基于DSM初始化和2DGS阴影投射，引入单目深度监督与多尺度几何精化建立规则表面，再通过阴影引导的生成式精化，利用几何阴影图保持高斯点与几何一致性。&#10;&#10;✨ **主要贡献**：在IARPA2016和DFC2019数据集上实现最先进性能，几何MAE降低18%，视觉保真度（FID-CLIP）提升28-45%，支持5倍分辨率增强且幻觉极少，具备跨瓦片一致性和大规模重建可扩展性。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Gaussian Splatting has been recently explored for satellite 3D reconstruction, demonstrating flexibility and efficiency in representing radiometrically diverse satellite scenes. However, the limited top viewpoint of satellite imagery results in insufficient supervision on building facades, leaving surface holes and degraded visual fidelity. Generative refinement, which leverages pretrained generative priors to iteratively refine and update the rendered images used as supervision targets, has recently been investigated to improve the visual fidelity of Gaussian-rendered images. However, since these models refine each view independently, the resulting images can generate hallucinations and break photo-consistency, leading to geometric degradation. To address these limitations, we propose SatSplatDiff, which aims to minimize geometric degradation prevalent in generative refinement. Building on photogrammetric DSM initialization and 2DGS-based shadow casting established in our prior work SatSplat, we first introduce monocular depth supervision and multi-scale geometric refinement to establish a geometrically accurate and well-regularized surface representation. We then apply shadow-guided generative refinement, where geometrically calculated shadow maps guide the Gaussians to maintain consistency with the underlying geometry, improving visual fidelity while reducing geometric degradation. Extensive evaluations on the IARPA2016 and DFC2019 datasets demonstrate state-of-the-art performance, reducing geometric MAE by up to 18% and improving visual fidelity (FID-CLIP) by 28-45% over existing baselines. Our method delivers up to 5x resolution enhancement with minimal hallucination and sensor-consistent appearance, demonstrating seamless cross-tile consistency and strong scalability for large-scale reconstruction. Source code is available at https://github.com/GDAOSU/SatSplatDiff</p>
@@ -1064,10 +1196,7 @@
                         <span class="paper-date">2026-06-25</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：3D高斯泼溅（3DGS）的优化过程难以解释，现有工具仅展示最终重建场景，无法分析高斯属性如何导致可见伪影或在训练中演变。&#10;&#10;🛠 **方法**：提出Vis4GS，一个多视图可视化分析工具，通过交互式高斯分析视图、属性时间线视图、高斯密集化树视图及日志控制面板，将渲染伪影与高斯属性、视角覆盖、训练进度和高斯谱系关联。&#10;&#10;✨ **主要贡献**：支持高斯选择、模糊/针状伪影评分、视角覆盖分析及多尺度谱系探索（克隆/分裂/剪枝事件），实现从场景级伪影到原始级证据的结构化诊断，用户研究证实其可用性与伪影理解能力显著优于原始3DGS查看器。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>3D Gaussian Splatting (3DGS) supports fast training and real-time rendering, but its optimization process remains difficult to interpret. Existing viewers mainly expose the final reconstructed scene and offer limited support for explaining how Gaussian properties contribute to visible artifacts or evolve during training. We present Vis4GS, a multi-view visual analytics tool for primitive-level diagnosis of 3DGS reconstruction artifacts. Built on the original 3DGS viewer and training framework, Vis4GS links rendered artifacts to Gaussian properties, View Coverage, training progress, and Gaussian genealogy through four linked views: an interactive Gaussian analysis view, a property timeline view, a Gaussian densification tree view, and a log and control panel. The system supports Gaussian selection, blur and needle-like artifact scoring, View Coverage analysis, and multiscale genealogy exploration of clone, split, prune, and clone-split events. By connecting scene-level artifacts with primitive-level evidence and optimization history, Vis4GS enables a structured workflow for diagnosing reconstruction failures beyond final-image inspection and global metrics. A user study also shows that Vis4GS provides stronger support for usability and artifact understanding than the original 3DGS viewer.</p>
@@ -1079,10 +1208,7 @@
                         <span class="paper-date">2026-06-25</span>
                     </div>
                                         <span class="paper-comment">📝 Accepted to ECCV 2026. Project page: https://vcc2310.github.io/SceneStyler/</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有3D高斯泼溅（3DGS）风格化方法在跨视角风格一致性上存在不足，容易导致风格分配不稳定、特征重复匹配以及视角间不一致。&#10;&#10;🛠 **方法**：提出基于容量控制的多视角风格化框架，将局部风格匹配重构为半平衡最优传输问题，通过可调强度的列容量约束抑制多对一匹配，并引入跨视角匹配引导和几何正则化来增强一致性。&#10;&#10;✨ **主要贡献**：实现了可控的风格特征分配，显著提升了多视角风格一致性，同时保持场景语义结构，生成稳定且富有表现力的3D风格化结果。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>While 3D Gaussian Splatting (3DGS) provides an efficient and explicit representation for novel view synthesis, enforcing stylistic coherence across viewpoints remains challenging. Existing 3D stylization methods typically apply 2D feature-matching losses independently per rendered view, which leads to unstable style allocation, many-to-one feature reuse, and limited cross-view consistency. We propose a capacity-controlled framework for multi-view stylization of 3DGS, grounded in optimal transport. Specifically, we reformulate local style matching as a semi-balanced optimal transport problem. By introducing explicit column-capacity constraints with tunable strength, our formulation mitigates many-to-one matching and enables controllable allocation of style features. This transport-based objective provides a principled mechanism for balancing feature coverage and stylistic diversity while maintaining stable correspondences across viewpoints. To further enhance cross-view coherence, we incorporate a novel cross-view matching guidance to constrain correspondences between scene content and style patterns. In addition, we introduce several geometric regularizations to enhance the vanilla 3DGS, thereby enabling optimized Gaussian primitives to represent finer-grained textures during stylization. Extensive experiments demonstrate that our approach significantly improves multi-view stylistic consistency and produces stable, expressive 3D stylizations while preserving the core semantic structure of the scene.</p>
@@ -1094,10 +1220,7 @@
                         <span class="paper-date">2026-06-25</span>
                     </div>
                                         <span class="paper-comment">📝 Accepted by SIGGRAPH 2026</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有3D网格编辑方法受限于体素表示的低分辨率及需要繁琐的3D掩码，缺乏直接基于单张图像进行高质量网格编辑的有效方案。&#10;&#10;🛠 **方法**：提出VecSet-Edit，以高保真VecSet大重建模型（LRM）为骨干，通过分析VecSet令牌的空间特性，设计掩码引导令牌播种、注意力对齐令牌门控实现仅用2D图像条件精准定位目标区域，并引入漂移感知令牌剪枝去除去噪过程中的几何异常，最后采用细节保持纹理烘焙模块保留原始网格的几何与纹理细节。&#10;&#10;✨ **主要贡献**：首次利用预训练LRM实现单图像驱动的网格编辑，无需3D掩码即可完成高精度局部编辑，同时保持原始网格的几何与纹理细节。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>3D editing has emerged as a critical research area to provide users with flexible control over 3D assets. While current editing approaches predominantly focus on 3D Gaussian Splatting or multi-view images, the direct editing of 3D meshes remains underexplored. Prior attempts, such as VoxHammer, rely on voxel-based representations that suffer from limited resolution and necessitate labor-intensive 3D mask. To address these limitations, we propose \textbf{VecSet-Edit}, the first pipeline that leverages the high-fidelity VecSet Large Reconstruction Model (LRM) as a backbone for mesh editing. Our approach is grounded on a analysis of the spatial properties in VecSet tokens, revealing that token subsets govern distinct geometric regions. Based on this insight, we introduce Mask-guided Token Seeding and Attention-aligned Token Gating strategies to precisely localize target regions using only 2D image conditions. Also, considering the difference between VecSet diffusion process versus voxel we design a Drift-aware Token Pruning to reject geometric outliers during the denoising process. Finally, our Detail-preserving Texture Baking module ensures that we not only preserve the geometric details of original mesh but also the textural information. More details can be found in our project page: https://github.com/BlueDyee/VecSet-Edit/tree/main</p>
@@ -1109,10 +1232,7 @@
                         <span class="paper-date">2026-06-25</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有前馈高斯泼溅方法在多视角输入时易积累噪声或冗余信息，难以收敛到稳定的场景表示，影响新视角合成和下游视觉任务性能。&#10;&#10;🛠 **方法**：提出CanonicalGS，通过从深度、语义特征和不确定性估计中提取视角相关证据，并在规范潜在世界中利用不确定性感知融合，聚合可靠观测并抑制不确定或冗余信息，生成稳定的场景中心表示。&#10;&#10;✨ **主要贡献**：在新视角合成任务中峰值信噪比提升高达2.5 dB，语义分割准确率提升11%，且表示可有效扩展至下游视觉感知任务。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Feed-forward Gaussian splatting (FFGS) facilitates real-time novel view synthesis, yet current methods often remain tied to view-dependent predictions. As more input views are added, they may accumulate noisy or redundant evidence instead of converging to a stable scene representation. In this paper, we introduce CanonicalGS, a feed-forward pipeline that maps cluttered multi-view observations into a stable, scene-centric representation. CanonicalGS first extracts view-centric evidence from depth, semantic features, and uncertainty estimates, and then aggregates this evidence in a canonical latent world using uncertainty-aware fusion. By emphasizing reliable observations while suppressing uncertain or redundant ones, CanonicalGS produces representations that scale more effectively for novel view synthesis and transfer to downstream visual perception tasks. Experiments show up to a $2.5$ dB improvement in peak signal-to-noise ratio for synthesizing novel views and an $11\%$ gain in semantic segmentation accuracy.</p>
@@ -1124,10 +1244,7 @@
                         <span class="paper-date">2026-06-24</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决脊柱MRI扫描中因原始图像平面与目标解剖结构不对齐，导致放射学分级不准确的问题。&#10;&#10;🛠 **方法**：将3D高斯泼溅技术（3D Gaussian Splatting）应用于稀疏各向异性MRI数据，构建体积重建，然后沿与临床评估相关的解剖平面对新视角进行采样和渲染。&#10;&#10;✨ **主要贡献**：相比原始扫描和体素插值重采样方法，基于高斯泼溅的重采样图像在脊柱狭窄分级上取得了更准确的预测结果。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>The objective of this paper is to improve radiological gradings measured on MRIs of spines, by resampling scans so that the new view planes are better aligned with the target anatomy than the original sparse images. To this end, we adapt 3D Gaussian Splatting to form a volumetric reconstruction starting from sparse anisotropic MRIs, and imaging planes aligned with the anatomy relevant for clinical evaluation are then sampled and rendered. The novel view plane is optimal for diagnostic radiological grading of the target anatomy, whereas the original MRI is not. The resampled scans are then used to predict ordinal severity grades of localised stenosis conditions in spinal MRIs. We compare our method against Voxel Interpolation resampling, which takes the average of inverse-distance weighted nearest neighbour intensities for each target coordinate. Experiments show that across all stenosis conditions, resampled scans using Gaussian Splatting produce more accurate stenosis gradings compared to the raw scans which do not include the complete anatomy in-plane, as well as images resampled using Voxel Interpolation.</p>
@@ -1139,10 +1256,7 @@
                         <span class="paper-date">2026-06-24</span>
                     </div>
                                         <span class="paper-comment">📝 ECCV 2026, Project Page: https://lhmd.top/volsplat, Code: https://github.com/ziplab/VolSplat</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有前馈式3D高斯泼溅方法依赖像素对齐预测，导致重建模型受输入视图数量限制、密度分布存在视角偏差，且在遮挡或低纹理区域产生对齐误差。&#10;&#10;🛠 **方法**：提出VolSplat，用体素对齐的高斯预测替代像素对齐范式，直接从预测的3D体素网格中生成高斯，避免对2D特征匹配的依赖。&#10;&#10;✨ **主要贡献**：实现鲁棒的多视图一致性，根据场景复杂度自适应控制密度，在多个基准上达到最先进性能，生成更真实且视角一致的新视图渲染结果。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Feed-forward 3D Gaussian Splatting (3DGS) has emerged as a highly effective solution for novel view synthesis. Existing methods predominantly rely on a \emph{pixel-aligned} Gaussian prediction paradigm, where each 2D pixel is mapped to a 3D Gaussian. We rethink this widely adopted formulation and identify several inherent limitations: it renders the reconstructed 3D models heavily dependent on the number of input views, leads to view-biased density distributions, and introduces alignment errors, particularly when source views contain occlusions or low texture. To address these challenges, we introduce VolSplat, a new multi-view feed-forward paradigm that replaces pixel alignment with voxel-aligned Gaussians. By directly predicting Gaussians from a predicted 3D voxel grid, it overcomes pixel alignment's reliance on error-prone 2D feature matching, ensuring robust multi-view consistency. Furthermore, it enables adaptive control over density based on 3D scene complexity, yielding more faithful Gaussians, improved geometric consistency, and enhanced novel-view rendering quality. Experiments on widely used benchmarks demonstrate that VolSplat achieves state-of-the-art performance, while producing more plausible and view-consistent results. The video results, code and trained models are available on our project page: https://lhmd.top/volsplat.</p>
@@ -1154,10 +1268,7 @@
                         <span class="paper-date">2026-06-24</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有无人机视觉语言导航基准多依赖长序列、逐步指令和终点导向评估，难以诊断实际任务中简洁高层指令需转化为安全多阶段行为的能力。  &#10;🛠 **方法**：构建HUGE-Bench基准，包含4个真实数字孪生场景、8项高层任务和256万米轨迹，采用对齐的3D高斯泼溅-网格表示，结合逼真渲染与碰撞几何体，支持可扩展生成与碰撞感知评估。  &#10;✨ **主要贡献**：提出过程导向与碰撞感知指标，评估过程保真度、终端精度和安全性；实验揭示当前先进VLA模型在高层语义完成和安全执行上的显著不足，为无人机高层自主性提供诊断性测试平台。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Existing UAV vision-language navigation (VLN) benchmarks have enabled language-guided flight, but they largely focus on long, step-wise route descriptions with goal-centric evaluation, making them less diagnostic for real operations where brief, high-level commands must be grounded into safe multi-stage behaviors. We present HUGE-Bench, a benchmark for High-Level UAV Vision-Language-Action (HL-VLA) tasks that tests whether an agent can interpret concise language and execute complex, process-oriented trajectories with safety awareness. HUGE-Bench comprises 4 real-world digital twin scenes, 8 high-level tasks, and 2.56M meters of trajectories, and is built on an aligned 3D Gaussian Splatting (3DGS)-Mesh representation that combines photorealistic rendering with collision-capable geometry for scalable generation and collision-aware evaluation. We introduce process-oriented and collision-aware metrics to assess process fidelity, terminal accuracy, and safety. Experiments on representative state-of-the-art VLA models reveal significant gaps in high-level semantic completion and safe execution, highlighting HUGE-Bench as a diagnostic testbed for high-level UAV autonomy.</p>
@@ -1169,10 +1280,7 @@
                         <span class="paper-date">2026-06-24</span>
                     </div>
                                         <span class="paper-comment">📝 Accepted for EMBC 2026. Project page: http://www.ok.sc.e.titech.ac.jp/res/GastroNVS/GastroGS/</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有数据集不足以评估神经辐射场（NeRF）和3D高斯泼溅（3DGS）等新视角合成方法在胃镜图像中的表现，限制了其在扩展视野、数字孪生等应用中的发展。  &#10;🛠 **方法**：构建了首个真实胃镜新视角合成数据集GastroNVS，包含胃镜图像、相机位姿和点云数据，并基于多种3DGS方法进行性能评估。  &#10;✨ **主要贡献**：提供了首个真实胃镜NVS基准数据集，揭示了当前方法在胃镜场景中的挑战，为未来算法优化和临床应用奠定基础。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Novel view synthesis (NVS) is an active research topic in computer vision, owing to the success of neural radiance field (NeRF) and 3D Gaussian splatting (3DGS) methods. While NVS opens the door to potential applications in gastroendoscopy, such as extending the field of view of endoscopic images and enabling digital twins for 3D archiving and endoscopist manipulation training, the dataset is insufficient to evaluate NVS for gastroendoscopy. In this paper, we present the first real gastroscopy dataset for NVS, namely the GastroNVS dataset, which contains a set of gastroscopic images, camera poses, and a point cloud for real gastroendoscopy inspection. To assess the suitability of the GastroNVS dataset, we evaluate several 3DGS methods and discuss the challenges for future development. The dataset is available on request from our project page.</p>
@@ -1512,18 +1620,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Robust obstacle segmentation is essential for the safety of intelligent robots, where LiDAR-based perception systems play a fundamental role in the robot-environment interaction. While extensive LiDAR-based approaches have demonstrated high performance on common obstacles in urban scenarios, their results on tiny obstacles such as curbs, gravel, and potholes remain unsatisfactory due to the significant similarity between tiny obstacles and inherent road undulations. Moreover, their segmentation accuracy even deteriorates sharply when the LiDAR scans suffer from degradation in challenging off-road scenes. To overcome these bottlenecks, we propose LOGOS, a LiDAR-only unified tiny obstacle segmentation system, which models the road surface as a continuous mixture of 2D Gaussian primitives and distinguishes tiny obstacles via high-presicion elevation estimation. Unlike existing Gaussian splatting methods that rely on iterative RGB training, LOGOS is a backpropagation-free LiDAR-only approach. It directly estimates Gaussian parameters via a freespace-aware initialization by incrementally pruning non-road primitives using smoothness constraints. Subsequently, pointwise signed distances are computed via a novel normal-aware elevation splatting function, ensuring robustness to both flat and sloped terrains. We evaluate LOGOS on a highly heterogeneous benchmark of point cloud frames collected from urban mobility scenarios and mining haulage off-road environments. These data are practically acquired using different LiDAR sensors and exhibit large variations in point density, terrain roughness, and obstacle types. Experiments on the road and off-road scenes demonstrate that LOGOS significantly outperforms other state-of-the-art methods, particularly in degraded point cloud regions and challenging off-road scenarios, while maintaining real-time efficiency.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.09074v2" target="_blank" class="paper-title">REFINE: Super-efficient 3D Gaussian Splatting Pruning via Rendering-Free Primitive Importance</a>
-                        <span class="paper-date">2026-06-19</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Existing pruning methods for 3D Gaussian splatting (3DGS) suffer from either severe quality degradation or prohibitive computational overhead. In this paper, we propose REFINE, a highly accelerated 3DGS pruning framework centered on a novel rendering-free primitive importance metric. Our approach leverages an analytically approximated, rendering-aware Hessian field to quantify the expected perceptual error induced by the removal of individual primitives. By modeling the joint modulation of visibility, projection geometry and the content adaptive hyperparameter, we entirely bypass costly forward rendering passes and derive an anisotropic perceptual weight field that serves as a high-fidelity proxy for primitive importance. Extensive experiments across multiple benchmark datasets demonstrate that REFINE maintains highly competitive rendering quality while achieving an unprecedented $3,000\times$ reduction in pruning-related computational complexity compared to state-of-the-art pruning methods.</p>
                     </details>
                 </div>
                 <div class="paper-card">
@@ -1920,102 +2016,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>In the context of novel view synthesis, 3D Gaussian Splatting (3DGS) has recently emerged as an efficient and competitive counterpart to Neural Radiance Field (NeRF), enabling high-fidelity photorealistic rendering in real time. Beyond novel view synthesis, the explicit and compact nature of 3DGS enables a wide range of downstream applications that require geometric and semantic understanding. This survey provides a comprehensive overview of recent progress in 3DGS applications. It first reviews the reconstruction preliminaries of 3DGS, followed by the problem formulation, 2D foundation models, and related NeRF-based research areas that inform downstream 3DGS applications. We then categorize 3DGS applications into three foundational tasks: segmentation, editing, and generation, alongside additional functional applications built upon or tightly coupled with these foundational capabilities. For each, we summarize representative methods, supervision strategies, and learning paradigms, highlighting shared design principles and emerging trends. Commonly used datasets and evaluation protocols are also summarized, along with comparative analyses of recent methods across public benchmarks. To support ongoing research and development, a continually updated repository of papers, code, and resources is maintained at https://github.com/heshuting555/Awesome-3DGS-Applications.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.16278v1" target="_blank" class="paper-title">RealityBridge: Bridging Editable 3D Gaussian Splatting Driving Simulations and Real-World Videos</a>
-                        <span class="paper-date">2026-06-15</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Long-tail hazardous scenarios are essential for safety-oriented autonomous driving, yet they are difficult to collect and reproduce at scale. Editable 3D Gaussian Splatting (3DGS) simulation offers a promising alternative by reconstructing real driving scenes and supporting controllable scene editing. However, edited 3DGS-rendered videos still suffer from a significant Sim-to-Real gap, including rendering artifacts, degraded foreground assets, inconsistent illumination, and temporal flickering. Existing restoration and video generation methods are insufficient for this task, as they often fail to jointly repair 3DGS-specific artifacts, improve visual realism, and ensure temporal consistency. To fill this gap, we propose RealityBridge, a structure-preserving and asset-aware Sim-to-Real framework for edited 3DGS driving videos. RealityBridge uses multimodal controls, including rendered videos, foreground masks, edge maps, and semantic masks, together with a lightweight GateNet for adaptive condition allocation across backbone layers. We further construct targeted training data and introduce autoregressive long-video training with reward-guided post-training to improve restoration quality, temporal stability, and hallucination suppression. Extensive experiments on internal and public driving datasets show that RealityBridge outperforms existing methods in artifact removal, illumination harmonization, and long-sequence temporal consistency.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.16232v1" target="_blank" class="paper-title">PolyMerge: Compressing 3D Gaussian Splats with Polytope Coverings for Provably Safe Resource-Constrained Navigation</a>
-                        <span class="paper-date">2026-06-15</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Obstacle avoidance is essential for safe navigation and motion planning. Recent radiance field reconstruction methods enable object detection and modeling with high fidelity, but remain too memory- and compute-intensive for on-board perception-based path planning. To address these limitations, we propose PolyMerge to convert a large, photorealistic 3D Gaussian Splatting (3DGS) model of a scene into a lightweight representation of convex polytopes whose union provably over-approximates all obstacles in the original 3DGS model. PolyMerge tunes the polytope count to trade off conservativeness and compute cost, and integrates with control barrier functions (CBFs) to plan collision-free paths. We showcase PolyMerge in simulation and hardware experiments on a Crazyflie drone, which uses PolyMerge to compute and follow safe trajectories in real time under severe onboard compute constraints, outperforming baselines in speed while guaranteeing safety. For our code and videos, visit https://athlon76.github.io/PolyMerge-website/.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.16168v1" target="_blank" class="paper-title">Fi-Gaussian: Frequency-Aware Implicit Gaussian Splatting for Single Image Dehazing</a>
-                        <span class="paper-date">2026-06-15</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Single image dehazing continues to be hindered by the loss of high-frequency details and the difficulty of accurate physical scattering modeling. To address these issues, we propose Fi-Gaussian, a frequency-aware implicit Gaussian splatting network for single image dehazing. Unlike explicit rendering methods that rely on 3D point clouds, our method employs implicit Gaussian splatting to adaptively model the underlying distribution of clear images as a continuous representation in 2D feature space. The core of the network is a frequency-aware implicit Gaussian splatting module, which decouples low-frequency structural information and high-frequency texture information in the frequency domain and then performs adaptive Gaussian aggregation with complex-valued weights to recover fine details. In addition, a physics-driven scattering renormalization mechanism is introduced to estimate the transmission map and atmospheric light under the guidance of implicit Gaussian priors. Extensive experiments on multiple benchmark datasets demonstrate that Fi-Gaussian achieves state-of-the-art quantitative performance and produces visually superior dehazed results, validating the effectiveness of implicit Gaussian splatting for low-level vision tasks.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.16163v1" target="_blank" class="paper-title">Dehaze-GaussianImage: Zero-Shot Dehazing via Efficient 2D Gaussian Splatting Representation</a>
-                        <span class="paper-date">2026-06-15</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Existing single image dehazing methods are often constrained by computational redundancy in pixel-level optimization and the lack of physical interpretability in implicit neural networks. These limitations hinder the balance between representation efficiency and reconstruction fidelity. To address these issues, we propose Dehaze-GaussianImage, the first zero-shot framework that introduces 2D Gaussian Splatting (2DGS) into the image dehazing domain to break the traditional pixel-grid processing paradigm. Distinct from static convolutional neural networks (CNNs) or Transformers, our approach models hazy images as continuous and dynamically evolvable anisotropic Gaussian fields. Specifically, we propose a novel reconstruction-decoupling zero-shot learning strategy that embeds the atmospheric scattering model into the Gaussian parameter space. This strategy drives Gaussian primitives to adaptively split, clone, and prune during optimization, achieving geometric-level decoupling of the transmission medium and clear textures. Furthermore, explicit structure-preserving constraints are introduced to suppress artifacts commonly caused by traditional physical priors. Experimental results demonstrate that the proposed method achieves state-of-the-art (SOTA) performance in a fully unsupervised manner with minimal parameters, highlighting the potential of explicit Gaussian representation for low-level vision tasks.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.16159v1" target="_blank" class="paper-title">Continuous Splatting meets Retinex: Continuous Gaussian Splatting and Implicit Reflectance Modeling for Low-Light Image Enhancement</a>
-                        <span class="paper-date">2026-06-15</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Low-light image enhancement aims to recover clear images from low-illumination observations and is crucial for high-level downstream vision tasks. However, existing methods frequently encounter color distortion and structural artifacts when balancing global smooth illumination adjustment and local high-frequency detail recovery. To address these issues, we propose CGS-Retinex as the first low-light image enhancement framework based on explicit-implicit joint modeling. Our framework deeply integrates continuous Gaussian splatting with Retinex theory. Specifically, we represent the image grid as a continuous parameter field and propose a continuous Gaussian renderer to estimate the spatially continuous global illumination distribution. This approach fundamentally eliminates grid artifacts caused by discrete Gaussian sampling. Furthermore, we introduce an implicit neural representation to model reflectance independently. We leverage shallow high-frequency features to guide the network in accurately reconstructing degraded texture details. Within the Retinex framework, we incorporate physics-inspired brightness consistency constraints and illumination smoothness regularization to enable explicit illumination and implicit reflectance to maintain proper exposure and achieve high-fidelity recovery of high-frequency structures and colors. Extensive experiments demonstrate that CGS-Retinex significantly suppresses dark-region noise and overexposure while achieving exceptional high-frequency structural fidelity and color restoration by precisely decoupling illumination and texture. This work establishes a novel continuous physical representation paradigm for low-light image enhancement.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.15924v1" target="_blank" class="paper-title">TurboGS: Accelerating 3D Gaussian Splatting via Error-Guided Sparse Pixel Sampling and Optimization</a>
-                        <span class="paper-date">2026-06-14</span>
-                    </div>
-                                        <span class="paper-comment">📝 Accepted by ICML2026. Project page: https://zhengdong.site/projects/TurboGS/</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Consumer-level applications require fast optimization of 3D Gaussian Splatting (3DGS) with high-fidelity novel view rendering. However, existing 3DGS acceleration approaches still incur substantial computation on redundant pixels while sacrificing fine details. In this paper, we present TurboGS, an error-guided training framework that accelerates 3DGS by concentrating optimization on perceptually informative pixels. TurboGS is built upon four core components: (1) a tile-wise sparse pixel sampling, which, driven by multi-view reconstruction errors during training, prioritizes challenging regions and skips well-reconstructed ones to avoid redundant gradient computation; (2) a tile-wise structure-aware loss with sparse Normalized Cross-Correlation, which provides sparse yet effective supervision to preserve fine details and stabilize training; (3) an error-driven Gaussian density control strategy, which dynamically allocates model capacity and removes redundant primitives; and (4) a tailored hybrid optimizer that couples Hessian-informed updates with Adam moment damping to stabilize and improve convergence under sparse supervision. Experiments on standard benchmarks demonstrate that TurboGS can deliver on par or superior rendering quality within 100 seconds on a single RTX 5090 GPU card (up to 10x training speedup over vanilla 3DGS).</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.15848v1" target="_blank" class="paper-title">EmoZone-Talker: Regional Semantic Control of Audio-Driven 3DGS Talking Heads via Facial Action Units</a>
-                        <span class="paper-date">2026-06-14</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>3D Gaussian Splatting (3DGS) has shown strong potential for high-fidelity talking head synthesis. However, enabling fine-grained, interpretable, and editable facial expression control remains fundamentally challenging due to intrinsic conflicts between speech-driven facial dynamics and explicit expression signals. Existing methods rely on implicit multimodal fusion, leading to spatial entanglement and temporal instability. We present EmoZone-Talker, a novel framework that reformulates audio-driven facial animation as a structured spatial-temporal coordination problem under cross-modal conflicts. Our approach introduces an explicit spatial disentanglement and temporal dynamics modeling of facial motion. Specifically, we propose Synergy Zones with Prioritized Attention Bias (SZ-PAB) to explicitly decouple modality contributions via region-wise constraints guided by anatomical priors, and a Channel-Independent Temporal AU Encoder (CIT-AE) to model temporally coherent AU dynamics. By integrating these representations into 3D Gaussian deformation, EmoZone-Talker enables precise and interpretable control over facial expressions. Extensive experiments demonstrate that our method improves expression controllability and realism, with notable gains in upper-face accuracy and temporal coherence, while preserving high rendering quality and accurate lip synchronization. Code will be publicly released to facilitate reproducibility and further research.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.15659v1" target="_blank" class="paper-title">SpatialAvatar-0: High-Quality 4D Head Avatar with Multi-Stage Reconstruction</a>
-                        <span class="paper-date">2026-06-14</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>High-quality 4D head avatars from one or a few source portraits are central to telepresence, AR/VR, and digital-human interaction. 3D Gaussian Splatting (3DGS) has emerged as the dominant representation, with two complementary regimes (generalizable feed-forward predictors and per-subject refiners) maturing in parallel. However, existing feed-forward predictors are trained on a single dataset family with a hard-coded source count, inheriting the corresponding domain bias. Per-subject refiners require 300K--600K iterations and rely on adaptive densification that destroys upstream Gaussian layouts, preventing the two regimes from sharing a representation end-to-end. To bridge both regimes we propose SpatialAvatar-0 on a shared FLAME-mesh-bound Gaussian representation: a feed-forward generator with a parameter-free K-source mean-pool and a monocular-temporal to multi-view-spatial two-phase schedule that anchors against identity-prior collapse onto the smaller multi-view set. We further introduce a 10K-iter layout-preserving per-subject refinement loop that freezes the FLAME-binding and Gaussian count and replaces densification with a three-component anti-spike regularization. On VFHQ/HDTF cross-domain zero-shot we surpass the in-domain leader GAGAvatar by +1.5 dB PSNR despite never training on either test domain, and on the SplattingAvatar monocular benchmark we lead every reported metric, surpassing the 300K-iter GeoAvatar by +1.3 dB PSNR at up to 60x shorter per-subject schedule than common SOTA baselines. Website: https://spatialwalk.github.io/SpatialAvatar-0.</p>
                     </details>
                 </div>
             </div>
