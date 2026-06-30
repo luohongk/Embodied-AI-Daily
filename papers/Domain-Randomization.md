@@ -2,7 +2,7 @@
 
 > **78 papers** fetched from arXiv for the keyword **Domain Randomization**.
 
-> Last update: 2026-06-30
+> Last update: 2026-07-01
 
 [← Back to README](../README.md)
 
