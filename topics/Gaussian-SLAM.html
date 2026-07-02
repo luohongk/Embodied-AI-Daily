@@ -1,0 +1,1451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaussian SLAM — Embodied AI Daily</title>
+    <style>
+        :root {
+            --bg: #f8fafc;
+            --surface: #ffffff;
+            --text: #1e293b;
+            --text-secondary: #64748b;
+            --border: #e2e8f0;
+            --accent: #6366f1;
+            --sidebar-width: 280px;
+            --radius: 12px;
+            --shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04);
+            --shadow-md: 0 4px 12px rgba(0,0,0,.08);
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0f172a;
+                --surface: #1e293b;
+                --text: #e2e8f0;
+                --text-secondary: #94a3b8;
+                --border: #334155;
+                --shadow: 0 1px 3px rgba(0,0,0,.3);
+                --shadow-md: 0 4px 12px rgba(0,0,0,.4);
+            }
+        }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        html { scroll-behavior:smooth; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            display: flex;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            position: fixed;
+            top: 0; left: 0;
+            width: var(--sidebar-width);
+            height: 100vh;
+            background: var(--surface);
+            border-right: 1px solid var(--border);
+            overflow-y: auto;
+            padding: 24px 20px;
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        .sidebar-header {
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 8px;
+        }
+        .sidebar-header h1 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #6366f1, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 4px;
+        }
+        .sidebar-header h1 a { text-decoration: none; }
+        .sidebar-header .update {
+            font-size: .75rem;
+            color: var(--text-secondary);
+        }
+        .nav-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 12px;
+            border-radius: 8px;
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: .85rem;
+            transition: all .15s;
+        }
+        .nav-item:hover {
+            background: var(--bg);
+            color: var(--text);
+        }
+        .nav-item.active {
+            background: var(--bg);
+            color: var(--text);
+            font-weight: 600;
+        }
+        .nav-dot {
+            width: 8px; height: 8px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+        .nav-label {
+            flex: 1;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .nav-count {
+            font-size: .72rem;
+            background: var(--bg);
+            padding: 2px 7px;
+            border-radius: 10px;
+            font-weight: 600;
+        }
+
+        /* Main content */
+        .main {
+            margin-left: var(--sidebar-width);
+            flex: 1;
+            padding: 40px 48px;
+            max-width: calc(100% - var(--sidebar-width));
+        }
+        .hero {
+            text-align: center;
+            padding: 40px 0 48px;
+        }
+        .hero h2 {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+        .hero .subtitle {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            margin-bottom: 16px;
+        }
+        .author-line {
+            margin-top: 14px;
+            font-size: .88rem;
+            color: var(--text-secondary);
+        }
+        .author-line a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .author-line a:hover {
+            text-decoration: underline;
+        }
+        .author-sep {
+            color: var(--border);
+            margin: 0 8px;
+        }
+        .badges {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .badges img {
+            height: 20px;
+        }
+
+        /* Topic directory grid (index page) */
+        .topic-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 16px;
+            margin-bottom: 40px;
+        }
+        .topic-card {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 18px 20px;
+            text-decoration: none;
+            color: var(--text);
+            box-shadow: var(--shadow);
+            transition: box-shadow .2s, transform .15s;
+        }
+        .topic-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+        .topic-card-name {
+            font-weight: 700;
+            font-size: 1rem;
+        }
+        .topic-card-count {
+            font-size: .8rem;
+            color: var(--text-secondary);
+        }
+        .topic-card-go {
+            margin-top: 4px;
+            font-size: .82rem;
+            font-weight: 600;
+            color: var(--accent);
+        }
+
+        /* Topic page header */
+        .topic-section {
+            margin-bottom: 48px;
+        }
+        .topic-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--border);
+            flex-wrap: wrap;
+        }
+        .topic-badge {
+            display: inline-block;
+            color: #fff;
+            padding: 5px 14px;
+            border-radius: 20px;
+            font-size: .85rem;
+            font-weight: 600;
+            letter-spacing: .01em;
+        }
+        .topic-count {
+            font-size: .82rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 18px;
+            font-size: .85rem;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .back-link:hover { text-decoration: underline; }
+
+        /* Paper cards */
+        .paper-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .paper-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 16px 20px;
+            box-shadow: var(--shadow);
+            transition: box-shadow .2s, transform .15s;
+        }
+        .paper-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-1px);
+        }
+        .paper-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .paper-title {
+            font-weight: 600;
+            font-size: .95rem;
+            color: var(--text);
+            text-decoration: none;
+            flex: 1;
+            min-width: 0;
+        }
+        .paper-title:hover {
+            color: var(--accent);
+            text-decoration: underline;
+        }
+        .paper-date {
+            font-size: .78rem;
+            color: var(--text-secondary);
+            white-space: nowrap;
+            font-variant-numeric: tabular-nums;
+        }
+        .paper-comment {
+            display: inline-block;
+            margin-top: 6px;
+            font-size: .78rem;
+            color: var(--text-secondary);
+            background: var(--bg);
+            padding: 2px 10px;
+            border-radius: 6px;
+        }
+        .paper-abstract {
+            margin-top: 10px;
+            font-size: .85rem;
+            color: var(--text-secondary);
+        }
+        .paper-abstract summary {
+            cursor: pointer;
+            font-weight: 500;
+            color: var(--accent);
+            font-size: .82rem;
+            user-select: none;
+        }
+        .paper-abstract summary:hover {
+            text-decoration: underline;
+        }
+        .paper-abstract p {
+            margin-top: 8px;
+            line-height: 1.7;
+            padding: 12px 16px;
+            background: var(--bg);
+            border-radius: 8px;
+            border-left: 3px solid var(--accent);
+        }
+
+        /* AI Summary */
+        .ai-summary {
+            margin-top: 10px;
+            padding: 10px 14px;
+            background: linear-gradient(135deg, rgba(99,102,241,0.07), rgba(168,85,247,0.07));
+            border-radius: 8px;
+            border-left: 3px solid var(--accent);
+        }
+        .ai-label {
+            font-size: .8rem;
+            font-weight: 600;
+            color: var(--accent);
+            cursor: pointer;
+            user-select: none;
+            letter-spacing: .02em;
+        }
+        .ai-label:hover {
+            text-decoration: underline;
+        }
+        .ai-content {
+            font-size: .85rem;
+            color: var(--text);
+            line-height: 1.75;
+            margin-top: 10px;
+            max-height: 480px;
+            overflow-y: auto;
+            padding-right: 6px;
+        }
+        /* Rendered markdown inside AI summary */
+        .markdown-body h2 {
+            font-size: 1rem;
+            margin: 14px 0 6px;
+            padding-bottom: 4px;
+            border-bottom: 1px solid var(--border);
+            color: var(--text);
+        }
+        .markdown-body h3 {
+            font-size: .9rem;
+            margin: 10px 0 4px;
+            color: var(--accent);
+        }
+        .markdown-body p { margin: 6px 0; }
+        .markdown-body ul, .markdown-body ol { margin: 6px 0 6px 20px; }
+        .markdown-body li { margin: 3px 0; }
+        .markdown-body strong { color: var(--text); }
+        .markdown-body code {
+            background: var(--bg);
+            padding: 1px 5px;
+            border-radius: 4px;
+            font-size: .82em;
+        }
+        .markdown-body pre {
+            background: var(--bg);
+            padding: 10px 12px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-size: .8em;
+        }
+        .markdown-body table {
+            border-collapse: collapse;
+            margin: 8px 0;
+            font-size: .82em;
+        }
+        .markdown-body th, .markdown-body td {
+            border: 1px solid var(--border);
+            padding: 4px 8px;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 40px 0 20px;
+            color: var(--text-secondary);
+            font-size: .82rem;
+            border-top: 1px solid var(--border);
+            margin-top: 20px;
+        }
+
+        /* Sponsor banner */
+        .sponsor {
+            margin: 0 auto 8px;
+            max-width: 640px;
+            background: linear-gradient(135deg, rgba(16,185,129,0.10), rgba(99,102,241,0.10));
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 16px 20px;
+            text-align: center;
+        }
+        .sponsor-title {
+            font-size: .95rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 6px;
+        }
+        .sponsor-desc {
+            font-size: .82rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        .sponsor details { margin-top: 4px; }
+        .sponsor summary {
+            cursor: pointer;
+            display: inline-block;
+            background: #07c160;
+            color: #fff;
+            font-size: .82rem;
+            font-weight: 600;
+            padding: 7px 18px;
+            border-radius: 20px;
+            user-select: none;
+            list-style: none;
+        }
+        .sponsor summary::-webkit-details-marker { display: none; }
+        .sponsor summary:hover { opacity: .9; }
+        .sponsor-qr {
+            margin-top: 14px;
+        }
+        .sponsor-qr img {
+            width: 220px;
+            max-width: 80%;
+            border-radius: 10px;
+            box-shadow: var(--shadow-md);
+        }
+
+        /* Mobile top bar */
+        .mobile-bar {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            height: 52px;
+            background: var(--surface);
+            border-bottom: 1px solid var(--border);
+            z-index: 200;
+            padding: 0 16px;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .mobile-bar .mobile-title {
+            font-weight: 700;
+            font-size: .95rem;
+            background: linear-gradient(135deg, #6366f1, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .menu-toggle {
+            background: none;
+            border: none;
+            font-size: 1.4rem;
+            cursor: pointer;
+            color: var(--text);
+            padding: 4px 8px;
+            border-radius: 6px;
+            line-height: 1;
+            transition: background .15s;
+        }
+        .menu-toggle:hover {
+            background: var(--bg);
+        }
+
+        /* Mobile nav overlay */
+        .mobile-nav-overlay {
+            display: none;
+            position: fixed;
+            top: 52px; left: 0; right: 0; bottom: 0;
+            background: var(--surface);
+            z-index: 199;
+            overflow-y: auto;
+            padding: 8px 16px 24px;
+            flex-direction: column;
+        }
+        .mobile-nav-overlay.open {
+            display: flex;
+        }
+        .mobile-nav-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0 12px;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 4px;
+            font-weight: 600;
+            font-size: .85rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: .04em;
+        }
+        .mobile-nav-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 13px 8px;
+            border-radius: 8px;
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: .88rem;
+            border-bottom: 1px solid var(--border);
+            transition: background .1s;
+        }
+        .mobile-nav-item:active {
+            background: var(--bg);
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .sidebar {
+                display: none;
+            }
+            .mobile-bar {
+                display: flex;
+            }
+            .main {
+                margin-left: 0;
+                max-width: 100%;
+                padding: 68px 16px 20px;
+            }
+            .hero h2 {
+                font-size: 1.4rem;
+            }
+            .hero {
+                padding: 20px 0 32px;
+            }
+            .paper-header {
+                flex-direction: column;
+                gap: 4px;
+            }
+        }
+    </style>
+    <!-- MathJax for rendering LaTeX math in AI summaries -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true
+            },
+            options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'] }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+</head>
+<body>
+    <!-- Mobile top bar -->
+    <div class="mobile-bar">
+        <span class="mobile-title">🚀 Embodied AI Daily</span>
+        <button class="menu-toggle" id="menuToggle" onclick="toggleMenu()" aria-label="Toggle menu">☰</button>
+    </div>
+
+    <!-- Mobile nav overlay -->
+    <div class="mobile-nav-overlay" id="mobileNav">
+        <div class="mobile-nav-header">
+            <span>Topics</span>
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Close menu">✕</button>
+        </div>
+                <a href="Continuous-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#6366f1"></span>
+                    <span class="nav-label">Continuous Learning</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="Feed-Forward-Reconstruction.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#8b5cf6"></span>
+                    <span class="nav-label">Feed Forward Reconstruction</span>
+                    <span class="nav-count">53</span>
+                </a>
+                <a href="Vision-and-Language-Navigation.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#a855f7"></span>
+                    <span class="nav-label">Vision and Language Navigation</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="Vision-Language-Action.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#d946ef"></span>
+                    <span class="nav-label">Vision Language Action</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="World-Model.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#ec4899"></span>
+                    <span class="nav-label">World Model</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="3D-Foundation-Model.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#f43f5e"></span>
+                    <span class="nav-label">3D Foundation Model</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="LLM.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#ef4444"></span>
+                    <span class="nav-label">LLM</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="VLM.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#f97316"></span>
+                    <span class="nav-label">VLM</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="World-Action-Model.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#f59e0b"></span>
+                    <span class="nav-label">World Action Model</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="Gaussian-Splatting.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#84cc16"></span>
+                    <span class="nav-label">Gaussian Splatting</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="Visual-SLAM.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#22c55e"></span>
+                    <span class="nav-label">Visual SLAM</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="Visual-Inertial-SLAM.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#10b981"></span>
+                    <span class="nav-label">Visual Inertial SLAM</span>
+                    <span class="nav-count">78</span>
+                </a>
+                <a href="Visual-Inertial-Odometry.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#14b8a6"></span>
+                    <span class="nav-label">Visual Inertial Odometry</span>
+                    <span class="nav-count">79</span>
+                </a>
+                <a href="Lidar-SLAM.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#06b6d4"></span>
+                    <span class="nav-label">Lidar SLAM</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="LiDAR-Odometry.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#0ea5e9"></span>
+                    <span class="nav-label">LiDAR Odometry</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="GNSS.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#3b82f6"></span>
+                    <span class="nav-label">GNSS</span>
+                    <span class="nav-count">50</span>
+                </a>
+                <a href="Graph-Optimization.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#6366f1"></span>
+                    <span class="nav-label">Graph Optimization</span>
+                    <span class="nav-count">70</span>
+                </a>
+                <a href="Dynamic-SLAM.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#8b5cf6"></span>
+                    <span class="nav-label">Dynamic SLAM</span>
+                    <span class="nav-count">43</span>
+                </a>
+                <a href="Semantic-SLAM.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#a855f7"></span>
+                    <span class="nav-label">Semantic SLAM</span>
+                    <span class="nav-count">77</span>
+                </a>
+                <a href="Gaussian-SLAM.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#d946ef"></span>
+                    <span class="nav-label">Gaussian SLAM</span>
+                    <span class="nav-count">25</span>
+                </a>
+                <a href="Autonomous-Driving.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#6366f1"></span>
+                    <span class="nav-label">Autonomous Driving</span>
+                    <span class="nav-count">79</span>
+                </a>
+                <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#8b5cf6"></span>
+                    <span class="nav-label">Kalman Filter</span>
+                    <span class="nav-count">56</span>
+                </a>
+                <a href="Loop-Closure-Detection.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#a855f7"></span>
+                    <span class="nav-label">Loop Closure Detection</span>
+                    <span class="nav-count">79</span>
+                </a>
+                <a href="Visual-Place-Recognition.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#d946ef"></span>
+                    <span class="nav-label">Visual Place Recognition</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#ec4899"></span>
+                    <span class="nav-label">Deep Learning</span>
+                    <span class="nav-count">70</span>
+                </a>
+                <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#f43f5e"></span>
+                    <span class="nav-label">Reinforcement Learning</span>
+                    <span class="nav-count">75</span>
+                </a>
+                <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#ef4444"></span>
+                    <span class="nav-label">PPO</span>
+                    <span class="nav-count">76</span>
+                </a>
+                <a href="Hierarchical-Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#f97316"></span>
+                    <span class="nav-label">Hierarchical Reinforcement Learning</span>
+                    <span class="nav-count">79</span>
+                </a>
+                <a href="Model-Based-RL.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#f59e0b"></span>
+                    <span class="nav-label">Model-Based RL</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="Imitation-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#84cc16"></span>
+                    <span class="nav-label">Imitation Learning</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="Behavior-Cloning.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#22c55e"></span>
+                    <span class="nav-label">Behavior Cloning</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="Diffusion-Policy.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#10b981"></span>
+                    <span class="nav-label">Diffusion Policy</span>
+                    <span class="nav-count">79</span>
+                </a>
+                <a href="Model-Predictive-Control.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#14b8a6"></span>
+                    <span class="nav-label">Model Predictive Control</span>
+                    <span class="nav-count">55</span>
+                </a>
+                <a href="Whole-Body-Control.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#06b6d4"></span>
+                    <span class="nav-label">Whole-Body Control</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="Motion-Planning.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#0ea5e9"></span>
+                    <span class="nav-label">Motion Planning</span>
+                    <span class="nav-count">79</span>
+                </a>
+                <a href="Path-Planning.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#3b82f6"></span>
+                    <span class="nav-label">Path Planning</span>
+                    <span class="nav-count">71</span>
+                </a>
+                <a href="Multimodal-Fusion.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#6366f1"></span>
+                    <span class="nav-label">Multimodal Fusion</span>
+                    <span class="nav-count">74</span>
+                </a>
+                <a href="Scene-Understanding.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#8b5cf6"></span>
+                    <span class="nav-label">Scene Understanding</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="Domain-Randomization.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#a855f7"></span>
+                    <span class="nav-label">Domain Randomization</span>
+                    <span class="nav-count">78</span>
+                </a>
+                <a href="Bipedal-Locomotion.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#d946ef"></span>
+                    <span class="nav-label">Bipedal Locomotion</span>
+                    <span class="nav-count">79</span>
+                </a>
+                <a href="Dexterous-Manipulation.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#6366f1"></span>
+                    <span class="nav-label">Dexterous Manipulation</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="Mobile-Manipulation.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#8b5cf6"></span>
+                    <span class="nav-label">Mobile Manipulation</span>
+                    <span class="nav-count">80</span>
+                </a>
+    </div>
+
+    <!-- Desktop sidebar -->
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <h1><a href="../index.html" style="background:linear-gradient(135deg,#6366f1,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">🚀 Embodied AI Daily</a></h1>
+            <div class="update">by <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent);text-decoration:none;font-weight:500;">Hongkun Luo</a> (罗宏昆)</div>
+            <div class="update" style="margin-top:2px">Last update: 2026-07-02</div>
+        </div>
+            <a href="Continuous-Learning.html" class="nav-item">
+                <span class="nav-dot" style="background:#6366f1"></span>
+                <span class="nav-label">Continuous Learning</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="Feed-Forward-Reconstruction.html" class="nav-item">
+                <span class="nav-dot" style="background:#8b5cf6"></span>
+                <span class="nav-label">Feed Forward Reconstruction</span>
+                <span class="nav-count">53</span>
+            </a>
+            <a href="Vision-and-Language-Navigation.html" class="nav-item">
+                <span class="nav-dot" style="background:#a855f7"></span>
+                <span class="nav-label">Vision and Language Navigation</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="Vision-Language-Action.html" class="nav-item">
+                <span class="nav-dot" style="background:#d946ef"></span>
+                <span class="nav-label">Vision Language Action</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="World-Model.html" class="nav-item">
+                <span class="nav-dot" style="background:#ec4899"></span>
+                <span class="nav-label">World Model</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="3D-Foundation-Model.html" class="nav-item">
+                <span class="nav-dot" style="background:#f43f5e"></span>
+                <span class="nav-label">3D Foundation Model</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="LLM.html" class="nav-item">
+                <span class="nav-dot" style="background:#ef4444"></span>
+                <span class="nav-label">LLM</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="VLM.html" class="nav-item">
+                <span class="nav-dot" style="background:#f97316"></span>
+                <span class="nav-label">VLM</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="World-Action-Model.html" class="nav-item">
+                <span class="nav-dot" style="background:#f59e0b"></span>
+                <span class="nav-label">World Action Model</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="Gaussian-Splatting.html" class="nav-item">
+                <span class="nav-dot" style="background:#84cc16"></span>
+                <span class="nav-label">Gaussian Splatting</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="Visual-SLAM.html" class="nav-item">
+                <span class="nav-dot" style="background:#22c55e"></span>
+                <span class="nav-label">Visual SLAM</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="Visual-Inertial-SLAM.html" class="nav-item">
+                <span class="nav-dot" style="background:#10b981"></span>
+                <span class="nav-label">Visual Inertial SLAM</span>
+                <span class="nav-count">78</span>
+            </a>
+            <a href="Visual-Inertial-Odometry.html" class="nav-item">
+                <span class="nav-dot" style="background:#14b8a6"></span>
+                <span class="nav-label">Visual Inertial Odometry</span>
+                <span class="nav-count">79</span>
+            </a>
+            <a href="Lidar-SLAM.html" class="nav-item">
+                <span class="nav-dot" style="background:#06b6d4"></span>
+                <span class="nav-label">Lidar SLAM</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="LiDAR-Odometry.html" class="nav-item">
+                <span class="nav-dot" style="background:#0ea5e9"></span>
+                <span class="nav-label">LiDAR Odometry</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="GNSS.html" class="nav-item">
+                <span class="nav-dot" style="background:#3b82f6"></span>
+                <span class="nav-label">GNSS</span>
+                <span class="nav-count">50</span>
+            </a>
+            <a href="Graph-Optimization.html" class="nav-item">
+                <span class="nav-dot" style="background:#6366f1"></span>
+                <span class="nav-label">Graph Optimization</span>
+                <span class="nav-count">70</span>
+            </a>
+            <a href="Dynamic-SLAM.html" class="nav-item">
+                <span class="nav-dot" style="background:#8b5cf6"></span>
+                <span class="nav-label">Dynamic SLAM</span>
+                <span class="nav-count">43</span>
+            </a>
+            <a href="Semantic-SLAM.html" class="nav-item">
+                <span class="nav-dot" style="background:#a855f7"></span>
+                <span class="nav-label">Semantic SLAM</span>
+                <span class="nav-count">77</span>
+            </a>
+            <a href="Gaussian-SLAM.html" class="nav-item active">
+                <span class="nav-dot" style="background:#d946ef"></span>
+                <span class="nav-label">Gaussian SLAM</span>
+                <span class="nav-count">25</span>
+            </a>
+            <a href="Autonomous-Driving.html" class="nav-item">
+                <span class="nav-dot" style="background:#6366f1"></span>
+                <span class="nav-label">Autonomous Driving</span>
+                <span class="nav-count">79</span>
+            </a>
+            <a href="Kalman-Filter.html" class="nav-item">
+                <span class="nav-dot" style="background:#8b5cf6"></span>
+                <span class="nav-label">Kalman Filter</span>
+                <span class="nav-count">56</span>
+            </a>
+            <a href="Loop-Closure-Detection.html" class="nav-item">
+                <span class="nav-dot" style="background:#a855f7"></span>
+                <span class="nav-label">Loop Closure Detection</span>
+                <span class="nav-count">79</span>
+            </a>
+            <a href="Visual-Place-Recognition.html" class="nav-item">
+                <span class="nav-dot" style="background:#d946ef"></span>
+                <span class="nav-label">Visual Place Recognition</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="Deep-Learning.html" class="nav-item">
+                <span class="nav-dot" style="background:#ec4899"></span>
+                <span class="nav-label">Deep Learning</span>
+                <span class="nav-count">70</span>
+            </a>
+            <a href="Reinforcement-Learning.html" class="nav-item">
+                <span class="nav-dot" style="background:#f43f5e"></span>
+                <span class="nav-label">Reinforcement Learning</span>
+                <span class="nav-count">75</span>
+            </a>
+            <a href="PPO.html" class="nav-item">
+                <span class="nav-dot" style="background:#ef4444"></span>
+                <span class="nav-label">PPO</span>
+                <span class="nav-count">76</span>
+            </a>
+            <a href="Hierarchical-Reinforcement-Learning.html" class="nav-item">
+                <span class="nav-dot" style="background:#f97316"></span>
+                <span class="nav-label">Hierarchical Reinforcement Learning</span>
+                <span class="nav-count">79</span>
+            </a>
+            <a href="Model-Based-RL.html" class="nav-item">
+                <span class="nav-dot" style="background:#f59e0b"></span>
+                <span class="nav-label">Model-Based RL</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="Imitation-Learning.html" class="nav-item">
+                <span class="nav-dot" style="background:#84cc16"></span>
+                <span class="nav-label">Imitation Learning</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="Behavior-Cloning.html" class="nav-item">
+                <span class="nav-dot" style="background:#22c55e"></span>
+                <span class="nav-label">Behavior Cloning</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="Diffusion-Policy.html" class="nav-item">
+                <span class="nav-dot" style="background:#10b981"></span>
+                <span class="nav-label">Diffusion Policy</span>
+                <span class="nav-count">79</span>
+            </a>
+            <a href="Model-Predictive-Control.html" class="nav-item">
+                <span class="nav-dot" style="background:#14b8a6"></span>
+                <span class="nav-label">Model Predictive Control</span>
+                <span class="nav-count">55</span>
+            </a>
+            <a href="Whole-Body-Control.html" class="nav-item">
+                <span class="nav-dot" style="background:#06b6d4"></span>
+                <span class="nav-label">Whole-Body Control</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="Motion-Planning.html" class="nav-item">
+                <span class="nav-dot" style="background:#0ea5e9"></span>
+                <span class="nav-label">Motion Planning</span>
+                <span class="nav-count">79</span>
+            </a>
+            <a href="Path-Planning.html" class="nav-item">
+                <span class="nav-dot" style="background:#3b82f6"></span>
+                <span class="nav-label">Path Planning</span>
+                <span class="nav-count">71</span>
+            </a>
+            <a href="Multimodal-Fusion.html" class="nav-item">
+                <span class="nav-dot" style="background:#6366f1"></span>
+                <span class="nav-label">Multimodal Fusion</span>
+                <span class="nav-count">74</span>
+            </a>
+            <a href="Scene-Understanding.html" class="nav-item">
+                <span class="nav-dot" style="background:#8b5cf6"></span>
+                <span class="nav-label">Scene Understanding</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="Domain-Randomization.html" class="nav-item">
+                <span class="nav-dot" style="background:#a855f7"></span>
+                <span class="nav-label">Domain Randomization</span>
+                <span class="nav-count">78</span>
+            </a>
+            <a href="Bipedal-Locomotion.html" class="nav-item">
+                <span class="nav-dot" style="background:#d946ef"></span>
+                <span class="nav-label">Bipedal Locomotion</span>
+                <span class="nav-count">79</span>
+            </a>
+            <a href="Dexterous-Manipulation.html" class="nav-item">
+                <span class="nav-dot" style="background:#6366f1"></span>
+                <span class="nav-label">Dexterous Manipulation</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="Mobile-Manipulation.html" class="nav-item">
+                <span class="nav-dot" style="background:#8b5cf6"></span>
+                <span class="nav-label">Mobile Manipulation</span>
+                <span class="nav-count">80</span>
+            </a>
+    </nav>
+
+    <main class="main">
+        <a href="../index.html" class="back-link">← 返回汇总 / Back to all topics</a>
+        <section class="hero" style="padding:20px 0 24px">
+            <div class="sponsor">
+                <div class="sponsor-title">☕ 支持本项目 · Support this project</div>
+                <div class="sponsor-desc">
+                    每篇论文的 AI 深度总结都会调用大量 DeepSeek API（需付费）。<br>
+                    如果这个项目对你有帮助，欢迎请作者喝杯咖啡，支持服务器与 API 开销 🙏
+                </div>
+                <details>
+                    <summary>💚 微信赞助 / Sponsor via WeChat Pay</summary>
+                    <div class="sponsor-qr" style="display:flex;gap:16px;align-items:flex-start;flex-wrap:wrap;">
+                        <div style="text-align:center;">
+                            <img src="../images/qr_code.png" alt="QR Code" style="max-width:180px;">
+                            <div style="font-size:13px;color:#888;">🔗 二维码</div>
+                        </div>
+                        <div style="text-align:center;">
+                            <img src="../images/wechat_pay.jpg" alt="WeChat Pay QR code" style="max-width:180px;">
+                            <div style="font-size:13px;color:#888;">💚 微信赞助</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </section>
+        <section class="topic-section">
+            <div class="topic-header">
+                <span class="topic-badge" style="background:#d946ef">Gaussian SLAM</span>
+                <span class="topic-count">25 papers</span>
+            </div>
+            <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2606.30436v1" target="_blank" class="paper-title">Robust and Efficient Monocular 3D Gaussian SLAM for Kilometer-Scale Outdoor Scenes</a>
+                        <span class="paper-date">2026-06-29</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决单目3D高斯泼溅（3DGS）SLAM在千米级户外场景中面临的长期位姿跟踪易漂移和大规模建图时内存开销过高的双重挑战。&#10;&#10;🛠 **方法**：提出KiloGS-SLAM系统，包含运动自适应混合跟踪模块（根据条件触发本质矩阵或PnP模型，必要时激活基础模型防止漂移）和生命周期管理的高斯建图策略（结合概率初始化与分块多视图稠密化及剪枝）。&#10;&#10;✨ **主要贡献**：在三个户外数据集上实现最先进的跟踪精度和渲染质量，成功在单GPU上处理超万帧序列，同时通过全流程优化显著减少图元冗余并保持高频细节。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Scaling monocular 3D Gaussian Splatting (3DGS) SLAM to kilometer-level outdoor environments poses two tightly coupled challenges: fragile long-term pose tracking and excessive memory overhead during large-scale mapping. In this paper, we propose KiloGS-SLAM, a highly efficient and robust monocular 3DGS-SLAM system that jointly addresses both bottlenecks. Since high-fidelity scene reconstruction fundamentally relies on drift-free camera poses, we first introduce a motion-adaptive hybrid tracking module. This module features a condition-triggered three-tier solving pipeline. It dynamically switches between Essential matrix and PnP models to handle geometric degeneracies. An on-demand foundation model can also be activated to rescue the trajectory from catastrophic drift. To ensure the system can sustain these long trajectories without memory exhaustion, we subsequently design a lifecycle-managed Gaussian mapping strategy. By integrating probabilistic initialization with chunk-based multi-view densification and pruning, this full-pipeline optimization effectively reduces primitive redundancy while preserving high-frequency details. Together, the robust tracking guarantees the geometric foundation required for accurate mapping, while the memory-efficient lifecycle-managed mapping enables large-scale operation. Extensive experiments across three challenging outdoor datasets demonstrate that our approach achieves state-of-the-art tracking accuracy and rendering quality, successfully scaling to sequences of over 10,000 frames on a single GPU.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2606.29738v1" target="_blank" class="paper-title">MyGO-Splat: Multi-Objective Closed-Loop Geometric Feedback for RGB-Only Gaussian SLAM</a>
+                        <span class="paper-date">2026-06-29</span>
+                    </div>
+                                        <span class="paper-comment">📝 IROS 2026</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有仅使用RGB图像的实时单目SLAM系统存在尺度模糊和缺乏几何自校正的问题，导致深度先验无法有效修正跟踪漂移。&#10;&#10;🛠 **方法**：提出MyGO-Splat框架，通过解析式地将高斯原语光栅化为逐像素深度和表面法线，实现地图主动监督相机位姿优化；并引入尺度感知自适应对齐，将基础模型深度估计投影到全局优化的高斯空间中，形成闭环尺度反馈。&#10;&#10;✨ **主要贡献**：实现了闭环几何反馈机制，显著提升了尺度稳定性和外观-几何一致性，在仅使用单目输入的情况下达到了与RGB-D方法相当的性能。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Real-time monocular Simultaneous Localization and Mapping (SLAM) fundamentally suffers from scale ambiguity and a lack of geometric self-correction. While 3D Gaussian Splatting (3DGS) enables high-fidelity rendering, existing RGB-only systems remain open-loop because depth priors are injected into mapping but refined geometry cannot effectively regulate tracking drift. We present MyGO-Splat, a closed-loop Gaussian SLAM framework that analytically rasterizes Gaussian primitives into pixel-wise depth and surface normals, allowing the map to actively supervise camera pose optimization. To bridge monocular priors and scale consistency, our framework introduces scale-aware adaptive alignment that projects foundation-model depth estimates into the globally optimized Gaussian space, forming a self-correcting cycle for scale feedback. Extensive evaluations show that this closed-loop design improves scale stability and appearance-geometry consistency, achieving performance comparable to RGB-D methods while using only monocular input.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2606.29494v1" target="_blank" class="paper-title">VCS-SLAM: Geometry-Validated Semantic Evidence Fusion for 3D Gaussian SLAM</a>
+                        <span class="paper-date">2026-06-28</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有语义3D高斯SLAM在在线建图中，因忽视2D语义先验的几何可靠性（如遮挡、边界模糊、射线几何歧义），导致全局高斯地图出现持久性语义伪影。&#10;&#10;🛠 **方法**：提出VCS-SLAM框架，通过可见性一致性、表面支撑边界证据和射线级冲突不确定性评估语义观测的几何可靠性，并构建可靠性感知目标函数，抑制不可靠语义更新、减少语义渗漏并延迟模糊区域的标签分配。&#10;&#10;✨ **主要贡献**：在Replica数据集上提升了语义一致性、边界保持和重建质量；在ScanNet数据集上验证了其在真实RGB-D输入下保持竞争力的跟踪性能。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Visual SLAM performance often deteriorates in complex real-world applications. Semantic 3D Gaussian SLAM commonly fuses 2D semantic priors into a persistent 3D map using uniform optimization weights. However, such priors are not equally reliable in online mapping: occlusions, unsupported semantic boundaries, and ambiguous ray geometry can introduce persistent semantic artifacts into the global Gaussian map. We propose VCS-SLAM, a geometry-validated semantic evidence fusion framework for RGB-D 3D Gaussian SLAM. Instead of treating all semantic observations as uniformly valid supervision, VCS-SLAM evaluates their geometric reliability through visibility consistency, surface-supported boundary evidence, and ray-level conflict uncertainty. The resulting reliability-aware objective suppresses occluded semantic updates, reduces unsupported semantic bleeding, and delays premature label assignment in ambiguous regions. Experiments on Replica demonstrate improved semantic consistency, boundary preservation, and reconstruction quality. Results on ScanNet further show that VCS-SLAM maintains competitive tracking performance under real RGB-D inputs</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2511.23030v2" target="_blank" class="paper-title">DiskChunGS: Large-Scale 3D Gaussian SLAM Through Chunk-Based Memory Management</a>
+                        <span class="paper-date">2026-06-10</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="好的，作为一名人工智能研究与学术论文分析专家，我将严格按照您的要求，对这篇论文进行详细的中文解读。&#10;&#10;---&#10;&#10;## 0. 概览（Concise Summary）&#10;&#10;- **主题（Topic）**：大规模3D高斯泼溅（3D Gaussian Splatting, 3DGS）同步定位与地图构建（SLAM）。&#10;- **问题（Problem）**：现有3DGS SLAM方法受限于GPU显存（VRAM），无法处理大规模环境（如城市级场景），导致内存溢出（OOM）或需要昂贵的硬件。&#10;- **方法（Method）**：提出一种**基于磁盘的、分块（Chunk）式内存管理架构**。将场景划分为空间块，仅将当前相机可见的活动块加载到GPU显存中，而将非活动块存储于磁盘上，类似于虚拟内存系统。&#10;- **创新（Innovation）**：&#10;    1.  **分块式外存架构**：将大规模3DGS SLAM的内存瓶颈从硬件问题转化为算法问题，通过空间分块和磁盘-显存动态调度实现可扩展性。&#10;    2.  **块感知的闭环检测**：在分块架构下，实现了高效的闭环校正，通过选择性变换和重分布高斯点，保证了全局一致性。&#10;    3.  **空间网格关键帧选择**：提出一种基于空间网格的关键帧选择策略，优先选择与当前显存中块重叠度高的关键帧，极大减少了I/O开销。&#10;- **意义（Significance）**：首次在标准GPU（如RTX 3090，24GB显存）上成功完成了所有11个KITTI序列的3DGS SLAM重建，而此前的方法均因内存问题失败。该方法在资源受限的边缘平台（Jetson Orin）上也表现出色，为机器人、AR/VR等领域的实用化大规模逼真重建铺平了道路。&#10;- **一句话总结**：DiskChunGS通过创新的分块式磁盘-显存协同管理策略，突破了GPU显存限制，首次实现了在消费级硬件上对多公里级场景的实时、高质量3DGS SLAM重建。&#10;&#10;## 1. 研究动机（Motivation）&#10;&#10;- **领域空白与挑战**：3DGS在渲染质量和速度上表现出色，但将其集成到SLAM系统中时，面临一个根本性的可扩展性瓶颈：**GPU显存容量限制**。现有方法（如CaRtGS, GigaSLAM）需要将整个场景的3D高斯表示（包括位置、颜色、形状等参数）全部加载到GPU显存中。对于大规模环境（如城市街区），高斯点数量巨大，远超消费级GPU（如24GB）的显存容量，导致内存溢出（OOM）崩溃。&#10;- **为什么重要**：大规模、高保真的3D重建是自动驾驶、机器人导航、增强现实（AR/VR）和数字孪生等应用的核心需求。如果SLAM系统无法在标准硬件上扩展到真实世界的大规模场景，其实际应用价值将大打折扣。&#10;- **挑战所在**：&#10;    1.  **内存瓶颈**：如何在不牺牲重建质量的前提下，让3DGS SLAM摆脱对巨大GPU显存的依赖？&#10;    2.  **I/O效率**：当场景数据在磁盘和显存之间交换时，如何设计高效的调度策略，避免频繁的I/O操作成为新的性能瓶颈（即“I/O thrashing”）？&#10;    3.  **全局一致性**：在大规模环境中，如何结合闭环检测，在分块架构下维护地图的全局一致性，而不仅仅是局部优化？&#10;    4.  **实时性**：如何在引入磁盘I/O开销后，仍然保持SLAM系统的在线处理能力？&#10;&#10;## 2. 创新点（Innovation）&#10;&#10;1.  **外存（Out-of-Core）分块架构**：这是最核心的创新。受操作系统虚拟内存管理启发，将3D空间划分为规则的“块”（Chunk）。系统只将当前相机视锥体（Viewing Frustum）内的“可见块”加载到GPU显存中进行渲染和优化，而将其他所有块序列化并保存到磁盘上。这从根本上解耦了场景规模与GPU显存需求。&#10;2.  **块感知的闭环校正机制**：当闭环检测（基于ORB-SLAM3）发现回环时，系统不是对整个地图进行全局优化，而是**只对受影响的块进行选择性变换**。具体地，它识别出受闭环影响的关键帧，然后仅对这些关键帧可见的块中的高斯点进行位置和旋转的校正。这避免了加载整个地图，极大地提高了闭环处理的效率和可行性。&#10;3.  **空间网格关键帧选择策略**：为了解决关键帧选择中“空间局部性”与“梯度多样性”的矛盾，论文提出了一种基于空间网格的粗粒度选择方法。它将关键帧按200米大小的网格进行分组。在优化时，优先选择与当前最新关键帧位于同一网格内的关键帧。这保证了所选关键帧的可见块与当前显存中的块高度重叠，从而**最小化磁盘I/O操作**，避免了因频繁加载/卸载块导致的性能崩溃。&#10;&#10;## 3. 主要内容（Main Content）【重点】&#10;&#10;### 3.1 设计架构与方法&#10;&#10;系统架构如图2所示，包含两个并行线程：&#10;- **跟踪线程（Tracking）**：使用ORB-SLAM3进行视觉里程计，估计相机位姿，并选择关键帧。&#10;- **建图线程（Mapping）**：负责分块式3DGS地图的构建与优化。&#10;    1.  **高斯点采样**：从ORB-SLAM3的稀疏点云和当前关键帧中，通过一种基于拉普拉斯高斯（LoG）算子的直接采样方法生成新的高斯点。该方法只会在图像细节丰富且当前重建不佳的区域放置新高斯点，避免了冗余。&#10;    2.  **深度估计**：使用单目深度估计模型（Depth-Anything-2）或立体匹配网络（Fast-ACVNet）为采样点提供深度信息。&#10;    3.  **分块管理**：系统维护一个“块”的索引。对于每个关键帧，执行**视锥体裁剪**，确定哪些块是可见的。然后，将这些可见块从磁盘加载到GPU显存。&#10;    4.  **优化**：在GPU显存中，对可见块内的所有高斯点进行可微渲染，计算与真实图像/深度之间的损失，并反向传播更新高斯参数。&#10;    5.  **内存回收**：当显存中的高斯点数量超过预设预算（如150万个）时，使用**最近最少使用（LRU）策略**，将最久未访问的块从显存中逐出并保存到磁盘。&#10;&#10;### 3.2 关键算法与数学推导&#10;&#10;1.  **直接采样概率**：&#10;    为了确定在图像位置 $(x, y)$ 处是否放置一个新的高斯点，其采样概率 $P_s(x, y)$ 由下式给出：&#10;    $$P_s(x, y) = \max \left\{ P_L(x, y) - \tilde{P}(x, y), 0 \right\}$$&#10;    其中 $P_L$ 是输入图像的LoG响应（代表图像细节丰富度），$\tilde{P}$ 是当前渲染图像的LoG响应（代表已重建区域的细节）。该公式确保了新高斯点只添加到“需要更多细节”的区域。&#10;&#10;2.  **损失函数**：&#10;    优化过程使用多分量损失函数：&#10;    $$L = L_{\text{image}} + \lambda_{\text{depth}} L_{\text{depth}}$$&#10;    - **图像损失** $L_{\text{image}}$：结合了L1损失和结构相似性指数（SSIM）损失。&#10;      $$L_{\text{image}} = (1 - \lambda_s) |I - I_{gt}|_1 + \lambda_s (1 - \text{SSIM}(I, I_{gt}))$$&#10;    - **深度损失** $L_{\text{depth}}$：渲染深度 $D_r$ 与真实深度 $D_{gt}$ 之间的L1距离。&#10;      $$L_{\text{depth}} = |D_r - D_{gt}|_1$$&#10;&#10;3.  **块坐标编码**：&#10;    为了快速定位一个高斯点属于哪个块，系统将3D坐标映射到块坐标，并使用一个64位整数进行编码，实现 $O(1)$ 的查询。&#10;    $$\text{ChunkCoord}(p) = \left\lfloor \frac{p_i + s/2}{s} \right\rfloor_{i \in \{x,y,z\}}$$&#10;    $$\text{EncodedID} = (c_x + 2^{20}) \cdot 2^{42} + (c_y + 2^{20}) \cdot 2^{21} + (c_z + 2^{20})$$&#10;    其中 $s$ 是块大小，$c_x, c_y, c_z$ 是块坐标。通过为每个坐标轴分配21位，可以表示一个巨大的空间范围。&#10;&#10;4.  **关键帧选择中的重叠度**：&#10;    为了最小化I/O，系统计算候选关键帧 $k$ 的可见块与当前显存中活动块 $C_{\text{active}}$ 的重叠度：&#10;    $$\text{Overlap}(k) = \frac{|C_v(k) \cap C_{\text{active}}|}{|C_v(k)|}$$&#10;    高重叠度意味着加载该关键帧所需的I/O操作很少。空间网格关键帧选择策略正是为了最大化这个重叠度。&#10;&#10;### 3.3 模型、训练与数据集&#10;&#10;- **模型**：基于3D高斯泼溅（3DGS）的场景表示。每个高斯点包含位置、协方差、不透明度、颜色（用3阶球谐函数表示）。优化目标是高斯点的这些参数。&#10;- **训练**：采用关键帧驱动的在线优化方式。对于每个选中的关键帧，加载其可见块，进行可微渲染，计算损失并更新高斯参数。优化过程与SLAM的跟踪线程并行。&#10;- **数据集**：&#10;    - **室内**：Replica（高保真室内场景）、TUM-RGBD（手持相机室内场景）。&#10;    - **室外**：KITTI（多公里城市驾驶场景，包含11个序列）。&#10;    - **边缘设备**：在Nvidia Jetson AGX Orin上进行了验证。&#10;&#10;### 3.4 实验设置与结果&#10;&#10;- **硬件**：AMD Ryzen 5950X CPU, 64GB RAM, Nvidia RTX 3090 (24GB VRAM), PCIe Gen 4 NVMe SSD。&#10;- **对比方法**：CaRtGS, On-The-Fly, GigaSLAM。所有方法均在相同硬件上重新运行以进行公平比较。&#10;- **主要结果**：&#10;    1.  **可扩展性（表I, II, III）**：**DiskChunGS是唯一在所有11个KITTI序列上均成功完成重建的方法**，没有出现内存崩溃（OOM）或跟踪丢失。CaRtGS和GigaSLAM分别在3个和4个序列上因内存不足而崩溃。On-The-Fly在6个序列上跟踪失败。&#10;    2.  **重建质量（表III, 图1, 图3）**：在成功运行的序列上，DiskChunGS在感知质量（LPIPS）上取得了最优或次优的结果，视觉上更清晰、伪影更少（图3）。图1的帕累托曲线显示，DiskChunGS在更短的时间内达到了更高的视觉质量。&#10;    3.  **室内场景（表IV）**：在Replica数据集上，DiskChunGS在PSNR、SSIM、LPIPS和FPS上均取得了最佳结果，展示了其在不同规模场景下的泛化能力。&#10;    4.  **消融实验（表V）**：验证了各组件的重要性。移除“分块”会导致6/11序列失败；移除“空间网格关键帧选择”会导致2个序列因I/O抖动失败；移除“深度监督”会轻微降低质量。&#10;    5.  **I/O开销**：在最长的KITTI序列（Scene 02）上，I/O操作仅占总处理时间的5.5%（低速）到19.6%（高速），证明了其效率。&#10;    6.  **边缘设备（表VI）**：在Jetson Orin上，DiskChunGS仍能保持可用的性能，质量下降不大，证明了其在资源受限平台上的实用性。&#10;&#10;### 3.5 技术细节&#10;&#10;- **块大小**：所有实验中块大小 $s$ 固定为10米。&#10;- **显存预算**：GPU显存中最多容纳150万个高斯点。&#10;- **关键帧预算**：内存中最多保留400个关键帧。&#10;- **闭环后处理**：闭环校正后，对受影响区域进行1000次迭代（约10秒）的专门优化，以平滑融合新旧地图。&#10;- **LRU逐出策略**：采用贪心策略，从最旧的块开始逐出，直到腾出足够空间容纳新块。&#10;&#10;## 4. 意义与影响（Significance and Impact）&#10;&#10;- **解决的问题与贡献**：&#10;    - **解决了3DGS SLAM的可扩展性瓶颈**。通过算法创新（分块外存管理）而非硬件升级，使得在标准GPU上进行大规模、高保真SLAM成为可能。&#10;    - **提供了完整的系统解决方案**。不仅解决了内存问题，还集成了鲁棒的跟踪（ORB-SLAM3）、高效的闭环校正和智能的关键帧选择，确保了全局一致性和实时性。&#10;    - **验证了实际部署能力**。在边缘计算平台（Jetson）和机器人操作系统（ROS）上的成功验证，表明该系统已具备从研究原型走向实际应用的条件。&#10;&#10;- **对未来研究/应用的影响**：&#10;    - **推动大规模3DGS应用**：为自动驾驶、城市级数字孪生、大规模AR/VR体验等应用提供了可行的技术路径。&#10;    - **启发新的研究方向**：其“外存”思想可以启发其他大规模场景表示（如NeRF）的SLAM系统设计。对I/O效率的优化（如GPU Direct Storage）和Level-of-Detail（LoD）的集成是明确的未来方向。&#10;    - **降低硬件门槛**：使得在消费级硬件上运行高质量SLAM成为可能，有利于技术的普及和民主化。&#10;&#10;- **局限与开放问题**：&#10;    - **动态物体与伪影**：无法处理运动模糊、镜头光晕和动态物体。在区域过渡时，由于优化约束不足，偶尔会出现稀疏的浮动伪影。&#10;    - **I/O开销**：虽然目前可控，但在超长序列（10公里以上）或更高速率下，I/O可能成为瓶颈。&#10;    - **远距离渲染**：缺乏Level-of-Detail（LoD）机制，渲染远处物体时效果不佳。&#10;&#10;## 5. 澄清与简化（Clarifications and Simplifications）&#10;&#10;- **类比：虚拟内存**：可以把DiskChunGS想象成操作系统的虚拟内存系统。你的电脑有有限的物理内存（RAM），但可以运行比它大得多的程序。操作系统只把当前正在使用的程序部分（“工作集”）加载到RAM中，其余部分放在硬盘上。DiskChunGS的“块”就是程序的一部分，“GPU显存”就是物理内存，“磁盘”就是硬盘。相机移动时，就像程序执行到不同部分，系统会动态地将需要的“块”从磁盘换入显存，将不用的换出。&#10;- **关键帧选择策略**：想象你在拼一个巨大的拼图，但你的桌面（显存）很小，只能放下几块拼图。如果你随机拿一块拼图，很可能需要去柜子（磁盘）里翻找新的拼图块，非常耗时。DiskChunGS的策略是，**只拿与当前桌面上拼图块相邻的拼图块**。这样，你几乎不需要去柜子里翻找，就能高效地完成局部区域的拼接。这就是“空间网格关键帧选择”的精髓：通过选择空间上邻近的关键帧，最大化与当前显存中块的“重叠度”，从而最小化I/O操作。&#10;- **闭环校正**：想象你画了一张地图，但画到最后发现起点和终点没对上（闭环）。传统方法需要把整张地图擦掉重画。DiskChunGS的方法更聪明：它只找到地图上“对不齐”的那一小块区域，然后像PS里的“变形”工具一样，**只对这一小块区域进行拉伸和旋转**，使其与周围区域对齐。这比重画整张地图快得多，也省内存得多。&#10;&#10;## 6. 补充说明（Additional Notes）&#10;&#10;- **相关工作关联**：&#10;    - **与Block-NeRF, Mega-NeRF, CityGaussian的关系**：这些方法也使用了空间分区，但主要针对离线训练和渲染，而非在线SLAM。DiskChunGS的创新在于将分区思想与SLAM的在线、实时需求（如关键帧选择、闭环）深度结合。&#10;    - **与On-The-Fly的关系**：On-The-Fly也试图解决内存问题，但它将数据存储在CPU RAM中，而非磁盘。这虽然缓解了VRAM压力，但最终仍受限于系统RAM容量，且缺乏闭环检测。DiskChunGS使用磁盘存储，理论上可扩展至无限大，并集成了闭环。&#10;    - **与GigaSLAM的关系**：GigaSLAM也针对大规模场景，但其高质量结果依赖于大量的离线后处理，且需要48GB VRAM的昂贵GPU。DiskChunGS在标准24GB GPU上实现了在线处理。&#10;&#10;- **最重要的图表**：&#10;    - **图2（系统架构图）**：这是理解整个系统工作流程的关键。它清晰地展示了跟踪、建图、分块管理、I/O操作和优化之间的交互关系。&#10;    - **图5（显存使用与时间关系图）**：这是证明方法有效性的核心证据。它直观地展示了随着场景规模增长（高斯点/关键帧数量持续增加），DiskChunGS的GPU显存使用量如何被稳定控制在一个恒定水平，而不会像传统方法那样线性增长直至崩溃。&#10;    - **表I, II, III（KITTI结果）**：这些表格是定量结果的核心，证明了DiskChunGS在可扩展性（无OOM）、跟踪精度和重建质量上的全面优势。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Recent advances in 3D Gaussian Splatting (3DGS) have demonstrated impressive results for novel view synthesis with real-time rendering capabilities. However, integrating 3DGS with SLAM systems faces a fundamental scalability limitation: methods are constrained by GPU memory capacity, restricting reconstruction to small-scale environments. We present DiskChunGS, a scalable 3DGS SLAM system that overcomes this bottleneck through an out-of-core approach that partitions scenes into spatial chunks and maintains only active regions in GPU memory while storing inactive areas on disk. Our architecture integrates seamlessly with existing SLAM frameworks for pose estimation and loop closure, enabling globally consistent reconstruction at scale. We validate DiskChunGS on indoor scenes (Replica, TUM-RGBD), urban driving scenarios (KITTI), and resource-constrained Nvidia Jetson platforms. Our method uniquely completes all 11 KITTI sequences without memory failures while achieving superior visual quality, demonstrating that algorithmic innovation can overcome the memory constraints that have limited previous 3DGS SLAM methods.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2605.10760v1" target="_blank" class="paper-title">MAGS-SLAM: Monocular Multi-Agent Gaussian Splatting SLAM for Geometrically and Photometrically Consistent Reconstruction</a>
+                        <span class="paper-date">2026-05-11</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="好的，作为人工智能研究与学术论文分析专家，我将严格按照您的要求，对论文《MAGS-SLAM: Monocular Multi-Agent Gaussian Splatting SLAM for Geometrically and Photometrically Consistent Reconstruction》进行详细的中文解读。&#10;&#10;---&#10;&#10;## 0. 概览（Concise Summary）&#10;&#10;- **主题（Topic）**：多智能体协同的、基于单目RGB相机的、使用3D高斯泼溅（3DGS）的即时定位与地图构建（SLAM）。&#10;- **问题（Problem）**：现有的多智能体高斯SLAM系统严重依赖RGB-D深度传感器来获取度量深度和简化智能体间对齐，这限制了其在轻量级、低成本或功耗受限的机器人平台上的部署。单目RGB相机存在固有的尺度模糊性，使得跨智能体的地图对齐和融合极具挑战。&#10;- **方法（Method）**：提出了MAGS-SLAM，一个纯单目RGB的多智能体3DGS SLAM框架。每个智能体独立构建局部单目高斯子地图，并传输紧凑的子地图摘要。一个轻量级的协调器通过描述符检索、几何与外观感知的环路验证、以及Sim(3)子地图位姿图优化，建立可靠的跨智能体约束。最后，通过一个占用感知的高斯融合和联合光度精炼，生成全局一致的、几何与光度一致的3D高斯地图。&#10;- **创新（Innovation）**：&#10;    1.  首个纯单目RGB的多智能体3DGS SLAM系统。&#10;    2.  提出了与位姿图光束法平差（PGBA）一致的Sim(3)环路闭合机制，联合解决智能体内和智能体间的尺度漂移。&#10;    3.  提出了占用感知的融合框架，用于消除冗余高斯、残余未对齐和光度接缝。&#10;    4.  引入了新的基准数据集ReplicaMultiagent Plus，支持更多智能体和长轨迹评估。&#10;- **意义（Significance）**：该工作首次证明了仅使用普通RGB相机即可实现与RGB-D方法相媲美甚至更优的多智能体协同光度真实感重建，极大地降低了硬件门槛和系统复杂度，为大规模、低成本的多机器人协同探索、虚拟制作和沉浸式远程呈现等应用铺平了道路。&#10;- **一句话总结**：MAGS-SLAM通过精巧的Sim(3)图优化和占用感知融合，首次实现了仅依赖单目RGB视频的、高质量的多智能体协同3D高斯SLAM，摆脱了对深度传感器的依赖。&#10;&#10;## 1. 研究动机（Motivation）&#10;&#10;- **解决的问题**：现有的大多数多智能体协同高斯SLAM系统（如MAGiC-SLAM、MAC-Ego3D）都**依赖于RGB-D传感器**来获取度量深度。这带来了几个关键问题：&#10;    1.  **硬件成本与功耗高**：深度传感器（如结构光、ToF）增加了硬件成本、功耗和体积，不适合轻量级、低成本或功耗受限的机器人平台。&#10;    2.  **校准与同步复杂**：RGB-D传感器需要额外的标定，且多传感器同步增加了系统复杂性。&#10;    3.  **限制了应用场景**：在室外强光或远距离场景下，许多深度传感器性能会下降甚至失效。&#10;- **为什么重要**：实现**纯单目RGB**的多智能体协同SLAM可以极大地扩展其应用范围。它允许使用无处不在的、低成本的普通相机（如手机、无人机、机器人上的单目摄像头）进行大规模、快速的光度真实感场景重建，这对于虚拟制作、沉浸式远程呈现、多用户增强现实和协同多机器人探索至关重要。&#10;- **核心挑战**：单目SLAM存在固有的**尺度模糊性**。每个智能体独立构建的局部地图具有不同的、未知的尺度。因此，跨智能体的地图对齐不再是简单的刚体变换（SE(3)），而是需要求解包含尺度的相似变换（Sim(3)）。此外，还需要解决如何高效地发现智能体间的重叠区域、如何验证环路闭合的可靠性、以及如何融合来自不同尺度的、可能存在重复和未对齐的高斯地图等问题。&#10;&#10;## 2. 创新点（Innovation）&#10;&#10;论文提出了四项关键创新：&#10;&#10;1.  **首个纯单目RGB多智能体3DGS SLAM系统**：这是该领域的首创性工作。它将单目高斯前端、紧凑子地图摘要、智能体间验证、Sim(3)子地图位姿图和占用感知融合整合到一个统一的框架中，实现了无需深度传感器的精确追踪和光度真实感重建。&#10;&#10;2.  **PGBA一致的Sim(3)环路闭合机制**：针对多智能体系统，提出了一种新颖的环路闭合机制。它构建了一个子地图级别的Sim(3)位姿图，该图同时优化**几何残差**和**光度残差**，以联合解决智能体内（由于单目SLAM漂移）和智能体间（由于尺度不一致）的尺度漂移。此外，还引入了一个**空间范围门**（spatial-extent gate）来拒绝退化的环路，以及一个**自适应边失效方案**来应对PGBA修正，增强了鲁棒性。&#10;&#10;3.  **占用感知的融合框架**：提出了一种用于融合多智能体高斯地图的框架。它通过以下步骤实现连贯的全局地图：&#10;    - **占用网格去重**：利用预计算的占用和自由空间体素网格，剔除来自其他智能体的、位于目标智能体已占用或自由空间中的冗余高斯，避免了“双重外壳”和伪影。&#10;    - **解耦的协调器**：协调器只处理紧凑的子地图摘要，不处理原始数据，通信高效。&#10;    - **联合位姿-高斯光度精炼**：在融合后，对全局地图、关键帧位姿和曝光参数进行联合优化，以消除残余的微小未对齐和光度差异。&#10;&#10;4.  **ReplicaMultiagent Plus基准数据集**：现有的多智能体数据集通常只有2-3个智能体和短轨迹。该新数据集将规模扩展到4个智能体，并提供了长轨迹、真实几何和语义标注，为评估单目、RGB-D和语义多智能体SLAM提供了更全面的平台。&#10;&#10;## 3. 主要内容（Main Content）【重点】&#10;&#10;### 3.1 设计架构与方法&#10;&#10;MAGS-SLAM的架构（如图2所示）分为三个主要阶段：&#10;&#10;1.  **局部追踪与高斯建图（Local Tracking &amp; Gaussian Mapping）**：每个智能体独立运行一个单目RGB前端。它使用基于DROID-SLAM的密集光束法平差（BA）和联合深度-尺度调整（JDSA）来估计位姿和深度。然后，将逆深度图反投影为3D高斯椭球，并在滑动窗口内优化这些高斯。关键帧被分组为有界的“子地图”（submap），一旦达到一定数量或移动距离，该子地图就会被“冻结”，不再参与局部优化。&#10;&#10;2.  **全局智能体内到智能体间环路闭合（Global Intra-to-Inter Loop Closure）**：这是一个中心化的协调器进程。&#10;    - **编码**：每个冻结的子地图被编码为一个紧凑的摘要，包括一个128维的全局描述符、一组显著3D点及其局部描述符、一个用于ICP的配准点云、边界框和一个锚定关键帧。&#10;    - **检索与验证**：协调器通过余弦相似度检索候选子地图对。然后，通过一个级联的验证流程（包括RANSAC+Umeyama算法估计Sim(3)变换、ICP精炼、空间范围门检查等）来确认可靠的跨智能体约束。&#10;    - **全局优化**：所有验证过的约束（智能体内的时间边和智能体间的验证边）被输入到一个全局的Sim(3)子地图位姿图中进行优化。优化目标同时包含几何残差和锚定图像的光度残差，以联合解决尺度漂移。&#10;&#10;3.  **高斯融合与全局精炼（Gaussian Fusion &amp; Global Refinement）**：&#10;    - **占用感知融合**：根据优化后的Sim(3)校正，将源子地图的高斯变换到目标智能体的坐标系。然后，利用目标智能体预计算的占用网格和自由空间网格，剔除冗余或位于自由空间中的高斯。&#10;    - **全局光度精炼**：对融合后的全局高斯地图、所有关键帧的位姿和曝光参数进行联合优化，以消除残余的未对齐和光度接缝，生成最终一致的地图。&#10;&#10;### 3.2 关键算法与数学推导&#10;&#10;1.  **局部BA损失函数**：&#10;    $$L_{BA} = \sum_{(i,j) \in E} \left\| u^*_{ij} - \pi\left(T_{ij} \pi^{-1}(u_i, d_i)\right) \right\|^2_{\Sigma_{ij}}$$&#10;    其中，$u^*$是精炼后的对应点，$\pi$和$\pi^{-1}$是相机投影和反投影算子，$T_{ij}$是相对位姿，$d_i$是深度。&#10;&#10;2.  **联合深度-尺度调整（JDSA）**：&#10;    $$L_{JDSA} = L_{BA} + \sum_{k \in V} B_k \left\| d_k - d^{prior}_k \right\|^2$$&#10;    在BA损失的基础上，增加了一个深度先验项，其中$d^{prior}_k$是从Metric3D网络学习到的深度先验，$B_k$是一个双线性插值函数，用于调整深度尺度。&#10;&#10;3.  **Sim(3)变换估计（Umeyama算法）**：&#10;    给定两组匹配的3D点集 $\{p^t_i\}$ 和 $\{p^s_i\}$，求解Sim(3)变换 $T_{t \leftarrow s} = (s, R, t)$：&#10;    $$\Gamma = \frac{1}{N} \sum_i (p^t_i - \bar{p}^t)(p^s_i - \bar{p}^s)^\top, \quad \Gamma = U \Lambda V^\top$$&#10;    $$R = U D V^\top, \quad s = \frac{\text{tr}(\Lambda D)}{\sigma^2_s}, \quad t = \bar{p}^t - s R \bar{p}^s$$&#10;    其中，$\sigma^2_s$是源点集的方差，$D$用于处理反射。&#10;&#10;4.  **全局Sim(3)位姿图优化目标**：&#10;    $$L_{graph}(\{C^a_\ell\}) = \sum_{e \in E_{sm}} w_e \left\| r^{geo}_e \right\|^2_\rho + \sum_{e \in E_v} \frac{w^{pho}_e}{|U_e|} \left\| r^{pho}_e \right\|^2_\rho$$&#10;    其中，$C^a_\ell$是每个子地图的Sim(3)校正。$r^{geo}_e$是几何残差，衡量了子地图间相对变换与观测值$M_e$的差异：&#10;    $$r^{geo}_e = \log\left( M_e^{-1} \circ C^{-1}_{tgt} \circ C_{src} \right) \in \mathbb{R}^7$$&#10;    $r^{pho}_e$是锚定图像的光度残差，衡量了源锚定图像与经过Sim(3)校正后投影到目标锚定图像上的像素差异：&#10;    $$r^{pho}_e(u) = I_{src}(u) - I_{tgt}\left( \pi_{tgt}(C^{-1}_{tgt} \circ C_{src} \cdot p_{src}(u)) \right)$$&#10;&#10;5.  **占用感知融合**：&#10;    预计算目标地图的占用体素 $O_{occ}$ 和自由空间体素 $O_{free}$：&#10;    $$O_{occ} = \bigcup_{G_i \in G_{tgt}} \left\{ \kappa(x) : x \in [\mu_i - k s_i, \mu_i + k s_i] \right\}$$&#10;    $$O_{free} = \bigcup_{u, k} \left\{ \kappa(c_k + t(r_k(u) - c_k)) : t \in [0, 1) \right\}$$&#10;    一个借来的高斯 $G_j$ 只有在 $\kappa(\mu_j) \notin O_{occ}$ 且 $\kappa(\mu_j) \notin O_{free}$ 时才被保留。&#10;&#10;### 3.3 模型、训练与数据集&#10;&#10;- **模型**：MAGS-SLAM本身不是一个需要端到端训练的神经网络模型，而是一个**框架**。它集成了多个预训练或现成的组件：&#10;    - **单目前端**：基于DROID-SLAM，其网络权重是预训练的。&#10;    - **深度先验**：使用Metric3D v2，这是一个预训练的单目深度估计基础模型。&#10;    - **特征匹配**：使用LoFTR进行密集特征匹配，也是预训练的。&#10;    - **3D高斯地图**：每个智能体本地维护一个3D高斯地图，其参数（位置、颜色、协方差、不透明度）通过梯度下降优化。&#10;- **训练**：框架本身不涉及大规模训练。局部高斯地图的优化是在线进行的（式4）。全局位姿图优化（式13）和全局光度精炼（式19）也是在线优化过程。&#10;- **数据集**：&#10;    - **ReplicaMultiagent**：基于Replica数据集的2智能体基准。&#10;    - **AriaMultiagent**：基于真实世界Aria Digital Twin数据集的3智能体基准。&#10;    - **ETH3D**：多智能体版本的ETH3D数据集。&#10;    - **ReplicaMultiagent Plus（新贡献）**：基于Habitat-Sim平台，在Replica场景中生成最多4个智能体的长轨迹，提供真实几何和语义标注。&#10;&#10;### 3.4 实验设置与结果&#10;&#10;- **评估指标**：&#10;    - **追踪精度**：绝对轨迹误差（ATE RMSE），单位cm。&#10;    - **渲染质量**：峰值信噪比（PSNR↑）、结构相似性指数（SSIM↑）、学习感知图像块相似度（LPIPS↓）。&#10;- **主要结果**：&#10;    - **追踪精度（表1，表2）**：在ReplicaMultiagent和AriaMultiagent数据集上，MAGS-SLAM（RGB）的ATE RMSE与最先进的RGB-D方法（如MAGiC-SLAM）相当，并显著优于其他RGB方法（如CCM-SLAM、MA-MASt3R-SLAM）。&#10;    - **渲染质量（表3，表4，表5）**：在三个数据集上，MAGS-SLAM（RGB）在PSNR、SSIM和LPIPS指标上均取得了**最优或次优**的结果，甚至超过了大多数RGB-D方法。例如，在ETH3D数据集上，PSNR比最好的RGB-D方法（MAC-Ego3D）高出3-7 dB。&#10;    - **定性结果（图3，图4）**：可视化结果清晰显示，MAGS-SLAM重建的地图更干净、更连贯，没有RGB-D方法中常见的重影、未对齐和光度接缝。&#10;- **消融实验（表6，图5）**：&#10;    - **A1 (w/o Sim(3)-PGBA update)**：移除PGBA更新，PSNR下降4.0 dB。&#10;    - **A2 (w/o photometric residuals)**：移除光度残差，PSNR下降。&#10;    - **A3 (w/o occupancy-aware fusion)**：移除占用感知融合，PSNR大幅下降（33.16），产生“双重外壳”和鬼影几何。&#10;    - **A4 (w/o pose-Gaussian joint refinement)**：移除联合精炼，PSNR略有下降。&#10;    - **A5 (w/o scale estimation, i.e., SE(3))**：使用SE(3)代替Sim(3)，PSNR崩溃至18.61 dB，地图完全撕裂，证明了尺度估计的**绝对必要性**。&#10;&#10;### 3.5 技术细节&#10;&#10;- **子地图摘要**：为了高效通信，每个子地图被压缩成一个轻量级的摘要，包含全局描述符、稀疏3D特征点、配准点云、边界框和单个锚定关键帧，而不是传输所有原始数据。&#10;- **空间范围门**：在验证环路闭合时，计算匹配点集的空间范围与子地图整体范围的比值$\eta$。只有当$\eta$大于阈值$\tau_{ext}$时，才认为该环路是可靠的，这防止了基于少量、局部匹配点的退化环路被错误接受。&#10;- **自适应边失效**：当智能体内部发生PGBA修正时，如果修正导致子地图的刚性变化过大（RMSE &gt; $\tau_{rig}$），则所有与该子地图相关的智能体间边都会被标记为无效，并重新进行验证。这保证了全局图优化的鲁棒性。&#10;- **异步融合**：融合过程是异步的，每个目标智能体可以独立地融合来自其他智能体的子地图，无需等待所有智能体完成。&#10;&#10;## 4. 意义与影响（Significance and Impact）&#10;&#10;- **解决的问题与贡献**：&#10;    - 首次证明了**纯单目RGB**输入在多智能体协同光度真实感SLAM中的可行性，解决了该领域对深度传感器的依赖这一核心瓶颈。&#10;    - 提出了一套完整且有效的解决方案，包括紧凑通信、鲁棒的Sim(3)对齐、可靠的环路验证和高质量的地图融合，为后续研究提供了坚实的基线和方法论。&#10;    - 引入了新的、更具挑战性的基准数据集，推动了该领域的标准化评估。&#10;&#10;- **对未来研究/应用的影响**：&#10;    - **硬件民主化**：使得任何配备普通RGB相机的设备（如手机、无人机、低成本机器人）都能参与大规模协同重建，极大地降低了应用门槛。&#10;    - **应用拓展**：为虚拟制作、沉浸式远程呈现、大规模数字孪生、多机器人协同探索与建图等应用提供了更实用、更经济的解决方案。&#10;    - **研究方向**：为未来研究指明了方向，如如何将系统扩展到超大规模环境、如何与大型基础模型（如更鲁棒的深度估计、语义理解）更紧密地集成。&#10;&#10;- **作者提到的局限与开放问题**：&#10;    - **主要局限**：将系统扩展到**超大规模环境**仍然是一个开放的挑战。当前的全局图优化和融合策略在处理海量子地图时可能面临计算和内存瓶颈。&#10;    - **未来工作**：探索更高效的全局地图管理策略，">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Collaborative photorealistic 3D reconstruction from multiple agents enables rapid large-scale scene capture for virtual production and cooperative multi-robot exploration. While recent 3D Gaussian Splatting (3DGS) SLAM algorithms can generate high-fidelity real-time mapping, most of the existing multi-agent Gaussian SLAM methods still rely on RGB-D sensors to obtain metric depth and simplify cross-agent alignment, which limits the deployment on lightweight, low-cost, or power-constrained robotic platforms. To address this challenge, we propose MAGS-SLAM, the first RGB-only multi-agent 3DGS SLAM framework for collaborative scene reconstruction. Each agent independently builds local monocular Gaussian submaps and transmits compact submap summaries rather than raw observations or dense maps. To facilitate robust collaboration in the presence of monocular scale ambiguity, our framework integrates compact submap communication, geometry- and appearance-aware loop verification, and occupancy-aware Gaussian fusion, enabling coherent global reconstruction without active depth sensors. We further introduce ReplicaMultiagent Plus benchmark for evaluating collaborative Gaussian SLAM. Intensive experiments on synthetic and real-world datasets show that MAGS-SLAM achieves competitive tracking accuracy and comparable or superior rendering quality to state-of-the-art RGB-D collaborative Gaussian SLAM methods while relying only RGB images.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2511.17207v2" target="_blank" class="paper-title">SING3R-SLAM: Submap-based Indoor Monocular Gaussian SLAM with 3D Reconstruction Priors</a>
+                        <span class="paper-date">2026-04-03</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="好的，作为一名人工智能研究与学术论文分析专家，我将严格按照您的要求，对论文《SING3R-SLAM: Submap-based Indoor Monocular Gaussian SLAM with 3D Reconstruction Priors》进行详细的中文解读。&#10;&#10;---&#10;&#10;## 0. 概览（Concise Summary）&#10;&#10;- **主题（Topic）**：室内单目视觉SLAM（同时定位与地图构建），特别是基于3D高斯泼溅（3D Gaussian Splatting）的稠密重建与位姿估计。&#10;- **问题（Problem）**：现有基于3D先验的SLAM方法在处理长序列时，由于缺乏全局几何一致性约束，容易出现累积漂移、尺度不一致和局部几何结构次优的问题。同时，现有的基于3D高斯的SLAM方法大多依赖RGB-D输入，限制了其应用范围。&#10;- **方法（Method）**：提出SING3R-SLAM框架，利用3D重建先验（如CUT3R）构建局部子图（Submap），然后将这些子图对齐并融合到一个全局高斯地图（Global Gaussian Map）中，并通过可微渲染进行联合优化（束调整），同时优化相机位姿和场景几何。&#10;- **创新（Innovation）**：1) 将局部3D先验子图与全局高斯地图相结合，作为持久、可微的记忆，为后续优化提供鲁棒初始化。2) 通过可微束调整（Differentiable Bundle Adjustment）逐帧细化几何，修正先验中的固有误差。3) 引入子图级别的位姿图优化和全局束调整，实现闭环校正和全局一致性。&#10;- **意义（Significance）**：该方法在纯单目输入下，实现了在位姿估计、3D重建和新视角合成方面的最先进性能，同时构建了一个紧凑、内存高效且支持多种下游任务的全局一致地图。它弥合了基于3D先验的SLAM和基于高斯的SLAM之间的差距。&#10;- **一句话总结**：SING3R-SLAM通过将3D重建先验与全局可微高斯地图巧妙结合，并辅以多层次的优化策略，有效解决了单目SLAM中的漂移和几何不一致问题，实现了高精度、高一致性的定位与稠密重建。&#10;&#10;## 1. 研究动机（Motivation）&#10;&#10;- **解决的问题**：单目SLAM系统在长序列中面临的核心挑战：**全局几何一致性与局部精度之间的矛盾**。&#10;- **为什么重要**：室内SLAM是机器人导航、AR/VR等应用的基础。一个精确且全局一致的地图对于后续的3D场景理解、路径规划等任务至关重要。仅依赖单目相机实现这一点极具挑战性，因为缺乏直接的深度信息。&#10;- **挑战在哪里**：&#10;    1.  **基于2D先验的方法**（如ORB-SLAM, DROID-SLAM）侧重于位姿估计，但构建的3D地图稀疏或缺乏全局一致性，难以支持下游任务。&#10;    2.  **基于3D先验的方法**（如MASt3R-SLAM, VGGT-SLAM）利用强大的3D先验进行重建，但先验本身存在几何误差，且缺乏全局记忆来强制一致性，导致长序列中局部子图错位、全局结构退化（如图1左下角所示）。&#10;    3.  **基于3D高斯的方法**（如Splat-SLAM, HI-SLAM2）通常需要RGB-D输入或依赖多个外部模块（深度估计器、跟踪模块），导致管线碎片化、计算开销大，且深度估计的尺度不一致会引入漂移。&#10;&#10;## 2. 创新点（Innovation）&#10;&#10;论文的核心创新在于提出了一种**混合架构**，将基于3D先验的局部重建与基于3D高斯的全局优化无缝集成。具体创新点如下：&#10;&#10;1.  **全局高斯地图作为持久可微记忆**：不同于以往方法只输出点云，SING3R-SLAM维护一个全局的、可微的3D高斯地图。这个地图不仅作为最终输出，更是一个“记忆体”，用于存储和优化全局几何信息，并通过可微渲染实现多视图一致性。&#10;2.  **基于子图的局部-全局对齐与初始化**：利用3D先验（CUT3R）高效地重建局部子图，然后通过`SE(3)`变换将这些子图对齐到全局坐标系，并用于初始化全局高斯地图。这为后续优化提供了一个鲁棒且高效的起点，避免了从零开始优化。&#10;3.  **可微束调整（Differentiable Bundle Adjustment）**：这是方法的核心。不同于传统基于特征匹配的BA，该方法直接在渲染的图像、深度、法线图上定义损失函数，通过反向传播**同时优化**全局高斯地图的参数和相机位姿。这能有效修正3D先验中的固有几何误差，并增强全局一致性。&#10;4.  **多层次的闭环与全局优化**：提出一个利用特征相似度和几何重投影的闭环检测方法，然后进行子图级别的位姿图优化（粗略校正）和全局束调整（精细校正），有效抑制长序列漂移。&#10;&#10;## 3. 主要内容（Main Content）【重点】&#10;&#10;### 3.1 设计架构与方法&#10;&#10;系统架构如图2所示，主要包含三个模块：&#10;&#10;1.  **子图局部重建（Submap Local Reconstruction）**：&#10;    - **关键帧选择**：利用单目几何估计器（CUT3R）提取的几何感知特征，通过计算当前帧与最新关键帧的特征重叠率来选择关键帧，避免冗余。&#10;    - **局部几何预测**：对每个子图（包含K帧，相邻子图有重叠帧），使用CUT3R解码器预测局部坐标系下的稠密点图和相机位姿。&#10;&#10;2.  **全局重建（Global Reconstruction）**：&#10;    - **地图表示**：采用3D高斯泼溅（3DGS）作为全局场景表示，每个高斯体包含位置、协方差、透明度和颜色。&#10;    - **子图全局配准**：将新子图的局部位姿通过`SE(3)`变换转换到全局坐标系。然后，通过最小化渲染图像与输入图像的差异以及尺度不变深度损失，优化新子图帧的全局位姿，并据此初始化新的高斯体。&#10;    - **可微束调整**：在一个滑动窗口内，通过可微渲染，联合优化窗口内所有帧的位姿和全局高斯地图的参数。损失函数包括光度损失、逆深度损失、法线损失和尺度正则化损失。&#10;&#10;3.  **闭环（Loop Closure）**：&#10;    - **闭环检测**：结合几何重投影重叠率和特征相似度，计算当前帧与历史帧的闭环分数，选择分数最高的帧作为闭环对。&#10;    - **位姿图优化与高斯更新**：构建一个包含闭环约束的子图位姿图，优化每个子图的`SE(3)`变换。优化后，根据子图ID更新全局高斯地图中所有高斯体的位置和旋转。&#10;    - **全局束调整**：在闭环校正后，对整个序列进行一次离线的全局束调整，以进行最终的精细对齐。&#10;&#10;### 3.2 关键算法与数学推导&#10;&#10;1.  **关键帧选择（公式1）**：&#10;    $$r = \frac{1}{N} \sum_{i=1}^{N} \mathbb{1}\left[ \max_j \langle f_t^{(i)}, f_k^{(j)} \rangle &gt; \beta \right]$$&#10;    - 计算当前帧特征 $f_t$ 与最新关键帧特征 $f_k$ 的匹配比例 $r$。如果 $r$ 低于阈值，则选择当前帧为新关键帧。&#10;&#10;2.  **子图全局配准（公式3-6）**：&#10;    - **位姿变换**：$$T_{i,j}^{world} = T_{i-1,K}^{world} \cdot (T_{i,0}^{i-th})^{-1} \cdot T_{i,j}^{i-th}$$&#10;    - **位姿优化**：$$\min_{T_{i,j}^{world}} \mathcal{L}_C + \lambda_{scaleD} \mathcal{L}_{scaleD}$$&#10;      - 光度损失：$\mathcal{L}_C = \|A_{i,j}C_{i,j} - A_{i,j}\hat{C}_{i,j}\|_1$&#10;      - 尺度不变深度损失：$$\mathcal{L}_{scaleD} = \sum \left( \log(A_{i,j}\hat{D}_{i,j}) - \log(A_{i,j}\tilde{D}_{i,j}) \right)^2 - \frac{1}{N} \left( \sum \left( \log(A_{i,j}\hat{D}_{i,j}) - \log(A_{i,j}\tilde{D}_{i,j}) \right) \right)^2$$&#10;    - **深度校正**：$$D_{i,j} = \exp\left( \log(A_{i,j}\hat{D}_{i,j}) - \log(A_{i,j}\tilde{D}_{i,j}) \right) \tilde{D}_{i,j}$$&#10;&#10;3.  **可微束调整（公式7）**：&#10;    $$\min_{\mathcal{M}, T^{world}} \sum_{\{T^{world}\} \in \mathcal{V}} \mathcal{L}_{pho} + \lambda_D \mathcal{L}_D + \lambda_N \mathcal{L}_N + \lambda_{DN} \mathcal{L}_{DN} + \lambda_S \mathcal{L}_S$$&#10;    - $\mathcal{L}_{pho}$: 光度损失（L1 + SSIM）&#10;    - $\mathcal{L}_D$: 逆深度损失 $\|1/D_{i,j} - 1/\hat{D}_{i,j}\|_1$&#10;    - $\mathcal{L}_N$: 渲染法线损失 $(1 - \hat{N}_{i,j} \cdot \bar{N}_{i,j})$&#10;    - $\mathcal{L}_{DN}$: 深度-法线一致性损失 $(1 - N_{i,j} \cdot \bar{N}_{i,j})$&#10;    - $\mathcal{L}_S$: 尺度正则化损失 $\sum_{j=0}^2 (s_j^k - \bar{s}_k)$，防止高斯体过于细长。&#10;&#10;4.  **闭环位姿图优化（公式8）**：&#10;    $$\min_{T} \sum_{t=0} \left( T_{t-1} T_{t-1,K}^{world} - T_t T_{t,0}^{world} \right) + \left( T_i T_{i,j}^{world} - T_{loop} T_{loop,0}^{world} \right) + \left( T_{loop} T_{loop,1}^{world} - T_m T_{m,n}^{world} \right)$$&#10;    - 优化每个子图的刚性变换 $T \in SE(3)$，以最小化相邻子图间的相对位姿误差和闭环约束误差。&#10;&#10;### 3.3 模型、训练与数据集&#10;&#10;- **模型**：系统由两个主要预训练模型和一个可优化组件构成：&#10;    1.  **单目几何估计器**：使用**CUT3R**作为`D`，用于从RGB图像预测局部点图和位姿。&#10;    2.  **高斯光栅化器**：使用**RaDe-GS**作为可微渲染器，用于从高斯地图渲染图像、深度和法线。&#10;    3.  **全局高斯地图**：`M`，其参数（位置、协方差、颜色、透明度）是可优化的。&#10;- **训练**：CUT3R和RaDe-GS是预训练好的，在SING3R-SLAM中权重被冻结。训练/优化过程是在线/离线进行的，通过反向传播更新高斯地图参数和相机位姿。具体来说，局部束调整（LBA）在线进行20次迭代，全局束调整（GBA）离线进行20000次迭代。&#10;- **数据集**：在两个公开室内数据集上评估：&#10;    - **7-Scenes**：用于评估位姿估计和3D重建。&#10;    - **ScanNet-v2**：用于评估位姿估计、渲染质量和3D重建。&#10;&#10;### 3.4 实验设置与结果&#10;&#10;- **基线方法**：与多种SOTA方法比较，包括基于3D重建的（MASt3R-SLAM, VGGT-SLAM, ViSTA-SLAM）、基于高斯的（MonoGS, Splat-SLAM, HI-SLAM2）以及RGB-D方法（SplaTAM, Gaussian-SLAM）。&#10;- **主要结果**：&#10;    - **位姿估计（表I, III）**：在7-Scenes数据集上，SING3R-SLAM的平均ATE（绝对轨迹误差）为4.9cm，比最好的基线方法（HI-SLAM2的5.5cm）提升了**超过10%**。在ScanNet-v2上也取得了有竞争力的结果。&#10;    - **3D重建（表II, 图3）**：在7-Scenes上，SING3R-SLAM在Accuracy、Completeness和Chamfer Distance三个指标上均达到SOTA。定性结果（图3）显示，其重建的点云更完整、几何更精确，有效抑制了其他方法中的漂浮伪影和结构错位。&#10;    - **渲染质量（表IV）**：在ScanNet-v2上的新视角合成任务中，SING3R-SLAM在PSNR、SSIM和LPIPS指标上均超越了所有RGB-D和RGB-only的基线方法。&#10;- **消融实验（表V）**：验证了各组件的重要性。没有全局高斯地图和闭环时（行a），系统完全失败。逐帧细化、局部BA、全局BA和闭环各自都对最终性能有显著贡献，且缺一不可。&#10;- **性能分析（表VI）**：SING3R-SLAM的跟踪时间与MASt3R-SLAM相当，但地图大小仅为7MB，远小于MASt3R-SLAM的110MB，体现了高斯表示的紧凑性。&#10;&#10;### 3.5 技术细节&#10;&#10;- **子图大小**：K=6帧，相邻子图有1帧重叠。&#10;- **关键帧阈值**：特征重叠率阈值设为0.7。&#10;- **闭环检测阈值**：闭环分数阈值设为0.5。&#10;- **损失权重**：在子图配准中，$\lambda_{scaleD}=10$。在局部BA中，$\lambda_D=10, \lambda_N=0, \lambda_{DN}=0.01, \lambda_S=10$。在全局BA中，$\lambda_D=0, \lambda_N=0.005, \lambda_{DN}=0.005, \lambda_S=0$。&#10;- **优化**：局部BA使用20次迭代，滑动窗口W=10。全局BA使用20000次迭代。&#10;- **硬件**：单张NVIDIA RTX 4090 GPU。&#10;&#10;## 4. 意义与影响（Significance and Impact）&#10;&#10;- **解决了什么问题**：成功解决了单目SLAM中长序列漂移和全局几何不一致的核心难题，同时避免了对外部深度传感器或复杂多模块管线的依赖。&#10;- **贡献是什么**：&#10;    1.  提出了一种新颖的SLAM范式，将3D先验的局部效率与高斯表示的全局优化能力相结合。&#10;    2.  设计了一个可微的束调整框架，能够同时优化位姿和稠密几何，显著提升了精度。&#10;    3.  构建了一个紧凑、全局一致且支持多种下游任务（如新视角合成、网格重建）的3D地图。&#10;- **对未来研究/应用的影响**：&#10;    - 为纯单目稠密SLAM提供了一个强大的新基线，有望推动机器人、AR/VR等领域的发展。&#10;    - 其“先局部重建，后全局优化”的思路可以启发其他3D视觉任务的设计。&#10;    - 紧凑的高斯地图表示对于资源受限的移动设备上的应用非常有价值。&#10;- **局限与开放问题**：&#10;    - 作者提到，在大型平面区域（如墙壁）的边界处，由于缺乏直接深度监督和法线正则化，可能会导致轻微过平滑。&#10;    - 系统目前主要针对室内场景，扩展到室外大场景可能面临挑战。&#10;    - 全局束调整是离线的，未来可以探索更高效的在线全局优化策略。&#10;    - 对动态物体的鲁棒性尚未明确讨论。&#10;&#10;## 5. 澄清与简化（Clarifications and Simplifications）&#10;&#10;- **类比理解“可微束调整”**：传统BA就像用尺子和量角器去测量和调整每个3D点的位置和相机角度，非常精确但计算复杂。SING3R-SLAM的可微BA则像是一个“画家”，他先根据记忆（高斯地图）画出一幅画（渲染图像），然后与真实照片（输入图像）对比，找出哪里画得不像（计算损失），然后通过“反向传播”这个神奇的过程，自动调整他脑海中的记忆（高斯参数）和作画时的视角（相机位姿），让下一幅画更接近真实照片。这个过程是端到端可微的，所以非常高效。&#10;- **“子图”的作用**：可以想象成拼图。我们不直接尝试将几千块小碎片（每一帧的点云）拼成完整图像，而是先拼好几个大的拼图块（子图）。每个拼图块内部是精确的（由3D先验保证），然后我们只需要将这些大块拼在一起（子图对齐），并微调它们之间的接缝（全局优化）。这比直接拼小碎片要稳定和高效得多。&#10;- **“全局高斯地图” vs “点云”**：点云是离散的、不可微的点的集合，修改一个点很难影响到其他点。高斯地图则是一系列“小云团”，每个云团有大小、形状、颜色和透明度。这些云团是连续的、可微的，通过调整它们的参数，可以平滑地改变整个场景的几何和外观。更重要的是，我们可以通过渲染过程，让所有云团“共同”对最终图像负责，从而实现全局优化。&#10;&#10;## 6. 补充说明（Additional Notes）&#10;&#10;- **相关工作关联**：本文与**DUSt3R/MASt3R**系列工作紧密相关，这些工作提供了强大的3D先验。SING3R-SLAM继承了它们的优势，但通过引入全局高斯地图解决了它们无法处理长序列全局一致性的问题。同时，它也借鉴了**SplaTAM**等RGB-D高斯SLAM的思路，但将其扩展到了更具挑战性的纯单目场景，并创新性地将3">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Recent advances in dense 3D reconstruction have demonstrated strong capability in accurately capturing local geometry. However, extending these methods to incremental global reconstruction, as required in SLAM systems, remains challenging. Without explicit modeling of global geometric consistency, existing approaches often suffer from accumulated drift, scale inconsistency, and suboptimal local geometry. To address these issues, we propose SING3R-SLAM, a globally consistent Gaussian-based monocular indoor SLAM framework. Our approach represents the scene with a Global Gaussian Map that serves as a persistent, differentiable memory, incorporates local geometric reconstruction via submap-level global alignment, and leverages global map's consistency to further refine local geometry. This design enables efficient and versatile 3D mapping for multiple downstream applications. Extensive experiments show that SING3R-SLAM achieves state-of-the-art performance in pose estimation, 3D reconstruction, and novel view rendering. It improves pose accuracy by over 10%, produces finer and more detailed geometry, and maintains a compact and memory-efficient global representation on real-world datasets.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2411.17982v3" target="_blank" class="paper-title">HI-SLAM2: Geometry-Aware Gaussian SLAM for Fast Monocular Scene Reconstruction</a>
+                        <span class="paper-date">2026-02-02</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="好的，作为一名人工智能研究与学术论文分析专家，我将严格按照您的要求，对论文《HI-SLAM2: Geometry-Aware Gaussian SLAM for Fast Monocular Scene Reconstruction》进行详细的中文解读。&#10;&#10;---&#10;&#10;## 0. 概览（Concise Summary）&#10;&#10;- **主题（Topic）**：视觉SLAM（同时定位与地图构建）与密集三维场景重建，特别是仅使用单目（RGB）相机输入的场景。&#10;- **问题（Problem）**：现有的基于神经辐射场（NeRF）或3D高斯泼溅（3DGS）的SLAM方法，在渲染质量和几何精度之间往往存在权衡，难以同时达到最优。此外，单目系统固有的尺度模糊性和深度噪声也限制了重建质量。&#10;- **方法（Method）**：提出一个名为HI-SLAM2的几何感知高斯SLAM系统。它采用混合设计，将基于学习的密集SLAM前端（用于跟踪和深度估计）与3DGS作为核心地图表示相结合。关键创新包括：一种网格化的尺度对齐策略来修正单目深度先验的畸变，一种无偏的深度渲染方法，以及通过变形高斯单元来实现高效的在线地图更新。&#10;- **创新（Innovation）**：&#10;    1.  **混合SLAM架构**：解耦了地图训练和跟踪，同时通过联合优化重新耦合，兼顾了效率和精度。&#10;    2.  **空间自适应尺度对齐**：提出2D网格尺度对齐策略，比单一尺度的对齐更能有效修正单目深度先验的非线性畸变。&#10;    3.  **几何感知的3DGS优化**：在3DGS训练中引入法线先验和无偏深度渲染，显著提升了表面重建质量。&#10;    4.  **高效的在线地图更新**：通过基于关键帧位姿更新的显式高斯单元变形，实现了快速的全局一致性地图更新。&#10;- **意义（Significance）**：这项工作证明了仅使用RGB输入，可以同时实现高渲染质量和高几何精度的单目场景重建，其性能甚至超越了部分RGB-D方法。这为轻量级、低成本的实时应用（如AR/VR、机器人导航）提供了新的可能性。&#10;- **一句话总结**：HI-SLAM2通过混合SLAM架构和创新的几何感知高斯地图优化，在仅使用单目RGB输入的情况下，实现了快速、高精度且高视觉质量的场景重建。&#10;&#10;## 1. 研究动机（Motivation）&#10;&#10;- **解决的问题**：单目密集三维场景重建。这是一个计算机视觉和机器人领域的核心挑战，旨在仅从2D图像序列中恢复出场景的3D结构和相机运动轨迹。&#10;- **为什么重要**：单目相机成本低、体积小，是实现自主导航、移动测绘和增强现实等应用的关键传感器。相比之下，RGB-D和LiDAR传感器存在成本高、工作范围受限或对环境敏感等缺点。&#10;- **挑战在哪里**：&#10;    1.  **缺乏显式几何测量**：单目相机无法直接获取深度信息，导致重建问题本身是病态的（ill-posed）。&#10;    2.  **尺度模糊性**：单目SLAM无法确定场景的绝对尺度，且深度估计存在尺度漂移。&#10;    3.  **现有方法的权衡**：传统的NeRF SLAM方法计算量大，而3DGS SLAM方法虽然渲染快，但往往在几何精度上有所妥协。现有方法难以同时兼顾渲染质量和几何精度。&#10;    4.  **深度噪声与畸变**：从预训练网络获得的单目深度先验存在噪声和尺度畸变，直接使用会导致重建质量下降。&#10;&#10;## 2. 创新点（Innovation）&#10;&#10;1.  **混合SLAM设计（Hybrid Design）**：不同于将地图表示同时用于跟踪和建图的“地图中心”方法，HI-SLAM2采用混合设计。它使用一个学习型的密集SLAM前端（基于DROID-SLAM）进行跟踪和生成深度图，然后将深度图作为中间表示来初始化3DGS地图。这种设计解耦了跟踪和建图，使得跟踪更鲁棒，建图更高效，同时通过后续的联合优化（Joint Optimization）重新耦合两者，确保了全局一致性。&#10;&#10;2.  **空间自适应尺度对齐（Spatially-Adaptive Scale-Grid Alignment）**：针对单目深度先验的尺度畸变问题，作者没有使用单一的全局尺度因子，而是提出一个2D的尺度网格（如2x2）。通过双线性插值，为每个像素计算一个局部尺度因子，从而更灵活、更精确地修正深度先验的非线性畸变。这显著提升了深度估计的准确性，为后续的3DGS初始化提供了更好的几何基础。&#10;&#10;3.  **几何感知的3DGS优化（Geometry-Aware 3DGS Optimization）**：&#10;    - **无偏深度渲染（Unbiased Depth）**：在渲染深度时，不是简单使用高斯中心的深度，而是计算光线与高斯椭球体表面的实际交点，得到更精确、无偏的深度值，有利于表面拟合。&#10;    - **法线先验监督（Normal Prior Supervision）**：在3DGS优化损失函数中，加入了从单目网络预测的法线先验作为几何约束，通过余弦嵌入损失来监督渲染深度图计算出的法线，从而提升低纹理区域的重建质量。&#10;&#10;4.  **高效的在线地图更新（Efficient Online Map Update）**：当闭环检测或全局BA更新了关键帧位姿后，HI-SLAM2不是重新训练整个地图，而是通过一个显式的变形公式（公式12），直接更新每个3D高斯单元的位置、旋转和尺度。这使得地图更新非常快速，支持实时或近实时的全局一致性维护。&#10;&#10;## 3. 主要内容（Main Content）【重点】&#10;&#10;### 3.1 设计架构与方法&#10;&#10;系统架构如图3所示，包含四个主要阶段：&#10;1.  **在线跟踪（Online Tracking）**：基于DROID-SLAM，使用循环光流网络估计新来帧的位姿和深度。通过一个联合深度和尺度对齐（JDSA）模块，将单目深度先验融入BA优化中，以提升深度估计的鲁棒性和准确性。&#10;2.  **在线闭环（Online Loop Closing）**：当检测到闭环时，使用Sim(3)上的位姿图BA（PGBA）来校正全局的位姿漂移和尺度漂移。优化后，通过变形3D高斯单元来更新地图。&#10;3.  **连续建图（Continuous Mapping）**：使用3DGS作为核心地图表示。每当创建新关键帧时，将其深度图反投影生成新的3D高斯单元来初始化地图。通过渲染图像与真实图像的损失（颜色、深度、法线）来优化高斯参数。&#10;4.  **离线优化（Offline Refinement）**：在在线处理完成后，进行三个阶段的离线优化：后关键帧插入（补充视场覆盖不足的区域）、全BA（对所有关键帧进行更精细的位姿和深度优化）、以及联合位姿与地图精炼（联合优化3DGS参数和相机位姿，并加入曝光补偿）。&#10;&#10;### 3.2 关键算法与数学推导&#10;&#10;1.  **局部BA优化（公式1）**：&#10;    $$ \arg \min_{T, d} \sum_{(i,j) \in E} \| \check{p}_{ij} - \Pi(T_{ij} \Pi^{-1}(p_i, d_i)) \|^2_{\Sigma_{ij}} $$&#10;    这是在线跟踪的核心，通过最小化光流预测的像素位置 $\check{p}_{ij}$ 和由位姿 $T$ 与深度 $d$ 重投影得到的像素位置之间的误差，来优化关键帧的位姿和深度图。&#10;&#10;2.  **深度先验因子（公式2）**：&#10;    $$ r_d = \| \check{d}_i \cdot \text{Bi}(p_i, s_i) - d_i \|^2 $$&#10;    其中 $\check{d}_i$ 是单目深度先验，$\text{Bi}(p_i, s_i)$ 是通过双线性插值从2D尺度网格 $s_i$ 中采样得到的像素级尺度因子。这个因子将深度先验与BA估计的深度 $d_i$ 对齐。&#10;&#10;3.  **JDSA优化（公式3）**：&#10;    $$ \arg \min_{s, d} \sum_{(i,j) \in E} \| \check{p}_{ij} - \Pi(T_{ij} \Pi^{-1}(p_i, d_i)) \|^2_{\Sigma_{ij}} + \sum_{i \in V} \| \check{d}_i \cdot \text{Bi}(p_i, s_i) - d_i \|^2 $$&#10;    该公式将重投影误差和深度先验因子联合起来，交替优化尺度网格 $s$ 和深度图 $d$。通过舒尔补（Schur complement，公式4-5）高效求解，因为深度变量 $d$ 的Hessian矩阵 $C$ 是对角阵。&#10;&#10;4.  **Sim(3)位姿图BA（公式7）**：&#10;    $$ \arg \min_{T, d} \sum_{(i,j) \in E^*} \| \check{p}_{ij} - \Pi(T_{ij} \Pi^{-1}(p_i, d_i)) \|^2_{\Sigma_{ij}} + \sum_{(i,j) \in E^+} \| \log(\check{T}_{ij} \cdot T_i \cdot T_j^{-1}) \|^2_{\Sigma_{ij}^{rel}} $$&#10;    该公式用于闭环校正。第一项是闭环检测到的帧之间的重投影误差，第二项是相对位姿因子，用于约束整个位姿图。使用Sim(3)表示允许优化每个关键帧的尺度，从而校正尺度漂移。&#10;&#10;5.  **高斯地图更新（公式12）**：&#10;    $$ \mu'_j = (T'^{-1}_i \cdot T_i \cdot \mu_j) / s_i, \quad R'_j = R'^{-1}_i \cdot R_i \cdot R_j, \quad s'_j = s_i \cdot s_j $$&#10;    当关键帧 $i$ 的位姿从 $T_i$ 更新为 $T'_i$ 时，其锚定的高斯单元 $j$ 的均值 $\mu_j$、旋转 $R_j$ 和尺度 $s_j$ 根据相对变换进行显式变形，实现快速地图更新。&#10;&#10;### 3.3 模型、训练与数据集&#10;&#10;- **模型**：核心模型是3D高斯泼溅（3DGS），每个高斯单元由位置 $\mu$、协方差矩阵 $\Sigma$（分解为旋转 $R$ 和尺度 $S$）、不透明度 $o$ 和颜色 $c$ 表示。颜色使用简单的RGB值而非球谐函数。&#10;- **训练**：3DGS的优化使用Adam优化器，损失函数（公式17）包括：&#10;    - 颜色损失 $L_c$：渲染图像与真实图像的L1损失。&#10;    - 深度损失 $L_d$：渲染深度与BA估计深度的L1损失。&#10;    - 法线损失 $L_n$：渲染法线与单目法线先验的余弦嵌入损失。&#10;    - 尺度正则化 $L_s$：惩罚高斯单元过度拉伸。&#10;- **数据集**：在多个数据集上进行了评估，包括合成数据集Replica和真实世界数据集ScanNet、Waymo Open、ETH3D SLAM和ScanNet++。这些数据集覆盖了室内、室外、不同光照条件和场景复杂度。&#10;&#10;### 3.4 实验设置与结果&#10;&#10;- **相机跟踪精度**：在Replica（表I）和ScanNet（表II）数据集上，HI-SLAM2的ATE（绝对轨迹误差）达到了最优或接近最优的水平，超越了所有RGB方法，甚至优于部分RGB-D方法。在ETH3D SLAM（图7）和Waymo（表III）数据集上同样表现最佳。&#10;- **几何重建质量**：在Replica数据集上（表IV），HI-SLAM2在精度（Accuracy）指标上大幅领先所有对比方法（平均1.57cm），在完整度（Completeness）和完整率（Comp. Ratio）上也表现优异。定性结果（图6）显示其重建的几何细节更平滑、更准确。&#10;- **外观渲染质量**：在Replica数据集上（表V），HI-SLAM2在PSNR、SSIM、LPIPS指标上均取得了最优或次优结果，超越了所有RGB方法，并与RGB-D方法相当甚至更好。定性结果（图8、10）显示其渲染的图像清晰、细节丰富。&#10;- **消融实验**：通过消融实验（表X等）验证了各模块的有效性，如尺度网格对齐、无偏深度、法线损失、闭环和离线优化等，每个组件都对最终性能有贡献。&#10;&#10;### 3.5 技术细节&#10;&#10;- **关键帧选择**：基于与上一关键帧的平均光流距离。&#10;- **深度先验**：使用预训练的OmniData网络提取。&#10;- **光流网络**：使用预训练的RAFT网络。&#10;- **初始化**：系统在收集12个关键帧后，通过BA初始化系统状态，并将平均深度归一化为1以确定系统尺度。&#10;- **地图管理**：新关键帧的深度图反投影生成高斯，并进行随机下采样（因子ψ=32）以控制地图大小。定期重置不透明度并进行剪枝和稠密化。&#10;- **曝光补偿**：在离线优化阶段，为每个关键帧优化一个3x4的仿射变换矩阵来补偿不同视角间的颜色不一致性。&#10;&#10;## 4. 意义与影响（Significance and Impact）&#10;&#10;- **解决的问题与贡献**：&#10;    - 解决了单目SLAM中渲染质量与几何精度难以兼得的根本问题，证明了二者可以同时实现。&#10;    - 提出了一套完整且高效的混合SLAM框架，结合了学习型SLAM的鲁棒性和3DGS的快速渲染与显式表达能力。&#10;    - 在多个标准数据集上取得了最先进的结果，甚至超越了部分依赖深度传感器的RGB-D方法，展示了单目方法的巨大潜力。&#10;&#10;- **对未来研究/应用的影响**：&#10;    - **应用层面**：为低成本、轻量级的实时3D重建应用（如移动机器人、无人机、AR/VR设备）提供了可行的技术方案。&#10;    - **研究层面**：其混合设计、尺度对齐策略和几何感知的3DGS优化思想，为后续的SLAM和场景重建研究提供了新的思路和基线。&#10;&#10;- **局限与开放问题**：&#10;    - **对极端环境的鲁棒性**：在ETH3D SLAM数据集的实验中，有6个序列因完全黑暗而失败，4个序列因光照变化和视野遮挡而失败。这表明系统对极端光照和快速运动等挑战性场景的鲁棒性仍有待提高。&#10;    - **重定位能力**：作者提到，未来可以集成地点识别（place recognition）来实现重定位（relocalization），以降低跟踪失败的概率和ATE的标准差。&#10;    - **计算资源**：虽然比NeRF方法快，但离线优化阶段（特别是全BA和联合优化）仍然需要一定的计算时间，可能不适合对实时性要求极高的场景。&#10;&#10;## 5. 澄清与简化（Clarifications and Simplifications）&#10;&#10;- **混合设计 vs. 地图中心设计**：&#10;    - **地图中心**：想象一个建筑师，他一边走一边画一张非常精细的3D地图，并且用这张地图来定位自己。每次定位和画图都要依赖同一张地图，如果地图画错了，定位也会错。&#10;    - **混合设计**：想象一个探险家，他有一个非常可靠的指南针和测距仪（学习型SLAM前端）来定位和测量距离。他先快速画一张粗略的草图（深度图），然后根据这张草图，让一个专门的绘图员（3DGS建图模块）去建造一个精美的3D模型。即使模型需要修改，探险家也可以独立地继续前进和测量。HI-SLAM2就是后者，将“定位”和“精细建模”的任务分开，让各自发挥优势。&#10;&#10;- **空间自适应尺度对齐**：单目深度估计就像用一根橡皮筋去量距离，这根橡皮筋在不同地方松紧程度不一样（非线性畸变）。以前的方法是用一个固定的力去拉整根橡皮筋（单一尺度对齐），效果不好。HI-SLAM2的方法是在橡皮筋上每隔一段距离钉一个图钉（2x2网格），然后可以独立调整每段橡皮筋的松紧（通过双线性插值计算每个点的尺度），这样就能把橡皮筋拉得和真实距离一样准。&#10;&#10;- **无偏深度渲染**：在3DGS中，每个高斯是一个模糊的小点。以前的方法直接取这个小点的中心深度作为它贡献的深度，但如果光线穿过的是这个小点的边缘，这个深度就不准了。HI-SLAM2的方法是在光线穿过这个小点的“表面”时，计算光线与这个模糊椭球体表面的交点深度，这个深度更准确，就像用尺子去量一个球体的表面，而不是量球心。&#10;&#10;## 6. 补充说明（Additional Notes）&#10;&#10;- **相关工作关联**：本文与HI-SLAM（作者的前作）有直接继承关系。HI-SLAM2用3DGS替代了HI-SLAM中的神经隐式场（NeRF），从而获得了更快的渲染速度和更高效的在线更新能力。同时，它将HI-SLAM的单尺度对齐改进为网格化对齐，并增加了法线先验和更复杂的多阶段优化流程。与Splat-SLAM、MonoGS等3DGS SLAM方法相比，HI-SLAM2的混合设计是其核心区别，使其在几何精度上更具优势。&#10;&#10;- **最重要的图表**：&#10;    - **图1**：直观展示了本文方法在几何精度和视觉外观上的优越性，以及它如何平衡了其他方法的权衡。&#10;    - **图2**：清晰地对比了“地图中心”SLAM和本文提出的“混合设计”SLAM的架构差异，是理解本文核心思想的关键。&#10;    - **图3**：系统整体框架图，详细展示了在线跟踪、闭环、建图和离线优化四个阶段的流程和数据流，是理解整个系统工作流程的蓝图。&#10;    - **图4**：展示了尺度对齐策略的效果，直观地说明了网格化对齐比单一尺度对齐更接近真实深度（GT）。&#10;    - **表IV**：Replica数据集上的几何重建结果，是证明本文方法在几何精度上取得突破性">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>We present HI-SLAM2, a geometry-aware Gaussian SLAM system that achieves fast and accurate monocular scene reconstruction using only RGB input. Existing Neural SLAM or 3DGS-based SLAM methods often trade off between rendering quality and geometry accuracy, our research demonstrates that both can be achieved simultaneously with RGB input alone. The key idea of our approach is to enhance the ability for geometry estimation by combining easy-to-obtain monocular priors with learning-based dense SLAM, and then using 3D Gaussian splatting as our core map representation to efficiently model the scene. Upon loop closure, our method ensures on-the-fly global consistency through efficient pose graph bundle adjustment and instant map updates by explicitly deforming the 3D Gaussian units based on anchored keyframe updates. Furthermore, we introduce a grid-based scale alignment strategy to maintain improved scale consistency in prior depths for finer depth details. Through extensive experiments on Replica, ScanNet, and ScanNet++, we demonstrate significant improvements over existing Neural SLAM methods and even surpass RGB-D-based methods in both reconstruction and rendering quality. The project page and source code will be made available at https://hi-slam2.github.io/.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2405.20031v4" target="_blank" class="paper-title">MG-SLAM: Structure Gaussian Splatting SLAM with Manhattan World Hypothesis</a>
+                        <span class="paper-date">2026-01-11</span>
+                    </div>
+                                        <span class="paper-comment">📝 IEEE Transactions on Automation Science and Engineering</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="好的，作为一名人工智能研究与学术论文分析专家，我将严格按照您的要求，对这篇论文《MG-SLAM: Structure Gaussian Splatting SLAM with Manhattan World Hypothesis》进行详细的中文解读。&#10;&#10;---&#10;&#10;## 0. 概览（Concise Summary）&#10;&#10;- **主题（Topic）**：本文属于**视觉同步定位与地图构建（SLAM）** 领域，具体聚焦于基于**3D高斯泼溅（3D Gaussian Splatting, 3DGS）** 的稠密SLAM系统。&#10;- **问题（Problem）**：现有的高斯泼溅SLAM系统在复杂室内环境中面临两大挑战：1）在**无纹理区域**（如白墙、地板）跟踪不稳定，容易丢失；2）由于**遮挡或视角限制**，地图重建存在大量**空洞和不完整**，尤其是在结构化平面（如地板、天花板）上。&#10;- **方法（Method）**：提出一种名为**MG-SLAM**的RGB-D SLAM系统。其核心是利用**曼哈顿世界（Manhattan World, MW）假设**，通过提取和融合**线段特征**来增强跟踪鲁棒性，并利用**平面表面假设**来指导**插值新的高斯原语**，以填补地图中的空洞，实现场景补全。&#10;- **创新（Innovation）**：1）首次将**曼哈顿世界假设**系统地融入高斯泼溅SLAM框架中。2）提出了一种**线段融合与滤波策略**，为跟踪提供更稳健的线特征。3）提出了一种**后优化方法**，利用MW假设识别平面边界，并通过训练PointNet++模型预测颜色，在空洞区域**主动插值新高斯原语**，实现场景补全。4）通过正则化项实现了从高斯表示中**直接提取高质量网格**。&#10;- **意义（Significance）**：该工作显著提升了高斯SLAM系统在复杂室内环境中的**跟踪精度**和**地图完整性**，解决了该领域一个被忽视的关键问题。在大型公寓数据集上，ATE降低了50%，PSNR提升了5dB，为机器人导航、AR/VR等下游任务提供了更可靠、更完整的场景表示。&#10;- **一句话总结**：MG-SLAM通过引入曼哈顿世界假设，利用线段特征和平面表面约束，显著增强了高斯泼溅SLAM在室内环境中的跟踪鲁棒性和地图重建的完整性。&#10;&#10;## 1. 研究动机（Motivation）&#10;&#10;- **解决的问题**：现有高斯泼溅SLAM（如SplaTAM, MonoGS）虽然在渲染质量和效率上表现出色，但在**复杂室内环境**中面临两个核心挑战：&#10;    1.  **跟踪不鲁棒**：室内场景常包含大量**无纹理表面**（如白墙、地板），缺乏足够的点特征用于相机位姿优化，导致跟踪漂移甚至失败。&#10;    2.  **地图不完整**：由于物体遮挡或相机视角有限，场景中许多区域（尤其是大面积平面，如地板、天花板）未被观测到。高斯表示无法在没有多视角优化的情况下有效插值这些未观测区域，导致重建地图出现**大量空洞和缺口**。&#10;- **为什么重要**：这两个问题严重限制了高斯SLAM在真实世界应用中的实用性。精确的跟踪是后续一切任务的基础，而完整的地图对于机器人导航、路径规划、场景理解等下游任务至关重要。解决这些问题是将高斯SLAM从实验室推向实际应用的关键一步。&#10;- **挑战在哪里**：&#10;    - 如何在无纹理区域找到**稳定、可靠的视觉特征**来替代或补充点特征？&#10;    - 如何在不依赖多视角观测的情况下，**推理并填补**未被观测到的几何结构，特别是那些具有规则形状的平面？&#10;    - 如何将结构约束（如曼哈顿世界假设）**无缝地集成**到基于高斯原语的、可微的SLAM框架中，同时不破坏其原有的高保真渲染能力？&#10;&#10;## 2. 创新点（Innovation）&#10;&#10;论文提出了三个关键创新点，共同解决了上述挑战：&#10;&#10;1.  **融合线段特征的鲁棒跟踪**：&#10;    - **创新**：将**线段特征**（Line Features）引入高斯SLAM的跟踪和建图流程中。与传统的点特征相比，线段在无纹理区域（如墙角、门框边缘）更丰富、更稳定。&#10;    - **不同之处**：现有高斯SLAM主要依赖点特征或光度损失进行跟踪。本文不仅使用线段，还提出了一种**线段融合与滤波策略**，将短线段合并为更长的、更可靠的线段，并剔除不稳定的线段，从而显著提升跟踪的鲁棒性。&#10;    - **为何奏效**：长线段提供了更强的几何约束，尤其是在相机旋转或平移时，其投影误差能更有效地指导位姿优化，减少漂移。&#10;&#10;2.  **基于曼哈顿世界假设的结构化表面补全**：&#10;    - **创新**：利用曼哈顿世界假设（即场景主要由三个正交方向构成）来**识别和补全**未观测到的结构化平面（如地板、天花板）。&#10;    - **不同之处**：现有高斯SLAM只能被动地重建观测到的区域。本文提出了一种**主动插值**方法：首先，利用提取的3D线段来**校准**场景坐标系，使其与曼哈顿世界对齐；然后，利用语义分割识别目标平面（如地板）；接着，通过计算高斯密度来**检测空洞**；最后，在空洞位置**生成新的高斯原语**，并使用PointNet++网络根据周围已观测区域的颜色模式来**预测新高斯的颜色**。&#10;    - **为何奏效**：曼哈顿世界假设为平面补全提供了**强先验**（平面是连续的、矩形的），使得系统能够合理推断出被遮挡部分的几何和外观，从而填补空洞，实现场景的完整重建。&#10;&#10;3.  **从高斯表示直接提取高质量网格**：&#10;    - **创新**：提出了一种结合**正则化项**的网格生成方法，能够从离散的3D高斯原语中直接提取出**平滑、高质量**的网格。&#10;    - **不同之处**：现有高斯SLAM通常依赖TSDF融合等后处理步骤从渲染图像中生成网格，这依赖于已观测的视角，且与高斯地图本身无关。本文的方法直接作用于高斯地图，并利用曼哈顿世界假设对平面（如地板）的法线方向进行**正则化**，从而生成更平滑、更准确的表面。&#10;    - **为何奏效**：通过迫使高斯原语变“扁”（一个缩放因子趋近于0），可以将其压缩到表面附近，从而构建一个连续的密度场。在此基础上，通过SDF正则化和法线正则化，可以引导表面重建过程，最终提取出高质量的网格。&#10;&#10;## 3. 主要内容（Main Content）【重点】&#10;&#10;### 3.1 设计架构与方法&#10;&#10;MG-SLAM的整体架构如图2所示，分为两个阶段：&#10;&#10;1.  **在线阶段（Tracking &amp; Mapping）**：&#10;    - **跟踪（Tracking）**：系统并行处理**点特征**和**线段特征**。从RGB-D图像中提取点特征和线段，并进行匹配。线段经过**融合与滤波**后，与点特征一起用于计算重投影误差和反投影误差，通过**全捆绑调整（Full Bundle Adjustment）** 优化相机位姿。&#10;    - **建图（Mapping）**：系统维护一个3D高斯地图。利用关键帧，通过最小化包含**光度损失、深度损失、语义损失**以及**线段特征损失**的总损失函数来优化高斯原语的参数（位置、协方差、颜色、不透明度等）。&#10;&#10;2.  **后优化阶段（Post-optimization）**：&#10;    - **结构优化（Structure Optimization）**：利用曼哈顿世界假设，对已建好的高斯地图进行**校准**，使其与场景主方向对齐。然后，通过语义信息识别结构化平面（如地板），检测其上的空洞，并**插值新的高斯原语**来填补这些空洞。&#10;    - **网格生成（Mesh Generation）**：通过正则化项将高斯原语压扁到表面，并利用SDF和法线约束，从高斯地图中**直接提取**出高质量的三角网格。&#10;&#10;### 3.2 关键算法与数学推导&#10;&#10;1.  **点重投影误差**：&#10;    $$L_{p}^{2D} = \|P_i - \pi(R_k X_i^w + T_k)\|_{\Sigma_{P_i}} \in \mathbb{R}$$&#10;    其中 $P_i$ 是2D观测点，$\pi$ 是投影函数，$R_k, T_k$ 是相机位姿，$X_i^w$ 是3D地图点。&#10;&#10;2.  **线段重投影误差**：&#10;    $$L_{l}^{2D} = \begin{bmatrix} d_k \cdot \pi(R_k X_p^w + t) \\ d_k \cdot \pi(R_k X_q^w + t) \end{bmatrix}_{\Sigma_{2D}} \in \mathbb{R}^2$$&#10;    其中 $d_k$ 是2D线段的法向量，$X_p^w, X_q^w$ 是3D线段的端点。该误差衡量的是3D线段端点投影到2D后，到2D观测线段的垂直距离。&#10;&#10;3.  **线段反投影误差**：&#10;    $$L_{l}^{3D} = \begin{bmatrix} e_{3D}(\theta(P_i), X_p^w) + \beta \cdot e_P(P_i, X_p^w) \\ e_{3D}(\theta(P_i), X_q^w) + \beta \cdot e_P(P_i, X_q^w) \end{bmatrix}_k \in \mathbb{R}^2$$&#10;    其中 $e_{3D}$ 是3D点到3D线段的垂直距离，$e_P$ 是3D点到其反投影点的距离。$\beta$ 是权重参数，用于稳定线段端点。&#10;&#10;4.  **全捆绑调整误差**：&#10;    $$L_{BA} = \sum_K \sum_U \rho(\|L_p^{2D}\|_{\Sigma_P}) + \sum_V \rho(\|L_l^{2D}\|_{\Sigma_{2D}}) + \sum_V \rho(\|L_l^{3D}\|_{\Sigma_{3D}})$$&#10;    这是跟踪优化的总目标函数，结合了点、线重投影和反投影误差，并使用Huber损失函数 $\rho$ 来抑制异常值。&#10;&#10;5.  **高斯密度函数**：&#10;    $$\nu(p) = \sum_{G_i} \alpha_{G_i} \exp(-\frac{1}{2}(p-\mu_{G_i}^T)\Sigma_{G_i}^{-1}(p-\mu_{G_i}))$$&#10;    用于评估空间中任意点 $p$ 被高斯原语覆盖的程度。在结构优化中，该函数被用于检测空洞（密度低于阈值 $T_{density}$ 的区域）。&#10;&#10;6.  **SDF正则化损失**：&#10;    $$L_{sdf} = \frac{1}{|X_p|} \sum_{x \in X_p} |sdf(x) - \hat{sdf}(x)|$$&#10;    用于将高斯密度场转换为有符号距离函数（SDF），使其与观测深度一致。&#10;&#10;7.  **法线正则化损失**：&#10;    $$L_{normal} = \frac{1}{|X_{floor}|} \sum_{x_{2D} \in P_{floor}} 1 - \hat{n} \cdot \frac{\nabla f(x)}{\|\nabla f(x)\|}$$&#10;    利用曼哈顿世界假设，强制地板区域的SDF梯度（即法线）与垂直方向 $\hat{n} = \langle 0,0,1 \rangle$ 对齐，从而生成平滑的地板网格。&#10;&#10;### 3.3 模型、训练与数据集&#10;&#10;- **模型**：系统由两个主要部分组成：1）基于C++实现的**跟踪前端**，负责特征提取、匹配和位姿优化；2）基于Python和CUDA实现的**建图后端**，负责高斯地图的优化、结构补全和网格生成。&#10;- **训练**：&#10;    - **高斯地图优化**：使用Adam优化器，通过最小化公式(12)中的总损失 $L_{Mapping}$ 来迭代优化每个高斯原语的参数。损失包括光度、深度、语义和线段特征损失。&#10;    - **PointNet++训练**：在结构补全阶段，对于每个被识别的结构化平面，从其已观测区域采样高斯原语作为训练数据，训练一个PointNet++模型来学习空间位置到颜色的映射。训练25个epoch，批次大小为1e4。&#10;- **数据集**：&#10;    - **Replica**：合成数据集，包含8个单房间场景和5个大型公寓场景。提供真实相机位姿和语义地图。&#10;    - **ScanNet**：真实世界数据集，包含多个室内场景。提供由BundleFusion计算得到的真实相机位姿。&#10;    - **物理平台数据集**：作者使用自己的机器人平台在NTU大楼的长走廊（&gt;200米）采集的数据，用于评估真实世界中的长轨迹性能。&#10;&#10;### 3.4 实验设置与结果&#10;&#10;- **评估指标**：&#10;    - **建图质量**：PSNR（峰值信噪比）、SSIM（结构相似性）、LPIPS（学习感知图像块相似度）。&#10;    - **跟踪精度**：ATE RMSE（绝对轨迹误差均方根）。&#10;    - **系统效率**：FPS（帧每秒）、参数大小。&#10;- **主要结果**：&#10;    - **Replica-V1（单房间）**：在渲染质量（PSNR, SSIM）上达到SOTA，跟踪精度（ATE）最优（0.45cm）。&#10;    - **Replica-Apartment（大型公寓）**：**性能提升显著**。在渲染质量上，PSNR比次优的Point-SLAM高0.07dB，比高斯方法高约7dB。在跟踪精度上，ATE（2.77cm）远优于所有基线，比传统方法PLVS（3.72cm）和ORB-SLAM3（4.41cm）都好（见表V）。&#10;    - **ScanNet（真实世界）**：在渲染质量上，PSNR（23.71dB）比次优的Photo-SLAM（20.76dB）高出近3dB。跟踪精度（ATE 6.77cm）也达到SOTA（见表VII）。&#10;    - **物理平台（长走廊）**：在极具挑战性的无纹理长走廊场景中，MG-SLAM是唯一成功完成跟踪和建图的方法，而SplaTAM直接失败。其ATE（7.72cm）远优于MonoGS（27.04cm）和Photo-SLAM（18.29cm）（见表VIII）。&#10;- **消融实验**：&#10;    - **超参数消融**（图7）：分析了点/线特征数量、关键帧间隔、下采样率对跟踪精度和速度的影响，找到了最优参数区间。&#10;    - **线段提取消融**（图8）：验证了线段反投影、融合和滤波策略的有效性，能生成更清晰、更长的线段。&#10;    - **损失函数消融**：验证了线段特征损失对跟踪和建图精度的贡献。&#10;&#10;### 3.5 技术细节&#10;&#10;- **线段融合**：将方向相近（&lt;1度）、端点距离近（&lt;10像素）、不重叠且垂直距离小的线段合并为更长的线段，提高稳定性。&#10;- **线段滤波**：剔除长度低于图像尺寸一定比例（$T_\ell = 0.08$）的短线段。&#10;- **场景校准**：通过K-means聚类3D线段的方向，找到三个正交主方向，构建校准矩阵 $K$，将整个高斯地图和线段旋转至与曼哈顿世界对齐。&#10;- **高斯插值**：在校准后的平面上创建2D网格，计算每个网格点的高斯密度。密度低于阈值 $T_{density}=0.90$ 的区域被视为空洞，在此处生成新的高斯中心。然后使用训练好的PointNet++模型预测这些新高斯的颜色。&#10;- **网格生成**：通过正则化使高斯变扁，构建SDF，然后使用Poisson重建提取网格。法线正则化 $L_{normal}$ 确保了平面区域的平滑性。&#10;&#10;## 4. 意义与影响（Significance and Impact）&#10;&#10;- **解决了什么问题**：&#10;    - 解决了高斯SLAM在**无纹理室内环境中的跟踪不稳定**问题。&#10;    - 解决了高斯SLAM因**未观测几何导致的地图空洞和不完整**问题，这是一个被先前研究忽视的关键挑战。&#10;    - 提供了一种从高斯表示**直接提取高质量网格**的方法，弥合了高斯SLAM与下游应用之间的鸿沟。&#10;- **贡献是什么**：&#10;    - 提出了一个新颖的、将曼哈顿世界假设与高斯泼溅SLAM深度融合的框架。&#10;    - 在多个数据集上取得了**SOTA的跟踪和建图性能**，尤其是在大型、真实室内场景中提升显著。&#10;    - 为后续研究提供了一个新的方向：如何利用**结构先验**来增强基于学习的SLAM系统的鲁棒性和完整性。&#10;- **对未来研究/应用的影响**：&#10;    - **机器人导航**：更完整、更精确的地图使机器人在复杂室内环境中能够更安全、更可靠地进行路径规划和避障。&#10;    - **AR/VR**：高质量的实时重建和网格生成可直接用于创建沉浸式的虚拟环境。&#10;    - **场景理解**：完整的几何和纹理信息为语义分割、物体识别等高级任务提供了更好的输入。&#10;- **作者提到的局限与开放问题**：&#10;    - 系统在**长轨迹**（如物理平台实验）中，虽然优于其他方法，但与真实图像相比仍**缺乏一些细节**，表明在极长轨迹下的累积误差和细节保持仍有提升空间。&#10;    - 为了追求更高的重建质量，系统采用了**更稠密的高斯表示**，导致建图速度和内存占用**不如**一些使用稀疏表示的实时系统（如Photo-SLAM, RTG-SLAM），这是一个**精度与效率的权衡**。&#10;&#10;## 5. 澄清与简化（Clarifications and Simplifications）&#10;&#10;- **曼哈顿世界假设**：可以想象一个典型的室内房间，墙壁、地板和天花板都是互相垂直的。曼哈顿世界假设就是认为大多数人造环境都遵循这种“**三轴正交**”的规则。MG-SLAM利用这个规则，就像给系统戴上了一副“**结构眼镜**”，让它能更好地理解场景的骨架，比如知道地板是平的、墙角是">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Gaussian Splatting SLAMs have made significant advancements in improving the efficiency and fidelity of real-time reconstructions. However, these systems often encounter incomplete reconstructions in complex indoor environments, characterized by substantial holes due to unobserved geometry caused by obstacles or limited view angles. To address this challenge, we present Manhattan Gaussian SLAM, an RGB-D system that leverages the Manhattan World hypothesis to enhance geometric accuracy and completeness. By seamlessly integrating fused line segments derived from structured scenes, our method ensures robust tracking in textureless indoor areas. Moreover, The extracted lines and planar surface assumption allow strategic interpolation of new Gaussians in regions of missing geometry, enabling efficient scene completion. Extensive experiments conducted on both synthetic and real-world scenes demonstrate that these advancements enable our method to achieve state-of-the-art performance, marking a substantial improvement in the capabilities of Gaussian SLAM systems.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2505.18992v2" target="_blank" class="paper-title">VPGS-SLAM: Voxel-based Progressive 3D Gaussian SLAM in Large-Scale Scenes</a>
+                        <span class="paper-date">2026-01-10</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="好的，作为一名人工智能研究与学术论文分析专家，我将严格按照您的要求，对论文《VPGS-SLAM: Voxel-based Progressive 3D Gaussian SLAM in Large-Scale Scenes》进行详细的中文解读。&#10;&#10;---&#10;&#10;## 0. 概览（Concise Summary）&#10;&#10;- **主题（Topic）**：密集视觉SLAM（Simultaneous Localization and Mapping，同时定位与地图构建），特别是基于3D高斯泼溅（3D Gaussian Splatting, 3DGS）的大规模场景重建与定位。&#10;- **问题（Problem）**：现有的3DGS-SLAM方法受限于小规模室内场景，无法处理大规模城市场景和长序列，主要面临三大挑战：1）3D高斯椭球体冗余导致内存爆炸；2）仅依赖2D渲染损失的相机追踪在室外大运动、运动模糊和光照变化下不准确；3）长序列中累积的位姿漂移导致全局不一致。&#10;- **方法（Method）**：提出VPGS-SLAM，一个基于3DGS的大规模RGBD SLAM框架。核心方法包括：1）**基于体素的渐进式3D高斯建图**，使用多个子图（submap）实现紧凑且准确的场景表示；2）**2D-3D融合相机追踪**，结合2D光度信息和3D几何信息进行粗到细的位姿估计；3）**2D-3D高斯闭环**，通过闭环检测、位姿图优化和子图融合来消除累积漂移，实现全局一致性。&#10;- **创新（Innovation）**：1）首次将3DGS-SLAM扩展到大规模室内外场景；2）提出了序列化的、基于体素的渐进式3D高斯表示，结合多分辨率体素和子图管理，显著降低了内存消耗并提高了可扩展性；3）提出了2D-3D融合追踪策略，自适应地结合2D和3D信息，提高了追踪的鲁棒性和准确性；4）设计了基于3D高斯的闭环和在线蒸馏的子图融合方法，保证了大规模场景下的全局一致性。&#10;- **意义（Significance）**：解决了3DGS-SLAM从“小房间”走向“大场景”的关键瓶颈，为自动驾驶、机器人导航等需要高精度位姿和稠密地图的智能交通系统提供了可行且高效的解决方案。其子图管理和渐进式建图思想为未来大规模场景下的实时SLAM研究提供了新范式。&#10;- **一句话总结**：本文提出VPGS-SLAM，通过基于体素的渐进式3D高斯子图表示、2D-3D融合追踪和3D高斯闭环，首次实现了在大规模室内外场景中高效、准确且全局一致的3DGS-SLAM系统。&#10;&#10;## 1. 研究动机（Motivation）&#10;&#10;- **解决的问题**：现有基于3DGS的SLAM方法（如SplaTAM, MonoGS）在小型室内场景中表现优异，但无法扩展到大规模场景（如多房间公寓、城市街道）和长序列。&#10;- **重要性**：在智能交通系统（如自动驾驶）中，精确的位姿估计是安全可靠驾驶的基础。位姿误差会导致不安全的驾驶行为，甚至引发连锁反应，增加事故风险。同时，稠密场景重建对于避障和运动规划至关重要。&#10;- **核心挑战**：&#10;    1.  **冗余的3D高斯椭球体**：现有方法使用大量高斯椭球体表示场景，在小房间场景就需要超过500MB内存，在大场景中会导致内存爆炸。&#10;    2.  **误差累积与位姿漂移**：现有方法依赖渲染损失进行追踪，在存在剧烈运动、运动模糊和曝光变化的大规模真实世界环境中表现不佳。&#10;    3.  **全局不一致**：在长序列和大场景中，当机器人回环时，需要确保空间相关性，实现全局一致性，而现有方法缺乏有效的闭环机制。&#10;&#10;## 2. 创新点（Innovation）&#10;&#10;1.  **序列化体素渐进式3D高斯表示**：&#10;    - **新意**：不同于现有方法直接添加大量高斯体，该方法将场景划分为多个局部子图。在每个子图内，采用**多分辨率体素**结构，每个体素中心作为一个“锚点”，由锚点生成一组“神经高斯体”。这避免了高斯体的无序增长。&#10;    - **不同之处**：与直接使用大量独立高斯体相比，该方法通过锚点和MLP解码器生成高斯体属性，参数更少，表示更紧凑。子图机制允许在优化后释放非活跃子图的内存，显著降低了在线内存需求。&#10;    - **为何奏效**：体素结构提供了场景的几何先验，引导高斯体分布，去除冗余。子图机制将大规模场景分解为多个可管理的小块，解决了内存爆炸问题。&#10;&#10;2.  **2D-3D融合相机追踪**：&#10;    - **新意**：提出一种粗到细的位姿估计策略，结合了2D光度信息和3D几何信息。&#10;    - **不同之处**：现有方法多仅使用2D渲染损失。该方法在粗阶段使用2D渲染损失（RGB和深度）提供初始估计，在细阶段使用基于体素的3D高斯ICP（迭代最近点）进行帧到地图的精确配准。&#10;    - **为何奏效**：2D信息在室内和仿真环境中表现好，而3D几何信息在室外（运动模糊、光照变化）更鲁棒。通过一个自适应策略评估2D信息质量，动态调整对2D/3D信息的依赖，使得系统能适应不同环境。&#10;&#10;3.  **2D-3D高斯闭环与子图融合**：&#10;    - **新意**：提出一个完整的闭环模块，包括基于NetVLAD的闭环检测、结合2D渲染损失和3D体素ICP的位姿图优化，以及一个**在线蒸馏**的子图融合方法。&#10;    - **不同之处**：闭环优化同时利用了2D和3D信息，比仅使用单一模态更鲁棒。子图融合通过在线蒸馏，将回环子图的重叠区域信息进行融合，而不是简单拼接。&#10;    - **为何奏效**：闭环检测和位姿图优化修正了累积的位姿漂移。在线蒸馏方法通过最小化两个子图在重叠区域渲染图像（RGB和深度）的差异，有效地融合了不同子图的信息，保证了全局地图的一致性。&#10;&#10;## 3. 主要内容（Main Content）【重点】&#10;&#10;### 3.1 设计架构与方法&#10;&#10;系统整体架构如图2所示，包含三个主要模块：&#10;&#10;1.  **体素渐进式场景表示**：输入RGB帧和3D点云。系统维护多个局部子图。当新关键帧到来时，将其观测区域体素化，初始化锚点。每个锚点通过MLP解码器生成一组神经高斯体。系统采用渐进式策略，当相机运动超出当前子图边界时，动态初始化新的子图。子图内的高斯体通过渲染损失进行优化，非活跃子图可被释放以节省内存。&#10;&#10;2.  **2D-3D融合相机追踪**：采用粗到细的位姿优化策略。&#10;    - **粗阶段**：使用2D光度损失（RGB和深度L1损失）优化相机位姿，提供一个好的初始值。&#10;    - **细阶段**：使用基于体素的3D高斯ICP方法，将当前帧的点云与3D高斯体素地图进行配准，进一步精化位姿。&#10;    - **自适应策略**：通过评估2D渲染结果的质量（如渲染损失），动态决定是否跳过粗阶段，直接使用3D ICP。这在室外场景中非常有效。&#10;&#10;3.  **2D-3D高斯闭环**：&#10;    - **闭环检测**：使用轻量级NetVLAD提取视觉描述符，通过余弦相似度检测回环。&#10;    - **位姿图优化**：检测到回环后，构建位姿图，利用2D渲染损失和3D体素ICP作为约束，优化所有相关子图的位姿。&#10;    - **子图融合**：位姿对齐后，使用在线蒸馏方法融合两个回环子图。具体地，在重叠区域选取相似图像对，最小化它们从不同子图渲染出的RGB和深度图像的差异。&#10;&#10;### 3.2 关键算法与数学推导&#10;&#10;1.  **神经高斯体位置生成**：&#10;    对于当前帧 $I_i$，其锚点位置为 $x_i^a$，对应的 $k$ 个神经高斯体的位置 $\{\mu_i^m\}_{m=0}^{k-1}$ 由下式计算：&#10;    $$\{\mu_i^m\}_{m=0}^{k-1} = x_i^a + \{O_i^m\}_{m=0}^{k-1} \cdot l_i$$&#10;    其中 $\{O_i^m\}_{m=0}^{k-1} \in \mathbb{R}^{k \times 3}$ 是可学习的偏移量，$l_i$ 是缩放因子。&#10;&#10;2.  **神经高斯体属性解码**：&#10;    高斯体的属性（不透明度 $\alpha$，四元数 $q$，缩放 $s$，颜色 $c$）由锚点特征 $f_i^a$、观测距离 $\delta_i$ 和方向 $d_i$ 通过多个小型MLP解码得到：&#10;    $$\{f_i^a, \delta_i, d_i\} \mapsto \{\{\alpha_i^m\}_{m=0}^{k-1}, \{q_i^m\}_{m=0}^{k-1}, \{s_i^m\}_{m=0}^{k-1}, \{c_i^m\}_{m=0}^{k-1}\}$$&#10;    其中 $\delta_i = \|x_i^a - x_i^c\|_2$，$d_i = \frac{x_i^a - x_i^c}{\|x_i^a - x_i^c\|_2}$，$x_i^c$ 是相机位置。&#10;&#10;3.  **子图优化损失函数**：&#10;    每个子图的优化损失 $L_m$ 包含四个部分：&#10;    $$L_m = L_c + L_{SSIM} + \lambda_d L_d + \lambda_{vol} L_{vol}$$&#10;    - $L_c$ 和 $L_{SSIM}$ 是颜色损失（L1和SSIM）。&#10;    - $L_d$ 是深度L1损失。&#10;    - $L_{vol}$ 是体积正则化项，鼓励高斯体小而紧凑：&#10;      $$L_{vol} = \sum_{i=1}^{N_{ng}} \text{Prod}(s_i)$$&#10;      其中 $N_{ng}$ 是子图中神经高斯体的数量，$\text{Prod}(\cdot)$ 是向量元素的乘积。&#10;&#10;4.  **3D高斯ICP位姿优化**：&#10;    在细阶段追踪中，通过最小化点云 $S$ 和地图 $M$ 之间对应点的距离来优化位姿 $\Delta\{R, t\}_{est}$：&#10;    $$\Delta\{R, t\}_{est} = \arg\min_{\{R,t\}} \sum_{(s,q) \in \mathcal{C}(\tau_t)} \rho(\|\{R, t\}s - m\|^2)$$&#10;    其中 $\mathcal{C}(\tau_t)$ 是距离小于阈值 $\tau_t$ 的最近邻对应点集，$\rho$ 是Geman-McClure鲁棒核函数：&#10;    $$\rho(e) = \frac{e^2/2}{\sigma_t/3 + e^2}$$&#10;&#10;5.  **子图融合蒸馏损失**：&#10;    对于检测到回环的两个子图 $\alpha$ 和 $\beta$，在重叠区域的关键帧集合 $\{KF\}$ 上计算蒸馏损失：&#10;    $$L_{\alpha-\beta} = \frac{1}{m} \sum_{\alpha,\beta \in \{KF\}} \left( (\hat{c}_\alpha - \hat{c}_\beta)^2 + (\hat{d}_\alpha - \hat{d}_\beta)^2 \right)$$&#10;    其中 $\hat{c}$ 和 $\hat{d}$ 分别是渲染的RGB和深度图像。&#10;&#10;### 3.3 模型、训练与数据集&#10;&#10;- **模型**：系统模型由多个子图组成，每个子图包含一个多分辨率体素哈希表、锚点特征以及几个小型MLP（不透明度、颜色、协方差MLP）。所有MLP均为2层，隐藏层维度32，使用ReLU激活。&#10;- **训练**：系统在线运行，采用增量式训练。新关键帧到来时，初始化新的锚点和高斯体。在映射线程中，使用渲染损失（公式7）优化当前活跃子图的参数。追踪线程使用2D-3D融合方法优化位姿。&#10;- **数据集**：&#10;    - **Replica**：8个小房间场景，用于评估小规模场景下的重建和定位精度。&#10;    - **ScanNet**：真实世界室内场景，长序列（&gt;5000张图），用于评估大规模室内环境。&#10;    - **KITTI &amp; VKITTI 2**：城市场景，长序列（~500m×400m），用于评估虚拟和真实城市规模场景。&#10;    - **Newer College**：校园环境，用于评估大规模、高保真重建性能。&#10;&#10;### 3.4 实验设置与结果&#10;&#10;- **相机追踪**：&#10;    - **Replica**：VPGS-SLAM在ATE RMSE指标上达到0.21cm，优于所有对比方法（如Loop-Splat的0.26cm），提升约30%。&#10;    - **ScanNet**：在8个序列上平均ATE RMSE为7.6cm，与Loopy-SLAM（7.7cm）和GO-SLAM（6.8cm）等先进方法相当或更优。&#10;    - **KITTI**：在LiDAR数据集上，VPGS-SLAM的平均ATE RMSE为1.40m，优于PIN-SLAM（1.43m）等传统方法，且是唯一能在所有序列上成功运行的3DGS方法。&#10;- **场景重建**：&#10;    - **Replica**：在PSNR、SSIM、Depth L1等指标上达到SOTA水平（PSNR 35.82，SSIM 0.984），与Loop-Splat相当。&#10;    - **KITTI &amp; VKITTI 2**：VPGS-SLAM在PSNR和SSIM上大幅领先于所有对比方法（如KITTI上PSNR 21.37 vs Loop-Splat的16.77），定性结果（图4, 5, 6）也显示出更清晰的渲染质量。&#10;- **内存与时间**：&#10;    - 相比SplaTAM，VPGS-SLAM的GPU峰值内存降低2-3倍（7.8GB vs 18.5GB），地图存储内存降低近4倍（70.81MB vs 273.09MB）。&#10;    - 渲染速度达到322.45 FPS，与Loop-Splat相当，远快于NeRF-based方法。&#10;- **消融实验**（表VIII）：&#10;    - 去除体素表示（w/o Vox.）导致内存和GPU使用大幅增加。&#10;    - 去除渐进式子图（w/o Prog.）在KITTI上失败，在Replica上GPU内存激增。&#10;    - 仅使用2D追踪（only 2D track）在KITTI上表现极差（RMSE 5.96m）。&#10;    - 仅使用3D追踪（only 3D track）在Replica上表现较差（RMSE 0.41m）。&#10;    - 去除闭环（w/o LC）在KITTI上导致较大漂移（RMSE 3.15m）。&#10;    - 完整模型在所有指标上达到最优或接近最优。&#10;&#10;### 3.5 技术细节&#10;&#10;- **体素化**：使用哈希表存储体素结构，支持高效的最近邻搜索和内存管理。&#10;- **子图触发**：通过距离阈值 $d$（室内0.5m，室外10m）和旋转阈值 $\omega$（50度）判断是否创建新子图。&#10;- **锚点生长与剪枝**：根据体素内高斯体的平均梯度 $\nabla g$ 决定是否生长新锚点；根据不透明度累积值移除不重要锚点。&#10;- **2D信息质量评估**：通过比较渲染损失 $L_c, L_d$ 与输入帧，若质量低于阈值 $\zeta$，则跳过2D粗追踪阶段。&#10;- **点云下采样**：采用双重下采样策略，保留每个体素内的原始点坐标，避免离散化误差。&#10;&#10;## 4. 意义与影响（Significance and Impact）&#10;&#10;- **解决的问题与贡献**：&#10;    1.  **解决了3DGS-SLAM的可扩展性问题**：首次将3DGS-SLAM成功应用于大规模室内外场景，突破了小房间的限制。&#10;    2.  **提出了高效紧凑的场景表示**：体素渐进式表示和子图管理显著降低了内存消耗，使得在消费级GPU上运行大规模SLAM成为可能。&#10;    3.  **提升了追踪的鲁棒性和准确性**：2D-3D融合追踪策略结合了两种模态的优势，并通过自适应机制适应不同环境，在室内外均表现出色。&#10;    4.  **实现了全局一致性**：完整的闭环和子图融合机制有效消除了长序列中的累积漂移，保证了大规模地图的全局一致性。&#10;&#10;- **对未来研究/应用的影响**：&#10;    - **自动驾驶**：为自动驾驶车辆提供了更精确、更鲁棒的位姿估计和稠密环境重建能力，有助于提升行车安全。&#10;    - **机器人导航**：使机器人能够在大型仓库、园区等复杂环境中进行长时间、高精度的自主导航和地图构建。&#10;    - **研究方向**：其子图管理和渐进式建图思想为后续大规模场景下的实时SLAM研究提供了新思路。2D-3D融合追踪也为多模态SLAM提供了有效范式。&#10;&#10;- **局限与开放问题**（基于论文推断）：&#10;    - 论文未明确讨论动态场景的处理能力。&#10;    - 系统依赖RGB-D输入，对于纯单目或双目场景的扩展性有待研究。&#10;    - 子图的数量和大小由固定阈值控制，如何自适应地确定最优子图划分是一个开放问题。&#10;    - 在线蒸馏的子图融合方法虽然有效，但可能引入额外的计算开销。&#10;&#10;## 5. 澄清与简化（Clarifications and Simplifications）&#10;&#10;- **">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>3D Gaussian Splatting has recently shown promising results in dense visual SLAM. However, existing 3DGS-based SLAM methods are all constrained to small-room scenarios and struggle with memory explosion in large-scale scenes and long sequences. To this end, we propose VPGS-SLAM, the first 3DGS-based large-scale RGBD SLAM framework for both indoor and outdoor scenarios. We design a novel voxel-based progressive 3D Gaussian mapping method with multiple submaps for compact and accurate scene representation in large-scale and long-sequence scenes. This allows us to scale up to arbitrary scenes and improves robustness (even under pose drifts). In addition, we propose a 2D-3D fusion camera tracking method to achieve robust and accurate camera tracking in both indoor and outdoor large-scale scenes. Furthermore, we design a 2D-3D Gaussian loop closure method to eliminate pose drift. We further propose a submap fusion method with online distillation to achieve global consistency in large-scale scenes when detecting a loop. Experiments on various indoor and outdoor datasets demonstrate the superiority and generalizability of the proposed framework. The code will be open source on https://github.com/dtc111111/vpgs-slam.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2502.09111v2" target="_blank" class="paper-title">DenseSplat: Densifying Gaussian Splatting SLAM with Neural Radiance Prior</a>
+                        <span class="paper-date">2026-01-06</span>
+                    </div>
+                                        <span class="paper-comment">📝 IEEE Transactions on Visualization and Computer Graphics</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="好的，作为一名人工智能研究与学术论文分析专家，我将严格遵循您的要求，对论文《DenseSplat: Densifying Gaussian Splatting SLAM with Neural Radiance Prior》进行详细的中文解读。&#10;&#10;---&#10;&#10;## 0. 概览（Concise Summary）&#10;&#10;- **主题（Topic）**：视觉密集同步定位与地图构建（Visual Dense SLAM），结合了神经辐射场（NeRF）和三维高斯泼溅（3DGS）技术。&#10;- **问题（Problem）**：现有的基于3DGS的SLAM系统在稀疏视图（sparse-view）条件下，由于观测不足或遮挡，会导致地图中出现大量空洞和几何不完整。同时，它们通常依赖密集的关键帧列表，这限制了实时性能并增加了内存消耗。&#10;- **方法（Method）**：提出了DenseSplat，这是首个将NeRF和3DGS优势有效结合的SLAM系统。它利用NeRF作为先验（NeRF prior）来初始化高斯原语（Gaussian primitives），从而密集地填充地图并填补空洞。系统还引入了几何感知的原语采样与剪枝策略、闭环检测（loop closure）和光束法平差（bundle adjustment）。&#10;- **创新（Innovation）**：&#10;    1.  首次将NeRF先验用于3DGS SLAM系统的初始化与稠密化，利用NeRF的插值能力填补未观测区域的几何空洞。&#10;    2.  提出几何感知的点采样策略，替代了传统的基于像素反投影的方法，实现了更均匀、更符合场景几何的高斯原语分布。&#10;    3.  集成了闭环检测和光束法平差，有效减少了帧间跟踪的累积漂移误差。&#10;- **意义（Significance）**：解决了3DGS SLAM在真实世界机器人应用中因稀疏视图导致的地图不完整问题，实现了在仅使用稀疏关键帧的情况下，仍能进行高质量、高保真度的实时跟踪与建图。这推动了SLAM系统向更实用、更高效的方向发展。&#10;- **一句话总结**：DenseSplat通过引入NeRF先验来稠密化高斯泼溅SLAM系统，有效解决了稀疏视图下的地图空洞问题，实现了高精度、高完整度的实时跟踪与建图。&#10;&#10;## 1. 研究动机（Motivation）&#10;&#10;- **解决的问题**：当前基于3DGS的SLAM系统在真实世界部署中面临一个关键挑战：地图不完整。具体表现为：&#10;    1.  **稀疏视图下的空洞**：在线SLAM系统通常部署在复杂环境中，传感器视野有限，导致许多区域观测不足或被遮挡。3DGS的显式离散表示难以有效插值这些未观测区域的几何结构，从而在地图中留下大量空洞（holes）。&#10;    2.  **不均匀的原语分布**：现有方法（如SplaTAM）通常通过逐帧像素反投影（per-frame pixel backprojection）来初始化高斯原语。这导致靠近相机的物体（前景）被密集采样，而远处的背景区域则采样稀疏，造成原语分布不均，影响多视图几何优化的效果。&#10;    3.  **对密集关键帧的依赖**：为了弥补上述缺陷，现有系统通常需要维护一个密集的关键帧列表（例如每4帧一个），以提供足够的多视角信息进行地图优化。但这会消耗大量内存并降低实时处理能力，这对于在线SLAM系统是至关重要的。&#10;&#10;- **为什么重要**：解决地图不完整问题对于SLAM系统在机器人导航、自主驾驶和VR/AR等实际应用中的可靠性和实用性至关重要。一个完整、准确的地图是后续路径规划、场景理解和交互的基础。&#10;&#10;- **挑战在哪里**：挑战在于如何在保持3DGS高渲染质量和实时性的同时，克服其显式表示在稀疏观测下的插值能力不足。直接增加高斯原语数量会带来巨大的内存和计算开销。需要一个既能提供密集几何信息，又能与3DGS高效融合的机制。&#10;&#10;## 2. 创新点（Innovation）&#10;&#10;论文提出了三个关键创新点：&#10;&#10;1.  **利用NeRF先验进行稠密化（Densification via NeRF Prior）**：&#10;    - **新方法**：首次将NeRF模型作为先验引入3DGS SLAM系统。具体来说，利用NeRF强大的插值能力，从训练好的NeRF模型中采样点，来初始化高斯原语。&#10;    - **与现有方案的不同**：现有3DGS SLAM系统（如SplaTAM）直接从RGB-D图像反投影初始化原语。DenseSplat则先训练一个轻量级的NeRF模型，然后从这个隐式模型中“提取”出密集且几何一致的点云，用于初始化高斯原语。&#10;    - **为何奏效**：NeRF模型能够从稀疏的输入中推断出未观测区域的几何结构（插值能力）。因此，用它初始化的高斯原语可以自然地填补地图中的空洞，并且只需要非常稀疏的关键帧即可工作。&#10;&#10;2.  **几何感知的原语采样与剪枝（Geometry-aware Primitive Sampling and Pruning）**：&#10;    - **新方法**：&#10;        - **采样**：提出了一种基于网格密度阈值的几何感知采样策略。它通过分析多分辨率哈希网格（multi-resolution hash grid）中每个网格边上的密度变化，精确地定位物体表面，并在表面过渡点处进行插值采样。&#10;        - **剪枝**：实现了一种基于射线的原语剪枝策略（Ray-Guided Gaussian Pruning），通过评估每个高斯原体对最终渲染的贡献度（重要性评分），移除那些贡献微乎其微的“漂浮”原语和离群点。&#10;    - **与现有方案的不同**：传统反投影采样是2D到3D的映射，导致分布不均。该方法的采样直接在3D空间中进行，确保了原语在物体表面上的均匀分布。剪枝策略则能有效控制原语数量，提升渲染效率。&#10;    - **为何奏效**：几何感知采样确保了初始化的原语更准确地贴合场景几何，减少了冗余和错误。射线引导的剪枝则剔除了无效原语，优化了地图表示，在保持高保真度的同时提升了实时性能。&#10;&#10;3.  **集成闭环检测与光束法平差（Integration of Loop Closure and Bundle Adjustment）**：&#10;    - **新方法**：在基于3DGS的SLAM系统中集成了闭环检测和光束法平差模块。当检测到闭环时，对相关关键帧进行位姿优化（Pose-only BA），并利用优化后的位姿对高斯地图进行重渲染和校正（BA-induced map refinement）。&#10;    - **与现有方案的不同**：许多先进的3DGS SLAM系统（如SplaTAM, MonoGS）仅依赖帧到帧的跟踪，没有全局优化机制，导致在大场景或长轨迹中累积严重漂移。DenseSplat通过引入BA，有效纠正了这种漂移。&#10;    - **为何奏效**：闭环检测识别出相机回到之前访问过的位置，BA则利用这些全局约束来优化所有相关帧的位姿。通过快速重渲染，高斯地图能够与校正后的位姿对齐，从而消除漂移，提升全局一致性。&#10;&#10;## 3. 主要内容（Main Content）【重点】&#10;&#10;### 3.1 设计架构与方法&#10;&#10;DenseSplat的整体架构如图3所示，包含两个主要模块：**跟踪模块（Tracking Module）** 和**建图模块（Mapping Module）**。&#10;&#10;1.  **跟踪模块**：输入RGB-D流，首先使用一个多分辨率哈希NeRF模型进行相机跟踪。对于每一帧，采用两阶段优化策略：先固定NeRF参数，仅优化相机位姿；待位姿稳定后，再联合优化位姿和NeRF权重。跟踪完成后，将稀疏的关键帧传递给建图模块。&#10;&#10;2.  **建图模块**：&#10;    - **NeRF先验生成**：利用跟踪模块中优化的NeRF模型，通过几何感知的点采样策略，从隐式场中提取一个密集、几何一致的点云。&#10;    - **高斯地图初始化**：用采样得到的点云初始化一组各向异性的3D高斯原语。&#10;    - **高斯地图优化**：通过多尺度高斯渲染和射线引导的原语剪枝策略，对高斯地图进行优化，并生成最终的高质量地图。&#10;    - **闭环与BA**：在建图过程中，集成闭环检测和光束法平差，用于校正累积的跟踪漂移，并更新高斯地图。&#10;&#10;### 3.2 关键算法与数学推导&#10;&#10;1.  **NeRF渲染与跟踪**：&#10;    - NeRF渲染像素颜色 $C^N$：&#10;      $$C^N = \sum_{j=1} c_j \alpha_j T_j^N, \quad \text{and} \quad T_j^N = \prod_{t=1}^{j-1} (1 - \alpha_t)$$&#10;      其中 $\alpha_i = 1 - e^{-\sigma_i \delta_i}$，$\sigma_i$ 是体积密度，$\delta_i$ 是采样点间距。&#10;    - NeRF光度损失函数：&#10;      $$\mathcal{L}^N = \sum_{r \in R_b} \left\| C_\theta^N(r) - C^{GT}(r) \right\|^2$$&#10;      其中 $R_b$ 是采样的射线批次，$C^{GT}$ 是真实颜色。&#10;    - 相机跟踪采用恒速模型初始化位姿：$T_i = T_{i-1} T_{i-2}^{-1} T_{i-1}$。&#10;&#10;2.  **几何感知的点采样**：&#10;    - 通过检测多分辨率哈希网格中密度超过阈值 $\tau_{grid}$ 的边，找到表面过渡点。&#10;    - 表面点的插值公式：&#10;      $$x = x_1 + \frac{\tau_{grid} - \sigma(x_1)}{\sigma(x_2) - \sigma(x_1)} \cdot (x_2 - x_1)$$&#10;      其中 $x_1, x_2$ 是网格边上的两个端点，$\sigma$ 是体积密度。&#10;&#10;3.  **高斯泼溅渲染**：&#10;    - 3D高斯原语投影到2D图像空间的协方差矩阵：&#10;      $$\Sigma' = (J W \Sigma W^T J^T)_{1:2, 1:2}$$&#10;      其中 $W$ 是观察矩阵，$J$ 是仿射投影近似的雅可比矩阵。&#10;    - 渲染像素颜色 $C^G$ 和深度 $D^G$：&#10;      $$C^G = \sum_{j=1} c_j \alpha_j T_j^G, \quad D^G = \sum_{j=1} d_j \alpha_j T_j^G$$&#10;&#10;4.  **射线引导的原语剪枝**：&#10;    - 每个高斯原语 $G_i$ 的重要性评分：&#10;      $$E(G_i) = \max_{r \in I_i} (\alpha_i^r T_{G_i}^r)$$&#10;      其中 $\alpha_i^r T_{G_i}^r$ 表示该原语对射线 $r$ 上最终像素颜色的贡献。&#10;    - 剪枝掩码：&#10;      $$M(G_i) = \mathbb{1}(E(G_i) &lt; \tau_{prune})$$&#10;      低于阈值 $\tau_{prune}$ 的原语被移除。&#10;&#10;5.  **光束法平差（BA）诱导的地图损失**：&#10;    - 颜色损失：&#10;      $$\mathcal{L}_{BA}^C = \sum_{k=1}^{N-1} \sum_{i=k+1}^{N} \left\| C^G \langle T_{i \to k} \rangle - C^G \langle T_k \rangle \right\|$$&#10;    - 深度损失：&#10;      $$\mathcal{L}_{BA}^D = \sum_{k=1}^{N-1} \sum_{i=k+1}^{N} \left\| D^G \langle T_{i \to k} \rangle - D^G \langle T_k \rangle \right\|$$&#10;      其中 $T_{i \to k}$ 是从当前帧 $i$ 到共视关键帧 $k$ 的相对位姿变换。&#10;&#10;6.  **总体建图损失函数**：&#10;    $$\mathcal{L}^G = \lambda_c \|C^G - C^{GT}\| + \lambda_d \|D^G - D^{GT}\| + \lambda_{ssim} \text{SSIM}(C^G, C^{GT}) + \lambda_{reg} \mathcal{L}_{reg}$$&#10;    其中 $\mathcal{L}_{reg}$ 是用于惩罚尺度超过阈值 $\tau_{scale}$ 的高斯原语的L2正则化损失。&#10;&#10;### 3.3 模型、训练与数据集&#10;&#10;- **模型**：&#10;    - **NeRF模型**：采用多分辨率哈希网格（multi-resolution hash grid）作为场景表示，由一个轻量级MLP解码颜色和密度。&#10;    - **3DGS模型**：使用一组各向异性的3D高斯原语表示场景，每个原语包含位置、协方差、不透明度、球谐系数和缩放因子。&#10;- **训练**：&#10;    - **跟踪**：使用Adam优化器，先进行10次位姿优化迭代，再进行10次联合优化。&#10;    - **建图**：NeRF模型优化10次，高斯地图优化30次。&#10;    - **关键帧间隔**：Replica和TUM RGB-D数据集为20帧，ScanNet数据集为25帧。&#10;- **数据集**：&#10;    - **Replica**：包含合成室内场景，用于评估渲染质量和跟踪精度。特别使用了4个大规模公寓场景。&#10;    - **ScanNet**：真实世界室内场景数据集，包含噪声深度和模糊图像，用于评估鲁棒性。&#10;    - **TUM RGB-D**：真实世界数据集，用于评估跟踪精度。&#10;&#10;### 3.4 实验设置与结果&#10;&#10;- **评估指标**：&#10;    - **跟踪精度**：绝对轨迹误差（ATE RMSE）。&#10;    - **渲染质量**：PSNR（峰值信噪比）、SSIM（结构相似性）、LPIPS（学习感知图像块相似度）。&#10;    - **系统效率**：FPS（每秒帧数）、GPU内存消耗、地图大小。&#10;    - **几何精度**：网格重建的Accuracy、Completion、Completion Ratio。&#10;- **主要结果**：&#10;    - **Replica数据集（表I）**：DenseSplat在渲染质量上达到SOTA，尤其是在大规模公寓场景中，显著优于其他方法。图4展示了其卓越的几何精度和空洞填充能力。&#10;    - **Replica数据集（表II）**：DenseSplat在帧到帧跟踪系统中实现了最高的建图FPS和最低的内存消耗，同时跟踪精度（ATE）与SOTA方法相当。&#10;    - **ScanNet数据集（表III, IV）**：DenseSplat在渲染质量和跟踪精度上均达到SOTA，证明了其在真实世界噪声环境下的鲁棒性。图5展示了其优秀的几何细节重建能力。&#10;    - **TUM RGB-D数据集（表V）**：DenseSplat的跟踪精度与当前SOTA方法性能相当。&#10;    - **网格重建评估（表VI）**：DenseSplat在Accuracy、Completion和Completion Ratio上均显著优于其他3DGS SLAM方法，证明了其地图的完整性和几何准确性。&#10;&#10;### 3.5 技术细节&#10;&#10;- **子图划分与融合（Submap Division and Fusion）**：为了处理大规模场景的内存消耗，系统将输入帧划分为每400帧一个的子图。每个子图独立构建NeRF和高斯地图。在融合时，使用锚帧BA（Anchor-frame BA）来精确对齐子图边界，实现无缝融合（算法2）。&#10;- **多尺度高斯渲染**：为了减少由NeRF采样引入的锯齿效应（aliasing），系统采用4个细节级别的多尺度高斯渲染，在训练过程中将小尺度高斯合并到大尺度高斯中，增强场景一致性。&#10;- **BA流程**：使用词袋模型（BoW）进行闭环检测。检测到闭环后，对共视关键帧进行位姿BA，然后利用BA后的位姿，通过公式(9)和(10)定义的损失函数对高斯地图进行重渲染和校正（算法1）。&#10;&#10;## 4. 意义与影响（Significance and Impact）&#10;&#10;- **解决的问题与贡献**：&#10;    - 解决了3DGS SLAM在稀疏视图下地图不完整的关键问题，这是其走向实际应用的主要障碍。&#10;    - 首次成功地将NeRF的隐式表示优势（插值能力）与3DGS的显式表示优势（高保真渲染、实时性）融合到一个统一的SLAM框架中。&#10;    - 提出了一套完整的解决方案，包括几何感知初始化、高效剪枝和全局优化，显著提升了SLAM系统的鲁棒性、效率和地图质量。&#10;&#10;- **对未来研究/应用的影响**：&#10;    - **SLAM领域**：为结合NeRF和3DGS提供了新的范式，可能会启发更多融合两种表示优势的工作。其稀疏关键帧策略为构建更高效的SLAM系统指明了方向。&#10;    - **机器人领域**：更完整、更精确的地图将直接提升机器人在未知环境中的导航、探索和操作能力。&#10;    - **VR/AR领域**：能够快速、高质量地重建大规模场景，为沉浸式体验和实时交互提供了更强大的技术基础。图13展示了其在VR/AR中的应用潜力。&#10;&#10;- **局限与开放问题**：&#10;    - **极端情况下的插值失败**：当未观测区域过大时（如图12所示），即使NeRF也无法完美填补所有空洞，仍会留下一些未重建区域。如何处理极端稀疏视图下的场景重建是一个开放问题。&#10;    - **计算开销**：虽然比纯NeRF系统快，但相比纯3DGS系统，引入NeRF先验仍然增加了额外的计算步骤（NeRF训练和采样）。如何进一步简化流程，实现更极致的实时性，是未来的研究方向。&#10;    - **参数敏感性**：系统引入了多个超参数（如 $\tau_{grid}, \tau_{prune}, \tau_{scale}$），虽然进行了消融实验，但在不同场景下如何自适应地调整这些参数，值得进一步探索。&#10;&#10;## 5. 澄清与简化（Clarifications and Simplifications）&#10;&#10;- **类比理解NeRF先验的作用**：可以把NeRF想象成一个“超级3D补图师”。传统的3DGS SLAM就像是用一堆小碎片（高斯原语）拼图，但有些地方碎片缺失了（空洞），它就拼不出来。而DenseSplat先让NeRF这个“补图师”根据已有的碎片，推断出">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Gaussian SLAM systems excel in real-time rendering and fine-grained reconstruction compared to NeRF-based systems. However, their reliance on extensive keyframes is impractical for deployment in real-world robotic systems, which typically operate under sparse-view conditions that can result in substantial holes in the map. To address these challenges, we introduce DenseSplat, the first SLAM system that effectively combines the advantages of NeRF and 3DGS. DenseSplat utilizes sparse keyframes and NeRF priors for initializing primitives that densely populate maps and seamlessly fill gaps. It also implements geometry-aware primitive sampling and pruning strategies to manage granularity and enhance rendering efficiency. Moreover, DenseSplat integrates loop closure and bundle adjustment, significantly enhancing frame-to-frame tracking accuracy. Extensive experiments on multiple large-scale datasets demonstrate that DenseSplat achieves superior performance in tracking and mapping compared to current state-of-the-art methods.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2411.15966v3" target="_blank" class="paper-title">Gaussian Scenes: Pose-Free Sparse-View Scene Reconstruction using Depth-Enhanced Diffusion Priors</a>
+                        <span class="paper-date">2025-10-10</span>
+                    </div>
+                                        <span class="paper-comment">📝 Accepted to TMLR 2025. Code and models released at https://gaussianscenes.github.io/</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>In this work, we introduce a generative approach for pose-free (without camera parameters) reconstruction of 360 scenes from a sparse set of 2D images. Pose-free scene reconstruction from incomplete, pose-free observations is usually regularized with depth estimation or 3D foundational priors. While recent advances have enabled sparse-view reconstruction of large complex scenes (with high degree of foreground and background detail) with known camera poses using view-conditioned generative priors, these methods cannot be directly adapted for the pose-free setting when ground-truth poses are not available during evaluation. To address this, we propose an image-to-image generative model designed to inpaint missing details and remove artifacts in novel view renders and depth maps of a 3D scene. We introduce context and geometry conditioning using Feature-wise Linear Modulation (FiLM) modulation layers as a lightweight alternative to cross-attention and also propose a novel confidence measure for 3D Gaussian splat representations to allow for better detection of these artifacts. By progressively integrating these novel views in a Gaussian-SLAM-inspired process, we achieve a multi-view-consistent 3D representation. Evaluations on the MipNeRF360 and DL3DV-10K benchmark dataset demonstrate that our method surpasses existing pose-free techniques and performs competitively with state-of-the-art posed (precomputed camera parameters are given) reconstruction methods in complex 360 scenes. Our project page provides additional results, videos, and code.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2411.15043v3" target="_blank" class="paper-title">Open-Vocabulary Online Semantic Mapping for SLAM</a>
+                        <span class="paper-date">2025-09-29</span>
+                    </div>
+                                        <span class="paper-comment">📝 Accepted for IEEE Robotics and Automation Letters</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>This paper presents an Open-Vocabulary Online 3D semantic mapping pipeline, that we denote by its acronym OVO. Given a sequence of posed RGB-D frames, we detect and track 3D segments, which we describe using CLIP vectors. These are computed from the viewpoints where they are observed by a novel CLIP merging method. Notably, our OVO has a significantly lower computational and memory footprint than offline baselines, while also showing better segmentation metrics than offline and online ones. Along with superior segmentation performance, we also show experimental results of our mapping contributions integrated with two different full SLAM backbones (Gaussian-SLAM and ORB-SLAM2), being the first ones using a neural network to merge CLIP descriptors and demonstrating end-to-end open-vocabulary online 3D mapping with loop closure.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2509.01547v1" target="_blank" class="paper-title">FGO-SLAM: Enhancing Gaussian SLAM with Globally Consistent Opacity Radiance Field</a>
+                        <span class="paper-date">2025-09-01</span>
+                    </div>
+                                        <span class="paper-comment">📝 ICRA 2025</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Visual SLAM has regained attention due to its ability to provide perceptual capabilities and simulation test data for Embodied AI. However, traditional SLAM methods struggle to meet the demands of high-quality scene reconstruction, and Gaussian SLAM systems, despite their rapid rendering and high-quality mapping capabilities, lack effective pose optimization methods and face challenges in geometric reconstruction. To address these issues, we introduce FGO-SLAM, a Gaussian SLAM system that employs an opacity radiance field as the scene representation to enhance geometric mapping performance. After initial pose estimation, we apply global adjustment to optimize camera poses and sparse point cloud, ensuring robust tracking of our approach. Additionally, we maintain a globally consistent opacity radiance field based on 3D Gaussians and introduce depth distortion and normal consistency terms to refine the scene representation. Furthermore, after constructing tetrahedral grids, we identify level sets to directly extract surfaces from 3D Gaussians. Results across various real-world and large-scale synthetic datasets demonstrate that our method achieves state-of-the-art tracking accuracy and mapping performance.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2502.14931v2" target="_blank" class="paper-title">Hier-SLAM++: Neuro-Symbolic Semantic SLAM with a Hierarchically Categorical Gaussian Splatting</a>
+                        <span class="paper-date">2025-07-09</span>
+                    </div>
+                                        <span class="paper-comment">📝 18 pages. Under review</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>We propose Hier-SLAM++, a comprehensive Neuro-Symbolic semantic 3D Gaussian Splatting SLAM method with both RGB-D and monocular input featuring an advanced hierarchical categorical representation, which enables accurate pose estimation as well as global 3D semantic mapping. The parameter usage in semantic SLAM systems increases significantly with the growing complexity of the environment, making scene understanding particularly challenging and costly. To address this problem, we introduce a novel hierarchical representation that encodes both semantic and geometric information in a compact form into 3D Gaussian Splatting, leveraging the capabilities of large language models (LLMs) as well as the 3D generative model. By utilizing the proposed hierarchical tree structure, semantic information is symbolically represented and learned in an end-to-end manner. We further introduce an advanced semantic loss designed to optimize hierarchical semantic information through both Intra-level and Inter-level optimizations. Additionally, we propose an improved SLAM system to support both RGB-D and monocular inputs using a feed-forward model. To the best of our knowledge, this is the first semantic monocular Gaussian Splatting SLAM system, significantly reducing sensor requirements for 3D semantic understanding and broadening the applicability of semantic Gaussian SLAM system. We conduct experiments on both synthetic and real-world datasets, demonstrating superior or on-par performance with state-of-the-art methods, while significantly reducing storage and training time requirements. Our project page is available at: https://hierslampp.github.io/</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2506.18885v1" target="_blank" class="paper-title">GRAND-SLAM: Local Optimization for Globally Consistent Large-Scale Multi-Agent Gaussian SLAM</a>
+                        <span class="paper-date">2025-06-23</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>3D Gaussian splatting has emerged as an expressive scene representation for RGB-D visual SLAM, but its application to large-scale, multi-agent outdoor environments remains unexplored. Multi-agent Gaussian SLAM is a promising approach to rapid exploration and reconstruction of environments, offering scalable environment representations, but existing approaches are limited to small-scale, indoor environments. To that end, we propose Gaussian Reconstruction via Multi-Agent Dense SLAM, or GRAND-SLAM, a collaborative Gaussian splatting SLAM method that integrates i) an implicit tracking module based on local optimization over submaps and ii) an approach to inter- and intra-robot loop closure integrated into a pose-graph optimization framework. Experiments show that GRAND-SLAM provides state-of-the-art tracking performance and 28% higher PSNR than existing methods on the Replica indoor dataset, as well as 91% lower multi-agent tracking error and improved rendering over existing multi-agent methods on the large-scale, outdoor Kimera-Multi dataset.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2505.22335v1" target="_blank" class="paper-title">UP-SLAM: Adaptively Structured Gaussian SLAM with Uncertainty Prediction in Dynamic Environments</a>
+                        <span class="paper-date">2025-05-28</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Recent 3D Gaussian Splatting (3DGS) techniques for Visual Simultaneous Localization and Mapping (SLAM) have significantly progressed in tracking and high-fidelity mapping. However, their sequential optimization framework and sensitivity to dynamic objects limit real-time performance and robustness in real-world scenarios. We present UP-SLAM, a real-time RGB-D SLAM system for dynamic environments that decouples tracking and mapping through a parallelized framework. A probabilistic octree is employed to manage Gaussian primitives adaptively, enabling efficient initialization and pruning without hand-crafted thresholds. To robustly filter dynamic regions during tracking, we propose a training-free uncertainty estimator that fuses multi-modal residuals to estimate per-pixel motion uncertainty, achieving open-set dynamic object handling without reliance on semantic labels. Furthermore, a temporal encoder is designed to enhance rendering quality. Concurrently, low-dimensional features are efficiently transformed via a shallow multilayer perceptron to construct DINO features, which are then employed to enrich the Gaussian field and improve the robustness of uncertainty prediction. Extensive experiments on multiple challenging datasets suggest that UP-SLAM outperforms state-of-the-art methods in both localization accuracy (by 59.8%) and rendering quality (by 4.57 dB PSNR), while maintaining real-time performance and producing reusable, artifact-free static maps in dynamic environments.The project: https://aczheng-cai.github.io/up_slam.github.io/</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2504.02437v1" target="_blank" class="paper-title">MonoGS++: Fast and Accurate Monocular RGB Gaussian SLAM</a>
+                        <span class="paper-date">2025-04-03</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>We present MonoGS++, a novel fast and accurate Simultaneous Localization and Mapping (SLAM) method that leverages 3D Gaussian representations and operates solely on RGB inputs. While previous 3D Gaussian Splatting (GS)-based methods largely depended on depth sensors, our approach reduces the hardware dependency and only requires RGB input, leveraging online visual odometry (VO) to generate sparse point clouds in real-time. To reduce redundancy and enhance the quality of 3D scene reconstruction, we implemented a series of methodological enhancements in 3D Gaussian mapping. Firstly, we introduced dynamic 3D Gaussian insertion to avoid adding redundant Gaussians in previously well-reconstructed areas. Secondly, we introduced clarity-enhancing Gaussian densification module and planar regularization to handle texture-less areas and flat surfaces better. We achieved precise camera tracking results both on the synthetic Replica and real-world TUM-RGBD datasets, comparable to those of the state-of-the-art. Additionally, our method realized a significant 5.57x improvement in frames per second (fps) over the previous state-of-the-art, MonoGS.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2501.08286v1" target="_blank" class="paper-title">VINGS-Mono: Visual-Inertial Gaussian Splatting Monocular SLAM in Large Scenes</a>
+                        <span class="paper-date">2025-01-14</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>VINGS-Mono is a monocular (inertial) Gaussian Splatting (GS) SLAM framework designed for large scenes. The framework comprises four main components: VIO Front End, 2D Gaussian Map, NVS Loop Closure, and Dynamic Eraser. In the VIO Front End, RGB frames are processed through dense bundle adjustment and uncertainty estimation to extract scene geometry and poses. Based on this output, the mapping module incrementally constructs and maintains a 2D Gaussian map. Key components of the 2D Gaussian Map include a Sample-based Rasterizer, Score Manager, and Pose Refinement, which collectively improve mapping speed and localization accuracy. This enables the SLAM system to handle large-scale urban environments with up to 50 million Gaussian ellipsoids. To ensure global consistency in large-scale scenes, we design a Loop Closure module, which innovatively leverages the Novel View Synthesis (NVS) capabilities of Gaussian Splatting for loop closure detection and correction of the Gaussian map. Additionally, we propose a Dynamic Eraser to address the inevitable presence of dynamic objects in real-world outdoor scenes. Extensive evaluations in indoor and outdoor environments demonstrate that our approach achieves localization performance on par with Visual-Inertial Odometry while surpassing recent GS/NeRF SLAM methods. It also significantly outperforms all existing methods in terms of mapping and rendering quality. Furthermore, we developed a mobile app and verified that our framework can generate high-quality Gaussian maps in real time using only a smartphone camera and a low-frequency IMU sensor. To the best of our knowledge, VINGS-Mono is the first monocular Gaussian SLAM method capable of operating in outdoor environments and supporting kilometer-scale large scenes.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2501.00352v1" target="_blank" class="paper-title">PanoSLAM: Panoptic 3D Scene Reconstruction via Gaussian SLAM</a>
+                        <span class="paper-date">2024-12-31</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Understanding geometric, semantic, and instance information in 3D scenes from sequential video data is essential for applications in robotics and augmented reality. However, existing Simultaneous Localization and Mapping (SLAM) methods generally focus on either geometric or semantic reconstruction. In this paper, we introduce PanoSLAM, the first SLAM system to integrate geometric reconstruction, 3D semantic segmentation, and 3D instance segmentation within a unified framework. Our approach builds upon 3D Gaussian Splatting, modified with several critical components to enable efficient rendering of depth, color, semantic, and instance information from arbitrary viewpoints. To achieve panoptic 3D scene reconstruction from sequential RGB-D videos, we propose an online Spatial-Temporal Lifting (STL) module that transfers 2D panoptic predictions from vision models into 3D Gaussian representations. This STL module addresses the challenges of label noise and inconsistencies in 2D predictions by refining the pseudo labels across multi-view inputs, creating a coherent 3D representation that enhances segmentation accuracy. Our experiments show that PanoSLAM outperforms recent semantic SLAM methods in both mapping and tracking accuracy. For the first time, it achieves panoptic 3D reconstruction of open-world environments directly from the RGB-D video. (https://github.com/runnanchen/PanoSLAM)</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2408.01126v2" target="_blank" class="paper-title">IG-SLAM: Instant Gaussian SLAM</a>
+                        <span class="paper-date">2024-08-07</span>
+                    </div>
+                                        <span class="paper-comment">📝 8 pages, 3 page ref, 5 figures</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>3D Gaussian Splatting has recently shown promising results as an alternative scene representation in SLAM systems to neural implicit representations. However, current methods either lack dense depth maps to supervise the mapping process or detailed training designs that consider the scale of the environment. To address these drawbacks, we present IG-SLAM, a dense RGB-only SLAM system that employs robust Dense-SLAM methods for tracking and combines them with Gaussian Splatting. A 3D map of the environment is constructed using accurate pose and dense depth provided by tracking. Additionally, we utilize depth uncertainty in map optimization to improve 3D reconstruction. Our decay strategy in map optimization enhances convergence and allows the system to run at 10 fps in a single process. We demonstrate competitive performance with state-of-the-art RGB-only SLAM systems while achieving faster operation speeds. We present our experiments on the Replica, TUM-RGBD, ScanNet, and EuRoC datasets. The system achieves photo-realistic 3D reconstruction in large-scale sequences, particularly in the EuRoC dataset.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2405.13748v1" target="_blank" class="paper-title">Monocular Gaussian SLAM with Language Extended Loop Closure</a>
+                        <span class="paper-date">2024-05-22</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Recently,3DGaussianSplattinghasshowngreatpotentialin visual Simultaneous Localization And Mapping (SLAM). Existing methods have achieved encouraging results on RGB-D SLAM, but studies of the monocular case are still scarce. Moreover, they also fail to correct drift errors due to the lack of loop closure and global optimization. In this paper, we present MG-SLAM, a monocular Gaussian SLAM with a language-extended loop closure module capable of performing drift-corrected tracking and high-fidelity reconstruction while achieving a high-level understanding of the environment. Our key idea is to represent the global map as 3D Gaussian and use it to guide the estimation of the scene geometry, thus mitigating the efforts of missing depth information. Further, an additional language-extended loop closure module which is based on CLIP feature is designed to continually perform global optimization to correct drift errors accumulated as the system runs. Our system shows promising results on multiple challenging datasets in both tracking and mapping and even surpasses some existing RGB-D methods.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2404.19706v3" target="_blank" class="paper-title">RTG-SLAM: Real-time 3D Reconstruction at Scale using Gaussian Splatting</a>
+                        <span class="paper-date">2024-05-09</span>
+                    </div>
+                                        <span class="paper-comment">📝 To be published in ACM SIGGRAPH 2024</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>We present Real-time Gaussian SLAM (RTG-SLAM), a real-time 3D reconstruction system with an RGBD camera for large-scale environments using Gaussian splatting. The system features a compact Gaussian representation and a highly efficient on-the-fly Gaussian optimization scheme. We force each Gaussian to be either opaque or nearly transparent, with the opaque ones fitting the surface and dominant colors, and transparent ones fitting residual colors. By rendering depth in a different way from color rendering, we let a single opaque Gaussian well fit a local surface region without the need of multiple overlapping Gaussians, hence largely reducing the memory and computation cost. For on-the-fly Gaussian optimization, we explicitly add Gaussians for three types of pixels per frame: newly observed, with large color errors, and with large depth errors. We also categorize all Gaussians into stable and unstable ones, where the stable Gaussians are expected to well fit previously observed RGBD images and otherwise unstable. We only optimize the unstable Gaussians and only render the pixels occupied by unstable Gaussians. In this way, both the number of Gaussians to be optimized and pixels to be rendered are largely reduced, and the optimization can be done in real time. We show real-time reconstructions of a variety of large scenes. Compared with the state-of-the-art NeRF-based RGBD SLAM, our system achieves comparable high-quality reconstruction but with around twice the speed and half the memory cost, and shows superior performance in the realism of novel view synthesis and camera tracking accuracy.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2312.10070v2" target="_blank" class="paper-title">Gaussian-SLAM: Photo-realistic Dense SLAM with Gaussian Splatting</a>
+                        <span class="paper-date">2024-03-22</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>We present a dense simultaneous localization and mapping (SLAM) method that uses 3D Gaussians as a scene representation. Our approach enables interactive-time reconstruction and photo-realistic rendering from real-world single-camera RGBD videos. To this end, we propose a novel effective strategy for seeding new Gaussians for newly explored areas and their effective online optimization that is independent of the scene size and thus scalable to larger scenes. This is achieved by organizing the scene into sub-maps which are independently optimized and do not need to be kept in memory. We further accomplish frame-to-model camera tracking by minimizing photometric and geometric losses between the input and rendered frames. The Gaussian representation allows for high-quality photo-realistic real-time rendering of real-world scenes. Evaluation on synthetic and real-world datasets demonstrates competitive or superior performance in mapping, tracking, and rendering compared to existing neural dense SLAM methods.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2303.14283v2" target="_blank" class="paper-title">GAPSLAM: Blending Gaussian Approximation and Particle Filters for Real-Time Non-Gaussian SLAM</a>
+                        <span class="paper-date">2023-08-09</span>
+                    </div>
+                                        <span class="paper-comment">📝 8 pages, 5 figures. To appear in IROS 2023</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Inferring the posterior distribution in SLAM is critical for evaluating the uncertainty in localization and mapping, as well as supporting subsequent planning tasks aiming to reduce uncertainty for safe navigation. However, real-time full posterior inference techniques, such as Gaussian approximation and particle filters, either lack expressiveness for representing non-Gaussian posteriors or suffer from performance degeneracy when estimating high-dimensional posteriors. Inspired by the complementary strengths of Gaussian approximation and particle filters$\unicode{x2013}$scalability and non-Gaussian estimation, respectively$\unicode{x2013}$we blend these two approaches to infer marginal posteriors in SLAM. Specifically, Gaussian approximation provides robot pose distributions on which particle filters are conditioned to sample landmark marginals. In return, the maximum a posteriori point among these samples can be used to reset linearization points in the nonlinear optimization solver of the Gaussian approximation, facilitating the pursuit of global optima. We demonstrate the scalability, generalizability, and accuracy of our algorithm for real-time full posterior inference on realworld range-only SLAM and object-based bearing-only SLAM datasets.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2109.10871v3" target="_blank" class="paper-title">Nested Sampling for Non-Gaussian Inference in SLAM Factor Graphs</a>
+                        <span class="paper-date">2022-08-09</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>We present nested sampling for factor graphs (NSFG), a novel nested sampling approach to approximate inference for posterior distributions expressed over factor-graphs. Performing such inference is a key step in simultaneous localization and mapping (SLAM). Although the Gaussian approximation often works well, in other more challenging SLAM situations, the posterior distribution is non-Gaussian and cannot be explicitly represented with standard distributions. Our technique applies to settings where the posterior distribution is substantially non-Gaussian (e.g., multi-modal) and thus needs a more expressive representation. NSFG exploits nested sampling methods to directly sample the posterior to represent the distribution without parametric density models. While nested sampling methods are known for their powerful capability in sampling multi-modal distributions, the application of the methods to SLAM factor graphs is not straightforward. NSFG leverages the structure of factor graphs to construct informative prior distributions which are efficiently sampled and provide notable computational benefits for nested sampling methods. We present simulated experiments which demonstrate that NSFG is more robust and computes solutions over an order of magnitude faster than state-of-the-art sampling techniques. Similarly, we compare NSFG to state-of-the-art Gaussian and non-Gaussian SLAM approaches and demonstrate that NSFG is notably more robust in describing non-Gaussian posteriors.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>👤 <strong>Hongkun Luo (罗宏昆)</strong> · <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent)">Academic Page</a> · <a href="https://github.com/luohongk" target="_blank" style="color:var(--accent)">GitHub</a></p>
+            <p style="margin-top:8px">🤖 Generated automatically from <a href="https://arxiv.org" style="color:var(--accent)">arXiv</a> · <a href="https://github.com/luohongk/Embodied-AI-Daily" style="color:var(--accent)">GitHub Repo</a></p>
+            <p style="margin-top:4px">Last update: 2026-07-02 (Beijing Time)</p>
+        </footer>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+        /* ── Mobile menu ── */
+        function toggleMenu() {
+            var overlay = document.getElementById('mobileNav');
+            var btn = document.getElementById('menuToggle');
+            var open = overlay.classList.toggle('open');
+            btn.textContent = open ? '✕' : '☰';
+            document.body.style.overflow = open ? 'hidden' : '';
+        }
+        function closeMenu() {
+            var overlay = document.getElementById('mobileNav');
+            var btn = document.getElementById('menuToggle');
+            overlay.classList.remove('open');
+            btn.textContent = '☰';
+            document.body.style.overflow = '';
+        }
+
+        /* ── Lazy AI-summary renderer ── */
+        // Render markdown + re-typeset MathJax only when a summary is opened.
+        // Math spans ($...$, $$...$$, \(...\), \[...\]) are stashed as
+        // placeholders before marked runs so Markdown never mangles LaTeX.
+        function renderAISummary(details) {
+            if (!details.dataset.lazy) return;   // already rendered
+            var rawMd = details.dataset.md || '';
+
+            // Decode HTML entities we encoded in Python.
+            // Order matters: &amp; must be last (it re-encodes other entities).
+            rawMd = rawMd
+                .replace(/&#10;/g, '\n')
+                .replace(/&quot;/g, '"')
+                .replace(/&lt;/g, '<')
+                .replace(/&gt;/g, '>')
+                .replace(/&amp;/g, '&');
+
+            // 1. Stash math spans.
+            var store = [];
+            function stash(m) { store.push(m); return '\x02MATH' + (store.length - 1) + 'END\x03'; }
+            var protected_ = rawMd
+                .replace(/\$\$[\s\S]+?\$\$/g, stash)
+                .replace(/\\\[[\s\S]+?\\\]/g, stash)
+                .replace(/\$[^$\n]+?\$/g, stash)
+                .replace(/\\\([\s\S]+?\\\)/g, stash);
+
+            // 2. Render markdown.
+            var html = (typeof marked !== 'undefined')
+                ? marked.parse(protected_)
+                : '<pre>' + protected_.replace(/</g, '&lt;') + '</pre>';
+
+            // 3. Restore math spans verbatim.
+            store.forEach(function(expr, i) {
+                html = html.split('\x02MATH' + i + 'END\x03').join(expr);
+            });
+
+            // 4. Inject into DOM.
+            var container = details.querySelector('.ai-content');
+            if (container) container.innerHTML = html;
+
+            // 5. Ask MathJax to typeset just this element.
+            if (window.MathJax && MathJax.typesetPromise) {
+                MathJax.typesetPromise([container]).catch(function(e) {
+                    console.warn('MathJax typeset error:', e);
+                });
+            }
+
+            // Mark done so we never re-render.
+            delete details.dataset.lazy;
+            delete details.dataset.md;
+        }
+
+        // Wire up all existing .ai-summary elements.
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('details.ai-summary[data-lazy]').forEach(function(det) {
+                det.addEventListener('toggle', function () {
+                    if (det.open) renderAISummary(det);
+                }, { once: true });
+            });
+        });
+    </script>
+</body>
+</html>
