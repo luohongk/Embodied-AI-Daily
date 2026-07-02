@@ -600,7 +600,7 @@
                 <a href="LLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
                     <span class="nav-label">LLM</span>
-                    <span class="nav-count">79</span>
+                    <span class="nav-count">80</span>
                 </a>
                 <a href="VLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f97316"></span>
@@ -675,7 +675,7 @@
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Kalman Filter</span>
-                    <span class="nav-count">55</span>
+                    <span class="nav-count">56</span>
                 </a>
                 <a href="Loop-Closure-Detection.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -690,12 +690,12 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">74</span>
+                    <span class="nav-count">70</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">74</span>
+                    <span class="nav-count">75</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -730,7 +730,7 @@
                 <a href="Model-Predictive-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#14b8a6"></span>
                     <span class="nav-label">Model Predictive Control</span>
-                    <span class="nav-count">56</span>
+                    <span class="nav-count">55</span>
                 </a>
                 <a href="Whole-Body-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#06b6d4"></span>
@@ -819,7 +819,7 @@
             <a href="LLM.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
                 <span class="nav-label">LLM</span>
-                <span class="nav-count">79</span>
+                <span class="nav-count">80</span>
             </a>
             <a href="VLM.html" class="nav-item">
                 <span class="nav-dot" style="background:#f97316"></span>
@@ -894,7 +894,7 @@
             <a href="Kalman-Filter.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Kalman Filter</span>
-                <span class="nav-count">55</span>
+                <span class="nav-count">56</span>
             </a>
             <a href="Loop-Closure-Detection.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -909,12 +909,12 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">74</span>
+                <span class="nav-count">70</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">74</span>
+                <span class="nav-count">75</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -949,7 +949,7 @@
             <a href="Model-Predictive-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#14b8a6"></span>
                 <span class="nav-label">Model Predictive Control</span>
-                <span class="nav-count">56</span>
+                <span class="nav-count">55</span>
             </a>
             <a href="Whole-Body-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#06b6d4"></span>
@@ -1030,6 +1030,126 @@
             <div class="paper-list">
                 <div class="paper-card">
                     <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2606.30988v2" target="_blank" class="paper-title">Multisensory Continual Learning: Adapting Pretrained Visuomotor Policies to Force</a>
+                        <span class="paper-date">2026-07-01</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：如何将预训练的纯视觉机器人策略适应到新增的多模态传感器（如力觉）任务中，同时保持原有传感器套件下的性能不下降。&#10;&#10;🛠 **方法**：提出MuSe框架，通过多阶段融合、多感官未来预测以及预训练数据的经验回放，将有限的多感官数据整合到预训练的纯视觉策略中。&#10;&#10;✨ **主要贡献**：在真实机器人操作任务中，MuSe不仅在新接触力微调任务上表现优异，还能保持甚至提升原始预训练任务的性能，证明少量多感官数据可提升机器人泛化能力。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Robot manipulation often relies on sensory feedback beyond vision, particularly in contact-rich settings where force, tactile, or audio signals reveal interaction states that are not directly observable from images. However, these modalities are often hardware- and task-specific, and large-scale multisensory robot datasets remain scarce. As a result, it is impractical to pretrain policies with every sensor they may encounter. We study multisensory continual learning: adapting a pretrained robot policy to new tasks with newly introduced modalities while preserving performance under the original sensor suite. We propose MuSe, which incorporates limited multisensory data into pretrained vision-only policies through multi-stage fusion, multisensory future prediction, and experience replay over pretraining data. We instantiate MuSe by augmenting a pretrained vision-only policy with force-torque sensing and evaluate it on real-world manipulation tasks. Our experiments show that MuSe performs strongly on contact-rich finetuning tasks while preserving, and in some cases improving, performance on the original pretraining tasks. These results suggest that a modest multisensory dataset can improve general robot capabilities beyond the finetuning distribution. Project website: https://jadenvc.github.io/multisensory-continual-learning/</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.01120v1" target="_blank" class="paper-title">Next-Generation Agentic Reinforcement Learning Systems Enable Self-Evolving Agents</a>
+                        <span class="paper-date">2026-07-01</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：当前企业级LLM代理在部署后无法自我进化，依赖人工循环进行改进，缺乏从自身经验中持续学习的能力。&#10;&#10;🛠 **方法**：提出下一代智能体强化学习系统，围绕三大支柱设计：标准化轨迹数据协议、企业级数据代理、统一进化控制平面，并通过AReaL2.0实例化在线RL循环。&#10;&#10;✨ **主要贡献**：指出阻碍自进化代理部署的关键在于智能体在线RL系统而非算法，并给出了具体架构、案例和反论证，为构建持续学习的代理系统提供了系统化方案。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>LLM agents are rapidly being deployed in production, including coding assistants, customer-support chatbots, and scientific research assistants, yet they remain fundamentally static in enterprise deployment. The LLM weights, system prompts, tool repertoires, and in-context harnesses are frozen at deployment time, and any improvement requires a manual loop of human-curated data collection, offline fine-tuning, modification of the agentic paradigm, and re-deployment. Recent work on self-evolving agents, such as OpenClaw for individual users, indicates that the next leap in agent capability will come from agents that continually learn from their own experience. In this paper, we argue that this vision for self-evolving agent deployment is being held back for enterprise-level large-scale agentic service not by reinforcement learning (RL) algorithms but by agentic online RL systems. Specifically, current agentic RL systems and the surrounding observability software stack are inadequate along three essential aspects: (i) there is no standardized agent trajectory data protocol capable of carrying RL learning signals at step granularity across heterogeneous agent paradigms; (ii) there is no enterprise-grade comprehensive data proxy that converts real workloads into governed learning substrates; and (iii) there is no unified agent evolution control plane that automatically decides, based on trajectory statistics, when to update policy weights or evolve the in-context harness. The next generation of agentic RL systems must be co-designed around these three pillars, and we sketch concrete architectures, case studies, and counter-arguments. We instantiate one branch through AReaL2.0, reorganizing existing RL infrastructure into an agent-oriented online RL loop for policy weight updates from deployed workloads.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2603.12056v3" target="_blank" class="paper-title">XSkill: Continual Learning from Experience and Skills in Multimodal Agents</a>
+                        <span class="paper-date">2026-07-01</span>
+                    </div>
+                                        <span class="paper-comment">📝 Accepted to ICML 2026</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：多模态智能体在开放环境中存在工具使用效率低、编排不灵活的问题，且无法通过持续学习过往经验来提升性能。&#10;&#10;🛠 **方法**：提出XSkill双流框架，通过视觉观察提取和整合“经验”（动作级指导）与“技能”（任务级指导），在推理时检索并适配当前视觉上下文，形成持续学习循环。&#10;&#10;✨ **主要贡献**：在五个跨领域基准测试中，XSkill显著优于纯工具和基于学习的方法；两个知识流互补影响推理行为，并展现出卓越的零样本泛化能力。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Multimodal agents can now tackle complex reasoning tasks with diverse tools, yet they still suffer from inefficient tool use and inflexible orchestration in open-ended settings. A central challenge is enabling such agents to continually improve without parameter updates by learning from past trajectories. We identify two complementary forms of reusable knowledge essential for this goal: experiences, providing concise action-level guidance for tool selection and decision making, and skills, providing structured task-level guidance for planning and tool use. To this end, we propose XSkill, a dual-stream framework for continual learning from experience and skills in multimodal agents. XSkill grounds both knowledge extraction and retrieval in visual observations. During accumulation, XSkill distills and consolidates experiences and skills from multi-path rollouts via visually grounded summarization and cross-rollout critique. During inference, it retrieves and adapts this knowledge to the current visual context and feeds usage history back into accumulation to form a continual learning loop. Evaluated on five benchmarks across diverse domains with four backbone models, XSkill consistently and substantially outperforms both tool-only and learning-based baselines. Further analysis reveals that the two knowledge streams play complementary roles in influencing the reasoning behaviors of agents and show superior zero-shot generalization.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2606.31191v2" target="_blank" class="paper-title">ISM:Self-Improving Strategy Memory for Continual Mathematical Reasoning</a>
+                        <span class="paper-date">2026-07-01</span>
+                    </div>
+                                        <span class="paper-comment">📝 3rd AI for Math Workshop at ICML 2026 Forty-Third International Conference on Machine Learning</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在连续学习场景下，如何让冻结参数的LLM在严格隔离的数学推理任务中持续提升性能，避免灾难性遗忘。&#10;&#10;🛠 **方法**：提出智能模式记忆（ISM）系统，通过维护一个自优化的策略模式库，从成功和失败案例中学习，并利用符号工具验证中间步骤和最终答案，无需更新模型参数。&#10;&#10;✨ **主要贡献**：在MATH-Hard和OlympiadBench上，ISM以比最强被动基线少64%和86%的策略模式，超越被动、检索和反思基线，证明小规模、主动维护且经验证的策略记忆能支持可靠的连续数学推理。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>We propose Intelligent Schema Memory (ISM), a self-evolving memory-augmented system that improves mathematical reasoning for a frozen LLM under continual learning with hard episodic resets. ISM maintains a compact, self-refined bank of strategy schemas learned from both successful and failed episodes, with symbolic tools that check intermediate steps and certify answers. Without updating model parameters, ISM outperforms passive, retrieval, and reflection baselines on MATH-Hard and OlympiadBench, using 64% and 86% fewer schemas respectively than the strongest passive baseline. These results show that small, actively maintained, and verified strategy memories can support reliable continual mathematical reasoning under strict episodic isolation.The codebase is available at https://github.com/pdx97/ISM .</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.00377v1" target="_blank" class="paper-title">SAOT: Self-Supervised Continual Graph Learning with Structure-Aware Optimal Transport</a>
+                        <span class="paper-date">2026-07-01</span>
+                    </div>
+                                        <span class="paper-comment">📝 The paper has 9 pages of text and 13 pages in total (including acknowledgments, impact statement, references, and appendix), with 6 figures and 4 tables. This paper has been accepted by ICML 2026 conference and this is a final version of the manuscript submitted to the conference</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有自监督持续图学习方法仅关注单个节点或节点对的稳定性，忽略了全局节点间关系结构，导致跨任务时关系逐渐扭曲。&#10;&#10;🛠 **方法**：提出结构感知最优传输（SAOT）框架，利用最优传输理论捕获全局节点对应关系，并结合跨任务知识蒸馏机制保留先前任务的结构知识。&#10;&#10;✨ **主要贡献**：在四个基准数据集上超越现有方法，在Class-IL设置下，CoraFull-CL和Products-CL的平均准确率分别提升高达5%和15%。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Self-supervised Continual Graph Learning (CGL) aims to successively learn from a graph sequence with different tasks without label supervision - a paradigm that has attracted widespread attention. Most existing self-supervised CGL methods rely on instance-level consistency objectives that enforce stability of individual node (or node-pair) embeddings. Due to optimizing nodes in isolation, these methods fail to maintain global relational structure, causing inter-node correspondences to progressively distort under continual learning. To this end, we propose a novel Structure-Aware Optimal Transport (SAOT) framework that explicitly captures and preserves relational structure within graph representations across sequential tasks. Specifically, SAOT leverages optimal transport theory to capture global inter-node correspondences, thereby facilitating and enhancing graph representation learning. Simultaneously, SAOT incorporates a cross-task knowledge distillation mechanism to preserve the previous structural knowledge. Extensive experiments on four CGL benchmark datasets demonstrate that SAOT outperforms existing self-supervised baselines. In particular, SAOT achieves significant performance gains, improving average accuracy by up to 5% on CoraFull-CL and over 15% on Products-CL compared with state-of-the-art methods in the Class-IL setting.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.00286v1" target="_blank" class="paper-title">Self-Organized Learning in Oscillatory Neural Networks with Memristive Signed Couplings</a>
+                        <span class="paper-date">2026-07-01</span>
+                    </div>
+                                        <span class="paper-comment">📝 14 pages single column</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：如何在振荡神经网络（ONN）中实现带符号的突触权重（特别是抑制性/负权重），以支持反相吸引子的自主持久存在，从而提升联想记忆和去噪等计算能力。&#10;&#10;🛠 **方法**：提出一种基于忆阻器边界的神经形态原语，通过忆阻器件实现抑制性耦合，并利用电路仿真验证系统在自联想任务中对含噪输入的去噪能力；同时结合理论分析，证明带符号的有效权重是反相吸引子自主维持的必要条件。&#10;&#10;✨ **主要贡献**：首次在ONN中通过忆阻电路实现可自主学习的抑制性耦合，突破了传统神经形态实现中负权重的设备与电路限制；通过仿真和理论证明，带符号权重能扩展吸引子结构类型，使反相约束在训练后仍能自主持续，为相位编码记忆和连续学习提供了可行硬件方案。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Oscillatory neural networks (ONNs) have emerged as a promising neuromorphic architecture, leveraging coupled dynamical systems to perform computation and represent information through phase relationships. Their interactions can be designed to support intrinsic energy-minimizing dynamics, enabling tasks such as associative memory and optimization, and positioning them as a candidate architecture for continuous learning and inference. We present a neuromorphic primitive implemented using memristive edges with inhibitory couplings as a potential design for autonomous learning, and provide circuit simulation validation that the system is capable of denoising noisy inputs on an auto-associative task. While numerical Hopfield/Ising models routinely assume signed weights, neuromorphic implementations of ONNs often fail to realize negative weights due to device and circuit constraints. A practically implementable route to inhibitory (negative) weights is particularly valuable: it expands the class of attractor structures accessible to oscillator networks beyond purely synchronous couplings, and supports phase-coded memories where anti-phase constraints are not merely transiently enforced during training but can persist autonomously after release. We provide circuit simulations and theoretical analyses demonstrating that signed effective weights are necessary for anti-phase attractors to persist autonomously.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2512.18934v2" target="_blank" class="paper-title">When Less is More: 8-bit Quantization Improves Continual Learning in Large Language Models</a>
+                        <span class="paper-date">2026-06-30</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在大语言模型的持续学习中，量化部署（如INT8、INT4）是否会导致更严重的灾难性遗忘，以及如何平衡量化精度与模型记忆保持能力。&#10;&#10;🛠 **方法**：系统比较了FP16、INT8、INT4三种量化精度在不同回放缓冲区策略下的持续学习表现，并分析了量化噪声对模型学习可塑性与知识保留的影响。&#10;&#10;✨ **主要贡献**：发现量化模型（尤其是INT8）在后续任务上比FP16高出8-15%的准确率，INT4在代码生成任务上性能近乎翻倍（40% vs 20%）；量化噪声起到隐式正则化作用，防止模型过拟合新任务梯度；极小回放缓冲区（0.1%）即可显著提升所有精度模型的记忆保持能力。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Catastrophic forgetting poses a fundamental challenge in continual learning, particularly when models are quantized for deployment efficiency. We systematically investigate the interplay between quantization precision (FP16, INT8, INT4) and replay buffer strategies in large language models, revealing unexpected dynamics. While FP16 achieves superior initial task performance (74.44% on NLU), we observe a striking inversion on subsequent tasks: quantized models outperform FP16 by 8-15% on final task forward accuracy, with INT4 achieving nearly double FP16's performance on Code generation (40% vs 20%). Critically, even minimal replay buffers (0.1%) dramatically improve retention - increasing NLU retention after Math training from 45% to 65% across all precision levels - with INT8 consistently achieving the optimal balance between learning plasticity and knowledge retention. We hypothesize that quantization-induced noise acts as implicit regularization, preventing the overfitting to new task gradients that plagues high-precision models. These findings challenge the conventional wisdom that higher precision is always preferable, suggesting instead that INT8 quantization offers both computational efficiency and superior continual learning dynamics. Our results provide practical guidelines for deploying compressed models in continual learning scenarios: small replay buffers (1-2%) suffice for NLU tasks, while Math and Code benefit from moderate buffers (5-10%), with quantized models requiring less replay than FP16 to achieve comparable retention. Code is available at https://github.com/Festyve/LessIsMore.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.00272v1" target="_blank" class="paper-title">ASPIRE: Agentic /Skills Discovery for Robotics</a>
+                        <span class="paper-date">2026-06-30</span>
+                    </div>
+                                        <span class="paper-comment">📝 43 pages, 12 figures, 9 tables. Project page: https://research.nvidia.com/labs/gear/aspire/</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：传统机器人编程需协调多模态感知、物理接触动力学及执行故障处理，过程复杂且难以泛化到新任务。&#10;&#10;🛠 **方法**：提出ASPIRE系统，采用代码即策略范式，通过闭环执行引擎、持续扩展的技能库和进化搜索三组件，自主编写、诊断并优化机器人控制程序。&#10;&#10;✨ **主要贡献**：在LIBERO-Pro、Robosuite等基准测试中性能提升最高77%，技能库支持零样本泛化到未见长时任务（成功率31% vs 4%），并初步验证仿真技能可迁移至不同实体机器人。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Traditional robot programming is challenging: it requires orchestrating multimodal perception, managing physical contact dynamics, and handling diverse configurations and execution failures. We introduce ASPIRE (Agentic Skill Programming through Iterative Robot Exploration), a continual learning system that autonomously writes and refines robot control programs in a code-as-policy paradigm while compounding experience into a reusable skill library. ASPIRE discovers skills that persist across tasks, simulation and real-world settings, and embodiments. It operates in an open-ended loop with three components: (1) a closed-loop robot execution engine that exposes fine-grained multimodal traces, enabling autonomous failure diagnosis, repair synthesis, and validation; (2) a continually expanding skill library that distills validated fixes into reusable, transferable knowledge; and (3) evolutionary search that generates diverse task sequences and control programs to explore beyond single-trajectory refinement. ASPIRE surpasses prior methods by up to 77% on LIBERO-Pro manipulation under perturbation, 72% on Robosuite bimanual handover, and 32% on BEHAVIOR-1K long-horizon household tasks. Its accumulated library also enables zero-shot generalization to unseen long-horizon tasks: on LIBERO-Pro Long, ASPIRE achieves 31% success versus 4% for prior methods despite their use of test-time reasoning and retries. Finally, simulation-discovered skills provide initial evidence of sim-to-real transfer, substantially reducing real-robot programming effort across different embodiments and robot APIs.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
                         <a href="https://arxiv.org/abs/2606.31275v1" target="_blank" class="paper-title">CLIMB: Centroid-Based Hierarchical Memory for Online Continual Self-Supervised Learning</a>
                         <span class="paper-date">2026-06-30</span>
                     </div>
@@ -1041,36 +1161,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Online Continual Self-Supervised Learning (OCSSL) aims to learn representations from a continuous stream of unlabeled data, without knowledge of task boundaries and under memory constraints. Existing methods rely either on replay buffers that exploit latent space structure, or on regularization alone. We present CLIMB (Continual Learning with Intelligent Memory Bank), which combines both simultaneously. Our method introduces a hierarchical centroid-based memory, bounded in total number of stored images, combined with knowledge distillation on replayed examples to limit representation drift. The memory groups similar images into centroids, providing hard-to-discriminate examples for contrastive learning while covering the diversity of observed distributions. Experiments on Split CIFAR-100 and Split ImageNet-100, on standard benchmarks from the state-of-the-art as well as a new protocol with irregular task distributions show that CLIMB outperforms state-of-the-art OCSSL methods.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.31191v1" target="_blank" class="paper-title">ISM:Self-Improving Strategy Memory for Continual Mathematical Reasoning</a>
-                        <span class="paper-date">2026-06-30</span>
-                    </div>
-                                        <span class="paper-comment">📝 3rd AI for Math Workshop at ICML 2026 Forty-Third International Conference on Machine Learning</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在连续学习场景下，如何让冻结参数的LLM在严格隔离的数学推理任务中持续提升性能，避免灾难性遗忘。&#10;&#10;🛠 **方法**：提出智能模式记忆（ISM）系统，通过维护一个自优化的策略模式库，从成功和失败案例中学习，并利用符号工具验证中间步骤和最终答案，无需更新模型参数。&#10;&#10;✨ **主要贡献**：在MATH-Hard和OlympiadBench上，ISM以比最强被动基线少64%和86%的策略模式，超越被动、检索和反思基线，证明小规模、主动维护且经验证的策略记忆能支持可靠的连续数学推理。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>We propose Intelligent Schema Memory (ISM), a self-evolving memory-augmented system that improves mathematical reasoning for a frozen LLM under continual learning with hard episodic resets. ISM maintains a compact, self-refined bank of strategy schemas learned from both successful and failed episodes, with symbolic tools that check intermediate steps and certify answers.Without updating model parameters, ISM outperforms passive, retrieval, and reflection baselines on MATH-Hard and OlympiadBench, using 64% and 86% fewer schemas respectively than the strongest passive baseline. These results show that small, actively maintained, and verified strategy memories can support reliable continual mathematical reasoning under strict episodic isolation.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.30988v1" target="_blank" class="paper-title">Multisensory Continual Learning: Adapting Pretrained Visuomotor Policies to Force</a>
-                        <span class="paper-date">2026-06-29</span>
-                    </div>
-                    
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：如何将预训练的纯视觉机器人策略适应到新增的多模态传感器（如力觉）任务中，同时保持原有传感器套件下的性能不下降。&#10;&#10;🛠 **方法**：提出MuSe框架，通过多阶段融合、多感官未来预测以及预训练数据的经验回放，将有限的多感官数据整合到预训练的纯视觉策略中。&#10;&#10;✨ **主要贡献**：在真实机器人操作任务中，MuSe不仅在新接触力微调任务上表现优异，还能保持甚至提升原始预训练任务的性能，证明少量多感官数据可提升机器人泛化能力。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Robot manipulation often relies on sensory feedback beyond vision, particularly in contact-rich settings where force, tactile, or audio signals reveal interaction states that are not directly observable from images. However, these modalities are often hardware- and task-specific, and large-scale multisensory robot datasets remain scarce. As a result, it is impractical to pretrain policies with every sensor they may encounter. We study multisensory continual learning: adapting a pretrained robot policy to new tasks with newly introduced modalities while preserving performance under the original sensor suite. We propose MuSe, which incorporates limited multisensory data into pretrained vision-only policies through multi-stage fusion, multisensory future prediction, and experience replay over pretraining data. We instantiate MuSe by augmenting a pretrained vision-only policy with force-torque sensing and evaluate it on real-world manipulation tasks. Our experiments show that MuSe performs strongly on contact-rich finetuning tasks while preserving, and in some cases improving, performance on the original pretraining tasks. These results suggest that a modest multisensory dataset can improve general robot capabilities beyond the finetuning distribution. Project website: https://jadenvc.github.io/multisensory-continual-learning/</p>
                     </details>
                 </div>
                 <div class="paper-card">
@@ -1094,10 +1184,7 @@
                         <span class="paper-date">2026-06-29</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在持续后训练（CPT）中，如何避免模型在学习新任务时遗忘已学知识，尤其是多模态大语言模型在适应下游任务时的知识保留问题。&#10;&#10;🛠 **方法**：对比分析监督微调（SFT）和强化微调（RFT）两种范式，基于Qwen2.5-VL-7B-Instruct模型在多任务上实验，并进一步提出基于rollout的实例过滤算法（RIF-RFT）以提升RFT效率。&#10;&#10;✨ **主要贡献**：发现RFT天然缓解灾难性遗忘，性能接近多任务训练，且能保护甚至增强模型通用知识；揭示其选择性更新机制是稳定性的关键，而非KL惩罚或思维链。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Continual post-training (CPT) is a popular and effective technique for adapting foundation models like multimodal large language models to ever-evolving downstream tasks. While existing research primarily focuses on methods like data replay, model expansion, or parameter regularization, the fundamental role of the learning paradigm remains largely unexplored. This paper presents a comparative analysis of two core post-training paradigms: supervised fine-tuning (SFT) and reinforcement fine-tuning (RFT), investigating their respective impacts on knowledge retention during CPT. Our experiments are conducted across multiple multimodal tasks, utilizing Qwen2.5-VL-7B-Instruct as the base model. The investigation yields two significant findings: (1) When continuously learning on downstream tasks, SFT leads to catastrophic forgetting of previously learned tasks. In contrast, RFT inherently preserves prior knowledge and achieves performance comparable to multi-task training. (2) RFT successfully protects and even enhances the model's general knowledge on standard benchmarks, while SFT degrades general model capabilities severely. Further analysis reveals that this stability is not primarily due to explicit mechanisms like KL penalty or chain-of-thought reasoning. We investigate RFT's learning dynamics and find that its selective update mechanism inherently prevents interference with established knowledge. Based on this insight, we propose a rollout-based instance filtering algorithm (RIF-RFT) that enhances the training efficiency of RFT by focusing on learnable samples. Our comprehensive study demonstrates the superiority of RFT as a robust paradigm for continual post-training.</p>
@@ -1109,10 +1196,7 @@
                         <span class="paper-date">2026-06-29</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：研究同构深度网络在持续学习中的收敛性，特别是弱正则化分类任务下全局收敛失败的原因及局部收敛的条件。&#10;&#10;🛠 **方法**：将持续分类问题建模为同构模型在任务间隔集上的顺序投影，并利用非凸投影理论分析随机与循环任务序列下的局部线性收敛性。&#10;&#10;✨ **主要贡献**：将先前仅适用于静态深度模型或线性持续模型的分析推广到同构深度网络，揭示了全局收敛的失败机制，并证明了在特定正则性下局部线性收敛的保证，同时将框架统一扩展到持续回归任务。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>We characterize weakly regularized continual classification in homogeneous models as sequential projections onto task margin sets. This result generalizes prior analyses restricted to either stationary (single-task) deep models or continual linear models. We show that global convergence generally fails, even for simple models linear in data but nonlinear in parameters. Nevertheless, by leveraging results from nonconvex projection theory, we identify regularity properties of homogeneous deep networks that guarantee local linear convergence under random and cyclic task sequences. Finally, we extend our analysis to continual regression, unifying the framework for homogeneous models.</p>
@@ -1124,10 +1208,7 @@
                         <span class="paper-date">2026-06-29</span>
                     </div>
                                         <span class="paper-comment">📝 15 pages, 6 figures. Code available at: https://github.com/Engibacter/R2LPL</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：自动驾驶策略在部署中遇到长尾场景时，缺乏明确机制来纠正并保留自身错误导致的失败经验，难以持续改进。&#10;&#10;🛠 **方法**：提出R²LPL框架，通过从可恢复的策略诱导错误中检索修正目标，并利用终身策略学习保留知识，将稀疏的闭环失败证据转化为紧凑的监督信号。&#10;&#10;✨ **主要贡献**：在nuPlan基准上，仅通过少量滚动与持续学习循环，将初始性能中等的学习型规划器提升至最先进水平，尤其在长尾难例集上表现突出，证明其能有效将错误转化为持续改进的修正知识。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Autonomous driving policies should be able to improve continually as deployment exposes them to increasingly diverse and long-tail traffic situations. However, most learning-based policies are trained or fine-tuned on expert demonstrations and then rely largely on generalization to handle challenging closed-loop scenarios, lacking an explicit mechanism to correct and retain the mistakes exposed in these scenarios. This paper studies autonomous driving policy improvement from a lifelong learning perspective: Can a pretrained policy improve continually by accumulating corrective knowledge derived from its own mistakes, while retaining previously acquired driving competence? To answer this question, we propose Rollout-Retrieval Lifelong Policy Learning (R$^2$LPL), a policy learning framework that retrieves corrective targets from recoverable policy-induced mistakes and retains the resulting knowledge through lifelong policy learning. R^2LPL addresses a key bottleneck in continual policy improvement: closed-loop mistakes reveal where the policy is weak, but do not directly specify what the policy should learn. By filtering recoverable mistake-related states and retrieving feasible corrective targets, R$^2$LPL turns sparse failure evidence into compact supervised knowledge for stable and sample-efficient policy improvement. We evaluate R$^2$LPL on large-scale closed-loop nuPlan benchmarks. With only a few rollout and continual-learning cycles, R$^2$LPL elevates a learning-based planner with moderate initial performance to state-of-the-art performance across the evaluated benchmarks, especially on the challenging and long-tail Test14-hard split. These results demonstrate the effectiveness of R$^2$LPL in converting recoverable closed-loop mistakes into corrective knowledge for sustained policy improvement.</p>
@@ -1139,10 +1220,7 @@
                         <span class="paper-date">2026-06-29</span>
                     </div>
                                         <span class="paper-comment">📝 16 pages, 1 figure, Accepted at the Conference on Lifelong Learning Agents (CoLLAs) 2026</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决运动-语言智能体在持续学习新动作概念时，如何避免灾难性遗忘并平衡稳定性与可塑性。&#10;&#10;🛠 **方法**：基于冻结的大语言模型，引入低秩适配（LoRA）变体，并设计混合专家架构，利用自编码器路由器在推理时无任务标签地选择专家。&#10;&#10;✨ **主要贡献**：在双向运动理解与生成任务上实现近零遗忘，且硬专家选择显著优于软混合；揭示了词级准确率与生成质量可能脱节，需更全面的评估协议。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Motion-language agents must possess the bidirectional capability to both understand human movement (motion-to-text, M2T) and generate it from natural language (text-to-motion, T2M). While foundational models have achieved strong performance in static settings, autonomous agents operating in dynamic environments must continuously incorporate new motion concepts -- such as novel athletic styles or specialized gestures -- without catastrophic forgetting of previously acquired skills. We investigate the stability-plasticity trade-off in bidirectional motion-language learning under sequential task exposure. Building on a frozen large language model backbone, we introduce low-rank adaptation (LoRA) variants designed to mitigate inter-task interference. We specifically propose mixture-of-experts architectures that utilize an autoencoder-based router to select task-specific experts at inference time, so that no task-label is needed. To evaluate these methods, we establish a reproducible five-task benchmark derived from HumanML3D through semantic clustering of motion descriptions. Our experimental results demonstrate near-zero forgetting across both M2T and T2M directions while maintaining high generation and captioning quality. Furthermore, we show that hard expert selection via routing significantly outperforms soft expert blending in quality metrics, indicating that preserving expert isolation is critical for maintaining performance in our continual learning setting. Finally, we observe that a divergence between token-level accuracy and downstream generation quality may occur, highlighting the need for more comprehensive evaluation protocols in future research on lifelong motion-language agents.</p>
@@ -1154,10 +1232,7 @@
                         <span class="paper-date">2026-06-29</span>
                     </div>
                                         <span class="paper-comment">📝 9 pages, 1 figure</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决持续学习中灾难性遗忘和循环任务恢复效率低下的问题，特别是在固定容量下如何高效管理参数子空间。&#10;&#10;🛠 **方法**：提出神经子空间重分配（NSR），将低秩适配（LoRA）模块视为可压缩、可检索的记忆单元，通过SVD压缩、任务知识库存储、嵌入相似性检索和子空间重分配循环，并辅以知识蒸馏保护旧任务。&#10;&#10;✨ **主要贡献**：理论证明循环环境中无记忆分配策略存在累积遗憾；实验上在Split-CIFAR-100上循环恢复时间减少10倍，在5-Datasets基准上达到最高准确率和最少遗忘，并揭示记忆机制（压缩与相似性检索）而非学习型分配策略是性能关键，且压缩知识库仅需每任务0.29 MB参数。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>We introduce Neural Subspace Reallocation (NSR), which reframes continual learning as memory management over parameter subspaces. Instead of treating Low-Rank Adaptation (LoRA) modules as disposable per-task adapters, NSR manages them as compressible, retrievable memory units on a frozen backbone through a recurring cycle: (1) compress learned LoRAs via SVD, (2) reserve them in a TaskKnowledgeBank, (3) recall related past LoRAs by embedding similarity to warm-start new or returning tasks, and (4) reallocate the active subspace accordingly, with distillation protecting prior tasks. We prove that in cyclic environments any memoryless allocation policy incurs cumulative regret Omega(T(M-1)Delta_switch) relative to a history-aware policy backed by the Bank (Theorem 1). Empirically, on Split-CIFAR-100 the Bank reduces cyclic recovery time by 10x, exactly as predicted, and on the heterogeneous 5-Datasets benchmark NSR achieves the highest accuracy and the least forgetting, about 9x closer to zero backward transfer than the memoryless heuristics. Crucially, we run a controlled study that isolates which component matters: holding the Bank fixed and varying only the allocation rule, we find that a simple similarity-based retrieval rule matches or beats a learned reinforcement-learning controller (recovering recurring tasks in 0 vs 1.8 steps and reaching equal accuracy). Our central, honest finding is therefore that the memory mechanism -- compression and similarity retrieval -- rather than a learned allocation policy, drives continual-learning performance under fixed capacity. A memory-budget analysis confirms the compressed Bank stays small -- 0.29 MB of parameter memory per task -- so a top-K retention cap bounds the total footprint while preserving fast recovery for retained tasks.</p>
@@ -1169,10 +1244,7 @@
                         <span class="paper-date">2026-06-29</span>
                     </div>
                                         <span class="paper-comment">📝 Preprint, Under Review</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：大语言模型在复杂长上下文场景中难以有效定位和遵循技能指令，限制了其利用文本技能的能力。&#10;&#10;🛠 **方法**：提出ParametricSkills框架，通过构建大规模高质量技能库并合成轨迹数据，训练超网络将文本技能实时转换为LoRA适配器参数，实现无上下文依赖的技能调用。&#10;&#10;✨ **主要贡献**：在六个软件工程子任务上平均超越上下文学习方法6.44个点，同时获得更高BERT Score和F1分数，并展示了参数化技能在测试时持续学习方面的潜力。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Since intelligence fundamentally relies on efficient skill acquisition (Chollet, 2019), the ability to leverage skills is critical. For LLMs, skills, manually authored or extracted from task trajectories, are textual recipes encoding mature problem-solving experience and are critical to agentic capabilities. Despite widespread deployment, their utility is limited by the model's ability to comprehend and follow skill instructions, especially under complex and long-context scenarios, where key instructions are difficult to locate and adhere to. To address this limitation, we propose ParametricSkills, a framework that can convert free-form textual skills into parameters at test time, enabling context-free skill exploitation. Specifically, we first construct a large-scale, high-quality skill library, and synthesize single-turn and multi-turn skill exploitation trajectories built around these skills with OpenCode. Using these data, we then train a hypernetwork that parameterizes both the skill content and the test-time exploitation methodology by receiving textual skills and converting them into LoRA adapters. Experimental results on six complex software engineering (SWE) subtasks demonstrate that, the proposed ParametricSkills averagely outperforms in-context learning by 6.44 points as judged by DeepSeek-V4-Flash, while also achieving significantly higher BERT Score and F1 score, confirming its effectiveness. Beyond performance, we further find that parametric skills, being inherently accumulative, offer a preliminary yet promising avenue toward test-time continual learning.</p>
@@ -1944,78 +2016,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Despite advances in large-scale Automatic Speech Recognition (ASR), disfluent speech remains challenging, as state-of-the-art systems are often optimized to omit disfluencies, leading to information loss and hallucinations. Prior work has focused on verbatim transcription and the integration of disfluency markers, but adapting models on limited datasets can lead to catastrophic forgetting of general-domain knowledge. We address this gap by leveraging continual learning (CL) with explicit disfluency tokens. We first introduce these tokens into a pretrained ASR model to establish stable token mechanisms, and then continue training on additional datasets with varying disfluency distributions. Through a detailed analysis of model dynamics during training, we identify a trade-off between marker learning and ASR performance, and a consistent cross-attention head mechanism shared across CL methods.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.14078v1" target="_blank" class="paper-title">Rethinking Backdoor Adversarial Unlearning through the Lens of Catastrophic Forgetting in Continual Learning</a>
-                        <span class="paper-date">2026-06-12</span>
-                    </div>
-                                        <span class="paper-comment">📝 Accepted by ACM CCS 2026</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Existing studies reveal that current backdoor defenses exhibit limited robustness and often fail against specific types of attacks. More concerningly, prevailing safety tuning strategies tend to provide only superficial safety protection, as they fall short of completely eliminating the backdoor effects. In this work, we present a novel formulation of backdoor learning and unlearning as a sequential, three-stage process from a continual learning perspective. Within this framework, we formally define complete backdoor unlearning and further derive the necessary conditions for achieving it based on the mechanism of catastrophic forgetting. Guided by these insights, we propose Blind Inversion-Backdoor Adversarial Unlearning (BI-BAU), which formulates the generation of adversarial examples satisfying the unlearning conditions as a blind inversion problem. We solve this by integrating the bi-level optimization process of adversarial training into an Expectation-Maximization (EM) algorithm framework to optimize the maximum a posteriori (MAP) objective. Furthermore, BI-BAU is extended to untargeted adversarial scenarios with unknown target classes, as well as to multi-modal contrastive learning tasks, enhancing its applicability to real-world deployment scenarios where pre-trained models may be compromised. Extensive experiments demonstrate that our method exhibits general applicability across a wide spectrum of backdoor attacks and can effectively and thoroughly eliminate the backdoor effects from a backdoor model.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.19373v1" target="_blank" class="paper-title">cAPM: Continual AI-Assisted Pace-Mapping with Active Learning</a>
-                        <span class="paper-date">2026-06-11</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Ventricular tachycardia is a life-threatening rhythm disorder and a major cause of sudden cardiac death. Pace-mapping is a clinical procedure for identifying the intervention target during catheter ablation of VT. It requires clinicians to pace different sites in the ventricles and rapidly interpret the resulting electrocardiograms to determine where to pace next or whether a target site has been identified. Active learning AI models have been proposed to guide clinicians to the next pacing site, showing promise in reducing the number of pacing sites and improving the efficiency of pace-mapping. Existing methods require retraining each target without the ability to transfer knowledge across multiple VTs within the same patient or across patients. We introduce cAPM for continuous AI-assisted pace-mapping to capture and transfer knowledge accumulated from past pace-mapping data to reduce the number of pace-mapping data needed for future target VTs. This is made possible by a task-agnostic surrogate neural network that learns the mapping from pacing sites to 12-lead ECG morphology, an active-learning strategy that refines this surrogate model by selecting the most informative pacing site for each target, and a continual learning strategy to do so sequentially while retaining knowledge from prior targets. Evaluated on an in-silico testbed consisting of sequentially-presented localization tasks across different physiological conditions and ventricular geometries, cAPM with and without replay of past data samples achieved an 81% probability of localizing within clinical tolerance (5 mm accuracy) using 4.5 pace-mapping sites, compared to the state-of-the-art active-learning method achieving 38% probability using 13.7 pacing sites. These results provide a strong basis for preparing cAPM towards in-vivo preclinical and clinical studies where it can be used to guide pace-mapping.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.13637v1" target="_blank" class="paper-title">The Stable Recovery Manifold: Geometric Principles Governing Recoverability in Continual Learning</a>
-                        <span class="paper-date">2026-06-11</span>
-                    </div>
-                                        <span class="paper-comment">📝 9 pages, 8 figures, 8 tables</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Catastrophic forgetting is often viewed as the destruction of previously learned knowledge during sequential learning. Building on the Accessibility Collapse framework, we investigate the geometric structure of recoverability in continual learning. Using Split CIFAR-100 and a sequentially trained ResNet-18, we analyze recoverability, representational drift, and recovery complexity across ten tasks. We introduce Recovery Subspace Dimensionality (k_t), a measure of the minimum number of singular directions required to preserve 90 percent of full probe performance. Contrary to our Recoverability Diffusion hypothesis, recovery dimensionality remains stable throughout training (mean k_t = 8.0) despite substantial representational drift. Principal-angle drift strongly predicts recoverability (r = -0.862), and a simple geometric model explains 82.2 percent of recoverability variance. These findings support the Stable Recovery Manifold hypothesis, suggesting that forgotten knowledge remains compactly decodable despite representational reorganization. The results indicate that catastrophic forgetting is primarily an accessibility and manifold-alignment problem rather than information destruction.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.12655v1" target="_blank" class="paper-title">Amnesia: A Stealthy Replay Attack on Continual Learning Dreams</a>
-                        <span class="paper-date">2026-06-10</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Continual learning (CL) models often use experience replay to reduce catastrophic forgetting, but their robustness to replay sampling interference remains underexplored. Existing CL attacks alter inputs or training pipelines (poisoning/backdoors) and rarely include explicit auditable constraints, limiting realism. Here, auditability means a monitor can verify compliance from sampler-visible telemetry - e.g., logged replay index/label statistics - by checking that the realized replay class histogram stays close to a nominal baseline and that replay rate is unchanged per batch and/or over a rolling window. We study a limited-privilege insider who controls only replay index selection, not pixels, labels, or model parameters, while staying within auditable limits such as queue priorities. We introduce Amnesia, a replay composition attack that maximizes degradation under two budgets: a visibility budget delta bounding the TV/KL divergence from a nominal class histogram p0, and a mass budget f fixing the replay rate. Amnesia has two steps: (i) compute lightweight class utilities, such as EMA loss or confidence, to tilt p0 toward harmful classes; and (ii) project the tilt back into the delta-ball using efficient KL (exponential tilt) or TV (balanced mass redistribution) optimizers. A windowed scheduler enforces rolling audits. Across challenging CL benchmarks and strong replay baselines, Amnesia consistently lowers final accuracy (ACC) and worsens backward transfer (-BWT). The KL variant delivers high impact while remaining largely undetected under multiple audit schemes, including per-batch and rolling-window checks. The TV variant is more damaging but easier to detect, especially under tight per-class constraints. These results expose index-only replay control as a practical, auditable threat surface in CL systems and establish a principled impact-visibility trade-off.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2605.15435v2" target="_blank" class="paper-title">On the Stability of Growth in Structural Plasticity</a>
-                        <span class="paper-date">2026-06-10</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Standard deep-learning pipelines usually choose the network architecture before training and keep it fixed throughout optimization. In contrast, a model can also be adapted by editing its structure during training, for example by pruning existing hidden-neuron units or growing new ones. Although growth is appealing for adaptive and continual systems, we show that it is not simply the inverse of pruning. Pruning selects among units that have participated in training from the start, whereas growth inserts new units into an already specialized optimization trajectory. We isolate this insertion problem and show that newborn units are often forward-active but backward-starved: they participate in the forward computation, yet receive much weaker gradient signal than incumbent units. This disadvantage is minor in small MLP benchmarks, but becomes clear in harder image-classification settings with a convolutional trunk. In these settings, \textsc{Grow} can achieve high final accuracy during the structural-editing procedure, while \textsc{Prune} is stronger when performance is averaged over the training trajectory or when the final sparse network is retrained from scratch. Interventions targeting optimizer state, insertion, selection, and trainability show that improving the integration of newborn units can improve adaptive performance, but does not automatically produce better final subnetworks. In continual-learning benchmarks stressing plasticity loss, \textsc{Grow} becomes competitive mainly when new units have enough time to integrate. Together, these results suggest that \textsc{Grow} should be evaluated not only as an architecture-search operator, but as a time-sensitive optimization process whose success depends on insertion stability.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.08102v2" target="_blank" class="paper-title">Continual Quadruped Robots Coordination via Semantic Skill Discovery</a>
-                        <span class="paper-date">2026-06-10</span>
-                    </div>
-                                        <span class="paper-comment">📝 22 pages, 8 figures, 11 tables. Project page: https://conquer-project.pages.dev/</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Multi-quadruped coordination has attracted increasing attention due to its enhanced payload capacity, broader contact coverage, and improved adaptability to challenging tasks. Existing methods for multi-quadruped manipulation typically focus on predefined or closed task families, often relying on multi-agent reinforcement learning (MARL) to train task-specific coordination policies. However, such methods struggle in open-ended continual learning settings, where tasks arrive sequentially and robots are expected to acquire new coordination skills while reusing previously learned ones without catastrophic forgetting. To address this challenge, we propose Conquer, a semantic skill-library framework that formulates continual multi-quadruped coordination as a retrieve-adapt-update process. First, to accommodate varying team sizes across tasks, we design a team-structured Self-Allies-Goal (SAG) backbone that supports variable-cardinality robot teams by explicitly modeling each robot's own state, teammate context, and task goal. For each incoming task, Conquer constructs a task-level semantic descriptor from pre-execution information and retrieves a relevant skill from the library for adaptation. After successful execution, Conquer updates the skill library by extracting trajectory-level semantic descriptors and organizing them according to semantic distance, thereby enabling continual skill accumulation and cross-task knowledge transfer. Simulation experiments show that Conquer achieves a final average success rate of 95.6%, demonstrating strong forward transfer and negligible catastrophic forgetting. Real-world rollouts on Unitree Go2 teams further validate the deployment feasibility of Conquer for practical multi-quadruped coordination. Simulation and real-robot demonstration videos are available at: https://conquer-project.pages.dev/.</p>
                     </details>
                 </div>
             </div>

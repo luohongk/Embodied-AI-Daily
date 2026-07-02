@@ -600,7 +600,7 @@
                 <a href="LLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
                     <span class="nav-label">LLM</span>
-                    <span class="nav-count">79</span>
+                    <span class="nav-count">80</span>
                 </a>
                 <a href="VLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f97316"></span>
@@ -675,7 +675,7 @@
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Kalman Filter</span>
-                    <span class="nav-count">55</span>
+                    <span class="nav-count">56</span>
                 </a>
                 <a href="Loop-Closure-Detection.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -690,12 +690,12 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">74</span>
+                    <span class="nav-count">70</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">74</span>
+                    <span class="nav-count">75</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -730,7 +730,7 @@
                 <a href="Model-Predictive-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#14b8a6"></span>
                     <span class="nav-label">Model Predictive Control</span>
-                    <span class="nav-count">56</span>
+                    <span class="nav-count">55</span>
                 </a>
                 <a href="Whole-Body-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#06b6d4"></span>
@@ -819,7 +819,7 @@
             <a href="LLM.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
                 <span class="nav-label">LLM</span>
-                <span class="nav-count">79</span>
+                <span class="nav-count">80</span>
             </a>
             <a href="VLM.html" class="nav-item">
                 <span class="nav-dot" style="background:#f97316"></span>
@@ -894,7 +894,7 @@
             <a href="Kalman-Filter.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Kalman Filter</span>
-                <span class="nav-count">55</span>
+                <span class="nav-count">56</span>
             </a>
             <a href="Loop-Closure-Detection.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -909,12 +909,12 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">74</span>
+                <span class="nav-count">70</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">74</span>
+                <span class="nav-count">75</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -949,7 +949,7 @@
             <a href="Model-Predictive-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#14b8a6"></span>
                 <span class="nav-label">Model Predictive Control</span>
-                <span class="nav-count">56</span>
+                <span class="nav-count">55</span>
             </a>
             <a href="Whole-Body-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#06b6d4"></span>
@@ -1028,6 +1028,81 @@
                 <span class="topic-count">79 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.00776v1" target="_blank" class="paper-title">From Prediction Uncertainty to Conformalized Distance Fields for Safe Motion Planning</a>
+                        <span class="paper-date">2026-07-01</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在动态环境中实现安全运动规划时，需要高效处理预测障碍物运动的不确定性，同时避免现有方法因逐障碍物聚合误差而丧失空间一致性并随场景密度增加而扩展性差的问题。&#10;&#10;🛠 **方法**：提出功能共形预测（FCP）框架，直接对整个预测距离场进行共形化，利用残差距离场的低秩性和近似时间不变性，在系数空间分解边界；通过离线拟合功能主成分分析和高斯混合归纳共形过程，再结合在线自适应功能共形更新（AFCP）优化低维向量，最终将边界嵌入采样模型预测控制器（FCP-MPC）作为安全约束。&#10;&#10;✨ **主要贡献**：首次实现分布无关、场级的安全下界，保证任意满足约束的轨迹均被认证安全；在ETH-UCY行人基准和含280个动态障碍物的密集3D四旋翼任务中，FCP-MPC在安全性、可行性和效率间取得更优平衡，每步计算量远低于在线不确定性推理基线，且不受障碍物数量影响。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Safe motion planning in dynamic environments requires reasoning about the uncertainty in predicted obstacle motion without sacrificing real-time performance. Existing conformal approaches conformalize a scalar score that aggregates per-obstacle prediction errors, losing spatial coherence and scaling poorly with scene density. We instead conformalize the entire predicted distance field at once. This functional conformal prediction (FCP) framework yields a distribution-free, field-level lower bound, from which safety follows uniformly: any trajectory satisfying the resulting constraint is certified safe, independent of how the control space is sampled. The key enabler is that the residual distance field is empirically low-rank and approximately time-invariant, which makes the bound decomposable in coefficient space. An envelope is fitted offline via functional PCA and a Gaussian-mixture inductive conformal procedure, then refined online by a lightweight adaptive functional conformal (AFCP) update on a low-dimensional vector. This keeps the per-step cost largely insensitive to obstacle count and retains long-run field coverage under distribution shift. We embed the envelope as a tightened safety constraint in a sampling-based model predictive controller, FCP-MPC. On the ETH--UCY pedestrian benchmarks and a dense 3D quadrotor task with up to 280 dynamic obstacles, FCP-MPC attains a favorable balance of safety, feasibility, and efficiency, reaching goals where pointwise and egocentric conformal baselines become too conservative or too expensive, while keeping per-step computation far below online uncertainty-reasoning baselines.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2511.03591v2" target="_blank" class="paper-title">Manifold-constrained Hamilton-Jacobi Reachability Learning for Decentralized Multi-Agent Motion Planning</a>
+                        <span class="paper-date">2026-07-01</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决多机器人运动规划中，在满足任务约束（如保持杯子直立）的同时避免碰撞的难题，现有方法难以有效处理此类流形约束。  &#10;🛠 **方法**：提出流形约束下的Hamilton-Jacobi可达性（HJR）学习框架，通过求解约束HJR问题获取任务感知安全条件，并将其集成到分散式轨迹优化规划器中。  &#10;✨ **主要贡献**：方法可泛化至多种流形约束任务，高效处理高维多机器人操作问题，实验表明其性能优于现有约束运动规划器，且速度满足实际应用需求。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Safe multi-agent motion planning (MAMP) under task-induced constraints is a critical challenge in robotics. Many real-world scenarios require robots to navigate dynamic environments while adhering to manifold constraints imposed by tasks. For example, service robots must carry cups upright while avoiding collisions with humans or other robots. Despite recent advances in decentralized MAMP for high-dimensional systems, incorporating manifold constraints remains difficult. To address this, we propose a manifold-constrained Hamilton-Jacobi reachability (HJR) learning framework for decentralized MAMP. Our method solves HJR problems under manifold constraints to capture task-aware safety conditions, which are then integrated into a decentralized trajectory optimization planner. This enables robots to generate motion plans that are both safe and task-feasible without requiring assumptions about other agents' policies. Our approach generalizes across diverse manifold-constrained tasks and scales effectively to high-dimensional multi-agent manipulation problems. Experiments show that our method outperforms existing constrained motion planners and operates at speeds suitable for real-world applications. Video demonstrations are available at https://youtu.be/RYcEHMnPTH8 .</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.00444v1" target="_blank" class="paper-title">Search-Based Spatiotemporal and Multi-Robot Motion Planning on Graphs of Space-Time Convex Sets</a>
+                        <span class="paper-date">2026-07-01</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决多机器人在连续空间中随时间变化的狭窄可行区域内的时空运动规划问题，避免碰撞并优化时间效率。  &#10;🛠 **方法**：提出基于时空凸集图（ST-GCS）的框架，将无碰撞区域表示为时空凸集，通过图搜索与连续轨迹优化结合，并引入精确凸分解（ECD）处理动态障碍物与多机器人交互，采用优先级规划与窗口协调策略提升效率。  &#10;✨ **主要贡献**：开发了最佳优先搜索求解器，通过可采纳启发式与支配性检查加速规划；实验表明单/多机器人场景下速度显著优于现有方法，且能快速解决多达100个机器人的大规模问题。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Spatiotemporal motion planning, especially in multi-robot settings, requires robots to reason about collision-free regions that change over time, which is challenging in continuous spaces when feasible regions are transient and geometrically constrained. We present an algorithmic framework based on graphs of space-time convex sets (ST-GCSs), where collision-free regions are represented as convex sets in space-time and trajectories correspond to paths on the graph together with continuous motions within the selected sets. We formulate time-optimal planning on ST-GCSs as a graph-search problem over path-indexed states and develop a best-first search solver that evaluates partial paths via continuous trajectory optimization, guided by admissible heuristics and dominance checks. We further present an Exact Convex Decomposition (ECD) scheme to reserve trajectory occupancies in space-time, enabling unified handling of dynamic obstacles and multi-robot interactions. For multi-robot motion planning, we integrate ST-GCS planning and ECD into prioritized planning methods and introduce a windowed coordination scheme to improve efficiency. Extensive experiments on single-robot and multi-robot problems demonstrate substantial speedups over various planners while maintaining high solution quality, particularly in environments with narrow and transient feasible regions. Large-scale demonstrations further show that the proposed multi-robot motion planner can solve instances with up to $100$ robots within only a few minutes. Project homepage: https://sites.google.com/view/stgcs</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.00326v1" target="_blank" class="paper-title">NeHMO: Neural Hamilton-Jacobi Reachability Learning for Decentralized Safe Multi-Arm Motion Planning</a>
+                        <span class="paper-date">2026-07-01</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决多机械臂运动规划中高维度、耦合空间和复杂碰撞约束带来的实时性与可扩展性挑战，尤其是应对其他机械臂不可预测行为时的安全性问题。&#10;&#10;🛠 **方法**：提出基于神经汉密尔顿-雅可比可达性（HJR）学习的方法，近似一个安全值函数以捕获最坏情况下的臂间安全约束，并构建去中心化轨迹优化框架，利用学习到的HJR表示进行实时规划。&#10;&#10;✨ **主要贡献**：方法具有可扩展性和数据高效性，能泛化至多机械臂系统，并在挑战性多臂运动规划任务中优于现有基线方法。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Safe multi-arm motion planning is a challenging problem in robotics due to its high dimensionality, coupled configuration space, and complex collision constraints. Centralized planners are capable of coordinating all arms but often face scalability limitations, restricting applicability in real-time settings. On the other hand, decentralized methods are scalable and recent deep learning-based approaches have shown promising results. However, these depend on accurate behavior prediction or coordination protocols and may fail when other arms act unpredictably. To address these challenges, we introduce a neural Hamilton-Jacobi Reachability (HJR) learning-based approach to approximate a safety value function that captures worst-case inter-arm safety constraints. We further develop a decentralized trajectory optimization framework that uses the learned HJR representation for real-time planning. The proposed method is scalable and data-efficient, generalizes across multi-manipulator systems, and outperforms state-of-the-art baselines on challenging multi-arm motion planning tasks.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.00215v1" target="_blank" class="paper-title">ELMP: Efficient Learning for Motion Planning via Analytical Policy Gradients</a>
+                        <span class="paper-date">2026-06-30</span>
+                    </div>
+                                        <span class="paper-comment">📝 8 pages, 7 figures, 4 tables</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：神经运动规划器（NMPs）在新环境中适应时，通常需要重新收集大量专家数据集，计算成本过高。&#10;&#10;🛠 **方法**：提出ELMP框架，通过自监督微调直接优化策略，利用可微运动学层结合密集碰撞、目标到达和平滑性目标，替代专家数据生成，并引入点云显式编码工具几何结构。&#10;&#10;✨ **主要贡献**：将单样本适应成本降低约两个数量级，在未见环境中将成功率从57.3%（零样本）提升至89.8%，平均成功率84.8%，冷启动延迟比经典方法低数个数量级，并在真实机器人上验证。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Neural Motion Planners (NMPs) enable fast reactive motion generation, but adapting them to new environments typically requires recollecting large expert datasets, which is computationally prohibitive. We propose ELMP, a framework for data-efficient adaptation via self-supervised fine-tuning. Rather than generating additional expert trajectories with expensive global planners, ELMP directly optimizes the policy through a differentiable kinematic layer using dense collision, target-reaching, and smoothness objectives. This replaces expert data generation with rapid problem sampling, reducing per-sample adaptation cost by roughly two orders of magnitude. To further support robust generalization across changing kinematic chains, we introduce a mechanism to explicitly encode tool geometry via point clouds. Benchmarked against classical and neural baselines, ELMP achieves an 84.8% average success rate with orders-of-magnitude lower cold-start latency than classical methods. In unseen environments, self-supervised fine-tuning improves success rate from 57.3% (zero-shot) to 89.8%, removing the data collection bottleneck. Our approach maintains millisecond-level inference latency and is validated on a physical Franka Emika Panda robot.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2606.31101v1" target="_blank" class="paper-title">Efficient Sim-to-Real Transfer of World-Action Models from Synthetic Priors</a>
@@ -1109,10 +1184,7 @@
                         <span class="paper-date">2026-06-29</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：传统信号灯控制导致车辆频繁启停，增加延误并降低交通效率，尤其在车流量大时问题更突出。  &#10;🛠 **方法**：提出DSIP框架，基于扩散模型进行多智能体运动规划，将交叉口管理从离散相位控制转为连续多车轨迹优化。  &#10;✨ **主要贡献**：在理想通信条件下，DSIP相比固定信号灯和强化学习方法显著降低平均延误并保持更高车速，为无信号交叉口管理提供可扩展、鲁棒的解决方案。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Traffic signal control at urban intersections inherently introduces stop-and-go behavior, resulting in increased delays and reduced traffic efficiency, especially under high traffic demand. With the emergence of connected and automated vehicles (CAVs), trajectory-level coordination has emerged as a high-potential strategy to augment or transcend conventional phase-based management. This paper proposes DSIP (Diffusion-model-based Signal-free Intersection Planner), a multi-agent motion planning framework driven by a generative diffusion process. DSIP shifts the intersection management paradigm from discrete temporal phasing to continuous multi-vehicle trajectory optimization. This work evaluates the theoretical upper-bound performance of this coordination strategy under idealized communication and execution conditions to isolate the core benefits of the diffusion-driven approach. Using the SUMO platform, we evaluate DSIP across diverse four-leg intersection configurations. Experimental results demonstrate that DSIP significantly reduces average delay and maintains higher average speed compared to both fixed-time signal control and state-of-the-art reinforcement-learning-based controllers, particularly in medium- to high-density traffic. These findings suggest that diffusion-based trajectory planning provides a scalable and robust foundation for future autonomous intersection management. By unlocking latent intersection capacity through software-defined coordination, this approach offers a cost-effective pathway to improve urban traffic flow efficiency without requiring physical infrastructure expansion.</p>
@@ -1124,10 +1196,7 @@
                         <span class="paper-date">2026-06-27</span>
                     </div>
                                         <span class="paper-comment">📝 8 pages, accepted to IROS2026, Pittsburgh</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决多接触滚动机器人系统中，在无滑移非完整约束和曲面流形约束下的路径规划难题。  &#10;🛠 **方法**：基于Montana接触坐标公式建立多球滚动运动学模型，在球面接触流形上构建Voronoi路线图，结合球冠障碍物和互斥区域进行流形碰撞检测，并通过流形一致的对数-指数平滑优化离散路径，最终利用正向仿真验证运动可行性。  &#10;✨ **主要贡献**：首次提出统一框架实现多接触无滑移滚动路径规划，支持流形上的碰撞检测与路径平滑，为扩展到非球面几何、动态障碍物及物理机器人实验奠定基础。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Rolling motion planning is challenging because rolling contact imposes nonholonomic constraints and the configuration evolves on a curved manifold. The problem becomes substantially harder in multi-contact settings, where multiple bodies roll without slip and the contact states are coupled. This paper presents a new framework for multi-contact path planning in spherical rolling robotics under no-slip constraints. We first derive a compact kinematic model for multi-sphere rolling using Montana's contact-coordinate formulation, where each contact is represented by a stacked five-state vector. Building on this model, we construct a Voronoi-based roadmap directly on the spherical contact manifold, incorporating spherical-cap obstacles and mutual-exclusion regions via on-manifold collision checking, and refine discrete graph paths using manifold-consistent log-exp smoothing. The resulting smoothed surface paths are then lifted to admissible multi-contact rolling motions through the derived Montana kinematics and validated via forward simulation. We further evaluate feasibility and path quality versus trajectory smoothness, Voronoi seed density, and computation time. The proposed framework provides a foundation for extending the method to non-spherical geometries, time-varying obstacle environments, and experimental validation on physical rolling robotic platforms.</p>
@@ -1139,10 +1208,7 @@
                         <span class="paper-date">2026-06-27</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：如何从人类视频中学习可迁移的机器人操作技能，解决因实体差异、场景变化和机器人可行性约束导致的演示迁移困难。&#10;&#10;🛠 **方法**：提出Human2Any框架，通过物体-物体交互运动表示操作任务，提取与实体无关的交互先验，并结合机器人侧的可行性推理与运动规划进行组合式任务执行。&#10;&#10;✨ **主要贡献**：无需目标任务场景中的真实机器人演示数据，即可将人类视频知识迁移至不同机器人（如Franka桌面机械臂和RBY-1人形机器人），在多种操作场景中实现鲁棒的交互中心操作。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Human videos are a scalable source of supervision for robot manipulation, as they are abundant and naturally capture rich object interactions. However, transferring human demonstrations to robots remains challenging due to embodiment mismatch, scene variation, and robot-specific feasibility constraints. We present Human2Any, a framework for learning reusable object-centric interaction priors from human videos without requiring real-world robot demonstrations in the target task contexts. Human2Any represents manipulation through object-object interaction motion, capturing task-relevant scene changes while abstracting away embodiment-specific details. It composes learned interaction priors with robot-side feasibility reasoning and motion planning, allowing the same human-derived knowledge to adapt to different embodiments, scene geometries, and task contexts. We validate Human2Any across diverse manipulation settings, including real-world experiments on a Franka tabletop setup and an RBY-1 humanoid mobile robot, demonstrating robust interaction-centric manipulation without real-world robot training data. Project website: https://human2any.github.io/.</p>
@@ -1154,10 +1220,7 @@
                         <span class="paper-date">2026-06-26</span>
                     </div>
                                         <span class="paper-comment">📝 IROS 2026. Project Page: https://jimntu.github.io/FailSafe</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有视觉-语言-动作（VLA）模型在执行机器人操作任务时，无法有效应对执行过程中出现的突发故障，且缺乏可用的故障恢复数据。&#10;&#10;🛠 **方法**：提出FailSafe系统，通过自动生成多样化故障案例及可执行的恢复动作，并基于LLaVA-OneVision-7B微调构建FailSafe-VLM模型，使其能检测故障并指导机器人恢复。&#10;&#10;✨ **主要贡献**：FailSafe可扩展至多种模拟器操作任务，生成的故障-恢复数据显著提升三种先进VLA模型（Pi-0-FAST、OpenVLA、OpenVLA-OFT）在ManiSkill任务中的平均性能达22.6%，且能泛化至不同空间配置、视角、物体和机器人形态。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Recent advances in robotic manipulation have integrated low-level robotic control into Vision-Language Models (VLMs), extending them into Vision-Language-Action (VLA) models. Although state-of-the-art VLAs achieve strong performance in downstream robotic applications, supported by large-scale crowd-sourced robot training data, they still inevitably encounter failures during execution. Enabling robots to reason and recover from unpredictable and abrupt failures remains a critical challenge. Existing robotic manipulation datasets, collected in either simulation or the real world, primarily provide only ground-truth trajectories, leaving robots unable to recover once failures occur. Moreover, the few datasets that address failure detection typically offer only textual explanations, which are difficult to utilize directly in VLA models. To address this gap, we introduce FailSafe, a novel failure generation and recovery system that automatically produces diverse failure cases paired with executable recovery actions. FailSafe can be easily adapted to a wide range of manipulation tasks in simulators with motion planning support, enabling scalable creation of failure-action data. To demonstrate its effectiveness, we fine-tune LLaVA-OneVision-7B (LLaVA-OV-7B) to build FailSafe-VLM. Experimental results show that FailSafe-VLM successfully helps robotic arms detect and recover from potential failures, improving the performance of three state-of-the-art VLA models (Pi-0-FAST, OpenVLA, OpenVLA-OFT) by up to 22.6% on average across several tasks in ManiSkill. Furthermore, FailSafe-VLM could generalize across different spatial configurations, camera viewpoints, object and robotic embodiments.</p>
@@ -1169,10 +1232,7 @@
                         <span class="paper-date">2026-06-26</span>
                     </div>
                                         <span class="paper-comment">📝 Accepted to IEEE Signal Processing Letters (SPL), 2026</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有3D占用世界模型过度依赖外部模态或大语言模型，未能充分利用占用表示本身的结构潜力，导致复杂3D场景的表示能力不足。&#10;&#10;🛠 **方法**：提出CascadeOcc，将级联向量量化（VQ）机制集成到自回归框架中，通过粗到细的多尺度架构逐步细化全局结构到细节，并引入TimeMixer捕获多尺度时间依赖，实现空间与时间的双层次建模。&#10;&#10;✨ **主要贡献**：在4D占用预测和运动规划基准上，CascadeOcc在纯视觉方法中达到最优性能，证明优化内在表示是替代依赖外部基础模型的有效方案。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>This letter proposes CascadeOcc, a novel occupancy world model that prioritizes intrinsic structural hierarchy over extrinsic auxiliary modalities for autonomous driving. Occupancy world models -- forecasting the future driving environment and planning the driving trajectory -- effectively bridge perception and planning, but current approaches often heavily rely on external modalities or large language models, failing to fully exploit the inherent structural potential of occupancy representations themselves. To enhance representational capacity for complex 3D scenes, we integrate a cascaded Vector Quantized (VQ) mechanism into an autoregressive framework. Following a coarse-to-fine principle, CascadeOcc progressively refines fine-grained details from global structures through a multi-scale architecture. Additionally, we incorporate a TimeMixer to capture multi-scale temporal dependencies, establishing a dual-hierarchy mechanism in both space and time. Experimental results on 4D occupancy forecasting and motion planning benchmarks demonstrate that CascadeOcc achieves superior performance among vision-centric approaches, validating that optimizing inherent representations is a powerful alternative to relying on external foundation models.</p>
@@ -1944,66 +2004,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Robotics manipulation usually assumes that the shape and pose of the object are known to the robot prior to motion planning. However, precise geometric information is not always available in practice, and pose inference suffers from sensor uncertainties and view occlusion. In this work, we propose a unified model-based geometric framework integrating robotic haptic perception, modeling, and manipulation planning. Our novelties involve: \textit{i)} Introducing Bayesian Optimization (BO) to guide the haptic exploration for object shape inference, where superellipses are used to approximate geometric boundary; \textit{ii)} Adaptive formulation of manipulation potential encoding object geometry for quasi-static robot-object interaction; \textit{iii)} Proposing an online Ordinary Differential Equation (ODE) for real-time pose inference based on model prediction and tactile feedback. We deploy our system on a 2D robotic sorting task, and vary object geometries to validate the robustness and generalizability of our framework in both simulation and a real-world multi-arm setup.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2512.11571v2" target="_blank" class="paper-title">Cross-Entropy Optimization of Physically Grounded Task and Motion Plans</a>
-                        <span class="paper-date">2026-05-29</span>
-                    </div>
-                                        <span class="paper-comment">📝 Accepted for publication in IEEE Robotics and Automation Letters (RA-L)</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Autonomously performing tasks often requires robots to plan high-level discrete actions and continuous low-level motions to realize them. Previous TAMP algorithms have focused mainly on computational performance, completeness, or optimality by making the problem tractable through simplifications and abstractions. However, this comes at the cost of the resulting plans potentially failing to account for the dynamics or complex contacts necessary to reliably perform the task when object manipulation is required. Additionally, approaches that ignore effects of the low-level controllers may not obtain optimal or feasible plan realizations for the real system. We investigate the use of a GPU-parallelized physics simulator to compute realizations of plans with motion controllers, explicitly accounting for dynamics, and considering contacts with the environment. Using cross-entropy optimization, we sample the parameters of the controllers, or actions, to obtain low-cost solutions. Since our approach uses the same controllers as the real system, the robot can directly execute the computed plans. We demonstrate our approach for a set of tasks where the robot is able to exploit the environment's geometry to move an object. Website and code: https://andreumatoses.github.io/research/parallel-realization</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2605.26430v2" target="_blank" class="paper-title">Multi-Robot Box Transport over Different Surfaces with Decentralized Role-based Proportional Control</a>
-                        <span class="paper-date">2026-05-28</span>
-                    </div>
-                                        <span class="paper-comment">📝 Accepted for presentation at the 2026 ASME IDETC-CIE</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Collaborative transport of objects via pushing by multiple robots has many applications, ranging from construction and warehouse environments to post disaster debris clean-up. Achieving collaborative transport over surfaces with different inclination and friction properties however poses unique challenges. To address these challenges, this paper presents an asynchronous decentralized task and motion planning approach for transporting rectangular boxes of varying mass over flat, uphill and downhill terrain. Such a decentralized approach alleviates communication, synchronization and consensus needs and mitigates single point of failure issues. Our approach, called R2P2 or Roles with Rules and Proportional-control Primitive, assigns roles (e.g., push, support and prevent) to robots based on rules cognizant of the mode of manipulation needed (box rotation vs translation); this is followed by either rule-based control or proportional control of robot velocity based on the roles. Each robot is assumed to observe the location and heading of self and the box in executing the role and controls. R2P2 is evaluated with a six-robot team deployed in a simulator built using NVIDIA IsaacSim -- demonstrating generalizability across different surface friction/inclination and box mass scenarios, and better success rate compared to a standard virtual-leader-follower method. R2P2 is also successfully validated with a physical experiment, where it is executed onboard four turtlebots tasked with moving a 1.2 kg box.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2511.04758v2" target="_blank" class="paper-title">ScheduleStream: Temporal Planning with Samplers for GPU-Accelerated Multi-Arm Task and Motion Planning & Scheduling</a>
-                        <span class="paper-date">2026-05-28</span>
-                    </div>
-                                        <span class="paper-comment">📝 Project website: https://schedulestream.github.io</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Bimanual and humanoid robots are appealing because of their human-like ability to leverage multiple arms to efficiently complete tasks. However, controlling multiple arms at once is computationally challenging due to the growth in the hybrid discrete-continuous action space. Task and Motion Planning (TAMP) algorithms can efficiently plan in hybrid spaces but generally produce plans, where only one arm is moving at a time, rather than schedules that allow for parallel arm motion. In order to extend TAMP to produce schedules, we present ScheduleStream, the first general-purpose framework for planning & scheduling with sampling operations. ScheduleStream models temporal dynamics using hybrid durative actions, which can be started asynchronously and persist for a duration that's a function of their parameters. We propose domain-independent algorithms that solve ScheduleStream problems without any application-specific mechanisms. We apply ScheduleStream to Task and Motion Planning & Scheduling (TAMPAS), where we use GPU acceleration within samplers to expedite planning. We compare ScheduleStream algorithms to several ablations in simulation and find that they produce more efficient solutions. We demonstrate ScheduleStream on several real-world bimanual robot tasks at https://schedulestream.github.io.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2508.14610v2" target="_blank" class="paper-title">TRUST-Planner: Topology-guided Robust Trajectory Planner for AAVs with Uncertain Obstacle Spatial-temporal Avoidance</a>
-                        <span class="paper-date">2026-05-28</span>
-                    </div>
-                                        <span class="paper-comment">📝 Accepted by IEEE Transactions on Industrial Electronics (TIE) for publication. The final version will be available online at https://ieeexplore.ieee.org/ after publication</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Despite extensive developments in motion planning of autonomous aerial vehicles (AAVs), existing frameworks faces the challenges of local minima and deadlock in complex dynamic environments, leading to increased collision risks. To address these challenges, we present TRUST-Planner, a topology-guided hierarchical planning framework for robust spatial-temporal obstacle avoidance. In the frontend, a dynamic enhanced visible probabilistic roadmap (DEV-PRM) is proposed to rapidly explore topological paths for global guidance. The backend utilizes a uniform terminal-free minimum control polynomial (UTF-MINCO) and dynamic distance field (DDF) to enable efficient predictive obstacle avoidance and fast parallel computation. Furthermore, an incremental multi-branch trajectory management framework is introduced to enable spatio-temporal topological decision-making, while efficiently leveraging historical information to reduce replanning time. Simulation results show that TRUST-Planner outperforms baseline competitors, achieving a 96\% success rate and millisecond-level computation efficiency in tested complex environments. Real-world experiments further validate the feasibility and practicality of the proposed method.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2507.23270v2" target="_blank" class="paper-title">Simulation-based planning of Motion Sequences for Automated Procedure Optimization in Multi-Robot Assembly Cells</a>
-                        <span class="paper-date">2026-05-28</span>
-                    </div>
-                                        <span class="paper-comment">📝 Accepted for publication at IEEE CASE 2026</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Reconfigurable multi-robot cells offer a promising approach to meet fluctuating assembly demands. However, the recurrent planning of their configurations introduces new challenges, particularly in generating optimized, coordinated multi-robot motion sequences that minimize the assembly duration. This work presents a simulation-based method for generating such optimized sequences. The approach separates assembly steps into task-related core operations and connecting traverse operations. While core operations are constrained and predetermined, traverse operations offer substantial optimization potential. Scheduling the core operations is formulated as an optimization problem, requiring feasible traverse operations to be integrated using a decomposition-based motion planning strategy. Several solution techniques are explored, including a sampling heuristic, tree-based search and gradient-free optimization. For motion planning, a decomposition method is proposed that identifies specific areas in the schedule, which can be solved independently with modified centralized path planning algorithms. The proposed method generates efficient and collision-free multi-robot assembly procedures that outperform a baseline relying on decentralized, robot-individual motion planning. Its effectiveness is demonstrated through simulation experiments.</p>
                     </details>
                 </div>
             </div>

@@ -600,7 +600,7 @@
                 <a href="LLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
                     <span class="nav-label">LLM</span>
-                    <span class="nav-count">79</span>
+                    <span class="nav-count">80</span>
                 </a>
                 <a href="VLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f97316"></span>
@@ -675,7 +675,7 @@
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Kalman Filter</span>
-                    <span class="nav-count">55</span>
+                    <span class="nav-count">56</span>
                 </a>
                 <a href="Loop-Closure-Detection.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -690,12 +690,12 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">74</span>
+                    <span class="nav-count">70</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">74</span>
+                    <span class="nav-count">75</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -730,7 +730,7 @@
                 <a href="Model-Predictive-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#14b8a6"></span>
                     <span class="nav-label">Model Predictive Control</span>
-                    <span class="nav-count">56</span>
+                    <span class="nav-count">55</span>
                 </a>
                 <a href="Whole-Body-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#06b6d4"></span>
@@ -819,7 +819,7 @@
             <a href="LLM.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
                 <span class="nav-label">LLM</span>
-                <span class="nav-count">79</span>
+                <span class="nav-count">80</span>
             </a>
             <a href="VLM.html" class="nav-item">
                 <span class="nav-dot" style="background:#f97316"></span>
@@ -894,7 +894,7 @@
             <a href="Kalman-Filter.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Kalman Filter</span>
-                <span class="nav-count">55</span>
+                <span class="nav-count">56</span>
             </a>
             <a href="Loop-Closure-Detection.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -909,12 +909,12 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">74</span>
+                <span class="nav-count">70</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">74</span>
+                <span class="nav-count">75</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -949,7 +949,7 @@
             <a href="Model-Predictive-Control.html" class="nav-item active">
                 <span class="nav-dot" style="background:#14b8a6"></span>
                 <span class="nav-label">Model Predictive Control</span>
-                <span class="nav-count">56</span>
+                <span class="nav-count">55</span>
             </a>
             <a href="Whole-Body-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#06b6d4"></span>
@@ -1025,9 +1025,39 @@
         <section class="topic-section">
             <div class="topic-header">
                 <span class="topic-badge" style="background:#14b8a6">Model Predictive Control</span>
-                <span class="topic-count">56 papers</span>
+                <span class="topic-count">55 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.00917v1" target="_blank" class="paper-title">Valdi: Value Diffusion World Models</a>
+                        <span class="paper-date">2026-07-01</span>
+                    </div>
+                                        <span class="paper-comment">📝 RLC 2026 WMW</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：扩散模型能有效建模不确定的未来动态，但其迭代推理过程难以用于低延迟的潜在规划，限制了其在模型预测控制（MPC）中的在线应用。&#10;&#10;🛠 **方法**：提出Value Diffusion World Models（Valdi），将潜在扩散动力学模型与MPC的端到端在线训练相结合，在训练和推理时均仅使用单步扩散步骤。&#10;&#10;✨ **主要贡献**：在CarRacing环境中的初步实验表明，Valdi使用单步扩散即可匹配确定性MLP基线的控制性能，同时揭示了预测多模态性与控制性能之间的权衡。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>World models can enable Model Predictive Control (MPC), but this requires dynamics prediction that is both fast enough for online use and expressive enough to represent uncertain futures. Diffusion models offer a natural mechanism for modeling uncertain dynamics, yet their iterative inference procedure makes them difficult to use for low-latency latent planning. We bridge this gap with Value Diffusion World Models (Valdi), combining end-to-end online training for MPC with a latent diffusion dynamics model. In preliminary experiments on the CarRacing environment, we show that Valdi, using a single diffusion step at both training and inference, matches a deterministic MLP baseline. Our experiments expose a trade-off between predictive multimodality and control performance in this setup. Code is available at https://github.com/Kit115/ValueDiffusionWorldModels.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.00776v1" target="_blank" class="paper-title">From Prediction Uncertainty to Conformalized Distance Fields for Safe Motion Planning</a>
+                        <span class="paper-date">2026-07-01</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在动态环境中实现安全运动规划时，需要高效处理预测障碍物运动的不确定性，同时避免现有方法因逐障碍物聚合误差而丧失空间一致性并随场景密度增加而扩展性差的问题。&#10;&#10;🛠 **方法**：提出功能共形预测（FCP）框架，直接对整个预测距离场进行共形化，利用残差距离场的低秩性和近似时间不变性，在系数空间分解边界；通过离线拟合功能主成分分析和高斯混合归纳共形过程，再结合在线自适应功能共形更新（AFCP）优化低维向量，最终将边界嵌入采样模型预测控制器（FCP-MPC）作为安全约束。&#10;&#10;✨ **主要贡献**：首次实现分布无关、场级的安全下界，保证任意满足约束的轨迹均被认证安全；在ETH-UCY行人基准和含280个动态障碍物的密集3D四旋翼任务中，FCP-MPC在安全性、可行性和效率间取得更优平衡，每步计算量远低于在线不确定性推理基线，且不受障碍物数量影响。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Safe motion planning in dynamic environments requires reasoning about the uncertainty in predicted obstacle motion without sacrificing real-time performance. Existing conformal approaches conformalize a scalar score that aggregates per-obstacle prediction errors, losing spatial coherence and scaling poorly with scene density. We instead conformalize the entire predicted distance field at once. This functional conformal prediction (FCP) framework yields a distribution-free, field-level lower bound, from which safety follows uniformly: any trajectory satisfying the resulting constraint is certified safe, independent of how the control space is sampled. The key enabler is that the residual distance field is empirically low-rank and approximately time-invariant, which makes the bound decomposable in coefficient space. An envelope is fitted offline via functional PCA and a Gaussian-mixture inductive conformal procedure, then refined online by a lightweight adaptive functional conformal (AFCP) update on a low-dimensional vector. This keeps the per-step cost largely insensitive to obstacle count and retains long-run field coverage under distribution shift. We embed the envelope as a tightened safety constraint in a sampling-based model predictive controller, FCP-MPC. On the ETH--UCY pedestrian benchmarks and a dense 3D quadrotor task with up to 280 dynamic obstacles, FCP-MPC attains a favorable balance of safety, feasibility, and efficiency, reaching goals where pointwise and egocentric conformal baselines become too conservative or too expensive, while keeping per-step computation far below online uncertainty-reasoning baselines.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2606.32026v1" target="_blank" class="paper-title">AdaJEPA: An Adaptive Latent World Model</a>
@@ -1154,10 +1184,7 @@
                         <span class="paper-date">2026-06-25</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有文本驱动人体运动合成方法在语义忠实度与物理真实性之间存在权衡，基于大语言模型的方法语义理解强但物理约束弱，而物理感知模型物理真实但语义处理能力有限。&#10;&#10;🛠 **方法**：提出ICMPG框架，将运动合成重构为类似模型预测控制的过程，包含两个模块：上下文感知运动生成模块利用大语言模型分解文本指令并生成候选运动序列，模型预测生成模块通过物理仿真和语义对齐评估候选序列，形成闭环优化。&#10;&#10;✨ **主要贡献**：无需任务特定策略重训练即可同时保证语义忠实与物理真实，在标准与零样本开放词汇设置下均优于基线方法，且能灵活集成不同大语言模型骨干，实现更通用可控的文本驱动运动合成。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Synthesizing human motion from textual descriptions is essential for immersive digital applications, yet existing methods face a persistent trade-off between semantic fidelity and physical realism. Large language model (LLM)-based approaches can interpret diverse open-vocabulary instructions and compose high-level action plans, but they often generate motions that violate physical constraints. Physics-aware models improve realism through simulation or control, but they struggle with semantic complexity, fine-grained instructions, and novel concepts. To address this gap, we propose In-Context Model Predictive Generation (ICMPG), a framework that integrates language-model planning with inference-time physical feedback. ICMPG reformulates motion synthesis as a Model Predictive Control (MPC)-like process with two modules. The Context-Aware Motion Generation (CAMG) module uses an LLM as a planner to decompose textual commands and generate candidate motion sequences from motion tokens. The Model Predictive Generation (MPG) module evaluates these candidates through physical simulation and semantic alignment, estimates a composite reward, and selects the best sequence to guide subsequent generation steps. Unlike open-loop generation, this closed-loop refinement enables ICMPG to adapt motions to both the input semantics and the simulated physical environment without task-specific policy retraining. Extensive experiments across standard and zero-shot open-vocabulary settings show that ICMPG generalizes robustly to diverse commands and produces motions that are more physically plausible and semantically faithful than representative baselines on the evaluated benchmarks. The framework bridges semantic interpretation and physical simulation while remaining flexible enough to incorporate different LLM backbones, enabling more versatile and controllable text-driven motion synthesis.</p>
@@ -1169,10 +1196,7 @@
                         <span class="paper-date">2026-06-24</span>
                     </div>
                                         <span class="paper-comment">📝 22 pages, 10 figures</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：强化学习在机器人运动控制中常收敛于局部最优但不可部署的行为（如肢体抖动或躯干滑动），无法产生可用的步态。  &#10;🛠 **方法**：提出MPC-Injection，通过将模型预测控制器（MPC）求解同一马尔可夫决策过程产生的状态转移插入到经验回放缓冲区，引导策略偏向控制器偏好的行为，无需修改奖励函数或添加对抗判别器。  &#10;✨ **主要贡献**：在2D仿真步行器和Go2四足机器人的仿真到真实迁移中，仅用1-2项任务奖励即可产生与21项调优奖励或对抗运动先验方法质量相当的步态，并揭示了注入转移如何通过偏置演员-评论家更新使策略学习到纯强化学习在简单奖励下难以达到的行为。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Reinforcement learning (RL) for locomotion frequently converges to locally optimal but undeployable behaviors, such as vibrating limbs or scooting on the torso, that maximize return without producing a usable gait. We present MPC-Injection, a low-overhead method that steers RL toward a designer-preferred gait by inserting transitions into the replay buffer from a model predictive controller solving the same Markov decision process. Unlike reward shaping, MPC-Injection does not require redesigning the task reward, and unlike adversarial imitation learning, it adds no discriminator, no kinematic retargeting, and no auxiliary objective. Instead, the controller's preferred behavior is transferred to the policy purely through the replay state distribution. On a 2D walker in simulation and with sim-to-real evaluation on a Go2 quadruped, we show that MPC-Injection drives the policy into the controller's behavior basin using a one to two-term task reward, producing gaits qualitatively comparable to those of reward shaping with twenty-one tuned terms and of adversarial motion priors without their discriminator and retargeting overhead. We further analyze how the injected transitions bias actor-critic updates toward controller-visited states, allowing the policy to learn behaviors that pure RL may fail to reach under simple reward functions.</p>
@@ -1692,42 +1716,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Knee rehabilitation exoskeletons must enforce a prescribed joint trajectory while remaining safely compliant with involuntary spasm and voluntary patient effort-objectives in tension for any fixed-gain impedance controller. We present an Impedance Model Predictive Control framework for knee rehabilitation exoskeletons, demonstrated on a series-elastic-actuator (SEA) platform: an algebraic feedforward reduces the knee dynamics to a constant-coefficient scalar double integrator, and a receding-horizon quadratic program (QP) computes corrective torques while enforcing hard range-of-motion, torque, and velocity limits (ISO 13482). A Kalman disturbance state driven by direct SEA-based torque sensing (the series-elastic spring deflection measured through the elastic element - an intrinsic, EMG-free patient-torque estimate, not a separate load cell) gives a nominal offset-free guarantee and, via its sign and the desired-motion direction, sensorless Assist-as-Needed. The constant state matrix permits offline precomputation of the QP cost inverse, enabling 500 Hz operation with a multi-step horizon. Across seven-controller benchmarks (sinusoidal tracking, isometric hold), the 500 Hz Kalman MPC is offset free 0.1 mrad RMS, 0.1 mrad steady-state, 0.2 mrad peak under 15 Nm spasm, versus a 515 mrad steady-state offset for classical impedance at the same stiffness - the direct-measurement channel converging the estimate near-immediately (within a few sampling periods). Without the estimator it realizes a classical impedance (4.8 mrad RMS, 8.3 mrad steady-state). All MPC variants meet the 87 mrad clinical criterion; no classical controller does. The architecture is formulated for the 20 DOF MyoSuite myoLeg via coupling-aware per-joint QPs.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2503.10919v3" target="_blank" class="paper-title">Data-Driven Soft Robot Control via Adiabatic Spectral Submanifolds</a>
-                        <span class="paper-date">2026-06-11</span>
-                    </div>
-                                        <span class="paper-comment">📝 41 pages, 24 figures, IJRR (2026) in press</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>The mechanical complexity of soft robots creates significant challenges for their model-based control. Specifically, linear data-driven models have struggled to control soft robots on complex, spatially extended paths that explore regions with significant nonlinear behavior. To account for these nonlinearities, we develop here a model-predictive control strategy based on the recent theory of adiabatic spectral submanifolds (aSSMs). This theory is applicable because the internal vibrations of heavily overdamped robots decay at a speed that is much faster than the desired speed of the robot along its intended path. In that case, low-dimensional attracting invariant manifolds (aSSMs) emanate from the path and carry the dominant dynamics of the robot. Aided by this recent theory, we devise an aSSM-based model-predictive control scheme purely from data. We demonstrate the effectiveness of our data-driven model in tracking dynamic trajectories across diverse tasks. We validate on high-fidelity, high-dimensional finite-element models of a soft trunk robot and Cosserat-rod-based elastic soft arms, with additional experiments confirming robust performance even in the presence of experimental noise. Notably, we find that five- or six-dimensional aSSM-reduced models outperform the tracking performance of other data-driven modeling methods by a factor up to 10 across all closed-loop control tasks.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.13113v1" target="_blank" class="paper-title">MPC for underactuated spacecraft control with a Lyapunov supervised physics-informed neural network correction layer</a>
-                        <span class="paper-date">2026-06-11</span>
-                    </div>
-                                        <span class="paper-comment">📝 Accepted at SPAICE (AI in and for Space) 2026</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Underactuated spacecraft faces controllability limitations and heightened sensitivity to environmental disturbances, complicating attitude maneuvering and stabilization. Due to the lack of control authority along the underactuated axis, conventional controllers cannot directly stabilize all attitude components and therefore require reference planning strategies. Furthermore, MPC approaches remain sensitive to inertia uncertainty and unmodeled dynamic couplings, resulting in degraded tracking performance under mismatch. To address these issues, we consider a hierarchical architecture integrating three layers: (i) a nonlinear model predictive controller (NMPC) for constraint and underactuation-aware maneuver planning and nominal closed-loop stability under actuator limits; (ii) a physics-informed neural network (PINN) trained offline on simulation data to estimate residual disturbance torques, with loss terms that enforce consistency with rigid-body rotational dynamics; (iii) a Lyapunov-based supervisory safety mechanism that evaluates the learned correction online and bounds or suppresses its influence to preserve the stability properties of the baseline controller. The architecture is evaluated in a high-fidelity simulation environment modelling reaction wheel dynamics, actuator saturation, and environmental disturbances. Monte Carlo studies show statistically significant reductions in steady-state attitude error relative to standalone NMPC while maintaining robust behavior under uncertainty. The supervisory layer ensures graceful degradation to purely model-based control when the learning-based augmentation is unreliable.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2508.12681v3" target="_blank" class="paper-title">Adaptive Model-Predictive Control of a Soft Continuum Robot Using a Physics-Informed Neural Network Based on Cosserat Rod Theory</a>
-                        <span class="paper-date">2026-06-11</span>
-                    </div>
-                                        <span class="paper-comment">📝 Submitted to IEEE Transactions on Robotics, 20 pages, 14 figures</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Dynamic control of soft continuum robots (SCRs) holds great potential for expanding their applications, but remains a challenging problem due to the high computational demands of accurate dynamic models. While data-driven approaches like Koopman-operator-based methods have been proposed, they typically lack adaptability and cannot reconstruct the full robot shape, limiting their applicability. This work introduces a real-time-capable nonlinear model-predictive control (MPC) framework for SCRs based on a domain-decoupled physics-informed neural network (DD-PINN) with adaptable bending stiffness. The DD-PINN serves as a surrogate for the dynamic Cosserat rod model with a speed-up factor of up to 44,000. It is also used within an unscented Kalman filter for estimating the model states and bending compliance from end-effector position measurements. We implement a nonlinear evolutionary MPC running at 70 Hz on the GPU. In simulation, it demonstrates accurate tracking of dynamic trajectories and setpoint control with end-effector position errors below 3 mm (2.3\% of the actuator's length). In real-world experiments, the controller achieves similar accuracy and accelerations up to 3.55 m/s2.</p>
                     </details>
                 </div>
             </div>

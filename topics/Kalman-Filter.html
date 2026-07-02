@@ -600,7 +600,7 @@
                 <a href="LLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
                     <span class="nav-label">LLM</span>
-                    <span class="nav-count">79</span>
+                    <span class="nav-count">80</span>
                 </a>
                 <a href="VLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f97316"></span>
@@ -675,7 +675,7 @@
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Kalman Filter</span>
-                    <span class="nav-count">55</span>
+                    <span class="nav-count">56</span>
                 </a>
                 <a href="Loop-Closure-Detection.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -690,12 +690,12 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">74</span>
+                    <span class="nav-count">70</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">74</span>
+                    <span class="nav-count">75</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -730,7 +730,7 @@
                 <a href="Model-Predictive-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#14b8a6"></span>
                     <span class="nav-label">Model Predictive Control</span>
-                    <span class="nav-count">56</span>
+                    <span class="nav-count">55</span>
                 </a>
                 <a href="Whole-Body-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#06b6d4"></span>
@@ -819,7 +819,7 @@
             <a href="LLM.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
                 <span class="nav-label">LLM</span>
-                <span class="nav-count">79</span>
+                <span class="nav-count">80</span>
             </a>
             <a href="VLM.html" class="nav-item">
                 <span class="nav-dot" style="background:#f97316"></span>
@@ -894,7 +894,7 @@
             <a href="Kalman-Filter.html" class="nav-item active">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Kalman Filter</span>
-                <span class="nav-count">55</span>
+                <span class="nav-count">56</span>
             </a>
             <a href="Loop-Closure-Detection.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -909,12 +909,12 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">74</span>
+                <span class="nav-count">70</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">74</span>
+                <span class="nav-count">75</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -949,7 +949,7 @@
             <a href="Model-Predictive-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#14b8a6"></span>
                 <span class="nav-label">Model Predictive Control</span>
-                <span class="nav-count">56</span>
+                <span class="nav-count">55</span>
             </a>
             <a href="Whole-Body-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#06b6d4"></span>
@@ -1025,9 +1025,54 @@
         <section class="topic-section">
             <div class="topic-header">
                 <span class="topic-badge" style="background:#8b5cf6">Kalman Filter</span>
-                <span class="topic-count">55 papers</span>
+                <span class="topic-count">56 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.00877v1" target="_blank" class="paper-title">Hierarchical Variational Kalman Filtering</a>
+                        <span class="paper-date">2026-07-01</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：传统变分卡尔曼滤波在噪声统计未知时存在过程协方差估计不一致和收敛速度慢的问题，限制了实际应用。&#10;&#10;🛠 **方法**：引入表示无过程噪声状态的代理变量，显式建模和推断过程噪声统计；将传统坐标上升变分推理重构成边缘化最大后验问题，再通过单步超参数拟合，避免内循环迭代并解耦协方差跟踪滤波器设计。&#10;&#10;✨ **主要贡献**：新架构允许使用高阶滤波器进行协方差跟踪和滑动窗口超参数估计，当窗口覆盖全部历史数据时，协方差跟踪估计器本质为零相位滤波。数值仿真验证了该方法相比现有方法具有更快的收敛速度和更高的估计精度。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Traditional variational Kalman filtering with unknown noise statistics suffers from inconsistent process covariance estimation and slow convergence speed, limiting its practical utility. To address these issues, we introduce a surrogate variable representing the process-noise-free state, which enables explicit modeling and inference of process noise statistics. In addition, we reformulate the conventional coordinate ascent variation inference (CAVI) as a marginalized maximum a posteriori problem, followed by a single-step hyperparameter fitting. This reformulation obviates the need for multiple inner iterations inherent to CAVI and decouples the design of the covariance tracking filters. Consequently, this architecture permits the deployment of higher-order filters for covariance tracking and enables sliding-window hyperparameter estimation. Notably, when this window encompasses all historical data, the covariance tracking estimator intrinsically operates as a zero-phase filter. Numerical simulations validate the theoretical framework, demonstrating the enhanced convergence speed and superior estimation accuracy compared with existing methods.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2505.07254v2" target="_blank" class="paper-title">Towards Accurate State Estimation: Motion Dynamics Kalman Filter for 3D Multi-Object Tracking</a>
+                        <span class="paper-date">2026-07-01</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有3D多目标跟踪中的卡尔曼滤波器基于恒定运动假设，忽略了城市交通中物体运动的连续变化，导致遮挡场景下状态估计不准确。&#10;&#10;🛠 **方法**：提出运动动力学卡尔曼滤波器（MD-KF），将连续测量间的运动变化建模为高斯分布，并自适应调整加权运动模型以捕捉这些变化，同时保持单一运动模型的简洁性。&#10;&#10;✨ **主要贡献**：MD-KF在多个数据集上一致优于恒定运动和多模型卡尔曼滤波器，显著降低计算延迟，并在遮挡轨迹估计和静止目标状态稳定性上表现更优。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Precise 3D state estimation in multi-object tracking (MOT) is critical for self-driving cars, particularly for objects occluded. Motion modeling in the Kalman filter with a constant motion assumption is widely used in MOT methods, but it neglects the continuous changes in objects' motion caused by traffic in urban environments. Although recent research introduces a multimodel Kalman filter that incorporates multiple motion models, these approaches incur significant computational overhead from the simultaneous processing of multiple models. To this end, this work introduces a motion-dynamics Kalman filter (MD-KF) that overcomes the constant-motion assumption while preserving the singularity of the motion model. MD-KF models the changes in objects' motion over successive measurements as Gaussian distributions, and adaptively adjusts a weighted motion model to account for these variations. MD-KF consistently outperforms constant and multimodel KF across multiple datasets with a significant reduction in computation latency compared to multimodel approaches. The proposed approach demonstrates its superiority in trajectory estimation during occlusion and state estimation stability for stationary objects.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.00145v1" target="_blank" class="paper-title">Iterated Invariant EKF for 3D Landmark-Aided Inertial Navigation</a>
+                        <span class="paper-date">2026-06-30</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决三维地标辅助惯性导航中经典SO(3)-EKF存在的虚假可观性问题，即滤波器在不可观方向上过度自信导致估计性能下降。  &#10;🛠 **方法**：首次将迭代不变扩展卡尔曼滤波（IterIEKF）应用于基于地标的3D惯性定位，通过确保低噪声条件下状态保持在观测流形上、不确定性限制在切空间内，改进IEKF的测量更新兼容性。  &#10;✨ **主要贡献**：数值仿真表明，IterIEKF在估计精度和一致性上均优于经典SO(3)-EKF、迭代SO(3)-EKF和IEKF。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Inertial navigation systems aided by three-dimensional landmark measurements constitute a fundamental problem in robotic perception and state estimation. Classical SO(3)-based Extended Kalman Filter (SO(3)-EKF) approaches provide practical solutions, but suffer from the false observability problem, in which the filter becomes overconfident in unobservable directions, leading to degraded estimation performance. The Invariant EKF (IEKF) addresses this limitation by reformulating the system dynamics as a group-affine system on a Lie group, although its measurement update does not fully satisfy certain state compatibility properties. More recently, the Iterated Invariant EKF (IterIEKF) was proposed to further improve the IEKF by ensuring, in the low-noise regime, that the estimated state remains on the observed state manifold while the uncertainty is confined to its tangent space. In this work, we formulate and apply the IterIEKF to landmark-based inertial 3D localization for the first time. Through numerical simulations, we show that the proposed approach outperforms the classical SO(3)-EKF, the Iterated SO(3)-EKF, and the IEKF in terms of both estimation accuracy and consistency.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2509.12698v2" target="_blank" class="paper-title">Low-Altitude UAV Tracking via Sensing-Assisted Predictive Beamforming</a>
@@ -1139,10 +1184,7 @@
                         <span class="paper-date">2026-06-29</span>
                     </div>
                                         <span class="paper-comment">📝 31 pages, 26 figures</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在无摄像头或激光雷达的情况下，仅依靠IMU和电机测量实现腿式或轮腿式机器人的可靠里程计，解决IMU漂移和关节速度传感噪声导致的长期定位误差。&#10;&#10;🛠 **方法**：提出一种纯本体感知状态估计器，通过关节力矩估计足端接触力，将可靠接触点视为运动学锚点，利用足地接触记录提供世界坐标系约束抑制漂移；引入高度聚类与时间衰减校正防止高程漂移，对轮腿平台增加有效轮滚动位移与坡度感知方向补偿；可选逆运动学容积卡尔曼滤波提升足端速度观测精度，并通过多接触几何一致性作为软航向先验抑制偏航漂移。&#10;&#10;✨ **主要贡献**：统一适用于四足与轮腿机器人的纯本体感知里程计框架，无需外部传感器即可实现长期稳定的位姿与速度估计，在四种四足平台上验证了有效性。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Reliable odometry for legged robots without cameras or LiDAR remains challenging due to IMU drift and noisy joint velocity sensing. This paper presents a purely proprioceptive state estimator that uses only IMU and motor measurements to estimate body pose and velocity, with a unified formulation applicable to quadruped and wheel-legged robots and extensible to other legged morphologies. The key idea is to treat each reliable contact as a kinematic anchor: joint-torque--based foot wrench estimation selects stance contacts, and the corresponding footfall records provide intermittent world-frame constraints that suppress long-term drift. To prevent elevation drift during extended traversal, we introduce a lightweight height clustering and time-decay correction that snaps newly recorded footfall heights to previously observed support planes. For wheel-legged platforms, the recorded contact is further propagated by effective wheel rolling displacement with shank-motion compensation and a slope-aware rolling direction. To improve foot velocity observations under encoder quantization, we retain an inverse-kinematics cubature Kalman filter as an optional velocity-enhancement module that filters foot-end velocities from joint angles and velocities. The implementation further mitigates yaw drift through multi-contact geometric consistency, which is injected as a soft heading prior rather than as a hard reset of the attitude state. The method is evaluated on four quadruped platforms.</p>
@@ -1154,10 +1196,7 @@
                         <span class="paper-date">2026-06-28</span>
                     </div>
                                         <span class="paper-comment">📝 Index Terms Dead reckoning Extended Kalman Filter GNSS IMU array Land navigation</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：如何利用数百个低成本MEMS惯性传感器组成阵列，在GNSS拒止环境下实现稳健的陆地导航，同时抑制突发性传感器偏差和漂移，且不增加计算负担。&#10;&#10;🛠 **方法**：提出鲁棒惯性传感器阵列融合（RISAF）预滤波框架，在扩展卡尔曼滤波（EKF）预测步骤前，结合动态百分位门控与实时偏差跟踪，对传感器读数进行聚合与异常抑制。&#10;&#10;✨ **主要贡献**：RISAF在仿真和实地测试中显著提升了方位角精度并减少了漂移累积，使低成本MEMS阵列的导航性能接近战术级惯性导航系统。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>We propose a robust Extended Kalman Filter (EKF) architecture for land navigation using an array of hundreds of low-cost micro-electromechanical systems (MEMS) inertial sensors. The main challenges in this setting are bursty sensor-specific bias errors, bias drift, and the need to aggregate many inertial measurements without increasing the computational burden of the navigation filter. To address these challenges, we introduce Robust Inertial Sensor Array Fusion (RISAF), a pre-filtering framework that combines dynamic percentile gating with real-time bias tracking before the EKF prediction step. The proposed aggregation suppresses anomalous sensor readings and compensates for individual sensor drift while preserving the vehicle-level kinematic signal. Because the resulting fused inertial measurements are passed to a standard EKF, the navigation filter retains a minimal state vector and supports real-time execution. We evaluate RISAF through extensive simulations and real-world field tests in GNSS-denied environments, with the data provided as supplementary material. Compared with a baseline that averages the sensor readings, RISAF achieves substantially improved azimuth accuracy and reduced drift accumulation. These results demonstrate that robust fusion of large MEMS inertial arrays can bridge a substantial part of the gap between cost-effective hardware and tactical-grade inertial navigation performance.</p>
@@ -1169,10 +1208,7 @@
                         <span class="paper-date">2026-06-28</span>
                     </div>
                                         <span class="paper-comment">📝 8 pages,International Conference on Intelligent Robots and Systems 2026 (IROS)</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：热成像在强光、低照度、雾天等恶劣环境下表现稳定，但热像仪自动增益控制导致图像全局对比度低、亮度恒常性假设失效，使得传统基于光流跟踪的视觉里程计性能下降。&#10;&#10;🛠 **方法**：提出PL-LIT系统，融合LiDAR、IMU与热/可见光相机，采用在线光度标定模块与深度神经网络提取点线特征，并在误差状态迭代卡尔曼滤波器（ESIKF）中实现紧耦合状态估计，同时引入线特征约束方案与概率热强度体素地图。&#10;&#10;✨ **主要贡献**：在可见光与热红外环境下均表现出通用性与鲁棒性，在长距离热红外数据集上达到最优性能，并基于热成像地图实现实时热异常检测功能，支持实际安全巡检应用。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Thermal imaging is resilient to adverse conditions, such as intense illumination, low-light operation, and fog, and can therefore mitigate odometry degradation when visible-spectrum imagery becomes unreliable. Nevertheless, most thermal cameras employ automatic gain control (AGC), and thermal images often present low global contrast despite containing informative edge structures. These characteristics undermine brightness constancy and cause conventional optical flow tracking-based odometry pipelines that fundamentally rely on the brightness constancy assumption across consecutive frames. To address these issues, we propose a general LiDAR-Inertial-Thermal SLAM system that accommodates both visible-light and thermal cameras. PL-LIT combines an online photometric calibration module with a deep neural network for point-line feature extraction, enabling more stable and repeatable thermal tracking. For state estimation, we design a tightly coupled LiDAR-Inertial-Thermal formulation within an Error-State Iterated Kalman Filter (ESIKF). We further introduce a line-feature constraint scheme ensuring the reliability of geometric constraints across varying thermal appearances. In addition, PL-LIT builds a probabilistic thermal-intensity voxel map, which supports real-time thermal anomaly detection. Extensive experiments demonstrate that PL-LIT exhibits generality and robustness in visible-light environments, achieves state-of-the-art performance on long-range thermal infrared datasets, and provides practical safety inspection functionality based on thermographic mapping.</p>
@@ -1380,6 +1416,18 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Data assimilation (DA) estimates a dynamical system's state from noisy observations. Recent generative models like the ensemble score filter (EnSF) improve DA in high-dimensional nonlinear settings but are computationally expensive. We introduce the ensemble flow filter (EnFF), a training-free, flow matching (FM)-based framework that accelerates sampling and offers flexibility in flow design. EnFF uses Monte Carlo estimators for the marginal flow field, localized guidance for observation assimilation, and utilizes a novel flow path that exploits the Bayesian DA formulation. It generalizes classical filters such as the bootstrap particle filter and ensemble Kalman filter. Experiments on high-dimensional benchmarks demonstrate EnFF's improved cost-accuracy tradeoffs and scalability, highlighting FM's potential for efficient, scalable DA. Code is available at https://github.com/Utah-Math-Data-Science/Data-Assimilation-Flow-Matching.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.00026v1" target="_blank" class="paper-title">Invariant Stochastic Filtering on SE(3) for Inertial-Encoder State Estimation of Serial Rigid Manipulators</a>
+                        <span class="paper-date">2026-06-21</span>
+                    </div>
+                                        <span class="paper-comment">📝 This document is an arXiv preprint posted for open access and citation purposes. It is under review and subject to revision</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>An invariant extended Kalman filter (IEKF) is developed for state estimation of serial rigid manipulators with an arbitrary number of links, formulated entirely within the Lie group SE(3). The group-affine property of the kinematic equations makes the linearised error dynamics autonomous, so the Riccati equation governs the true error covariance rather than a local approximation. A physically separated noise model treats gyroscope and accelerometer channels independently: the accelerometer provides translational twist via gravity-compensated integration, yielding a measurement covariance that scales with the sample interval in exact analogy with process noise discretisation; a state-dependent Coriolis noise term captures gyroscope noise propagating through the nonlinear dynamics, vanishing at rest and growing with twist magnitude. The filter is structured as a modular chain of per-link IEKFs in which the predicted covariance of each link depends on its predecessor only through the Adjoint-transformed posterior, giving linear computational cost in link count. Exponential ultimate boundedness in mean square is established via a Lie algebra Lyapunov function, with per-link bounds chained through the Adjoint operator norm to yield a stability certificate that is modular and scalable to arbitrary chain length. Numerical results validate the design.</p>
                     </details>
                 </div>
                 <div class="paper-card">
@@ -1680,42 +1728,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Data assimilation (DA) for compressible flows with shocks is challenging because many classical DA methods generate spurious oscillations and nonphysical features near uncertain shocks. We focus here on the ensemble Kalman filter (EnKF). We show that the poor performance of the EnKF may be attributed to the bimodal forecast distribution that can arise in the vicinity of an uncertain shock location; this violates the assumptions underpinning the EnKF, which assume a forecast which is close to Gaussian. To address this issue we introduce the new neural EnKF. The basic idea is to systematically embed neural function approximations within ensemble DA by mapping the forecast ensemble of shocked flows to the parameter space (weights and biases) of a deep neural network (NN) and to subsequently perform DA in that space. The nonlinear mapping encodes sharp and smooth flow features in an ensemble of NN parameters. Neural EnKF updates are therefore well-behaved only if the NN parameters vary smoothly within the neural representation of the forecast ensemble. We show that such a smooth variation of network parameters can be enforced via physics-informed transfer learning, and demonstrate that in so-doing the neural EnKF avoids the spurious oscillations and nonphysical features that plague the EnKF. The applicability of the neural EnKF is demonstrated through a series of systematic numerical experiments with the inviscid Burgers' equation, the Sod shock tube, and a two-dimensional blast wave.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2602.20958v2" target="_blank" class="paper-title">EKF-Based Depth Camera and Deep Learning Fusion for UAV-Person Distance Estimation and Following in SAR Operations</a>
-                        <span class="paper-date">2026-06-10</span>
-                    </div>
-                                        <span class="paper-comment">📝 This work has been submitted to the IEEE for possible publication</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Vision-based Unmanned Aerial Vehicles (UAVs) frameworks aid human search tasks by detecting and recognizing specific individuals, then tracking and following them while maintaining a safe distance. A key safety requirement for UAV following is the accurate estimation of the distance between camera and target object under real-world conditions, achieved by fusing multiple image modalities. As part of the system for automatic people detection and face recognition using deep learning, in this paper we present the fusion of depth camera measurements and monocular camera-to-body distance estimation for robust tracking and following. Deep learning based filtering of depth camera data and estimation of camera-to-body distance from a monocular camera are achieved with YOLO-pose, enabling real-time fusion of depth information using the Extended Kalman Filter (EKF) algorithm. The proposed subsystem, designed for use in drones, estimates and measures the distance between the depth camera and the human body keypoints, to maintain the safe distance between the drone and the human target. Our system provides an accurate estimated distance, which has been validated against motion capture ground truth data. The system has been tested in real time indoors, where it reduces the average errors, RMSE and standard deviations of distance estimation up to 15,3% in three tested scenarios. Based on the test results, the EKF fusion-based approach increases the depth detection range by reducing the errors outside the optimal depth camera working range. It also shows improved robustness and precision in challenging conditions, such as reflections and poor visibility, making it suitable for SAR.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.10971v1" target="_blank" class="paper-title">Resilient Navigation for Autonomous Farm Robots by Leveraging Jerk-Augmented Models with IMU-Only Disturbance Rejection</a>
-                        <span class="paper-date">2026-06-09</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Precise state estimation for navigation of autonomous agricultural robots is often compromised by sensor outages (GNSS/LiDAR/Visual) and high-frequency vibrations inherent in off-road environments. This paper proposes a robust navigation algorithm based on a jerk-augmented Extended Kalman Filter (EKF) integrated with a Multiple Tuning Factor (MTF) adaptation method. Unlike standard EKF approaches that assume constant measurement noise, our method dynamically adjusts the measurement covariance matrix in real-time, allowing the system to cope with sudden disturbances and sensor outliers. We evaluate the algorithm using real-world data from a Salin247 autonomous robot. Results demonstrate that jerk-augmentation combined with MTF adaptation significantly reduces 3D position Root Mean Square Error (RMSE) compared to baseline EKF models, providing superior dead-reckoning capabilities.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2505.08213v2" target="_blank" class="paper-title">HandCept: A Visual-Inertial Fusion Framework for Accurate Proprioception in Dexterous Hands</a>
-                        <span class="paper-date">2026-06-09</span>
-                    </div>
-                                        <span class="paper-comment">📝 8 pages, 7 figures, conference</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>As robotics progresses toward general manipulation, dexterous hands are becoming increasingly critical. However, proprioception in dexterous hands remains a bottleneck due to limitations in volume and generality. In this work, we present HandCept, the first visual-inertial proprioception framework designed to overcome the challenges of traditional joint angle estimation methods for dexterous hands. HandCept addresses the difficulty of achieving accurate and robust joint angle estimation in dynamic environments where both visual and inertial measurements are prone to noise and drift. It leverages a zero-shot learning approach using a wrist-mounted RGB-D camera and 9-axis IMUs, fused in real time via a latency-free Extended Kalman Filter (EKF). Our results show that HandCept achieves joint angle estimation errors generally between $2^{\circ}$ and $4^{\circ}$ without observable drift, outperforming visual-only and inertial-only methods. Furthermore, we validate the stability and uniformity of the IMU system, demonstrating that a common base frame across IMUs simplifies system calibration. To support sim-to-real transfer, we also open-source our high-fidelity rendering pipeline, which is essential for training without real-world ground truth. This work offers a robust, generalizable solution for proprioception in dexterous hands, with significant implications for robotic manipulation and human-robot interaction. https://github.com/huangjund/blenderYCB</p>
                     </details>
                 </div>
             </div>
