@@ -2,7 +2,7 @@
 
 > **80 papers** fetched from arXiv for the keyword **Vision and Language Navigation**.
 
-> Last update: 2026-07-04
+> Last update: 2026-07-05
 
 [← Back to README](../README.md)
 
