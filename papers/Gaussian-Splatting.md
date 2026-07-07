@@ -2,7 +2,7 @@
 
 > **80 papers** fetched from arXiv for the keyword **Gaussian Splatting**.
 
-> Last update: 2026-07-07
+> Last update: 2026-07-08
 
 [← Back to README](../README.md)
 
