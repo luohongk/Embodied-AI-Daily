@@ -600,7 +600,7 @@
                 <a href="LLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
                     <span class="nav-label">LLM</span>
-                    <span class="nav-count">79</span>
+                    <span class="nav-count">77</span>
                 </a>
                 <a href="VLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f97316"></span>
@@ -675,7 +675,7 @@
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Kalman Filter</span>
-                    <span class="nav-count">56</span>
+                    <span class="nav-count">55</span>
                 </a>
                 <a href="Loop-Closure-Detection.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -690,12 +690,12 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">70</span>
+                    <span class="nav-count">68</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">77</span>
+                    <span class="nav-count">74</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -730,7 +730,7 @@
                 <a href="Model-Predictive-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#14b8a6"></span>
                     <span class="nav-label">Model Predictive Control</span>
-                    <span class="nav-count">53</span>
+                    <span class="nav-count">52</span>
                 </a>
                 <a href="Whole-Body-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#06b6d4"></span>
@@ -819,7 +819,7 @@
             <a href="LLM.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
                 <span class="nav-label">LLM</span>
-                <span class="nav-count">79</span>
+                <span class="nav-count">77</span>
             </a>
             <a href="VLM.html" class="nav-item">
                 <span class="nav-dot" style="background:#f97316"></span>
@@ -894,7 +894,7 @@
             <a href="Kalman-Filter.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Kalman Filter</span>
-                <span class="nav-count">56</span>
+                <span class="nav-count">55</span>
             </a>
             <a href="Loop-Closure-Detection.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -909,12 +909,12 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">70</span>
+                <span class="nav-count">68</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">77</span>
+                <span class="nav-count">74</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -949,7 +949,7 @@
             <a href="Model-Predictive-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#14b8a6"></span>
                 <span class="nav-label">Model Predictive Control</span>
-                <span class="nav-count">53</span>
+                <span class="nav-count">52</span>
             </a>
             <a href="Whole-Body-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#06b6d4"></span>
@@ -1028,6 +1028,36 @@
                 <span class="topic-count">80 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.07139v1" target="_blank" class="paper-title">Disturbance-aware Motion Planning for Over-actuated Underwater Vehicles Exploiting Actuation Redundancy for High-fidelity 3D Reconstruction</a>
+                        <span class="paper-date">2026-07-08</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：水下机器人作业时，高功率推进器会搅动沉积物并引发湍流，导致传感器输入图像质量下降，影响三维重建精度。传统控制器仅优化运动跟踪与稳定性，未考虑推进器动作对感知的干扰。&#10;&#10;🛠 **方法**：利用八推进器ROV的过驱动冗余特性，在保持相同运动的前提下，搜索推进器分配的空域解，最小化目标区域的预测扰动。采用基于致动盘理论并考虑方向衰减的推进器尾流代理模型（经PIV验证），结合实时冗余解析分配器（10 Hz频率，每次求解45 ms）。&#10;&#10;✨ **主要贡献**：在440次试验中，将目标区域粒子速度降低67%（p&lt;0.001），三维重建RMSE较未感知扰动的方法改善55%（1.9±0.4 mm vs 4.3±1.8 mm），重建成功率达98.5%。支持自主扫描与操作员辅助检查两种模式。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Underwater robots often operate near delicate targets where high-power thrusters resuspend sediments and induce turbulence, degrading image quality at the sensor input. Conventional controllers optimize vehicle-centric objectives, such as tracking and stability, without accounting for the impact of actuation on sensing. We address this actuation-to-perception coupling by exploiting redundancy in over-actuated platforms. For an eight-thruster ROV, multiple thrust allocations can yield the same motion; we search this null space to minimize predicted disturbance in a task-relevant target region while enforcing motion constraints. Our method uses a control-oriented thruster-wake proxy derived from actuator-disk theory with directional attenuation and validated by PIV ($R^2 = 0.99$ near the wake axis; $R^2 > 0.82$ in the primary wake region), together with a real-time redundancy-resolving allocator running at 10 Hz (45 ms/solve). Across 440 trials, the approach reduces target-region particle velocity by 67% ($p < 0.001$), improves 3D reconstruction RMSE by 55% versus a disturbance-unaware baseline ($1.9 \pm 0.4$ mm vs. $4.3 \pm 1.8$ mm), and achieves a 98.5% reconstruction success rate. The framework supports autonomous scanning, which is quantitatively evaluated, and operator-assisted inspection, which is demonstrated in the supplementary materials.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.06989v1" target="_blank" class="paper-title">Ace! Motion Planning of Professional-Level Table Tennis Serves with a Robot Arm</a>
+                        <span class="paper-date">2026-07-08</span>
+                    </div>
+                                        <span class="paper-comment">📝 8 pages, 4 figures</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决机器人实现专业级乒乓球发球的技术难题，包括从无旋转球生成高旋转、精确瞄准及多目标优化。  &#10;🛠 **方法**：结合运动基元、模型预测控制与贝叶斯优化，生成符合官方规则的发球动作。  &#10;✨ **主要贡献**：机器人发球旋转速度最高达550 rad/s、球速达6.7 m/s，达到甚至超越精英运动员水平，且具备广泛可控的变化性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Table tennis, a dynamic, compact, and popular sport, has received significant attention as a robotics benchmark over the last decades. Most of the research has focused on the rally aspect - returning an incoming ball - requiring high-speed vision, agile motion planning, and tight closed-loop control. However, the other component of table tennis gameplay - the serve - is comparatively a quite unexplored research problem, that in fact requires pushing physics modeling and control to the extremes. Achieving competitive serves with a robot presents domain-specific challenges, such as high-spin generation from a spinless ball, precise aiming, or multi-objective optimization. In this work, we present a novel approach for generating official rule-compliant serves by combining motion primitives, Model Predictive Control, and Bayesian Optimization. Serves generated in this way offer a wide and controllable variation of spins of up to 550 rad/s, and speeds of up to 6.7 m/s, matching and even surpassing those of elite table tennis players.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2607.06499v1" target="_blank" class="paper-title">Clustering-Embedded Model Predictive Path Integral Control: Avoiding Averaging-Induced Failure and Enabling Efficient Cluster Selection for Dynamic Obstacles</a>
@@ -1154,10 +1184,7 @@
                         <span class="paper-date">2026-07-03</span>
                     </div>
                                         <span class="paper-comment">📝 8 pages</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有基于扩散模型的运动规划方法依赖固定长度的路径点序列，导致模型分辨率依赖性强，无法实现跨分辨率的零样本泛化。&#10;&#10;🛠 **方法**：提出FSD-MP，将轨迹建模为连续函数，在函数空间中进行扩散；在谱域定义基于Matérn型协方差噪声的模式正向过程，并用边界兼容的离散正弦变换傅里叶神经算子（DST-FNO）参数化逆向过程，以保持不同分辨率下的起止约束。&#10;&#10;✨ **主要贡献**：在2D点机器人和7-DoF Franka机械臂规划基准上，FSD-MP在训练分辨率下达到竞争性能，并能零样本泛化至高达16倍的分辨率，无需重新训练，实现了离散化不变的规划行为。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Diffusion-based motion planners have demonstrated strong performance in generating diverse and high-quality robot trajectories in cluttered environments with multiple feasible solutions. However, existing approaches typically operate on fixed-length waypoint sequences, making the learned model resolution-dependent, thereby preventing zero-shot generalization across resolutions. In this work, we propose Function-Space Diffusion for Motion Planning (FSD-MP), a diffusion-based motion planner that models trajectories as continuous functions and performs diffusion directly in function space, achieving discretization-invariant trajectory generation. We define a mode-wise forward process in the spectral domain, driven by Gaussian noise with a Matérn-type covariance, and parameterize the reverse process with a boundary-compatible Discrete Sine Transform-based Fourier Neural Operator (DST-FNO) that preserves start-goal constraints across resolutions. We evaluate FSD-MP on 2D point robot and 7-DoF Franka manipulator planning benchmarks. Our method achieves competitive planning performance at the training resolution and generalizes zero-shot across resolutions up to 16$\times$ higher, preserving consistent planning behavior without retraining. These results demonstrate that function-space diffusion provides an effective framework for discretization-invariant motion planning.</p>
@@ -1169,10 +1196,7 @@
                         <span class="paper-date">2026-07-03</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决连续时间随机系统在过程与测量不确定性下的运动规划问题，确保安全与性能的概率性保证，尤其避免离散时间采样中遗漏的区间内机会约束违规。&#10;&#10;🛠 **方法**：提出离线混合信念传播模型，结合连续时间ODE与离散卡尔曼滤波更新；引入基于信念障碍函数的段级概率验证器，用于连续轨迹段的安全检查。&#10;&#10;✨ **主要贡献**：首次在采样信念规划中统一处理连续时间不确定性传播与安全约束，集成至RRT和SST规划器后，在窄通道等场景中成功率和约束执行鲁棒性显著优于离散时间方法。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>We address sampling-based motion planning for continuous-time stochastic systems under process and measurement uncertainty, with probabilistic guarantees on safety and performance. The robot dynamics are modeled as a continuous-time linear stochastic differential equation, while sensor measurements arrive at discrete time instants. We derive an offline hybrid belief propagation model in which the belief evolves according to continuous-time ODEs between measurements and undergoes discrete Kalman filter update jumps at measurement times. To ensure safety, we introduce a belief-barrier-function-based safety checker for segment-level probabilistic verification. This enables the planner to certify safety over entire continuous trajectory segments and detect inter-sample chance-constraint violations that are missed by conventional node-based checks. Together, these components provide a principled framework for sampling-based belief planning that accounts for both continuous-time uncertainty propagation and continuous-time safety requirements. We integrate the method with RRT and SST planners and evaluate it across multiple benchmark environments. The results show that the proposed method achieves high success rates and robust enforcement of chance constraints, including in narrow-passage scenarios where discrete-time counterparts fail due to missed inter-sample unsafe behavior.</p>
@@ -1992,30 +2016,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>In robotic manipulation, the tight coupling between grasping and motion planning often obscures the true source of failure, leading to inefficient trial-and-error. To enable efficient long-horizon manipulation, we propose GTP-FA (Grasp-Then-Plan with Failure Attribution), a task-oriented two-stage grasp-then-plan framework that generates grasp candidates and performs downstream motion planning conditioned on the selected grasp. Given a failed manipulation trajectory, we learn a failure attribution model that generalizes to unseen grasps and produces a stable distribution over failure modes for diagnosis-guided optimization. Based on these attribution results, we then optimize both modules in a diagnosis-driven manner: on the grasping side, we inject task-level priors and risk penalties into grasp candidate scoring and optimization to suppress unstable or task-incompatible grasps; on the planning side, we target high-risk initial states through data collection and fine-tuning to address genuine planning bottlenecks. We evaluate the proposed framework in both simulation and real-robot experiments, and show that GTP-FA improves the corresponding base learners across RL, IL, diffusion-policy, and VLA-based settings, achieving substantially higher overall task success rates.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.03296v1" target="_blank" class="paper-title">Bridging Predictive Uncertainty and Safe Action: Sample-Conditioned Differentiable Planning for Autonomous Driving</a>
-                        <span class="paper-date">2026-06-02</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Complex, dynamic, and interactive driving environments pose significant challenges for autonomous driving, primarily due to the pervasive uncertainty of surrounding traffic. A fundamental bottleneck in current systems is the disconnect between highly expressive uncertainty modeling and interpretable, safe motion planning. In this paper, we propose a novel sample-conditioned differentiable planning framework that bridges this gap by explicitly incorporating diffusion-generated future trajectories into the optimization process. Rather than compressing predictions into a single deterministic future or relying on black-box end-to-end architectures, our approach leverages a conditional diffusion model to generate a diverse set of plausible future scenarios. Crucially, these samples are directly fed into a differentiable planner, which explicitly mitigates predictive uncertainty via an empirical Conditional Value-at-Risk (CVaR) tail-risk constraint. This allows the planner to optimize a physically interpretable trajectory that is robust to rare yet safety-critical interactions. Furthermore, we introduce a directed graph representation for scene context that yields substantial improvements in both predictive effectiveness and computational efficiency. Validated through extensive open-loop and closed-loop evaluations on the Waymo Open Motion and Argoverse 2 datasets, our framework significantly outperforms state-of-the-art baselines in safety, efficiency, and ride comfort.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.02677v1" target="_blank" class="paper-title">Motion Planning in Dynamic Environments: A Survey from Classical to Modern Methods</a>
-                        <span class="paper-date">2026-06-01</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Motion planning in dynamic environments requires robots to continuously adapt their paths in response to environmental changes for safe and uninterrupted navigation. While many surveys have reviewed planning in static settings, systematic reviews focused on dynamic environments remain limited. This paper presents a comprehensive survey of 138 works, primarily published between 2015 and 2025, spanning both classical and learning-based approaches. The motion planning methods are grouped into five categories based on the concepts of sampling, graph search, model predictive control, learning, and additional classical local planning approaches, including velocity obstacles, potential fields and dynamic windows. The learning techniques include supervised learning and reinforcement learning. We also discuss the role of dynamic perception in motion planning, covering techniques for detecting and modeling moving obstacles using cameras, LiDAR, and event-based sensors. The survey analyzes the principles, strengths, and limitations of each method, with particular attention to challenges unique to dynamic environments, such as prediction uncertainty, human-robot interaction, and the freezing robot problem. The survey provides researchers with a structured understanding of motion planning methods in dynamic environments.</p>
                     </details>
                 </div>
             </div>

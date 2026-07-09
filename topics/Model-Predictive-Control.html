@@ -600,7 +600,7 @@
                 <a href="LLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
                     <span class="nav-label">LLM</span>
-                    <span class="nav-count">79</span>
+                    <span class="nav-count">77</span>
                 </a>
                 <a href="VLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f97316"></span>
@@ -675,7 +675,7 @@
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Kalman Filter</span>
-                    <span class="nav-count">56</span>
+                    <span class="nav-count">55</span>
                 </a>
                 <a href="Loop-Closure-Detection.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -690,12 +690,12 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">70</span>
+                    <span class="nav-count">68</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">77</span>
+                    <span class="nav-count">74</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -730,7 +730,7 @@
                 <a href="Model-Predictive-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#14b8a6"></span>
                     <span class="nav-label">Model Predictive Control</span>
-                    <span class="nav-count">53</span>
+                    <span class="nav-count">52</span>
                 </a>
                 <a href="Whole-Body-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#06b6d4"></span>
@@ -819,7 +819,7 @@
             <a href="LLM.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
                 <span class="nav-label">LLM</span>
-                <span class="nav-count">79</span>
+                <span class="nav-count">77</span>
             </a>
             <a href="VLM.html" class="nav-item">
                 <span class="nav-dot" style="background:#f97316"></span>
@@ -894,7 +894,7 @@
             <a href="Kalman-Filter.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Kalman Filter</span>
-                <span class="nav-count">56</span>
+                <span class="nav-count">55</span>
             </a>
             <a href="Loop-Closure-Detection.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -909,12 +909,12 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">70</span>
+                <span class="nav-count">68</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">77</span>
+                <span class="nav-count">74</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -949,7 +949,7 @@
             <a href="Model-Predictive-Control.html" class="nav-item active">
                 <span class="nav-dot" style="background:#14b8a6"></span>
                 <span class="nav-label">Model Predictive Control</span>
-                <span class="nav-count">53</span>
+                <span class="nav-count">52</span>
             </a>
             <a href="Whole-Body-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#06b6d4"></span>
@@ -1025,9 +1025,54 @@
         <section class="topic-section">
             <div class="topic-header">
                 <span class="topic-badge" style="background:#14b8a6">Model Predictive Control</span>
-                <span class="topic-count">53 papers</span>
+                <span class="topic-count">52 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.07252v1" target="_blank" class="paper-title">Safe Reinforcement Learning using Ideas from Model Predictive Control</a>
+                        <span class="paper-date">2026-07-08</span>
+                    </div>
+                                        <span class="paper-comment">📝 Accepted at Eurocast 2026</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在强化学习的主动探索阶段，如何确保物理系统（如机器人）严格满足硬性安全约束，避免因违反机械极限造成不可逆损伤。&#10;&#10;🛠 **方法**：提出一个通用框架，将深度强化学习（DRL）的自适应性与模型预测控制（MPC）的形式化安全保证相结合。通过离线MPC计算定义可行的状态-动作空间，并在训练和部署时利用安全滤波器将RL智能体的即时动作投影到该全局验证的安全集合内。&#10;&#10;✨ **主要贡献**：在非线性单自由度实验室平台上进行了系统评估，成功实现了物理硬件上的安全探索和稳定的策略收敛，验证了该方法在保证严格安全约束的同时保持高性能控制的有效性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Reinforcement learning (RL) enables the synthesis of control policies directly from data, making it highly appealing for complex cyber-physical systems (CPSs) and robotics. A persistent challenge, however, is ensuring strict, hard safety constraints during the active learning phase. In real-world physical systems, violating mechanical limits can cause irreversible damage, necessitating that exploration remains strictly within safe operational regions. We propose a generalized framework that combines the adaptive, high-performance nature of deep reinforcement learning (DRL) with the formal safety guarantees of model predictive control (MPC). Using a mathematical model of the system dynamics, offline MPC computations define a feasible state-action space, representing all safe combinations of system states and control inputs that guarantee constraint satisfaction. During training and deployment, the RL agent's instantaneous actions are projected onto this globally verified feasible set via a safety filter. We systematically evaluate our generalized approach on a non-linear 1-DoF laboratory testbed, demonstrating successful exploration and stable policy convergence on physical hardware.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.06989v1" target="_blank" class="paper-title">Ace! Motion Planning of Professional-Level Table Tennis Serves with a Robot Arm</a>
+                        <span class="paper-date">2026-07-08</span>
+                    </div>
+                                        <span class="paper-comment">📝 8 pages, 4 figures</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决机器人实现专业级乒乓球发球的技术难题，包括从无旋转球生成高旋转、精确瞄准及多目标优化。  &#10;🛠 **方法**：结合运动基元、模型预测控制与贝叶斯优化，生成符合官方规则的发球动作。  &#10;✨ **主要贡献**：机器人发球旋转速度最高达550 rad/s、球速达6.7 m/s，达到甚至超越精英运动员水平，且具备广泛可控的变化性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Table tennis, a dynamic, compact, and popular sport, has received significant attention as a robotics benchmark over the last decades. Most of the research has focused on the rally aspect - returning an incoming ball - requiring high-speed vision, agile motion planning, and tight closed-loop control. However, the other component of table tennis gameplay - the serve - is comparatively a quite unexplored research problem, that in fact requires pushing physics modeling and control to the extremes. Achieving competitive serves with a robot presents domain-specific challenges, such as high-spin generation from a spinless ball, precise aiming, or multi-objective optimization. In this work, we present a novel approach for generating official rule-compliant serves by combining motion primitives, Model Predictive Control, and Bayesian Optimization. Serves generated in this way offer a wide and controllable variation of spins of up to 550 rad/s, and speeds of up to 6.7 m/s, matching and even surpassing those of elite table tennis players.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.06950v1" target="_blank" class="paper-title">Residual-Conservative Model Predictive Path Integral Control</a>
+                        <span class="paper-date">2026-07-08</span>
+                    </div>
+                                        <span class="paper-comment">📝 9 pages, 3 figures, 2 tables. Companion paper in the MPPI closed-loop reliability and robustness series</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：传统采样型模型预测控制（MPPI）在模型与实际系统不匹配时，使用固定约束惩罚无法自适应调整安全性，导致控制效果下降。&#10;&#10;🛠 **方法**：提出残差保守型MPPI（RC-MPPI），通过在线利用预测-执行残差动态调节三个耦合机制：残差依赖的约束收紧、自适应安全-代价整形，以及通过探索收缩和温度松弛实现的残差自适应采样调制。&#10;&#10;✨ **主要贡献**：理论推导了在Lipschitz动力学和次高斯扰动下约束违反的概率界，证明自适应机制随残差增大可降低违反概率；在LTI点质量和平面2R机械臂仿真中，相比原始MPPI显著提升了安全裕度、成功率和控制效率。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Sampling-based model predictive control methods handle nonlinear dynamics and complex cost landscapes through Monte Carlo rollouts, yet typically employ fixed constraint penalties that do not adapt to model-plant mismatch. This paper proposes Residual-Conservative Model Predictive Path Integral Control (RC-MPPI), a sampling-based MPC framework that modulates safety conservatism online using the prediction-execution residual. RC-MPPI combines three coupled mechanisms: residual-dependent constraint tightening, adaptive safety-cost shaping, and residual-adaptive sampling modulation through exploration contraction and temperature relaxation. The temperature adaptation reflects a key insight: when the model is inaccurate, rollout cost evaluations become unreliable, and increasing temperature reduces overcommitment to apparent cost rankings. Under Lipschitz dynamics and sub-Gaussian disturbances, we derive probabilistic bounds on constraint violation and show that the joint effect of the adaptive mechanisms reduces violation probability as the residual grows. A rollout-cost uncertainty analysis further shows that model-plant mismatch perturbs MPPI importance weights in proportion to residual magnitude and inversely with temperature, providing theoretical justification for residual-adaptive temperature relaxation. Simulations on an LTI point-mass system and a planar 2R manipulator show improved safety margin, success rate, and control efficiency compared with vanilla MPPI under significant model-plant mismatch.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2607.06123v1" target="_blank" class="paper-title">MP-MPPI: A Motion Primitive Guided Sampling-Based Optimizer for Model Predictive Control</a>
@@ -1139,10 +1184,7 @@
                         <span class="paper-date">2026-07-05</span>
                     </div>
                                         <span class="paper-comment">📝 13 pages, 5 figures, 3 tables</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在障碍密集环境中，基于优化的局部规划与控制需要高效评估碰撞避免约束，但计算负载常成为控制周期瓶颈。  &#10;🛠 **方法**：提出多边形符号距离函数（PSDF），通过无权重、无分支的张量化几何管线实现GPU批量执行与自动微分，并嵌入基于序列二次规划的模型预测控制（PSDF-MPC），分离CPU/GPU计算。  &#10;✨ **主要贡献**：PSDF在几何精度与计算效率间取得平衡，微基准测试显示其符号距离查询性能优于基线；闭环仿真与真实导航实验证明PSDF-MPC在密集多边形环境中保持实时可行性与鲁棒碰撞避免。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Optimization-based local planning and control require high-rate collision-avoidance constraint evaluation over a prediction horizon. In obstacle-dense environments, where feasible space is limited and the constraints become increasingly complex, the computational workload often dominates the control-cycle runtime. The resulting bottleneck motivates collision-avoidance constraints that combine computational efficiency with geometric fidelity. The proposed Polygonal Signed Distance Function (PSDF) is a geometry-exact signed distance function between a convex polygonal robot footprint and obstacles represented by their boundary edges. It is implemented as a weight-free, branch-free tensorized geometric pipeline enabling batched GPU execution and automatic differentiation. The PSDF is embedded into model predictive control by locally linearizing the stage-wise safety constraints within a sequential quadratic programming-based real-time iteration scheme, yielding the PSDF-embedded model predictive controller (PSDF-MPC). The design separates CPU/GPU computation so that the GPU evaluates batched PSDF values and gradients while the CPU solves a sparse quadratic program whose dimension is determined by system dimensions and horizon length, not by obstacle features. Microbenchmarks show that PSDF scales favorably against signed-distance query baselines. Closed-loop simulated and real-world navigation experiments, including comparisons with optimization-based baselines, demonstrate that PSDF-MPC maintains real-time feasibility and robust collision avoidance in dense polygonal environments.</p>
@@ -1154,10 +1196,7 @@
                         <span class="paper-date">2026-07-05</span>
                     </div>
                                         <span class="paper-comment">📝 12th 2026 International Conference on Control, Decision and Information Technologies (CoDIT 2026)</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在自动驾驶路径规划中，如何同时保证路径的安全性、舒适性、动态可行性以及计算效率。  &#10;🛠 **方法**：提出一种顺序路径规划框架，先通过图搜索（Dijkstra算法）生成粗略路径，再基于该路径构建空间变化的凸侧向安全走廊，将避障约束转化为连续可行性约束，最后通过模型预测控制（MPC）优化路径，并惩罚横向偏移的三阶空间导数以提升平滑性。  &#10;✨ **主要贡献**：在直道和弯道多场景超车测试中，该方法相比多项式拟合与二次规划方法，显著降低了横向加速度、曲率和冲击度，同时计算成本在直道和弯道上分别降低28.08%和29.52%，验证了图搜索与MPC结合在结构化环境中平衡平滑性与效率的有效性。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Path planning is a fundamental component of autonomous vehicles, where achieving safe, comfortable, and dynamically feasible paths while ensuring computational efficiency remains a significant challenge. This paper presents a sequential path planning framework in which a rough path obtained from graph search is explicitly exploited to guide a Model Predictive Control (MPC)-based path refinement. A rough path is first obtained via Dijkstra search on a discretized grid and is then used to construct a spatially varying convex lateral safety corridor that explicitly captures obstacle avoidance constraints, transforming discrete obstacle avoidance decisions into continuous feasibility constraints for optimization. Within this corridor, an MPC problem is formulated to refine the path, enabling efficient optimization while maintaining path smoothness by penalizing the third-order spatial derivative of the lateral offset over a prediction horizon. The proposed algorithm is evaluated in multiple overtaking scenarios on both straight and curved roads, including cases with single and multiple target vehicles, using high-fidelity environment simulations (i.e., CarMaker). Compared with the previous study, which used polynomial fitting and a quadratic programming method, the proposed approach consistently achieves lower lateral acceleration, curvature, and jerk while reducing computational cost by 28.08% on straight roads and 29.52% on curved roads. These results demonstrate that exploiting graph-search structure within an MPC formulation provides an effective balance between path smoothness and computational efficiency for autonomous vehicles in structured driving environments.</p>
@@ -1169,10 +1208,7 @@
                         <span class="paper-date">2026-07-04</span>
                     </div>
                                         <span class="paper-comment">📝 The authors' electronic preprint version of an article accepted to IEEE Transactions on Automatic Control</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有控制系统的Koopman算子方法依赖显式的字典或输入参数化，限制了模型在无限维空间中的灵活性和高维系统的适用性。&#10;&#10;🛠 **方法**：在再生核希尔伯特空间中提出无参数化的Koopman复合算子表示框架，利用不同模型表示间的等价性统一无限维回归与算子学习，并通过草图技术提升高维系统的可扩展性。&#10;&#10;✨ **主要贡献**：实现了无限维空间中的任意精度有限秩近似，无需预先限制函数或输入跨度；数值实验表明在高维场景下预测精度显著优于双线性EDMD，且学习模型可直接与线性参数变化技术结合用于模型预测控制。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>This paper presents a novel Koopman composition operator representation framework for control systems in reproducing kernel Hilbert spaces (RKHSs) that is free of explicit dictionary or input parametrizations. By establishing fundamental equivalences between different model representations, we are able to close the gap of control system operator learning and infinite-dimensional regression, enabling various empirical estimators and the connection to the well-understood learning theory in RKHSs under one unified framework. Consequently, our proposed framework allows for arbitrarily accurate finite-rank approximations in infinite-dimensional spaces and leads to finite-dimensional predictors without a priori restrictions to a finite span of functions or inputs. To enable applications to high-dimensional control systems, we improve the scalability of our proposed control Koopman operator estimates by utilizing sketching techniques. Numerical experiments demonstrate superior prediction accuracy compared to bilinear EDMD, especially in high dimensions. Finally, we show that our learned models are readily interfaced with linear-parameter-varying techniques for model predictive control.</p>
@@ -1644,54 +1680,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Load transportation with quadruped robots is strongly affected by the dynamics of the physical interface between the robot and the load. Passive spring-based arms reduce weight and complexity compared to active manipulators, but their spring-damper dynamics can introduce oscillatory forces that degrade locomotion stability. This paper derives an extended Zero Moment Point (ZMP) formulation that includes passive payload-interface dynamics, relating stiffness, damping, and payload mass to the stability margin. The analysis shows that underdamped configurations can resonate with locomotion harmonics. Based on this insight, we augment a Single Rigid Body Dynamics model with passive subsystem dynamics and integrate it into a Model Predictive Control framework. In simulation, the proposed controller reduces stability violations by up to $10\times$, from $7.0\%$ to $0.7\%$, and increase locomotion efficiency by lowering horizontal ground reaction force effort by up to $15\%$ compared to a nominal baseline. Hardware experiments with a $2\,\mathrm{kg}$ payload show stable locomotion under pull-release disturbances where the nominal controller fails. The same model also enables end-effector tracking through passive arm dynamics without direct arm actuation.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2512.21109v2" target="_blank" class="paper-title">Robust and Efficient MuJoCo-based Model Predictive Control via Web of Affine Spaces Derivatives</a>
-                        <span class="paper-date">2026-06-17</span>
-                    </div>
-                                        <span class="paper-comment">📝 Accepted to 2026 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2026)</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>MuJoCo is a powerful and efficient physics simulator widely used in robotics. One common way it is applied in practice is through Model Predictive Control (MPC), which uses repeated rollouts of the simulator to optimize future actions and generate responsive control policies in real time. To make this process more accessible, the open source library MuJoCo MPC (MJPC) provides ready-to-use MPC algorithms and implementations built directly on top of the MuJoCo simulator. However, MJPC relies on finite differencing (FD) to compute derivatives through the underlying MuJoCo simulator, which is often a key bottleneck that can make it prohibitively costly for time-sensitive tasks, especially in high-DOF systems or complex scenes. In this paper, we introduce the use of Web of Affine Spaces (WASP) derivatives within MJPC as a drop-in replacement for FD. WASP is a recently developed approach for efficiently computing sequences of accurate derivative approximations. By reusing information from prior, related derivative calculations, WASP accelerates and stabilizes the computation of new derivatives, making it especially well suited for MPC's iterative, fine-grained updates over time. We evaluate WASP across a diverse suite of MJPC tasks spanning multiple robot embodiments. Our results suggest that WASP derivatives are particularly effective in MJPC: it integrates seamlessly across tasks, delivers consistently robust performance, and achieves up to a 2$\mathsf{x}$ speedup compared to an FD backend when used with derivative-based planners, such as iLQG. In addition, WASP-based MPC outperforms MJPC's stochastic sampling-based planners on our evaluation tasks, offering both greater efficiency and reliability. To support adoption and future research, we release an open-source implementation of MJPC with WASP derivatives fully integrated.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2602.01700v2" target="_blank" class="paper-title">Tilt-Ropter: A Fully Actuated Hybrid Aerial-Terrestrial Vehicle with Tilt Rotors and Passive Wheels</a>
-                        <span class="paper-date">2026-06-17</span>
-                    </div>
-                                        <span class="paper-comment">📝 8 pages, 10 figures. Accepted by the IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2026)</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>In this work, we present Tilt-Ropter, a fully actuated hybrid aerial-terrestrial vehicle (HATV) that integrates tilt rotors with passive wheels to enable efficient multi-modal locomotion. Unlike conventional underactuated HATVs, the fully actuated design of Tilt-Ropter allows decoupled force and torque control, improving maneuverability and ground locomotion efficiency. A unified nonlinear model predictive controller (NMPC) is developed to track reference trajectories, enforce non-holonomic constraints, and accommodate contact effects across locomotion modes, while ensuring actuator feasibility through dedicated control allocation. To address complex wheel-ground dynamics, an external wrench estimator is incorporated to provide real-time interaction wrench estimates. The system is validated through simulation and real-world experiments, including seamless air-ground transitions and trajectory tracking tasks. Experimental results demonstrate low tracking errors in both modes and reveal a 92.8% reduction in power consumption during ground locomotion compared to flight, highlighting the platform's suitability for long-duration missions in energy-constrained environments.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.18630v1" target="_blank" class="paper-title">DNN Koopman-Based Deviation Compensation for UGV Path Tracking Control on Coupled Slope and Potholed Road</a>
-                        <span class="paper-date">2026-06-17</span>
-                    </div>
-                                        <span class="paper-comment">📝 22 pages, 13 figures</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Unmanned ground vehicles (UGVs) operating in off-road scenarios are confronted with complex terrain disturbances that can substantially degrade path tracking performance. To address this challenge, this paper proposes a deep neural network (DNN) Koopman-based deviation compensation strategy for UGV path tracking control. Firstly, based on the vehicle dynamic function on coupled slope, an adaptive forgetting recursive least squares method with decoupled error terms is designed to estimate tire cornering stiffness. On this basis, a Laguerre model predictive control (LMPC) path tracking control strategy is designed by incorporating Laguerre functions, which can reduce computational resource usage while maintaining reliable tracking performance across different coupled slope scenarios. Then, by integrating Koopman operator theory with DNN, a DNN Koopman (DK) path deviation compensation method is proposed, which significantly improves the path tracking accuracy of UGV under potholed road disturbances. Furthermore, an event-triggered parallel cooperative (EPC) compensation mechanism that couples LMPC with DK is established based on compensation activation criteria and credibility verification. This mechanism improves path tracking accuracy on potholed road while ensuring the feasibility of overall steering command and stability of vehicle after DK compensation. Finally, a hardware-in-the-loop (HiL) experimental platform is constructed for validation. Experimental results demonstrate that the proposed UGV path tracking strategy improves tracking performance by more than 11.5% across multiple operating conditions.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2604.03208v2" target="_blank" class="paper-title">Hierarchical Planning with Latent World Models</a>
-                        <span class="paper-date">2026-06-16</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>World models are a promising path to zero-shot embodied control through planning. However, existing world model planners struggle on long-horizon, multi-stage tasks: prediction errors compound and naive search is exponential in the planning horizon. Hierarchy mitigates both by decomposing tasks into shorter, tractable subproblems; yet prior hierarchical approaches either amortize control into task-specific policies (hierarchical RL) or assume low-dimensional states and known dynamics (classical hierarchical MPC). We present Hierarchical Planning with Latent World Models (HWM), an architecture and planning paradigm for hierarchical model predictive control (MPC) directly on visual world models trained solely via next-latent prediction. HWM learns world models at multiple temporal scales within a shared latent space, so predictions from the long-horizon model serve as subgoals for the short-horizon model via latent matching, without task-specific rewards, skill learning, or hierarchical policies. To keep long-horizon search tractable, HWM learns an action encoder that compresses primitive action chunks into latent macro-actions. On real-world Franka manipulation, HWM solves pick-and-place from a single goal image at 70% success vs. 0% for single-level planning. Across simulated push manipulation and maze navigation, HWM consistently improves performance on long-horizon tasks while requiring up to 3x less planning compute.</p>
                     </details>
                 </div>
             </div>
