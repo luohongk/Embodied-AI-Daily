@@ -590,7 +590,7 @@
                 <a href="World-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">World Model</span>
-                    <span class="nav-count">76</span>
+                    <span class="nav-count">77</span>
                 </a>
                 <a href="3D-Foundation-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
@@ -600,7 +600,7 @@
                 <a href="LLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
                     <span class="nav-label">LLM</span>
-                    <span class="nav-count">77</span>
+                    <span class="nav-count">78</span>
                 </a>
                 <a href="VLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f97316"></span>
@@ -690,12 +690,12 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">68</span>
+                    <span class="nav-count">69</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">74</span>
+                    <span class="nav-count">76</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -730,7 +730,7 @@
                 <a href="Model-Predictive-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#14b8a6"></span>
                     <span class="nav-label">Model Predictive Control</span>
-                    <span class="nav-count">52</span>
+                    <span class="nav-count">53</span>
                 </a>
                 <a href="Whole-Body-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#06b6d4"></span>
@@ -809,7 +809,7 @@
             <a href="World-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">World Model</span>
-                <span class="nav-count">76</span>
+                <span class="nav-count">77</span>
             </a>
             <a href="3D-Foundation-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
@@ -819,7 +819,7 @@
             <a href="LLM.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
                 <span class="nav-label">LLM</span>
-                <span class="nav-count">77</span>
+                <span class="nav-count">78</span>
             </a>
             <a href="VLM.html" class="nav-item">
                 <span class="nav-dot" style="background:#f97316"></span>
@@ -909,12 +909,12 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">68</span>
+                <span class="nav-count">69</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">74</span>
+                <span class="nav-count">76</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -949,7 +949,7 @@
             <a href="Model-Predictive-Control.html" class="nav-item active">
                 <span class="nav-dot" style="background:#14b8a6"></span>
                 <span class="nav-label">Model Predictive Control</span>
-                <span class="nav-count">52</span>
+                <span class="nav-count">53</span>
             </a>
             <a href="Whole-Body-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#06b6d4"></span>
@@ -1025,9 +1025,24 @@
         <section class="topic-section">
             <div class="topic-header">
                 <span class="topic-badge" style="background:#14b8a6">Model Predictive Control</span>
-                <span class="topic-count">52 papers</span>
+                <span class="topic-count">53 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2602.01385v2" target="_blank" class="paper-title">TriphiBot: A Triphibious Robot Combining FOC-based Propulsion with Eccentric Design</a>
+                        <span class="paper-date">2026-07-08</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有三栖机器人多局限于双域运动，且存在机械复杂度高、地面/水下推进效率低的问题，难以高效实现空中、陆地和水下三域运动及跨域切换。&#10;&#10;🛠 **方法**：提出TriphiBot机器人，采用四旋翼结构结合两个被动轮的极简设计，通过偏心重心（CoG）设计使推力自然对齐运动方向以提升地面/水下效率，并基于磁场定向控制（FOC）构建统一推进系统，解决空气与水中推力匹配问题，同时设计混合非线性模型预测控制（HNMPC）-PID系统实现稳定多域运动与无缝切换。&#10;&#10;✨ **主要贡献**：首次实现无需额外执行器的三栖机器人极简设计，通过偏心重心和FOC推进系统显著提升地面/水下运动效率与跨介质推力适应性，实验验证了多域运动、跨域切换能力及推进系统的有效性与鲁棒性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Triphibious robots capable of multi-domain motion and cross-domain transitions are promising to handle complex tasks across diverse environments. However, existing designs primarily focus on dual-mode platforms, and some designs suffer from high mechanical complexity or low propulsion efficiency, which limits their application. In this paper, we propose a novel triphibious robot capable of aerial, terrestrial, and aquatic motion, by a minimalist design combining a quadcopter structure with two passive wheels, without extra actuators. To address inefficiency of ground-support motion (moving on land/seabed) for quadcopter based designs, we introduce an eccentric Center of Gravity (CoG) design that inherently aligns thrust with motion, enhancing efficiency without specialized mechanical transformation designs. Furthermore, to address the drastic differences in motion control caused by different fluids (air and water), we develop a unified propulsion system based on Field-Oriented Control (FOC). This method resolves torque matching issues and enables precise, rapid bidirectional thrust across different mediums. Grounded in the perspective of living condition and ground support, we analyse the robot's dynamics and propose a Hybrid Nonlinear Model Predictive Control (HNMPC)-PID control system to ensure stable multi-domain motion and seamless transitions. Experimental results validate the robot's multi-domain motion and cross-mode transition capability, along with the efficiency and adaptability of the proposed propulsion system.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2607.07252v1" target="_blank" class="paper-title">Safe Reinforcement Learning using Ideas from Model Predictive Control</a>
@@ -1169,10 +1184,7 @@
                         <span class="paper-date">2026-07-05</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：针对离散时间线性系统，如何自动生成控制输入以严格满足带有显式时间约束的时序任务规范（TWTL），并确保鲁棒性。&#10;&#10;🛠 **方法**：将TWTL公式的鲁棒满足性编码为混合整数线性约束，构建混合整数线性规划（MILP）最大化鲁棒度；提出开环优化与闭环模型预测控制（MPC）两种框架，其中MPC利用TWTL的确定性有限自动机（DFA）动态调整预测时域。&#10;&#10;✨ **主要贡献**：首次将TWTL鲁棒性度量的优化问题转化为MILP求解，证明正鲁棒度可保证布尔满足性；提出任务自适应时域MPC方法，通过仅预测当前子任务剩余窗口显著降低计算成本。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Time Window Temporal Logic (TWTL) is a rich specification language for cyber-physical systems that can compactly express sequential tasks with explicit timing constraints. In this paper, we consider the problem of synthesizing control inputs for discrete-time linear systems subject to TWTL task specifications. Building on the quantitative semantics (robustness) recently introduced for TWTL in [1], we encode the robust satisfaction of a TWTL formula as a set of Mixed-Integer Linear constraints and pose synthesis as a Mixed Integer Linear Program (MILP) that maximizes the robustness degree. We prove that any feasible solution with positive objective value guarantees Boolean satisfaction of the specification. We address two synthesis settings: an \emph{open-loop} formulation that optimizes the full control sequence from the initial state, and a \emph{closed-loop} receding-horizon Model Predictive Controller (MPC) formulation that re-solves the MILP at each step using the current measured state. A key feature of our MPC formulation is a \emph{task-adaptive horizon} that exploits the TWTL Deterministic Finite Automaton (DFA) to determine the active sub-task at each step, limiting the prediction horizon to the remaining window of the current task rather than the full formula horizon, this makes each re-solve significantly cheaper than the initial open-loop solve.</p>

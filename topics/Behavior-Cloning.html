@@ -590,7 +590,7 @@
                 <a href="World-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">World Model</span>
-                    <span class="nav-count">76</span>
+                    <span class="nav-count">77</span>
                 </a>
                 <a href="3D-Foundation-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
@@ -600,7 +600,7 @@
                 <a href="LLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
                     <span class="nav-label">LLM</span>
-                    <span class="nav-count">77</span>
+                    <span class="nav-count">78</span>
                 </a>
                 <a href="VLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f97316"></span>
@@ -690,12 +690,12 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">68</span>
+                    <span class="nav-count">69</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">74</span>
+                    <span class="nav-count">76</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -730,7 +730,7 @@
                 <a href="Model-Predictive-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#14b8a6"></span>
                     <span class="nav-label">Model Predictive Control</span>
-                    <span class="nav-count">52</span>
+                    <span class="nav-count">53</span>
                 </a>
                 <a href="Whole-Body-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#06b6d4"></span>
@@ -809,7 +809,7 @@
             <a href="World-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">World Model</span>
-                <span class="nav-count">76</span>
+                <span class="nav-count">77</span>
             </a>
             <a href="3D-Foundation-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
@@ -819,7 +819,7 @@
             <a href="LLM.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
                 <span class="nav-label">LLM</span>
-                <span class="nav-count">77</span>
+                <span class="nav-count">78</span>
             </a>
             <a href="VLM.html" class="nav-item">
                 <span class="nav-dot" style="background:#f97316"></span>
@@ -909,12 +909,12 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">68</span>
+                <span class="nav-count">69</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">74</span>
+                <span class="nav-count">76</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -949,7 +949,7 @@
             <a href="Model-Predictive-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#14b8a6"></span>
                 <span class="nav-label">Model Predictive Control</span>
-                <span class="nav-count">52</span>
+                <span class="nav-count">53</span>
             </a>
             <a href="Whole-Body-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#06b6d4"></span>
@@ -1028,6 +1028,36 @@
                 <span class="topic-count">80 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2603.15136v2" target="_blank" class="paper-title">Safe Flow Q-Learning: Offline Safe Reinforcement Learning with Reachability-Based Flow Policies</a>
+                        <span class="paper-date">2026-07-09</span>
+                    </div>
+                                        <span class="paper-comment">📝 21 pages, 6 figures, 3 tables; First 2 authors have contributed equally; Paper accepted at Reinforcement Learning Conference (RLC) 2026</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决离线安全强化学习中，现有方法依赖软期望成本目标或迭代生成推理，难以满足安全关键场景实时控制需求的问题。&#10;&#10;🛠 **方法**：提出Safe Flow Q-Learning（SafeFQL），将流策略（Flow Policy）扩展到离线安全RL，结合基于Hamilton-Jacobi可达性的安全价值函数与高效一步流策略，通过自洽Bellman递归学习安全价值，并用行为克隆训练流策略，蒸馏为一步动作生成器，避免部署时的拒绝采样。&#10;&#10;✨ **主要贡献**：相比扩散式安全生成基线，SafeFQL以适度增加离线训练成本为代价，显著降低推理延迟；在船导航和Safety Gymnasium MuJoCo任务中，性能匹配或超越现有离线安全RL方法，同时大幅减少约束违反。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Offline safe reinforcement learning (RL) seeks reward-maximizing policies from static datasets under strict safety constraints. Existing methods often rely on soft expected-cost objectives or iterative generative inference, which can be insufficient for safety-critical real-time control. We propose Safe Flow Q-Learning (SafeFQL), which extends FQL to safe offline RL by combining a Hamilton--Jacobi reachability-inspired safety value function with an efficient one-step flow policy. SafeFQL learns the safety value via a self-consistency Bellman recursion, trains a flow policy by behavioral cloning, and distills it into a one-step actor for reward-maximizing safe action selection without rejection sampling at deployment. Empirically, SafeFQL trades modestly higher offline training cost for substantially lower inference latency than diffusion-style safe generative baselines, which is advantageous for real-time safety-critical deployment. Across boat navigation, and Safety Gymnasium MuJoCo tasks, SafeFQL matches or exceeds prior offline safe RL performance while substantially reducing constraint violations.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.08436v1" target="_blank" class="paper-title">EgoWAM: World Action Models Beyond Pixels with In-the-Wild Egocentric Human Data</a>
+                        <span class="paper-date">2026-07-08</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：如何利用第一人称人类视频数据训练机器人策略，同时避免人类形态、头部运动等不可迁移因素对机器人控制的干扰。&#10;&#10;🛠 **方法**：提出EgoWAM框架，通过世界动作模型（WAM）让策略不仅预测动作，还预测场景演化。对比三种世界表示（像素、DINO特征、3D运动流），在固定策略骨干、动作头和数据集混合的条件下进行人-机器人协同训练。&#10;&#10;✨ **主要贡献**：发现WAM协同训练比行为克隆更有效地利用野外人类数据；DINO表示将分布外物体和场景泛化能力提升最多4倍，3D运动流将域内性能提升20-30%，而像素级预测迁移效果最差。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Egocentric human data offers scalable supervision for robot manipulation. However, behavior cloning entangles transferable content like objects, scenes, and task semantics, with non-transferable factors like human morphology, head motion, and behavioral style. We study whether World Action Models (WAMs) provide a better training signal by requiring policies to predict not only actions, but also how the scene evolves. The central question is what world representation best enables human-to-robot transfer. We hypothesize that an effective world target should abstract appearance, capture agent-invariant physical effects, and separate camera motion from environment change. We introduce EgoWAM, a controlled human-robot co-training framework that fixes the policy backbone, action head, and data mixture while varying only the world prediction target, comparing Pixel, DINO, and 3D motion flow. Across three real-world bimanual tasks, WAM co-training scales more effectively with in-the-wild egocentric human data than behavior cloning. Pixel-based prediction transfers weakly, while DINO and 3D flow yield substantial gains: DINO improves out-of-distribution object and scene generalization by up to 4x, and 3D flow improves in-domain performance by 20-30%. More details: https://gatech-rl2.github.io/egowam.github.io</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2603.05296v2" target="_blank" class="paper-title">Latent Policy Steering through One-Step Flow Policies</a>
@@ -1154,10 +1184,7 @@
                         <span class="paper-date">2026-07-05</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="好的，作为一名人工智能研究与学术论文分析专家，我将严格按照您的要求，对论文《SutureFormer: Learning Surgical Trajectories via Goal-conditioned Offline RL in Pixel Space》进行详细的中文解读。&#10;&#10;---&#10;&#10;## 0. 概览（Concise Summary）&#10;&#10;- **主题（Topic）**：机器人辅助手术中的手术针轨迹预测，具体针对内窥镜视频中的缝合操作。&#10;- **问题（Problem）**：现有方法（如监督学习、模仿学习）难以有效利用稀疏的关键帧标注，且无法显式建模连续运动步骤间的依赖关系，导致预测精度和泛化能力不足。同时，依赖机器人运动学信号的方法限制了其在缺乏此类数据的传统腹腔镜视频中的应用。&#10;- **方法（Method）**：提出 **SutureFormer**，一种基于**目标条件（Goal-conditioned）的离线强化学习（Offline RL）** 框架。它将针尖轨迹预测重新定义为像素空间中的序贯决策问题，利用**三次样条插值**将稀疏标注转化为密集奖励信号，并通过**保守Q学习（CQL）** 结合**行为克隆（BC）** 正则化，从专家演示中学习稳定策略。&#10;- **创新（Innovation）**：&#10;    1.  首次将手术轨迹预测建模为像素空间中的**视觉导航任务**，并采用离线强化学习求解。&#10;    2.  提出一种**目标条件策略**，在训练时利用真实未来关键点作为引导，在推理时通过多项式外推生成伪引导，实现了从稀疏标注中学习。&#10;    3.  设计了一个结合**离散方向**和**连续步长**的动作空间，以及一个包含**置信度加权**的奖励函数，有效利用了插值产生的密集但可靠性不同的监督信号。&#10;- **意义（Significance）**：该方法仅需9个关键帧标注和视频帧，无需机器人运动学数据，显著降低了数据标注成本和对特定平台的依赖。在包含1158条轨迹的真实临床数据集上，平均位移误差（ADE）相比最强基线降低了58.6%，展示了离线强化学习在手术轨迹预测领域的巨大潜力，有望为经验不足的外科医生提供实时、精准的决策支持。&#10;- **一句话总结**：SutureFormer 通过将手术针轨迹预测转化为像素空间中的目标条件离线强化学习问题，利用稀疏标注学习密集奖励，实现了高精度、强鲁棒性的轨迹预测。&#10;&#10;## 1. 研究动机（Motivation）&#10;&#10;- **解决的问题**：在机器人辅助缝合手术中，准确预测手术针的未来轨迹对于实现**前瞻性规划、实时引导和更安全的运动执行**至关重要。然而，现有方法面临两大挑战：&#10;    1.  **数据依赖性强**：许多方法依赖机器人运动学信号（如关节角度、末端执行器位姿），这些数据仅在特定机器人平台（如达芬奇研究套件）上可用，无法泛化到海量的传统腹腔镜视频数据中。&#10;    2.  **监督信号稀疏且建模不足**：现有方法（如监督学习、扩散模型）要么将轨迹预测视为一次性回归问题，要么依赖缓慢的自回归解码，但都未能显式建模相邻运动步骤间的**序贯依赖性**。此外，手动标注的稀疏关键帧（如每段轨迹仅9个点）提供的监督信号不足，难以支撑长程轨迹的精确学习。&#10;- **为什么重要**：解决这些问题可以打破对昂贵机器人平台的依赖，利用海量的临床视频数据，开发出更通用、更精准的手术辅助系统。这有助于将专家经验转化为可学习的决策支持，提升手术质量，尤其对经验不足的外科医生意义重大。&#10;- **挑战在哪里**：&#10;    - **从视觉到动作的映射**：直接从图像像素预测精细的针尖运动是一个高维、非线性的挑战。&#10;    - **稀疏监督下的长程预测**：如何从极少的标注点中学习到连续、平滑且符合物理规律的完整轨迹。&#10;    - **离线学习**：模型只能从固定的专家演示数据集中学习，无法与环境交互，这要求算法必须能够稳健地处理分布外动作，避免价值估计过高。&#10;&#10;## 2. 创新点（Innovation）&#10;&#10;论文的核心创新在于将手术轨迹预测问题重新定义为**像素空间中的目标条件离线强化学习**问题，具体创新点如下：&#10;&#10;1.  **问题重构（Problem Reformulation）**：将针尖视为一个在像素空间中逐步移动的**智能体（Agent）**。这自然捕捉了运动的连续性，并允许显式建模像素级的**状态转移**。这是与现有回归或生成式方法最根本的区别。&#10;2.  **目标条件离线RL框架（Goal-conditioned Offline RL Framework）**：&#10;    - **目标引导**：提出一个**目标条件策略**。在训练时，使用真实未来关键点作为“目标”来引导每一步的动作选择；在推理时，通过多项式外推生成“伪目标”来替代。这有效地将稀疏的专家知识转化为每一步的导航信号。&#10;    - **奖励密化**：利用**三次样条插值**，将9个稀疏关键帧标注转化为所有中间帧的密集参考位置，并据此设计了一个**置信度加权**的奖励函数。这解决了稀疏监督信号难以直接用于RL的问题，使模型能从有限的专家引导中学习。&#10;3.  **混合动作空间（Hybrid Action Space）**：动作被分解为**离散方向**（8个45°方向 + 1个静止动作）和**连续步长**。这种设计既保留了价值学习所需的离散性，又提供了连续运动所需的平滑性。&#10;4.  **稳定的离线训练策略**：采用**保守Q学习（CQL）** 结合**行为克隆（BC）** 正则化，有效抑制了离线RL中常见的对分布外动作的价值高估问题，并稳定了策略学习。同时，通过**梯度流分离**，防止了保守的Critic更新对观测编码器产生负面影响。&#10;&#10;## 3. 主要内容（Main Content）【重点】&#10;&#10;### 3.1 设计架构与方法&#10;&#10;SutureFormer 的整体框架如图1所示，主要由三部分组成：&#10;&#10;1.  **观测编码器（Observation Encoder）**：处理历史视频帧，提取时空上下文特征。&#10;2.  **目标条件状态编码器（Goal-conditioned State Encoder）**：结合上下文特征、当前位置、目标位置等信息，构建当前状态。&#10;3.  **策略头（Policy Head）**：基于当前状态，输出一个离散方向分布和一个连续步长，自回归地生成未来轨迹点。&#10;&#10;训练过程完全离线，使用从专家演示中提取的转移元组 `(s, a, r, s')`，通过CQL进行策略优化。&#10;&#10;### 3.2 关键算法与数学推导&#10;&#10;**1. 动作空间定义：**&#10;动作由离散方向 $a \in \{1, \dots, 9\}$ 和连续步长 $\hat{m}_k \in [0, \delta_{max}]$ 组成。方向对应的单位向量为：&#10;$$ u_a = \begin{cases} \left[ \sin\left(\frac{(a-1)\pi}{4}\right), -\cos\left(\frac{(a-1)\pi}{4}\right) \right]^\top, &amp; a=1,\dots,8 \\ (0,0)^\top, &amp; a=9 \end{cases} $$&#10;推理时，期望方向为：&#10;$$ \hat{d}_k = \sum_{a=1}^{9} \pi(a|s_k) u_a $$&#10;下一步位置更新为：&#10;$$ \Delta \hat{p}_k = \hat{m}_k \hat{d}_k, \quad \hat{p}_{k+1} = \text{clip}(\hat{p}_k + \Delta \hat{p}_k, 0, 1) $$&#10;&#10;**2. 保守Q学习（CQL）损失函数：**&#10;Critic 网络 $Q_i$ 的优化目标包含贝尔曼回归项和保守正则化项：&#10;$$ L_{Q_i} = \mathbb{E}_{(s,a,r,s',d) \sim \mathcal{D}} \left[ \left( Q_i(s, a) - y \right)^2 \right] + \alpha_{cql} \mathbb{E}_{s \sim \mathcal{D}} \left[ \log \sum_{a} \exp(Q_i(s, a)) - Q_i(s, a_{exp}) \right] $$&#10;其中，$y$ 是目标值，$a_{exp}$ 是专家动作，$\alpha_{cql}$ 控制保守惩罚强度。该损失函数旨在压低非专家动作的Q值，同时保持专家动作的Q值。&#10;&#10;**3. 策略优化目标：**&#10;策略 $\pi$ 通过最小化熵正则化目标来优化：&#10;$$ L_\pi = \mathbb{E}_{s \sim \mathcal{D}} \left[ \sum_a \pi(a|s) \left( \alpha \log \pi(a|s) - \min(Q_1(s, a), Q_2(s, a)) \right) \right] $$&#10;此外，还加入了行为克隆损失 $L_{BC}$ 和步长回归损失 $L_{mag}$ 来稳定训练。&#10;&#10;**4. 奖励函数设计：**&#10;每一步的奖励 $r_k$ 由三部分组成：&#10;$$ r_k = r_{time} + r_{prox,k} + r_{term,k} $$&#10;- 时间惩罚：$r_{time} = -0.01$&#10;- 置信度加权接近奖励：$r_{prox,k} = w_k \cdot r_{prox,max} \left(1 - \frac{d_k}{\tau}\right)$，其中 $d_k = \|\hat{p}_k - \tilde{p}_k\|_2$ 是预测位置与插值参考位置的距离，$w_k$ 是置信度权重（关键帧为1.0，插值帧为0.5+0.5*置信度）。&#10;- 终点整形奖励：仅在最后一步 $k=K-1$ 时应用，形式与 $r_{prox}$ 相同，用于强调终点精度。&#10;&#10;### 3.3 模型、训练与数据集&#10;&#10;- **模型**：观测编码器由**空间CNN**（处理单帧）和**Transformer**（建模时序依赖）组成。策略头由两个MLP组成，分别输出离散方向分布和连续步长。&#10;- **训练**：使用**离线强化学习**，从静态专家数据集中采样转移元组进行训练。优化器为Adam，采用余弦退火学习率调度。Critic使用双Q网络和软更新。&#10;- **数据集**：使用一个新的**肾脏伤口缝合数据集**，包含来自50名患者的1158条缝合轨迹。每条轨迹由临床专家标注了9个关键帧。数据集按患者级别划分为训练集（35人，861条轨迹）、验证集（8人，151条轨迹）和测试集（7人，146条轨迹）。&#10;&#10;### 3.4 实验设置与结果&#10;&#10;- **设置**：在两种设置下评估：`Obs=6, Pred=3`（观察6个关键帧，预测3个）和 `Obs=3, Pred=6`（观察3个，预测6个）。所有指标在原始图像分辨率（1264×902）下计算。&#10;- **指标**：平均位移误差（ADE）、最终位移误差（FDE）、离散弗雷歇距离（FD）。&#10;- **基线**：与BC、GAIL、IBC、iDiff-IL、CondDiff、MID等7种方法对比。&#10;- **主要结果（表1）**：&#10;    - 在 `Obs=6, Pred=3` 设置下，SutureFormer 的 ADE 为 52.95 像素，相比最强基线 BC（128.15）降低了 **58.6%**。FDE 和 FD 也大幅领先。&#10;    - 在更具挑战性的 `Obs=3, Pred=6` 设置下，SutureFormer 依然保持最佳性能，ADE 为 93.22，相比 BC（135.65）降低了 **31.3%**。&#10;    - SutureFormer 在所有指标和随机种子下的标准差都更低，表明其鲁棒性更强。&#10;- **定性结果（图2）**：可视化显示，SutureFormer 预测的轨迹（红色）与真实轨迹（绿色）高度吻合，而基线方法（蓝色）则出现明显偏差。&#10;- **统计分析（图3）**：小提琴图和CDF图显示，SutureFormer 的 ADE 分布更集中，90%的预测误差低于100像素，远优于其他方法。&#10;- **泛化分析（图4）**：展示了在不同长度轨迹上，策略选择的动作的Q值始终不低于专家动作的Q值，证明了CQL成功塑造了价值函数，使其偏好策略动作，且能稳定泛化到不同长度的序列。&#10;&#10;### 3.5 技术细节&#10;&#10;- **观测编码器**：从全图中裁剪出以针尖为中心的128×128 RGB图像块，并叠加一个由稀疏轨迹点光栅化生成的**引导热图**（Guidance Map），形成4通道输入。热图强度由标注置信度调制。&#10;- **目标条件编码**：状态向量 $s_k$ 由上下文特征 $z_c$、当前位置 $\hat{p}_k$、目标坐标 $g_k$、相对位移 $g_k - \hat{p}_k$ 和归一化步数 $k/T_{pred}$ 拼接而成。位置信息通过独立的**正弦坐标编码器**嵌入。&#10;- **推理时的伪目标**：由于推理时无法获取真实未来点，使用过去L个观测点进行**二次多项式外推**（至少5个点）或线性外推来生成伪目标 $g_k$。&#10;- **梯度流分离**：Critic 网络更新时，状态特征的梯度被阻断（detach），防止Critic的保守性影响编码器。Actor和步长回归的梯度则可以更新编码器。这确保了编码器专注于学习准确的运动表示。&#10;&#10;## 4. 意义与影响（Significance and Impact）&#10;&#10;- **解决的问题与贡献**：&#10;    - **解决了数据瓶颈**：证明了仅凭稀疏的关键帧标注和视频图像，无需昂贵的机器人运动学数据，即可实现高精度的轨迹预测。这大大降低了数据获取门槛，使得海量临床视频数据得以利用。&#10;    - **提供了新范式**：首次将手术轨迹预测问题成功建模为像素空间中的**目标条件离线强化学习**问题，为该领域提供了一个全新的、有效的解决思路，超越了传统的回归和生成式方法。&#10;    - **性能显著提升**：在真实临床数据集上取得了远超现有方法的性能，验证了其有效性和鲁棒性。&#10;- **对未来研究/应用的影响**：&#10;    - **临床应用**：该技术有望集成到手术机器人系统中，为外科医生提供实时的、视觉化的轨迹引导，辅助新手医生学习，提升手术的精准度和安全性。&#10;    - **研究方向**：启发了将离线RL应用于其他细粒度、稀疏监督的医学图像分析任务（如导管、内窥镜的路径规划）。其“目标条件”的设计思想也可被借鉴到其他需要长程规划的机器人任务中。&#10;- **局限与开放问题**：&#10;    - **作者提及的局限**：当前工作仅针对缝合任务，未来需要扩展到更广泛的腹腔镜手术。&#10;    - **开放问题**：如何将模型部署到真实机器人平台上进行验证（如离体猪实验）？如何处理更复杂、更动态的手术场景？如何进一步提升模型对罕见或异常轨迹的预测能力？&#10;&#10;## 5. 澄清与简化（Clarifications and Simplifications）&#10;&#10;- **离线强化学习 vs. 在线强化学习**：可以想象成，在线RL是让一个学生（智能体）在考场上（环境）边做题边对答案，不断试错学习。而离线RL是给学生一本标准答案集（专家演示数据集），让他只能从这本答案中学习，不能去考场实践。SutureFormer 就是后者，它从专家手术视频中学习，因此必须使用CQL等算法来防止它“幻想”出一些答案集里没有的错误动作。&#10;- **目标条件（Goal-conditioned）**：可以理解为给智能体一个“导航目的地”。在训练时，这个目的地是真实轨迹上的下一个点（就像有导游带路）。在推理时，没有导游了，模型就根据过去走过的路（观测到的轨迹）自己“猜”一个目的地（通过多项式外推），然后朝着这个方向走。这大大简化了长程预测的难度。&#10;- **离散方向 + 连续步长**：想象一下在棋盘上移动。离散方向就是决定“往东、往西、往东北”等8个方向之一。连续步长就是决定“走1厘米还是2厘米”。这种混合设计比直接预测一个连续的二维向量（x, y）更容易学习，因为方向是有限的，而步长可以微调。&#10;- **置信度加权奖励**：专家标注的9个点非常可靠（置信度1.0），而通过插值得到的中间点（比如第2.5帧的位置）是“猜”出来的，可靠性较低（置信度0.45-0.9）。奖励函数给高置信度的点更高的权重，告诉模型“要更努力地靠近这些可靠的点”，而对插值点则不必过于苛求。这就像老师批改作业，对标准答案（关键帧）扣分更严，对参考答案（插值点）扣分更松。&#10;&#10;## 6. 补充说明（Additional Notes）&#10;&#10;- **相关工作关联**：&#10;    - 与**扩散模型**（如iDiff-IL, MID）相比，SutureFormer 通过序贯决策显式建模了步骤依赖，避免了单次生成或慢速自回归解码的缺点。&#10;    - 与**行为克隆（BC）** 相比，SutureFormer 通过RL的奖励机制，能够从稀疏标注中学习更优的策略，而不仅仅是模仿专家动作。&#10;    - 与**G2RL**等视觉导航工作类似，SutureFormer 也使用了引导图（Guidance Map）来提供空间线索，但将其应用到了更精细的手术场景。&#10;- **最重要的图表**：&#10;    - **图1（框架概览图）**：是理解整个方法架构的核心，清晰地展示了观测编码、目标条件状态构建、策略输出和离线训练流程。&#10;    - **表1（定量结果表）**：是证明方法有效性的关键证据，直观地展示了SutureFormer在所有指标和设置下对基线的显著优势。&#10;    - **图3（ADE分布图）**：通过小提琴图和CDF图，生动地展示了SutureFormer不仅在平均性能上领先，而且在预测">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Predicting surgical needle trajectories from endoscopic video is critical for robot-assisted suturing, enabling anticipatory planning, real-time guidance, and safer motion execution. Existing methods that directly learn motion distributions from visual observations tend to overlook the sequential dependency among adjacent motion steps. Moreover, sparse waypoint annotations often fail to provide sufficient supervision, further increasing the difficulty of supervised or imitation learning methods. To address these challenges, we formulate image-based needle trajectory prediction as a sequential decision-making problem, in which the needle tip is treated as an agent that moves step by step in pixel space. This formulation naturally captures the continuity of needle motion and enables the explicit modeling of physically plausible pixel-wise state transitions over time. From this perspective, we propose SutureFormer, a goal-conditioned offline reinforcement learning framework that leverages sparse annotations to dense reward signals via cubic spline interpolation, encouraging the policy to exploit limited expert guidance while exploring plausible future motion paths. SutureFormer encodes variable-length clips using an observation encoder to capture both local spatial cues and long-range temporal dynamics, and autoregressively predicts future waypoints through actions composed of discrete directions and continuous magnitudes. To enable stable offline policy optimization from expert demonstrations, we adopt Conservative Q-Learning with Behavioral Cloning regularization. Experiments on a new kidney wound suturing dataset containing 1,158 trajectories from 50 patients show that SutureFormer reduces Average Displacement Error by 58.6% compared with the strongest baseline, demonstrating the effectiveness of modeling needle trajectory prediction as pixel-level sequential action learning.</p>
@@ -1169,10 +1196,7 @@
                         <span class="paper-date">2026-07-04</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决灵巧机器人手臂-手系统在操作任务中，因缺乏高效数据采集和策略训练方法而导致的效率低下问题。  &#10;🛠 **方法**：提出两阶段方法，先通过基于增强现实（AR）的远程人机交互系统收集专家演示数据，进行行为克隆（BC）预训练；再结合对比学习增强的强化学习（RL）和事件驱动增强奖励，优化策略并提升安全性。  &#10;✨ **主要贡献**：在PyBullet仿真和真实实验中，该方法相比基线显著加速训练过程，并提高操作任务的成功率；消融实验证实对比学习有效防止策略崩溃。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>This paper focuses on the scalable robot learning for manipulation in the dexterous robot arm-hand systems, where the remote human-robot interactions via augmented reality (AR) are established to collect the expert demonstration data for improving efficiency. In such a system, we present a novel method to address the general manipulation task problem. Specifically, the proposed method consists of two phases: i) In the first phase for pretraining, the policy is created in a behavior cloning (BC) manner, through leveraging the learning data from our AR-based remote human-robot interaction system; ii) In the second phase, a contrastive learning empowered reinforcement learning (RL) method is developed to obtain more efficient and robust policy than the BC, and thus a projection head is designed to accelerate the learning progress. An event-driven augmented reward is adopted for enhancing the safety. To validate the proposed method, both the physics simulations via PyBullet and real-world experiments are carried out. The results demonstrate that compared to the baselines, our method not only significantly speeds up the training process, but also achieves much better performance in terms of the success rate for fulfilling the manipulation tasks. By conducting the ablation study, it is confirmed that the proposed RL with contrastive learning overcomes policy collapse. Supplementary demonstrations are available at https://cyberyyc.github.io/.</p>
@@ -1992,30 +2016,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>This paper presents a learning-based navigation framework for indoor mobile robots. The proposed method combines a supervised neural global planner, trained from cost-aware A* expert trajectories, with the proposed Learning-Based DWA local planner, which is formulated as discrete candidate selection over the Dynamic Window Approach (DWA) action lattice. For local planning, the policy is first trained by behavior cloning and then refined by Proximal Policy Optimization (PPO) under feasibility-aware masking. The framework is implemented and evaluated in both simulated and real-world indoor environments. Experimental results show that the proposed method generates feasible global routes and reliable local motion commands for safe goal-directed navigation in the presence of obstacles. These results demonstrate the effectiveness of integrating learning-based global planning with reinforcement-learning-refined local control for indoor mobile robot navigation. The source code will be released at https://ntdathp.github.io/rl_robot_web/.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2605.29119v1" target="_blank" class="paper-title">PRO-CUA: Process-Reward Optimization for Computer Use Agents</a>
-                        <span class="paper-date">2026-05-27</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Computer use agents (CUAs) have shown strong potential for automating complex digital workflows, yet their training remains constrained by costly live environment interaction and limited high-quality supervision. Existing filtered behavior cloning pipelines suffer from imitation bottlenecks, including distribution shift from the expert demonstration and the absence of negative learning signals. Meanwhile, standard trajectory-level reinforcement learning struggles with sparse rewards, ambiguous credit assignment, and high infrastructure costs for long-horizon GUI interaction. In this work, we propose PRO-CUA, a process-reward optimization framework for training CUAs with iterative step-level reinforcement learning. PRO-CUA decouples on-policy environment interaction from policy optimization: the current policy collects states through live rollouts, generates diverse candidate actions for each state, receives step-level feedback from a process reward model (PRM), and is optimized with group-relative advantages. This design enables dense and flexible credit assignment without relying on golden answers or offline expert trajectories, while reducing distribution shift by training on the agent's own execution states. Experiments on live web benchmarks demonstrate the effectiveness of PRO-CUA and the reliability of PRM-guided step-level training.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2605.27919v1" target="_blank" class="paper-title">Frequency-Guided Action Diffusion via Sub-Frequency Manifold Traversal</a>
-                        <span class="paper-date">2026-05-27</span>
-                    </div>
-                                        <span class="paper-comment">📝 A preprint version of FGO</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Learning visuomotor policies via behavior cloning typically involves mimicking expert demonstrations collected by human operators. However, natural human demonstrations inherently contain high-frequency noise, such as intermittent jerks, pauses, and action jitter. Training policies to directly imitate these raw trajectories inevitably causes the model to inherit these suboptimal behaviors. This pathology is particularly pronounced in diffusion-based policies, where iterative denoising steps can inadvertently amplify high-frequency artifacts at the expense of meaningful fine-grained details. To address these limitations, we present a novel frequency-based algorithm that enables implicit spectral maneuvering and smooth action generation. Our method, Frequency Guidance Operator (FGO), steers the generation process of diffusion polices by progressively driving the noisy samples through intermediate sub-frequency manifolds with expanding spectral bands. Validated on 15 robotic manipulation tasks from 5 benchmarks, FGO achieves superior performance in enhancing action smoothness and temporal consistency while preserving the details necessary for successful task execution. Project website: https://henrywjl.github.io/frequency-guidance-operator/</p>
                     </details>
                 </div>
             </div>

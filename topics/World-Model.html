@@ -590,7 +590,7 @@
                 <a href="World-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">World Model</span>
-                    <span class="nav-count">76</span>
+                    <span class="nav-count">77</span>
                 </a>
                 <a href="3D-Foundation-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
@@ -600,7 +600,7 @@
                 <a href="LLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
                     <span class="nav-label">LLM</span>
-                    <span class="nav-count">77</span>
+                    <span class="nav-count">78</span>
                 </a>
                 <a href="VLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f97316"></span>
@@ -690,12 +690,12 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">68</span>
+                    <span class="nav-count">69</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">74</span>
+                    <span class="nav-count">76</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -730,7 +730,7 @@
                 <a href="Model-Predictive-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#14b8a6"></span>
                     <span class="nav-label">Model Predictive Control</span>
-                    <span class="nav-count">52</span>
+                    <span class="nav-count">53</span>
                 </a>
                 <a href="Whole-Body-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#06b6d4"></span>
@@ -809,7 +809,7 @@
             <a href="World-Model.html" class="nav-item active">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">World Model</span>
-                <span class="nav-count">76</span>
+                <span class="nav-count">77</span>
             </a>
             <a href="3D-Foundation-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
@@ -819,7 +819,7 @@
             <a href="LLM.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
                 <span class="nav-label">LLM</span>
-                <span class="nav-count">77</span>
+                <span class="nav-count">78</span>
             </a>
             <a href="VLM.html" class="nav-item">
                 <span class="nav-dot" style="background:#f97316"></span>
@@ -909,12 +909,12 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">68</span>
+                <span class="nav-count">69</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">74</span>
+                <span class="nav-count">76</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -949,7 +949,7 @@
             <a href="Model-Predictive-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#14b8a6"></span>
                 <span class="nav-label">Model Predictive Control</span>
-                <span class="nav-count">52</span>
+                <span class="nav-count">53</span>
             </a>
             <a href="Whole-Body-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#06b6d4"></span>
@@ -1025,9 +1025,54 @@
         <section class="topic-section">
             <div class="topic-header">
                 <span class="topic-badge" style="background:#ec4899">World Model</span>
-                <span class="topic-count">76 papers</span>
+                <span class="topic-count">77 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.07287v2" target="_blank" class="paper-title">TouchWorld: A Predictive and Reactive Tactile Foundation Model for Dexterous Manipulation</a>
+                        <span class="paper-date">2026-07-09</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：灵巧操作中机器人需要同时具备接触状态的预测能力和对滑移、错位等局部误差的快速修正能力，但现有策略将触觉作为低频观测，无法分离慢速任务推理与快速接触反馈。&#10;&#10;🛠 **方法**：提出TouchWorld，一种预测-反应式触觉基础模型，采用分层策略：高层规划层生成子任务并预测触觉子目标，视觉-触觉目标条件策略生成名义动作块，触觉条件精调策略利用高频触觉与本体感知反馈进行在线残差修正。&#10;&#10;✨ **主要贡献**：将触觉同时作为预测性接触参考和快速反馈信号，在保持视觉-语言-动作策略语义泛化能力的同时提升局部接触适应性。在六项长时程、高接触灵巧操作任务中，干净环境成功率65.0%，人为扰动下成功率53.7%，分别超出最强基线15.7和18.5个百分点。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Dexterous manipulation in everyday environments requires both anticipation and reaction: a robot must predict how contact should evolve while rapidly correcting local errors caused by slip, misalignment, unstable grasping, or force mismatch. Vision and language provide semantic and geometric guidance, but they cannot reliably reveal hidden contact states such as force, slip, and contact stability. Although tactile sensing exposes these physical cues, most existing policies treat touch as a low-frequency observation stream within a monolithic action model, coupling slow task reasoning, action generation, and fast contact feedback in a single loop. We introduce TouchWorld, a predictive-and-reactive tactile foundation model for dexterous manipulation. TouchWorld uses a hierarchical policy that separates vision-language subtask planning, tactile world-model prediction, visuo-tactile goal-conditioned action generation, and high-frequency tactile residual refinement. A High-Level Planning Layer produces executable subtasks and predicts tactile subgoals; a Visuo-Tactile Goal-Conditioned Policy generates nominal action chunks; and a Tactile-Conditioned Refinement Policy performs online residual correction using recent tactile and proprioceptive feedback. By using touch as both a predictive contact reference and a fast feedback signal, TouchWorld preserves the semantic generalization of vision-language-action policies while improving local contact adaptation. Across six long-horizon and contact-rich dexterous manipulation tasks, TouchWorld achieves 65.0% success in the clean setting and 53.7% success under human perturbations, outperforming the strongest baseline by 15.7 and 18.5 percentage points, respectively.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.08375v1" target="_blank" class="paper-title">WCog-VLA: A Dual-Level World-Cognitive Vision-Language-Action Model for End-to-End Autonomous Driving</a>
+                        <span class="paper-date">2026-07-09</span>
+                    </div>
+                                        <span class="paper-comment">📝 20 pages, 7 figures</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有视觉-语言-动作（VLA）模型缺乏全面的世界认知或存在碎片化的世界预测能力，导致自动驾驶只能被动反应而非主动规划。&#10;&#10;🛠 **方法**：提出WCog-VLA双层级世界认知框架，语义层通过3D空间感知和智能体令牌捕捉世界动态，并引入博弈论思维链（Game-CoT）推理；生成层采用对齐解耦扩散Transformer（ADDT）合成多智能体轨迹，并通过场景表示对齐加速推理。&#10;&#10;✨ **主要贡献**：在NAVSIM基准上实现92.9的PDMS分数（当前最优），并构建包含85k条Game-CoT标注的大规模数据集，首次将语义世界预测与生成式世界演化结合实现主动驾驶。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Vision-Language-Action (VLA) models have advanced end-to-end autonomous driving. However, existing methods either lack comprehensive world cognition or suffer from fragmented world foresight, inherently confining these models to reactive driving. To address this limitation, we propose WCog-VLA, a novel dual-level World-Cognitive VLA framework that successfully bridges semantic world forecasting with generative world evolution to achieve proactive autonomous driving. At the semantic level, WCog-VLA unifies world cognition and reasoning by incorporating 3D spatial perception and injecting agent tokens to capture the world dynamics, while concurrently enabling Game-theoretic Chain-of-Thought (Game-CoT) reasoning. At the generative level, we introduce the Aligned Decoupled Diffusion Transformer (ADDT) as a powerful generative world model that synthesizes physically-plausible joint multi-agent trajectories. Through scene representation alignment, ADDT reduces the number of denoising steps required and thus significantly accelerates inference. To facilitate strategic reasoning, we further construct a large-scale dataset featuring 85k Game-CoT annotations. Extensive experiments on the NAVSIM benchmark demonstrate that WCog-VLA achieves a State-Of-The-Art (SOTA) PDMS score of 92.9.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.08312v1" target="_blank" class="paper-title">Write-Protected Discrete Bottlenecks for Language-Grounded World Models: A Structural Limitation and Sufficient Fix</a>
+                        <span class="paper-date">2026-07-09</span>
+                    </div>
+                                        <span class="paper-comment">📝 20 pages, 7 figures. Preprint</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：语言梯度直接注入基于Gumbel-softmax的离散符号瓶颈时，会导致符号坍塌（有效符号数降至2.2/64）或语义标签学习失败（准确率≤9.2%），两者无法兼得。&#10;&#10;🛠 **方法**：提出三约束修复方案——(1) 切断梯度链（z.detach()）阻止语言信号影响符号瓶颈；(2) 引入零参数、零梯度的非参数记忆表，通过共现计数替代梯度绑定；(3) 使用DP-Means流聚类处理符号碰撞，自动分裂子簇。&#10;&#10;✨ **主要贡献**：在74次独立实验中，32个种子均实现零符号坍塌，语义绑定准确率达79-100%（跨三种编码器架构、两种环境、三种纹理条件），总参数量低于2M且无需微调LLM。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>How should language interface with a world model's discrete symbol system? The dominant paradigm -- end-to-end injection of LLM/VLM features into robot world models (RT-2, Octo, PaLM-E) -- implicitly assumes that language gradients can directly shape physical symbol representations. We ask whether this assumption is safe, find that it is not, and characterize the minimal architectural constraint that prevents the failure. Any language gradient entering a Gumbel-softmax-based discrete symbol bottleneck forces a structural trade-off: the vanilla estimator collapses to 2.2/64 symbols (4/5 seeds), while five anti-collapse strategies maintain diversity but fail to learn semantic labels (all <= 9.2% accuracy). No tested GumbelBottleneck variant achieves both objectives simultaneously. Within this family of discrete bottlenecks, the failure is structural rather than a matter of optimization. We characterize a sufficient set of three constraints that prevent the failure: (1) cut the gradient chain (z.detach()), preventing language signals from reaching the symbol bottleneck; (2) provide a gradient-free semantic channel -- a non-parametric Memory Table (Dict[symbol -> Counter[label]], zero parameters, zero gradients) where co-occurrence counting replaces gradient-based binding; (3) handle symbol collisions via DP-Means streaming clustering for automatic sub-cluster splitting. All three layers together achieve 97.2% grounding accuracy vs. 22.2% without Layer 3. Across two experiments spanning 74 independent runs, we demonstrate zero symbol collapse in all 32 seeds, with the blackboard achieving 79-100% semantic binding across three encoder architectures (CNN, V-JEPA 300M, CLIP ViT-L), two environments, and three texture conditions. The fix trains fewer than 2M parameters and requires no LLM fine-tuning.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2607.07534v1" target="_blank" class="paper-title">Infinite Worlds with Versatile Interactions</a>
@@ -1045,17 +1090,17 @@
                 </div>
                 <div class="paper-card">
                     <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.07287v1" target="_blank" class="paper-title">TouchWorld: A Predictive and Reactive Tactile Foundation Model for Dexterous Manipulation</a>
+                        <a href="https://arxiv.org/abs/2607.07763v1" target="_blank" class="paper-title">Unlocking Temporal Generalization in Hamiltonian Video Dynamics Models</a>
                         <span class="paper-date">2026-07-08</span>
                     </div>
-                    
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：灵巧操作中机器人需要同时具备接触状态的预测能力和对滑移、错位等局部误差的快速修正能力，但现有策略将触觉作为低频观测，无法分离慢速任务推理与快速接触反馈。&#10;&#10;🛠 **方法**：提出TouchWorld，一种预测-反应式触觉基础模型，采用分层策略：高层规划层生成子任务并预测触觉子目标，视觉-触觉目标条件策略生成名义动作块，触觉条件精调策略利用高频触觉与本体感知反馈进行在线残差修正。&#10;&#10;✨ **主要贡献**：将触觉同时作为预测性接触参考和快速反馈信号，在保持视觉-语言-动作策略语义泛化能力的同时提升局部接触适应性。在六项长时程、高接触灵巧操作任务中，干净环境成功率65.0%，人为扰动下成功率53.7%，分别超出最强基线15.7和18.5个百分点。">
+                                        <span class="paper-comment">📝 To appear in the 1st Workshop on Physics-Aware Video Generation and Restoration at the 28th International Conference on Pattern Recognition</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有世界模型（如Hamiltonian生成网络）在非保守系统中无法泛化到训练时未见过的时间步长，导致变时间分辨率预测失败。&#10;&#10;🛠 **方法**：通过分析两种失效机制（动作-力映射导致的潜变量增长和积分器误差累积），提出针对性修复策略，包括约束动作-力映射和优化积分器。&#10;&#10;✨ **主要贡献**：首次系统诊断了Hamiltonian视频动力学模型在时域泛化中的失效原因，并给出有效解决方案，使模型能在训练分布外的时间分辨率下稳定预测。">
                         <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
                         <div class="ai-content markdown-body"></div>
                     </details>
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
-                        <p>Dexterous manipulation in everyday environments requires both anticipation and reaction: a robot must predict how contact should evolve while rapidly correcting local errors caused by slip, misalignment, unstable grasping, or force mismatch. Vision and language provide semantic and geometric guidance, but they cannot reliably reveal hidden contact states such as force, slip, and contact stability. Although tactile sensing exposes these physical cues, most existing policies treat touch as a low-frequency observation stream within a monolithic action model, coupling slow task reasoning, action generation, and fast contact feedback in a single loop. We introduce TouchWorld, a predictive-and-reactive tactile foundation model for dexterous manipulation. TouchWorld uses a hierarchical policy that separates vision-language subtask planning, tactile world-model prediction, visuo-tactile goal-conditioned action generation, and high-frequency tactile residual refinement. A High-Level Planning Layer produces executable subtasks and predicts tactile subgoals; a Visuo-Tactile Goal-Conditioned Policy generates nominal action chunks; and a Tactile-Conditioned Refinement Policy performs online residual correction using recent tactile and proprioceptive feedback. By using touch as both a predictive contact reference and a fast feedback signal, TouchWorld preserves the semantic generalization of vision-language-action policies while improving local contact adaptation. Across six long-horizon and contact-rich dexterous manipulation tasks, TouchWorld achieves 65.0% success in the clean setting and 53.7% success under human perturbations, outperforming the strongest baseline by 15.7 and 18.5 percentage points, respectively.</p>
+                        <p>World models are typically trained to predict discrete-time physical dynamics with a fixed step size baked into the model weights, preventing prediction at variable temporal resolutions. This matters for hierarchical planning, sim-to-real transfer, and scientific or game-engine applications that must query the same dynamics at multiple timescales. Hamiltonian Generative Networks (HGN) offer a principled path forward, grounding predictions in a continuous-time energy function that is, in principle, independent of the observation frame rate. In practice, however, their temporal generalization breaks down in non-conservative settings. We show that in externally forced, dissipative environments, HGN rollouts at step sizes beyond the training regime fail due to distinct failure modes, including latent magnitude growth driven by an unconstrained action-force map, and global truncation error accumulation from an under-resolved integrator. We identify a targeted fix for each mechanism and demonstrate stable dynamics prediction at temporal resolutions well outside the training distribution. In a detailed analysis, we recommend several strategies for enabling temporal generalization in continuous-time video generation.</p>
                     </details>
                 </div>
                 <div class="paper-card">
@@ -1139,10 +1184,7 @@
                         <span class="paper-date">2026-07-08</span>
                     </div>
                                         <span class="paper-comment">📝 Accepted by ECCV 2026</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有研究缺乏对多模态大模型（MLLMs）在“预见智能”（即预测和解释未来事件能力）上的系统评估，尤其在自动驾驶等关键应用中这一能力至关重要。&#10;&#10;🛠 **方法**：构建了FSU-QA视觉问答数据集，专门用于激发和评估模型的预见智能；通过该数据集对当前最先进的视觉-语言模型进行首次全面测试，并利用世界模型生成的预测语义一致性来评估其性能。&#10;&#10;✨ **主要贡献**：揭示了现有模型在预见推理上的不足；证明FSU-QA可作为评估世界模型的有效基准；通过微调实验显示，即使小模型在FSU-QA上训练后也能显著超越大型先进模型，为开发具备真正预见能力的下一代模型奠定了基础。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>In this work, we define Foresight Intelligence as the capability to anticipate and interpret future events-an ability essential for applications such as autonomous driving, yet largely overlooked by existing research. To bridge this gap, we introduce FSU-QA, a new Visual Question-Answering (VQA) dataset specifically designed to elicit and evaluate Foresight Intelligence. Using FSU-QA, we conduct the first comprehensive study of state-of-the-art Vision-Language Models (VLMs) under foresight-oriented tasks, revealing that current models still struggle to reason about future situations. Beyond serving as a benchmark, FSU-QA also enables the assessment of world models by measuring the semantic coherence of their generated predictions, quantified through performance gains when VLMs are augmented with such outputs. Our experiments further demonstrate that FSU-QA can effectively enhance foresight reasoning: even small VLMs fine-tuned on FSU-QA surpass much larger, advanced models by a substantial margin. Together, these findings position FSU-QA as a principled foundation for developing next-generation models capable of truly anticipating and understanding future events. Furthermore, beyond model performance, we examine whether WM-generated predictions remain semantically consistent by using VLM-based proxy judges, and validate this evaluation protocol through shuffled control experiments. Fine-tuning models on FSU-QA leads to substantial improvements in foresight understanding, demonstrating the dataset's effectiveness and offering a principled foundation for future research.</p>
@@ -1154,10 +1196,7 @@
                         <span class="paper-date">2026-07-07</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="好的，作为人工智能研究与学术论文分析专家，我将严格按照您的要求，对这篇论文进行详细的中文解读。&#10;&#10;---&#10;&#10;## 0. 概览（Concise Summary）&#10;&#10;- **主题（Topic）**：自动驾驶领域的端到端规划，特别是将**世界模型（World Model）** 与**视觉-语言-动作（VLA）** 模型相结合，以实现具有前瞻性的安全规划。&#10;- **问题（Problem）**：现有的VLA模型本质上是“反应式”的，缺乏对物理世界动态和长期因果关系的理解，无法在行动前模拟未来状态，导致在复杂场景下（如环岛、红绿灯）的规划能力不足。同时，直接应用视频预测作为世界模型面临两个挑战：1）视频帧的低熵冗余性导致预测退化为简单的帧间外推；2）瞬时动态与长期因果之间的时间尺度矛盾。&#10;- **方法（Method）**：提出**X-Foresight**，一个将预测性世界模型直接集成到VLA架构中的框架。其核心是**长时域、分块自回归（Long-horizon Chunk-wise Auto-regressive）** 策略，并辅以**课程学习（Curriculum Learning）**、**时序重要性采样（Temporal Importance Sampling）** 和**扩散渲染器（Diffusion-based Renderer）**。&#10;- **创新（Innovation）**：&#10;    1.  **分块自回归策略**：通过预测语义上更远的“块”而非相邻帧，解决了低熵退化问题；同时，块内密集帧捕捉瞬时动态，块间稀疏预测捕捉长期因果关系。&#10;    2.  **时序重要性采样**：根据自车运动和行为信号，对安全关键的时间段进行加权采样，使模型更关注长尾安全场景。&#10;    3.  **解耦的预测与渲染架构**：将高级语义预测（LDM）与像素级逼真渲染（扩散模型）分离，既保证了世界模型的高效抽象学习，又获得了高质量的视觉反馈。&#10;- **意义（Significance）**：首次在工业级自动驾驶VLA模型中成功集成了预测性世界模型，显著提升了规划的安全性（碰撞率降低16.2%）和合规性，为构建“世界知识驱动”的自主系统提供了有效范式。&#10;- **一句话总结**：X-Foresight通过创新的分块自回归世界模型，让自动驾驶VLA模型具备了“预见未来”的能力，从而做出更安全、更智能的规划决策。&#10;&#10;## 1. 研究动机（Motivation）&#10;&#10;- **核心问题**：当前的视觉-语言-动作（VLA）模型在自动驾驶中表现出色，但它们本质上是**反应式（reactive）** 的。它们根据历史观测直接输出控制信号，缺乏对世界动态的深层理解和主动规避风险的能力。这导致模型无法在行动前“思考”或“想象”未来可能发生的情况，从而难以应对需要长期因果推理的复杂场景（如预测其他车辆意图、提前规划通过路口）。&#10;- **为什么重要**：安全是自动驾驶的首要目标。一个不具备“预见性”的系统，在面对突发状况或需要提前规划的场景时，其决策可能是短视甚至危险的。赋予模型“世界知识”，使其能够模拟未来状态，是实现安全、可泛化规划的关键。&#10;- **挑战在哪里**：&#10;    1.  **视频预测的退化问题**：与语义离散、高信息熵的语言token不同，视频帧是连续的、冗余的，相邻帧差异极小。直接进行下一帧预测，模型很容易学习到“复制粘贴”式的简单外推，而不是真正的物理动态。&#10;    2.  **时间尺度的矛盾**：世界模型需要同时捕捉两种时间尺度的信息：**瞬时动态**（如车辆急刹、行人突然横穿）需要高帧率的密集预测；**长期因果关系**（如前方车辆减速是因为要转弯，或红绿灯即将变化）则需要跨越长时域、可变长度的预测。密集预测无法高效覆盖长期因果，而稀疏预测又会丢失瞬时动态细节。&#10;&#10;## 2. 创新点（Innovation）&#10;&#10;论文的核心创新在于提出了一套系统性的解决方案，以应对上述挑战，其关键创新点如下：&#10;&#10;1.  **长时域、分块自回归策略（Long-horizon Chunk-wise Auto-regressive Strategy）**：&#10;    - **新方法**：模型不是逐帧预测，而是预测一个包含多帧（如1秒）的“块（chunk）”。在自回归的每一步，模型预测下一个块，而不是下一帧。&#10;    - **与现有方案的不同**：传统的帧级预测（frame-wise）容易退化；简单的帧下采样（frame-wise longer foresight）会丢失运动细节。分块策略则兼顾了两者：块内保持密集帧以捕捉瞬时动态，块间预测跨越更大时间步长以学习长期因果。&#10;    - **为何奏效**：预测一个语义上更丰富的“块”迫使模型学习更高层次的场景演变规律，而不是简单的像素外推，从而解决了低熵退化问题。同时，通过调整块间步长（stride），可以灵活地控制预测的时域跨度，解决了时间尺度矛盾。&#10;&#10;2.  **时序重要性采样（Temporal Importance Sampling, TIS）**：&#10;    - **新方法**：在训练时，不是均匀地采样未来时间步，而是根据一个重要性分数（基于自车的纵向和横向加速度）进行加权采样。&#10;    - **与现有方案的不同**：均匀采样会浪费大量计算资源在“巡航”等平淡场景上，而忽略了急刹车、变道、避让等安全关键事件。TIS主动将训练重心偏向这些“关键时刻”。&#10;    - **为何奏效**：通过聚焦于安全相关的动态变化，模型能更有效地学习到对决策至关重要的世界知识，从而在碰撞率等安全指标上取得显著提升。&#10;&#10;3.  **解耦的预测与渲染架构（Decoupled Prediction and Rendering）**：&#10;    - **新方法**：将世界模型分为两个独立模块：**大型驾驶模型（LDM）** 负责在抽象的潜在空间中预测未来动作和场景语义（相机token）；**视觉渲染器（Vision Renderer）** 负责将这些抽象的相机token渲染成逼真的多视角图像。&#10;    - **与现有方案的不同**：以往的工作常将动作条件动态和像素合成耦合在一个网络中。X-Foresight则将其分离，让LDM专注于“想象”和“控制”，而渲染器专注于“视觉呈现”。&#10;    - **为何奏效**：这种解耦设计避免了模型在抽象推理和像素细节之间顾此失彼。LDM可以学习高效、结构化的世界表征，而渲染器（基于扩散模型）则能生成高质量的图像用于闭环反馈，两者各司其职，协同工作。&#10;&#10;## 3. 主要内容（Main Content）【重点】&#10;&#10;### 3.1 设计架构与方法&#10;&#10;X-Foresight的整体架构如图1(A)和图4所示，主要由两个核心组件构成：&#10;&#10;1.  **大型驾驶模型（Large Drive Model, LDM）**：一个自回归Transformer，其核心是**长时域、分块自回归**策略。它接收多视角历史图像、语言指令和自车状态，预测未来的三样东西：&#10;    - **自车动作（Ego Actions）**：用于实时控制。&#10;    - **鸟瞰图（BEV）**：捕捉周围空间结构。&#10;    - **相机潜在token（Camera Latent Tokens）**：每个视角未来外观的紧凑摘要。&#10;&#10;2.  **视觉渲染器（Vision Renderer）**：一个基于扩散Transformer（DiT）的模块，负责将LDM预测的抽象相机token解码成逼真的多视角未来帧。这些渲染后的帧会被重新输入到LDM中，形成闭环预测循环。&#10;&#10;**训练流程分为三个阶段（如图4所示）**：&#10;- **阶段I：LDM预训练**：在教师强制（teacher forcing）下，使用分块多模态提示和组合损失（动作、相机、BEV损失）训练LDM。&#10;- **阶段II：渲染器预训练**：独立训练渲染器，使其学会根据**真实的自车动作**生成逼真的多视角图像。&#10;- **阶段III：渲染器对齐**：**冻结LDM**，仅微调渲染器。将其条件输入从“真实动作”切换为LDM预测的“相机token”，使渲染器学会适应LDM在推理时产生的token分布，弥合训练与推理之间的差距。&#10;&#10;### 3.2 关键算法与数学推导&#10;&#10;1.  **分块自回归策略**：如图5所示，模型将时间序列分割成固定长度的块（chunk）。在自回归的每一步，模型基于历史信息预测下一个块。通过增加块间步长（stride），可以实现长时域预测。&#10;&#10;2.  **时序重要性采样（TIS）**：&#10;    对于每个候选时间步 $k$，计算其重要性分数 $w_k$：&#10;    $$w_k = \sum_{W \in \{W_1^k, W_2^k, W_3^k\}} \max_{t \in W} (\lambda_x |a_x(t)| + \lambda_y |a_y(t)|)$$&#10;    其中 $a_x(t)$ 和 $a_y(t)$ 是自车在时间 $t$ 的纵向和横向加速度。$W_1^k, W_2^k, W_3^k$ 分别是围绕 $k$ 的近未来、中时域和近历史窗口。该分数衡量了该时间步附近驾驶动态的剧烈程度。&#10;    然后，根据温度缩放后的分布进行采样：&#10;    $$p_k = \frac{w_k^{1/\tau}}{\sum_j w_j^{1/\tau}}$$&#10;    其中 $\tau &gt; 0$ 控制分布的尖锐程度。&#10;&#10;3.  **训练目标**：&#10;    LDM的总损失函数为：&#10;    $$L_{total} = L_{act} + \alpha L_{cam} + \beta L_{bev}$$&#10;    - **动作损失** $L_{act}$：预测动作 $\hat{a}_i$ 与真实动作 $a_i$ 的L1损失。&#10;    - **相机损失** $L_{cam}$：预测相机token $\hat{o}_i^v$ 与通过冻结ViT $g(\cdot)$ 提取的真实图像特征之间的L2损失。&#10;    - **BEV损失** $L_{bev}$：预测BEV $\hat{b}_i$ 与真实BEV $b_i$ 的L2损失。&#10;&#10;4.  **视觉渲染器（Rectified Flow）**：&#10;    渲染器使用修正流（Rectified Flow）目标进行训练，学习一个速度场 $v_\theta(y_t, t, c)$，将高斯噪声 $y_1$ 映射到数据分布 $y_0$：&#10;    $$L_{velocity}(\theta) = \mathbb{E}_{y_0, y_1, t, c} \left[ \| v_\theta(y_t, t, c) - (y_1 - y_0) \|_2^2 \right]$$&#10;    其中 $y_t = (1-t)y_0 + t y_1$，$c$ 是条件（LDM预测的相机token）。&#10;&#10;### 3.3 模型、训练与数据集&#10;&#10;- **数据集**：使用了约**28万小时**的内部驾驶数据，分割成**3400万个**片段，包含7个摄像头（前鱼眼、前窄角、侧向、后向），总token数达**13.8T**。数据以12Hz采集，训练时下采样至4Hz。场景分布涵盖常规驾驶（约70%）和交互/长尾场景（约30%），如图3所示。&#10;- **模型架构**：&#10;    - **LDM**：基于Transformer的自回归模型，采用了**半因果块稀疏注意力（Semi-Causal Block Sparse Attention）** 机制（图6），以支持长序列的高效训练。&#10;    - **视觉渲染器**：基于X-World的DiT架构，并集成了**跨视角注意力（Cross-view Attention）** 以保持多视图几何一致性。&#10;- **训练细节**：&#10;    - **阶段I**：在128或1024个GPU上训练，使用课程学习逐步增加预测时域（从1秒步长到3秒步长）。&#10;    - **阶段II &amp; III**：对渲染器进行微调，使其适应4Hz的帧率和LDM的token分布。&#10;&#10;### 3.4 实验设置与结果&#10;&#10;- **评估指标**：&#10;    - **轨迹指标**：平均位移误差（ADE）和最终位移误差（FDE）。&#10;    - **驾驶质量指标（CCES）**：合规性（Compliance）、舒适性（Comfort）、效率（Efficiency）、安全性（Safety）。所有指标均以与基线的比率形式呈现，越低越好。&#10;    - **碰撞率（Coll.）**：独立的碰撞失败率百分比。&#10;- **主要结果**：&#10;    1.  **长时域训练的效果（表1）**：增加训练时域 $H$（从1到21）能持续改善ADE、FDE和碰撞率，尤其是在安全性和合规性指标上。&#10;    2.  **消融研究（表2）**：验证了课程学习（CL）、扩展预见课程学习（CLEF）和时序重要性采样（TIS）的有效性。TIS在碰撞率上取得了最大的相对降低（6.1%），并获得了最佳的总体CCES分数。&#10;    3.  **生产规模对比（表3）**：在1024个GPU上训练的完整X-Foresight模型，与基线相比，碰撞率降低了**16.2%**（从0.228%降至0.191%），安全性指标改善了**9.1%**，总体CCES改善了**4.6%**。&#10;    4.  **定性分析（图7）**：展示了X-Foresight在复杂环岛和红绿灯场景中的优越性，它能基于对未来的预测（如导航指令、信号灯变化）做出正确决策，而基线模型则失败。&#10;&#10;### 3.5 技术细节&#10;&#10;- **半因果块稀疏注意力**：如图6所示，注意力掩码设计为：系统提示对所有块可见；块内为全双向注意力；块间为因果注意力，且查询token（$Q_i$）不能关注之前的查询token（$Q_{1:i-1}$）。注意力头被分为两组，每组关注不同的时间偏移子集，使得计算复杂度随序列长度近似线性增长。&#10;- **渲染器漂移缓解**：为了应对闭环推理中，渲染器生成的帧会作为下一轮输入，导致分布漂移的问题，论文采用了两种轻量级方法：1）**潜在锚点（Latent Sink）**：在推理过程中锚定一个稳定的参考上下文；2）**潜在增强（Latent Augmentation）**：在训练时对当前步的潜在表示添加扰动，模拟推理时的分布。&#10;- **推理流程**：如图1(A)所示，推理时，LDM和渲染器严格交替执行。LDM预测未来1秒的相机token和动作，渲染器根据token生成逼真图像，然后这些图像和动作被追加到历史上下文中，供LDM进行下一步预测。&#10;&#10;## 4. 意义与影响（Significance and Impact）&#10;&#10;- **解决了什么问题**：成功解决了将预测性世界模型集成到VLA架构中的两大核心挑战：视频预测的退化问题和时间尺度矛盾。通过分块自回归、课程学习、重要性采样和解耦架构，X-Foresight让VLA模型具备了真正的“预见”能力。&#10;- **贡献是什么**：&#10;    1.  提出了一个新颖且有效的**长时域分块自回归世界模型**范式。&#10;    2.  提出了**时序重要性采样**方法，有效引导模型关注安全关键事件。&#10;    3.  提出了**解耦的预测-渲染架构**，平衡了抽象推理与像素级逼真度。&#10;    4.  在工业级大规模数据集上进行了充分验证，证明了该方法在**安全性**（碰撞率降低16.2%）上的显著提升。&#10;- **对未来研究/应用的影响**：&#10;    - 为自动驾驶领域提供了一个强大的“世界知识驱动”的新范式，有望推动下一代端到端自动驾驶系统的发展。&#10;    - 其分块预测、重要性采样等思想可以推广到其他需要长期规划和因果推理的机器人领域。&#10;    - 解耦的架构设计为未来研究如何更好地结合高级语义推理与低级感官反馈提供了思路。&#10;- **局限与开放问题**：&#10;    - 论文提到，在长时域训练（H=21）中，舒适性和效率指标出现了轻微退化，这表明长时域优化本身仍是一个挑战，需要更精细的课程学习或损失函数设计。&#10;    - 渲染器的闭环漂移问题虽然通过轻量级方法缓解，但更根本的解决方案（如DMD）可能带来更好的效果。&#10;    - 模型的计算成本仍然很高（需要1024个GPU进行生产级训练），如何降低训练和推理成本是未来工程化的重要方向。&#10;&#10;## 5. 澄清与简化（Clarifications and Simplifications）&#10;&#10;- **分块预测 vs. 逐帧预测**：想象一下看一部电影。逐帧预测就像让你根据前一帧猜下一帧，因为相邻帧几乎一样，你很容易猜对（复制粘贴），但这并没有让你理解剧情。分块预测则是让你根据前5分钟，预测下一个5分钟的“剧情摘要”。这迫使你去理解故事的发展脉络、人物的动机等更高层次的信息，这才是真正的“世界知识”。&#10;- **时序重要性采样**：就像一个学生复习考试。如果所有章节均匀分配时间，他会在已经掌握的基础章节上浪费大量时间，而忽略了那些难懂但常考的重点章节。时序重要性采样就是让模型把更多“学习精力”放在那些“急刹车”、“危险变道”等“考试重点”上，从而更高效地掌握安全驾驶知识。&#10;- **解耦的预测与渲染**：可以类比为一位建筑师和一位画家。建筑师（LDM）负责设计房子的结构、布局和功能，他画的是蓝图（抽象的相机token）。画家（渲染器）则根据蓝图，画出逼真的效果图，让人能直观地看到房子建好后的样子。让建筑师直接去画效果图，他可能会陷入细节而忽略了结构；让画家去设计结构，他可能设计不出稳固的房子。各司其职，效率最高。&#10;&#10;## 6. 补充说明（Additional Notes）&#10;&#10;- **相关工作关联**：本文的工作建立在多个前沿研究之上。其VLA基础架构与RT-2、OpenVLA等一脉相承。世界模型部分借鉴了Sora、Genie等视频生成模型的思想，但针对自动驾驶场景">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Physical world knowledge resides mainly in videos. Equipping Vision-Language-Action (VLA) models with such knowledge is fundamental for safe and generalizable planning. Predictive world modeling enables VLA to internalize physical dynamics and long-term causality by predicting future video from past observations. However, naive next-frame prediction faces two challenges: 1) unlike semantically distinct text tokens, video tokens are low-entropy and redundant, causing prediction to degenerate into trivial extrapolation. 2) world modeling poses a temporal dilemma: dense prediction captures instantaneous dynamics, but cannot efficiently model long-horizon causality. To learn world knowledge effectively, we introduce X-Foresight, a predictive world model integrated directly into the VLA architecture to jointly learn world modeling and real-time action control. At its core lies a long-horizon chunk-wise auto-regressive strategy that addresses both challenges: by predicting semantically distant chunks rather than adjacent frames, it escapes trivial extrapolation, while preserving dense intra-chunk frames for instantaneous dynamics and sparse inter-chunk transitions for long-term causality. A curriculum learning schedule progressively extends prediction horizons and stabilizes long-horizon training. To capture long-term causality effectively, we present temporal importance sampling, which concentrates supervision on safety-critical chunks identified by ego-motion and behavioral signals. We further delegate photorealistic synthesis to a diffusion-based multi-view renderer, improving photorealistic appearance. Comprehensive experiments demonstrate that X-Foresight significantly outperforms VLA baselines in planning performance while maintaining strong generative fidelity, establishing a robust paradigm for world-knowledge-driven autonomous systems.</p>
@@ -1169,10 +1208,7 @@
                         <span class="paper-date">2026-07-07</span>
                     </div>
                                         <span class="paper-comment">📝 56 pages, 11 figures, 16 tables</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：如何将视觉-语言-动作（VLA）模型统一应用于双机械臂操作和无人机自主控制，解决两类机器人系统在协调、语言指令理解和实时动作生成上的共性挑战。&#10;&#10;🛠 **方法**：综述了2017-2026年间183篇文献，从VLA架构、训练方法、动作表示、双机械臂协调（2022-2026）、无人机导航与控制（2017-2026）、语言接地以及记忆与世界模型等七个维度进行系统分析，并论证双机械臂的协调策略、训练方法和动作表示可迁移至无人机系统。&#10;&#10;✨ **主要贡献**：首次系统揭示了双机械臂VLA与无人机VLA在协调策略和动作表示上的可迁移性，并提出了涵盖两个领域的14个未来研究方向。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Vision Language Action (VLA) models unify visual perception, natural-language understanding, and action generation within a single foundation model, allowing a robot to follow instructions such as fold the towel or fly to the red building directly from camera images. Because VLAs inherit world knowledge from internet-scale pre-training, they have become the dominant framework for learning-based manipulation, with bimanual coordination serving as the most demanding testbed: two arms with 7 degrees of freedom each must move in concert to fold, assemble, and reorient objects. Unmanned aerial robotics faces a structurally similar challenge: a drone must coordinate thrust, attitude, and increasingly gripper commands from visual observations under strict latency and payload constraints. This review covers 183 contributions spanning 2017-2026 and organized along seven dimensions: VLA architectures, training recipes, action representations, bimanual coordination (2022-2026), unmanned aerial vehicle (UAV) navigation and control (2017-2026), language grounding, and cross-cutting concerns including memory and world models. We show that the coordination strategies, training recipes, and action representations developed for bimanual VLAs transfer to unmanned aerial systems and identify fourteen research directions across both domains.</p>
@@ -1944,30 +1980,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Recent advances in agentic AI are producing increasingly complex autonomous systems that integrate large language models, world models, optimization engines, specialized neural architectures, autonomous platforms, and human operators. While much current research focuses on improving reasoning capabilities, safety-critical real-time deployment also requires bounded and verifiable coordination among heterogeneous components operating concurrently under uncertainty. Software-mediated coordination presents fundamental limitations in domains where bounded latency, deterministic coordination, and enforceable safety guarantees are essential. Hence, we propose a hardware-enforced semantic coordination architecture in which selected coordination semantics are implemented directly at the hardware level via field-programmable gate arrays (FPGAs). The approach builds on the Topic-Based Communication Space Petri Net (TB-CSPN) framework, which separates semantic reasoning from interaction management. In this approach, selected TB-CSPN coordination mechanisms are mapped onto FPGA primitives, creating a hardware-native semantic coordination layer. Focus is not on acceleration, but on enforcing temporal synchronization, semantic gating, authorization constraints, and bounded coordination behavior directly in hardware. Semantic reasoning remains adaptive and software-driven, while embedded coordination semantics become deterministic.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.02195v1" target="_blank" class="paper-title">Bridge-WA: Predicting Where and How the World Changes for Robotic Action</a>
-                        <span class="paper-date">2026-07-02</span>
-                    </div>
-                                        <span class="paper-comment">📝 21 pages, 8 figures, https://hcplab-sysu.github.io/BRIDGE-WA</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>General-purpose vision-language-action models benefit from large vision-language priors, but effective manipulation also requires anticipating action-relevant scene changes. Existing world-action models often rely on large generative world models or dense future rollouts, which are expensive and spend capacity on visual details weakly coupled to control. We present Bridge-WA, a lightweight world-action framework that distills a frozen future-change teacher into three compact priors: future tokens for intended outcomes, change maps for intervention support, and motion-flow maps for local transition direction. A WorldBridge conditions the action transformer on these priors through multi-source attention memories and spatial-temporal biases, while the teacher model is removed at inference. Across VLABench, RoboTwin2.0, LIBERO-Plus and real-robot evaluations, Bridge-WA improves task success, progress, and robustness, with particularly clear gains under out-of-distribution visual shifts. By focusing action generation on where and how the scene will change, Bridge-WA suppresses nuisance appearance factors such as background, lighting, and distractors, leading to better generalization without deployment-time dense future-image generation. Code and visualizations are available at: https://hcplab-sysu.github.io/BRIDGE-WA .</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.02045v1" target="_blank" class="paper-title">PWM-ArtGen: Part World Model for Articulated Object Generation</a>
-                        <span class="paper-date">2026-07-02</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>The key challenge in articulated 3D object generation from a single image is accurately predicting the underlying kinematic structure. Existing methods either infer kinematic parameters directly from a static image that lacks dynamic part-level kinematic relationships, or estimate parameters from visual dynamics generated from a single image, which is prone to accumulated errors of two steps. Moreover, the limited scale and diversity of existing annotated datasets further hinder generalization to complex, real-world objects. To overcome these limitations, we propose to learn the joint distribution of visual dynamics and kinematic parameters. Recognizing that articulated objects can be formulated as dynamic systems, we propose a unified Part World Model called PWM-ArtGen. To leverage unannotated data, this model couples action diffusion and image diffusion with independent diffusion timesteps, which enables visual branch co-training. We further curate a photorealistic dataset of 19.7k part-level image pairs without kinematic annotations, to support co-training. Experiments demonstrate that PWM-ArtGen substantially outperforms existing baselines in the resting state and exhibits strong zero-shot generalization to out-of-distribution objects.</p>
                     </details>
                 </div>
             </div>
