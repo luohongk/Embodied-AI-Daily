@@ -2,7 +2,7 @@
 
 > **77 papers** fetched from arXiv for the keyword **Semantic SLAM**.
 
-> Last update: 2026-07-13
+> Last update: 2026-07-14
 
 [← Back to README](../README.md)
 
