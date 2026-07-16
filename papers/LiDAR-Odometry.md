@@ -2,7 +2,7 @@
 
 > **80 papers** fetched from arXiv for the keyword **LiDAR Odometry**.
 
-> Last update: 2026-07-16
+> Last update: 2026-07-17
 
 [← Back to README](../README.md)
 
