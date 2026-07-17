@@ -590,7 +590,7 @@
                 <a href="World-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">World Model</span>
-                    <span class="nav-count">78</span>
+                    <span class="nav-count">77</span>
                 </a>
                 <a href="3D-Foundation-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
@@ -675,7 +675,7 @@
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Kalman Filter</span>
-                    <span class="nav-count">54</span>
+                    <span class="nav-count">51</span>
                 </a>
                 <a href="Loop-Closure-Detection.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -695,7 +695,7 @@
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">77</span>
+                    <span class="nav-count">76</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -730,7 +730,7 @@
                 <a href="Model-Predictive-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#14b8a6"></span>
                     <span class="nav-label">Model Predictive Control</span>
-                    <span class="nav-count">53</span>
+                    <span class="nav-count">52</span>
                 </a>
                 <a href="Whole-Body-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#06b6d4"></span>
@@ -809,7 +809,7 @@
             <a href="World-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">World Model</span>
-                <span class="nav-count">78</span>
+                <span class="nav-count">77</span>
             </a>
             <a href="3D-Foundation-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
@@ -894,7 +894,7 @@
             <a href="Kalman-Filter.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Kalman Filter</span>
-                <span class="nav-count">54</span>
+                <span class="nav-count">51</span>
             </a>
             <a href="Loop-Closure-Detection.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -914,7 +914,7 @@
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">77</span>
+                <span class="nav-count">76</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -949,7 +949,7 @@
             <a href="Model-Predictive-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#14b8a6"></span>
                 <span class="nav-label">Model Predictive Control</span>
-                <span class="nav-count">53</span>
+                <span class="nav-count">52</span>
             </a>
             <a href="Whole-Body-Control.html" class="nav-item active">
                 <span class="nav-dot" style="background:#06b6d4"></span>
@@ -1030,6 +1030,36 @@
             <div class="paper-list">
                 <div class="paper-card">
                     <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.10132v2" target="_blank" class="paper-title">TAC-LOCO: Unified Whole-Body Control for Quadrupedal TACtile-Informed LOCO-Manipulation</a>
+                        <span class="paper-date">2026-07-15</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：四足机器人在动态全身操作中，如何在不确定外力下协调肢体运动并稳定抓取物体，同时缺乏触觉反馈在全身控制中的应用研究。&#10;&#10;🛠 **方法**：提出TAC-LOCO框架，将柔性夹爪的触觉阵列观测编码为紧凑潜在表示，与本体感知结合，通过强化学习统一控制腿部、手臂和夹爪，并设计抓取稳定性奖励函数。&#10;&#10;✨ **主要贡献**：在Unitree Go2机器人上零样本部署，实现动态触觉感知操作，抓取力降低47%，物体掉落率低于1%，首次将触觉反馈有效融入四足机器人全身控制。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Dynamic loco-manipulation requires legged robots to coordinate whole-body motion while maintaining stable physical interaction with grasped objects under uncertain external forces. While tactile sensing has been widely studied for robotic manipulation, its role in dynamic whole-body control remains largely unexplored. Existing works without tactile feedback commonly grasp firmly rather than regulate the grasp according to the interaction. We propose TAC-LOCO, a tactile-augmented unified reinforcement learning framework that encodes tactile array observations from compliant grippers into a compact latent representation and joins it with proprioception for unified control of the legs, arm, and gripper. With effective grasp stability reward design, the policy learns to simultaneously track body velocity and end-effector trajectories, moderate grasp force, and prevent object slip under both gradual load changes and sudden release events. We deploy the policy zero-shot on a Unitree Go2 with an Interbotix WidowX 250 arm and tactile gripper, demonstrating dynamic tactile-informed loco-manipulation under varying external interactions, achieving a 47% reduction in grasping force and an object drop rate of less than 1%.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.14182v1" target="_blank" class="paper-title">Semantic Audio-driven Understanding for Dynamic Humanoid Whole Body Control</a>
+                        <span class="paper-date">2026-07-15</span>
+                    </div>
+                                        <span class="paper-comment">📝 Accepted at 29th Robocup International Symposium, held on July 6th, 2026 in Incheon, Republic of Korea</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有仿人机器人全身运动控制多依赖预设序列或外部触发，缺乏对动态环境的自主响应能力，尤其是无法根据实时音频输入（音乐或语音）自主选择和执行动作技能。&#10;&#10;🛠 **方法**：提出一种多模态编排框架，将连续音频流分为音乐和语音分支。音乐分支通过音频指纹和语义嵌入实现曲目识别与时间对齐，动态映射至运动策略；语音分支将指令映射至模仿学习得到的离散技能库，并通过统一接口调度强化学习控制管线执行技能。&#10;&#10;✨ **主要贡献**：首次实现基于语义音频驱动的仿人机器人实时全身运动控制，支持音乐与语音两种模态的自主技能选择；在仿真和Unitree G1实体机器人上验证了鲁棒的仿真到现实迁移和一致的音频条件策略选择。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Recent advances in humanoid robotics and reinforcement learning have enabled the acquisition of highly expressive whole-body motion policies. However, most robotic performances remain based on pre-scripted sequences or externally triggered behaviors, limiting autonomy and responsiveness to dynamic environments. In this work, we introduce a novel multi-modal orchestration framework for semantic audio-driven humanoid control, enabling robots to autonomously select and execute appropriate motion skills in real time. The system processes continuous audio streams and routes them into music or speech branches. Music input is handled via audio fingerprinting and semantic embeddings to retrieve track identity and temporal alignment, allowing dynamic mapping between musical segments and motion policies. Speech input is grounded into a discrete library of imitation-learned skills, enabling direct human-robot interaction. Both modalities share a unified interface that schedules skill execution over a reinforcement learning control pipeline. We validate the approach in simulation and on a Unitree G1 humanoid, showing robust sim-to-real transfer and consistent audio-conditioned policy selection. Supplementary materials are available at the following site: https://lab-rococo-sapienza.github.io/semantic-WBC/</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
                         <a href="https://arxiv.org/abs/2607.11874v1" target="_blank" class="paper-title">A Minimalist Retargeting-Guided Reinforcement Learning Recipe for Dexterous Manipulation</a>
                         <span class="paper-date">2026-07-13</span>
                     </div>
@@ -1086,21 +1116,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Quadrupedal loco-manipulation is commonly built on visual perception and proprioception. Yet reliable contact-rich manipulation remains difficult: vision and proprioception alone cannot resolve uncertain, evolving interactions with the environment. Tactile sensing offers direct contact observability, but scalable tactile-aware learning framework for quadrupedal loco-manipulation is still underexplored. In this paper, we present a tactile-aware loco-manipulation policy learning pipeline with a hierarchical structure. Our approach has two key components. First, we leverage real-world human demonstrations to train a tactile-conditioned visuotactile high-level policy. This policy predicts not only end-effector trajectories for manipulation, but also the evolving tactile interaction cues that characterize how contact should develop over time. Second, we perform large-scale reinforcement learning in simulation to learn a tactile-aware whole-body control policy that tracks diverse commanded trajectories and tactile interaction cues, and transfers zero-shot to the real world. Together, these components enable coordinated locomotion and manipulation under contact-rich scenarios. We evaluate the system on real-world contact-rich tasks, including in-hand reorientation with insertion, valve tightening, and delicate object manipulation. Compared to vision-only and visuotactile baselines, our method improves performance by 28.54% on average across these tasks.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.10132v1" target="_blank" class="paper-title">TAC-LOCO: Unified Whole-Body Control for Quadrupedal TACtile-Informed LOCO-Manipulation</a>
-                        <span class="paper-date">2026-07-11</span>
-                    </div>
-                    
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：四足机器人在动态全身操作中，如何在不确定外力下协调肢体运动并稳定抓取物体，同时缺乏触觉反馈在全身控制中的应用研究。&#10;&#10;🛠 **方法**：提出TAC-LOCO框架，将柔性夹爪的触觉阵列观测编码为紧凑潜在表示，与本体感知结合，通过强化学习统一控制腿部、手臂和夹爪，并设计抓取稳定性奖励函数。&#10;&#10;✨ **主要贡献**：在Unitree Go2机器人上零样本部署，实现动态触觉感知操作，抓取力降低47%，物体掉落率低于1%，首次将触觉反馈有效融入四足机器人全身控制。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Dynamic loco-manipulation requires legged robots to coordinate whole-body motion while maintaining stable physical interaction with grasped objects under uncertain external forces. While tactile sensing has been widely studied for robotic manipulation, its role in dynamic whole-body control remains largely unexplored. Existing works without tactile feedback commonly grasp firmly rather than regulate the grasp according to the interaction. We propose TAC-LOCO, a tactile-augmented unified reinforcement learning framework that encodes tactile array observations from compliant grippers into a compact latent representation and joins it with proprioception for unified control of the legs, arm, and gripper. With effective grasp stability reward design, the policy learns to simultaneously track body velocity and end-effector trajectories, moderate grasp force, and prevent object slip under both gradual load changes and sudden release events. We deploy the policy zero-shot on a Unitree Go2 with an Interbotix WidowX 250 arm and tactile gripper, demonstrating dynamic tactile-informed loco-manipulation under varying external interactions, achieving a 47% reduction in grasping force and an object drop rate of less than 1%.</p>
                     </details>
                 </div>
                 <div class="paper-card">
@@ -1169,10 +1184,7 @@
                         <span class="paper-date">2026-07-07</span>
                     </div>
                                         <span class="paper-comment">📝 27 pages, including appendix. Preprint</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有的人形机器人全身运动控制方法在处理长尾运动（如高动态过渡和平衡关键动作）时，即使增加训练曝光仍存在失败，根本原因是运动需求与默认训练策略导致的模型能力不匹配。&#10;&#10;🛠 **方法**：提出Athena-WBC框架，包含两类能力对齐的策略专家——动态专家采用跟踪导向、约束感知的目标函数，去除保守力与时间控制惩罚；平衡专家使用重力课程提升早期训练存活率。通过DAgger蒸馏将特权教师压缩为单一控制器，再经强化学习微调。&#10;&#10;✨ **主要贡献**：在全尺寸人形机器人上，仅用少量专家即可显著提升训练集中长尾运动的恢复效果，并在未见运动跟踪上超越强基线SONIC方法，验证了能力对齐策略对解决长尾问题的有效性。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Large-scale humanoid motion-tracking controllers are commonly improved by reallocating training effort: difficult motions are sampled more often, isolated into smaller subsets, or assigned to specialized experts. We show that this view is incomplete. In strong whole-body-control baselines, a residual set of feasible training clips remains unsolved even under targeted training, especially for high-dynamic transitions and balance-critical motions. These failures arise not only from insufficient exposure, but from a mismatch between the motion demands and the effective capability induced by the default training recipe. We propose Athena-WBC, a compact teacher-student pipeline with capability-aligned policy experts for long-tail humanoid whole-body control. Dynamic experts use a tracking-focused, constraint-aware objective that removes conservative effort and temporal-control penalties while preserving physical feasibility constraints; balance experts use a gravity curriculum to improve early-training survivability. The resulting privileged teachers are motion-routed for DAgger distillation and then compressed into a single controller with deployable observations followed by RL fine-tuning. Experiments on a full-size humanoid show improved recovery of training-set long-tail motions and better held-out tracking than a strong SONIC-recipe baseline, using only a small number of experts.</p>
@@ -2004,18 +2016,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Learning natural, stable, and compositionally generalizable whole-body control policies for humanoid robots performing simultaneous locomotion and manipulation (loco-manipulation) remains a fundamental challenge in robotics. Existing reinforcement learning approaches typically rely on a single monolithic policy to acquire multiple skills, which often leads to cross-skill gradient interference and motion pattern conflicts in high-degree-of-freedom systems. As a result, generated behaviors frequently exhibit unnatural movements, limited stability, and poor generalization to complex task compositions. To address these limitations, we propose MetaWorld-X, a hierarchical world model framework for humanoid control. Guided by a divide-and-conquer principle, our method decomposes complex control problems into a set of specialized expert policies (Specialized Expert Policies, SEP). Each expert is trained under human motion priors through imitation-constrained reinforcement learning, introducing biomechanically consistent inductive biases that ensure natural and physically plausible motion generation. Building upon this foundation, we further develop an Intelligent Routing Mechanism (IRM) supervised by a Vision-Language Model (VLM), enabling semantic-driven expert composition. The VLM-guided router dynamically integrates expert policies according to high-level task semantics, facilitating compositional generalization and adaptive execution in multi-stage loco-manipulation tasks.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2603.07516v1" target="_blank" class="paper-title">InterReal: A Unified Physics-Based Imitation Framework for Learning Human-Object Interaction Skills</a>
-                        <span class="paper-date">2026-03-08</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Interaction is one of the core abilities of humanoid robots. However, most existing frameworks focus on non-interactive whole-body control, which limits their practical applicability. In this work, we develop InterReal, a unified physics-based imitation learning framework for Real-world human-object Interaction (HOI) control. InterReal enables humanoid robots to track HOI reference motions, facilitating the learning of fine-grained interactive skills and their deployment in real-world settings. Within this framework, we first introduce a HOI motion data augmentation scheme with hand-object contact constraints, and utilize the augmented motions to improve policy stability under object perturbations. Second, we propose an automatic reward learner to address the challenge of large-scale reward shaping. A meta-policy guided by critical tracking error metrics explores and allocates reward signals to the low-level reinforcement learning objective, which enables more effective learning of interactive policies. Experiments on HOI tasks of box-picking and box-pushing demonstrate that InterReal achieves the best tracking accuracy and the highest task success rate compared to recent baselines. Furthermore, we validate the framework on the real-world robot Unitree G1, which demonstrates its practical effectiveness and robustness beyond simulation.</p>
                     </details>
                 </div>
             </div>

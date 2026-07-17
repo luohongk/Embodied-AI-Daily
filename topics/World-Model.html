@@ -590,7 +590,7 @@
                 <a href="World-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">World Model</span>
-                    <span class="nav-count">78</span>
+                    <span class="nav-count">77</span>
                 </a>
                 <a href="3D-Foundation-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
@@ -675,7 +675,7 @@
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Kalman Filter</span>
-                    <span class="nav-count">54</span>
+                    <span class="nav-count">51</span>
                 </a>
                 <a href="Loop-Closure-Detection.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -695,7 +695,7 @@
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">77</span>
+                    <span class="nav-count">76</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -730,7 +730,7 @@
                 <a href="Model-Predictive-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#14b8a6"></span>
                     <span class="nav-label">Model Predictive Control</span>
-                    <span class="nav-count">53</span>
+                    <span class="nav-count">52</span>
                 </a>
                 <a href="Whole-Body-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#06b6d4"></span>
@@ -809,7 +809,7 @@
             <a href="World-Model.html" class="nav-item active">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">World Model</span>
-                <span class="nav-count">78</span>
+                <span class="nav-count">77</span>
             </a>
             <a href="3D-Foundation-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
@@ -894,7 +894,7 @@
             <a href="Kalman-Filter.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Kalman Filter</span>
-                <span class="nav-count">54</span>
+                <span class="nav-count">51</span>
             </a>
             <a href="Loop-Closure-Detection.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -914,7 +914,7 @@
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">77</span>
+                <span class="nav-count">76</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -949,7 +949,7 @@
             <a href="Model-Predictive-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#14b8a6"></span>
                 <span class="nav-label">Model Predictive Control</span>
-                <span class="nav-count">53</span>
+                <span class="nav-count">52</span>
             </a>
             <a href="Whole-Body-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#06b6d4"></span>
@@ -1025,9 +1025,129 @@
         <section class="topic-section">
             <div class="topic-header">
                 <span class="topic-badge" style="background:#ec4899">World Model</span>
-                <span class="topic-count">78 papers</span>
+                <span class="topic-count">77 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.15278v1" target="_blank" class="paper-title">Hierarchical Denoising For Multi-Step Visual Reasoning</a>
+                        <span class="paper-date">2026-07-16</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有视频模型在多步视觉推理任务中难以兼顾逻辑一致性与低延迟流式生成，密集帧级去噪导致高推理成本。&#10;&#10;🛠 **方法**：提出HDR框架，将视频潜在表示组织为树状层次结构，通过粗到细的层次化去噪实现多步推理，并采用稀疏层次注意力模式（SHAP）降低时序注意力计算成本。&#10;&#10;✨ **主要贡献**：在六项多步推理基准任务中，HDR将成功率从34.22提升至60.29（相对提升76.2%），平均进度从76.00提升至89.56；推理速度比双向扩散快54.2倍，且仅用2%训练数据即可保留82.9%性能，并在真实机器人实验中验证了物理交互潜力。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Video models are evolving into vision foundation models, yet they still lack human-like multi-step reasoning. Streaming autoregressive diffusion models are efficient but limited in reasoning, while bidirectional diffusion enables global revision with high inference costs due to dense frame-level denoising. Both paradigms struggle to achieve logical consistency and low-latency streaming for complex reasoning tasks. We propose HDR (Hierarchical Denoising for Visual Reasoning), a unified framework that integrates hierarchical latents into causal video generation for multi-step reasoning. HDR organizes video latents into a tree-structured hierarchy, enabling coarse-to-fine reasoning before streaming output. Coarse denoising layers preserve uncertain hypotheses for global planning, while finer layers progressively refine them into concrete visual states. A sparse hierarchical attention pattern (SHAP) further reduces temporal attention costs. We introduce a level-stratified multi-step video reasoning benchmark with out-of-distribution cases, covering six tasks: maze navigation, Tower of Hanoi, one-line drawing, sliding puzzle, Sokoban, and water pouring. Compared with streaming autoregressive diffusion baselines, HDR improves success from 34.22 to 60.29 (76.2% relative gain) and increases average progress from 76.00 to 89.56, demonstrating more consistent reasoning trajectories. HDR maintains low-latency streaming at 0.70 seconds per latent, achieving 54.2 times faster inference than bidirectional diffusion. It also retains 82.9% of full-data performance with only 2% training data, compared with 52.0% for bidirectional diffusion. Real-world robot experiments further demonstrate HDR's potential for physical interaction and world modeling. Project demo: https://hierarchical-diffusion-reasoning.github.io/.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.15142v1" target="_blank" class="paper-title">Concept-Guided Spatial Regularization for World Models in Atari Pong</a>
+                        <span class="paper-date">2026-07-16</span>
+                    </div>
+                                        <span class="paper-comment">📝 16 pages, 5 figures</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在Atari Pong游戏中，五种主流世界模型（DreamerV3、DIAMOND等）在封闭循环推演和零样本MBRL任务中均出现严重视觉与动力学错误，导致策略性能大幅下降，尤其是DreamerV3的回报从-5.5骤降至-20.9。&#10;&#10;🛠 **方法**：提出概念引导的空间正则化（CGSReg），通过对分割出的关键概念区域（如乒乓球）施加辅助像素重建损失，增强世界模型对任务核心元素的建模能力。&#10;&#10;✨ **主要贡献**：CGSReg显著改善了DreamerV3、DIAMOND和TWISTER的封闭循环推演质量与零样本MBRL性能，但未能完全解决所有模型瓶颈，揭示了世界模型在孤立评估中的系统性缺陷。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>World models are usually evaluated as components of model-based reinforcement learning (MBRL) systems, while the world models themselves are rarely studied in isolation. We examine five representative visual world-model agents in Atari Pong: DreamerV3, DIAMOND, TWISTER, Simulus, and STORM. After reproducing their training pipelines and matching the reported agent performance, we freeze the learned world models and evaluate them with a closed-loop rollout diagnostic: a policy trained separately from the corresponding MBRL agent interacts with each frozen model, and the generated video trajectories are inspected for visual and dynamical errors. Across all five models, the rollouts contain clear failures, including ball disappearance, incorrect ball motion, and invalid ball-paddle interactions. Beyond visual trajectories, we further evaluate them with pixel-space zero-shot MBRL, where a new policy is trained entirely inside a frozen world model and then evaluated in the real environment. Across all five models, the resulting policies substantially underperform those produced by the corresponding original MBRL training pipelines. The gap is particularly large for DreamerV3, whose mean return drops from -5.5 to -20.9, near the minimum Pong return of -21. We hypothesize that insufficient modeling of task-critical concepts, such as the ball in Pong, may contribute to these failures. We therefore propose Concept-Guided Spatial Regularization (CGSReg), an auxiliary pixel reconstruction loss applied to segmented concept regions. Experiments show that CGSReg improves both closed-loop rollouts and pixel-space zero-shot MBRL in DreamerV3, DIAMOND, and TWISTER. Its effects vary across the remaining models and evaluation metrics, indicating that CGSReg alone does not address all world-model bottlenecks.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.15065v1" target="_blank" class="paper-title">DriftWorld: Fast World Modeling through Drifting</a>
+                        <span class="paper-date">2026-07-16</span>
+                    </div>
+                                        <span class="paper-comment">📝 Website at https://susie-lu.github.io/driftworld/</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：扩散模型作为世界模型时，推理阶段的多步采样导致生成未来帧速度慢，限制了机器人实时规划和大规模动作搜索。&#10;&#10;🛠 **方法**：提出 DriftWorld，基于漂移生成模型，通过训练学习动作条件漂移，在推理时仅需单次前向传播即可从当前观测和候选动作序列生成未来帧，速度达 30+ fps。&#10;&#10;✨ **主要贡献**：在多个机器人操作基准上，DriftWorld 比扩散基线平均快 17 倍，同时实现最先进的决策性能；还可作为离线模拟器，其 rollout 评分与真实策略表现相关性高达 0.99。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Predictive world models enable robots to plan by imagining the outcomes of their actions, but their value for control hinges on generating many rollouts quickly. This creates a bottleneck for diffusion-based world models: multistep sampling makes each rollout expensive, limiting large-scale action search at inference time. We introduce DriftWorld, an action-conditioned world model based on drifting generative models. Rather than denoising iteratively at inference, DriftWorld learns an action-conditioned drift during training, allowing it to generate future frames from the current observation and a candidate action sequence in a single forward pass at 30+ fps, which is 17x faster on average than diffusion based baselines. We evaluate DriftWorld on standard vision-based robotic manipulation benchmarks, including Bridge-V2, RT-1, Language Table, Push-T, and Robomimic. By producing rollouts that are both accurate and fast, DriftWorld achieves state-of-the-art decision-making performance with far less inference time than diffusion-based world model baselines. Beyond online control, DriftWorld can also serve as an offline simulator for ranking real-world robot policies, with rollout-based scores correlating with ground truth at up to 0.99. These results show that drifting models are a strong fit for robot world modeling, where fast, high-quality imagination directly supports planning and policy evaluation.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.13960v2" target="_blank" class="paper-title">GigaWorld-Policy-0.5: A Faster and Stronger WAM Empowered by AutoResearch</a>
+                        <span class="paper-date">2026-07-16</span>
+                    </div>
+                                        <span class="paper-comment">📝 project page: https://open-gigaai.github.io/giga-world-policy/</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有世界动作模型（WAM）在推理时需显式生成未来视频，导致计算开销大，难以实现实时闭环控制。&#10;&#10;🛠 **方法**：提出以动作为中心的WAM框架，训练时利用未来视觉动态，推理时仅解码动作；采用混合动作条件世界建模（AC-WM）与WAM预训练策略，并引入混合Transformer架构分离视觉建模与动作生成；通过基于智能体的AutoResearch流水线自动搜索训练配置。&#10;&#10;✨ **主要贡献**：在保持未来视觉动态训练优势的同时，将推理延迟降至85毫秒（RTX 4090），显著提升机器人控制的实时性与效率。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>World Action Models (WAMs) improve robot policy learning by jointly modeling actions and future visual observations, using future scene evolution as dense supervision for physically grounded action generation. However, a common design in existing WAMs is to explicitly generate future videos at inference time, incurring substantial computational overhead and hindering real-time closed-loop deployment. GigaWorld-Policy addresses this issue with an action-centered formulation, where future visual dynamics are used during training while action-only decoding is used at inference time. Building upon this framework, we present GigaWorld-Policy-0.5, an enhanced action-centered WAM designed for more efficient robot control. During pretraining, GigaWorld-Policy-0.5 adopts a mixed Action-Conditioned World Modeling (AC-WM) and WAM training strategy. This strengthens the coupling between visual dynamics and robot actions and improves the transferability of action representations for downstream policy learning. For efficient inference, GigaWorld-Policy-0.5 introduces a Mixture-of-Transformers architecture that separates visual dynamics modeling and action generation into specialized experts, reducing active computation during action-only inference and achieving 85 ms inference latency on a local RTX 4090 setup. In addition, we employ an agent-based AutoResearch pipeline to systematically search training configurations, enabling more efficient identification of optimal experimental setups while reducing the time and manual intervention required for hyperparameter tuning. Experiments and ablations show that GigaWorld-Policy-0.5 preserves the training benefits of future visual dynamics while improving inference efficiency for robot control.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.14550v1" target="_blank" class="paper-title">World-Model-Aware Responsibility Allocation in Heterogeneous Logistics Systems</a>
+                        <span class="paper-date">2026-07-16</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在异构物流系统中，自主物流设备（ALE）与中央控制系统（CS）因世界模型不一致导致决策冲突和死锁，而传统资源分配方法无法解决此类问题。&#10;&#10;🛠 **方法**：提出世界模型感知责任框架（WMARF），根据CS世界模型质量和设备自动化水平动态分配决策权，并通过离散事件仿真（基于VDA 5050接口）验证近距触发交接机制。&#10;&#10;✨ **主要贡献**：首次将死锁按权威状态（无权威、过渡中、分歧）分类，并证明基于信息质量的动态授权可随自主性提升保持有效性，避免静态控制下的分歧死锁。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Logistics systems increasingly mix \emph{autonomous logistic equipment} (ALE) with non-autonomous machinery under a central control system (CS), where the best decision-maker depends on who holds the most current world model, yet authority is fixed at design time. When an ALE's local model and the CS global model diverge, both act on incompatible beliefs and produce deadlocks that resource-based handling neither explains nor prevents. We propose the World-Model-Aware Responsibility Framework (WMARF), which assigns authority dynamically from CS world-model quality and equipment automation level, and classifies deadlocks by the state of authority -- none, in transition, or divergent. In a discrete-event simulation of two ALE converging on a semi-automated transfer point, reproduced over the VDA~5050 interface, a divergence deadlock under static control is prevented by a proximity-triggered handoff. Because authority follows information quality rather than a shared protocol, the scheme stays valid as autonomy grows.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2605.25170v2" target="_blank" class="paper-title">Grow-Prune-Freeze Networks: Adaptive & Continual Learning Technique for Olfactory Navigation</a>
+                        <span class="paper-date">2026-07-16</span>
+                    </div>
+                                        <span class="paper-comment">📝 Accepted as poster to the Reinforcement Learning in Big Worlds Workshop at the 2026 Reinforcement Learning Conference</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决嗅觉导航任务中训练数据分散、非标准化，以及动态非平稳环境下机器人需要实时持续学习的问题。&#10;&#10;🛠 **方法**：提出Grow-Prune-Freeze（GPF）自适应框架，通过动态增长、剪枝和冻结策略网络的早期层，结合非线性随机矩阵理论扩展至多层持续学习模型，并基于Expected SARSA算法实现。&#10;&#10;✨ **主要贡献**：在湍流羽流导航任务中达到94%的成功率，证明GPF能有效应对部分可观测、非平稳的“大世界”挑战，并展示其在Atari强化学习、图像分类和自回归语言模型中的泛化潜力。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Training data for olfaction is scattered through disparate, non-standardized datasets that limit the ability to build representative world models. Olfactory navigation is a highly dynamic and non-stationary task that benefits from real-time continual learning. We introduce an adaptive framework called Grow-Prune-Freeze (GPF) networks that enable an agent to continually learn through growing, pruning, and freezing early layers of its policy in response to world complexity. Grounding GPFs in non-linear random matrix theory, we show that the work of Pennington & Worth (2017) can be extended from single hidden layers to n-layer continual-learning models, and that eigenvalue composition of network weights is preserved as successive layers are added. We show that GPFs based on Expected SARSA achieve a 94% success rate on turbulent plume navigation - a partially observable, non-stationary task representative of the "big world" challenges that motivate adaptive learning in robotics - and provide supporting methodology for applying GPFs in other world models. Further experiments amount evidence that GPFs may generalize well to other machine learning tasks such as reinforcement learning in Atari, image classification, and autoregressive language models. We open source all code and data to encourage improvements on and more research in olfactory robotics.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2511.22098v2" target="_blank" class="paper-title">WorldWander: Bridging Egocentric and Exocentric Worlds in Video Generation</a>
+                        <span class="paper-date">2026-07-16</span>
+                    </div>
+                                        <span class="paper-comment">📝 Accepted by ECCV 2026; Code: https://github.com/showlab/WorldWander</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有视频生成研究仅支持从第三人称视角（exocentric）到第一人称视角（egocentric）的单向转换，缺乏参考引导的第三人称视角合成能力，难以满足游戏和具身AI应用的需求。&#10;&#10;🛠 **方法**：提出WorldWander框架，基于视频扩散Transformer，集成上下文视角对齐（In-Context Perspective Alignment）和协作位置编码（Collaborative Position Encoding），实现双视角间的同步建模与角色一致性保持。&#10;&#10;✨ **主要贡献**：构建了包含合成与真实场景的同步EgoExo-8K数据集，实验证明WorldWander在视角同步、角色一致性和泛化能力上达到新标杆，填补了第一人称与第三人称视频双向翻译的空白。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Recent advances in video world models enable interactive environments with free navigation, making translation between first-person (egocentric) and third-person (exocentric) perspectives increasingly important. However, existing studies focus on unidirectional exocentric-to-egocentric translation, overlooking reference-guided exocentric perspective synthesis. This capability is crucial for gaming and embodied AI applications. Motivated by this, we present WorldWander, an in-context learning framework tailored for translating between egocentric and exocentric worlds in video generation. Building upon advanced video diffusion transformers, WorldWander integrates (i) In-Context Perspective Alignment and (ii) Collaborative Position Encoding to model cross-view synchronization and character consistency. To support our task, we curate EgoExo-8K, a dynamic and scene-rich dataset containing synchronized egocentric-exocentric triplets from both synthetic and real-world scenarios. Experiments demonstrate that WorldWander achieves superior perspective synchronization, character consistency, and generalization, setting a new benchmark for egocentric-exocentric video translation.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2606.29059v2" target="_blank" class="paper-title">Flow Matching in Feature Space for Stochastic World Modeling</a>
+                        <span class="paper-date">2026-07-15</span>
+                    </div>
+                                        <span class="paper-comment">📝 24 pages, 18 figures, 6 tables</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有视觉世界模型难以同时实现高精度未来预测与下游感知任务的有效性——VAE模型受限于低维重建潜变量，而确定性预测器在多模态未来预测中会退化为模糊均值。&#10;&#10;🛠 **方法**：提出FlowWM，直接在预训练特征空间（如DINOv3）中执行流匹配，通过可微分单步投影机制实现高效训练，并保持时间一致性与任务驱动目标。&#10;&#10;✨ **主要贡献**：在合成基准和真实世界FuturePerception基准上，FlowWM在感知性能、模态覆盖率和时域鲁棒性上均取得提升，验证了高维特征空间中随机世界建模设计的有效性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>World modeling requires forecasting uncertain futures while preserving information useful for downstream perception. Existing visual world models often struggle to satisfy both goals: VAE-based stochastic models operate in low-dimensional reconstruction latents, which can limit perception performance, while deterministic predictors using strong pretrained features collapse multimodal futures into a single blurry mean. In this work, we propose FlowWM, a stochastic world model that performs flow matching directly within pretrained feature space (e.g., DINOv3). This is challenging because pretrained features are substantially high-dimensional, making standard diffusion recipes suboptimal. To address this, we investigate the design choices needed for feature-space flow matching and introduce a differentiable one-step projection mechanism that enables efficient training with temporal consistency and task-driven objectives. We evaluate FlowWM on two benchmarks: a synthetic benchmark for systematic evaluation of accuracy and diversity, and a real-world benchmark FuturePerception. FlowWM improves perception performance, mode coverage, and horizon robustness, validating our proposed design for stochastic world modeling in high-dimensional feature spaces.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2607.14076v1" target="_blank" class="paper-title">From Pixels to States: Rethinking Interactive World Models as Game Engines</a>
@@ -1064,10 +1184,7 @@
                         <span class="paper-date">2026-07-15</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：当前AI在科学领域虽能实现精准预测，但缺乏对观测背后可复用解释机制的发现能力，无法真正实现科学发现。  &#10;🛠 **方法**：提出“机制世界模型”设计范式，将可复用机制置于表征、计算和学习的核心，结合科学哲学原理推导发现所需的计算能力，并整合机械可解释性、因果表征学习、方程发现和模块化架构等方向。  &#10;✨ **主要贡献**：为AI从预测性建模转向自主科学发现提供了概念基础和计算蓝图，明确了机制中心世界模型的设计原则与解剖结构。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Recent advances in foundation models have transformed AI for Science, enabling remarkably accurate predictive performance across domains ranging from protein folding to weather forecasting. Yet prediction alone does not constitute scientific discovery. Scientific understanding depends on uncovering the reusable explanatory mechanisms that generate observations, whereas contemporary machine learning remains fundamentally organised around predictive mappings rather than explanatory structure. In this paper, we argue that scientific discovery is fundamentally a problem of knowledge organisation. To this end, we introduce Mechanistic World Models, a new design paradigm that places reusable mechanisms at the centre of representation, computation and learning. Drawing on insights from the philosophy of science, we derive the computational capabilities required for discovery, identify the design principles and inductive pressures that encourage explanatory knowledge to emerge, and formalise the anatomy of a mechanism-centric world model. Finally, we show how diverse research directions including mechanistic interpretability, causal representation learning, equation discovery and modular architectures capture complementary ingredients of this paradigm while lacking a unified framework. We propose Mechanistic World Models as a conceptual foundation and computational blueprint for moving AI beyond predictive forecasting towards autonomous scientific discovery.</p>
@@ -1075,17 +1192,38 @@
                 </div>
                 <div class="paper-card">
                     <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.13960v1" target="_blank" class="paper-title">GigaWorld-Policy-0.5: A Faster and Stronger WAM Empowered by AutoResearch</a>
+                        <a href="https://arxiv.org/abs/2607.14187v1" target="_blank" class="paper-title">RxBrain: Embodied Cognition Foundation Model with Joint Language-Visual Reasoning and Imagination</a>
                         <span class="paper-date">2026-07-15</span>
                     </div>
-                                        <span class="paper-comment">📝 project page: https://open-gigaai.github.io/giga-world-policy/</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有世界动作模型（WAM）在推理时需显式生成未来视频，导致计算开销大，难以实现实时闭环控制。&#10;&#10;🛠 **方法**：提出以动作为中心的WAM框架，训练时利用未来视觉动态，推理时仅解码动作；采用混合动作条件世界建模（AC-WM）与WAM预训练策略，并引入混合Transformer架构分离视觉建模与动作生成；通过基于智能体的AutoResearch流水线自动搜索训练配置。&#10;&#10;✨ **主要贡献**：在保持未来视觉动态训练优势的同时，将推理延迟降至85毫秒（RTX 4090），显著提升机器人控制的实时性与效率。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
-                        <p>World Action Models (WAMs) improve robot policy learning by jointly modeling actions and future visual observations, using future scene evolution as dense supervision for physically grounded action generation. However, a common design in existing WAMs is to explicitly generate future videos at inference time, incurring substantial computational overhead and hindering real-time closed-loop deployment. GigaWorld-Policy addresses this issue with an action-centered formulation, where future visual dynamics are used during training while action-only decoding is used at inference time. Building upon this framework, we present GigaWorld-Policy-0.5, an enhanced action-centered WAM designed for more efficient robot control. During pretraining, GigaWorld-Policy-0.5 adopts a mixed Action-Conditioned World Modeling (AC-WM) and WAM training strategy. This strengthens the coupling between visual dynamics and robot actions and improves the transferability of action representations for downstream policy learning. For efficient inference, GigaWorld-Policy-0.5 introduces a Mixture-of-Transformers architecture that separates visual dynamics modeling and action generation into specialized experts, reducing active computation during action-only inference and achieving 85 ms inference latency on a local RTX 4090 setup. In addition, we employ an agent-based AutoResearch pipeline to systematically search training configurations, enabling more efficient identification of optimal experimental setups while reducing the time and manual intervention required for hyperparameter tuning. Experiments and ablations show that GigaWorld-Policy-0.5 preserves the training benefits of future visual dynamics while improving inference efficiency for robot control.</p>
+                        <p>Embodied cognition requires agents to connect high-level task reasoning with the physical states to be achieved. We introduce Hy-Embodied-RxBrain, an embodied cognition foundation model with joint language-visual reasoning and imagination. Unlike vision-language models that emphasize scene understanding and textual decision making, or generative world models that mainly predict future visual states, RxBrain represents embodied plans in a single planning sequence where language and visual imagination play complementary roles. Language provides the abstract structure of a plan, including task decomposition, planning primitives, constraints, temporal order, and decision logic, while visual imagination grounds this structure through world state prediction and joint subgoal planning, associating each planning step with intermediate and final physical states. RxBrain adopts a unified multimodal Mixture-of-Transformers architecture that supports language, image, and video understanding and generation within one model. To train this capability, we build an automatic pipeline that converts embodied videos into joint text-visual planning supervision by decomposing videos into planning steps and aligning them with visual state transitions. We further introduce RxBrain-Bench to evaluate whether models can represent embodied plans through joint textual and visual components rather than separate understanding or generation. Experiments show that RxBrain maintains embodied understanding and generation abilities, and produces plans with coupled textual reasoning, world state prediction, and joint subgoal planning. We also extend RxBrain to continuous robot action generation, where it shows promising real-robot performance without large-scale action-data pretraining. These results provide an initial step toward foundation models for embodied cognition.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.14183v1" target="_blank" class="paper-title">Open-AoE: An Open Egocentric Manipulation Dataset and Toolchain for Embodied Learning</a>
+                        <span class="paper-date">2026-07-15</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Egocentric videos of human manipulation provide scalable supervision for embodied intelligence, yet existing resources rarely combine low-cost continuous capture, manipulation-level structured annotations, and reusable tools for robot learning. We present Open-AoE, an open, community-oriented egocentric manipulation dataset and toolchain spanning the full pipeline from smartphone capture to model training. Its first release contains approximately 2,000 hours of manipulation video collected in natural environments by 500+ contributors using 400+ smartphones. The dataset provides text annotations, MANO-based hand poses, camera trajectories, and temporally localized atomic actions. Open-AoE further includes a data processing pipeline that transforms raw recordings into structured samples through temporal action segmentation, semantic annotation, hand reconstruction, and camera trajectory reconstruction. Meanwhile, we provide a separate downstream toolchain supports visualization, cross-embodiment retargeting, model-specific data conversion, and training recipes for VLA policies, WAMs, and World Models. By integrating scalable capture, structured processing, and downstream adaptation, Open-AoE reduces the barriers to both data contribution and reuse, providing practical open infrastructure for embodied model training, human-to-robot transfer, and world modeling.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.14180v1" target="_blank" class="paper-title">RENEW: Towards Learning World Models and Repairing Model Exploitation from Preferences</a>
+                        <span class="paper-date">2026-07-15</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>World models are widely used in offline reinforcement learning (RL) to improve sample efficiency and generate experience beyond a fixed dataset. However, they are vulnerable to model exploitation where data coverage is thin. Prior work addresses this either by collecting more expert demonstrations, which is often expensive, unsafe, or unavailable, or by conservative algorithms that avoid uncertain regions, which limits generalization. We propose instead to repair exploitation directly using human preferences over imagined rollouts, leveraging the strong intuitive physics that allows humans to easily spot egregious dynamics hallucinations. We formalize this as Dynamics Learning from Human Feedback (DLHF), a Bradley-Terry preference loss over trajectory log-likelihoods under a learned dynamics model. Unfortunately, naive DLHF is sample inefficient, so we introduce RENEW, which uses epistemic uncertainty to focus finetuning where the model is most exploitable. We evaluate on several Jumanji and classic control environments and find that while naive DLHF requires an outsize preference budget, RENEW makes the framework practical by improving sample efficiency, limiting catastrophic forgetting, and reducing exploitation in pretrained world models. Taken together, our results provide initial evidence that preferences can supervise world model dynamics directly, offering a new approach to addressing exploitation in offline model-based RL.</p>
                     </details>
                 </div>
                 <div class="paper-card">
@@ -1094,10 +1232,7 @@
                         <span class="paper-date">2026-07-15</span>
                     </div>
                                         <span class="paper-comment">📝 Accepted at RLC 2026 WM Workshop. V2 places the diagnostic in Koopman representation theory; references expanded. Results unchanged</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在基于模型的强化学习中，现有评估方法（如奖励预测误差）无法有效检测世界模型在潜在空间滚动预测中的规划相关错误，导致模型性能评估不全面。&#10;&#10;🛠 **方法**：提出一种名为“operator-on-F”的互补诊断方法，通过在可观测子集F上比较模型的多步潜在推演与环境真实动态，并利用模型自身的预测器计算算子误差。&#10;&#10;✨ **主要贡献**：实验表明，算子误差与规划回报损失高度相关（斯皮尔曼相关系数-0.90），能清晰区分不同规模模型（如TD-MPC2）的规划性能，而传统奖励预测误差分辨率极低（仅3倍变化）。该方法补充而非替代价值等价性评估，并可在跨架构比较中提供有区分度的诊断信息。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>World-model evaluation for model-based reinforcement learning typically asks whether the learned model predicts reward and value well, which can leave planning-relevant errors in the model's latent rollouts unmeasured. We introduce a complementary diagnostic, operator-on-F, that compares a model's k-step latent pushforward to the environment's on an observable subset F, using the model's own predictor. On a TD-MPC2 size sweep over cheetah-run, reward-prediction error stays within [0.028, 0.091] for every model size - only about 3x variation - so an unnormalized reward-fit check has narrow resolution to distinguish them; the (unnormalized) Bellman residual and reward error themselves have weak relationships with return (Spearman -0.10 and -0.30). Operator error spans 0.28 to 2.62 over the same sizes. At 317M the operator error is 2.62 - an order of magnitude above the 0.28-0.36 cluster - and the planning return collapses to 0.9, while reward-prediction error (0.091) is the highest of the five but stays within the same small [0.028, 0.091] range as the rest of the sweep. The rank correlation between operator error and return loss is -0.90 (anchor-bootstrap 95% CI [-0.90, -0.70] at n=5 sizes; leave-one-out removal of any single size leaves it at -0.80 or stronger). The operator also returns informative, architecture-discriminating estimates in a cross-architecture comparison between TD-MPC2 and a pure-SSL latent world model. The operator diagnostic complements value-equivalence rather than replacing it.</p>
@@ -1109,10 +1244,7 @@
                         <span class="paper-date">2026-07-15</span>
                     </div>
                                         <span class="paper-comment">📝 Accepted to ECCV 2026. Project page: https://vsi-super-wild.github.io/</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有空间超感知基准依赖合成长视频且场景单一，无法评估模型在真实世界长时域、多样化场景中持续追踪世界状态的能力。&#10;&#10;🛠 **方法**：构建大规模基准VSI-Super-Wild，包含6,980个经人工验证的问答对，源自442段真实世界视频（涵盖8类场景，最长超4小时），并基于认知科学系统探测世界状态的三个维度：观察者、物体和环境。&#10;&#10;✨ **主要贡献**：揭示模型在静态图像理解上虽有进步，但在长时域世界状态追踪任务中持续失败；提出四种失败模式（空间坍缩、语义捷径、更新不足、实例混淆），并指出模型缺乏将物体、观察者和环境绑定为统一空间世界模型的核心机制。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Humans can efficiently parse continuous sensory streams, from hours to years, scaffolding an internal world model that grounds spatial reasoning and prediction. To mimic this capacity, spatial supersensing challenges multimodal models to move beyond linguistic understanding toward true world modeling. However, their benchmark relies on synthetic long videos, formed by concatenating random short clips, and is mostly limited to household scenes, leaving real-world continuity and diversity underexplored. To address the gap, we introduce $\textbf{VSI-Super-Wild}$, a large-scale benchmark for evaluating spatial supersensing over long temporal horizons in diverse in-the-wild scenes. Notably, inspired by cognitive studies on how humans structure experience, we systematically probe the full triad of world state: the agent (observer), objects (scene items), and the environment (places and global layout). In total, VSI-Super-Wild contains $\textbf{6,980}$ human-verified question-answer pairs derived from $\textbf{442}$ real-world videos spanning 8 scene categories, including long-form recordings exceeding 4 hours. Results on VSI-Super-Wild expose a fundamental disconnect: despite advances in static image understanding, models consistently fail at tasks that require coherent world-state tracking over time. We characterize how performance degrades with world-state complexity and temporal horizon, and diagnose four failure modes: spatial collapse, semantic shortcuts, insufficient update, and instance confusion. This taxonomy reveals that models lack mechanisms to bind objects, agents, and environments into a unified spatial world model, a fundamental gap that defines the path forward for spatial supersensing.</p>
@@ -1124,10 +1256,7 @@
                         <span class="paper-date">2026-07-15</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决地球观测中图像到达时地表是否可见（即云层遮挡）的预测问题，而非图像获取延迟问题。  &#10;🛠 **方法**：采用LeWorldModel联合嵌入预测架构的世界模型，结合多光谱图像（蓝、绿、红、近红外、云掩膜）和气象、日历协变量，在EarthNet2021数据集上训练18.0M参数的模型。  &#10;✨ **主要贡献**：在可观测性预测任务上，LeWorldModel在下一时刻可用性（平衡准确率0.769-0.887）和首次可用时间预测（准确率0.602-0.806）上显著优于持久性基线，并在连续云/晴回归和异常检测上表现突出。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>The bottleneck of Earth Observation processing chains is not the arrival of new imagery but whether the surface is actually visible when the image arrives. We study this as an observability forecasting problem on EarthNet2021. Given recent multispectral imagery and exogenous weather drivers, the goal is to predict whether the next acquisition will be usable and, if not, when a usable view is likely to return. To do this, we adapt LeWorldModel, a joint-embedding predictive architecture world model, to cloud-aware Earth Observation sequences. The final pipeline converts raw minicubes into episodic HDF5 sequences with five image channels (blue, green, red, near-infrared, cloud mask) and eight meteorological and calendar covariates. The resulting model has 18.0M trainable parameters and is trained from scratch on 23,904 training episodes. The trained leWorldModel is evaluated under a locked protocol: linear probes are fit on train only, calibration choices are set on an internal validation split, and the fitted heads are then frozen for valsplit, IID, OOD, and extreme evaluation. On the full frozen-bundle observability benchmark, LeWorldModel consistently outperforms persistence. For next-step usability, balanced accuracy ranges from 0.769 to 0.887, compared with 0.493 to 0.556 for persistence. For exact first-usable-horizon prediction, accuracy ranges from 0.602 to 0.806, compared with 0.120 to 0.369 for persistence. Against a frozen LightGBM baseline fit on the same training windows, LeWorldModel is better on continuous clear/cloud regression and on exact recovery timing on valsplit, IID, and extreme, while LightGBM is stronger on the simpler binary any-usable-within-six task and is more robust on OOD. In separate sampled diagnostic analyses, LeWM also produces strong ranking-based anomaly signals under synthetic temporal inconsistencies.</p>
@@ -1139,13 +1268,22 @@
                         <span class="paper-date">2026-07-15</span>
                     </div>
                                         <span class="paper-comment">📝 Theoretical paper; empirical validation of the stated predictions is left to separate work. 28 pages, 4 figures, 4 tables</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：论文旨在从理论层面解释联合嵌入预测架构（JEPA）作为潜在世界模型的有效性，特别是其训练目标与主动推理（AIF）变分自由能之间的关系，并解决现有正则化方法在信息瓶颈和自由能边界上的不一致性。&#10;&#10;🛠 **方法**：通过将四种非对比正则化器（VICReg、LogDet、PairDist、SIGReg）组织为基于先验校准差距的熵估计层次，并证明在SIGReg约束下（各向同性高斯嵌入），JEPA目标可精确对应AIF变分自由能，同时扩展至多步期望自由能、集成认知价值和策略学习框架。&#10;&#10;✨ **主要贡献**：首次建立JEPA与AIF之间的严格理论对应，证明SIGReg可消除熵估计偏差，使目标成为精确信息瓶颈并保留惊奇边界，而VICReg等则存在不可约的各向异性项；同时识别出当前JEPA世界模型缺失的状态认知价值项，所有结果均经过Lean 4形式化验证。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Joint-Embedding Predictive Architectures (JEPAs) are the dominant design for latent world models, yet they are usually justified by empirical performance rather than a normative principle. We show that the choice of anti-collapse regulariser determines whether a JEPA's training objective, a prediction loss plus a weighted embedding regulariser, is a valid Active Inference (AIF) variational free energy. We organise four non-contrastive regularisers (VICReg, LogDet, PairDist, and SIGReg) into an entropy-estimator hierarchy indexed by a prior-miscalibration gap, and show that the gap's sign, whether the estimator bounds the latent entropy from above or below, decides whether the AIF surprise bound survives: VICReg and LogDet are unsafe upper bounds, PairDist a safe lower bound, and SIGReg eliminates the gap. We then prove a correspondence theorem: under the standard constant-noise encoder model and successful SIGReg enforcement (isotropic-Gaussian embeddings), the gap vanishes, the objective becomes an exact information bottleneck, the surprise bound is preserved, and the latent goal cost becomes an exact proxy for AIF pragmatic value, whereas VICReg leaves an irreducible second-order anisotropy term. We extend the correspondence to multi-step expected free energy, ensemble epistemic value, and a learned-policy regime, and we identify the one AIF term no current JEPA world model computes: the state-epistemic value, a future-state coverage signal. The predictions differ in kind, not degree, and are stated here as theoretical consequences left for empirical test in separate work; full proofs are in Appendix A, and the algebraic core of every result is machine-verified in Lean 4 (Appendix D).</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.14169v1" target="_blank" class="paper-title">When a Verified World Model Still Loses: Play-Adequacy vs Prediction-Accuracy in LLM-Synthesized Code World Models</a>
+                        <span class="paper-date">2026-07-15</span>
+                    </div>
+                                        <span class="paper-comment">📝 41 pages, 4 figures. Code and reproduction log: https://github.com/JaviMaligno/code-world-models</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Large language models can synthesize a game's rules as executable code - a Code World Model (CWM) - which a classical planner then searches over. Such models are typically accepted when they reach high transition accuracy on sampled trajectories. We argue this is the wrong notion of adequacy for planning. We show four things. (1) An LLM-synthesized CWM can pass a sampling gate at 100% transition accuracy and be $\geq 98\%$ state-accurate on the planner's own search distribution, yet lose systematically at play, because the $<1\%$ it gets wrong is exactly the pivotal dynamics; the play cost of the omitted rule is $0.091$ (seed-clustered 95% CI $[0.065,0.117]$, $n=4800$). We call this the verified-vs-correct gap, and confirm it end-to-end through the synthesis pipeline. (2) The harm follows a quantitative law, $\mathrm{danger}=\mathrm{play\_cost}\times(1-\mathrm{rarity})^N$, whose $(1-\mathrm{rarity})^N$ gate-miss factor is proven exact and whose play cost is empirically bounded. (3) The failure is not repaired by more data: LLM synthesis behaves as rule translation, not rule inference, and did not infer the omitted rule across models (GPT-5.x) and data regimes (including DAgger and targeted examples). (4) The same mechanism recurs on the belief-inference function of imperfect-information CWMs: we prove a coverage bound (a size-$N$ gate is identifying when $N\gtrsim b^{d_{\max}}$), explaining why shallow games such as Kuhn poker show no gap, and hand-construct Beacon, a verified-but-wrong inference function that passes the gate yet loses every game. These results suggest adequacy for planning-oriented world models should be measured on the search distribution or by play directly, not by prediction accuracy on sampled transitions.</p>
                     </details>
                 </div>
                 <div class="paper-card">
@@ -1154,10 +1292,7 @@
                         <span class="paper-date">2026-07-15</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：当前生成式与具身AI主要依赖被动学习语言规律，缺乏生物智能中通过环境交互建立的具身世界模型，导致系统无法真正理解物理世界和自主行动。&#10;&#10;🛠 **方法**：从神经科学与认知科学中提取五个具身世界建模的神经回路案例，包括导航、物体交互、主动感知、稳态控制及自我-世界区分，并对比分析生物系统与当前AI的差异。&#10;&#10;✨ **主要贡献**：揭示了生物智能中内在动力学、行动对齐、自主探索等关键特征，提出未来具身AI应基于社会交互训练，构建不仅具身且与社会规范对齐的世界模型。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Recent advances in generative and embodied AI have been driven by large-scale predictive learning over multimodal data. However, the resulting systems remain largely based on passive training regimes where linguistic regularities create the scaffold onto which information from other modalities is attached. Conversely, neuroscience and cognitive science suggest that biological intelligence is organized in the opposite way, where grounded world models acquired through interaction with the environment provide the semantic scaffold to which language is attached. Here, we illustrate five examples of neural circuits supporting grounded world modelling, which underlie navigation in physical and conceptual spaces, affordance-based perception and interaction with objects, active perception and exploratory learning, allostatic control and emotion, and the distinction between self- and world-generated outcomes. These examples highlight several features largely missing from current embodied AI, including the role of intrinsic dynamics as a foundation for learning, the centrality of action in aligning these dynamics with the external world, the prominence of autonomous experience and open-ended learning over passive assimilation of externally provided data, and the fact that early predictive and control mechanisms scaffold higher cognitive abilities such as reasoning, conceptual navigation, planning, imagination, understanding others' minds, and communication. Finally, we discuss whether and how principles derived from biological systems may inform future embodied AI, including training regimes based on social interaction to construct world models that are not only grounded but also socially shared and aligned with human norms and values.</p>
@@ -1169,10 +1304,7 @@
                         <span class="paper-date">2026-07-15</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="好的，作为人工智能研究与学术论文分析专家，我将严格按照您的要求，对论文《MotuBrain: An Advanced World Action Model for Robot Control》进行详细的中文解读。&#10;&#10;## 0. 概览（Concise Summary）&#10;&#10;- **主题（Topic）**：机器人控制领域的**世界动作模型（World Action Model, WAM）**。该模型旨在统一视觉世界建模与机器人动作预测，实现更智能、更通用的机器人操控。&#10;- **问题（Problem）**：现有机器人策略主要分为两类：1）**视觉-语言-动作（VLA）模型**，虽然泛化能力强，但缺乏对世界动态（如物理规律、物体交互）的深层理解，导致行为模仿而非真正的因果推理；2）**视频生成模型+逆动力学模型（VGM+IDM）** 的两阶段范式，虽然利用了视频数据的时空先验，但存在**级联误差**问题（视频预测的误差会累积并传递给动作预测）。此外，如何高效地利用异构多模态数据（如无动作标签的视频、不同机器人形态的数据）进行统一训练，并实现低延迟的实时部署，也是关键挑战。&#10;- **方法（Method）**：提出**MotuBrain**，一个基于**UniDiffuser**框架的**统一世界动作模型**。它采用**三流混合Transformer（Mixture-of-Transformers, MoT）** 架构，分别处理文本、视频和动作三种模态。通过联合建模视频和动作的生成过程，模型可以支持多种推理模式（如策略建模、世界建模、视频生成等）。此外，还引入了**统一多视角表示**、**跨本体统一动作表示**、**V2A风格非对称注意力**以及一套**推理加速栈**（包括噪声采样优化、编译、FP8量化、DiT缓存等），以实现高效的实时控制。&#10;- **创新（Innovation）**：&#10;    1.  **统一架构与训练**：在UniDiffuser框架下，将视频和动作作为两个连续的模态进行联合建模和调度，实现了从异构多模态数据（包括无动作标签的视频）中学习，突破了传统VLA模型对动作标签的依赖。&#10;    2.  **三流MoT与H桥注意力**：设计了独立的文本、视频、动作三流架构，并采用**H桥（H-bridge）注意力**设计，在保证跨模态交互的同时，显著提升了计算效率。&#10;    3.  **实用化设计与推理优化**：提出了**统一多视角**、**跨本体统一动作表示**、**V2A非对称推理**（允许在推理后期仅更新动作流，冻结视频流）以及一套**超过50倍加速**的推理优化栈，使大型世界动作模型能够满足实时机器人控制的需求。&#10;- **意义（Significance）**：MotuBrain证明了**统一世界动作模型**在**通用性、可控性和实时可部署性**上可以同时取得显著进步。它在RoboTwin 2.0基准测试中取得了**95.8%（干净场景）和96.1%（随机场景）** 的最高成功率，在WorldArena世界模型评估中也获得了最高分。更重要的是，它仅需**50-100条**同本体轨迹即可快速适应新的人形机器人，并展现出长时域任务执行和内在的自我纠错能力，为构建更通用、更智能的机器人基础模型提供了有力范式。&#10;- **一句话总结**：MotuBrain通过一个统一的世界动作模型架构和高效的推理优化，实现了从异构数据中学习、在多种机器人上高效迁移、并能在真实世界中进行长时域、灵巧操作的先进机器人控制系统。&#10;&#10;## 1. 研究动机（Motivation）&#10;&#10;- **核心问题**：当前的机器人学习范式存在根本性缺陷。**VLA模型**虽然擅长理解语义和指令，但它们在静态图文数据上预训练，缺乏对**细粒度世界动态**（如物体如何因力而移动、形变）的感知和预测能力，导致其行为更像是“模仿”而非“理解”。另一方面，**VGM+IDM**的两阶段方法虽然利用了视频中的动态信息，但视频预测的微小误差会随着时间步长累积放大，最终导致动作预测失败，即**级联误差**问题。&#10;- **重要性**：一个真正的智能机器人需要同时具备两种能力：1）**理解世界**（世界模型）：预测环境在自身动作下的未来状态；2）**作用于世界**（策略模型）：根据当前状态和目标，生成正确的动作序列。将这两者割裂开来（如VGM+IDM）或只关注后者（如VLA）都限制了机器人的智能水平。&#10;- **挑战**：&#10;    1.  **数据异构性**：如何有效利用海量的、但缺少动作标签的互联网视频数据？如何融合来自不同机器人形态（如单臂、双臂、人形）的异构数据？&#10;    2.  **模型统一性**：如何设计一个单一的模型，既能进行高质量的视频预测（世界模型），又能进行精确的动作生成（策略模型），并且两者能相互促进，而不是相互干扰？&#10;    3.  **实时性**：大型扩散模型推理速度慢，如何将其加速到足以满足机器人高频控制（如10Hz以上）的实时性要求？&#10;&#10;## 2. 创新点（Innovation）&#10;&#10;1.  **统一世界动作建模框架**：基于**UniDiffuser**，将视频和动作视为两个连续的模态，在一个统一的生成式框架下进行联合建模和调度。这使得同一个模型可以支持五种不同的推理模式（VLA策略、世界模型、视频生成、逆动力学、联合视频-动作预测），从根本上解决了VGM+IDM的级联误差问题，并实现了从异构多模态数据中学习。&#10;2.  **三流混合Transformer（MoT）与H桥注意力**：&#10;    - **三流架构**：独立的**文本流**（用于语义理解）、**视频流**（用于视觉动态建模）和**动作流**（用于动作生成）。这种设计避免了模态间的信息混淆，特别是独立的文本流增强了指令跟随能力。&#10;    - **H桥注意力**：在Transformer层中，仅在中间50%的层使用全视频-动作联合注意力，而在底部和顶部的25%层使用解耦注意力。这大幅降低了计算成本，同时保留了在中间层进行语义对齐和策略基础学习的能力。&#10;3.  **实用化设计与推理加速栈**：&#10;    - **统一多视角表示**：通过为不同视角的token引入**3D旋转位置编码（3D RoPE）** 的视角相关偏移，可以无缝支持任意数量和布局的相机视角。&#10;    - **跨本体统一动作表示**：将动作表示为相对于当前观测帧末端执行器状态的**相对位姿**（位置差、旋转差），提高了不同机器人形态和初始位姿下的动作空间兼容性，减少了迁移所需的数据量。&#10;    - **V2A风格非对称推理**：训练时采用视频不关注动作、动作关注视频的**非对称注意力**。这使得推理时可以在少量联合去噪步骤后，**冻结视频流**，仅更新动作流，从而大幅降低计算量。&#10;    - **推理加速栈**：组合了**噪声采样优化**（减少去噪步数）、**torch.compile**（算子融合）、**FP8量化**（降低内存和计算开销）、**DiT缓存**（利用去噪步骤间的冗余跳过部分计算）和**V2A推理**，实现了超过**50倍**的端到端加速，使模型达到**11Hz**的推理频率。&#10;&#10;## 3. 主要内容（Main Content）&#10;&#10;### 3.1 设计架构与方法&#10;&#10;MotuBrain的整体架构如图1所示，其核心是一个**三流混合Transformer（MoT）**。&#10;&#10;- **输入处理**：&#10;    - **文本**：语言指令通过文本编码器转换为文本token。&#10;    - **视频**：条件帧（当前观测）和未来帧（待预测）通过Vidu VAE编码为视频latent。&#10;    - **动作**：未来动作通过动作编码器转换为动作token。&#10;- **三流MoT**：模型包含三个并行的Transformer流：&#10;    - **文本流**：作为条件分支，其隐藏状态参与注意力计算，但不输出预测头。&#10;    - **视频流**：通过流匹配（Flow Matching）预测视频latent的速度场。&#10;    - **动作流**：通过流匹配预测动作token的速度场。&#10;- **H桥注意力**：如图1所示，在Transformer的中间层，视频、动作和文本token之间进行**全联合注意力**；而在浅层和深层，视频和动作流独立处理，仅与文本流交互。这平衡了跨模态交互与计算效率。&#10;- **多视角支持**：对于多视角输入，每个视角独立编码后在token级别拼接。通过为不同视角的token在空间维度上添加不同的3D RoPE偏移，模型可以区分并处理来自不同视角的信息。&#10;&#10;### 3.2 关键算法与数学推导&#10;&#10;- **统一动作表示**：&#10;    设绝对末端执行器动作为 $E_{abs} = \{e^{abs}_1, ..., e^{abs}_n\}$，条件帧的末端执行器状态为 $s$。相对动作 $E_{rel} = \{e^{rel}_1, ..., e^{rel}_n\}$ 定义为：&#10;    $$e^{rel}_i = e^{abs}_i \ominus s$$&#10;    其中 $\ominus$ 表示逐分量位姿差。对于位姿 $e = (p, R, g)$（位置 $p$，旋转 $R$，夹爪状态 $g$）：&#10;    $$e^{abs}_i = (p_i, R_i, g_i), \quad s = (p_s, R_s, g_s)$$&#10;    $$e^{rel}_i = (p_i - p_s, R_s^{-1} R_i, g_i)$$&#10;    最终动作维度为10（3维位置 + 6维旋转表示 + 1维夹爪状态）。&#10;&#10;- **训练目标**：&#10;    两阶段预训练的总损失函数为视频损失和动作损失的加权和：&#10;    $$L = \lambda_v L_v + \lambda_a L_a$$&#10;    其中 $L_v = \text{MSE}(v_{out}, v_{target})$, $L_a = \text{MSE}(a_{out}, a_{target})$。&#10;&#10;- **V2A风格推理**：&#10;    在推理时，采用一个短期的联合去噪前缀，随后是仅动作去噪的后缀：&#10;    $$(z^{(t+1)}_v, z^{(t+1)}_a) = \begin{cases} \Phi_{joint}(z^{(t)}_v, z^{(t)}_a), &amp; t &lt; N \\ (z^{(N)}_v, \Phi_{act}(z^{(t)}_a; z^{(N)}_v)), &amp; t \ge N \end{cases}$$&#10;    其中 $z^{(t)}_v$ 和 $z^{(t)}_a$ 分别是第 $t$ 步的视频和动作latent。在 $N$ 步之后，视频latent $z^{(N)}_v$ 被冻结，后续步骤仅更新动作token。&#10;&#10;- **DiT缓存**：&#10;    利用去噪步骤间的相似性跳过部分计算。设 $v_t$ 为第 $t$ 步的速度预测，相似度 $s_t$ 定义为：&#10;    $$s_t = \frac{\langle v_t, v_{t-1} \rangle}{\|v_t\|_2 \|v_{t-1}\|_2}$$&#10;    当 $s_t &gt; \gamma$ 时，跳过后续 $k$ 步的DiT计算，用历史预测近似：&#10;    $$\hat{v}_{t+j} \approx v_t, \quad j = 1, ..., k$$&#10;&#10;- **实时执行中的动作融合**：&#10;    为减少异步控制中的块边界不连续性，将当前块未执行的动作作为下一块的软约束。融合后的动作为：&#10;    $$\tilde{a}^{new}_i = w_i a^{remain}_i + (1 - w_i) a^{new}_i$$&#10;    其中权重 $w_i$ 由指数衰减函数 $g(\rho_i) = \frac{\rho_i (e^{\rho_i} - 1)}{e - 1}$ 决定，$\rho_i$ 是融合窗口内的归一化进度。&#10;&#10;### 3.3 模型、训练与数据集&#10;&#10;- **基础模型**：视频生成模型**Vidu**作为MotuBrain的基础模型。&#10;- **数据金字塔**：预训练数据采用四级金字塔结构：&#10;    1.  **互联网视频**：训练视频生成基础模型。&#10;    2.  **第一人称视频**：提供接近具身操作的交互模式。&#10;    3.  **异构本体数据**：来自不同双臂机器人平台的数据。&#10;    4.  **特定本体数据**：目标机器人配置下的数据，用于最终对齐。&#10;- **两阶段预训练**：&#10;    - **第一阶段**：冻结随机初始化的动作分支，仅训练视频分支。目标是在第一人称和异构本体数据上，将互联网视频先验适应到具身操作，获得一个能理解双臂交互动态的视频世界模型。此阶段采用**噪声条件增强**（公式1）来提高对不完美视觉条件的鲁棒性。&#10;    - **第二阶段**：冻结第一阶段训练好的视频分支，仅训练动作分支。目标是在异构本体数据上，学习一个**跨本体的统一动作表示**（相对末端执行器位姿），使动作空间更一致。&#10;- **后训练**：在特定本体数据上微调。有两种设置：&#10;    - **非自回归（Non-AR）**：一次性去噪整个观测窗口内的所有视频和动作token。&#10;    - **自回归（AR）**：基于块（chunk）的因果分解，用于长时域任务。使用块因果注意力掩码（图2d），每个块只能关注过去块的干净视觉上下文。&#10;&#10;### 3.4 实验设置与结果&#10;&#10;- **仿真环境评估（RoboTwin 2.0）**：&#10;    - **设置**：使用2500条干净场景和25000条随机场景的演示数据训练。视频下采样到5Hz，动作到10Hz。&#10;    - **结果（表3）**：MotuBrain在干净场景和随机场景下分别达到**95.8%** 和**96.1%** 的平均成功率，远超所有基线模型（包括π0.5, X-VLA, Motus, LingBot-VA等）。它是唯一一个在随机评估中平均分超过95%的模型。&#10;    - **任务级分析（表4）**：在50个任务中，MotuBrain在24个（干净）和25个（随机）任务上获得满分。其优势集中在需要**鲁棒的多阶段操作**、**精确交互**（如Handover Block, Open Microwave）和**精细空间排列**（如Blocks Ranking Size）的任务上。&#10;    - **扩展性分析（图3, 4）**：MotuBrain展现出比VLA基线更强的**任务扩展性**和**数据效率**。增加任务多样性比单纯增加数据量更有效。&#10;&#10;- **世界模型评估（WorldArena）**：&#10;    - **设置**：使用2500条高分辨率轨迹训练，在**前向动力学模式（FDM）** 下评估。&#10;    - **结果（图5, 表5）**：MotuBrain获得了最高的**EWMScore（63.77）**，在**运动质量（Motion Quality）** 维度上排名第一（Flow Score, Motion Smoothness, Dynamic Degree均为最高）。这表明MotuBrain预测的运动是**实质性、平滑且集中在相关区域**的，成功弥合了“感知-功能”鸿沟。&#10;&#10;- **真实世界实验**：&#10;    - **设置**：从预训练模型出发，仅用**50-100条**同本体轨迹进行快速适配。无需VLM规划器、外部记忆等辅助模块。&#10;    - **任务**：在多种人形机器人上执行**关东煮制作**、**调制鸡尾酒**、**插花**等长时域、灵巧操作任务。&#10;    - **结果（表6, 7, 8）**：在关东煮任务中得分**98.54**，鸡尾酒任务得分**97.34**，插花任务得分**83.30**。&#10;    - **定性分析**：模型展现出**内在的自我纠错能力**（如插花失败后调整）、**双臂异步泛化能力**（一只手臂任务提前完成不影响另一只）和**场景泛化能力**（在未见过的环境中成功执行）。&#10;&#10;### 3.5 技术细节&#10;&#10;- **噪声采样**：为视频和动作使用独立的基于信噪比（SNR）的时间步采样。视频使用 `timeshift=6`（倾向于更嘈杂的区域），动作使用 `timeshift=1`（更均匀）。这使得模型在嘈杂视觉条件下也能预测准确动作，从而允许将推理步数从50减少到30。&#10;- **编译**：使用 `torch.compile` 优化推理图并融合算子，减少重复去噪的开销。&#10;- **FP8量化**：将符合条件的 `nn.Linear` 层替换为FP8线性层，使用 `float8_e4m3fn` 格式和逐张量缩放，通过 `torch._scaled_mm` 计算矩阵乘法，降低内存带宽和计算成本。&#10;- **动作平滑**：采用Savitzky-Golay滤波器对动作块进行平滑，并利用**频率感知插值**根据模型动作频率和底层控制频率的比例进行插值，保持预测的速度轮廓。&#10;- **实时执行**：将模型推理循环与机器人动作执行循环**解耦**。采用**RTC启发式策略**，通过一个延迟队列 `Q` 保守估计下一次推理的延迟，并据此调整融合窗口，使异步执行在波动的网络和模型延迟下更稳定。&#10;&#10;## 4. 意义与影响（Significance and Impact）&#10;&#10;- **解决的问题与贡献**：&#10;    - **解决了级联误差问题**：通过统一建模视频和动作，避免了VGM+IDM范式中视频预测误差的累积。&#10;    - **实现了从异构数据中学习**：证明了世界动作模型可以从海量、异构、多模态数据（包括无动作标签的视频）中有效学习，这是VLA模型难以做到的。&#10;    - **弥合了感知-功能鸿沟**：MotuBrain在WorldArena（感知评估）和RoboTwin（功能评估）上同时取得最佳成绩，表明其学到的世界">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Vision-Language-Action (VLA) models generalize semantically well but often lack fine-grained modeling of world dynamics. We present Motubrain, a unified World Action Model that jointly models video and action under a UniDiffuser formulation with a three-stream Mixture-of-Transformers architecture. A single model supports policy learning, world modeling, video generation, inverse dynamics, and joint video-action prediction, while scaling to heterogeneous multimodal data such as video-only, task-agnostic, and cross-embodiment robot data. Building on Motus, Motubrain further introduces unified multiview modeling, an independent text stream for stronger language-action coupling, a shared cross-embodiment action representation, and an efficient post-training and deployment recipe for long-horizon real-world control. Our inference stack combines step reduction, compilation, FP8 quantization, DiT caching, V2A-style action-only inference, and real-time chunked closed-loop execution, achieving over 50x speedup over a naive baseline and up to 11 Hz inference. Experimentally, Motubrain achieves 95.8% and 96.1% average success on RoboTwin 2.0 under clean and randomized settings, respectively, attains the strongest reported EWMScore in our WorldArena comparison, and adapts to new humanoid embodiments with only 50--100 trajectories. These results show that unified world action models can scale in generality, predictive accuracy, and real-world deployability.</p>
@@ -1848,150 +1980,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>A learned world model is usually judged by how faithfully it reconstructs its observations or predicts reward, as though quality were something the model simply has or lacks. But what a task actually needs from a model is narrower: the few predictive coordinates its queries depend on, which we call the closure. We show that how much of that closure a latent comes to represent is set not by the model's capacity or its observations but by the dimensionality of the objective it is trained against, and we measure this directly on a DreamerV3 stack in a controlled environment with known ground-truth closure. An aligned scalar value signal -- the objective at the heart of value equivalence -- installs only a one-dimensional projection of a closure that needs several dimensions: read through a single linear probe, the recoverable structure rises from R^2=0.10 to 0.76 as the scalar is replaced by the full objective. Sweeping the objective's dimensionality from one to four installs exactly that many predictive directions through an auxiliary head, and the same staircase appears -- at attenuated magnitude but the same rank -- through the model's own value head, so the dissociation is dimensional rather than an artifact of head form. Capacity-matched comparisons and in-situ pressure checks rule out the obvious alternatives. The law governs a regime, and we measure its boundary: on a companion closed-loop task whose structure is observable frame by frame, reconstruction installs that structure and the scalar objective suffices -- the objective decides what a latent represents exactly where cheaper training signals cannot already recover it. Value equivalence is thus not all-or-nothing but dimensional: the familiar single-reward objective is its rank-one corner, and a model installs as much of a task's structure as the objective it is asked to predict.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.06291v1" target="_blank" class="paper-title">AlayaWorld: Long-Horizon and Playable Video World Generation</a>
-                        <span class="paper-date">2026-07-07</span>
-                    </div>
-                                        <span class="paper-comment">📝 Authors are listed alphabetically by the first name and their role. See the contribution section for details</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Game worlds have traditionally been built through labor-intensive production pipelines, making them costly to develop, difficult to customization, and expensive to modify after deployment. Recent advances in video world models offer a fundamentally different paradigm. Rather than explicitly authoring every component of a virtual environment, these models autoregressively synthesize future observations conditioned on the current world state and user interactions, enabling playable worlds to be generated online. Trained on both gameplay recordings and real-world videos, they can capture diverse visual appearances and physical dynamics, opening new opportunities for interactive applications beyond gaming, including embodied intelligence. In this paper, we present \textbf{AlayaWorld}, a full-stack open-source framework for building interactive generative worlds. AlayaWorld enables open-ended real-time interaction, allowing users to freely navigate and perform diverse actions such as combat, spell casting, and monster summoning. The framework unifies the complete development-from data preparation model architecture, model training, inference acceleration, and deployment-within a modular and extensible architecture. Alongside the framework, we release reproducible pipelines, reference implementations, evaluation tools, and comprehensive documentation, establishing a practical foundation for future research and real-time applications of generative world models.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.06216v1" target="_blank" class="paper-title">MoWorld: A Flash World Model</a>
-                        <span class="paper-date">2026-07-07</span>
-                    </div>
-                                        <span class="paper-comment">📝 Project Page: https://moxin-tech.github.io/moworld/</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>The future of World Models depends not only on scaling model capability, but also on scaling practicality and inference efficiency. High-frame-rate inference enables responsive perception, planning, and control in real-world autonomous systems. To this end, we present MoWorld, a cost-effective yet high-performance Flash World Model with an end-to-end framework spanning data generation, pre-training, distillation, and efficient inference, enabling up to 50 FPS real-time interaction with cinematic visual quality without the need of high-end GPUs. To enable large-scale real-world deployment, MoWorld jointly optimizes model capability and cost throughout the entire development pipeline. Specifically, unlike existing approaches that primarily rely on large-scale video corpora, MoWorld is built upon a scalable 3D-native data engine accumulated from our large-scale 3D vision and generative modeling pipeline, enabling the efficient construction of geometrically consistent training data across diverse real-world and synthetic environments. Based on this foundation, a curriculum cross-frame pre-training strategy for stable and scalable World Model learning, an efficient denoising-step distillation algorithm to reduce diffusion training cost, and a mixed-precision parallel inference framework for low-cost real-time deployment. MoWorld is the first real-time interactive World Model built on the Neural Processing Unit (NPU) and can achieves up to 50 FPS in such the devices, enabling practical and efficient deployment at scale. Comprehensive evaluations demonstrate that MoWorld achieves leading performance; notably, its average inference cost is only 30\%-50\% of that of existing World Models, providing a practical foundation for large-scale real-world applications of World Models. We also demonstrate diverse applications of MoWorld.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.05966v1" target="_blank" class="paper-title">Imagined Rollouts are Kinematic, Not Dynamic: A Diagnosis of Long-Horizon World-Model Failure</a>
-                        <span class="paper-date">2026-07-07</span>
-                    </div>
-                                        <span class="paper-comment">📝 9 Pages Workshop Paper accepted at RSS Robot World Model Workshop 2026</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Long-horizon failure in world models is conventionally attributed to compounding error, a generic framing that does not distinguish what kind of error compounds. We propose a kinematic-vs-dynamic reframing: world models tend to imagine kinematically rather than dynamically. We operationalize this as the imagined Kinematic-Consistency Error, a per-step diagnostic that measures how far a rollout departs from a closed-form kinematic null, paired with a perturbation protocol that tests whether iKCE responds when physical conditions cross a regime boundary. We instantiate the diagnostic on a released DreamerV3 checkpoint trained on DMC walker-walk, where imagined iKCE runs roughly two orders of magnitude above that of matched real-physics rollouts. Across a friction sweep that crosses the gait-collapse boundary, the model's iKCE stays statistically flat even as the trained policy's reward collapses through the same range, providing the kinematic-not-dynamic signature. The diagnostic distinguishes kinematic from dynamic imagination at horizons longer than the embodiment's gait period.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2605.02965v2" target="_blank" class="paper-title">Joint Energy Management and Coordinated AIGC Workload Scheduling for Distributed Data Centers: A Diffusion-Aided Reward Shaping Approach</a>
-                        <span class="paper-date">2026-07-07</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Artificial intelligence-generated content (AIGC) has emerged as a transformative paradigm for automating the creation of diverse and customized content, giving rise to rapidly growing computational workloads in cloud data centers. It is imperative for AIGC service providers (ASPs) to strategically schedule AIGC workloads to reduce data center energy costs while guaranteeing high-quality content generation. However, the distinctive characteristics of AIGC services pose critical challenges, including model heterogeneity across ASPs, implicit service quality evaluation, and complex inference process control. To tackle these challenges, we propose a joint energy management and coordinated AIGC workload scheduling framework, which introduces an explicit mathematical characterization of service quality to promote both job transfer among ASPs and fine-grained inference process configuration. Moreover, various energy resources within data centers are jointly considered to enhance power usage flexibility. Subsequently, a system utility maximization problem is formulated to balance AIGC service revenue with operational penalties and costs. Nevertheless, the strong coupling among job scheduling decisions induces severe reward sparsity, which limits the effectiveness of existing deep reinforcement learning (DRL) algorithms. To address this issue, we develop a diffusion model-aided reward shaping approach to synthesize complementary reward signals through a multi-step denoising process. This approach is seamlessly integrated with DRL to enable efficient learning of scheduling policies under sparse environmental feedback. Experiments based on real-world models and datasets demonstrate that our scheme effectively accommodates electricity price fluctuations and AIGC model heterogeneity, while achieving superior learning convergence and system utility compared with benchmark methods.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.28757v2" target="_blank" class="paper-title">A Physics-Grounded Benchmark for Multi-Agent Dynamics in World Models</a>
-                        <span class="paper-date">2026-07-07</span>
-                    </div>
-                                        <span class="paper-comment">📝 34 pages, 9 figures, 12 tables</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Generative world models hold immense promise as scalable simulators for autonomous systems, particularly for synthesizing rare but safety-critical multi-agent interactions, such as vehicle collisions. However, current evaluation paradigms index heavily on visual fidelity and semantic alignment, leaving a critical blind spot: they cannot reliably quantify whether generated dynamics actually obey the fundamental physical laws required for reliable simulation. Assessing this physical plausibility is inherently difficult due to a lack of physical metrics and the challenge of extracting metric-scale kinematics from uncalibrated video rollouts. To bridge this gap, we introduce CrashTwin, a physics-grounded evaluation framework designed to stress-test the physical trustworthiness of world models. CrashTwin couples a diverse dataset of multi-agent collision scenarios, comprising 25K controllable synthetic and 12K in-the-wild real-world collision sequences with a novel calibration-free reconstruction pipeline, enabling the recovery of 3D physical attributes directly from world model rollouts. We propose a diagnostic suite that systematically evaluates three dimensions: spatio-temporal consistency, momentum and kinetic energy conservation, and world-dynamics integrity. Extensive benchmarking of state-of-the-art models reveals a crucial insight: high perceptual quality frequently masks severe physical violations during complex interactions. By quantitatively exposing these failure modes, CrashTwin provides a vital diagnostic tool for developing physically grounded world models capable of reliable real-world simulation.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.19990v2" target="_blank" class="paper-title">Reward as An Agent for Embodied World Models</a>
-                        <span class="paper-date">2026-07-07</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>While RL has become a promising tool for refining world models, existing methods largely rely on conservative rollouts near the training distribution, limiting exploration, behavioral diversity, and richer dynamic discovery. In this work, we challenge this conservative paradigm. We argue that the core limitation is not exploration itself, but the lack of reliable verification strategies to support broader exploration. Without reliable verification, expanded exploration becomes highly susceptible to reward hacking, where policies exploit imperfect rewards without achieving genuine improvement. To evaluate this motivation, we instantiate our method in embodied world models, where physical plausibility, and task completion provide a rigorous testbed for scalable RL under complex dynamics. On the verification side, we introduce Reward as an Agent, an agentic reward framework that actively evaluates generated behaviors to provide robust reward signals and mitigate reward hacking under distribution shifts. On the exploration side, we introduce Dynamic-Aware Rollout Diversification through DynDiff-GRPO, which explicitly expands action-space exploration to diversify trajectories, broaden state-action coverage, and encourage richer embodied behaviors beyond conservative rollout regimes. By unifying Reward as an Agent with DynDiff-GRPO, we enable RL on a more reliable reward foundation with substantially diversified sampling, effectively mitigating reward hacking while yielding significant accuracy gains across multiple open-source world models, thereby demonstrating that broader exploration can scale successfully when grounded in robust verification.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2603.20182v4" target="_blank" class="paper-title">IndoorR2X: Indoor Robot-to-Everything Coordination with LLM-Driven Planning</a>
-                        <span class="paper-date">2026-07-07</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Although robot-to-robot (R2R) communication improves indoor scene understanding beyond what a single robot can achieve, R2R alone cannot overcome partial observability without substantial exploration overhead or scaling team size. In contrast, many indoor environments already include low-cost Internet of Things (IoT) sensors (e.g., cameras) that provide persistent, building-wide context beyond onboard perception. We therefore introduce IndoorR2X, a benchmark and simulation framework for Large Language Model (LLM)-driven multi-robot task planning with Robot-to-Everything (R2X) perception and communication in indoor environments. IndoorR2X integrates observations from mobile robots and static IoT devices to construct a global semantic state that supports scalable scene understanding, reduces redundant exploration, and enables high-level coordination through LLM-based planning. IndoorR2X provides configurable simulation environments, sensor layouts, robot teams, and task suites to systematically evaluate semantic-level coordination strategies. Extensive experiments across diverse settings demonstrate that IoT-augmented world modeling improves multi-robot efficiency and reliability, and we highlight key insights and failure modes for advancing LLM-based collaboration between robot teams and indoor IoT sensors. Project page: https://fandulu.github.io/IndoorR2X_project_page/.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2511.17649v5" target="_blank" class="paper-title">SWITCH: Benchmarking Modeling and Handling of Tangible Interfaces in Long-horizon Embodied Scenarios</a>
-                        <span class="paper-date">2026-07-07</span>
-                    </div>
-                                        <span class="paper-comment">📝 The dataset is available at https://huggingface.co/datasets/BAAI-Agents/SWITCH</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Tangible control interfaces (TCIs), such as appliance panels, remotes, elevators, and embedded GUIs, are a fundamental component of everyday human-built environments. Interacting with these interfaces requires agents not only to ground language in visual observations,but also to execute actions, track temporally evolving state changes, and verify whether intended outcomes have been achieved. However, existing benchmarks predominantly evaluate open-loop perception or single-step action execution, failing to capture this continuous cycle of interaction, feedback, and correction. We introduce SWITCH, a benchmark for closed-loop interactive reasoning with TCIs in realistic egocentric environments1. SWITCH comprises 1,170 temporally interactive videos across diverse functional categories, providing structured annotations of instructions, actions, state transitions, outcomes, and recovery behaviors over time. To probe generative world modeling, SWITCH also evaluates video generation models on interaction-centered tasks using both LLM-as-judge and human evaluation2.Experiments with frontier proprietary and opensource multimodal models reveal persistent weaknesses in fine-grained visual-temporal perception, outcome verification, and error recovery, highlighting SWITCH as a testbed for closed-loop embodied intelligence.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.05577v1" target="_blank" class="paper-title">Narrative World Model: Narratology-Grounded Writer Memory for Long-Form Fiction</a>
-                        <span class="paper-date">2026-07-06</span>
-                    </div>
-                                        <span class="paper-comment">📝 23 pages, 4 figures; 9-page main text plus appendix. Preprint</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Long-form fiction writers need memory that answers multi-hop questions about evolving story state: who knows a secret and when they learned it, whether an event preceded the narration that revealed it, whether a setup paid off, and how a relationship shifted. General-purpose retrieval and agent-memory systems represent entities and facts but not the narratological structure these questions turn on, so they surface the wrong evidence or none at all. We introduce the Narrative World Model (NWM), a writer-memory system that pairs a narratology-grounded typed temporal-state graph with query-conditioned hybrid retrieval. To measure memory rather than the answerer, we read every system through a single held-constant Opus 4.8 reader over only that system's chapter-safe evidence, on a reproducible public corpus and a validated multi-hop benchmark, and we compare against the strongest existing temporal-knowledge-graph agent-memory framework, Graphiti/Zep (Rasmussen et al., 2025). NWM substantially and significantly outperforms this baseline on multi-hop narratological QA across both corpora, and far exceeds GraphRAG and flat retrieval. The advantage is representational rather than an artifact of extraction: it survives rebuilding the baseline with NWM's own extractor, and traces to its narratology-grounded structure and query-conditioned retrieval, not to graph size or extractor quality.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.05390v1" target="_blank" class="paper-title">Deform360: A Massive Multi-view Visuotactile Dataset for Deformable World Models</a>
-                        <span class="paper-date">2026-07-06</span>
-                    </div>
-                                        <span class="paper-comment">📝 Accepted by ECCV 2026</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Predicting object dynamics (i.e., world modeling) is a fundamental challenge for robotic manipulation, and modeling deformable objects presents a particularly difficult case due to their high-dimensional state spaces and complex material properties. While current world models approach this through two distinct paradigms: learning the dynamics over the 2D pixel space or more explicit 3D geometric space. A systematic understanding of their relative strengths and limitations remains elusive due to the lack of diverse, large-scale real-world data. To address this, we present Deform360, a large-scale visuotactile dataset featuring 198 daily-life objects, 1,980 interaction sequences, and over 215 hours of observations from 41 surround-view cameras and bimanual tactile grippers to capture both global motion and contact-induced local deformations. Leveraging a novel markerless visuotactile 3D tracking pipeline to extract dense geometry and motion, we systematically evaluate current state-of-the-art world models, comparing 2D video models against 3D particle models. Finally, we provide a preliminary demonstration indicating the real-world applicability of our dataset by performing robot planning tasks on deformable objects. Our analysis reveals key insights into the trade-offs between structural priors and scalability, providing a solid benchmark for future research in generalizable deformable object-centric world modeling. Project website: https://deform360.lhy.xyz</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.31672v3" target="_blank" class="paper-title">WorldRoamBench: An Open-World Benchmark for Long-Horizon Stability of Interactive World Models</a>
-                        <span class="paper-date">2026-07-06</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Despite rapid progress in interactive world models (IWMs), existing benchmarks evaluate action following only at trajectory level and ignore memory and interaction physics. We introduce WorldRoamBench, an open-world benchmark for long-horizon stability across four dimensions, each with tailored innovations: (i) Action: per-frame action metric bypassing cross-model semantic scale disparity and exposing failures hidden by trajectory; (ii) Vision: segment-based drift metric capturing non-monotonic mid-sequence collapse missed by start-vs-end comparisons; (iii) Physics: controllability-gated evaluation over mechanics, optics, and 3D consistency, scoring plausibility under faithful action execution; (iv) Memory: action-decoupled protocol evaluating scene memory via transition-localized 3D point-cloud reconstruction and subject memory via tracking-plus-VLM reasoning. The benchmark comprises 600+ test cases across Nature, Urban, and Indoor scenes in first/third-person views with WASD 10-60s continuous interaction. Evaluating 10+ open/closed-source models reveals none reliably satisfies all dimensions; even the best achieves only moderate scores. Advances on WorldRoamBench are steps toward IWMs that are stable, physically grounded, memory-faithful, and deployable in real-world applications.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2512.08029v3" target="_blank" class="paper-title">CLARITY: Medical World Model for Guiding Treatment Decisions by Modeling Context-Aware Disease Trajectories in Latent Space</a>
-                        <span class="paper-date">2026-07-06</span>
-                    </div>
-                                        <span class="paper-comment">📝 Accepted to ECCV 2026</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Clinical decision-making in oncology requires predicting dynamic disease evolution, a task current static AI predictors cannot perform. While world models (WMs) offer a paradigm for generative prediction, existing medical applications remain limited. Existing methods often rely on stochastic diffusion models, focusing on visual reconstruction rather than causal, physiological transitions. Furthermore, in medical domain, models like MeWM typically ignore patient-specific temporal and clinical contexts and lack a feedback mechanism to link predictions to treatment decisions. To address these gaps, we introduce CLARITY, a medical world model that forecasts disease evolution directly within a structured latent space. It explicitly integrates time intervals (temporal context) and patient-specific data (clinical context) to model treatment-conditioned progression as a smooth, interpretable trajectory, and thus generate physiologically faithful, individualized treatment plans. Finally, CLARITY introduces a novel prediction-to-decision framework, translating latent rollouts into transparent, actionable recommendations. CLARITY demonstrates state-of-the-art performance in treatment planning. On the MU-Glioma-Post dataset, our approach outperforms recent MeWM by 12\%, and significantly surpasses all other medical-specific large language models.</p>
                     </details>
                 </div>
             </div>

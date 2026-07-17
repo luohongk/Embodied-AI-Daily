@@ -590,7 +590,7 @@
                 <a href="World-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">World Model</span>
-                    <span class="nav-count">78</span>
+                    <span class="nav-count">77</span>
                 </a>
                 <a href="3D-Foundation-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
@@ -675,7 +675,7 @@
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Kalman Filter</span>
-                    <span class="nav-count">54</span>
+                    <span class="nav-count">51</span>
                 </a>
                 <a href="Loop-Closure-Detection.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -695,7 +695,7 @@
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">77</span>
+                    <span class="nav-count">76</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -730,7 +730,7 @@
                 <a href="Model-Predictive-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#14b8a6"></span>
                     <span class="nav-label">Model Predictive Control</span>
-                    <span class="nav-count">53</span>
+                    <span class="nav-count">52</span>
                 </a>
                 <a href="Whole-Body-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#06b6d4"></span>
@@ -809,7 +809,7 @@
             <a href="World-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">World Model</span>
-                <span class="nav-count">78</span>
+                <span class="nav-count">77</span>
             </a>
             <a href="3D-Foundation-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
@@ -894,7 +894,7 @@
             <a href="Kalman-Filter.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Kalman Filter</span>
-                <span class="nav-count">54</span>
+                <span class="nav-count">51</span>
             </a>
             <a href="Loop-Closure-Detection.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -914,7 +914,7 @@
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">77</span>
+                <span class="nav-count">76</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -949,7 +949,7 @@
             <a href="Model-Predictive-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#14b8a6"></span>
                 <span class="nav-label">Model Predictive Control</span>
-                <span class="nav-count">53</span>
+                <span class="nav-count">52</span>
             </a>
             <a href="Whole-Body-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#06b6d4"></span>
@@ -1030,6 +1030,126 @@
             <div class="paper-list">
                 <div class="paper-card">
                     <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.15048v1" target="_blank" class="paper-title">RoGS: Adaptive Meshgrid Gaussian for Large-Scale Road Surface Mapping</a>
+                        <span class="paper-date">2026-07-16</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有基于网格的路面重建方法在大规模驾驶场景中重建质量有限且优化成本高，难以高效处理复杂道路结构。&#10;&#10;🛠 **方法**：提出ROADGS-T框架，采用自适应网格高斯表示，在网格上放置2D高斯曲面片以显式存储颜色、语义和几何信息，并引入道路结构感知的自适应网格策略及轨迹一致性引导的位姿鲁棒优化。&#10;&#10;✨ **主要贡献**：通过网格高斯表示更好匹配道路薄表面特性，减少冗余图元；自适应策略在车道线、边界等复杂区域分配更密高斯曲面片，提升结构保真度；位姿鲁棒优化利用多邻近位姿估计局部表面先验，增强大规模场景下的重建鲁棒性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Road surface mapping plays a crucial role in autonomous driving, supporting high-definition map generation, lane-level perception, and automatic road annotation. Recent mesh-based road surface reconstruction methods have shown promising results, but they still suffer from limited reconstruction quality and high optimization cost, especially in large-scale driving scenarios. To address these limitations, we propose ROADGS-T, a robust and efficient large-scale road surface mapping framework based on adaptive meshgrid Gaussian representation. Specifically, we model the road surface by placing 2D Gaussian surfels on a meshgrid, where each surfel explicitly stores color, semantic, and geometric information. Compared with conventional mesh-based representations and 3D Gaussian primitives, the proposed meshgrid Gaussian representation better matches the thin-surface property of roads while significantly reducing redundant primitives and overlap during optimization. To further improve representation efficiency and structural fidelity, we introduce a road-structure-aware adaptive meshgrid strategy, which allocates denser Gaussian surfels to geometrically or semantically complex regions, such as lane markings, road boundaries, and height discontinuities, while maintaining a compact representation in flat road areas. Moreover, instead of relying on a single nearest vehicle pose, we design a trajectory-consistency-guided pose-robust refinement strategy, which estimates local surface priors from multiple neighboring poses and adaptively weights pose-guided height regularization according to their geometric consistency.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2503.08068v3" target="_blank" class="paper-title">Simulating Automotive Radar with Lidar and Camera Inputs</a>
+                        <span class="paper-date">2026-07-16</span>
+                    </div>
+                                        <span class="paper-comment">📝 Accepted by 2025 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：低成本毫米波雷达在自动驾驶中能应对恶劣天气和光照条件，但缺乏高质量数据集限制了其研发进展。  &#10;🛠 **方法**：提出一种利用摄像头图像、激光雷达点云和自车速度模拟4D毫米波雷达信号的方法，包含两个神经网络——DIS-Net（估计信号空间分布和数量）和RSS-Net（基于外观和几何信息预测信号强度）。  &#10;✨ **主要贡献**：在三种商用雷达数据集上验证了该方法能生成高保真雷达信号；用合成数据增强训练的目标检测网络性能优于仅用原始雷达数据的网络，为雷达相关研究提供了有效数据增强手段。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Low-cost millimeter automotive radar has received more and more attention due to its ability to handle adverse weather and lighting conditions in autonomous driving. However, the lack of quality datasets hinders research and development. We report a new method that is able to simulate 4D millimeter wave radar signals including pitch, yaw, range, and Doppler velocity along with radar signal strength (RSS) using camera image, light detection and ranging (lidar) point cloud, and ego-velocity. The method is based on two new neural networks: 1) DIS-Net, which estimates the spatial distribution and number of radar signals, and 2) RSS-Net, which predicts the RSS of the signal based on appearance and geometric information. We have implemented and tested our method using open datasets from 3 different models of commercial automotive radar. The experimental results show that our method can successfully generate high-fidelity radar signals. Moreover, we have trained a popular object detection neural network with data augmented by our synthesized radar. The network outperforms the counterpart trained only on raw radar data, a promising result to facilitate future radar-based research and development.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.14727v1" target="_blank" class="paper-title">WorkDrive: Roadwork Chain of Causation for Autonomous Driving</a>
+                        <span class="paper-date">2026-07-16</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：自动驾驶视觉语言模型在道路施工区域表现不佳，因为临时设施（如锥桶、路障）改变了驾驶环境，而模型倾向于依赖预训练中的熟悉视觉线索，导致规划决策错误。&#10;&#10;🛠 **方法**：提出WorkDrive框架，通过自动化多任务感知管线提取结构化场景事实，构建“因果链”标注流程，引导模型关注施工区域特定元素；随后使用监督微调，并基于横向元动作与预测轨迹的一致性进行强化学习。&#10;&#10;✨ **主要贡献**：在最大公开施工区域数据集ROADWork上，因果链将轨迹平均位移误差降低9.0%，一致性强化学习进一步降低3.0%，实现了渐进式性能提升。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Autonomous driving vision-language models (VLMs) struggle in roadwork zones, where familiar visual cues such as lane markings and permanent signs are altered or absent, and temporary devices such as cones and barriers redefine the drivable corridor. VLMs can detect these objects, but without explicit guidance they anchor their reasoning on familiar elements from pre-training and fail to connect work-zone observations to correct planning decisions. We propose WorkDrive, a framework that constructs perception-grounded causal reasoning for work zones and aligns it with trajectory prediction. An automated multitask perception pipeline extracts structured scene facts and injects them into a Chain-of-Causation (CoC) annotation pipeline, redirecting the annotator's attention to domain-specific elements. The resulting reasoning labels are used for supervised fine-tuning, followed by reinforcement learning with a single reward: consistency between lateral meta-actions and the predicted trajectory. On ROADWork, the largest public work-zone dataset, the proposed roadwork CoC reduces trajectory average displacement error (ADE) by 9.0\%, and consistency-based GRPO yields a further 3.0\%, achieving progressive improvement over the trajectory-only baseline. Code and data will be publicly released.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.14710v1" target="_blank" class="paper-title">Variational Inference for Bird's Eye View Segmentation in Autonomous Driving</a>
+                        <span class="paper-date">2026-07-16</span>
+                    </div>
+                                        <span class="paper-comment">📝 13 pages, 9 figures</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决自动驾驶中多相机数据融合与复杂环境下的鸟瞰图（BEV）分割难题，提升环境感知的准确性和鲁棒性。&#10;&#10;🛠 **方法**：提出基于变分推断的Transformer网络（TVB），以条件变分自编码器（CVAE）为骨干生成多个BEV候选图，并引入归一化流增强概率分布的复杂性，同时设计BEV注意力融合（BAF）模块自适应整合候选图。&#10;&#10;✨ **主要贡献**：在nuScenes和OPV2V数据集上，该方法在多相机BEV分割和车道感知任务中取得优越性能，创新性地将变分推断与注意力机制结合，提升了BEV地图的生成质量与融合效果。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>The bird's eye view (BEV) has emerged as a pivotal approach for environmental perception in autonomous driving, providing a unified spatial representation for vehicles. Nevertheless, despite BEV's significance in addressing the challenges inherent to autonomous driving, effectively fusing data from multiple camera sensors and operating in complex external driving environments remains a considerable challenge. To mitigate this issue, we recast the BEV segmentation problem within a variational inference framework. In this paper, we propose a novel transformer-based variational flow transformation network for BEV segmentation, denoted as TVB. Our architecture implicitly learns the mapping from multiple camera views to a unified canonical BEV map during training by exploiting posterior BEV supervision. TVB employs a conditional variational auto encoder (CVAE) as its backbone and produces multiple BEV map candidates. To augment the realism of the generated BEV maps, we integrate normalizing flows into the map generation process, enabling the construction of more complex and expressive probability distributions. Furthermore, we design a BEV-attention fusion (BAF) module that harnesses attention mechanisms to adaptively integrate the multiple candidate BEV maps. Experimental results, evaluated on both the nuScenes and OPV2Vdatasets, demonstrate that our proposed method achieves superior performance in multi-camera view BEV segmentation and lane environment perception.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.14387v1" target="_blank" class="paper-title">Chat2Scenic: An Iterative RAG-Based Framework for Scenario Generation in Autonomous Driving</a>
+                        <span class="paper-date">2026-07-15</span>
+                    </div>
+                                        <span class="paper-comment">📝 Accepted at 2026 IEEE International Conference on Intelligent Robots and Systems (IROS)</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：从法规描述自动生成自动驾驶测试场景的可执行脚本，现有方法在编译成功率和可扩展性之间存在权衡。&#10;&#10;🛠 **方法**：提出Chat2Scenic，首个基于迭代检索增强生成（RAG）的框架，通过聊天机器人界面支持交互式场景优化，并利用RAG将场景生成与法规知识和领域特定语言（DSL）语法对齐。&#10;&#10;✨ **主要贡献**：在包含123个场景的基准测试中，Chat2Scenic实现76.42%的编译成功率和58.17%的框架准确率，显著优于现有方法（最高30.08%编译成功率），并开源代码。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Validating autonomous driving systems requires diverse, regulation-compliant test scenarios. In simulation-based testing, scenarios are defined as executable scripts. Yet automatically generating such scripts from regulatory descriptions remains an open challenge, and existing approaches face fundamental trade-offs. Retrieval-assemble methods achieve reasonable compilation rates but lack scalability, whereas retrieval-based full-script generation suffers from low compilation success rates. We present Chat2Scenic, the first iterative retrieval-augmented framework to generate scenario scripts in Domain Specific Language (DSL). Specifically, Chat2Scenic provides a chatbot interface that supports interactive scenario refinement and integrates Retrieval-augmented Generation (RAG) to ground scenario generation in regulatory knowledge and DSL syntax. Furthermore, we propose an open benchmark for scenario generation comprising 123 scenarios from various regulations, including NHTSA and United Nations Vehicle Regulations, as well as other sources. Extensive evaluation with State-of-the-Art (SOTA) Large Language Models (LLMs) demonstrates that Chat2Scenic achieves 76.42% Compilation Success Rate (CSR) and 58.17% Framework Accuracy (FA), outperforming existing methods (Retrieval Assemble with 30.08% CSR, 11.03% FA and Retrieval full script generation with 16.26% CSR, 10.86% FA). To facilitate future research, we release our code as open source at https://github.com/TUM-AVS/chat2scenic.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2606.17386v2" target="_blank" class="paper-title">TerraTransfer: Learning End-to-End Driving Policies Without Expert Demonstrations</a>
+                        <span class="paper-date">2026-07-15</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：端到端自动驾驶训练成本高昂，包括专家演示数据采集、图像渲染及大模型前向传播的计算开销，且闭环强化学习受限于每步成本。&#10;&#10;🛠 **方法**：提出TerraTransfer，通过解耦“学习驾驶”与“学习视觉”。先在向量化模拟器中通过自博弈预训练驾驶策略，再通过动作KL散度和批量关系低秩结构损失，将策略潜在空间与预训练视觉骨干对齐，仅需图像-场景状态配对数据，无需专家演示。&#10;&#10;✨ **主要贡献**：显著降低训练成本，无需专家轨迹或标注数据；在逼真的3D高斯泼溅闭环场景中，端到端策略性能达到或超越现有方法。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>End-to-end autonomous driving has achieved state-of-the-art performance on benchmarks and real-world deployments. Its standard training recipe, however, is expensive across all stages: collecting and labeling millions of driving frames is costly, and closed-loop RL on images is bottlenecked by the per-step cost of photorealistic rendering plus a forward pass through a large vision backbone. Self-play in vectorized simulators changes the economics: millions of rollout steps per second, and a state distribution naturally rich in collisions, near-misses, and recoveries that no driving log contains. Our approach exploits this asymmetry by decoupling learning to drive from learning to see. We pretrain a single policy by self-play, then align its latent space with a pretrained vision backbone, through the action KL divergence and a batch-relational low-rank structural loss. The action target comes from the self-play policy, so alignment never supervises against a logged trajectory: a paired dataset of (image, scene-state) frames suffices, with no need for the curated expert demonstrations that imitation pretraining is built on. On photorealistic 3D Gaussian splatting closed-loop scenarios, the resulting end-to-end policy matches or exceeds prior end-to-end methods.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.14248v1" target="_blank" class="paper-title">3D Lane Detection with Odometry for High-Speed Vehicle Racing</a>
+                        <span class="paper-date">2026-07-15</span>
+                    </div>
+                                        <span class="paper-comment">📝 14 pages, IROS paper, includes extended abstract</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：针对高速赛车场景中车辆速度高、道路几何极端导致的3D车道检测难题，现有研究较少且缺乏专用数据集。&#10;&#10;🛠 **方法**：构建包含超25万张多摄像头图像与惯性测量数据的赛车3D车道检测数据集，提出基于里程计预积分与多摄像头集成的轻量化方法，实现近300Hz的帧处理速率。&#10;&#10;✨ **主要贡献**：首次系统研究赛车场景的3D车道检测，通过融合惯性测量与多摄像头集成，相比BevLaneDet方法F1分数提升3点，近车横向平均绝对误差降低超30%，实际部署中F1&gt;0.9且横向误差&lt;0.18米。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Lane boundary detection is a critical component in autonomous driving systems and has been rigorously studied in regular driving scenarios. However, it is less explored in vehicle racing, where the car moves at higher speeds across more extreme road geometries. To study this problem, we introduce a new dataset for 3D lane detection in racing, featuring >$250$k images from multiple camera feeds and inertial measurements taken with a Lexus LC 500 driving on a closed circuit. With this dataset, we compare various approaches to 3D lane detection and propose modifications that permit frames to be processed at rates of almost 300Hz while retaining high predictive performance in the racing application. This facilitates a multi-camera ensemble approach that is validated on hardware. We show that sensing modalities such as inertial measurements can be leveraged for pre-integration to regress road geometries over both cameras and time, yielding improvements in key metrics. Compared to methods such as BevLaneDet, adding odometry and ensemble predictions improves the F1 score by 3 points and reduces near-vehicle mean absolute errors (MAEs) by $>30 \%$. We show F1 scores $>$0.9 and lateral MAEs of $<$0.18m in vehicle deployments.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.14203v1" target="_blank" class="paper-title">Instant NuRec: Feed-Forward 3D Gaussian Reconstruction for Driving Scene Simulation</a>
+                        <span class="paper-date">2026-07-15</span>
+                    </div>
+                                        <span class="paper-comment">📝 Project Page: https://research.nvidia.com/labs/sil/projects/instant-nurec/</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有驾驶场景神经仿真方法（如NuRec）速度较慢且需逐场景调参，无法实现快速、通用的3D场景重建。&#10;&#10;🛠 **方法**：提出Instant NuRec，一种前馈式神经重建模型，通过单次前向传播将短时多视角驾驶日志转化为可仿真的3D高斯泼溅（3DGS）世界，并输出静态/动态层、天空盒及相机ISP校正，同时利用3DGUT支持非针孔相机模型。&#10;&#10;✨ **主要贡献**：在Waymo数据集上PSNR比最强基线高2.01 dB，10-20秒多相机场景重建仅需约1.5秒，且深度集成于NuRec并兼容AlpaSim闭环仿真。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>3D simulation platforms are critical for autonomous driving because they enable end-to-end policy evaluation, thereby reducing development costs and improving safety. In recent years, neural simulation has become predominant, with methods such as NuRec playing a central role; however, these methods remain relatively slow and typically require per-scene tuning. In this work, we present Instant NuRec, a feed-forward neural reconstruction model that turns a short multi-view driving log into a fully simulatable 3D Gaussian Splatting (3DGS) world in a single forward pass. The model accepts multi-view input from a calibrated camera rig and emits a layered output consisting of static and dynamic 3DGS layers, a sky cubemap, and per-camera ISP corrections, while providing native support for non-pinhole camera models via 3DGUT. It reconstructs a 10-20-second multi-camera scene in roughly 1.5 seconds and achieves a PSNR on the Waymo Open Dataset that is 2.01 dB above the strongest evaluated baseline. Instant NuRec is deeply integrated into NuRec and is compatible with AlpaSim for closed-loop simulation.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
                         <a href="https://arxiv.org/abs/2607.14005v1" target="_blank" class="paper-title">M$^\text{4}$World: A Multi-view Multimodal Driving World Model for Interactive Object Manipulation and Minute-long Streaming</a>
                         <span class="paper-date">2026-07-15</span>
                     </div>
@@ -1064,10 +1184,7 @@
                         <span class="paper-date">2026-07-15</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：传统视觉-语言-动作模型（VLA）在自动驾驶中因语义与空间特征耦合，导致空间表征崩溃，难以生成精确的低层控制动作。  &#10;🛠 **方法**：提出S-squared-VLA，将语义流（利用层级桥接提取多尺度VLM特征进行意图推理）与空间流（独立保留视觉编码器的未压缩空间特征，并引入辅助感知监督）显式解耦，再通过双流规划适配器以级联注意力融合高层语义与空间约束。  &#10;✨ **主要贡献**：在NAVSIM闭环基准上，S-squared-VLA在纯监督微调下达到87.1的PDMS分数，并以98.4%的无碰撞率刷新VLA模型最优性能，验证了解耦空间表征对安全导航的关键作用。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Vision-Language Models (VLMs) have demonstrated remarkable potential for high-level reasoning in autonomous driving, yet they fundamentally struggle to generate precise, low-level control actions. This limitation is rooted in a semantic-physical gap caused by the inherent mismatch between discrete language tokens and continuous trajectory planning. While Vision-Language-Action (VLA) architectures attempt to bridge this gap by unifying perception and control into a single policy, this entanglement creates a new bottleneck. Standard VLAs experience a severe spatial representation collapse, which irreversibly degrades the fine-grained spatial and geometric priors essential for safe, boundary-aware navigation. To address this limitation, we propose the S-squared-VLA, which explicitly decouples the semantic and spatial streams in Vision-Language-Action models. The semantic stream leverages hierarchical bridging to extract multi-scale VLM features for robust intent reasoning. In parallel, an independent spatial stream bypasses the autoregressive language bottleneck, directly preserving uncompressed spatial features from the visual encoder. By integrating auxiliary perception supervision, this stream explicitly equips the model with rich spatial and geometric priors. Finally, a dual-stream planning adapter fuses high-level semantic intent with precise spatial constraints via cascaded attention mechanisms. Evaluations on the NAVSIM closed-loop benchmark show that S-squared-VLA achieves a Predictive Driver Model Score (PDMS) of 87.1, establishing a new state-of-the-art for VLA models under a purely supervised fine-tuning (SFT) setting. By mitigating the spatial representation collapse of traditional VLMs, our framework significantly outperforms baselines, achieving the highest No Collision (NC) rate of 98.4 among all evaluated methods.</p>
@@ -1079,10 +1196,7 @@
                         <span class="paper-date">2026-07-15</span>
                     </div>
                                         <span class="paper-comment">📝 8 pages, 6 figures, 5 tables</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有自动驾驶规划方法多针对乘用车，缺乏对分布式电驱卡车（DETs）这类重型车辆的性能评估，尤其是其复杂动力学和侧翻风险尚未被充分研究。&#10;&#10;🛠 **方法**：提出首个高保真基准nuTruck，集成高精度非线性卡车动力学模型（支持全轮独立驱动/转向及动态载荷转移），并基于nuPlan真实驾驶场景进行闭环仿真，对比多种规则与学习型规划器。&#10;&#10;✨ **主要贡献**：首次为DETs提供大规模神经网络训练与闭环评估平台，不仅分析常规无碰撞规划性能，还量化轨迹的动力学安全性（如侧翻风险），有望成为DETs自动驾驶规划的标准测试基准。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>The dominance of traditional rule-based methods in autonomous driving has gradually been replaced by learning-based approaches. While learning-based planners have achieved considerable success in passenger vehicles, their performance on heavy-duty trucks, particularly modern distributed electric-drive trucks (DETs), remains largely unexplored. To facilitate research and application of learning-based planners in DETs, this letter presents the first high-fidelity benchmark, called nuTruck, designed to support large-scale neural network training and closed-loop evaluation. Given the complex dynamics and high rollover susceptibility of DETs, we first incorporate a highly accurate nonlinear truck dynamical model into the simulation, which enables independent driving and steering of all wheels and captures dynamic load transfer caused by acceleration, deceleration, and cornering, thereby allowing quantitative assessment of rollover risk in closed-loop simulation. Second, we adapt several rule-based and learning-based planners as baselines for DETs and evaluate their performance in closed-loop simulation. Finally, using real-world driving scenarios from the nuPlan dataset, we conduct extensive closed-loop evaluations, analyzing not only conventional collision-free planning performance, but also the dynamical safety of the planned trajectories. The proposed nuTruck benchmark is expected to serve as a new standard for fair and realistic evaluation of autonomous driving planners on DETs.</p>
@@ -1094,10 +1208,7 @@
                         <span class="paper-date">2026-07-15</span>
                     </div>
                                         <span class="paper-comment">📝 Accepted to IEEE/RSJ IROS 2026. The benchmark and source code will be made publicly available at https://github.com/YouthZest-Lin/OccTrack360</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有4D全景占据跟踪缺乏支持环视鱼眼相机、长时序序列和实例级体素跟踪的基准，限制了动态3D环境理解的发展。&#10;&#10;🛠 **方法**：提出OccTrack360基准（含174-2234帧长序列及体素可见性标注）和FoSOcc框架，包含中心聚焦模块（CFM）增强实例定位，以及基于鱼眼的增强提升（FEL）扩展统一投影模型下的透视提升。&#10;&#10;✨ **主要贡献**：构建首个支持环视鱼眼相机的4D全景占据跟踪基准，提出有效处理鱼眼畸变和空间定位的FoSOcc方法，在几何规则类别上显著提升跟踪质量，为后续研究建立强基线。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Understanding dynamic 3D environments in a spatially continuous and temporally consistent manner is fundamental for robotics and autonomous driving. While recent advances in occupancy prediction provide a unified representation of scene geometry and semantics, progress in 4D panoptic occupancy tracking remains limited by the lack of benchmarks that support surround-view fisheye sensing, long temporal sequences, and instance-level voxel tracking. To address this gap, we present OccTrack360, a new benchmark for 4D panoptic occupancy tracking from surround-view fisheye cameras. OccTrack360 provides substantially longer and more diverse sequences (174~2234 frames) than prior benchmarks, together with principled voxel visibility annotations, including an all-direction occlusion mask and an MEI-based fisheye field-of-view mask. To establish a strong fisheye-oriented baseline, we further propose Focus on Sphere Occ (FoSOcc), a framework that addresses two core challenges in fisheye occupancy tracking: distorted spherical projection and inaccurate voxel-space localization. FoSOcc includes a Center Focusing Module (CFM) to enhance instance-aware spatial localization through supervised focus guidance, and a Fisheye-based Enhanced Lifting (FEL) that extends perspective lifting to fisheye imaging under the Unified Projection Model. Extensive experiments on Occ3D-Waymo and OccTrack360 show that our method improves occupancy tracking quality with notable gains on geometrically regular categories, and establishes a strong baseline for future research on surround-view fisheye 4D occupancy tracking. The benchmark and source code will be made publicly available at https://github.com/YouthZest-Lin/OccTrack360.</p>
@@ -1109,10 +1220,7 @@
                         <span class="paper-date">2026-07-15</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在6G车联网中，卫星通信带宽有限且传播损耗大，传统通信系统传输原始数据效率低，难以满足自动驾驶任务（如交通标志识别）对带宽、可靠性和低延迟的需求。&#10;&#10;🛠 **方法**：提出一种基于变分自编码器（VAE）的多任务语义通信框架，利用概率潜在表示提取任务相关特征，通过端到端训练联合优化交通标志重建与分类任务，并在噪声信道中传输。&#10;&#10;✨ **主要贡献**：相比确定性自编码器方法，该框架在信噪比变化下保持稳定性能，同时实现高达87.23%至98.17%的带宽压缩，显著提升卫星辅助自动驾驶的通信效率。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>The development of smart transportation systems and the introduction of 6G wireless communication technologies have significantly changed vehicle network topologies. Future connected autonomous vehicle (CAV) networks require bandwidth-efficient, reliable, and low-latency communication for safety-critical applications such as traffic sign recognition and decision-making. Conventional communication systems transmit raw data regardless of task relevance, which is inefficient in resource-constrained satellite channels where uplink bandwidth is scarce and propagation losses are large. Semantic communication addresses this limitation by transmitting task-relevant information instead of full signal representations. It extracts and conveys essential semantic features and leverages deep learning to optimize task performance at the receiver. Therefore, we present a Variational Autoencoder (VAE)-based multi-task semantic communication framework for satellite-assisted autonomous driving. Unlike deterministic autoencoder-based methods, the proposed model uses probabilistic latent representations for more robust and efficient encoding. The learned features are transmitted over noisy wireless channels to perform traffic sign reconstruction and classification. The framework is trained end-to-end to jointly optimize both tasks. Results show that the proposed approach achieves significant bandwidth reduction of up to 87.23\% to 98.17\% while maintaining stable performance across varying signal-to-noise ratio conditions.</p>
@@ -1124,10 +1232,7 @@
                         <span class="paper-date">2026-07-15</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：从视觉观测中恢复完整的3D场景体积表示（包括物体、结构和自由空间）仍具挑战，尤其在遮挡和未观测区域，现有视觉几何先验仅提供表面信息，无法直接用于体积占用预测。&#10;&#10;🛠 **方法**：提出GPOcc++，将视觉几何先验转化为占用感知的稀疏高斯表示，并在统一框架中建模多视角观测和时间序列，支持室内外场景的占用预测。&#10;&#10;✨ **主要贡献**：通过稀疏高斯表示桥接表面几何与体积占用，实现高效且表达力强的场景建模；在室内外基准上均取得优异性能，并展现出良好的效率与泛化能力。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Accurate 3D scene understanding is fundamental to embodied intelligence and autonomous driving, where 3D occupancy provides a unified representation of objects, structures, and free space. However, recovering such a complete volumetric representation from visual observations remains challenging, particularly in occluded and unobserved regions. Visual geometry priors offer strong and generalizable geometric cues for addressing this challenge, but their outputs are inherently surface-centric, whereas occupancy prediction requires reasoning about volumetric interiors and free space. To bridge this gap, we introduce GPOcc, which transforms visual geometry priors into occupancy-aware sparse Gaussian representations for efficient and expressive volumetric scene modeling. Building on GPOcc, GPOcc++ models multi-view observations and temporal sequences within a unified framework, allowing spatial and temporal evidence to be handled through the same representation. We further extend GPOcc++ from indoor scenes to outdoor occupancy prediction. Extensive experiments on both indoor and outdoor benchmarks demonstrate consistently strong performance across both multi-view and temporal settings, together with favorable efficiency and generalization. Code will be released at https://github.com/JuIvyy/GPOcc.</p>
@@ -1139,10 +1244,7 @@
                         <span class="paper-date">2026-07-15</span>
                     </div>
                                         <span class="paper-comment">📝 13 pages, 13 figures</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有驾驶世界模型在鸟瞰图表示中，因自车运动与场景动态纠缠，导致模型需大量资源恢复自车运动，降低了场景建模和想象精度。&#10;&#10;🛠 **方法**：提出DynaDreamer，通过物理信息驱动的自车动态编码器-解码器提取自车状态历史作为显式先验，并利用因果Transformer世界模型在潜在空间中对自车动态和场景动态进行解耦建模。&#10;&#10;✨ **主要贡献**：在城区和高速场景中，任务成功率分别比最强基线提升28%和61%；在零样本跨底盘适应中，成功率提升达73%，且无需重新训练即可适配新底盘。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>World model (WM)-based reinforcement learning enables sample-efficient end-to-end autonomous driving learning by imagining long-horizon trajectories in latent space. However, most driving WMs operate on bird's-eye-view (BEV) representations that are inherently egocentric: the transition between consecutive frames entangles the ego vehicle's own motion with scene dynamics. As a result, the WM devotes significant capacity to recovering ego-motion from warped observations, at the cost of scene modeling fidelity and imagination accuracy. This work proposes DynaDreamer, a dynamics-augmented Dreamer-style reinforcement learning method to address this problem by augmenting the WM with an explicit ego-dynamics prior. A physics-informed ego-dynamics encoder-decoder extracts the ego-state history into a compact and identifiable context, which modulates a causal Transformer WM to condition both its prior and posterior latents. During imagination, the ego-dynamics predictor propagates this context forward to keep the ego-dynamics prior synchronized with the rollout. An information-theoretic analysis shows that conditioning on this context reduces both the predictive entropy of the observation transition and the prior--posterior Kullback--Leibler divergence, confining the WM's modeling burden to the scene dynamics beyond ego-motion. An additional benefit is zero-shot cross-chassis adaptation: the ego-dynamics context depends on identifiable chassis parameters, so that a vehicle with previously unseen dynamic characteristics can adapt the WM to the new chassis without retraining. Experiments demonstrate that DynaDreamer improves task success rates over the strongest baseline by 28% and 61% in urban and highway driving scenarios, respectively, with the advantage rising to 73% when extrapolating to unseen chassis.</p>
@@ -1154,10 +1256,7 @@
                         <span class="paper-date">2026-07-15</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：传统证据深度学习（EDL）存在两个缺陷：KL惩罚项仅抑制负类证据导致证据过高，且缺乏对Dirichlet参数设置的理论保证，从而削弱了模型量化不确定性的能力。&#10;&#10;🛠 **方法**：提出变分推断证据深度学习（VI-EDL），通过变分推断重新构建证据学习框架，推导出证据下界（ELBO）来防止证据过度增长，并理论证明设置Dirichlet参数α=e+1可最小化该下界。&#10;&#10;✨ **主要贡献**：建立了严格的泛化界，揭示了预测不确定性、特征与网络复杂度对泛化界的影响；在标准视觉和医学数据集上实现最先进性能，尤其在分布外检测、噪声检测和自动驾驶场景中表现优异。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>While Deep Neural Networks (DNNs) achieve remarkable performance, their tendency to produce overconfident predictions. Evidential Deep Learning (EDL) mitigates this by formulating predictions as a Dirichlet distribution over class probabilities to explicitly quantify epistemic uncertainty. However, we found that the conventional EDL suffers from two fundamental limitations: a Kullback-Leibler (KL) penalty that only suppresses the evidence of negative classes, producing excessively high evidence therefore decreasing the model's ability to quantify uncertainty, and an absence in theoretical guarantee of setting Dirichlet parameter $α=e+1$. In this paper, we propose a mathematically principled framework, Variational Inference Evidential Deep Learning (VI-EDL). By reformulating evidential learning through the lens of variational inference, we derive an Evidence Lower Bound (ELBO), which prevents the evidence from growing excessively. Theoretically, we rigorously establish a generalization bound and reveal how the predicted uncertainty, feature and network complexity affect this bound, and why setting $\boldsymbolα = \mathbf{e} + \mathbf{1}$ can minimize it. Extensive experiments on standard visual and medical datasets demonstrate that VI-EDL achieves state-of-the-art performance, showing excellent performance in out-of-distribution detection, noise detection and autonomous driving scenario. The code is available in https://github.com/seutjw/VI-EDL.</p>
@@ -1169,10 +1268,7 @@
                         <span class="paper-date">2026-07-14</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：扩散轨迹规划器在复杂自动驾驶场景中可能因罕见或分布外情况产生灾难性失败，缺乏可认证的安全性保障。  &#10;🛠 **方法**：提出PC-Diffuser框架，在扩散规划的去噪循环中嵌入路径一致的胶囊障碍函数安全滤波，通过胶囊距离碰撞评估、运动学可行性转换和路径一致滤波，实现迭代式上下文感知的安全修正。  &#10;✨ **主要贡献**：将安全性内置于轨迹生成过程而非事后修复，在保持扩散模型路径几何特性的同时消除约束违反，显著提升规划器的可认证性和鲁棒性。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Autonomous driving in complex traffic requires planners that generalize beyond hand-crafted rules, motivating data-driven approaches that learn behavior from expert demonstrations. Diffusion-based trajectory planners have recently shown strong closed-loop performance by iteratively denoising a full-horizon plan, but they remain difficult to certify and can fail catastrophically in rare or out-of-distribution scenarios. To address this challenge, we present PC-Diffuser, a safety augmentation framework that embeds a certifiable, path-consistent barrier-function structure directly into the denoising loop of diffusion planning. The key idea is to make safety an intrinsic part of trajectory generation rather than a post-hoc fix: we enforce forward invariance along the rollout while preserving the diffusion model's intended path geometry. Specifically, PC-Diffuser (i) evaluates collision risk using a capsule-distance barrier function that better reflects vehicle geometry and reduces unnecessary conservativeness, (ii) converts denoised waypoints into dynamically feasible motion under a kinematic bicycle model, and (iii) applies a path-consistent safety filter that eliminates residual constraint violations without geometric distortion, so the corrected plan remains close to the learned distribution. By injecting these safety-consistent corrections at every denoising step and feeding the refined trajectory back into the diffusion process, PC-Diffuser enables iterative, context-aware safeguarding instead of post-hoc repair...</p>
@@ -1896,102 +1992,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Multi-Modal Agents (M-agents), empowered by Large Language Models (LLMs), excel in various complex, open-world scenarios such as autonomous driving and robotics. However, their unique requirements to interact with dynamic and diverse multi-modal environments introduce novel implementation challenges beyond those faced by traditional agents. Outdated perception, untrustworthy planning and inapplicable execution could cause traffic accident and financial loss. Despite growing study on agent issues, there has not been a systematic study focusing on M-agent-specific implementation bugs. To address this gap, we conducted the first systematic study of implementation bugs in M-agents. We collected 34 representative M-agents from diverse sources and, through meticulous filtering,identified 158 M-agent-specific bugs from 1,268 issue reports. Using a top-down strategy, we developed a comprehensive taxonomy that classifies bugs by global symptoms, functionality component-level symptoms, and root causes. We then implemented MATester, an automatic proof-of-concept bug identifier by analyzing runtime inter-component outputs. When applied to 12 extra M-agents, MATester successfully covered 61.4% of known open issues and discovered 31 additional bugs, demonstrating the practical usefulness of our study. Our work provides a comprehensive reference and guideline for classification, prevention and fix of M-agent bugs.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.04953v1" target="_blank" class="paper-title">Real-World Perturbation Testing of Autonomous Driving Systems</a>
-                        <span class="paper-date">2026-07-06</span>
-                    </div>
-                                        <span class="paper-comment">📝 In proceedings of the 41st IEEE/ACM International Conference on Automated Software Engineering (ASE '26)</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Autonomous Driving Systems (ADS) must operate reliably under diverse conditions, yet representative data for rare or adverse scenarios is difficult to obtain. Perturbation-based testing is widely used to assess robustness, but most studies focus on offline datasets or simulation, leaving open questions about how such results translate to real-world driving. We present a large-scale study of 72 camera and LiDAR perturbations, evaluated across three testing modalities: offline model-level analysis, hardware-in-the-loop execution, and closed-loop system-level testing on a full-scale autonomous vehicle. The study covers both an end-to-end vision-based driving model and a modular LiDAR-based perception and planning stack. Our results reveal a clear gap between testing levels. For camera-based systems, perturbations with limited offline impact can still induce unstable control and failures in real-world driving. For LiDAR-based systems, degradation is more consistent at the perception level but weakly predictive of system-level failures. Across both modalities, model-level metrics alone are insufficient to identify the most harmful perturbations. We further show that real-time feasibility is a key constraint in real-world testing, and that robustness observations obtained from recorded data do not consistently transfer to closed-loop behavior on a physical vehicle, highlighting the importance of complementary real-world, system-level evaluation.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.04812v1" target="_blank" class="paper-title">TGRIP: A Text-Guided Approach to Vehicle Instance Prediction in Autonomous Driving</a>
-                        <span class="paper-date">2026-07-06</span>
-                    </div>
-                                        <span class="paper-comment">📝 11 pages, 5 figures</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Bird's-Eye View (BEV) end-to-end instance prediction has emerged as a robust paradigm for autonomous driving perception, effectively mitigating the error propagation inherent in traditional modular pipelines. However, current state-of-the-art approaches rely predominantly on geometric supervision, such as occupancy regression and optical flow, effectively treating scene agents as generic moving obstacles. This absence of explicit semantic awareness imposes limitations on the capacity of the model to solve ambiguities in complex scenarios, particularly those where object-specific behavior is essential for accurate forecasting (e.g. overtaking, intersections). In this paper, we introduce Text-Guided Representation for Instance Prediction (TGRIP), a novel framework that bridges this gap by injecting rich semantic priors into the instance prediction loop. The proposed teacher-student pipeline employs Vision-Language Foundation Models to generate dense, semantic-enhanced BEV maps from multi-camera images. These maps serve as auxiliary supervision during training, guiding the network to learn spatio-temporal representations that are not only geometrically consistent but also semantically discriminative. To the best of our knowledge, this represents the first attempt to unify semantic guidance with the temporal task of future instance prediction. The experimental results demonstrate that TGRIP surpasses existing state-of-the-art models in nuScenes, validating the hypothesis that semantic enrichment is a fundamental element for robust, end-to-end motion prediction. Code is available on https://github.com/miguelag99/TGRIP.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.04803v1" target="_blank" class="paper-title">E-CoDrive: A Co-Simulation Framework for Testing Energy-Critical Driving Scenarios</a>
-                        <span class="paper-date">2026-07-06</span>
-                    </div>
-                                        <span class="paper-comment">📝 In proceedings of the 41st IEEE/ACM International Conference on Automated Software Engineering (ASE '26) - Tools and Datasets track</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Autonomous driving research has largely focused on safety while giving limited attention to non-functional aspects such as energy consumption and sustainability. As Autonomous Electric Vehicles (AEVs) become increasingly common in urban traffic, understanding how complex traffic dynamics influence their energy consumption is paramount to test whether AEVs can complete trips before battery depletion. To support energy-aware scenario-based testing of AEVs, we present E-CoDrive, a framework for reproducible closed-loop driving co-simulations that integrates an energy consumption model, a micro-traffic simulator, and a high-fidelity driving simulator to test AEV software stacks in urban scenarios. This tool paper describes the architecture of E-CoDrive and demonstrates its applicability by testing an Autoware-based AEV stack. Our evaluation shows that varying traffic conditions produce substantial differences in vehicle energy consumption. The artifact is publicly available at https://doi.org/10.6084/m9.figshare.32244783, and a screencast showing the tool is available at https://youtu.be/yX9fWHqCvgc.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.04770v1" target="_blank" class="paper-title">Cam2Sim: Neural Scenario Reconstruction for Closed-Loop Autonomous Driving Simulation</a>
-                        <span class="paper-date">2026-07-06</span>
-                    </div>
-                                        <span class="paper-comment">📝 In proceedings of the 41st IEEE/ACM International Conference on Automated Software Engineering (ASE '26) - Tools and Datasets track</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Simulation-based testing enables safe and repeatable evaluation of autonomous driving systems, but its effectiveness is limited by the gap between synthetic simulator outputs and real-world camera observations. To address this problem, we present Cam2Sim, a tool that transforms real-world driving recordings into playable CARLA simulation scenarios. Starting from camera images and poses, Cam2Sim reconstructs road geometry, ego trajectories, parked vehicles, and simulation assets, and augments the reconstructed environment with Gaussian Splatting to render camera observations that resemble the original recording. The framework supports ROS-based data extraction, parked-vehicle detection, OpenStreetMap-based map generation, CARLA scenario construction, Gaussian Splatting training, trajectory replay, and closed-loop execution with a system under test. We validate Cam2Sim on a real-world urban-driving scenario with a camera-based end-to-end driving model, comparing reconstruction quality, image-generation quality, and closed-loop behavior against both a simulation-only baseline and the real-world target. Results show that Gaussian-Splatting-based rendering reduces the visual gap with respect to standard simulator rendering and improves behavioral similarity to the real-world reference runs. The artifact is publicly available at https: //github.com/ast-fortiss-tum/cam2sim, and a screencast showing the tool is available at https://youtu.be/KmZ74l1__lI</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.04732v1" target="_blank" class="paper-title">SparseOcc++: Geometry-Aware Sparse Latent Representation for Semantic Occupancy Prediction</a>
-                        <span class="paper-date">2026-07-06</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Vision-based 3D semantic occupancy prediction is essential for autonomous driving, yet dense voxel representations waste computation on largely empty space, while BEV and TPV projections compromise fine-grained 3D structure. Fully sparse representations offer an attractive alternative, but existing methods, including SparseOcc, entangle scene completion with semantic prediction by indiscriminately propagating high-dimensional features into empty regions and applying voxel-wise classification. This creates excessive activations, computational overhead, and geometric ambiguity. We present SparseOcc++, a geometry-aware sparse framework that explicitly decouples scene completion from semantic segmentation. SparseOcc++ reformulates completion as signed-distance regression on sparse anchor voxels through a scene completion field (SCF). To model complex outdoor geometry robustly, it combines orthogonal decomposition with discretized distance learning. A geometry-guided propagation module then converts the SCF into a complete volumetric scene and restricts semantic segmentation to geometrically verified regions. Experiments establish new state of the art: SparseOcc++ improves IoU by 2.3 points and is 3.9x faster than SparseOcc on nuScenes, while achieving a 5.9x speedup over OccFormer on SemanticKITTI.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.04689v1" target="_blank" class="paper-title">A Reliable Context-Aware and Temporal Planning Framework for Autonomous Driving</a>
-                        <span class="paper-date">2026-07-06</span>
-                    </div>
-                                        <span class="paper-comment">📝 Submitted to IEEE Transactions on Intelligent Transportation Systems. 12 pages, 6 figures</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Safe operation of autonomous vehicles in dense urban traffic depends on perception and planning that remain reliable when onboard sensing is degraded. In real driving conditions, camera observations are frequently corrupted by occlusion, motion blur, illumination change, and sensor noise, and when such degraded observations are aggregated indiscriminately over time, trajectory planning becomes unstable and collision risk rises for both the ego vehicle and surrounding road users. Recent Bird's-Eye-View (BEV) approaches unify perception and planning through a shared spatial representation, but most fuse temporal information across frames without assessing the reliability of the underlying observations. We present a Reliable Context-Aware and Temporal Planning framework for Autonomous Driving (RCT-AD) that explicitly models feature quality and temporal consistency to support safer, more consistent planning. A Reliable Context Awareness module scores per-frame reliability and selectively retains trustworthy features through a quality-gated First-In-Last-Out (FILO) memory mechanism, reconstructing degraded observations from reliable historical context so that corrupted inputs do not destabilize the scene representation. A Temporal Trajectory Planner captures long-term dependencies and multi-agent interactions to produce smoother, safety-aware trajectories, while a joint detection-and-segmentation head injects semantic and motion cues into the shared BEV space to strengthen scene understanding. Experiments on the nuScenes autonomous driving benchmark show that RCT-AD improves perception accuracy, motion prediction, and planning robustness over recent end-to-end baselines, achieving 61.5 nuScenes Detection Score, 52.9 mean Average Precision, and 52.3 mean Intersection over Union, while maintaining competitive computational efficiency suitable for real-time deployment.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.10856v2" target="_blank" class="paper-title">An Exposure-Time-Aligned Primary-Path Architecture for Autonomous-Driving ECUs</a>
-                        <span class="paper-date">2026-07-06</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>While end-to-end (E2E) autonomous driving has become the dominant research direction, production vehicles continue to rely on modular multi-NN pipelines for a non-trivial transitional period. The subject of this paper is the design of an architecture that, during this phase, supports a modular pipeline and an E2E path side by side and embeds a path for staged migration. Transplanted to a production SoC, egalitarian late fusion is compute-inefficient and offers no natural unit for staged E2E substitution. As an alternative, we propose three design principles: (i) Primary-Path, which selects a primary perception-to-planner chain and prioritizes its enclosure within a single SoC over the non-critical paths, (ii) Exposure-Time-Aligned, which propagates the primary sensor's exposure time $τ_{\mathrm{exp}}$ as a tag along the chain and event-drives the fusion node on matched $τ_{\mathrm{exp}}$ rather than a fixed cycle, and (iii) Co-Path Coexistence, which, building on (i) and (ii), lets an E2E output path co-run with the modular pipeline within the same $τ_{\mathrm{exp}}$ cycle. On a Dual-SoC production AD-ECU, the implementation achieves a camera-shutter to planner-output latency of 296 ms on average within a 350 ms design budget, with the modular pipeline and the E2E path coexisting within the shared $τ_{\mathrm{exp}}$ cycle.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.04681v1" target="_blank" class="paper-title">Do Vision-Language-Action Models Mean What They Say? On the Role of Faithfulness in Embodied Reasoning</a>
-                        <span class="paper-date">2026-07-06</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Embodied Chain-of-Thought has emerged as a promising mechanism to enhance robot decision-making and interpretability in black-box Vision-Language Action (VLA) models. However, whether this verbalized Chain-of-Thought truthfully reflects the policy's underlying decision process remains poorly understood. We distinguish between functional reasoning, in which reasoning improves task performance, and faithful reasoning, in which reasoning truly reflects the policy's internal decision process. We argue that SoTA alignment strategies offer a necessary but insufficient notion of faithfulness, admitting reasoning whose intermediate steps can mask the causal links in action prediction through confounding factors (e.g., reasoning that is ungrounded in the environment and internally disconnected or inconsistent), restricting policy generalization. We study this gap through a human evaluation of a SoTA reasoning model for autonomous driving, revealing an inconsistent coupling between reasoning quality and downstream trajectory improvement. We then operationalize a behavioral surrogate for embodied faithfulness through a learned critic, Pinocchio, scoring observation grounding and stepwise coherence, and use this critic as a dense reward signal in post-training an embodied policy with reinforcement learning. Across withheld driving benchmarks, our post-trained planner improves faithfulness by 4% and 18% over SoTA alignment and trajectory error post-training baselines, respectively, while maintaining competitive downstream task performance. Finally, on a synthetic out-of-distribution test set, post-training for faithfulness improves policy responsiveness to rare counterfactual scenarios by 1.6x that of a SoTA policy, suggesting that faithful reasoning traces contribute to more robust, generalizable, and interpretable embodied intelligence. Project page: https://mjf-su.github.io/pinocchio/</p>
                     </details>
                 </div>
             </div>

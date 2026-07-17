@@ -590,7 +590,7 @@
                 <a href="World-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">World Model</span>
-                    <span class="nav-count">78</span>
+                    <span class="nav-count">77</span>
                 </a>
                 <a href="3D-Foundation-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
@@ -675,7 +675,7 @@
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Kalman Filter</span>
-                    <span class="nav-count">54</span>
+                    <span class="nav-count">51</span>
                 </a>
                 <a href="Loop-Closure-Detection.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -695,7 +695,7 @@
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">77</span>
+                    <span class="nav-count">76</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -730,7 +730,7 @@
                 <a href="Model-Predictive-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#14b8a6"></span>
                     <span class="nav-label">Model Predictive Control</span>
-                    <span class="nav-count">53</span>
+                    <span class="nav-count">52</span>
                 </a>
                 <a href="Whole-Body-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#06b6d4"></span>
@@ -809,7 +809,7 @@
             <a href="World-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">World Model</span>
-                <span class="nav-count">78</span>
+                <span class="nav-count">77</span>
             </a>
             <a href="3D-Foundation-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
@@ -894,7 +894,7 @@
             <a href="Kalman-Filter.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Kalman Filter</span>
-                <span class="nav-count">54</span>
+                <span class="nav-count">51</span>
             </a>
             <a href="Loop-Closure-Detection.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -914,7 +914,7 @@
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">77</span>
+                <span class="nav-count">76</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -949,7 +949,7 @@
             <a href="Model-Predictive-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#14b8a6"></span>
                 <span class="nav-label">Model Predictive Control</span>
-                <span class="nav-count">53</span>
+                <span class="nav-count">52</span>
             </a>
             <a href="Whole-Body-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#06b6d4"></span>
@@ -1028,6 +1028,51 @@
                 <span class="topic-count">80 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.14616v1" target="_blank" class="paper-title">SportD: Can VLMs Physically Strategize?</a>
+                        <span class="paper-date">2026-07-16</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：评估视觉语言模型（VLMs）在足球场景中能否利用视觉信息做出策略性决策，而非仅完成常规视觉理解任务。&#10;&#10;🛠 **方法**：构建SportD基准，包含2022年世界杯478个持球决策事件，通过对比模型选择与基于控球价值的优化策略（最大化进球概率）来量化决策质量。&#10;&#10;✨ **主要贡献**：发现最佳VLM仅31.4%事件选择最优动作（职业球员38.9%），且模型偏好低风险低回报动作（少射门、少传威胁球），并存在模仿球员常见模式而非理性评估的倾向。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Vision--language models have become increasingly capable of interpreting visual scenes, but it remains unclear whether they can use information to make strategically effective decisions. We investigate this question in soccer, where models observe the seconds preceding an on-ball decision and must choose whether to shoot or pass to a specific teammate. Unlike conventional visual-understanding tasks, soccer enables decisions to be evaluated quantitatively by estimating the value of every available action. We introduce SportD, a benchmark comprising 478 on-ball decisions from the 2022 FIFA World Cup. Each model choice is evaluated against a possession-value model that estimates the action that most increases the attacking team's probability of scoring, allowing us to measure both optimal-action accuracy and the value forfeited by suboptimal decisions. Across three frontier VLMs, the best selects the highest-valued action on 31.4% of events, compared with 38.9% for the professional players, and all models incur significantly greater regret. Further analysis reveals a systematic preference for lower-variance and lower-reward actions: VLMs shoot less often and select substantially less progressive passes than either the optimal policy or the real players. The models also reproduce the player's specific action above chance even when that action is suboptimal, suggesting partial imitation of familiar play patterns rather than consistent evaluation of counterfactual alternatives. SportD provides a value-grounded testbed for measuring physical strategic reasoning in VLMs.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.14586v1" target="_blank" class="paper-title">SoftNav: Injecting 3D Scene Tokens into VLMs for Embodied Navigation</a>
+                        <span class="paper-date">2026-07-16</span>
+                    </div>
+                                        <span class="paper-comment">📝 8 pages, 6 figures. Accepted to IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) 2026</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在目标导向的具身导航任务中，现有方法通过文本将3D场景信息传递给视觉语言模型（VLM），导致表示鸿沟，限制了导航性能。&#10;&#10;🛠 **方法**：提出SoftNav，通过轻量投影器将每个检测到的物体或前沿的实体级3D连续表示作为软令牌注入VLM的隐藏空间，冻结3D编码器和VLM，仅需约1200个样本和1700万可训练参数。&#10;&#10;✨ **主要贡献**：在HM3D-OVON上达到74.2%/68.3%/66.7%的成功率（SR），超越所有先前方法；零样本迁移至GOAT-Bench（67.2% SR）、SG3D（47.2% s-SR）及真实机器人部署，无需重新训练或架构修改，弥合了表示鸿沟。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>In goal-directed embodied navigation, where an agent must locate a specified target in an unseen environment, 3D scene understanding and navigation reasoning must work in concert. Current approaches transmit 3D scene information to vision-language models (VLMs) through text, suggesting a representation gap in our tested configurations; a controlled ablation confirms that direct embedding-level transfer significantly outperforms the evaluated text serialization formats. We introduce SoftNav, which injects entity-level 3D continuous representations -- one token per detected object or frontier -- into a VLM's hidden space as soft tokens through a lightweight projector. With the 3D encoder and VLM frozen, only ~1,200 samples and ~17M trainable parameters are needed. On HM3D-OVON, SoftNav achieves 74.2%/68.3%/66.7% SR across three splits, surpassing all prior methods in both SR and SPL; the same navigation policy transfers zero-shot to GOAT-Bench (67.2% SR), SG3D (47.2% s-SR), and real-world robot deployment without retraining or architectural modification. Injecting 3D scene tokens directly into VLMs bridges the representation gap, enabling transferable navigation with minimal training.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.14543v1" target="_blank" class="paper-title">SafeRelBench: A Spatial-Relation-Aware Benchmark for Process-Level Safety in VLM-Driven Embodied Agents</a>
+                        <span class="paper-date">2026-07-16</span>
+                    </div>
+                                        <span class="paper-comment">📝 Preprint. 10 pages, 6 figures, 4 tables</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有具身智能安全评估主要关注静态风险或最终任务完成，忽略了由空间关系（如支撑、包含、邻近）引发的过程级安全违规问题。&#10;&#10;🛠 **方法**：提出了SAFERELBENCH基准，包含507个可执行评估样本（248个空间关系样本和259个非空间控制样本），用于系统测试VLM驱动具身智能体在执行高风险动作前是否满足安全条件。&#10;&#10;✨ **主要贡献**：通过评估7个开源和闭源VLM驱动的具身智能体，发现任务成功与过程级安全合规之间存在显著差距，模型常完成任务却违反安全约束，表明安全具身智能需要更强的空间关系推理能力。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Vision-language models (VLMs) are increasingly used as the reasoning backbone of embodied agents, enabling robots to interpret visual scenes, follow language instructions, and plan multi-step actions. In household environments, however, safety depends not only on recognizing objects, but also on how actions change the physical scene over time. Existing embodied safety evaluations largely focus on static risk recognition, unsafe instruction refusal, or final-state task completion. As a result, process-level safety failures induced by spatial relations such as support, containment, and proximity remain insufficiently studied. To address this gap, we introduce SAFERELBENCH, a spatial-relation-aware safety benchmark with 507 executable evaluation samples, including 248 spatial-relation samples and 259 non-spatial control samples. Using SAFERELBENCH to evaluate seven open- and closed-source VLM-driven embodied agents, we find a substantial gap between task success and process-level safety compliance: models often complete the requested task while violating process-level safety constraints. Unlike prior benchmarks, SAFERELBENCH explicitly tests whether agents satisfy safety conditions before risk-prone actions, making spatial relations a core dimension in embodied safety assessment. More broadly, our results show that safe embodied intelligence requires not only stronger perception and planning, but also reliable reasoning about how object relations shape risk during interaction.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2607.13569v1" target="_blank" class="paper-title">GHR-VLM: Making Zero-Shot Transit Video Analytics Realizable with Grounded Hybrid Reasoning</a>
@@ -1139,10 +1184,7 @@
                         <span class="paper-date">2026-07-13</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有视觉语言模型（VLM）的基准排名主要基于任务性能，但相同性能的模型在不同数据集上表现差异显著，存在“能力-可靠性差距”，即基准分数无法反映模型在实际应用中的稳定性。&#10;&#10;🛠 **方法**：提出ARGUS-EVAL评估框架，从四个维度（基准能力、跨数据集一致性、鲁棒性保留、效率）综合评估VLM，并在检索、描述和推理任务上测试了CLIP、BLIP、LXMERT、Gemma-3-4B和Qwen-2.5VL-3B-Instruct五个模型。&#10;&#10;✨ **主要贡献**：揭示了能力导向与可靠性导向排名之间的显著差异。Qwen-2.5VL-3B-Instruct在能力上最强（如R@1=82.7%），而CLIP在效率上最优（延迟31ms，内存0.9GB），为实际模型选择提供了更全面的参考依据。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Vision-Language Models (VLMs) are increasingly used in industry VLM applications such as retrieval systems, content generation platforms, and decision-support workflows, where model selection is commonly guided by benchmark rankings. These rankings are largely determined by retrieval, captioning, and reasoning downstream tasks; however, models with similar task performance often show substantially different behavior across datasets. This creates a Capability-Reliability Gap between benchmark performance and observed model stability. We present ARGUS-EVAL, a capability-reliability-oriented evaluation framework for VLMs that characterizes model behavior through Benchmark Capability P(M), Cross-Dataset Consistency CDC(M), Robustness Retention RR(M), and Efficiency E(M). We evaluate CLIP, BLIP, LXMERT, Gemma-3-4B, and Qwen-2.5VL-3B-Instruct across retrieval, captioning, and reasoning downstream tasks. The results reveal notable differences between capability-oriented and reliability-oriented rankings. Qwen-2.5VL-3BInstruct achieves the strongest overall capability (R@1 = 82.7%, BLEU-4 = 47.2%, CIDEr = 141.6, CDC = 0.91), whereas CLIP records the lowest latency (31 ms) and memory footprint (0.9 GB).</p>
@@ -1154,10 +1196,7 @@
                         <span class="paper-date">2026-07-13</span>
                     </div>
                                         <span class="paper-comment">📝 CoRL 2026 submission. 15 pages, 7 figures</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：移动机器人在社交导航中需要平衡实时响应与语义推理能力，现有强化学习策略缺乏语义理解，而视觉语言模型计算成本高、推理慢，难以实时部署。&#10;&#10;🛠 **方法**：提出HUMA混合架构，日常低密度导航由快速反应的强化学习策略处理，当人类进入机器人邻近敏感区域时，则触发后训练的视觉语言模型进行高级语义推理，实现动态切换。&#10;&#10;✨ **主要贡献**：在Social-MP3D和Social-HM3D基准上分别提升任务成功率20%和3%，显著减少个人空间侵犯与碰撞；消融实验验证各组件有效性，并在Mirokaï机器人上完成实际部署验证。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>As mobile robots become more integrated into everyday human environments, social robot navigation is becoming essential for ensuring human comfort, safety, and trust. While reinforcement learning (RL) navigation policies provide the fast inference and reactive behavior necessary for real-time deployment, they still lack flexible semantic reasoning capabilities and often fail to generalize to complex social scenarios. Recent approaches have increasingly turned to vision-language models (VLMs) in place of RL policies to improve semantic and social reasoning in robot navigation. Nevertheless, their high computational cost and slow inference remain major barriers to real-time deployment. To overcome these limitations, we introduce HUMA (Hybrid Understanding for Multi-modal social Navigation), a hybrid architecture that dynamically balances the computational efficiency of RL policies with the deep semantic understanding of VLMs. Our approach uses a reactive RL policy to handle low-density, routine navigation tasks, while conditioning it on a post-trained high-level VLM when a human enters sensitive situations, such as the robot's proximity zone. We evaluate HUMA on the Social-MP3D and Social-HM3D benchmarks, where it achieves task success improvements of 20% and 3%, respectively, while significantly reducing personal space violations and human collisions against state-of-the-art baselines. Extensive ablation studies validate each architectural component, and real-world deployment on the Mirokaï mobile robot further demonstrates the practical viability of our approach.</p>
@@ -1169,10 +1208,7 @@
                         <span class="paper-date">2026-07-12</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="好的，作为一名人工智能研究与学术论文分析专家，我将严格按照您要求的章节结构和格式，对这篇题为《SpaceDrive: Infusing Spatial Awareness into VLM-based Autonomous Driving》的论文进行详细的中文解读。&#10;&#10;---&#10;&#10;## 0. 概览（Concise Summary）&#10;&#10;- **主题（Topic）**：端到端自动驾驶，具体为基于视觉语言模型（VLM）的轨迹规划。&#10;- **问题（Problem）**：当前VLM在处理自动驾驶所需的精细3D空间关系（如距离、坐标）时存在根本性缺陷，导致空间推理不准确和轨迹规划精度低。&#10;- **方法（Method）**：提出SpaceDrive框架，通过一个统一的3D位置编码（PE）机制，将空间信息显式地注入到VLM的视觉和文本处理流程中，并用回归解码器替代传统的文本数字生成方式。&#10;- **创新（Innovation）**：1) 提出一种通用的3D位置编码（PE），同时用于增强视觉特征和替换文本中的坐标数字；2) 采用回归解码器直接预测轨迹坐标，而非逐位生成数字；3) 实现了感知与推理阶段空间表示的完全统一。&#10;- **意义（Significance）**：显著提升了VLM在自动驾驶任务中的空间理解和规划能力，在nuScenes开放循环评测中达到SOTA，在Bench2Drive闭环评测中取得VLM方法第二的成绩，为构建更可靠、更具空间感知能力的VLM驾驶系统提供了新范式。&#10;- **一句话总结**：SpaceDrive通过引入统一的3D位置编码，有效解决了VLM在自动驾驶中缺乏精细空间感知的问题，从而实现了更精确、更安全的轨迹规划。&#10;&#10;## 1. 研究动机（Motivation）&#10;&#10;论文的研究动机源于当前基于VLM的端到端自动驾驶方法面临的一个核心矛盾：**VLM拥有强大的2D视觉理解和语义推理能力，但在理解精细的3D空间关系方面存在严重不足**。&#10;&#10;- **问题与空白**：自动驾驶系统需要精确理解物体在3D空间中的位置、距离和相对关系，才能做出安全的驾驶决策。然而，现有VLM在3D任务（如几何测量、距离估计）上表现不佳。作者指出，这主要源于两个因素：&#10;    1.  **缺乏3D预训练**：VLM主要在2D数据上预训练，缺乏对3D坐标与2D语义之间关联的显式学习，导致模型难以将“（3.82m, 0.51m）”这样的坐标与图像中“黑色轿车”的语义特征精确关联起来。&#10;    2.  **数字处理的局限性**：语言模型本质上是将数字作为离散的文本token进行分类预测（如“3”、“.”、“8”、“2”）。这种逐位分类方式忽略了数字token之间的内在顺序和数值邻近性，导致对连续坐标值的预测精度很差。&#10;&#10;- **为什么重要**：这种空间感知的缺失直接限制了VLM在自动驾驶中的规划能力。如图1(a)所示，当被问及“如果跟随轨迹[ (0.54m, 0.22m), ...]会发生什么？”时，VLM可能会给出“你会撞到交通锥”这样不准确的回答，因为它无法将轨迹坐标与场景中物体的实际3D位置正确关联。这导致规划出的轨迹要么是粗略的猜测，要么是不精确的。&#10;&#10;- **挑战**：如何在不牺牲VLM强大的通用语义理解能力的前提下，高效、通用地注入3D空间感知能力，并克服语言模型在数值预测上的先天不足，是核心挑战。&#10;&#10;## 2. 创新点（Innovation）&#10;&#10;论文的核心创新在于提出了一个名为 **SpaceDrive** 的框架，其关键创新点如下：&#10;&#10;1.  **统一的3D位置编码（Unified 3D Positional Encoding, PE）**：这是最核心的创新。SpaceDrive设计了一个通用的3D正弦-余弦位置编码器 `ϕ(·)`。这个编码器被用于处理所有来源的3D坐标，包括：&#10;    - 从深度估计中得到的图像像素对应的3D坐标。&#10;    - 文本提示中的坐标（如问题中的坐标、轨迹点）。&#10;    - 历史自车状态中的坐标。&#10;    这种“一个编码器，处处使用”的设计，确保了感知和推理阶段的空间表示是完全一致的，使得模型能够直接利用PE的相似性来索引和关联空间信息。&#10;&#10;2.  **显式的空间-语义关联（Explicit Spatial-Semantic Association）**：与现有方法将3D信息作为隐式特征注入不同，SpaceDrive将3D位置编码 `ϕ(cp)` **显式地、逐元素地** 加到经过视觉-语言对齐后的视觉token `hp` 上。这使得每个视觉token都携带了其对应的精确3D位置信息，从而在注意力机制中，文本中的坐标PE可以直接与这些“空间化”的视觉token进行交互，实现了精确的“指哪看哪”。&#10;&#10;3.  **回归式坐标解码器（Regression-based Coordinate Decoder）**：针对语言模型逐位生成数字的缺陷，SpaceDrive引入了一个可学习的MLP解码器 `ψ(·)`。当VLM输出一个特殊的 `&lt;IND&gt;` token时，后续的隐藏状态会被送入这个解码器，直接**回归**出连续的3D坐标值。这从根本上解决了离散数字预测带来的精度损失问题。&#10;&#10;## 3. 主要内容（Main Content）【重点】&#10;&#10;### 3.1 设计架构与方法&#10;&#10;SpaceDrive的整体架构如图2所示，主要包含以下几个模块：&#10;&#10;1.  **视觉编码与空间编码**：&#10;    - 多视角图像 `{Ik}` 经过视觉编码器 `fvis.` 得到视觉token `Xv`，再通过MLP投影器 `g` 对齐到语言空间，得到 `Hv`。&#10;    - 同时，图像经过一个冻结的深度估计器 `fdep.` 得到深度图 `Dk`。通过相机内参，将每个图像patch的中心点投影到3D空间，得到坐标 `cp`。&#10;    - 使用统一的PE编码器 `ϕ(·)` 将 `cp` 编码为3D位置编码 `ϕ(cp)`。&#10;    - 将 `ϕ(cp)` 与视觉token `hp` 相加，得到带有空间信息的视觉token `˜hp`。&#10;&#10;2.  **文本中的坐标编码**：&#10;    - 在输入文本提示时，扫描并识别出表示坐标的子串（如 `(3.82m, 0.51m)`）。&#10;    - 提取其数值，同样使用 `ϕ(·)` 编码为PE token，替换掉原来的数字token序列。&#10;    - 在每个输入PE前加上一个特殊的 `&lt;IND&gt;` token，以标识其身份。&#10;&#10;3.  **自车状态编码**：&#10;    - 历史自车轨迹点 `cego_τ` 也通过相同的 `ϕ(·)` 编码，作为显式的时空条件输入给VLM。&#10;&#10;4.  **输出解码**：&#10;    - VLM的输出序列 `{ej}` 被送入扩展后的语言头 `W'lang`。&#10;    - 如果输出token是 `&lt;IND&gt;`，则下一个隐藏状态 `ej+1` 被送入PE解码器 `ψ(·)`，直接回归出坐标 `ˆc`。&#10;    - 否则，按常规方式生成文本token。&#10;&#10;### 3.2 关键算法与数学推导&#10;&#10;- **3D坐标获取**：对于每个图像patch `p`，其对应的3D坐标 `cp` 通过反投影得到：&#10;  $$c_p = P_k^{\dagger} [u_p, v_p, d_p, 1]^T$$&#10;  其中，$P_k^{\dagger}$ 是第k个相机的投影矩阵的伪逆，$(u_p, v_p)$ 是patch中心坐标，$d_p$ 是该patch内最小深度值。&#10;&#10;- **3D正弦-余弦位置编码**：`ϕ(cp)` 是一个三维的正弦-余弦编码，将每个维度独立编码：&#10;  $$\phi(c_p) = [\phi_x(x_p^{3D}), \phi_y(y_p^{3D}), \phi_z(z_p^{3D})] \in \mathbb{R}^{dim}$$&#10;  对于维度 $a \in \{x, y, z\}$：&#10;  $$\phi_a(p_a) = \left( \sin\left(\frac{p_a}{20000^{2i/d_a}}\right), \cos\left(\frac{p_a}{20000^{2i/d_a}}\right) \right), \quad i=0, \dots, \lfloor d_a/2 \rfloor -1$$&#10;  其中 $d_x = d_y = \lceil dim/3 \rceil$, $d_z = dim - d_x - d_y$。&#10;&#10;- **空间token注入**：&#10;  $$\tilde{h}_p = h_p + \alpha_{PE} \phi(c_p)$$&#10;  其中 $h_p$ 是原始的视觉token，$\alpha_{PE}$ 是一个可学习的归一化因子，用于调节PE的幅度，避免破坏预训练VLM的token分布。&#10;&#10;- **文本坐标替换**：对于文本序列中的坐标子串 $S$，其对应的PE token为：&#10;  $$\tilde{h}_i = \phi(c_r) \quad \text{if } i \in S$$&#10;  其中 $c_r$ 是从文本中提取的坐标向量。&#10;&#10;- **坐标回归损失**：训练时，坐标回归部分采用Huber损失：&#10;  $$L_{reg.}(\hat{c}, c) = \text{Huber}(\hat{c}, c)$$&#10;  总损失为语言模型损失和回归损失之和：&#10;  $$L = L_{LM} + L_{reg.}(\hat{c}, c)$$&#10;&#10;### 3.3 模型、训练与数据集&#10;&#10;- **基础VLM**：默认使用 **Qwen2.5-VL-7B**。为了验证适应性，也在 **LLaVA** 上进行了实验。&#10;- **训练策略**：采用 **LoRA**（秩=16）微调核心大语言模型（LLM），视觉编码器和投影器保持冻结。深度估计器使用 **Unidepthv2-ViT-L**，同样冻结。&#10;- **数据集**：&#10;    - **nuScenes**：用于开放循环（Open-loop）评测。包含1000个城市驾驶场景，使用6个摄像头。模型预测未来3秒内的6个轨迹点。&#10;    - **Bench2Drive**：用于闭环（Closed-loop）评测。基于CARLA V2模拟器，包含44种交互场景，共220条短路线。评估指标为驾驶分数（Driving Score）和成功率（Success Rate）。&#10;- **训练细节**：开放循环训练6个epoch，闭环训练12个epoch。使用8×A100 80GB GPU，batch size为8，学习率1e-4，余弦退火调度。输入图像尺寸为640×640。&#10;&#10;### 3.4 实验设置与结果&#10;&#10;- **开放循环规划（nuScenes）**：&#10;    - **结果**：如表1所示，SpaceDrive+（使用自车状态）在所有VLM方法中取得了**最优**的L2误差（0.32m）、碰撞率（0.23%）和侵入率（1.27%）。即使不使用自车状态（SpaceDrive），其性能也显著优于其代码库OmniDrive。&#10;    - **分析**：这证明了统一的3D位置编码足以替代复杂的BEV特征，并且显式的空间信息注入能有效提升规划的安全性和精度。&#10;&#10;- **闭环规划（Bench2Drive）**：&#10;    - **结果**：如表2所示，SpaceDrive+取得了78.02的驾驶分数和55.11%的成功率，在所有VLM方法中排名**第二**（仅次于使用了大量数据增强的SimLingo）。&#10;    - **分析**：相比之下，其代码库OmniDrive在闭环中表现极差（成功率低于10%），其预测轨迹会退化为近似直线。这有力地证明了SpaceDrive引入的显式空间token是解锁VLM在复杂动态场景中进行合理规划的关键。&#10;&#10;- **定性结果**：图3展示了一个复杂的避让场景。SpaceDrive+能够根据周围车辆的动态，做出加速、减速、变道等一系列合理的决策，体现了其强大的空间推理和策略适应能力。&#10;&#10;### 3.5 技术细节&#10;&#10;- **PE归一化**：表5的消融实验表明，引入一个**可学习的归一化因子** `αPE` 至关重要。固定过小的 `αPE` 会导致PE在注意力计算中被忽略，性能下降。可学习的 `αPE` 能自适应地调节PE的尺度，稳定训练并提升性能。&#10;- **PE编码器与解码器选择**：表4的消融实验显示：&#10;    - 使用**正弦-余弦编码**作为PE编码器优于可学习的MLP编码器，因为它具有平移不变性，有助于注意力层恢复token间的空间关系。&#10;    - 使用**可学习的MLP**作为PE解码器优于直接尝试反解正弦-余弦编码，因为后者在数值上是不适定的。&#10;    - **逐坐标解码**（每个轨迹点独立解码）优于从单个embedding解码整个轨迹（任务特定解码）。&#10;- **适应性**：表6显示，SpaceDrive在Qwen-VL和LLaVA两种不同的VLM基座上均取得了优异且一致的性能提升，证明了其方法的通用性和可迁移性。&#10;&#10;## 4. 意义与影响（Significance and Impact）&#10;&#10;- **解决的问题与贡献**：&#10;    - **解决了VLM在自动驾驶中的空间感知瓶颈**：通过提出统一的3D位置编码，SpaceDrive为VLM提供了一种显式、精确且通用的方式来理解和推理3D空间。&#10;    - **提升了规划精度与安全性**：在开放循环和闭环评测中均取得了领先的性能，证明了该方法能有效提升轨迹规划的准确性和驾驶安全性。&#10;    - **提供了一个通用范式**：该方法不依赖于特定的VLM架构或任务，具有良好的适应性和可迁移性，为未来构建更具空间智能的VLM系统提供了新思路。&#10;&#10;- **对未来研究/应用的影响**：&#10;    - 为VLM在机器人、增强现实等需要与物理世界交互的领域提供了重要的技术参考。&#10;    - 证明了“显式注入几何信息”比“依赖隐式学习”更有效，可能引导后续研究更注重模型的结构化空间表示。&#10;    - 其回归式解码器设计为克服语言模型在连续数值预测上的缺陷提供了一个有效的解决方案。&#10;&#10;- **局限与开放问题**：&#10;    - **缺乏不确定性处理**：当前模型对每个轨迹点给出一个确定的预测，没有考虑预测的不确定性。&#10;    - **缺乏时序记忆机制**：模型主要依赖当前帧和历史自车状态，没有利用多帧时序记忆机制来更好地理解动态场景的演变。&#10;    - **对深度估计的依赖**：性能受限于深度估计器的精度，未来可以探索更鲁棒的深度估计或端到端联合训练。&#10;&#10;## 5. 澄清与简化（Clarifications and Simplifications）&#10;&#10;- **类比理解“统一位置编码”**：可以把SpaceDrive的PE想象成一种“通用空间语言”或“3D坐标的二维码”。无论是从图像中看到的物体（视觉token），还是从文字中读到的坐标（文本token），甚至是你自己走过的路（自车状态），都统一用这种“二维码”来标记。这样，模型在处理信息时，就能通过比对“二维码”的相似度，轻松地将文字中的“（3.82m, 0.51m）”与图像中那个位置的“黑色轿车”对应起来，实现“指哪打哪”。&#10;&#10;- **为什么回归解码比逐位生成数字更好？**：想象一下，你要预测一个数字“3.14”。传统的语言模型会把它当作“3”、“.”、“1”、“4”四个独立的分类任务。它不知道“3.14”和“3.15”很接近，而和“9.99”相差很远。这就像让你猜一个四位数的密码，猜错一位就全错。而SpaceDrive的回归解码器，就像一把尺子，直接去测量目标值，它天生就知道数值之间的远近关系，所以预测更精确、更稳定。&#10;&#10;- **可学习归一化因子 `αPE` 的作用**：VLM中的token都有自己习惯的“能量”或“范数”。如果强行把3D位置编码（PE）加进去，可能会破坏这种平衡，就像在安静的房间里突然放了一个大喇叭。`αPE` 就像一个音量调节旋钮，模型可以自己学习把PE的音量调到最合适的程度，既能被听到（发挥作用），又不会震耳欲聋（破坏原有特征）。&#10;&#10;## 6. 补充说明（Additional Notes）&#10;&#10;- **相关工作关联**：&#10;    - 与**OmniDrive**和**ORION**等同期工作相比，SpaceDrive的核心区别在于其**统一的、显式的**空间表示。OmniDrive使用文本数字表示坐标，ORION使用任务特定的embedding。SpaceDrive则通过一个通用的PE，将感知和推理中的空间信息统一起来，避免了信息损失和任务绑定。&#10;    - 与**SpatialVLM**等专注于提升VLM空间推理能力的工作相比，SpaceDrive更聚焦于**自动驾驶中的端到端规划**，并提出了一个可直接用于轨迹预测的实用框架。&#10;    - 与**UniAD**等传统端到端方法相比，SpaceDrive利用了VLM的通用知识和推理能力，有望实现更好的泛化性。&#10;&#10;- **最重要的图表**：&#10;    - **图1**：非常直观地对比了现有VLM方法（a）和SpaceDrive（b）在空间推理上的差异，清晰地展示了论文要解决的问题和提出的解决方案。&#10;    - **图2**：展示了SpaceDrive的完整框架图，是理解方法架构的核心。&#10;    - **表1**和**表2**：是论文的核心实验结果，分别证明了SpaceDrive在开放循环和闭环评测中的优越性能，是论文贡献的最有力证据。&#10;    - **表3**：关键的消融实验，系统地验证了将PE注入视觉token、文本坐标和历史自车状态这三个模块各自的有效性，以及将它们统一起来的重要性。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>End-to-end autonomous driving methods built on vision language models (VLMs) have undergone rapid development driven by their universal visual understanding and strong reasoning capabilities obtained from the large-scale pretraining. However, we find that current VLMs struggle to understand fine-grained 3D spatial relationships which is a fundamental requirement for systems interacting with the physical world. To address this issue, we propose SpaceDrive, a spatial-aware VLM-based driving framework that treats spatial information as explicit positional encodings (PEs) instead of textual digit tokens, enabling joint reasoning over semantic and spatial representations. SpaceDrive employs a universal positional encoder to all 3D coordinates derived from multi-view depth estimation, historical ego-states, and text prompts. These 3D PEs are first superimposed to augment the corresponding 2D visual tokens. Meanwhile, they serve as a task-agnostic coordinate representation, replacing the digit-wise numerical tokens as both inputs and outputs for the VLM. This mechanism enables the model to better index specific visual semantics in spatial reasoning and directly regress trajectory coordinates rather than generating digit-by-digit, thereby enhancing planning accuracy. Extensive experiments validate that SpaceDrive achieves state-of-the-art open-loop performance on the nuScenes dataset and the second-best Driving Score of 78.02 on the Bench2Drive closed-loop benchmark over existing VLM-based methods. Code is available at: https://github.com/zhenghao2519/SpaceDrive.</p>
@@ -1980,42 +2016,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Maintaining physical consistency in video generators and world models increasingly relies on vision-language models (VLMs) as automated judges that provide reward signals, ranking decisions, and data-filtering criteria. Yet VLMs differ substantially in training data and architecture, encoding physical phenomena through distinct internal representations. A single global evaluation schema therefore gives every VLM the same axes of competence, regardless of what each can actually perceive. We propose JudgeFit, an iterative refinement procedure that discovers a per-VLM evaluation taxonomy. An initial taxonomy is constructed by prompting the target VLM to enumerate physics errors on a small set of videos and clustering the resulting descriptions. The taxonomy is then refined through a diagnostic step: we calibrate the VLM's per-dimension scores to human physical-commonsense ratings, diagnose which dimensions it scores unreliably or redundantly, and prompt an LLM to repair them, iterating until convergence. We further instantiate this procedure as a benchmark and apply it to 16 VLMs spanning eight model families. The refined taxonomy outperforms the global-schema baseline on held-out videos for every VLM tested, with a mean relative improvement of approximately 32%. Beyond aggregate accuracy, the per-VLM profiles expose model-specific blind spots that overall rankings cannot anticipate, with reliability patterns differing markedly across model families.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2603.20475v4" target="_blank" class="paper-title">CREG: Compass Relational Evidence Graph for Characterizing Directional Structure in VLM Spatial-Reasoning Attribution</a>
-                        <span class="paper-date">2026-06-21</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Standard attribution heatmaps show where a vision-language model (VLM) focuses, but they do not reveal whether the recovered evidence is organized by the queried spatial relation or merely reflects image layout. To address this problem, we introduce CREG (Compass Relational Evidence Graph), a training-free diagnostic framework that converts token-level attribution into a reference-centered compass distribution and measures its directional alignment. CREG provides a shared directional readout across attribution methods and makes comparison with geometric controls explicit. Across three spatial-relation benchmarks, box-only geometry achieves Direction Alignment Error 28.4 to 34.4 degrees lower than the best current model-based attribution method on each dataset, leaving a substantial gap between attribution structure and simple target localization. To examine this gap, we apply a diagnostic battery including target intervention, reference-center randomization, and variance partition. Taken together, the results suggest that the directional structure recoverable from current attribution methods is limited and often mixed with image layout. We further find that higher task accuracy does not reliably coincide with better directional attribution: small-scale LoRA training and newer model generations can improve task accuracy while leaving Direction Alignment Error unchanged or worse. These findings characterize what current attribution methods reveal rather than the model's internal spatial representation. CREG provides a controlled protocol for testing whether improvements in spatial reasoning are accompanied by more directionally organized evidence.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.22409v1" target="_blank" class="paper-title">Gold Points Sniper: Self-guided Visual Reasoning in VLM for Fine-grained Action Understanding</a>
-                        <span class="paper-date">2026-06-21</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Robots operating in everyday environments must understand fine-grained human actions, intentions, and contextual cues from broad views where people occupy only small regions, a capability unmet by current systems. While open-vocabulary action recognition methods remain limited to assigning predefined labels, and vision-language models (VLMs) face an inherent trade-off between informational richness and factual fidelity in their outputs, neither approach achieves the deep semantic interpretation required for reliable human-robot interaction. We propose Gold Points Sniper (GPS), a novel framework that empowers lightweight VLMs with self-guided multimodal reasoning capabilities for fine-grained human action understanding. Our approach comprises three key modules: Gold Points Extractor trains VLMs to identify critical action-relevant details, Selective Socratic Questioner validates and refines these details through selective self-questioning, and Semantic Entailment Evaluator quantitatively assesses factual consistency using semantic entailment classification. Extensive experiments on our curated instruction-tuning dataset based on the CAP benchmark demonstrate that GPS-enhanced lightweight VLMs achieve substantial performance improvements, with some models reaching performance comparable to proprietary GPT-4o while maintaining superior factual accuracy. Our work establishes a reliable foundation for fine-grained action understanding in domestic robotics, enabling robots to safely interpret human behavior through information-dense yet factually grounded descriptions. Source code, training configurations, annotation prompts, and dataset details are released at https://github.com/Haodi-Liu/GPS-Gold-Point-Sniper.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2605.05161v2" target="_blank" class="paper-title">Wasserstein-Aligned Localisation for VLM-Based Distributional OOD Detection in Medical Imaging</a>
-                        <span class="paper-date">2026-06-20</span>
-                    </div>
-                                        <span class="paper-comment">📝 submitted to MICCAI 2026</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Zero-shot anomaly localisation via vision-language models (VLMs) offers a compelling approach for rare pathology detection, yet its performance is fundamentally limited by the absence of healthy anatomical context. We reformulate zero-shot localisation as a comparative inference problem in which anomalies are identified through structured comparison against reference distributions of normal anatomy. We introduce WALDO, a training-free framework grounded in optimal transport theory that enables comparative reasoning through: (i) entropy-weighted Sliced Wasserstein distances for anatomically-aware reference selection from DINOv2 patch distributions, (ii) Goldilocks zone sampling exploiting the non-monotonic relationship between reference similarity and localisation accuracy, and (iii) self-consistency aggregation via weighted non-maximum suppression. We theoretically analyse the Goldilocks effect through distributional divergence, and show that references with moderate similarity minimize a bias-variance trade-off in comparative visual reasoning. On the NOVA brain MRI benchmark, WALDO with Qwen2.5-VL-72B achieves $43.5_{\pm1.6}\%$ mAP@30 (95\% CI: [40.4, 46.7]), representing a 19\% relative improvement over zero-shot baselines. Cross-model evaluation shows consistent gains: GPT-4o achieves $32.0_{\pm6.5}\%$ and Qwen3-VL-32B achieves $32.0_{\pm6.6}\%$ mAP@30. Paired McNemar tests confirm statistical significance ($p<0.01$). Source code is available at https://github.com/bkainz/WALDO_MICCAI26_demo .</p>
                     </details>
                 </div>
             </div>

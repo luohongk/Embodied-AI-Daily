@@ -590,7 +590,7 @@
                 <a href="World-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">World Model</span>
-                    <span class="nav-count">78</span>
+                    <span class="nav-count">77</span>
                 </a>
                 <a href="3D-Foundation-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
@@ -675,7 +675,7 @@
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Kalman Filter</span>
-                    <span class="nav-count">54</span>
+                    <span class="nav-count">51</span>
                 </a>
                 <a href="Loop-Closure-Detection.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -695,7 +695,7 @@
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">77</span>
+                    <span class="nav-count">76</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -730,7 +730,7 @@
                 <a href="Model-Predictive-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#14b8a6"></span>
                     <span class="nav-label">Model Predictive Control</span>
-                    <span class="nav-count">53</span>
+                    <span class="nav-count">52</span>
                 </a>
                 <a href="Whole-Body-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#06b6d4"></span>
@@ -809,7 +809,7 @@
             <a href="World-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">World Model</span>
-                <span class="nav-count">78</span>
+                <span class="nav-count">77</span>
             </a>
             <a href="3D-Foundation-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
@@ -894,7 +894,7 @@
             <a href="Kalman-Filter.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Kalman Filter</span>
-                <span class="nav-count">54</span>
+                <span class="nav-count">51</span>
             </a>
             <a href="Loop-Closure-Detection.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -914,7 +914,7 @@
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">77</span>
+                <span class="nav-count">76</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -949,7 +949,7 @@
             <a href="Model-Predictive-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#14b8a6"></span>
                 <span class="nav-label">Model Predictive Control</span>
-                <span class="nav-count">53</span>
+                <span class="nav-count">52</span>
             </a>
             <a href="Whole-Body-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#06b6d4"></span>
@@ -1028,6 +1028,36 @@
                 <span class="topic-count">72 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.15182v1" target="_blank" class="paper-title">Stigmergic Graph Memory: An Environment-Aware Approach for Many-to-Many Multi-Agent Pickup and Delivery</a>
+                        <span class="paper-date">2026-07-16</span>
+                    </div>
+                                        <span class="paper-comment">📝 16 pages total: 7 pages main text, 2 pages references, and 7 pages appendix</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在多对多多智能体拣选与配送（MAPD）任务中，如何通过感知环境动态信息来优化任务分配和路径规划，避免仓库拥堵并提升吞吐量。&#10;&#10;🛠 **方法**：提出了一种名为“Stigmergic Graph Memory (SGM)”的有限、衰减记忆层，该层记录仓库节点和有向边上的近期执行信号，用于对可行端点进行排序并影响路径偏好，而不改变碰撞约束或规划器有效性。&#10;&#10;✨ **主要贡献**：在五种布局、三种负载水平和25个随机种子条件下，SGM在所有15种地图-负载组合中均优于两种重建的多对多分配基线，吞吐量提升20.5%-36.7%，证明近期执行记忆可通过影响可行目标的选择而非仅路径规划来提升仓库效率。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Automated fulfillment warehouses must continuously assign and execute pickup-and-delivery work while avoiding congestion. In many-to-many Multi-Agent Pickup and Delivery (MAPD), a request specifies a stock-keeping unit rather than fixed endpoints, requiring the controller to select an agent, source, and destination before path planning. Existing graph-guidance methods primarily influence routing after goals are fixed, leaving endpoint instantiation uninformed by recent traffic. We introduce Stigmergic Graph Memory (SGM), a bounded, decaying memory layer that records recent execution signals on warehouse nodes and directed edges to rank feasible endpoints and route preferences without altering collision constraints or planner validity. Across paired request streams on five layouts, three load levels, and 25 seeds per condition, SGM outperforms two reconstructed many-to-many allocation baselines in all 15 map-load conditions, with paired throughput gains of 20.5-36.7%. These results show that recent execution memory can improve warehouse throughput by shaping which feasible goals enter the planner, not only how agents travel to already fixed goals.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2408.12548v3" target="_blank" class="paper-title">Human-In-The-Loop Machine Learning for Safe and Ethical Autonomous Vehicles: Principles, Challenges, and Opportunities</a>
+                        <span class="paper-date">2026-07-16</span>
+                    </div>
+                                        <span class="paper-comment">📝 19 pages, 4 figures</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决自动驾驶在复杂场景下难以实现全自主性，以及数据标注成本高、效率低的问题，同时确保安全与伦理合规。&#10;&#10;🛠 **方法**：采用人机协同的机器学习框架，包括课程学习（从简单到复杂任务训练）、人在回路强化学习（通过奖励设计、动作修正等）、人在回路大语言模型（协作与监督）、主动学习（优化数据标注）以及伦理原则的集成。&#10;&#10;✨ **主要贡献**：系统综述了HITL-ML在自动驾驶中的关键技术与应用，涵盖感知、规划、控制等模块，并提出了提升学习效率、安全探索和实时干预的可行方案，同时强调透明度、问责制和人机监督等伦理要求。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Machine Learning (ML) has become central to Autonomous Vehicles (AVs), supporting perception, prediction, planning, control, and decision-making in dynamic environments. However, achieving full autonomy in cluttered and complex scenarios, such as intricate intersections, diverse scenes, varied trajectories, and complex missions, remains challenging; moreover, data labeling is still a major bottleneck. These limitations motivate Human-in-the-Loop Machine Learning (HITL-ML), in which human input is incorporated through validation, annotation, task organization, reward design, action correction, preference feedback, and supervisory intervention. To advance safe and ethical autonomy, this paper presents a tutorial survey of HITL-ML for AVs, focusing on Curriculum Learning (CL), Human-in-the-Loop Reinforcement Learning (HITL-RL), Human-in-the-Loop Large Language Models (HITL-LLMs), Active Learning (AL), and ethical principles. We first review CL methods that structure training from simple to complex tasks, covering navigation, path planning, obstacle avoidance, data collection, landing, intersection handling, motion planning, and UAV swarm coordination. We then examine HITL-RL through reward shaping, action injection, demonstrations, preference-based feedback, and interactive learning, emphasizing improved learning efficiency, safer policy exploration, and real-time intervention. Next, we review HITL-LLM through collaboration and oversight and specify key challenges. After that, we discuss AL for perception, anomaly detection, semantic mapping, object detection, vehicle recognition, and security-related classification. Ethical principles are reviewed as technical requirements for transparency, accountability, human oversight, safety, security, regulatory compliance, and reliability of human input.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2507.23270v3" target="_blank" class="paper-title">Simulation-based planning of Motion Sequences for Automated Procedure Optimization in Multi-Robot Assembly Cells</a>
@@ -1154,10 +1184,7 @@
                         <span class="paper-date">2026-07-05</span>
                     </div>
                                         <span class="paper-comment">📝 12th 2026 International Conference on Control, Decision and Information Technologies (CoDIT 2026)</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在自动驾驶路径规划中，如何同时保证路径的安全性、舒适性、动态可行性以及计算效率。  &#10;🛠 **方法**：提出一种顺序路径规划框架，先通过图搜索（Dijkstra算法）生成粗略路径，再基于该路径构建空间变化的凸侧向安全走廊，将避障约束转化为连续可行性约束，最后通过模型预测控制（MPC）优化路径，并惩罚横向偏移的三阶空间导数以提升平滑性。  &#10;✨ **主要贡献**：在直道和弯道多场景超车测试中，该方法相比多项式拟合与二次规划方法，显著降低了横向加速度、曲率和冲击度，同时计算成本在直道和弯道上分别降低28.08%和29.52%，验证了图搜索与MPC结合在结构化环境中平衡平滑性与效率的有效性。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Path planning is a fundamental component of autonomous vehicles, where achieving safe, comfortable, and dynamically feasible paths while ensuring computational efficiency remains a significant challenge. This paper presents a sequential path planning framework in which a rough path obtained from graph search is explicitly exploited to guide a Model Predictive Control (MPC)-based path refinement. A rough path is first obtained via Dijkstra search on a discretized grid and is then used to construct a spatially varying convex lateral safety corridor that explicitly captures obstacle avoidance constraints, transforming discrete obstacle avoidance decisions into continuous feasibility constraints for optimization. Within this corridor, an MPC problem is formulated to refine the path, enabling efficient optimization while maintaining path smoothness by penalizing the third-order spatial derivative of the lateral offset over a prediction horizon. The proposed algorithm is evaluated in multiple overtaking scenarios on both straight and curved roads, including cases with single and multiple target vehicles, using high-fidelity environment simulations (i.e., CarMaker). Compared with the previous study, which used polynomial fitting and a quadratic programming method, the proposed approach consistently achieves lower lateral acceleration, curvature, and jerk while reducing computational cost by 28.08% on straight roads and 29.52% on curved roads. These results demonstrate that exploiting graph-search structure within an MPC formulation provides an effective balance between path smoothness and computational efficiency for autonomous vehicles in structured driving environments.</p>
@@ -1169,10 +1196,7 @@
                         <span class="paper-date">2026-07-03</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有具身智能基准测试多聚焦于静态家庭环境，缺乏对动态工业场景中空间推理能力的全面评估，尤其是安全导向的路径规划与主动探索能力。&#10;&#10;🛠 **方法**：提出IndustryNav基准，基于Unity构建12个高保真仓库场景，包含动态物体与人类运动；设计零样本PointGoal导航流程，融合第一人称视觉与全局里程计，并引入“碰撞率”与“警告率”指标衡量安全行为。&#10;&#10;✨ **主要贡献**：首次构建动态工业导航基准，系统评估14种前沿VLLM模型，揭示闭源模型虽有优势，但所有智能体在鲁棒路径规划、避障及主动探索方面存在显著不足，推动具身研究从被动感知转向动态环境中的稳定规划与安全行为。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>While Visual Large Language Models (VLLMs) show great promise as embodied agents, they continue to face substantial challenges in spatial reasoning. Existing embodied benchmarks largely focus on passive, static household environments and evaluate isolated capabilities, failing to capture holistic performance in interactive and dynamic complexity of specific domains. To fill this gap, we present IndustryNav, the first dynamic industrial navigation benchmark for active spatial reasoning. IndustryNav leverages 12 manually created, high-fidelity Unity warehouse scenarios featuring dynamic objects and human movement. We proposes a zero-shot PointGoal navigation pipeline that effectively combines egocentric vision with global odometry to assess holistic local-global planning. Furthermore, we introduce the "collision rate" and "warning rate" metrics to measure safety-oriented behaviors. A comprehensive study of fourteen state-of-the-art VLLMs (including models such as GPT-5.2, Claude-4.6, and Gemini-3) reveals that closed-source models maintain a consistent advantage; however, all agents exhibit notable deficiencies in robust path planning, collision avoidance and active exploration. This highlights a critical need for embodied research to move beyond passive perception and toward tasks that demand stable planning, active exploration, and safe behavior in vivid, dynamic environments.</p>
@@ -1896,30 +1920,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Integrating artificial intelligence (AI) into sampling-based motion planning provides new possibilities for improving autonomous navigation efficiency. In this paper, three algorithms, namely RRT*, Neural RRT*, and Neural Informed RRT*, are implemented and evaluated on environments containing convex and concave obstacles with different obstacle densities. The obtained results indicate that neural-guided planners improve path quality, producing up to 14\% shorter paths and 55--75\% smoother trajectories compared with the conventional RRT* algorithm. Among the evaluated methods, Neural Informed RRT* achieves the best overall performance in terms of path length and trajectory smoothness. These results demonstrate the effectiveness of AI-guided sampling strategies for improving reliability and trajectory efficiency in robotic and UAV navigation, despite a slight increase in computation time. Overall, the study highlights the growing importance of artificial intelligence in real-time robotic path planning applications.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2605.25006v1" target="_blank" class="paper-title">Convex-Neural RRT*: Fast and Reliable Learning-Guided Sampling for High-Quality Robot Path Planning</a>
-                        <span class="paper-date">2026-05-24</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Sampling-based algorithms for robot path planning offer probabilistic completeness and strong empirical convergence properties across environments with diverse obstacle configurations. However, in practice, these methods often require many iterations to obtain high-quality solutions. This paper proposes Convex-Neural RRT*, an enhanced RRT* variant that incorporates neural guidance to predict informative waypoint regions near high-quality paths. Convex candidate regions are extracted from these predictions, enabling the planner to concentrate exploration on geometrically relevant areas while preserving global exploration. The proposed algorithm is evaluated against Neural RRT*, Neural Informed RRT*, classical RRT*, and LTA* across three environment types and 18 benchmark maps. Experimental results show that Convex-Neural RRT* reduces computation time by 30-75% compared to neural-guided variants and up to 88-98% relative to LTA*, while achieving an average path length reduction of approximately 5% compared to classical RRT*, with larger improvements observed in complex environments. The method also maintains an overall success rate above 99% across varying obstacle densities. These findings indicate that convex-guided neural sampling provides an effective balance between computational efficiency and solution quality, supporting its applicability to time-sensitive robotic navigation tasks.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2602.02009v2" target="_blank" class="paper-title">Logic-Guided Vector Fields for Constrained Generative Modeling</a>
-                        <span class="paper-date">2026-05-22</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Neuro-symbolic systems aim to combine the expressive structure of symbolic logic with the flexibility of neural learning; yet, generative models typically lack mechanisms to enforce declarative constraints at generation time. We propose Logic-Guided Vector Fields (LGVF), a neuro-symbolic framework that injects symbolic knowledge, specified as differentiable relaxations of logical constraints, into flow matching generative models. LGVF couples two complementary mechanisms: (1) a training-time logic loss that penalizes constraint violations along continuous flow trajectories, with weights that emphasize correctness near the target distribution; and (2) an inference-time adjustment that steers sampling using constraint gradients, acting as a lightweight, logic-informed correction to the learned dynamics. We evaluate LGVF on three constrained generation case studies spanning linear, nonlinear, and multi-region feasibility constraints. Across all settings, LGVF reduces constraint violations by 59-82% compared to standard flow matching and achieves the lowest violation rates in each case. In the linear and ring settings, LGVF also improves distributional fidelity as measured by MMD, while in the multi-obstacle setting, we observe a satisfaction-fidelity trade-off, with improved feasibility but increased MMD. Beyond quantitative gains, LGVF yields constraint-aware vector fields exhibiting emergent obstacle-avoidance behavior, routing samples around forbidden regions without explicit path planning.</p>
                     </details>
                 </div>
             </div>

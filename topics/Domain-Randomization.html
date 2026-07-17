@@ -590,7 +590,7 @@
                 <a href="World-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">World Model</span>
-                    <span class="nav-count">78</span>
+                    <span class="nav-count">77</span>
                 </a>
                 <a href="3D-Foundation-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
@@ -675,7 +675,7 @@
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Kalman Filter</span>
-                    <span class="nav-count">54</span>
+                    <span class="nav-count">51</span>
                 </a>
                 <a href="Loop-Closure-Detection.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -695,7 +695,7 @@
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">77</span>
+                    <span class="nav-count">76</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -730,7 +730,7 @@
                 <a href="Model-Predictive-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#14b8a6"></span>
                     <span class="nav-label">Model Predictive Control</span>
-                    <span class="nav-count">53</span>
+                    <span class="nav-count">52</span>
                 </a>
                 <a href="Whole-Body-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#06b6d4"></span>
@@ -809,7 +809,7 @@
             <a href="World-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">World Model</span>
-                <span class="nav-count">78</span>
+                <span class="nav-count">77</span>
             </a>
             <a href="3D-Foundation-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
@@ -894,7 +894,7 @@
             <a href="Kalman-Filter.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Kalman Filter</span>
-                <span class="nav-count">54</span>
+                <span class="nav-count">51</span>
             </a>
             <a href="Loop-Closure-Detection.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -914,7 +914,7 @@
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">77</span>
+                <span class="nav-count">76</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -949,7 +949,7 @@
             <a href="Model-Predictive-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#14b8a6"></span>
                 <span class="nav-label">Model Predictive Control</span>
-                <span class="nav-count">53</span>
+                <span class="nav-count">52</span>
             </a>
             <a href="Whole-Body-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#06b6d4"></span>
@@ -1028,6 +1028,21 @@
                 <span class="topic-count">79 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.14708v1" target="_blank" class="paper-title">Reinforcement Learning for the Full Strawberry Harvesting Process: Obstacle Separation, Detachment, and Placement</a>
+                        <span class="paper-date">2026-07-16</span>
+                    </div>
+                                        <span class="paper-comment">📝 Accepted to IROS 2026</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决草莓采摘过程中因严重遮挡和植物结构变形导致的复杂接触动力学问题，实现障碍分离、果实摘取和放置的完整流程自动化。&#10;&#10;🛠 **方法**：提出基于策略驱动的强化学习框架，结合启发式阶段协调，将采摘任务建模为序列决策问题；采用共享交互感知策略生成笛卡尔运动，并通过分层架构融合高层策略与低层阻抗控制，同时利用零样本仿真到现实迁移技术。&#10;&#10;✨ **主要贡献**：在仿真和真实实验中分别达到89.7%和82.0%的成功率，验证了交互感知采摘行为可有效迁移至不同结构的机器人平台，且随遮挡程度增加，执行时间从12.99秒升至21.73秒，反映了对复杂交互的适应能力。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Severe occlusions and deformable plant structures introduce complex contact dynamics that challenge robotic strawberry harvesting. A policy-driven reinforcement learning (RL) framework with heuristic phase coordination was developed, in which obstacle separation, fruit detachment, and placement were formulated as a sequential decision-making task. A shared interaction-aware policy generated Cartesian motions across all task phases, while lightweight heuristic logic coordinated task progression and gripper events. A shared structured observation space was used to represent target, obstacle, end-effector, and task-context information. A hierarchical architecture combined the high-level policy with low-level Cartesian impedance control for compliant interaction. To support zero-shot sim-to-real transfer, feasibility-first observation alignment and domain randomization were adopted. The policy achieved success rates of 89.7% in simulation and 82.0% in real-world experiments. As the occlusion level increased from 1 to 5, the average execution time increased from 12.99 s to 21.73 s, reflecting greater interaction complexity. These results demonstrated effective transfer of interaction-aware harvesting behaviors to a structurally different robotic platform.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2607.11481v1" target="_blank" class="paper-title">Towards Human-level Dexterous Teleoperation</a>
@@ -1169,10 +1184,7 @@
                         <span class="paper-date">2026-06-29</span>
                     </div>
                                         <span class="paper-comment">📝 21 pages, 26 figures</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="好的，作为一名人工智能研究与学术论文分析专家，我将严格遵循您的要求，对这篇论文进行详细的中文解读。&#10;&#10;---&#10;&#10;## 0. 概览（Concise Summary）&#10;&#10;- **主题（Topic）**：行星探测车的全地形自主运动控制。具体来说，是研究如何利用强化学习（RL）控制一个带有主动铰接式悬挂系统的四轮火星车，使其能够在各种复杂地形（如岩石、沙坡、台阶）上自主导航。&#10;- **问题（Problem）**：传统的被动悬挂火星车在面对陡峭的沙坡、松软土壤、岩石等复杂地形时，其通过能力受到根本性限制。主动悬挂系统虽能提升通过性，但其控制策略复杂，难以适应多种地形，且通常依赖显式的地形分类和控制器切换。&#10;- **方法（Method）**：提出了一种名为ERNEST的火星车概念，其核心是“主动万向节悬挂”（Active Gimbal Suspension, AGS）。利用高保真度的DARTS仿真引擎（结合Bekker-Wong土壤力学模型）训练一个单一的神经网络控制器。该控制器通过一种“策略整合”（policy consolidation）方法，将多个地形专用智能体的经验合并到一个网络中，无需显式地形分类。通过域随机化（domain randomization）和系统辨识（system identification）实现从仿真到真实机器人的零样本迁移（zero-shot transfer）。&#10;- **创新（Innovation）**：&#10;    1.  **硬件创新**：设计了结构简单但功能强大的“主动万向节悬挂”（AGS），仅用两个自由度（偏航和翻滚）即可实现车轮重新配置、转向和主动载荷重新分配。&#10;    2.  **算法创新**：提出了“策略整合”（policy consolidation）方法，解决了单一RL策略难以同时学习多种复杂地形通过策略的问题，实现了无需切换的统一控制器。&#10;    3.  **系统集成与验证**：在包含软土力学的高保真仿真中训练，并通过零样本迁移在真实火星车上成功验证了其在多种极具挑战性地形上的自主通过能力，包括20°的干沙和湿沙斜坡。&#10;- **意义（Significance）**：这项工作显著扩展了轮式火星车的机动性边界，使其能够进入以前无法到达的科学目标区域，并缩短任务路径。它证明了通过强化学习控制一个简单的主动悬挂系统，可以产生复杂、高效且可解释的通过行为（如爬行步态），为未来行星探测任务提供了极具潜力的技术方案。&#10;- **一句话总结**：本文通过强化学习训练一个单一的神经网络控制器，成功驱动一个带有两自由度主动悬挂的火星车，使其能够在无需地形分类的情况下，自主穿越岩石、台阶、沙坡等极端复杂地形，并在松软沙坡上实现了比被动悬挂更优的能效和通过性。&#10;&#10;## 1. 研究动机（Motivation）&#10;&#10;- **核心问题**：传统的行星探测车（如机遇号、勇气号、好奇号）普遍采用**被动悬挂系统**。这种系统虽然结构简单、能效高，但其通过能力受限于地形条件。在面对陡峭的松软沙坡、深沙坑、大块岩石等复杂地形时，被动悬挂无法主动调整姿态和载荷分配，极易发生打滑、沉陷甚至被困，导致任务失败或严重受限（如好奇号被限制在15°以下的斜坡行驶）。&#10;- **为什么重要**：未来的科学任务（如探索月球永久阴影区、火星极地）要求火星车进入这些极具挑战性的环境。提升火星车的全地形通过能力，不仅能打开新的科学探索窗口，还能允许火星车选择更短的路径，从而提高任务效率，并在某些风险极高的场景下（如无法停车）保障任务安全。&#10;- **挑战在哪里**：&#10;    1.  **被动悬挂的局限性**：被动悬挂无法针对所有地形进行优化，其通过障碍物完全依赖轮地摩擦力，在松软土壤上尤其脆弱。&#10;    2.  **主动悬挂的控制复杂性**：虽然全主动的“轮-腿”式平台（如Hylos, WorkPartner）通过性极强，但控制复杂度高，且大量关节在多数情况下未被充分利用，增加了不必要的重量和机械复杂性。&#10;    3.  **传统控制方法的不足**：基于模型的控制或规划方法难以处理复杂的轮地接触动力学和土壤力学，计算耗时且难以应对环境变化。&#10;    4.  **多地形适应性的难题**：为每种地形训练一个专门的控制器，然后进行显式地形分类和切换，不仅增加了系统复杂性，而且分类错误可能导致灾难性后果。如何训练一个能适应所有地形的**单一、统一**的控制器是一个巨大挑战。&#10;&#10;## 2. 创新点（Innovation）&#10;&#10;1.  **硬件创新：主动万向节悬挂（Active Gimbal Suspension, AGS）**&#10;    - **新方法**：提出了一种仅有两个自由度（偏航Yaw和翻滚Roll）的主动悬挂设计，这两个关节共轴，形成一个万向节结构。&#10;    - **与现有方案的不同**：&#10;        - 相比被动悬挂，AGS可以主动控制车轮位置和载荷分布。&#10;        - 相比全主动“轮-腿”系统（如Hylos的8个主动关节），AGS结构极其简单（仅2个主动关节），机械复杂度和重量开销更低。&#10;        - 相比其他部分主动的悬挂（如Scarab的“推-拉”运动），AGS的偏航和翻滚关节组合能实现更丰富的功能：偏航关节可实现无滑移转向和车轮位置重配置；翻滚关节可主动调节对角线车轮的载荷分布，甚至抬起单个车轮。&#10;    - **为什么能奏效**：这种设计巧妙地利用了**耦合效应**。通过偏航关节改变前桥的朝向，再结合翻滚关节施加扭矩，可以灵活地将载荷转移到任意一个车轮上，从而实现类似“爬行”或“抬腿”的步态，有效克服障碍物。&#10;&#10;2.  **算法创新：策略整合（Policy Consolidation）**&#10;    - **新方法**：提出了一种两阶段训练策略。首先，为每种地形（如岩石、沙坡、台阶）分别训练一个专门的RL智能体。然后，将这些智能体产生的经验数据（experience）合并，用于从头训练一个**全新的、单一的**神经网络控制器。&#10;    - **与现有方案的不同**：传统方法要么训练一个通用但性能较差的控制器，要么训练多个专用控制器并依赖显式的地形分类和切换逻辑。策略整合方法避免了复杂的分类和切换，同时保留了专用智能体的“专家经验”。&#10;    - **为什么能奏效**：直接训练一个通用控制器去解决所有问题，由于探索空间过大和网络塑性下降，往往难以收敛。而先训练专用智能体，可以高效地探索并收敛到各自领域的局部最优策略。将这些高质量的经验数据合并，相当于为最终的通用控制器提供了一个高质量的“预训练数据集”，使其能够从这些成功的策略中学习，从而更容易地找到一个能覆盖所有场景的全局最优策略。&#10;&#10;3.  **系统集成与验证：从仿真到现实的零样本迁移**&#10;    - **新方法**：在包含Bekker-Wong软土力学模型的高保真DARTS仿真环境中训练，并成功实现了零样本迁移到真实的ERNEST火星车上。&#10;    - **与现有方案的不同**：许多RL工作要么停留在仿真，要么在真实机器人上需要额外的微调。本文通过**域随机化**（随机化地形、摩擦系数等）、**传感器噪声注入**和**系统辨识**（精确标定质量分布、车轮刚度等），使得在仿真中训练的策略可以直接在真实世界中运行，无需任何调整。&#10;    - **为什么能奏效**：域随机化迫使策略学习到对物理参数变化鲁棒的行为；系统辨识确保了仿真模型与真实机器人的动力学特性高度一致，从而最小化了“仿真到现实”的差距。&#10;&#10;## 3. 主要内容（Main Content）【重点】&#10;&#10;### 3.1 设计架构与方法&#10;&#10;- **整体架构**：论文提出了一个端到端的感知-控制环路。火星车通过立体相机和IMU感知环境，生成地形高程图和自身姿态。这些信息与关节编码器、力-扭矩传感器的本体感知数据一起，输入到一个单一的神经网络控制器中。该控制器直接输出三个控制指令：前进速度、AGS偏航关节速度和AGS翻滚关节速度。这些指令通过一个“车轮同步控制”模块，解算为四个车轮的独立转速，驱动火星车运动。&#10;- **硬件平台（ERNEST）**：一个75公斤的四轮火星车，核心是“主动万向节悬挂”（AGS）。AGS包含一个偏航关节（Yaw）和一个翻滚关节（Roll），并配备一个**离合器**，可以在主动和被动模式间切换。当离合器分离时，前桥可以自由摆动，作为被动悬挂使用以节省能量；当离合器结合时，翻滚关节可以主动施加扭矩。&#10;- **感知管道**：使用立体惯性里程计（xVIO）估计6自由度位姿，并使用立体相机生成稠密点云，融合成10m×10m、1cm分辨率的机器人中心高程图。&#10;&#10;### 3.2 关键算法与数学推导&#10;&#10;1.  **车轮同步控制（Wheel Synchronization）**：&#10;    这是一个运动学求解器，用于将高层控制指令（底盘速度、AGS关节速度）映射为每个车轮的角速度，并强制实现无侧滑约束。&#10;    - 对于每个车轮i，其轮心速度 $[v^i_x, v^i_y, v^i_z]^T$ 与广义速度 $\dot{q} = [V_x, V_y, V_z, \omega_x, \omega_y, \omega_z, \dot{\psi}, \dot{\phi}]^T$ 的关系由雅可比矩阵 $J^i$ 给出：&#10;      $$J^i \dot{q} = \begin{bmatrix} v^i_x \\ v^i_y \\ v^i_z \end{bmatrix}$$&#10;    - 为了求解，将未知量（如 $V_y, V_z, \omega_z$ 和所有车轮的 $v^i_x, v^i_z$）组成向量 $x$，将已知量（$V_x, \omega_x, \omega_y, \dot{\psi}, \dot{\phi}$）移到等式右边组成向量 $y$，并强制侧滑速度 $v^i_y = 0$。得到线性系统：&#10;      $$Ax = y$$&#10;    - 通过求解该系统的右伪逆（right pseudoinverse），得到最小化车轮速度平方和的最优解：&#10;      $$x = A^+ y$$&#10;    - 最后，根据车轮半径 $r$ 计算每个车轮的角速度：&#10;      $$\omega^i_{wheel} = \frac{1}{r} \text{sign}(v^i_x) \sqrt{(v^i_x)^2 + (v^i_z)^2}$$&#10;&#10;2.  **Bekker-Wong软土力学模型**：&#10;    该模型用于仿真车轮与松软土壤的交互，计算法向应力和剪切应力。&#10;    - **滑移率（Slip Ratio）** $s$：定义了车轮的滑转或滑移程度。公式(12)中加入了正则化项 $\epsilon_{slip}$ 以避免在低速时的不连续性。&#10;    - **法向应力（Normal Stress）** $\sigma(\theta)$：基于压力-沉陷关系，由Bekker公式给出：&#10;      $$\sigma(\theta) = \left( \frac{k_c}{b} + k_\phi \right) (\cos\theta' - \cos\theta_f)^n$$&#10;      其中 $k_c, k_\phi$ 是土壤内聚和摩擦模量，$n$ 是沉陷指数，$\theta_f$ 是进入角。&#10;    - **剪切应力（Shear Stress）** $\tau_x(\theta)$：基于Janosi-Hanamoto的牵引-滑移关系：&#10;      $$\tau_x(\theta) = (c + \sigma(\theta) \tan\phi)(1 - e^{-|j_x(\theta)|/k_x})$$&#10;      其中 $c$ 是土壤内聚力，$\phi$ 是内摩擦角，$j_x(\theta)$ 是剪切变形。&#10;    - **合力计算**：通过对整个接触弧上的应力进行积分，得到作用在车轮上的纵向力 $F_x$、侧向力 $F_y$ 和法向力 $F_z$（公式30-32）。&#10;&#10;3.  **强化学习算法（TD3）**：&#10;    采用**双延迟深度确定性策略梯度（TD3）**算法。这是一个离策略（off-policy）的Actor-Critic算法，相比PPO等在线策略算法，其数据效率更高，且能更好地控制探索过程，这对于计算昂贵的仿真环境至关重要。&#10;&#10;### 3.3 模型、训练与数据集&#10;&#10;- **神经网络模型**：Actor和Critic网络均为两层512个神经元的全连接网络，使用ReLU激活函数。Actor输出层使用tanh激活函数，将动作限制在[-1, 1]范围内。&#10;- **观测空间（Observations）**：包含32个输入：航向偏差、横向偏差、底盘两个倾角、偏航/翻滚关节位置、4个车轮的3轴力与3轴扭矩（共24个）、12个地形高程采样点、当前前进速度、当前偏航/翻滚关节速度。&#10;- **动作空间（Actions）**：3个输出：前进速度、偏航关节角速度、翻滚关节角速度。&#10;- **训练数据集**：在DARTS仿真环境中生成。训练环境包含多种地形（岩石、台阶、沙坡等），并应用域随机化（随机化地形高度、摩擦系数、土壤参数等）。&#10;- **训练流程**：&#10;    1.  **专用训练**：为每种地形（如岩石区、沙坡、台阶）分别训练一个独立的Actor-Critic对。&#10;    2.  **策略整合**：收集每个专用智能体最近的一百万步经验数据，合并成一个大型数据集。然后，用这个数据集从头训练一个新的Actor-Critic对。这个阶段不需要额外的仿真，速度很快。&#10;&#10;### 3.4 实验设置与结果&#10;&#10;- **实验平台**：真实的ERNEST火星车。&#10;- **实验场景**：在多种极具挑战性的真实地形上进行测试，包括：&#10;    - 岩石场（Rock fields）&#10;    - 比克勒陷阱（Bickler trap，一种特殊的台阶陷阱）&#10;    - 车轮高的台阶（Wheel-high step）&#10;    - 沙波纹（Sand ripples）&#10;    - 干沙斜坡（Dry sandy slope，20°）&#10;    - 湿沙斜坡（Wet sandy slope，20°）&#10;- **对比基准**：将学习到的控制器与**被动悬挂配置**（即AGS离合器分离，前桥自由摆动）进行对比。&#10;- **主要结果**：&#10;    1.  **全地形通过能力**：学习到的控制器成功自主穿越了所有测试地形，包括被动悬挂无法通过的湿沙斜坡。&#10;    2.  **能效提升**：在20°的干沙斜坡上，学习到的控制器相比被动悬挂，将**运输成本（Cost of Transport, CoT）** 降低了**37%**。这是一个非常显著的提升，表明主动控制不仅增加了通过性，还提高了能效。&#10;    3.  **涌现的可解释行为**：观察到了多种复杂的、类似动物的步态，例如：&#10;        - **顺序爬轮**：在通过台阶时，控制器会依次抬起并放置前轮和后轮。&#10;        - **主动载荷重新分配**：在斜坡上，控制器通过翻滚关节将载荷转移到上坡侧的车轮，增加牵引力。&#10;        - **爬行步态**：在松软沙坡上，控制器展现出类似“爬行”或“推-拉”的运动模式，通过AGS的偏航和翻滚关节协同动作，推动车身前进。&#10;&#10;### 3.5 技术细节&#10;&#10;- **离合器机制**：AGS的翻滚关节通过一个由两个“shotbolt lock units”组成的离合器与车桥连接。当离合器分离时，车桥自由摆动；当需要主动控制时，控制器会先通过一个速度反馈控制器将车桥框架与车桥对齐，然后锁止离合器，从而传递扭矩。&#10;- **系统辨识**：为了精确建模质量分布，研究人员测量了火星车在不同姿态和AGS关节角度下四个车轮的垂直载荷，然后通过非线性回归（Levenberg-Marquardt算法）拟合了一个两刚体质量模型，拟合优度 $R^2 = 0.96$。&#10;- **仿真到现实的差距处理**：&#10;    - **域随机化**：在仿真中随机化土壤参数、摩擦系数、地形高度等，迫使策略学习鲁棒行为。&#10;    - **传感器噪声注入**：在仿真中向观测值添加噪声，模拟真实传感器的噪声特性。&#10;    - **模型简化**：作者承认Bekker-Wong模型不模拟土壤变形和挖掘，这既是简化（防止RL学到“挖坑”这种在现实中可能无效的行为），也是挑战（RL必须适应给定的地形，而不能改变它）。尽管如此，该模型足以产生可迁移的物理合理行为。&#10;&#10;## 4. 意义与影响（Significance and Impact）&#10;&#10;- **解决了什么问题**：&#10;    - 解决了被动悬挂火星车在复杂地形（尤其是松软沙坡）上通过性不足的根本问题。&#10;    - 解决了主动悬挂系统控制复杂、难以适应多地形的问题，提出了一个统一的、无需地形分类的控制器。&#10;    - 验证了通过强化学习在包含软土力学的高保真仿真中训练，并零样本迁移到真实机器人的可行性。&#10;&#10;- **贡献是什么**：&#10;    - 提出了一个新颖、高效的火星车硬件设计（AGS），在机械复杂度和功能之间取得了极佳的平衡。&#10;    - 提出了一种有效的“策略整合”训练方法，为训练多任务RL控制器提供了新思路。&#10;    - 提供了一个完整的从仿真到现实的系统实现案例，证明了RL在解决复杂机器人控制问题上的巨大潜力。&#10;&#10;- **对未来研究/应用的影响**：&#10;    - 为未来行星探测任务（如月球极地、火星极地）的火星车设计提供了极具价值的技术参考。&#10;    - 其“策略整合”方法可以推广到其他需要多技能融合的机器人控制问题中。&#10;    - 证明了在低成本、高保真度的仿真环境中训练复杂行为，并直接部署到真实机器人上的可行性，有望加速机器人技术的研发和应用。&#10;&#10;- **作者提到的局限与开放问题**：&#10;    - **土壤力学模型局限**：Bekker-Wong模型不模拟土壤变形和挖掘，这是一个重要的“仿真到现实”差距。未来工作应考虑使用更高保真度的土壤模型（如SCM）进行补充训练。&#10;    - **感知局限**：当前感知依赖立体视觉，在低光照或粉尘环境下可能失效。未来可考虑融合LiDAR等其他传感器。&#10;    -">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>This paper presents ERNEST, a four-wheeled planetary rover concept equipped with a two-degree-of-freedom Active Gimbal Suspension that combines yaw and roll actuation to enable wheel reconfiguration, steering, and active load redistribution. A single neural network controller, trained to track a desired path across challenging terrain, fully unlocks the capabilities of this actuated suspension system for autonomous obstacle negotiation. A reinforcement learning framework is developed using the high-fidelity DARTS simulation engine, which combines rigid-contact dynamics and Bekker-Wong terramechanics, enabling the emergence of locomotion strategies adapted to loose-soil conditions. To obtain a single unified controller across heterogeneous terrains, a policy consolidation strategy merges the experience of terrain-specialized agents into one neural network, eliminating the need for explicit terrain classification and controller switching. The resulting controller operates on a combination of proprioceptive and exteroceptive feedback, including sparse stereo-derived terrain elevation, chassis attitude, joint states, and force-torque measurements. Zero-shot transfer to the physical rover is achieved through domain randomization, sensor noise injection, and model-to-real system identification. Experimental results demonstrate autonomous traversal of rock fields, a Bickler trap (bump obstacle), a wheel-high step, sand ripples, and sandy slopes. On a 20° sandy slope, the learned controller reduces the cost of transport by 37% on dry sand despite the additional actuation, and achieves superior performance on wet sand where the passive suspension becomes completely immobilized. A video accompanying this paper is available at https://youtu.be/d684P5a3xMc</p>
@@ -1992,18 +2004,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>We present ECHO, an edge--cloud framework for language-driven whole-body control of humanoid robots. A cloud-hosted diffusion-based text-to-motion generator synthesizes motion references from natural language instructions, while an edge-deployed reinforcement-learning tracker executes them in closed loop on the robot. The two modules are bridged by a compact, robot-native 38-dimensional motion representation that encodes joint angles, root planar velocity, root height, and a continuous 6D root orientation per frame, eliminating inference-time retargeting from human body models and remaining directly compatible with low-level PD control. The generator adopts a 1D convolutional UNet with cross-attention conditioned on CLIP-encoded text features; at inference, DDIM sampling with 10 denoising steps and classifier-free guidance produces motion sequences in approximately one second on a cloud GPU. The tracker follows a Teacher--Student paradigm: a privileged teacher policy is distilled into a lightweight student equipped with an evidential adaptation module for sim-to-real transfer, further strengthened by morphological symmetry constraints and domain randomization. An autonomous fall recovery mechanism detects falls via onboard IMU readings and retrieves recovery trajectories from a pre-built motion library. We evaluate ECHO on a retargeted HumanML3D benchmark, where it achieves strong generation quality (FID 0.029, R-Precision Top-1 0.686) under a unified robot-domain evaluator, while maintaining high motion safety and trajectory consistency. Real-world experiments on a Unitree G1 humanoid demonstrate stable execution of diverse text commands with zero hardware fine-tuning.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2603.14156v1" target="_blank" class="paper-title">TransCurriculum: Multi-Dimensional Curriculum Learning for Fast & Stable Locomotion</a>
-                        <span class="paper-date">2026-03-14</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>High-speed legged locomotion struggles with stability and transfer losses at higher command velocities during deployment. One reason is that most curricula vary difficulty along single axis, for example increase the range of command velocities, terrain difficulty, or domain parameters (e.g. friction or payload mass) using either fixed update rule or instantaneous rewards while ignoring how the history of robot training has evolved. We propose TransCurriculum, a transformer-based multi-dimensional curriculum learning approach for agile quadrupedal locomotion. TransCurriculum adapts to 3 axes, velocity command targets, terrain difficulty, and domain randomization parameters (friction and payload mass). Rather than feeding task reward history directly into the low-level control policy, our formulation exploits it at the curriculum level. A transformer-based teacher retrieves the sequence of rewards and uses it to predict future rewards, success rate, and learning progress to guide expansion of this multidimensional curriculum towards high performing task bins. Finally we validate our approach on the Unitree Go1 robot in simulation (Isaac Gym) and deploy it zero-shot on Go1 hardware. Our TransCurriculum policy achieves a maximum velocity of 6.3 m/s in simulation and outperforms prior curriculum baselines. We tested our TransCurriculum trained policy on terrains (carpets, slopes, tiles, concrete), achieving a forward velocity of 4.1 m/s on carpet surpassing the fastest curriculum methods by 18.8% and achieves maximum zero-shot value among all tested methods. Our multi-dimensional curriculum also reduces the transfer loss to 18% from 27% for command only curriculum, demonstrating the benefits of joint training over velocity, terrain and domain randomization dimension while keeping the task success rate of 80-90% on rigid indoor and outdoor surfaces.</p>
                     </details>
                 </div>
             </div>

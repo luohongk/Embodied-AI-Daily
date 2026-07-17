@@ -590,7 +590,7 @@
                 <a href="World-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">World Model</span>
-                    <span class="nav-count">78</span>
+                    <span class="nav-count">77</span>
                 </a>
                 <a href="3D-Foundation-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
@@ -675,7 +675,7 @@
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Kalman Filter</span>
-                    <span class="nav-count">54</span>
+                    <span class="nav-count">51</span>
                 </a>
                 <a href="Loop-Closure-Detection.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -695,7 +695,7 @@
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">77</span>
+                    <span class="nav-count">76</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -730,7 +730,7 @@
                 <a href="Model-Predictive-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#14b8a6"></span>
                     <span class="nav-label">Model Predictive Control</span>
-                    <span class="nav-count">53</span>
+                    <span class="nav-count">52</span>
                 </a>
                 <a href="Whole-Body-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#06b6d4"></span>
@@ -809,7 +809,7 @@
             <a href="World-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">World Model</span>
-                <span class="nav-count">78</span>
+                <span class="nav-count">77</span>
             </a>
             <a href="3D-Foundation-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
@@ -894,7 +894,7 @@
             <a href="Kalman-Filter.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Kalman Filter</span>
-                <span class="nav-count">54</span>
+                <span class="nav-count">51</span>
             </a>
             <a href="Loop-Closure-Detection.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -914,7 +914,7 @@
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">77</span>
+                <span class="nav-count">76</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -949,7 +949,7 @@
             <a href="Model-Predictive-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#14b8a6"></span>
                 <span class="nav-label">Model Predictive Control</span>
-                <span class="nav-count">53</span>
+                <span class="nav-count">52</span>
             </a>
             <a href="Whole-Body-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#06b6d4"></span>
@@ -1030,6 +1030,96 @@
             <div class="paper-list">
                 <div class="paper-card">
                     <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.15094v1" target="_blank" class="paper-title">AlphaWiSE: Adaptive Weight Interpolation for Continual Multimodal Representation Learning</a>
+                        <span class="paper-date">2026-07-16</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：多模态模型（如CLIP）在持续学习新数据时，会破坏早期阶段学到的跨模态对齐能力，而传统持续学习方法只能返回单一检查点，无法平衡所有检索方向的稳定性与可塑性。&#10;&#10;🛠 **方法**：提出AlphaWiSE，一种事后权重空间插值方法，通过为每个对齐的参数张量拟合一个标量插值系数，组合两个冻结的源检查点，生成一个插值后的检查点，模型架构和参数量不变，无需额外推理时间。&#10;&#10;✨ **主要贡献**：在音频-图像-文本检索任务上，AlphaWiSE在多个检索方向和评估指标上持续优于强持续学习基线，有效缓解了跨模态对齐的灾难性遗忘问题。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Multimodal models such as CLIP learn a shared embedding space for cross-modal retrieval, but continual adaptation to sequentially arriving data can disrupt the cross-modal alignment acquired from earlier phases. Conventional continual-learning methods return a single checkpoint, which commits every retrieval direction to the same stability-plasticity trade-off. We propose AlphaWiSE, a post-hoc weight-space interpolation method that composes two frozen source checkpoints. For each aligned parameter tensor identified by its checkpoint key, AlphaWiSE fits one scalar interpolation coefficient shared by all tensor entries. The coefficients are fitted on a smaller exemplar memory and used to materialize one interpolated checkpoint. The deployed model has the same architecture and parameter count as either source checkpoint, which does not require additional inference time. Extensive experiments on audio-image-text retrieval show consistent improvements over strong continual-learning baselines across multiple retrieval directions and evaluation metrics.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2601.19788v2" target="_blank" class="paper-title">Knowledge-Aware Evolution for Task-Free Streaming Federated Continual Learning with Arbitrary Class Overlap</a>
+                        <span class="paper-date">2026-07-16</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决无任务标识、数据流式到达且类别任意重叠的联邦持续学习场景中，新旧知识混淆及本地推理能力不足的问题。&#10;&#10;🛠 **方法**：提出FedKACE框架，包含自适应模型切换机制、基于梯度范数平方比的响应式平衡重放策略，以及保留高信息量和边界样本的全局缓冲区维护策略。&#10;&#10;✨ **主要贡献**：通过理论分析和多场景实验验证，FedKACE能有效提升客户端在类别重叠下的持续学习性能，平衡新知识获取与旧知识保留。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Federated Continual Learning (FCL) leverages inter-client collaboration to better balance new knowledge acquisition and old knowledge retention on non-stationary data. However, existing FCL methods struggle to adapt to streaming scenarios where sequential and ephemerally accessible data chunks lack task identifiers and exhibit arbitrary class overlap, leading to confusion between old and new knowledge and an inability to sustain local inference on all encountered classes. To address this, we propose FedKACE with three components: 1) an adaptive mechanism that determines when to switch the inference model from the local to the global one to improve client-side inference performance; 2) a responsive gradient-balanced replay scheme that utilizes the ratio of the squared L2 gradient norms to balance client-specific knowledge between new acquisition and old retention; 3) a holistic buffer maintenance strategy that preserves highly informative and boundary-significant samples to enhance knowledge retention under class overlap.Experiments across multiple scenarios and theoretical analysis demonstrate the effectiveness of FedKACE.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2604.27031v2" target="_blank" class="paper-title">NORACL: Neurogenesis for Oracle-free Resource-Adaptive Continual Learning</a>
+                        <span class="paper-date">2026-07-16</span>
+                    </div>
+                                        <span class="paper-comment">📝 26 pages, 7 figures and 6 tables</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：持续学习中固定容量网络面临稳定性-可塑性困境，即无法预知未来任务数量与特征重叠度，导致模型要么资源不足（弱相关任务）要么过度配置（强相关任务），且依赖未知的“oracle架构”。&#10;&#10;🛠 **方法**：提出NORACL方法，受生物神经发生启发，从紧凑网络开始，通过监测表征饱和与可塑性饱和两个互补信号，仅在必要时动态增长神经元，实现资源自适应。&#10;&#10;✨ **主要贡献**：NORACL在多种任务数量与几何设置下，达到或超越oracle规模静态基线的平均准确率，且参数更少；其增长模式可解释（不同任务类型对应不同层增长）；揭示了固定网络随任务累积丧失可塑性的原因，而NORACL通过增长创造新容量，推动了持续学习的稳定性-可塑性帕累托前沿。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>In a continual learning setting, we require a model to be plastic enough to learn a new task and stable enough to not disturb previously learned capabilities. We argue that this dilemma has an architectural root. A finite network has limited representational and plastic resources, yet the required capacity depends on properties of the future task stream that are unknown: how many tasks will be encountered, and how much they overlap in feature space. Regularization-based methods preserve past knowledge within fixed-capacity architectures and therefore implicitly rely on an oracle architecture sized for this unknown future. When tasks are only weakly related, fixed architectures progressively run out of plastic resources; when tasks are few or strongly overlapping, models are often over-provisioned. Inspired by neurogenesis in biology, we propose NORACL to address the stability-plasticity dilemma by tackling the oracle architecture problem through neuronal growth. Starting from a compact network, NORACL grows only when needed by monitoring two complementary signals for representational and plasticity saturation. We evaluate NORACL against oracle-sized static baselines across varying task counts and geometries. Across all settings, NORACL achieves final average accuracies that are better than or on par with oracle-provisioned static baselines while using fewer parameters. Additionally, NORACL yields architectures with interpretable growth, i.e. dissimilar tasks predominantly expand feature-extraction layers, whereas tasks which rely on common features shift growth toward later feature-combination layers. Our analysis further explains why fixed-capacity networks lose plasticity as tasks accumulate, whereas NORACL creates fresh capacity for new tasks through growth. Together, these results show that adaptive neurogenesis pushes the stability-plasticity Pareto frontier of continual learning.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.14571v1" target="_blank" class="paper-title">Gate-Zero Growth: A Geometric Framework for Function-Preserving Continual Learning</a>
+                        <span class="paper-date">2026-07-16</span>
+                    </div>
+                                        <span class="paper-comment">📝 24 pages, 2 figures</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决持续学习中新增网络容量时，如何在不破坏已有功能（函数保持）的前提下安全激活新参数，避免灾难性遗忘。&#10;&#10;🛠 **方法**：提出“门控零增长”算子，通过零初始化门控添加残差块，利用横截性条件实现功能雅可比矩阵的秩分离，使旧方向不变、新权重方向平坦、仅门控方向提供一阶功能变化。&#10;&#10;✨ **主要贡献**：在300M→857M Transformer上实现近零旧域遗忘（Δ_A&lt;0.1），遗忘量比非函数保持方法低一个数量级；同时统一了LoRA、ReZero等方法的几何分析，确立门控零增长为安全容量激活的规范实例。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>We introduce \emph{gate-zero growth}, a function-preserving (FP) operator for continual learning that adds new residual blocks through a zero-initialised gate. Under a transversality condition, gate-zero growth induces \emph{rank separation} in the functional Jacobian: old directions are unchanged, new-weight directions are exactly flat at the growth point, and new gate directions are the only first-order source of new functional variation. As gates open during continual learning, function drift is $O(\|\boldsymbolα\|^2)$ and Jacobian leakage $O(\|\boldsymbolα\|_\infty)$, giving a controlled departure from the FP locus. On a $300\mathrm{M}\to857\mathrm{M}$ Transformer adapted from WikiText-103 to BookCorpus, gate-zero growth reaches near-zero old-domain forgetting ($Δ_A < 0.1$) under both exact-preservation (Isolation) and joint-frontier (Freeze-Nothing) operating points, while a non-FP control ($G_{\text{stack}}$) suffers an order-of-magnitude larger forgetting under the same recipe. The same geometric analysis covers LoRA, ReZero, and zero-init adapter constructions, establishing gate-zero growth as the canonical instance of a shared local geometry that governs safe capacity activation in CL.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2605.25170v2" target="_blank" class="paper-title">Grow-Prune-Freeze Networks: Adaptive & Continual Learning Technique for Olfactory Navigation</a>
+                        <span class="paper-date">2026-07-16</span>
+                    </div>
+                                        <span class="paper-comment">📝 Accepted as poster to the Reinforcement Learning in Big Worlds Workshop at the 2026 Reinforcement Learning Conference</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决嗅觉导航任务中训练数据分散、非标准化，以及动态非平稳环境下机器人需要实时持续学习的问题。&#10;&#10;🛠 **方法**：提出Grow-Prune-Freeze（GPF）自适应框架，通过动态增长、剪枝和冻结策略网络的早期层，结合非线性随机矩阵理论扩展至多层持续学习模型，并基于Expected SARSA算法实现。&#10;&#10;✨ **主要贡献**：在湍流羽流导航任务中达到94%的成功率，证明GPF能有效应对部分可观测、非平稳的“大世界”挑战，并展示其在Atari强化学习、图像分类和自回归语言模型中的泛化潜力。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Training data for olfaction is scattered through disparate, non-standardized datasets that limit the ability to build representative world models. Olfactory navigation is a highly dynamic and non-stationary task that benefits from real-time continual learning. We introduce an adaptive framework called Grow-Prune-Freeze (GPF) networks that enable an agent to continually learn through growing, pruning, and freezing early layers of its policy in response to world complexity. Grounding GPFs in non-linear random matrix theory, we show that the work of Pennington & Worth (2017) can be extended from single hidden layers to n-layer continual-learning models, and that eigenvalue composition of network weights is preserved as successive layers are added. We show that GPFs based on Expected SARSA achieve a 94% success rate on turbulent plume navigation - a partially observable, non-stationary task representative of the "big world" challenges that motivate adaptive learning in robotics - and provide supporting methodology for applying GPFs in other world models. Further experiments amount evidence that GPFs may generalize well to other machine learning tasks such as reinforcement learning in Atari, image classification, and autoregressive language models. We open source all code and data to encourage improvements on and more research in olfactory robotics.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2511.06237v2" target="_blank" class="paper-title">Mixtures of SubExperts for Large Language Continual Learning</a>
+                        <span class="paper-date">2026-07-16</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决大型语言模型在持续学习中面临的稳定性-可塑性困境，即在吸收新知识时不覆盖旧知识，同时保持参数规模的可扩展性。&#10;&#10;🛠 **方法**：提出Mixtures of SubExperts（MoSEs）框架，通过分解模型容量为可复用的子专家模块，并利用学习到的子路由函数动态选择稀疏子集，实现模块化、稀疏化的参数组合。&#10;&#10;✨ **主要贡献**：MoSEs通过稀疏激活隔离知识（稳定性）、路由驱动重组实现可塑性、以及亚线性参数增长保证可扩展性，在TRACE和SuperNI基准上超越现有PEFT方法，达到新的帕累托最优，展示了模块化稀疏性与组合路由作为持续学习的关键归纳偏置。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Enabling lifelong learning in LLMs demands resolving the stability-plasticity dilemma (i.e., models must incorporate new knowledge without overwriting prior representations) while maintaining scalability under bounded parameter growth. Existing PEFT methods fail to satisfy this triad; shared-parameter approaches suffer from catastrophic interference, while task-isolated expansions preclude knowledge transfer and scale linearly. We propose Mixtures of SubExperts (MoSEs), a modular and sparse framework that factorizes model capacity into reusable, compositional primitives. MoSEs augment transformer layers with lightweight SubExperts and a learned sub-routing function that dynamically selects and composes a sparse subset of modules conditioned on task inputs. This induces a structured decomposition of the parameter space where knowledge is localized yet accessible, mitigating interference while preserving reuse. Specifically, MoSEs balance the dilemma via three pillars: (i) stability by isolating knowledge within sparsely activated modules, (ii) plasticity through routing-driven recombination and selective expansion, and (iii) scalability via sublinear growth in effective capacity. Notably, the routing mechanism enables compositional generalization, allowing new tasks to be represented as combinations of previously acquired sub-functions. We empirically validate MoSEs on TRACE and SuperNI, showing reduced forgetting, improved forward transfer, and better parameter efficiency over strong PEFT baselines. MoSEs establish a new Pareto frontier, achieving state-of-the-art performance while maintaining strict parameter budgets. Our results suggest that modular sparsity and compositional routing are key inductive biases for building foundation models that continually learn without saturation.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
                         <a href="https://arxiv.org/abs/2607.14004v1" target="_blank" class="paper-title">Do Agent Optimizers Compound? A Continual-Learning Evaluation on Terminal-Bench 2.0</a>
                         <span class="paper-date">2026-07-15</span>
                     </div>
@@ -1094,10 +1184,7 @@
                         <span class="paper-date">2026-07-14</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：研究语言模型能否通过持续写入新知识到权重中，实现事实的积累与长期保留，以及写入顺序对知识可用性的影响。&#10;&#10;🛠 **方法**：向Qwen3模型顺序写入虚构事实（20至100次），对比“裸陈述训练”与“多样化重述训练”两种数据形式，并通过五种类型的问题测试知识保留与遗忘情况。&#10;&#10;✨ **主要贡献**：发现多样化重述训练显著缩小知识“背诵”与“应用”的差距（从27.4降至5.4分），并在20次顺序写入后保留46%的准确率（裸陈述仅1%）；揭示“行为遗忘”并非知识擦除，而是后续写入重定向了问题访问路径；证明上下文是可靠的知识传递通道，而权重写入无法避免干扰。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Continual learning promises a language model that keeps acquiring knowledge after training, with each new fact written into its weights. Whether weight writes can support accumulation remains undecided. We follow invented facts written into Qwen3 models from creation through sequences of twenty to one hundred later writes, using held-out questions of five types, with the original model given the fact in its prompt as the reference. Across these experiments, the breadth of the training data determines the kind of knowledge created. Bare-statement training produces recitation, while diverse restatements reduce the recitation-to-use gap from 27.4 to 5.4 points without showing the model a conclusion. This difference carries into later writes: after twenty sequential writes, bare-statement facts retain 1% accuracy while facts written from broad study data retain 46%. We also find that facts can be behaviourally forgotten without being erased. Forgotten facts keep most of the log-probability added by their write, and under bare-statement training 70% of wrong answers about them contain the most recently written fact. The same writes barely degrade the model's use of facts in context, and a forgotten study fact supplied in the prompt recovers to 77-80% on its questions. These results describe knowledge that is stored but question-keyed: later writes redirect the questions that reached it. Damage to unrelated abilities tracks KL divergence from the original model, and the later writes cause interference regardless of how the earlier fact was stored. Broad data can create usable knowledge, and a frozen reference can preserve capability, but no intervention we tested, including those built on accurate local measurements of each write, keeps earlier facts reachable. When facts must be composed or survive later writes, the reliable channel is context rather than the weights.</p>
@@ -1109,10 +1196,7 @@
                         <span class="paper-date">2026-07-13</span>
                     </div>
                                         <span class="paper-comment">📝 submitted to IEEE JSTSP</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：联邦微调多模态大模型时，顺序任务更新会导致灾难性遗忘，即模型在视觉、语言和跨模态表示上丢失先前学到的知识。&#10;&#10;🛠 **方法**：提出FedCMM框架，在参数层使用模态感知弹性权重合并（为不同模态计算独立Fisher矩阵），在数据层训练轻量生成模块合成无原始数据的多模态回放元组，在聚合层通过梯度余弦相似度自主过滤和重加权客户端更新。&#10;&#10;✨ **主要贡献**：在多个基准上持续优于现有方法，验证了模态感知的全局优化能实现异构网络AI的鲁棒演化适应，有效提升准确率和反向迁移性能。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Federated fine-tuning of Multimodal Large Language Models (MLLMs) across distributed networks enables privacy-sensitive adaptation to evolving data streams, yet a fundamental obstacle prevents robust deployment in dynamic environments: catastrophic forgetting, wherein sequential task updates erase previously acquired knowledge across visual, linguistic, and cross-modal representations. Addressing this challenge is especially critical for autonomous networked AI operating in safety-sensitive domains, such as content moderation, where reliable retention of prior knowledge underpins system integrity. To overcome this, we propose Federated Continual Multimodal Learning (FedCMM), a framework that embeds continual-learning safeguards into the federated optimization loop at three complementary levels. At the parameter level, modality-aware elastic weight consolidation computes separate Fisher information matrices for the vision encoder, language backbone, and cross-modal projector, providing granular, asymmetry-aware protection against modality-specific forgetting. At the data level, each client trains a lightweight local generative replay module to synthesize raw-data-free embedding-level multimodal replay tuples without any raw data sharing. At the aggregation level, Task-similarity-aware gradient aggregation autonomously filters and reweights client updates by gradient cosine similarity, suppressing conflicting directions and stabilizing the global learning trajectory. Extensive experiments on two benchmarks demonstrate that FedCMM consistently outperforms recent baselines on accuracy and backward transfer, confirming that holistic, modality-aware optimization enables robust evolutive adaptation across heterogeneous networked AI deployments.</p>
@@ -1124,10 +1208,7 @@
                         <span class="paper-date">2026-07-13</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在真实临床环境中部署医学视觉问答（MedVQA）系统时，模型需要适应新任务而不遗忘旧知识，但现有持续学习方法在异构MedVQA任务（如分类、检测、计数、报告生成）中的表现尚未被充分研究。&#10;&#10;🛠 **方法**：系统评估了多种持续学习方法在异构MedVQA任务上的性能，包括对灾难性遗忘的缓解能力、任务顺序的敏感性分析，以及低秩适应参数在不同方法下的权重漂移模式。&#10;&#10;✨ **主要贡献**：揭示了现有持续学习方法在处理目标与监督格式差异大的任务时，难以维持稳定性-可塑性平衡，并提供了任务顺序影响性能保留与遗忘的实证分析。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Deploying medical visual question answering (MedVQA) systems in real-world clinical settings requires models that adapt to new clinical tasks without forgetting previously acquired knowledge. Continual learning (CL) provides a practical framework for this setting. Despite rapid progress in medical vision-language models, the behavior of CL methods when training these models across heterogeneous MedVQA tasks remains underexplored. This work presents a systematic evaluation of CL for MedVQA across diverse clinical objectives, including classification, multi-label classification, detection, cell counting, and report generation. Specifically, we explore (1) the ability of existing CL methods to mitigate catastrophic forgetting; (2) their sensitivity to task ordering, analyzing how different task sequences influence performance retention and forgetting; and (3) the evolution of low-rank adaptation parameters as new tasks are learned, revealing patterns of weight drift under different CL methods. Our findings suggest that existing CL methods struggle to maintain stability-plasticity balance when tasks with different objectives and supervision formats are interleaved. Code and full experimental setup will be publicly available.</p>
@@ -1139,10 +1220,7 @@
                         <span class="paper-date">2026-07-13</span>
                     </div>
                                         <span class="paper-comment">📝 ECCV 2026 (49 pages, 10 figures, project page: https://spherelab.ai/symbomni)</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有视觉生成模型存在“永久新手”问题，无法累积学习经验、自主进化，导致组合泛化能力差且知识保留效率低。&#10;&#10;🛠 **方法**：提出SymbOmni智能全模态模型，通过符号概念学习实现累积进化。核心是“符号概念盒”这一可优化记忆模块，将底层操作抽象为可复用的符号工作流指令，并采用归纳-转导循环（经验抽象为符号概念，再组合解决新任务），训练通过基于语言反馈的言语反向传播实现持续自我改进。&#10;&#10;✨ **主要贡献**：在图像质量和任务成功率上显著超越现有智能体系统及闭源模型（如Nano Banana、GPT-Image-1）；将令牌消耗降低40%以上且保持生成质量；在多个在线学习基准上实现累积增益，创下新最优结果。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Visual generation is increasingly ubiquitous in diverse domains, from text-to-image/video synthesis to multimodal interactive creation. Yet prevailing monolithic models remain fundamentally constrained by their inability to learn cumulatively and evolve autonomously, which is a limitation we term the "perpetual novice" problem. They lack mechanisms for structuring experience into reusable knowledge and therefore rely on brittle, "from-scratch" reasoning for each task, resulting in poor compositional generalization and inefficient knowledge retention. Motivated by these limitations, we propose SymbOmni, an agentic omni-model designed for cumulative evolution through Symbolic Concept Learning. At its core is the Symbolic Concept Box, an optimizable memory module that abstracts low-level operations into reusable Symbolic Workflow Instructions. SymbOmni operates through an induction-transduction cycle: experiences are abstracted into symbolic concepts (induction), which are then adaptively composed to solve novel tasks (transduction). The training is done by verbalized backpropagation with language-based feedback to enable continuous self-improvement without gradient-based model fine-tuning. Comprehensive experiments validate that (I) SymbOmni significantly outperforms existing agent-based systems for iterative creation and also surpasses closed-source models (e.g., Nano Banana, GPT-Image-1) in both image quality and task success rates; (II) SymbOmni effectively reduces token consumption by over 40% while maintaining competitive generation quality; and (III) SymbOmni enables effective continual learning by achieving cumulative gains across multiple online-learning benchmarks and setting a new state of the art.</p>
@@ -1154,10 +1232,7 @@
                         <span class="paper-date">2026-07-13</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：大型语言模型在持续学习中存在灾难性遗忘问题，即学习新任务后，旧任务性能显著下降，而现有方法缺乏对模型内部参数重要性的理解。&#10;&#10;🛠 **方法**：提出基于归因的持续微调框架，利用层级相关性传播（LRP）根据模型内部计算过程估计参数重要性，对关键参数限制更新，对次要参数允许灵活调整。&#10;&#10;✨ **主要贡献**：相比基线方法，该方法在减少灾难性遗忘的同时保持对新任务的适应性，验证了机械归因对大型语言模型持续微调的价值。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Large language models (LLMs) often suffer from catastrophic forgetting in continual learning: after learning new tasks sequentially, they perform worse on earlier tasks. Existing methods mitigate catastrophic forgetting by data replay, parameter freezing, or regularization. However, these methods lack understanding of LLM mechanisms and cannot distinguish which parameters store important knowledge from previous tasks and which parameters can be updated for new tasks. To address this, we propose the attribution-guided continual fine-tuning framework that leverages Layer-wise Relevance Propagation (LRP) to estimate parameter importance based on the internal computational process of LLMs. During continual learning, parameters critical to previous tasks are constrained to receive smaller updates, while less relevant parameters remain available for learning new tasks. Extensive experiments show that, compared with baseline methods, our approach reduces catastrophic forgetting while preserving adaptability to new tasks, highlighting the value of mechanistic attribution for continual fine-tuning of LLMs.</p>
@@ -1169,10 +1244,7 @@
                         <span class="paper-date">2026-07-13</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：验证强化学习在视觉-语言模型持续后训练中是否真的不易遗忘，并解决其存在的灾难性遗忘问题。  &#10;🛠 **方法**：提出无需回放的持续策略优化框架（CPO），基于先前任务的行为KL散度目标，通过理论支持参数移动正则化限制策略漂移。  &#10;✨ **主要贡献**：构建多模态推理持续学习基准MRCL，证明强化学习仍会严重遗忘；CPO在多个模型上显著降低遗忘（如Qwen3-VL-8B遗忘减少13.7%），同时保持甚至提升预训练能力（提升7.0%）。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Continual post-training is becoming a central paradigm for adapting vision-language models to evolving tasks. Recent work has increasingly favored reinforcement learning over supervised fine-tuning, driven by the belief that reinforcement learning is inherently less prone to forgetting. However, the belief remains insufficiently validated, as existing evidence is largely drawn from outdated or homogeneous benchmarks. We revisit this assumption under recent and diverse multimodal reasoning tasks. To this end, we introduce MRCL, a Multimodal Reasoning Continual Learning benchmark. Experiments on MRCL show that standard reinforcement learning still suffers from severe catastrophic forgetting during continual post-training. We trace this failure to an objective mismatch: the KL regularization used in common policy optimization methods is evaluated on current-task data, whereas forgetting is caused by behavioral drift on prior-task distributions. To address this problem, we propose Continual Policy Optimization (CPO), a replay-free framework grounded in a prior-task behavioral KL objective. CPO relaxes the intractable historical KL constraint into sparse parameter-movement regularization, limiting policy drift without storing old data. Extensive experiments across multiple model scales show that CPO consistently reduces forgetting while preserving, and in some cases improving, pretrained model capabilities. On Qwen3-VL-8B, CPO reduces forgetting by 13.7% and improves pretrained capability by 7.0%. The implementation code is available at https://github.com/MaolinLuo/CPO.</p>
@@ -1932,78 +2004,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Autonomy, from the Greek autos (self) and nomos (law), refers to the capacity to operate according to internal rules without external control. Autonomous vehicles (AuVs) are therefore understood as vehicular systems that perceive their environment and execute tasks with minimal human intervention, consistent with the direction indicated by the SAE levels of automated driving. However, recent research and deployments increasingly showcase vehicular capabilities that, while not contradicting autonomy, are not entailed by it, including ambiguous goal handling, purposeful social engagement, external tool use, proactive problem solving, continuous learning, and context-sensitive reasoning in unseen and ethically salient situations, enabled in part by multimodal language models. These developments reveal a gap between technical autonomy and the broader social cognitive functions required for human-centered mobility, which are more precisely captured by the notion of agency. Therefore, rather than adding increasingly elaborate modifiers to "autonomous," we introduce agentic vehicles (AgVs) and suggest that autonomy and agency are intertwined but conceptually distinct: if autonomy concerns what to do and how to do it (task executions under internal rules), agency pertains to why to do it and what else can be done (goal-directed, adaptive actions). We present autonomy and agency as orthogonal yet synergistic dimensions with co-development implications. Vehicle agency marks a novel dimension of mobility service intelligence, heralding vehicles as purposeful actors in society.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.27353v1" target="_blank" class="paper-title">Continual Robot Policy Learning via Variational Neural Dynamics</a>
-                        <span class="paper-date">2026-06-25</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Robots deployed in the real world rarely operate under a single fixed dynamics model: wind changes, payloads vary, batteries drain, contacts shift, and hardware wears. Yet most learning-based controllers are trained once and deployed as if learning were complete. This prevents the robot from using deployment experience to further improve task performance. In this work, we propose a continual learning framework that uses real-world experience to improve robot policies under hidden and recurring dynamics. Our method learns a condition-aware dynamics model from real state-action trajectories by combining an analytical physics prior with a neural residual for unmodeled effects. A recurrent encoder infers the current hidden condition from recent interaction, and this estimate conditions both the residual model and the policy. Policy learning is performed via differentiable simulation using diverse learned dynamics sampled from the latent model. At deployment, these sampled conditions are replaced by conditions inferred online from recent real interaction, allowing the policy to recover recurring dynamics by recognition rather than residual re-fitting. Through extensive simulation studies and real-world experiments, we demonstrate that the framework improves policy performance under diverse unobserved disturbances. On real quadrotor trajectory tracking under changing wind, the policy recovers from recurring disturbances in roughly 1s, about 5x faster than online residual re-fitting. It also reduces large-disturbance hover and tracking errors by 65.7% and 53.3% over the state-of-the-art online adaptation approaches</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.27095v1" target="_blank" class="paper-title">Data-Free Reservoir Features for Efficient Long-Horizon Cold-Start Continual Learning</a>
-                        <span class="paper-date">2026-06-25</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Cold-start exemplar-free class-incremental learning requires learning a growing set of classes without replay, external pretraining, or a large initial task. Existing cold-start methods typically either train the backbone throughout the stream and compensate for semantic drift, or freeze a backbone after the first task, producing features biased toward the initial classes. These choices also create a computational tension: drift-compensation methods require repeated backbone training and increasingly expensive updates as the task horizon grows, while frozen-backbone methods are cheap but weak under cold start. We study a third option: a feature extractor that is never fit to image data at all. We propose CIRCLE, a class-incremental classifier built from fixed bidirectional two-dimensional reservoir features, adapted from BiRC2D for image classification, and streaming linear discriminant analysis heads. CIRCLE groups multiple random reservoir instantiations into feature ensembles and averages the softmax outputs of independent SLDA heads, yielding a tunable bias-variance tradeoff between richer random features and prediction-level ensembling. Because the feature extractor is fixed and the head admits streaming closed-form updates, CIRCLE performs sample-wise training without replay, task-boundary information, or backbone backpropagation. On CIFAR-100, TinyImageNet, ImageNet-Subset, and ImageNet-1k, CIRCLE is competitive at 10-20 task splits and substantially outperforms strong CS-EFCIL baselines at 50, 100, and 500 task splits, while training much faster than trained-backbone drift-compensation methods. Ablations show that the BiRC2D-style extractor, SLDA head, and balanced feature/prediction ensembling each contribute to the final performance.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.26629v1" target="_blank" class="paper-title">From Weights to Features: SAE-Guided Activation Regularization for LLM Continual Learning</a>
-                        <span class="paper-date">2026-06-25</span>
-                    </div>
-                                        <span class="paper-comment">📝 21 pages, 4 figures, 6 tables</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Weight-space regularization methods such as Elastic Weight Consolidation (EWC) are the standard approach to catastrophic forgetting in continual learning. However, those methods tend to underperform when applied to large language models. We argue that such underperformance can be partly explained by the ``polysemantic'' nature of large language models: per-weight importance estimates utilized by EWC-style regularization are too coarse and cannot isolate the knowledge that needs protection. In this paper, we propose regularizing instead in the model's activation space, using pretrained Sparse Autoencoders (SAEs) as a monosemantic feature dictionary. From the perspective of constrained optimization, we derive a new loss function that uses the SAE feature dictionary to explicitly balance stability and plasticity, and show that EWC is a special case in the one-sided weight-space penalty setting. Unlike replay-based methods that store or revisit examples from earlier tasks, our method requires no previous-task data after mask construction: current-task data is used to compute a compact SAE feature mask, and only this mask is retained for later training. Further, since the feature space has significantly lower dimensionality than the parameter space, the proposed method is more memory efficient. On the TRACE and MedCL continual learning benchmarks, the method achieves the strongest result among approaches without introducing task-specific architectural components, also surpassing traditional weight-space regularization methods like EWC. Beyond performance comparisons, we provide empirical evidence for the polysemanticity thesis: task-relevant representations are linearly separable in the SAE feature basis but indistinguishable from chance in the weight basis, and weight-space protection is nearly non-selective at the concept level.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.25342v1" target="_blank" class="paper-title">Lifelong In-Context Learning with Transformers Requires Parametric Forms of Attention</a>
-                        <span class="paper-date">2026-06-24</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Lifelong continual learning remains an obstacle on the path to human-like intelligence. Modern transformers show sparks of intelligence with in-context learning. The quadratic nature of attention, however, prohibits transformers from performing this process on arbitrarily long sequences. In this work, we argue that extending in-context learning to lifelong settings is a practical solution for continual learning in AI agents. In particular, we argue that \emph{parametric forms of attention} are needed to understand a lifetime of context with transformers on a fixed hardware budget. These attention mechanisms learn the relationship between keys and their associated values at test-time with parametric regression. Our generalization of parametric approaches (linear attention, state-space models, fast weight programmers, and test-time training layers) contrasts with nonparametric counterparts like softmax attention. They replace the ever-growing key-value cache with an online-trainable neural network, maintaining a constant memory footprint. We highlight how parametric attention currently fall short of lifelong learning due to limited memory capacity or costly online updates. To address these issues, we pose a set of open questions with novel insights to guide the field toward long-horizon agents.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2512.18471v2" target="_blank" class="paper-title">The Urysohn Ladder: Recursive Metric Contraction for Scalable Continual Learning</a>
-                        <span class="paper-date">2026-06-23</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Continual learning systems face a fundamental geometric obstacle: as experience accumulates on a fixed-capacity manifold, covering numbers grow linearly with time, eventually forcing representational overlap and catastrophic interference. Prevailing approaches attack this problem by \emph{expansion} - projecting into higher-dimensional spaces via kernels, overparameterization, or replay. We argue the solution is the opposite: \emph{contraction}. We formalize abstraction as the \textbf{Urysohn Ladder}, a hierarchy of quotient maps that recursively collapse validated metric neighborhoods into compact tokens, converting unbounded ambient-space search into bounded navigation on a low-dimensional intrinsic scaffold. Geometrically, each collapsed token acts as a shortcut - a region of extreme metric contraction that bridges distant experiences, much like a wormhole in the representational manifold. We establish four results that collectively guarantee \emph{separability} (metric contraction renders nonlinearly entangled structure linearly separable at each quotient level, and this separability propagates faithfully through the entire hierarchy), \emph{bounded capacity} (covering numbers remain $O(1)$ per quotient level, independent of stream length), \emph{stability} (parity-partitioned flow/scaffold subspaces enable unbounded plasticity without catastrophic interference), and \emph{scalability} (inference cost scales with quotient distance, not ambient distance). We validate each claim empirically with pretrained models and real-world datasets. Moreover, we demonstrate the potential of Urysohn Ladder for scalable continual learning via scaffold amortization.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.25165v1" target="_blank" class="paper-title">The Gentle Collapse: Distributional Metrics for Continual Learning</a>
-                        <span class="paper-date">2026-06-23</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Accuracy degradation is the standard metric for Catastrophic Forgetting (CF), however, it records only whether forgetting occurred or not. It saturates at the extremes and collapses discretely at task boundaries, hiding the internal structure of what is being forgotten. We introduce six softmax-derived metrics spanning true-label rank (TLR), predictive confidence, and distributional divergence that characterize forgetting continuously, each normalized to [0, 1] with no modification to training. On CIFAR-100, these metrics carry information where accuracy does not: at 0% accuracy, the Confusion Margin spans an IQR of [0.32, 0.50] across classes that accuracy treats identically. We demonstrate that this richer signal is actionable in mitigating catastrophic forgetting. Per-sample metric scores used as loss weights reduce forgetting by 1.3 percentage points over uniform experience replay (ER) on CIFAR-100. Furthermore, the slope of a metric over a small window provides a stable sampling criterion: at a small-window size (e.g. 3 epochs), accuracy-trend degrades to 34.79% (std. = 2.32) while log-TLR achieves 41.07% (std. = 0.57). This gap is structural since reliable small-window trend estimation requires a continuous signal. On TinyImageNet, log-TLR trend sampling reduces forgetting by 7.7 percentage points over the ER baseline.</p>
                     </details>
                 </div>
             </div>

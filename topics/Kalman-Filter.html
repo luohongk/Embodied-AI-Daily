@@ -590,7 +590,7 @@
                 <a href="World-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">World Model</span>
-                    <span class="nav-count">78</span>
+                    <span class="nav-count">77</span>
                 </a>
                 <a href="3D-Foundation-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
@@ -675,7 +675,7 @@
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Kalman Filter</span>
-                    <span class="nav-count">54</span>
+                    <span class="nav-count">51</span>
                 </a>
                 <a href="Loop-Closure-Detection.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -695,7 +695,7 @@
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">77</span>
+                    <span class="nav-count">76</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -730,7 +730,7 @@
                 <a href="Model-Predictive-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#14b8a6"></span>
                     <span class="nav-label">Model Predictive Control</span>
-                    <span class="nav-count">53</span>
+                    <span class="nav-count">52</span>
                 </a>
                 <a href="Whole-Body-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#06b6d4"></span>
@@ -809,7 +809,7 @@
             <a href="World-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">World Model</span>
-                <span class="nav-count">78</span>
+                <span class="nav-count">77</span>
             </a>
             <a href="3D-Foundation-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
@@ -894,7 +894,7 @@
             <a href="Kalman-Filter.html" class="nav-item active">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Kalman Filter</span>
-                <span class="nav-count">54</span>
+                <span class="nav-count">51</span>
             </a>
             <a href="Loop-Closure-Detection.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -914,7 +914,7 @@
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">77</span>
+                <span class="nav-count">76</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -949,7 +949,7 @@
             <a href="Model-Predictive-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#14b8a6"></span>
                 <span class="nav-label">Model Predictive Control</span>
-                <span class="nav-count">53</span>
+                <span class="nav-count">52</span>
             </a>
             <a href="Whole-Body-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#06b6d4"></span>
@@ -1025,9 +1025,39 @@
         <section class="topic-section">
             <div class="topic-header">
                 <span class="topic-badge" style="background:#8b5cf6">Kalman Filter</span>
-                <span class="topic-count">54 papers</span>
+                <span class="topic-count">51 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.15235v1" target="_blank" class="paper-title">Adaptive Sampling for Spatiotemporal Anomaly Monitoring in Wireless Sensor Networks</a>
+                        <span class="paper-date">2026-07-16</span>
+                    </div>
+                                        <span class="paper-comment">📝 Accepted paper for IEEE ISSC 2026 conference, Limerick, Ireland</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：无线传感器网络在长期环境监测中采用稀疏采样以延长寿命，但容易错过短暂、局部的异常事件。&#10;&#10;🛠 **方法**：提出哨兵辅助自适应采样框架，正常时期基于卡尔曼滤波预测不确定性进行稀疏采样，异常时期由连续采样的哨兵节点执行混合广义似然比检测，并触发一跳邻域唤醒与恢复感知警报控制。&#10;&#10;✨ **主要贡献**：在Intel Berkeley实验室温度数据集上，将异常窗口采样率从0.439提升至0.933，相比AAS和Adapted e-Sampling方法分别降低总成本15.4%和2.1%，实现了异常可见性与采样成本的有效平衡。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Long-term environmental monitoring in wireless sensor networks (WSNs) often uses sparse sampling to extend network lifetime, but sparse sensing can miss short-lived, localized, and potentially diffusive anomalies. This paper proposes a sentinel-assisted adaptive sampling framework as a cooperative sensing-control pipeline for WSN anomaly monitoring. During normal periods, nodes perform sparse sensing driven by Kalman filter (KF) predictive uncertainty. During anomalous periods, continuously sampled sentinel nodes perform hybrid GLR-based detection with node-relative thresholds, and local detections trigger one-hop neighborhood wake-up with recovery-aware alert control. Experiments on the Intel Berkeley Research Lab temperature dataset with abrupt random spatiotemporal anomalies show that the proposed method raises the anomaly-window sampling ratio (AWSR) from 0.439 to 0.933 in the main experiment. It also improves AWSR over Adaptive Data Acquisition with Energy Efficiency and Critical-Sensing Guarantee (AAS) and Adapted e-Sampling while reducing total cost by 15.4\% and 2.1\%, respectively. These results show that integrating KF-based sparse sampling, sentinel GLR detection, and local alert propagation improves anomaly-window visibility while maintaining a lower sampling-cost trade-off.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.15111v1" target="_blank" class="paper-title">Goal-Oriented Semantic Communication for Distributed ISAC-Enabled Vehicle Coordination</a>
+                        <span class="paper-date">2026-07-16</span>
+                    </div>
+                                        <span class="paper-comment">📝 13 pages, 9 figures</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决无信号灯路口车辆协调中，传统分离式感知、通信与控制方案导致的冗余传输、信息过时及协调不可靠问题。&#10;&#10;🛠 **方法**：提出统一的目标导向语义通信（GSC）框架，利用扩展卡尔曼滤波（EKF）预测车辆状态并融合分布式感知数据，设计掩码混合近端策略优化（MHPPO）联合决策感知与通信传输，并采用不确定性感知传输设计（UTD）优化波束赋形与功率分配。&#10;&#10;✨ **主要贡献**：实现100%无碰撞车辆协调，相比现有预测性ISAC基线方法显著降低信令开销，验证了语义重要性驱动的传输策略在提升路口通行效率中的有效性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Vehicle coordination at unsignalized intersections relies on accurate real-time vehicle state acquisition and reliable command-and-control (C&C) signal delivery. However, existing studies typically treat sensing, communication, and control separately, which may lead to redundant transmissions, outdated state information, and unreliable vehicle coordination. In this paper, we investigate a new scenario of distributed integrated sensing and communication (ISAC)-enabled vehicle coordination at intersections, where multiple roadside units (RSUs) collaboratively transmit sensing signals for vehicle state acquisition and C&C signals for vehicle movement control under the management of a central base station (BS). To improve signaling efficiency, we propose a unified goal-oriented semantic communication (GSC) framework, which transmits sensing and C&C signals only when they are semantically important for improving intersection traffic throughput. Specifically, an extended Kalman filter (EKF) is adopted to predict vehicle states and fuse distributed sensing measurements. A masked hybrid proximal policy optimization (MHPPO) framework is then developed to jointly determine sensing transmission decisions, C&C transmission decisions, and C&C signal contents based on a value-of-information (VoI) reward. Furthermore, we propose an uncertainty-aware transmission design (UTD), including robust beamforming and VoI-based time-division power allocation, to improve sensing and communication reliability under vehicle state uncertainty and inter-RSU interference. Simulation results show that our proposed framework achieves 100% collision-free vehicle coordination with significantly reduced signaling overhead compared with predictive ISAC baselines adapted from state-of-the-art related studies and several ablation baselines.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2607.10735v2" target="_blank" class="paper-title">GNet: A scalable and flexible Gaussian process network with nonparametric neurons</a>
@@ -1154,10 +1184,7 @@
                         <span class="paper-date">2026-07-10</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决三维地标辅助惯性导航中经典SO(3)-EKF存在的虚假可观性问题，即滤波器在不可观方向上过度自信导致估计性能下降。  &#10;🛠 **方法**：首次将迭代不变扩展卡尔曼滤波（IterIEKF）应用于基于地标的3D惯性定位，通过确保低噪声条件下状态保持在观测流形上、不确定性限制在切空间内，改进IEKF的测量更新兼容性。  &#10;✨ **主要贡献**：数值仿真表明，IterIEKF在估计精度和一致性上均优于经典SO(3)-EKF、迭代SO(3)-EKF和IEKF。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Inertial navigation systems aided by three-dimensional landmark measurements constitute a fundamental problem in robotic perception and state estimation. Classical SO(3)-based Extended Kalman Filter (SO(3)-EKF) approaches provide practical solutions, but suffer from the false observability problem, in which the filter becomes overconfident in unobservable directions, leading to degraded estimation performance. The Invariant EKF (IEKF) addresses this limitation by reformulating the system dynamics as a group-affine system on a Lie group, although its measurement update does not fully satisfy certain state compatibility properties. More recently, the Iterated Invariant EKF (IterIEKF) was proposed to further improve the IEKF by ensuring, in the low-noise regime, that the estimated state remains on the observed state manifold while the uncertainty is confined to its tangent space. In this work, we formulate and apply the IterIEKF to landmark-based inertial 3D localization for the first time. Through numerical simulations, we show that the proposed approach outperforms the classical SO(3)-EKF, the Iterated SO(3)-EKF, and the IEKF in terms of both estimation accuracy and consistency.</p>
@@ -1169,10 +1196,7 @@
                         <span class="paper-date">2026-07-10</span>
                     </div>
                                         <span class="paper-comment">📝 17 pages, 8 figures, 2 tables</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：如何高效计算动态线性模型中协方差矩阵与任意向量的乘积及其逆矩阵，避免传统方法的高计算成本。&#10;&#10;🛠 **方法**：提出逆卡尔曼滤波器，实现协方差矩阵与向量的精确矩阵-向量乘法（线性计算复杂度），并与共轭梯度算法结合，加速一般形式协方差矩阵的求逆过程。&#10;&#10;✨ **主要贡献**：在非参数估计粒子相互作用函数的应用中，通过仿真和显微镜细胞轨迹数据验证了该方法的高可扩展性和效率，且适用于其他近似方法难以处理的场景。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>We introduce the inverse Kalman filter, which enables exact matrix-vector multiplication between a covariance matrix from a dynamic linear model and any real-valued vector with linear computational cost. We integrate the inverse Kalman filter with the conjugate gradient algorithm, which substantially accelerates the computation of matrix inversion for a general form of covariance matrix, where other approximation approaches may not be directly applicable. We demonstrate the scalability and efficiency of the proposed approach through applications in nonparametric estimation of particle interaction functions, using both simulations and cell trajectories from microscopy data.</p>
@@ -1644,66 +1668,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>We develop a continuous-time state-space framework for the joint reconstruction of three Cenozoic climate proxies, benthic foraminiferal d18O and d13C and atmospheric CO2, from irregularly and unevenly sampled multi-site, multi-method data spanning the last 67 million years. The latent signals follow a trivariate random walk in continuous time; the measurement equation differentiates the error variance by drill site for the isotopes and by proxy group for CO2, with bias intercepts placing all sources on a common scale, and the transition equation lets the innovation covariance and a deterministic La2004 Milankovitch forcing depend on the prevailing climate state. All parameters are estimated by maximum likelihood through the Kalman filter with diffuse initialization. The estimated cross-proxy correlations reverse sign between the early Cenozoic greenhouse and the icehouse, the orbital sensitivity of the isotopes strengthens as continental ice sheets grow, and the reconstructed CO2 path, reported with calibrated confidence bands, places the atmospheric CO$_2$ thresholds of the major Cenozoic glaciations in relation to present-day concentrations.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2604.02878v3" target="_blank" class="paper-title">An Asynchronous Two-Speed Kalman Filter for Real-Time UUV Cooperative Navigation Under Acoustic Delays</a>
-                        <span class="paper-date">2026-06-22</span>
-                    </div>
-                                        <span class="paper-comment">📝 6 pages, 6 figures. Accepted for publication in the 2026 IEEE International Conference on Industrial Informatics (INDIN). \c{opyright} 2026 IEEE. Personal use of this material is permitted. See PDF for the full IEEE copyright notice</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>In Global Navigation Satellite System (GNSS)-denied underwater environments, individual unmanned underwater vehicles (UUVs) suffer from unbounded dead-reckoning drift, making collaborative navigation (CN) crucial for accurate state estimation. However, the severe communication delay inherent in underwater acoustic channels poses serious challenges to real-time state estimation. Traditional filters, such as Extended Kalman Filters (EKFs) or Unscented Kalman Filters (UKFs), usually block the main control loop while waiting for delayed data, or effectively discard Out-of-Sequence Measurements (OOSMs), resulting in serious drift. To address this, we propose an Asynchronous Two-Speed Kalman Filter (TSKF) enhanced by a novel projection mechanism, which we term Variational History Distillation (VHD). The proposed architecture decouples the estimation process into two parallel threads: a fast-rate thread that utilizes Gaussian Process (GP) compensated dead reckoning to guarantee high-frequency real-time control, and a slow-rate thread dedicated to processing asynchronously delayed collaborative information. By introducing a Finite-Length Circular State Buffer (FLCSB), the algorithm applies delayed measurements to their corresponding historical states, and utilizes a VHD-based projection to fast-forward the correction to the current time without computationally heavy recalculations. Simulation results demonstrate that the proposed TSKF maintains a trajectory error comparable to computationally intensive batch-optimization methods under severe delays (up to 30\,s). Executing in sub-millisecond time, it significantly outperforms standard EKF/UKF. The results demonstrate an effective control, communication, and computing (3C) co-design that significantly enhances the resilience of autonomous marine automation systems.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2508.13313v5" target="_blank" class="paper-title">Flow Matching for Efficient and Scalable Data Assimilation</a>
-                        <span class="paper-date">2026-06-21</span>
-                    </div>
-                                        <span class="paper-comment">📝 accepted for publication in SIAM/ASA Journal on Uncertainty Quantification</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Data assimilation (DA) estimates a dynamical system's state from noisy observations. Recent generative models like the ensemble score filter (EnSF) improve DA in high-dimensional nonlinear settings but are computationally expensive. We introduce the ensemble flow filter (EnFF), a training-free, flow matching (FM)-based framework that accelerates sampling and offers flexibility in flow design. EnFF uses Monte Carlo estimators for the marginal flow field, localized guidance for observation assimilation, and utilizes a novel flow path that exploits the Bayesian DA formulation. It generalizes classical filters such as the bootstrap particle filter and ensemble Kalman filter. Experiments on high-dimensional benchmarks demonstrate EnFF's improved cost-accuracy tradeoffs and scalability, highlighting FM's potential for efficient, scalable DA. Code is available at https://github.com/Utah-Math-Data-Science/Data-Assimilation-Flow-Matching.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.00026v1" target="_blank" class="paper-title">Invariant Stochastic Filtering on SE(3) for Inertial-Encoder State Estimation of Serial Rigid Manipulators</a>
-                        <span class="paper-date">2026-06-21</span>
-                    </div>
-                                        <span class="paper-comment">📝 This document is an arXiv preprint posted for open access and citation purposes. It is under review and subject to revision</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>An invariant extended Kalman filter (IEKF) is developed for state estimation of serial rigid manipulators with an arbitrary number of links, formulated entirely within the Lie group SE(3). The group-affine property of the kinematic equations makes the linearised error dynamics autonomous, so the Riccati equation governs the true error covariance rather than a local approximation. A physically separated noise model treats gyroscope and accelerometer channels independently: the accelerometer provides translational twist via gravity-compensated integration, yielding a measurement covariance that scales with the sample interval in exact analogy with process noise discretisation; a state-dependent Coriolis noise term captures gyroscope noise propagating through the nonlinear dynamics, vanishing at rest and growing with twist magnitude. The filter is structured as a modular chain of per-link IEKFs in which the predicted covariance of each link depends on its predecessor only through the Adjoint-transformed posterior, giving linear computational cost in link count. Exponential ultimate boundedness in mean square is established via a Lie algebra Lyapunov function, with per-link bounds chained through the Adjoint operator norm to yield a stability certificate that is modular and scalable to arbitrary chain length. Numerical results validate the design.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.22289v1" target="_blank" class="paper-title">Control-Aware Manipulation of ArduPilot via Legitimate MAVLink Commands: Simulation and Hardware Validation</a>
-                        <span class="paper-date">2026-06-21</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>This paper investigates control-aware attacks against ArduPilot-based Unmanned Aerial Vehicles (UAVs), inwhich an adversary exploits the sensitivity of flight-controller dynamics to parameter changes to cause loss of control and crashes. It describes six attacks that exploit interactions among multi-layer controllers by modifying Proportional-Integral-Derivative (PID) gains, altering Extended Kalman Filter (EKF) estimation configuration, and violating failsafe assumptions, thereby forcing ArduPilot into unsafe operating conditions. We evaluate the attacks in Software-in-the-Loop (SITL) simulation and validate them on a Pixhawk 2.4.8 hardware platform. The results show that short sequences of well-formed MAVLink messages can exploit controller sensitivity to parameter values and updates frequency, affecting controller states and degrading attitude stability, angular-rate behavior, trajectory tracking, and estimator health. We demonstrate that when multiple effects are combined, the vehicle can enter an unsafe state and crashes. These findings show that security gaps in input-parameter handling, command trust, and controller-state validation can be exploited to cause loss of control and crashes in UAVs.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.22200v1" target="_blank" class="paper-title">Neural Conjugate Aggregation: Identifiable Unsupervised Multi-Sensor Regression under Heterogeneous Sensor Bias</a>
-                        <span class="paper-date">2026-06-20</span>
-                    </div>
-                                        <span class="paper-comment">📝 10 pages</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>We study regression-based data fusion under uncertainty, where multiple noisy and biased measurement sources are available but ground-truth labels are absent during training. This setting arises in sensor networks, simulation ensembles, and scientific monitoring systems where supervision is costly or infeasible. We propose the Neural Conjugate Aggregation Model (NCAM), a hierarchical Bayesian framework that combines neural networks with conjugate Gaussian inference for unsupervised multi-source fusion. NCAM learns source-specific bias and reliability conditioned on contextual covariates, yielding an analytically tractable posterior over a latent target variable with decomposed epistemic and aleatoric uncertainty. Structural non-identifiability is resolved through sensor anchoring and variance regularization, enabling stable and interpretable posterior aggregation. To complement Bayesian uncertainty with finite-sample guarantees, we integrate locally adaptive Monte Carlo conformal prediction, producing heteroscedastic prediction intervals with coverage guarantees under exchangeability assumptions. Experiments on synthetic and real-world air-quality datasets demonstrate improved predictive accuracy and well-calibrated uncertainty compared to unsupervised baselines, including mean aggregation, probabilistic PCA, and Kalman filtering.</p>
                     </details>
                 </div>
             </div>

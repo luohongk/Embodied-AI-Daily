@@ -590,7 +590,7 @@
                 <a href="World-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">World Model</span>
-                    <span class="nav-count">78</span>
+                    <span class="nav-count">77</span>
                 </a>
                 <a href="3D-Foundation-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
@@ -675,7 +675,7 @@
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Kalman Filter</span>
-                    <span class="nav-count">54</span>
+                    <span class="nav-count">51</span>
                 </a>
                 <a href="Loop-Closure-Detection.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -695,7 +695,7 @@
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">77</span>
+                    <span class="nav-count">76</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -730,7 +730,7 @@
                 <a href="Model-Predictive-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#14b8a6"></span>
                     <span class="nav-label">Model Predictive Control</span>
-                    <span class="nav-count">53</span>
+                    <span class="nav-count">52</span>
                 </a>
                 <a href="Whole-Body-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#06b6d4"></span>
@@ -809,7 +809,7 @@
             <a href="World-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">World Model</span>
-                <span class="nav-count">78</span>
+                <span class="nav-count">77</span>
             </a>
             <a href="3D-Foundation-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
@@ -894,7 +894,7 @@
             <a href="Kalman-Filter.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Kalman Filter</span>
-                <span class="nav-count">54</span>
+                <span class="nav-count">51</span>
             </a>
             <a href="Loop-Closure-Detection.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -914,7 +914,7 @@
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">77</span>
+                <span class="nav-count">76</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -949,7 +949,7 @@
             <a href="Model-Predictive-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#14b8a6"></span>
                 <span class="nav-label">Model Predictive Control</span>
-                <span class="nav-count">53</span>
+                <span class="nav-count">52</span>
             </a>
             <a href="Whole-Body-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#06b6d4"></span>
@@ -1030,6 +1030,36 @@
             <div class="paper-list">
                 <div class="paper-card">
                     <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2603.12408v2" target="_blank" class="paper-title">Human Motion Data Alone Does Not Guarantee Plausible Gait Biomechanics</a>
+                        <span class="paper-date">2026-07-16</span>
+                    </div>
+                                        <span class="paper-comment">📝 8 pages, 7 figures</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：研究仅依赖人体运动数据（不含动力学信息）的模仿学习能否准确估计合理的生物关节力矩，揭示其在高保真步态建模中的局限性。  &#10;🛠 **方法**：对比纯运动模仿学习（MOIL）与结合地面反作用力（GRF）和压力中心（CoP）的动力学感知模仿学习（KAIL），并通过消融实验分析各动力学项的贡献。  &#10;✨ **主要贡献**：发现MOIL虽能实现高精度运动跟踪，但GRF、CoP和关节力矩估计误差显著；而KAIL能生成更符合生物力学值的动力学结果，强调运动数据本身无法保证步态生物力学的合理性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Motion imitation learning (IL) is increasingly used in robotics and human gait modeling, yet its ability to recover biomechanically consistent joint moments without explicit kinetic information remains unclear. In this study, we examined whether motion imitation alone can estimate reasonable biological joint moments. We compare motion-only IL (MOIL) against a kinetics-aware IL (KAIL) framework that incorporates ground reaction forces (GRF) and center of pressure (CoP) in imitation rewards, with an ablation study to examine the contribution of each kinetic term. Experiments were conducted using walking data from a non-disabled participant at three speeds (0.9, 1.2, and 1.5 m/s). While both MOIL and KAIL achieved comparable kinematic tracking accuracy, MOIL exhibited substantially larger errors in GRF, CoP, and joint moment estimates relative to inverse dynamics references. In contrast, KAIL produced kinetics more consistent with biomechanical values. These findings highlight a fundamental limitation of MOIL approaches, which may lead to erroneous interpretations of gait biomechanics and downstream applications by failing to estimate consistent human-like gait kinetics.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.14200v1" target="_blank" class="paper-title">Augmentations for Robust and Efficient Imitation Learning in Streamed Video Games</a>
+                        <span class="paper-date">2026-07-15</span>
+                    </div>
+                                        <span class="paper-comment">📝 To be published in proceedings of IEEE Conference on Games (CoG), 2026</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在流媒体游戏环境中，网络延迟和压缩导致的视觉伪影（如像素块、模糊、鬼影）会引发模仿学习策略的协变量偏移，降低游戏代理的鲁棒性和效率。&#10;&#10;🛠 **方法**：提出流媒体数据增强方法，模拟四种常见伪影（像素块、擦除、全局模糊、鬼影），并基于预测逆动力学模型（PIDM）在潜在空间中结合未来状态条件与逆动力学策略进行训练。&#10;&#10;✨ **主要贡献**：在稳定流媒体条件下，使用时空增强的代理性能提升高达41%；在网络延迟下，性能仅下降7.45%（对比未增强代理的49.82%），证明该方法能简单有效地训练鲁棒且高效的游戏代理。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Imitation learning is an appealing way to scale game-playing agents to complex 3D environments by training policies to map visual observations to actions from human demonstrations. However, these demonstrations are expensive to collect and modern game-playing is often done through streaming in which network delay and compression introduce spatiotemporally correlated visual artifacts that can cause a covariance shift at test time. To address these challenges, we propose streaming augmentations that mimic four types of artifacts commonly encountered during streaming with low-bandwidth network connection: pixelated blocks and scrubs, global blur, and ghosting. We instantiate our approach on top of predictive inverse dynamics models (PIDM), which combine future-state conditioning with an inverse dynamics policy in a learned latent space, and evaluate the impact of our augmentations across three tasks in modern 3D video games. Under stable streaming conditions, agents trained with spatiotemporal augmentations achieve up to 41% higher evaluation performance compared to agents trained without augmentations under an identical data budget. When network lag is introduced, agents trained with augmentations degrade by only 7.45% vs 49.82% of the original performance for agents trained only with the original data. These results clearly indicate that spatiotemporal augmentations tailored for the streaming setting are a simple yet powerful tool to train robust and efficient game-playing agents.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
                         <a href="https://arxiv.org/abs/2607.14021v1" target="_blank" class="paper-title">Industrial Dexterity Benchmark: A Hardware-Software Benchmarking Platform for Industrial Dexterous Manipulation</a>
                         <span class="paper-date">2026-07-15</span>
                     </div>
@@ -1056,6 +1086,21 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Inverse Reinforcement Learning (IRL) algorithms are powerful tools for learning from and generalizing expert demonstrations, but they often rely on unconstrained exploration, rendering them unsafe for real-world deployment. Meanwhile, Control Barrier Functions (CBFs) can guarantee the safety of control systems, but the analytical design of CBFs can be time-consuming and esoteric. In this work, we address these limitations jointly by constraining reward function candidacy during IRL to the space of CBFs, yielding a formulation that exhibits safe online control with continuous experiential improvement. Crucially, this framework enables the data-driven recovery of barrier functions directly from unlabeled expert observations. We demonstrate that the recovered barrier function is robust to unsafe states entirely absent from the expert data. Furthermore, we benchmark our method against standard IRL baselines in a simulated navigation environment, demonstrating improved safety performance. Finally, we investigate the trade-offs of planning-based versus policy-based IRL methods across both simulation and a real world obstacle avoidance task.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.14182v1" target="_blank" class="paper-title">Semantic Audio-driven Understanding for Dynamic Humanoid Whole Body Control</a>
+                        <span class="paper-date">2026-07-15</span>
+                    </div>
+                                        <span class="paper-comment">📝 Accepted at 29th Robocup International Symposium, held on July 6th, 2026 in Incheon, Republic of Korea</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有仿人机器人全身运动控制多依赖预设序列或外部触发，缺乏对动态环境的自主响应能力，尤其是无法根据实时音频输入（音乐或语音）自主选择和执行动作技能。&#10;&#10;🛠 **方法**：提出一种多模态编排框架，将连续音频流分为音乐和语音分支。音乐分支通过音频指纹和语义嵌入实现曲目识别与时间对齐，动态映射至运动策略；语音分支将指令映射至模仿学习得到的离散技能库，并通过统一接口调度强化学习控制管线执行技能。&#10;&#10;✨ **主要贡献**：首次实现基于语义音频驱动的仿人机器人实时全身运动控制，支持音乐与语音两种模态的自主技能选择；在仿真和Unitree G1实体机器人上验证了鲁棒的仿真到现实迁移和一致的音频条件策略选择。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Recent advances in humanoid robotics and reinforcement learning have enabled the acquisition of highly expressive whole-body motion policies. However, most robotic performances remain based on pre-scripted sequences or externally triggered behaviors, limiting autonomy and responsiveness to dynamic environments. In this work, we introduce a novel multi-modal orchestration framework for semantic audio-driven humanoid control, enabling robots to autonomously select and execute appropriate motion skills in real time. The system processes continuous audio streams and routes them into music or speech branches. Music input is handled via audio fingerprinting and semantic embeddings to retrieve track identity and temporal alignment, allowing dynamic mapping between musical segments and motion policies. Speech input is grounded into a discrete library of imitation-learned skills, enabling direct human-robot interaction. Both modalities share a unified interface that schedules skill execution over a reinforcement learning control pipeline. We validate the approach in simulation and on a Unitree G1 humanoid, showing robust sim-to-real transfer and consistent audio-conditioned policy selection. Supplementary materials are available at the following site: https://lab-rococo-sapienza.github.io/semantic-WBC/</p>
                     </details>
                 </div>
                 <div class="paper-card">
@@ -1139,10 +1184,7 @@
                         <span class="paper-date">2026-07-14</span>
                     </div>
                                         <span class="paper-comment">📝 Website: https://dense-reward.github.io/</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：机器人强化学习缺乏可靠的视觉-语言奖励模型，难以提供密集且信息丰富的反馈，主要受限于大规模失败数据获取困难和奖励信号稀疏。&#10;&#10;🛠 **方法**：提出DenseReward模型，通过自动化仿真管道生成物理真实的失败轨迹（如碰撞、抓取失败、物体掉落等），并基于视觉观察和语言指令预测密集的帧级奖励分数。&#10;&#10;✨ **主要贡献**：无需人工标注即可合成多样化失败数据，实现细粒度任务进度估计；在模拟和真实操作中优于通用VLM和现有奖励模型，并成功用于模型预测控制和强化学习。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Reinforcement learning holds great promise for improving robot policies beyond the limits of imitation learning. However, its practical adoption remains bottlenecked by the lack of reliable vision-language reward models that provide dense and informative feedback. Two key challenges remain: acquiring diverse failure data at scale and obtaining fine-grained reward signals beyond sparse trajectory-level success labels. Collecting failure trajectories typically requires laborious human effort, while pseudo-failures constructed by relabeling successful demonstrations fail to capture the diverse physical failure modes that arise during robot execution. Meanwhile, existing reward models often predict sparse binary or trajectory-level rewards, which provide limited guidance for efficient policy optimization. We introduce DenseReward, a dense robotic reward model that addresses both challenges. To train DenseReward, we develop an automated failure data generation pipeline that synthesizes physically realistic failure trajectories in simulation without human labeling, covering diverse failure modes such as collisions, missed grasps, object drops, and recovery behaviors. DenseReward predicts dense frame-level reward scores from visual observations and language instructions, enabling fine-grained estimation of task progress throughout an episode. Experiments show that DenseReward outperforms general-purpose VLMs and existing robotic reward models in dense reward prediction across both simulated and real-world manipulation. We further demonstrate that DenseReward provides effective reward guidance for downstream model predictive control and reinforcement learning. We release the dataset, trained reward models, and evaluation suite to support the development of failure-aware dense reward modeling for robot learning.</p>
@@ -1154,10 +1196,7 @@
                         <span class="paper-date">2026-07-14</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：机器人模仿学习中，现有方法在生成符合任务几何特征的运动轨迹时，常因后处理（如滤波、平滑）扭曲末端执行器路径，且难以同时保证关节空间的动态可行性。&#10;&#10;🛠 **方法**：提出频谱运动基元（SMP），将演示轨迹用截断傅里叶系数表示，通过低频任务带捕获主要几何特征，并利用上下文条件的高斯混合模型/回归（GMM/GMR）预测任务带系数；再通过相位耦合调节器限制关节速度与加速度，而不修改频谱系数。&#10;&#10;✨ **主要贡献**：实现了紧凑的几何重建、跨未见任务帧的泛化、显著减少动态违规和加加速度，并在Franka Panda机器人上验证了末端路径的保持能力。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Robot imitation learning for manipulation should preserve demonstrated task geometry while producing dynamically admissible robot motions. Existing pipelines often learn task-dependent trajectories and impose execution limits afterward through filtering, smoothing, clipping, or time scaling, which may distort task-critical end-effector paths. We propose the Spectral Movement Primitive (SMP), a frequency-domain imitation learning framework that couples task-space skill generation with joint-space execution regulation. Demonstrations are represented by truncated finite-horizon Fourier coefficients. An empirically selected low-frequency task band captures the dominant motion geometry, while higher harmonics contribute disproportionately to derivative growth. A frame-aware context-conditioned GMM/GMR prior predicts the task-band coefficients in a canonical task frame, and the resulting Cartesian trajectory is mapped to joint space through sequential inverse kinematics. A phase-coupled regulator then limits the requested phase progression without modifying the spectral coefficients, thereby enforcing joint velocity and acceleration limits while preserving the represented path. Experiments evaluate task-band reconstruction, robustness to composite demonstration corruption, out-of-distribution cross-board generalization, joint-space dynamic admissibility, end-effector path preservation, and deployment on a Franka Panda robot. Results show compact geometric reconstruction, consistent transfer across unseen task frames, substantial reductions in dynamic violations and jerk, and preservation of the intended end-effector path during phase regulation.</p>
@@ -1169,10 +1208,7 @@
                         <span class="paper-date">2026-07-13</span>
                     </div>
                                         <span class="paper-comment">📝 Accepted for publication in IEEE RA-L</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决机器人技能策略在陌生条件下泛化能力不足的问题，尤其是模仿学习局限于训练区域，而迁移学习在零样本泛化中精度低且数据需求大。&#10;&#10;🛠 **方法**：提出一种联合学习框架，通过构建正向与逆向任务的共同表征，利用新配置下的正向演示数据（无需直接监督）来成功执行对应的逆向任务，实现知识的高效迁移。&#10;&#10;✨ **主要贡献**：在模拟和真实环境中，针对复杂操作任务（如使用多样物体和工具），该方法在零样本泛化精度和效率上优于扩散模型和多模态VAE基线，并通过消融实验验证了其外推能力。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Generalizing skill policies to novel conditions remains a key challenge in robot learning. Imitation learning methods, while data-efficient, are largely confined to the training region and consistently fail on input data outside it, leading to unpredictable policy failures. Alternatively, transfer learning approaches offer methods for trajectory generation robust to both changes in environment and tasks, but they remain data-hungry and lack accuracy in zero-shot generalization. We address these challenges in the context of task inversion learning and propose a novel joint learning approach to achieve accurate and efficient knowledge transfer. Our method constructs a common representation of the forward and inverse tasks, and leverages auxiliary forward demonstrations from novel configurations to successfully execute the corresponding inverse tasks, without any direct supervision. We demonstrate the extrapolation capabilities of our framework through ablation studies and experiments in simulated and real-world environments that require complex manipulation skills with a diverse set of objects and tools, where we outperform diffusion-based and multimodal VAE alternatives.</p>
@@ -1980,42 +2016,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Limb loss affects millions globally, impairing physical function and reducing quality of life. Most traditional surface electromyographic (sEMG) and semi-autonomous methods require users to generate myoelectric signals for each control, imposing physically and mentally taxing demands. This study aims to develop a fully autonomous control system that enables a prosthetic hand to automatically grasp and release objects of various shapes using only a camera attached to the wrist. By placing the hand near an object, the system will automatically execute grasping actions with a proper grip force in response to the hand's movements and the environment. To release the object being grasped, just naturally place the object close to the table and the system will automatically open the hand. Such a system would provide individuals with limb loss with a very easy-to-use prosthetic control interface and may help reduce mental effort while using. To achieve this goal, we developed a teleoperation system to collect human demonstration data for training the prosthetic hand control model using imitation learning, which mimics the prosthetic hand actions from human. By training the model on data from a limited set of objects collected from a single participant's demonstration, we showed that the imitation learning algorithm can achieve high success rates and generalize effectively to new users and previously unseen objects with varying weights. The demonstrations are available at https://sites.google.com/view/autonomous-prosthetic-hand.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2602.13977v2" target="_blank" class="paper-title">WoVR: World Models as Reliable Simulators for Post-Training VLA Policies with RL</a>
-                        <span class="paper-date">2026-06-27</span>
-                    </div>
-                                        <span class="paper-comment">📝 25pages, 11 figures</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Reinforcement learning (RL) promises to unlock capabilities beyond imitation learning for Vision--Language--Action (VLA) models, but its requirement for massive real-world interaction prevents direct deployment on physical robots. Recent work attempts to use learned world models as simulators for policy optimization, yet closed-loop imagined rollouts inevitably suffer from hallucination and long-horizon error accumulation. Such errors not only degrade visual fidelity, but also mislead policy optimization by providing unreliable learning signals. We propose WoVR, a reliable world-model-based RL framework for post-training VLA policies. Instead of assuming a faithful world model, WoVR explicitly regulates how RL interacts with imperfect imagined dynamics. It improves rollout stability through a controllable action-conditioned video world model, reshapes imagined interaction to reduce effective error depth via Keyframe-Initialized Rollouts, and maintains policy--simulator alignment through World Model-Policy co-evolution. Extensive experiments demonstrate that WoVR enables stable long-horizon imagined rollouts and effective policy optimization, achieving superior LIBERO performance and consistent real-world gains across multiple robotic platforms. These results show that world models can serve as practical simulators for RL when hallucination is explicitly controlled. Additional visualization results are available at https://wovr-corl.github.io.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2507.04049v5" target="_blank" class="paper-title">DIVER: Reinforced Diffusion Breaks Imitation Bottlenecks in End-to-End Autonomous Driving</a>
-                        <span class="paper-date">2026-06-26</span>
-                    </div>
-                                        <span class="paper-comment">📝 17 pages, 10 figures</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Most end-to-end autonomous driving methods rely on imitation learning from single expert demonstrations, often leading to conservative and homogeneous behaviors that limit generalization in complex real-world scenarios. In this work, we propose DIVER, an end-to-end driving framework that integrates reinforcement learning with diffusion-based generation to produce diverse and feasible trajectories. At the core of DIVER lies a reinforced diffusion-based generation mechanism. First, the model conditions on map elements and surrounding agents to generate multiple reference trajectories from a single ground-truth trajectory, alleviating the limitations of imitation learning that arise from relying solely on single expert demonstrations. Second, reinforcement learning is employed to guide the diffusion process, where reward-based supervision enforces safety and diversity constraints on the generated trajectories, thereby enhancing their practicality and generalization capability. Furthermore, to address the limitations of L2-based open-loop metrics in capturing trajectory diversity, we propose a novel Diversity metric to evaluate the diversity of multi-mode predictions.Extensive experiments on the closed-loop NAVSIM and Bench2Drive benchmarks, as well as the open-loop nuScenes dataset, demonstrate that DIVER significantly improves trajectory diversity, effectively addressing the mode collapse problem inherent in imitation learning.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2410.18647v4" target="_blank" class="paper-title">Data Scaling Laws in Imitation Learning for Robotic Manipulation</a>
-                        <span class="paper-date">2026-06-26</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Data scaling has revolutionized fields like natural language processing and computer vision, providing models with remarkable generalization capabilities. In this paper, we investigate whether similar data scaling laws exist in robotics, particularly in robotic manipulation, and whether appropriate data scaling can yield single-task robot policies that can be deployed zero-shot for any object within the same category in any environment. To this end, we conduct a comprehensive empirical study on data scaling in imitation learning. By collecting data across numerous environments and objects, we study how a policy's generalization performance changes with the number of training environments, objects, and demonstrations. Throughout our research, we collect over 40,000 demonstrations and execute more than 15,000 real-world robot rollouts under a rigorous evaluation protocol. Our findings reveal several intriguing results: the generalization performance of the policy follows a roughly power-law relationship with the number of environments and objects. The diversity of environments and objects is far more important than the absolute number of demonstrations; once the number of demonstrations per environment or object reaches a certain threshold, additional demonstrations have minimal effect. Based on these insights, we propose an efficient data collection strategy. With four data collectors working for one afternoon, we collect sufficient data to enable the policies for two tasks to achieve approximately 90% success rates in novel environments with unseen objects.</p>
                     </details>
                 </div>
             </div>

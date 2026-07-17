@@ -590,7 +590,7 @@
                 <a href="World-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">World Model</span>
-                    <span class="nav-count">78</span>
+                    <span class="nav-count">77</span>
                 </a>
                 <a href="3D-Foundation-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
@@ -675,7 +675,7 @@
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Kalman Filter</span>
-                    <span class="nav-count">54</span>
+                    <span class="nav-count">51</span>
                 </a>
                 <a href="Loop-Closure-Detection.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -695,7 +695,7 @@
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">77</span>
+                    <span class="nav-count">76</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -730,7 +730,7 @@
                 <a href="Model-Predictive-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#14b8a6"></span>
                     <span class="nav-label">Model Predictive Control</span>
-                    <span class="nav-count">53</span>
+                    <span class="nav-count">52</span>
                 </a>
                 <a href="Whole-Body-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#06b6d4"></span>
@@ -809,7 +809,7 @@
             <a href="World-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">World Model</span>
-                <span class="nav-count">78</span>
+                <span class="nav-count">77</span>
             </a>
             <a href="3D-Foundation-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
@@ -894,7 +894,7 @@
             <a href="Kalman-Filter.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Kalman Filter</span>
-                <span class="nav-count">54</span>
+                <span class="nav-count">51</span>
             </a>
             <a href="Loop-Closure-Detection.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -914,7 +914,7 @@
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">77</span>
+                <span class="nav-count">76</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -949,7 +949,7 @@
             <a href="Model-Predictive-Control.html" class="nav-item active">
                 <span class="nav-dot" style="background:#14b8a6"></span>
                 <span class="nav-label">Model Predictive Control</span>
-                <span class="nav-count">53</span>
+                <span class="nav-count">52</span>
             </a>
             <a href="Whole-Body-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#06b6d4"></span>
@@ -1025,9 +1025,39 @@
         <section class="topic-section">
             <div class="topic-header">
                 <span class="topic-badge" style="background:#14b8a6">Model Predictive Control</span>
-                <span class="topic-count">53 papers</span>
+                <span class="topic-count">52 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2509.19869v2" target="_blank" class="paper-title">Modeling and Control of Deep Sign-Definite Dynamics with Application to Hybrid Powertrain Control</a>
+                        <span class="paper-date">2026-07-16</span>
+                    </div>
+                                        <span class="paper-comment">📝 Submitted to Automatica</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：针对难以建立精确机理模型的复杂系统，如何设计既能保证物理一致性又能实现高效最优控制的数据驱动深度模型。&#10;&#10;🛠 **方法**：提出符号约束（对雅可比矩阵元素施加正负限制）作为单调性、正定性和符号确定性的统一描述，并给出精确可线性化深度动力学的结构条件与神经网络参数化方法，使模型预测控制可转化为凸二次规划或凸松弛问题。&#10;&#10;✨ **主要贡献**：通过构造性约束保证深度动力学模型的物理合理性，同时将最优控制转化为凸优化问题，在三水箱系统和混合动力总成实验中验证了该方法相比非凸方案具有更好的外推性能和更平滑的控制输入。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Data-driven control increasingly relies on deep models for complex systems whose first-principles models are difficult to obtain. For reliable deployment, however, learned dynamics should respect physical structure and lead to tractable optimal control. We introduce sign constraints, namely sign restrictions on Jacobian entries, as a unified description of monotonicity, positivity, and sign-definiteness. For exactly linearizable deep dynamics, we provide structural conditions and neural-network parameterizations that enforce these constraints by construction. The same structure also allows model predictive control to be formulated as a convex quadratic program or as a convex relaxation, yielding a unique optimizer and a Lipschitz continuous control law. Applications to a three-tank system and a hybrid powertrain demonstrate that the proposed approach offers improved extrapolation performance and smoother control inputs compared with competing nonconvex formulations.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.14600v1" target="_blank" class="paper-title">A Nonlinear Model Predictive Control Perspective on Gradient-Based Optimization: A New Efficient, Parameter-Free and Provably Stable Algorithm</a>
+                        <span class="paper-date">2026-07-16</span>
+                    </div>
+                                        <span class="paper-comment">📝 15 pages, 14 Figures</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决梯度优化算法在非线性模型预测控制（NMPC）应用中参数敏感、收敛慢且缺乏稳定性保证的问题。  &#10;🛠 **方法**：提出一种名为“搜索与加速”（SaA）的新算法，融合了新型线搜索、信赖域机制和自适应梯度加速方案。  &#10;✨ **主要贡献**：该算法在600个箱约束优化问题基准测试中表现优异，参数鲁棒性强（默认值即可适用），且在NMPC中能缩短控制更新周期，同时保证稳定性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>This paper discusses some aspects related to gradient-based optimization algorithms with special focus on the requirements associated to their use in the implementation of Nonlinear Model Predictive Control. Based on a dedicated discussion, a new algorithm, termed Search and Accelerate (SaA) is proposed that mixes together a novel line search, a trust region mechanism together with an adaptation of the gradient acceleration scheme. A dedicated benchmark involving a set of 600 instances of box constrained optimization problems is designed and used in order to show the algorithm performances which make it a highly competitive general purpose gradient-based alternative for box-constrained optimization problems. An appealing feature of the algorithm is its robustness to the choice of the few parameters involved in its definition making the default values a valid option for any problem without a priori knowledge of the related Lipchitz constant. Moreover, an example of use of the proposed algorithm in NMPC implementation is proposed showing the possibility to reduce the control updating period which might be mandatory in some circumstances.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2607.13877v1" target="_blank" class="paper-title">AI-Augmented Adaptive Digital Twin Modeling for Brain Tumor Evolution Prediction and Treatment Scheduling</a>
@@ -1154,10 +1184,7 @@
                         <span class="paper-date">2026-07-14</span>
                     </div>
                                         <span class="paper-comment">📝 Website: https://dense-reward.github.io/</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：机器人强化学习缺乏可靠的视觉-语言奖励模型，难以提供密集且信息丰富的反馈，主要受限于大规模失败数据获取困难和奖励信号稀疏。&#10;&#10;🛠 **方法**：提出DenseReward模型，通过自动化仿真管道生成物理真实的失败轨迹（如碰撞、抓取失败、物体掉落等），并基于视觉观察和语言指令预测密集的帧级奖励分数。&#10;&#10;✨ **主要贡献**：无需人工标注即可合成多样化失败数据，实现细粒度任务进度估计；在模拟和真实操作中优于通用VLM和现有奖励模型，并成功用于模型预测控制和强化学习。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Reinforcement learning holds great promise for improving robot policies beyond the limits of imitation learning. However, its practical adoption remains bottlenecked by the lack of reliable vision-language reward models that provide dense and informative feedback. Two key challenges remain: acquiring diverse failure data at scale and obtaining fine-grained reward signals beyond sparse trajectory-level success labels. Collecting failure trajectories typically requires laborious human effort, while pseudo-failures constructed by relabeling successful demonstrations fail to capture the diverse physical failure modes that arise during robot execution. Meanwhile, existing reward models often predict sparse binary or trajectory-level rewards, which provide limited guidance for efficient policy optimization. We introduce DenseReward, a dense robotic reward model that addresses both challenges. To train DenseReward, we develop an automated failure data generation pipeline that synthesizes physically realistic failure trajectories in simulation without human labeling, covering diverse failure modes such as collisions, missed grasps, object drops, and recovery behaviors. DenseReward predicts dense frame-level reward scores from visual observations and language instructions, enabling fine-grained estimation of task progress throughout an episode. Experiments show that DenseReward outperforms general-purpose VLMs and existing robotic reward models in dense reward prediction across both simulated and real-world manipulation. We further demonstrate that DenseReward provides effective reward guidance for downstream model predictive control and reinforcement learning. We release the dataset, trained reward models, and evaluation suite to support the development of failure-aware dense reward modeling for robot learning.</p>
@@ -1169,10 +1196,7 @@
                         <span class="paper-date">2026-07-14</span>
                     </div>
                                         <span class="paper-comment">📝 29 pages, 8 figures</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：如何利用开放权重推理模型，通过少量训练数据高效调度建筑热能存储系统，以降低碳排放并接近最优控制性能。&#10;&#10;🛠 **方法**：采用基于可验证奖励的强化学习（RLVR），将离线动态规划（DP）的动作值转化为密集奖励信号，仅用30个训练提示对开放权重推理模型进行强化微调（RFT），使其输出每小时热泵设定点。&#10;&#10;✨ **主要贡献**：RFT将开放权重模型的碳排放从70.5降至61.2 kg-CO₂，接近DP最优值60.8 kg-CO₂；验证了推理时间推理的重要性（非推理模型GPT-4o表现差于无存储基线）；发现RFT主要稳定了规划模式（如候选比较、前瞻和可行性检查），而非创造新策略，并在预测误差和未见条件下保持鲁棒性。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Buildings are expected to shift cooling loads in response to grid conditions. Thermal energy storage (TES) enables this shift, but scheduling it well requires planning hours ahead under storage constraints. Model predictive control (MPC) and reinforcement learning are difficult to scale across buildings. This study instead adapts an open-weight reasoning model through reinforcement learning with verifiable rewards (RLVR). We convert exact offline dynamic-programming (DP) action values into dense rewards for every candidate action. Using only 30 training prompts, reinforcement fine-tuning (RFT) trains the model as an upper-level scheduler that outputs hourly heat-pump setpoints from text-based states and forecasts. Evaluation uses a deliberately simple office-building TES benchmark where exact DP is tractable and the optimum is known. RFT reduces the open-weight model's emissions from 70.5 to 61.2 kg-CO2, close to the DP optimum of 60.8 kg-CO2. GPT-5 nearly matches DP and MPC without task-specific training, while GPT-4o, a non-reasoning LLM, produces higher emissions than the no-storage baseline, so inference-time reasoning appears important. Trace analysis shows that RFT mainly stabilizes observable planning patterns (candidate comparison, look-ahead, and feasibility checking) rather than creating a new strategy. Robustness and generalization tests clarify what transfers: the reinforced planning patterns persist under forecast errors and an unseen TES condition and carry over to a battery task, but its different structure limits the gains. DP-based verifiable rewards offer a practical way to adapt open-weight reasoning models to building storage scheduling. These results motivate higher-fidelity tests of whole-building control and scalable verifiers for city-scale energy management.</p>
@@ -1656,42 +1680,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>We investigate the problem of remote estimation (at a monitor) of a discrete-time joint Markov process with individual components which can be observed with dedicated sensors. At a given time slot, the monitor has the option of staying idle or sending a pull request to one of the sensors to obtain a partial state value, while the sensors are assumed to have heterogeneous sampling costs. Our goal is to develop a monitor pull policy, i.e., determining when and towards which sensor to send a pull request, in order to minimize a weighted sum of average age of incorrect information (AoII), or in short age, and sampling costs. As the communication model, we assume an erasure channel with a fixed one-slot delay from each sensor to the monitor. In this setting, the monitor does not perfectly know either the state of the process or the age, at any given time. We first obtain a sufficient statistic, namely belief, representing the joint distribution of the age and the current state of the observed process, by using the history of all pull requests and observations. Then, we formulate the optimization problem as a continuous state-space Markov decision process (MDP), namely belief-MDP, for the solution of which we propose two model predictive control (MPC) methods, namely MPC without terminal costs (MPC-WTC), and reinforcement learning MPC (RL-MPC). The effectiveness of the proposed methods is validated by numerical examples.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2407.21359v2" target="_blank" class="paper-title">ProSpec RL: Plan Ahead, then Execute</a>
-                        <span class="paper-date">2026-06-28</span>
-                    </div>
-                                        <span class="paper-comment">📝 Withdrawn by the authors due to substantial errors in the analysis that affect the main conclusions of the paper</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Imagining potential outcomes of actions before execution helps agents make more informed decisions, a prospective thinking ability fundamental to human cognition. However, mainstream model-free Reinforcement Learning (RL) methods lack the ability to proactively envision future scenarios, plan, and guide strategies. These methods typically rely on trial and error to adjust policy functions, aiming to maximize cumulative rewards or long-term value, even if such high-reward decisions place the environment in extremely dangerous states. To address this, we propose the Prospective (ProSpec) RL method, which makes higher-value, lower-risk optimal decisions by imagining future n-stream trajectories. Specifically, ProSpec employs a dynamic model to predict future states (termed "imagined states") based on the current state and a series of sampled actions. Furthermore, we integrate the concept of Model Predictive Control and introduce a cycle consistency constraint that allows the agent to evaluate and select the optimal actions from these trajectories. Moreover, ProSpec employs cycle consistency to mitigate two fundamental issues in RL: augmenting state reversibility to avoid irreversible events (low risk) and augmenting actions to generate numerous virtual trajectories, thereby improving data efficiency. We validated the effectiveness of our method on the DMControl benchmarks, where our approach achieved significant performance improvements. Code will be open-sourced upon acceptance.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.28300v1" target="_blank" class="paper-title">CacheMPC: Certified Cached Model Predictive Control for Quadruped Locomotion</a>
-                        <span class="paper-date">2026-06-26</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Model Predictive Control (MPC) is the standard predictive layer in hierarchical quadruped controllers, but the per-cycle QP solve limits the update rate achievable on embedded processors. Because legged gaits revisit a bounded region of state space, MPC solutions admit caching and reuse. This paper proposes \emph{Certified CacheMPC}: a Locality-Sensitive-Hashed cache of horizon contact-force trajectories, partitioned by contact mode, retrieved at query time and accepted only when an a-posteriori per-query certificate confirms primal feasibility and a Lagrangian dual-gap upper bound on cost suboptimality. A bounded-budget controller schedule combines top-$K$ certified retrieval, a deadline-bounded QP solve, and a shifted last-certified fallback. The framework is evaluated on a Unitree Go2 across $2{,}038$ usable cold-controller MuJoCo trials, including a $600$-trial $n\!=\!50$ campaign at three failure-boundary cells, and a first-deploy session on the on-robot NVIDIA Orin NX. The un-gated cache delivers a $25\times$ median solve-time speedup in simulation and an $18.7\times$ median speedup on hardware. At $n\!=\!50$ no statistically significant difference in closed-loop stable rate is detected between the cache variants and the no-cache baseline at any tested cell. The certificate's contribution to closed-loop safety is not resolvable at the present sample size.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.26981v1" target="_blank" class="paper-title">In-Context Model Predictive Generation: Open-Vocabulary Motion Synthesis from Language Models to Physics</a>
-                        <span class="paper-date">2026-06-25</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Synthesizing human motion from textual descriptions is essential for immersive digital applications, yet existing methods face a persistent trade-off between semantic fidelity and physical realism. Large language model (LLM)-based approaches can interpret diverse open-vocabulary instructions and compose high-level action plans, but they often generate motions that violate physical constraints. Physics-aware models improve realism through simulation or control, but they struggle with semantic complexity, fine-grained instructions, and novel concepts. To address this gap, we propose In-Context Model Predictive Generation (ICMPG), a framework that integrates language-model planning with inference-time physical feedback. ICMPG reformulates motion synthesis as a Model Predictive Control (MPC)-like process with two modules. The Context-Aware Motion Generation (CAMG) module uses an LLM as a planner to decompose textual commands and generate candidate motion sequences from motion tokens. The Model Predictive Generation (MPG) module evaluates these candidates through physical simulation and semantic alignment, estimates a composite reward, and selects the best sequence to guide subsequent generation steps. Unlike open-loop generation, this closed-loop refinement enables ICMPG to adapt motions to both the input semantics and the simulated physical environment without task-specific policy retraining. Extensive experiments across standard and zero-shot open-vocabulary settings show that ICMPG generalizes robustly to diverse commands and produces motions that are more physically plausible and semantically faithful than representative baselines on the evaluated benchmarks. The framework bridges semantic interpretation and physical simulation while remaining flexible enough to incorporate different LLM backbones, enabling more versatile and controllable text-driven motion synthesis.</p>
                     </details>
                 </div>
             </div>

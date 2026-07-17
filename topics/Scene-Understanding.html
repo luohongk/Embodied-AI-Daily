@@ -590,7 +590,7 @@
                 <a href="World-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">World Model</span>
-                    <span class="nav-count">78</span>
+                    <span class="nav-count">77</span>
                 </a>
                 <a href="3D-Foundation-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
@@ -675,7 +675,7 @@
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Kalman Filter</span>
-                    <span class="nav-count">54</span>
+                    <span class="nav-count">51</span>
                 </a>
                 <a href="Loop-Closure-Detection.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -695,7 +695,7 @@
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">77</span>
+                    <span class="nav-count">76</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -730,7 +730,7 @@
                 <a href="Model-Predictive-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#14b8a6"></span>
                     <span class="nav-label">Model Predictive Control</span>
-                    <span class="nav-count">53</span>
+                    <span class="nav-count">52</span>
                 </a>
                 <a href="Whole-Body-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#06b6d4"></span>
@@ -809,7 +809,7 @@
             <a href="World-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">World Model</span>
-                <span class="nav-count">78</span>
+                <span class="nav-count">77</span>
             </a>
             <a href="3D-Foundation-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
@@ -894,7 +894,7 @@
             <a href="Kalman-Filter.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Kalman Filter</span>
-                <span class="nav-count">54</span>
+                <span class="nav-count">51</span>
             </a>
             <a href="Loop-Closure-Detection.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -914,7 +914,7 @@
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">77</span>
+                <span class="nav-count">76</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -949,7 +949,7 @@
             <a href="Model-Predictive-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#14b8a6"></span>
                 <span class="nav-label">Model Predictive Control</span>
-                <span class="nav-count">53</span>
+                <span class="nav-count">52</span>
             </a>
             <a href="Whole-Body-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#06b6d4"></span>
@@ -1028,6 +1028,66 @@
                 <span class="topic-count">80 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2603.18624v2" target="_blank" class="paper-title">REST: Receding Horizon Explorative Steiner Tree for Zero-Shot Object-Goal Navigation</a>
+                        <span class="paper-date">2026-07-16</span>
+                    </div>
+                                        <span class="paper-comment">📝 Accepted to IROS'26</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：零样本目标导航（ZSON）中，现有方法将子目标候选视为单一航点，忽略了路径上的信息增益和候选间的结构关系，导致决策效率低下。&#10;&#10;🛠 **方法**：提出REST框架，通过在线RGB-D流构建开放词汇3D地图，基于采样规划生成以智能体为中心的路径树作为选项空间，并将每条分支文本化为空间叙事，利用链式思维大语言模型推理选择最优路径。&#10;&#10;✨ **主要贡献**：首次将选项空间设计为路径树，通过共享分支实现从粗到细的LLM推理，显著提升导航效率；在Gibson、HM3D和HSSD基准上，成功率与路径效率均达到顶尖水平。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Zero-shot object-goal navigation (ZSON) requires navigating unknown environments to find a target object without task-specific training. Prior hierarchical solutions mainly focus on either scene understanding and representations (belief) or high-level decision-making and planning (policy), yet treat the option, i.e., the subgoal candidate that belief proposes and policy selects, as an interface inherited from adjacent modules rather than a design axis in its own right. In practice, options are predominantly single waypoints scored by destination utility: a lone destination hides the value gathered en route, and a flat list obscures the relationships among candidates. Our insight is that the option space should be a tree of paths. Full paths expose en-route information gain that destination-only scoring systematically neglects; a tree of shared segments enables coarse-to-fine LLM reasoning that dismisses or pursues entire branches before examining individual leaves, compressing the combinatorial path space into an efficient hierarchy. We instantiate this insight in REST (Receding Horizon Explorative Steiner Tree), a training-free framework that (1) builds an explicit open-vocabulary 3D map from online RGB-D streams; (2) grows an agent-centric tree of safe and informative paths as the option space via sampling-based planning; and (3) textualizes each branch into a spatial narrative and selects the next-best path through chain-of-thought LLM reasoning. Across the Gibson, HM3D, and HSSD benchmarks, REST consistently ranks among the top methods in success rate and path efficiency.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.14675v1" target="_blank" class="paper-title">An Intelligent-Cloud Edge Multimodal Interaction System for Robots</a>
+                        <span class="paper-date">2026-07-16</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在计算资源受限的机器人平台上，实现复杂环境下的鲁棒人机交互，包括准确的手势感知、场景理解和任务规划。&#10;&#10;🛠 **方法**：提出云-边多模态交互框架，集成改进的YOLO手势检测器（加入CBAM注意力模块和DIoU损失函数）与LLM/VLM智能体；云端负责检测、融合与规划，TonyPi机器人本地处理数据采集与执行。&#10;&#10;✨ **主要贡献**：手势检测在公开和自定义数据集上分别达到98.9%和95.0%的精度，系统任务成功率最高达95%；30人评估平均满意度3.69/5，验证了轻量级手势检测与多模态智能体结合在资源受限机器人上的可行性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Robust human-robot interaction in complex environments requires accurate gesture perception, semantic scene understanding, and reliable task planning under limited onboard computing resources. This paper presents a cloud-edge multimodal interaction framework that integrates an enhanced YOLO-based gesture detector with coordinated large language model (LLM) and vision-language model (VLM) agents. The proposed detector, incorporates the Convolutional Block Attention Module (CBAM) into the neck and replaces the baseline bounding-box regression objective with Distance-IoU (DIoU) loss. These modifications improve feature discrimination and localization for small or partially occluded gestures in complex backgrounds. The cloud layer performs gesture detection, scene understanding, multimodal fusion, and action planning, whereas the TonyPi robot locally handles data acquisition, communication, action execution, and feedback. Experiments on a public gesture dataset and a custom dataset show that YOLO-DC achieves precision values of 98.9% and 95.0%, with mAP@0.5 values of 90.7% and 92.7%, respectively. System-level evaluation yields success rates of 95%, 88%, and 82% for single-action, composite-action, and vision-dependent tasks. A 30 participant evaluation yields an overall mean satisfaction score of 3.69 out of 5. These results demonstrate the feasibility of combining refined gesture detection with multimodal agents for resource-constrained robotic interaction.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.14586v1" target="_blank" class="paper-title">SoftNav: Injecting 3D Scene Tokens into VLMs for Embodied Navigation</a>
+                        <span class="paper-date">2026-07-16</span>
+                    </div>
+                                        <span class="paper-comment">📝 8 pages, 6 figures. Accepted to IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) 2026</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在目标导向的具身导航任务中，现有方法通过文本将3D场景信息传递给视觉语言模型（VLM），导致表示鸿沟，限制了导航性能。&#10;&#10;🛠 **方法**：提出SoftNav，通过轻量投影器将每个检测到的物体或前沿的实体级3D连续表示作为软令牌注入VLM的隐藏空间，冻结3D编码器和VLM，仅需约1200个样本和1700万可训练参数。&#10;&#10;✨ **主要贡献**：在HM3D-OVON上达到74.2%/68.3%/66.7%的成功率（SR），超越所有先前方法；零样本迁移至GOAT-Bench（67.2% SR）、SG3D（47.2% s-SR）及真实机器人部署，无需重新训练或架构修改，弥合了表示鸿沟。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>In goal-directed embodied navigation, where an agent must locate a specified target in an unseen environment, 3D scene understanding and navigation reasoning must work in concert. Current approaches transmit 3D scene information to vision-language models (VLMs) through text, suggesting a representation gap in our tested configurations; a controlled ablation confirms that direct embedding-level transfer significantly outperforms the evaluated text serialization formats. We introduce SoftNav, which injects entity-level 3D continuous representations -- one token per detected object or frontier -- into a VLM's hidden space as soft tokens through a lightweight projector. With the 3D encoder and VLM frozen, only ~1,200 samples and ~17M trainable parameters are needed. On HM3D-OVON, SoftNav achieves 74.2%/68.3%/66.7% SR across three splits, surpassing all prior methods in both SR and SPL; the same navigation policy transfers zero-shot to GOAT-Bench (67.2% SR), SG3D (47.2% s-SR), and real-world robot deployment without retraining or architectural modification. Injecting 3D scene tokens directly into VLMs bridges the representation gap, enabling transferable navigation with minimal training.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.14187v1" target="_blank" class="paper-title">RxBrain: Embodied Cognition Foundation Model with Joint Language-Visual Reasoning and Imagination</a>
+                        <span class="paper-date">2026-07-15</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决具身智能体在高层任务推理与物理状态之间建立连接的问题，实现语言与视觉联合的具身规划。&#10;&#10;🛠 **方法**：提出RxBrain模型，采用统一的多模态Mixture-of-Transformers架构，支持语言、图像和视频的理解与生成；通过自动管道将具身视频转换为文本-视觉联合规划监督，并引入RxBrain-Bench评估基准。&#10;&#10;✨ **主要贡献**：首次实现具身规划中语言抽象结构与视觉想象（世界状态预测、子目标规划）的互补融合，模型在保持理解与生成能力的同时，能生成耦合文本推理、状态预测和子目标规划的规划序列，并成功扩展至连续机器人动作生成，无需大规模动作数据预训练。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Embodied cognition requires agents to connect high-level task reasoning with the physical states to be achieved. We introduce Hy-Embodied-RxBrain, an embodied cognition foundation model with joint language-visual reasoning and imagination. Unlike vision-language models that emphasize scene understanding and textual decision making, or generative world models that mainly predict future visual states, RxBrain represents embodied plans in a single planning sequence where language and visual imagination play complementary roles. Language provides the abstract structure of a plan, including task decomposition, planning primitives, constraints, temporal order, and decision logic, while visual imagination grounds this structure through world state prediction and joint subgoal planning, associating each planning step with intermediate and final physical states. RxBrain adopts a unified multimodal Mixture-of-Transformers architecture that supports language, image, and video understanding and generation within one model. To train this capability, we build an automatic pipeline that converts embodied videos into joint text-visual planning supervision by decomposing videos into planning steps and aligning them with visual state transitions. We further introduce RxBrain-Bench to evaluate whether models can represent embodied plans through joint textual and visual components rather than separate understanding or generation. Experiments show that RxBrain maintains embodied understanding and generation abilities, and produces plans with coupled textual reasoning, world state prediction, and joint subgoal planning. We also extend RxBrain to continuous robot action generation, where it shows promising real-robot performance without large-scale action-data pretraining. These results provide an initial step toward foundation models for embodied cognition.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2606.27745v2" target="_blank" class="paper-title">Panoramic Scene Understanding: A Survey from Distortion-Aware Engineering to Sphere-Native Modeling</a>
@@ -1124,10 +1184,7 @@
                         <span class="paper-date">2026-07-13</span>
                     </div>
                                         <span class="paper-comment">📝 5 pages, 8 figures</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有4D雷达-相机融合方法主要优化目标检测，而双任务系统（检测+占用预测）中两者交互有限，缺乏对全场景语义布局的联合建模。&#10;&#10;🛠 **方法**：提出4DR360框架，将语义占用建模为持续传播的场景状态，通过状态引导的BEV增强（SBE）和Doppler引导的时间融合（DTF）实现跨模态粗到细的特征聚合。&#10;&#10;✨ **主要贡献**：首次在4D雷达-相机系统中实现360°全场景联合检测与占用预测，并扩展ManTruckScenes数据集生成卫星地图标注的占用标签，建立统一的跨数据集多任务评估协议。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Reliable autonomous driving requires full-scene perception that couples foreground objects with dense semantic layout. Recently, 4D millimeter-wave radar has emerged as a robust and affordable sensor, yet its sparse returns make radar-camera fusion necessary for comprehensive scene understanding. Existing radar-camera methods mainly optimize detection, while dual-task systems usually decode boxes and occupancy with limited interaction. To address this gap and advance radar-based multi-task learning, we propose \method, a 4D radar-camera framework for 360$^\circ$ full-scene perception, which models semantic occupancy as a persistent scene state rather than a terminal output. \method{} follows a cross-modal state reasoning paradigm, where the occupancy state is modeled and propagated through stages for coarse-to-fine feature aggregation. Specifically, State-guided BEV Enhancement (SBE) strengthens intra-frame BEV representation, while Doppler-guided Temporal Fusion (DTF) preserves state evidence over longer temporal horizons. Beyond the model, we further extend ManTruckScenes with satellite-map-based generated occupancy labels and pair it with OmniHD-Scenes in a unified cross-dataset detection-and-occupancy protocol. The resulting experiments cover accuracy, robustness, ablation, and efficiency under one radar-camera multi-task evaluation framework. Code and labels will be released upon acceptance.</p>
@@ -1139,10 +1196,7 @@
                         <span class="paper-date">2026-07-13</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：如何设计一个支持长期物理共存、具备多接口、长时记忆、多机器人协调及安全执行能力的智能机器人系统。&#10;&#10;🛠 **方法**：提出PHILIA多机器人智能体架构，基于“机器人网关”抽象层，将高层语义推理与低层机器人执行解耦，通过统一能力接口整合用户界面、机器人本体和策略后端。&#10;&#10;✨ **主要贡献**：实现了用户界面的组合式体验，支持异构机器人平台的即插即用，并在Astribot S1机器人上验证了从简单整理到复杂长时服务任务（如打包背包、提垃圾袋）的交互场景，强调了上下文理解与人机协同确认的重要性。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Long-term physical coexistence with intelligent robots requires more than capable robot policies. A persistent robotic assistant must support diverse user-facing interfaces, maintain long-horizon memory of people and preferences, coordinate across robot embodiments, and translate human intent into safe physical execution. We introduce PHILIA, a multi-robot agent built around a robot gateway abstraction. PHILIA retains the rich interaction and tool ecosystem of OpenClaw while exposing robot-local runtimes, onboard perception, navigation, speaker, and robot policies through a unified capability interface. This design decouples low-frequency, high-semantic agent reasoning from high-frequency, low-level robot execution, enabling plug-and-play integration of user interfaces, robot embodiments, and policy backends. As a result, the user experience becomes compositional: advances in user interfaces, robot embodiments, robot policies, navigation, or interaction algorithms can improve the overall experience without redesigning the system. We validate the architecture on Astribot S1 robots while designing the robot gateway contract to support future heterogeneous robot platforms through a shared capability interface for observation, task execution, navigation, speech playback, status monitoring, and task cancellation. We present representative use cases in which agent memory and scene understanding are grounded in robot actions. These span interactive household scenarios, ranging from simple organization to challenging long-horizon and dexterous service tasks, such as packing a backpack and lifting a garbage bag. We highlight the human-robot interaction flow, where contextual understanding of user intent and preferences, together with human-in-the-loop confirmation or adjustment during execution, is essential for effective assistance.</p>
@@ -1154,10 +1208,7 @@
                         <span class="paper-date">2026-07-13</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="好的，作为一名人工智能研究与学术论文分析专家，我将严格遵循您的要求，对这篇论文进行详细的中文解读。&#10;&#10;---&#10;&#10;## 0. 概览（Concise Summary）&#10;&#10;- **主题（Topic）**：3D场景理解、功能性3D场景图构建、开放词汇、机器人操作。&#10;- **问题（Problem）**：现有功能性3D场景图（如OpenFunGraph）局限于大型家具，缺乏对桌面可操作物体和物体-部件层级结构的建模，导致在细粒度操作任务中表现不佳。同时，引入这些新元素带来了小尺度、密集、相似实例的感知与推理挑战。&#10;- **方法（Method）**：提出一个基于2D视觉锚定和3D图优化的开放词汇流水线。该方法通过2D视觉证据锚定功能关系，利用多线索融合进行跨帧节点关联，并通过时序图优化（证据累积、熵正则化、时序平滑）鲁棒地确定功能边，最后进行全局层级塑造。&#10;- **创新（Innovation）**：1）扩展了功能性3D场景图的基准，首次引入桌面可操作物体和显式的层级结构（物体-功能载体-交互单元）。2）提出了一个新颖的流水线，通过2D视觉锚定解决3D几何退化问题，并通过图优化解决跨帧实例混淆和归属不确定性。&#10;- **意义（Significance）**：该工作显著提升了功能性3D场景图在复杂真实场景中的构建能力，使其更适用于细粒度的机器人操作任务，为连接高层语义理解与底层操作控制提供了更强大的中间表示。&#10;- **一句话总结**：本文通过扩展基准并设计一个基于2D视觉锚定和3D图优化的开放词汇流水线，成功构建了包含桌面物体和层级结构的、更全面且鲁棒的功能性3D场景图。&#10;&#10;## 1. 研究动机（Motivation）&#10;&#10;现有功能性3D场景图（如OpenFunGraph）存在两个关键局限，限制了其在真实世界机器人操作中的应用：&#10;&#10;1.  **基准覆盖不足**：现有基准（如SceneFun3D, FunGraph3D）主要关注大型家具（如橱柜、浴缸），忽略了在机器人操作任务中更常见的**桌面可操作物体**（如瓶子、水壶、盖子）。同时，它们缺乏对物体-部件之间**层级结构**（如“橱柜-抽屉-把手”）的显式建模，导致细粒度推理能力不足。例如，无法区分一个橱柜上多个抽屉的把手，从而无法执行“打开第二个抽屉”这样的指令。&#10;&#10;2.  **现有流水线无法应对新挑战**：引入桌面物体和层级结构后，带来了三个现有方法（如OpenFunGraph）难以克服的挑战：&#10;    -   **缺乏视觉锚定**：小尺度桌面部件（如瓶盖）的3D几何易受重建噪声影响，而层级结构中的密集同类节点（如多个抽屉）会导致3D边界框严重混淆。直接使用这些不可靠的3D信息进行LLM推理，会导致错误累积。&#10;    -   **跨帧融合中的实例混淆**：密集排列的同类实例（如一排调料瓶）在跨帧融合时，边界和特征容易重叠，导致实例身份混淆。&#10;    -   **动态视角下的归属不确定性**：由于遮挡和视角变化，交互单元（如把手）的归属（属于哪个抽屉）在不同帧之间可能频繁变化，导致关联抖动和错误连接。&#10;&#10;因此，本文旨在解决上述基准和方法的不足，构建一个更全面、更鲁棒的功能性3D场景图。&#10;&#10;## 2. 创新点（Innovation）&#10;&#10;本文的核心创新点在于：&#10;&#10;1.  **扩展了功能性3D场景图的基准**：首次将**桌面可操作物体**和**显式的层级结构**（物体O → 功能载体C → 交互单元U）纳入基准。这使场景图更贴近真实世界的操作场景，并定义了更丰富的功能关系。&#10;&#10;2.  **提出了基于2D视觉锚定的关系推理方法**：摒弃了依赖不可靠3D几何信息进行关系推理的旧范式。通过构建动态交互性地图（Dynamic Interactability Map）引导2D检测，并利用2D几何一致性和视觉-语义一致性，直接从2D图像中提取可靠的功能边证据，为后续3D融合提供了坚实基础。&#10;&#10;3.  **设计了基于图优化的鲁棒边关联机制**：将功能边的确定建模为一个时序图优化问题。通过结合**历史证据累积**（log-odds accumulation）、**熵正则化**（鼓励不确定性）和**时序平滑**（抑制抖动），该方法能够鲁棒地处理单帧观测的噪声和视角变化带来的归属不确定性，有效防止了关联抖动和错误连接。&#10;&#10;4.  **提出了多线索节点关联机制**：在跨帧节点关联中，综合了2D投影一致性（IoU）、3D几何距离、外观相似度和语义兼容性等多种线索，有效抑制了密集同类实例间的错误关联。&#10;&#10;## 3. 主要内容（Main Content）【重点】&#10;&#10;### 3.1 设计架构与方法&#10;&#10;本文提出一个三阶段渐进式推理框架，如图2所示：&#10;&#10;1.  **阶段一：开放词汇2D关系锚定**：该阶段旨在从2D帧中提取可靠的功能边候选及其视觉证据分数。&#10;    -   **动态交互性地图生成**：结合LLM的先验知识和当前帧的视觉检测结果，动态生成当前帧中可操作物体及其关联功能部件类型的映射。&#10;    -   **开放词汇节点候选生成**：基于交互性地图，使用LLMDet和SAM2进行开放词汇的实例检测和分割，生成节点候选。&#10;    -   **2D功能边生成与评分**：根据交互性地图的语义约束，通过几何一致性（掩码包含关系）和视觉-语义一致性（VLM评估）对候选边进行级联验证和评分。&#10;&#10;2.  **阶段二：功能节点与边关联**：该阶段将单帧的2D证据提升到3D，并鲁棒地确定全局的功能边。&#10;    -   **节点关联**：通过多线索融合（公式1），将当前帧检测到的节点与地图中的节点实例进行匹配，解决实例混淆问题。&#10;    -   **边关联**：将功能边的确定建模为时序图优化问题（公式3）。通过最大化一个包含历史证据累积、熵正则化和时序平滑的目标函数，鲁棒地确定每个细粒度节点的归属对象。&#10;&#10;3.  **阶段三：全局层级塑造**：在3D层面，利用更可靠的全局信息，将直接的功能边（O←U）优化为层级结构（O←C←U）。通过一个配对优化问题（公式9），将交互单元分配给最合适的功能载体。&#10;&#10;### 3.2 关键算法与数学推导&#10;&#10;**1. 节点关联权重计算（公式1）**：&#10;用于衡量当前帧检测节点 `n_k` 与地图节点 `v_j` 的匹配程度。&#10;$$S^{(t)}(n_k \rightarrow v_j) = w_{iou} \text{IoU}(b_{n_k}, \Pi_t(P_{v_j})) + w_{geo} K(\|x_{3D}^{n_k} - \mu_{v_j}\|) + w_{app} \cos(h_{n_k}, H_{v_j}) + w_{sem} J(c_{n_k}, c_{v_j})$$&#10;-   `IoU`: 2D投影一致性，比较检测框与地图节点投影框的重叠度。&#10;-   `K(·)`: 高斯核函数，将3D距离映射为相似度。&#10;-   `cos(·,·)`: 外观相似度，比较颜色直方图。&#10;-   `J(·,·)`: 语义兼容性，比较CLIP特征的余弦相似度。&#10;&#10;**2. 边关联的目标函数（公式3）**：&#10;用于优化每个细粒度节点 `f` 在时刻 `t` 的软分配分布 `z_f^{(t)}`。&#10;$$\max_{z_f^{(t)}} \left[ \sum_{o \in O_f} z_{o \leftarrow f}^{(t)} L_{1:t}(o \leftarrow f) + H(z_f^{(t)}) - D(z_f^{(t)}, z_f^{(t-1)}) \right]$$&#10;-   **数据项**：`L_{1:t}(o←f)` 是历史累积证据，通过log-odds累积（公式4）融合所有历史观测。&#10;    $$L_{1:t}(o \leftarrow f) := \sum_{\tau \in T_f^t(o)} \text{logit}(s_{2D}^{(\tau)}(o \leftarrow f))$$&#10;-   **熵正则化项**：`H(z_f^{(t)})`（公式5），鼓励在证据不足时保持不确定性，防止过早锁定错误关联。&#10;    $$H(z_f^{(t)}) = -\sum_{o \in O_f} z_{o \leftarrow f}^{(t)} \log z_{o \leftarrow f}^{(t)}$$&#10;-   **时序平滑项**：`D(z_f^{(t)}, z_f^{(t-1)})`（公式6），惩罚相邻帧间分配分布的剧烈变化，抑制关联抖动。&#10;    $$D(z_f^{(t)}, z_f^{(t-1)}) = \frac{1}{2} \sum_{o \in O_f} (z_{o \leftarrow f}^{(t)} - z_{o \leftarrow f}^{(t-1)})^2$$&#10;&#10;**3. 全局层级塑造的配对目标（公式9）**：&#10;用于将交互单元 `u` 分配给功能载体 `c`。&#10;$$\max_{\{Y_{c \leftarrow u}\}} \sum_{u \in U_o} \sum_{c \in C_o} Y_{c \leftarrow u} (C_{\text{prior}}(c, u) + G_{\text{near}}(c, u))$$&#10;-   `C_prior`: 语义兼容性，由交互性地图定义。&#10;-   `G_near`: 3D几何邻近性分数。&#10;&#10;### 3.3 模型、训练与数据集&#10;&#10;-   **模型**：本文方法是一个**流水线**，而非单一可训练模型。它集成了多个预训练/基础模型：&#10;    -   **LLM**: GPT-5，用于生成交互性地图的先验知识和语义推理。&#10;    -   **检测器**: RAM++（开放词汇图像标记）和 LLMDet（开放词汇目标检测）。&#10;    -   **分割器**: SAM2（分割一切模型）。&#10;    -   **VLM**: LLaVA v1.6，用于评估2D功能边的视觉-语义一致性。&#10;    -   **视觉语言模型**: CLIP，用于计算语义兼容性。&#10;-   **训练**：本文方法**无需训练**。所有组件都是预训练好的，通过精心设计的提示和算法流程组合在一起。&#10;-   **数据集**：在扩展标注后的 **SceneFun3D** 和 **FunGraph3D** 数据集上进行评估。扩展标注引入了桌面物体和层级关系（O-C-U三元组）。FunGraph3D包含722个节点和592条功能边，其中118条是层级关系，140个属于桌面类别。&#10;&#10;### 3.4 实验设置与结果&#10;&#10;-   **评估指标**：采用基于检索的评估（Recall@3/Recall@5），并针对开放词汇标签的语义粒度差异进行了调整（使用相似度阈值和匈牙利匹配）。&#10;-   **基线方法**：与 **FunGraph** 和 **OpenFunGraph** 及其变体（OpenFunGraph Tabletop, OpenFunGraph Hierarchy）进行比较。&#10;-   **主要结果**：&#10;    -   **节点评估（表1）**：在FunGraph3D上，本文方法在所有节点类别（物体、功能载体、交互单元）和总体节点上均显著优于所有基线。特别是在功能载体上，本文方法达到78.7%，远超OpenFunGraph Hierarchy的41.5%。&#10;    -   **三元组评估（表2）**：在FunGraph3D上，本文方法在层级、桌面和总体三元组上均大幅领先。例如，层级三元组达到61.9%，而最佳基线OpenFunGraph Hierarchy仅为16.1%。&#10;    -   **定性结果（图4）**：可视化结果表明，本文方法能准确构建层级结构（如烤箱-控制面板-旋钮），并成功识别桌面物体的交互单元和功能边，而基线方法则存在大量遗漏和错误关联。&#10;&#10;### 3.5 技术细节&#10;&#10;-   **动态交互性地图**：结合了LLM的全局先验（如“橱柜是可操作的”）和RAM++的帧级视觉检测，动态更新当前帧的可操作物体及其部件类型，使检测更具针对性和场景适应性。&#10;-   **2D功能边生成**：采用级联验证。先通过节点置信度和几何一致性（掩码包含关系）进行预过滤，再通过VLM进行最终的视觉-语义一致性评分，平衡了全面性和准确性。&#10;-   **节点关联的匹配策略**：在构建稀疏二分图后，使用最大权重一对一匹配（匈牙利算法）解决关联问题，并允许未匹配的节点初始化为新节点。&#10;-   **边关联的决策**：在优化得到软分配分布后，通过一个综合决策分数（公式7）进行Top-1选择，确定最终的功能边。&#10;-   **计算效率**：通过关键帧下采样控制计算开销，使得本文方法的运行时间与基线方法相当。&#10;&#10;## 4. 意义与影响（Significance and Impact）&#10;&#10;-   **解决的问题与贡献**：&#10;    -   **解决了现有功能性3D场景图覆盖不全、粒度粗糙的问题**，使其能够处理桌面物体和层级结构，更贴近真实机器人操作场景。&#10;    -   **提出了一套有效应对小尺度、密集、相似实例感知挑战的方法**，通过2D视觉锚定和3D图优化，显著提升了在复杂场景下的鲁棒性。&#10;    -   **为3D场景理解与机器人操作之间搭建了更坚实的桥梁**，提供了一种更丰富、更精确的场景表示，可用于自然语言引导的操作任务。&#10;&#10;-   **对未来研究/应用的影响**：&#10;    -   **基准贡献**：扩展后的基准为后续研究提供了更全面的评估平台，推动功能性3D场景图向更实用、更细粒度的方向发展。&#10;    -   **方法论启发**：其“2D锚定+3D优化”的范式，为处理3D感知中的几何退化问题提供了新思路。时序图优化框架对于处理动态环境下的不确定性具有借鉴意义。&#10;    -   **应用前景**：在机器人操作、增强现实、虚拟现实等领域具有巨大潜力，尤其是在需要理解复杂物体结构和执行精细操作的任务中。&#10;&#10;-   **局限与开放问题**：&#10;    -   **极端情况**：在极端遮挡或受限视角下，歧义性可能仍然存在。&#10;    -   **性能上限**：方法性能受限于底层检测/分割模型和VLM的判别能力。&#10;    -   **未来工作**：作者提出未来将探索主动视角选择，以主动获取更多信息，减少歧义。&#10;&#10;## 5. 澄清与简化（Clarifications and Simplifications）&#10;&#10;-   **功能性3D场景图**：可以想象成一个“物体操作说明书”。传统场景图只告诉你房间里有什么（物体）以及它们的位置关系（如“在...旁边”）。功能性场景图则更进一步，告诉你每个物体**怎么用**。例如，它不只是说“有一个烤箱”，还会告诉你“烤箱上有一个控制面板，面板上有旋钮，旋转旋钮可以设置温度”。这里的“烤箱”是**物体**，“控制面板”是**功能载体**，“旋钮”是**交互单元**，它们之间的箭头就是**功能关系**。&#10;&#10;-   **为什么不用3D信息直接推理？**：想象一下，你通过一个质量很差的3D扫描仪看一个厨房，所有瓶瓶罐罐都糊成一团，它们的3D位置和大小都不准。如果让一个AI仅凭这些模糊的3D坐标去判断“哪个盖子属于哪个瓶子”，它肯定会犯错。本文的方法就像让AI先看高清的2D照片，在照片上清晰地看到“这个盖子就在这个瓶子上”，然后再把这个2D证据整合到3D空间中，这样就可靠多了。&#10;&#10;-   **时序图优化在做什么？**：假设一个机器人正在观察一个有两个抽屉的柜子，每个抽屉都有一个把手。从某个角度看，它不确定左边的把手属于左边的抽屉还是右边的抽屉。这时，时序图优化就像一个“决策委员会”：&#10;    1.  **证据累积**：委员会会记录每一次观察（“第1帧，左边把手看起来像属于左边抽屉”）。随着观察次数增多，正确的证据会越来越多。&#10;    2.  **熵正则化**：在证据不足时，委员会会说“我们还不确定，先别急着下结论”，保持多种可能性。&#10;    3.  **时序平滑**：委员会不喜欢“朝令夕改”。如果上一帧认为把手A属于抽屉1，这一帧没有强有力的新证据，它就不会轻易改成抽屉2，从而避免了决策抖动。&#10;&#10;## 6. 补充说明（Additional Notes）&#10;&#10;-   **相关工作关联**：&#10;    -   本文与 **SceneFun3D** 和 **FunGraph3D** 工作一脉相承，但明确指出了它们的局限性并进行了扩展。&#10;    -   与 **IFR-Explore** 相比，本文是开放词汇的，并且处理真实场景而非合成场景。&#10;    -   与 **Open3DSG** 和 **ConceptGraph** 等开放词汇3D场景图方法相比，本文专注于**功能关系**和**层级结构**，而非仅仅是空间关系。&#10;    -   与 **FunGraph** 相比，本文采用了更鲁棒的2D锚定和3D图优化，而非简单的2D检测加VLM标注。&#10;&#10;-   **最重要的图表**：&#10;    -   **图1**：直观地展示了本文方法（Ours）与先前工作（Ours Knob Cabinet...）的对比，清晰地说明了本文引入的桌面物体和层级结构。&#10;    -   **图2**：是本文方法的核心，完整展示了三阶段流水线的架构和流程，是理解全文的关键。&#10;    -   **图4**：提供了定性结果的可视化对比，直观地证明了本文方法在复杂场景下的优越性。&#10;    -   **表1和表2**：提供了关键的定量结果，有力地支持了本文方法的有效性。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Functional 3D scene graphs offer a versatile and flexible representation for 3D scene understanding and robotic manipulation, defined by object nodes, interactive elements, and functional relationship edges. However, their potential remains underexplored due to the limited coverage of existing benchmarks and the overly straightforward design of previous pipelines, which primarily focus on large-scale furniture but lack of hierarchical structures. Therefore, in this work, we extend the benchmark coverage by introducing dense tabletop objects and explicit multi-level functional relationships. This expansion introduces critical challenges involving small-scale, dense, and similar instances, with lack of visual anchoring in relational reasoning, instance confusion during cross-frame fusion, and attribution uncertainty under dynamic viewpoints. To address these issues, we propose an open-vocabulary pipeline based on 2D visual grounding and 3D graph optimization. Specifically, we anchor fine-grained functional edges from 2D visual evidence, and associate nodes across frames in 3D using multiple cues. Furthermore, edge association is formulated as temporal graph optimization, integrating evidence accumulation, entropy regularization, and temporal smoothing to robustly determine the functional connections of each node. Finally, global hierarchy shaping is performed to recover the hierarchical graph structure. Extensive experiments demonstrate that the proposed method can reliably infer functional 3D scene graphs in challenging real-world scenes, thereby further unlocking their potential for practical applications.</p>
@@ -1169,10 +1220,7 @@
                         <span class="paper-date">2026-07-13</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有基于扩散的对象中心模型依赖复杂的预训练生成先验（如Stable Diffusion）和外部VAE潜空间，导致计算开销大且流程繁琐，难以实现高效场景分解与高质量生成。&#10;&#10;🛠 **方法**：提出Slot-RAE框架，直接在冻结的视觉基础模型（如DINOv3）的连续语义特征空间中运行，使用Slot注意力机制和从头训练的扩散Transformer（DiT）解码器，并引入表示对齐（REPA）头进行特征空间扩散。&#10;&#10;✨ **主要贡献**：无需VAE瓶颈和任务无关的生成预训练，在COCO数据集上实现与现有方法相当的无监督对象发现、更高保真度的图像重建和鲁棒的零样本组合能力，同时显著提升计算效率和速度。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Deploying object-centric models for real-world scene understanding typically requires complex pipelines to achieve both robust scene decomposition and high-fidelity generation. Recent diffusion-based approaches have improved visual quality, but they almost universally rely on heavy, pretrained generative priors (e.g., Stable Diffusion) and external VAE latent spaces. In this paper, we propose Slot-RAE, a much simpler, fully integrated framework that operates directly within the continuous semantic feature space of visual foundation models (e.g., DINOv3). Slot-RAE employs a feature-space diffusion process using a Diffusion Transformer (DiT) decoder and a Representation Alignment (REPA) head. Unlike existing diffusion-based objectcentric methods that rely heavily on subsidized text-toimage priors, the generative core of Slot-RAE (Slot Attention and the DiT) is trained from scratch within the frozen VFM feature space. This eliminates the need for VAE bottlenecks and task-agnostic generative pre-training. Experiments on the COCO dataset demonstrate that despite its architectural simplicity, Slot-RAE achieves state-of-the-art results. It delivers comparable unsupervised object discovery, higher-fidelity image reconstruction, and robust zero-shot compositionality, all while being significantly faster and more computationally efficient than existing object-centric latent diffusion models.</p>
@@ -1968,54 +2016,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Language-conditioned robot manipulation is an emerging field aimed at enabling seamless communication and cooperation between humans and robotic agents by teaching robots to comprehend and execute instructions conveyed in natural language. This interdisciplinary area integrates scene understanding, language processing, and policy learning to bridge the gap between human instructions and robot actions. In this comprehensive survey, we systematically explore recent advancements in language-conditioned robot manipulation. We categorize existing methods based on the primary ways language is integrated into the robot system, namely language for state evaluation, language as a policy condition, language for cognitive planning and reasoning, and language in unified vision-language-action models. Specifically, we further analyze state-of-the-art techniques from five axes of action granularity, data and supervision regimes, system cost and latency, environments and evaluations, and task specification. Additionally, we highlight the key debates in the field. Finally, we discuss open challenges and future research directions, focusing on potentially enhancing generalization capabilities and addressing safety issues in language-conditioned robot manipulators.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.23312v1" target="_blank" class="paper-title">From Pixels to Concepts: Growing Rich 3D Semantic Scene Graph Forests utilizing Foundation Models</a>
-                        <span class="paper-date">2026-06-22</span>
-                    </div>
-                                        <span class="paper-comment">📝 To be published in the Proceedings of the IEEE/RSJ International Conference on Intelligent Robots & Systems (IEEE IROS 2026)</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Operating in complex real-world environments requires robots to understand their surroundings on a functional semantic level. This demands a detailed multi-layer world model capturing the complex relations of its surroundings. Hierarchical 3D scene graphs address this challenge by integrating geometric, semantic, and relational data within a unified spatial framework. However, current 3D scene graph approaches often restrict themselves to rigid structures of pre-determined relationship classes, mostly neglecting important semantic connections, like causal connections or environmental contexts. This paper explores the potential of foundation models to build forests of 3D scene graphs with open semantic relationships to improve scene understanding and robotic task execution. We propose a method where instance-specific concept-nodes and relationships are first identified by a VLM and extended upon by a LLM, inferring broader, more abstract concept-nodes and relationships through reasoning. These object-nodes, concept-nodes, and relationships are then assembled into a forest of hierarchical 3D scene graphs, enhanced with concept-nodes to represent abstract concepts. Evaluations were conducted on the uHumans2 and ScanNet indoor dataset, validating the accuracy and relevance of the generated relationships. Downstream suitability of scene-graph forests for robotics applications is demonstrated in an open-vocabulary object-retrieval task utilizing both ScanNet data and a real-world indoor deployment using a Boston Dynamics Spot. This paper leverages foundation models to create more expressive, semantically deep 3D hierarchical scene graphs and demonstrates their potential to advance semantic and environmental understanding in robotics.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.23113v1" target="_blank" class="paper-title">Technical Report for the ICRA 2026 GOOSE 2D Fine-Grained Semantic Segmentation Challenge: Pretraining-Diverse Ensemble of Foundation Vision Encoders for Robust Outdoor Scene Understanding</a>
-                        <span class="paper-date">2026-06-22</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>This report presents our solution for the ICRA 2026 GOOSE 2D Fine-Grained Semantic Segmentation Challenge, which requires parsing unstructured outdoor scenes from four camera platforms into 56 fine-grained categories. Our approach pairs foundation vision encoders (including DINOv3, SigLIP2, and InternImage) with a Mask2Former decoder, and trains them with a strong recipe including long training schedules, exponential moving average, a larger crop size, and multi-scale plus flip test-time augmentation. The three encoders, chosen for their complementary pretraining objectives, are combined into a pretraining-diverse ensemble through per-class validation-IoU weighting. Evaluated on the official GOOSE test set, our submission achieves 75.40% composite mIoU and wins the second place of the challenge. Our study further shows that the encoder's pretraining recipe, rather than its parameter count or the decoder design, is the dominant factor for accuracy on this benchmark.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2605.24354v2" target="_blank" class="paper-title">SparseWorld: Enhancing End-to-End Autonomous Driving via World Models with Sparse Scene Representation</a>
-                        <span class="paper-date">2026-06-22</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Recently, world models have made significant progress in enhancing end-to-end driving systems through both future situation forecasting and improved scene understanding. However, existing driving world models are typically built upon dense scene representations, causing high computational costs and redundant information. In this paper, we present SparseWorld, a lightweight world model that focuses on predicting only the critical layout of the scene, enabling efficient future forecasting for end-to-end driving systems. SparseWorld first performs autoregressive rollout to forecast future map elements and surrounding agents, enabling the model to learn how driving scenarios evolve over time. It then leverages these predicted futures to refine downstream motion prediction and trajectory planning. Specifically, we propose a Sparse Dreamer that anticipates future instances in the latent space through joint temporal and spatial attention. By interacting with predicted future instances, the motion planner captures more accurate motion patterns and generates more informed and safety-aware trajectories. Extensive experiments demonstrate that SparseWorld significantly reduces collision risk and achieves state-of-the-art performance on the open-loop planning metrics of the nuScenes dataset with a collision rate of 0.05\%. Moreover, it substantially outperforms the baseline method in closed-loop planning metrics on the Bench2Drive benchmark. Supplementary material is available at the project page: https://wryzju.github.io/SparseWorld/.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.22660v1" target="_blank" class="paper-title">Prompting Diffusion Models for Zero-Shot Instance Segmentation</a>
-                        <span class="paper-date">2026-06-21</span>
-                    </div>
-                                        <span class="paper-comment">📝 Under review</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Several disruptive research directions have recently emerged in computer vision, including foundation models achieving previously unseen zero-shot performance in scene understanding, even interactively, and generative models that synthesize extremely realistic images. The latter have also been shown to be highly effective in scene understanding tasks thanks to their rich priors. However, for promptable segmentation, foundation models struggle with accurately segmenting an object's region, leading to false positives and over-segmentation. Notably, early attempts that leverage generative priors use prompts only during post-processing, yielding suboptimal segments because the process is agnostic to the user input. In this paper, we target these limitations with Prompt2Seg, a spatial conditioning framework for diffusion-based segmentation. Prompt2Seg augments a frozen diffusion segmentation model with a conditioning branch. Our approach takes spatial prompts, represented as 2D Gaussians or confidence maps, as explicit input signals, training the model to respond directly to user intent. Fine-tuned on a deliberately constrained set of object categories drawn from Hypersim and Virtual KITTI 2, Prompt2Seg generalizes zero-shot to a wide range of unseen object types and visual domains. We evaluate on seven datasets ranging from standard benchmarks to more challenging domains, including paintings, egocentric views, and X-ray data. Furthermore, we demonstrate that Prompt2Seg consistently outperforms the underlying diffusion segmentation backbone across all benchmarks. Our results suggest that the rich priors encoded in generative pretraining, combined with principled spatial conditioning, offer a compelling path toward broadly generalizing interactive segmentation without large-scale mask supervision.</p>
                     </details>
                 </div>
             </div>
