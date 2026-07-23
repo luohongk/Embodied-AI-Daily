@@ -670,12 +670,12 @@
                 <a href="Autonomous-Driving.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#6366f1"></span>
                     <span class="nav-label">Autonomous Driving</span>
-                    <span class="nav-count">78</span>
+                    <span class="nav-count">79</span>
                 </a>
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Kalman Filter</span>
-                    <span class="nav-count">50</span>
+                    <span class="nav-count">51</span>
                 </a>
                 <a href="Loop-Closure-Detection.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -690,7 +690,7 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">68</span>
+                    <span class="nav-count">69</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
@@ -784,7 +784,7 @@
         <div class="sidebar-header">
             <h1><a href="../index.html" style="background:linear-gradient(135deg,#6366f1,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">🚀 Embodied AI Daily</a></h1>
             <div class="update">by <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent);text-decoration:none;font-weight:500;">Hongkun Luo</a> (罗宏昆)</div>
-            <div class="update" style="margin-top:2px">Last update: 2026-07-23</div>
+            <div class="update" style="margin-top:2px">Last update: 2026-07-24</div>
         </div>
             <a href="Continuous-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
@@ -889,12 +889,12 @@
             <a href="Autonomous-Driving.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
                 <span class="nav-label">Autonomous Driving</span>
-                <span class="nav-count">78</span>
+                <span class="nav-count">79</span>
             </a>
             <a href="Kalman-Filter.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Kalman Filter</span>
-                <span class="nav-count">50</span>
+                <span class="nav-count">51</span>
             </a>
             <a href="Loop-Closure-Detection.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -909,7 +909,7 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">68</span>
+                <span class="nav-count">69</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
@@ -1028,6 +1028,21 @@
                 <span class="topic-count">80 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2510.18348v2" target="_blank" class="paper-title">PGTT: Phase-Guided Terrain Traversal for Perceptive Legged Locomotion</a>
+                        <span class="paper-date">2026-07-22</span>
+                    </div>
+                                        <span class="paper-comment">📝 8 pages, 9 figures, 3 tables, Accepted at IROS 2026</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有足式机器人感知强化学习控制器要么依赖振荡器或逆运动学步态先验，限制动作空间和跨形态适应性，要么“盲目”运行，无法预判后腿地形且对观测噪声脆弱。&#10;&#10;🛠 **方法**：提出相位引导地形遍历（PGTT），通过奖励塑形强制步态结构，使用三次Hermite样条编码每腿相位，根据局部高度图调整摆动高度，并添加摆动相接触惩罚，策略直接在关节空间动作以实现形态无关部署。&#10;&#10;✨ **主要贡献**：在MuJoCo中训练后，PGTT在推扰干扰下成功率中位数比次优基线高7.5%，离散障碍物上高9%，速度跟踪相当；在Unitree Go2和ANYmal-C上验证了跨平台迁移能力，无需特定平台策略先验或大量调参。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>State-of-the-art perceptive Reinforcement Learning controllers for legged robots typically either (i) impose oscillator-or IK-based gait priors that constrain the action space, bias policy optimization, and limit adaptability across robot morphologies, or (ii) operate "blind," making them unable to anticipate hind-leg terrain and brittle to observation noise. We propose Phase-Guided Terrain Traversal (PGTT), a perception-aware deep-RL approach that enforces gait structure through reward shaping, thereby reducing inductive bias compared to oscillator- or IK-conditioned action priors. PGTT encodes per-leg phase as a cubic Hermite spline, adapts swing height to local heightmap statistics, and adds a swing-phase contact penalty, while the policy acts directly in joint space for morphology-agnostic deployment. Trained in MuJoCo (MJX) on procedurally generated stair-like terrains with curriculum learning and domain randomization, PGTT achieves the highest success rate among the evaluated baselines under push disturbances (median +7.5% over the next-best baseline) and on discrete obstacles (+9%), while maintaining comparable velocity tracking. We validate PGTT on a Unitree Go2 using a real-time LiDAR elevation-to-heightmap pipeline and report preliminary results on ANYmal-C using the same hyperparameters. These results provide early evidence that terrain-adaptive, phase-guided reward shaping can transfer across platforms without platform-specific policy priors or extensive re-tuning.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2607.17326v1" target="_blank" class="paper-title">Rethinking the Suitability of Reinforcement Learning Algorithms Under Practical Transfer Constraints</a>
@@ -1169,10 +1184,7 @@
                         <span class="paper-date">2026-07-01</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：四足机器人强化学习依赖固定、手工设计的马尔可夫奖励函数，导致策略可解释性差且无法显式控制步态行为。&#10;&#10;🛠 **方法**：提出基于信号时序逻辑（STL）的参数化约束框架，将步态规范（如安全边界、同步约束、速度跟踪）转化为稠密连续奖励信号，结合平滑鲁棒性近似与PPO算法进行策略优化，并在MuJoCo XLA中并行训练Barkour机器人。&#10;&#10;✨ **主要贡献**：相比手工奖励基线，STL塑造的奖励实现了更精确的速度跟踪和更稳定的训练过程，同时通过参数化步态模板（行走-小跑、小跑、跳跃）增强了策略的可解释性与步态控制能力。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Reinforcement learning (RL) for quadruped locomotion commonly depends on fixed, hand-crafted, and Markovian reward functions that limit both interpretability of learned policies and lack explicit control over gait behaviors. We introduce a framework where distinct gaits are specified using parameterized constraints expressed in Signal Temporal Logic (STL). These include safety bounds, gait synchronization constraints, command tracking, and actuation bounds. From these specifications, we develop a reward shaping mechanism that provides learning agents a dense, continuous reward landscape that encodes desired behavior. We define parametric STL templates for three speed regimes (walking-trot, trot, bound), calibrate their parameters from reference rollouts, and compute rewards from using smooth approximations of STL robustness over the rollouts. The generated rewards can be used to provide shaped gradients compatible with Proximal Policy Optimization (PPO). We instantiate the approach on Google's Barkour quadruped robot in MuJoCo XLA (MJX). We use parallelization within the simulator to improve training speeds and use domain randomization to robustify learned policies. We show that compared to a baseline of hand-crafted rewards, the STL-shaped rewards yield tighter velocity tracking and more stable training. Videos can be found on our project website: https://stl-locomotion.github.io/.</p>
@@ -2006,25 +2018,13 @@
                         <p>This paper proposes a novel alternative to existing sim-to-real methods for training control policies with simulated experiences. Prior sim-to-real methods for legged robots mostly rely on the domain randomization approach, where a fixed finite set of simulation parameters is randomized during training. Instead, our method adds state-dependent perturbations to the input joint torque used for forward simulation during the training phase. These state-dependent perturbations are designed to simulate a broader range of reality gaps than those captured by randomizing a fixed set of simulation parameters. Experimental results show that our method enables humanoid locomotion policies that achieve greater robustness against complex reality gaps unseen in the training domain.</p>
                     </details>
                 </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2603.21853v2" target="_blank" class="paper-title">Sim-to-Real of Humanoid Locomotion Policies via Joint Torque Space Perturbation Injection</a>
-                        <span class="paper-date">2026-03-25</span>
-                    </div>
-                                        <span class="paper-comment">📝 Duplication, resubmission of our previous paper arXiv:2504.06585</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>This paper proposes a novel alternative to existing sim-to-real methods for training control policies with simulated experiences. Unlike prior methods that typically rely on domain randomization over a fixed finite set of parameters, the proposed approach injects state-dependent perturbations into the input joint torque during forward simulation. These perturbations are designed to simulate a broader spectrum of reality gaps than standard parameter randomization without requiring additional training. By using neural networks as flexible perturbation generators, the proposed method can represent complex, state-dependent uncertainties, such as nonlinear actuator dynamics and contact compliance, that parametric randomization cannot capture. Experimental results demonstrate that the proposed approach enables humanoid locomotion policies to achieve superior robustness against complex, unseen reality gaps in both simulation and real-world deployment.</p>
-                    </details>
-                </div>
             </div>
         </section>
 
         <footer class="footer">
             <p>👤 <strong>Hongkun Luo (罗宏昆)</strong> · <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent)">Academic Page</a> · <a href="https://github.com/luohongk" target="_blank" style="color:var(--accent)">GitHub</a></p>
             <p style="margin-top:8px">🤖 Generated automatically from <a href="https://arxiv.org" style="color:var(--accent)">arXiv</a> · <a href="https://github.com/luohongk/Embodied-AI-Daily" style="color:var(--accent)">GitHub Repo</a></p>
-            <p style="margin-top:4px">Last update: 2026-07-23 (Beijing Time)</p>
+            <p style="margin-top:4px">Last update: 2026-07-24 (Beijing Time)</p>
         </footer>
     </main>
 

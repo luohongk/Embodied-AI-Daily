@@ -670,12 +670,12 @@
                 <a href="Autonomous-Driving.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#6366f1"></span>
                     <span class="nav-label">Autonomous Driving</span>
-                    <span class="nav-count">78</span>
+                    <span class="nav-count">79</span>
                 </a>
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Kalman Filter</span>
-                    <span class="nav-count">50</span>
+                    <span class="nav-count">51</span>
                 </a>
                 <a href="Loop-Closure-Detection.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -690,7 +690,7 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">68</span>
+                    <span class="nav-count">69</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
@@ -784,7 +784,7 @@
         <div class="sidebar-header">
             <h1><a href="../index.html" style="background:linear-gradient(135deg,#6366f1,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">🚀 Embodied AI Daily</a></h1>
             <div class="update">by <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent);text-decoration:none;font-weight:500;">Hongkun Luo</a> (罗宏昆)</div>
-            <div class="update" style="margin-top:2px">Last update: 2026-07-23</div>
+            <div class="update" style="margin-top:2px">Last update: 2026-07-24</div>
         </div>
             <a href="Continuous-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
@@ -889,12 +889,12 @@
             <a href="Autonomous-Driving.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
                 <span class="nav-label">Autonomous Driving</span>
-                <span class="nav-count">78</span>
+                <span class="nav-count">79</span>
             </a>
             <a href="Kalman-Filter.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Kalman Filter</span>
-                <span class="nav-count">50</span>
+                <span class="nav-count">51</span>
             </a>
             <a href="Loop-Closure-Detection.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -909,7 +909,7 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">68</span>
+                <span class="nav-count">69</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
@@ -1028,6 +1028,21 @@
                 <span class="topic-count">80 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2602.18109v3" target="_blank" class="paper-title">TempoNet: Slack-Quantized Transformer-Guided Reinforcement Scheduler for Adaptive Deadline-Centric Real-Time Dispatchs</a>
+                        <span class="paper-date">2026-07-22</span>
+                    </div>
+                                        <span class="paper-comment">📝 43 pages, 12 figures</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在严格计算预算下，实时调度器需处理紧截止时间任务，现有方法难以兼顾全局推理与近线性计算效率。  &#10;🛠 **方法**：提出TempoNet，结合置换不变Transformer与深度Q近似，通过松弛量化分词器离散化时间松弛，并采用延迟感知稀疏注意力堆栈（含块级top-k选择与局部敏感分块）实现亚毫秒级推理，最后通过掩码贪婪选择或可微匹配将Q值映射到多核处理器。  &#10;✨ **主要贡献**：在工业混合关键性轨迹与大规模多处理器场景中，相比分析调度器与神经网络基线，持续提升截止时间满足率；验证了松弛量化稳定性、注意力机制可解释性、行为克隆预训练样本效率及与演员-评论家变体的兼容性，为基于Transformer的高吞吐实时调度提供实用框架。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Real-time schedulers must reason about tight deadlines under strict compute budgets. We present TempoNet, a reinforcement learning scheduler that pairs a permutation-invariant Transformer with a deep Q-approximation. An Urgency Tokenizer discretizes temporal slack into learnable embeddings, stabilizing value learning and capturing deadline proximity. A latency-aware sparse attention stack with blockwise top-k selection and locality-sensitive chunking enables global reasoning over unordered task sets with near-linear scaling and sub-millisecond inference. A multicore mapping layer converts contextualized Q-scores into processor assignments through masked-greedy selection or differentiable matching. Extensive evaluations on industrial mixed-criticality traces and large multiprocessor settings show consistent gains in deadline fulfillment over analytic schedulers and neural baselines, together with improved optimization stability. Diagnostics include sensitivity analyses for slack quantization, attention-driven policy interpretation, hardware-in-the-loop and kernel micro-benchmarks, and robustness under stress with simple runtime mitigations; we also report sample-efficiency benefits from behavioral-cloning pretraining and compatibility with an actor-critic variant without altering the inference pipeline. These results establish a practical framework for Transformer-based decision making in high-throughput real-time scheduling.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2607.18042v1" target="_blank" class="paper-title">Anticipate Before Acting: Future-State-Conditioned Vision-Language Navigation</a>
@@ -1169,10 +1184,7 @@
                         <span class="paper-date">2026-07-11</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在密集动态环境中，移动机器人导航需要兼顾物理可行控制与低延迟重规划，但现有方法（如MPC、行为克隆或扩散策略）在实时性与多模态避障能力之间存在权衡。&#10;&#10;🛠 **方法**：提出PIER-Flow，通过将MPC专家策略蒸馏为连续时间常微分方程（ODE），结合并行潜在采样与轻量可行性选择实现单步动作生成；并引入物理信息训练目标保证运动学一致性，以及异步动作分块架构支持仿真到真实部署。&#10;&#10;✨ **主要贡献**：在仿真中实现98.85%成功率与零碰撞，平均推理仅1.29毫秒，比MPC加速37.2倍，比标准扩散模型加速超800倍；在资源受限的边缘计算机上实际部署仍保持约5.3毫秒稳定推理延迟，避免基线方法的延迟尖峰与冻结问题。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Autonomous navigation in dense and highly dynamic environments requires both physically feasible control and low-latency replanning. Optimization-based methods such as Model Predictive Control (MPC) explicitly handle robot kinematics and safety constraints, but repeated nonlinear optimization can limit real-time responsiveness. Deterministic behavior-cloning policies enable efficient inference but may fail to represent multimodal avoidance behaviors, whereas diffusion policies capture multimodality at the cost of time-consuming iterative denoising. We propose PIER-Flow (Physics-Informed Efficient Rectified Flow), a lightweight navigation policy for mobile robots. By distilling an MPC expert into a continuous-time Ordinary Differential Equation (ODE), PIER-Flow achieves single-step action generation through parallel latent sampling and lightweight feasibility selection. We introduce a physics-informed training objective to enforce kinematic consistency, paired with an asynchronous action chunking architecture for robust sim-to-real deployment. Extensive simulations demonstrate that PIER-Flow achieves a 98.85\% success rate and zero collisions, with an average inference of $\sim$1.29 ms, which accelerates planning by 37.2$\times$ compared to MPC and over 800$\times$ against standard diffusion models. Crucially, real-world deployment on a resource-constrained edge computer further achieves an approximately stable inference latency of $\sim$5.3 ms, avoiding the latency spikes and freezing events observed with planning baselines.</p>
@@ -2006,25 +2018,13 @@
                         <p>Path planning is essential for Autonomous Mobile Robots (AMRs). Conventional methods for incorporating human preferences into planning typically rely on either complex reward engineering or hardware-intensive solutions. Recent state-of-the-art frameworks leverage imitation learning to train behavior-specific path planning models from expert demonstrations. However, these approaches face two key limitations: limited generalization to unseen environments and low robustness in demonstration collection. To address these challenges, this work introduces an enhanced framework that focuses on two main contributions: an overhauled annotation tool built on ROS 2, and a novel training strategy that integrates diffusion-based augmentation into baseline behavioral cloning models. A dataset of expert demonstrations is provided and evaluated through ablation studies to assess the robustness of the proposed solution. The enhanced approach outperforms state-of-the-art methods with 39.1% lower Absolute Pose Error (APE) and 33.5% lower Fr'echet Inception Distance (FID) while having 93.8% less trainable parameters. Moreover it attains diffusion-level generalization while preserving the real-time, on-edge properties of state-of-the-art models.</p>
                     </details>
                 </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.03335v1" target="_blank" class="paper-title">GPU-Parallel Multi-Task Reinforcement Learning with Demonstration Guided Policy Optimization</a>
-                        <span class="paper-date">2026-06-02</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Large scale GPU-parallel reinforcement learning has changed what can be trained in robot simulation, yet most systems still optimize one specialist policy per task. We propose a construction methodology for turning structured manipulation task families into GPU-parallel multi-task RL benchmarks, and instantiate it as MT-Libero using LIBERO assets and task predicates in Isaac Lab. The resulting benchmark supports simultaneous reinforcement learning over heterogeneous task suites with parallel rendering, physics randomization, and state-input or visual-input policies. To make such training practical under sparse success signals and limited prior data, we further propose DGPO, an on-policy demonstration guided method that combines importance weighted PPO with adaptive behavior cloning on matched demonstration actions. DGPO enables a tunable preference toward demonstrated task distributions, outperforming both prior-free RL and existing demonstration-based methods while preserving the stability and online improvement benefits of on-policy PPO.</p>
-                    </details>
-                </div>
             </div>
         </section>
 
         <footer class="footer">
             <p>👤 <strong>Hongkun Luo (罗宏昆)</strong> · <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent)">Academic Page</a> · <a href="https://github.com/luohongk" target="_blank" style="color:var(--accent)">GitHub</a></p>
             <p style="margin-top:8px">🤖 Generated automatically from <a href="https://arxiv.org" style="color:var(--accent)">arXiv</a> · <a href="https://github.com/luohongk/Embodied-AI-Daily" style="color:var(--accent)">GitHub Repo</a></p>
-            <p style="margin-top:4px">Last update: 2026-07-23 (Beijing Time)</p>
+            <p style="margin-top:4px">Last update: 2026-07-24 (Beijing Time)</p>
         </footer>
     </main>
 

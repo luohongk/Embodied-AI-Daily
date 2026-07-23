@@ -670,12 +670,12 @@
                 <a href="Autonomous-Driving.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#6366f1"></span>
                     <span class="nav-label">Autonomous Driving</span>
-                    <span class="nav-count">78</span>
+                    <span class="nav-count">79</span>
                 </a>
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Kalman Filter</span>
-                    <span class="nav-count">50</span>
+                    <span class="nav-count">51</span>
                 </a>
                 <a href="Loop-Closure-Detection.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -690,7 +690,7 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">68</span>
+                    <span class="nav-count">69</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
@@ -784,7 +784,7 @@
         <div class="sidebar-header">
             <h1><a href="../index.html" style="background:linear-gradient(135deg,#6366f1,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">🚀 Embodied AI Daily</a></h1>
             <div class="update">by <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent);text-decoration:none;font-weight:500;">Hongkun Luo</a> (罗宏昆)</div>
-            <div class="update" style="margin-top:2px">Last update: 2026-07-23</div>
+            <div class="update" style="margin-top:2px">Last update: 2026-07-24</div>
         </div>
             <a href="Continuous-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
@@ -889,12 +889,12 @@
             <a href="Autonomous-Driving.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
                 <span class="nav-label">Autonomous Driving</span>
-                <span class="nav-count">78</span>
+                <span class="nav-count">79</span>
             </a>
             <a href="Kalman-Filter.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Kalman Filter</span>
-                <span class="nav-count">50</span>
+                <span class="nav-count">51</span>
             </a>
             <a href="Loop-Closure-Detection.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -909,7 +909,7 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">68</span>
+                <span class="nav-count">69</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
@@ -1030,6 +1030,36 @@
             <div class="paper-list">
                 <div class="paper-card">
                     <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.20232v1" target="_blank" class="paper-title">DINS-IO: Learned Inertial Odometry via Differentiable INS Consistency</a>
+                        <span class="paper-date">2026-07-22</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有学习型惯性里程计训练依赖昂贵且难以大规模获取的高精度位置真值（如动作捕捉或SLAM），本文旨在无需位置标签，仅从原始IMU数据学习惯性里程计。&#10;&#10;🛠 **方法**：提出DINS-IO，利用捷联惯导速度递归作为可微分的自监督先验，构建滑动窗口最小二乘问题并解析求解，将残差作为自监督损失；同时设计高频网络输出体坐标系速度，并通过少量带标签轨迹进行低秩适配（LoRA）校准。&#10;&#10;✨ **主要贡献**：首次实现无需位置标签的自监督惯性里程计学习，在标准基准上，自监督预训练后仅用少量标签微调即可达到或超越全监督基线，显著降低了对昂贵标注数据的依赖。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>The training of learned inertial odometry depends on dense, high-precision position ground truth from motion capture, visual-inertial odometry or SLAM, which is costly and hard to acquire at scale. We propose DINS-IO, which learns inertial odometry directly from raw IMU streams without position labels. Our key insight is that the strapdown INS velocity recursion is a strong, fully differentiable consistency prior: the predicted velocity, rotated into the navigation frame, must agree with the integrated specific force up to an unknown initial velocity and a constant accelerometer bias. We cast this constraint as a sliding-window least-squares problem with a globally shared bias, solve it in closed form, and use the solver residual as a self-supervised loss whose gradient flows back to the network through the analytic solution. To supply this per-sample constraint, we design a high-frequency network that emits dense body-frame velocity at the IMU rate. Since the self-supervised network learns consistent motion but its velocity is not yet metrically calibrated, we calibrate it to true metric velocity from a few labeled trajectories by directly supervising the predicted body-frame velocity and adapting only low-rank (LoRA) patches. On standard benchmarks, DINS-IO pretrained self-supervised and fine-tuned with a small fraction of labels matches or surpasses fully supervised baselines.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.17332v2" target="_blank" class="paper-title">Multi-Resolution Voxelized Map-Based Stereo Visual-Inertial Odometry</a>
+                        <span class="paper-date">2026-07-22</span>
+                    </div>
+                                        <span class="paper-comment">📝 9 pages, 4 figures, 6 tables. Accepted to appear in the 2026 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2026)</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：视觉惯性里程计（VIO）中，使用先验地图可提升精度和鲁棒性，但地图数据量大、传输带宽有限，难以在边缘设备上持续加载局部地图。&#10;&#10;🛠 **方法**：提出多分辨率体素化先验地图构建方法，并设计对应的VIO系统。地图以多分辨率体素化存储，每个体素仅保留一个地图点；在线运行时，通过锥形索引策略和3D数字微分分析（DDA）算法，根据当前位置与3D点的距离选择合适分辨率，快速关联2D特征与唯一地图点。&#10;&#10;✨ **主要贡献**：在保证位姿估计精度的同时，显著减少数据传输量和数据关联的计算负载。在两个公开数据集上的实验验证了系统的高精度和低传输需求。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Incorporating prior maps significantly enhances the accuracy and robustness of pose estimation in visual-inertial odometry (VIO). However, the large data volume of such maps, combined with limited transmission bandwidth, makes it impractical to continuously load local maps onto an edge device. In this paper, we propose a multi-resolution prior map construction method and a corresponding map-based VIO system. The prior map is voxelized at multiple resolutions, with each voxel retaining only a single map point. During online VIO operation, a cone-shaped indexing strategy associates 2D features on the edge device with 3D map points. The cone's intercept is determined by the distance from the current position to the 3D points, enabling the selection of the appropriate resolution level and the retrieval of the unique map point within the corresponding voxel via a 3D digital differential analyzer (DDA) algorithm. This approach minimizes both the volume of data required for transmission and the computational load during data association. Extensive experiments on two public datasets demonstrate that our system achieves accurate pose estimation while requiring minimal data transmission.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
                         <a href="https://arxiv.org/abs/2607.17956v1" target="_blank" class="paper-title">Does Robust VIO Need More Learning? Geometry-Verified Visual Measurements under Distribution Shift</a>
                         <span class="paper-date">2026-07-20</span>
                     </div>
@@ -1041,21 +1071,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Learning is increasingly introduced into visual-inertial odometry (VIO), ranging from learned feature front-ends to learning-dominant motion and geometry estimation. However, learning more of the pipeline does not necessarily improve robustness when deployment conditions differ from the training distribution. This work asks whether robust VIO under distribution shift truly requires deeper learned estimation, or whether learning can be confined to visual measurement generation. We propose a minimal-learning stereo VIO framework in which SEA-RAFT is used only to propose dense stereo correspondences and predict their uncertainty, while temporal tracking, geometric verification, and state estimation remain explicit. Dense flow is sampled at sparse feature locations, filtered using predicted uncertainty and stereo epipolar consistency, and incorporated into a sliding-window stereo-inertial estimator through uncertainty-weighted reprojection factors. The same uncertainty is further propagated through stereo triangulation for downstream anisotropic 3D Gaussian mapping. Experiments on EuRoC, VIODE, and 4Seasons demonstrate accurate and stable estimation under motion blur, dynamic scenes, illumination changes, and large indoor-to-outdoor distribution shifts. Ablations show that learned flow alone is insufficient: the gains arise from combining learned correspondence proposals with geometric verification and uncertainty-aware weighting. These results suggest that, for OOD-robust VIO, carefully integrated learned visual measurements can be more effective than learning a larger fraction of the estimation pipeline. Code and configs for the benchmark will be open-source upon acceptance. A supplementary video is available at https://drive.google.com/file/d/1EVRhOkhanmNXHbQS1Vr80FoEIAYOYOV2/view</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.17332v1" target="_blank" class="paper-title">Multi-Resolution Voxelized Map-Based Stereo Visual-Inertial Odometry</a>
-                        <span class="paper-date">2026-07-19</span>
-                    </div>
-                                        <span class="paper-comment">📝 9 pages, 4 figures, 6 tables. Accepted to appear in the 2026 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2026)</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：视觉惯性里程计（VIO）中，使用先验地图可提升精度和鲁棒性，但地图数据量大、传输带宽有限，难以在边缘设备上持续加载局部地图。&#10;&#10;🛠 **方法**：提出多分辨率体素化先验地图构建方法，并设计对应的VIO系统。地图以多分辨率体素化存储，每个体素仅保留一个地图点；在线运行时，通过锥形索引策略和3D数字微分分析（DDA）算法，根据当前位置与3D点的距离选择合适分辨率，快速关联2D特征与唯一地图点。&#10;&#10;✨ **主要贡献**：在保证位姿估计精度的同时，显著减少数据传输量和数据关联的计算负载。在两个公开数据集上的实验验证了系统的高精度和低传输需求。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Incorporating prior maps significantly enhances the accuracy and robustness of pose estimation in visual-inertial odometry (VIO). However, the large data volume of such maps, combined with limited transmission bandwidth, makes it impractical to continuously load local maps onto an edge device. In this paper, we propose a multi-resolution prior map construction method and a corresponding map-based VIO system. The prior map is voxelized at multiple resolutions, with each voxel retaining only a single map point. During online VIO operation, a cone-shaped indexing strategy associates 2D features on the edge device with 3D map points. The cone's intercept is determined by the distance from the current position to the 3D points, enabling the selection of the appropriate resolution level and the retrieval of the unique map point within the corresponding voxel via a 3D digital differential analyzer (DDA) algorithm. This approach minimizes both the volume of data required for transmission and the computational load during data association. Extensive experiments on two public datasets demonstrate that our system achieves accurate pose estimation while requiring minimal data transmission.</p>
                     </details>
                 </div>
                 <div class="paper-card">
@@ -1169,10 +1184,7 @@
                         <span class="paper-date">2026-06-24</span>
                     </div>
                                         <span class="paper-comment">📝 20 pages, 12 figures, 5 tables</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有紧耦合LiDAR-视觉-惯性里程计（LIVO）中，LiDAR和视觉传感器各自存在独立失效模式（如LiDAR在几何约束不足时退化，视觉在光照差或无纹理时退化），但现有方法仅在模态层面处理退化，未考虑联合信息矩阵的方向依赖性，导致视觉残差在LiDAR已良好约束的方向上仍被引入，而在退化方向上视觉补偿分散于全状态空间而非集中所需方向。&#10;&#10;🛠 **方法**：提出SA-LIVO系统，通过子空间感知信息融合（SAIF）框架对联合LiDAR-视觉信息矩阵进行特征分解，并在每个特征方向上应用线性-钳位软门控，衰减退化方向同时保持可观测方向的全强度；随后在一个共享线性化点的InEKF循环中联合优化LiDAR和视觉残差，且视觉雅可比矩阵仅在循环前组装一次并在迭代中复用，避免传统迭代滤波器的逐次计算开销。&#10;&#10;✨ **主要贡献**：在三个基准（HILTI'22、New College、Oxford Spires）的29个序列及并发退化场景中，SA-LIVO达到与最强基线相当的精度，并在竞争系统发散时保持有界漂移；在笔记本电脑CPU上平均每帧12.3毫秒，嵌入式ARM板上26.8毫秒，峰值内存降低3.6-6.3倍，代码将开源。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Tightly coupled LiDAR-visual-inertial odometry (LIVO) fuses precise geometric depth with complementary visual measurements, yet its exteroceptive sensors face independent failure modes: LiDAR degenerates when scan geometry is under-constrained, while visual measurements degrade under adverse illumination or texture absence. Existing countermeasures, including binary degeneracy detection, covariance inflation, and scene-level quality gating, operate at the modality level and leave the direction-dependent structure of the joint information matrix unaddressed. Consequently, visual residuals enter pose directions where LiDAR is well-constrained, while in deficient directions visual compensation disperses across the full state space rather than concentrating where needed. We propose SA-LIVO, a LiDAR-inertial-visual odometry system addressing these limitations through direction-selective fusion and information-efficient processing. The Subspace-Aware Information Fusion (SAIF) framework eigendecomposes the joint LiDAR-visual information matrix and applies a linear-clamp soft gate per eigendirection, attenuating degenerate directions while preserving observable ones at full strength. LiDAR and visual residuals are then jointly optimized in one InEKF loop at a shared linearization point. Since visual information contributes only where LiDAR is deficient, photometric Jacobians are assembled once before the loop and reused across iterations, avoiding the per-iteration cost of conventional iterated filters. Experiments on 29 sequences from three benchmarks (HILTI'22, New College, Oxford Spires) and concurrent-degradation scenarios show accuracy competitive with the strongest baselines and bounded drift where competing systems diverge. SA-LIVO averages 12.3 ms per frame on a laptop CPU and 26.8 ms on an embedded ARM board without GPU, with 3.6-6.3x lower peak memory. The code will be open-sourced.</p>
@@ -1994,25 +2006,13 @@
                         <p>We present a novel dataset covering seasonal and challenging perceptual conditions for autonomous driving. Among others, it enables research on visual odometry, global place recognition, and map-based re-localization tracking. The data was collected in different scenarios and under a wide variety of weather conditions and illuminations, including day and night. This resulted in more than 350 km of recordings in nine different environments ranging from multi-level parking garage over urban (including tunnels) to countryside and highway. We provide globally consistent reference poses with up-to centimeter accuracy obtained from the fusion of direct stereo visual-inertial odometry with RTK-GNSS. The full dataset is available at https://go.vision.in.tum.de/4seasons.</p>
                     </details>
                 </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2505.12337v2" target="_blank" class="paper-title">Structureless VIO</a>
-                        <span class="paper-date">2025-06-16</span>
-                    </div>
-                                        <span class="paper-comment">📝 Accepted by the SLAM Workshop at RSS 2025</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Visual odometry (VO) is typically considered as a chicken-and-egg problem, as the localization and mapping modules are tightly-coupled. The estimation of a visual map relies on accurate localization information. Meanwhile, localization requires precise map points to provide motion constraints. This classical design principle is naturally inherited by visual-inertial odometry (VIO). Efficient localization solutions that do not require a map have not been fully investigated. To this end, we propose a novel structureless VIO, where the visual map is removed from the odometry framework. Experimental results demonstrated that, compared to the structure-based VIO baseline, our structureless VIO not only substantially improves computational efficiency but also has advantages in accuracy.</p>
-                    </details>
-                </div>
             </div>
         </section>
 
         <footer class="footer">
             <p>👤 <strong>Hongkun Luo (罗宏昆)</strong> · <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent)">Academic Page</a> · <a href="https://github.com/luohongk" target="_blank" style="color:var(--accent)">GitHub</a></p>
             <p style="margin-top:8px">🤖 Generated automatically from <a href="https://arxiv.org" style="color:var(--accent)">arXiv</a> · <a href="https://github.com/luohongk/Embodied-AI-Daily" style="color:var(--accent)">GitHub Repo</a></p>
-            <p style="margin-top:4px">Last update: 2026-07-23 (Beijing Time)</p>
+            <p style="margin-top:4px">Last update: 2026-07-24 (Beijing Time)</p>
         </footer>
     </main>
 

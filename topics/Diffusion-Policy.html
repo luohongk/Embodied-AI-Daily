@@ -670,12 +670,12 @@
                 <a href="Autonomous-Driving.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#6366f1"></span>
                     <span class="nav-label">Autonomous Driving</span>
-                    <span class="nav-count">78</span>
+                    <span class="nav-count">79</span>
                 </a>
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Kalman Filter</span>
-                    <span class="nav-count">50</span>
+                    <span class="nav-count">51</span>
                 </a>
                 <a href="Loop-Closure-Detection.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -690,7 +690,7 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">68</span>
+                    <span class="nav-count">69</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
@@ -784,7 +784,7 @@
         <div class="sidebar-header">
             <h1><a href="../index.html" style="background:linear-gradient(135deg,#6366f1,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">🚀 Embodied AI Daily</a></h1>
             <div class="update">by <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent);text-decoration:none;font-weight:500;">Hongkun Luo</a> (罗宏昆)</div>
-            <div class="update" style="margin-top:2px">Last update: 2026-07-23</div>
+            <div class="update" style="margin-top:2px">Last update: 2026-07-24</div>
         </div>
             <a href="Continuous-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
@@ -889,12 +889,12 @@
             <a href="Autonomous-Driving.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
                 <span class="nav-label">Autonomous Driving</span>
-                <span class="nav-count">78</span>
+                <span class="nav-count">79</span>
             </a>
             <a href="Kalman-Filter.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Kalman Filter</span>
-                <span class="nav-count">50</span>
+                <span class="nav-count">51</span>
             </a>
             <a href="Loop-Closure-Detection.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -909,7 +909,7 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">68</span>
+                <span class="nav-count">69</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
@@ -1028,6 +1028,36 @@
                 <span class="topic-count">79 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.20293v1" target="_blank" class="paper-title">Evolving Cache Schedules for Fast Diffusion Policy Inference</a>
+                        <span class="paper-date">2026-07-22</span>
+                    </div>
+                                        <span class="paper-comment">📝 15 pages, 3 figures, supplementary material included. Accepted by PRCV 2026</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：扩散策略在机器人视觉运动控制中通过迭代去噪实现强性能，但重复计算导致实时部署计算成本高，现有缓存方法均匀分配计算资源，忽略了不同模块的冗余差异，造成性能与效率的次优权衡。&#10;&#10;🛠 **方法**：提出EVO（进化缓存调度）框架，通过进化搜索全局优化缓存刷新调度，在块-时间步格点上生成完整调度方案，利用冗余感知初始化加速搜索，并引入目标条件早停机制，在达到性能目标后终止搜索，无需重新训练即可直接应用于预训练扩散策略。&#10;&#10;✨ **主要贡献**：在保持接近完整性能的同时，大幅降低计算量，实现最高8.05倍的动作生成加速，将FLOPs从15.77G降至1.96G，并在多个操作基准上验证了有效性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Diffusion policies achieve strong visuomotor control by iteratively denoising action chunks, but repeated denoising makes real-time deployment computationally demanding. Cache-based methods reduce inference cost by reusing intermediate activations, but existing training-free schedules typically allocate computation uniformly across blocks, ignoring heterogeneous redundancy across blocks and leading to a suboptimal performance-efficiency trade-off. To bridge this gap, we introduce Evolving Cache Schedules (EVO), a training-free acceleration framework that globally schedules cache refreshes via evolutionary search. EVO represents each candidate as a complete schedule over the block-timestep lattice. Thus, redundant transformer computations during iterative denoising can be skipped through cache reuse while preserving closed-loop rollout performance. To make the search practical, EVO introduces redundancy-aware initialization, which seeds the population with promising schedules, and target-conditioned early stopping, which verifies and terminates once a desired performance target is reached. The offline-optimized schedule can be directly plugged into pretrained diffusion policies without retraining. Extensive manipulation benchmarks show that EVO preserves near-full performance while substantially reducing computation, achieving up to 8.05x action-generation speedup and reducing FLOPs from 15.77G to as low as 1.96G. Source code is available at https://github.com/pillom/EVO.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.19919v1" target="_blank" class="paper-title">Diffusion ReRoll: Revisable Denoising for Robotic Sequential Prediction</a>
+                        <span class="paper-date">2026-07-22</span>
+                    </div>
+                                        <span class="paper-comment">📝 Project Page: https://seonsoo-p1.github.io/DiffusionReRoll/</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有扩散模型在机器人序列预测中只能进行单向去噪，无法在生成过程中对已稳定的局部区域进行修正，导致长程预测的灵活性和准确性不足。&#10;&#10;🛠 **方法**：提出Diffusion ReRoll框架，通过选择性对局部稳定区域重新加噪，使其在其余区域继续去噪的同时，利用全局上下文进行迭代修正，实现跨时间步的可逆去噪。&#10;&#10;✨ **主要贡献**：在OGBench点迷宫和蚂蚁迷宫任务中，成功率相对提升21%-23%；在LIBERO-10多任务基准上，动作预测成功率相对提升56.5%；在视频-动作联合预测中，实现了最优的动作-视频一致性，尤其在分布外场景下表现突出。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>We propose Diffusion ReRoll, a diffusion-based framework for robotic sequential prediction that enables revisable denoising over horizons. Existing diffusion-based sequence predictors typically perform a single monotonic denoising process. In contrast, Diffusion ReRoll selectively re-noises regions that have become locally stable while the remaining regions continue denoising, so the re-noised regions can be refined again using context from the rest of the horizon. This structured re-noising enables iterative cross-horizon revision, allowing earlier and later segments to revise one another, while maintaining local consistency. We evaluate Diffusion ReRoll against full-sequence diffusion and causal denoising based on Diffusion Forcing across long-horizon planning, policy learning, and unified video-action modeling. On OGBench PointMaze and AntMaze, Diffusion ReRoll achieves relative gains in average success rate of 21% over Diffusion Forcing in matched guidance-based planning and 23% over Diffuser in matched goal-inpainting. In diffusion-policy-style action prediction, Diffusion ReRoll improves average success by 56.5% relative to Diffusion Policy across different prediction horizons and history lengths on the LIBERO-10 multi-task benchmark. In unified video-action prediction, Diffusion ReRoll improves policy and inverse dynamics performance, especially under out-of-distribution evaluation, and achieves the best action-video consistency. These results support structured re-noising as an effective mechanism for revisable robotic sequence generation.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2512.10946v2" target="_blank" class="paper-title">ImplicitRDP: An End-to-End Visual-Force Diffusion Policy with Structural Slow-Fast Learning</a>
@@ -1154,10 +1184,7 @@
                         <span class="paper-date">2026-07-13</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有的扩散策略通常使用单一预定义动作坐标系，导致在复杂任务中动作分布建模过于复杂，无法适应不同任务对坐标系的需求。&#10;&#10;🛠 **方法**：提出Mixture of Frames Policy (MoF)，在多个任务相关坐标系中同步进行动作去噪，通过维护单一规范扩散状态、在不同坐标系中重表达、应用专用去噪器并融合预测，同时引入基于列的6D旋转表示支持可微分的SE(3)帧变换。&#10;&#10;✨ **主要贡献**：在9个模拟双臂操作任务中证明最佳动作坐标系因任务而异，MoF优于最优单帧选择和标准混合专家基线；在2个真实世界双臂移动操作任务中，MoF超越所有单帧基线。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Robotic manipulation is inherently multi-frame: local actions may be simple in an end-effector frame, while transport, upright-object handling, and whole-body coordination are better represented in a base-aligned frame. However, modern diffusion-based visuomotor policies typically commit to a single predefined action frame, forcing one denoiser to model action distributions that are often unnecessarily complex in that frame. We propose Mixture of Frames Policy (MoF), a diffusion policy that performs synchronized action denoising across multiple coordinate frames. MoF maintains a single canonical diffusion state, re-expresses it in several task-relevant frames, applies frame-specialized denoisers, and fuses their noise predictions back in the canonical frame. To make this possible for intermediate noisy diffusion states, we introduce a column-based 6D rotation representation within an SE(3) action parameterization that supports exact, differentiable frame transformations without requiring noisy rotations to lie on the SO(3) manifold. Across nine simulated bimanual manipulation tasks, we show that the best action frame is task-dependent and that MoF improves over oracle frame selection and standard Mixture-of-Experts (MoE) baselines. We further evaluate MoF on two real-world bimanual mobile manipulation tasks, demonstrating that it outperforms all constituent single-frame baselines. Project homepage: https://mofpo.github.io</p>
@@ -1169,10 +1196,7 @@
                         <span class="paper-date">2026-07-12</span>
                     </div>
                                         <span class="paper-comment">📝 8 pages, 7 figures</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：如何在没有人类演示的情况下，利用强化学习训练一个单一的扩散策略模型，使其能够完成多形状积木推动任务，并实现零样本从仿真到真实环境的迁移。&#10;&#10;🛠 **方法**：提出一个基于强化学习的框架，使用重加权证据下界作为策略损失函数，结合逆向课程生成和目标中心化表示，以解决稀疏奖励下的探索难题，并利用扩散策略的表达能力学习多任务策略。&#10;&#10;✨ **主要贡献**：首次在无演示条件下，通过强化学习成功训练出单一扩散策略控制器，在仿真中完成多形状积木推动任务，并验证了该策略在真实环境中对目标位置、积木形状、重量和表面摩擦等变化具有零样本迁移能力。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Diffusion policies have shown promising empirical performance in representing and learning complex maneuvers for robots using behavior cloning (BC). In this paper, we explore training diffusion policies from scratch using reinforcement learning (RL) for multi-task robotic manipulation. Specifically, we aim to train a single diffusion policy for block-pushing tasks with multiple shapes. The proposed framework features a simple policy loss function, which is a reweighted evidence lower bound used in BC-based diffusion policy training and can seamlessly serve as the policy learning module in RL algorithms. To address the exploration challenges arising from the absence of demonstrations, we incorporate reverse curriculum generation and objective-centric representations. Combined with the expressiveness of diffusion policies, our design supports learning of multi-task block-pushing policies in our sparse-reward simulation setting. We further evaluate whether the trained diffusion policy transfers in zero-shot to real-world tasks under varying environmental conditions including goal positions, block shapes, block weights and surface friction, providing evidence that this pipeline can transfer to our real-world block-pushing setup under the tested variations.</p>
@@ -1982,37 +2006,13 @@
                         <p>Learning generalizable and robust behavior cloning policies requires large volumes of high-quality robotics data. While human demonstrations (e.g., through teleoperation) serve as the standard source for expert behaviors, acquiring such data at scale in the real world is prohibitively expensive. This paper introduces ExpertGen, a framework that automates expert policy learning in simulation to enable scalable sim-to-real transfer. ExpertGen first initializes a behavior prior using a diffusion policy trained on imperfect demonstrations, which may be synthesized by large language models or provided by humans. Reinforcement learning is then used to steer this prior toward high task success by optimizing the diffusion model's initial noise while keep original policy frozen. By keeping the pretrained diffusion policy frozen, ExpertGen regularizes exploration to remain within safe, human-like behavior manifolds, while also enabling effective learning with only sparse rewards. Empirical evaluations on challenging manipulation benchmarks demonstrate that ExpertGen reliably produces high-quality expert policies with no reward engineering. On industrial assembly tasks, ExpertGen achieves a 90.5% overall success rate, while on long-horizon manipulation tasks it attains 85% overall success, outperforming all baseline methods. The resulting policies exhibit dexterous control and remain robust across diverse initial configurations and failure states. To validate sim-to-real transfer, the learned state-based expert policies are further distilled into visuomotor policies via DAgger and successfully deployed on real robotic hardware.</p>
                     </details>
                 </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2601.22965v2" target="_blank" class="paper-title">Self-Imitated Diffusion Policy for Efficient and Robust Visual Navigation</a>
-                        <span class="paper-date">2026-06-01</span>
-                    </div>
-                                        <span class="paper-comment">📝 Preprint</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Diffusion policies (DP) have demonstrated significant potential in visual navigation by capturing diverse multi-modal trajectory distributions. However, standard imitation learning (IL), which most DP methods rely on for training, often inherits sub-optimality and redundancy from expert demonstrations, thereby necessitating a computationally intensive "generate-then-filter" pipeline that relies on auxiliary selectors during inference. To address these challenges, we propose Self-Imitated Diffusion Policy (SIDP), a novel framework that learns improved planning by selectively imitating a set of trajectories sampled from itself. Specifically, SIDP introduces a reward-guided self-imitation mechanism that encourages the policy to consistently produce high-quality trajectories efficiently, rather than outputs of inconsistent quality, thereby reducing reliance on extensive sampling and post-filtering. During training, we employ a reward-driven curriculum learning paradigm to mitigate inefficient data utility, and goal-agnostic exploration for trajectory augmentation to improve planning robustness. Extensive evaluations on a comprehensive simulation benchmark show that SIDP significantly outperforms previous methods, with real-world experiments confirming its effectiveness across multiple robotic platforms. On Jetson Orin Nano, SIDP delivers a 2.5$\times$ faster inference than the baseline NavDP, i.e., 110ms VS 273ms, enabling efficient real-time deployment.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.01865v1" target="_blank" class="paper-title">Set-Supervised Diffusion Policy: Learning Action-Chunking Diffusion through Corrections</a>
-                        <span class="paper-date">2026-06-01</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Diffusion policies have recently emerged as a powerful framework for robotic manipulation. However, like other behavior cloning methods, they remain vulnerable to distributional shift, often requiring human-in-the-loop interventions to correct failures during deployment. These interactions naturally provide paired supervision in the form of the robot's undesired actions and the human teacher's corrective actions. Yet existing data aggregation pipelines and standard behavior cloning losses largely ignore this negative signal from undesired actions, leading to overfitting to teacher's actions and an increasing reliance on costly expert data. To address this limitation, we propose Set-Supervised Diffusion Policy (SDP), a novel learning framework that utilizes contrastive action-chunk data to train diffusion policies from human corrections. From paired positive and negative action-chunks, SDP constructs a set of desired action-chunks and designs a training pipeline that encourages the diffusion policy to align with the set. Through extensive experiments across multiple robotic manipulation tasks, we demonstrate that SDP consistently improves policy performance, with particularly strong gains in robustness to noisy data. Moreover, SDP induces high-quality aggregated datasets, enabling more efficient and reliable policy learning from human-in-the-loop corrections. Our code is available at https://set-supervised-diffusion-policy.github.io/.</p>
-                    </details>
-                </div>
             </div>
         </section>
 
         <footer class="footer">
             <p>👤 <strong>Hongkun Luo (罗宏昆)</strong> · <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent)">Academic Page</a> · <a href="https://github.com/luohongk" target="_blank" style="color:var(--accent)">GitHub</a></p>
             <p style="margin-top:8px">🤖 Generated automatically from <a href="https://arxiv.org" style="color:var(--accent)">arXiv</a> · <a href="https://github.com/luohongk/Embodied-AI-Daily" style="color:var(--accent)">GitHub Repo</a></p>
-            <p style="margin-top:4px">Last update: 2026-07-23 (Beijing Time)</p>
+            <p style="margin-top:4px">Last update: 2026-07-24 (Beijing Time)</p>
         </footer>
     </main>
 

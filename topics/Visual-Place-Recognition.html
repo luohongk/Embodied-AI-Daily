@@ -670,12 +670,12 @@
                 <a href="Autonomous-Driving.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#6366f1"></span>
                     <span class="nav-label">Autonomous Driving</span>
-                    <span class="nav-count">78</span>
+                    <span class="nav-count">79</span>
                 </a>
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Kalman Filter</span>
-                    <span class="nav-count">50</span>
+                    <span class="nav-count">51</span>
                 </a>
                 <a href="Loop-Closure-Detection.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -690,7 +690,7 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">68</span>
+                    <span class="nav-count">69</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
@@ -784,7 +784,7 @@
         <div class="sidebar-header">
             <h1><a href="../index.html" style="background:linear-gradient(135deg,#6366f1,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">🚀 Embodied AI Daily</a></h1>
             <div class="update">by <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent);text-decoration:none;font-weight:500;">Hongkun Luo</a> (罗宏昆)</div>
-            <div class="update" style="margin-top:2px">Last update: 2026-07-23</div>
+            <div class="update" style="margin-top:2px">Last update: 2026-07-24</div>
         </div>
             <a href="Continuous-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
@@ -889,12 +889,12 @@
             <a href="Autonomous-Driving.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
                 <span class="nav-label">Autonomous Driving</span>
-                <span class="nav-count">78</span>
+                <span class="nav-count">79</span>
             </a>
             <a href="Kalman-Filter.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Kalman Filter</span>
-                <span class="nav-count">50</span>
+                <span class="nav-count">51</span>
             </a>
             <a href="Loop-Closure-Detection.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -909,7 +909,7 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">68</span>
+                <span class="nav-count">69</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
@@ -1030,8 +1030,8 @@
             <div class="paper-list">
                 <div class="paper-card">
                     <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2602.04401v3" target="_blank" class="paper-title">Quantile Transfer for Reliable Operating Point Selection in Visual Place Recognition</a>
-                        <span class="paper-date">2026-07-20</span>
+                        <a href="https://arxiv.org/abs/2602.04401v4" target="_blank" class="paper-title">Quantile Transfer for Reliable Operating Point Selection in Visual Place Recognition</a>
+                        <span class="paper-date">2026-07-22</span>
                     </div>
                                         <span class="paper-comment">📝 Accepted to the IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) 2026</span>
                                         <details class="ai-summary" data-lazy="1" data-md="好的，作为一名人工智能研究与学术论文分析专家，我将严格按照您的要求，对这篇关于视觉地点识别中可靠操作点选择的论文进行详细的中文解读。&#10;&#10;---&#10;&#10;## 0. 概览（Concise Summary）&#10;&#10;- **主题（Topic）**：视觉地点识别（Visual Place Recognition, VPR）中的操作点（即图像匹配阈值）自动选择问题。&#10;- **问题（Problem）**：VPR系统的性能高度依赖于手动设定的固定匹配阈值，该阈值无法适应环境变化，导致在部署时性能下降。现有方法无法在满足用户指定的高精度要求下，自动最大化召回率。&#10;- **方法（Method）**：提出一种基于分位数（Quantile）的阈值转移方法。该方法利用少量带标注的校准数据，将学习到的绝对阈值转换为相似度分布中的分位数，然后将其稳定地转移到部署环境，从而动态地选择最优操作点。&#10;- **创新（Innovation）**：&#10;    1.  提出将绝对阈值转换为分位数进行跨环境转移，利用其在不同采样分布下的稳定性。&#10;    2.  提出自适应校准采样策略，为每个部署查询选择最相似的校准查询，以应对局部环境差异。&#10;    3.  实现了从用户定义的精度要求到部署阈值的直接、连续映射。&#10;- **意义（Significance）**：该方法消除了手动调参的需要，使VPR系统能够自动适应新环境，在保证高精度的前提下显著提升召回率（最高提升25%），对于安全关键的机器人应用（如V-SLAM）具有重要价值。&#10;- **一句话总结**：本文提出了一种通过分位数转移将校准数据中的最优阈值稳定迁移到部署环境的方法，实现了在用户指定精度约束下自动最大化召回率的VPR操作点选择。&#10;&#10;## 1. 研究动机（Motivation）&#10;&#10;视觉地点识别（VPR）是机器人在无GPS环境下进行定位和闭环检测的关键技术。VPR通常被建模为图像检索问题，系统通过比较查询图像与数据库图像的描述符相似度来判断是否为同一地点。这个判断依赖于一个关键的**操作点**，即**图像匹配阈值**。&#10;&#10;- **核心问题**：如何选择这个阈值？阈值过高会漏掉正确匹配（低召回率），过低则会引入错误匹配（低精度）。在安全关键应用中（如自动驾驶），高精度至关重要，但手动调参繁琐且无法适应环境变化。&#10;- **现有挑战**：&#10;    1.  **手动调参的局限性**：传统方法需要离线绘制精确率-召回率曲线来手动选择阈值，然后将该固定阈值用于部署。当环境（如季节、光照、视角）发生变化时，相似度分数的分布会改变，导致固定阈值性能急剧下降。&#10;    2.  **缺乏动态适应性**：现有自动阈值选择方法（如Schubert等人[33]的方法）虽然无需手动调参，但无法直接满足用户对特定精度水平（如100%精度）的要求，且其假设（如分数服从正态分布）在复杂环境中可能不成立。&#10;    3.  **校准数据与部署数据的分布差异**：即使有少量校准数据，其相似度分数分布与部署数据也可能不同，直接使用校准数据上学习到的绝对阈值无法泛化。&#10;&#10;因此，本文旨在解决**如何在仅有少量校准数据的情况下，自动、动态地为VPR系统选择一个操作点，使其在满足用户指定的高精度要求下，最大化召回率**。&#10;&#10;## 2. 创新点（Innovation）&#10;&#10;本文的核心创新在于提出了一种**基于分位数（Quantile）的阈值转移框架**，该框架巧妙地解决了校准与部署环境之间的分布差异问题。主要创新点如下：&#10;&#10;1.  **分位数转移（Quantile Transfer）**：这是最关键的创新。作者观察到，虽然不同环境下的绝对相似度分数会变化，但分数在分布中的**相对位置（即分位数）** 却相对稳定。因此，他们不是直接转移绝对阈值，而是将校准数据上学习到的最优阈值转换为该分布中的一个分位数，然后将这个分位数应用到部署数据的分数分布上，从而得到部署阈值。这种方法使得阈值选择对分布缩放和偏移具有鲁棒性。&#10;&#10;2.  **自适应校准采样（Adaptive Calibration Sampling）**：为了处理环境内部的局部差异（例如，森林和城市区域的分数分布不同），该方法不是使用整个校准集，而是为每个部署查询动态选择与其“最相似”的校准查询子集。相似性通过比较查询与校准查询的**排序后相似度向量**的皮尔逊相关系数来衡量。这确保了用于推导阈值的校准数据与当前部署场景高度相关。&#10;&#10;3.  **从精度要求到操作点的直接映射**：该方法建立了一个从用户定义的精度要求（如90%精度）到部署阈值的连续映射。通过在校准阶段计算不同分位数对应的精度-召回率曲线，系统可以反向查找满足特定精度要求的分位数，并将其转移到部署环境。这使得系统能够灵活地适应不同的任务需求。&#10;&#10;这些创新点共同作用，使得该方法能够：&#10;- **消除手动调参**。&#10;- **适应新环境**。&#10;- **在满足高精度约束下最大化召回率**。&#10;- **对校准数据量和采样变化具有鲁棒性**。&#10;&#10;## 3. 主要内容（Main Content）【重点】&#10;&#10;### 3.1 设计架构与方法&#10;&#10;整个方法流程如图1和图2所示，主要分为四个阶段：&#10;&#10;1.  **相似度矩阵构建**：使用VPR技术（如NetVLAD）提取图像描述符，并计算数据库图像与所有查询图像（包括校准集和部署集）之间的余弦相似度，形成相似度矩阵 $S_{cal}$ 和 $S_{val}$。&#10;&#10;2.  **自适应校准采样**：对于部署查询集 $Q_{val}$ 中的每个查询向量 $v_j$，计算其与校准查询集 $Q_{cal}$ 中每个向量 $c_i$ 的皮尔逊相关系数（基于排序后的相似度向量）。为每个 $v_j$ 选择相关系数最高的 $k$ 个校准查询，形成自适应校准子集 $\{C^*_k\}$ 及其对应的真实标签 $\{GT^*_k\}$。&#10;&#10;3.  **分位数阈值转移**：&#10;    - 对于每个自适应校准子集 $C^*_k$，使用其真实标签 $GT^*_k$ 计算精确率-召回率曲线，并找到在满足用户指定最小精度 $\pi^*$ 条件下最大化召回率的绝对阈值 $MT_k$。&#10;    - 将 $MT_k$ 转换为它在 $C^*_k$ 分数分布中的分位数 $Q_k$。公式为：$Q_k = \Pr(C^*_k \le MT_k)$。&#10;    - 在部署阶段，将分位数 $Q_k$ 应用到部署相似度矩阵 $S_{val}$ 上，通过其经验分位数函数 $F^{-1}_{S_{val}}$ 得到部署阈值 $MT_{val}^k = F^{-1}_{S_{val}}(Q_k)$。&#10;&#10;4.  **操作点选择**：对于给定的精度要求，取所有 $k$ 个校准子集对应的分位数 $\{Q_k\}$ 的中位数，作为最终的代表性分位数。然后通过线性外推，建立一个从精度要求到部署阈值的连续映射。&#10;&#10;### 3.2 关键算法与数学推导&#10;&#10;核心数学推导在于分位数的转换和应用：&#10;&#10;1.  **分位数计算**：&#10;    给定一个校准子集的相似度分数分布 $C^*_k$ 和在该子集上找到的最优绝对阈值 $MT_k$，其对应的分位数 $Q_k$ 定义为：&#10;    $$Q_k = \Pr(C^*_k \le MT_k)$$&#10;    其中 $\Pr$ 表示经验概率，即分数小于等于 $MT_k$ 的样本占总样本的比例。&#10;&#10;2.  **分位数到阈值的逆映射**：&#10;    在部署阶段，给定一个分位数 $Q_k$，需要找到部署分数分布 $S_{val}$ 中对应的阈值。这通过经验分位数函数 $F^{-1}_{S_{val}}$ 实现：&#10;    $$MT_{val}^k = F^{-1}_{S_{val}}(Q_k)$$&#10;    该函数返回 $S_{val}$ 中第 $Q_k$ 百分位处的分数值。如果 $Q_k$ 不是精确的百分位，则通过插值得到。&#10;&#10;3.  **自适应校准采样的相关性度量**：&#10;    对于部署查询向量 $v_j$ 和校准查询向量 $c_i$，首先将它们的相似度分数按降序排列。然后计算这两个排序后向量的皮尔逊相关系数 $r(v'_j, c'_i)$。相关系数越高，表示两个查询的相似度分布模式越相似。&#10;&#10;### 3.3 模型、训练与数据集&#10;&#10;- **模型**：本文的方法是一个**后处理**框架，不涉及对VPR模型本身的训练。它直接使用现有VPR模型（如MegaLoc, SALAD, NetVLAD等）输出的相似度分数。&#10;- **训练**：无模型训练过程。方法的核心是**校准**，即利用少量带标注的校准数据来学习分位数映射。&#10;- **数据集**：使用了三个标准VPR基准数据集，覆盖了季节、光照和场景变化：&#10;    - **Nordland**：长距离铁路场景，包含四季变化。使用夏季-冬季和秋季-夏季两种遍历组合。&#10;    - **SFU Mountain**：半结构化森林小径，包含干季和黄昏场景。&#10;    - **Oxford RobotCar**：城市道路场景，包含雨天和黄昏场景。&#10;- **数据划分**：每个数据集的前10%的查询图像作为校准集（带真实标签），剩余90%作为部署集。部署集进一步被划分为多个小块（chunks），每个小块代表一个独立的部署场景，用于统计评估。&#10;&#10;### 3.4 实验设置与结果&#10;&#10;- **评估指标**：&#10;    - **Recall Gap (RG)**：估计阈值与最优阈值（Oracle）在召回率上的绝对差异。值越低越好。&#10;    - **Precision Satisfaction Rate (PSR)**：满足用户指定精度要求的部署块的比例。值越高越好。&#10;    - **Area Under the Performance Curve (AUPC)**：综合RG和PSR的标量指标，通过在不同精度要求下绘制RG vs PSR曲线并计算面积得到。值越低越好。&#10;- **基线方法**：主要与Schubert等人[33]的无监督方法及其一个使用校准数据的变体进行比较。&#10;- **主要结果**：&#10;    1.  **整体性能提升**：在R@100P（100%精度下的最大召回率）任务上，本文方法（Ours）在绝大多数VPR技术和数据集上取得了最低的AUPC值（见表I），性能显著优于基线。&#10;    2.  **高精度场景优势明显**：如图3所示，在80-100%的高精度要求下，本文方法的AUPC降低最为显著（如Nordland数据集上降低16-30%），表明其在高可靠性需求场景下价值巨大。&#10;    3.  **动态阈值跟踪**：如图4所示，本文方法估计的阈值（绿色线）能够紧密跟踪Oracle最优阈值（紫色线），而基线方法（红色线）则严重低估了阈值，导致大量误检。本文方法的Recall Gap（0.077）比基线（0.65）低近一个数量级。&#10;    4.  **定性分析**：图5展示了本文方法既能接受基线错误拒绝的正确匹配（提高召回率），又能拒绝基线错误接受的错误匹配（保证精度），实现了更好的平衡。&#10;    5.  **消融实验**：图6表明，去除分位数转移步骤（Ours w/o quantile）后，性能大幅下降，证实了分位数转移是方法有效性的关键。同时，方法在不同部署块大小下表现稳定，证明了其鲁棒性。&#10;&#10;### 3.5 技术细节&#10;&#10;- **校准数据量**：实验中使用前10%的查询作为校准数据。作者在脚注中提到，额外实验表明校准数据量从5%到50%变化时，方法性能（AUPC）变化不显著，证明了其鲁棒性。&#10;- **部署块划分**：将部署集划分为多个小块是为了模拟多次独立的部署，从而进行统计评估。例如，Nordland数据集被划分为70个块，每个块285张图像。&#10;- **分位数外推**：为了覆盖所有可能的精度要求，分位数被线性外推，使得阈值能够覆盖部署分数分布的整个范围 $[\min(S_{val}), \max(S_{val})]$。&#10;- **运行时**：在Intel i7-14700处理器上，每个查询的处理时间在0.001秒（SFU Mountain）到0.29秒（Nordland）之间，具有实际部署的潜力。&#10;&#10;## 4. 意义与影响（Significance and Impact）&#10;&#10;- **解决的问题与贡献**：&#10;    - 解决了VPR系统中操作点选择这一长期存在的实际问题，即手动调参的繁琐性和固定阈值在环境变化下的失效性。&#10;    - 提出了一个新颖、通用且有效的**分位数转移**框架，为跨分布阈值迁移提供了一种优雅的解决方案。&#10;    - 通过大量实验证明了该方法在多种先进VPR技术和复杂数据集上的优越性，特别是在高精度要求下，能显著提升召回率（最高25%）。&#10;&#10;- **对未来研究/应用的影响**：&#10;    - **对VPR系统**：该方法可以作为任何VPR系统的即插即用模块，显著提升其在真实世界部署中的可靠性和鲁棒性，无需修改底层特征提取器。&#10;    - **对机器人应用**：对于依赖VPR进行定位和建图的机器人（如自动驾驶汽车、服务机器人），该方法能有效减少因误检导致的灾难性故障，提高系统安全性。&#10;    - **对相关领域**：分位数转移的思想可以推广到其他需要跨分布迁移阈值的任务，如异常检测、图像检索中的置信度校准等。&#10;&#10;- **局限性与开放问题**：&#10;    - **单帧匹配**：当前方法主要针对单帧图像匹配。作者指出，将其扩展到序列或滤波匹配方法是未来工作方向。&#10;    - **静态校准集**：方法依赖一个固定的、带标注的校准集。未来可以探索如何通过自监督方式在线更新校准集，甚至完全摆脱对静态校准集的依赖。&#10;    - **失败案例**：如图5底部所示，方法在某些情况下仍会低估阈值，导致误检。尽管比基线好，但仍有改进空间。&#10;&#10;## 5. 澄清与简化（Clarifications and Simplifications）&#10;&#10;- **什么是“分位数转移”？**&#10;    - **通俗解释**：想象两个班级的考试成绩。A班平均分80，B班平均分60。你发现A班考了90分（绝对分数）是优秀，但你不能说B班考了90分也是优秀，因为B班没人能考那么高。但是，你可以说“在A班排名前10%的学生是优秀的”。这个“前10%”就是**分位数**。当你去B班时，你不需要再找90分的人，而是找B班排名前10%的人（比如72分）。**分位数转移**就是做类似的事情：把在“校准环境”中找到的“优秀阈值”（绝对分数），转换成“排名位置”（分位数），然后把这个“排名位置”应用到“部署环境”中，找到对应的新阈值。这样，即使两个环境的分数分布完全不同，你也能找到性能相当的阈值。&#10;&#10;- **为什么分位数比绝对阈值更稳定？**&#10;    - **类比**：绝对阈值就像一把固定长度的尺子，用它去量不同大小的物体，结果会不准确。而分位数就像一把“比例尺”，它总是测量物体在整体中的相对位置。环境变化（如光照、季节）会拉伸或压缩相似度分数的分布，但好的匹配和差的匹配之间的**相对顺序**通常保持不变。分位数抓住了这个相对顺序，所以更稳定。&#10;&#10;- **“自适应校准采样”在做什么？**&#10;    - **类比**：假设你有一个包含城市、森林、海滩三种场景的校准照片集。现在，你部署时遇到一张森林的照片。如果你用整个校准集（包含城市和海滩）来学习阈值，结果可能不准确。**自适应校准采样**就像是在说：“这张森林照片和校准集里的哪些照片最像？哦，是那些森林照片。那我就只用这些森林照片来为它学习阈值。” 这样，为每个部署查询量身定做校准子集，提高了精度。&#10;&#10;## 6. 补充说明（Additional Notes）&#10;&#10;- **相关工作关联**：本文与Schubert等人[33]的工作最为相关。后者是一种无监督方法，假设分数分布为正态分布，通过拟合鲁棒正态分布来设置阈值。本文方法则明确利用校准数据来满足用户指定的精度要求，并引入分位数转移来解决分布漂移问题。与Vysotska等人[34]的序列匹配自适应阈值方法不同，本文专注于单帧匹配。&#10;- **重要图表**：&#10;    - **图1**：提供了整个方法的宏观流程图，清晰地展示了校准和部署两个阶段以及分位数转移的核心思想。&#10;    - **图2**：详细展示了方法的技术流程，包括相似度矩阵、相关性矩阵、自适应采样和分位数转移的各个步骤，是理解方法细节的关键。&#10;    - **图3**：展示了在不同精度要求下AUPC的变化，直观地证明了本文方法在高精度区域的显著优势。&#10;    - **图4**：展示了动态阈值跟踪效果，有力地证明了分位数转移方法能够自适应地调整阈值，紧密跟随最优解。&#10;    - **表I**：提供了在R@100P任务上，多种VPR技术和数据集下的AUPC数值，是量化性能对比的核心依据。">
@@ -1040,7 +1040,7 @@
                     </details>
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
-                        <p>Visual Place Recognition (VPR) is a key component for localization in Global Navigation Satellite System (GNSS)-denied environments, but its performance critically depends on selecting an image matching threshold (operating point) that balances precision and recall. Thresholds are typically hand-tuned offline for a specific environment and fixed during deployment, leading to degraded performance under environmental change. We propose a method that automatically estimates the operating point of a VPR system to maximize recall whilst aiming to achieve 100% precision. The method uses a small calibration traversal with known correspondences and transfers thresholds to deployment via quantile normalization of similarity score distributions. This quantile transfer ensures that thresholds remain stable across calibration sizes and query subsets. Experiments with seven state-of-the-art VPR techniques across five benchmark datasets demonstrate that our proposed approach consistently outperforms existing baselines, enabling the underlying VPR technique to operate at 100% precision in approximately twice as many deployment scenarios (median improvement), while retrieving up to 29% more correct matches at that precision. The method eliminates manual tuning by adapting to new environments and generalizing across operating conditions. Our code is available at https://github.com/DhyeyR-007/Quantile-Transfer-for-Reliabl e-VPR.</p>
+                        <p>Visual Place Recognition (VPR) is a key component for localization in Global Navigation Satellite System (GNSS)-denied environments, but its performance critically depends on selecting an image matching threshold (operating point) that balances precision and recall. Thresholds are typically hand-tuned offline for a specific environment and fixed during deployment, leading to degraded performance under environmental change. We propose a method that automatically estimates the operating point of a VPR system to maximize recall whilst aiming to achieve 100% precision. The method uses a small calibration traversal with known correspondences and transfers thresholds to deployment via quantile normalization of similarity score distributions. This quantile transfer ensures that thresholds remain stable across calibration sizes and query subsets. Experiments with seven state-of-the-art VPR techniques across five benchmark datasets demonstrate that our proposed approach consistently outperforms existing baselines, enabling the underlying VPR technique to operate at 100% precision in approximately twice as many deployment scenarios (median improvement), while retrieving up to 29% more correct matches at that precision. The method eliminates manual tuning by adapting to new environments and generalizing across operating conditions. Our code is available at https://github.com/DhyeyR-007/Quantile-Transfer-for-Reliable-VPR.</p>
                     </details>
                 </div>
                 <div class="paper-card">
@@ -2024,7 +2024,7 @@
         <footer class="footer">
             <p>👤 <strong>Hongkun Luo (罗宏昆)</strong> · <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent)">Academic Page</a> · <a href="https://github.com/luohongk" target="_blank" style="color:var(--accent)">GitHub</a></p>
             <p style="margin-top:8px">🤖 Generated automatically from <a href="https://arxiv.org" style="color:var(--accent)">arXiv</a> · <a href="https://github.com/luohongk/Embodied-AI-Daily" style="color:var(--accent)">GitHub Repo</a></p>
-            <p style="margin-top:4px">Last update: 2026-07-23 (Beijing Time)</p>
+            <p style="margin-top:4px">Last update: 2026-07-24 (Beijing Time)</p>
         </footer>
     </main>
 

@@ -670,12 +670,12 @@
                 <a href="Autonomous-Driving.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#6366f1"></span>
                     <span class="nav-label">Autonomous Driving</span>
-                    <span class="nav-count">78</span>
+                    <span class="nav-count">79</span>
                 </a>
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Kalman Filter</span>
-                    <span class="nav-count">50</span>
+                    <span class="nav-count">51</span>
                 </a>
                 <a href="Loop-Closure-Detection.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -690,7 +690,7 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">68</span>
+                    <span class="nav-count">69</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
@@ -784,7 +784,7 @@
         <div class="sidebar-header">
             <h1><a href="../index.html" style="background:linear-gradient(135deg,#6366f1,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">🚀 Embodied AI Daily</a></h1>
             <div class="update">by <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent);text-decoration:none;font-weight:500;">Hongkun Luo</a> (罗宏昆)</div>
-            <div class="update" style="margin-top:2px">Last update: 2026-07-23</div>
+            <div class="update" style="margin-top:2px">Last update: 2026-07-24</div>
         </div>
             <a href="Continuous-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
@@ -889,12 +889,12 @@
             <a href="Autonomous-Driving.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
                 <span class="nav-label">Autonomous Driving</span>
-                <span class="nav-count">78</span>
+                <span class="nav-count">79</span>
             </a>
             <a href="Kalman-Filter.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Kalman Filter</span>
-                <span class="nav-count">50</span>
+                <span class="nav-count">51</span>
             </a>
             <a href="Loop-Closure-Detection.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -909,7 +909,7 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">68</span>
+                <span class="nav-count">69</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
@@ -1030,6 +1030,36 @@
             <div class="paper-list">
                 <div class="paper-card">
                     <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.15330v2" target="_blank" class="paper-title">Xiaomi-Robotics-1: Scaling Vision-Language-Action Models with over 100K Hours of Real-World Trajectories</a>
+                        <span class="paper-date">2026-07-22</span>
+                    </div>
+                                        <span class="paper-comment">📝 Project page: https://robotics.xiaomi.com/xiaomi-robotics-1.html</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：如何构建一个能够泛化执行多种移动操作任务、并高效适应新任务的视觉-语言-动作（VLA）基础模型。  &#10;🛠 **方法**：提出两阶段训练方案——预训练阶段利用超过10万小时真实操作轨迹（通过UMI设备采集）和自动标注的自然语言描述进行训练，后训练阶段对齐机器人本体与人类指令。  &#10;✨ **主要贡献**：模型在RoboCasa365上以57.6%成功率超越此前最佳（46.6%），在RoboDojo上平均得分20.07（此前最佳13.07），并展现出随数据量和模型规模提升的强扩展性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>We present Xiaomi-Robotics-1, a foundational vision-language-action (VLA) model capable of (1) following diverse language instructions to perform a wide range of mobile manipulation tasks in unseen environments out-of-the-box, and (2) efficiently adapting to novel downstream tasks with minimal fine-tuning data. We propose a two-stage training recipe consisting of pre-training and post-training. During pre-training, we imbue the model with broad and generalizable action-generation capabilities by training on over 100k hours of real-world manipulation trajectories collected via UMI devices. Crucially, we develop a scalable auto-labeling pipeline that annotates trajectory clips with natural languages describing scene state transitions, providing rich and precise conditioning for action learning. During post-training, we aim to align these capabilities with robot embodiments and imperative instructions that humans naturally use to prompt robots. Extensive experiments demonstrate strong scaling behavior. Xiaomi-Robotics-1 consistently improves with increased data scales and model sizes during pre-training. This scaling behavior directly transfers to post-training, where a stronger pre-training model yields better out-of-the-box real-robot performance in unseen environments. Furthermore, Xiaomi-Robotics-1 serves as a strong robot foundation policy that can be efficiently fine-tuned on complex, dexterous tasks with high data efficiency. Across multiple simulation benchmarks, Xiaomi-Robotics-1 outperforms state-of-the-art methods. Notably, it establishes a new state-of-the-art with a 57.4% success rate on RoboCasa365, surpassing the previous best of 46.6%. Furthermore, it achieves an average score of 20.07 on RoboDojo, significantly outperforming the prior state-of-the-art (13.07). Code and model checkpoints will be released. Project page: https://robotics.xiaomi.com/xiaomi-robotics-1.html</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.19479v1" target="_blank" class="paper-title">ModPack: An Extensible Teleoperation Interface for Bimanual Mobile Manipulation</a>
+                        <span class="paper-date">2026-07-21</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有遥操作系统通常针对特定机器人硬件和任务领域定制，缺乏可扩展性和适应性，难以支持多样化的机器人形态和任务需求。&#10;&#10;🛠 **方法**：提出ModPack模块化遥操作系统，核心是一个集成了计算、电源、通信和数据存储的可穿戴“背包”，并支持即插即用的功能模块，包括关节级遥操作（带触觉反馈）、移动操作和主动感知。&#10;&#10;✨ **主要贡献**：在两种不同机器人平台和真实移动操作任务中验证了系统的灵活性和可复用性，并开源了完整的硬件设计和软件栈，为数据收集和策略学习提供了统一框架。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Existing teleoperation systems are often tailored to specific robot hardware and task domains, limiting their scalability and adaptability. We present ModPack, a modular and extensible teleoperation system designed to support diverse robot embodiments and task requirements within a unified framework. At the core of ModPack is a self-contained wearable "backpack" that integrates onboard computation, power, communication, and data storage. Built on top of this shared interface, the system supports plug-and-play capability modules including joint-level teleoperation with haptic feedback, mobile manipulation, and active perception. Experiments across two distinct robot platforms and real-world mobile manipulation tasks demonstrate that ModPack provides a flexible and reusable framework for data collection and policy learning. To support future research, we open-source the complete hardware design and software stack. Project website: https://modpack-robotics.github.io/</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
                         <a href="https://arxiv.org/abs/2602.23024v6" target="_blank" class="paper-title">InCoM: Intent-Driven Perception and Structured Coordination for Mobile Manipulation</a>
                         <span class="paper-date">2026-07-21</span>
                     </div>
@@ -1105,21 +1135,6 @@
                 </div>
                 <div class="paper-card">
                     <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.15330v1" target="_blank" class="paper-title">Xiaomi-Robotics-1: Scaling Vision-Language-Action Models with over 100K Hours of Real-World Trajectories</a>
-                        <span class="paper-date">2026-07-16</span>
-                    </div>
-                                        <span class="paper-comment">📝 Project page: https://robotics.xiaomi.com/xiaomi-robotics-1.html</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：如何构建一个能够泛化执行多种移动操作任务、并高效适应新任务的视觉-语言-动作（VLA）基础模型。  &#10;🛠 **方法**：提出两阶段训练方案——预训练阶段利用超过10万小时真实操作轨迹（通过UMI设备采集）和自动标注的自然语言描述进行训练，后训练阶段对齐机器人本体与人类指令。  &#10;✨ **主要贡献**：模型在RoboCasa365上以57.6%成功率超越此前最佳（46.6%），在RoboDojo上平均得分20.07（此前最佳13.07），并展现出随数据量和模型规模提升的强扩展性。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>We present Xiaomi-Robotics-1, a foundational vision-language-action (VLA) model capable of (1) following diverse language instructions to perform a wide range of mobile manipulation tasks in unseen environments out-of-the-box, and (2) efficiently adapting to novel downstream tasks with minimal fine-tuning data. We propose a two-stage training recipe consisting of pre-training and post-training. During pre-training, we imbue the model with broad and generalizable action-generation capabilities by training on over 100k hours of real-world manipulation trajectories collected via UMI devices. Crucially, we develop a scalable auto-labeling pipeline that annotates trajectory clips with natural languages describing scene state transitions, providing rich and precise conditioning for action learning. During post-training, we aim to align these capabilities with robot embodiments and imperative instructions that humans naturally use to prompt robots. Extensive experiments demonstrate strong scaling behavior. Xiaomi-Robotics-1 consistently improves with increased data scales and model sizes during pre-training. This scaling behavior directly transfers to post-training, where a stronger pre-training model yields better out-of-the-box real-robot performance in unseen environments. Furthermore, Xiaomi-Robotics-1 serves as a strong robot foundation policy that can be efficiently fine-tuned on complex, dexterous tasks with high data efficiency. Across multiple simulation benchmarks, Xiaomi-Robotics-1 outperforms state-of-the-art methods. Notably, it establishes a new state-of-the-art with a 57.6% success rate on RoboCasa365, surpassing the previous best of 46.6%. Furthermore, it achieves an average score of 20.07 on RoboDojo, significantly outperforming the prior state-of-the-art (13.07). Code and model checkpoints will be released. Project page: https://robotics.xiaomi.com/xiaomi-robotics-1.html</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
                         <a href="https://arxiv.org/abs/2607.13653v1" target="_blank" class="paper-title">Exploratory, Communicative, and Deployable: Vision-Driven Embodied Agents for Open-World Mobile Manipulation</a>
                         <span class="paper-date">2026-07-15</span>
                     </div>
@@ -1169,10 +1184,7 @@
                         <span class="paper-date">2026-07-12</span>
                     </div>
                                         <span class="paper-comment">📝 Minor revisions to presentation; technical content and results remain unchanged. Project page: horizonrobotics.github.io/EmbodiedGen</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：当前生成式3D资产虽发展迅速，但将这些资产组装成可直接用于具身智能策略训练的任务环境仍高度依赖人工，限制了大规模闭环学习。&#10;&#10;🛠 **方法**：提出EmbodiedGen V2，通过统一的“可仿真表示”连接跨仿真器资产、交互功能、任务驱动场景、多房间大场景及状态化Vibe Coding，构建可生成、可编辑、可复用的仿真管线。&#10;&#10;✨ **主要贡献**：资产管线实现96.5%人类接受率与98.6%碰撞成功率，83.3%的任务场景无需手动修改即可直接用于下游仿真；在线强化学习将仿真成功率从9.7%提升至79.8%，真实机器人任务成功率从21.7%提升至75.0%，验证了其作为可扩展仿真基础设施的有效性。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>We present EmbodiedGen V2, a generative 3D world engine for building executable policy-ready environments for embodied intelligence. Sim-ready 3D asset generation has advanced rapidly, yet assembling such assets into policy-ready task environments remains largely manual, limiting scalable closed-loop learning. EmbodiedGen V2 addresses this gap through a unified sim-ready representation that connects cross-simulator assets, interaction affordances, task-driven worlds, large-scale multi-room scenes, and stateful Vibe Coding into a generative, editable, and reusable simulation pipeline. The generated environments support manipulation, navigation, mobile manipulation, cross-simulator deployment, and embodied policy training. In evaluation, the asset pipeline achieves 96.5% human acceptance and 98.6% collision success, and 83.3% of task-driven worlds are directly usable for downstream simulation without manual modification. Online reinforcement learning with generated environments further improves simulation success from 9.7% to 79.8%, and transfers to real robots with task success increasing from 21.7% to 75.0%. These results establish EmbodiedGen V2 as scalable simulation infrastructure for training, evaluating, and deploying embodied policies.</p>
@@ -2006,25 +2018,13 @@
                         <p>Mobile Manipulation (MoMa) of articulated objects, such as opening doors, drawers, and cupboards, demands simultaneous, whole-body coordination between a robot's base and arms. Classical whole-body controllers (WBCs) can solve such problems via hierarchical optimization, but require extensive hand-tuned optimization and remain brittle. Learning-based methods, on the other hand, show strong generalization capabilities but typically rely on expensive whole-body teleoperation data or heavy reward engineering. We observe that even a sub-optimal WBC is a powerful structural prior: it can be used to collect data in a constrained, task-relevant region of the state-action space, and its behavior can still be improved upon using offline reinforcement learning. Building on this, we propose WHOLE-MoMa, a two-stage pipeline that first generates diverse demonstrations by randomizing a lightweight WBC, and then applies offline RL to identify and stitch together improved behaviors via a reward signal. To support the expressive action-chunked diffusion policies needed for complex coordination tasks, we extend offline implicit Q-learning with Q-chunking for chunk-level critic evaluation and advantage-weighted policy extraction. On three tasks of increasing difficulty using a TIAGo++ mobile manipulator in simulation, WHOLE-MoMa significantly outperforms WBC, behavior cloning, and several offline RL baselines. Policies transfer directly to the real robot without finetuning, achieving 80% success in bimanual drawer manipulation and 68% in simultaneous cupboard opening and object placement, all without any teleoperated or real-world training data.</p>
                     </details>
                 </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2604.09323v1" target="_blank" class="paper-title">Robust Adaptive Backstepping Impedance Control of Robots in Unknown Environments</a>
-                        <span class="paper-date">2026-04-10</span>
-                    </div>
-                                        <span class="paper-comment">📝 8</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>This paper presents a Robust Adaptive Backstepping Impedance Control (RABIC) strategy for robots operating in contact-rich and uncertain environments. The proposed control strategy considers the complete coupled dynamics of the system and explicitly accounts for key sources of uncertainty, including external disturbances and unmodeled dynamics, while not requiring the robot's dynamic parameters in implementation. We propose a backstepping-based adaptive impedance control scheme for the inner loop to track the reference impedance model. To handle uncertainties, we employ a Taylor series-based estimator for system dynamics and an adaptive estimator for determining the upper bound of external forces. Stability analysis demonstrates the semi-global practical finite-time stability of the overall system. To demonstrate the effectiveness of the proposed method, a simulated mobile manipulator scenario and experimental evaluations on a real Franka Emika Panda robot were conducted. The proposed approach exhibits safer performance compared to PD control while ensuring trajectory tracking and force monitoring. Overall, the RABIC framework provides a solid basis for future research on adaptive and learning-based impedance control for coupled mobile and fixed serially linked manipulators.</p>
-                    </details>
-                </div>
             </div>
         </section>
 
         <footer class="footer">
             <p>👤 <strong>Hongkun Luo (罗宏昆)</strong> · <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent)">Academic Page</a> · <a href="https://github.com/luohongk" target="_blank" style="color:var(--accent)">GitHub</a></p>
             <p style="margin-top:8px">🤖 Generated automatically from <a href="https://arxiv.org" style="color:var(--accent)">arXiv</a> · <a href="https://github.com/luohongk/Embodied-AI-Daily" style="color:var(--accent)">GitHub Repo</a></p>
-            <p style="margin-top:4px">Last update: 2026-07-23 (Beijing Time)</p>
+            <p style="margin-top:4px">Last update: 2026-07-24 (Beijing Time)</p>
         </footer>
     </main>
 

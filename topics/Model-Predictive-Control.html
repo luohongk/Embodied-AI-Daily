@@ -670,12 +670,12 @@
                 <a href="Autonomous-Driving.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#6366f1"></span>
                     <span class="nav-label">Autonomous Driving</span>
-                    <span class="nav-count">78</span>
+                    <span class="nav-count">79</span>
                 </a>
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Kalman Filter</span>
-                    <span class="nav-count">50</span>
+                    <span class="nav-count">51</span>
                 </a>
                 <a href="Loop-Closure-Detection.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -690,7 +690,7 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">68</span>
+                    <span class="nav-count">69</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
@@ -784,7 +784,7 @@
         <div class="sidebar-header">
             <h1><a href="../index.html" style="background:linear-gradient(135deg,#6366f1,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">🚀 Embodied AI Daily</a></h1>
             <div class="update">by <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent);text-decoration:none;font-weight:500;">Hongkun Luo</a> (罗宏昆)</div>
-            <div class="update" style="margin-top:2px">Last update: 2026-07-23</div>
+            <div class="update" style="margin-top:2px">Last update: 2026-07-24</div>
         </div>
             <a href="Continuous-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
@@ -889,12 +889,12 @@
             <a href="Autonomous-Driving.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
                 <span class="nav-label">Autonomous Driving</span>
-                <span class="nav-count">78</span>
+                <span class="nav-count">79</span>
             </a>
             <a href="Kalman-Filter.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Kalman Filter</span>
-                <span class="nav-count">50</span>
+                <span class="nav-count">51</span>
             </a>
             <a href="Loop-Closure-Detection.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -909,7 +909,7 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">68</span>
+                <span class="nav-count">69</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
@@ -1028,6 +1028,36 @@
                 <span class="topic-count">56 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.20352v1" target="_blank" class="paper-title">Distributed Motion Planning with Safety Guarantees for Self-Reconfiguring Robotic Boats</a>
+                        <span class="paper-date">2026-07-22</span>
+                    </div>
+                                        <span class="paper-comment">📝 Submitted to IEEE</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决水上自重构机器人在多智能体协同下安全地形成并重构目标形状的问题，避免碰撞并克服局部最优。&#10;&#10;🛠 **方法**：提出一种混合框架，结合分布式模型预测控制（MPC）与基于控制障碍函数（CBF）的实时安全滤波器，通过交替方向乘子法（ADMM）实现局部优化与信息交换。&#10;&#10;✨ **主要贡献**：利用MPC的预测能力缓解局部极小值问题，同时CBF提供形式化的安全保障，即使优化问题非凸也能确保安全；仿真（25个智能体）与实物实验（4个机器人）验证了框架的有效性与可扩展性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Aquatic self-reconfigurable robots must assemble into desired shapes while ensuring safe interactions among multiple agents. This paper proposes a hybrid framework that combines distributed Model Predictive Control (MPC) with Control Barrier Functions (CBFs) for multi-agent shape formation and reconfiguration. Given a desired shape and target assignment, a distributed MPC scheme, solved via the Alternating Direction Method of Multipliers (ADMM), computes coordinated trajectories through local optimization and information exchange. To ensure safety in real time, distributed CBF-based filters are applied to enforce inter-agent collision avoidance. The proposed approach leverages the predictive capabilities of MPC to mitigate local minima, while CBFs provide formal safety guarantees despite the nonconvexity of the underlying optimization problem. Simulation results with up to 25 agents and experimental validation with four physical robots demonstrate the effectiveness and scalability of the framework.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.19484v1" target="_blank" class="paper-title">Emergent Autonomous Drifting for Collision Avoidance in Real-World Winter Driving Scenarios</a>
+                        <span class="paper-date">2026-07-21</span>
+                    </div>
+                                        <span class="paper-comment">📝 8 pages, 8 figures. Accepted at IEEE ITSC 2026</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在真实冬季驾驶场景中，研究车辆在何种情况下通过自主漂移实现碰撞规避，并验证其安全性优势。&#10;&#10;🛠 **方法**：提出一种支持漂移的非线性模型预测控制（MPC）系统，基于致命碰撞数据设计场景，在高保真模拟器中测试道路偏离和对向来车避让，并与电子稳定控制（ESC）系统对比。&#10;&#10;✨ **主要贡献**：首次在真实冬季场景中证明漂移控制器能自然启动并维持漂移以应对冰面和对向车辆，相比ESC系统在高速下显著降低车道误差，揭示了漂移在高速下更优的稳定性与可控性权衡。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Real-world collision avoidance is a core motivation for studying the dynamics and control of high sideslip drifting in vehicles, yet the practical benefit of such maneuvers has so far primarily been tested in scenarios explicitly engineered to require drifting. In this work, we explore the question of if and when drifting may be optimal for safety in real-world winter driving conditions. We present a drift-capable nonlinear model predictive control (MPC) system designed to handle scenarios grounded in crash fatality data and deploy the controller in a high fidelity simulator across road departure and oncoming vehicle collision avoidance scenarios. The controller naturally initiates and sustains drifting maneuvers to stay on the road when hitting a patch of ice on the rear axle and to avoid an oncoming vehicle that has slid into its lane. Comparisons with a benchmark electronic stability control (ESC) system demonstrate how a drift-capable controller can trade off stability for controllability to precisely maneuver through dangerous winter driving scenarios. A Monte Carlo study over random ice patches further shows that the drift-capable controller achieves lower median lane error than ESC across several speeds, while revealing that drifting emerges predominantly at higher speeds.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2602.06925v3" target="_blank" class="paper-title">Strategizing at Speed: A Learned Model Predictive Game for Multi-Agent Drone Racing</a>
@@ -1154,10 +1184,7 @@
                         <span class="paper-date">2026-07-19</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在工业环境中，基于摄像头的遥操作机械臂难以同时实现高精度定位、避障和深度感知，尤其在杂乱场景下操作员需对齐末端执行器与目标并避免碰撞。&#10;&#10;🛠 **方法**：提出共享自主框架，通过RGB-D摄像头无标记捕捉操作员手臂动作和手势，利用视觉-语言模型将自由文本提示与机械臂夹爪相机中的目标关联，并由可提示视频分割模型跨相机跟踪目标；结合GPU加速的模型预测控制器实现实时避障，在最终接近阶段通过势场修正操作员参考轨迹，同时支持手势触发的自主抓取模式。&#10;&#10;✨ **主要贡献**：在四足移动机械臂上验证，位置误差仅59毫米（相对运动捕捉真值），控制器在操作员故意将手臂推入障碍物6厘米时仍保持至少18厘米安全距离；在工业阀门操作和拾取放置任务中，完整框架全部成功，而消融碰撞或辅助模块均导致失败，自主模式每任务5次试验成功4次。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Teleoperating a robotic manipulator in industrial environments demands precision that camera-based interfaces alone struggle to deliver. The operator must align the end-effector with a target in clutter, under limited depth perception, and without colliding with the surrounding structures. This paper presents a shared-autonomy framework that assists the operator throughout this process. A single RGB-D camera captures the operator's arm motion and hand gestures without wearables, fiducials, or a calibration stage. The intended target is specified by a free-form text prompt, grounded by a vision-language model in the robot's gripper camera, and tracked across its onboard cameras by a promptable video-segmentation model, resulting in a grasp frame continuously separated from the obstacle map. Every commanded motion is executed by a GPU-accelerated model-predictive controller that enforces self- and environment-collision avoidance against an online volumetric reconstruction, while a potential field corrects the operator's reference toward the grounded target during the final approach. An autonomous mode can be gesture-triggered to complete the grasp on the same target without a separate perception pipeline. The framework is validated on a quadruped mobile manipulator. The interface achieves a positional RMSE of 59 mm relative to motion-capture ground truth, and the controller keeps the arm at least 18 cm from obstacles while the operator deliberately commands the arm into them by 6 cm. In an industrial valve manipulation and a pick-and-place task, the full framework succeeded in all trials, while ablating either the collision or the assistance module produced failures through complementary mechanisms, and autonomous execution succeeded in four of five trials per task.</p>
@@ -1169,10 +1196,7 @@
                         <span class="paper-date">2026-07-18</span>
                     </div>
                                         <span class="paper-comment">📝 Supplementary video available at: https://youtu.be/w8hg52T8Luc?si=nzQrGsqP5ZBNFlGp</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决多台四足机器人协作运输共享负载时的安全关键分布式实时优化与协调控制问题。&#10;&#10;🛠 **方法**：提出基于交替方向乘子法（ADMM）的分布式非线性模型预测控制（DNMPC）框架，将集中式最优控制问题分解为并行局部子问题，并通过高阶控制障碍函数（HOCBFs）确保机器人和负载的安全避障。&#10;&#10;✨ **主要贡献**：在分布式预测控制中显式引入加速度级完整约束，并强制对负载状态和交互力轨迹达成共识；相比集中式NMPC，平均NLP求解时间降低23%，且通过仿真和实物实验验证了在负载不确定性和外部干扰下的鲁棒性；消融实验表明，显式负载状态共识和完整约束显著优于仅基于力共识的现有方法。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>This paper presents a safety-critical distributed nonlinear model predictive control (DNMPC) framework for cooperative payload transportation by teams of quadrupedal robots. The proposed approach models the robotic team and the shared payload as a dynamically coupled networked system with rigid holonomic coupling constraints arising from cooperative transportation. To enable distributed real-time optimization, the centralized finite-horizon optimal control problem is decomposed into parallel local NMPC subproblems coordinated through the alternating direction method of multipliers (ADMM). The resulting distributed framework enforces consensus over both payload-state and interaction-wrench trajectories while explicitly incorporating acceleration-level holonomic coupling constraints within the distributed predictive control formulation. Safety-critical obstacle avoidance constraints for both the robotic agents and payload are enforced using higher-order control barrier functions (HOCBFs). The framework is validated through numerical simulations with teams of two, three, and four quadrupedal robots transporting shared payloads in cluttered environments. Real-time experiments on two- and three-robot teams demonstrate safe and robust transportation under payload uncertainty and external disturbances. Compared with centralized NMPC, the proposed framework achieves up to 23% reduction in average NLP solve time while maintaining comparable closed-loop performance. Ablation studies further demonstrate robustness to communication delays and show that explicit payload-state consensus and holonomic constraints substantially improve payload tracking and distributed coordination over existing wrench-only consensus formulations.</p>
@@ -1706,37 +1730,13 @@
                         <p>Optimization-based local planning and control require high-rate collision-avoidance constraint evaluation over a prediction horizon. In obstacle-dense environments, where feasible space is limited and the constraints become increasingly complex, the computational workload often dominates the control-cycle runtime. The resulting bottleneck motivates collision-avoidance constraints that combine computational efficiency with geometric fidelity. The proposed Polygonal Signed Distance Function (PSDF) is a geometry-exact signed distance function between a convex polygonal robot footprint and obstacles represented by their boundary edges. It is implemented as a weight-free, branch-free tensorized geometric pipeline enabling batched GPU execution and automatic differentiation. The PSDF is embedded into model predictive control by locally linearizing the stage-wise safety constraints within a sequential quadratic programming-based real-time iteration scheme, yielding the PSDF-embedded model predictive controller (PSDF-MPC). The design separates CPU/GPU computation so that the GPU evaluates batched PSDF values and gradients while the CPU solves a sparse quadratic program whose dimension is determined by system dimensions and horizon length, not by obstacle features. Microbenchmarks show that PSDF scales favorably against signed-distance query baselines. Closed-loop simulated and real-world navigation experiments, including comparisons with optimization-based baselines, demonstrate that PSDF-MPC maintains real-time feasibility and robust collision avoidance in dense polygonal environments.</p>
                     </details>
                 </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.04259v1" target="_blank" class="paper-title">Integrated Graph Search and Model Predictive Control for Smooth and Efficient Path Planning in Autonomous Vehicles</a>
-                        <span class="paper-date">2026-07-05</span>
-                    </div>
-                                        <span class="paper-comment">📝 12th 2026 International Conference on Control, Decision and Information Technologies (CoDIT 2026)</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Path planning is a fundamental component of autonomous vehicles, where achieving safe, comfortable, and dynamically feasible paths while ensuring computational efficiency remains a significant challenge. This paper presents a sequential path planning framework in which a rough path obtained from graph search is explicitly exploited to guide a Model Predictive Control (MPC)-based path refinement. A rough path is first obtained via Dijkstra search on a discretized grid and is then used to construct a spatially varying convex lateral safety corridor that explicitly captures obstacle avoidance constraints, transforming discrete obstacle avoidance decisions into continuous feasibility constraints for optimization. Within this corridor, an MPC problem is formulated to refine the path, enabling efficient optimization while maintaining path smoothness by penalizing the third-order spatial derivative of the lateral offset over a prediction horizon. The proposed algorithm is evaluated in multiple overtaking scenarios on both straight and curved roads, including cases with single and multiple target vehicles, using high-fidelity environment simulations (i.e., CarMaker). Compared with the previous study, which used polynomial fitting and a quadratic programming method, the proposed approach consistently achieves lower lateral acceleration, curvature, and jerk while reducing computational cost by 28.08% on straight roads and 29.52% on curved roads. These results demonstrate that exploiting graph-search structure within an MPC formulation provides an effective balance between path smoothness and computational efficiency for autonomous vehicles in structured driving environments.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2405.07312v5" target="_blank" class="paper-title">Nonparametric Control Koopman Operators</a>
-                        <span class="paper-date">2026-07-04</span>
-                    </div>
-                                        <span class="paper-comment">📝 The authors' electronic preprint version of an article accepted to IEEE Transactions on Automatic Control</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>This paper presents a novel Koopman composition operator representation framework for control systems in reproducing kernel Hilbert spaces (RKHSs) that is free of explicit dictionary or input parametrizations. By establishing fundamental equivalences between different model representations, we are able to close the gap of control system operator learning and infinite-dimensional regression, enabling various empirical estimators and the connection to the well-understood learning theory in RKHSs under one unified framework. Consequently, our proposed framework allows for arbitrarily accurate finite-rank approximations in infinite-dimensional spaces and leads to finite-dimensional predictors without a priori restrictions to a finite span of functions or inputs. To enable applications to high-dimensional control systems, we improve the scalability of our proposed control Koopman operator estimates by utilizing sketching techniques. Numerical experiments demonstrate superior prediction accuracy compared to bilinear EDMD, especially in high dimensions. Finally, we show that our learned models are readily interfaced with linear-parameter-varying techniques for model predictive control.</p>
-                    </details>
-                </div>
             </div>
         </section>
 
         <footer class="footer">
             <p>👤 <strong>Hongkun Luo (罗宏昆)</strong> · <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent)">Academic Page</a> · <a href="https://github.com/luohongk" target="_blank" style="color:var(--accent)">GitHub</a></p>
             <p style="margin-top:8px">🤖 Generated automatically from <a href="https://arxiv.org" style="color:var(--accent)">arXiv</a> · <a href="https://github.com/luohongk/Embodied-AI-Daily" style="color:var(--accent)">GitHub Repo</a></p>
-            <p style="margin-top:4px">Last update: 2026-07-23 (Beijing Time)</p>
+            <p style="margin-top:4px">Last update: 2026-07-24 (Beijing Time)</p>
         </footer>
     </main>
 

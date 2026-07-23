@@ -670,12 +670,12 @@
                 <a href="Autonomous-Driving.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#6366f1"></span>
                     <span class="nav-label">Autonomous Driving</span>
-                    <span class="nav-count">78</span>
+                    <span class="nav-count">79</span>
                 </a>
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Kalman Filter</span>
-                    <span class="nav-count">50</span>
+                    <span class="nav-count">51</span>
                 </a>
                 <a href="Loop-Closure-Detection.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -690,7 +690,7 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">68</span>
+                    <span class="nav-count">69</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
@@ -784,7 +784,7 @@
         <div class="sidebar-header">
             <h1><a href="../index.html" style="background:linear-gradient(135deg,#6366f1,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">🚀 Embodied AI Daily</a></h1>
             <div class="update">by <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent);text-decoration:none;font-weight:500;">Hongkun Luo</a> (罗宏昆)</div>
-            <div class="update" style="margin-top:2px">Last update: 2026-07-23</div>
+            <div class="update" style="margin-top:2px">Last update: 2026-07-24</div>
         </div>
             <a href="Continuous-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
@@ -889,12 +889,12 @@
             <a href="Autonomous-Driving.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
                 <span class="nav-label">Autonomous Driving</span>
-                <span class="nav-count">78</span>
+                <span class="nav-count">79</span>
             </a>
             <a href="Kalman-Filter.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Kalman Filter</span>
-                <span class="nav-count">50</span>
+                <span class="nav-count">51</span>
             </a>
             <a href="Loop-Closure-Detection.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -909,7 +909,7 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">68</span>
+                <span class="nav-count">69</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
@@ -1028,6 +1028,21 @@
                 <span class="topic-count">80 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.19880v1" target="_blank" class="paper-title">EA-Nav: Learning Safe Visual Navigation Policies with Embodiment Awareness</a>
+                        <span class="paper-date">2026-07-22</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：跨形态（cross-embodiment）视觉导航中，不同智能体面对相同视觉观察时动作预测存在歧义，现有方法依赖强化学习难以支持可扩展预训练和真实场景适应。&#10;&#10;🛠 **方法**：提出基于模仿学习的形态感知导航框架（EA-Nav），采用模块化多阶段设计。预训练阶段从互联网视频构建跨形态数据集，引入形态几何作为条件令牌减少动作歧义；微调阶段通过解耦架构注入多模态信息，并设计轨迹增强策略生成高风险样本，分别训练空间感知与风险感知校正。&#10;&#10;✨ **主要贡献**：首次将形态几何显式融入模仿学习导航框架，有效提升不同形态设置下的导航性能，验证了形态几何在具身导航中的有效性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Cross-embodiment navigation is a key challenge in embodied intelligence. Due to differences in embodiment, the same visual observation may imply different actions for different agents, making prediction ambiguous when relying solely on vision. Existing studies mainly rely on reinforcement learning, which requires large-scale interaction and careful reward design, making it difficult to support scalable pretraining and real-world adaptation. In contrast, imitation-learning-based approaches remain limited. To address these challenges, we propose an imitation-learning-based embodiment-aware navigation framework with a modular multi-stage design. In pretraining, we construct a cross-embodiment navigation dataset from Internet videos and introduce embodiment geometry as conditional tokens to reduce action ambiguity under the same observation. In fine-tuning, we design a multimodal information injection mechanism based on a decoupled architecture. Specifically, we design a trajectory augmentation strategy to generate high-risk samples, which are used to train spatial perception and risk-aware correction separately, thereby explicitly incorporating embodiment geometry for safe navigation. Experimental results show that the proposed method effectively improves navigation performance across different embodiment settings, demonstrating the effectiveness of incorporating embodiment geometry into embodied navigation.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2607.18637v1" target="_blank" class="paper-title">End-to-end Conditional Diffusion for Realistic and Controllable Visual Traffic Scenario Generation</a>
@@ -1169,10 +1184,7 @@
                         <span class="paper-date">2026-07-16</span>
                     </div>
                                         <span class="paper-comment">📝 8 pages, 7 figures</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：研究仅依赖人体运动数据（不含动力学信息）的模仿学习能否准确估计合理的生物关节力矩，揭示其在高保真步态建模中的局限性。  &#10;🛠 **方法**：对比纯运动模仿学习（MOIL）与结合地面反作用力（GRF）和压力中心（CoP）的动力学感知模仿学习（KAIL），并通过消融实验分析各动力学项的贡献。  &#10;✨ **主要贡献**：发现MOIL虽能实现高精度运动跟踪，但GRF、CoP和关节力矩估计误差显著；而KAIL能生成更符合生物力学值的动力学结果，强调运动数据本身无法保证步态生物力学的合理性。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Motion imitation learning (IL) is increasingly used in robotics and human gait modeling, yet its ability to recover biomechanically consistent joint moments without explicit kinetic information remains unclear. In this study, we examined whether motion imitation alone can estimate reasonable biological joint moments. We compare motion-only IL (MOIL) against a kinetics-aware IL (KAIL) framework that incorporates ground reaction forces (GRF) and center of pressure (CoP) in imitation rewards, with an ablation study to examine the contribution of each kinetic term. Experiments were conducted using walking data from a non-disabled participant at three speeds (0.9, 1.2, and 1.5 m/s). While both MOIL and KAIL achieved comparable kinematic tracking accuracy, MOIL exhibited substantially larger errors in GRF, CoP, and joint moment estimates relative to inverse dynamics references. In contrast, KAIL produced kinetics more consistent with biomechanical values. These findings highlight a fundamental limitation of MOIL approaches, which may lead to erroneous interpretations of gait biomechanics and downstream applications by failing to estimate consistent human-like gait kinetics.</p>
@@ -1684,6 +1696,18 @@
                 </div>
                 <div class="paper-card">
                     <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.19399v1" target="_blank" class="paper-title">Leveraging Offline Supervision for Efficient and Generalizable Reinforcement Learning in Large-Scale Vision-Language-Action Models</a>
+                        <span class="paper-date">2026-07-06</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>It is commonly observed that online reinforcement learning (RL) produces better-performing strategies than offline methods across a broad range of performance measures. In particular, RL-trained policies exhibit stronger out-of-distribution (OOD) behavior, where models trained only with imitation learning approaches often struggle. A recent study introduced an OOD-focused benchmark and reported that RL-trained vision-language-action (VLA) policies achieve noticeably better OOD performance and slightly better in-distribution (IND) performance than their counterparts trained with supervised fine-tuning (SFT). In this work, we investigate whether hybrid offline-online training can combine the advantages of both approaches. Specifically, we study RL methods regularized by offline supervision via either offline data or an offline-trained reference policy. We evaluate these approaches on the OOD benchmark and compare them with both offline-only training and standard RL. Our results show that although offline training achieves limited OOD performance by itself, incorporating offline supervision into RL preserves strong OOD capability while substantially improving training efficiency. In particular, the guided methods reach performance close to that of standard RL while requiring roughly half of the training budget. Rather than producing a trade-off between speed and OOD performance, the hybrid approach retains strong OOD capability while achieving this efficiency gain. Project page: https://alstar8.github.io/offline-supervision-vla-rl</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
                         <a href="https://arxiv.org/abs/2606.24633v2" target="_blank" class="paper-title">Beyond Monotonic Progress: Retry-Supervised Value Learning for Robot Imitation</a>
                         <span class="paper-date">2026-07-06</span>
                     </div>
@@ -1740,6 +1764,18 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Recent advances in embodied AI have established robot foundation models (RFMs) as the dominant approach for generalist robotic systems to date. By leveraging imitation learning on extensive robot demonstrations, RFMs have achieved impressive capabilities in mapping visual observations and language instructions to continuous robotic actions. However, current RFMs lack an inherent ability to reason about physical dynamics and the causal effects of robot behaviors on the 3D physical world. This creates a fundamental mismatch between 2D-centric visual perception and 3D-centric embodied interaction, severely limiting the generalization ability of RFMs in real-world tasks.To address this gap, we present WSA$_1$, a novel RFM built upon proposed 3D-Centric World-Spatial-Action modeling paradigm. It not only learns 3D world-aware visual thought for future robot behaviors, but also models mutual constraints between 3D world state transitions and robotic actions to enhance behavior generalization. Notably, WSA$_1$ achieves highly data-efficient pre-training with 6k hours of expert demonstration data (only 1k hours from real robot), while delivering competitive manipulation performance (93% success rate) on RoboTwin2.0 simulation benchmark and achieving +20% average boosted performance over state-of-the-art RFMs on real-world robot control tasks. These results reveal that generalizable RFM can be attained without large-scale real robot data when paired with 3D-centric world-action joint modeling, which offers a practical and affordable pathway to generalist robotic systems.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.19398v1" target="_blank" class="paper-title">HyGRL: Adaptive Hybrid Graph Reasoning for Multi-Entity Questions</a>
+                        <span class="paper-date">2026-07-04</span>
+                    </div>
+                                        <span class="paper-comment">📝 8 pages</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Multi-entity compositional questions pose significant challenges to existing retrieval-augmented language models. Conventional methods fall into a dilemma: standard RAG lacks dynamic reasoning, traditional Graph-RAG is limited by structural sparsity, and LLM-constructed Graph-RAG incurs prohibitive costs. We propose \textbf{\fwa}, a unified framework that embeds unstructured text into structured knowledge graphs, creating a heterogeneous network for flexible evidence retrieval. Reasoning is formulated as adaptive structure induction, learned via a robust two-stage process: (1) imitation learning distills heuristic expert signals, and (2) reinforcement learning refines the policy using LLM-driven preference rewards. Experiments demonstrate that {\fwa} effectively merges textual richness with structural knowledge, outperforming SOTA baselines in answer accuracy and reasoning fidelity while maintaining extremely low token costs and near real-time inference((code available at https://github.com/wjywjy123/HyGRL) .</p>
                     </details>
                 </div>
                 <div class="paper-card">
@@ -1982,49 +2018,13 @@
                         <p>Humanoid robots have demonstrated impressive motor skills in a wide range of tasks, yet whole-body control for humanlike long-time, dynamic fighting remains particularly challenging due to the stringent requirements on agility and stability. While imitation learning enables robots to execute human-like fighting skills, existing approaches often rely on switching among multiple single-skill policies or employing a general policy to imitate input reference motions. These strategies suffer from instability when transitioning between skills, as the mismatch of initial and terminal states across skills or reference motions introduces out-of-domain disturbances, resulting in unsmooth or unstable behaviors. In this work, we propose RPG, a hybrid expert policy framework, for smooth and stable humanoid multi-skills transition. Our approach incorporates motion transition randomization and temporal randomization to train a unified policy that generates agile fighting actions with stability and smoothness during skill transitions. Furthermore, we design a control pipeline that integrates walking/running locomotion with fighting skills, allowing humanlike long-time combat of arbitrary duration that can be seamlessly interrupted or transit action policies at any time. Extensive experiments in simulation demonstrate the effectiveness of the proposed framework, and real-world deployment on the Unitree G1 humanoid robot further validates its robustness and applicability.</p>
                     </details>
                 </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2509.15443v2" target="_blank" class="paper-title">A Scalable Whole-body Motion Transfer via Implicit Kinodynamic Motion Retargeting</a>
-                        <span class="paper-date">2026-06-30</span>
-                    </div>
-                                        <span class="paper-comment">📝 RSS 2026 Workshop. Webpage: https://cybercal.github.io/webpage.ikmr</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Human-to-humanoid imitation learning presents a promising pathway to address the severe data scarcity bottleneck in robotics by utilizing abundant, large-scale human motion collections. However, scaling this paradigm requires addressing two key challenges. First, human motion data acquired from videos, motion capture systems, or generative models often contains spatial noise, jitter, and frame-level flickering, which can be amplified during retargeting and lead to unsafe or physically infeasible robot motions. Second, existing motion retargeting methods typically rely on frame-by-frame numerical optimization, making them too computationally expensive for large-scale dataset synthesis. To overcome these limitations, we introduce Implicit Kinodynamic Motion Retargeting (IKMR), a highly scalable, neural-based data transformation pipeline. IKMR leverages a skeleton-based graph convolutional dual autoencoder to map cross-structural human and humanoid kinematic configurations into a shared topological latent space. To guarantee the physical viability of the generated data, the framework incorporates a physics-informed refinement phase that utilizes simulated physical tracking feedback to learn a robust motion prior. This implicit formulation fundamentally resolves both challenges. By shifting the computational burden from online optimization to offline inference, IKMR achieves an unprecedented data conversion throughput exceeding 5000 frames per second. Furthermore, leveraging the learned motion prior, it functions as an intrinsic data curation mechanism and naturally filters out high-frequency noise and spatial jitters from source data, yielding smooth trajectories that ensure physical hardware safety. Extensive evaluations, including real-world whole-body control deployments on humanoid robot, confirm that IKMR bridges the gap between human motion and robotic data.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.31106v1" target="_blank" class="paper-title">What Probing Reveals about Autonomous Driving: Linking Internal Prediction Errors to Ego Planning</a>
-                        <span class="paper-date">2026-06-30</span>
-                    </div>
-                                        <span class="paper-comment">📝 10 pages</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Large-scale datasets and fast simulators have enabled improvements in driving policies that appear safe and robust, yet strong performance in nominal scenarios can still mask flawed reasoning and unsafe heuristics. Summary scores from closed-loop simulators do not give significant insight into the policy, making it difficult to determine whether they truly predict the motion of surrounding vehicles, how the ego vehicle generates future plans, or whether they merely rely on brittle heuristics that happen to succeed in nominal scenarios. To better understand the limits and weaknesses of driving policies, we focus on probing for forms of prediction, i.e., where surrounding vehicles will move next, and planning, i.e., understanding how to generate safe trajectories. We focus on these two capabilities because they reflect behaviors expected of effective driving policies, and use their presence or absence to assess policy quality across data-driven behavior cloning and simulation-driven reinforcement learning policies. To evaluate the presence of these capabilities, we investigate them as a function of scale, asking whether the closed-loop gains from larger datasets and longer simulation training reflect stronger prediction and planning or merely better behavioral heuristics. We use linear probing and targeted perturbations in both imitation learning and reinforcement learning models to track when these internal signals emerge, plateau, or fail. Despite good closed-loop performance, policies often fail to form timely surrounding-vehicle predictions during near-collision events, revealing a limitation in the predictive signals available for ego planning. Finally, causal intervention shows that correcting mistaken predictions improves ego planning toward safer trajectories.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.30923v1" target="_blank" class="paper-title">Behavior Cloning is Not All You Need: The Optimality of On-Policy Distillation for Noisy Expert Feedback</a>
-                        <span class="paper-date">2026-06-29</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Imitation Learning is a natural framework for learning in sequential decision-making systems and has emerged as the dominant paradigm through which we understand language model training. A central puzzle is that, while in theory offline IL can be horizon-free and optimal, in practice online methods such as on-policy distillation often outperform offline methods such as supervised fine-tuning. We propose a noisy expert model to explain this gap, in which the learner only has access to a noisy version of the expert's policy, but wishes to compete against the reward achieved by a clean expert, motivated by the fact that in many applications, e.g. training language models to perform long chains of thought, the expert is often imperfect. In this setting, we show a sharp separation between offline and online IL. Offline learning from noisy trajectories is fundamentally hard: to compete with the clean expert, the sample complexity must grow exponentially, in contradistinction to the clean expert setting where no explicit horizon dependence exists. In contrast, we prove that online interaction with the noisy expert via a novel variant of OPD enables polynomial dependence on the horizon in general. We further show that, under a natural condition on the expert noise distribution, which we show to be necessary for any horizon-free sample complexity, one can obtain such a guarantee, although our proposed algorithm sacrifices statistical efficiency in its dependence on the size of the policy class. Our analysis leads to an alternative loss function that is commonly considered empirically for LM training. We further provide algorithms and lower bounds, and extend our results to the more realistic setting of unknown corruption when the clean expert is deterministic, thereby providing a theoretical foundation for why OPD can outperform SFT when training language models from imperfect teachers.</p>
-                    </details>
-                </div>
             </div>
         </section>
 
         <footer class="footer">
             <p>👤 <strong>Hongkun Luo (罗宏昆)</strong> · <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent)">Academic Page</a> · <a href="https://github.com/luohongk" target="_blank" style="color:var(--accent)">GitHub</a></p>
             <p style="margin-top:8px">🤖 Generated automatically from <a href="https://arxiv.org" style="color:var(--accent)">arXiv</a> · <a href="https://github.com/luohongk/Embodied-AI-Daily" style="color:var(--accent)">GitHub Repo</a></p>
-            <p style="margin-top:4px">Last update: 2026-07-23 (Beijing Time)</p>
+            <p style="margin-top:4px">Last update: 2026-07-24 (Beijing Time)</p>
         </footer>
     </main>
 

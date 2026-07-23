@@ -670,12 +670,12 @@
                 <a href="Autonomous-Driving.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#6366f1"></span>
                     <span class="nav-label">Autonomous Driving</span>
-                    <span class="nav-count">78</span>
+                    <span class="nav-count">79</span>
                 </a>
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Kalman Filter</span>
-                    <span class="nav-count">50</span>
+                    <span class="nav-count">51</span>
                 </a>
                 <a href="Loop-Closure-Detection.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -690,7 +690,7 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">68</span>
+                    <span class="nav-count">69</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
@@ -784,7 +784,7 @@
         <div class="sidebar-header">
             <h1><a href="../index.html" style="background:linear-gradient(135deg,#6366f1,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">🚀 Embodied AI Daily</a></h1>
             <div class="update">by <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent);text-decoration:none;font-weight:500;">Hongkun Luo</a> (罗宏昆)</div>
-            <div class="update" style="margin-top:2px">Last update: 2026-07-23</div>
+            <div class="update" style="margin-top:2px">Last update: 2026-07-24</div>
         </div>
             <a href="Continuous-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
@@ -889,12 +889,12 @@
             <a href="Autonomous-Driving.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
                 <span class="nav-label">Autonomous Driving</span>
-                <span class="nav-count">78</span>
+                <span class="nav-count">79</span>
             </a>
             <a href="Kalman-Filter.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Kalman Filter</span>
-                <span class="nav-count">50</span>
+                <span class="nav-count">51</span>
             </a>
             <a href="Loop-Closure-Detection.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -909,7 +909,7 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">68</span>
+                <span class="nav-count">69</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
@@ -1028,6 +1028,36 @@
                 <span class="topic-count">79 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.20352v1" target="_blank" class="paper-title">Distributed Motion Planning with Safety Guarantees for Self-Reconfiguring Robotic Boats</a>
+                        <span class="paper-date">2026-07-22</span>
+                    </div>
+                                        <span class="paper-comment">📝 Submitted to IEEE</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决水上自重构机器人在多智能体协同下安全地形成并重构目标形状的问题，避免碰撞并克服局部最优。&#10;&#10;🛠 **方法**：提出一种混合框架，结合分布式模型预测控制（MPC）与基于控制障碍函数（CBF）的实时安全滤波器，通过交替方向乘子法（ADMM）实现局部优化与信息交换。&#10;&#10;✨ **主要贡献**：利用MPC的预测能力缓解局部极小值问题，同时CBF提供形式化的安全保障，即使优化问题非凸也能确保安全；仿真（25个智能体）与实物实验（4个机器人）验证了框架的有效性与可扩展性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Aquatic self-reconfigurable robots must assemble into desired shapes while ensuring safe interactions among multiple agents. This paper proposes a hybrid framework that combines distributed Model Predictive Control (MPC) with Control Barrier Functions (CBFs) for multi-agent shape formation and reconfiguration. Given a desired shape and target assignment, a distributed MPC scheme, solved via the Alternating Direction Method of Multipliers (ADMM), computes coordinated trajectories through local optimization and information exchange. To ensure safety in real time, distributed CBF-based filters are applied to enforce inter-agent collision avoidance. The proposed approach leverages the predictive capabilities of MPC to mitigate local minima, while CBFs provide formal safety guarantees despite the nonconvexity of the underlying optimization problem. Simulation results with up to 25 agents and experimental validation with four physical robots demonstrate the effectiveness and scalability of the framework.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.19971v1" target="_blank" class="paper-title">Unified Prediction and Planning via Conflict-Aware Disjoint Parameter Training</a>
+                        <span class="paper-date">2026-07-22</span>
+                    </div>
+                                        <span class="paper-comment">📝 Accepted at ECCV 2026. 38 pages, 14 figures. Project page: https://dpt2026.github.io/</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在资源受限的边缘设备上，统一预测与规划模型因预测邻居行为与自我安全规划的目标不同，导致参数重叠引发“技能冲突”，损害模型性能。&#10;&#10;🛠 **方法**：提出基于模型合并的“分离参数训练”（DPT）框架，通过分布式参数学习分离各任务的关键参数区域，并在合并时采用稀疏合并策略，仅整合对每个任务最关键的参数。&#10;&#10;✨ **主要贡献**：首次识别并解决统一模型中的技能冲突问题；DPT框架可并行应用于多种合并方法；在JRDB和JTA基准上验证了其优越性能，适用于安全且资源高效的机器人导航。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Accurate motion prediction of surrounding agents and safe motion planning are two closely coupled key tasks for social robot navigation in crowded environments. Deploying these systems on resource-constrained edge devices necessitates compact, unified models that can perform both tasks simultaneously. However, within these compact shared encoders, recent unified models often overlook severe representational conflicts that arise from the distinct objectives of predicting neighbor behaviors versus ego-centric safety planning. To address this issue, we first identify the Skill Conflict$\unicode{x2014}$a phenomenon where overlapping parameter assignments cause distinct tasks to compete for the same weights, preventing the model from fully specializing in individual skills. To resolve this, we propose a novel model-merging-based framework, Disjoint Parameter Training (DPT). DPT mitigates performance degradation caused by Skill Conflict through distributed parameter learning, which separates the key parameter regions of each task while preserving their core capabilities prior to merging. In addition, we observe that sparse merging, which selectively integrates only the most influential parameters for each task rather than combining all task-specific parameters, yields optimal performance by preventing interference among adjacent features and concentrating representational capacity. DPT can be applied in parallel with a variety of merging methods. Evaluated on standard crowd navigation benchmarks (JRDB and JTA), our framework demonstrates superior performance, validating its versatility and effectiveness for safe, resource-efficient robot navigation.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2607.19306v1" target="_blank" class="paper-title">From Distances to Trajectories: Real-Time Signed Distance Function Mapping and Distance-Accelerated Motion Planning for UAVs</a>
@@ -1154,10 +1184,7 @@
                         <span class="paper-date">2026-07-20</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：非完整移动机器人在运动规划中难以同时满足曲率约束、避免输入饱和，并实现有限时间收敛。&#10;&#10;🛠 **方法**：提出一个通用框架，包含有限时间曲率约束向量场（FT-C2VF）和无饱和控制律。FT-C2VF通过互补增益构造，确保积分曲线曲率连续、有界且随径向比单调递减；无饱和控制器无需雅可比信息，使控制输入保持在执行器限制内。&#10;&#10;✨ **主要贡献**：首次实现曲率约束下的有限时间收敛与无饱和控制，通过动力学分析证明目标平衡点的几乎全局有限时间稳定性，仿真和户外实验验证了其优于现有向量场方法的性能与鲁棒性。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Accurately steering a robot to a target configuration is fundamental in engineering, yet remains challenging for nonholonomic mobile robots. Vector fields (VFs) provide a natural framework by specifying desired motion directions throughout the workspace and enabling direct integration with feedback control. However, most existing VF-based methods cannot explicitly generate trajectories satisfying curvature constraints. Actuator limits are therefore often enforced by input saturation, which may invalidate stability guarantees and degrade closed-loop performance when not considered in controller design. In addition, these methods usually ensure only asymptotic convergence without an explicit settling-time bound. To address these issues, we propose a generalized motion planning and control framework consisting of a finite-time curvature-constrained vector field (FT-C2VF) and a saturation-free control law. Depending on the motion objective, the framework drives the robot to the target configuration in finite time or through it periodically. First, the FT-C2VF is constructed using complementary gains to achieve finite-time convergence while ensuring that the curvature of its integral curves is continuous, bounded, and monotonically decreasing with the radial ratio. Second, an almost globally C1-smooth, saturation-free controller is developed to track the FT-C2VF without Jacobian information, while keeping all control inputs within prescribed actuator limits. Third, dynamical-systems analysis establishes almost-global finite-time stability of the target equilibrium. Numerical simulations show improved performance over representative VF-based methods, and outdoor experiments on an Ackermann-steered vehicle confirm the effectiveness and robustness of the proposed approach.</p>
@@ -1169,10 +1196,7 @@
                         <span class="paper-date">2026-07-20</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决飞行机器人在狭窄空间中因强气动扰动和有限空间导致的飞行保守或不安全问题。&#10;&#10;🛠 **方法**：提出扰动感知规划与控制框架（DAPCF），通过双环观测器实时估计六自由度扰动力和力矩，引入扰动风险函数自适应调节规划器参考速度，并设计基于电机动力学的非线性模型预测控制器（MDNMPC）进行扰动补偿。&#10;&#10;✨ **主要贡献**：实现了对角线长0.39米的四旋翼在0.6米宽的直、斜、弯曲隧道中自主穿越，成功率和飞行效率均优于人类飞行员。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Autonomous flight of aerial robots in narrow space remains challenging due to strong aerodynamic disturbances and limited flying space. Existing approaches mainly address aerodynamic disturbances at the control level, while motion planning typically relies on geometric constraints and fixed speed limits, leading to conservative or unsafe behaviors in confined environments. This paper presents a disturbance-aware planning and control framework (DAPCF) that integrates online disturbance estimation into the planning-control loop for quadrotor flight in narrow space. First, the dual-loop observers estimate 6-degree-of-freedom disturbance forces and torques in real time based on odometry and motor speed measurements. Then, a disturbance risk function is introduced that adaptively modulates the reference speed of the planner based on disturbance estimation, reducing velocity when disturbances exceed a threshold and restoring it under low-disturbance conditions. Finally, a motor-dynamics-based nonlinear model predictive controller (MDNMPC) with disturbance compensation is designed to ensure robust trajectory tracking under perturbed conditions. Experiments demonstrate that a quadrotor with a diagonal length of 0.39~m can traverse straight, sloped, and curved tunnels as narrow as 0.6~m, outperforming human pilots in both success rate and flight efficiency.</p>
@@ -1982,37 +2006,13 @@
                         <p>Many robotic tasks, such as inverse kinematics, motion planning, and contact-rich manipulation, can be formulated as optimization problems. Solving these problems requires addressing inherent nonlinear kinematics, complex contact dynamics, long-horizon correlations, and multi-modal optimization landscapes, each posing distinct challenges for state-of-the-art optimizers. While existing methods tackle these issues through problem-specific strategies, such specialization inherently limits cross-task generalization, requires heavy engineering effort in problem reformulation, and hinders multi-task autonomy. Monte Carlo Tree Search (MCTS) offers a compelling framework that generalizes across diverse robotic tasks via strategic exploration of the solution space. However, it typically suffers from combinatorial complexity when applied naively, resulting in slow convergence and excessive storage space in high-dimensional domains. To address this limitation, we propose Tensor Train Tree Search (TTTS), which leverages tensor factorization to exploit implicit correlations among different branches within the decision tree. By utilizing the resulting compact, linear-complexity representation, TTTS significantly reduces both computation and storage overhead, thereby enabling highly efficient global decision making. Experimental results across inverse kinematics, motion planning around obstacles, legged robot manipulation, multi-stage motion planning, and bimanual whole-body manipulation demonstrate the efficiency of TTTS for generalized robot optimization over a diverse set of tasks.</p>
                     </details>
                 </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.26700v1" target="_blank" class="paper-title">Learning Motion Feasibility from Point Clouds in Cluttered Environments</a>
-                        <span class="paper-date">2026-06-25</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Motion feasibility prediction plays a central role in robotics, particularly in task and motion planning and manipulation. A major bottleneck for this problem in cluttered environments is that infeasible planning attempts by Sampling-based motion planners (SBMPs) can incur substantial computational cost. Also existing approaches for infeasibility certification are limited to low-dimensional configuration spaces and often assume simplified geometric environments represented by primitive objects with known parameters. We study the complementary problem of learning motion feasibility prediction directly from raw RGB-D observations for a 7-DOF manipulator operating in realistic cluttered scenes. We introduce the first large-scale benchmark for this setting, comprising 2.7M grasp feasibility labels over 88 scanned objects and 190 cluttered tabletop scenes. We benchmark three representative classifier families spanning MLP- based, volumetric-CNN, and point-cloud-based Transformer architectures under matched training conditions. Our best model, GRASPFC-PTX (a point-cloud transformer), achieves an AUROC of 0.996 on Novel objects while providing predictions significantly faster than SBMPs.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.09716v1" target="_blank" class="paper-title">RoboNav-Arm: Agentic AI-Driven Navigation and Obstacle Avoidance for Robotic Manipulator in Cluttered Environments</a>
-                        <span class="paper-date">2026-06-25</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Robotic manipulators operating in unstructured environments face significant challenges in safely executing goal-directed tasks due to dynamic and unforeseen obstacles, while traditional methods rely on prior knowledge or fixed perception pipelines, limiting adaptability. We propose a framework for safe task execution with effective obstacle avoidance. The environment module performs real-time obstacle detection, 3D localization, and ground surface geometry estimation. It then generates a structured semantic report that includes obstacle positions, object geometry and shape, and whether obstacles lie inside, outside, or within critical interaction zones. A central coordination module manages the overall system by handling tool invocation (e.g., memory and MoveIt collision scene updates), facilitating communication between modules, and continuously monitoring task progress until completion. Furthermore, a planning module selects an appropriate motion planning algorithm, such as RRTConnect, RRT*, or BiTRRT, based on the current environment configuration and goal requirements. The trajectory generated by the planner is further analyzed and refined to ensure safe and collision-free task execution. The proposed approach is evaluated in Gazebo Classic , demonstrating robustness in dynamic scenarios.</p>
-                    </details>
-                </div>
             </div>
         </section>
 
         <footer class="footer">
             <p>👤 <strong>Hongkun Luo (罗宏昆)</strong> · <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent)">Academic Page</a> · <a href="https://github.com/luohongk" target="_blank" style="color:var(--accent)">GitHub</a></p>
             <p style="margin-top:8px">🤖 Generated automatically from <a href="https://arxiv.org" style="color:var(--accent)">arXiv</a> · <a href="https://github.com/luohongk/Embodied-AI-Daily" style="color:var(--accent)">GitHub Repo</a></p>
-            <p style="margin-top:4px">Last update: 2026-07-23 (Beijing Time)</p>
+            <p style="margin-top:4px">Last update: 2026-07-24 (Beijing Time)</p>
         </footer>
     </main>
 

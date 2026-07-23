@@ -670,12 +670,12 @@
                 <a href="Autonomous-Driving.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#6366f1"></span>
                     <span class="nav-label">Autonomous Driving</span>
-                    <span class="nav-count">78</span>
+                    <span class="nav-count">79</span>
                 </a>
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Kalman Filter</span>
-                    <span class="nav-count">50</span>
+                    <span class="nav-count">51</span>
                 </a>
                 <a href="Loop-Closure-Detection.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -690,7 +690,7 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">68</span>
+                    <span class="nav-count">69</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
@@ -784,7 +784,7 @@
         <div class="sidebar-header">
             <h1><a href="../index.html" style="background:linear-gradient(135deg,#6366f1,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">🚀 Embodied AI Daily</a></h1>
             <div class="update">by <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent);text-decoration:none;font-weight:500;">Hongkun Luo</a> (罗宏昆)</div>
-            <div class="update" style="margin-top:2px">Last update: 2026-07-23</div>
+            <div class="update" style="margin-top:2px">Last update: 2026-07-24</div>
         </div>
             <a href="Continuous-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
@@ -889,12 +889,12 @@
             <a href="Autonomous-Driving.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
                 <span class="nav-label">Autonomous Driving</span>
-                <span class="nav-count">78</span>
+                <span class="nav-count">79</span>
             </a>
             <a href="Kalman-Filter.html" class="nav-item active">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Kalman Filter</span>
-                <span class="nav-count">50</span>
+                <span class="nav-count">51</span>
             </a>
             <a href="Loop-Closure-Detection.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -909,7 +909,7 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">68</span>
+                <span class="nav-count">69</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
@@ -1025,9 +1025,54 @@
         <section class="topic-section">
             <div class="topic-header">
                 <span class="topic-badge" style="background:#8b5cf6">Kalman Filter</span>
-                <span class="topic-count">50 papers</span>
+                <span class="topic-count">51 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.20010v1" target="_blank" class="paper-title">Generalized Kalman filter based temporal difference reinforcement learning</a>
+                        <span class="paper-date">2026-07-22</span>
+                    </div>
+                                        <span class="paper-comment">📝 39 pages, 18 figures</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：传统基于卡尔曼滤波的时序差分强化学习受限于线性高斯假设，无法处理非线性模型和非高斯概率分布下的价值函数估计与不确定性量化问题。&#10;&#10;🛠 **方法**：基于条件期望理论，将价值函数和Q值函数视为不确定量，通过随机推断框架进行递归估计，并利用多项式混沌展开或集成近似对随机问题进行离散化，以实现高效计算。&#10;&#10;✨ **主要贡献**：提出了一种广义时序差分学习框架，能同时估计价值函数的条件期望及其二阶概率矩，从而量化学习过程中的不确定性，并将经典方法扩展至非线性、非高斯系统，在线性质量-弹簧-阻尼系统和非线性热传导问题中验证了其准确性与适用性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>In this paper, we present a generalized temporal-difference (TD) reinforcement learning framework based on the theory of conditional expectations. The value and action-value (Q-value) functions are treated as uncertain quantities, and their estimation is formulated as a stochastic inference problem. Unlike classical Kalman-based temporal-difference learning, which relies on linear-Gaussian assumptions, the proposed formulation is derived directly from the conditional expectation framework and naturally extends to nonlinear models and non-Gaussian probability distributions. The proposed method recursively estimates not only the conditional expectation of the value function but also its second probabilistic moment, thereby quantifying the uncertainty associated with the learned value function throughout the learning process. To obtain a computationally tractable algorithm, the stochastic problem is discretized using either polynomial chaos expansions or ensemble-based approximations, providing efficient representations of the underlying random variables. The proposed framework is demonstrated on two optimal control problems: a linear mass--spring--damper system and a nonlinear heat conduction problem in a closed cavity. The numerical examples illustrate the capability of the proposed method to accurately estimate both the value function and its associated uncertainty, while extending classical Kalman-based temporal-difference learning to a broader class of stochastic systems.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.17191v2" target="_blank" class="paper-title">Toward Anthropomorphic Dialogue: A Closed-Loop Framework for Human-Like Chat Generation, Evaluation, and Preference Alignment</a>
+                        <span class="paper-date">2026-07-22</span>
+                    </div>
+                                        <span class="paper-comment">📝 17 pages, 2 figures, 11 tables</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：如何让对话系统在私密聊天中不仅生成流畅回复，还能保持角色个性、关系、记忆、知识边界、时间感知和连贯的多轮对话结构。&#10;&#10;🛠 **方法**：提出AnthroDial闭环框架，包含角色条件化调度对话运行时、可执行基准测试（含L0有效性门控及多维度评估）、以及基于认知诊断和最近发展区（ZPD）的奖励对齐训练（结合SFT和GRPO）。&#10;&#10;✨ **主要贡献**：在55个角色、50个场景的基准测试中，最强非训练基线严格准确率仅32.00%，而Qwen3.6-27B-SFT+RL达到39.00%和98.5总分；在9B无思考设置下，SFT和RL将严格准确率从0.00%提升至18.37%，证明生成、评估与奖励共享相同行为维度可显著提升拟人化对话效果。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Human-like private chat requires more than fluent response generation: a system must preserve persona, relationship, memory, bounded knowledge, medium-specific timing, and a coherent multi-turn arc. We present AnthroDial, a closed-loop framework that formulates anthropomorphic dialogue as a joint problem of system architecture, executable evaluation, and diagnostic alignment. It combines (1) a role-conditioned scheduled dialogue runtime with persona and scenario cards, long-term memory, virtual time, and single-draft message decisions; (2) an executable benchmark with an L0 validity gate, five per-turn dimensions, and five dialogue-level dimensions; and (3) a post-training pipeline that filters 16,436 scheduled-decision examples for SFT and applies GRPO with a cognitive-diagnostic, ZPD-aware reward. The reward maintains Kalman-filtered capability estimates for each behavioral dimension, upweights dimensions with larger capability deficits, and uses rollout scores as task-level ZPD matches to focus optimization on learnable weak skills. On a benchmark with 55 personas, 50 scenarios, 50 persona-scenario bindings, and 100 role-conditioned cases per model, we evaluate 16 systems spanning frontier baselines, open models, thinking/no-think variants, and SFT/RL ablations. The strongest non-trained baseline reaches 32.00% strict ACC, while Qwen3.6-27B-SFT+RL reaches 39.00% strict ACC and a 98.5 overall score. In the 9B no-think setting, SFT and RL improve strict ACC from 0.00% to 13.00% and 18.37%. These results show that anthropomorphic dialogue benefits when generation, evaluation, and reward shaping share the same behavioral dimensions.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.19590v1" target="_blank" class="paper-title">Learning to Transmit: Volatility-Aware Predictive Communication for Energy-Efficient IoT Networks</a>
+                        <span class="paper-date">2026-07-21</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：物联网设备通信能耗高，而许多传感器数据存在强时间相关性，频繁传输冗余信息造成能源浪费。&#10;&#10;🛠 **方法**：提出ADAPTIVEML框架，每个传感器使用轻量级机器学习预测器，仅当预测残差超过基于信号波动性自适应调整的阈值时才传输数据；进一步提出ADAPTIVEML-RLS，采用带指数遗忘的递归最小二乘法在线学习，适应长期非平稳性。&#10;&#10;✨ **主要贡献**：在三个真实数据集上（超240万观测值），ADAPTIVEML实现最高94.7%的传输减少，重建误差仅0.352°C；ADAPTIVEML-RLS在漂移条件下进一步降低重建误差12-18%，同时保持93%以上的传输减少。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Communication is the dominant source of energy consumption in Internet-of-Things (IoT) networks, yet many sensed measurements exhibit strong temporal correlations and provide little new information to the receiver. This paper introduces \textsc{ADAPTIVEML}, a volatility-aware predictive communication framework that enables IoT devices to intelligently decide when communication is necessary. Each sensor maintains a lightweight machine learning predictor and transmits only when the prediction residual exceeds an adaptive threshold proportional to the local signal volatility. By normalizing prediction errors using a rolling estimate of signal variability, the proposed transmission policy automatically adapts to changing environmental conditions, seasonal variations, and deployment-specific dynamics without manual threshold tuning. To address long-term non-stationarity, we further propose \textsc{ADAPTIVEML-RLS}, an online learning extension based on Recursive Least Squares (RLS) with exponential forgetting, allowing continuous adaptation to sensor drift and evolving signal characteristics. Extensive experiments are conducted on three heterogeneous real-world datasets comprising more than 2.4 million sensor observations from outdoor environmental monitoring, indoor wireless sensor networks, and urban air-quality sensing. Compared with six representative baselines, including periodic transmission, static-threshold suppression, ARIMA, Kalman filtering, EMA, and LMS filtering, \textsc{ADAPTIVEML} achieves up to 94.7\% transmission reduction while maintaining a reconstruction error of 0.352$^\circ$C. \textsc{ADAPTIVEML-RLS} further reduces reconstruction error by 12--18\% under drift conditions while preserving transmission reduction above 93\%. These results demonstrate the effectiveness of volatility-aware predictive communication for energy-efficient and adaptive IoT networks.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2501.01324v5" target="_blank" class="paper-title">Fast data inversion for high-dimensional Ornstein-Uhlenbeck processes from noisy measurements</a>
@@ -1056,21 +1101,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>The prevailing inference framework for diffusion models formulates generation fundamentally as a problem of numerical integration. This perspective casts the model as an exact estimator, neglecting the inherent statistical uncertainty of the denoising process. In this work, we propose Forward-Process Aligned Diffusion prediction (\textbf{DiFA}), a training-free framework that reframes inference-time data prediction refinement as a sequential state estimation problem. Rather than reusing past outputs solely for numerical integration, DiFA treats iterative data predictions along the reverse trajectory as correlated observations to build a forward-aligned temporal consensus. Inspired by Kalman filtering, this consensus aggregates historical predictions according to structural consistency and noise-level compatibility. To counteract the over-smoothing tendency of temporal consensus, we introduce a deviation guidance mechanism to adaptively preserve residual details. Empirically, DiFA yields significant improvements on CIFAR-10 and ImageNet across the evaluated metrics, including FID, IS, and FD-DINOv2, demonstrating that aligning inference with the forward statistical structure substantially improves generative fidelity.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.17191v1" target="_blank" class="paper-title">Toward Anthropomorphic Dialogue: A Closed-Loop Framework for Human-Like Chat Generation, Evaluation, and Preference Alignment</a>
-                        <span class="paper-date">2026-07-19</span>
-                    </div>
-                                        <span class="paper-comment">📝 17 pages, 2 figures, 11 tables</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：如何让对话系统在私密聊天中不仅生成流畅回复，还能保持角色个性、关系、记忆、知识边界、时间感知和连贯的多轮对话结构。&#10;&#10;🛠 **方法**：提出AnthroDial闭环框架，包含角色条件化调度对话运行时、可执行基准测试（含L0有效性门控及多维度评估）、以及基于认知诊断和最近发展区（ZPD）的奖励对齐训练（结合SFT和GRPO）。&#10;&#10;✨ **主要贡献**：在55个角色、50个场景的基准测试中，最强非训练基线严格准确率仅32.00%，而Qwen3.6-27B-SFT+RL达到39.00%和98.5总分；在9B无思考设置下，SFT和RL将严格准确率从0.00%提升至18.37%，证明生成、评估与奖励共享相同行为维度可显著提升拟人化对话效果。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Human-like private chat requires more than fluent response generation: a system must preserve persona, relationship, memory, bounded knowledge, medium-specific timing, and a coherent multi-turn arc. We present AnthroDial, a closed-loop framework that formulates anthropomorphic dialogue as a joint problem of system architecture, executable evaluation, and diagnostic alignment. It combines (1) a role-conditioned scheduled dialogue runtime with persona and scenario cards, long-term memory, virtual time, and single-draft message decisions; (2) an executable benchmark with an L0 validity gate, five per-turn dimensions, and five dialogue-level dimensions; and (3) a post-training pipeline that filters 16,436 scheduled-decision examples for SFT and applies GRPO with a cognitive-diagnostic, ZPD-aware reward. The reward maintains Kalman-filtered capability estimates for each behavioral dimension, upweights dimensions with larger capability deficits, and uses rollout scores as task-level ZPD matches to focus optimization on learnable weak skills. On a benchmark with 55 personas, 50 scenarios, 50 persona-scenario bindings, and 100 role-conditioned cases per model, we evaluate 16 systems spanning frontier baselines, open models, thinking/no-think variants, and SFT/RL ablations. The strongest non-trained baseline reaches 32.00% strict ACC, while Qwen3.6-27B-SFT+RL reaches 39.00% strict ACC and a 98.5 overall score. In the 9B no-think setting, SFT and RL improve strict ACC from 0.00% to 13.00% and 18.37%. These results show that anthropomorphic dialogue benefits when generation, evaluation, and reward shaping share the same behavioral dimensions.</p>
                     </details>
                 </div>
                 <div class="paper-card">
@@ -1154,10 +1184,7 @@
                         <span class="paper-date">2026-07-16</span>
                     </div>
                                         <span class="paper-comment">📝 13 pages, 9 figures</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决无信号灯路口车辆协调中，传统分离式感知、通信与控制方案导致的冗余传输、信息过时及协调不可靠问题。&#10;&#10;🛠 **方法**：提出统一的目标导向语义通信（GSC）框架，利用扩展卡尔曼滤波（EKF）预测车辆状态并融合分布式感知数据，设计掩码混合近端策略优化（MHPPO）联合决策感知与通信传输，并采用不确定性感知传输设计（UTD）优化波束赋形与功率分配。&#10;&#10;✨ **主要贡献**：实现100%无碰撞车辆协调，相比现有预测性ISAC基线方法显著降低信令开销，验证了语义重要性驱动的传输策略在提升路口通行效率中的有效性。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Vehicle coordination at unsignalized intersections relies on accurate real-time vehicle state acquisition and reliable command-and-control (C&C) signal delivery. However, existing studies typically treat sensing, communication, and control separately, which may lead to redundant transmissions, outdated state information, and unreliable vehicle coordination. In this paper, we investigate a new scenario of distributed integrated sensing and communication (ISAC)-enabled vehicle coordination at intersections, where multiple roadside units (RSUs) collaboratively transmit sensing signals for vehicle state acquisition and C&C signals for vehicle movement control under the management of a central base station (BS). To improve signaling efficiency, we propose a unified goal-oriented semantic communication (GSC) framework, which transmits sensing and C&C signals only when they are semantically important for improving intersection traffic throughput. Specifically, an extended Kalman filter (EKF) is adopted to predict vehicle states and fuse distributed sensing measurements. A masked hybrid proximal policy optimization (MHPPO) framework is then developed to jointly determine sensing transmission decisions, C&C transmission decisions, and C&C signal contents based on a value-of-information (VoI) reward. Furthermore, we propose an uncertainty-aware transmission design (UTD), including robust beamforming and VoI-based time-division power allocation, to improve sensing and communication reliability under vehicle state uncertainty and inter-RSU interference. Simulation results show that our proposed framework achieves 100% collision-free vehicle coordination with significantly reduced signaling overhead compared with predictive ISAC baselines adapted from state-of-the-art related studies and several ablation baselines.</p>
@@ -1169,10 +1196,7 @@
                         <span class="paper-date">2026-07-15</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决传统高斯过程模型在大规模数据和高维输入场景下计算与存储成本过高的问题。  &#10;🛠 **方法**：提出GNet框架，使用高斯过程作为非参数神经元，并引入联合逆卡尔曼滤波算法，避免显式构建协方差矩阵，同时提供梯度闭式解以加速训练与预测。  &#10;✨ **主要贡献**：在非线性函数预测、真实数据非参数回归及高维物理建模（如经典密度泛函理论）中表现优异，显著降低计算与存储开销，具备良好的可扩展性与灵活性。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>We develop GNet, a scalable and flexible Gaussian process network with nonparametric activation functions modeled by Gaussian processes. To reduce computational and storage costs, we introduce the jointly inverse Kalman filter, a fast algorithm together with closed-form expressions of gradients for accelerating model training and predictions without the need to form covariance matrices. Using a unified optimization setting, GNet shows competitive performance across a diverse range of test problems, including predicting nonlinear functions, nonparametric regression of real-world data, and predicting one-body direct correlation functions with high-dimensional inputs in classical density function theory. The strong performance of GNet, accelerated by the jointly inverse Kalman filter, suggests broad applicability to large-scale predictive modeling with substantially reduced computational and storage costs.</p>
@@ -1646,25 +1670,13 @@
                         <p>The Bootstrap Particle Filter (BPF) and the Ensemble Kalman Filter (EnKF) are two widely used methods for sequential Bayesian filtering: the BPF is asymptotically exact but can suffer from weight degeneracy, while the EnKF scales well in high dimension (typically with localization) yet is exact only in the linear-Gaussian case. We combine these approaches by retaining the EnKF transport step and adding a principled importance-sampling correction. Our first contribution is a general importance-sampling theory for mixture targets and proposals, including variance comparisons between individual- and mixture-based estimators. We then interpret the stochastic EnKF analysis as sampling from explicit Gaussian-mixture proposals obtained by conditioning on the current or previous ensemble, which leads to six self-normalized IS-EnKF schemes. We embed these updates into a broader class of ensemble-based filters and prove consistency and error bounds, including weight-variance comparisons and sufficient conditions ensuring finite-variance importance weights. As a second contribution, we construct transported quasi-Monte Carlo (TQMC) point sets for the Gaussian-mixture laws arising in prediction and analysis, yielding TQMC-enhanced variants that can substantially reduce sampling error without changing the filtering pipeline. Numerical experiments on benchmark models compare the proposed mixture-weighted and TQMC-enhanced filters, showing improved filtering accuracy relative to BPF, EnKF, and the standard weighted EnKF, and that the weighted schemes eliminate the EnKF error plateau often caused by analysis-target mismatch.</p>
                     </details>
                 </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.26010v1" target="_blank" class="paper-title">FAR-LIO: Enabling High-Speed Autonomy through Fast, Accurate, and Robust LiDAR-Inertial Odometry</a>
-                        <span class="paper-date">2026-06-24</span>
-                    </div>
-                                        <span class="paper-comment">📝 8 pages, accepted for publication at IROS2026 (IEEE/RSJ International Conference on Intelligent Robots and Systems 2026)</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Robust and accurate odometry estimation is essential in modern robotics. In environments characterized by highly dynamic motion and sensor noise, odometry estimation becomes increasingly challenging. Autonomous racing combines both factors in an unstructured setting, where minimizing odometry latency is essential for stable closed-loop control. This paper introduces FAR-LIO, a highly optimized CUDA-accelerated LiDAR-inertial odometry framework developed for Fast, Accurate, and Robust performance. Our system leverages a novel CUDA-based voxel hashmap to enable parallelized nearest-neighbor search and efficient map updates. We employ a sparsity-aware Generalized Iterative Closest Point algorithm with adaptive thresholding on top of the CUDA-based voxel hashmap with adaptive density to achieve low-latency without compromising accuracy. An Extended Kalman Filter serves as a robust backend. It utilizes an upsampling and delay compensation strategy to fuse the LiDAR odometry with high-frequency IMU data, thereby ensuring a robust and smooth odometry output. We evaluate FAR-LIO across four different sensor setups, using both public datasets and data from two autonomous racecars driving at speeds of up to 250 km/h. FAR-LIO achieves an average 6.9% reduction in the positional error and 38.4% lower runtime compared to state-of-the-art baselines on target hardware using a single parameter set. This demonstrates its computational efficiency and broad applicability. To build upon our work, our code is available open-source on https://github.com/TUMFTM/FAR-LIO.</p>
-                    </details>
-                </div>
             </div>
         </section>
 
         <footer class="footer">
             <p>👤 <strong>Hongkun Luo (罗宏昆)</strong> · <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent)">Academic Page</a> · <a href="https://github.com/luohongk" target="_blank" style="color:var(--accent)">GitHub</a></p>
             <p style="margin-top:8px">🤖 Generated automatically from <a href="https://arxiv.org" style="color:var(--accent)">arXiv</a> · <a href="https://github.com/luohongk/Embodied-AI-Daily" style="color:var(--accent)">GitHub Repo</a></p>
-            <p style="margin-top:4px">Last update: 2026-07-23 (Beijing Time)</p>
+            <p style="margin-top:4px">Last update: 2026-07-24 (Beijing Time)</p>
         </footer>
     </main>
 

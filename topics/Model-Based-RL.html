@@ -670,12 +670,12 @@
                 <a href="Autonomous-Driving.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#6366f1"></span>
                     <span class="nav-label">Autonomous Driving</span>
-                    <span class="nav-count">78</span>
+                    <span class="nav-count">79</span>
                 </a>
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Kalman Filter</span>
-                    <span class="nav-count">50</span>
+                    <span class="nav-count">51</span>
                 </a>
                 <a href="Loop-Closure-Detection.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -690,7 +690,7 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">68</span>
+                    <span class="nav-count">69</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
@@ -784,7 +784,7 @@
         <div class="sidebar-header">
             <h1><a href="../index.html" style="background:linear-gradient(135deg,#6366f1,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">🚀 Embodied AI Daily</a></h1>
             <div class="update">by <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent);text-decoration:none;font-weight:500;">Hongkun Luo</a> (罗宏昆)</div>
-            <div class="update" style="margin-top:2px">Last update: 2026-07-23</div>
+            <div class="update" style="margin-top:2px">Last update: 2026-07-24</div>
         </div>
             <a href="Continuous-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
@@ -889,12 +889,12 @@
             <a href="Autonomous-Driving.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
                 <span class="nav-label">Autonomous Driving</span>
-                <span class="nav-count">78</span>
+                <span class="nav-count">79</span>
             </a>
             <a href="Kalman-Filter.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Kalman Filter</span>
-                <span class="nav-count">50</span>
+                <span class="nav-count">51</span>
             </a>
             <a href="Loop-Closure-Detection.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -909,7 +909,7 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">68</span>
+                <span class="nav-count">69</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
@@ -1028,6 +1028,21 @@
                 <span class="topic-count">80 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.19749v1" target="_blank" class="paper-title">The World Model Remembers, the Actor Forgets: Dream Rehearsal for Continual Model-Based RL</a>
+                        <span class="paper-date">2026-07-22</span>
+                    </div>
+                                        <span class="paper-comment">📝 11 pages, 2 figures. Code, pre-registration trail, and run data: https://github.com/gurpnijjer/dream-rehearsal</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在基于模型的持续强化学习中，当智能体按任务序列训练时，即使保留所有过往经验，其行为策略仍会发生灾难性遗忘，而世界模型却几乎完全保留旧任务知识。研究旨在明确遗忘的根源并解决这一问题。&#10;&#10;🛠 **方法**：通过组件级探针实验发现遗忘源于“通道问题”（行为策略而非记忆），提出“分级梦境排练”方法：冻结世界模型，利用其生成的带评分梦境轨迹进行监督式自我模仿训练，无需环境交互即可恢复遗忘技能。&#10;&#10;✨ **主要贡献**：首次量化并定位持续强化学习中遗忘的组件（行为策略而非世界模型）；提出无需任务标签、参数固定的持续学习方法，在4任务和8任务链上均实现完全保留（基线方法完全失败）；引入梦境评分机制与离线选择标准，有效避免评分失败模式。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Model-based reinforcement-learning agents of the DreamerV3 family forget catastrophically when trained on task sequences, even when an unbounded replay buffer preserves every earlier experience. We ask a question the continual-RL literature has assumed an answer to but never measured: which component forgets? Under never-clear replay, pre-registered component-level probes (n=3 seeds throughout) show that the world model retains essentially everything measurable about old tasks -- reward discrimination (retention ratio ~1.0), value estimates, and termination structure -- while the actor's behavior collapses. Forgetting in this regime is a channel problem, not a memory problem. We demonstrate this by intervention: with the world model frozen and identical imagined rollouts, reinforcement learning in imagination fails to recover a lost skill (0/3 seeds), while supervised self-imitation on the world model's own graded dreams recovers it on 3/3 seeds with zero environment interaction. Interleaved during training, this graded dream rehearsal yields a task-label-free, parameter-constant continual learner: 3/3 four-task chains retained where plain replay passes 0/3, 3/3 eight-task chains, and consistent gains over matched real-episode cloning (paired difference +0.13, bootstrap 95% CI [0.07, 0.24], complete seed separation). The dream-grading step is load-bearing: we characterize two scoring failure modes, provide an offline selection gauge that caught both before they contaminated results, and give a realized-first grading rule that closes them. All experiments were pre-registered with committed protocols; every refuted hypothesis is reported.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2607.16591v1" target="_blank" class="paper-title">Learning from World Feedback: Why Model Uncertainty Fails as a Risk Signal in Model-Based RL</a>
@@ -1169,10 +1184,7 @@
                         <span class="paper-date">2026-06-12</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="好的，作为一名人工智能研究与学术论文分析专家，我将严格按照您的要求，对这篇论文进行详细的中文解读。&#10;&#10;---&#10;&#10;## 0. 概览（Concise Summary）&#10;&#10;- **主题（Topic）**：机器人操作、可变形物体操作、鲁棒模型预测控制（MPC）、可微仿真。&#10;- **问题（Problem）**：如何实现对绳索和布料等高维、接触丰富的可变形物体进行实时、安全且鲁棒的操作，同时应对模型误差和感知不确定性。&#10;- **方法（Method）**：提出CORD-SLS框架，核心包括：1) 一个GPU并行、具有接触平滑功能的可微仿真器；2) 一个基于系统级综合（SLS）的GPU并行输出反馈鲁棒MPC算法；3) 利用共形预测（CP）校准感知误差边界，为MPC提供高概率的安全保证。&#10;- **创新（Innovation）**：&#10;    1.  首次将**接触平滑**与**GPU并行可微仿真**结合，为接触丰富的规划任务提供了有信息量的梯度。&#10;    2.  将**输出反馈鲁棒MPC**（基于SLS）扩展到高维可变形物体操作，并通过GPU并行化实现了实时计算。&#10;    3.  利用**共形预测**校准视觉反馈和感知误差，将数据驱动的鲁棒性保证与模型预测控制相结合。&#10;- **意义（Significance）**：该工作弥合了可变形物体操作中，可扩展规划、接触动力学和鲁棒性之间的鸿沟。它首次在真实硬件上展示了能够处理接触、规避障碍并具有高概率安全保证的实时鲁棒控制，为家庭、物流和手术等安全关键型应用铺平了道路。&#10;- **一句话总结**：本文提出了CORD-SLS，一个集成了接触平滑可微仿真、GPU并行鲁棒输出反馈MPC和共形预测校准的框架，实现了对绳索和布料等可变形物体的实时、安全且鲁棒的操作。&#10;&#10;## 1. 研究动机（Motivation）&#10;&#10;- **问题与空白**：可变形物体（如绳索、布料）的操作对于家庭机器人、物流和手术等应用至关重要。然而，控制这些物体非常困难，原因在于：&#10;    1.  **高维度和非线性**：可变形物体通常缺乏紧凑的状态表示，需要规划高维度的非线性动力学。&#10;    2.  **接触丰富的规划**：操作需要决定何时何地建立接触，而接触动力学本身是非光滑的，导致传统基于梯度的方法难以有效发现接触。&#10;    3.  **鲁棒性挑战**：真实世界存在模型误差（仿真与现实的差距）和感知不确定性（视觉测量噪声），现有方法难以在保证安全的前提下处理这些不确定性。&#10;- **现有工作的局限**：&#10;    - **经典方法**：使用几何抽象进行规划，速度快但产生开环规划，鲁棒性有限。&#10;    - **学习方法**：学习视觉或潜在空间中的策略，但缺乏鲁棒性保证且训练缓慢。&#10;    - **可微仿真**：支持快速的基于梯度的规划，但由朴素接触公式引起的非连续梯度会阻碍有效的接触发现，而接触发现对于操作至关重要。&#10;- **重要性**：解决这些问题对于将机器人操作从受控实验室环境推广到复杂、非结构化的真实世界至关重要，尤其是在安全至关重要的场景中。&#10;&#10;## 2. 创新点（Innovation）&#10;&#10;本文的核心创新在于提出了一个名为 **CORD-SLS** 的综合性框架，其关键创新点如下：&#10;&#10;1.  **接触平滑的可微仿真器**：提出了一种新颖的GPU并行可微仿真器。与现有可微仿真器不同，它通过**接触平滑**技术（如软化互补条件）来生成“规划友好”的梯度。即使在物理接触尚未发生（梯度为零）时，平滑后的梯度也能引导规划器主动寻找和建立接触，解决了接触发现中的梯度消失问题。&#10;2.  **GPU并行的输出反馈鲁棒MPC**：将基于系统级综合（SLS）的鲁棒MPC从状态反馈扩展到输出反馈，使其能够直接处理带噪声的视觉观测。更重要的是，通过将SLS中的观测器递归和控制器传播表达为**可并行化的关联扫描**，首次在GPU上实现了该算法的实时计算，使其能够应用于高维可变形物体。&#10;3.  **基于共形预测（CP）的校准安全保证**：提出了一种实用的方法，利用共形预测来校准视觉反馈和感知误差的边界。这使得MPC能够计算出**高概率的安全可达管**，将数据驱动的鲁棒性保证与模型预测控制相结合，弥合了理论鲁棒性与现实不确定性之间的差距。&#10;&#10;## 3. 主要内容（Main Content）【重点】&#10;&#10;### 3.1 设计架构与方法&#10;&#10;CORD-SLS框架由四个核心模块组成，形成一个闭环系统：&#10;&#10;1.  **可微仿真器（Sec. 4.1）**：一个GPU并行、接触平滑的可微仿真器，用于快速、准确地模拟可变形物体的动力学，并为规划提供有信息量的梯度。&#10;2.  **鲁棒MPC规划器（Sec. 4.2）**：一个基于SLS的GPU并行输出反馈鲁棒MPC算法。它利用仿真器生成名义轨迹，并同时计算一个输出反馈控制器和一个**安全可达管**，确保在存在扰动和感知噪声的情况下，系统状态始终保持在安全区域内。&#10;3.  **模型加速的强化学习（APG, Sec. 4.3）**：利用可微仿真器提供解析策略梯度，加速神经控制策略的训练，提高样本效率。&#10;4.  **共形预测校准（Sec. 4.4）**：在真实硬件上，使用共形预测来校准感知误差和模型误差的联合边界，为鲁棒MPC提供实际可用的不确定性集，从而保证高概率的安全性。&#10;&#10;### 3.2 关键算法与数学推导&#10;&#10;**1. 接触平滑的可微仿真器**&#10;&#10;- **动力学模型**：采用准静态假设，系统的动力学由隐式时间步进方案描述：&#10;  $$M \frac{q^+ - q}{\delta t^2} + \frac{\partial E(q^+)}{\partial q^+} = \tau(u) + \sum_{i=1}^{n_c} J_i(q)^\top \lambda_i$$&#10;  其中 $M$ 是质量矩阵，$E$ 是弹性势能，$\tau(u)$ 是外部广义力，$\lambda_i$ 是约束力，$J_i$ 是约束雅可比矩阵。&#10;&#10;- **接触平滑**：为了解决接触动力学中的梯度消失问题，论文引入了**代理梯度**（surrogate gradients）的概念。具体地，对于接触约束的互补条件，通过引入平滑参数 $\kappa$ 进行松弛：&#10;  $$(J_i(q) (q^+ - q) + [\phi_i(q), 0, 0]^\top)^\top \lambda_i = \kappa$$&#10;  当 $\kappa \to 0$ 时，恢复原始的非光滑互补条件。平滑后的动力学仅用于梯度计算，而前向仿真仍使用非光滑动力学以保证模型保真度。&#10;&#10;- **隐式微分**：为了高效计算梯度，论文采用隐式微分而非对迭代求解器进行展开。对于第一阶段的求解器 $F(q^*; q, u)=0$，梯度计算为：&#10;  $$\frac{\partial q^*}{\partial \theta} = - \left( \frac{\partial F}{\partial q^*} \right)^{-1} \frac{\partial F}{\partial \theta}$$&#10;  其中 $\theta = (q, u)$。由于前向求解时已经计算了 $\partial F / \partial q^*$ 的分解，反向传播时无需额外成本。&#10;&#10;**2. GPU并行输出反馈SLS**&#10;&#10;- **问题形式化**：目标是求解一个输出反馈策略 $\pi$，使得在存在有界扰动 $w_k$ 和 $e_k$ 的情况下，系统状态和控制输入始终满足约束。这被形式化为一个鲁棒优化问题（公式11）。&#10;&#10;- **SLS参数化**：将控制问题转化为对闭环响应算子 $\Phi$ 的优化。输出反馈SLS问题可以分解为三个子问题：1) 名义轨迹生成；2) 状态反馈控制器优化；3) 输出反馈控制器优化。&#10;&#10;- **GPU并行化**：论文的核心贡献在于将第三步（输出反馈控制器优化）并行化。通过将卡尔曼滤波的递归（公式13）和观测器传播（公式14）表达为**关联扫描**（associative scans），可以在GPU上以对数时间复杂度并行计算。例如，卡尔曼增益 $L_{k,j}$ 可以通过以下组合规则（公式16）的并行前缀扫描高效求解：&#10;  $$\tilde{P}_{i,l} = \tilde{P}_{i,m} \otimes \tilde{P}_{m,l} := (\tilde{A}_{i,m}^\top (I + \tilde{P}_{m,l} \tilde{D}_{i,m})^{-1} \tilde{P}_{m,l} \tilde{A}_{i,m} + \tilde{P}_{i,m})$$&#10;  这使得整个鲁棒MPC的求解时间从串行的 $O(N)$ 降低到并行的 $O(\log N)$，实现了实时控制。&#10;&#10;### 3.3 模型、训练与数据集&#10;&#10;- **可变形物体模型**：&#10;    - **绳索**：使用离散弹性杆（Discrete Elastic Rods）模型，状态 $q$ 由节点（links）的3D位置和方向组成。&#10;    - **布料**：使用网格（mesh）模型，状态 $q$ 由网格节点的3D位置组成（约300个自由度）。&#10;- **仿真器**：基于JAX框架实现，支持GPU加速的矩阵分解和自动微分。&#10;- **训练**：&#10;    - **MPC**：无需离线训练，在线实时优化。&#10;    - **APG（模型加速RL）**：使用可微仿真器提供的解析策略梯度来训练一个神经网络策略。PPO基线则使用CORD-SLS生成的10个专家演示进行热启动。&#10;- **数据集**：用于共形预测校准的校准集 $D_{cal}$ 是在真实硬件上通过施加100个随机控制动作，收集感知状态转换对 $(\bar{q}_i, u_i, \bar{q}^+_i)$ 得到的。&#10;&#10;### 3.4 实验设置与结果&#10;&#10;- **任务**：在仿真和硬件上评估了四个任务：绳索提升（Lift Rope）、绳索拖拽避障（Drag Rope）、布料折叠（Fold Cloth）、布料展平（Flatten Cloth）。&#10;- **基线方法**：MPPI（模型预测路径积分）、PPO（近端策略优化）、APG（本文提出的模型加速RL）。&#10;- **主要结果（Table 1）**：&#10;    - **速度**：CORD-SLS的每步执行时间远快于MPPI（例如，绳索提升任务中0.05秒 vs 0.177秒），实现了毫秒级的规划。&#10;    - **安全性**：CORD-SLS在所有任务中实现了**100%的安全率**（Safety Rate），而MPPI和PPO在拖拽和折叠任务中出现了大量约束违反。&#10;    - **任务成功率**：CORD-SLS在目标误差（Goal Error）上通常优于或持平于基线方法，尤其是在需要鲁棒性的拖拽任务中。&#10;- **硬件实验（Figure 1）**：在真实机器人上成功演示了绳索避障和布料折叠任务。通过共形预测校准，计算出的鲁棒管（robust tubes）确保了操作的安全性。&#10;- **输出反馈验证（Figure 3）**：在仿真中验证了输出反馈鲁棒MPC的有效性。在有测量噪声和动力学扰动的情况下，所有轨迹的滚动都保持在计算出的鲁棒管内，证明了其鲁棒性。&#10;&#10;### 3.5 技术细节&#10;&#10;- **接触平滑实现**：通过将约束刚度矩阵 $D_i$ 定义为 $D_i = D_{i, max} \exp(-\|c_i(q)\|^2 / \kappa)$ 来实现，其中 $\kappa$ 是平滑参数。当距离 $\|c_i(q)\|$ 很大时，$D_i$ 趋近于0，梯度很小；当距离接近0时，$D_i$ 迅速增大，提供强梯度。&#10;- **GPU并行SLS实现**：通过将卡尔曼滤波的递归和观测器传播重写为关联扫描，利用JAX的 `lax.associative_scan` 等原语在GPU上高效实现。&#10;- **共形预测校准**：在硬件上收集数据后，计算非一致性分数 $s_i = \|\bar{q}^+_i - f(\bar{q}_i, u_i)\|_2$。然后，根据期望的误覆盖率 $\delta$ 和规划时域 $N$，计算校准半径 $r_{CP} = s_{(\lceil (n+1)(1-\delta/T) \rceil)}$。这个半径被用于MPC中，以扩大不确定性集，从而保证高概率安全。&#10;- **定理1**：证明了通过共形预测校准的感知状态管，在膨胀一个感知误差上界 $\rho$ 后，可以以高概率包含真实状态。这为从感知到安全的端到端保证提供了理论基础。&#10;&#10;## 4. 意义与影响（Significance and Impact）&#10;&#10;- **解决的问题与贡献**：&#10;    - **解决了可变形物体操作中的“接触发现”难题**：通过接触平滑，使得基于梯度的规划器能够有效地规划接触行为，这是以往方法难以做到的。&#10;    - **实现了实时鲁棒控制**：通过GPU并行化SLS，首次将输出反馈鲁棒MPC应用于高维可变形物体，并达到了实时控制速率。&#10;    - **弥合了理论与实践的差距**：通过共形预测，将理论上的鲁棒控制方法与现实世界中的不确定性（感知误差、模型误差）联系起来，提供了可验证的安全保证。&#10;- **对未来研究/应用的影响**：&#10;    - 为**安全关键型机器人操作**（如手术、家庭服务）提供了一个强大的框架。&#10;    - 展示了**可微仿真**与**鲁棒控制**结合的巨大潜力，可能启发更多将模型和数据驱动方法相结合的研究。&#10;    - **GPU并行化**的思路可以推广到其他需要实时求解复杂优化问题的机器人领域。&#10;- **局限与开放问题**：&#10;    - **接触平滑误差**：接触平滑在接触转换附近会引入误差，作者提到可以通过 [17] 中的方法处理。&#10;    - **感知挑战**：在严重遮挡和复杂拓扑结构下，可变形物体的感知仍然困难，需要更复杂的感知管线（如多视角RGB-D）。&#10;    - **内存瓶颈**：对于更高维度的系统和更长的规划时域，GPU内存会成为瓶颈，作者建议使用低秩SLS响应算子来解决。&#10;&#10;## 5. 澄清与简化（Clarifications and Simplifications）&#10;&#10;- **接触平滑（Contact Smoothing）**：可以想象一个“磁力场”。在真实物理中，只有当两个物体接触时才会产生力。但在CORD-SLS的“平滑”版本中，当两个物体即将接触但还未接触时，就已经有一个微弱的“磁力”在引导它们靠近。这个“磁力”就是平滑后的梯度，它告诉规划器“往这个方向走就能碰到目标”，从而解决了传统方法中“不知道往哪走才能碰到”的难题。规划完成后，实际执行时仍然使用真实的物理规则，所以不会产生虚假的吸引力。&#10;- **输出反馈鲁棒MPC**：想象一个司机开车。状态反馈MPC就像司机能完美知道汽车的精确位置和速度。而输出反馈MPC更像一个司机只能通过模糊的后视镜和仪表盘（带噪声的观测）来感知车辆状态。CORD-SLS不仅规划出一条安全路线，还设计了一个“鲁棒控制器”，这个控制器能根据模糊的观测信息，自动调整方向盘和油门，确保即使观测有误差，汽车也不会偏离安全路线太远。它计算出的“鲁棒管”就像一条加宽的车道，保证车辆无论如何都不会驶出这个车道。&#10;- **共形预测（Conformal Prediction）**：可以把它想象成一个“校准器”。在把机器人部署到真实世界之前，我们先让它做100次随机动作，并记录下“仿真预测的下一个状态”和“真实感知到的下一个状态”之间的差距。共形预测会分析这些差距，然后给出一个“安全半径”。例如，它会说：“我们有95%的把握，未来任何一次预测的误差都不会超过3厘米。” 这个“3厘米”的半径就被用来加宽之前提到的“鲁棒管”，从而保证即使在最坏情况下，真实状态也大概率在安全范围内。&#10;&#10;## 6. 补充说明（Additional Notes）&#10;&#10;- **相关工作关联**：本文的工作与多个研究领域紧密相关：&#10;    - **可变形物体仿真**：超越了基于位置动力学（PBD）的方法，采用了更物理精确的离散弹性杆和壳模型，并解决了其可微性问题。&#10;    - **规划**：不同于需要专家数据的模仿学习或需要大量训练的纯学习方法，本文采用基于模型的规划，并引入了鲁棒性。&#10;    - **鲁棒控制**：不同于传统的基于屏障函数的方法（仅提供局部修正）或开环规划，本文的SLS框架提供了全局的、具有理论保证的鲁棒性。&#10;- **最重要的图表**：&#10;    - **Figure 1**：展示了硬件实验的成功结果，是论文方法有效性的最直观证明。&#10;    - **Table 1**：定量比较了CORD-SLS与基线方法在速度、安全性和任务成功率上的表现，是核心性能证据。&#10;    - **Figure 3**：验证了输出反馈鲁棒MPC的有效性，展示了鲁棒管和轨迹滚动，是理论正确性的仿真验证。&#10;    - **Figure 4**：详细展示了硬件实验中的感知管线，对于理解整个系统的实际部署至关重要。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>We present CORD-SLS, a real-time control method for safe deformable object manipulation, with a focus on ropes and cloth. At its core is a GPU-parallel differentiable simulator with contact smoothing which enables efficient gradient-based planning through intermittent contact. To robustly satisfy constraints under model and sensing uncertainty, we develop a real-time, GPU-parallel output-feedback robust model predictive control (MPC) algorithm that plans with this simulator. We further show that the simulator accelerates model-based RL for training neural manipulation policies. To improve real-world robustness, we use conformal prediction to calibrate visual-feedback and perception-error bounds for MPC, producing reachable tubes that enable high-probability safe control. We evaluate CORD-SLS on high-dimensional, contact-rich rope and cloth manipulation tasks in simulation and hardware, including obstacle avoidance, routing, folding, and smoothing. Across settings, CORD-SLS achieves millisecond-speed planning, exceeding baselines in safety, speed, and task success.</p>
@@ -2006,25 +2018,13 @@
                         <p>Bayesian reinforcement learning (BRL) is a method that merges principles from Bayesian statistics and reinforcement learning to make optimal decisions in uncertain environments. As a model-based RL method, it has two key components: (1) inferring the posterior distribution of the model for the data-generating process (DGP) and (2) policy learning using the learned posterior. We propose to model the dynamics of the unknown environment through deep generative models, assuming Markov dependence. In the absence of likelihood functions for these models, we train them by learning a generalized predictive-sequential (or prequential) scoring rule (SR) posterior. We used sequential Monte Carlo (SMC) samplers to draw samples from this generalized Bayesian posterior distribution. In conjunction, to achieve scalability in the high-dimensional parameter space of the neural networks, we use the gradient-based Markov kernels within SMC. To justify the use of the prequential scoring rule posterior, we prove a Bernstein-von Mises-type theorem. For policy learning, we propose expected Thompson sampling (ETS) to learn the optimal policy by maximising the expected value function with respect to the posterior distribution. This improves upon traditional Thompson sampling (TS) and its extensions, which utilize only one sample drawn from the posterior distribution. This improvement is studied both theoretically and using simulation studies, assuming a discrete action space. Finally, we successfully extended our setup for a challenging problem with a continuous action space without theoretical guarantees.</p>
                     </details>
                 </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2505.22597v1" target="_blank" class="paper-title">HDDLGym: A Tool for Studying Multi-Agent Hierarchical Problems Defined in HDDL with OpenAI Gym</a>
-                        <span class="paper-date">2025-05-28</span>
-                    </div>
-                                        <span class="paper-comment">📝 Accepted to Proceedings of ICAPS 2025</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>In recent years, reinforcement learning (RL) methods have been widely tested using tools like OpenAI Gym, though many tasks in these environments could also benefit from hierarchical planning. However, there is a lack of a tool that enables seamless integration of hierarchical planning with RL. Hierarchical Domain Definition Language (HDDL), used in classical planning, introduces a structured approach well-suited for model-based RL to address this gap. To bridge this integration, we introduce HDDLGym, a Python-based tool that automatically generates OpenAI Gym environments from HDDL domains and problems. HDDLGym serves as a link between RL and hierarchical planning, supporting multi-agent scenarios and enabling collaborative planning among agents. This paper provides an overview of HDDLGym's design and implementation, highlighting the challenges and design choices involved in integrating HDDL with the Gym interface, and applying RL policies to support hierarchical planning. We also provide detailed instructions and demonstrations for using the HDDLGym framework, including how to work with existing HDDL domains and problems from International Planning Competitions, exemplified by the Transport domain. Additionally, we offer guidance on creating new HDDL domains for multi-agent scenarios and demonstrate the practical use of HDDLGym in the Overcooked domain. By leveraging the advantages of HDDL and Gym, HDDLGym aims to be a valuable tool for studying RL in hierarchical planning, particularly in multi-agent contexts.</p>
-                    </details>
-                </div>
             </div>
         </section>
 
         <footer class="footer">
             <p>👤 <strong>Hongkun Luo (罗宏昆)</strong> · <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent)">Academic Page</a> · <a href="https://github.com/luohongk" target="_blank" style="color:var(--accent)">GitHub</a></p>
             <p style="margin-top:8px">🤖 Generated automatically from <a href="https://arxiv.org" style="color:var(--accent)">arXiv</a> · <a href="https://github.com/luohongk/Embodied-AI-Daily" style="color:var(--accent)">GitHub Repo</a></p>
-            <p style="margin-top:4px">Last update: 2026-07-23 (Beijing Time)</p>
+            <p style="margin-top:4px">Last update: 2026-07-24 (Beijing Time)</p>
         </footer>
     </main>
 
