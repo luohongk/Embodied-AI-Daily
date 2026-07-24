@@ -675,7 +675,7 @@
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Kalman Filter</span>
-                    <span class="nav-count">51</span>
+                    <span class="nav-count">52</span>
                 </a>
                 <a href="Loop-Closure-Detection.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -730,7 +730,7 @@
                 <a href="Model-Predictive-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#14b8a6"></span>
                     <span class="nav-label">Model Predictive Control</span>
-                    <span class="nav-count">56</span>
+                    <span class="nav-count">54</span>
                 </a>
                 <a href="Whole-Body-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#06b6d4"></span>
@@ -784,7 +784,7 @@
         <div class="sidebar-header">
             <h1><a href="../index.html" style="background:linear-gradient(135deg,#6366f1,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">🚀 Embodied AI Daily</a></h1>
             <div class="update">by <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent);text-decoration:none;font-weight:500;">Hongkun Luo</a> (罗宏昆)</div>
-            <div class="update" style="margin-top:2px">Last update: 2026-07-24</div>
+            <div class="update" style="margin-top:2px">Last update: 2026-07-25</div>
         </div>
             <a href="Continuous-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
@@ -894,7 +894,7 @@
             <a href="Kalman-Filter.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Kalman Filter</span>
-                <span class="nav-count">51</span>
+                <span class="nav-count">52</span>
             </a>
             <a href="Loop-Closure-Detection.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -949,7 +949,7 @@
             <a href="Model-Predictive-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#14b8a6"></span>
                 <span class="nav-label">Model Predictive Control</span>
-                <span class="nav-count">56</span>
+                <span class="nav-count">54</span>
             </a>
             <a href="Whole-Body-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#06b6d4"></span>
@@ -1028,6 +1028,33 @@
                 <span class="topic-count">79 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2512.05207v3" target="_blank" class="paper-title">Exploiting the Alternatives: Coordinated Learning via Hierarchical RL for Dynamic VNEAP</a>
+                        <span class="paper-date">2026-07-23</span>
+                    </div>
+                                        <span class="paper-comment">📝 This work has been submitted to the IEEE for possible publication. Copyright may be transferred without notice, after which this version may no longer be accessible</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决动态虚拟网络嵌入中，虚拟网络请求具有多种可选拓扑结构（VNEAP）时，因额外决策层带来的嵌入挑战，提升请求接受率和收益。&#10;&#10;🛠 **方法**：提出分层强化学习框架HRL-VNEAP，高层策略负责选择最优替代拓扑或拒绝请求，低层策略将选定拓扑嵌入底层网络。&#10;&#10;✨ **主要贡献**：在真实拓扑和多负载场景下，HRL-VNEAP相比最强基线，接受率提升20.7%，总收益提升36.2%，收益成本比提升22.1%，并量化了与最优解的差距。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Virtual Network Embedding (VNE) is a key enabler of network slicing, yet most formulations assume that each Virtual Network Request (VNR) has a fixed topology. Recently, VNE with Alternatives (VNEAP) was introduced to capture malleable VNRs, where each request can be instantiated using one of several functionally equivalent topologies that trade resources differently. This flexibility can improve embedding feasibility, but only if the orchestrator can jointly select suitable alternatives and embed them under dynamic arrivals. This paper proposes HRL-VNEAP, a hierarchical reinforcement learning approach for dynamic VNEAP. A high-level policy selects the most suitable alternative topology (or rejects the request), and a low-level policy embeds the chosen topology onto the substrate network. Experiments on realistic substrate topologies under varying arrival rates show that naive exploitation strategies provide only modest gains, whereas HRL-VNEAP outperforms state of the art approaches, improving acceptance ratio by up to 22%, and net profit by up to 20%. An offline MILP upper bound is also used on tractable instances to quantify the remaining optimality gap.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.20973v1" target="_blank" class="paper-title">Deep Reinforcement-Learning-Guided Model Predictive Control for Preventing Overtakes in Autonomous Racing</a>
+                        <span class="paper-date">2026-07-23</span>
+                    </div>
+                                        <span class="paper-comment">📝 Accepted to the 2026 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2026). 8 pages, 7 figures</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>This paper addresses defensive blocking in autonomous racing, where a vehicle must prevent a faster opponent from overtaking while operating near its dynamic limits. Different from lap-time minimization, we formulate defense as a spatial occupancy regulation problem via a hierarchical reinforcement-learning guided model predictive control framework. A Soft Actor-Critic strategic layer operates in the Frenet domain to generate geometry-aware defensive references, which are embedded into the nonlinear model predictive control formulation as spatial regularization under friction constraints. Evaluated on the Thunderhill West circuit in simulation, the framework increases average overtake time from 8.8 s to 14.6 s while significantly reducing opponent progress. Meanwhile, it allows the vehicle to utilize 83.4% of available tire force. The framework achieves a 33.3 ms mean solve time (13.9 ms std), supporting real-time high-speed adversarial interaction.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2607.19232v1" target="_blank" class="paper-title">S3: Stable Subgoal Selection by Constraining Uncertainty of Coarse Dynamics in Hierarchical Reinforcement Learning</a>
@@ -1154,10 +1181,7 @@
                         <span class="paper-date">2026-06-30</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决分散式多智能体强化学习中部分可观测性和非平稳性导致的协调困难，以及现有分层策略在优化上的局限性。&#10;&#10;🛠 **方法**：提出基于封建式分层强化学习框架的消息传递策略层次结构，上层智能体向下层分配目标，同层智能体间通过消息传递协调，并设计基于上层优势函数的下层奖励分配方法。&#10;&#10;✨ **主要贡献**：首次有效结合消息传递与分层强化学习实现多智能体协调，在多个基准测试中取得优于现有方法的性能。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Decentralized Multi-Agent Reinforcement Learning (MARL) methods allow for learning scalable multi-agent policies, but suffer from partial observability and induced non-stationarity. These challenges can be addressed by introducing mechanisms that facilitate coordination and high-level planning. Specifically, coordination and temporal abstraction can be achieved through communication (e.g., message passing) and Hierarchical Reinforcement Learning (HRL) approaches to decision-making. However, optimization issues limit the applicability of hierarchical policies to multi-agent systems. As such, the combination of these approaches has not been fully explored. To fill this void, we propose a novel and effective methodology for learning multi-agent hierarchies of message-passing policies. We adopt the feudal HRL framework and rely on a hierarchical graph structure for planning and coordination among agents. Agents at lower levels in the hierarchy receive goals from the upper levels and exchange messages with neighboring agents at the same level. To learn hierarchical multi-agent policies, we design a novel reward-assignment method based on training the lower-level policies to maximize the advantage function associated with the upper levels. Results on relevant benchmarks show that our method performs favorably compared to the state of the art.</p>
@@ -1169,10 +1193,7 @@
                         <span class="paper-date">2026-06-29</span>
                     </div>
                                         <span class="paper-comment">📝 23 pages, 11 figures, including supplementary material</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决即时战略游戏中多单位协调带来的状态-动作空间维度爆炸、稀疏奖励导致样本效率低，以及传统分层结构难以自适应分解战术任务的问题。&#10;&#10;🛠 **方法**：提出HRL-IM/CBS分层强化学习框架，采用影响力地图哈希将全局战场编码为紧凑十六进制码，结合基于聚类的脚本实现动态局部协调，并通过分层多Q表架构将决策分解为上层聚类策略选择与下层战术执行。&#10;&#10;✨ **主要贡献**：在六个非对称星际争霸微操场景中，该方法不仅达到与深度强化学习基线相当的性能，还通过透明Q表显著提升了样本效率和决策可解释性。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Real-time strategy (RTS) games present significant AI challenges, characterized by expansive state-action spaces arising from multi-unit coordination in continuous battlefields, and sparse delayed rewards stemming from final win/lose signals. Existing approaches face a trade-off between managing the dimensionality explosion of joint actions and maintaining the interpretability of complex state representations. This complexity is further intensified by the limitation of traditional hierarchical structures in adaptively decomposing tasks into effective tactical modules. Such difficulties are compounded by the black-box nature of deep learning models and their reliance on sparse rewards, which together result in limited sample efficiency and a lack of decision-making transparency. To address these limitations, this paper proposes HRL-IM/CBS, a hierarchical reinforcement learning framework with influence map hashing and cluster-based scripts for StarCraft micromanagement. Influence map hashing encodes global battlefield situations into compact hexadecimal codes, capturing spatial control and relative advantage. Cluster-based scripts enable dynamic local coordination through adaptive unit partitioning. The hierarchical multi-Q-table architecture decomposes decision-making into upper-level clustering strategy selection and lower-level tactical execution, with reward allocation providing dense learning signals. Experiments across six asymmetric scenarios demonstrate competitive performance against deep RL baselines while offering advantages in sample efficiency and interpretability through transparent Q-table representations.</p>
@@ -1560,18 +1581,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Non-pharmaceutical interventions (NPIs), such as diagnostic testing and quarantine, are crucial for controlling infectious disease outbreaks but are often constrained by limited resources, particularly in early outbreak stages. In real-world public health settings, resources must be allocated across multiple outbreak clusters that emerge asynchronously, vary in size and risk, and compete for a shared resource budget. Here, a cluster corresponds to a group of close contacts generated by a single infected index case. Thus, decisions must be made under uncertainty and heterogeneous demands, while respecting operational constraints. We formulate this problem as a constrained restless multi-armed bandit and propose a hierarchical reinforcement learning framework. A global controller learns a continuous action cost multiplier that adjusts global resource demand, while a generalized local policy estimates the marginal value of allocating resources to individuals within each cluster. We evaluate the proposed framework in a realistic agent-based simulator of SARS-CoV-2 with dynamically arriving clusters. Across a wide range of system scales and testing budgets, our method consistently outperforms RMAB-inspired and heuristic baselines, improving outbreak control effectiveness by 20%-30%. Experiments on up to 40 concurrently active clusters further demonstrate that the hierarchical framework is highly scalable and enables faster decision-making than the RMAB-inspired method.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2512.05207v2" target="_blank" class="paper-title">Hierarchical Reinforcement Learning for the Dynamic VNE with Alternatives Problem</a>
-                        <span class="paper-date">2026-04-27</span>
-                    </div>
-                                        <span class="paper-comment">📝 This paper has been rejected from the conferences i submitted it, and it turns out that contains several errors, please review section of MILP</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Virtual Network Embedding (VNE) is a key enabler of network slicing, yet most formulations assume that each Virtual Network Request (VNR) has a fixed topology. Recently, VNE with Alternative topologies (VNEAP) was introduced to capture malleable VNRs, where each request can be instantiated using one of several functionally equivalent topologies that trade resources differently. While this flexibility enlarges the feasible space, it also introduces an additional decision layer, making dynamic embedding more challenging. This paper proposes HRL-VNEAP, a hierarchical reinforcement learning approach for VNEAP under dynamic arrivals. A high-level policy selects the most suitable alternative topology (or rejects the request), and a low-level policy embeds the chosen topology onto the substrate network. Experiments on realistic substrate topologies under multiple traffic loads show that naive exploitation strategies provide only modest gains, whereas HRL-VNEAP consistently achieves the best performance across all metrics. Compared to the strongest tested baselines, HRL-VNEAP improves acceptance ratio by up to \textbf{20.7\%}, total revenue by up to \textbf{36.2\%}, and revenue-over-cost by up to \textbf{22.1\%}. Finally, we benchmark against an MILP formulation on tractable instances to quantify the remaining gap to optimality and motivate future work on learning- and optimization-based VNEAP solutions.</p>
                     </details>
                 </div>
                 <div class="paper-card">
@@ -1994,25 +2003,13 @@
                         <p>Endowing robots with the ability to rearrange various large and heavy objects, such as furniture, can substantially alleviate human workload. However, this task is extremely challenging due to the need to interact with diverse objects and efficiently rearrange multiple objects in complex environments while ensuring collision-free loco-manipulation. In this work, we present ALORE, an autonomous large-object rearrangement system for a legged manipulator that can rearrange various large objects across diverse scenarios. The proposed system is characterized by three main features: (i) a hierarchical reinforcement learning training pipeline for multi-object environment learning, where a high-level object velocity controller is trained on top of a low-level whole-body controller to achieve efficient and stable joint learning across multiple objects; (ii) two key modules, a unified interaction configuration representation and an object velocity estimator, that allow a single policy to regulate planar velocity of diverse objects accurately; and (iii) a task-and-motion planning framework that jointly optimizes object visitation order and object-to-target assignment, improving task efficiency while enabling online replanning. Comparisons against strong baselines show consistent superiority in policy generalization, object-velocity tracking accuracy, and multi-object rearrangement efficiency. Key modules are systematically evaluated, and extensive simulations and real-world experiments are conducted to validate the robustness and effectiveness of the entire system, which successfully completes 8 continuous loops to rearrange 32 chairs over nearly 40 minutes without a single failure, and executes long-distance autonomous rearrangement over an approximately 40 m route. The open-source packages are available at https://zhihaibi.github.io/Alore/.</p>
                     </details>
                 </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2601.12988v1" target="_blank" class="paper-title">PaperGuide: Making Small Language-Model Paper-Reading Agents More Efficient</a>
-                        <span class="paper-date">2026-01-19</span>
-                    </div>
-                                        <span class="paper-comment">📝 35 pages, 9 figures, 7 tables</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>The accelerating growth of the scientific literature makes it increasingly difficult for researchers to track new advances through manual reading alone. Recent progress in large language models (LLMs) has therefore spurred interest in autonomous agents that can read scientific papers and extract task-relevant information. However, most existing approaches rely either on heavily engineered prompting or on a conventional SFT-RL training pipeline, both of which often lead to excessive and low-yield exploration. Drawing inspiration from cognitive science, we propose PaperCompass, a framework that mitigates these issues by separating high-level planning from fine-grained execution. PaperCompass first drafts an explicit plan that outlines the intended sequence of actions, and then performs detailed reasoning to instantiate each step by selecting the parameters for the corresponding function calls. To train such behavior, we introduce Draft-and-Follow Policy Optimization (DFPO), a tailored RL method that jointly optimizes both the draft plan and the final solution. DFPO can be viewed as a lightweight form of hierarchical reinforcement learning, aimed at narrowing the `knowing-doing' gap in LLMs. We provide a theoretical analysis that establishes DFPO's favorable optimization properties, supporting a stable and reliable training process. Experiments on paper-based question answering (Paper-QA) benchmarks show that PaperCompass improves efficiency over strong baselines without sacrificing performance, achieving results comparable to much larger models.</p>
-                    </details>
-                </div>
             </div>
         </section>
 
         <footer class="footer">
             <p>👤 <strong>Hongkun Luo (罗宏昆)</strong> · <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent)">Academic Page</a> · <a href="https://github.com/luohongk" target="_blank" style="color:var(--accent)">GitHub</a></p>
             <p style="margin-top:8px">🤖 Generated automatically from <a href="https://arxiv.org" style="color:var(--accent)">arXiv</a> · <a href="https://github.com/luohongk/Embodied-AI-Daily" style="color:var(--accent)">GitHub Repo</a></p>
-            <p style="margin-top:4px">Last update: 2026-07-24 (Beijing Time)</p>
+            <p style="margin-top:4px">Last update: 2026-07-25 (Beijing Time)</p>
         </footer>
     </main>
 

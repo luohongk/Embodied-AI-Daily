@@ -675,7 +675,7 @@
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Kalman Filter</span>
-                    <span class="nav-count">51</span>
+                    <span class="nav-count">52</span>
                 </a>
                 <a href="Loop-Closure-Detection.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -730,7 +730,7 @@
                 <a href="Model-Predictive-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#14b8a6"></span>
                     <span class="nav-label">Model Predictive Control</span>
-                    <span class="nav-count">56</span>
+                    <span class="nav-count">54</span>
                 </a>
                 <a href="Whole-Body-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#06b6d4"></span>
@@ -784,7 +784,7 @@
         <div class="sidebar-header">
             <h1><a href="../index.html" style="background:linear-gradient(135deg,#6366f1,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">🚀 Embodied AI Daily</a></h1>
             <div class="update">by <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent);text-decoration:none;font-weight:500;">Hongkun Luo</a> (罗宏昆)</div>
-            <div class="update" style="margin-top:2px">Last update: 2026-07-24</div>
+            <div class="update" style="margin-top:2px">Last update: 2026-07-25</div>
         </div>
             <a href="Continuous-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
@@ -894,7 +894,7 @@
             <a href="Kalman-Filter.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Kalman Filter</span>
-                <span class="nav-count">51</span>
+                <span class="nav-count">52</span>
             </a>
             <a href="Loop-Closure-Detection.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -949,7 +949,7 @@
             <a href="Model-Predictive-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#14b8a6"></span>
                 <span class="nav-label">Model Predictive Control</span>
-                <span class="nav-count">56</span>
+                <span class="nav-count">54</span>
             </a>
             <a href="Whole-Body-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#06b6d4"></span>
@@ -1028,6 +1028,30 @@
                 <span class="topic-count">79 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2508.16947v2" target="_blank" class="paper-title">Drive As You Like: Multi-Head Diffusion with Reinforcement Learning for Personalized Driving</a>
+                        <span class="paper-date">2026-07-23</span>
+                    </div>
+                                        <span class="paper-comment">📝 Has been submitted to AAAI 2026</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Despite significant progress, imitation learning-based autonomous driving planners remain largely restricted to reproducing high-frequency biased behaviors, overlooking the inherent behavioral diversity of human driving. Moreover, existing systems struggle to understand user intent from human interactions and environmental contexts. In real-world advanced deployment, motion planning must accommodate diverse, context-dependent user preferences to support heterogeneous driving services, requiring the ability to interpret human intent and adapt behavior accordingly. However, existing approaches lack such user-oriented capabilities, as they neither explicitly model user intent nor enable flexible policy adaptation. To bridge this gap, we propose an RL-guided multi-strategy framework with a diffusion-based multi-head planner(M-Diffusion Planner) integrated with LLM-based semantic understanding, enabling dynamic perception of user intent and generation of diverse, preference-aligned trajectories. To balance trajectory quality and strategy alignment, we adopt a two-stage training paradigm: first, imitation learning ensures each policy head achieves safe and high-quality planning; second, constrained Group Relative Policy Optimization (GRPO) further aligns each head with user preferences. Experiments on the nuPlan benchmark, under both open-loop and closed-loop settings, demonstrate competitive performance while meeting real-time planning requirements and effectively aligning with user intent.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.21341v1" target="_blank" class="paper-title">Grasp, Handover, Rotate: Bimanual Object Reorientation via Compositional Diffusion and Energy-Based Optimization</a>
+                        <span class="paper-date">2026-07-23</span>
+                    </div>
+                                        <span class="paper-comment">📝 IROS 2026</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Bimanual object reorientation - picking an object, handing it over between two arms, and placing it in a desired target pose - is valuable when direct placement from the initial grasp is infeasible due to collisions, kinematic constraints, or poor final orientation. However, achieving this under multiple competing objectives remains challenging. We introduce BiCompoDiff, a compositional diffusion and energy-based framework that jointly optimizes grasp selection, handover, regrasp, and motion planning under multiple constraints. By combining a pretrained grasp diffusion model with bimanual planning energy-based models (EBMs), our method injects gradient guidance during reverse diffusion to enforce collision avoidance, trajectory smoothness (via differentiable inverse kinematics), handover feasibility, and regrasp safety. Annealed MCMC sampling further refines grasp poses over the composite energy landscape. Experiments across diverse simulated household reorientation tasks demonstrate that BiCompoDiff achieves over 20% higher success rates and up to 37% smoother trajectories (measured by joint displacement) compared to strong sampling-based baselines. Real-world validation confirms effective sim-to-real transfer and robust performance on challenging scenes.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2607.20352v1" target="_blank" class="paper-title">Distributed Motion Planning with Safety Guarantees for Self-Reconfiguring Robotic Boats</a>
@@ -1154,10 +1178,7 @@
                         <span class="paper-date">2026-07-20</span>
                     </div>
                                         <span class="paper-comment">📝 Appeared in the 17th World Symposium on the Algorithmic Foundations of Robotics (WAFR)</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决刚体装配中因紧密几何约束（如近乎零间隙）导致的运动规划难题。  &#10;🛠 **方法**：提出CMG-RRT算法，通过自适应偏置采样到“临界流形”（零件间至少有一个接触点的构型子集）附近，并利用构型空间的层次细分引导探索。  &#10;✨ **主要贡献**：证明算法在标准假设下概率完备，在旋转装配基准测试中实现100%成功率，并首次自动求解Elk解谜难题。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Motion planning for rigid-body assembly poses a fundamental challenge in robotics due to tight geometric constraints. In such scenarios, feasible motions often require passing through (near-)zero clearance configurations in which the parts are tightly constrained by contact. In this work, we introduce Critical-Manifold Guided RRT (CMG-RRT), a sampling-based planner designed specifically for tight assembly problems. Our key observation is that in tight assemblies, valid solution paths lie on or near a critical manifold: the subset of configuration space consisting of poses with at least one contact point between parts. CMG-RRT guides exploration by adaptively biasing sampling toward neighborhoods of the critical manifold using a hierarchical subdivision of the configuration space. We prove that CMG-RRT is probabilistically complete under standard clearance assumptions. Empirical evaluation on challenging rotational assembly benchmarks demonstrates a 100% success rate across all tested instances, including, to the best of our knowledge, the first fully automatic solution of the Elk disentanglement puzzle. Our open source software is available through our project page: https://www.cgl.cs.tau.ac.il/projects/tight-assembly-planning.</p>
@@ -1169,10 +1190,7 @@
                         <span class="paper-date">2026-07-20</span>
                     </div>
                                         <span class="paper-comment">📝 Accepted at IROS 2026</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决林业起重机在液压泵流量约束下，因固定末端关节配置限制冗余自由度利用，导致运动规划效率低的问题。  &#10;🛠 **方法**：提出TSC-VP-STO算法，将VP-STO的末端关节空间约束替换为任务空间约束，联合优化轨迹与末端冗余自由度，并引入可达性约束处理运动学限制。  &#10;✨ **主要贡献**：平均缩短轨迹时间12-15%，优化泵流量分配，并在真实林业起重机的完整装载循环中验证了实用性。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Efficient, collision-free, and time-optimal motion planning is a fundamental requirement for autonomous forestry cranes operating under hydraulic pump-flow constraints. The Via-Point-based Stochastic Trajectory Optimization (VP-STO) algorithm has demonstrated near-time-optimal hybrid motion planning in this domain, but requires a fixed terminal joint configuration specified prior to optimization. For kinematically redundant manipulators such as forestry cranes, this pre-commitment to a single inverse kinematics solution restricts the planner's ability to exploit redundancy, particularly under the nonlinear, globally coupled pump-flow constraint where admissible joint velocities depend on their combined hydraulic demand. This paper presents TSC-VP-STO, a task-space-constrained extension of VP-STO that replaces the strict terminal joint-space constraint with a task-space constraint, jointly optimizing the trajectory and the redundant degrees of freedom of the terminal configuration. This enables the planner to adapt end configurations to the environment-dependent motion and hydraulic flow allocation, yielding more balanced pump utilization and shorter trajectory durations. We formalize the approach through a configuration space decomposition and derive a concrete reachability constraint for the forestry crane kinematics. Experimental evaluations across multiple planning targets and via-point configurations demonstrates a reduction on trajectory durations by 12-15% on average and improved pump-flow utilization compared to the baseline VP-STO. The practical applicability of TSC-VP-STO is validated through real-world deployment on a forestry crane, including a full log-loading cycle.</p>
@@ -1982,37 +2000,13 @@
                         <p>We present AO-ARC, an anytime multi-robot motion planning (MRMP) method that achieves initial solution times on par with state-of-the-art MRMP feasibility solvers while converging faster and more reliably than existing anytime MRMP methods as the number of robots increases. AO-ARC adapts the AO-x meta-algorithm for converting feasibility solvers into anytime algorithms by iteratively calling the original ARC method on bounded MRMP instances under a makespan cost metric. This exploits the adaptive (de)coupling of ARC while maintaining the consistent cost bound across robot (de)compositions needed for AO-x. We provide theoretical analysis proving the asymptotic optimality properties of AO- ARC and conduct empirical evaluation on a set of 2D scenarios with different levels of coordination complexity and a 3D manipulator scenario representative of real-world applications.</p>
                     </details>
                 </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.27292v1" target="_blank" class="paper-title">BOWConnect: Parallel Bayesian Optimization over Windows with Learned Local Cost Maps for Sample-Efficient Kinodynamic Motion Planning</a>
-                        <span class="paper-date">2026-06-25</span>
-                    </div>
-                                        <span class="paper-comment">📝 Accepted to the 2026 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2026)</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>This paper presents BOWConnect, a bidirectional parallel kinodynamic motion planner that addresses three fundamental limitations of existing sampling-based methods: sample inefficiency in high-dimensional state spaces, unreliable cost heuristics under dynamic constraints, and poor performance in narrow passage environments. Unlike classical planners that rely on random control sampling and geometric distance heuristics, BOWConnect integrates Bayesian Optimization over Windows (BOW) as a learning-based steering function within a parallel tree-based exploration framework, enabling each worker to learn local cost maps and constraints to guide sampling toward dynamically feasible and collision-free controls. A bidirectional architecture simultaneously grows forward and backward trees from the start and goal regions in parallel threads, with a spatial hashing mechanism enabling fast connection queries and a boundary value problem solver generating kinodynamically consistent bridge trajectories. Extensive evaluations across ten benchmark environments demonstrate that BOWConnect achieves 100\% success while delivering the fastest or near-fastest planning time in complex scenarios, including narrow passages and non-convex spaces where state-of-the-art planners fail or degrade substantially. Real-world deployment on a ground vehicle and a quadrotor confirms real-time planning with no collisions. Videos of real-world and simulated experiments, high-resolution versions of the figures, and the open-source code are available at https://bow-connect.github.io/.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2507.04949v3" target="_blank" class="paper-title">Monte Carlo Tree Search with Tensor Factorization for Optimization Problems in Robotics</a>
-                        <span class="paper-date">2026-06-25</span>
-                    </div>
-                                        <span class="paper-comment">📝 25 pages, 17 figures</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Many robotic tasks, such as inverse kinematics, motion planning, and contact-rich manipulation, can be formulated as optimization problems. Solving these problems requires addressing inherent nonlinear kinematics, complex contact dynamics, long-horizon correlations, and multi-modal optimization landscapes, each posing distinct challenges for state-of-the-art optimizers. While existing methods tackle these issues through problem-specific strategies, such specialization inherently limits cross-task generalization, requires heavy engineering effort in problem reformulation, and hinders multi-task autonomy. Monte Carlo Tree Search (MCTS) offers a compelling framework that generalizes across diverse robotic tasks via strategic exploration of the solution space. However, it typically suffers from combinatorial complexity when applied naively, resulting in slow convergence and excessive storage space in high-dimensional domains. To address this limitation, we propose Tensor Train Tree Search (TTTS), which leverages tensor factorization to exploit implicit correlations among different branches within the decision tree. By utilizing the resulting compact, linear-complexity representation, TTTS significantly reduces both computation and storage overhead, thereby enabling highly efficient global decision making. Experimental results across inverse kinematics, motion planning around obstacles, legged robot manipulation, multi-stage motion planning, and bimanual whole-body manipulation demonstrate the efficiency of TTTS for generalized robot optimization over a diverse set of tasks.</p>
-                    </details>
-                </div>
             </div>
         </section>
 
         <footer class="footer">
             <p>👤 <strong>Hongkun Luo (罗宏昆)</strong> · <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent)">Academic Page</a> · <a href="https://github.com/luohongk" target="_blank" style="color:var(--accent)">GitHub</a></p>
             <p style="margin-top:8px">🤖 Generated automatically from <a href="https://arxiv.org" style="color:var(--accent)">arXiv</a> · <a href="https://github.com/luohongk/Embodied-AI-Daily" style="color:var(--accent)">GitHub Repo</a></p>
-            <p style="margin-top:4px">Last update: 2026-07-24 (Beijing Time)</p>
+            <p style="margin-top:4px">Last update: 2026-07-25 (Beijing Time)</p>
         </footer>
     </main>
 

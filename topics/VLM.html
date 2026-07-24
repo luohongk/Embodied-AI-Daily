@@ -675,7 +675,7 @@
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Kalman Filter</span>
-                    <span class="nav-count">51</span>
+                    <span class="nav-count">52</span>
                 </a>
                 <a href="Loop-Closure-Detection.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -730,7 +730,7 @@
                 <a href="Model-Predictive-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#14b8a6"></span>
                     <span class="nav-label">Model Predictive Control</span>
-                    <span class="nav-count">56</span>
+                    <span class="nav-count">54</span>
                 </a>
                 <a href="Whole-Body-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#06b6d4"></span>
@@ -784,7 +784,7 @@
         <div class="sidebar-header">
             <h1><a href="../index.html" style="background:linear-gradient(135deg,#6366f1,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">🚀 Embodied AI Daily</a></h1>
             <div class="update">by <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent);text-decoration:none;font-weight:500;">Hongkun Luo</a> (罗宏昆)</div>
-            <div class="update" style="margin-top:2px">Last update: 2026-07-24</div>
+            <div class="update" style="margin-top:2px">Last update: 2026-07-25</div>
         </div>
             <a href="Continuous-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
@@ -894,7 +894,7 @@
             <a href="Kalman-Filter.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Kalman Filter</span>
-                <span class="nav-count">51</span>
+                <span class="nav-count">52</span>
             </a>
             <a href="Loop-Closure-Detection.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -949,7 +949,7 @@
             <a href="Model-Predictive-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#14b8a6"></span>
                 <span class="nav-label">Model Predictive Control</span>
-                <span class="nav-count">56</span>
+                <span class="nav-count">54</span>
             </a>
             <a href="Whole-Body-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#06b6d4"></span>
@@ -1028,6 +1028,33 @@
                 <span class="topic-count">80 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.21595v1" target="_blank" class="paper-title">3D-Aware VLMs with Implicit and Explicit Geometries</a>
+                        <span class="paper-date">2026-07-23</span>
+                    </div>
+                                        <span class="paper-comment">📝 Accepted by ECCV 2026, Open Sourced</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Despite rapid progress, most existing vision-language models (VLMs) built from 2D visual inputs often struggle when handling various 3D tasks that require fine-grained spatial understanding and reasoning. To bridge this gap, we present VLM-IE3D, a unified framework that enhances the 3D spatial awareness of VLMs by equipping them with both implicit and explicit 3D geometries learned from RGB videos. Our VLM-IE3D introduces Implicit Geometry Tokens (IGTs) that capture high-level geometric priors from input videos, as well as complementary Explicit Geometry Tokens (EGTs) that encode detailed geometric structures from reconstructed 3D attributes. On top of that, VLM-IE3D comes with a 3D-aware adapter that effectively fuses the two types of geometric representations with 2D visual cues. This RGB-only design injects strong 3D inductive biases for fine-grained spatial understanding and reasoning without requiring any additional 3D inputs. Extensive experiments show that VLM-IE3D achieves superior performance consistently across various 3D tasks including 3D video detection, 3D visual grounding, 3D dense captioning, and spatial reasoning. Code and models are available at https://github.com/Vegetebird/VLM-IE3D.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2606.00543v2" target="_blank" class="paper-title">ETC: Extreme Token Compression via Task-aware Visual Information Distillation in VLMs</a>
+                        <span class="paper-date">2026-07-23</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="好的，作为一名人工智能研究与学术论文分析专家，我将严格按照您的要求，对这篇题为《ETC: Extreme Token Compression via Task-aware Visual Information Distillation in VLMs》的论文进行详细的中文解读。&#10;&#10;---&#10;&#10;## 0. 概览（Concise Summary）&#10;&#10;- **主题（Topic）**：视觉语言模型（VLM）中的视觉令牌压缩。&#10;- **问题（Problem）**：高分辨率图像在VLM中产生大量视觉令牌，导致推理时计算成本和KV缓存开销巨大。现有压缩方法在极端压缩（如1-4个令牌）下性能急剧下降，即存在“压缩悬崖”问题。&#10;- **方法（Method）**：提出一个名为ETC（极端令牌压缩）的框架。该框架基于变分信息蒸馏原理，通过最小化任务损失来指导压缩。具体地，它利用文本到图像的交叉注意力来近似一个“指令感知的预测充分统计量”，然后通过变分信息蒸馏（VID）损失，迫使紧凑的表示（压缩后的令牌）保留这个统计量。&#10;- **创新（Innovation）**：&#10;    1.  从信息论角度，为任务损失最小化下的视觉令牌压缩提供了理论指导，即压缩表示应保留“指令感知的充分统计量”。&#10;    2.  提出了一种实用的方法，利用VLM中固有的文本-图像交叉注意力来近似这个理论上的充分统计量。&#10;    3.  引入变分信息蒸馏（VID）作为训练目标，直接指导压缩令牌保留任务相关的视觉信息，而非仅依赖语言先验。&#10;- **意义（Significance）**：ETC能够在极端压缩率（如1个令牌）下，依然保持强大的任务性能，显著降低KV缓存开销（高达95.33%）和计算成本。这为部署高效、低延迟的VLM提供了可行方案，尤其是在资源受限的场景下。&#10;- **一句话总结**：本文提出ETC框架，通过理论指导下的任务感知视觉信息蒸馏，实现了VLM中视觉令牌的极端压缩，在仅用1个令牌时仍能保持强大的性能。&#10;&#10;## 1. 研究动机（Motivation）&#10;&#10;- **问题与空白**：现代VLM（如LLaVA-1.5, Qwen3-VL）为了提升视觉理解能力，处理高分辨率图像时会产生大量视觉令牌（例如，Qwen3-VL可产生超过10,000个）。这些令牌导致Transformer计算复杂度呈二次方增长，并带来巨大的KV缓存开销，严重影响了推理效率。&#10;- **重要性**：解决视觉令牌的冗余问题，是实现VLM高效部署、降低推理成本的关键。这对于将VLM应用于实时应用、边缘设备等场景至关重要。&#10;- **挑战**：现有的压缩方法主要分为两类：&#10;    - **选择性压缩**（如SparseVLM）：通过丢弃或合并图像块来减少令牌。在中等压缩率下效果不错，但在极端压缩（如1-4个令牌）下，性能会急剧下降，出现“压缩悬崖”现象。这表明简单地保留“最重要”的图像块并不可靠。&#10;    - **抽象性压缩**（如VoCo-LLaMA）：将整个视觉序列总结成几个紧凑的令牌。它们更适合综合信息，但通常仅通过“下一个令牌预测（NTP）”损失进行训练。这种间接监督方式使得模型可能过度依赖语言先验，而不需要忠实保留任务所需的视觉信息。只要最终文本预测正确，模型就不会被强制保留视觉证据。&#10;- **核心挑战**：如何在极端压缩下，确保压缩后的表示仍然保留了**任务相关**的视觉信息，从而最小化因压缩带来的任务损失。&#10;&#10;## 2. 创新点（Innovation）&#10;&#10;- **理论创新**：从信息论角度，严格推导了任务损失最小化下的压缩准则。论文证明，要最小化压缩带来的任务损失，压缩表示 $Z$ 必须成为原始视觉令牌 $V$ 关于目标输出 $Y$ 和指令 $T$ 的“充分统计量”。这为设计压缩方法提供了坚实的理论基础。&#10;- **方法创新**：&#10;    1.  **指令感知的预测统计量近似**：由于理论上的充分统计量（输出分布）无法直接获取，ETC巧妙地利用VLM中**文本到图像的交叉注意力**来近似它。通过计算所有文本令牌对每个视觉令牌的平均注意力分数，得到一个指令感知的权重，并用此权重对原始视觉特征进行加权，得到近似的预测统计量 $\hat{X}$。&#10;    2.  **变分信息蒸馏（VID）**：为了将上述近似的统计量 $\hat{X}$ 保留在紧凑的表示 $Z$ 中，ETC引入了变分信息蒸馏损失。与简单的MSE损失不同，VID通过最大化 $\hat{X}$ 和 $Z$ 之间的互信息下界，鼓励 $Z$ 包含足够的信息来**重建** $\hat{X}$，而不是简单地让两者在欧氏距离上接近。这避免了极端压缩下的“均值坍缩”问题。&#10;- **架构创新**：在解码器-only的VLM中，ETC通过一个**瓶颈注意力掩码**（Bottleneck Attention Mask）实现压缩。压缩令牌 $Z$ 可以关注所有视觉令牌 $V$，而文本令牌 $T$ 只能关注 $Z$。这种设计强制信息流必须经过压缩令牌，从而将视觉信息蒸馏到 $Z$ 中。推理时，原始视觉令牌 $V$ 可以被丢弃，仅用 $Z$ 和 $T$ 进行解码。&#10;&#10;## 3. 主要内容（Main Content）【重点】&#10;&#10;### 3.1 设计架构与方法&#10;&#10;ETC的整体架构如图1所示。其核心思想是在VLM的输入序列中插入一组可学习的压缩令牌 $Z$，并通过特殊的注意力掩码和训练损失，迫使 $Z$ 捕获任务相关的视觉信息。&#10;&#10;- **输入序列**：`[V; Z; T]`，其中 $V$ 是原始视觉令牌，$Z$ 是 $M$ 个压缩令牌（$M \ll N_v$），$T$ 是文本令牌。&#10;- **瓶颈注意力掩码**：如图1所示，该掩码控制信息流：&#10;    - $Z$ 可以关注 $V$（从视觉中提取信息）。&#10;    - $T$ 只能关注 $Z$（不能直接看到原始视觉信息），从而迫使 $T$ 从 $Z$ 中获取视觉上下文。&#10;- **训练过程**：&#10;    1.  **前向传播**：输入序列通过LLM。&#10;    2.  **计算预测统计量 $\hat{X}$**：在LLM的最后一层，利用该层的文本-图像交叉注意力分数，对原始视觉特征 $X_v$ 进行加权，得到 $\hat{X}$（公式11）。&#10;    3.  **计算重建**：一个MLP解码器将压缩令牌 $Z$ 映射回原始视觉令牌空间，得到重建的表示 $\mu(Z, T)$。&#10;    4.  **计算损失**：联合优化两个损失：标准的自回归交叉熵损失 $L_{CE}$ 和变分信息蒸馏损失 $L_{ETC}$（公式18）。$L_{ETC}$ 鼓励 $\mu(Z, T)$ 尽可能接近 $\hat{X}$。&#10;- **推理过程**：&#10;    1.  **预填充阶段**：使用与训练相同的瓶颈注意力掩码，将 $V$ 中的信息压缩到 $Z$ 中。&#10;    2.  **丢弃视觉令牌**：将原始视觉令牌 $V$ 从KV缓存中丢弃。&#10;    3.  **解码阶段**：仅使用 $Z$ 和 $T$，在标准的因果注意力掩码下进行自回归生成。&#10;&#10;### 3.2 关键算法与数学推导&#10;&#10;**1. 任务损失最小化准则（Proposition 1）**&#10;&#10;压缩带来的额外任务损失定义为：&#10;$$&#10;\Delta_{task}(Z) = H(Y | Z, T) - H(Y | V, T)&#10;$$&#10;通过信息论推导，可以证明：&#10;$$&#10;\Delta_{task}(Z) = I(Y; V | Z, T)&#10;$$&#10;这意味着，要最小化任务损失（即 $\Delta_{task}(Z)=0$），必须满足 $Y \perp V | (Z, T)$，即 $Z$ 是 $V$ 关于 $Y$ 和 $T$ 的充分统计量。这等价于要求压缩表示 $Z$ 保留一个潜在的“指令感知预测统计量” $X^* = p(\cdot | V, T)$。&#10;&#10;**2. 指令感知预测统计量近似**&#10;&#10;由于 $X^*$ 无法直接获取，ETC使用文本-图像交叉注意力来近似它。对于第 $i$ 个视觉令牌，其聚合注意力分数为：&#10;$$&#10;S_i = \frac{1}{N_h \cdot N_t} \sum_{h=1}^{N_h} \sum_{j=1}^{N_t} A_{j,i}^h&#10;$$&#10;其中 $A_{j,i}^h$ 是第 $h$ 个注意力头中第 $j$ 个文本令牌对第 $i$ 个视觉令牌的注意力分数。经过归一化后，得到权重 $\tilde{S}_i$。最终的近似统计量为：&#10;$$&#10;\hat{X} = X_v \odot (1 - \alpha + \alpha \tilde{S})&#10;$$&#10;其中 $\alpha$ 是控制指令感知权重重度的超参数。&#10;&#10;**3. 变分信息蒸馏（VID）损失**&#10;&#10;为了保留 $\hat{X}$ 在 $Z$ 中，需要最大化条件互信息 $I(\hat{X}; Z | T)$。这等价于最小化条件熵 $H(\hat{X} | Z, T)$。由于真实分布 $p(\hat{X} | Z, T)$ 未知，引入变分分布 $q(\hat{X} | Z, T)$ 来近似，得到互信息的下界：&#10;$$&#10;I(\hat{X}; Z | T) \geq H(\hat{X} | T) + \mathbb{E}_{p(\hat{X},Z,T)}[\log q(\hat{X} | Z, T)]&#10;$$&#10;最大化该下界等价于最小化：&#10;$$&#10;L_{ETC} = -\mathbb{E}_{p(\hat{X},Z,T)}[\log q(\hat{X} | Z, T)]&#10;$$&#10;假设 $q$ 为高斯分布，其均值为 $\mu(Z, T)$（由MLP解码器输出），方差为 $\sigma_d^2$（可学习），则损失函数具体化为：&#10;$$&#10;L_{ETC} = \frac{1}{B} \sum_{b=1}^{B} \left[ \sum_{d=1}^{D} \left( \frac{1}{2\sigma_d^2} \sum_{n=1}^{N} (\hat{X}_{b,n,d} - \mu_{b,n,d}(Z, T))^2 + N \log \sigma_d \right) \right]&#10;$$&#10;&#10;### 3.3 模型、训练与数据集&#10;&#10;- **基础模型**：LLaVA-1.5-7B 和 Qwen3-VL-2B。&#10;- **训练数据集**：LLaVA-v1.5-mix665k 指令微调数据集，包含COCO, GQA, OCR-VQA, TextVQA, Visual Genome等。&#10;- **训练策略**：冻结视觉编码器，优化跨模态投影器和LLM骨干网络。使用AdamW优化器。联合损失函数为 $L = L_{CE} + \lambda L_{ETC}$，其中 $\lambda = 10^{-5}$，$\alpha = 0.6$。&#10;&#10;### 3.4 实验设置与结果&#10;&#10;- **评估基准**：MMBench, MME, SEED-Bench, ScienceQA (SQA), VQAv2, Q-Bench, RefCOCO。&#10;- **主要结果**：&#10;    - **LLaVA-1.5-7B（表1）**：在4、2、1个令牌的压缩预算下，ETC在大多数指标上均优于MQT-LLaVA、VoCo等方法。在1个令牌的极端情况下，ETC在MMBench上达到60.22%，MME达到1553.82，显著优于其他方法。&#10;    - **Qwen3-VL-2B（表2）**：ETC同样表现出色。在4个令牌时，平均性能保留率达到95.68%；在1个令牌时，仍能保留93.15%的性能，远超VoCo（86.93%）和QueCC（37.43%）。&#10;    - **与选择性压缩方法对比（图3）**：ETC仅用1个令牌的性能，就超过了SparseVLM、VisionZip等方法使用64个令牌的性能，证明了其极端压缩的有效性。&#10;    - **RefCOCO结果（表3）**：在细粒度区域-文本对齐任务上，ETC同样优于其他压缩方法。&#10;    - **效率分析（表4）**：相比1024个视觉令牌的完整缓存，ETC将KV缓存从223.54 MB降至10.44 MB（减少95.33%），CUDA时间减少43.79%，FLOPs减少54.03%。&#10;&#10;### 3.5 技术细节&#10;&#10;- **注意力掩码适配**：对于使用3D旋转位置编码（如Qwen3-VL）的模型，需要为压缩令牌 $Z$ 设置合适的时间索引和空间索引，以确保位置信息的正确性。&#10;- **损失权重 $\lambda$ 和混合系数 $\alpha$ 的敏感性**：实验表明，$\alpha=0.6$ 和 $\lambda=10^{-5}$ 是最优选择。$\alpha=0$（任务无关）时性能最差，说明指令感知的重要性。$\lambda$ 在 $10^{-5}$ 到 $10^0$ 范围内表现稳定，表明方法对超参数不敏感。&#10;- **VID vs. MSE（表7）**：VID损失显著优于MSE损失。这是因为MSE在极端压缩下会导致“均值坍缩”，而VID通过最大化互信息，鼓励压缩表示保留重建所需的信息，而非简单的像素级对齐。&#10;- **监督层选择（表8）**：在LLM的最后一层施加ETC监督效果最好，因为该层包含最成熟的多模态语义，且与最终预测直接相关。&#10;- **解码器选择（表9）**：MLP解码器作为重建头效果最好，优于Q-Former和线性插值。&#10;&#10;## 4. 意义与影响（Significance and Impact）&#10;&#10;- **解决的问题与贡献**：&#10;    - 解决了VLM中视觉令牌极端压缩下的性能崩溃问题（“压缩悬崖”）。&#10;    - 提供了一个理论驱动的、任务感知的压缩框架，将压缩问题与信息论中的充分统计量联系起来。&#10;    - 提出了一种实用且有效的实现方案，利用交叉注意力和VID损失来指导压缩。&#10;- **对未来研究/应用的影响**：&#10;    - **高效VLM部署**：ETC为在资源受限设备（如手机、机器人）上部署高性能VLM提供了可能，因为它能大幅降低内存和计算需求。&#10;    - **长视频理解**：对于处理长视频序列，视觉令牌数量会急剧膨胀。ETC的极端压缩能力可以极大地降低处理长视频的计算成本。&#10;    - **新范式**：ETC展示了通过直接优化信息保留来指导压缩的潜力，可能启发未来更多基于信息论的压缩方法。&#10;- **局限与开放问题**：&#10;    - **性能天花板**：尽管ETC在极端压缩下表现优异，但与无压缩的基线相比仍有差距。如何进一步缩小这个差距是未来方向。&#10;    - **任务依赖性**：ETC的性能可能依赖于指令的质量。对于模糊或复杂的指令，交叉注意力可能无法准确捕捉任务相关的视觉区域。&#10;    - **架构泛化性**：虽然已在LLaVA和Qwen上验证，但在其他VLM架构（如Flamingo）上的表现有待探索。&#10;    - **细粒度任务**：在RefCOCO等需要精确定位的任务上，性能仍然有限，表明极端压缩可能丢失了部分空间细节信息。&#10;&#10;## 5. 澄清与简化（Clarifications and Simplifications）&#10;&#10;- **“充分统计量”的通俗解释**：想象你要向朋友描述一张照片，但只能用一个词。这个词就是“压缩表示”。如果这个词是“海滩”，那么朋友就能很好地理解照片的主题，并回答“照片里是白天还是晚上？”（任务）。这个“海滩”就是一个关于“照片主题”的“充分统计量”，因为它包含了回答任务所需的最关键信息。ETC的目标就是让模型学会找出这个“海滩”一样的词。&#10;- **“变分信息蒸馏”的类比**：想象你有一本厚厚的百科全书（原始视觉令牌），你需要把它压缩成一张A4纸的摘要（压缩令牌）。简单的做法（MSE）是复制书中的句子，但A4纸太小，只能写几个词，信息丢失严重。ETC的做法（VID）是，先让一个专家（交叉注意力）告诉你，读者（文本指令）最关心什么话题（比如“恐龙”），然后你只围绕“恐龙”这个主题，用最精炼的语言写出摘要。这个摘要虽然短，但包含了回答读者问题所需的核心信息。VID损失就是确保这个摘要能让你（MLP解码器）尽可能还原出关于“恐龙”的原始知识。&#10;- **“压缩悬崖”**：想象你有一张1000块的拼图。选择性压缩就像扔掉一些拼图块。当你只扔掉100块时，你还能看出大概的图案。但当你扔掉900块时，剩下的100块拼图可能完全无法拼出任何有意义的图案，性能会断崖式下跌。ETC则像是用这100块拼图重新画一幅画，虽然细节少了，但保留了原图的核心特征和主题。&#10;&#10;## 6. 补充说明（Additional Notes）&#10;&#10;- **相关工作关联**：本文的工作与VoCo-LLaMA密切相关，两者都使用了“瓶颈注意力掩码”的架构。ETC的主要改进在于：1）提出了理论指导；2）引入了任务感知的交叉注意力权重来构建监督信号；3）使用更先进的VID损失替代了VoCo中可能使用的简单重建损失（如MSE）。与MQT-LLaVA相比，ETC更侧重于信息保留而非简单的查询变换。&#10;- **最重要的图表**：&#10;    - **图1**：这是理解ETC整个框架的核心。它清晰地展示了训练和推理阶段的输入序列、注意力掩码、以及如何计算 $\hat{X}$ 和 $L_{ETC}$。&#10;    - **图2**：展示了VLM中文本-图像交叉注意力的分布模式，为选择在最后一层施加监督提供了实验依据。&#10;    - **图">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>In Vision-Language Models (VLMs), high-resolution images produce a large number of visual tokens, resulting in high computational costs and KV-cache overhead during inference. To address this problem, we propose an Extreme Token Compression (ETC) framework that minimizes task loss when reducing the number of input tokens based on the principle of variational information distillation. Specifically, from an information-theoretic perspective, we show that minimizing task loss requires the compact representation to preserve the instruction-aware sufficient statistic of the task-relevant visual information for prediction. In practice, ETC leverages text-to-image cross-attention to weight the original visual features to approximate the latent instruction-aware predictive statistic. Moreover, ETC introduces a variational information distillation, enabling the compact representation to preserve the essential information to recover this predictive statistic. Experiments on LLaVA-1.5-7B and Qwen3-VL-2B show that ETC remains effective even under single-token compression, substantially reducing KV-cache overhead while retaining strong task performance.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2607.19701v1" target="_blank" class="paper-title">SafeGen: Goal-Conditioned Video Diffusion of Safety-Critical Scenarios for VLM-Based Autonomous Driving</a>
@@ -1154,10 +1181,7 @@
                         <span class="paper-date">2026-07-19</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：高速公路监控视频中远距离目标异常行为难以检测，现有视觉语言模型处理全局画面时注意力分散且计算成本高。&#10;&#10;🛠 **方法**：提出VIBES异步协作框架，通过在线贝叶斯推理模块动态评估车辆轨迹，更新正常驾驶行为的概率边界，精准定位异常时空区域，仅将局部画面输入视觉语言模型进行语义推理。&#10;&#10;✨ **主要贡献**：显著提升远距离异常检测精度，降低计算开销，实现高实时性与可解释性，并在多种高速公路场景下展现良好泛化能力。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Expressway video anomaly detection is essential for safety management. However, identifying anomalies across diverse scenes remains challenging, particularly for far-field targets exhibiting subtle abnormal vehicle motions. While Vision-Language Models (VLMs) demonstrate strong semantic reasoning capabilities, processing global frames causes attention dilution for these far-field objects and incurs prohibitive computational costs. To address these issues, we propose VIBES, an asynchronous collaborative framework utilizing VLMs guided by Bayesian inference. Specifically, to overcome poor generalization across varying expressway environments, we introduce an online Bayesian inference module. This module continuously evaluates vehicle trajectories to dynamically update the probabilistic boundaries of normal driving behaviors, serving as an asynchronous trigger to precisely localize anomalies in space and time. Instead of processing the continuous video stream, the VLM processes only the localized visual regions indicated by the trigger. This targeted visual input prevents attention dilution and enables accurate semantic reasoning. Extensive evaluations demonstrate that VIBES improves detection accuracy for far-field anomalies and reduces computational overhead, achieving high real-time efficiency and explainability while demonstrating generalization across diverse expressway conditions.</p>
@@ -1169,10 +1193,7 @@
                         <span class="paper-date">2026-07-18</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：评估视觉语言模型（VLMs）在足球场景中能否利用视觉信息做出策略性决策，而非仅完成常规视觉理解任务。&#10;&#10;🛠 **方法**：构建SportD基准，包含2022年世界杯478个持球决策事件，通过对比模型选择与基于控球价值的优化策略（最大化进球概率）来量化决策质量。&#10;&#10;✨ **主要贡献**：发现最佳VLM仅31.4%事件选择最优动作（职业球员38.9%），且模型偏好低风险低回报动作（少射门、少传威胁球），并存在模仿球员常见模式而非理性评估的倾向。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Vision--language models have become increasingly capable of interpreting visual scenes, but it remains unclear whether they can use information to make strategically effective decisions. We investigate this question in soccer, where models observe the seconds preceding an on-ball decision and must choose whether to shoot or pass to a specific teammate. Unlike conventional visual-understanding tasks, soccer enables decisions to be evaluated quantitatively by estimating the value of every available action. We introduce SportD, a benchmark comprising 478 on-ball decisions from the 2022 FIFA World Cup. Each model choice is evaluated against a possession-value model that estimates the action that most increases the attacking team's probability of scoring, allowing us to measure both optimal-action accuracy and the value forfeited by suboptimal decisions. Across three frontier VLMs, the best selects the highest-valued action on 31.4% of events, compared with 38.9% for the professional players, and all models incur significantly greater regret. Further analysis reveals a systematic preference for lower-variance and lower-reward actions: VLMs shoot less often and select substantially less progressive passes than either the optimal policy or the real players. The models also reproduce the player's specific action above chance even when that action is suboptimal, suggesting partial imitation of familiar play patterns rather than consistent evaluation of counterfactual alternatives. SportD provides a value-grounded testbed for measuring physical strategic reasoning in VLMs.</p>
@@ -1994,37 +2015,13 @@
                         <p>Geo-localization from a single image at planet scale (essentially an advanced or extreme version of the kidnapped robot problem) is a fundamental and challenging task in applications such as navigation, autonomous driving and disaster response due to the vast diversity of locations, environmental conditions, and scene variations. Traditional retrieval-based methods for geo-localization struggle with scalability and perceptual aliasing, while classification-based approaches lack generalization and require extensive training data. Recent advances in vision-language models (VLMs) offer a promising alternative by leveraging contextual understanding and reasoning. However, while VLMs achieve high accuracy, they are often prone to hallucinations and lack interpretability, making them unreliable as standalone solutions. In this work, we propose a novel hybrid geo-localization framework that combines the strengths of VLMs with retrieval-based visual place recognition (VPR) methods. Our approach first leverages a VLM to generate a prior, effectively guiding and constraining the retrieval search space. We then employ a retrieval step, followed by a re-ranking mechanism that selects the most geographically plausible matches based on feature similarity and proximity to the initially estimated coordinates. We evaluate our approach on multiple geo-localization benchmarks and show that it consistently outperforms prior state-of-the-art methods, particularly at street (up to 4.51%) and city level (up to 13.52%). Our results demonstrate that VLM-generated geographic priors in combination with VPR lead to scalable, robust, and accurate geo-localization systems.</p>
                     </details>
                 </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.27871v1" target="_blank" class="paper-title">LocalNav: Distilling Frontier VLMs and Embodied RL for On-Device Object Goal Navigation</a>
-                        <span class="paper-date">2026-06-26</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Vision Language Models (VLMs) have emerged in the robotic domain as a powerful tool that enables environmental perception with language context, serving as a catalyst for open-vocabulary tasks like ObjectNav. Yet, their computational footprint typically confines them to cloud execution, hindering low-latency inference with local deployment on resource-constrained robots. To address this challenge, we present a distillation strategy that transfers complex spatial-semantic reasoning from large frontier models into a lightweight, 4B-parameter local VLM for edge execution on embedded GPU devices (e.g., Jetson Orin). We first establish a State of the Art (SotA), Scene Graph (SG)-based pipeline using Claude Sonnet 4.6, achieving a 39.7% Success Rate (SR) on the HM3D OVON benchmark. We then demonstrate that fine-tuning Qwen3.5-4B on just 500 frontier reasoning traces effectively enables navigation capabilities, yielding a SR of 34.5%, narrowing the gap to the performance of large cloud models. Finally, we introduce E-RLVR with Token Generation (TG) regularization to compress output sequence lengths for physical deployment while grounding the agent in its task. This downstream optimization reduces TG overhead by 72.1% and latency by 71.8%. Combined with quantization, this joint strategy yields a cumulative 82.8% reduction in overall inference latency without significantly sacrificing performance, presenting a viable paradigm for local, low-latency VLM execution on mobile robots.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2601.22709v5" target="_blank" class="paper-title">Gated Relational Alignment via Confidence-based Distillation for Efficient VLMs</a>
-                        <span class="paper-date">2026-06-26</span>
-                    </div>
-                                        <span class="paper-comment">📝 Accepted to the International Conference on Machine Learning (ICML 2026)</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Vision-Language Models (VLMs) achieve strong multimodal performance but are costly to deploy, and post-training quantization often causes significant accuracy loss. Despite its potential, quantization-aware training for VLMs remains underexplored. We propose GRACE, a framework unifying knowledge distillation and QAT under the Information Bottleneck principle: quantization constrains information capacity while distillation guides what to preserve within this budget. Treating the teacher as a proxy for task-relevant information, we introduce confidence-gated decoupled distillation to filter unreliable supervision, relational centered kernel alignment to transfer visual token structures, and an adaptive controller via Lagrangian relaxation to balance fidelity against capacity constraints. Across extensive benchmarks on LLaVA and Qwen families, our INT4 models consistently outperform FP16 baselines (e.g., LLaVA-1.5-7B: 70.1 vs. 66.8 on SQA; Qwen2-VL-2B: 76.9 vs. 72.6 on MMBench), nearly matching teacher performance. Using real INT4 kernel, we achieve 3$\times$ throughput with 54% memory reduction. This principled framework significantly outperforms existing quantization methods, making GRACE a compelling solution for resource-constrained deployment. Code and data are available at: https://github.com/ForeverBlue816/GRACE.</p>
-                    </details>
-                </div>
             </div>
         </section>
 
         <footer class="footer">
             <p>👤 <strong>Hongkun Luo (罗宏昆)</strong> · <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent)">Academic Page</a> · <a href="https://github.com/luohongk" target="_blank" style="color:var(--accent)">GitHub</a></p>
             <p style="margin-top:8px">🤖 Generated automatically from <a href="https://arxiv.org" style="color:var(--accent)">arXiv</a> · <a href="https://github.com/luohongk/Embodied-AI-Daily" style="color:var(--accent)">GitHub Repo</a></p>
-            <p style="margin-top:4px">Last update: 2026-07-24 (Beijing Time)</p>
+            <p style="margin-top:4px">Last update: 2026-07-25 (Beijing Time)</p>
         </footer>
     </main>
 

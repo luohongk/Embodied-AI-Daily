@@ -675,7 +675,7 @@
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Kalman Filter</span>
-                    <span class="nav-count">51</span>
+                    <span class="nav-count">52</span>
                 </a>
                 <a href="Loop-Closure-Detection.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -730,7 +730,7 @@
                 <a href="Model-Predictive-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#14b8a6"></span>
                     <span class="nav-label">Model Predictive Control</span>
-                    <span class="nav-count">56</span>
+                    <span class="nav-count">54</span>
                 </a>
                 <a href="Whole-Body-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#06b6d4"></span>
@@ -784,7 +784,7 @@
         <div class="sidebar-header">
             <h1><a href="../index.html" style="background:linear-gradient(135deg,#6366f1,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">🚀 Embodied AI Daily</a></h1>
             <div class="update">by <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent);text-decoration:none;font-weight:500;">Hongkun Luo</a> (罗宏昆)</div>
-            <div class="update" style="margin-top:2px">Last update: 2026-07-24</div>
+            <div class="update" style="margin-top:2px">Last update: 2026-07-25</div>
         </div>
             <a href="Continuous-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
@@ -894,7 +894,7 @@
             <a href="Kalman-Filter.html" class="nav-item active">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Kalman Filter</span>
-                <span class="nav-count">51</span>
+                <span class="nav-count">52</span>
             </a>
             <a href="Loop-Closure-Detection.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -949,7 +949,7 @@
             <a href="Model-Predictive-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#14b8a6"></span>
                 <span class="nav-label">Model Predictive Control</span>
-                <span class="nav-count">56</span>
+                <span class="nav-count">54</span>
             </a>
             <a href="Whole-Body-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#06b6d4"></span>
@@ -1025,13 +1025,13 @@
         <section class="topic-section">
             <div class="topic-header">
                 <span class="topic-badge" style="background:#8b5cf6">Kalman Filter</span>
-                <span class="topic-count">51 papers</span>
+                <span class="topic-count">52 papers</span>
             </div>
             <div class="paper-list">
                 <div class="paper-card">
                     <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.20010v1" target="_blank" class="paper-title">Generalized Kalman filter based temporal difference reinforcement learning</a>
-                        <span class="paper-date">2026-07-22</span>
+                        <a href="https://arxiv.org/abs/2607.20010v2" target="_blank" class="paper-title">Generalized Kalman filter based temporal difference reinforcement learning</a>
+                        <span class="paper-date">2026-07-23</span>
                     </div>
                                         <span class="paper-comment">📝 39 pages, 18 figures</span>
                                         <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：传统基于卡尔曼滤波的时序差分强化学习受限于线性高斯假设，无法处理非线性模型和非高斯概率分布下的价值函数估计与不确定性量化问题。&#10;&#10;🛠 **方法**：基于条件期望理论，将价值函数和Q值函数视为不确定量，通过随机推断框架进行递归估计，并利用多项式混沌展开或集成近似对随机问题进行离散化，以实现高效计算。&#10;&#10;✨ **主要贡献**：提出了一种广义时序差分学习框架，能同时估计价值函数的条件期望及其二阶概率矩，从而量化学习过程中的不确定性，并将经典方法扩展至非线性、非高斯系统，在线性质量-弹簧-阻尼系统和非线性热传导问题中验证了其准确性与适用性。">
@@ -1041,6 +1041,30 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>In this paper, we present a generalized temporal-difference (TD) reinforcement learning framework based on the theory of conditional expectations. The value and action-value (Q-value) functions are treated as uncertain quantities, and their estimation is formulated as a stochastic inference problem. Unlike classical Kalman-based temporal-difference learning, which relies on linear-Gaussian assumptions, the proposed formulation is derived directly from the conditional expectation framework and naturally extends to nonlinear models and non-Gaussian probability distributions. The proposed method recursively estimates not only the conditional expectation of the value function but also its second probabilistic moment, thereby quantifying the uncertainty associated with the learned value function throughout the learning process. To obtain a computationally tractable algorithm, the stochastic problem is discretized using either polynomial chaos expansions or ensemble-based approximations, providing efficient representations of the underlying random variables. The proposed framework is demonstrated on two optimal control problems: a linear mass--spring--damper system and a nonlinear heat conduction problem in a closed cavity. The numerical examples illustrate the capability of the proposed method to accurately estimate both the value function and its associated uncertainty, while extending classical Kalman-based temporal-difference learning to a broader class of stochastic systems.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.20939v1" target="_blank" class="paper-title">Interaction Dynamics Modeling and Predictive Control for Safe Steerable Catheter--Tissue Interaction</a>
+                        <span class="paper-date">2026-07-23</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Safe steerable catheter control is fundamentally a problem of interaction dynamics: the tip must follow a planned motion, remain compliant against moving tissue, reject friction and hysteresis, and respect a clinically meaningful never-exceed contact-force bound. We formulate catheter--tissue interaction dynamics in the scalar tip-normal coordinate of a single-segment single-tendon catheter. A partial-physics feedforward cancels only the reliable nominal bending dynamics, exposing a configuration-invariant linear interaction-dynamics model whose input gain varies through the scalar catheter inertia. A predictive optimizer then regulates this interaction state subject to hard contact-force, tendon-force, and curvature constraints. An augmented Kalman filter compresses contact, friction, and modeling error into one sensor-free disturbance state, giving nominal offset-free regulation in free space while leaving force safety to the explicit constraint. The unconstrained and disturbance-free limit recovers classical catheter impedance as a special realization of the same interaction dynamics, rather than as the main design object. In a MuJoCo distributed-compliance simulation of an eight-link tendon-driven catheter, disturbance augmentation cuts free-space approach error by 90\%, and only the force-constrained predictive interaction-dynamics controller reconciles tracking with the 0.5\,N bound: the unconstrained controller drives contact force to 0.60\,N against a penetrating target, while the constrained one holds 0.47\,N at identical tracking. These results show that offset-free motion regulation and contact-force safety are coupled interaction-dynamics objectives, and that the explicit predictive constraint resolves their tension under stiff tissue contact. The bound also holds under $0.5$\,mm, $1.2$\,Hz cardiac motion. Hardware validation is future work.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.20710v1" target="_blank" class="paper-title">Decentralized UAV Swarms for Ground Target Protection in GPS- and Communication-Denied Environments</a>
+                        <span class="paper-date">2026-07-22</span>
+                    </div>
+                                        <span class="paper-comment">📝 Accepted for publication at the 2026 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2026)</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>The presence of UAVs in military operations has recently increased, also increasing the demand for defense systems against UAV attacks. UAVs can also be used as countermeasures. Most available methods rely on UAV-to-UAV communication and global positioning. However, such resources may not be available in modern warfare scenarios. To address these limitations, we propose a pipeline for ground-target protection against UAV attacks that employs autonomous swarms of UAVs. We assume a communication- and GPS-denied environment in which the UAVs use onboard sensors to track the target and coordinate as a swarm. We developed Kalman filters to estimate the states of unknown targets and the positions of UAVs in the swarm using only relative measurements. Also, our strategy is to encircle the target of interest to maximize coverage. To achieve that, we propose a decentralized swarm encirclement technique that adapts to the target's motion. Our approach was extensively validated using real robots, demonstrating its effectiveness in detecting, encircling, and intercepting hostile UAVs.</p>
                     </details>
                 </div>
                 <div class="paper-card">
@@ -1154,10 +1178,7 @@
                         <span class="paper-date">2026-07-17</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决液压挖掘机自动化开发中物理机器访问受限和真实实验成本高昂的问题。  &#10;🛠 **方法**：提出一种基于长短期记忆网络的仿真到真实迁移框架，将挖掘机视为输入-输出系统，训练其闭环行为替代模型，并引入自适应卡尔曼滤波处理真实数据中的测量不一致性。  &#10;✨ **主要贡献**：在MuJoCo仿真和真实挖掘机上验证了替代模型在角速度和长时轨迹复现中的高保真度，证明其可作为仿真与物理系统的通用替代，支持挖掘自动化算法的高效规模化开发。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Developing autonomous hydraulic excavators is constrained by limited access to physical machines and the high cost of real-world experimentation. This paper proposes a simulation-to-real framework for learning a system-level digital surrogate using Long Short-Term Memory (LSTM) networks. Instead of modeling internal dynamics, the excavator is treated as an input-output operator, and the surrogate is trained to reproduce its closed-loop behavior under identical control inputs. The approach is first validated in a MuJoCo simulation environment and then transferred to a real excavator. To address measurement inconsistencies in real-world data, a consistency-aware state estimation method based on adaptive Kalman filtering is introduced. Experimental results demonstrate that the learned surrogate achieves high fidelity in both angular velocity and long-horizon trajectory reproduction under closed-loop autoregressive evaluation. These results confirm that the proposed model can serve as a drop-in surrogate for both simulation and physical systems, enabling scalable and efficient development of excavation automation algorithms.</p>
@@ -1169,10 +1190,7 @@
                         <span class="paper-date">2026-07-16</span>
                     </div>
                                         <span class="paper-comment">📝 Accepted paper for IEEE ISSC 2026 conference, Limerick, Ireland</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：无线传感器网络在长期环境监测中采用稀疏采样以延长寿命，但容易错过短暂、局部的异常事件。&#10;&#10;🛠 **方法**：提出哨兵辅助自适应采样框架，正常时期基于卡尔曼滤波预测不确定性进行稀疏采样，异常时期由连续采样的哨兵节点执行混合广义似然比检测，并触发一跳邻域唤醒与恢复感知警报控制。&#10;&#10;✨ **主要贡献**：在Intel Berkeley实验室温度数据集上，将异常窗口采样率从0.439提升至0.933，相比AAS和Adapted e-Sampling方法分别降低总成本15.4%和2.1%，实现了异常可见性与采样成本的有效平衡。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Long-term environmental monitoring in wireless sensor networks (WSNs) often uses sparse sampling to extend network lifetime, but sparse sensing can miss short-lived, localized, and potentially diffusive anomalies. This paper proposes a sentinel-assisted adaptive sampling framework as a cooperative sensing-control pipeline for WSN anomaly monitoring. During normal periods, nodes perform sparse sensing driven by Kalman filter (KF) predictive uncertainty. During anomalous periods, continuously sampled sentinel nodes perform hybrid GLR-based detection with node-relative thresholds, and local detections trigger one-hop neighborhood wake-up with recovery-aware alert control. Experiments on the Intel Berkeley Research Lab temperature dataset with abrupt random spatiotemporal anomalies show that the proposed method raises the anomaly-window sampling ratio (AWSR) from 0.439 to 0.933 in the main experiment. It also improves AWSR over Adaptive Data Acquisition with Energy Efficiency and Critical-Sensing Guarantee (AAS) and Adapted e-Sampling while reducing total cost by 15.4\% and 2.1\%, respectively. These results show that integrating KF-based sparse sampling, sentinel GLR detection, and local alert propagation improves anomaly-window visibility while maintaining a lower sampling-cost trade-off.</p>
@@ -1344,6 +1362,18 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Marginalization of latent variables or nuisance parameters is a fundamental aspect of Bayesian inference and uncertainty quantification. In this work, we focus on scalable marginalization of latent variables in modeling correlated data, such as spatio-temporal or functional observations. We first introduce Gaussian processes (GPs) for modeling correlated data and highlight the computational challenge, where the computational complexity increases cubically fast along with the number of observations. We then review the connection between the state space model and GPs with Mat{é}rn covariance for temporal inputs. The Kalman filter and Rauch-Tung-Striebel smoother were introduced as a scalable marginalization technique for computing the likelihood and making predictions of GPs without approximation. We then introduce recent efforts on extending the scalable marginalization idea to the linear model of coregionalization for multivariate correlated output and spatio-temporal observations. In the final part of this work, we introduce a novel marginalization technique to estimate interaction kernels and forecast particle trajectories. The achievement lies in the sparse representation of covariance function, then applying conjugate gradient for solving the computational challenges and improving predictive accuracy. The computational advances achieved in this work outline a wide range of applications in molecular dynamic simulation, cellular migration, and agent-based models.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.20521v1" target="_blank" class="paper-title">Generative Bayesian Filtering for State Estimation</a>
+                        <span class="paper-date">2026-07-09</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>The state of a dynamic system evolves over time, switching among several latent modes that govern its observable behavior. Filtering methods infer the latent state from observations. Classical filtering approaches, including Kalman filters, typically rely on simple observation models, such as linear-Gaussian models, that are incapable of characterizing the increasingly nonlinear and heterogeneous patterns in high-dimensional sensor signals. To tackle the challenge, we propose Generative Bayesian Filtering (GBF), a filtering framework that replaces restrictive observation models with pretrained conditional generative models parametrized by conditional variational autoencoders (CVAE). For online inference, GBF performs a Bayesian prediction-update recursion in which the measurement update is formulated as a posterior sampling problem that combines the dynamical prior with the CVAE-induced likelihood. The resulting filtering problem is then transformed into a score-based sampling problem, which naturally inherits the flexibility from generative models and the uncertainty quantification capabilities from ensembling. Experiments on synthetic datasets and real-world applications involving manufacturing system monitoring and arrhythmia diagnosis demonstrate that GBF improves state estimation accuracy and robustness relative to baseline approaches.</p>
                     </details>
                 </div>
                 <div class="paper-card">
@@ -1646,37 +1676,13 @@
                         <p>Simultaneous Localization and Mapping (SLAM) is essential for autonomous systems, yet achieving reliable, globally consistent pose estimation and dense mapping in complex environments remains challenging due to geometric degeneracy and sensor drift. While multi-sensor fusion addresses these issues, existing systems often lack the modularity to adapt to diverse platforms and rely on mathematically inconsistent fusion or suboptimal map representations. To address these limitations, we propose LXD-SLAM (LiDAR+X Dense SLAM), a highly versatile and unified multi-sensor fusion framework. Centered around 3D LiDAR, our system allows for the plug-and-play integration of LiDAR, Camera, IMU, Wheel Encoder, and GNSS, supporting up to 32 distinct sensor combinations. We employ a mathematically unified Iterative Error-Sate Kalman Filter with an adaptive hierarchical prediction strategy and an update step that minimizes point-to-mesh distances and visual reprojection errors. To support this, the environment is modeled using continuous multi-layered Gaussian Process (GP) sub-meshes, which enables efficient ray-to-mesh depth recovery for visual features. For global consistency, we introduce an Extended Scan Context (ESC) descriptor derived from the GP sub-meshes alongside a Bidirectional PnP optimization for robust multi-modal loop closure within a hybrid pose graph. Extensive evaluations on public datasets and real-world experiments demonstrate that LXD-SLAM matches or exceeds state-of-the-art specialized odometry solutions across various configurations while generating high-fidelity, globally consistent dense meshes in real-time. The relevant codes and data will be made available at https://github.com/peterWon/LXD-SLAM upon publication.</p>
                     </details>
                 </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2605.29072v3" target="_blank" class="paper-title">Diffusion Model-Based Data Assimilation for Real-World Energy Consumption Forecasting</a>
-                        <span class="paper-date">2026-06-26</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Accurate estimation and forecasting of energy consumption are important for power-system operation, planning, and demand-side management. In practice, however, complete and timely measurements may not always be available, and the observed data can be partial, noisy, or delayed. This motivates the use of learned forecasting models for predicting the evolving consumption state, together with data assimilation methods for sequential forecast correction. In this work, we study a high-dimensional data assimilation problem for real energy-consumption data. \modeltext{The forward prediction is supplied by a pretrained black-box spatio-temporal forecasting model, which is treated as the state propagator in the filtering procedure.} We employ the Ensemble Score Filter (EnSF) to assimilate partial and noisy observations and to correct the forecast trajectory over time. The EnSF uses score-based diffusion models to approximate filtering distributions and avoids retraining neural-network score models during assimilation by using a closed-form score representation and Monte Carlo approximation. Numerical experiments demonstrate that open-loop propagation of the learned forecasting model can become unreliable over long horizons, while EnSF-based correction substantially improves state estimation. Comparisons with the Ensemble Kalman Filter (EnKF) further show that EnSF provides stronger correction under the nonlinear observation setting considered in this work.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2601.18992v2" target="_blank" class="paper-title">Mixture-Weighted Ensemble Kalman Filter with Quasi-Monte Carlo Transport</a>
-                        <span class="paper-date">2026-06-25</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>The Bootstrap Particle Filter (BPF) and the Ensemble Kalman Filter (EnKF) are two widely used methods for sequential Bayesian filtering: the BPF is asymptotically exact but can suffer from weight degeneracy, while the EnKF scales well in high dimension (typically with localization) yet is exact only in the linear-Gaussian case. We combine these approaches by retaining the EnKF transport step and adding a principled importance-sampling correction. Our first contribution is a general importance-sampling theory for mixture targets and proposals, including variance comparisons between individual- and mixture-based estimators. We then interpret the stochastic EnKF analysis as sampling from explicit Gaussian-mixture proposals obtained by conditioning on the current or previous ensemble, which leads to six self-normalized IS-EnKF schemes. We embed these updates into a broader class of ensemble-based filters and prove consistency and error bounds, including weight-variance comparisons and sufficient conditions ensuring finite-variance importance weights. As a second contribution, we construct transported quasi-Monte Carlo (TQMC) point sets for the Gaussian-mixture laws arising in prediction and analysis, yielding TQMC-enhanced variants that can substantially reduce sampling error without changing the filtering pipeline. Numerical experiments on benchmark models compare the proposed mixture-weighted and TQMC-enhanced filters, showing improved filtering accuracy relative to BPF, EnKF, and the standard weighted EnKF, and that the weighted schemes eliminate the EnKF error plateau often caused by analysis-target mismatch.</p>
-                    </details>
-                </div>
             </div>
         </section>
 
         <footer class="footer">
             <p>👤 <strong>Hongkun Luo (罗宏昆)</strong> · <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent)">Academic Page</a> · <a href="https://github.com/luohongk" target="_blank" style="color:var(--accent)">GitHub</a></p>
             <p style="margin-top:8px">🤖 Generated automatically from <a href="https://arxiv.org" style="color:var(--accent)">arXiv</a> · <a href="https://github.com/luohongk/Embodied-AI-Daily" style="color:var(--accent)">GitHub Repo</a></p>
-            <p style="margin-top:4px">Last update: 2026-07-24 (Beijing Time)</p>
+            <p style="margin-top:4px">Last update: 2026-07-25 (Beijing Time)</p>
         </footer>
     </main>
 

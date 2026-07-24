@@ -675,7 +675,7 @@
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Kalman Filter</span>
-                    <span class="nav-count">51</span>
+                    <span class="nav-count">52</span>
                 </a>
                 <a href="Loop-Closure-Detection.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -730,7 +730,7 @@
                 <a href="Model-Predictive-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#14b8a6"></span>
                     <span class="nav-label">Model Predictive Control</span>
-                    <span class="nav-count">56</span>
+                    <span class="nav-count">54</span>
                 </a>
                 <a href="Whole-Body-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#06b6d4"></span>
@@ -784,7 +784,7 @@
         <div class="sidebar-header">
             <h1><a href="../index.html" style="background:linear-gradient(135deg,#6366f1,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">🚀 Embodied AI Daily</a></h1>
             <div class="update">by <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent);text-decoration:none;font-weight:500;">Hongkun Luo</a> (罗宏昆)</div>
-            <div class="update" style="margin-top:2px">Last update: 2026-07-24</div>
+            <div class="update" style="margin-top:2px">Last update: 2026-07-25</div>
         </div>
             <a href="Continuous-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
@@ -894,7 +894,7 @@
             <a href="Kalman-Filter.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Kalman Filter</span>
-                <span class="nav-count">51</span>
+                <span class="nav-count">52</span>
             </a>
             <a href="Loop-Closure-Detection.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -949,7 +949,7 @@
             <a href="Model-Predictive-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#14b8a6"></span>
                 <span class="nav-label">Model Predictive Control</span>
-                <span class="nav-count">56</span>
+                <span class="nav-count">54</span>
             </a>
             <a href="Whole-Body-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#06b6d4"></span>
@@ -1030,6 +1030,81 @@
             <div class="paper-list">
                 <div class="paper-card">
                     <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.21347v1" target="_blank" class="paper-title">Quality-Aware Multimodal Fusion Reveals Implicit Identity in Valence-Arousal Features</a>
+                        <span class="paper-date">2026-07-23</span>
+                    </div>
+                                        <span class="paper-comment">📝 10 pages, 3 figures, 6 tables. Accepted for publication at IEEE International Joint Conference on Biometrics (IJCB), 2026</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Conventional face recognition relies on static appearance cues and degrades in unconstrained settings with expression variation, occlusion, and poor lighting. We hypothesize that audiovisual expression dynamics carry identity-discriminative information complementary to static appearance, and that extracting this signal requires multimodal representations robust to the variable input quality of in-the-wild video. To learn such representations, we cast multimodal valence-arousal (VA) estimation as a pretext task and propose Quality-Aware Adaptive Fusion (QAAF), which estimates per-sample, per-modality reliability and adapts each modality's contribution through learned soft gating and a quality-dependent dropout. For the problem of VA estimation, QAAF achieves an average Concordance Correlation Coefficient (CCC) of 0.472 via late fusion ensembling on Aff-wild2, improving over a baseline ensemble under the same setting (0.415) as well as a single-backbone baseline (0.288). Furthermore, the proposed QAAF demonstrates greater resilience to unavailable modalities, with only a 7.5-34.4% relative decrease in CCC when one modality is missing. We then probe whether these VA-trained features encode identity without identity-specific training. On AFEW-VA (67 actors) and YTF (1,595 subjects), VA-trained backbone features rank first among evaluated soft biometric methods, and score-level fusion with ArcFace lowers EER on both datasets (0.022 to 0.021 on AFEW-VA, 0.106 to 0.104 on YTF), correcting 68.2% of ArcFace's false accepts on AFEW-VA. These findings establish multimodal VA estimation as a soft biometric modality complementary to conventional face recognition.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.21058v1" target="_blank" class="paper-title">Human-Inspired Framework for Robotic Craniotomy: Integrating Multimodal Fusion and Adaptive Trajectory Adjustment</a>
+                        <span class="paper-date">2026-07-23</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Manual craniotomy is a high-risk, skill-dependent procedure associated with surgeon fatigue and potential dural injury. While robotic approaches have improved safety, existing open-loop systems rely solely on preoperative images and cannot compensate for intraoperative registration errors or tissue deformation. To address this, we propose a human-inspired closed-loop robotic craniotomy framework that intelligently integrates preoperative planning with intraoperative execution. An adaptive dual-contour fusion algorithm is employed to generate trajectories that conform to complex cranial geometries while maintaining a consistent tool-bone relative pose. For intraoperative perception, a multimodal two-stage cross-modal attention block (CMA)-temporal convolutional network (TCN)-Transformer network combined with an adaptive Bayesian filter fuses force and acoustic signals to achieve robust breakthrough detection under varying bone conditions. Upon detection, an in-situ projection-based trajectory adjustment strategy dynamically compensates for depth deviations, enabling safe residual bone isolation. Experiments on bovine ribs show a breakthrough prediction accuracy of 97%, a detection latency of 0.048 +/- 0.097 s, and a maximum overshoot of 0.29 mm. All four ex vivo cranial experiments were successfully completed without dural injury. These results demonstrate that the proposed cybernetic framework enables safe and autonomous craniotomy with highly effective closed-loop control.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.20900v1" target="_blank" class="paper-title">DINO-VPT: Hierarchical Visual Prompt Tuning for Joint Physical-Digital Face Anti-Spoofing</a>
+                        <span class="paper-date">2026-07-23</span>
+                    </div>
+                                        <span class="paper-comment">📝 accepted to IJCB2026</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>With the increasing diversity of spoofing attacks, there is a growing demand for unified Face Anti-Spoofing (FAS) models capable of detecting both physical and digital threats. While existing Vision-Language Models (VLMs) demonstrate high generalization in this context, they heavily rely on complex multimodal fusion and external text encoders. In this paper, we propose DINO-VPT, a lightweight, vision-only framework leveraging hierarchical visual prompt tuning. By dynamically injecting prompts conditioned on input features via a Prompt Routing Network (PRN), our method effectively disentangles diverse spoofing artifacts without requiring multimodal fusion. Evaluations on the UniAttackData benchmark demonstrate that DINO-VPT achieves higher accuracy than state-of-the-art VLM-based methods. Our results indicate that a properly structured vision-only architecture can achieve state-of-the-art performance in unified FAS without the need for multimodal supervision.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.14675v3" target="_blank" class="paper-title">An Intelligent-Cloud Edge Multimodal Interaction System for Robots</a>
+                        <span class="paper-date">2026-07-23</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在计算资源受限的机器人平台上，实现复杂环境下的鲁棒人机交互，包括准确的手势感知、场景理解和任务规划。&#10;&#10;🛠 **方法**：提出云-边多模态交互框架，集成改进的YOLO手势检测器（加入CBAM注意力模块和DIoU损失函数）与LLM/VLM智能体；云端负责检测、融合与规划，TonyPi机器人本地处理数据采集与执行。&#10;&#10;✨ **主要贡献**：手势检测在公开和自定义数据集上分别达到98.9%和95.0%的精度，系统任务成功率最高达95%；30人评估平均满意度3.69/5，验证了轻量级手势检测与多模态智能体结合在资源受限机器人上的可行性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Robust human-robot interaction in complex environments requires accurate gesture perception, semantic scene understanding, and reliable task planning under limited onboard computing resources. This paper presents a cloud-edge multimodal interaction framework that integrates an enhanced YOLO-based gesture detector with coordinated large language model (LLM) and vision-language model (VLM) agents. The proposed detector, incorporates the Convolutional Block Attention Module (CBAM) into the neck and replaces the baseline bounding-box regression objective with Distance-IoU (DIoU) loss. These modifications improve feature discrimination and localization for small or partially occluded gestures in complex backgrounds. The cloud layer performs gesture detection, scene understanding, multimodal fusion, and action planning, whereas the TonyPi robot locally handles data acquisition, communication, action execution, and feedback. Experiments on a public gesture dataset and a custom dataset show that YOLO-DC achieves precision values of 98.9% and 95.0%, with mAP@0.5 values of 90.7% and 92.7%, respectively. System-level evaluation yields success rates of 95%, 88%, and 82% for single-action, composite-action, and vision-dependent tasks. A 30 participant evaluation yields an overall mean satisfaction score of 3.69 out of 5. These results demonstrate the feasibility of combining refined gesture detection with multimodal agents for resource-constrained robotic interaction.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.20790v1" target="_blank" class="paper-title">Ocular Verification for Virtual Reality</a>
+                        <span class="paper-date">2026-07-22</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Virtual reality (VR) headsets (e.g., Meta Quest, Apple Vision Pro) provide a seamless user experience due to their fast, frictionless interaction with the physical world in a simulated environment. User authentication relies on biometric cues such as iris in such headsets. However, traditional iris recognition protocols may not be adequate in cases of unconstrained acquisition, which is typical of VR-based data. In this work, we examine three crucial aspects: (1) evaluating ISO/IEC 29794-6 iris quality metrics on VRBiom dataset and analyzing their limitations, (2) addressing data-specific challenges such as off-axis gaze, non-uniform illumination, and specular reflection using generative models, and (3) performing unimodal (iris, periocular) recognition and multimodal score-level fusion (iris + periocular). We observe that some metrics (e.g., margin adequacy) fail on VR-acquired data; whereas, image adjustments primarily benefit periocular recognition, and multimodal fusion lowers EER by ~11% over unimodal iris recognition performance. We will release the evaluation scripts upon acceptance for reproducibility.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.20742v1" target="_blank" class="paper-title">Adaptive Confidence-weighted Expansion for Trustworthy Multi-Omics Multimodal Fusion</a>
+                        <span class="paper-date">2026-07-22</span>
+                    </div>
+                                        <span class="paper-comment">📝 Accepted for publication in the proceedings of the International Conference on Pattern Recognition (ICPR 2026)</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Multimodal learning is a robust approach to improve predictive performance in applications such as medical prognosis. However, the clinical applicability of models that use multimodal learning is hampered by their poor performance under noisy or uninformative data streams. Present fusion approaches often lack robust mechanisms for the dynamic assessment of data quality and for the provision of a trustable confidence score on the final prediction. This dissuades their deployment in safety-critical settings. To address these limitations, we introduce Adaptive Confidence-weighted Expansion (ACE), a novel framework to enhance the trustworthiness of multimodal fusion models. ACE first enhances the multimodal space by generating new, complementary modalities from intra-modality correlations. It then employs a dual-level confidence mechanism that (1) adaptively reweighs all modalities by their reliability before fusion and (2) estimates a global trust score over the fused, final decision. To evaluate ACE, we used four challenging multi-omics datasets (BRCA, KIPAN, LGG, and ROSMAP). ACE significantly outperforms existing state-of-the-art algorithms in both classification performance and confidence calibration. Our framework provides a more stable and robust data fusion method that facilitates the use of multimodal learning in addressing high-stakes problems.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
                         <a href="https://arxiv.org/abs/2606.28445v2" target="_blank" class="paper-title">LoRA-Tuned Large Language Models for Dementia Detection via Multi-View Speech-Derived Features</a>
                         <span class="paper-date">2026-07-22</span>
                     </div>
@@ -1041,21 +1116,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Early detection of dementia enables timely intervention, and reflecting cognitive impairment, spontaneous speech offers a non-invasive screening modality. Conventional approaches often focus on a single representational dimension -- such as acoustic descriptors, pause modeling, automatic speech recognition (ASR) transcripts, or multimodal fusion -- limiting integrative reasoning across heterogeneous cognitive symptoms. We propose a low-rank adaptation (LoRA)-tuned large language model (LLM) that performs structured multi-view reasoning over four complementary speech-derived signals: ASR transcripts with pause markers, discourse-level topic cues, temporal fluency statistics, and phonological sequences. These cues are encoded within a unified prompt, enabling a single LLM to learn a coherent decision function without modality-specific encoders or late-stage fusion. On ADReSSo, our best model achieves an F1-score of 90.14%, and ablation confirms the complementary contribution of each view.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.14675v2" target="_blank" class="paper-title">An Intelligent-Cloud Edge Multimodal Interaction System for Robots</a>
-                        <span class="paper-date">2026-07-22</span>
-                    </div>
-                    
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在计算资源受限的机器人平台上，实现复杂环境下的鲁棒人机交互，包括准确的手势感知、场景理解和任务规划。&#10;&#10;🛠 **方法**：提出云-边多模态交互框架，集成改进的YOLO手势检测器（加入CBAM注意力模块和DIoU损失函数）与LLM/VLM智能体；云端负责检测、融合与规划，TonyPi机器人本地处理数据采集与执行。&#10;&#10;✨ **主要贡献**：手势检测在公开和自定义数据集上分别达到98.9%和95.0%的精度，系统任务成功率最高达95%；30人评估平均满意度3.69/5，验证了轻量级手势检测与多模态智能体结合在资源受限机器人上的可行性。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Robust human-robot interaction in complex environments requires accurate gesture perception, semantic scene understanding, and reliable task planning under limited onboard computing resources. This paper presents a cloud-edge multimodal interaction framework that integrates an enhanced YOLO-based gesture detector with coordinated large language model (LLM) and vision-language model (VLM) agents. The proposed detector, incorporates the Convolutional Block Attention Module (CBAM) into the neck and replaces the baseline bounding-box regression objective with Distance-IoU (DIoU) loss. These modifications improve feature discrimination and localization for small or partially occluded gestures in complex backgrounds. The cloud layer performs gesture detection, scene understanding, multimodal fusion, and action planning, whereas the TonyPi robot locally handles data acquisition, communication, action execution, and feedback. Experiments on a public gesture dataset and a custom dataset show that YOLO-DC achieves precision values of 98.9% and 95.0%, with mAP@0.5 values of 90.7% and 92.7%, respectively. System-level evaluation yields success rates of 95%, 88%, and 82% for single-action, composite-action, and vision-dependent tasks. A 30 participant evaluation yields an overall mean satisfaction score of 3.69 out of 5. These results demonstrate the feasibility of combining refined gesture detection with multimodal agents for resource-constrained robotic interaction.</p>
                     </details>
                 </div>
                 <div class="paper-card">
@@ -1109,10 +1169,7 @@
                         <span class="paper-date">2026-07-21</span>
                     </div>
                                         <span class="paper-comment">📝 This paper has been accepted by the 40th AAAI Conference on Artificial Intelligence (AAAI-26). It contians 9 pages, 11 figures</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在视频场景中检测玻璃表面，解决反射或透射物体与背景运动不一致导致的视觉干扰问题，提升机器人或无人机导航的安全性。  &#10;🛠 **方法**：提出MVGD-Net网络，利用运动不一致性线索，通过跨尺度多模态融合模块（CMFM）整合空间特征与光流图，并结合历史引导注意力模块（HGAM）和时序交叉注意力模块（TCAM）增强时序特征，最后用时序-空间解码器（TSD）生成玻璃区域掩膜。  &#10;✨ **主要贡献**：首次将运动不一致性用于视频玻璃表面检测，构建包含312个场景、19268帧的大规模数据集，实验表明该方法在性能上优于现有最先进技术。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Glass surface ubiquitous in both daily life and professional environments presents a potential threat to vision-based systems, such as robot and drone navigation. To solve this challenge, most recent studies have shown significant interest in Video Glass Surface Detection (VGSD). We observe that objects in the reflection (or transmission) layer appear farther from the glass surfaces. Consequently, in video motion scenarios, the notable reflected (or transmitted) objects on the glass surface move slower than objects in non-glass regions within the same spatial plane, and this motion inconsistency can effectively reveal the presence of glass surfaces. Based on this observation, we propose a novel network, named MVGD-Net, for detecting glass surfaces in videos by leveraging motion inconsistency cues. Our MVGD-Net features three novel modules: the Cross-scale Multimodal Fusion Module (CMFM) that integrates extracted spatial features and estimated optical flow maps, the History Guided Attention Module (HGAM) and Temporal Cross Attention Module (TCAM), both of which further enhances temporal features. A Temporal-Spatial Decoder (TSD) is also introduced to fuse the spatial and temporal features for generating the glass region mask. Furthermore, for learning our network, we also propose a large-scale dataset, which comprises 312 diverse glass scenarios with a total of 19,268 frames. Extensive experiments demonstrate that our MVGD-Net outperforms relevant state-of-the-art methods.</p>
@@ -1124,10 +1181,7 @@
                         <span class="paper-date">2026-07-19</span>
                     </div>
                                         <span class="paper-comment">📝 Accept by Interspeech 2026</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：对话中的多模态情感识别常因不同模态间的冲突信号、噪声或缺失信息导致不确定性，现有融合方法未显式处理这种不确定性。&#10;&#10;🛠 **方法**：提出EmoEUS框架，通过学习每个模态的方差估计动态加权融合，并引入显式监督损失，使预测方差与话语分布表示到情感-模态聚类中心的距离对齐。&#10;&#10;✨ **主要贡献**：在IEMOCAP和MELD数据集上，EmoEUS一致超越现有最优方法，首次将不确定性显式监督引入多模态情感识别对话任务。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Multimodal emotion recognition in conversation (MERC) can leverage multimodal and contextual cues to boost recognition performance. However, existing fusion approaches in MERC often ignore modality-specific uncertainty across utterances caused by conflicting cues, varying noise, and missing modality-specific signals. We propose EmoEUS, an explicit uncertainty supervision framework for MERC. EmoEUS performs uncertainty-aware multimodal fusion by dynamically weighting modalities using learned variance estimates. We also introduce an explicitly supervised loss that aligns each utterance's predicted variance with the distance between the utterance's distributional representation and its emotion- and modality-specific cluster center. Experiments on IEMOCAP and MELD show that EmoEUS consistently outperforms state-of-the-art methods.</p>
@@ -1139,10 +1193,7 @@
                         <span class="paper-date">2026-07-19</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：针对孟加拉语YouTube视频中标题和缩略图构成的点击诱饵内容，现有公开多模态数据集匮乏，导致检测困难。&#10;&#10;🛠 **方法**：构建了包含7,147对孟加拉语缩略图-标题对的BanClickThumb数据集，并提出多模态融合模型BanClickFusionFormer（结合ViT和XLM-RoBERTa，采用中间融合策略）。&#10;&#10;✨ **主要贡献**：数据集具有高标注一致性（Cohen's Kappa: 0.83-0.93），多模态融合模型达到0.84准确率，优于单模态模型（文本0.82、图像0.68），并揭示了密集文本、比喻语言和文化俚语等检测难点。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Clickbait, where video titles and thumbnails exaggerate or misrepresent content, reduces user trust, wastes attention, and promotes misinformation on video-sharing platforms. Detecting Bengali clickbait remains challenging because publicly available multimodal datasets are limited. To address this gap, we introduce BanClickThumb, a curated dataset of 7,147 Bengali YouTube thumbnail-title pairs from five content domains, annotated by ten annotators with high agreement (Cohen's Kappa: 0.83-0.93). Using this dataset, we benchmark text-only, image-only, and multimodal approaches. Among unimodal models, BanClickTextFormer (XLM-RoBERTa) achieves 0.82 accuracy, while BanClickImageFormer (SwiftFormer) reaches 0.68. Our proposed multimodal model, BanClickFusionFormer, combines ViT and XLM-RoBERTa through intermediate fusion and achieves the best accuracy of 0.84. Error analysis shows that dense thumbnail text, figurative language, and culturally specific slang remain challenging. Our findings demonstrate the effectiveness of multimodal fusion for Bengali clickbait detection and provide a publicly available benchmark to support future research on low-resource multimodal content analysis.</p>
@@ -1154,10 +1205,7 @@
                         <span class="paper-date">2026-07-18</span>
                     </div>
                                         <span class="paper-comment">📝 15 pages, 4 figures</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：基于Transformer的音视频事件识别模型计算复杂度和内存占用过高，难以部署在资源受限的边缘设备上。&#10;&#10;🛠 **方法**：提出一种结合架构压缩、知识蒸馏和动态INT8量化的高效压缩框架，先构建高容量教师模型（VideoMAE+AST+混合交叉注意力），再设计轻量学生模型，通过蒸馏训练后进一步进行动态INT8后训练量化。&#10;&#10;✨ **主要贡献**：在AVE数据集上，多模态融合模块参数量减少59.06%，分类精度仅下降2.14%；动态INT8量化将模型从10.71 MB压缩至2.04 MB，同时保持竞争性识别性能，实现了精度与效率的有效平衡。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Audio-visual event recognition (AVER) has achieved significant performance improvements through transformer-based multimodal architectures. However, the high computational complexity, large memory footprint, and inference cost of these models hinder their deployment on edge and resource-constrained devices. This paper presents an efficient compression framework for hybrid cross-attention-based audiovisual event recognition by combining architectural model compression, knowledge distillation, and dynamic INT8 quantization. A high-capacity teacher model integrates VideoMAE for visual representation learning, the Audio Spectrogram Transformer (AST) for audio feature extraction, and a hybrid cross-attention fusion network for multimodal feature integration. A lightweight student model is constructed by reducing the hidden feature dimension, the number of attention heads, and the feedforward network size while preserving the overall network architecture. The student model is trained using knowledge distillation to effectively transfer discriminative knowledge from the teacher. Finally, dynamic INT8 post-training quantization is applied to further reduce the model size for efficient deployment. Experimental results on the Audio-Visual Event (AVE) dataset show that the proposed framework reduces the number of trainable parameters in the multimodal fusion module by 59.06%, with only a 2.14% decrease in classification accuracy compared with the teacher model. Furthermore, dynamic INT8 quantization reduces the model size from 10.71 MB to 2.04 MB while maintaining competitive recognition performance. These results demonstrate that the proposed framework provides an effective trade-off between recognition accuracy and computational efficiency, making it a promising solution for deployment on resource-constrained edge AI platforms.</p>
@@ -1169,10 +1217,7 @@
                         <span class="paper-date">2026-07-18</span>
                     </div>
                                         <span class="paper-comment">📝 8 pages, preprint</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：统一多模态模型（UMMs）在图像编辑中可能被恶意用于未经授权的人脸肖像篡改，现有对抗保护方法在UMMs上效果不佳，因为其通过多个互补视觉通路处理图像。&#10;&#10;🛠 **方法**：提出CCS框架，通过联合扰动ViT理解分支和VAE生成分支的特征，并利用线性CKA显式破坏跨分支兼容性，使UMM无法在编辑中恢复可靠的身份信息。&#10;&#10;✨ **主要贡献**：揭示了单分支特征扰动在UMMs中效果有限，并首次提出跨分支协同对抗保护方法，实验证明CCS在抑制身份保持编辑方面显著优于现有方法。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Unified multimodal models (UMMs) have recently demonstrated powerful instruction-based image editing capabilities, but they also raise serious concerns about unauthorized manipulation of personal portraits. Existing adversarial protection methods are mainly designed for either visual understanding or image generation models and often become ineffective when transferred to UMMs, which process an image through multiple complementary visual pathways. In this work, we first conduct a feature-level analysis of unified image editing. We observe that the ViT-based understanding branch and the VAE-based generation branch exhibit non-trivial structural agreement for the same input image. Although perturbing an individual branch can reduce this agreement and induce intermediate hidden-state deviations, such effects are asymmetric and gradually attenuated during multimodal fusion and generation. These observations reveal that single-branch feature distortion is insufficient for consistently disrupting unified image editing. Motivated by this finding, we propose CCS, a unified adversarial protection framework that jointly drives the ViT and VAE representations away from their clean counterparts while explicitly disrupting their cross-branch compatibility through linear CKA. By simultaneously removing stable information from both visual pathways and creating incompatible visual contexts, CCS prevents the UMM from recovering reliable identity information during editing. Extensive experiments demonstrate that CCS consistently outperforms existing protection methods in suppressing identity-preserving edits.</p>
@@ -1380,6 +1425,18 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>While generative models enable encoding of complex neuroimaging data for feature generation and reconstruction, developing optimal architectural frameworks with appropriate encoding and latent space processes is crucial for studying structural and functional properties of the brain. We design a multimodal generative framework for structural and functional magnetic resonance imaging (MRI) features through systematic evaluation of encoding strategies, latent multimodal fusion, and generative model selection. Using structural gray matter volume (GMV) and static functional network connectivity (sFNC) features from a large neuroimaging dataset, we analyze generative frameworks involving variational autoencoders (VAEs), transformers, generative adversarial networks (GANs), and diffusion models. Architectures that employ modality-aware graph encoding of functional connectivity into a lower-dimensional latent space outperform vectorized encoders or direct data space approaches. The proposed multimodal graph VAE (gMMVAE) surpasses alternative generative variants across multiple metrics for generation fidelity, reconstruction quality, efficiency, and latent space discriminability, highlighting its potential for robust multimodal neuroimaging analysis.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.20517v1" target="_blank" class="paper-title">Multimodal CoLRAG-TF: Triple-Filtered Retrieval for Complex PDFs</a>
+                        <span class="paper-date">2026-07-07</span>
+                    </div>
+                                        <span class="paper-comment">📝 18 pages, 8 tables, 9 figures</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Retrieval-augmented generation (RAG) over heterogeneous PDF collections remains challenging due to multimodal content, domain-specific terminology, and the need for multi-hop reasoning across dispersed evidence. We present Multimodal CoLRAG-TF, a four-axis fusion architecture that integrates dense text embeddings, BM25 keyword matching, knowledge-graph triple filtering, and image-based similarity for robust retrieval over complex documents. Our system constructs a multimodal index of 2,403 blocks extracted from 43 Japanese disaster lesson PDFs, supported by a hybrid OCR pipeline and LLM-based caption generation. To enhance compositional reasoning, we extract 11,414 OpenIE triples and index them with FAISS, enabling sub-second triple lookup and hierarchical propagation of relevance signals. A HippoRAG2-inspired coarse-to-fine retriever (volume $\to$ chapter $\to$ block) narrows the search space before final fusion scoring. Bayesian optimization over fusion weights reveals that the triple axis must dominate ($α_\text{triple} = 0.44$) to counteract lexical bias and sustain multi-hop retrieval quality. Evaluated on a 457-pair benchmark, Multimodal CoLRAG-TF achieves a Retrieval Recall of 0.9909 and a 71.6$\%$ improvement in multi-hop answer similarity over single-hop queries. An image-to-lesson pipeline using a vision LLM further demonstrates the applicability of the approach to visual inputs. These results show that triple-filtered multimodal fusion is essential for structured reasoning over noisy, heterogeneous PDFs and provides a general framework applicable beyond the disaster domain.</p>
                     </details>
                 </div>
                 <div class="paper-card">
@@ -1874,85 +1931,13 @@
                         <p>Accurate time-to-event (TTE) prediction from multimodal clinical data remains challenging due to modality imbalance and distribution shift. We introduce a foundation model-driven framework for cross-modal representation alignment between CT imaging and longitudinal EHR data, designed to generalize across tasks and institutions. CT and EHR modalities are encoded independently using domain-specific foundation models and aligned in a shared latent space through four principled fusion strategies: late fusion, contrastive alignment, cross-attention, and co-attention. We evaluate two clinically distinct TTE tasks: pulmonary embolism (PE) mortality and cardiovascular disease (CVD) outcomes, on large-scale multi-institutional cohorts (PE: N=3,099 train; 1,098 internal; 435 external; CVD: N=2,951 train; 837 internal; 682 external). Fusion consistently improves concordance index by 1.5-5.4% over unimodal baselines when modalities contribute comparably. Overall, contrastive multimodal fusion, particularly with CLMBR representations, provided the most consistent and statistically robust improvements, especially for PE mortality prediction. For MACE, cross-attention (one-hot) achieved the highest internal performance and image-guided co-attention achieved the best external performance. We therefore introduce a generalizable foundation model-based cross-modal alignment framework and provide the first systematic analysis of fusion behavior under modality imbalance in TTE prediction. Our results establish task-aware multimodal alignment as a necessary design principle for robust generalization and scalable clinical deployment.</p>
                     </details>
                 </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.14981v1" target="_blank" class="paper-title">Inference-time Policy Steering via Vision and Touch</a>
-                        <span class="paper-date">2026-06-12</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Inference-time steering adapts pre-trained generative robot policies during deployment by verifying candidate actions before execution. While prior methods typically perform this verification only with visual observations, vision alone is often insufficient for contact-rich manipulation, where success depends on both global task progress and subtle local interactions such as contact force. We introduce ViTaL, a visuo-tactile inference-time steering framework that formulates multimodal guidance as a bi-level optimization problem. At the high level, visual sampling-and-verification performs long-horizon mode selection, deciding what behavior the robot should execute. At the low level, tactile-guided diffusion editing refines the selected action sequence over a shorter horizon to satisfy local contact requirements. To support outcome-based steering, ViTaL learns a visuo-tactile latent world model and employs semantically aligned visual and tactile verifiers, including a novel text-conditioned tactile reward that scores predicted tactile futures directly in latent space. Across three real-world contact-rich manipulation tasks, ViTaL improves overall success by 51% over the base policy, outperforms unimodal steering by at least 33%, and exceeds naive multimodal fusion by at least 20%. Website: https://yilin-wu98.github.io/vital_website.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.13970v1" target="_blank" class="paper-title">An Attention-based Model for Robust Forecasting with Missing Modality</a>
-                        <span class="paper-date">2026-06-11</span>
-                    </div>
-                                        <span class="paper-comment">📝 Work originally done in 2023</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Learning with missing modalities is a fundamental challenge in multimodal robot learning, as real-world robotic systems often operate in environments with incomplete sensor data. Attention-based models are appealing for processing multimodal data because they can handle multiple modalities with a single backbone network. However, most multimodal models assume that all modalities are available during both training and inference, limiting their applicability in robotic perception and decision-making. In this paper, we introduce a multimodal model designed to handle missing modalities during both training and inference. The model is formulated as a conditional variational autoencoder (CVAE) and incorporates a transformer-based architecture that leverages attention mechanisms to learn a unified, fixed-dimensional representation, even when some modalities are missing. We show that our proposed model can be trained with missing modalities while approximating a robust representation of all modalities. We evaluate our approach on five multimodal datasets across two robot learning tasks: human trajectory prediction and robot manipulation forecasting. Experimental results demonstrate that our model effectively learns from incomplete data and is superior to prior multimodal fusion approaches.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2512.10966v3" target="_blank" class="paper-title">Interpretable Alzheimer's Diagnosis via Multimodal Fusion of Regional Brain Experts</a>
-                        <span class="paper-date">2026-06-11</span>
-                    </div>
-                                        <span class="paper-comment">📝 Published at IEEE ICHI 2026</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Accurate and early diagnosis of Alzheimer's disease (AD) is critical for effective intervention and requires integrating complementary information from multimodal neuroimaging data. However, conventional fusion approaches often rely on simple concatenation of features, which cannot adaptively balance the contributions of biomarkers such as amyloid PET and MRI across brain regions. In this work, we propose MREF-AD, a Multimodal Regional Expert Fusion model for AD diagnosis. It is a Mixture-of-Experts (MoE) framework that models mesoscopic brain regions within each modality as independent experts and employs a gating network to learn subject-specific fusion weights. Utilizing tabular neuroimaging and demographic information from the Alzheimer's Disease Neuroimaging Initiative (ADNI), MREF-AD achieves competitive performance over strong classic and deep baselines while providing interpretable, modality- and region-level insight into how structural and molecular imaging jointly contribute to AD diagnosis. The source code is available at https://github.com/PennShenLab/mref-ad.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.12294v1" target="_blank" class="paper-title">Bridging the Modality Gap in Forensic Image Retrieval</a>
-                        <span class="paper-date">2026-06-10</span>
-                    </div>
-                                        <span class="paper-comment">📝 23 pages, 5 figures, paper submitted to Elsevier journal</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Automated image retrieval plays an increasingly critical role in modern forensic analysis, supporting investigative workflows that rely on efficient comparison of visual evidence. While prior work has focused primarily on developing and optimizing multimodal retrieval systems, limited attention has been paid to evaluating the forensic applicability of these technologies across diverse real-world scenarios. In this study, we present a unified retrieval framework adapted to four key forensic tasks: (1) tattoo image retrieval given a tattoo query image; (2) tattoo retrieval guided by human-expert textual descriptions, modelling the common situation where a witness verbally describes a tattoo; (3) tattoo retrieval from hand-drawn sketches; and (4) face retrieval from forensic face sketches. Our system leverages a multimodal large language model (MLLM) to automatically generate structured textual descriptions for all queries and gallery images, followed by sentence-transformer embedding for text-based comparison. We evaluate retrieval using visual-only embeddings, text-only embeddings and a multimodal fusion strategy that combines text- and image-based similarity scores derived from state-of-the-art visual feature extractors relevant to each task. The fusion of modalities consistently improves retrieval precision and robustness, especially in scenarios where visual information is limited or noisy (e.g., sketches, partial tattoos, or fragmented witness statements). This work highlights the forensic value of a unified multimodal retrieval pipeline and demonstrates how modern MLLMs can operationalize challenging forensic tasks that traditionally rely on manual expert analysis. Our results position multimodal retrieval as a promising tool for supporting investigative workflows involving tattoos, facial composites, and witness descriptions.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.09347v2" target="_blank" class="paper-title">IB-HFN: Information Bottleneck-Driven SAR-Optical Fusion Network for High-Fidelity Cloud Removal</a>
-                        <span class="paper-date">2026-06-10</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Synthetic aperture radar (SAR)-assisted optical cloud removal aims to recover surface information obscured by clouds in optical remote sensing images by exploiting complementary SAR observations. Existing multimodal fusion methods typically rely on direct spatial concatenation and pixel-wise supervision, which can propagate SAR speckle noise into optical reconstruction and lead to over-smoothed results. To address these limitations, we propose an Information Bottleneck-driven High-Fidelity Network (IB-HFN) for SAR-assisted optical cloud removal. IB-HFN employs a dual-stream backbone to preserve modality-specific representations before deep semantic fusion, thereby mitigating premature cross-modal contamination. At the fusion stage, we introduce a Spatial Information Bottleneck Fusion module that compresses SAR features through a channel-wise variational information bottleneck to suppress unstructured speckle noise. In parallel, a local-global gating mechanism predicts clear-sky regions and routes reliable optical details through a Dirac-initialized skip connection, decoupling noise suppression from texture preservation. We further develop a joint optimization strategy that integrates feature-level bottleneck regularization with image-level constraints on reconstruction accuracy, structural consistency, spectral fidelity, and contrastive sharpness. A dynamic weighting schedule balances these objectives to stabilize training and reduce hazy artifacts. Experiments on the SEN12MS-CR dataset under challenging spatio-temporal splits demonstrate that IB-HFN achieves superior structural preservation and spectral fidelity over existing methods.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.11420v1" target="_blank" class="paper-title">Context-Aware Multimodal Claim Verification in Spoken Dialogues</a>
-                        <span class="paper-date">2026-06-09</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Every day, millions absorb claims from podcasts and streams that no fact-checker ever sees. Spoken misinformation is built through conversation, where credibility comes not from facts alone but from how claims are framed, reinforced, or left unchallenged across turns. Yet fact-checking has focused on isolated text, leaving dialogue audio under-studied. We introduce MAD2, a new Multi-turn Audio Dialogues benchmark for spoken claim verification, containing 1,000 two-speaker dialogues with 3,368 check-worthy claims and approximately 10 hours of audio, and propose calibrated multimodal fusion of a context-aware audio encoder and a dialogue-aware text model. Across settings, adding dialogue context improves verification, but the gains depend on scenario type. Using only preceding context often matches offline performance, supporting live-moderation settings, and audio contributes most when transcript-based models are destabilized by additional context. Overall, conversational structure matters more for verification than misinformation framing.</p>
-                    </details>
-                </div>
             </div>
         </section>
 
         <footer class="footer">
             <p>👤 <strong>Hongkun Luo (罗宏昆)</strong> · <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent)">Academic Page</a> · <a href="https://github.com/luohongk" target="_blank" style="color:var(--accent)">GitHub</a></p>
             <p style="margin-top:8px">🤖 Generated automatically from <a href="https://arxiv.org" style="color:var(--accent)">arXiv</a> · <a href="https://github.com/luohongk/Embodied-AI-Daily" style="color:var(--accent)">GitHub Repo</a></p>
-            <p style="margin-top:4px">Last update: 2026-07-24 (Beijing Time)</p>
+            <p style="margin-top:4px">Last update: 2026-07-25 (Beijing Time)</p>
         </footer>
     </main>
 
