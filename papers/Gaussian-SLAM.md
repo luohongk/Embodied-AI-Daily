@@ -2,7 +2,7 @@
 
 > **25 papers** fetched from arXiv for the keyword **Gaussian SLAM**.
 
-> Last update: 2026-07-25
+> Last update: 2026-07-26
 
 [← Back to README](../README.md)
 
