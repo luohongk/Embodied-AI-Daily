@@ -784,7 +784,7 @@
         <div class="sidebar-header">
             <h1><a href="../index.html" style="background:linear-gradient(135deg,#6366f1,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">🚀 Embodied AI Daily</a></h1>
             <div class="update">by <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent);text-decoration:none;font-weight:500;">Hongkun Luo</a> (罗宏昆)</div>
-            <div class="update" style="margin-top:2px">Last update: 2026-07-26</div>
+            <div class="update" style="margin-top:2px">Last update: 2026-07-27</div>
         </div>
             <a href="Continuous-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
@@ -1034,7 +1034,10 @@
                         <span class="paper-date">2026-07-23</span>
                     </div>
                                         <span class="paper-comment">📝 The source code and model weights will be made publicly available at https://github.com/lynn-yu/HGeo-TopoMap</span>
-                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决自动驾驶中拓扑地图构建时，因真实道路缺乏中心线显式标注而导致的中心线实例检测难题。&#10;&#10;🛠 **方法**：提出HGeo-TopoMap，通过显式先验地图和隐式空间关系分层提升拓扑映射。具体包括几何自适应学习模块（利用逆透视映射获取道路结构图，通过离散编码和先验掩码注意力聚焦有效区域）和几何一致性学习模块（基于几何感知解码器，对齐相同几何方向中心线特征以保持空间一致性）。&#10;&#10;✨ **主要贡献**：在OpenLane-V2数据集上，中心线、车道段和鲁棒性基准测试中均显著提升拓扑映射精度，且在标准与挑战性条件下均优于基线方法，增强了系统鲁棒性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Topological maps are key outputs of autonomous driving perception systems, delivering essential road information for path planning. They identify instances such as centerlines and traffic signs, along with their connectivity relationships. Due to the lack of explicit markings for centerlines in real-world environments, the detection of centerline instances remains a significant challenge. To tackle this problem, we propose HGeo-TopoMap, which leverages an explicit prior map and implicit spatial relations to hierarchically boost topological mapping. First, a geometric adaptive learning module is designed for the road structure map obtained via inverse perspective mapping. This module discretely encodes semantic and spatial features from the map, followed by a prior-mask attention mechanism that selectively focuses on informative regions. Then, a geometric consistency learning module is devised, which leverages the geometric properties and spatial relationships of centerlines. Built on the geometry-aware decoder, it enforces spatial consistency by aligning features of centerline instances with identical geometric orientations. The proposed method is evaluated on the OpenLane-V2 dataset across the centerline, lane segment, and robustness benchmarks. Beyond substantial improvements in topological mapping accuracy, the proposed method offers the benefit of enhanced robustness, consistently outperforming baselines under both standard and challenging conditions. The source code and model weights will be made publicly available at https://github.com/lynn-yu/HGeo-TopoMap.</p>
@@ -1046,7 +1049,10 @@
                         <span class="paper-date">2026-07-22</span>
                     </div>
                                         <span class="paper-comment">📝 Submitted to Civil Engineering Sciences</span>
-                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决多机器人在人类环境中长期导航行为缺乏社会一致性和可预测性的问题，避免局部规划器因缺乏社会意识而产生低效、反应式的运动。&#10;&#10;🛠 **方法**：提出一种部分去中心化框架，通过改进的A*规划器将宏观社会规范嵌入代价函数，并共享路径构建社会图以保持一致性；同时将多机器人轨迹协调问题建模为混合整数凸规划，高效计算无冲突轨迹。&#10;&#10;✨ **主要贡献**：在路径规划阶段强制社会一致性，生成可预测且符合社会规范的机器人路径，简化了多机器人协调的复杂性，支持大规模车队和动态任务分配。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>The successful integration of mobile robots in human-centric environments requires navigation that is not only safe and efficient, but also predictable and aligned with social conventions, key precursors for human comfort and acceptance. While significant research addresses short-term human-aware planning, these methods often lack mechanisms for ensuring consistent and predictable behaviors across long horizons. Without socially aware long-term planners, local planners are overburdened, resulting in inefficient and locally reactive movements that undermine predictability. This paper introduces a partially decentralized framework that generates predictable and socially consistent multi-robot motion by decoupling global path planning from trajectory coordination. First, we propose a modified A* planner that embeds macroscopic social norms into the planner cost function. Planned paths are shared across mobile robots to collaboratively build a social graph of established routes, which enforces path consistency and reduces future planning effort. Second, we leverage the emergent structure of the socially constrained paths to formulate the multi-robot trajectory coordination problem as a mixed-integer convex program. The convex program enables efficient computation of conflict- free trajectories, scaling effectively to large fleets and supporting dynamic task assignment. Our results demonstrate that enforcing social consistency at the path planning stage produces predictable, socially compliant mobile robot paths and simplifies the otherwise complex problem of multi-robot coordination.</p>
@@ -1910,7 +1916,7 @@
         <footer class="footer">
             <p>👤 <strong>Hongkun Luo (罗宏昆)</strong> · <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent)">Academic Page</a> · <a href="https://github.com/luohongk" target="_blank" style="color:var(--accent)">GitHub</a></p>
             <p style="margin-top:8px">🤖 Generated automatically from <a href="https://arxiv.org" style="color:var(--accent)">arXiv</a> · <a href="https://github.com/luohongk/Embodied-AI-Daily" style="color:var(--accent)">GitHub Repo</a></p>
-            <p style="margin-top:4px">Last update: 2026-07-26 (Beijing Time)</p>
+            <p style="margin-top:4px">Last update: 2026-07-27 (Beijing Time)</p>
         </footer>
     </main>
 

@@ -784,7 +784,7 @@
         <div class="sidebar-header">
             <h1><a href="../index.html" style="background:linear-gradient(135deg,#6366f1,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">🚀 Embodied AI Daily</a></h1>
             <div class="update">by <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent);text-decoration:none;font-weight:500;">Hongkun Luo</a> (罗宏昆)</div>
-            <div class="update" style="margin-top:2px">Last update: 2026-07-26</div>
+            <div class="update" style="margin-top:2px">Last update: 2026-07-27</div>
         </div>
             <a href="Continuous-Learning.html" class="nav-item active">
                 <span class="nav-dot" style="background:#6366f1"></span>
@@ -1049,7 +1049,10 @@
                         <span class="paper-date">2026-07-22</span>
                     </div>
                                         <span class="paper-comment">📝 18 pages</span>
-                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：当前多模态大模型驱动的网页代理在跨会话任务中频繁出现重复错误，缺乏从历史经验中学习的能力，导致长期鲁棒性和样本效率低下。&#10;&#10;🛠 **方法**：提出WebCoach框架，包含三个组件：WebCondenser（标准化导航日志）、外部记忆库（存储完整轨迹作为情景经验）、Coach（基于相似性和时效性检索经验，并通过运行时钩子注入任务建议），实现跨会话记忆的持久化与利用。&#10;&#10;✨ **主要贡献**：WebCoach无需重新训练即可实现代理的自我进化，在WebVoyager基准测试中，使用38B模型将任务成功率从47%提升至61%，且小型模型搭配WebCoach可达到与GPT-4o代理相当的性能。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Multimodal LLM-powered agents have recently demonstrated impressive capabilities in web navigation, enabling agents to complete complex browsing tasks across diverse domains. However, current agents struggle with repetitive errors and lack the ability to learn from past experiences across sessions, limiting their long-term robustness and sample efficiency. We introduce WebCoach, a model-agnostic self-evolving framework that equips web browsing agents with persistent cross-session memory, enabling improved long-term planning, reflection, and continual learning without retraining. WebCoach consists of three key components: (1) a WebCondenser, which standardizes raw navigation logs into concise summaries; (2) an External Memory Store, which organizes complete trajectories as episodic experiences; and (3) a Coach, which retrieves relevant experiences based on similarity and recency, and decides whether to inject task-specific advice into the agent via runtime hooks. This design empowers web agents to access long-term memory beyond their native context window, improving robustness in complex browsing tasks. Moreover, WebCoach achieves self-evolution by continuously curating episodic memory from new navigation trajectories, enabling agents to improve over time without retraining. Evaluations on the WebVoyager benchmark demonstrate that WebCoach consistently improves the performance of browser-use agents across three different LLM backbones. With a 38B model, it increases task success rates from 47% to 61% while reducing or maintaining the average number of steps. Notably, smaller base models with WebCoach achieve performance comparable to the same web agent using GPT-4o.</p>
@@ -1061,7 +1064,10 @@
                         <span class="paper-date">2026-07-22</span>
                     </div>
                     
-                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：传统强化学习使用固定折扣因子平衡短期与长期回报，但无法适应动态环境中的任务变化，导致手动调参困难。&#10;&#10;🛠 **方法**：提出自适应多时间范围强化学习框架，通过动态选择与组合多个时间范围，无需手动调整折扣因子即可适应奖励结构变化。&#10;&#10;✨ **主要贡献**：在MiniGrid环境（含连续三个任务切换场景）中验证了该方法能自动识别有效折扣因子，提升参数效率与持续学习场景下的适应性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Effective decision-making in complex and changing environments requires balancing short-term and long-term consequences. In reinforcement learning (RL), this trade-off is typically controlled through a fixed discount factor, which imposes a single exponentially discounted temporal horizon. However, biological agents exhibit flexible and adaptive temporal discounting, suggesting that effective planning requires multiple timescales. Here, we propose a multi-horizon approach that adaptively selects and combines temporal horizons, enabling robust adaptation to changes in reward structure without manual discount-factor tuning. This flexibility makes the method particularly suitable for continual learning scenarios involving task switches and varying environmental configurations. Empirically, we demonstrate that our approach identifies effective discount factors across a range of MiniGrid environments, including continual settings composed of three sequentially changing tasks. These results suggest that adaptive temporal discounting can improve parameter efficiency and enhance adaptability in both artificial and biologically inspired learning systems.</p>
@@ -2006,7 +2012,7 @@
         <footer class="footer">
             <p>👤 <strong>Hongkun Luo (罗宏昆)</strong> · <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent)">Academic Page</a> · <a href="https://github.com/luohongk" target="_blank" style="color:var(--accent)">GitHub</a></p>
             <p style="margin-top:8px">🤖 Generated automatically from <a href="https://arxiv.org" style="color:var(--accent)">arXiv</a> · <a href="https://github.com/luohongk/Embodied-AI-Daily" style="color:var(--accent)">GitHub Repo</a></p>
-            <p style="margin-top:4px">Last update: 2026-07-26 (Beijing Time)</p>
+            <p style="margin-top:4px">Last update: 2026-07-27 (Beijing Time)</p>
         </footer>
     </main>
 

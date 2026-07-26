@@ -784,7 +784,7 @@
         <div class="sidebar-header">
             <h1><a href="../index.html" style="background:linear-gradient(135deg,#6366f1,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">🚀 Embodied AI Daily</a></h1>
             <div class="update">by <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent);text-decoration:none;font-weight:500;">Hongkun Luo</a> (罗宏昆)</div>
-            <div class="update" style="margin-top:2px">Last update: 2026-07-26</div>
+            <div class="update" style="margin-top:2px">Last update: 2026-07-27</div>
         </div>
             <a href="Continuous-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
@@ -1034,7 +1034,10 @@
                         <span class="paper-date">2026-07-23</span>
                     </div>
                     
-                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：针对机器翻译（MT）和大语言模型（LLM）在隐喻翻译中因语义复杂、依赖上下文及文化嵌入导致的错误，缺乏有效的错误严重性感知评估框架。&#10;&#10;🛠 **方法**：提出MetaHOPE框架，基于错误严重性对隐喻翻译进行人工标注；选取GoogleMT、GPT5.4和Hunyuan-7b三种系统，使用VUAMC和PSUCMC语料库进行英汉双向翻译实验，并构建人工后编辑的双语平行语料作为参考。&#10;&#10;✨ **主要贡献**：首次提出面向隐喻翻译的错误严重性感知标注框架MetaHOPE，创建了双语平行隐喻语料资源，并通过分析当前最优自动翻译模型的错误，为隐喻翻译研究提供了新工具与数据支持。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>In this opinion paper, we propose MetaHOPE, an error severity-aware annotation framework for evaluating metaphor translations. Metaphors present challenges for machine translation (MT) and natural language understanding and processing (NLU, NLP), because it presents the features of semantic complexity, contextual dependency, and cultural embeddings that can lead to ambiguity issues for NLP models. To investigate how state-of-the-art NLP models perform on translating metaphors, we select three representative systems, i.e., GoogleMT, GPT5.4, and Hunyuan-7b as Neural MT (NMT) models and LLMs. We used two human-annotated metaphor corpora, including VUAMC and PSUCMC for English-to-Chinese and Chinese-to-English translation purposes. The original corpora we used are monolingual, where we carried out error annotation using the MetaHOPE framework, and also produced the human post-edited gold reference for bilingual use as a new resource. We believe the MetaHOPE evaluation framework for metaphor translation annotation, the parallel corpora resources, and the error analysis on SOTA automatic translation models can be useful and shed some light for the field of metaphor translation study. We share our resources publicly upon paper acceptance.</p>
@@ -1046,7 +1049,10 @@
                         <span class="paper-date">2026-07-23</span>
                     </div>
                     
-                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：大型语言模型生成的并发有状态Rust API测试常违反前置条件、缺乏深度或丢失并发语义，而传统模型方法需大量手工代码将抽象场景转为可执行测试。&#10;&#10;🛠 **方法**：提出基于Petri网引导的测试生成方法，用有色令牌和变迁表示API资源、生命周期及因果依赖，推导合法深状态、近合法及偏序并发场景，并作为约束中间表示指导LLM代码合成，辅以局部忠实性契约、结构修复循环及Petri网调度优化。&#10;&#10;✨ **主要贡献**：首次将Petri网形式化建模与LLM代码生成结合，实现从资源流到可执行测试的自动化转化，通过分层语义预言机区分合成失败与API行为违规，有效提升并发测试的深度和语义保真度。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Concurrent stateful library APIs expose behavior through evolving resource ownership, lifecycle states, and competing interleavings. Large language models can synthesize executable Rust tests, but their outputs often violate API preconditions, remain shallow, or reduce concurrency to accidental sequential traces. Conversely, model-based and systematic testing techniques provide semantic control but commonly require substantial handwritten code to turn abstract scenarios into executable tests. This paper addresses the gap between formal scenario design and low-cost test concretization. We present a Petri-net-guided methodology for test generation over concurrent stateful Rust APIs. The method represents API resources, lifecycle conditions, and causal dependencies as colored tokens and transitions; derives legal deep-state, near-legal, and partial-order concurrent scenarios; and uses these scenarios as a constrained intermediate representation for LLM-based code synthesis. A local-faithfulness contract and structural repair loop preserve the modeled intent during concretization, while Petri-guided schedule shaping prioritizes high-conflict concurrency skeletons for systematic exploration. A layered semantic oracle then distinguishes synthesis failures from violations of the target API's expected behavior.</p>
@@ -1058,7 +1064,10 @@
                         <span class="paper-date">2026-07-23</span>
                     </div>
                     
-                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：如何将大语言模型（LLM）自然地融入人们使用手写笔记和草图进行创意构思的实践中，实现墨水原生的交互体验。&#10;&#10;🛠 **方法**：提出Thinkink系统，支持手写文本或草图作为提示，LLM生成的响应以墨水风格文本和草图形式集成到共享2D画布中；通过语义树简化墨水输入的解释，并利用状态机驱动的轻量级UI提供显式控制。&#10;&#10;✨ **主要贡献**：通过三阶段用户研究（N=12、N=6、N=10）验证设计，揭示了墨水原生LLM交互的可用性挑战，并贡献了设计启示及一个支持用户与LLM在共享画布上共同书写和绘制的工具。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>People often use handwritten notes and sketches to externalize ideas for ideation. To integrate large language models (LLMs) into this practice, we propose Thinkink. Prompts can be handwritten text or drawn sketches with LLM-generated responses visualized as ink-like text and sketches spatially integrated into a shared canvas. A semantic tree streamlines ink interpretation, and a lightweight UI provides explicit control using a state machine. The tool was designed using a three-stage process. A formative study (N=12) examined current practices with conventional and digital inking methods. The results informed a technical probe for a diagnostic study (N=6) identifying usability and human-LLM interaction challenges. This motivated the design of Thinkink, with a final study (N=10) examining how people incorporate it into their ideation practices. We contribute design implications and a tool for ink-native LLM interaction where the user and LLM write and draw in a shared 2D canvas.</p>
@@ -1070,7 +1079,10 @@
                         <span class="paper-date">2026-07-23</span>
                     </div>
                     
-                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有LLM文本检测方法主要针对整篇文档分类，无法定位人机协作文本中由LLM生成的具体部分。  &#10;🛠 **方法**：提出一种基于token级别的检测方法，通过平滑相邻token的检测分数降低波动性，并采用自适应Lepski规则根据局部作者身份选择平滑带宽，无需token级标注数据。  &#10;✨ **主要贡献**：理论上证明了该方法在估计潜在信号时均方误差性能优越，实验在合成和真实数据集上均优于多种基线方法，并部署了公开可用的网站实现。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>The rise of human-AI collaborative writing has created a growing need for fine-grained detection methods that support localizing likely LLM-generated content in mixed-authorship documents. Existing methods for detecting LLM-generated text mainly focus on document-level classification and cannot identify which parts of the text are generated by LLMs. This paper introduces a new method to address this urgent need. Our method operates at the token level, the natural unit of modern language models, and builds on existing token-level detection scores. The key idea is to smooth adjacent token scores to reduce their variability, while using an adaptive Lepski-type rule to select the bandwidth according to the local authorship structure. Our method is simple to implement and does not require token-level labeled data for training. Theoretically, we characterize this trade-off and show that the proposed method achieves favorable mean square error performance in estimating the underlying signal. Empirically, we demonstrate strong performance of our method against a wide range of baselines in both synthetic datasets and a realistic dataset. We deploy a publicly accessible website that implements the methods as well.</p>
@@ -1082,7 +1094,10 @@
                         <span class="paper-date">2026-07-23</span>
                     </div>
                                         <span class="paper-comment">📝 submitted to the ARR</span>
-                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：探究大型语言模型（LLMs）在常识性、文化性及长尾知识上的表现，尤其是在多语言环境下对日常流行文化知识的掌握程度。  &#10;🛠 **方法**：构建多语言基准数据集TriviaRoomQA，包含3300道平行选择题（覆盖6种欧洲语言）和5340道法语题目，评估30个开源LLM（7B-70B参数）在288个主题上的知识能力。  &#10;✨ **主要贡献**：发现LLMs在历史、地理等知识密集型主题上表现优异，但在名人、音乐、电影等日常流行文化主题上显著薄弱；且模型对同一问题的回答能力随语言变化，表明事实知识访问并非语言无关。该研究揭示了现有学术基准未覆盖的重要知识缺口。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Quiz rooms, trivia nights, and quiz shows challenge human knowledge across a wide range of topics, from canonical facts to everyday culture. In this paper, we examine whether large language models (LLMs) can perform competitively in such settings, using quiz-style questions to test them on both common and niche topics. We introduce TriviaRoomQA, a multilingual benchmark designed to evaluate everyday, culturally grounded, and long-tail knowledge across 288 topics. The benchmark contains 3,300 parallel multiple-choice questions in six European languages and additional 5,340 French-only questions for a more fine-grained case study. We evaluate 30 open-weight LLMs from European, Asian, and North American providers, covering models from 7 to 70B parameters. We find that models are strong on knowledge-intensive topics such as history, geography, and mathematics, but substantially weaker on everyday popular-culture topics such as celebrities, music, movies, and news. Moreover, model performance varies across languages even for the same underlying questions, suggesting that access to factual knowledge is not always language-independent. In sum, our dataset and experiments demonstrate an important knowledge gap which is not captured by existing academic-based saturated benchmarks.</p>
@@ -1094,7 +1109,10 @@
                         <span class="paper-date">2026-07-23</span>
                     </div>
                     
-                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有基于奖励的多步LLM智能体训练方法中，标量奖励无法解释轨迹优劣，且基于评分标准的奖励方法缺乏步骤级指导，评分器静态不变，无法随智能体进化而适应。&#10;&#10;🛠 **方法**：提出ARCO（自适应评分标准协同进化），为每个步骤生成评分标准并预测步骤级奖励，同时持续更新评分模型，使其标准与分数随智能体行为改进而协同进化。&#10;&#10;✨ **主要贡献**：在HotpotQA、2WikiMultiHopQA和MuSiQue数据集上，使用两种开源基座模型，ARCO在所有设置中均取得最高精确匹配分数，且评分标准具有步骤特异性、对设计选择鲁棒，可用于诊断智能体行为。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Reinforcement learning for multi-step LLM agents often relies on scalar rewards that indicate success but cannot explain why a trajectory is good or bad. Rubric-based rewards improve interpretability through natural-language criteria, but existing methods share two limitations: they score at the trajectory level, offering no guidance for individual steps; and their scorer is closed-source and static, so it cannot adapt as the agent evolves during training. We propose ARCO (Adaptive Rubric CO-evolution), which generates a per-step rubric and predicts a rubric-conditioned step-level reward for each action, and continually updates this rubric model on on-policy rollouts so that its criteria and scores co-evolve with the agent's improving behavior. Across HotpotQA, 2WikiMultiHopQA, and MuSiQue with two open-source backbones, ARCO achieves the highest EM in all settings over outcome-, rubric-, and process-reward baselines, and analyses show its rubrics are step-specific, robust to design choices, and useful for diagnosing agent behavior. Code and data are available at https://github.com/zihangtian/ARCO.</p>
@@ -1106,7 +1124,10 @@
                         <span class="paper-date">2026-07-23</span>
                     </div>
                                         <span class="paper-comment">📝 23 pages. Rubrics, prompts, and demonstration tasks are publicly available.</span>
-                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在资本市场工作流中，大型语言模型生成的输出是否具备“可银行性”——即面对交易对手或监管机构时，能否基于文档进行有效辩护，而不仅仅是表面流畅。&#10;&#10;🛠 **方法**：提出CM-LRS评分体系，从事实准确性、证据可追溯性、数值一致性、工作流完整性、来源纪律、决策有用性和可审查性七个维度，对工作流输出进行0-5分评估，并采用多个独立LLM作为评判者。&#10;&#10;✨ **主要贡献**：在五个资本市场工作流上验证了CM-LRS，发现前沿闭源模型评分接近（4.09-4.31），显著优于开源基线（3.15）；差距集中在检索和合成任务而非提取任务；决策有用性维度跨模型差异最大且评判者一致性最高，表明“可银行性”是比“合理性”更高的标准。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>In capital-markets workflows the question is rarely whether a large language model can produce a fluent draft, but whether the draft is bankable: defensible in front of a counter-party or a regulator, with the documents in hand. Existing methods address parts of that gap: open-domain QA benchmarks reward surface accuracy, and finance benchmarks (FinanceBench, FinQA, ConvFinQA) advance document-grounded and numerical QA but evaluate at the question-answer layer rather than the workflow outputs practitioners defend. We introduce CM-LRS, a Capital Markets LLM Reliability Score, evaluating outputs at the workflow-output layer across seven dimensions: factual accuracy, evidence traceability, numerical consistency, workflow completeness, source discipline, decision usefulness, and reviewability/auditability. Each is scored 0-5 against a rubric anchored on signals reviewers in regulated settings use; the aggregate is tunable to the workflow. We demonstrate CM-LRS on five workflows (DCM transaction-terms extraction, precedent retrieval, issuer profile synthesis, M&A transaction-comparable reasoning, ECM transaction-terms extraction) over public SEC EDGAR filings, a public UK takeover release, and fictional synthetic supplements, scoring four models against four independent LLM judges spanning three model families. Three findings. First, the frontier closed-source models cluster within 0.22 points on four-judge averaged CM-LRS (Sonnet 4.6 = 4.31, Opus 4.7 = 4.30, GPT-5.5 = 4.09); all four judges place the open-weights baseline (Llama 3.3 70B = 3.15) last. Second, that gap concentrates on retrieval (2.23) and synthesis (2.15), not extraction (0.84). Third, Decision Usefulness shows the widest cross-model dispersion of any dimension (4.0 points on issuer profiling) and top-tier inter-judge agreement (mean r = 0.52). Plausibility is cheap. Bankability is the bar.</p>
@@ -1118,7 +1139,10 @@
                         <span class="paper-date">2026-07-23</span>
                     </div>
                     
-                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：传统文献计量指标（如引用次数、h指数）存在时间滞后、语义浅薄，且无法捕捉当代知识生态系统的非线性动态变化。&#10;&#10;🛠 **方法**：提出一个五层混合框架，整合开放学术数据、动态版本化知识图谱、受约束的大语言模型语义增强、多层验证管道及分析层，将LLM严格用于生成临时候选增强，仅通过结构、证据、比较和专家选择性验证后才纳入分析。&#10;&#10;✨ **主要贡献**：将验证作为语义灵活性与认知纪律之间的中介原则，使STI分析在语义丰富性和时间响应性上超越静态文献计量，同时保持科学研究的证据标准，并讨论了可重复性、偏差和可审计性等治理问题。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Bibliometric indicators - citation counts, h-indexes, co-authorship networks - have long anchored science, technology, and innovation (STI) analytics, yet suffer from temporal lag, semantic shallowness, and an inability to capture the non-linear dynamics of contemporary knowledge ecosystems. Dynamic knowledge graphs and large language models (LLMs) have each been proposed as remedies, but neither is sufficient alone: existing scholarly knowledge graphs remain largely static, while LLM-driven pipelines are prone to hallucination, opacity, and corpus bias without structured grounding. This paper proposes a hybrid, symbolic-first framework integrating all three traditions under explicit methodological constraint. Organized across five layers - an open scholarly data backbone, a dynamic versioned knowledge graph, a constrained LLM-assisted semantic augmentation layer, a multi-layer validation pipeline, and an analytics layer - the framework positions LLMs strictly as generators of provisional candidate enrichments. Candidates become analytically admissible only after passing structural, evidentiary, comparative, and selective expert validation, with full provenance recorded at every stage. The analytics layer supports both established bibliometric indicators and extended graph-based analyses, including trend emergence detection, science-to-technology pathway mapping, and policy-oriented gap analysis. The framework's central theoretical contribution is treating validation as the mediating principle between semantic flexibility and epistemic discipline, enabling STI analytics that is semantically richer and temporally more responsive than static bibliometrics while remaining aligned with the evidentiary standards of science-of-science research. Governance considerations addressing reproducibility, bias, and auditability are also discussed.</p>
@@ -1130,7 +1154,10 @@
                         <span class="paper-date">2026-07-23</span>
                     </div>
                     
-                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：揭示量化后的大语言模型在保持任务准确率的同时，可能隐藏推理过程的质量退化，特别是“空心收敛”等无法被标准评估发现的失败模式。&#10;&#10;🛠 **方法**：提出六类推理失败分类体系（Cohen’s κ=0.906），对5个指令微调模型（3B-14B参数）在3种量化精度下生成3万条思维链输出进行人工标注与统计分析。&#10;&#10;✨ **主要贡献**：发现NF4量化导致小模型“空心收敛”显著下降、错误模式从“信心滚雪球”转向“捷径崩溃”，且该现象无法通过表层文本特征可靠检测（F1=0.53），揭示了量化部署中隐藏的推理质量风险。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>We show that post-training quantization can silently alter how large language models reason even when task accuracy is preserved. Using a six-category failure taxonomy validated by two independent human annotators (Cohen's $κ$ = 0.906), we classify 30,000 chain-of-thought outputs from five instruction-tuned LLMs (3B--14B parameters) across three quantization precisions (FP32, FP16, NF4) and four reasoning benchmarks. We find that while accuracy is robust across precisions (maximum 3.1 pp drop), Hollow Convergence (correct answers reached through incomplete or unverifiable reasoning) shows a significant size-dependent shift under NF4, dropping sharply for the two smallest models tested but remaining invariant for models at 12B parameters and above. This effect is also benchmark-specific: GSM8K is categorically immune while LogiQA and ARC-Challenge show the largest shifts. Furthermore, under NF4, Shortcut Collapse rises from 44% to 78% of wrong-answer failures in LLaMA 3.2-3B while Confidence Snowballing collapses from 15.8% to near zero, a qualitative shift invisible to accuracy metrics. Finally, we show Hollow Convergence cannot be reliably detected from surface-level text features (best F1 = 0.53), establishing it as a deployment-relevant failure mode that standard evaluation pipelines cannot catch.</p>
@@ -1142,7 +1169,10 @@
                         <span class="paper-date">2026-07-23</span>
                     </div>
                                         <span class="paper-comment">📝 Proceedings of the 2026 American Medical Informatics Association Symposium, to appear</span>
-                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：临床实验协议依赖非结构化自由文本，阻碍了自动化推理、队列发现和试验模拟，尤其是动态资格标准和事件时间约束等关键时间表型难以被形式化表达。&#10;&#10;🛠 **方法**：提出CT-TEL工作流，利用大语言模型（LLMs）将叙述性临床协议自动翻译为时间集成逻辑（TEL）公式，并通过反向翻译方法评估语义保留度。&#10;&#10;✨ **主要贡献**：成功为23个真实临床试验生成逻辑模型，验证了LLMs将非正式协议映射为可计算逻辑的可行性，为“符号生物医学”范式下的可扩展临床试验模拟提供了初步证据。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>The reliance on unstructured free text for documenting clinical trial protocols creates a significant barrier to automated reasoning, cohort discovery, and trial simulation. The lack of formal structure obscures critical temporal phenotypes, such as dynamic eligibility criteria and event timing constraints. Although Temporal Ensemble Logic (TEL) offers an expressive framework for modeling these elements, manual encoding remains a prohibitive bottleneck. We introduce the CT-TEL workflow: a scalable pipeline leveraging Large Language Models (LLMs) to translate narrative clinical protocols into TEL formulas. We applied CT-TEL to generate logical models for 23 real-world trials from ClinicalTrials.gov. We evaluated translation fidelity via a back-translation approach, using LLMs to convert TEL formulas back into natural language and measuring semantic similarity against source texts. The resulting semantic retention suggests that LLMs may offer a pathway for mapping informal protocols to computable logic, providing preliminary evidence toward scalable clinical trial emulation within the emerging "Symbolic Biomedicine" paradigm championed by the corresponding author.</p>
@@ -1994,7 +2024,7 @@
         <footer class="footer">
             <p>👤 <strong>Hongkun Luo (罗宏昆)</strong> · <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent)">Academic Page</a> · <a href="https://github.com/luohongk" target="_blank" style="color:var(--accent)">GitHub</a></p>
             <p style="margin-top:8px">🤖 Generated automatically from <a href="https://arxiv.org" style="color:var(--accent)">arXiv</a> · <a href="https://github.com/luohongk/Embodied-AI-Daily" style="color:var(--accent)">GitHub Repo</a></p>
-            <p style="margin-top:4px">Last update: 2026-07-26 (Beijing Time)</p>
+            <p style="margin-top:4px">Last update: 2026-07-27 (Beijing Time)</p>
         </footer>
     </main>
 

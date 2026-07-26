@@ -784,7 +784,7 @@
         <div class="sidebar-header">
             <h1><a href="../index.html" style="background:linear-gradient(135deg,#6366f1,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">🚀 Embodied AI Daily</a></h1>
             <div class="update">by <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent);text-decoration:none;font-weight:500;">Hongkun Luo</a> (罗宏昆)</div>
-            <div class="update" style="margin-top:2px">Last update: 2026-07-26</div>
+            <div class="update" style="margin-top:2px">Last update: 2026-07-27</div>
         </div>
             <a href="Continuous-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
@@ -1034,7 +1034,10 @@
                         <span class="paper-date">2026-07-23</span>
                     </div>
                                         <span class="paper-comment">📝 27 pages, 15 figures. To be submitted to Journal of Engineering Research (Elsevier). Certain TeX commands are supported</span>
-                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：凹版印刷质量控制依赖人工检测，效率低且成本高，而真实工业缺陷图像极度稀缺，难以训练深度学习模型实现自动化检测。&#10;&#10;🛠 **方法**：提出一种合成数据生成框架，自动生成高保真印刷缺陷图像（如折痕、条纹、套印不准等），并输出对应的边界框和标注，用于训练目标检测模型RFDETR。&#10;&#10;✨ **主要贡献**：生成了7533张合成图像，训练后的模型在真实工业样本上达到80.9%的平均精度（mAP），为零成本、快速部署的印刷缺陷自动检测提供了可行方案。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Quality control in printing, particularly in rotogravure printing, still depends on slow, costly, and subjective manual inspection. Automated surface defect detection is critical for maintaining high-quality standards in rotogravure printing. Deep learning models give prospects for automation. However, training robust deep learning models, such as YOLO or Vision Transformers, is heavily hindered by the extreme scarcity of real-world industrial defects images. To overcome this limitation, this paper introduces a novel synthetic data generation framework tailored for rotogravure printing quality control. The proposed pipeline automatically generates high-fidelity images of specific printing defects (creases, streaks, misregistration, etc.) and outputs corresponding bounding boxes and annotations. To validate the framework, a synthetic dataset of 7533 images was generated and used to train the state-of-the-art object-detection model RFDETR. Experimental results demonstrate that the model trained on our synthetic data achieves a Mean Average Precision (mAP) of 80.9\% on real industrial testing samples. This framework provides a zero-cost, rapid-deployment solution for automating defect inspection in printing lines without requiring massive manual data collection.</p>
@@ -1046,7 +1049,10 @@
                         <span class="paper-date">2026-07-23</span>
                     </div>
                                         <span class="paper-comment">📝 Accepted by IEEE International Joint Conference on Biometrics (IJCB) 2026</span>
-                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：虹膜识别中，眼睑、睫毛、反光等遮挡会破坏虹膜纹理，导致识别性能下降，现有方法对大面积遮挡处理不足。&#10;&#10;🛠 **方法**：提出三模块遮挡感知框架：先用残差2D CNN识别遮挡类型，再用条件扩散模型根据遮挡类型和掩码重建被遮挡区域，最后用改进的VGG19-HPMNet提取全局与局部特征进行识别。&#10;&#10;✨ **主要贡献**：在CASIA-Iris-Thousand数据集上，通过识别遮挡类型、重建掩码区域并重新评估修复样本，显著提升了虹膜识别性能。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Iris recognition is a reliable biometric approach that identifies individuals using the distinctive and stable texture of the iris. However, recognition performance can degrade when discriminative iris texture is partially occluded by eyelids, eyelashes, specular reflections, or other acquisition artifacts. Existing approaches often perform recognition directly on degraded samples or rely only on the remaining visible iris region, which may be inadequate when substantial texture is corrupted. To address this limitation, we propose an occlusion-aware iris recognition framework with three sequential modules: occlusion-type identification, diffusion-based reconstruction, and deep-learning-based recognition. First, a residual 2D CNN-based network determines whether an iris image is non-occluded or belongs to one of the controlled occlusion categories. Second, the occluded image, binary mask, and predicted occlusion type condition a denoising diffusion probabilistic model to reconstruct the corrupted region. Finally, VGG19-HPMNet, a modified VGG19 model with horizontal pyramid mapping, extracts discriminative global and part-wise local iris features for recognition. Experiments on the CASIA-Iris-Thousand dataset under a controlled synthetic-occlusion protocol show that the proposed framework improves iris recognition performance by identifying the occlusion type, reconstructing masked regions, and re-evaluating the restored iris samples.</p>
@@ -1058,7 +1064,10 @@
                         <span class="paper-date">2026-07-23</span>
                     </div>
                                         <span class="paper-comment">📝 18 pages, 4 figures. Accepted for publication at ECML PKDD 2026</span>
-                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：量化海冰厚度与海面高度（SSH）之间的因果关系，解决传统深度学习模型在气候动态中因时变混杂和缺乏物理约束而难以准确估计处理效应的问题。&#10;&#10;🛠 **方法**：提出知识引导因果模型变分自编码器（KGCM-VAE），利用SSH与表面速度的物理关系生成时变连续处理变量，并通过最大均值差异（MMD）在潜在空间中平衡处理组与对照组分布，以消除混杂偏差。&#10;&#10;✨ **主要贡献**：在合成数据上，KGCM-VAE相比现有基线模型实现了更低的PEHE（预期策略误差）；消融实验证实MMD能稳定提升处理效应估计；真实案例研究验证了海冰厚度对SSH强迫的敏感性，并与物理模型结果一致。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Quantifying the causal relationship between sea ice thickness and sea surface height (SSH) is essential for understanding the mechanisms driving polar climate dynamics. Conventional deep learning models often struggle with treatment effect estimation in climate settings due to time-varying confounding and the lack of physical constraints. To address these challenges, we propose the Knowledge-Guided Causal Model Variational Autoencoder (KGCM-VAE) to quantify the effect of SSH on sea ice thickness. The framework leverages established physical relationships between SSH and surface velocity to generate physically grounded, time-varying continuous treatments, where each treatment value can change at every time step within a sequence. The model also incorporates Maximum Mean Discrepancy (MMD) to balance treated and control distributions in the latent space, mitigating observed confounding bias. Using synthetic data, we evaluated the model's ability to predict sea ice thickness responses under hypothetical SSH forcing scenarios, demonstrating that KGCM-VAE achieves lower PEHE compared to state-of-the-art baselines. Ablation studies further confirm that MMD consistently enhances treatment effect estimation over the base model. Additionally, we conducted a real-world case study to examine the sensitivity of sea ice thickness to SSH forcing and validate our findings against existing physical modeling results.</p>
@@ -1070,7 +1079,10 @@
                         <span class="paper-date">2026-07-23</span>
                     </div>
                                         <span class="paper-comment">📝 Appears in the proceedings of GoodIT'26</span>
-                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：道德语言具有文化差异和表达微妙性，导致跨语言翻译困难，而现有道德分类标注语料几乎全为英文，限制了非英语语言的道德价值观研究。&#10;&#10;🛠 **方法**：以波兰语为测试案例，使用约5万条多主题社交媒体道德标注数据，通过LaBSE跨语言嵌入相似度、中心核对齐（CKA）、LLM作为评判评估和深度学习分类器一致性检验四种方法，验证基于LLM的机器翻译效果。&#10;&#10;✨ **主要贡献**：证明机器翻译虽在处理俚语、粗俗语和文化负载表达上有缺陷，但能有效保留道德语义线索，平均余弦相似度达0.89，分类准确率差距仅0.01–0.02 AUROC，为资源匮乏语言提供了一条实用且低成本的道德研究路径。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Moral language is subtle and culturally variable, making it difficult to translate faithfully across languages. Idiomatic expressions, slang, and cultural references introduce hard-to-avoid translation artifacts. Yet automated moral classification depends on language-specific annotated corpora that exist almost exclusively in English. We investigate whether LLM-based translation can bridge this gap, taking Polish as a test case. Using $\sim$50k morally annotated social media posts from a diverse range of topics, we apply a principled four-method validation pipeline: LaBSE cross-lingual embedding similarity, Centred Kernel Alignment (CKA), LLM-as-judge evaluation, and deep learning classifier parity tests. We show that despite shortcomings in handling slang, vulgarity, and culturally loaded expressions, direct translation preserves subtle moral cues well enough to be harvested by cross-lingual machine learning --- with a mean cosine similarity of 0.89 and classification accuracy gaps of 0.01--0.02 AUROC across foundations. These results demonstrate that machine translation is a practical and cost-effective path to moral values research in languages currently under-resourced in this domain. We demonstrate this for Polish as a representative Slavic language, with expected generalization to related languages.</p>
@@ -1082,7 +1094,10 @@
                         <span class="paper-date">2026-07-23</span>
                     </div>
                                         <span class="paper-comment">📝 Accepted at IEEE International Joint Conference on Biometrics (IJCB) 2026</span>
-                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：合成眼动数据可能泄露个体内部状态（如疲劳、情绪等）隐私，现有生成模型未明确评估是否保留了这些敏感信息。&#10;&#10;🛠 **方法**：采用基于扩散模型的眼动生成方法，通过分析合成眼动特征与主观报告（如疲劳状态）的相关性，评估其是否减弱了状态相关信号。&#10;&#10;✨ **主要贡献**：发现合成眼动数据中状态相关特征的相关性更弱且更不稳定，表明该方法能有效衰减隐私敏感的状态签名，同时保留身份等关键信号，支持隐私保护的眼动应用。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>The recent success of deep learning (DL) has enabled the generation of high-quality synthetic data, advancing the development of data-driven biometric applications. Among various biometric modalities, eye movement sequences have emerged as a promising behavioral biometric. However, gaze data also raises privacy concerns because it may encode individuals' internal states, such as fatigue, emotional load, and stress. Ideally, synthetic gaze data should preserve the signal quality of real recordings, including identity features, while removing or attenuating privacy-sensitive, state-related attributes to reduce risks of personal state exposure. Many recent DL-based generative models focus on replicating real gaze trajectories but do not explicitly evaluate whether generated signals retain subjective-state information. In this work, we examine a recent diffusion-based gaze synthesis approach by analyzing the correlations between synthetic gaze features and subjective reports, including fatigue and other self-reported states. Our results show that these correlations are weaker and less stable in synthetic gaze than in real gaze, suggesting the attenuation of state-related signatures under the evaluated protocol. At the same time, synthetic gaze preserves essential signal characteristics similar to real data, supporting its potential use in privacy-aware gaze-based applications.</p>
@@ -1094,7 +1109,10 @@
                         <span class="paper-date">2026-07-23</span>
                     </div>
                                         <span class="paper-comment">📝 This paper is accepted to MICCAI 2026, and this is the submission version, not the camera-ready version</span>
-                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：深度学习模型在手术切缘评估中难以泛化到手术室环境，且缺乏可解释性，导致临床采用受限。&#10;&#10;🛠 **方法**：提出Agent-Guided Concept Discovery框架，通过推理代理自动从数据中学习语义概念，并利用生化知识图谱确保概念与已知代谢关系一致，无需人工概念标注。&#10;&#10;✨ **主要贡献**：在皮肤癌和乳腺癌数据集上提升了平衡准确率和灵敏度，并在术中案例中减少假阳性，增强了模型对手术条件的泛化能力和可解释性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Deep learning models can effectively use Rapid Evaporative Ionization Mass Spectrometry (REIMS) data for surgical margin assessment. However, their clinical adoption remains challenging due to limited generalization to operating room conditions. This difficulty arises because models are typically trained on labeled spectra collected from resected tissue samples, while they must operate on noisy, unlabeled data acquired directly during surgery. In addition, the black-box nature of deep learning models makes it difficult to understand and systematically improve their behavior. Concept-based learning offers a promising way to address these challenges by mapping raw measurements to human-understandable concepts. However, supervised concept-based approaches rely on concept annotations, which are difficult to obtain in complex mass spectrometry workflows. We propose Agent-Guided Concept Discovery, a framework that learns meaningful concepts directly from data without requiring predefined concept labels. During training, a reasoning agent refines semantic descriptions of the learned concepts and adaptively adjusts their weight based on diagnostic relevance. These concepts are further grounded using a biochemical knowledge graph to ensure consistency with known metabolic relationships. Across Skin and Breast Cancer datasets, our model improves balanced accuracy and sensitivity over the baseline. In a representative intraoperative case, it shows fewer false positives, indicating better generalization to surgical conditions.</p>
@@ -1106,7 +1124,10 @@
                         <span class="paper-date">2026-07-23</span>
                     </div>
                                         <span class="paper-comment">📝 33 pages, 20 figures + appendix. This submission supersedes both arXiv:2505.24849 and arXiv:2501.18530. v4 implements minor improvements</span>
-                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：研究多层感知机在接近插值（参数与数据量相当）条件下的最优学习能力，突破传统统计物理方法仅能分析窄网络或核方法的局限。&#10;&#10;🛠 **方法**：采用统计物理框架，分析匹配的师生网络设置（教师网络生成目标，学生网络学习），并聚焦于宽度与输入维度成比例的网络，以捕捉特征学习效应。&#10;&#10;✨ **主要贡献**：揭示了最优训练下网络学习的充分统计量及学习相变现象，发现专业化（对目标任务的适应）在层间和神经元间不均匀传播，且深层目标更难学习，为特征学习机制提供了理论洞见。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>For four decades statistical physics has been providing a framework to analyse neural networks. A long-standing question remained on its capacity to tackle deep learning models capturing rich feature learning effects, thus going beyond the narrow networks or kernel methods analysed until now. We positively answer through the study of the supervised learning of a multi-layer perceptron. Importantly, (i) its width scales as the input dimension, making it more prone to feature learning than ultra wide networks, and more expressive than narrow ones or ones with fixed embedding layers; and (ii) we focus on the challenging interpolation regime where the number of trainable parameters and data are comparable, which forces the model to adapt to the task. We consider the matched teacher-student setting. Therefore, we provide the fundamental limits of learning random deep neural network targets and identify the sufficient statistics describing what is learnt by an optimally trained network as the data budget increases. A rich phenomenology emerges with various learning transitions. With enough data, optimal performance is attained through the model's "specialisation" towards the target, but it can be hard to reach for training algorithms which get attracted by sub-optimal solutions predicted by the theory. Specialisation occurs inhomogeneously across layers, propagating from shallow towards deep ones, but also across neurons in each layer. Furthermore, deeper targets are harder to learn. Despite its simplicity, the Bayes-optimal setting provides insights on how the depth, non-linearity and finite (proportional) width influence neural networks in the feature learning regime that are potentially relevant in much more general settings.</p>
@@ -1118,7 +1139,10 @@
                         <span class="paper-date">2026-07-23</span>
                     </div>
                     
-                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决水文气象时间序列中观测数据稀疏、缺失率高，导致传统统计方法难以准确模拟和预测其动态变化的问题。  &#10;🛠 **方法**：提出基于Transformer的扩散模型，用于水文时间序列的概率性插补和预测，并在法国东北部六个站点联合建模水量与水质数据。  &#10;✨ **主要贡献**：验证了Transformer扩散模型能有效捕捉水文数据的复杂时序模式，在缺失数据场景下实现高质量的时间序列插补与预测，性能优于多种基线方法。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>The modeling of hydrometeorological time series with limited observations is a key challenge in the monitoring of hydro-systems and water resources, as well as for flood or drought risk assessment. Due to the high variability of the underlying processes and the sparsity of available measurements, traditional statistical approaches often struggle to accurately represent their dynamics. In this context, recent advances in deep learning offer a promising direction for improving the representation and generation of complex temporal processes sampled at several observation sites. This study investigates the application of transformer-based diffusion models to the simulation and reconstruction of hydrological time series. The proposed framework is applied to the joint modeling of water quantity and quality at six sites spread across three adjacent headwater catchments located in North-East France on a limestone plateau covered by forests and field crops. The model is calibrated and validated using available observational data, which has been quality controlled and corrected for sensor drift and malfunction through collaborative efforts by LNE metrology expertise and Andra monthly quality control over more than 15 years. Its performance is compared with several established baseline approaches commonly used for time series modeling. Quantitative evaluation metrics are employed to assess the ability of the proposed method to reproduce key temporal characteristics of the observed signals in two settings: the imputation of incomplete time series and the forecasting of upcoming hydrological conditions. Results support the effectiveness of the transformer-based approach and highlight its capacity to capture and simulate the complex patterns present in hydrological data. In particular, the results indicate that diffusion models can efficiently sample realistic time series distributions under observation settings with variable missing data for both forecasting and imputation.</p>
@@ -1130,7 +1154,10 @@
                         <span class="paper-date">2026-07-23</span>
                     </div>
                     
-                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决跨模态荧光显微镜超分辨率重建中，纯数据驱动模型生成的图像与光学成像物理规律不一致的问题。&#10;&#10;🛠 **方法**：提出一种物理信息生成对抗网络，将显微镜特定的点扩散函数信息融入训练目标，实现共聚焦到STED图像的跨模态转换。&#10;&#10;✨ **主要贡献**：PSF引导模型在结构保真度、局部偏差和频域分析上优于非PSF基线方法，证明光学先验能提升生成模型的物理合理性与结构准确性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Cross-modality image translation offers a route to super-resolution fluorescence microscopy from low-resolution images while reducing phototoxicity and instrumentation demands. However, purely data-driven models can produce visually plausible outputs that are inconsistent with optical image formation. Here, we propose a physics-informed generative adversarial network for confocal-to-STED image translation that incorporates microscope-specific point spread function information into the training objective. Simulated and experimentally measured PSFs were evaluated using a limited paired confocal-STED dataset of TOM20-labeled mitochondria in human primary M2 macrophages acquired across different experimental days. Performance was assessed using reference-based and non-reference-based image-quality metrics, together with complementary frequency- and distribution-sensitive analyses. The no-reference metrics probed physics-relevant image properties, including spatial-frequency content, contrast, and signal-to-noise behavior. PSF-guided models improved structural fidelity, reduced local deviations, and achieved closer agreement with STED references than non-PSF baselines, particularly in frequency-domain analyses. These results demonstrate that optical priors can improve the structural fidelity and physical plausibility of generative microscopy models for cross-modality super-resolution imaging.</p>
@@ -1142,7 +1169,10 @@
                         <span class="paper-date">2026-07-23</span>
                     </div>
                     
-                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：自回归深度学习天气预测模型在长期预报中误差快速累积，源于输出误差与输入分布偏移之间的反馈循环，类似“蝴蝶效应”。  &#10;🛠 **方法**：提出**Self-Output Fine-Tuning (SOFT)**，一种即插即用策略，利用模型自身的一步预测结果校准首个自回归步骤中的输入分布偏差。  &#10;✨ **主要贡献**：SOFT在长期预报任务中达到最优性能，显著降低预测误差和分布偏移，揭示了改进自回归管道对大气科学的关键价值。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Long-horizon weather forecasting is a fundamental challenge in atmospheric science, for which autoregressive Deep Learning Weather Prediction (DLWP) has emerged as the primary paradigm. Although the autoregressive pipeline is highly scalable and flexible, its prediction errors grow rapidly over long forecasting horizons. In this work, we study this error growth phenomenon from both theoretical and empirical perspectives. Our analysis reveals that the growth is driven by a feedback loop between output errors and input distribution shifts. Specifically, the autoregressive process amplifies small initial output errors, which progressively corrupt subsequent input distributions, echoing the butterfly effect in atmospheric science and ultimately deteriorating forecasting accuracy over longer horizons. Furthermore, we show that this distributional shift originates at the earliest stage of inference, with out-of-distribution signatures detectable as early as the first autoregressive step. To mitigate this issue, we propose \textbf{Self-Output Fine-Tuning (SOFT)}, a plug-and-play strategy that leverages the model's own one-step predictions to calibrate the biased input distribution encountered at the first step. Extensive experiments demonstrate that, despite its simplicity, SOFT achieves state-of-the-art performance on long-horizon forecasting tasks and substantially reduces both prediction errors and distributional discrepancy. The success of SOFT highlights the importance of reexamining the fundamental pipeline of deep learning weather prediction, representing a critical pipeline advance for atmospheric science.</p>
@@ -1862,7 +1892,7 @@
         <footer class="footer">
             <p>👤 <strong>Hongkun Luo (罗宏昆)</strong> · <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent)">Academic Page</a> · <a href="https://github.com/luohongk" target="_blank" style="color:var(--accent)">GitHub</a></p>
             <p style="margin-top:8px">🤖 Generated automatically from <a href="https://arxiv.org" style="color:var(--accent)">arXiv</a> · <a href="https://github.com/luohongk/Embodied-AI-Daily" style="color:var(--accent)">GitHub Repo</a></p>
-            <p style="margin-top:4px">Last update: 2026-07-26 (Beijing Time)</p>
+            <p style="margin-top:4px">Last update: 2026-07-27 (Beijing Time)</p>
         </footer>
     </main>
 

@@ -784,7 +784,7 @@
         <div class="sidebar-header">
             <h1><a href="../index.html" style="background:linear-gradient(135deg,#6366f1,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">🚀 Embodied AI Daily</a></h1>
             <div class="update">by <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent);text-decoration:none;font-weight:500;">Hongkun Luo</a> (罗宏昆)</div>
-            <div class="update" style="margin-top:2px">Last update: 2026-07-26</div>
+            <div class="update" style="margin-top:2px">Last update: 2026-07-27</div>
         </div>
             <a href="Continuous-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
@@ -1034,7 +1034,10 @@
                         <span class="paper-date">2026-07-23</span>
                     </div>
                                         <span class="paper-comment">📝 ECCV 2026</span>
-                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有视频场景理解任务（如深度、语义分割等）依赖碎片化且领域不兼容的数据集，缺乏统一模型能同时从分散数据中学习多种密集预测属性。&#10;&#10;🛠 **方法**：提出UniD模型，利用预训练扩散模型的强视觉先验，通过轻量级任务投影器让各任务专家监督统一骨干网络，无需标注重叠或伪标签，直接从分散数据联合学习八种场景属性。&#10;&#10;✨ **主要贡献**：首次实现从不相交数据中联合预测深度、法线、语义等八种密集属性，性能媲美单任务专家，且具备跨任务一致性与强分布外泛化能力。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Scene understanding requires simultaneous prediction about geometry, appearance, and semantics. However, existing task-specific annotations are fragmented across incompatible, domain-specific datasets. Current unified systems circumvent this by restricting training to fully co-annotated data, or by incurring the large computational cost of pseudo-labeling. To mitigate this, we introduce UniD, a unified video model that jointly predicts eight dense scene properties-depth, surface normals, semantic segmentation, boundaries, human parts, albedo, shading, and materials-all learned from disjoint, domain-specific datasets. We propose a simple yet effective distillation step in which per-task experts supervise a unified backbone through lightweight task projectors, eliminating the need for annotation overlap or pseudo-labeling. Our key insight is that the strong visual priors of a pretrained diffusion model are sufficient to bridge the domain gaps introduced by disjoint training sources, enabling robust generalization to scene-task combinations never seen during training. UniD achieves competitive performance against per-task specialists and multi-task baselines, with strong generalization to out-of-distribution scenarios and enhanced temporal and cross-task consistency. Code and video results are available at https://unid-video.github.io/.</p>
@@ -1046,7 +1049,10 @@
                         <span class="paper-date">2026-07-23</span>
                     </div>
                                         <span class="paper-comment">📝 13 pages, 5 figures</span>
-                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：如何通过可微渲染技术，识别场景中哪些参数对特定图像指标（如亮度、感知分数）影响最大，从而解释场景属性与视觉结果之间的因果关系。&#10;&#10;🛠 **方法**：利用可微渲染器对渲染图像上的任意标量指标进行反向传播，计算每个场景参数的梯度，生成“度量显著性图”，将参数重要性从神经网络权重传播扩展到物理光传输过程。&#10;&#10;✨ **主要贡献**：首次将可微渲染的梯度视为场景参数显著性工具，证明不同指标（如眩光指数、平均亮度、神经感知分数）会产生截然不同的显著性排序，且显著性依赖于指标而非场景固有属性，为场景理解和可解释性提供了新视角。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Gradient-based saliency methods reveal which input features most influence a neural network's output, and are a standard tool for model interpretability. We observe that differentiable renderers, which are conventionally used for parameter optimisation, produce an analogous form of saliency: given any scalar metric evaluated on a rendered image, a single reverse-mode differentiation pass yields per-parameter gradients that identify which scene elements most influence the metric. We call these gradient fields metric saliency maps. Unlike neural saliency, which propagates attribution through learned weights, metric saliency propagates through the image formation process itself, including multi-bounce light transport, capturing parameter dependencies that are semi-opaque to manual inspection. We compute metric saliency maps for qualitatively different objectives: psychovisual glare indices, mean scene luminance, and neural perceptual scores. The saliency rankings differ substantially across metrics for the same scene, with parameters that dominate one objective being negligible for another. The saliency map is specific to the metric, not an intrinsic property of the scene. Our results suggest that differentiable renderers produce derivative images that are as informative for scene understanding as the primal images they were designed to generate.</p>
@@ -1994,7 +2000,7 @@
         <footer class="footer">
             <p>👤 <strong>Hongkun Luo (罗宏昆)</strong> · <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent)">Academic Page</a> · <a href="https://github.com/luohongk" target="_blank" style="color:var(--accent)">GitHub</a></p>
             <p style="margin-top:8px">🤖 Generated automatically from <a href="https://arxiv.org" style="color:var(--accent)">arXiv</a> · <a href="https://github.com/luohongk/Embodied-AI-Daily" style="color:var(--accent)">GitHub Repo</a></p>
-            <p style="margin-top:4px">Last update: 2026-07-26 (Beijing Time)</p>
+            <p style="margin-top:4px">Last update: 2026-07-27 (Beijing Time)</p>
         </footer>
     </main>
 

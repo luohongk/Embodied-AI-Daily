@@ -784,7 +784,7 @@
         <div class="sidebar-header">
             <h1><a href="../index.html" style="background:linear-gradient(135deg,#6366f1,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">🚀 Embodied AI Daily</a></h1>
             <div class="update">by <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent);text-decoration:none;font-weight:500;">Hongkun Luo</a> (罗宏昆)</div>
-            <div class="update" style="margin-top:2px">Last update: 2026-07-26</div>
+            <div class="update" style="margin-top:2px">Last update: 2026-07-27</div>
         </div>
             <a href="Continuous-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
@@ -1034,7 +1034,10 @@
                         <span class="paper-date">2026-07-23</span>
                     </div>
                                         <span class="paper-comment">📝 Has been submitted to AAAI 2026</span>
-                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有基于模仿学习的自动驾驶规划器仅能复现高频驾驶行为，缺乏对用户个性化意图和多样化驾驶偏好的理解与适应能力。&#10;&#10;🛠 **方法**：提出RL引导的多策略框架，包含基于扩散模型的多头规划器（M-Diffusion Planner）和LLM语义理解模块，采用两阶段训练：先通过模仿学习确保各策略头安全规划，再使用约束组相对策略优化（GRPO）对齐用户偏好。&#10;&#10;✨ **主要贡献**：首次将扩散模型与强化学习结合实现个性化驾驶规划，在nuPlan基准的开放和闭环测试中达到竞争性性能，同时满足实时规划需求并有效对齐用户意图。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Despite significant progress, imitation learning-based autonomous driving planners remain largely restricted to reproducing high-frequency biased behaviors, overlooking the inherent behavioral diversity of human driving. Moreover, existing systems struggle to understand user intent from human interactions and environmental contexts. In real-world advanced deployment, motion planning must accommodate diverse, context-dependent user preferences to support heterogeneous driving services, requiring the ability to interpret human intent and adapt behavior accordingly. However, existing approaches lack such user-oriented capabilities, as they neither explicitly model user intent nor enable flexible policy adaptation. To bridge this gap, we propose an RL-guided multi-strategy framework with a diffusion-based multi-head planner(M-Diffusion Planner) integrated with LLM-based semantic understanding, enabling dynamic perception of user intent and generation of diverse, preference-aligned trajectories. To balance trajectory quality and strategy alignment, we adopt a two-stage training paradigm: first, imitation learning ensures each policy head achieves safe and high-quality planning; second, constrained Group Relative Policy Optimization (GRPO) further aligns each head with user preferences. Experiments on the nuPlan benchmark, under both open-loop and closed-loop settings, demonstrate competitive performance while meeting real-time planning requirements and effectively aligning with user intent.</p>
@@ -1046,7 +1049,10 @@
                         <span class="paper-date">2026-07-23</span>
                     </div>
                     
-                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：自动驾驶中自监督深度估计在恶劣天气下因传感器感知退化导致预测错误，且雷达点云稀疏难以有效融合。&#10;&#10;🛠 **方法**：提出不确定性感知多教师蒸馏方法，利用不同天气条件输入生成多样教师模型并通过不确定性加权知识蒸馏损失；设计POV-BEV雷达融合方法，利用相机像素射线约束连接相机视角与雷达鸟瞰图，以利用更密集的雷达点。&#10;&#10;✨ **主要贡献**：通过多教师蒸馏和鲁棒雷达融合，在多种天气数据集上实现最先进的深度估计性能，显著提升鲁棒性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Self-supervised depth estimation is challenging for safe autonomous driving under various adverse weather conditions due to sensor perception degradation. These challenges arise from two main aspects. Firstly, adverse conditions can distort pixel correspondences and violate the assumptions embedded in the self-supervised loss function, leading to erroneous depth predictions. Secondly, while radar is a widely adopted sensor in adverse weather conditions, the sparse distribution of radar points in the Point of View (POV) poses challenges for self-supervised fusion. To address these issues, we introduce a novel self-training pipeline using unpaired real all-weather data through multi-teacher distillation and robust radar fusion. We propose the Uncertainty-Aware Multi-Teacher Distillation method to generate diverse teacher models with different adverse condition inputs, and then employ uncertainty modeling to weigh the knowledge distillation loss. Additionally, we design the POV-BEV Radar Fusion approach, which leverages camera-pixel ray constraints to establish connections between the camera's Point of View (POV) and the radar's Bird's-Eye View (BEV). This approach enables the utilization of denser radar points, effectively capturing the complementary perspectives of both POV and BEV. Extensive quantitative and qualitative experiments demonstrate the robustness of our proposed method on all-weather datasets, achieving state-of-the-art performance. Our code and models are available at https://github.com/MICLAB-BUPT/RobustDepth.</p>
@@ -1058,7 +1064,10 @@
                         <span class="paper-date">2026-07-23</span>
                     </div>
                                         <span class="paper-comment">📝 The source code and model weights will be made publicly available at https://github.com/lynn-yu/HGeo-TopoMap</span>
-                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决自动驾驶中拓扑地图构建时，因真实道路缺乏中心线显式标注而导致的中心线实例检测难题。&#10;&#10;🛠 **方法**：提出HGeo-TopoMap，通过显式先验地图和隐式空间关系分层提升拓扑映射。具体包括几何自适应学习模块（利用逆透视映射获取道路结构图，通过离散编码和先验掩码注意力聚焦有效区域）和几何一致性学习模块（基于几何感知解码器，对齐相同几何方向中心线特征以保持空间一致性）。&#10;&#10;✨ **主要贡献**：在OpenLane-V2数据集上，中心线、车道段和鲁棒性基准测试中均显著提升拓扑映射精度，且在标准与挑战性条件下均优于基线方法，增强了系统鲁棒性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Topological maps are key outputs of autonomous driving perception systems, delivering essential road information for path planning. They identify instances such as centerlines and traffic signs, along with their connectivity relationships. Due to the lack of explicit markings for centerlines in real-world environments, the detection of centerline instances remains a significant challenge. To tackle this problem, we propose HGeo-TopoMap, which leverages an explicit prior map and implicit spatial relations to hierarchically boost topological mapping. First, a geometric adaptive learning module is designed for the road structure map obtained via inverse perspective mapping. This module discretely encodes semantic and spatial features from the map, followed by a prior-mask attention mechanism that selectively focuses on informative regions. Then, a geometric consistency learning module is devised, which leverages the geometric properties and spatial relationships of centerlines. Built on the geometry-aware decoder, it enforces spatial consistency by aligning features of centerline instances with identical geometric orientations. The proposed method is evaluated on the OpenLane-V2 dataset across the centerline, lane segment, and robustness benchmarks. Beyond substantial improvements in topological mapping accuracy, the proposed method offers the benefit of enhanced robustness, consistently outperforming baselines under both standard and challenging conditions. The source code and model weights will be made publicly available at https://github.com/lynn-yu/HGeo-TopoMap.</p>
@@ -1070,7 +1079,10 @@
                         <span class="paper-date">2026-07-23</span>
                     </div>
                     
-                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决自动驾驶车辆在混合交通中与人类驾驶员交互时，因策略相互依赖导致的复杂决策与安全约束问题。&#10;&#10;🛠 **方法**：将驾驶交互建模为广义纳什均衡问题（GNEP），显式考虑共享安全与几何约束，并采用粒子群优化（PSO）求解器实现非凸问题的实时求解。&#10;&#10;✨ **主要贡献**：在真实测试轨道上使用自动驾驶雷诺Zoé与人类驾驶员验证，系统能在50毫秒内收敛，生成舒适且类人的轨迹，有效处理关键场景。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Safe and efficient navigation in mixed-traffic environments remains a critical challenge for Autonomous Vehicles (AVs), primarily due to the complex interdependence between the AV's decisions and the unpredictable reactions of human drivers. This paper introduces a comprehensive decision-making framework that formulates the driving interaction as a Generalized Nash Equilibrium Problem (GNEP). Unlike decoupled optimization approaches, this framework explicitly models shared safety and geometric constraints, ensuring that the feasibility of the AV's strategy is dynamically linked to the opponent's actions. To solve this non-convex problem in real-time, we propose a dedicated solver based on Particle Swarm Optimization (PSO). The complete architecture was validated on a test track using a real autonomous Renault Zoé interacting with a human driver. Experimental results demonstrate the system's ability to handle critical scenarios by generating comfortable, human-like trajectories. Benchmarks confirm the solver's operational feasibility, achieving convergence in under 50 ms.</p>
@@ -1082,7 +1094,10 @@
                         <span class="paper-date">2026-07-23</span>
                     </div>
                                         <span class="paper-comment">📝 20 pages with 13 figures</span>
-                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有视觉-语言-动作（VLA）模型在自动驾驶中面临两难：像素级世界模型鲁棒性差，而潜在空间世界模型缺乏可解释性和表征质量。&#10;&#10;🛠 **方法**：提出HyWorldVLA混合框架，预训练阶段同时预测视频潜在特征和重建像素帧，微调阶段仅用潜在特征驱动动作专家生成轨迹。&#10;&#10;✨ **主要贡献**：在NAVSIM v1/v2基准上显著优于纯像素和纯潜在基线，并首次对自动驾驶世界模型的噪声鲁棒性进行系统定性与定量分析。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Vision-Language-Action (VLA) models augmented with world modeling represent a promising paradigm for end-to-end autonomous driving. While pixel-level future prediction enables fine-grained spatiotemporal reasoning, it compromises robustness in noisy driving scenarios. Conversely, latent-based world models alleviate this sensitivity but often incur limited interpretability and representational degradation due to absent pixel-level grounding. To reconcile this trade-off, we propose HyWorldVLA, a hybrid world-VLA framework that unifies pixel-level supervision and latent representation learning. In the pre-training stage, HyWorldVLA predicts video latents encoded by a pre-trained video VAE, while simultaneously reconstructing video frames to provide precise pixel-level grounding. During the subsequent co-fine-tuning phase, the model exclusively predicts latent features, which are fed into an action expert to generate trajectories. Extensive experiments on NAVSIM v1 and v2 benchmarks demonstrate that HyWorldVLA significantly outperforms both pixel-based and latent-based world model baselines. Notably, we present the first comprehensive qualitative and quantitative analysis of world model noise robustness in autonomous driving, establishing a new benchmark for evaluating future architectures.</p>
@@ -1094,7 +1109,10 @@
                         <span class="paper-date">2026-07-23</span>
                     </div>
                                         <span class="paper-comment">📝 15 pages, 8 figures</span>
-                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：协同感知中有限带宽导致数据过时，现有信息年龄最小化策略未考虑车辆本地感知对信息年龄的降低作用。&#10;&#10;🛠 **方法**：提出移动感知的信息年龄最小化框架，推导长期平均信息年龄闭式表达式，并设计在线学习算法LocMW（局部感知感知的最大权重调度），在未知环境统计和延迟观测下优化广播调度。&#10;&#10;✨ **主要贡献**：LocMW算法相比最优静态随机基准实现次线性累积超额信息年龄，在真实轨迹和3D感知任务中，时间平均信息年龄降低31.6%，mAP检测精度提升16.3%。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>While collaborative perception (CP) enhances the safety of autonomous driving, limited bandwidth can cause severe shared data staleness in CP systems. Existing age-of-information (AoI) minimization policies are not well-suited for CP, as they overlook the fact that a vehicle's AoI decreases not only through updates from the source (i.e., a base station) but also through the vehicle's local sensing. To address this issue, we propose a mobility-aware AoI minimization framework for CP that explicitly accounts for vehicles' dynamic sensing ranges. We first derive a closed-form expression for the long-term time average sum AoI within a considered region, accommodating an ever-changing vehicle population and their dynamic sensed areas. Based on this characterization, we develop Local-sensing-aware Max-Weight Scheduling (LocMW), an online learning algorithm designed for sensor information broadcast from a source to vehicles under unknown environmental statistics and delayed observations. We provide performance guarantees demonstrating that LocMW achieves a sublinear cumulative excess AoI compared to the optimal stationary randomized benchmark. Extensive simulations using vehicular trajectory datasets and 3D perception tasks demonstrate that our LocMW policy substantially outperforms competing baselines, reducing the time-averaged sum AoI by up to 31.6% and improving mAP detection accuracy by up to 16.3%.</p>
@@ -1106,7 +1124,10 @@
                         <span class="paper-date">2026-07-23</span>
                     </div>
                     
-                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：路侧3D目标检测对相机外参高度敏感，微小偏差（如抖动或漂移）会被投影几何放大，导致特征错位和定位精度下降。&#10;&#10;🛠 **方法**：提出RECO框架，通过可学习的范围边界将场景分为近区和远区，分别估计6自由度位姿偏移；利用可微Sigmoid门平滑融合两区域补偿几何，并引入辅助重投影损失联合优化外参。&#10;&#10;✨ **主要贡献**：在DAIR-V2X-I和Rope3D基准上，针对偏航角和z轴扰动，RECO持续优于现有方法，且能从瞬时扰动泛化到持续偏移，在严格标定不确定性下保持高性能。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>In intelligent transportation systems, roadside 3D object detection provides wide-area perception crucial for traffic understanding, cooperative early warning, and safe autonomous driving. However, existing methods suffer from high sensitivity to camera extrinsics; even slight deviations (whether manifesting as transient jitter or persistent drift) can be significantly amplified by projective geometry. This cascade results in severe feature misalignment and degraded localization. To mitigate this limitation, we propose RECO, a region-aware extrinsic compensation framework that corrects extrinsics using piecewise 6-DoF pose offsets. RECO predicts a learnable range boundary to partition the scene into near and far regions, estimating region-specific pose corrections. A differentiable sigmoid gate then smoothly blends the two compensated geometries to preserve continuous BEV sampling and facilitate stable optimization. To supervise the refinement of extrinsics, we introduce an auxiliary reprojection loss that compares 2D bounding boxes projected from 3D ground truth against 2D annotations, optimizing it jointly with the standard detection objective. Extensive experiments on the DAIR-V2X-I and Rope3D benchmarks under extrinsic perturbations demonstrate consistent improvements over state-of-the-art baselines across both yaw and $z$-axis deviations. RECO also generalizes from transient perturbations to persistent shifts, maintaining highly competitive performance under strict calibration uncertainty.</p>
@@ -1991,7 +2012,7 @@
         <footer class="footer">
             <p>👤 <strong>Hongkun Luo (罗宏昆)</strong> · <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent)">Academic Page</a> · <a href="https://github.com/luohongk" target="_blank" style="color:var(--accent)">GitHub</a></p>
             <p style="margin-top:8px">🤖 Generated automatically from <a href="https://arxiv.org" style="color:var(--accent)">arXiv</a> · <a href="https://github.com/luohongk/Embodied-AI-Daily" style="color:var(--accent)">GitHub Repo</a></p>
-            <p style="margin-top:4px">Last update: 2026-07-26 (Beijing Time)</p>
+            <p style="margin-top:4px">Last update: 2026-07-27 (Beijing Time)</p>
         </footer>
     </main>
 

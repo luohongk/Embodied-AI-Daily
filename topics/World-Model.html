@@ -784,7 +784,7 @@
         <div class="sidebar-header">
             <h1><a href="../index.html" style="background:linear-gradient(135deg,#6366f1,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">🚀 Embodied AI Daily</a></h1>
             <div class="update">by <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent);text-decoration:none;font-weight:500;">Hongkun Luo</a> (罗宏昆)</div>
-            <div class="update" style="margin-top:2px">Last update: 2026-07-26</div>
+            <div class="update" style="margin-top:2px">Last update: 2026-07-27</div>
         </div>
             <a href="Continuous-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
@@ -1034,7 +1034,10 @@
                         <span class="paper-date">2026-07-23</span>
                     </div>
                                         <span class="paper-comment">📝 Project page: https://vail-ucla.github.io/worldweaver/</span>
-                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有自回归视频扩散模型在多智能体交互场景中难以维护跨智能体共享且随视角演化的世界状态，导致生成内容逻辑不一致。&#10;&#10;🛠 **方法**：提出WorldWeaver（W²）流式多智能体视频扩散模型，通过引入跨智能体世界状态寄存器（可学习令牌）存储共享信息并动态更新，结合混合Transformer架构分离世界状态与视觉帧建模，并利用智能体状态、全局视角（如鸟瞰图）和场景文本作为监督信号。&#10;&#10;✨ **主要贡献**：首次在双智能体Minecraft视频生成任务中验证显式世界状态建模可显著提升逻辑一致性与生成质量，并设计了可扩展的流式多视角生成框架。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Multi-agent interactive world models should not only generate consistent observations, but also maintain world states that persist across agents and evolve across views. Existing autoregressive video diffusion pipelines carry forward observation history as conditioning context, which makes shared state difficult to maintain in multi-agent and multi-view settings. We present WorldWeaver (W^2), a streaming multi-agent video diffusion model that augments rollout with cross-agent world state registers: learnable tokens that store shared world information, track individual agent status, and are dynamically updated after each generated chunk. We ground these registers with supervision signals spanning individual agent status, global state views including bird's-eye views, and scene text. We further improve the architecture with a Mixture-of-Transformers design that uses separate weights for world state modeling and visual frame modeling. Extensive experiments in two-agent Minecraft video generation show that explicit world-state modeling improves logical consistency and generation quality.</p>
@@ -1046,7 +1049,10 @@
                         <span class="paper-date">2026-07-23</span>
                     </div>
                                         <span class="paper-comment">📝 51 pages, main body 39 pages + References 6 pages, Appendices 6 pages, Tables 3, and Figures 16</span>
-                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决认知科学中“4E认知”（具身、嵌入、生成、延展）与经典认知主义之间的理论僵局，提出具身智能体构建有向对象现象学体验所需的架构基础。&#10;&#10;🛠 **方法**：提出“感觉调制网络”（SMN）模型，将整个身体视为认知主体，通过“感觉调制器”（同一基质中感知与行动的组织）配对形成“协调动作区”，并由全身广播路由，利用重力、弹性、身体拓扑与几何结构进行建设性认知工作。&#10;&#10;✨ **主要贡献**：核心论点是“可停止性”（haltability）——主动维持对抗平衡——是对象导向现象学所需的架构条件；对象是多个属性的捆绑。该架构是生成式的，通过形态变化（链、片、管、层、附肢）以相同机制构建自我模型、世界模型和对象指向性，并提供了可运行、可证伪的实验基准，将感觉运动行动主义、主动推理等理论视为其特例。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>We propose the Sensation Modulating Network (SMN): the cognitive agent as the whole body, organized at every scale by opponent dynamics, built from Sensation Modulators -- tissue that senses and acts through one substrate -- paired into Coordinated Action Zones routed by a body-wide broadcast. It is an inclusive model of the body, in which gravity, elasticity, and the body's topology and geometry do constructive cognitive work. The paper is scoped to what such a body constructs at its foundation -- a self-model, a world-model in that self's frame, and object-directedness -- each built by the body's physics, not assumed as a primitive. The architecture is generative: one small kit of primitives whose morphological variations (chain, sheet, tube, layered, appendicular) construct experience by the same mechanism, an invariance shown for the self-model across body plans and scales. The central thesis: haltability -- the active holding of an opponent equilibrium -- is the architectural condition object-directed phenomenology requires; a second principle, that an object is a bundle of more than one property, carries it from felt resistance to a genuine object. A companion bench realizes each construction as a runnable, falsifiable experiment with a pre-registered order parameter and matched foil. We place the principal competing accounts -- sensorimotor enactivism, active inference, and ecological and affordance-based theories -- as limiting cases within a wider landscape, stating in each case the criterion that would tell them apart, and give systems and cognitive neuroscience its place: the nervous system as the integrating core that makes the body one, not a commander over it. On this account, the cognitivism-4E impasse reflects an incomplete architecture of the embodied agent: its resolution begins not with the brain alone but with the whole body.</p>
@@ -1058,7 +1064,10 @@
                         <span class="paper-date">2026-07-23</span>
                     </div>
                                         <span class="paper-comment">📝 20 pages with 13 figures</span>
-                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有视觉-语言-动作（VLA）模型在自动驾驶中面临两难：像素级世界模型鲁棒性差，而潜在空间世界模型缺乏可解释性和表征质量。&#10;&#10;🛠 **方法**：提出HyWorldVLA混合框架，预训练阶段同时预测视频潜在特征和重建像素帧，微调阶段仅用潜在特征驱动动作专家生成轨迹。&#10;&#10;✨ **主要贡献**：在NAVSIM v1/v2基准上显著优于纯像素和纯潜在基线，并首次对自动驾驶世界模型的噪声鲁棒性进行系统定性与定量分析。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Vision-Language-Action (VLA) models augmented with world modeling represent a promising paradigm for end-to-end autonomous driving. While pixel-level future prediction enables fine-grained spatiotemporal reasoning, it compromises robustness in noisy driving scenarios. Conversely, latent-based world models alleviate this sensitivity but often incur limited interpretability and representational degradation due to absent pixel-level grounding. To reconcile this trade-off, we propose HyWorldVLA, a hybrid world-VLA framework that unifies pixel-level supervision and latent representation learning. In the pre-training stage, HyWorldVLA predicts video latents encoded by a pre-trained video VAE, while simultaneously reconstructing video frames to provide precise pixel-level grounding. During the subsequent co-fine-tuning phase, the model exclusively predicts latent features, which are fed into an action expert to generate trajectories. Extensive experiments on NAVSIM v1 and v2 benchmarks demonstrate that HyWorldVLA significantly outperforms both pixel-based and latent-based world model baselines. Notably, we present the first comprehensive qualitative and quantitative analysis of world model noise robustness in autonomous driving, establishing a new benchmark for evaluating future architectures.</p>
@@ -1100,7 +1109,10 @@
                         <span class="paper-date">2026-07-22</span>
                     </div>
                     
-                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有方法在预测机器人操作下可变形物体的动态时，要么依赖缓慢且无法泛化的逐物体材料参数优化，要么在端到端学习中缺乏物理一致性，导致外推效果差。&#10;&#10;🛠 **方法**：提出PhysCoRe模型，将可微分的物质点法（MPM）模拟器与两个前馈神经网络耦合——材料从运动（MfM）模块从视觉观测推断粒子级弹性参数，残差从动力学（RfD）模块学习并修正模拟器内部动力学偏差，同时支持在线材料识别和不确定性驱动的探索。&#10;&#10;✨ **主要贡献**：在真实可变形物体操作序列上，PhysCoRe在预测精度上优于现有基线，且其预测置信度在物体几何上形成可靠分布，为未来置信度引导的探索提供了自然信号。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Predicting how deformable objects evolve under robotic manipulation is a longstanding challenge. Existing approaches typically rely on per-object optimization to fit material parameters, which can be slow and cannot generalize, while end-to-end learned alternatives extrapolate poorly and often violate basic physical structure. We present PhysCoRe, a physics-corrected residual world model that couples a differentiable Material Point Method (MPM) simulator with two feed-forward neural networks. A material refinement module, Material from Motion (MfM), infers per-particle elasticity from visual observations, grounding the simulator in object-specific physics. A residual correction module, Residual from Dynamics (RfD), learns the discrepancy and predicts corrections to the simulator's internal dynamics, absorbing systematic biases that the analytical model cannot capture. This design also supports online material identification on novel objects. MfM adapts from limited interactions, and its predictive uncertainty steers further exploration toward the regions where its estimate is least confident. Experiments on real deformable-object manipulation sequences show that PhysCoRe outperforms state-of-the-art baselines in prediction accuracy, and that its predicted confidence forms a reliable distribution across the object's geometry, providing a natural signal for future confidence-guided exploration.</p>
@@ -1976,7 +1988,7 @@
         <footer class="footer">
             <p>👤 <strong>Hongkun Luo (罗宏昆)</strong> · <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent)">Academic Page</a> · <a href="https://github.com/luohongk" target="_blank" style="color:var(--accent)">GitHub</a></p>
             <p style="margin-top:8px">🤖 Generated automatically from <a href="https://arxiv.org" style="color:var(--accent)">arXiv</a> · <a href="https://github.com/luohongk/Embodied-AI-Daily" style="color:var(--accent)">GitHub Repo</a></p>
-            <p style="margin-top:4px">Last update: 2026-07-26 (Beijing Time)</p>
+            <p style="margin-top:4px">Last update: 2026-07-27 (Beijing Time)</p>
         </footer>
     </main>
 

@@ -784,7 +784,7 @@
         <div class="sidebar-header">
             <h1><a href="../index.html" style="background:linear-gradient(135deg,#6366f1,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">🚀 Embodied AI Daily</a></h1>
             <div class="update">by <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent);text-decoration:none;font-weight:500;">Hongkun Luo</a> (罗宏昆)</div>
-            <div class="update" style="margin-top:2px">Last update: 2026-07-26</div>
+            <div class="update" style="margin-top:2px">Last update: 2026-07-27</div>
         </div>
             <a href="Continuous-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
@@ -1049,7 +1049,10 @@
                         <span class="paper-date">2026-07-23</span>
                     </div>
                                         <span class="paper-comment">📝 8 pages, 3 figures. Accepted to the IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2026)</span>
-                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决模仿学习在接触式精密插入任务中因协变量偏移导致的失败问题，以及需要持续专家监控的部署瓶颈。&#10;&#10;🛠 **方法**：提出TER-DAgger框架，通过优化轨迹编辑学习残差策略，融合策略执行与人工修正轨迹；引入力感知失败预测机制，仅在预测与实测力不一致时触发人工干预；所有策略在笛卡尔阻抗控制框架下执行。&#10;&#10;✨ **主要贡献**：相比行为克隆、人工修正等基线方法，在仿真和真实精密插入任务中平均成功率提升超37%，有效缓解协变量偏移并实现可扩展的接触式操作部署。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Imitation learning (IL) has shown strong potential for contact-rich precision insertion tasks. However, its practical deployment is often hindered by covariate shift and the need for continuous expert monitoring to recover from failures during execution. In this paper, we propose Trajectory Editing Residual Dataset Aggregation (TER-DAgger), a scalable and force-aware human-in-the-loop imitation learning framework that mitigates covariate shift by learning residual policies through optimization-based trajectory editing. This approach smoothly fuses policy rollouts with human corrective trajectories, providing consistent and stable supervision. Second, we introduce a force-aware failure anticipation mechanism that triggers human intervention only when discrepancies arise between predicted and measured end-effector forces, significantly reducing the requirement for continuous expert monitoring. Third, all learned policies are executed within a Cartesian impedance control framework, ensuring compliant and safe behavior during contact-rich interactions. Extensive experiments in both simulation and real-world precision insertion tasks show that TER-DAgger improves the average success rate by over 37\% compared to behavior cloning, human-guided correction, retraining, and fine-tuning baselines, demonstrating its effectiveness in mitigating covariate shift and enabling scalable deployment in contact-rich manipulation.</p>
@@ -1061,7 +1064,10 @@
                         <span class="paper-date">2026-07-22</span>
                     </div>
                     
-                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：机器人学习需要密集、指令相关的反馈信号来区分任务进展，但现有方法依赖人工标注或任务特定训练，难以大规模获取。&#10;&#10;🛠 **方法**：提出TOPReward，通过探测预训练视频-语言模型（VLM）的内部token概率，而非直接生成数值，来推断指令任务是否完成，从而得到无需训练的密集奖励信号。&#10;&#10;✨ **主要贡献**：在包含130个任务和4种机器人平台的ManiRewardBench基准上，TOPReward显著优于现有无训练VLM奖励方法，与需训练的奖励模型基线性能相当，且支持成功检测和离线奖励加权行为克隆等下游应用。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>General-purpose robot learning requires dense, instruction-conditioned feedback that can distinguish meaningful task progress from stalled, failed, or partially completed behavior. Yet obtaining such feedback at scale remains difficult, since existing approaches often rely on manual progress annotations, task-specific demonstrations, or reward models trained on curated robot datasets. We introduce TOPReward, a training-free progress reward method that probes pretrained Video-Language Models (VLMs) through their internal token probabilities rather than asking them to generate numerical progress values. Given a video prefix and a language instruction, TOPReward measures the model's likelihood that the instructed task has been completed, converting latent video-language understanding into a dense reward signal without task-specific reward-model training or manually annotated progress labels. We evaluate TOPReward on ManiRewardBench, our real-world manipulation benchmark spanning 130 unique tasks and four robot platforms, as well as on Open X-Embodiment datasets. Across these settings, TOPReward substantially outperforms prior training-free VLM reward methods on open-source models and is competitive with a trained reward-model baseline on progress-estimation metrics, while requiring no reward-model training. Additional analyses show that the reward is sensitive to the specified instruction and is not explained by time index alone. Finally, TOPReward supports downstream applications including success detection and offline reward-weighted behavior cloning.</p>
@@ -2018,7 +2024,7 @@
         <footer class="footer">
             <p>👤 <strong>Hongkun Luo (罗宏昆)</strong> · <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent)">Academic Page</a> · <a href="https://github.com/luohongk" target="_blank" style="color:var(--accent)">GitHub</a></p>
             <p style="margin-top:8px">🤖 Generated automatically from <a href="https://arxiv.org" style="color:var(--accent)">arXiv</a> · <a href="https://github.com/luohongk/Embodied-AI-Daily" style="color:var(--accent)">GitHub Repo</a></p>
-            <p style="margin-top:4px">Last update: 2026-07-26 (Beijing Time)</p>
+            <p style="margin-top:4px">Last update: 2026-07-27 (Beijing Time)</p>
         </footer>
     </main>
 

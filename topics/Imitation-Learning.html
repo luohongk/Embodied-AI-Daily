@@ -784,7 +784,7 @@
         <div class="sidebar-header">
             <h1><a href="../index.html" style="background:linear-gradient(135deg,#6366f1,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">🚀 Embodied AI Daily</a></h1>
             <div class="update">by <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent);text-decoration:none;font-weight:500;">Hongkun Luo</a> (罗宏昆)</div>
-            <div class="update" style="margin-top:2px">Last update: 2026-07-26</div>
+            <div class="update" style="margin-top:2px">Last update: 2026-07-27</div>
         </div>
             <a href="Continuous-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
@@ -1034,7 +1034,10 @@
                         <span class="paper-date">2026-07-23</span>
                     </div>
                                         <span class="paper-comment">📝 Has been submitted to AAAI 2026</span>
-                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有基于模仿学习的自动驾驶规划器仅能复现高频驾驶行为，缺乏对用户个性化意图和多样化驾驶偏好的理解与适应能力。&#10;&#10;🛠 **方法**：提出RL引导的多策略框架，包含基于扩散模型的多头规划器（M-Diffusion Planner）和LLM语义理解模块，采用两阶段训练：先通过模仿学习确保各策略头安全规划，再使用约束组相对策略优化（GRPO）对齐用户偏好。&#10;&#10;✨ **主要贡献**：首次将扩散模型与强化学习结合实现个性化驾驶规划，在nuPlan基准的开放和闭环测试中达到竞争性性能，同时满足实时规划需求并有效对齐用户意图。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Despite significant progress, imitation learning-based autonomous driving planners remain largely restricted to reproducing high-frequency biased behaviors, overlooking the inherent behavioral diversity of human driving. Moreover, existing systems struggle to understand user intent from human interactions and environmental contexts. In real-world advanced deployment, motion planning must accommodate diverse, context-dependent user preferences to support heterogeneous driving services, requiring the ability to interpret human intent and adapt behavior accordingly. However, existing approaches lack such user-oriented capabilities, as they neither explicitly model user intent nor enable flexible policy adaptation. To bridge this gap, we propose an RL-guided multi-strategy framework with a diffusion-based multi-head planner(M-Diffusion Planner) integrated with LLM-based semantic understanding, enabling dynamic perception of user intent and generation of diverse, preference-aligned trajectories. To balance trajectory quality and strategy alignment, we adopt a two-stage training paradigm: first, imitation learning ensures each policy head achieves safe and high-quality planning; second, constrained Group Relative Policy Optimization (GRPO) further aligns each head with user preferences. Experiments on the nuPlan benchmark, under both open-loop and closed-loop settings, demonstrate competitive performance while meeting real-time planning requirements and effectively aligning with user intent.</p>
@@ -1046,7 +1049,10 @@
                         <span class="paper-date">2026-07-23</span>
                     </div>
                     
-                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：端到端视觉运动策略缺乏可解释性，人类难以理解或纠正模型的视觉注意力，导致在分布外（OOD）场景下性能下降。&#10;&#10;🛠 **方法**：提出GuidedAttention框架，通过从图像中预测任务相关的注意力关键点作为显式中间表示，并以此条件化扩散动作策略；用户可在初始化时检查并修正关键点，修正后的注意力由跟踪模块自动传播至整个执行过程。&#10;&#10;✨ **主要贡献**：首次将可解释且可纠正的视觉注意力引入模仿学习，显著提升机器人操作性能，尤其在位置和外观分布外条件下表现鲁棒，仿真与真实实验均验证有效性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>End-to-end visuomotor policies provide little opportunity for humans to understand or correct the policy's visual attention. We propose GuidedAttention, a visuomotor imitation learning framework that introduces interpretable and correctable visual attention as an explicit intermediate representation. Task-relevant attention keypoints are predicted from camera images and condition a diffusion-based action policy. Users can inspect and optionally correct selected keypoints once at rollout initialization, after which the corrected attention is automatically propagated throughout execution by a tracking module. Experiments in simulation and the real world demonstrate that GuidedAttention consistently improves robot manipulation performance, particularly under positional and appearance out-of-distribution (OOD) conditions.</p>
@@ -1058,7 +1064,10 @@
                         <span class="paper-date">2026-07-23</span>
                     </div>
                                         <span class="paper-comment">📝 8 pages, 3 figures. Accepted to the IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2026)</span>
-                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决模仿学习在接触式精密插入任务中因协变量偏移导致的失败问题，以及需要持续专家监控的部署瓶颈。&#10;&#10;🛠 **方法**：提出TER-DAgger框架，通过优化轨迹编辑学习残差策略，融合策略执行与人工修正轨迹；引入力感知失败预测机制，仅在预测与实测力不一致时触发人工干预；所有策略在笛卡尔阻抗控制框架下执行。&#10;&#10;✨ **主要贡献**：相比行为克隆、人工修正等基线方法，在仿真和真实精密插入任务中平均成功率提升超37%，有效缓解协变量偏移并实现可扩展的接触式操作部署。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Imitation learning (IL) has shown strong potential for contact-rich precision insertion tasks. However, its practical deployment is often hindered by covariate shift and the need for continuous expert monitoring to recover from failures during execution. In this paper, we propose Trajectory Editing Residual Dataset Aggregation (TER-DAgger), a scalable and force-aware human-in-the-loop imitation learning framework that mitigates covariate shift by learning residual policies through optimization-based trajectory editing. This approach smoothly fuses policy rollouts with human corrective trajectories, providing consistent and stable supervision. Second, we introduce a force-aware failure anticipation mechanism that triggers human intervention only when discrepancies arise between predicted and measured end-effector forces, significantly reducing the requirement for continuous expert monitoring. Third, all learned policies are executed within a Cartesian impedance control framework, ensuring compliant and safe behavior during contact-rich interactions. Extensive experiments in both simulation and real-world precision insertion tasks show that TER-DAgger improves the average success rate by over 37\% compared to behavior cloning, human-guided correction, retraining, and fine-tuning baselines, demonstrating its effectiveness in mitigating covariate shift and enabling scalable deployment in contact-rich manipulation.</p>
@@ -1070,7 +1079,10 @@
                         <span class="paper-date">2026-07-23</span>
                     </div>
                                         <span class="paper-comment">📝 Accepted to IEEE Robotics and Automation Letters (RA-L). \textcopyright 2026 IEEE</span>
-                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有视觉运动策略依赖单步观测或短时历史，难以处理需要长期记忆的非马尔可夫任务，而简单扩大上下文窗口会导致计算成本高、过拟合及分布偏移下的灾难性失败。&#10;&#10;🛠 **方法**：提出VPWEM框架，结合短期工作记忆（滑动窗口）和基于Transformer的上下文记忆压缩器，将窗口外观测递归压缩为固定数量的情景记忆嵌入，并与扩散策略联合训练，实现近恒定的每步计算与内存开销。&#10;&#10;✨ **主要贡献**：在MIKASA记忆密集型操作任务上超越扩散策略和视觉-语言-动作模型等基线超过20%，在MoMaRT移动操作基准上平均提升5%，并开源代码。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Imitation learning from human demonstrations has achieved significant success in robotic control, yet most visuomotor policies still condition on single-step observations or short-context histories, making them struggle with non-Markovian tasks that require long-term memory. Simply enlarging the context window incurs substantial computational and memory costs and encourages overfitting to spurious correlations, leading to catastrophic failures under distribution shift and violating real-time constraints in robotic systems. By contrast, humans can compress important past experiences into long-term memories and exploit them to solve tasks throughout their lifetime. In this paper, we propose VPWEM, a non-Markovian visuomotor policy equipped with working and episodic memories. VPWEM retains a sliding window of recent observation embeddings as short-term working memory, and introduces a Transformer-based contextual memory compressor that recursively converts out-of-window observations into a fixed number of episodic memory embeddings. The compressor uses self-attention over a cache of past summary embeddings and cross-attention over a cache of historical observations, and is trained jointly with the policy. We instantiate VPWEM on diffusion policies to exploit both short-term and episode-wide information for action generation with nearly constant memory and computation per step. Experiments demonstrate that VPWEM outperforms state-of-the-art baselines including diffusion policies and vision-language-action (VLA) models by more than 20\% on the memory-intensive manipulation tasks in MIKASA and achieves an average 5\% improvement on the mobile manipulation benchmark MoMaRT. Code is available at https://github.com/HarryLui98/code_vpwem.</p>
@@ -2012,7 +2024,7 @@
         <footer class="footer">
             <p>👤 <strong>Hongkun Luo (罗宏昆)</strong> · <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent)">Academic Page</a> · <a href="https://github.com/luohongk" target="_blank" style="color:var(--accent)">GitHub</a></p>
             <p style="margin-top:8px">🤖 Generated automatically from <a href="https://arxiv.org" style="color:var(--accent)">arXiv</a> · <a href="https://github.com/luohongk/Embodied-AI-Daily" style="color:var(--accent)">GitHub Repo</a></p>
-            <p style="margin-top:4px">Last update: 2026-07-26 (Beijing Time)</p>
+            <p style="margin-top:4px">Last update: 2026-07-27 (Beijing Time)</p>
         </footer>
     </main>
 

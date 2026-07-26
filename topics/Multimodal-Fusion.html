@@ -784,7 +784,7 @@
         <div class="sidebar-header">
             <h1><a href="../index.html" style="background:linear-gradient(135deg,#6366f1,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">🚀 Embodied AI Daily</a></h1>
             <div class="update">by <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent);text-decoration:none;font-weight:500;">Hongkun Luo</a> (罗宏昆)</div>
-            <div class="update" style="margin-top:2px">Last update: 2026-07-26</div>
+            <div class="update" style="margin-top:2px">Last update: 2026-07-27</div>
         </div>
             <a href="Continuous-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
@@ -1034,7 +1034,10 @@
                         <span class="paper-date">2026-07-23</span>
                     </div>
                                         <span class="paper-comment">📝 10 pages, 3 figures, 6 tables. Accepted for publication at IEEE International Joint Conference on Biometrics (IJCB), 2026</span>
-                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：传统人脸识别依赖静态外观特征，在表情变化、遮挡或光照不佳的非受控环境下性能下降，需要挖掘音视频动态表达中隐含的身份信息。&#10;&#10;🛠 **方法**：提出质量感知自适应融合（QAAF）方法，通过可学习的软门控和质量相关丢弃机制，动态估计每个样本、每种模态的可靠性并调整其贡献，以多模态效价-唤醒（VA）估计作为预训练任务来学习鲁棒表征。&#10;&#10;✨ **主要贡献**：在Aff-wild2上VA估计的CCC达0.472，优于基线；缺失单模态时性能仅下降7.5-34.4%；VA训练特征在AFEW-VA和YTF上超越其他软生物特征方法，与ArcFace融合后EER进一步降低，纠正了68.2%的误接受。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Conventional face recognition relies on static appearance cues and degrades in unconstrained settings with expression variation, occlusion, and poor lighting. We hypothesize that audiovisual expression dynamics carry identity-discriminative information complementary to static appearance, and that extracting this signal requires multimodal representations robust to the variable input quality of in-the-wild video. To learn such representations, we cast multimodal valence-arousal (VA) estimation as a pretext task and propose Quality-Aware Adaptive Fusion (QAAF), which estimates per-sample, per-modality reliability and adapts each modality's contribution through learned soft gating and a quality-dependent dropout. For the problem of VA estimation, QAAF achieves an average Concordance Correlation Coefficient (CCC) of 0.472 via late fusion ensembling on Aff-wild2, improving over a baseline ensemble under the same setting (0.415) as well as a single-backbone baseline (0.288). Furthermore, the proposed QAAF demonstrates greater resilience to unavailable modalities, with only a 7.5-34.4% relative decrease in CCC when one modality is missing. We then probe whether these VA-trained features encode identity without identity-specific training. On AFEW-VA (67 actors) and YTF (1,595 subjects), VA-trained backbone features rank first among evaluated soft biometric methods, and score-level fusion with ArcFace lowers EER on both datasets (0.022 to 0.021 on AFEW-VA, 0.106 to 0.104 on YTF), correcting 68.2% of ArcFace's false accepts on AFEW-VA. These findings establish multimodal VA estimation as a soft biometric modality complementary to conventional face recognition.</p>
@@ -1046,7 +1049,10 @@
                         <span class="paper-date">2026-07-23</span>
                     </div>
                     
-                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：传统开颅手术依赖医生经验，易因疲劳或术中误差导致硬脑膜损伤，而现有机器人系统仅依赖术前影像，无法应对术中配准误差或组织变形。&#10;&#10;🛠 **方法**：提出仿生闭环框架，采用自适应双轮廓融合算法生成贴合颅骨几何的轨迹；结合多模态两阶段交叉注意力网络（CMA-TCN-Transformer）与自适应贝叶斯滤波器，融合力与声学信号实现突破检测；并利用原位投影策略动态调整轨迹补偿深度偏差。&#10;&#10;✨ **主要贡献**：在牛肋骨实验中实现97%的突破预测准确率、0.048±0.097秒检测延迟及0.29mm最大超调量；所有离体颅骨实验均成功完成且无硬脑膜损伤，验证了该闭环控制框架的安全性与自主性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Manual craniotomy is a high-risk, skill-dependent procedure associated with surgeon fatigue and potential dural injury. While robotic approaches have improved safety, existing open-loop systems rely solely on preoperative images and cannot compensate for intraoperative registration errors or tissue deformation. To address this, we propose a human-inspired closed-loop robotic craniotomy framework that intelligently integrates preoperative planning with intraoperative execution. An adaptive dual-contour fusion algorithm is employed to generate trajectories that conform to complex cranial geometries while maintaining a consistent tool-bone relative pose. For intraoperative perception, a multimodal two-stage cross-modal attention block (CMA)-temporal convolutional network (TCN)-Transformer network combined with an adaptive Bayesian filter fuses force and acoustic signals to achieve robust breakthrough detection under varying bone conditions. Upon detection, an in-situ projection-based trajectory adjustment strategy dynamically compensates for depth deviations, enabling safe residual bone isolation. Experiments on bovine ribs show a breakthrough prediction accuracy of 97%, a detection latency of 0.048 +/- 0.097 s, and a maximum overshoot of 0.29 mm. All four ex vivo cranial experiments were successfully completed without dural injury. These results demonstrate that the proposed cybernetic framework enables safe and autonomous craniotomy with highly effective closed-loop control.</p>
@@ -1058,7 +1064,10 @@
                         <span class="paper-date">2026-07-23</span>
                     </div>
                                         <span class="paper-comment">📝 accepted to IJCB2026</span>
-                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有统一人脸防伪（FAS）模型需同时检测物理和数字攻击，但依赖复杂的多模态融合和外部文本编码器，效率较低。&#10;&#10;🛠 **方法**：提出轻量级纯视觉框架DINO-VPT，通过提示路由网络（PRN）动态注入基于输入特征的层次化视觉提示，无需多模态融合即可解耦不同伪造痕迹。&#10;&#10;✨ **主要贡献**：在UniAttackData基准上，DINO-VPT以纯视觉架构超越基于视觉-语言模型（VLM）的最优方法，证明无需多模态监督即可实现统一FAS的顶尖性能。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>With the increasing diversity of spoofing attacks, there is a growing demand for unified Face Anti-Spoofing (FAS) models capable of detecting both physical and digital threats. While existing Vision-Language Models (VLMs) demonstrate high generalization in this context, they heavily rely on complex multimodal fusion and external text encoders. In this paper, we propose DINO-VPT, a lightweight, vision-only framework leveraging hierarchical visual prompt tuning. By dynamically injecting prompts conditioned on input features via a Prompt Routing Network (PRN), our method effectively disentangles diverse spoofing artifacts without requiring multimodal fusion. Evaluations on the UniAttackData benchmark demonstrate that DINO-VPT achieves higher accuracy than state-of-the-art VLM-based methods. Our results indicate that a properly structured vision-only architecture can achieve state-of-the-art performance in unified FAS without the need for multimodal supervision.</p>
@@ -1085,7 +1094,10 @@
                         <span class="paper-date">2026-07-22</span>
                     </div>
                     
-                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：针对虚拟现实头戴设备中非约束性采集（如离轴注视、不均匀光照、镜面反射）导致的虹膜识别性能下降问题，评估现有ISO/IEC质量指标的适用性并探索改进方案。&#10;&#10;🛠 **方法**：在VRBiom数据集上分析ISO/IEC 29794-6虹膜质量指标的局限性；利用生成模型处理数据特异性挑战（如光照校正、反射消除）；分别进行单模态（虹膜、眼周）识别与多模态分数级融合（虹膜+眼周）。&#10;&#10;✨ **主要贡献**：发现部分质量指标（如边缘充分性）在VR数据中失效；图像预处理主要提升眼周识别性能；多模态融合相比单模态虹膜识别将等错误率降低约11%。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Virtual reality (VR) headsets (e.g., Meta Quest, Apple Vision Pro) provide a seamless user experience due to their fast, frictionless interaction with the physical world in a simulated environment. User authentication relies on biometric cues such as iris in such headsets. However, traditional iris recognition protocols may not be adequate in cases of unconstrained acquisition, which is typical of VR-based data. In this work, we examine three crucial aspects: (1) evaluating ISO/IEC 29794-6 iris quality metrics on VRBiom dataset and analyzing their limitations, (2) addressing data-specific challenges such as off-axis gaze, non-uniform illumination, and specular reflection using generative models, and (3) performing unimodal (iris, periocular) recognition and multimodal score-level fusion (iris + periocular). We observe that some metrics (e.g., margin adequacy) fail on VR-acquired data; whereas, image adjustments primarily benefit periocular recognition, and multimodal fusion lowers EER by ~11% over unimodal iris recognition performance. We will release the evaluation scripts upon acceptance for reproducibility.</p>
@@ -1097,7 +1109,10 @@
                         <span class="paper-date">2026-07-22</span>
                     </div>
                                         <span class="paper-comment">📝 Accepted for publication in the proceedings of the International Conference on Pattern Recognition (ICPR 2026)</span>
-                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：多模态融合模型在噪声或无效数据下性能下降，且缺乏动态评估数据质量和提供可信置信度的机制，限制了其在安全关键场景（如医疗预后）中的应用。&#10;&#10;🛠 **方法**：提出自适应置信加权扩展（ACE）框架，通过从模态内相关性生成新互补模态来增强多模态空间，并采用双层置信机制——融合前根据可靠性自适应重加权模态，融合后估计全局信任分数。&#10;&#10;✨ **主要贡献**：在四个多组学数据集（BRCA、KIPAN、LGG、ROSMAP）上，ACE在分类性能和置信度校准上显著优于现有方法，提供了更稳定鲁棒的数据融合方式，促进了多模态学习在高风险问题中的应用。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Multimodal learning is a robust approach to improve predictive performance in applications such as medical prognosis. However, the clinical applicability of models that use multimodal learning is hampered by their poor performance under noisy or uninformative data streams. Present fusion approaches often lack robust mechanisms for the dynamic assessment of data quality and for the provision of a trustable confidence score on the final prediction. This dissuades their deployment in safety-critical settings. To address these limitations, we introduce Adaptive Confidence-weighted Expansion (ACE), a novel framework to enhance the trustworthiness of multimodal fusion models. ACE first enhances the multimodal space by generating new, complementary modalities from intra-modality correlations. It then employs a dual-level confidence mechanism that (1) adaptively reweighs all modalities by their reliability before fusion and (2) estimates a global trust score over the fused, final decision. To evaluate ACE, we used four challenging multi-omics datasets (BRCA, KIPAN, LGG, and ROSMAP). ACE significantly outperforms existing state-of-the-art algorithms in both classification performance and confidence calibration. Our framework provides a more stable and robust data fusion method that facilitates the use of multimodal learning in addressing high-stakes problems.</p>
@@ -1937,7 +1952,7 @@
         <footer class="footer">
             <p>👤 <strong>Hongkun Luo (罗宏昆)</strong> · <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent)">Academic Page</a> · <a href="https://github.com/luohongk" target="_blank" style="color:var(--accent)">GitHub</a></p>
             <p style="margin-top:8px">🤖 Generated automatically from <a href="https://arxiv.org" style="color:var(--accent)">arXiv</a> · <a href="https://github.com/luohongk/Embodied-AI-Daily" style="color:var(--accent)">GitHub Repo</a></p>
-            <p style="margin-top:4px">Last update: 2026-07-26 (Beijing Time)</p>
+            <p style="margin-top:4px">Last update: 2026-07-27 (Beijing Time)</p>
         </footer>
     </main>
 

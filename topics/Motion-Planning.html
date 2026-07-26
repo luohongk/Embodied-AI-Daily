@@ -784,7 +784,7 @@
         <div class="sidebar-header">
             <h1><a href="../index.html" style="background:linear-gradient(135deg,#6366f1,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">🚀 Embodied AI Daily</a></h1>
             <div class="update">by <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent);text-decoration:none;font-weight:500;">Hongkun Luo</a> (罗宏昆)</div>
-            <div class="update" style="margin-top:2px">Last update: 2026-07-26</div>
+            <div class="update" style="margin-top:2px">Last update: 2026-07-27</div>
         </div>
             <a href="Continuous-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
@@ -1034,7 +1034,10 @@
                         <span class="paper-date">2026-07-23</span>
                     </div>
                                         <span class="paper-comment">📝 Has been submitted to AAAI 2026</span>
-                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有基于模仿学习的自动驾驶规划器仅能复现高频驾驶行为，缺乏对用户个性化意图和多样化驾驶偏好的理解与适应能力。&#10;&#10;🛠 **方法**：提出RL引导的多策略框架，包含基于扩散模型的多头规划器（M-Diffusion Planner）和LLM语义理解模块，采用两阶段训练：先通过模仿学习确保各策略头安全规划，再使用约束组相对策略优化（GRPO）对齐用户偏好。&#10;&#10;✨ **主要贡献**：首次将扩散模型与强化学习结合实现个性化驾驶规划，在nuPlan基准的开放和闭环测试中达到竞争性性能，同时满足实时规划需求并有效对齐用户意图。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Despite significant progress, imitation learning-based autonomous driving planners remain largely restricted to reproducing high-frequency biased behaviors, overlooking the inherent behavioral diversity of human driving. Moreover, existing systems struggle to understand user intent from human interactions and environmental contexts. In real-world advanced deployment, motion planning must accommodate diverse, context-dependent user preferences to support heterogeneous driving services, requiring the ability to interpret human intent and adapt behavior accordingly. However, existing approaches lack such user-oriented capabilities, as they neither explicitly model user intent nor enable flexible policy adaptation. To bridge this gap, we propose an RL-guided multi-strategy framework with a diffusion-based multi-head planner(M-Diffusion Planner) integrated with LLM-based semantic understanding, enabling dynamic perception of user intent and generation of diverse, preference-aligned trajectories. To balance trajectory quality and strategy alignment, we adopt a two-stage training paradigm: first, imitation learning ensures each policy head achieves safe and high-quality planning; second, constrained Group Relative Policy Optimization (GRPO) further aligns each head with user preferences. Experiments on the nuPlan benchmark, under both open-loop and closed-loop settings, demonstrate competitive performance while meeting real-time planning requirements and effectively aligning with user intent.</p>
@@ -1046,7 +1049,10 @@
                         <span class="paper-date">2026-07-23</span>
                     </div>
                                         <span class="paper-comment">📝 IROS 2026</span>
-                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决双臂机器人在物体重定向任务中，因碰撞、运动学约束或初始抓取姿态不佳导致无法直接放置的问题，需在多重竞争目标下联合优化抓取、交接、重抓取和运动规划。&#10;&#10;🛠 **方法**：提出BiCompoDiff框架，结合预训练的抓取扩散模型与双臂规划能量模型（EBMs），在逆向扩散过程中注入梯度引导，以强制执行碰撞避免、轨迹平滑（通过可微逆运动学）、交接可行性和重抓取安全性，并采用退火MCMC采样优化复合能量景观中的抓取姿态。&#10;&#10;✨ **主要贡献**：在多样化模拟家居重定向任务中，BiCompoDiff相比强基线方法成功率提升超20%，轨迹平滑度（以关节位移衡量）提升高达37%；真实世界验证表明其具备有效的仿真到现实迁移能力及鲁棒性能。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Bimanual object reorientation - picking an object, handing it over between two arms, and placing it in a desired target pose - is valuable when direct placement from the initial grasp is infeasible due to collisions, kinematic constraints, or poor final orientation. However, achieving this under multiple competing objectives remains challenging. We introduce BiCompoDiff, a compositional diffusion and energy-based framework that jointly optimizes grasp selection, handover, regrasp, and motion planning under multiple constraints. By combining a pretrained grasp diffusion model with bimanual planning energy-based models (EBMs), our method injects gradient guidance during reverse diffusion to enforce collision avoidance, trajectory smoothness (via differentiable inverse kinematics), handover feasibility, and regrasp safety. Annealed MCMC sampling further refines grasp poses over the composite energy landscape. Experiments across diverse simulated household reorientation tasks demonstrate that BiCompoDiff achieves over 20% higher success rates and up to 37% smoother trajectories (measured by joint displacement) compared to strong sampling-based baselines. Real-world validation confirms effective sim-to-real transfer and robust performance on challenging scenes.</p>
@@ -2006,7 +2012,7 @@
         <footer class="footer">
             <p>👤 <strong>Hongkun Luo (罗宏昆)</strong> · <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent)">Academic Page</a> · <a href="https://github.com/luohongk" target="_blank" style="color:var(--accent)">GitHub</a></p>
             <p style="margin-top:8px">🤖 Generated automatically from <a href="https://arxiv.org" style="color:var(--accent)">arXiv</a> · <a href="https://github.com/luohongk/Embodied-AI-Daily" style="color:var(--accent)">GitHub Repo</a></p>
-            <p style="margin-top:4px">Last update: 2026-07-26 (Beijing Time)</p>
+            <p style="margin-top:4px">Last update: 2026-07-27 (Beijing Time)</p>
         </footer>
     </main>
 
