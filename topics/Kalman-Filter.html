@@ -590,7 +590,7 @@
                 <a href="World-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">World Model</span>
-                    <span class="nav-count">77</span>
+                    <span class="nav-count">79</span>
                 </a>
                 <a href="3D-Foundation-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
@@ -690,7 +690,7 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">69</span>
+                    <span class="nav-count">67</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
@@ -784,7 +784,7 @@
         <div class="sidebar-header">
             <h1><a href="../index.html" style="background:linear-gradient(135deg,#6366f1,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">🚀 Embodied AI Daily</a></h1>
             <div class="update">by <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent);text-decoration:none;font-weight:500;">Hongkun Luo</a> (罗宏昆)</div>
-            <div class="update" style="margin-top:2px">Last update: 2026-07-27</div>
+            <div class="update" style="margin-top:2px">Last update: 2026-07-28</div>
         </div>
             <a href="Continuous-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
@@ -809,7 +809,7 @@
             <a href="World-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">World Model</span>
-                <span class="nav-count">77</span>
+                <span class="nav-count">79</span>
             </a>
             <a href="3D-Foundation-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
@@ -909,7 +909,7 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">69</span>
+                <span class="nav-count">67</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
@@ -1028,6 +1028,36 @@
                 <span class="topic-count">52 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2604.02441v2" target="_blank" class="paper-title">Adaptive Learned State Estimation based on KalmanNet</a>
+                        <span class="paper-date">2026-07-24</span>
+                    </div>
+                                        <span class="paper-comment">📝 Pending release approval from company</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有基于学习的混合状态估计器（如KalmanNet）在模拟数据上表现良好，但在真实汽车多传感器数据（雷达、激光雷达、摄像头）中性能不足，难以适应复杂交通场景和传感器噪声特性。&#10;&#10;🛠 **方法**：提出自适应多模态KalmanNet（AM-KNet），为每个传感器设计独立的测量模块以学习其噪声特性；引入超网络通过上下文调制（目标类型、运动状态、相对位姿）实现滤波器自适应；并基于Joseph形式构建协方差估计分支，通过负对数似然损失监督估计误差和新息。&#10;&#10;✨ **主要贡献**：在nuScenes和View-of-Delft数据集上，AM-KNet相比基础KalmanNet显著提升了估计精度和跟踪稳定性，缩小了与经典贝叶斯滤波器在真实汽车数据上的性能差距。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Hybrid state estimators that combine model-based Kalman filtering with learned components have shown promise on simulated data, yet their performance on real-world automotive data remains insufficient. In this work we present Adaptive Multi-modal KalmanNet (AM-KNet), an advancement of KalmanNet tailored to the multi-sensor autonomous driving setting. AM-KNet introduces sensor-specific measurement modules that enable the network to learn the distinct noise characteristics of radar, lidar, and camera independently. A hypernetwork with context modulation conditions the filter on target type, motion state, and relative pose, allowing adaptation to diverse traffic scenarios. We further incorporate a covariance estimation branch based on the Josephs form and supervise it through negative log-likelihood losses on both the estimation error and the innovation. A comprehensive, component-wise loss function encodes physical priors on sensor reliability, target class, motion state, and measurement flow consistency. AM-KNet is trained and evaluated on the nuScenes and View-of-Delft datasets. The results demonstrate improved estimation accuracy and tracking stability compared to the base KalmanNet, narrowing the performance gap with classical Bayesian filters on real-world automotive data.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.22030v1" target="_blank" class="paper-title">Impedance Control of Ship-Borne Manipulators via Optimization-based Task-Space Inverse Dynamics</a>
+                        <span class="paper-date">2026-07-24</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：船载机械臂在海洋环境中受随机波浪引起的基座运动干扰，导致轨迹跟踪精度下降，并增加接触操作的安全风险。&#10;&#10;🛠 **方法**：提出基于优化的任务空间逆动力学（TSID）控制框架，通过二次规划求解，显式补偿基座运动的动态耦合；同时设计误差状态卡尔曼滤波器（ESKF），融合惯性测量与末端执行器位姿反馈，实现精确的前馈补偿。&#10;&#10;✨ **主要贡献**：在7自由度机械臂与6自由度Stewart平台实验中，末端位置跟踪误差较最优基线降低25.7%以上；在基座运动下实现1毫米间隙的动态销孔插入，成功率提升且平均接触力降低45%，验证了精准且柔顺的接触操作能力。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Ship-borne manipulators operating in maritime environments are subject to stochastic wave-induced base motions that introduce kinematic disturbances and dynamic coupling, degrading trajectory tracking accuracy and complicating safe, contact-rich manipulation. This paper proposes a torque-level optimization-based control framework that integrates high-precision trajectory tracking with task-space impedance for ship-borne manipulators. The controller is formulated using task-space inverse dynamics (TSID) and solved via quadratic programming to explicitly compensate for the dynamic coupling introduced by base motion. To enable accurate feedforward compensation, an error-state Kalman filter (ESKF) is developed to estimate the base state by fusing inertial measurements with end-effector pose feedback. The framework is validated in simulation and real-world experiments using a 7-DOF manipulator mounted on a 6-DOF Stewart platform. The proposed method reduces real-world end-effector position tracking error by over 25.7% compared with the best baseline. Furthermore, the controller enables dynamic peg-in-hole insertion with 1~mm clearance under base motion, increasing the success rate while reducing average contact forces by 45%, demonstrating precise and compliant manipulation in contact-rich environments.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2607.20010v2" target="_blank" class="paper-title">Generalized Kalman filter based temporal difference reinforcement learning</a>
@@ -1154,10 +1184,7 @@
                         <span class="paper-date">2026-07-18</span>
                     </div>
                                         <span class="paper-comment">📝 Accepted for publication at 2026 International Conference on Intelligent Transportation Systems (ITSC)</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决卡车-半挂车组合在自动驾驶和高级驾驶辅助系统中，无需手动初始化、额外传感器或挂车先验知识，即可准确估计铰接角的问题。&#10;&#10;🛠 **方法**：提出多种基于学习的模型，从视觉和运动学输入直接估计铰接角，并与扩展卡尔曼滤波框架中的运动学模型集成，同时采用基于不确定性量化的自适应加权方案处理视觉测量。&#10;&#10;✨ **主要贡献**：通过大量真实世界实验验证，该方法在不同挂车类型、颜色和光照条件下展现出鲁棒性和泛化能力，实现了准确可靠的铰接角估计，同时降低了部署要求，具有实际应用优势。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Accurate articulation angle estimation of trucks with trailers is critical for autonomous driving and advanced driver assistance system (ADAS). Existing methods either require manual initialization, additional sensors, or prior knowledge and signals from trailers, or they lack real-world validation, limiting practical deployment. This paper presents multiple learning-based models to directly estimate articulation angles from visual and kinematic inputs, eliminating the need for dedicated driving maneuvers for initialization, bounding box annotations, trailer-mounted sensor signals, or prior knowledge of trailer parameters. Two learning-based models are integrated with a kinematic model within an extended Kalman filter (EKF) framework, and an adaptive weighting scheme based on uncertainty quantification is applied for measurements involving visual input. Extensive real-world experiments with different trailer types demonstrate the approaches' robustness and generalization under out-of-domain conditions, including new trailers, varying colors, and lighting conditions. Results show that the hybrid method achieves accurate and reliable articulation angle estimation while maintaining reduced implementation requirements and practical deployment advantages.</p>
@@ -1169,10 +1196,7 @@
                         <span class="paper-date">2026-07-17</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：工业自主移动机器人（AMR）的UWB定位在实际部署中面临两个难题：静态锚点校准耗时且易出错，以及UWB与车载传感器的融合需要精心设计以保证鲁棒性。&#10;&#10;🛠 **方法**：提出端到端流水线，包含自动锚点校准（估计锚点位置和距离偏差）和基于偏差感知扩展卡尔曼滤波的多传感器融合（结合UWB与本体感知），并针对地面车辆运动进行优化。&#10;&#10;✨ **主要贡献**：在仓库环境中实现高精度室内外定位，相比先前方法一致性显著提升；在独立叉车数据集上验证了跨平台迁移性；在视距受限和锚点稀疏场景下仍有效，大幅减少人工校准工作量，并公开了仓库数据集。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Ultra-Wideband (UWB) ranging has become a viable option for industrial Autonomous Mobile Robot (AMR) localization due to improved accuracy and low cost. However, real-world deployments remain limited by two recurring challenges: calibrating static anchors can be time-consuming and error-prone, and integrating UWB with existing onboard sensors requires careful design to ensure robust and consistent pose estimation. Addressing these challenges, this paper presents an end-to-end pipeline that combines automatic anchor calibration with a generic multi-sensor estimator tailored to surface-bound vehicle motion. It targets existing AMR stacks in scenarios where robot pose priors are available for initialization. The calibration stage estimates anchor positions and range biases, while the localization stage fuses UWB with proprioceptive sensing in a bias-aware Extended Kalman Filter to improve consistency without extensive parameter tuning. Experiments on a commercial logistics AMR in a warehouse setting demonstrate accurate positioning indoors and across outdoor transitions, with improved consistency compared to an earlier estimator formulation. Evaluation on an independent forklift dataset further indicates transferability to other platforms. The method remains effective in test cases with limited line-of-sight and sparse anchor coverage. These results show that UWB localization can be deployed with substantially reduced manual effort while preserving the accuracy required for industrial AMRs. The collected warehouse dataset is made publicly available.</p>
@@ -1658,37 +1682,13 @@
                         <p>Thermal imaging is resilient to adverse conditions, such as intense illumination, low-light operation, and fog, and can therefore mitigate odometry degradation when visible-spectrum imagery becomes unreliable. Nevertheless, most thermal cameras employ automatic gain control (AGC), and thermal images often present low global contrast despite containing informative edge structures. These characteristics undermine brightness constancy and cause conventional optical flow tracking-based odometry pipelines that fundamentally rely on the brightness constancy assumption across consecutive frames. To address these issues, we propose a general LiDAR-Inertial-Thermal SLAM system that accommodates both visible-light and thermal cameras. PL-LIT combines an online photometric calibration module with a deep neural network for point-line feature extraction, enabling more stable and repeatable thermal tracking. For state estimation, we design a tightly coupled LiDAR-Inertial-Thermal formulation within an Error-State Iterated Kalman Filter (ESIKF). We further introduce a line-feature constraint scheme ensuring the reliability of geometric constraints across varying thermal appearances. In addition, PL-LIT builds a probabilistic thermal-intensity voxel map, which supports real-time thermal anomaly detection. Extensive experiments demonstrate that PL-LIT exhibits generality and robustness in visible-light environments, achieves state-of-the-art performance on long-range thermal infrared datasets, and provides practical safety inspection functionality based on thermographic mapping.</p>
                     </details>
                 </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.28475v1" target="_blank" class="paper-title">Improvement of Robot's Simultaneous Localization and Mapping Using an Effective Transformation to Achieve Linear Model</a>
-                        <span class="paper-date">2026-06-26</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Nowadays mobile robots have wide engineering applications. Simultaneous localization and mapping (SLAM) is an important task of these robots. The major and common algorithms used for this task are based on extended Kalman filter (EKF). One of the main problems in EKF-based SLAM is its divergence. The nonlinearity of motion and observation models and linearization error are the main reasons for the divergence. There have been some efforts to address this problem with limited success. In this paper, by applying a simple compass and using an effective transformation, we transform the non-linear state space model into a linear model. Then, by applying the original KF to this model, we reach a new method, which is called LMKF SLAM. We show that the LMKF SLAM is significantly superior to the state-of-the-art methods, especially EKF-based SLAMs, both in accuracy, convergence, and computational complexity. The proposed method is also more stable with respect to the uncertainty of sensors values and changes in system parameters. Experimental results verify these points.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.27811v1" target="_blank" class="paper-title">LXD-SLAM: LiDAR+X Dense SLAM with $\sum_{i=0}^{5}C_5^i$ Configurable Sensor Combinations</a>
-                        <span class="paper-date">2026-06-26</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Simultaneous Localization and Mapping (SLAM) is essential for autonomous systems, yet achieving reliable, globally consistent pose estimation and dense mapping in complex environments remains challenging due to geometric degeneracy and sensor drift. While multi-sensor fusion addresses these issues, existing systems often lack the modularity to adapt to diverse platforms and rely on mathematically inconsistent fusion or suboptimal map representations. To address these limitations, we propose LXD-SLAM (LiDAR+X Dense SLAM), a highly versatile and unified multi-sensor fusion framework. Centered around 3D LiDAR, our system allows for the plug-and-play integration of LiDAR, Camera, IMU, Wheel Encoder, and GNSS, supporting up to 32 distinct sensor combinations. We employ a mathematically unified Iterative Error-Sate Kalman Filter with an adaptive hierarchical prediction strategy and an update step that minimizes point-to-mesh distances and visual reprojection errors. To support this, the environment is modeled using continuous multi-layered Gaussian Process (GP) sub-meshes, which enables efficient ray-to-mesh depth recovery for visual features. For global consistency, we introduce an Extended Scan Context (ESC) descriptor derived from the GP sub-meshes alongside a Bidirectional PnP optimization for robust multi-modal loop closure within a hybrid pose graph. Extensive evaluations on public datasets and real-world experiments demonstrate that LXD-SLAM matches or exceeds state-of-the-art specialized odometry solutions across various configurations while generating high-fidelity, globally consistent dense meshes in real-time. The relevant codes and data will be made available at https://github.com/peterWon/LXD-SLAM upon publication.</p>
-                    </details>
-                </div>
             </div>
         </section>
 
         <footer class="footer">
             <p>👤 <strong>Hongkun Luo (罗宏昆)</strong> · <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent)">Academic Page</a> · <a href="https://github.com/luohongk" target="_blank" style="color:var(--accent)">GitHub</a></p>
             <p style="margin-top:8px">🤖 Generated automatically from <a href="https://arxiv.org" style="color:var(--accent)">arXiv</a> · <a href="https://github.com/luohongk/Embodied-AI-Daily" style="color:var(--accent)">GitHub Repo</a></p>
-            <p style="margin-top:4px">Last update: 2026-07-27 (Beijing Time)</p>
+            <p style="margin-top:4px">Last update: 2026-07-28 (Beijing Time)</p>
         </footer>
     </main>
 

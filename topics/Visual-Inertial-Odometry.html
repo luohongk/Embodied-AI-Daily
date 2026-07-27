@@ -590,7 +590,7 @@
                 <a href="World-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">World Model</span>
-                    <span class="nav-count">77</span>
+                    <span class="nav-count">79</span>
                 </a>
                 <a href="3D-Foundation-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
@@ -690,7 +690,7 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">69</span>
+                    <span class="nav-count">67</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
@@ -784,7 +784,7 @@
         <div class="sidebar-header">
             <h1><a href="../index.html" style="background:linear-gradient(135deg,#6366f1,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">🚀 Embodied AI Daily</a></h1>
             <div class="update">by <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent);text-decoration:none;font-weight:500;">Hongkun Luo</a> (罗宏昆)</div>
-            <div class="update" style="margin-top:2px">Last update: 2026-07-27</div>
+            <div class="update" style="margin-top:2px">Last update: 2026-07-28</div>
         </div>
             <a href="Continuous-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
@@ -809,7 +809,7 @@
             <a href="World-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">World Model</span>
-                <span class="nav-count">77</span>
+                <span class="nav-count">79</span>
             </a>
             <a href="3D-Foundation-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
@@ -909,7 +909,7 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">69</span>
+                <span class="nav-count">67</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
@@ -1028,6 +1028,21 @@
                 <span class="topic-count">79 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.22123v1" target="_blank" class="paper-title">DB-VIO: Dual-Branch Visual Inertial Odometry with Enhanced Visual-Inertial Representation</a>
+                        <span class="paper-date">2026-07-24</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有学习型视觉惯性里程计（VIO）方法使用统一的视觉-惯性表示和单一时序模型，难以捕捉旋转与平移的异质动态，且单目视觉缺乏几何结构、原始惯性编码隐含旋转运动学信息，导致旋转相关特征弱化。&#10;&#10;🛠 **方法**：提出DB-VIO双分支框架，通过引入深度线索增强单目视觉感知，注入显式积分姿态先验强化旋转感知的惯性表示，并将位姿估计解耦为独立的旋转分支和平移分支，分别进行运动特定时序建模。&#10;&#10;✨ **主要贡献**：在KITTI和EuRoC基准上分别提升基线20%和33%，尤其在EuRoC敏捷运动场景中旋转指标提升65.7%，验证了跨平台和运动场景的有效性与泛化性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Visual inertial odometry (VIO) is essential for accurate 6-DoF motion estimation in mobile robotic systems. Recent learning-based VIO methods have shown promising progress, but they often rely on unified visual--inertial representations and a single temporal model for full-pose estimation, limiting their ability to capture the heterogeneous dynamics of rotation and translation. Moreover, monocular visual features often lack explicit geometric structure, while raw inertial encoding leaves the underlying rotational kinematics implicit, weakening the rotation-related cues in IMU features. To address these issues, we propose DB-VIO, a dual-branch visual inertial odometry framework with enhanced visual--inertial representation. DB-VIO incorporates depth cues to improve monocular visual perception, injects an explicit integrated-attitude prior to strengthen rotation-aware inertial representation, and decouples pose estimation into dedicated rotational and translational branches for motion-specific temporal modeling. Experiments on autonomous driving and aerial robot benchmarks show that DB-VIO achieves state-of-the-art performance, improving the corresponding baselines by 20\% on KITTI and 33\% on EuRoC. Notably, under the more agile motion patterns of EuRoC, DB-VIO improves the rotational metric by 65.7\% over prior methods. These results demonstrate the effectiveness and generalization of DB-VIO across different platforms and motion scenarios.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2607.20232v1" target="_blank" class="paper-title">DINS-IO: Learned Inertial Odometry via Differentiable INS Consistency</a>
@@ -1169,10 +1184,7 @@
                         <span class="paper-date">2026-06-29</span>
                     </div>
                                         <span class="paper-comment">📝 10 pages, 7 figures</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在GNSS信号缺失的沿海环境中，无人水面艇（USV）无法远距离发现目标并保持全局参考导航。&#10;&#10;🛠 **方法**：提出AUSLUN系统，利用固定悬停的无人机（UAV）通过视觉惯性里程计（VIO）自定位，作为远程感知与导航锚点；采用多边形感知环形吊舱扫描、模态感知方位-距离定位、目标相对USV引导及视觉丢失恢复三个耦合模块，并通过门控递归估计器融合激光测距（非合作目标）与数据链测距（合作USV）。&#10;&#10;✨ **主要贡献**：自适应偏航边界扫描相比固定扇区扫描减少时间与冗余覆盖；门控递归估计器在定位精度上优于非递归基线方法；完整验证了从搜索到导航的流程，包括故意触发的视觉丢失恢复，证明了固定悬停无人机辅助USV在GNSS缺失环境中接近静止目标的可行性与操作边界。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Global navigation satellite system (GNSS) denial can prevent an unmanned surface vehicle (USV) from both finding a distant vessel and maintaining a globally referenced approach. This paper presents AUSLUN (Automatic UAV Search, Localization, and USV Navigation), a fixed-hover aerial-surface system that uses a coastal unmanned aerial vehicle (UAV), which estimates its own pose through visual-inertial odometry (VIO), as a long-range sensing and navigation anchor. The central design shifts sensing motion from UAV translation to a zoom pod and closes the loop through three coupled elements: polygon-aware annular pod scanning, modality-aware bearing-range localization, and target-relative USV guidance with visual-loss recovery. The same gated recursive estimator uses laser range for the non-cooperative target and datalink range for the cooperative USV. Search-planning simulations show that the adaptive yaw bounds reduce scan time and redundant coverage relative to a matched fixed-sector scan, and GPS-referenced field data show that the gated recursive estimator outperforms non-recursive baselines in localization accuracy. An integrated maritime mission further demonstrates the complete search-to-navigation sequence, including a deliberately triggered visual-loss recovery. These results establish the feasibility and operating boundary of fixed-hover UAV assistance for stationary-target approach in coastal GNSS-denied environments. The source code and a video demonstration are publicly available at https://github.com/xirhxq/pod_search and https://youtu.be/S-5RkJs35JI.</p>
@@ -1994,25 +2006,13 @@
                         <p>Global localization is necessary for autonomous operations on the lunar surface where traditional Earth-based navigation infrastructure, such as GPS, is unavailable. As NASA advances toward sustained lunar presence under the Artemis program, autonomous operations will be an essential component of tasks such as robotic exploration and infrastructure deployment. Tasks such as excavation and transport of regolith require precise pose estimation, but proposed approaches such as visual-inertial odometry (VIO) accumulate odometry drift over long traverses. Precise pose estimation is particularly important for upcoming missions such as the ISRU Pilot Excavator (IPEx) that rely on autonomous agents to operate over extended timescales and varied terrain. To help overcome odometry drift over long traverses, we propose LunarLoc, an approach to global localization that leverages instance segmentation for zero-shot extraction of boulder landmarks from onboard stereo imagery. Segment detections are used to construct a graph-based representation of the terrain, which is then aligned with a reference map of the environment captured during a previous session using graph-theoretic data association. This method enables accurate and drift-free global localization in visually ambiguous settings. LunarLoc achieves sub-cm level accuracy in multi-session global localization experiments, significantly outperforming the state of the art in lunar global localization. To encourage the development of further methods for global localization on the Moon, we release our datasets publicly with a playback module: https://github.com/mit-acl/lunarloc-data.</p>
                     </details>
                 </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2009.06364v3" target="_blank" class="paper-title">4Seasons: A Cross-Season Dataset for Multi-Weather SLAM in Autonomous Driving</a>
-                        <span class="paper-date">2025-06-19</span>
-                    </div>
-                                        <span class="paper-comment">📝 German Conference on Pattern Recognition (GCPR 2020)</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>We present a novel dataset covering seasonal and challenging perceptual conditions for autonomous driving. Among others, it enables research on visual odometry, global place recognition, and map-based re-localization tracking. The data was collected in different scenarios and under a wide variety of weather conditions and illuminations, including day and night. This resulted in more than 350 km of recordings in nine different environments ranging from multi-level parking garage over urban (including tunnels) to countryside and highway. We provide globally consistent reference poses with up-to centimeter accuracy obtained from the fusion of direct stereo visual-inertial odometry with RTK-GNSS. The full dataset is available at https://go.vision.in.tum.de/4seasons.</p>
-                    </details>
-                </div>
             </div>
         </section>
 
         <footer class="footer">
             <p>👤 <strong>Hongkun Luo (罗宏昆)</strong> · <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent)">Academic Page</a> · <a href="https://github.com/luohongk" target="_blank" style="color:var(--accent)">GitHub</a></p>
             <p style="margin-top:8px">🤖 Generated automatically from <a href="https://arxiv.org" style="color:var(--accent)">arXiv</a> · <a href="https://github.com/luohongk/Embodied-AI-Daily" style="color:var(--accent)">GitHub Repo</a></p>
-            <p style="margin-top:4px">Last update: 2026-07-27 (Beijing Time)</p>
+            <p style="margin-top:4px">Last update: 2026-07-28 (Beijing Time)</p>
         </footer>
     </main>
 

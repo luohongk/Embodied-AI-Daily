@@ -590,7 +590,7 @@
                 <a href="World-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">World Model</span>
-                    <span class="nav-count">77</span>
+                    <span class="nav-count">79</span>
                 </a>
                 <a href="3D-Foundation-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
@@ -690,7 +690,7 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">69</span>
+                    <span class="nav-count">67</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
@@ -784,7 +784,7 @@
         <div class="sidebar-header">
             <h1><a href="../index.html" style="background:linear-gradient(135deg,#6366f1,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">🚀 Embodied AI Daily</a></h1>
             <div class="update">by <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent);text-decoration:none;font-weight:500;">Hongkun Luo</a> (罗宏昆)</div>
-            <div class="update" style="margin-top:2px">Last update: 2026-07-27</div>
+            <div class="update" style="margin-top:2px">Last update: 2026-07-28</div>
         </div>
             <a href="Continuous-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
@@ -809,7 +809,7 @@
             <a href="World-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">World Model</span>
-                <span class="nav-count">77</span>
+                <span class="nav-count">79</span>
             </a>
             <a href="3D-Foundation-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
@@ -909,7 +909,7 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">69</span>
+                <span class="nav-count">67</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
@@ -1028,6 +1028,36 @@
                 <span class="topic-count">78 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2511.14019v4" target="_blank" class="paper-title">RISE: Single Static Radar-based Indoor Scene Understanding</a>
+                        <span class="paper-date">2026-07-24</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="好的，作为一名人工智能研究与学术论文分析专家，我将严格按照您的要求，对论文《RISE: Single Static Radar-based Indoor Scene Understanding》进行详细的中文解读。&#10;&#10;---&#10;&#10;## 0. 概览（Concise Summary）&#10;&#10;- **主题（Topic）**：基于单静态毫米波雷达的室内场景理解，包括布局重建和物体检测。&#10;- **问题（Problem）**：传统光学传感器（RGB、LiDAR）存在隐私风险和视线遮挡问题；现有无线方案（WiFi、毫米波）要么分辨率低，要么需要移动设备扫描，部署成本高。如何仅用一个静态的毫米波雷达实现高精度的室内场景理解是一个挑战，主要难点在于毫米波信号的镜面反射特性导致大量环境信息不可见。&#10;- **方法（Method）**：提出RISE系统，核心思想是利用人体移动引入的多径反射（传统视为噪声）来推断环境结构。具体包括：1）**双角度多径增强（BAME）**模块，通过显式建模到达角（AOA）和离开角（AOD）来恢复被传统波束成形抑制的“鬼影”信号；2）**模拟到真实的分层扩散（SRHD）**框架，利用合成数据训练扩散模型，将碎片化的雷达观测转化为完整的布局和物体检测结果。&#10;- **创新（Innovation）**：1）首次提出并实现仅用单静态毫米波雷达进行室内布局重建和物体检测的完整系统与基准；2）提出BAME模块，解决了因AOA≠AOD导致的多径鬼影信号丢失问题；3）提出SRHD框架，通过模拟数据生成和分层扩散模型，弥合了模拟与真实之间的差距，实现了从稀疏、不完整观测到完整场景理解的跨越。&#10;- **意义（Significance）**：RISE证明了利用现有静态无线设备（如路由器）进行隐私保护、高精度室内感知的可行性，为智能家居、安防、VR/AR等应用开辟了新路径。它首次将毫米波雷达的感知能力从粗略的墙壁轮廓提升到包含家具检测的细粒度场景理解。&#10;- **一句话总结**：RISE通过巧妙利用人体移动产生的多径反射，结合创新的信号处理与生成式AI模型，首次实现了仅用单个静态毫米波雷达即可完成高精度的室内布局重建与物体检测。&#10;&#10;## 1. 研究动机（Motivation）&#10;&#10;- **解决的问题**：室内场景理解是计算机视觉和机器人领域的核心问题，但传统方法依赖RGB相机和LiDAR等光学传感器。这些传感器存在两个根本性缺陷：&#10;    1.  **隐私风险**：在智能家居、办公室等环境中，摄像头会捕捉到敏感的个人信息。&#10;    2.  **视线遮挡**：光学信号无法穿透墙壁、家具等障碍物，导致感知存在大量盲区。&#10;- **为什么重要**：如果能用无线信号（如毫米波）替代光学传感器，就能同时解决隐私和遮挡问题。毫米波雷达可以穿透非金属障碍物，且不捕捉视觉细节，保护隐私。&#10;- **挑战在哪里**：现有无线方案存在局限性：&#10;    - **WiFi方案**：分辨率低，只能提供粗略的环境轮廓。&#10;    - **移动毫米波方案**：需要将雷达安装在机器人上主动扫描环境，增加了部署复杂度和成本，不适用于静态场景。&#10;    - **静态毫米波方案**：面临**镜面反射**（specularity）的挑战。毫米波信号像镜子一样反射，只有与雷达法线方向对齐的表面才能被直接探测到，导致大部分墙壁、物体“隐形”，只能获得稀疏、不完整的点云（如图1(a.2)所示）。如何从这些稀疏的观测中恢复完整的场景结构是核心难题。&#10;&#10;## 2. 创新点（Innovation）&#10;&#10;论文提出了三个关键创新，共同构成了RISE系统：&#10;&#10;1.  **首个单静态雷达室内场景理解基准与系统**：RISE是第一个专门针对“仅使用单个静态毫米波雷达”进行室内布局重建和物体检测的完整系统。为此，作者还构建了包含50,000帧、100条真实轨迹的大规模数据集（RISE-Indoor Benchmark），为后续研究提供了标准化评估平台。&#10;2.  **双角度多径增强（BAME）模块**：这是信号处理层面的核心创新。传统毫米波雷达处理（如式2）隐式假设信号的到达角（AOA）等于离开角（AOD），这适用于直接反射。但对于多径反射（如雷达→墙壁→人→雷达），AOA和AOD往往不同，导致这些携带丰富几何信息的“鬼影”信号被抑制或丢失。BAME模块通过**分离处理AOA和AOD**（式4），构建完整的Range-AOA-AOD三维数据立方体，从而恢复这些被传统方法忽略的“离轴”鬼影信号，显著增强了雷达对隐藏结构的感知能力。&#10;3.  **模拟到真实的分层扩散（SRHD）框架**：这是数据处理和模型层面的创新。BAME模块虽然能恢复更多信号，但输出仍然是碎片化的线段。为了得到完整的布局和物体检测，RISE引入了生成式AI模型。&#10;    - **模拟引擎**：由于真实雷达-布局配对数据稀缺，作者构建了一个高保真模拟器，基于35,000个真实室内平面图生成合成雷达信号，并设计了随机缺失、旋转、缩放等数据增强策略来模拟真实世界的噪声。&#10;    - **分层扩散模型**：采用两阶段扩散模型。第一阶段预测物体检测图，第二阶段结合物体图和原始观测来预测完整的墙壁布局。这种分层设计让物体信息作为语义先验，指导布局重建。&#10;    - **空间一致性优化**：在推理阶段，利用人体运动轨迹（已知）对生成的布局进行反向优化，惩罚轨迹与墙壁/物体的碰撞，确保最终结果在物理上是合理的。&#10;&#10;## 3. 主要内容（Main Content）【重点】&#10;&#10;### 3.1 设计架构与方法&#10;&#10;RISE的整体流程如图3所示，分为三个主要阶段：&#10;&#10;1.  **信号增强与多径反演（BAME + Multipath Inversion）**：&#10;    - **输入**：一段连续的人体运动轨迹的毫米波信号序列。&#10;    - **BAME模块**：对每一帧信号，通过双角度波束成形（式4）和3D CFAR检测，恢复被传统方法抑制的鬼影信号（如G1'）。&#10;    - **多径反演**：利用恢复后的鬼影信号（G1, G1', G2, G2'）和人体目标（H）之间的几何关系（图4），通过公式（3）估算出反射点（墙壁上的点）的位置。然后通过GMM聚类和RANSAC直线拟合，得到每一帧的初始、碎片化的墙壁线段。&#10;2.  **时间累积与初始布局生成（Temporal Accumulation）**：&#10;    - 将多帧（整个轨迹）估算出的反射点累积起来，形成一个稀疏但覆盖范围更广的初始布局假设（图1(b.2)中的蓝点）。&#10;3.  **模拟到真实的分层扩散重建（SRHD）**：&#10;    - **输入**：上述初始布局（碎片化线段）。&#10;    - **Stage 1: 物体检测**：一个扩散模型（f1）以初始布局为条件，从高斯噪声中生成一个二值的物体检测图（X0）。&#10;    - **Stage 2: 布局重建**：第二个扩散模型（f2）以初始布局和第一阶段生成的物体检测图为条件，生成完整的墙壁布局图（Y0）。&#10;    - **优化**：利用人体轨迹进行空间一致性优化，修正不合理的布局。&#10;&#10;### 3.2 关键算法与数学推导&#10;&#10;1.  **传统波束成形（AOA=AOD假设）**：&#10;    $$P(\theta) = \sum_{n=1}^{N} s_n e^{j2\pi(nd\cos\theta)/\lambda}$$&#10;    该公式将接收信号在单一角度 $\theta$ 上聚焦，隐含了AOA=AOD的假设。&#10;&#10;2.  **双角度波束成形（BAME核心）**：&#10;    $$S(\theta_{AOA}, \theta_{AOD}, r) = \sum_{i=1}^{N_r} \left( \sum_{k=1}^{N_t} s_{ikr} e^{j2\pi(kd_t \cos\theta_{AOD})/\lambda} \right) e^{j2\pi(id_r \cos\theta_{AOA})/\lambda}$$&#10;    该公式将AOA和AOD作为两个独立的维度进行处理。内层求和计算AOD响应，外层求和计算AOA响应，从而可以探测到AOA≠AOD的信号。&#10;&#10;3.  **反射点估计**：&#10;    对于鬼影G1'，其对应的反射点 $c_1$ 的位置可以通过以下公式估算（推导见附录）：&#10;    $$s_{c_1} = \frac{2|\vec{s}_{g'_1}|^2 - 2|\vec{s}_{g'_1}||\vec{s}_h|}{2|\vec{s}_{g'_1}| - |\vec{s}_h|\cos(\theta_2^s - \theta_1^s) - |\vec{s}_h|}$$&#10;    其中，$\vec{s}_{g'_1}$ 和 $\vec{s}_h$ 分别是雷达到鬼影G1'和人体H的向量，$\theta_1^s$ 和 $\theta_2^s$ 是相关的角度。&#10;&#10;4.  **数据增强中的旋转与缩放**：&#10;    - **随机旋转**：&#10;      $$\begin{bmatrix} x'_p \\ y'_p \end{bmatrix} = \begin{bmatrix} \cos\alpha_i &amp; -\sin\alpha_i \\ \sin\alpha_i &amp; \cos\alpha_i \end{bmatrix} \begin{bmatrix} x_p - x_c \\ y_p - y_c \end{bmatrix} + \begin{bmatrix} x_c \\ y_c \end{bmatrix}$$&#10;    - **随机缩放**：&#10;      $$\begin{bmatrix} x'_p \\ y'_p \end{bmatrix} = \begin{bmatrix} x_r \\ y_r \end{bmatrix} + a_i \left( \begin{bmatrix} x_p \\ y_p \end{bmatrix} - \begin{bmatrix} x_r \\ y_r \end{bmatrix} \right)$$&#10;&#10;5.  **空间一致性优化损失函数**：&#10;    $$L_{overlap} = \sum_{(x_t, y_t) \in T} \left[ \mathbb{1}[(x_t, y_t) \in W] + \mathbb{1}[(x_t, y_t) \in B] \right]$$&#10;    该损失函数惩罚人体轨迹点 $(x_t, y_t)$ 落入预测的墙壁区域 $W$ 或物体区域 $B$ 的情况，从而确保生成的布局与已知的人体运动轨迹在物理上不冲突。&#10;&#10;### 3.3 模型、训练与数据集&#10;&#10;- **模型**：SRHD框架包含两个独立的扩散模型（f1和f2），具体架构未详述，但提到了使用通道注意力融合模块来整合几何和语义信息。&#10;- **训练**：扩散模型完全在**合成数据**上训练。合成数据由布局模拟引擎生成，该引擎基于35,000个真实室内平面图，并模拟了雷达的物理传播特性（仅保留首次反射点）和随机物体。通过三种数据增强（随机缺失、旋转、缩放）来提升模型对真实噪声的鲁棒性。&#10;- **数据集**：RISE-Indoor Benchmark。&#10;    - **传感器**：TI MMWCAS-RF-EVM Cascade毫米波雷达（固定高度1.2m），Intel Realsense深度相机（用于获取真值）。&#10;    - **规模**：100+条人体运动轨迹，每条约30秒，共50,000帧（20Hz）。&#10;    - **环境**：11个不同的室内场景（办公室、走廊、实验室、客厅等）。&#10;    - **标注**：提供两层标注：&#10;        1.  **结构布局标注**：墙壁边界和房间轮廓的多边形。&#10;        2.  **物体标注**：家具（桌子、柜子、沙发等）的轴对齐边界框。&#10;&#10;### 3.4 实验设置与结果&#10;&#10;- **任务**：布局重建（Chamfer Distance, F1-score）和物体检测（IoU, Dice系数）。&#10;- **基线**：&#10;    - **物体检测**：BRL [22]（单帧雷达检测器），EMT [9] + SRHD（将RISE的SRHD模块应用于EMT输出）。&#10;    - **布局重建**：EMT [9]（现有最强的多帧雷达布局重建方法）。&#10;- **主要结果**：&#10;    - **物体检测（表1）**：RISE在所有场景下均大幅领先。平均IoU为**57.78%**，Dice系数为**69.34%**，而最佳基线（EMT+SRHD）仅为7.70%和12.66%。这表明BAME模块对于恢复小物体反射至关重要。&#10;    - **布局重建（图7）**：RISE的平均Chamfer距离为**16.03 cm**，F1-score为**83.63**；而基线EMT [9]为39.06 cm和63.43。RISE在精度和完整性上均有显著提升（Chamfer距离降低60%）。&#10;    - **轨迹长度影响（图9）**：即使只使用40%的轨迹数据，RISE的Chamfer距离仍优于基线使用完整轨迹的性能，展示了其鲁棒性。&#10;    - **消融实验（表2）**：逐步验证了各模块的贡献。&#10;        - 基线（EMT）：Chamfer 39.06 cm&#10;        - + Ghost Enhancement (BAME)：Chamfer 32.31 cm&#10;        - + Diffusion Model：Chamfer 19.82 cm&#10;        - + Reverse Optimization：Chamfer **16.32 cm**&#10;        这表明每个组件都对最终性能有正向贡献，其中扩散模型和反向优化带来的提升最为显著。&#10;&#10;### 3.5 技术细节&#10;&#10;- **鬼影识别**：通过CFAR检测和RANSAC聚类后，利用四个步骤识别H、G1、G1'、G2'等鬼影。例如，H是幅度最大且距离最近的簇，G1与H方向相同但距离稍远。&#10;- **阈值**：两个点被认为是同一个点，如果它们的距离差&lt;15 cm或角度差&lt;15°。&#10;- **模拟引擎细节**：模拟器中，每个布局被转换为2D结构骨架，虚拟雷达随机放置。发射多条射线，仅保留每条射线的第一个交点。为模拟多径，随机插入N个边界框作为物体，并为每个框选择一个反射线段来模拟随机散射。&#10;- **扩散模型**：采用标准的去噪扩散概率模型（DDPM），但条件输入是BAME和反演模块输出的碎片化布局。推理时，通过优化初始噪声（X1000, Y1000）来最小化重叠损失。&#10;&#10;## 4. 意义与影响（Significance and Impact）&#10;&#10;- **解决的问题与贡献**：&#10;    1.  **解决了单静态雷达场景理解的难题**：首次证明了仅用一个不动的毫米波雷达，结合人体移动产生的多径效应，就能实现高精度的室内布局重建和物体检测。&#10;    2.  **提出了有效的技术方案**：BAME模块解决了多径信号丢失这一关键信号处理问题；SRHD框架解决了从稀疏观测到完整场景的生成式重建问题。&#10;    3.  **建立了新的基准**：RISE-Indoor Benchmark为后续研究提供了标准化的数据集和评估指标，将推动该领域的发展。&#10;- **对未来研究/应用的影响**：&#10;    - **智能家居**：可以利用现有的WiFi路由器或智能音箱中的毫米波雷达，实现无需摄像头的隐私保护式家庭监控、老人跌倒检测、智能空间管理。&#10;    - **安防与监控**：在需要保护隐私的场所（如更衣室、浴室、办公室）进行入侵检测和空间态势感知。&#10;    - **VR/AR**：无需额外传感器，即可实时重建用户所处的室内环境，用于沉浸式体验或空间映射。&#10;    - **机器人**：为机器人提供一种低成本、低功耗、隐私友好的环境感知方式，尤其适用于烟雾、黑暗等恶劣环境。&#10;- **局限与开放问题**：&#10;    - **依赖人体移动**：系统需要有人在环境中移动才能产生多径效应。对于完全静态的场景，该方法失效。&#10;    - **多目标场景**：论文主要针对单人场景。如何处理多人同时移动带来的更复杂的多径干扰是一个开放问题。&#10;    - **轨迹长度**：性能随轨迹长度缩短而下降，如何从更短的轨迹中重建场景是未来的研究方向。&#10;    - **物体检测能力**：虽然实现了首次检测，但58%的IoU仍有很大提升空间，特别是对于小物体和形状不规则的物体。&#10;&#10;## 5. 澄清与简化（Clarifications and Simplifications）&#10;&#10;- **镜面反射 vs. 漫反射**：&#10;    - **类比**：想象一下，用手电筒照一个镜子（镜面反射），你只能在特定角度看到反射光；而照一张白纸（漫反射），光会向四面八方散射，你从任何角度都能看到。毫米波雷达就像手电筒照镜子，大部分墙壁对它来说都是“镜子”，所以只有少数正对着雷达的墙才能被直接“看到”。&#10;- **多径鬼影**：&#10;    - **类比**：在一个房间里，你（雷达）和一个朋友（人）说话。你不仅能听到朋友直接说的话（直接反射），还能听到朋友的声音从墙壁反弹回来的回声（多径反射）。这个回声听起来像是从墙壁后面传来的“鬼影”朋友。RISE就是利用这些“鬼影”回声的位置和变化，来推断墙壁的位置和形状。&#10;- **AOA vs. AOD**：&#10;    - **类比**：想象一个台球从球杆（雷达发射器）击出，撞到墙壁（反射点）后弹向球洞（雷达接收器）。球杆的方向就是离开角（AOD），球洞接收球的方向就是到达角（AOA）。对于直接反射，球杆和球洞在同一个位置，AOA=AOD。但对于多径反射（球先撞墙再进球洞），AOA和AOD就不同了。传统雷达处理假设它们相同，所以会漏掉这种“拐弯”的信号。BAME模块则分别处理这两个角度，从而捕捉到这些“拐弯”的信号。&#10;- **分层扩散模型**：&#10;    - **类比**：这就像一个画家在作画。首先，他根据一些模糊的线条（初始布局）和记忆，先画出房间里的大件家具（物体检测）。然后，他再">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Robust and privacy-preserving indoor scene understanding remains a fundamental open problem. While optical sensors such as RGB and LiDAR offer high spatial fidelity, they suffer from severe occlusions and introduce privacy risks in indoor environments. In contrast, millimeter-wave (mmWave) radar preserves privacy and penetrates obstacles, but its inherently low spatial resolution makes reliable geometric reasoning difficult. We introduce RISE, the first benchmark and system for single-static-radar indoor scene understanding, jointly targeting layout reconstruction and object detection. RISE is built upon the key insight that multipath reflections-traditionally treated as noise-encode rich geometric cues. To exploit this, we propose a Bi-Angular Multipath Enhancement that explicitly models Angle-of-Arrival and Angle-of-Departure to recover secondary (ghost) reflections and reveal invisible structures. On top of these enhanced observations, a simulation-to-reality Hierarchical Diffusion framework transforms fragmented radar responses into complete layout reconstruction and object detection. Our benchmark contains 50,000 frames collected across 100 real indoor trajectories, forming the first large-scale dataset dedicated to single, static, radar-based indoor scene understanding. Extensive experiments show that RISE reduces the Chamfer Distance by 60% (down to 16 cm) compared to the state of the art in mmWave layout reconstruction, and delivers the first mmWave-based object detection, achieving 58% IoU. These results establish RISE as a new foundation for geometry-aware and privacy-preserving indoor scene understanding using a single static radar. Our website and code are available at https://rise-cvpr.github.io.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.22352v1" target="_blank" class="paper-title">Time-Reversed Imaging: A Multimodal Benchmark and Framework for Reconstructing Past Human-Environment Interactions</a>
+                        <span class="paper-date">2026-07-24</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：如何从热、紫外和可见光谱中残留的物理痕迹，推断场景中刚刚发生的人与环境交互行为，而非直接预测或插值视频帧。&#10;&#10;🛠 **方法**：提出TRACE-HEI多模态数据集，包含同步的三光谱视频；采用多模态推理方法提取痕迹的结构化文本描述，并利用视觉-语言引导的扩散模型生成合理的过去帧。&#10;&#10;✨ **主要贡献**：首次定义时间反演成像的计算与实验基础，证明互补模态可减少解的不确定性，为超越瞬时观察的场景理解开辟新方向。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>We introduce time-reversed imaging, a new paradigm that infers what just happened in a scene from fading multimodal traces. Instead of extrapolating or interpolating video frames, our goal is to infer past human-environment interactions from residual physical imprints observable in thermal, ultraviolet, and visible spectra. To study this problem, we present TRACE-HEI, the first proof-of-concept dataset for time-reversed imaging, containing synchronized tri-modal video sequences of actions such as sitting, touching, moving objects, and liquid spills, captured across diverse materials and recorded up to three minutes after contact. To establish the benchmark, we propose a multimodal inference approach that extracts structured textual descriptions of detected traces and uses them to constrain a vision-language-guided diffusion model for reconstructing plausible past frames. Experiments show that inferring recent events from fading traces is challenging but feasible when complementary modalities reduce solution ambiguity. This work defines the first computational and experimental foundation for time-reversed imaging, bridging vision, physics, and generative reasoning, and opening new directions for scene understanding beyond instantaneous observation.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2607.21592v1" target="_blank" class="paper-title">Unified Video Dense Prediction from Disjoint Data</a>
@@ -1154,10 +1184,7 @@
                         <span class="paper-date">2026-07-22</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：自动驾驶高层规划需要精确的场景理解、及时推理和内部一致的动作选择，但现有视觉语言模型（VLM）因结构化监督成本高、常规场景冗余推理以及推理与动作间的不一致性而受限。&#10;&#10;🛠 **方法**：提出认知双过程规划框架，使用结构化思维链（S-CoT）表示场景知识，通过自动化数据引擎生成监督信号；引入轻量级视觉仲裁器评估场景复杂度，动态选择快速预测或慢速推理；对慢速路径输出采用确定性规则验证器检查一致性，并基于GRPO提供可验证奖励。&#10;&#10;✨ **主要贡献**：在195场景人工审计中，生成注释的CoT准确率达91.8%，逻辑一致性得分（LCS）达98.5%；在574个NAVSIM测试样本上，规划准确率达80.14%，LCS达97.20%，同时相比全场景慢速推理降低17.39%延迟；外部长尾子集评估进一步揭示了路由与规划性能退化的条件。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>High-level planning for autonomous driving is a knowledge-intensive engineering decision task that requires accurate scene understanding, timely inference, and internally consistent action selection. Vision-language models (VLMs) can make intermediate reasoning explicit, but their use in deployed planners is constrained by costly structured supervision, unnecessary reasoning in routine scenes, and possible inconsistencies between generated rationales and driving actions. We present a cognitive dual-process planning framework that represents planning-relevant scene knowledge in a machine-parsable structured chain-of-thought (S-CoT) schema. An automated data engine integrates perception foundation models, critical-path filtering, and an expert VLM to generate S-CoT supervision without manual annotation of individual rationales. A lightweight visual Arbiter estimates scene complexity from multilevel vision-encoder features before language decoding and routes each input to either fast meta-action prediction or slow structured reasoning. For slow-path outputs, a deterministic rule-based validator checks whether the parsed S-CoT fields are consistent with the final meta-action and provides verifiable rewards for Group Relative Policy Optimization (GRPO). In a 195-scene manual audit, the generated annotations achieve 91.8\% CoT accuracy and a 98.5\% Logical Consistency Score (LCS). On 574 manually verified NAVSIM test samples, the planner achieves 80.14\% planning accuracy and 97.20\% LCS while reducing average latency by 17.39\% relative to applying slow reasoning to every scene. Evaluation on external long-tail subsets further identifies conditions under which routing and planning performance degrade. Together, these results show how explicit scene knowledge can be operationalized through adaptive reasoning and rule-based verification to support high-level VLM planning decisions.</p>
@@ -1169,10 +1196,7 @@
                         <span class="paper-date">2026-07-21</span>
                     </div>
                                         <span class="paper-comment">📝 14 pages, 8 figures, 3 tables and 1 algorithm</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在自动驾驶和智慧城市场景中，如何实现高精度语义分割的同时保持低计算成本和实时性，并增强模型对对抗攻击的鲁棒性。&#10;&#10;🛠 **方法**：提出EGRNet轻量级网络，采用深度可分离卷积降低计算量，使用空洞残差块捕获多尺度上下文信息；引入边缘门控细化（EGR）模块，通过可学习门控机制自适应融合原始与细化特征以增强边界保留；并加入挤压激励（SE）注意力机制提升特征表示，同时设计轻量级对抗攻击检测策略。&#10;&#10;✨ **主要贡献**：仅0.46M参数即在Cityscapes数据集上达到65.28% mIoU，实现高效准确分割；首次在轻量级语义分割中集成边缘门控细化与对抗感知，兼顾实时性、精度与鲁棒性，适合边缘设备部署。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>As autonomous systems and smart cities continue to evolve, the demand for efficient and robust scene understanding becomes increasingly critical. Semantic segmentation plays a key role in enabling autonomous vehicles to comprehend complex urban environments. However, achieving high accuracy with minimal computational cost remains a significant challenge. In this paper, we present Edge-Gated Refinement Network (EGRNet), a lightweight and efficient deep learning model designed for real-time semantic segmentation in urban scenarios. The model incorporates depthwise separable convolutions to reduce computational complexity and dilated residual blocks for capturing rich multi-scale contextual information. Additionally, we introduce a novel Edge-Gated Refinement (EGR) module, which adaptively fuses original and refined features through a learnable gating mechanism, enhancing boundary preservation and edge-sensitive regions. To further improve feature representation, Squeeze-and-Excitation (SE) attention is applied across the network. With only 0.46M parameters, EGRNet achieves state-of-the-art performance while maintaining low computational overhead. When evaluated on the Cityscapes dataset, the model attains a mean Intersection over Union (mIoU) of 65.28%, demonstrating strong accuracy with minimal resource consumption. Moreover, we introduce a lightweight adversarial attack detection strategy, ensuring robustness against adversarial inputs without compromising real-time performance. By combining efficiency, accuracy, and resilience, EGRNet is well-suited for deployment on edge devices in safety-critical real-time applications.</p>
@@ -1970,37 +1994,13 @@
                         <p>Existing egocentric benchmarks have primarily constructed the egocentric setting from first-person-view data, which makes it difficult to evaluate egocentric perspective itself in isolation. However, understanding first-person-view input and taking an egocentric perspective are separable abilities, especially when first-person body cues are absent or when other agents are present. To isolate egocentric perspective understanding, we introduce EgoGapBench, a diagnostic benchmark for measuring action selection in multi-agent egocentric scenes. We define the ability measured by this benchmark as Egocentric Action Selection (EAS): selecting an appropriate action from the agent's perspective in the presence of other agents. On EgoGapBench, humans answer reliably, whereas both open-source and proprietary MLLMs perform substantially worse and systematically select actions performed by other visible agents. Fine-tuning on existing egocentric data fails to close this gap and can even be detrimental. In contrast, fine-tuning on EgoGapBench training data improves accuracy but does not reach human performance. These results show that EAS is difficult to acquire from first-person-view data alone, and that MLLMs should be evaluated and trained not only for scene understanding but also for egocentric action selection.</p>
                     </details>
                 </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2604.04198v2" target="_blank" class="paper-title">DriveVA: Video Action Models are Zero-Shot Drivers</a>
-                        <span class="paper-date">2026-07-01</span>
-                    </div>
-                                        <span class="paper-comment">📝 Accepted to ECCV 2026. 30 pages, 12 figures, 11 tables</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Generalization is a central challenge in autonomous driving, as real-world deployment requires robust performance under unseen scenarios, sensor domains, and environmental conditions. Recent world-model-based planning methods have shown strong capabilities in scene understanding and multi-modal future prediction, yet their generalization across datasets and sensor configurations remains limited. In addition, their loosely coupled planning paradigm often leads to poor video-trajectory consistency during visual imagination. To overcome these limitations, we propose DriveVA, a novel autonomous driving world model that jointly decodes future visual forecasts and action sequences in a shared latent generative process. DriveVA inherits rich priors on motion dynamics and physical plausibility from well-pretrained large-scale video generation models to capture continuous spatiotemporal evolution and causal interaction patterns. To this end, DriveVA employs a DiT-based decoder to jointly predict future action sequences (trajectories) and videos, enabling tighter alignment between planning and scene evolution. We also introduce a video continuation strategy to strengthen long-duration rollout consistency. DriveVA achieves an impressive PDM-based planning performance of 90.9 PDM score on the NAVSIM benchmark. Extensive experiments also demonstrate the zero-shot capability and cross-domain generalization of DriveVA, which reduces average L2 error and collision rate by 78.9% and 83.3% on nuScenes and 52.5% and 52.4% on the Bench2Drive built on CARLA v2 compared with the state-of-the-art world-model-based planner.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2601.04453v4" target="_blank" class="paper-title">UniDrive-WM: Unified Understanding, Planning and Generation World Model for Autonomous Driving</a>
-                        <span class="paper-date">2026-07-01</span>
-                    </div>
-                                        <span class="paper-comment">📝 Accepted to ECCV 2026. Project Page: https://unidrive-wm.github.io/UniDrive-WM</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>World models have become central to autonomous driving, where accurate scene understanding and future prediction are crucial for safe control. Recent work has explored using vision-language models (VLMs) for planning, yet existing approaches typically treat perception, prediction, and planning as separate modules. We propose UniDrive-WM, a unified VLM-based world model that jointly performs driving-scene understanding, trajectory planning, and trajectory-conditioned future image generation within a single architecture. UniDrive-WM's trajectory planner predicts a future trajectory, which conditions a VLM-based image generator to produce plausible future frames. These predictions provide additional supervisory signals that enhance scene understanding and iteratively refine trajectory generation. We further compare discrete and continuous output representations for future image prediction, analyzing their influence on downstream driving performance. Experiments on the challenging Bench2Drive benchmark show that UniDrive-WM produces high-fidelity future images and improves planning performance by 7.3% in L2 trajectory error and 10.4% in collision rate over the previous best method. These results demonstrate the advantages of tightly integrating VLM-driven reasoning, planning, and generative world modeling for autonomous driving. The project page is available at https://unidrive-wm.github.io/UniDrive-WM.</p>
-                    </details>
-                </div>
             </div>
         </section>
 
         <footer class="footer">
             <p>👤 <strong>Hongkun Luo (罗宏昆)</strong> · <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent)">Academic Page</a> · <a href="https://github.com/luohongk" target="_blank" style="color:var(--accent)">GitHub</a></p>
             <p style="margin-top:8px">🤖 Generated automatically from <a href="https://arxiv.org" style="color:var(--accent)">arXiv</a> · <a href="https://github.com/luohongk/Embodied-AI-Daily" style="color:var(--accent)">GitHub Repo</a></p>
-            <p style="margin-top:4px">Last update: 2026-07-27 (Beijing Time)</p>
+            <p style="margin-top:4px">Last update: 2026-07-28 (Beijing Time)</p>
         </footer>
     </main>
 

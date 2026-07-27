@@ -590,7 +590,7 @@
                 <a href="World-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">World Model</span>
-                    <span class="nav-count">77</span>
+                    <span class="nav-count">79</span>
                 </a>
                 <a href="3D-Foundation-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
@@ -690,7 +690,7 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">69</span>
+                    <span class="nav-count">67</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
@@ -784,7 +784,7 @@
         <div class="sidebar-header">
             <h1><a href="../index.html" style="background:linear-gradient(135deg,#6366f1,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">🚀 Embodied AI Daily</a></h1>
             <div class="update">by <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent);text-decoration:none;font-weight:500;">Hongkun Luo</a> (罗宏昆)</div>
-            <div class="update" style="margin-top:2px">Last update: 2026-07-27</div>
+            <div class="update" style="margin-top:2px">Last update: 2026-07-28</div>
         </div>
             <a href="Continuous-Learning.html" class="nav-item active">
                 <span class="nav-dot" style="background:#6366f1"></span>
@@ -809,7 +809,7 @@
             <a href="World-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">World Model</span>
-                <span class="nav-count">77</span>
+                <span class="nav-count">79</span>
             </a>
             <a href="3D-Foundation-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
@@ -909,7 +909,7 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">69</span>
+                <span class="nav-count">67</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
@@ -1030,6 +1030,66 @@
             <div class="paper-list">
                 <div class="paper-card">
                     <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.22157v1" target="_blank" class="paper-title">Learning on the Job: Continual Learning from Deployment Feedback for Frozen-Weights Agents</a>
+                        <span class="paper-date">2026-07-24</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：AI智能体在部署后模型参数被冻结，无法从每次运行中积累经验，导致重复遇到相同困难任务时仍需从零开始。&#10;&#10;🛠 **方法**：提出一种持续学习框架，将冻结模型与外部记忆模块结合，把每次运行的结果（如成功/失败判定或事后修正）蒸馏为可检索的自然语言规则，实现从部署反馈中持续学习。&#10;&#10;✨ **主要贡献**：在τ-bench银行领域，仅利用单比特结果反馈即可将单次任务成功率提升至基线1.6倍，利用修正反馈提升至2.6倍，并解决了基线无法完成的84个任务中的22个；该方法在Mistral Large和Claude Sonnet 5上均有效，且积累的记忆可在不同模型间迁移。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>AI agents encounter learning opportunities in every episode they run, and discard nearly all of them: the underlying models are frozen at deployment, so an agent that resolves a difficult request today starts from zero when it recurs tomorrow. Yet ordinary operation already produces feedback, in the form of outcome verdicts and after-the-fact corrections. We show that this feedback is a sufficient signal for continual learning when the frozen model is paired with an external memory that distils each episode into retrievable natural-language rules. On the banking domain of $τ$-bench, against a static-RAG control retrieving over the complete policy corpus, learning from the one-bit outcome verdict lifts single-trial success to 1.6$\times$ the baseline, and learning from corrections to 2.6$\times$, converting 22 of the 84 tasks the baseline never solves. The result spans the deployment spectrum, measured on Mistral Large, an open-weights model that organisations with data sovereignty requirements can self-host, and replicated on a frontier model, Claude Sonnet 5. The accumulated memory also transfers: each model, reading the store built by the other, rises above its own no-memory baseline. The harness, protocol, and data are released.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.22075v1" target="_blank" class="paper-title">FSE: Continual Learning for Named Entity Recognition by Fast-Slow Experts</a>
+                        <span class="paper-date">2026-07-24</span>
+                    </div>
+                                        <span class="paper-comment">📝 Preprint submitted to Pattern Recognition Letters</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决命名实体识别（NER）在持续学习场景中的灾难性遗忘问题，并提升跨任务共享信息的利用效率。  &#10;🛠 **方法**：提出Fast-Slow Experts（FSE）模型，包含共享的快速专家（学习token级链接过滤无效片段）和任务特定的慢速专家（对剩余候选片段进行分类），并引入长度衰减负采样策略缓解片段不平衡。  &#10;✨ **主要贡献**：在OntoNotes和FewNERD数据集上达到持续学习NER的最优性能，验证了各模块的有效性、更快的收敛速度以及双专家的预期功能。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Continual Learning for Named Entity Recognition (CLNER) enable models to incrementally learn new entity types without forgetting previously acquired ones. However, existing methods suffer from catastrophic forgetting and insufficient exploitation of shared information across tasks. This paper proposes FSE, a Fast-Slow Experts enhanced span-based NER model for CLNER. The shared fast expert learns token-level links to efficiently filter out unlikely spans, while the task-specific slow expert performs span classification only on the remaining candidates. It stabilizes learning by promoting knowledge sharing across tasks and maintains plasticity by reducing learning burden at each task. A length-decay negative sampling strategy to mitigate span imbalance is also introduced. Extensive experiments on OntoNotes and FewNERD synthestic datasets demonstrate that FSE achieves state-of-the-art performance in CLNER scenarios, with effectiveness of each component, empirical evidence of faster convergence and expected functionality of both experts.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.21949v1" target="_blank" class="paper-title">MA-DAR: Manifold-Aligned Dynamic Adaptive Routing for Continual Temporal Knowledge Graph Reasoning</a>
+                        <span class="paper-date">2026-07-24</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决持续时序知识图谱推理中，回放表示与当前表示直接融合导致的“范数支配”和“语义模糊”两种表示冲突问题。&#10;&#10;🛠 **方法**：提出MA-DAR框架，先通过流形对齐将回放和当前表示映射到共享空间以缓解分布差异，再采用动态门控机制学习维度级融合权重，并引入极化正则化器抑制模糊门控决策。&#10;&#10;✨ **主要贡献**：作为轻量级即插即用模块，在四个公开基准上持续提升代表性TKG编码器性能，并通过消融实验验证了流形对齐与动态自适应路由在缓解表示冲突、改善持续推理中的有效性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Continual temporal knowledge graph (TKG) reasoning aims to continuously incorporate newly emerging facts while preserving previously acquired knowledge. Replay-based continual learning has achieved promising performance by revisiting historical representations. However, existing methods primarily focus on what to replay, while largely overlooking how replayed representations should be integrated with current ones. Such direct integration often gives rise to two critical forms of representation conflict: \textit{norm domination} and \textit{semantic blurring}, ultimately degrading continual reasoning performance. To address these challenges, we propose MA-DAR (Manifold-Aligned Dynamic Adaptive Routing), a lightweight plug-and-play framework for replay representation fusion. MA-DAR first aligns replayed and current representations onto a shared manifold to alleviate distribution discrepancies. It then employs a dynamic gating mechanism to learn dimension-wise fusion weights, adaptively determining the contribution of replayed and current representations to the fused representation. Furthermore, a polarization regularizer encourages more decisive routing behaviors by discouraging ambiguous gating decisions, resulting in more stable and effective knowledge integration. Extensive experiments on four public continual TKG benchmarks demonstrate that MA-DAR consistently improves the performance of representative TKG encoders while remaining effective under different replay settings. Comprehensive ablation studies and visualization analyses further verify the effectiveness of manifold alignment and dynamic adaptive routing in mitigating representation conflicts and improving continual reasoning.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2604.22407v2" target="_blank" class="paper-title">Hidden Failure Modes of Gradient Modification under Adam in Continual Learning, and Adaptive Decoupled Moment Routing as a Repair</a>
+                        <span class="paper-date">2026-07-24</span>
+                    </div>
+                                        <span class="paper-comment">📝 The authors have identified substantial issues in the experimental design and evaluation that affect the validity of the main conclusions. Therefore, the authors have decided to withdraw this manuscript</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在持续学习中，梯度修改方法（如投影、惩罚缩放、回放混合）与Adam优化器组合时存在隐藏的失效模式，导致模型性能退化甚至接近随机遗忘。&#10;&#10;🛠 **方法**：提出自适应解耦动量路由（Adaptive Decoupled Moment Routing），将修改后的梯度仅作用于Adam的一阶动量，同时保持二阶动量统计量的幅度忠实性，并引入重叠感知的自适应强度调节。&#10;&#10;✨ **主要贡献**：揭示了Adam二阶动量路径导致的旧方向有效学习率膨胀（1/(1-α)倍）是失效根源；在8域和16域持续语言模型任务中，该方法相比最强共享路由投影基线提升3.8-4.8单位，且唯一在所有方法、优化器和规模（含7B LoRA）下保持稳定。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Many continual-learning methods modify gradients upstream (e.g., projection, penalty rescaling, replay mixing) while treating Adam as a neutral backend. We show this composition has a hidden failure mode. In a high-overlap, non-adaptive 8-domain continual LM, all shared-routing projection baselines collapse close to vanilla forgetting (12.5--12.8 vs. 13.2). A 0.5% replay buffer is the strongest shared alternative but still reaches 11.6, while fixed-strength decoupling falls below vanilla at 14.1. Only adaptive decoupled routing remains stable at 9.4, improving over vanilla by 3.8 units. On a 16-domain stream, its gain over the strongest shared-routing projection baseline grows to 4.5--4.8 units. The failure is largely invisible on clean benchmarks. We explain this effect through Adam's second-moment pathway: in the tested regime, projection induces a 1/(1-alpha) inflation of the old-direction effective learning rate, matching measurements within 8% across eight alpha values. The same conflict appears with penalty methods, replay mixing, and at 7B scale under LoRA. Our fix routes the modified gradient only to the first moment while preserving magnitude-faithful second-moment statistics, with overlap-aware adaptive strength. This simple change is the only tested configuration that consistently avoids collapse across methods, optimizers, and scale.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
                         <a href="https://arxiv.org/abs/2607.20064v2" target="_blank" class="paper-title">PRO-LONG: Programmatic Memory Enables Long-Horizon Reasoning</a>
                         <span class="paper-date">2026-07-23</span>
                     </div>
@@ -1124,10 +1184,7 @@
                         <span class="paper-date">2026-07-22</span>
                     </div>
                                         <span class="paper-comment">📝 extended abstract of AICS 2025 poster</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：边缘计算平台（如自动驾驶、智能传感设备）需要实时适应动态环境，但现有持续学习算法在CPU/GPU与内存间产生大量数据移动，导致能效低、不适合边缘部署；同时，存内计算（IMC）虽能减少数据移动，却面临计算噪声大、训练精度低及资源效率支持不足的挑战。&#10;&#10;🛠 **方法**：提出CLASP系统，这是首个端到端支持持续学习的IMC加速平台。软硬件协同设计，基于自制的后道兼容ECRAM器件，通过软件可见的汇编级指令支持多种持续学习算法，并克服其他新兴存储器件在IMC训练中的噪声问题。&#10;&#10;✨ **主要贡献**：在MNIST数据集上，CLASP结合ECRAM的持续学习精度接近GPU训练水平，同时实现67倍加速和132倍能耗节省，显著提升边缘持续学习的效率与可行性。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Several edge computing platforms, such as autonomous vehicles and smart sensing devices, need to adapt to dynamic environments in real time by learning from new data in the field. Continual learning has emerged as a promising solution for edge training, by incorporating techniques that successfully combine a highly summarized version of previously trained data (to avoid catastrophic forgetting) with recently sensed data. However, as is the case with other ML algorithms, continual learning generates significant data movement between general-purpose CPUs/GPUs and memory, impacting the suitability of continual learning for edge platforms. In-memory computing (IMC; also known as processing-using-memory) can curtail this waste and make continual learning feasible at the edge, but it faces two unique challenges: (1) IMC architectures make use of noisy computation operations that significantly harm training accuracy; and (2) IMC architectures have poor and often incomplete support for resource-efficient training. To address these challenges, we propose CLASP (the Continual Learning Acceleration System Platform), which to our knowledge is the first end-to-end system with IMC acceleration for continual learning. The hardware and software of CLASP are co-designed to support a wide range of continual learning algorithms, through software-visible assembly-level instructions that can be incorporated without constraints into ML-based algorithms. CLASP is designed around a back-end-of-line (BEOL) compatible ECRAM device that we fabricate, which can overcome the challenges of IMC-based training using other emerging memory devices. We show that CLASP with ECRAM approaches the accuracy of in-GPU training, while delivering a speedup of 67x and energy savings of 132x for learning without forgetting and experience replay using MNIST.</p>
@@ -1139,10 +1196,7 @@
                         <span class="paper-date">2026-07-21</span>
                     </div>
                                         <span class="paper-comment">📝 v3: Substantially revised as a negative-results study. All reported values recomputed from verified experimental runs; method description corrected to match the released implementation; statistical aggregation corrected to per-seed population standard deviations. 4 pages, 2 figures, 3 tables. Code: https://github.com/AminHasibul/Continual-Learning-UsingInterClusterDistance</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在基于回放的持续学习中，始终激活的类间排斥项（ICF）是否真的能提升旧任务记忆保持能力？  &#10;🛠 **方法**：在ResNet-18骨干网络上，对Split CIFAR-10五任务场景进行实验，比较了仅回放、仅ICF、以及结合回放与ICF（即Cluster-Aware Replay初步形式）的性能，并分析了损失函数行为。  &#10;✨ **主要贡献**：发现始终激活的类间排斥不仅未提升性能（最高平均准确率22.5%，低于仅回放的23.1%），反而因非饱和性导致总目标变为负值、旧任务准确率崩溃；揭示了几何分离并非自动与回放互补，并建议采用基于边界的门控目标函数。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Feature-space objectives are often added to replay-based continual learning systems with the expectation that better geometric separation will improve retention. We study a preliminary form of Cluster-Aware Replay (CAR) that combines a class-balanced replay memory with an always-active inter-cluster repulsion term (ICF). On five-task Split CIFAR-10 with a ResNet-18 backbone, the highest observed mean in a six-value sensitivity sweep reaches $22.5\pm1.4\%$ final average accuracy over three seeds, compared with $23.1\pm2.5\%$ for replay alone. ICF without replay reaches only $19.2\pm0.1\%$. All tested repulsion weights produce final accuracies between $20.1\%$ and $22.5\%$, and the detailed configuration exhibits $89.2\pm1.5$ percentage points of average forgetting. An instrumented rerun shows that the weighted repulsion contribution remains near $-0.13$ after cross-entropy has fallen close to zero, so the total objective becomes negative while old-task accuracy collapses. Importantly, the normalized distance objective is mathematically bounded; the failure is therefore better described as non-saturating, always-on repulsion rather than an unbounded loss. These negative results show that geometric separation is not automatically complementary to replay and motivate margin-gated objectives whose gradients deactivate once sufficient separation has been reached.</p>
@@ -1154,10 +1208,7 @@
                         <span class="paper-date">2026-07-21</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决大规模预训练模型在持续学习场景中因灾难性遗忘而无法高效适应多任务的问题。  &#10;🛠 **方法**：结合持续学习算法与参数高效微调技术，通过小规模模型修改实现多任务连续适应。  &#10;✨ **主要贡献**：系统综述了参数高效持续微调的最新进展，分析了评估指标并指出了未来研究方向，为持续学习与高效微调的协同发展提供了指导。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>The emergence of large pre-trained networks has revolutionized the AI field, unlocking new possibilities and achieving unprecedented performance. However, these models inherit a fundamental limitation from traditional Machine Learning approaches: their strong dependence on the \textit{i.i.d.} assumption hinders their adaptability to dynamic learning scenarios. We believe the next breakthrough in AI lies in enabling efficient adaptation to evolving environments -- such as the real world -- where new data and tasks arrive sequentially. This challenge defines the field of Continual Learning (CL), a Machine Learning paradigm focused on developing lifelong learning neural models. One alternative to efficiently adapt these large-scale models is known Parameter-Efficient Fine-Tuning (PEFT). These methods tackle the issue of adapting the model to a particular data or scenario by performing small and efficient modifications, achieving similar performance to full fine-tuning. However, these techniques still lack the ability to adjust the model to multiple tasks continually, as they suffer from the issue of Catastrophic Forgetting. In this survey, we first provide an overview of CL algorithms and PEFT methods before reviewing the state-of-the-art on Parameter-Efficient Continual Fine-Tuning (PECFT). We examine various approaches, discuss evaluation metrics, and explore potential future research directions. Our goal is to highlight the synergy between CL and Parameter-Efficient Fine-Tuning, guide researchers in this field, and pave the way for novel future research directions.</p>
@@ -1169,10 +1220,7 @@
                         <span class="paper-date">2026-07-21</span>
                     </div>
                                         <span class="paper-comment">📝 Submitted to EUSIPCO 2026</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在持续学习框架下，步态识别系统面临灾难性遗忘和成员推理攻击的隐私泄露风险。&#10;&#10;🛠 **方法**：采用码分调制层（CDML）技术，在不依赖数据重放的情况下，对持续学习策略训练的步态识别模型进行保护。&#10;&#10;✨ **主要贡献**：该方法在保持所有任务识别精度的同时，有效缓解了成员推理攻击，并消除了数据重放带来的额外开销。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Continual learning (CL) has been recently employed in biometric identification systems thanks to its ability to integrate new knowledge within a pre-trained model and to the possibility of reducing the computational cost of training. Unfortunately, such approaches pose new challenges both in terms of final accuracy and privacy guarantees since a progressive fine-tuning of the model on small subsets expose them to catastrophic forgetting and successful inference attacks. This paper evaluates the efficiency of code division modulation layers (CDML) on a gait identification system which has been trained following a continual learning policy. The proposed approach preserves accuracy on all the tasks while mitigating membership inference attacks at the same time. Moreover, the impact of retransmission is minimized since replaying data is not necessary.</p>
@@ -1958,61 +2006,13 @@
                         <p>Content-Preserving Style transfer, given content and style references, remains challenging for Diffusion Transformers (DiTs) due to entangled content and style features. With a reverse triplet synthesis pipeline to build a million-scale training set and a dual-branch Style-Content DiT (SC-DiT) that decouples style and content via separate ROPE embeddings and causal masking, we observe that such a one-stage training paradigm on mixed style categories causes semantic styles to dominate, hindering texture style learning, and harming content preservation. To address these issues, we propose Style-CCL, a Multi-Stage Curriculum Continual Learning framework that trains SC-DiT from semantic (easy) to texture (hard) styles, and from clean to synthetic data, with Random Memory Rehearsal across stages to avoid catastrophic forgetting. Extensive experiments demonstrate that our Style-CCL achieves state-of-the-art performance in three core metrics: style similarity, content consistency, and aesthetic quality.</p>
                     </details>
                 </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.02020v1" target="_blank" class="paper-title">Hidden Forgetting in Continual Multimodal Learning: When Accuracy Survives but Grounding Fails</a>
-                        <span class="paper-date">2026-07-02</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Multimodal large language models must continually adapt to evolving tasks and domains, yet standard continual learning metrics mainly measure whether old answers remain correct, leaving the stability of multimodal grounding largely unexamined. We study this overlooked failure mode and ask whether a continually adapted MLLM can preserve not only what it answers, but also how it uses visual, textual, OCR, chart, and document evidence. We identify \emph{hidden evidence-use forgetting}, where answer accuracy is retained while the model silently shifts toward different or less grounded evidence channels, and propose \textsc{RCL}, a replay-free reliance-constrained continual learning framework. \textsc{RCL} freezes the previous checkpoint as a behavioral reference, estimates teacher and student evidence-reliance profiles through counterfactual channel interventions, and jointly optimizes task learning, prediction preservation, and reliance preservation without adding inference-time cost. Across CoIN, COAST, MCITlib, and an evidence-sensitive multimodal stream, \textsc{RCL} consistently improves final performance and reduces forgetting over replay-free, PEFT, routing, and memory-assisted baselines, while substantially lowering modality reliance drift, dominant evidence flips, and hidden forgetting rates. These results suggest that robust continual multimodal learning requires preserving the evidence path behind correct answers, not merely the answers themselves.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2602.00722v2" target="_blank" class="paper-title">Spectral Imbalance Causes Forgetting in Low-Rank Continual Adaptation</a>
-                        <span class="paper-date">2026-07-02</span>
-                    </div>
-                                        <span class="paper-comment">📝 21 pages, 7 figures</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Parameter-efficient continual learning aims to adapt pre-trained models to sequential tasks without forgetting previously acquired knowledge. Most existing approaches treat continual learning as avoiding interference with past updates, rather than considering what properties make the current task-specific update naturally preserve previously acquired knowledge. From a knowledge-decomposition perspective, we observe that low-rank adaptations exhibit highly imbalanced singular value spectra: a few dominant components absorb most of the adaptation energy, thereby (i) more likely to disrupt previously acquired knowledge and (ii) making the update more vulnerable to interference from subsequent tasks. To enable explicit balance among components, we decouple the magnitude of the task update from its directional structure and formulate it as a constrained optimization problem on a restricted Stiefel manifold. We address this problem using a projected first-order method compatible with standard deep-learning optimizers used in vision-language models. Our method mitigates both backward and forward forgetting, consistently outperforming continual learning baselines. The implementation code is available at https://github.com/haodotgu/EBLoRA.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.01763v1" target="_blank" class="paper-title">Denser $\neq$ Better: Limits of On-Policy Self-Distillation for Continual Post-Training</a>
-                        <span class="paper-date">2026-07-02</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Continual post-training enables foundation models to acquire new knowledge while preserving existing capabilities. Recent work suggests that on-policy learning can mitigate forgetting, with on-policy self-distillation emerging as a particularly attractive approach. In this work, we revisit this optimistic view through self-distillation policy optimization (SDPO). Our experiments show that SDPO can accelerate in-domain specialization when teacher signals are stable and well aligned, but it struggles to generalize to out-of-distribution scenarios. In continual post-training, SDPO exhibits stronger forgetting and can even collapse, whereas on-policy reinforcement learning methods such as GRPO adapt more conservatively and better preserve prior capabilities. Further analyses reveal that denser self-distillation induces larger drift in both parameter space and response space, and can amplify high-frequency formatting artifacts through a self-reinforcing teacher--student loop. These findings suggest that on-policy data alone is insufficient for continual learning. Dense self-distillation can accelerate specialization when teacher targets are stable and token-level supervision is reliable, but it should not be treated as a default stabilizer for continual post-training. Our code is available at https://github.com/Moenupa/SDPO-CL.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.31191v3" target="_blank" class="paper-title">ISM:Self-Improving Strategy Memory for Continual Mathematical Reasoning</a>
-                        <span class="paper-date">2026-07-02</span>
-                    </div>
-                                        <span class="paper-comment">📝 3rd AI for Math Workshop at ICML 2026 Forty-Third International Conference on Machine Learning</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>We propose Intelligent Schema Memory (ISM), a self-evolving memory-augmented system that improves mathematical reasoning for a frozen LLM under continual learning with hard episodic resets. ISM maintains a compact, self-refined bank of strategy schemas learned from both successful and failed episodes, with symbolic tools that check intermediate steps and certify answers. Without updating model parameters, ISM outperforms passive, retrieval, and reflection baselines on MATH-Hard and OlympiadBench, using 64% and 86% fewer schemas respectively than the strongest passive baseline. These results show that small, actively maintained, and verified strategy memories can support reliable continual mathematical reasoning under strict episodic isolation. The codebase is available at https://github.com/pdx97/ISM .</p>
-                    </details>
-                </div>
             </div>
         </section>
 
         <footer class="footer">
             <p>👤 <strong>Hongkun Luo (罗宏昆)</strong> · <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent)">Academic Page</a> · <a href="https://github.com/luohongk" target="_blank" style="color:var(--accent)">GitHub</a></p>
             <p style="margin-top:8px">🤖 Generated automatically from <a href="https://arxiv.org" style="color:var(--accent)">arXiv</a> · <a href="https://github.com/luohongk/Embodied-AI-Daily" style="color:var(--accent)">GitHub Repo</a></p>
-            <p style="margin-top:4px">Last update: 2026-07-27 (Beijing Time)</p>
+            <p style="margin-top:4px">Last update: 2026-07-28 (Beijing Time)</p>
         </footer>
     </main>
 
