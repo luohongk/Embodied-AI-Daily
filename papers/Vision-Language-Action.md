@@ -2,7 +2,7 @@
 
 > **79 papers** fetched from arXiv for the keyword **Vision Language Action**.
 
-> Last update: 2026-08-01
+> Last update: 2026-08-02
 
 [← Back to README](../README.md)
 

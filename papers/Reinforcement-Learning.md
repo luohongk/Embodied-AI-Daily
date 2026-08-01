@@ -2,7 +2,7 @@
 
 > **74 papers** fetched from arXiv for the keyword **Reinforcement Learning**.
 
-> Last update: 2026-08-01
+> Last update: 2026-08-02
 
 [← Back to README](../README.md)
 
