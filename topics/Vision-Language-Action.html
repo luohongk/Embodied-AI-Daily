@@ -600,7 +600,7 @@
                 <a href="LLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
                     <span class="nav-label">LLM</span>
-                    <span class="nav-count">79</span>
+                    <span class="nav-count">80</span>
                 </a>
                 <a href="VLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f97316"></span>
@@ -675,7 +675,7 @@
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Kalman Filter</span>
-                    <span class="nav-count">47</span>
+                    <span class="nav-count">46</span>
                 </a>
                 <a href="Loop-Closure-Detection.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -690,12 +690,12 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">71</span>
+                    <span class="nav-count">68</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">74</span>
+                    <span class="nav-count">77</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -730,7 +730,7 @@
                 <a href="Model-Predictive-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#14b8a6"></span>
                     <span class="nav-label">Model Predictive Control</span>
-                    <span class="nav-count">54</span>
+                    <span class="nav-count">53</span>
                 </a>
                 <a href="Whole-Body-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#06b6d4"></span>
@@ -819,7 +819,7 @@
             <a href="LLM.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
                 <span class="nav-label">LLM</span>
-                <span class="nav-count">79</span>
+                <span class="nav-count">80</span>
             </a>
             <a href="VLM.html" class="nav-item">
                 <span class="nav-dot" style="background:#f97316"></span>
@@ -894,7 +894,7 @@
             <a href="Kalman-Filter.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Kalman Filter</span>
-                <span class="nav-count">47</span>
+                <span class="nav-count">46</span>
             </a>
             <a href="Loop-Closure-Detection.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -909,12 +909,12 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">71</span>
+                <span class="nav-count">68</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">74</span>
+                <span class="nav-count">77</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -949,7 +949,7 @@
             <a href="Model-Predictive-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#14b8a6"></span>
                 <span class="nav-label">Model Predictive Control</span>
-                <span class="nav-count">54</span>
+                <span class="nav-count">53</span>
             </a>
             <a href="Whole-Body-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#06b6d4"></span>
@@ -1030,6 +1030,96 @@
             <div class="paper-list">
                 <div class="paper-card">
                     <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.29613v1" target="_blank" class="paper-title">WCM: A World Critic Model for Vision-Language-Action Reinforcement Learning</a>
+                        <span class="paper-date">2026-07-31</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有VLA模型的强化学习后训练中，critic网络仅基于单帧观测或单帧VLM特征进行价值估计，无法处理机器人控制中的部分可观测性，导致价值估计不准确。&#10;&#10;🛠 **方法**：提出World Critic Model（WCM），基于轻量级LeJEPA架构，联合预测未来潜在状态并估计价值，使critic表示显式学习时间动态而非仅回归标量回报，可无缝集成到on-policy和off-policy训练流程中。&#10;&#10;✨ **主要贡献**：在149个任务、四个基准上达到SOTA性能，尤其在分布外场景下泛化能力显著提升；在7个真实世界操作任务中验证了稳定部署，兼容Pi0、Pi0.5和OpenVLA-OFT等主流VLA骨干网络。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Reinforcement learning (RL) post-training of Vision-Language-Action (VLA) models has shown strong promise for robotic manipulation. Among RL methods, critic-based approaches rely on a value estimator that predominantly operates on single-frame observations or single-frame VLM backbone latents, which is a fundamental mismatch with the partially observable nature of robot control. A naive approach to incorporate observation history into the critic incurs exponential complexity with high-dimensional visual space, and still fails because pure scalar-return regression provides insufficient supervision for learning cross-temporal dynamics. We identify the root cause as a state approximation problem: without an explicit world modeling objective, the critic's representation cannot capture the temporal structure needed for accurate value estimation. To address this, we propose the World Critic Model (WCM), built on a lightweight LeJEPA architecture; WCM jointly predicts future latent state and estimates values, such that the critic's representation is explicitly trained to capture temporal dynamics rather than merely regress scalar returns. WCM integrates seamlessly into both on-policy and off-policy training pipelines and is compatible with state-of-the-art VLA backbones including Pi0, Pi0.5, and OpenVLA-OFT. Extensive experiments on 149 tasks across four benchmarks demonstrate that WCM consistently achieves state-of-the-art performance in both in-distribution and out-of-distribution settings, with particularly strong generalization gains. We further validate WCM on seven real-world manipulation tasks using OpenVLA-OFT and Pi0.5 with off-policy RL, confirming stable deployment across diverse settings.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.29596v1" target="_blank" class="paper-title">FibVLA: An Efficient Temporal Vision-Language-Action Model with Fibonacci Sampling</a>
+                        <span class="paper-date">2026-07-31</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有视觉-语言-动作模型（VLA）在捕捉长时序信息时推理效率下降，难以兼顾时序感知与实时响应。&#10;&#10;🛠 **方法**：提出FibVLA框架，采用对数回溯采样（Fibonacci采样）处理本体感知状态和视觉帧，以低冗余捕捉长期时序依赖；动作专家使用流匹配生成动作分布，并引入Fibonacci循环推理策略，基于闭环反馈生成长期规划步骤。&#10;&#10;✨ **主要贡献**：在不重训大规模视觉编码器的情况下，显著提升动作平滑度和成功率；实际评估中相比基于视频的基线方法，实时响应性更优，验证了时序感知与推理效率的平衡可行性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Vision-language-action models (VLAs), which leverage the cognition of multimodal information to infer physical-world actions, provide a generalized solution for embodied AI applications. Conventional VLAs usually concentrate on current digital cognition. While some efforts are made to enhance VLAs' reasoning capabilities by capturing temporal information, encoding the long-context history causes an efficiency-decreasing issue. To reconcile the conflict between capturing temporal information and maintaining inference efficiency in VLAs, this paper introduces FibVLA, an efficient framework featuring temporal perception of long-context history. Specifically, we leverage logarithmic hindsight sampling to both proprioceptive states and visual frames to capture long-term temporal dependencies with minimal redundancy. For the action expert, we introduce the flow matching to produce action distributions, and the Fibonacci recurrent inference strategy to generate long-range planning steps based on real-time closed-loop feedback. Experiments demonstrate that FibVLA significantly improves action smoothness and success rates without retraining large-scale visual encoders. Efficiency analysis demonstrates superior real-time responsiveness compared to video-based baselines in real-world evaluations.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.29569v1" target="_blank" class="paper-title">Safe Vision Language Action Models via Barrier Enhanced Flow Matching</a>
+                        <span class="paper-date">2026-07-31</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有视觉-语言-动作（VLA）模型在生成机器人控制轨迹时缺乏形式化的安全保证，而外部安全过滤器可能破坏模型语义或增加计算负担。&#10;&#10;🛠 **方法**：提出模块化推理框架，将Flow Matching生成模型与控制屏障函数（CBF）结合，在去噪过程中直接嵌入平滑的Log-Sum-Exponential聚合屏障，对整段动作块施加安全约束，无需额外数据集或重训练。&#10;&#10;✨ **主要贡献**：证明了生成分布与目标分布间的2-Wasserstein距离有界；在两种机器人操作平台和2D导航基准上验证，该方法在不降低任务成功率的前提下实现可靠安全，且计算开销极小。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>This article presents a modular inference framework that integrates Flow Matching generative models with formal Control Barrier Function (CBF) safety guarantees. Unlike existing methods that apply external safety filters to a model's final output, our approach modifies the Flow Matching denoising process within the model to inherently generate safe trajectories. By employing a smooth Log-Sum-Exponential aggregate barrier, we enforce safety over entire action chunks. This aggregate barrier ensures a minimal increase in computational overhead and does not alter the semantic intent of the model. We show that, within the proposed framework, the 2-Wasserstein distance between the generated distribution and the target distribution remains bounded. Our method eliminates the need for safety-specific datasets or costly model retraining, providing a versatile solution for safe inference. We validate the approach on two robotic manipulation platforms and a 2D navigation benchmark, verifying that our framework achieves reliable safety without degrading the success rate of the model.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.29169v1" target="_blank" class="paper-title">ActFovea: Runtime Safeguarding for VLA Policies via Spatiotemporal Visual-Action Consistency</a>
+                        <span class="paper-date">2026-07-31</span>
+                    </div>
+                                        <span class="paper-comment">📝 8 pages, 4 figures, 4 tables. Code: https://github.com/SunnyYWD/ActFovea.git</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：视觉-语言-动作（VLA）策略在机器人操作中易受运行时扰动影响，导致视觉观测、机器人状态与执行动作之间的时间对齐被破坏，引发任务失败。&#10;&#10;🛠 **方法**：提出ActFovea，一种即插即用的守护框架，利用机器人运动学、本体感觉和近期动作构建动作条件化的中央凹区域，通过评估视觉运动与观测新鲜度是否与几何、本体感觉及动作转换一致来检测风险，并对可恢复扰动生成候选观测、验证动作块后恢复，否则触发有界安全失败。&#10;&#10;✨ **主要贡献**：在多个LIBERO套件上对π₀策略的闭环评估中，ActFovea将局部视觉叠加下的成功率从49.3%提升至90.3%，弥合了93.7%的干净性能差距；在动作漂移和视觉延迟下分别提升7.0和9.8个百分点，同时保持干净任务性能；在冻结观测重放下所有试验均及时触发安全失败，无未保护失败，验证了时空视觉-动作一致性作为VLA策略运行时守护的有效基础。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Vision-language-action (VLA) policies achieve strong performance in robotic manipulation but remain vulnerable to runtime disturbances that break the temporal alignment among visual observations, robot states, and executed actions. We introduce ActFovea, a plug-and-play safeguarding framework that detects and mitigates such failures without retraining or modifying the underlying VLA policy. ActFovea uses robot kinematics, proprioceptive states, and recent actions to construct action-conditioned foveated regions that retain contact-relevant areas and predicted motion corridors while suppressing task-irrelevant visual content. It detects runtime risks by evaluating whether visual motion and observation freshness remain consistent with geometric, proprioceptive, and action transitions. For recoverable disturbances, ActFovea constructs disturbance-specific candidate observations and accepts a recovery only after verifying the resulting action chunk. When stale or replayed observations make reliable recovery impossible, it invokes a bounded safe-failure procedure. In closed-loop evaluations of $π_0$ across multiple LIBERO suites, ActFovea increases success under localized visual overlays from 49.3\% to 90.3\%, closing 93.7\% of the gap to clean performance. It further improves success under action drift and visual delay by 7.0 and 9.8 percentage points, respectively, while preserving clean-task performance. Under frozen-observation replay, ActFovea triggers timely safe failure in all trials, with no unprotected failures. These results demonstrate that spatiotemporal visual-action consistency provides an effective basis for runtime safeguarding of VLA policies.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2605.11567v4" target="_blank" class="paper-title">Dynamic Execution Commitment of Vision-Language-Action Models</a>
+                        <span class="paper-date">2026-07-31</span>
+                    </div>
+                                        <span class="paper-comment">📝 code is available at https://inceptionwang.github.io/A3/</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有视觉-语言-动作（VLA）模型依赖固定动作执行步长，忽略了预测可靠性的状态依赖性，导致在动态或分布外场景中性能脆弱。&#10;&#10;🛠 **方法**：提出自适应动作接受机制A3，将动态执行承诺转化为自推测前缀验证问题，通过组采样计算轨迹级共识分数，并强制执行共识排序条件不变性和前缀闭合顺序一致性，仅接受最长可验证前缀。&#10;&#10;✨ **主要贡献**：A3消除了手动调整执行步长的需求，在多种VLA模型和基准测试中实现了执行鲁棒性与推理吞吐量的更优权衡。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Vision-Language-Action (VLA) models predominantly adopt action chunking, i.e., predicting and committing to a short horizon of consecutive low-level actions in a single forward pass, to amortize the inference cost of large-scale backbones and reduce per-step latency. However, committing these multi-step predictions to real-world execution requires balancing success rate against inference efficiency, a decision typically governed by fixed execution horizons tuned per task. Such heuristics ignore the state-dependent nature of predictive reliability, leading to brittle performance in dynamic or out-of-distribution settings. In this paper, we introduce A3, an Adaptive Action Acceptance mechanism that reframes dynamic execution commitment as a self-speculative prefix verification problem. A3 first computes a trajectory-wise consensus score of actions via group sampling, then selects a representative draft and prioritizes downstream verification. Specifically, it enforces: (1) consensus-ordered conditional invariance, which validates low-consensus actions by judging whether they remain consistent when re-decoded conditioned on high-consensus actions; and (2) prefix-closed sequential consistency, which guarantees physical rollout integrity by accepting only the longest continuous sequence of verified actions starting from the beginning. Consequently, the execution horizon emerges as the longest verifiable prefix satisfying both internal model logic and sequential execution constraints. Experiments across diverse VLA models and benchmarks demonstrate that A3 eliminates the need for manual horizon tuning while achieving a superior trade-off between execution robustness and inference throughput.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.28829v1" target="_blank" class="paper-title">When Unlearning Fails: Reliable Data Deletion under Post-Training in Agent Networks</a>
+                        <span class="paper-date">2026-07-30</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在自改进联邦智能体网络中，数据删除请求后，已删除数据仍通过影响后续轨迹保留“影响回声”，导致传统遗忘方法失效，行为泄露持续存在。&#10;&#10;🛠 **方法**：提出MUTE方法，通过服务器轻量账本估计下游影响，执行遗忘-保留更新清除当前残留，对高影响保留轨迹进行隔离或降权，并在上行带宽预算下审计后续行为以安排额外擦除。&#10;&#10;✨ **主要贡献**：在LIBERO基准和物理Jetson边缘测试台上验证，MUTE在保持任务效用的同时显著降低行为泄露和影响再生，通信开销远低于全量重训练，支持多种删除粒度和两个视觉-语言-动作骨干网络。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Self-improving federated agent networks keep training after deployment by collecting new trajectories with the current policy and feeding them back into later rounds. This closed loop makes unlearning harder than a one-time model repair. When a data owner requests deletion, the target data may have already shaped later retained trajectories, so retraining or model-side unlearning can leave an influence echo that returns as the network continues to operate. We show that this echo survives retained-data retraining, grows with the amount of forget-shaped retained data, and can be traced from deployment, collection, and aggregation records. To address this problem, we propose MUTE, a Muting Unlearned Trajectories' Echoes method for reliable deletion in self-improving federated agent networks. MUTE estimates downstream influence from a lightweight server ledger, removes the current residue through a forget-retain update, contains high-influence retained trajectories through quarantine or down-weighting, and audits later behavior to schedule additional erasure under an uplink budget. Experiments on LIBERO with two vision-language-action backbones, three deletion granularities, and a physical Jetson-based edge testbed show that MUTE keeps behavioral leakage and influence regeneration low while preserving task utility and using much less communication than full retraining.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
                         <a href="https://arxiv.org/abs/2607.28625v1" target="_blank" class="paper-title">ACE-Data-0: Human-Centric Ambient Capture as Embodied Data Engine</a>
                         <span class="paper-date">2026-07-30</span>
                     </div>
@@ -1094,10 +1184,7 @@
                         <span class="paper-date">2026-07-30</span>
                     </div>
                                         <span class="paper-comment">📝 Code and models are available at https://rl2-vla.github.io</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：视觉-语言-动作（VLA）模型在复杂和域外任务中性能下降，现有测试时干预方法存在动作样本集中、继承相同失败模式，且对所有时间步采用统一干预策略的问题。&#10;&#10;🛠 **方法**：提出RL²框架，利用强化学习在VLA潜在空间进行自适应推理时组合引导。先训练轻量级离线RL策略，基于VLA动作专家提取的潜在表示，在推理时将其流速度与冻结VLA的流速度组合，仅在预测失败时激活该组合引导。&#10;&#10;✨ **主要贡献**：发现推理时引导在成功与失败状态下遵循不同缩放定律，据此实现自适应激活。在SIMPLER和PolaRiS基准上，域外设置成功率提升高达+17.3%，真实实验验证了跨仿真迁移的有效性，成为VLA部署的实用模块化引导框架。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Despite the impressive visuomotor capabilities enabled by Vision-Language-Action (VLA) models, their performance often degrades on challenging and out-of-domain tasks. Recent test-time steering and scaling methods improve performance without extensive data collection and retraining, but action samples often remain concentrated around similar behaviors and therefore inherit correlated failure modes. Moreover, existing methods apply the same intervention strategy at every timestep, regardless of whether the base policy is already likely to succeed. To address these limitations, we introduce $RL^2$, an adaptive inference-time steering framework that leverages Reinforcement Learning on VLA Latents. First, we train a lightweight offline RL policy conditioned on expressive latents extracted from the VLA action expert and compose its flow velocity with that of the frozen VLA during inference. This compositional steering strategy combines the behavioral priors of large-scale imitation learning with the action diversity induced by offline RL beyond dominant demonstration modes. We further discover that inference-time steering follows fundamentally different scaling laws under success and failure states, revealing that action diversity is most beneficial when the base VLA is likely to fail, but can unnecessarily perturb already-accurate actions when success is likely. Building on this insight, $RL^2$ activates compositional steering only when failure is predicted. Across the SIMPLER and PolaRiS benchmarks, $RL^2$ improves success rates by up to +17.3% in out-of-domain settings, while ablations and scaling studies demonstrate the importance of latent representations and RL training. Finally, real-world experiments demonstrate that these gains transfer beyond simulation, establishing $RL^2$ as a practical and modular steering framework for VLA deployment.</p>
@@ -1109,10 +1196,7 @@
                         <span class="paper-date">2026-07-30</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：如何在有限的任务数据下，将触觉信息有效融入预训练的视觉-语言-动作（VLA）模型，以提升接触丰富的操作任务性能，同时避免大规模预训练的高昂成本。&#10;&#10;🛠 **方法**：提出τ框架，基于联合嵌入预测架构（JEPA），利用未来视觉监督学习动作条件下的时空触觉表示，并将其与视觉-语言特征融合以生成动作。该监督仅在训练时使用，不增加部署负担，并配套构建了包含同步视觉、本体感知和触觉信号的TacAura数据集。&#10;&#10;✨ **主要贡献**：τ模型在接触丰富的操作任务中优于现有方法，并能泛化到未见过的物体和场景，显著提升了操作性能与鲁棒性。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Incorporating tactile sensing into Vision-Language-Action (VLA) models holds promise for contact-rich manipulation, where visual observations alone often fail to capture critical cues about physical interactions. However, learning informative tactile representation while effectively adapting it to pretrained VLA models remains challenging under limited task-specific data. Existing methods either focus on instantaneous contact states or model temporal interaction dynamics using 6D wrench sequences, leaving high-dimensional tactile signals underexplored. To address these challenges, we present τ, a touch-augmented VLA framework that learns an action-conditioned spatiotemporal tactile representation from future visual supervision inspired by the Joint-Embedding Predictive Architecture (JEPA), and fuses it with vision-language features for action generation. This supervision operates in latent space and is used only during training, adding no deployment overhead. We also introduce TacAura, a dataset of synchronized vision, proprioception, and vision-based tactile signals across four representative contact-rich manipulation tasks. Experiments show that τ outperforms existing models and generalizes to unseen objects and scenes, delivering improved manipulation performance and robustness.</p>
@@ -1124,10 +1208,7 @@
                         <span class="paper-date">2026-07-30</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="好的，作为一名人工智能研究与学术论文分析专家，我将严格按照您的要求，对这篇题为《Do World Action Models Generalize Better than VLAs? A Robustness Study》的论文进行详细的中文解读。&#10;&#10;---&#10;&#10;## 0. 概览（Concise Summary）&#10;&#10;- **主题（Topic）**：机器人操作策略的鲁棒性研究，比较两种主流范式：视觉-语言-动作模型（VLA）与世界动作模型（WAM）。&#10;- **问题（Problem）**：VLA模型在真实世界部署时，面对视觉干扰、环境变化等扰动时泛化能力有限，缺乏对物理世界动态的根本理解。WAMs声称通过视频预训练获得了更好的时空先验，但其鲁棒性优势是否真实存在、在何种条件下成立，尚缺乏系统性比较。&#10;- **方法（Method）**：构建了两个增强的机器人操作基准（LIBERO-Plus 和 RoboTwin 2.0-Plus），引入七种不同类型的视觉和语言扰动（如相机视角、光照、噪声、背景、布局等），对多种先进的VLA和WAM模型进行全面的鲁棒性评估和对比分析。&#10;- **创新（Innovation）**：&#10;    1.  **首次系统性对比**：对VLA和WAM两大范式在鲁棒性方面进行了首次大规模、系统性的实证研究。&#10;    2.  **构建新基准**：提出了RoboTwin 2.0-Plus基准，用于评估双臂操作任务的鲁棒性。&#10;    3.  **深入分析**：揭示了WAM鲁棒性的来源（视频先验）、局限性（对几何变换敏感）以及关键影响因素（训练数据多样性），并指出了推理速度这一主要瓶颈。&#10;- **意义（Significance）**：该研究为机器人策略选择提供了关键见解：WAM在视觉扰动下鲁棒性更强，且对大规模具身预训练数据的需求更低；而VLA（如π0.5）通过多样化的数据训练也能达到相当水平。研究结果明确了两种范式的优劣和适用场景，为未来开发更鲁棒、高效的机器人基础模型指明了方向。&#10;- **一句话总结**：本文通过系统性鲁棒性研究，证实了世界动作模型（WAM）在视觉扰动下普遍优于视觉-语言-动作模型（VLA），但其优势依赖于视频先验与训练数据多样性的结合，且推理速度是其主要瓶颈。&#10;&#10;## 1. 研究动机（Motivation）&#10;&#10;- **解决的问题**：机器人策略在真实世界中部署时，面临环境多样性、光照变化、视觉噪声、物体布局改变等众多不确定性。现有主流的VLA模型虽然在标准任务上表现优异，但其泛化能力和鲁棒性严重不足，容易受到这些“扰动”的影响而失败。&#10;- **为什么重要**：鲁棒性是机器人能否从实验室走向真实应用的关键。一个无法应对环境微小变化的机器人是不可靠的。理解不同模型架构（VLA vs. WAM）的鲁棒性差异，对于设计更可靠、更通用的机器人系统至关重要。&#10;- **挑战在哪里**：&#10;    1.  **VLA的局限性**：VLA通常基于在静态图文数据上预训练的VLM，缺乏对物理世界动态变化（如物体运动、交互后果）的显式建模能力。其鲁棒性提升往往依赖于海量、多样化的机器人数据，成本高昂。&#10;    2.  **WAM的潜力与疑问**：WAM基于在大量视频数据上预训练的世界模型，理论上具备更好的时空动态先验，可能天然更鲁棒。但这一优势是否真实存在？其鲁棒性在不同类型的扰动下是否一致？与VLA相比，其代价（如推理速度）是否值得？这些问题缺乏系统的实验证据。&#10;    3.  **缺乏统一比较基准**：不同模型在各自的数据集和任务上评测，难以进行公平、全面的鲁棒性比较。&#10;&#10;## 2. 创新点（Innovation）&#10;&#10;- **关键创新**：&#10;    1.  **系统性鲁棒性比较框架**：提出了一个统一的、多维度扰动评估框架，用于公平比较VLA和WAM两大范式。&#10;    2.  **构建新基准RoboTwin 2.0-Plus**：在RoboTwin 2.0基础上，按照LIBERO-Plus的扰动协议，构建了针对双臂操作任务的鲁棒性评估基准，填补了该领域的空白。&#10;    3.  **深入的实证分析与发现**：&#10;        - 证实了WAM在视觉扰动（噪声、光照、布局）下普遍优于VLA。&#10;        - 揭示了WAM的鲁棒性并非绝对，其对相机视角和机器人初始状态等几何变换同样敏感。&#10;        - 发现了训练数据多样性对WAM鲁棒性的关键作用，特别是对于非IDM（逆动力学模型）架构的WAM（如Fast-WAM）。&#10;        - 量化了WAM与VLA在推理速度上的巨大差距，指出了WAM部署的主要瓶颈。&#10;- **与现有方案的不同**：现有工作多关注模型在标准任务上的性能，或仅研究单一类型的扰动。本文首次将多种主流VLA和WAM模型置于统一的、多扰动基准下进行横向对比，并深入分析了鲁棒性差异背后的原因（如预训练目标、架构设计、训练数据）。&#10;- **为什么能奏效**：通过精心设计的扰动基准和全面的模型选择，该研究能够系统地揭示不同模型在面对各种挑战时的行为模式，从而得出有说服力的结论。例如，对比LingBot-VA和Fast-WAM在不同数据多样性下的表现，清晰地分离了“视频先验”和“数据多样性”对鲁棒性的贡献。&#10;&#10;## 3. 主要内容（Main Content）【重点】&#10;&#10;### 3.1 设计架构与方法&#10;&#10;论文的核心方法是**构建一个统一的鲁棒性评估框架**，具体包括：&#10;&#10;1.  **扰动基准**：&#10;    - **LIBERO-Plus**：基于单臂操作任务，引入7种扰动：相机视角（Camera）、机器人初始状态（Robot）、语言指令（Language）、光照（Light）、背景（Background）、图像噪声（Noise）、布局（Layout）。&#10;    - **RoboTwin 2.0-Plus**：基于双臂操作任务（Aloha-Agilex平台），遵循与LIBERO-Plus相同的扰动协议，用于评估双臂协调的鲁棒性。&#10;&#10;2.  **模型选择**：选取了具有代表性的模型，分为三类：&#10;    - **经典VLA**：π0.5, X-VLA&#10;    - **混合方法 (VLA + WM)**：MOTUS, VLA-JEPA（在VLA中引入世界模型作为辅助任务）&#10;    - **世界动作模型 (WAM)**：LingBot-VA, Fast-WAM, Cosmos-Policy, GE-Act&#10;&#10;3.  **评估流程**：在原始任务和所有扰动任务上，分别评估每个模型的成功率（Success Rate），并进行横向对比。&#10;&#10;### 3.2 关键算法与数学推导&#10;&#10;论文的核心思想在于区分VLA和WAM的预测范式。&#10;&#10;- **VLA的预测范式**：直接根据当前状态 $h_t$ 预测动作 $a_t$。&#10;  $$p_\theta(a_t | h_t)$$&#10;  其中 $\theta$ 是VLA模型的参数。模型学习一个从观察到动作的直接映射。&#10;&#10;- **WAM的预测范式**：WAM通常有两种形式：&#10;    1.  **联合预测**：同时预测未来视觉状态 $h_{t+1}$ 和动作 $a_t$。&#10;        $$p_\phi(h_{t+1}, a_t | h_t)$$&#10;    2.  **级联预测（IDM风格）**：先预测未来视觉状态，再基于当前和未来状态预测动作。&#10;        $$p_\phi(h_{t+1} | h_t) \cdot g_\psi(a_t | h_t, h_{t+1})$$&#10;        其中 $\phi$ 是世界模型（视频生成模型）的参数，负责预测未来帧；$g_\psi$ 是逆动力学模型（IDM）的参数，负责根据状态转换推断动作。&#10;&#10;- **关键差异**：WAM的预训练阶段 $p_\phi(h_{t+1} | h_t)$ 是在海量互联网视频数据上进行的，这赋予了模型强大的**时空先验**。而VLA的VLM骨干网络主要在静态图文数据上训练，缺乏这种动态预测能力。因此，WAM在具身预训练阶段只需专注于学习相对简单的逆动力学 $g_\psi(a_t | h_t, h_{t+1})$，而VLA则需要从更复杂的数据中隐式学习世界动态。&#10;&#10;### 3.3 模型、训练与数据集&#10;&#10;- **模型**：论文对比了多种模型，其关键特征总结在论文的**Table 1**中。例如：&#10;    - **LingBot-VA**: 基于Wan2.2-5B视频生成模型，采用IDM风格，自回归生成。&#10;    - **Cosmos-Policy**: 基于Cosmos-Predict2，采用联合去噪方式。&#10;    - **Fast-WAM**: 基于Wan2.2-5B，采用混合Transformer（MOT）架构，推理时无需生成视频，速度快。&#10;    - **π0.5**: 经典VLA，JAX实现，训练数据多样。&#10;&#10;- **训练数据**：论文的**Table 2**详细列出了各模型在不同训练阶段使用的数据。关键发现是：&#10;    - **WAMs**（如Cosmos-Policy, LingBot-VA）通常不需要大规模、多样化的具身预训练数据，甚至不需要（如Fast-WAM）。&#10;    - **VLAs**（如π0.5）和**混合方法**（如MOTUS, VLA-JEPA）为了达到与WAMs相当的鲁棒性，通常需要依赖海量、跨具身形态的机器人数据，甚至人类视频数据。&#10;&#10;- **数据集**：&#10;    - **LIBERO-Plus**: 基于LIBERO基准，使用7-DoF Franka Panda机器人，单臂操作。&#10;    - **RoboTwin 2.0-Plus**: 基于RoboTwin 2.0，使用Aloha-Agilex双臂平台。&#10;&#10;### 3.4 实验设置与结果&#10;&#10;- **实验设置**：在LIBERO-Plus和RoboTwin 2.0-Plus两个基准上，对每个模型的原始任务和7种扰动任务分别进行评测，记录成功率。&#10;&#10;- **主要结果**：&#10;    - **Table 3 (RoboTwin 2.0-Plus)**:&#10;        - **WAMs表现突出**：LingBot-VA以74.2%的总成功率排名第一，远超π0.5的58.6%。&#10;        - **数据多样性的重要性**：Fast-WAM（72.7%）在使用了多样化数据训练后，表现接近LingBot-VA，证明了视频先验+多样化数据的力量。&#10;        - **混合方法居中**：MOTUS（71.5%）表现介于纯VLA和WAM之间。&#10;    - **Table 4 (LIBERO-Plus)**:&#10;        - **WAMs依然强劲**：Cosmos-Policy（82.2%）和GE-Act（80.3%）表现优异。&#10;        - **VLA的潜力**：π0.5（85.7%）在单臂任务上表现最佳，说明通过大规模多样化数据训练，VLA也能获得极强的鲁棒性。&#10;        - **数据多样性的关键作用**：Fast-WAM（51.5%）在LIBERO-Plus上表现急剧下降，原因是其使用的训练数据缺乏多样性（仅使用干净演示）。这直接证明了**视频先验本身不足以保证鲁棒性，训练数据的多样性同样至关重要**。&#10;&#10;- **关键发现（RQ1-RQ4）**：&#10;    - **RQ1**: WAMs对视觉扰动（噪声、光照、布局）普遍鲁棒。&#10;    - **RQ2**: WAMs的优势并非全能，对相机视角和机器人初始状态等几何变换的鲁棒性较弱。**Figure 3**展示了Cosmos-Policy在噪声和光照下能准确预测未来帧，但在背景变化下预测失真。&#10;    - **RQ3**: WAMs的鲁棒性源于其视频骨干网络提供的时空先验，这简化了后续的策略学习。VLA要达到同等水平，需要更多样化的动态数据。&#10;    - **RQ4**: WAMs的推理速度是主要瓶颈。**Table 5**显示，最慢的LingBot-VA比最快的π0.5慢83倍。即使是较快的Fast-WAM，也比π0.5慢3倍。&#10;&#10;### 3.5 技术细节&#10;&#10;- **扰动定义**：论文附录A详细定义了每种扰动的具体参数，如噪声类型（N1-N5）、光照变化（L1-L4）等，如图1所示。&#10;- **模型实现**：论文提到了π0.5的JAX和PyTorch实现存在性能差异，因此统一使用JAX版本进行微调。对于其他模型，使用官方发布的检查点。&#10;- **推理速度测量**：**Table 5**详细列出了各模型在不同配置下的推理时间，并指出了影响速度的关键因素：去噪步数、骨干网络大小、生成策略（是否生成视频）等。&#10;&#10;## 4. 意义与影响（Significance and Impact）&#10;&#10;- **解决的问题与贡献**：&#10;    1.  **澄清了WAM与VLA的鲁棒性差异**：首次通过大规模实验证实，WAM在视觉扰动下普遍比VLA更鲁棒，这主要归功于其视频预训练带来的时空先验。&#10;    2.  **揭示了鲁棒性的关键因素**：明确指出鲁棒性并非单一因素决定，而是“**视频先验**”与“**训练数据多样性**”共同作用的结果。WAM提供了先验，但多样化的下游数据是发挥其潜力的关键。&#10;    3.  **指出了WAM的局限性**：WAM对几何变换（如相机视角变化）的鲁棒性不足，且推理速度是其部署的主要障碍。&#10;&#10;- **对未来研究/应用的影响**：&#10;    - **模型选择指导**：对于视觉环境变化大的应用（如家庭服务机器人），WAM是更优的选择；对于需要快速响应且环境相对可控的场景（如工业流水线），优化后的VLA可能更合适。&#10;    - **研究方向启发**：未来研究应聚焦于：&#10;        1.  提升WAM的推理速度，例如通过减少去噪步数、设计更高效的架构（如Fast-WAM的思路）。&#10;        2.  增强WAM对几何变换的鲁棒性，例如通过数据增强或引入几何先验。&#10;        3.  探索如何更有效地结合VLA和WAM的优势，例如利用WAM的动态预测能力来指导VLA的决策。&#10;    - **数据策略启示**：对于WAM，高质量、多样化的任务特定数据比大规模、任务无关的具身预训练数据更重要。&#10;&#10;- **作者提到的局限与开放问题**：&#10;    - **推理速度**：WAM的推理速度远慢于VLA，是部署的主要挑战。&#10;    - **对几何变换的敏感性**：WAM在相机视角和机器人初始状态变化下表现不佳。&#10;    - **模型覆盖不全**：由于计算资源和模型可用性限制，未能评估所有最新的WAM（如DreamZero, GigaWorld-Policy）。&#10;    - **评估范围**：研究主要基于模拟器，真实世界的鲁棒性有待进一步验证。&#10;&#10;## 5. 澄清与简化（Clarifications and Simplifications）&#10;&#10;- **VLA vs. WAM 的类比**：&#10;    - **VLA** 就像一个**经验丰富的司机**，他看过很多路况图片和文字说明（图文预训练），知道“红灯停，绿灯行”。但他没有真正开过车，对车辆动态、刹车距离、转向手感（物理动态）没有直观感受。遇到从未见过的路况（扰动），他可能会不知所措。&#10;    - **WAM** 就像一个**驾校教练**，他不仅懂交规，更在模拟器或真实道路上开过无数小时（视频预训练），对车辆在各种情况下的动态反应（物理动态）有深刻理解。他能预测“如果我现在打方向盘，车会怎么走”。因此，即使遇到突发状况（如突然窜出的行人），他也能更好地应对。&#10;&#10;- **“时空先验”的通俗解释**：可以理解为模型对“世界是如何运转的”的一种**直觉**。比如，一个球被推一下会滚动，一个杯子掉地上会碎。WAM通过观看海量视频，学到了这种“因果”和“动态”的直觉。而VLM主要看静态图片，它知道“杯子”和“碎片”是两样东西，但很难直觉地理解“掉”这个动作如何导致“碎”这个结果。&#10;&#10;- **为什么Fast-WAM在LIBERO-Plus上表现差？**：这就像一个**天赋异禀的运动员**（视频先验），但他只练习了标准动作（干净数据）。当比赛场地、光线、对手（扰动）都变了，他因为没有针对性地训练过，表现就会大打折扣。而LingBot-VA就像一个**经验丰富的老将**，他不仅天赋好，还经历过各种恶劣条件下的训练（多样化数据），所以能从容应对。这清晰地说明了“天赋”和“训练”缺一不可。&#10;&#10;## 6. 补充说明（Additional Notes）&#10;&#10;- **相关工作关联**：本文的研究与近期机器人基础模型的发展紧密相关。它直接对比了以π0系列为代表的**VLA流派**和以Cosmos-Policy、LingBot-VA为代表的**世界模型流派**。同时，它也评估了介于两者之间的**混合方法**，如MOTUS和VLA-JEPA，这些方法试图在VLA框架内注入世界模型的能力。论文的结论与一些早期工作（如VPP）的发现一致，即视频预训练对机器人策略的性能提升至关重要。&#10;&#10;- **最重要的图表**：&#10;    1.  **Table 3 &amp; Table 4**：这是论文的核心结果，直观地展示了所有模型在两个基准上的性能对比，是理解全文结论的关键。&#10;    2.  **Table 5**：揭示了WAMs的主要瓶颈——推理速度，对于评估其实用价值至关重要。&#10;    3.  **Figure 3**：通过可视化Cosmos-Policy预测的未来帧，直观地解释了WAMs为何对某些扰动鲁棒（如噪声、光照），而对另一些扰动（如背景）失效。&#10;    4.  **Table 2**：清晰地展示了不同模型在训练数据上的巨大差异，是解释性能差异（尤其是Fast-WAM在两个基准上表现迥异）的关键线索。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Robot action planning in the real world is challenging as it requires not only understanding the current state of the environment but also predicting how it will evolve in response to actions. Vision-language-action (VLA), which repurpose large-scale vision-language models for robot action generation using action experts, have achieved notable success across a variety of robotic tasks. Nevertheless, their performance remains constrained by the scope of their training data, exhibiting limited generalization to unseen scenarios and vulnerability to diverse contextual perturbations. More recently, world models have been revisited as an alternative to VLAs. These models, referred to as world action models (WAMs), are built upon world models that are trained on large corpora of video data to predict future states. With minor adaptations, their latent representation can be decoded into robot actions. It has been suggested that their explicit dynamic prediction capacity, combined with spatiotemporal priors acquired from web-scale video pretraining, enables WAMs to generalize more effectively than VLAs. In this paper, we conduct a comparative study of prominent state-of-the-art VLA policies and recently released WAMs. We evaluate their performance on the LIBERO-Plus and RoboTwin 2.0-Plus benchmarks under various visual and language perturbations. Our results show that WAMs achieve strong robustness, with LingBot-VA reaching 74.2% success rate on RoboTwin 2.0-Plus and Cosmos-Policy achieving 82.2% on LIBERO-Plus. While VLAs such as $π_{0.5}$ can achieve comparable robustness on certain tasks, they typically require extensive training with diverse robotic datasets and varied learning objectives. The evaluation code for the RoboTwin2.0-Plus benchmark is available at: https://robot-robustness.github.io/RoboTwin2.0-Plus/.</p>
@@ -1139,10 +1220,7 @@
                         <span class="paper-date">2026-07-30</span>
                     </div>
                                         <span class="paper-comment">📝 Project page: https://ajaysridhar.com/barx/</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在机器人操作的大规模模仿学习中，如何有效实现跨本体（cross-embodiment）迁移，即利用不同机器人形态的数据训练策略，并泛化到新本体上。&#10;&#10;🛠 **方法**：提出使用行为对齐表示（如物体边界框、语言动作、末端执行器轨迹）作为视觉-语言-动作（VLA）模型的中间表征，这些表示在不同本体间具有不变性且能预测机器人动作，从而统一跨本体数据。通过仿真基准测试比较不同表示及其集成方式。&#10;&#10;✨ **主要贡献**：发现末端执行器轨迹对跨本体迁移特别有效；表示在更大先验数据集下更有用，并能利用无动作数据；在仿真到真实（sim-to-real）迁移中，预训练策略的任务完成进度提升28%。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Recent progress in large-scale imitation learning for robot manipulation has been driven by leveraging datasets across a wide range of robot embodiments. However, achieving significant cross-embodiment transfer is often still challenging. In this work, we study the role of using behavior-aligned representations (e.g., object bounding boxes, language motions, end-effector traces of robot motion) in vision-language-action (VLA) models to promote cross-embodiment transfer. We hypothesize that by possessing invariances across embodiments while being predictive of robot actions, these representations can help unify large-scale cross-embodiment data to enhance transfer. To assess our hypothesis, we develop a simulation-based benchmark designed to assess transfer with diverse cross-embodiment data to new embodiments. Using this benchmark, we compare different representations and ways of incorporating them. We identify that end-effector traces can be particularly beneficial for transfer, representations are generally more useful with larger prior datasets, and can be used to benefit from action-free data. We also demonstrate that they can enhance sim-to-real cross-embodiment transfer, improving task completion progress of real robot policies pre-trained on simulation data by 28%. We provide videos of our evaluations at our website: https://ajaysridhar.com/barx/.</p>
@@ -1154,10 +1232,7 @@
                         <span class="paper-date">2026-07-29</span>
                     </div>
                                         <span class="paper-comment">📝 Code is available at https://github.com/H-EmbodVis/TurboVLA</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有视觉-语言-动作（VLA）模型依赖大语言模型作为中心接口，导致推理时计算和内存开销巨大，难以在消费级GPU上实现实时运行。&#10;&#10;🛠 **方法**：提出TurboVLA，将传统的“视觉→语言→动作”路径重构为直接的“视觉+语言→动作”映射，通过轻量级双向视觉-语言交互独立编码观测和指令，并用紧凑解码器直接预测连续动作块。&#10;&#10;✨ **主要贡献**：在LIBERO基准上以仅0.2B参数、31.2毫秒推理延迟和0.9GB显存（RTX 4090）达到97.7%平均成功率，性能媲美或超越更大规模VLA模型，为高效机器人操控提供了新范式。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Vision-language-action (VLA) models commonly adopt an LLM-centric $V \to L \to A$ pathway, where visual observations are projected into the representation space of a large language model before being decoded into robot actions. Although effective, this design incurs substantial computation and memory overhead at every policy invocation. In this work, we introduce TurboVLA, a new VLA paradigm that reformulates the conventional $V \to L \to A$ pathway as a direct $V + L \to A$ mapping. Instead of using a large language model as the central interface between perception and action, TurboVLA independently encodes visual observations and language instructions, directly exchanges information between them through lightweight bidirectional vision-language interaction, and predicts continuous action chunks with a compact decoder. This simple design constructs task-conditioned representations directly from visual and linguistic features, significantly reducing the computational and memory costs of VLA inference. On LIBERO, TurboVLA achieves 97.7% average success with only 0.2B parameters, 31.2 ms inference latency, and 0.9 GB inference VRAM on a consumer-grade RTX 4090, matching or outperforming substantially larger VLA policies. These results establish TurboVLA as a simple and effective alternative to the prevailing LLM-centric VLA paradigm, offering a new perspective on how vision, language, and action can be connected for efficient robotic manipulation. Code is available at https://github.com/H-EmbodVis/TurboVLA.</p>
@@ -1169,10 +1244,7 @@
                         <span class="paper-date">2026-07-29</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有视觉-语言-动作（VLA）模型受限于稀缺的动作标注机器人数据，而潜在动作模型虽能从无动作视频中提取先验，但重建训练得到的潜在编码缺乏与机器人动作联合生成所需的结构化时序约束。&#10;&#10;🛠 **方法**：提出DLAM，一种分布性潜在动作模型，将每个状态转移表示为对角高斯分布。通过参考帧条件化重建约束均值，利用等间隔三元组的归一化组合与反转约束均值和维度方差，其中方差组合采用轻量共享相关系数处理相邻转移的依赖关系，反转则保持方差不变。下游策略学习时冻结编码器，训练流匹配策略联合生成均值转移序列与机器人动作。&#10;&#10;✨ **主要贡献**：在保留转移上学习到更时序一致的潜在动态，在保留视频上实现更强的直接与累积重建；在MetaWorld MT50、LIBERO及真实世界操作任务中提升策略性能；消融实验表明归一化均值约束贡献主要重建增益，而学习方差与相关性感知组合在控制任务中提供互补改进。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Vision-language-action (VLA) models remain constrained by scarce action-labeled robot data, whereas action-free videos offer abundant observations of physical change. Latent action models can extract such priors, but reconstruction-trained codes may predict future observations without the structure required for joint generation with robot actions. Existing structured methods add temporal constraints but retain deterministic transition points, so residual errors in locally inferred transitions may propagate and compound under recursive composition. We introduce DLAM, a distributional latent-action model that represents each transition as a diagonal Gaussian. Reconstruction conditioned on the reference frame grounds the mean in observed visual change, while normalized composition and reversal over equal-gap triplets constrain both the mean and dimension-wise variance. Variance composition uses a lightweight shared-correlation coefficient to account for dependence between adjacent transitions that share an intermediate frame, whereas reversal negates the mean and preserves the variance. For downstream policy learning, we freeze the encoder and train a flow-matching policy to jointly generate mean transition sequences and robot actions. On held-out transitions, DLAM learns more temporally consistent latent dynamics than existing latent-action baselines and achieves stronger direct and cumulative reconstruction on held-out videos. Under the same controlled $π_0$ transfer protocol, it also improves policy performance on MetaWorld MT50, LIBERO, and real-world manipulation tasks. Controlled ablations show that normalized mean constraints account for most of the reconstruction gain, while learned variance and correlation-aware composition provide complementary improvements in downstream control.</p>
@@ -1932,78 +2004,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>We present Wan-Streamer v0.3, which reframes our native-streaming interaction model under a single organizing view: a video is a world plus an event stream. The world is the persistent context in which a video unfolds, including the environment, scene, subjects, ambient acoustic conditions, voice characteristics, and other relatively stable conditions. The event stream is everything that changes over time within that world, including scene or environmental changes, subject behavior, speech, and other sounds. This yields a general-purpose pretraining task over large amounts of real video: given a world and incoming input, predict how the world moves, changes, and responds in real time. The resulting competence can be specialized to a broad family of real-time downstream tasks. We instantiate it on real-time full-duplex audio-visual interaction, where the event stream is the agent's speech together with free-form behavior. Functionally, the model's multimodal understanding process is vision-language-action-like: it maps multimodal user input to language-form speech and behavior actions. Wan-Streamer v0.3 preserves the v0.2 operating point: 640x368 video at 25 FPS, a 160 ms streaming unit, approximately 200 ms model-side response latency, and approximately 550 ms total interaction latency under a 350 ms bidirectional network budget.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.15275v1" target="_blank" class="paper-title">RoboTTT: Context Scaling for Robot Policies</a>
-                        <span class="paper-date">2026-07-16</span>
-                    </div>
-                                        <span class="paper-comment">📝 Project website: http://research.nvidia.com/labs/gear/robottt/</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Recent robot foundation models operate with single-step or short-history visuomotor context. We introduce Test-Time-Training Robot Policies (RoboTTT), a robot model and training recipe that scale visuomotor context to 8K timesteps, three orders of magnitude beyond state-of-the-art policies, without growing inference latency. At this context length, we unlock new robot capabilities: one-shot in-context imitation from human video demonstrations, on-the-fly policy improvement, robustness to perturbations, and stronger performance on multi-stage, long-horizon tasks. We also observe, for the first time, steady gains in closed-loop performance as pretraining context length scales. At its core, RoboTTT integrates Test-Time Training into robot foundation models such as Vision-Language-Action policies, yielding a sequence model whose recurrent state consists of fast weights, parameters updated by gradient descent during both training and inference, compressing histories into weight space and retrieving contextual information for long-context conditioning. To scale training context length, the recipe combines sequence action forcing with truncated backpropagation through time. On challenging real-robot manipulation tasks, RoboTTT improves overall performance by 87% over the single-step context baseline and fully completes a five-minute, ten-stage assembly task, which no baseline ever does. RoboTTT trained with 8K-timestep context outperforms the same model pretrained with 1K timesteps by 62%, suggesting context length as a new scaling axis for robot foundation models. Videos are available at https://research.nvidia.com/labs/gear/robottt/</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2603.05754v2" target="_blank" class="paper-title">Safe-Night VLA: Seeing the Unseen via Thermal-Perceptive Vision-Language-Action Models for Safety-Critical Manipulation</a>
-                        <span class="paper-date">2026-07-16</span>
-                    </div>
-                                        <span class="paper-comment">📝 Accepted to the 2026 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Current Vision-Language-Action (VLA) models rely primarily on RGB perception, preventing them from capturing modalities such as thermal signals that are imperceptible to conventional visual sensors. Moreover, end-to-end generative policies lack explicit safety constraints, making them fragile when encountering obstacles and novel scenarios outside the training distribution. To address these limitations, we propose Safe-Night VLA, a multimodal manipulation framework that enables robots to see the unseen while enforcing rigorous safety constraints for thermal-aware manipulation in unstructured environments. Specifically, Safe-Night VLA integrates long-wave infrared thermal perception into a pre-trained vision-language backbone, enabling semantic reasoning grounded in thermodynamic properties. To ensure safe execution under out-of-distribution conditions, we incorporate a safety filter via control barrier functions, which provide deterministic workspace constraint enforcement during policy execution. We validate our framework through real-world experiments on a Franka manipulator, introducing a novel evaluation paradigm featuring temperature-conditioned manipulation, subsurface target localization, and reflection disambiguation, while maintaining constrained execution at inference time. Results demonstrate that Safe-Night VLA outperforms RGB-only baselines and provide empirical evidence that foundation models can effectively leverage non-visible physical modalities for robust manipulation.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.15004v1" target="_blank" class="paper-title">CosFly-VLA: A Spatially Aware Vision-Language-Action Model for UAV Tracking</a>
-                        <span class="paper-date">2026-07-16</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Dynamic target tracking is essential for Unmanned Aerial Vehicles (UAVs) operating in complex urban environments, where both the target and the camera viewpoint change continuously. Existing Vision-Language-Action (VLA) policies can track visible targets effectively, but their performance often degrades when buildings, vegetation, or roadside objects block the line of sight. During sustained occlusion, a policy may lose the target state, execute actions toward an incorrect region, and amplify this error through subsequent observations until re-acquisition becomes impossible. To this end, we present CosFly-VLA, a spatially aware VLA model that jointly grounds the target, estimates its visibility, and generates continuous flight actions through a structured prediction interface. To train this policy, we use a large-scale recipe over diverse data sources. Spatially Grounded Continued Pretraining (CPT) on a 500k mixed pool injects UAV-view depth, distance, and 3-D spatial reasoning. A three-stage Curriculum-based Supervised Fine-Tuning (SFT) process then specializes the tracker through multi-head warm-up followed by two-stage curriculum learning over natural and hard / long-occlusion data. Chain-of-Thought (CoT) training subsequently teaches recovery-oriented reasoning traces before structured answers. Finally, a closed-loop Reinforcement Learning (RL) stage optimizes tracking behavior with a multi-component reward covering stand-off tracking, grounding quality, collision avoidance, and task success. Relative to OpenVLA, CosFly-VLA-0.8B reduces open-loop Average Displacement Error (ADE) by 34.1% on seen-test and 35.3% on unseen-test. Closed-loop optimization improves Success Rate (SR) by 29.8% and 2.5%, respectively. These results demonstrate progress from visible-frame imitation toward spatially grounded action-closed-loop control, evaluated under a shared oracle state history.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.14997v1" target="_blank" class="paper-title">AeroAct: Action-Centered World-Action Models for Language-Conditioned Quadrotor Flight</a>
-                        <span class="paper-date">2026-07-16</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Language-conditioned quadrotor flight requires a policy to ground semantic goals, anticipate the visual consequences of ego-motion, and output control references that remain smooth and dynamically executable under rapidly changing first-person views. Existing aerial vision-language navigation and vision-language-action methods commonly use discrete actions, high-level waypoints, or instantaneous velocity commands, which provide limited supervision about how flight actions change future observations. We present AeroAct, an action-centered world-action model (WAM) for quadrotor navigation. To the best of our knowledge, AeroAct is the first WAM instantiated and demonstrated for real-world aerial flight. The model adapts a pretrained video diffusion Transformer to predict local trajectory-action chunks from egocentric visual history, proprioception, and language. Future first-person frames are used during training as dense consequence supervision, while deployment directly decodes actions without generating future video. To obtain aligned visual, state, language, and dynamically feasible action data, we build a DiffAero-based pipeline with complementary Isaac Lab and 3D Gaussian splatting renderers. We further introduce a low-cost handheld collection device that couples camera observations with motion estimates to recreate flight-like egocentric trajectories, and a self-guidance procedure that improves temporal consistency across overlapping trajectory chunks. Closed-loop simulation and real-world experiments show that temporal visual context improves target tracking and object-search performance, and that WAM-based policies can be executed on a physical quadrotor.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2605.10821v2" target="_blank" class="paper-title">UniSteer: Unified Noise Steering for Efficient Human-Guided VLA Adaptation</a>
-                        <span class="paper-date">2026-07-16</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Diffusion-based vision-language-action (VLA) models have emerged as strong priors for robotic manipulation, yet adapting them to real-world distributions remains challenging. In particular, on-robot reinforcement learning (RL) is expensive and time-consuming, so effective adaptation depends on efficient policy improvement within a limited budget of real-world interactions. Noise-space RL lowers the cost by keeping the pretrained VLA fixed as a denoising generator while updating only a lightweight actor that predicts the noise. However, its performance is still limited due to inefficient autonomous exploration. Human corrective interventions can reduce this exploration burden, but they are naturally provided in action space, whereas noise-space finetuning requires supervision over noise variables. To address these challenges, we propose UniSteer, a Unified Noise Steering framework that combines human corrective guidance with noise-space RL through approximate action-to-noise inversion. Given a human corrective action, UniSteer inverts the frozen flow-matching decoder to recover a noise target, which provides supervised guidance for the same noise actor that is simultaneously optimized via reinforcement learning. Real-world experiments on diverse manipulation tasks show that UniSteer adapts more efficiently than strong noise-space RL and action-space human-in-the-loop baselines, improving the success rate from 20% to 90% in 66 minutes on average across four real-world adaptation tasks.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.14739v1" target="_blank" class="paper-title">FoMoVLA: Bridging Visual Foresight and Motion Guidance for Vision-Language-Action Models</a>
-                        <span class="paper-date">2026-07-16</span>
-                    </div>
-                                        <span class="paper-comment">📝 12 pages, 7 figures, 8 tables. Project page: https://liauto-research.github.io/FoMoVLA</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Vision-Language-Action (VLA) models have achieved impressive results in visuomotor policy learning, yet remain fundamentally reactive, mapping current observations and language to actions without explicit forward prediction of world dynamics. Existing visual foresight methods predict future visual states but lack explicit motion guidance: they show where to go but not how to get there. We argue that future feature prediction and sparse point tracking are naturally complementary: the former provides the goal state, while the latter captures the continuous motion path toward it. We propose FoMoVLA, a framework that augments VLA representations with explicit spatio-temporal supervision by jointly learning future feature foresight and sparse 2D point tracking, enhancing the continuous action policy. FoMoVLA introduces compact foresight tokens to decode future feature states, decodes sparse temporal 2D point trajectories to model compact geometric motion, and couples both through a lightweight future-conditioned cross-attention module that enables consistent reasoning between anticipated states and point dynamics. Extensive experiments on LIBERO, RoboCasa GR-1 Tabletop, and LIBERO-Plus demonstrate state-of-the-art performance and strong zero-shot generalization. Project page is available at https://liauto-research.github.io/FoMoVLA.</p>
                     </details>
                 </div>
             </div>

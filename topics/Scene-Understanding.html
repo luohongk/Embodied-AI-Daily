@@ -600,7 +600,7 @@
                 <a href="LLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
                     <span class="nav-label">LLM</span>
-                    <span class="nav-count">79</span>
+                    <span class="nav-count">80</span>
                 </a>
                 <a href="VLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f97316"></span>
@@ -675,7 +675,7 @@
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Kalman Filter</span>
-                    <span class="nav-count">47</span>
+                    <span class="nav-count">46</span>
                 </a>
                 <a href="Loop-Closure-Detection.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -690,12 +690,12 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">71</span>
+                    <span class="nav-count">68</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">74</span>
+                    <span class="nav-count">77</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -730,7 +730,7 @@
                 <a href="Model-Predictive-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#14b8a6"></span>
                     <span class="nav-label">Model Predictive Control</span>
-                    <span class="nav-count">54</span>
+                    <span class="nav-count">53</span>
                 </a>
                 <a href="Whole-Body-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#06b6d4"></span>
@@ -819,7 +819,7 @@
             <a href="LLM.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
                 <span class="nav-label">LLM</span>
-                <span class="nav-count">79</span>
+                <span class="nav-count">80</span>
             </a>
             <a href="VLM.html" class="nav-item">
                 <span class="nav-dot" style="background:#f97316"></span>
@@ -894,7 +894,7 @@
             <a href="Kalman-Filter.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Kalman Filter</span>
-                <span class="nav-count">47</span>
+                <span class="nav-count">46</span>
             </a>
             <a href="Loop-Closure-Detection.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -909,12 +909,12 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">71</span>
+                <span class="nav-count">68</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">74</span>
+                <span class="nav-count">77</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -949,7 +949,7 @@
             <a href="Model-Predictive-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#14b8a6"></span>
                 <span class="nav-label">Model Predictive Control</span>
-                <span class="nav-count">54</span>
+                <span class="nav-count">53</span>
             </a>
             <a href="Whole-Body-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#06b6d4"></span>
@@ -1028,6 +1028,21 @@
                 <span class="topic-count">78 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.29033v1" target="_blank" class="paper-title">SAM+D: Parameter-Efficient Dimensional Lifting of SAM-Family Models via Depth-Routed LoRA and Depth Shifting</a>
+                        <span class="paper-date">2026-07-31</span>
+                    </div>
+                                        <span class="paper-comment">📝 Accepted to ECCV2026</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有方法将2D基础模型（如SAM）适配到3D/4D数据时，要么忽略切片间上下文，要么需要大量架构改动和重训练，缺乏参数高效的通用方案。&#10;&#10;🛠 **方法**：提出SAM+D框架，在冻结的Transformer块中插入两个轻量模块——Depth-Routed LoRA（DRLoRA）专家实现空间自适应低秩更新，Depth Shift Modules（DSM）以零参数代价交换跨切片特征，仅微调约2.8%（SAM）和3.7%（SAM2）的参数。&#10;&#10;✨ **主要贡献**：首次通过参数高效微调实现SAM到3D分割和SAM2到4D（3D+T）时空分割，在四个CT基准和细胞追踪数据集上达到竞争性或更优性能，且跨架构、跨维度、跨领域（医学影像与生物场景）均表现良好。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Existing methods for adapting 2D foundation models such as SAM to 3D volumes either process slices independently---ignoring inter-slice context---or require substantial architectural changes and retraining. In this paper, we present \textbf{SAM+D}, a parameter-efficient framework that lifts SAM-family models by one spatial dimension---enabling 3D volumetric segmentation from 2D SAM and, for the first time via parameter-efficient fine-tuning, end-to-end 4D (3D+T) spatiotemporal segmentation from video-based SAM2---while keeping the vast majority of pre-trained parameters frozen. SAM+D introduces two lightweight, model-agnostic modules into frozen transformer blocks: (1)~\textbf{Depth-Routed LoRA (DRLoRA)} experts with learned routing for spatially adaptive low-rank updates, and (2)~\textbf{Depth Shift Modules (DSM)} for cross-slice feature exchange at zero additional parameter cost. Together, they provide volume-level context while tuning only ${\sim}$2.8\% of parameters for SAM and ${\sim}$3.7\% for SAM2. We evaluate SAM+D in two distinct settings, each lifting the base model by one spatial dimension: 3D segmentation, where SAM(2D$\,\to\,$3D) is evaluated on four CT benchmarks (KiTS, Pancreas, LiTS, Colon), and 4D segmentation, where SAM2 (2D+T$\,\to\,$3D+T) is evaluated on a cell tracking challenge (CTC) dataset (Fluo-N3DH-SIM+). In both settings SAM+D achieves competitive or superior results under the single-point prompt setting while using fewer trainable parameters than existing methods, demonstrating that SAM+D generalizes across SAM-family architectures, target dimensionalities (3D, 4D), and domains spanning medical imaging and bio-scene understanding. Code is publicly available at https://github.com/JerrySongCST/SAM-Plus-D.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2607.28300v1" target="_blank" class="paper-title">MonoVoc: Decoupling Geometry and Semantics for Lightweight Monocular Open-Vocabulary 3D Gaussians</a>
@@ -1169,10 +1184,7 @@
                         <span class="paper-date">2026-07-28</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有导航系统在决策层使用单次评分，导致长距离任务中过度自信的错误和冗余探索，影响部分可观测环境下的行动可靠性。&#10;&#10;🛠 **方法**：提出DSCD-Nav，通过构建任务-场景理解（TSU）和安全-信息平衡（SIB）两种立场进行合作辩论，并引入导航共识仲裁（NCA）代理，基于证据交叉验证和轻量微探测来优化决策。&#10;&#10;✨ **主要贡献**：在HM3Dv1、HM3Dv2和MP3D数据集上，该方法一致提升了导航成功率和路径效率，同时减少了探索冗余。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Adaptive navigation in unfamiliar indoor environments is crucial for household service robots. Despite advances in zero-shot perception and reasoning from vision-language models, existing navigation systems still rely on single-pass scoring at the decision layer, leading to overconfident long-horizon errors and redundant exploration. To tackle these problems, we propose Dual-Stance Cooperative Debate Navigation (DSCD-Nav), a decision mechanism that replaces one-shot scoring with stance-based cross-checking and evidence-aware arbitration to improve action reliability under partial observability. Specifically, given the same observation and candidate action set, we explicitly construct two stances by conditioning the evaluation on diverse and complementary objectives: a Task-Scene Understanding (TSU) stance that prioritizes goal progress from scene-layout cues, and a Safety-Information Balancing (SIB) stance that emphasizes risk and information value. The stances conduct a cooperative debate and make policy by cross-checking their top candidates with cue-grounded arguments. Then, a Navigation Consensus Arbitration (NCA) agent is employed to consolidate both sides' reasons and evidence, optionally triggering lightweight micro-probing to verify uncertain choices, preserving NCA's primary intent while disambiguating. Experiments on HM3Dv1, HM3Dv2, and MP3D demonstrate consistent improvements in success and path efficiency while reducing exploration redundancy.</p>
@@ -1980,18 +1992,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Automated semantic understanding of dense terrestrial laser scanning (TLS) point clouds is a prerequisite for Scan-to-BIM, digital twin maintenance, and as-built verifcation. Yet for operational industrial mechanical, electrical, and plumbing (MEP) facilities, this challenge remains largely unsolved: water-treatment TLS scans exhibit extreme geometric ambiguity, severe occlusion, and extreme class imbalance that architectural benchmarks such as S3DIS and ScanNet cannot adequately represent. We present Industrial3D, a terrestrial LiDAR dataset with 612.7 million expert-labeled points at 6 mm resolution from 20 room scenes, 13 dataset areas, and 7 operational water treatment facilities. At 6.6x the scale of the closest comparable MEP dataset, Industrial3D provides the largest industrial MEP testbed for within-domain scene understanding. We further establish a cross-paradigm benchmark of nine methods across fully supervised, weakly supervised, unsupervised, and foundation-model settings. The best supervised method reaches 55.74% mIoU, whereas zero-shot Point-SAM reaches 15.79%, a 39.95 percentage-point gap that quantifes unresolved domain transfer for industrial TLS data. Analysis attributes this gap to a dual crisis: 215:1 statistical rarity and cylindrical geometric ambiguity between tail classes and head-class pipes. The dataset, benchmark code, and pre-trained models will be publicly released at https://github.com/pointcloudyc/Industrial3D.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2605.05207v2" target="_blank" class="paper-title">Syn4D: A Multiview Synthetic 4D Dataset</a>
-                        <span class="paper-date">2026-07-04</span>
-                    </div>
-                                        <span class="paper-comment">📝 33 pages, 11 figures, project page: https://jzr99.github.io/Syn4D/</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Dense 3D reconstruction and tracking of dynamic scenes from monocular video remains an important open challenge in computer vision. Progress in this area has been constrained by the scarcity of high-quality datasets with dense, complete, and accurate geometric annotations. To address this limitation, we introduce Syn4D, a multiview synthetic dataset of dynamic scenes that includes ground-truth camera motion, depth maps, dense tracking, and parametric human pose annotations. A key feature of Syn4D is the ability to unproject any pixel into 3D to any time and to any camera. We conduct extensive evaluations across multiple downstream tasks to demonstrate the utility and effectiveness of the proposed dataset, including 4D scene reconstruction, 3D point tracking, geometry-aware camera retargeting, and human pose estimation. The experimental results highlight Syn4D's potential to facilitate research in dynamic scene understanding and spatiotemporal modeling.</p>
                     </details>
                 </div>
             </div>

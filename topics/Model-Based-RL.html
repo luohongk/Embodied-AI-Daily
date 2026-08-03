@@ -600,7 +600,7 @@
                 <a href="LLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
                     <span class="nav-label">LLM</span>
-                    <span class="nav-count">79</span>
+                    <span class="nav-count">80</span>
                 </a>
                 <a href="VLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f97316"></span>
@@ -675,7 +675,7 @@
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Kalman Filter</span>
-                    <span class="nav-count">47</span>
+                    <span class="nav-count">46</span>
                 </a>
                 <a href="Loop-Closure-Detection.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -690,12 +690,12 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">71</span>
+                    <span class="nav-count">68</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">74</span>
+                    <span class="nav-count">77</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -730,7 +730,7 @@
                 <a href="Model-Predictive-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#14b8a6"></span>
                     <span class="nav-label">Model Predictive Control</span>
-                    <span class="nav-count">54</span>
+                    <span class="nav-count">53</span>
                 </a>
                 <a href="Whole-Body-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#06b6d4"></span>
@@ -819,7 +819,7 @@
             <a href="LLM.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
                 <span class="nav-label">LLM</span>
-                <span class="nav-count">79</span>
+                <span class="nav-count">80</span>
             </a>
             <a href="VLM.html" class="nav-item">
                 <span class="nav-dot" style="background:#f97316"></span>
@@ -894,7 +894,7 @@
             <a href="Kalman-Filter.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Kalman Filter</span>
-                <span class="nav-count">47</span>
+                <span class="nav-count">46</span>
             </a>
             <a href="Loop-Closure-Detection.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -909,12 +909,12 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">71</span>
+                <span class="nav-count">68</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">74</span>
+                <span class="nav-count">77</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -949,7 +949,7 @@
             <a href="Model-Predictive-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#14b8a6"></span>
                 <span class="nav-label">Model Predictive Control</span>
-                <span class="nav-count">54</span>
+                <span class="nav-count">53</span>
             </a>
             <a href="Whole-Body-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#06b6d4"></span>
@@ -1028,6 +1028,21 @@
                 <span class="topic-count">80 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.29491v1" target="_blank" class="paper-title">DreamQAS: Learning a Decision-Useful World Model for VQE-Efficient Quantum Architecture Search</a>
+                        <span class="paper-date">2026-07-31</span>
+                    </div>
+                                        <span class="paper-comment">📝 26 pages, 4 figures, including appendices</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：传统基于强化学习的量子架构搜索（RL-QAS）在每次扩展电路后都需重复优化变分量子本征求解器（VQE），导致计算成本高昂，尽管电路构建和动作合法性是确定且已知的。&#10;&#10;🛠 **方法**：提出DreamQAS，一种基于模型的强化学习框架，保留精确的电路动力学，仅学习昂贵的VQE后反馈。它使用循环随机先验集成预测无Oracle分数，支持多步想象策略学习，并结合排序激活、不确定性感知悲观截断和选择性真实VQE验证。&#10;&#10;✨ **主要贡献**：在15,000集预算下，DreamQAS在五个分子任务中的四个上取得最低平均冻结策略能量误差，且达到相同精度时减少1.6至10.6倍的真实VQE调用。反事实动作排序效用平均提升0.346（95%置信区间[0.185, 0.507]），且集成不确定性优于随机拒绝的风险覆盖，证明其价值在于决策有用的反馈而非精确能量预测。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Reinforcement-learning-based quantum architecture search (RL-QAS) repeatedly optimizes a variational quantum eigensolver (VQE) after extending a circuit, although circuit construction and action legality are deterministic and known. We introduce DreamQAS, a model-based RL framework that preserves these exact circuit dynamics and learns only the expensive post-VQE feedback. A recurrent randomized-prior ensemble predicts an oracle-free score relative to an empirical energy frontier and supports multi-step imagined policy learning over explicit legal circuits. Ranking-based activation, uncertainty-aware pessimism and truncation, and selective real-VQE verification form a reliability-controlled learning loop. Under a common 15,000-episode budget and frozen evaluation for the RL methods, DreamQAS has the lowest mean frozen-policy energy error on four of five molecular tasks and the second-lowest on one. At fine-error targets reached by all seeds of both methods, it uses 1.6x to 2.0x fewer real VQE calls on four tasks and 10.6x fewer on BeH2-8q. Counterfactual action-ranking utility increases across all five tasks, with a mean increase of 0.346 and a 95 percent confidence interval of [0.185, 0.507], while direct greedy and beam use of the same model does not recover the gains of imagined policy learning. Ensemble disagreement also improves risk-coverage over random rejection on all three probed tasks. These results establish a world-model design for QAS whose value lies in decision-useful feedback rather than exact energy prediction.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2607.19749v1" target="_blank" class="paper-title">The World Model Remembers, the Actor Forgets: Dream Rehearsal for Continual Model-Based RL</a>
@@ -1169,10 +1184,7 @@
                         <span class="paper-date">2026-06-15</span>
                     </div>
                                         <span class="paper-comment">📝 20 pages, 5 figures, 8 tables</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有安全强化学习方法依赖真实世界探索或手工设计的安全函数，难以扩展到开放世界中视觉-语言-动作（VLA）模型的安全控制。&#10;&#10;🛠 **方法**：提出SafeDojo框架，基于交互式视频世界模型进行在线强化学习，通过世界模型生成动作条件未来预测，并利用ResNet成功分类器和轻量级安全头分别评估任务进度与轨迹安全，结合拉格朗日约束的GRPO目标平衡任务奖励与安全成本。&#10;&#10;✨ **主要贡献**：在SafeLIBERO基准上实现最优任务成功率、安全成功率及执行效率，Level I安全成功率比最强基线提升8.25个百分点；真实Franka机器人实验中，五项任务的平均任务成功率和安全成功率均达最佳，验证了基于世界模型的安全强化学习在具身智能中的可扩展性与泛化性。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Safe control is a prerequisite for real-world embodied intelligence, for which safe reinforcement learning has emerged as a promising paradigm. However, existing safe reinforcement learning methods either require costly real-world exploration or depend on hand-crafted safety functions. Neither scales to vision-language-action models deployed in open-world physical environments. We propose SafeDojo, the first model-based safe reinforcement learning framework for vision-language-action policies designed to learn safe actions through world model-based imagination. Specifically, SafeDojo performs online reinforcement learning on top of an interactive video world model. The world model generates action-conditioned future predictions, from which a tailored ResNet success classifier estimates per-step task progress from imagined frames and a lightweight safety head predicts per-step safety costs from latent context together with the proposed action chunk, enabling simultaneous assessment of task execution and trajectory safety. The decoupled task-reward and safety-cost signals are balanced through a Lagrangian-based constrained GRPO objective, enabling coordinated improvement of task success and safety under explicit constraints. On SafeLIBERO, SafeDojo achieves the best aggregate task success, safe success, and execution efficiency among inference-time safety, model-free RL, and model-based RL baselines, with the best average safe-success rate on both levels and an 8.25 percentage-point improvement over the strongest baseline on Level I. Real-world Franka deployment further shows the best average task and safe-success rates across five tasks. Our results position world model-based safe reinforcement learning as a scalable and generalizable path toward safe embodied intelligence.</p>
@@ -2004,18 +2016,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Reinforcement Learning (RL) applications in real-world scenarios must prioritize safety and reliability, which impose strict constraints on agent behavior. Model-based RL leverages predictive world models for action planning and policy optimization, but inherent model inaccuracies can lead to catastrophic failures in safety-critical settings. We propose a novel model-based RL framework that jointly optimizes task performance and safety. To address world model errors, our method incorporates an adaptive mechanism that dynamically switches between model-based planning and direct policy execution. We resolve the objective mismatch problem of traditional model-based approaches using an implicit world model. Furthermore, our framework employs dynamic safety thresholds that adapt to the agent's evolving capabilities, consistently selecting actions that surpass safe policy suggestions in both performance and safety. Experiments demonstrate significant improvements over non-adaptive methods, showing that our approach optimizes safety and performance simultaneously rather than merely meeting minimum safety requirements. The proposed framework achieves robust performance on diverse safety-critical continuous control tasks, outperforming existing methods.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2412.11743v2" target="_blank" class="paper-title">Generalized Bayesian deep reinforcement learning</a>
-                        <span class="paper-date">2025-06-02</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Bayesian reinforcement learning (BRL) is a method that merges principles from Bayesian statistics and reinforcement learning to make optimal decisions in uncertain environments. As a model-based RL method, it has two key components: (1) inferring the posterior distribution of the model for the data-generating process (DGP) and (2) policy learning using the learned posterior. We propose to model the dynamics of the unknown environment through deep generative models, assuming Markov dependence. In the absence of likelihood functions for these models, we train them by learning a generalized predictive-sequential (or prequential) scoring rule (SR) posterior. We used sequential Monte Carlo (SMC) samplers to draw samples from this generalized Bayesian posterior distribution. In conjunction, to achieve scalability in the high-dimensional parameter space of the neural networks, we use the gradient-based Markov kernels within SMC. To justify the use of the prequential scoring rule posterior, we prove a Bernstein-von Mises-type theorem. For policy learning, we propose expected Thompson sampling (ETS) to learn the optimal policy by maximising the expected value function with respect to the posterior distribution. This improves upon traditional Thompson sampling (TS) and its extensions, which utilize only one sample drawn from the posterior distribution. This improvement is studied both theoretically and using simulation studies, assuming a discrete action space. Finally, we successfully extended our setup for a challenging problem with a continuous action space without theoretical guarantees.</p>
                     </details>
                 </div>
             </div>

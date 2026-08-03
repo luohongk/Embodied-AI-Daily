@@ -600,7 +600,7 @@
                 <a href="LLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
                     <span class="nav-label">LLM</span>
-                    <span class="nav-count">79</span>
+                    <span class="nav-count">80</span>
                 </a>
                 <a href="VLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f97316"></span>
@@ -675,7 +675,7 @@
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Kalman Filter</span>
-                    <span class="nav-count">47</span>
+                    <span class="nav-count">46</span>
                 </a>
                 <a href="Loop-Closure-Detection.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -690,12 +690,12 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">71</span>
+                    <span class="nav-count">68</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">74</span>
+                    <span class="nav-count">77</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -730,7 +730,7 @@
                 <a href="Model-Predictive-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#14b8a6"></span>
                     <span class="nav-label">Model Predictive Control</span>
-                    <span class="nav-count">54</span>
+                    <span class="nav-count">53</span>
                 </a>
                 <a href="Whole-Body-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#06b6d4"></span>
@@ -819,7 +819,7 @@
             <a href="LLM.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
                 <span class="nav-label">LLM</span>
-                <span class="nav-count">79</span>
+                <span class="nav-count">80</span>
             </a>
             <a href="VLM.html" class="nav-item">
                 <span class="nav-dot" style="background:#f97316"></span>
@@ -894,7 +894,7 @@
             <a href="Kalman-Filter.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Kalman Filter</span>
-                <span class="nav-count">47</span>
+                <span class="nav-count">46</span>
             </a>
             <a href="Loop-Closure-Detection.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -909,12 +909,12 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">71</span>
+                <span class="nav-count">68</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">74</span>
+                <span class="nav-count">77</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -949,7 +949,7 @@
             <a href="Model-Predictive-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#14b8a6"></span>
                 <span class="nav-label">Model Predictive Control</span>
-                <span class="nav-count">54</span>
+                <span class="nav-count">53</span>
             </a>
             <a href="Whole-Body-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#06b6d4"></span>
@@ -1030,6 +1030,126 @@
             <div class="paper-list">
                 <div class="paper-card">
                     <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.29622v1" target="_blank" class="paper-title">RayViT: Ray-Conditioned Visual Representations for Viewpoint-Robust Imitation Learning</a>
+                        <span class="paper-date">2026-07-31</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：视觉模仿学习中，RGB观测缺乏几何线索，导致策略在相机扰动下表现脆弱。&#10;&#10;🛠 **方法**：提出RayViT架构，将相机几何编码为Plücker射线图，经patch化后作为密集位置嵌入注入预训练ViT，并通过门控交叉注意力生成几何感知的类别令牌，同时辅以余弦相似度损失增强鲁棒性。&#10;&#10;✨ **主要贡献**：在RoboCasa多任务基准中，相机扰动下鲁棒性提升约13个百分点；真实机器人多任务成功率平均完成阶段数提升1.78，验证了方法的有效性与泛化性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Visual imitation learning enables robots to acquire visuomotor skills directly from images, yet RGB observations lack explicit geometric cues, making learned policies brittle to camera perturbations. To address this, we propose \textbf{Ray-conditioned Vision Transformer Encoder (RayViT)}, a lightweight architecture that injects camera geometry into pretrained ViT backbones. RayViT represents camera geometry as a Plücker ray map, patchifies it into ray features, and uses gated cross-attention to produce a ray-conditioned class token. These ray features are added as dense positional embeddings, while the ray class token replaces the original ViT class token to provide a geometry-aware summary representation. We combine this approach with an auxiliary cosine similarity loss to consistently improve the performance and robustness for geometry-aware tokens. Experiments on sim- and real-robot tasks demonstrate that RayViT improves robustness by approximately 13 percentage points under camera perturbations in multi-task RoboCasa benchmark and by 1.78 average completed stages in real-world multi-task success rate compared to baselines.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.29617v1" target="_blank" class="paper-title">When Does On-Policy Interaction Help? Representational Tradeoffs in Value-Based Imitation Learning</a>
+                        <span class="paper-date">2026-07-31</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在模仿学习中，当学习者无法完美表示专家策略时，交互式查询和值函数估计如何提升性能？具体而言，专家交互是否以及为何能降低学习者的表示能力要求。&#10;&#10;🛠 **方法**：提出交互式在线模仿学习算法OVI，该算法利用专家沿学习者轨迹的交互查询，仅需学习者能表示专家的值函数（而非完整策略），并借助线性最大化预言机实现高效计算。&#10;&#10;✨ **主要贡献**：理论上证明专家交互可放宽表示需求（只需值函数可实现性），并给出负结果说明无交互时离线算法必须依赖专家策略类的复杂度；实验表明OVI优于BC、DAgger及离线值基方法，尤其在学习者网络远不如专家表达力时增益最大。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Imitation learning (IL)---training an agent to replicate expert behavior from demonstrations---underpins applications from robotics to language model training. Standard approaches such as Behavior Cloning (BC) are known to suffer from compounding errors and performance plateaus, particularly when the learner cannot perfectly represent the expert's policy (as is typical, e.g., in distillation). Two interventions are widely understood empirically to improve performance: querying the expert interactively along the learner's own trajectories, and using value function estimation en route to generating a policy rather than directly fitting the expert's full action distribution. We investigate the nature of these improvements and their potentially surprising interplay. Our main finding is that expert interaction relaxes the representational demands on the learner: one only needs a model capable of realizing the expert's value function, bypassing the (often stricter) requirement of realizing the expert's policy itself. Concretely, we introduce OVI, an interactive on-policy IL algorithm that is statistically efficient whenever the learner can represent the expert's value function and computationally efficient given access to a linear maximization oracle. We complement this with a negative result showing that interaction is necessary. Namely, without stronger assumptions beyond expert-value realizability alone, any offline IL algorithm must scale with the complexity of the expert policy class. Our findings bear out empirically. OVI outperforms offline policy-based (BC), interactive policy-based (DAgger), and offline value-based IL methods, with the largest gains when the learner network is substantially less expressive than the expert's.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.29517v1" target="_blank" class="paper-title">STAGE: STyle-controllable Action GEneration for personalized autonomous driving</a>
+                        <span class="paper-date">2026-07-31</span>
+                    </div>
+                                        <span class="paper-comment">📝 Accepted for publication in IEEE Robotics and Automation Letters</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决自动驾驶系统无法个性化匹配用户驾驶风格的问题，使系统生成的驾驶行为能贴近用户自身习惯。&#10;&#10;🛠 **方法**：提出STAGE方法，基于模仿学习训练，融合风格值和潜在动作模态编码；通过偏好学习将用户风格映射为连续单调值，并设计规则降低人工标注成本；推理时用户输入风格值控制动作生成。&#10;&#10;✨ **主要贡献**：实现驾驶动作的风格可控生成，验证了在多种典型场景下与人类期望高度一致；相比其他方法，STAGE在风格可控性、连续性、驾驶风格对齐能力及安全性上具有独特优势。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Driving style refers to the behavioral preferences that drivers maintain during driving, shaped by their diverse experiences, habits, and needs, and is typically reflected in varying levels of aggressiveness. If humans choose to use autonomous driving systems, they would expect the driving style of the systems to closely resemble their own habit. However, this is challenging for current industrial autonomous driving systems. To address this, we developed a style controllable action generation method, STAGE, for driving tasks. Its training process is based on imitation learning, incorporating both style value and latent value action modality encoding. Preference learning is then used to identify the user's driving style as a continuous, monotonic style value. And to reduce the cost of human involvement in the preference training process, we also developed a set of rules to compare driving style in data pairs. Then, during inference, the user inputs the style value to control the generated action patterns, dynamically meeting the user's expectations. Using the STAGE method, we verified that the style-controlled action generation results in several typical road scenarios significantly align with human expectations. Furthermore, through comparisons between the STAGE method and various other approaches, we reveal the unique functionalities of STAGE, including its style controllability, style continuity, driving style alignment capability and driving safety. The code for this work is available at: https://github.com/CarlDegio/STAGE</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2602.07339v2" target="_blank" class="paper-title">RAPiD: Reward-Guided Consistency Distillation of Diffusion Planners for Real-Time Autonomous Driving</a>
+                        <span class="paper-date">2026-07-31</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：扩散模型轨迹规划器虽能建模多模态驾驶行为，但迭代去噪过程导致推理延迟过高，难以满足实时闭环自动驾驶需求。&#10;&#10;🛠 **方法**：提出RAPiD框架，通过奖励引导的一致性蒸馏将预训练的DiffusionPlanner压缩为少步（2步）学生模型，并利用隐式Q学习评论员对生成轨迹进行安全感知的择优选择。&#10;&#10;✨ **主要贡献**：在nuPlan上推理延迟从100.91ms降至18.41ms（5.5倍加速），性能与扩散教师相当；在interPlan上取得学习类方法最高分，验证了奖励引导蒸馏在保持安全性的同时显著降低计算成本。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Diffusion-based trajectory planners can model multi-modal driving behavior, but their iterative denoising process introduces a latency bottleneck for real-time closed-loop deployment. We present RAPiD, a reward-guided consistency distillation framework that distills a pretrained DiffusionPlanner into a few-step consistency student while retaining multi-modal trajectory generation. The student is trained using deterministic teacher denoising steps from the frozen diffusion planner, together with a low-noise data anchor that keeps generated trajectories grounded in expert demonstrations. To make distillation safety-aware, we train an Implicit Q-Learning critic on a balanced mixture of ground-truth log-replay and DiffusionPlanner rollout trajectories, each scored using a modified PDM-style reward, providing trajectory-level supervision beyond conventional imitation learning. During deployment, the 2-step student generates K trajectories, and the trained critic performs best-of-K trajectory selection conditioned on the latent state. On nuPlan, RAPiD maintains comparable performance to the diffusion teacher on non-reactive closed-loop splits and remains competitive on reactive splits, while reducing complete-pipeline inference latency from 100.91 ms to 18.41 ms, corresponding to a 5.5x speedup. On interPlan, RAPiD achieves the highest aggregate score among learning-based methods, demonstrating competitive generalization in interactive long-tail scenarios. These results show that reward-guided consistency distillation can convert a pretrained diffusion planner into a few-step closed-loop planner that substantially reduces inference cost while preserving safety-oriented trajectory selection. The official website of this work is: https://github.com/ruturajreddy/RAPiD</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.29302v1" target="_blank" class="paper-title">BWM: A Low-Cost High-Fidelity World Simulator for Robot Learning</a>
+                        <span class="paper-date">2026-07-31</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有物理仿真器构建成本高且存在sim-to-real差距，视频生成器难以精确响应机器人细粒度动作，缺乏低成本、高保真的世界模拟器用于机器人学习。&#10;&#10;🛠 **方法**：提出BWM（Boundless World Model），一种动作条件世界模型，结合初始环境引导、动态视觉历史和时序对齐的机器人动作条件，通过轨迹重放、重叠片段采样和初始观测增强构建训练数据，实现状态化自回归预测未来观测。&#10;&#10;✨ **主要贡献**：BWM作为开源数据引擎和策略评估器，可增强模仿学习数据并支持闭环评估、风险预测和策略排序；在WorldArena基准和实体机器人上验证了高保真度和实用性，综合排名第一，并开源完整生态系统（模型、代码和接口）。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Reliable robot learning requires a world simulator that can predict action consequences before execution on physical hardware, including risky and failure-prone outcomes. Existing physics simulators require substantial asset construction and calibration and still face a sim-to-real gap, while video generators often lack precise control over their responses to fine-grained robot actions. In this paper, we present the Boundless World Model (BWM), an open-source, low-cost, high-fidelity world simulator for robot manipulation. BWM is an action-conditioned world model that combines initial-environment guidance, dynamic visual history, and temporally aligned robot-action conditioning for stateful autoregressive prediction of future observations. We construct action-aligned training clips through trajectory replay, overlapping clip sampling, and initial-observation enhancement. BWM serves as a data engine that augments imitation-learning data with action-aligned rollouts, and as a policy evaluator for closed-loop assessment, risk anticipation, and policy ranking. Experiments on the WorldArena benchmark and physical robots demonstrate improved simulator fidelity and functional utility across the data-engine and policy-evaluator settings. BWM ranks first overall in the WorldArena Challenge across Track 1 and its two Track 2 applications. We release the BWM open-source ecosystem, including model checkpoints, training and inference code, and interfaces for data generation and policy evaluation.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.29285v1" target="_blank" class="paper-title">TRACT: Temporally Routed Action Chunks with Chronological Phase Authority for Contact-Rich Manipulation</a>
+                        <span class="paper-date">2026-07-31</span>
+                    </div>
+                                        <span class="paper-comment">📝 6 pages, 3 figures</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在接触丰富的机器人操作任务中，动作分块预测跨越程序阶段边界时，将当前阶段赋给整个分块会导致时间结构错配，引发阶段歧义和动作停滞。&#10;&#10;🛠 **方法**：提出TRACT框架，将阶段化动作分块分解为当前阶段和未来范围内的单一“当前→下一”边界；通过任务局部图约束阶段时序权威，用累积边界分布单调路由查询；并引入因果响应缺失积分器，在方向响应被抑制时累积手臂补偿，确认恢复后衰减。&#10;&#10;✨ **主要贡献**：在六种真实机器人变体各10次试验中，完整TRACT实现10/10全序列成功、99%中位擦拭完成率、零阶段歧义和零停滞；相比扁平包（6/10 vs 3/10成功），路由表示显著提升任务表现，时序权威将阶段歧义从8/10降至0/10，响应积分将停滞从4/10降至0/10。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Action chunking shortens the effective decision horizon of robot imitation learning by predicting multiple future actions, while conventional phase conditioning describes the current control instant. When a predicted horizon crosses a procedural boundary, assigning the current phase to the entire chunk creates a structural temporal mismatch. We present TRACT, which factorizes phase-structured action chunking into an accepted current phase and a single CURRENT-to-NEXT boundary inside the future horizon. A task-local graph constrains chronological phase authority, and a cumulative boundary distribution monotonically routes future queries through phase-specific query and action paths. For contact execution, a causal response-deficit integrator compares policy intent with ACK-eligible subsequent motion, accumulates arm compensation when directional response is suppressed, and decays after confirmed recovery. Across six real-robot variants with ten trials each, full TRACT achieves 10/10 full-sequence success, 99.00 [88.75, 100.00]% median [min, max] wipe completion, zero observed phase ambiguity, and zero stalls. Under the current complete method package and evaluation setting, the routed representation obtains better observed task results than the flat package (6/10 vs. 3/10 success; 77.08% vs. 8.03% median wipe completion). Chronological authority reduces observed phase ambiguity from 8/10 to 0/10, and response integration reduces stalls from 4/10 to 0/10. The package comparison does not isolate routing from other generator-package differences.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2603.09956v2" target="_blank" class="paper-title">Kinodynamic Motion Retargeting for Humanoid Locomotion via Multi-Contact Whole-Body Trajectory Optimization</a>
+                        <span class="paper-date">2026-07-30</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：传统基于运动捕捉数据的运动重定向方法仅依赖运动学信息，导致生成的人形机器人运动存在脚部滑动、地面穿透等物理不一致问题，影响下游模仿学习策略的性能。&#10;&#10;🛠 **方法**：提出KDMR框架，将运动重定向建模为多接触全身轨迹优化问题，显式加入刚体动力学和接触互补约束，并融合地面反作用力（GRF）测量数据以自动检测脚跟-脚尖接触事件。&#10;&#10;✨ **主要贡献**：相比纯运动学基线方法（如GMR），KDMR生成的运动具有更好的动态可行性和平滑性，GRF跟踪更准确，且能加速下游控制策略（BeyondMimic）的收敛并提升运动稳定性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>We present the KinoDynamic Motion Retargeting (KDMR) framework, a novel approach for humanoid locomotion that models the retargeting process as a multi-contact, whole-body trajectory optimization problem. Conventional kinematics-based retargeting methods rely solely on spatial motion capture (MoCap) data, inevitably introducing physically inconsistent artifacts, such as foot sliding and ground penetration, that severely degrade the performance of downstream imitation learning policies. To bridge this gap, KDMR extends beyond pure kinematics by explicitly enforcing rigid-body dynamics and contact complementarity constraints. Further, by integrating ground reaction force (GRF) measurements alongside MoCap data, our method automatically detects heel-toe contact events to accurately replicate complex human-like contact patterns. We evaluate KDMR against the state-of-the-art baseline, GMR, across three key dimensions: 1) the dynamic feasibility and smoothness of the retargeted motions, 2) the accuracy of GRF tracking compared to raw source data, and 3) the training efficiency and final performance of downstream control policies trained via the BeyondMimic framework. Experimental results demonstrate that KDMR significantly outperforms purely kinematic methods, yielding dynamically viable reference trajectories that accelerate policy convergence and enhance overall locomotion stability. Our end-to-end pipeline will be open-sourced upon publication.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.28737v1" target="_blank" class="paper-title">Mirror Learning</a>
+                        <span class="paper-date">2026-07-30</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决模仿学习过度依赖第一人称密集对齐数据、无法利用第三人称被动观察信号的问题。&#10;&#10;🛠 **方法**：提出“镜像学习”框架，结合微调的视频扩散模型学习视角变换，将第三人称演示转换为第一人称视角，再通过逆动力学模型推断学习者控制空间中的动作轨迹，生成“镜像数据”用于策略训练。&#10;&#10;✨ **主要贡献**：首次证明仅用第三人称观察生成的镜像数据即可训练有效策略，且与第一人称行为克隆数据混合可进一步提升性能，为减少遥操作数据采集提供了一种可扩展、安全的替代方案。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>We investigate imitation learning through the lens of third-person observation and propose a framework for mirror learning: acquiring actionable policies from passive observation. While behavior cloning (BC) excels under dense, well-aligned first-person data, it fundamentally fails to leverage the rich observational signals arising from third-person demonstrations that humans and animals routinely exploit. We introduce a method that composes (i) a learned perspective transformation that places learners in demonstrators' shoes using a fine-tuned video diffusion model and (ii) an inverse dynamics model that infers action trajectories in the learners' control space. This enables the synthesis of mirror data, pseudo first-person expert data generated from third-person observations of demonstrator behavior. Empirically, we show that mirror data alone can train effective policies, and that augmenting first-person BC training with mirror data further improves downstream policy performance. Our results suggest that modern generative world models implicitly encode sufficient structure to enable a scalable and safe alternative to teleoperation-heavy data collection.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
                         <a href="https://arxiv.org/abs/2607.28625v1" target="_blank" class="paper-title">ACE-Data-0: Human-Centric Ambient Capture as Embodied Data Engine</a>
                         <span class="paper-date">2026-07-30</span>
                     </div>
@@ -1064,10 +1184,7 @@
                         <span class="paper-date">2026-07-30</span>
                     </div>
                                         <span class="paper-comment">📝 Accepted at the ICRA 2026 Workshop on Reinforcement Learning for Imitation Learning (RL4IL), Vienna. 5 pages, 2 figures. v2: corrects the unified-critic run's curriculum level (10 of 40) and per-run environment counts, adds a Confounding Factors section, and softens the causal framing; measurements unchanged. https://mturan33.github.io/critic-architecture-matters/</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="好的，作为一名人工智能研究与学术论文分析专家，我将严格按照您的要求，对这篇论文进行详细的中文解读。&#10;&#10;---&#10;&#10;## 0. 概览（Concise Summary）&#10;&#10;- **主题（Topic）**：人形机器人强化学习中的多目标协调问题，具体为**移动操作（Loco-Manipulation）** 任务。&#10;- **问题（Problem）**：在训练人形机器人同时进行行走（Locomotion）和抓取（Manipulation）的单一策略时，如何设计评论家（Critic）网络架构？是使用一个统一的（Unified）评论家来评估所有目标的联合价值，还是使用分离的（Dual）评论家来分别评估每个目标的价值？这个关键的设计选择在现有文献中很少被探讨。&#10;- **方法（Method）**：在NVIDIA Isaac Lab仿真环境中，以Unitree G1人形机器人为平台，通过一个包含13个等级的序列化课程学习（Curriculum Learning）来训练移动操作策略。严格对比了**统一评论家（Unified Critic）** 和**双评论家（Dual Critic）** 两种架构的性能。&#10;- **创新（Innovation）**：&#10;    1.  首次在人形机器人移动操作任务中，对统一和双评论家架构进行了**受控对比实验**。&#10;    2.  提出了一个**双演员-评论家（Dual Actor-Critic）框架**，并采用冻结分支迁移（Frozen-Branch Transfer）策略。&#10;    3.  揭示了标准训练指标（如奖励值、课程进度）无法反映架构间的效率差异，并提出了包含时间-到达（time-to-reach）和吞吐量（throughput）的**标准化评估方法**。&#10;- **意义（Significance）**：证明了评论家架构是影响多目标人形机器人强化学习效率的**首要设计选择**，其影响甚至超过奖励工程（Reward Engineering）。该发现对“模仿学习+强化学习微调”的混合范式具有重要指导意义，即分离的评论家可以防止强化学习梯度覆盖模仿学习获得的行为。&#10;- **一句话总结**：本文通过实验证明，在人形机器人移动操作任务中，使用分离的**双评论家架构**相比统一的**单评论家架构**，能实现**3.5倍**更快的到达速度和**2倍**更高的任务吞吐量，且其效果优于复杂的奖励工程。&#10;&#10;## 1. 研究动机（Motivation）&#10;&#10;- **问题与空白**：人形机器人需要同时协调行走（Locomotion）和操作（Manipulation）两个目标，这是一个典型的多目标强化学习问题。在训练单一策略时，一个核心但常被忽视的设计选择是**评论家（Critic）架构**：是使用一个统一的评论家来评估所有目标的联合价值，还是为每个目标使用独立的评论家？现有的人形机器人强化学习文献大多采用其中一种架构，但**缺乏对这两种选择的系统性对比**。&#10;- **为什么重要**：评论家网络负责估计状态的价值，其架构直接影响策略梯度的计算和更新方向。在多目标场景下，不同目标（如“快速行走”和“精准抓取”）的奖励信号可能存在冲突。错误的评论家架构可能导致策略在目标间妥协，效率低下，甚至无法学习。&#10;- **挑战**：&#10;    1.  **目标冲突**：行走和抓取对机器人身体姿态、关节力矩的需求可能相互矛盾。例如，为了保持平衡而限制手臂的快速运动。&#10;    2.  **梯度干扰**：在统一评论家中，来自不同目标的梯度信号会混合，可能导致一个目标的梯度“淹没”或“干扰”另一个目标的梯度，从而抑制某些行为的学习。&#10;    3.  **评估困难**：标准训练指标（如总奖励、课程等级）可能无法揭示架构间的效率差异，需要设计更精细的评估指标。&#10;&#10;## 2. 创新点（Innovation）&#10;&#10;1.  **首次受控对比**：在人形机器人移动操作领域，首次对**统一评论家（Unified Critic）** 和**双评论家（Dual Critic）** 架构进行了严格的、受控的对比实验，而非简单地采用一种架构。&#10;2.  **双演员-评论家框架**：提出了一个解耦的**双演员-评论家（Dual Actor-Critic）** 框架（如图1所示）。该框架包含两个完全独立的“分支”：一个负责行走（Locomotion Branch），包含自己的演员（Actor）和评论家（Critic）；另一个负责手臂操作（Arm Branch），同样包含自己的演员和评论家。两个评论家接收**互不重叠的奖励信号**。&#10;3.  **标准化评估方法**：提出了一套**标准化评估基准**，不仅关注传统的“到达率”，更引入了**时间-到达（time-to-reach）** 和**吞吐量（validated reaches per 1,000 steps）** 等效率指标，从而揭示了标准训练指标（如奖励值）无法捕捉的架构间巨大差异。&#10;4.  **对混合范式的启示**：明确指出其发现对“模仿学习+强化学习微调”范式的关键意义。双评论家架构可以天然地将强化学习微调信号限制在特定分支（如手臂），从而保护其他分支（如行走）的模仿学习行为不被覆盖，为解决混合训练中的“灾难性遗忘”问题提供了新思路。&#10;&#10;## 3. 主要内容（Main Content）【重点】&#10;&#10;### 3.1 设计架构与方法&#10;&#10;论文的核心是两种评论家架构的对比：&#10;&#10;- **统一评论家架构（Unified Critic）**：&#10;    - **演员（Actor）**：两个独立的演员网络，`π_loco`（接收57维观测，输出12个腿部关节动作）和`π_arm`（接收52维观测，输出12个手臂+手指关节动作）。&#10;    - **评论家（Critic）**：**一个单一的评论家网络 `V_unified`**，它接收拼接后的109维观测（57+52），并估计行走和操作奖励的**联合价值**。&#10;&#10;- **双评论家架构（Dual Actor-Critic）**：&#10;    - **行走分支**：包含演员 `π_loco` 和评论家 `V_loco`。`V_loco` 只接收行走相关的奖励信号（如速度跟踪、平衡）。&#10;    - **手臂分支**：包含演员 `π_arm` 和评论家 `V_arm`。`V_arm` 只接收操作相关的奖励信号（如到达距离、位移）。&#10;    - **关键**：两个评论家接收**互不重叠的奖励信号**，实现了梯度的完全隔离。如图1所示。&#10;&#10;### 3.2 关键算法与数学推导&#10;&#10;论文使用PPO（Proximal Policy Optimization）算法进行训练。其核心思想是双评论家架构下的梯度隔离。&#10;&#10;- **统一评论家（Unified Critic）的损失函数**：&#10;  $$L_{V\_unified} = \mathbb{E}\left[ (R_{loco} + R_{arm} - V_{unified}(s_{loco}, s_{arm}))^2 \right]$$&#10;  其中，$R_{loco}$ 和 $R_{arm}$ 分别是行走和操作的奖励，$s_{loco}$ 和 $s_{arm}$ 是各自的观测。评论家试图拟合**总奖励**，因此其梯度会同时受到两个目标的影响。&#10;&#10;- **双评论家（Dual Critic）的损失函数**：&#10;  $$L_{V\_loco} = \mathbb{E}\left[ (R_{loco} - V_{loco}(s_{loco}))^2 \right]$$&#10;  $$L_{V\_arm} = \mathbb{E}\left[ (R_{arm} - V_{arm}(s_{arm}))^2 \right]$$&#10;  两个评论家独立地拟合各自的奖励，梯度完全解耦。&#10;&#10;- **验证性到达（Validated Reach）条件**（公式1）：&#10;  $$valid = (\|p_{ee} - p_t\| &lt; \epsilon_{pos}) \land (\|p_{ee} - p_{0}^{ee}\| &gt; d_{disp}) \land (t &lt; t_{max})$$&#10;  其中，$p_{ee}$ 是末端执行器位置，$p_t$ 是目标位置，$p_{0}^{ee}$ 是初始末端执行器位置。该条件要求：位置足够近、有足够位移（防止原地不动）、且在超时前完成。这个公式用于防止“作弊”行为。&#10;&#10;### 3.3 模型、训练与数据集&#10;&#10;- **机器人平台**：Unitree G1 人形机器人（23个主动自由度）。&#10;- **仿真环境**：NVIDIA Isaac Lab，使用4096个并行环境进行训练。&#10;- **算法**：PPO（Proximal Policy Optimization）。&#10;- **超参数**：学习率 $3 \times 10^{-4}$（余弦退火），折扣因子 $\gamma=0.99$，GAE参数 $\lambda=0.95$，裁剪比率 $0.2$。&#10;- **课程学习（Curriculum Learning）**：训练过程分为13个等级（Levels 0-12），跨越4个阶段（如表1所示）：&#10;    - **Levels 0-4**：原地站立+伸手。&#10;    - **Levels 5-6**：行走+伸手。&#10;    - **Levels 7-8**：固定末端执行器方向。&#10;    - **Levels 9-12**：在逐渐增大的锥形范围内改变末端执行器方向（20°到80°）。&#10;    课程推进需要达到持续的验证性到达率阈值。&#10;&#10;### 3.4 实验设置与结果&#10;&#10;- **对比策略**：&#10;    - `S6u`（统一评论家）：使用统一评论家，训练至Level 10/12。&#10;    - `S6s`（双评论家）：使用双评论家，训练至Level 12/12。&#10;    - `S7`（双评论家+反作弊）：使用双评论家，并加入了5种反作弊奖励机制，训练至Level 7/7。&#10;- **评估设置**：在标准化条件下（绝对目标采样、最小目标距离0.12m等），对每个策略在站立和行走两种模式下评估3000步。&#10;- **主要结果（表2）**：&#10;&#10;| 指标 | S6u (统一) | S6s (双) | S7 (双+反作弊) |&#10;| :--- | :--- | :--- | :--- |&#10;| **站立模式** | | | |&#10;| 验证性到达率 | 53.8% | **65.2%** | 60.9% |&#10;| 平均到达时间（步） | 22.6 | **6.5** | 5.8 |&#10;| 每千步验证性到达数 | 7.0 | **14.3** | 13.0 |&#10;| 超时率 | 41.0% | **27.3%** | 28.1% |&#10;| 手臂动作幅度 | 1.22 | **2.54** | 3.04 |&#10;| **行走模式** | | | |&#10;| 验证性到达率 | 51.1% | **63.1%** | 56.2% |&#10;| 平均到达时间（步） | 16.4 | **7.0** | 5.9 |&#10;| 每千步验证性到达数 | 7.7 | **13.7** | 12.0 |&#10;&#10;- **关键发现**：&#10;    1.  **双评论家大幅领先**：`S6s` 相比 `S6u`，到达速度快了 **3.5倍**（6.5步 vs 22.6步），吞吐量高了 **2倍**（14.3 vs 7.0），验证性到达率也更高（65.2% vs 53.8%）。&#10;    2.  **反作弊机制无效**：`S7` 的性能（60.9%）甚至略低于 `S6s`（65.2%），说明一旦架构瓶颈被解决，额外的奖励工程没有带来额外收益。&#10;    3.  **手臂动作幅度差异**：统一评论家策略的手臂动作幅度（1.22）远小于双评论家策略（2.54和3.04）。这表明统一评论家**抑制了手臂动作**，导致其策略更保守，到达更慢。&#10;&#10;### 3.5 技术细节&#10;&#10;- **观测空间**：行走分支观测57维（本体感受、速度指令等），手臂分支观测52维（基础运动、手臂关节状态、末端执行器/目标位置等）。&#10;- **动作空间**：行走分支输出12个腿部关节目标，手臂分支输出5个手臂关节残差动作。注意，统一评论家版本的手臂动作是12维（包含手指），而双评论家版本是5维。作者承认这是一个混淆因素，但认为5维是12维的严格子集，因此评论家架构仍是主要解释变量。&#10;- **冻结分支迁移**：在`S7`（Stage 7）中，行走分支的策略被**冻结**，只训练新初始化的手臂分支。这模拟了“先学行走，再学操作”的迁移学习场景。&#10;&#10;## 4. 意义与影响（Significance and Impact）&#10;&#10;- **解决了什么问题**：&#10;    1.  明确了在人形机器人多目标强化学习中，**评论家架构是一个首要的、但常被忽视的设计选择**。&#10;    2.  证明了**双评论家架构**在解决目标冲突、提高任务效率方面，比复杂的奖励工程更有效。&#10;    3.  揭示了**标准训练指标的局限性**，强调了需要更精细的评估指标（如时间-到达、吞吐量）来评估策略的真实效率。&#10;&#10;- **对未来研究/应用的影响**：&#10;    1.  **指导多目标RL设计**：为未来设计人形机器人或其他多目标机器人强化学习系统提供了明确的架构指导——优先考虑解耦的评论家架构。&#10;    2.  **影响混合训练范式**：对“模仿学习+强化学习微调”的混合范式有重要启示。当用强化学习微调一个预训练的模仿学习策略时，使用双评论家可以**隔离强化学习信号**，防止其破坏模仿学习学到的其他技能（如行走），从而避免灾难性遗忘。&#10;    3.  **简化奖励设计**：表明在正确的架构下，可以简化奖励函数设计，无需复杂的反作弊机制。&#10;&#10;- **局限与开放问题**：&#10;    1.  **仿真环境**：结果仅在仿真中验证，需要向真实机器人迁移。&#10;    2.  **单次实验**：仅进行了单次种子（single-seed）训练，统计显著性有待加强。&#10;    3.  **混淆因素**：统一和双评论家版本的手臂动作维度不同（12 vs 5），未来需要通过消融实验分离动作维度和评论家架构的影响。&#10;    4.  **手臂自由度**：仅控制了5个手臂自由度，未来需要扩展到29自由度的双臂控制。&#10;&#10;## 5. 澄清与简化（Clarifications and Simplifications）&#10;&#10;- **类比：一家公司的两个部门**&#10;    - **统一评论家（Unified Critic）**：就像一个公司的**CEO**，他需要同时评估销售部和研发部的整体表现（总利润）。当销售部想增加预算（梯度）时，CEO可能会因为担心影响研发部的长期项目（另一个目标）而犹豫不决，最终只批准一小部分。这导致销售部行动缓慢，效率低下。这就是统一评论家抑制手臂动作的原因。&#10;    - **双评论家（Dual Critic）**：就像给销售部和研发部分别任命了**独立的副总裁**。销售部副总裁只关心销售额，研发部副总裁只关心产品创新。他们各自独立评估自己部门的绩效，并直接批准预算。销售部可以快速行动，研发部也可以专注创新。这就是双评论家能实现快速、高效到达的原因。&#10;&#10;- **为什么标准训练指标会“骗人”？**&#10;    - 想象两个学生都在学习“边走路边拍球”。学生A（统一评论家）动作很慢，但很稳，很少掉球，但拍球频率低。学生B（双评论家）动作快，拍球频率高，但偶尔会掉球。&#10;    - **标准指标（总奖励）**：可能看起来差不多，因为学生A的“稳”和学生B的“快”都获得了奖励。&#10;    - **课程等级**：两人可能都通过了“慢走拍球”的课程。&#10;    - **精细指标（时间-到达、吞吐量）**：学生B的“平均每次拍球时间”远小于学生A，且“每分钟成功拍球次数”远高于学生A。这些指标才真正反映了效率差异。&#10;&#10;## 6. 补充说明（Additional Notes）&#10;&#10;- **相关工作关联**：&#10;    - 论文与**课程学习**（Curriculum Learning）[8, 9, 10] 相关，但指出课程进度指标可能掩盖架构差异。&#10;    - 与**多目标强化学习**和**奖励作弊（Reward Hacking）** [11, 12, 13] 相关，但将问题焦点从奖励设计转向了评论家架构。&#10;    - 与**模仿学习+强化学习微调** [16, 17] 紧密相关，论文的发现为这种混合范式提供了关键的架构选择建议。&#10;&#10;- **最重要的图表**：&#10;    - **图1（Figure 1）**：**双演员-评论家架构图**。这张图清晰地展示了两个独立分支的结构、各自的观测、动作和**互不重叠的奖励信号**，是理解论文核心方法的关键。&#10;    - **表2（Table II）**：**标准化基准测试结果表**。这张表用数据直接证明了双评论家架构的巨大优势，是论文结论的核心支撑。特别是“平均到达时间”和“每千步验证性到达数”这两列，直观地展示了效率差异。&#10;    - **图2（Figure 2）**：展示了训练好的双评论家策略在仿真环境中的实际表现，提供了直观的视觉证据。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Multi-objective reinforcement learning for humanoid robots must coordinate locomotion and manipulation within a single policy. A natural design choice is whether to use a single (unified) critic that estimates the combined value of all objectives, or separate (dual) critics with disjoint reward signals. We compare the two on the Unitree G1 humanoid (23 active DoF, of which 17 are policy-controlled) in NVIDIA Isaac Lab, training loco-manipulation policies through sequential curricula that progress from stationary reaching to walking with variable-orientation targets. Under a matched compute budget, the dual-critic run reaches targets 3.5x faster (6.5 vs. 22.6 simulation steps), achieves 2x higher throughput (14.3 vs. 7.0 validated reaches per 1,000 steps), and attains a higher validated reach rate (65.2% vs. 53.8%) than the unified-critic run in a standardized evaluation. Adding five anti-gaming reward mechanisms on top of the dual critic yields no further improvement (60.9% vs. 65.2%). We report this as an efficiency gap between two trained policies rather than an isolated effect of the critic: the two runs also differ in curriculum schedule, arm action dimensionality and one locomotion reward weight, and each is a single seed. The results are nonetheless suggestive for the emerging paradigm of RL fine-tuning of imitation-learned policies, where a unified critic may suppress pre-trained arm behavior through competing locomotion gradients. We argue that critic architecture deserves explicit treatment as a design variable in multi-objective humanoid RL, and specify the single-variable ablation required to establish its causal contribution. Code, trained checkpoints and a project page are available at https://mturan33.github.io/critic-architecture-matters/</p>
@@ -1079,10 +1196,7 @@
                         <span class="paper-date">2026-07-30</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有大视觉语言模型（LVLMs）的后训练方法（SFT和RL）各自存在缺陷——SFT因单一专家轨迹导致多模态能力遗忘，RL则因稀疏奖励下冷启动困难而优化崩溃。&#10;&#10;🛠 **方法**：提出统一后训练框架S-GRPO，将模仿学习引导融入多轨迹偏好优化。其核心机制是条件真值轨迹注入（CGI），当采样组内所有轨迹均无效时，注入已验证的真值轨迹并赋予最大奖励，从而在组相对优势估计中提供正信号。&#10;&#10;✨ **主要贡献**：S-GRPO将监督学习目标重构为策略梯度中的高优势组件，动态平衡专家轨迹利用与新概念探索；理论分析和实验表明，它显著加速收敛，实现更优的领域适应，同时保持基础模型的通用能力，有效弥合SFT与RL之间的鸿沟。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Current post-training methodologies for adapting Large Vision-Language Models (LVLMs) generally fall into two paradigms: Supervised Fine-Tuning (SFT) and Reinforcement Learning (RL). Despite their prevalence, both approaches suffer from inefficiencies when applied in isolation. SFT forces the model's generation along a single expert trajectory, often inducing catastrophic forgetting of general multimodal capabilities due to distributional shifts. Conversely, RL explores multiple generated trajectories but frequently encounters optimization collapse - a cold-start problem where an unaligned model fails to spontaneously sample any domain-valid trajectories in sparse-reward visual tasks. In this paper, we propose Supervised Group Relative Policy Optimization (S-GRPO), a unified post-training framework that integrates the guidance of imitation learning into the multi-trajectory exploration of preference optimization. Tailored for direct-generation visual tasks, S-GRPO introduces Conditional Ground-Truth Trajectory Injection (CGI). When a binary verifier detects a complete exploratory failure within a sampled group of trajectories, CGI injects the verified ground-truth trajectory into the candidate pool. By assigning a deterministic maximal reward to this injected anchor, S-GRPO enforces a positive signal within the group-relative advantage estimation. This mechanism reformulates the supervised learning objective as a high-advantage component of the policy gradient, compelling the model to dynamically balance between exploiting the expert trajectory and exploring novel visual concepts. Theoretical analysis and empirical results demonstrate that S-GRPO gracefully bridges the gap between SFT and RL, drastically accelerates convergence, and achieves superior domain adaptation while preserving the base model's general-purpose capabilities.</p>
@@ -1094,10 +1208,7 @@
                         <span class="paper-date">2026-07-30</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：传统机器学习求解组合优化问题依赖大规模离线训练，成本高且泛化能力差，难以适应不同问题实例。&#10;&#10;🛠 **方法**：提出LM-GRASP框架，将GRASP的随机构造阶段重构为在线模仿学习任务，每个实例从零训练一个Decoder-only Transformer作为构造策略，以局部搜索作为专家指导，通过行为克隆动态更新精英轨迹库。&#10;&#10;✨ **主要贡献**：无需离线预训练或人工特征工程，完全数据驱动；在Taillard PFSP基准上平均比GPU-GRASP提升28.4个makespan单位，效果接近GPU加速带来的收益，证明实例专属在线训练语言模型是手工构造器的实用替代方案。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Machine learning for combinatorial optimization typically relies on neural constructors trained via reinforcement learning on large offline datasets for a fixed problem class-incurring high pretraining costs and generalizing poorly outside the training distribution. We propose an alternative: a metaheuristic framework that reformulates the randomized constructive phase of GRASP as an online imitation learning task, trained from scratch on each problem instance. A local search procedure acts as an expert oracle, while a decoder-only Transformer serves as the constructive policy. Unlike classical GRASP, which relies on static, myopic heuristic rules based on localized scalar costs, our approach is fully data-driven: the construction policy emerges from high-quality solutions discovered during the search itself, with no problem-specific feature engineering required. We instantiate this as LM-GRASP, a hybrid metaheuristic following an iterative learn-infer-improve cycle, training the policy online via behavioral cloning on a dynamic archive of elite trajectories-no external data or offline pretraining needed. The pipeline interfaces with the domain solely through the objective evaluator used by local search. Evaluated on the Taillard PFSP benchmark (ta51-ta60), the most discriminating block due to half its optima being unknown, LM-GRASP outperforms GPU-GRASP by 28.4 makespan units on average-comparable to the gain from GPU acceleration over sequential execution (27.2 units), though with overlapping standard deviations. This suggests instance-specific, online-trained language models are a promising, practical alternative to hand-engineered constructors, especially for landscapes resistant to classical greedy construction.</p>
@@ -1109,10 +1220,7 @@
                         <span class="paper-date">2026-07-30</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：传统实验室自动化依赖人工设计的运动流程和专用硬件，成本高且灵活性差；现有模仿学习方法模型庞大，需要高性能计算资源，难以在真实实验室环境中部署。&#10;&#10;🛠 **方法**：提出TVF-DiT框架，通过紧凑适配器将自监督视觉基础模型与视觉-语言模型对齐，并集成基于扩散Transformer的动作专家，整个模型参数少于5亿，可在低显存GPU上推理。&#10;&#10;✨ **主要贡献**：在试管清洗、试管排列和粉末转移三项真实实验室任务中平均成功率86.6%，显著优于轻量级基线；详细任务提示能提升视觉-语言对齐和任务表现，证明小模型经合理对齐与扩散策略集成可高效支持资源受限的实验室自动化。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Robotic laboratory automation has traditionally relied on carefully engineered motion pipelines and task-specific hardware interfaces, resulting in high design cost and limited flexibility. While recent imitation learning techniques can generate general robot behaviors, their large model sizes often require high-performance computational resources, limiting applicability in practical laboratory environments. In this study, we propose a compact imitation learning framework for laboratory automation using small foundation models. The proposed method, TVF-DiT, aligns a self-supervised vision foundation model with a vision-language model through a compact adapter, and integrates them with a Diffusion Transformer-based action expert. The entire model consists of fewer than 500M parameters, enabling inference on low-VRAM GPUs. Experiments on three real-world laboratory tasks - test tube cleaning, test tube arrangement, and powder transfer - demonstrate an average success rate of 86.6%, significantly outperforming alternative lightweight baselines. Furthermore, detailed task prompts improve vision-language alignment and task performance. These results indicate that small foundation models, when properly aligned and integrated with diffusion-based policy learning, can effectively support practical laboratory automation with limited computational resources.</p>
@@ -1124,10 +1232,7 @@
                         <span class="paper-date">2026-07-30</span>
                     </div>
                                         <span class="paper-comment">📝 17 pages, 13 figures</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：模仿学习中的扩散策略（Diffusion Policy）在增加观测历史长度时性能下降，难以有效处理长时域机器人操作任务。&#10;&#10;🛠 **方法**：提出自演化门控注意力（SEGA）模块，通过门控注意力机制维护随时间演化的隐状态，实现高效循环更新，将长时域上下文压缩为紧凑表示并过滤无关信息；将其集成到扩散策略中形成自演化扩散策略（SeedPolicy）。&#10;&#10;✨ **主要贡献**：在RoboTwin 2.0基准的50个操作任务上，SeedPolicy相比扩散策略在干净和随机挑战设置中分别实现36.8%和169%的相对性能提升；相比1.2B参数的视觉-语言-动作模型，SeedPolicy以少1-2个数量级的参数在干净设置中取得更强性能，成为长时域机器人操作的最优模仿学习方法。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Imitation Learning (IL) enables robots to acquire manipulation skills from expert demonstrations. Diffusion Policy (DP) models multi-modal expert behaviors but degrades when naively increasing stacked observation horizons, limiting long-horizon manipulation. We propose Self-Evolving Gated Attention (SEGA), a temporal module that maintains a time-evolving latent state via gated attention, enabling efficient recurrent updates that accumulate long-term context into a compact latent representation while filtering irrelevant temporal information. Integrating SEGA into DP yields Self-Evolving Diffusion Policy (SeedPolicy), which resolves the temporal modeling bottleneck and extends the effective temporal horizon with moderate overhead. On the RoboTwin 2.0 benchmark with 50 manipulation tasks, SeedPolicy outperforms DP and other IL baselines. Averaged across both CNN and Transformer backbones, SeedPolicy achieves 36.8% relative improvement in clean settings and 169% relative improvement in randomized challenging settings over the DP. Compared to vision-language-action models such as RDT with 1.2B parameters, SeedPolicy achieves stronger performance in the clean setting with one to two orders of magnitude fewer parameters, demonstrating strong efficiency. These results establish SeedPolicy as a state-of-the-art imitation learning method for long-horizon robotic manipulation. Code is available at: https://github.com/Youqiang-Gui/SeedPolicy.</p>
@@ -1139,10 +1244,7 @@
                         <span class="paper-date">2026-07-30</span>
                     </div>
                                         <span class="paper-comment">📝 Code and models are available at https://rl2-vla.github.io</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：视觉-语言-动作（VLA）模型在复杂和域外任务中性能下降，现有测试时干预方法存在动作样本集中、继承相同失败模式，且对所有时间步采用统一干预策略的问题。&#10;&#10;🛠 **方法**：提出RL²框架，利用强化学习在VLA潜在空间进行自适应推理时组合引导。先训练轻量级离线RL策略，基于VLA动作专家提取的潜在表示，在推理时将其流速度与冻结VLA的流速度组合，仅在预测失败时激活该组合引导。&#10;&#10;✨ **主要贡献**：发现推理时引导在成功与失败状态下遵循不同缩放定律，据此实现自适应激活。在SIMPLER和PolaRiS基准上，域外设置成功率提升高达+17.3%，真实实验验证了跨仿真迁移的有效性，成为VLA部署的实用模块化引导框架。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Despite the impressive visuomotor capabilities enabled by Vision-Language-Action (VLA) models, their performance often degrades on challenging and out-of-domain tasks. Recent test-time steering and scaling methods improve performance without extensive data collection and retraining, but action samples often remain concentrated around similar behaviors and therefore inherit correlated failure modes. Moreover, existing methods apply the same intervention strategy at every timestep, regardless of whether the base policy is already likely to succeed. To address these limitations, we introduce $RL^2$, an adaptive inference-time steering framework that leverages Reinforcement Learning on VLA Latents. First, we train a lightweight offline RL policy conditioned on expressive latents extracted from the VLA action expert and compose its flow velocity with that of the frozen VLA during inference. This compositional steering strategy combines the behavioral priors of large-scale imitation learning with the action diversity induced by offline RL beyond dominant demonstration modes. We further discover that inference-time steering follows fundamentally different scaling laws under success and failure states, revealing that action diversity is most beneficial when the base VLA is likely to fail, but can unnecessarily perturb already-accurate actions when success is likely. Building on this insight, $RL^2$ activates compositional steering only when failure is predicted. Across the SIMPLER and PolaRiS benchmarks, $RL^2$ improves success rates by up to +17.3% in out-of-domain settings, while ablations and scaling studies demonstrate the importance of latent representations and RL training. Finally, real-world experiments demonstrate that these gains transfer beyond simulation, establishing $RL^2$ as a practical and modular steering framework for VLA deployment.</p>
@@ -1154,10 +1256,7 @@
                         <span class="paper-date">2026-07-30</span>
                     </div>
                                         <span class="paper-comment">📝 Project page at worldactionplanner.github.io</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决机器人决策系统在多样化场景和任务中泛化能力不足的问题，现有模仿学习策略难以适应新环境和新任务。&#10;&#10;🛠 **方法**：提出World Action Planner系统，结合视觉语言模型（VLM）的推理能力与多任务姿态-图像条件世界模型的物理基础，通过初始动作规划、优化与搜索迭代细化，并基于世界模型想象滚动进行推理。&#10;&#10;✨ **主要贡献**：在组合任务、新布局和零样本泛化场景中显著优于现有端到端策略模型（如VLA和WAM），展示了更强的泛化性能和决策质量。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Building generalizable agents for diverse applications remains a fundamental challenge. While imitation learning-based policies succeed in specific training environments, they often fail to generalize to novel scenes and tasks. In this work, we propose World Action Planner, a robot planning system that leverages the reasoning capabilities of Vision-Language Models (VLMs) and the physical grounding of a multi-task pose-image conditioned world model. Our system enables an agent to propose initial action plans and iteratively refine them via optimization and search, reasoning over imagined world model rollouts. We demonstrate that our approach achieves superior performance across compositional tasks, new layouts, and zero-shot generalization scenarios, significantly outperforming state-of-the-art end-to-end policy models such as VLAs and WAMs. Project website at worldactionplanner.github.io</p>
@@ -1169,10 +1268,7 @@
                         <span class="paper-date">2026-07-30</span>
                     </div>
                                         <span class="paper-comment">📝 Project page: https://ajaysridhar.com/barx/</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在机器人操作的大规模模仿学习中，如何有效实现跨本体（cross-embodiment）迁移，即利用不同机器人形态的数据训练策略，并泛化到新本体上。&#10;&#10;🛠 **方法**：提出使用行为对齐表示（如物体边界框、语言动作、末端执行器轨迹）作为视觉-语言-动作（VLA）模型的中间表征，这些表示在不同本体间具有不变性且能预测机器人动作，从而统一跨本体数据。通过仿真基准测试比较不同表示及其集成方式。&#10;&#10;✨ **主要贡献**：发现末端执行器轨迹对跨本体迁移特别有效；表示在更大先验数据集下更有用，并能利用无动作数据；在仿真到真实（sim-to-real）迁移中，预训练策略的任务完成进度提升28%。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Recent progress in large-scale imitation learning for robot manipulation has been driven by leveraging datasets across a wide range of robot embodiments. However, achieving significant cross-embodiment transfer is often still challenging. In this work, we study the role of using behavior-aligned representations (e.g., object bounding boxes, language motions, end-effector traces of robot motion) in vision-language-action (VLA) models to promote cross-embodiment transfer. We hypothesize that by possessing invariances across embodiments while being predictive of robot actions, these representations can help unify large-scale cross-embodiment data to enhance transfer. To assess our hypothesis, we develop a simulation-based benchmark designed to assess transfer with diverse cross-embodiment data to new embodiments. Using this benchmark, we compare different representations and ways of incorporating them. We identify that end-effector traces can be particularly beneficial for transfer, representations are generally more useful with larger prior datasets, and can be used to benefit from action-free data. We also demonstrate that they can enhance sim-to-real cross-embodiment transfer, improving task completion progress of real robot policies pre-trained on simulation data by 28%. We provide videos of our evaluations at our website: https://ajaysridhar.com/barx/.</p>
@@ -1908,102 +2004,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Imitation learning has enabled remarkable progress in robotic manipulation, especially with diffusion and flow-based policies that generate complex visuomotor behaviors directly from demonstrations. Yet, despite their strong performance, these policies often fail to generalize across tasks and environments. A key reason is that existing policies tend to imitate superficial action correlations rather than the underlying intent. Inspired by the compositional structure of human behaviors, we propose PriGo, a primitive-guided test-time adaptive framework for robust robotic manipulation. PriGo introduces PANet, a lightweight primitive prediction module that infers primitive distributions directly from observations. We further propose a differentiable primitive guidance mechanism that refines generated actions during inference, steering trajectories toward semantically consistent behaviors. Unlike prior primitive-conditioned approaches, PriGo operates entirely at test time and can be seamlessly integrated into pretrained diffusion and flow policies without retraining. Extensive experiments on LIBERO, CALVIN, SIMPLER, and real-world robotic tasks demonstrate that PriGo consistently improves robustness, long-horizon execution, and generalization ability across both diffusion and flow-based policies.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2405.16668v2" target="_blank" class="paper-title">Provably Efficient Off-Policy Adversarial Imitation Learning with Convergence Guarantees</a>
-                        <span class="paper-date">2026-07-08</span>
-                    </div>
-                                        <span class="paper-comment">📝 TMLR 2026</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Adversarial Imitation Learning (AIL) faces challenges with sample inefficiency because of its reliance on sufficient on-policy data to evaluate the performance of the current policy during reward function updates. In this work, we study the convergence properties and sample complexity of off-policy AIL algorithms. We show that, even in the absence of importance sampling correction, reusing samples generated by the $o(\sqrt{K})$ most recent policies, where $K$ is the number of iterations of policy updates and reward updates, does not undermine the convergence guarantees of this class of algorithms. Furthermore, our results indicate that the distribution shift error induced by off-policy updates is dominated by the benefits of having more data available. This result provides theoretical support for the sample efficiency of off-policy AIL algorithms. To the best of our knowledge, this is the first work that provides theoretical guarantees for off-policy AIL algorithms.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2510.24108v2" target="_blank" class="paper-title">Zero-Human Demonstration End-to-end Autonomous Driving with Trajectory Scorer</a>
-                        <span class="paper-date">2026-07-08</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Human demonstrations are widely considered the cornerstone of end-to-end (E2E) autonomous driving despite human demonstration's scarcity for long-tail and safety-critical scenarios. Nonetheless, current E2E autonomous driving (AD) training paradigms continue to rely on human demonstrations. Imitation learning (IL) requires human demonstrations for training, whereas reinforcement learning (RL) has emerged as a promising alternative to reduce this dependency. However, most existing RL methods for E2E AD still rely implicitly on human demonstrations. A pure rewards-based RL method can overcome the need for human demonstrations, but general RL policy gradient methods suffer from the cold-start problem. In this paper, we propose ZTRS (Zero-human demonstration end-to-end autonomous driving with TRajectory Scorer) - a complete RL-based E2E planning paradigm trained solely on real-world images and rule-based rewards, entirely without human demonstration. Through our proposed Exhaustive Policy Optimization (EPO), a policy gradient variant tailored for enumerable trajectory actions and dense supervision, ZTRS enables the model to generalize better to long-tail driving scenarios. We demonstrate this generalization through our SOTA performance against IL approaches on both long-tail Navhard and closed-loop HUGSIM datasets. Project page: https://zhenxinli.net/ZTRS/.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.03834v2" target="_blank" class="paper-title">Let the Dynamics Flow: Stable Flow Matching Dynamical Systems</a>
-                        <span class="paper-date">2026-07-07</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Flow matching has recently emerged as a powerful approach for imitation learning, enabling scalable, expressive, and multimodal motion policies. However, when modeling these policies as dynamical systems, incorporating formal stability guarantees into these generative models is a prerequisite to ensure safe and generalizable robot behaviors, which remains a significant challenge. This paper introduces Stable Flow Matching Dynamical Systems (SFMDS), a novel framework that bridges the gap between highly expressive generative modeling and formal stability guarantees. SFMDS parametrizes dynamical systems via flow matching while constraining the model to satisfy positive invariance and/or Lyapunov stability conditions. We propose two variants: a soft constraint based on a penalty term, and a hard structural constraint embedded directly into the model architecture. We further extend both formulations to Lie groups to robustly handle orientation trajectories. Experiments on benchmark datasets, in simulation, and on a humanoid robot show that SFMDS learns stable, scalable, and multimodal dynamical systems in low- and high-dimensional state spaces, enabling safe and expressive robot motion generation. SFMDS matches or outperforms state-of-the-art methods on unimodal datasets, while substantially improving performance on multimodal datasets, where competing approaches fail to capture multi-modal behaviors. Accompanying source code and video are available at: https://let-the-dynamics-flow.github.io/SFMDS/.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.09773v1" target="_blank" class="paper-title">EvoCUA-1.5: Online Reinforcement Learning for Multi-turn Computer-Use Agents</a>
-                        <span class="paper-date">2026-07-07</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Computer-use agents must solve long-horizon tasks through repeated interaction with partially observable, multimodal desktop environments. Although imitation learning and offline trajectory refinement provide strong priors, static traces cannot cover the causal feedback loop of real computer use: each action changes the screen state, future action space, and recovery options. EvoCUA-1.5 extends self-evolving computer-use agents from offline experience learning to online reinforcement learning, where policies interact with executable sandbox environments and improve from verifiable task outcomes. Online RL in this setting requires more than directly reusing single-turn language-RL recipes. Multi-turn interaction introduces context-managed observations, sparse terminal rewards, variable-length trajectories, and slow environment feedback. EvoCUA-1.5 addresses these challenges with Step-Level Policy Optimization (STEPO), which preserves trajectory-level advantage balance after decomposition into step-level samples; policy-aware filtering and pass-rate calibration over verifiable synthesized tasks; Dynamic Tri-Adaptive Curriculum (DTAC), which combines learnable tasks, difficult positive replay, and controlled infeasible-task exposure; and a fully asynchronous RL infrastructure with staleness control and mini-group batching. Experiments show that these components improve training stability and downstream performance. EvoCUA-1.5 achieves 63.2\% success on OSWorld-Verified, outperforming comparable 32B/35B-scale open-weight baselines and even approaching models with significantly larger parameter counts. Overall, EvoCUA-1.5 provides a practical framework for scaling online RL in multi-turn computer-use agents.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.06442v1" target="_blank" class="paper-title">SIEVE: Structure-Aware Data Selection for Imitation Learning with VLA Models</a>
-                        <span class="paper-date">2026-07-07</span>
-                    </div>
-                                        <span class="paper-comment">📝 The code is available at \href{https://github.com/ChangtiWu/SIEVE}{SIEVE}</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Vision-Language-Action (VLA) models are typically trained by imitation learning on large-scale robot demonstration datasets, but more data does not necessarily yield better policies due to redundancy, noise, and uneven coverage. Existing data selection methods often assess demonstrations at either the trajectory or state-action level, missing the reusable structures that compose long-horizon behaviors. In this paper, we propose SIEVE, a structure-aware data selection method for VLA imitation learning. SIEVE views demonstrations as compositions of reusable primitives and transition interfaces. It first discovers visuo-motor primitives from segmented trajectories, then allocates selection budgets to composition patterns by maximizing reuse-aware structural exposure under diminishing returns. Finally, it selects medoid trajectories within each composition-pattern bucket to retain central, stable, and imitation-friendly demonstrations. Experiments across multiple datasets, benchmarks, and VLA models show that SIEVE consistently outperforms competitive data selection baselines. Notably, SIEVE can surpass full-data training while using only 50% of demonstrations and 50% of training steps, suggesting that reusable structure, captured through primitives and transitions, is an important signal for efficient VLA imitation learning.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2504.16595v2" target="_blank" class="paper-title">HERB: Human-augmented Efficient Reinforcement learning for Bin-packing</a>
-                        <span class="paper-date">2026-07-07</span>
-                    </div>
-                                        <span class="paper-comment">📝 8 pages, 8 Figures</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Packing objects efficiently is a fundamental problem in logistics, warehouse automation, and robotics. When dealing with highly diverse 3D objects (household or grocery items), closed-form solutions are infeasible, and heuristic or model-free Reinforcement Learning~(RL) methods tend to focus solely on geometric optimization, relying on exhaustive searches of the discretized solution space. This leads to long training times (for pure RL) and high latency (heuristics), limited transferability to robotic scenarios, and ultimately ignores object characteristics (fragility, deformability) and human preferences. We propose HERB, a human-augmented RL framework for packing irregular objects, the first to explore the potential of learning from human demonstrations to solve this complex task. It leverages human demonstrations of packing strategies, which inherently exhibit latent factors such as space optimization, stability, and object properties that are difficult to model explicitly. The human-expert data is combined with RL exploration to provide the placement of each object inside the container. Experimental results show that our method outperforms heuristic, purely RL-based, and imitation learning approaches in packing efficiency and latency. Qualitative results highlight that our packing strategy produces more stable, human-like arrangements, which we expect to be more appropriate and widely accepted. Finally, we demonstrate the real-world feasibility of our method on a robotic system.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.06323v1" target="_blank" class="paper-title">LAMP: Latent Motion Prior-Guided Real-World Learning for Dexterous Hand Manipulation</a>
-                        <span class="paper-date">2026-07-07</span>
-                    </div>
-                                        <span class="paper-comment">📝 17 pages, 11 figures</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Real-world learning for dexterous hands remains brittle because high-dimensional hand actions amplify imitation errors and make reinforcement-learning exploration prone to contact-breaking motion. While combining imitation learning (IL) with online reinforcement learning (RL) can reduce manual supervision, unconstrained exploration in raw hand-action spaces is sample-inefficient and risky for physical hardware. We introduce a latent motion prior module (\prior{}) that maps recent hand-action histories to a compact, history-conditioned latent prior and decodes continuous latent commands into executable high-dimensional hand targets. Built on this prior, \method{} is a three-stage real-world dexterous learning framework: it pretrains \prior{} from demonstrations, trains a visuomotor policy that predicts native arm commands and latent hand-action offsets, and improves the policy with online residual RL in the same latent hand-action space. This shared, decodable interface lets residual exploration make local corrections near demonstrated, contact-consistent hand motions rather than perturbing every finger joint independently. We evaluate \method{} on four real-robot dexterous manipulation tasks against raw, linear, and discrete hand-action interfaces. Starting from small task-specific demonstration sets, \method{} achieves a 56.25\% average IL success rate and raises it to 98.75\% after online RL, reaching 100\% final success on three tasks and 95\% on the remaining task.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2512.11797v2" target="_blank" class="paper-title">AnchorDream: Repurposing Video Diffusion for Embodiment-Aware Robot Data Synthesis</a>
-                        <span class="paper-date">2026-07-06</span>
-                    </div>
-                                        <span class="paper-comment">📝 Project page: https://jay-ye.github.io/AnchorDream/</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>The collection of large-scale and diverse robot demonstrations remains a major bottleneck for imitation learning, as real-world data acquisition is costly and simulators offer limited diversity and fidelity with pronounced sim-to-real gaps. While generative models present an attractive solution, existing methods often alter only visual appearances without creating new behaviors, or suffer from embodiment inconsistencies that yield implausible motions. To address these limitations, we introduce AnchorDream, an embodiment-aware world model that repurposes pretrained video diffusion models for robot data synthesis. AnchorDream conditions the diffusion process on robot motion renderings, anchoring the embodiment to prevent hallucination while synthesizing objects and environments consistent with the robot's kinematics. Starting from only a handful of human teleoperation demonstrations, our method scales them into large, diverse, high-quality datasets without requiring explicit environment modeling. Experiments show that the generated data leads to consistent improvements in downstream policy learning, with relative gains of 36.4% in simulator benchmarks and nearly double performance in real-world studies. These results suggest that grounding generative world models in robot motion provides a practical path toward scaling imitation learning.</p>
                     </details>
                 </div>
             </div>
