@@ -590,7 +590,7 @@
                 <a href="World-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">World Model</span>
-                    <span class="nav-count">80</span>
+                    <span class="nav-count">78</span>
                 </a>
                 <a href="3D-Foundation-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
@@ -600,7 +600,7 @@
                 <a href="LLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
                     <span class="nav-label">LLM</span>
-                    <span class="nav-count">80</span>
+                    <span class="nav-count">78</span>
                 </a>
                 <a href="VLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f97316"></span>
@@ -690,12 +690,12 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">68</span>
+                    <span class="nav-count">64</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">77</span>
+                    <span class="nav-count">78</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -750,7 +750,7 @@
                 <a href="Multimodal-Fusion.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#6366f1"></span>
                     <span class="nav-label">Multimodal Fusion</span>
-                    <span class="nav-count">75</span>
+                    <span class="nav-count">77</span>
                 </a>
                 <a href="Scene-Understanding.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
@@ -809,7 +809,7 @@
             <a href="World-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">World Model</span>
-                <span class="nav-count">80</span>
+                <span class="nav-count">78</span>
             </a>
             <a href="3D-Foundation-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
@@ -819,7 +819,7 @@
             <a href="LLM.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
                 <span class="nav-label">LLM</span>
-                <span class="nav-count">80</span>
+                <span class="nav-count">78</span>
             </a>
             <a href="VLM.html" class="nav-item">
                 <span class="nav-dot" style="background:#f97316"></span>
@@ -909,12 +909,12 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">68</span>
+                <span class="nav-count">64</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">77</span>
+                <span class="nav-count">78</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -969,7 +969,7 @@
             <a href="Multimodal-Fusion.html" class="nav-item active">
                 <span class="nav-dot" style="background:#6366f1"></span>
                 <span class="nav-label">Multimodal Fusion</span>
-                <span class="nav-count">75</span>
+                <span class="nav-count">77</span>
             </a>
             <a href="Scene-Understanding.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
@@ -1025,9 +1025,99 @@
         <section class="topic-section">
             <div class="topic-header">
                 <span class="topic-badge" style="background:#6366f1">Multimodal Fusion</span>
-                <span class="topic-count">75 papers</span>
+                <span class="topic-count">77 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2604.00086v2" target="_blank" class="paper-title">Hierarchical Pre-Training of Vision Encoders with Large Language Model</a>
+                        <span class="paper-date">2026-08-03</span>
+                    </div>
+                                        <span class="paper-comment">📝 17 pages, 14 figures, accepted to Computer Vision and Pattern Recognition Conference (CVPR) Workshops 2026. 5th MMFM Workshop: What is Next in Multimodal Foundation Models?</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有视觉编码器与大型语言模型（LLM）在多模态预训练中通常被独立处理，缺乏层次化视觉特征的深度融合，限制了视觉-语言对齐效果。&#10;&#10;🛠 **方法**：提出HIVE框架，在视觉编码器与LLM之间引入层次化交叉注意力，替代传统扁平化图像嵌入方式，并采用三阶段训练策略逐步对齐视觉编码器与LLM，以优化梯度流和表示学习。&#10;&#10;✨ **主要贡献**：HIVE在图像分类及多项视觉-语言任务（如MME、GQA、OK-VQA、ScienceQA）上优于基于自注意力的方法，验证了层次化特征融合的有效性，为构建更高效、更具表达力的视觉-语言模型提供了新路径。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>The field of computer vision has experienced significant advancements through scalable vision encoders and multimodal pre-training frameworks. However, existing approaches often treat vision encoders and large language models (LLMs) as independent modules, limiting the integration of hierarchical visual features. In this work, we propose HIVE (Hierarchical Pre-Training of Vision Encoders), a novel framework that enhances vision-language alignment by introducing hierarchical cross-attention between the vision encoder and LLM. Unlike conventional methods that flatten image embeddings, HIVE enables structured feature fusion across multiple layers, improving gradient flow and representation learning. To optimize this interaction, we introduce a three-stage training strategy that progressively aligns the vision encoder with the LLM, ensuring stable optimization and effective multimodal fusion. Empirical evaluations demonstrate that HIVE achieves superior performance not only in image classification but also on various vision-language tasks, outperforming self-attention-based methods in benchmarks such as MME, GQA, OK-VQA, and ScienceQA. Our results highlight the benefits of hierarchical feature integration, paving the way for more efficient and expressive vision-language models.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.02092v1" target="_blank" class="paper-title">Deep Multimodal Fusion Detection through Spatial Mask and Channel Fusion</a>
+                        <span class="paper-date">2026-08-03</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有双骨干多模态融合检测方法在特征级融合时，容易过度依赖单一模态的统计特性，导致过拟合或过专业化，影响跨模态目标检测的鲁棒性。&#10;&#10;🛠 **方法**：提出一种基于注意力驱动的互补重采样框架（Attention-Driven Complementarity Resampling），包括语义掩码交换（在训练阶段主动混合模态边界）和可学习的通道竞争机制（按通道可学习地采样和聚合特征）。&#10;&#10;✨ **主要贡献**：在多个数据集上验证了方法的有效性，性能达到现有最先进方法的竞争水平，且通过强制骨干网络学习广义特征，显著提升了跨模态检测的泛化能力。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Deep multimodal fusion for object detection has demonstrated good performance through mining modal characteristics. However, existing feature-level fusion methods mainly weigh between two modalities and unify them in a unified representation space. This can lead to overfitting or over-specialization of the statistical properties of a single modality within a dual-backbone architecture. This paper proposes an Attention-Driven Complementarity Resampling framework for robust improvement of cross-modality object detection. Based on a shared channel spatial attention mechanism, we first introduce the semantic mask exchange to actively mix the boundaries of the modalities during the training phase, forcing the backbone network to learn generalized features without relying on fixed modal labels. Then we propose a learnable channel competition to sample and aggregate features in a channel-wise and learnable way. Our experiments on multiple datasets demonstrate that the proposed method is effective and yields competitive results among existing state-of-the-art approaches. The source code is provided in the supplementary material.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2602.17330v6" target="_blank" class="paper-title">SubQuad: Near-Quadratic-Free Structure Inference with Distribution-Balanced Objectives in Adaptive Receptor framework</a>
+                        <span class="paper-date">2026-08-03</span>
+                    </div>
+                                        <span class="paper-comment">📝 27 pages, 9 figures. In the previous version, Juntendo University was erroneously listed as the affiliation; we must clarify that this paper has absolutely no relation to Juntendo University. Therefore, we have replaced this affiliation in the new version</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：大规模免疫组库分析面临两个瓶颈——成对亲和力评估的近二次方计算成本，以及数据集不平衡导致临床重要稀有克隆型被掩盖。&#10;&#10;🛠 **方法**：提出SubQuad端到端流程，结合抗原感知的近次二次方检索、GPU加速亲和核、学习型多模态融合与公平约束聚类，通过紧凑MinHash预过滤、可微分门控模块和自动校准例程实现。&#10;&#10;✨ **主要贡献**：在大规模病毒和肿瘤组库中，SubQuad在保持或提升召回率、聚类纯度和亚组公平性的同时，显著提高了吞吐量并降低了峰值内存使用，为可扩展、偏差感知的组库挖掘及疫苗靶点优先排序等下游任务提供了平台。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Comparative analysis of adaptive immune repertoires at population scale is hampered by two practical bottlenecks: the near-quadratic cost of pairwise affinity evaluations and dataset imbalances that obscure clinically important minority clonotypes. We introduce SubQuad, an end-to-end pipeline that addresses these challenges by combining antigen-aware, near-subquadratic retrieval with GPU-accelerated affinity kernels, learned multimodal fusion, and fairness-constrained clustering. The system employs compact MinHash prefiltering to sharply reduce candidate comparisons, a differentiable gating module that adaptively weights complementary alignment and embedding channels on a per-pair basis, and an automated calibration routine that enforces proportional representation of rare antigen-specific subgroups. On large viral and tumor repertoires SubQuad achieves measured gains in throughput and peak memory usage while preserving or improving recall@k, cluster purity, and subgroup equity. By co-designing indexing, similarity fusion, and equity-aware objectives, SubQuad offers a scalable, bias-aware platform for repertoire mining and downstream translational tasks such as vaccine target prioritization and biomarker discovery.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.01807v1" target="_blank" class="paper-title">Parameter-Dynamic Adaptive Fusion and Calibration Network for RGBT Tracking</a>
+                        <span class="paper-date">2026-08-03</span>
+                    </div>
+                                        <span class="paper-comment">📝 9 pages,4 figures; Under review</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有RGBT跟踪器在不同目标和场景下使用固定参数的融合函数，无法适应目标外观变化和模态质量波动。&#10;&#10;🛠 **方法**：提出参数动态自适应融合与校准网络（PAFCNet），通过目标自适应超网络（TA-HyperNet）利用模板表示动态生成目标条件参数，用于多模态融合和时空校准，并设计目标感知参数动态融合模块和动态时空校准模块。&#10;&#10;✨ **主要贡献**：首次实现融合参数随目标状态动态调整，有效提升融合灵活性和时间表征可靠性，在多个RGBT跟踪基准上取得竞争性性能。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Existing RGBT trackers typically employ fusion functions with fixed parameters across different targets and scenarios. Although dynamic-architecture methods improve fusion flexibility by selecting among predefined operations, they still cannot adapt the fusion parameters to the evolving target state. To address these issues, we propose a Parameter-Dynamic Adaptive Fusion and Calibration Network (PAFCNet) for RGBT tracking. PAFCNet dynamically generates target-conditioned parameters for multimodal fusion and temporal calibration, enabling the tracking process to adapt to target appearance variations and modality quality fluctuations. Specifically, we introduce a Target-Adaptive Hypernetwork (TA-HyperNet) that leverages template representations, which preserve stable target identity and recent appearance changes with less background interference, to generate target-conditioned parameters for subsequent fusion and calibration. Based on TA-HyperNet, we design a target-aware parameter-dynamic fusion module that uses the generated parameters to modulate the fusion process. This enables the fusion module to adapt to changes in target appearance and complex scene conditions. Furthermore, since spatio-temporal information propagation may accumulate tracking noise, we propose a dynamic spatio-temporal calibration module that employs TA-HyperNet to generate calibration parameters for spatio-temporal tokens. By dynamically calibrating historical information before propagation, the module improves the reliability of temporal representations. Experimental results demonstrate that PAFCNet achieves competitive performance on multiple RGBT tracking benchmarks.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2606.01173v2" target="_blank" class="paper-title">Bridging Multimodal Fusion and Expert Routing via Spectral Reliability Descriptors for Robust Object Detection</a>
+                        <span class="paper-date">2026-08-02</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：RGB-infrared（RGB-红外）目标检测中，跨模态融合产生的统计信息通常被丢弃，导致下游模块无法判断当前融合是否可靠，尤其在退化场景下性能下降。&#10;&#10;🛠 **方法**：提出一种无参数的7维“光谱可靠性描述符”（提取频带能量、振幅比、相位一致性和跨模态相关性），并将其同时用于两个模块：光谱可靠性融合（SRF）通过门控机制将光谱残差与保守空间基结合，以及可靠性条件专家路由（RCER）将描述符与内容特征结合以引导稀疏专家选择。&#10;&#10;✨ **主要贡献**：在DroneVehicle数据集上，六种合成退化下平均保留率提升至95.0%（对比内容-only MoE的92.0%和拼接法的87.9%），模态缺失时增益最大；自然昼夜划分下mAP50提升+5.2/+5.3。消融实验表明，描述符条件路由比专家架构本身带来更大的边际增益，证明将融合可靠性作为显式信号能同时改善自适应融合和条件计算。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>RGB-infrared detectors typically discard the statistics generated during cross-modal fusion, leaving downstream modules unaware of whether the current interaction is reliable. We propose to extract a parameter-free, 7-dimensional spectral reliability descriptor -- summarizing band energy, amplitude ratio, phase consistency, and cross-modal correlation -- and to reuse it beyond the fusion stage. The descriptor drives both Spectral Reliability Fusion (SRF), which gates a spectral residual against a conservative spatial base, and Reliability-Conditioned Expert Routing (RCER), which combines the descriptor with pooled content to steer sparse post-fusion experts. Under matched ablations, descriptor-aware gating improves mAP50 over content-only adaptive gating; a $2{\times}2$ factorial analysis further shows that descriptor-conditioned routing provides the larger marginal gain over expert architecture alone at near-equal parameter count. Under six synthetic degradations on DroneVehicle, average retention rises to 95.0%, versus 92.0% for content-only MoE and 87.9% for concatenation, with the largest gain under modality drop; the same model also improves mAP50 by +5.2/+5.3 on the natural day/night split. These results suggest that preserving fusion-time reliability as an explicit signal benefits both adaptive fusion and post-fusion conditional computation.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.00986v1" target="_blank" class="paper-title">Understanding and Overcoming Cross-modal Fusion Bias in Multimodal Anomaly Detection From A Fisher Information Perspective</a>
+                        <span class="paper-date">2026-08-02</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：多模态异常检测（MAD）中跨模态融合偏差限制了性能提升，现有研究缺乏对该偏差的系统分析。&#10;&#10;🛠 **方法**：提出UCFB框架，利用Fisher信息矩阵分析融合偏差，并通过Fisher信息引导的动态校准调整模态正则化权重，结合典型相关分析增强模态间交互。&#10;&#10;✨ **主要贡献**：在MVTec 3D-AD和Eyecandies数据集上，UCFB在单类、多类及少样本场景下均取得一致性能提升，且作为即插即用模块可适配现有方法。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Current advancements in Multimodal Anomaly Detection (MAD) are largely driven by enhancing multimodal fusion, particularly through the integration of RGB and Depth data for richer anomaly representation. However, less attention was devoted to analyzing the role of cross-modal fusion bias, a well-known challenge in multimodal learning, in MAD. This gap motivates a key question: can we overcome this bias to break the performance bottleneck of current work? In this paper, we first analyze the impact of cross-modal fusion bias in MAD via the Fisher Information Matrix. Then, grounded in these findings, we propose UCFB, a simple yet effective plug-and-play framework designed to mitigate cross-modal fusion bias in MAD. It achieves this by jointly employing Fisher-information-guided dynamic calibration to adjust modality-specific regularization weights and canonical similarity analysis to improve inter-modal interactions. Extensive experiments on the MVTec 3D-AD and Eyecandies datasets demonstrate that UCFB achieves consistent improvements in single-class, multi-class, and few-shot settings.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2607.29112v1" target="_blank" class="paper-title">DoubleHelix: Structured Cross-Modal Fusion for Audio-Visual Speech Recognition with LLMs</a>
@@ -1094,10 +1184,7 @@
                         <span class="paper-date">2026-07-29</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：多模态融合中，模态的可靠性或冗余性未被显式建模，导致不可靠或冗余的模态信息可能损害预测性能。&#10;&#10;🛠 **方法**：提出TIER-MoE，一种风险引导的子空间混合专家模型，通过估计每个样本的模态风险（基于未在该样本上训练的模型的out-of-fold预测损失），结合专家子空间兼容性进行稀疏模态-专家路由，并保留共享路径以维持多模态互补性。&#10;&#10;✨ **主要贡献**：在四个公开生物医学数据集（阿尔茨海默病、皮肤病变、视网膜分类）上，TIER-MoE在预测性能和概率校准上优于现有方法，Macro-F1和Brier分数一致提升，并展现出对外部队列的强零样本泛化能力。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>The promise of multimodal fusion lies in combining complementary sources of evidence, yet more evidence does not always yield a better prediction. Recent multimodal models have advanced fusion through richer cross-modal interaction and sample-adaptive fusion. However, the influence assigned to a modality during fusion does not reveal whether that source is unreliable, redundant, or poorly matched to a specialized expert. To address this limitation, we introduce TIER-MoE, a risk-guided subspace mixture-of-experts model that defines sample-specific modality reliability as the prediction loss its unimodal predictor is expected to incur. This risk is learned from out-of-fold predictions generated by models that were not trained on the corresponding sample. TIER-MoE combines the estimated risk with expert-specific subspace compatibility for sparse modality-expert routing, while an always-active shared path preserves multimodal complementarity. We evaluate TIER-MoE on four public multimodal biomedical datasets spanning Alzheimer's disease status, skin-lesion malignancy, and retinal classification. Results demonstrate its superiority over state-of-the-art methods in predictive performance and probability calibration, with consistent improvements in Macro-F1 and Brier score and strong zero-shot generalization to an external cohort.</p>
@@ -1109,10 +1196,7 @@
                         <span class="paper-date">2026-07-29</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决动物考古学中鸟类骨骼识别依赖人工、效率低的问题，探索AI辅助分类的可行性。&#10;&#10;🛠 **方法**：提出多模态融合框架，结合基于EfficientNet_V2_S的CNN图像特征与骨学测量数据，采用BiRefNet和SAM2两阶段自动分割，在超万张图像数据集上完成骨骼类型和科级分类。&#10;&#10;✨ **主要贡献**：骨骼类型分类达86%准确率，科级分类top-1为51%、top-3达75%，验证了视觉与形态测量特征融合的深度学习方法的有效性，为AI辅助动物考古识别建立了方法基线。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Artificial intelligence has shown considerable potential for archaeological applications, yet its use in zooarchaeology remains limited, particularly for the identification of avian skeletal remains. This study presents a proof-of-concept multimodal framework that integrates convolutional neural network-based image analysis with osteometric measurements for the classification of bird bones. Using a dataset of more than 10,000 images from multiple museum and research collections, two classification tasks were investigated: skeletal element identification and family-level taxonomic classification. Prior to classification, images were automatically segmented using a two-stage pipeline combining BiRefNet and SAM2. Visual features extracted with a pre-trained EfficientNet_V2_S backbone were fused with standardized morphometric data through a feature-level multimodal architecture. The model achieved 86% accuracy on the test set for bone-type classification, demonstrating reliable recognition of skeletal elements. Family-level classification proved more challenging, reaching 51% top-1 accuracy but 75% top-3 accuracy, indicating that correct taxa were frequently included among the most probable predictions. These results demonstrate the feasibility of combining visual and morphometric information within a unified deep-learning framework and establish a methodological baseline for future AI-assisted zooarchaeological identification. The approach contributes to ongoing efforts to develop scalable, interpretable, and archaeologically meaningful tools for the study of avian remains.</p>
@@ -1124,10 +1208,7 @@
                         <span class="paper-date">2026-07-29</span>
                     </div>
                                         <span class="paper-comment">📝 11 pages</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：白光成像（WLI）与窄带成像（NBI）在配准不佳的内窥镜图像中，因空间错位导致直接融合会混合非对应区域，降低病灶边界分割精度。&#10;&#10;🛠 **方法**：提出一种可靠性感知的复数域融合框架，先通过拓扑正则化建立特征对应并评估跨模态可靠性，再在可学习的复数表示中，让WLI提供幅度（外观）信息、NBI提供相位（结构）信息，并抑制不可靠区域的交互。&#10;&#10;✨ **主要贡献**：显式建模WLI与NBI的不同角色，并引入可靠性引导的跨模态融合，在配准不佳的WLI/NBI内窥镜数据集上显著提升病灶分割性能，消融实验验证了模态角色设计与可靠性机制的必要性。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>White-light imaging (WLI) and narrow-band imaging (NBI) provide complementary views of endoscopic lesions, but their paired observations are often spatially misaligned due to viewpoint changes, tissue deformation, and sequential handheld acquisition. This makes direct WLI/NBI fusion prone to mixing non-corresponding regions and may even degrade segmentation around lesion boundaries. To address this problem, we propose a reliability-aware complex-domain fusion framework for paired-but-unregistered WLI/NBI lesion segmentation. The framework first establishes topology-regularized feature correspondence and further estimates where the cross-modal correspondence is reliable. Guided by this reliability, the model selectively fuses WLI and NBI features in a learnable complex representation. In this representation, WLI-derived cues mainly provide appearance-related magnitude responses, while NBI-derived cues provide structure-sensitive phase responses. Unlike conventional real-valued or symmetric multimodal fusion, the proposed method explicitly models the different roles of WLI and NBI and suppresses unreliable cross-modal interaction in locally mismatched regions. Experiments on paired WLI/NBI endoscopic datasets show that the proposed reliability-aware registration grounding and complex-domain fusion consistently improve lesion segmentation performance. Role-reversal and module ablation studies further validate the necessity of both the modality-role design and reliability-guided cross-modal interaction.</p>
@@ -1139,10 +1220,7 @@
                         <span class="paper-date">2026-07-28</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有食品图像分割模型在视觉相似的食材和罕见食品类别上表现不佳，缺乏对语义信息的有效利用。&#10;&#10;🛠 **方法**：提出两个即插即用的多模态模块（LIM-F和LIM-Q），利用大语言模型从食品图像中推断出的食材标签，直接注入视觉分析流程，无需图像与文本的预对齐。&#10;&#10;✨ **主要贡献**：在FoodSeg103基准上达到最先进性能，Swin-L+Mask2Former架构下LIM-Q实现55.0 mIoU，LIM-F达54.4 mIoU，且能提升CNN架构性能（从47.7到49.8 mIoU），训练时GPU内存增加最多仅3.8 GB。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Food image segmentation plays a vital role in health-related applications such as nutrition tracking and personalized health monitoring. However, existing models often underperform on visually similar ingredients and rare food categories. To address this issue, we propose two plug-and-play multimodal modules that enhance the segmentation performance by leveraging ingredient labels inferred from food images using large language models (LLMs). The first module, called LIM-F (Language Injection Module for Features), is designed to pair with any image encoder that produces multi-layer outputs (e.g., Swin Transformer), while the second module, LIM-Q (Language Injection Module for Queries), targets Mask2Former-style Transformer-based decoders. Both modules enable training without the need for pre-aligning images with text by directly injecting semantic ingredient information into the visual analysis pipeline. On the FoodSeg103 benchmark, the proposed method achieves state-of-the-art performance. Specifically, integrating LIM-Q into the Mask2Former decoder with a Swin-L image encoder yields a mean Intersection over Union (mIoU) of 55.0. LIM-F also demonstrates strong generalization and competitive performance, reaching an mIoU of 54.4 under the same model (Swin-L+Mask2Former). Furthermore, its applicability extends beyond Transformer-based decoders, as evidenced by an improvement from 47.7 to 49.8 mIoU when integrated into a CNN-based architecture. Notably, the improved segmentation accuracy is achieved with only a moderate (at most 3.8 GB) increase in the GPU memory consumption during training. Thus, the proposed approach offers a practical and scalable solution for fine-grained food understanding.</p>
@@ -1154,10 +1232,7 @@
                         <span class="paper-date">2026-07-28</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有心理健康评估的多模态融合模型忽略了DASS-21问卷的心理测量结构（如症状项到子量表的固定映射），导致抑郁、焦虑和压力风险评估不够精准。&#10;&#10;🛠 **方法**：提出DynaBridge框架，编码多会话的声学、视觉和文本线索，并用冻结大语言模型生成的DASS感知摘要作为语义证据；同时预测有序项目分布，从项目级软分数重构风险证据，并与直接多模态风险预测融合，再通过置信度感知策略保守整合高置信语义线索。&#10;&#10;✨ **主要贡献**：在AdoDAS验证集上，DynaBridge在D/A/S风险预测中达到0.5012平均F1，在DASS-21项目预测中达到0.3216平均QWK，显著优于官方基线及代表性多模态方法，验证了融合多模态线索、语义摘要与DASS-21心理测量结构的有效性。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Multimodal behavioral analysis offers a scalable approach to assessing depression, anxiety, and stress, yet generic fusion models often ignore the psychometric structure of questionnaire labels. In DASS-21, risk labels are derived from ordered symptom items through fixed item-to-subscale mappings. We propose \textbf{DynaBridge}, a dynamic summary-guided cross-task multimodal framework for DASS-structured mental health assessment. DynaBridge encodes acoustic, visual, and textual cues across multiple sessions and augments them with frozen-LLM-generated DASS-aware summaries as participant-level semantic evidence. It predicts ordinal item distributions, reconstructs depression, anxiety, and stress risk evidence from item-level soft scores, and fuses this evidence with direct multimodal risk predictions. A confidence-aware refinement strategy further incorporates high-confidence semantic cues conservatively. On the official AdoDAS validation split, DynaBridge outperforms the official baseline and representative multimodal methods, achieving 0.5012 mean F1 for D/A/S risk prediction and 0.3216 mean QWK for DASS-21 item prediction. These results show the value of bridging multimodal cues, semantic summaries, and DASS-21 psychometric structure.</p>
@@ -1169,10 +1244,7 @@
                         <span class="paper-date">2026-07-28</span>
                     </div>
                                         <span class="paper-comment">📝 21 pages, 10 figures</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决自动驾驶中多视角协同感知与多模态融合在遮挡、视角受限及V2X通信延迟下的3D时空理解难题。&#10;&#10;🛠 **方法**：提出XET-V2X框架，通过双层级空间交叉注意力模块（基于多尺度可变形注意力）对齐异构视角与模态，先聚合多视图图像特征增强语义一致性，再以更新后的空间查询引导点云融合，实现高效跨模态交互。&#10;&#10;✨ **主要贡献**：在真实V2X-Seq-SPD数据集及模拟V2X-Sim子集上，相比单视角/单模态基线，在mAP和AMOTA上实现15-20%的相对提升，并优于代表性检测-跟踪协同感知方法。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Multiview cooperative perception and multimodal fusion are essential for reliable 3-D spatiotemporal understanding in autonomous driving, especially in cases with occlusions, limited viewpoints, and communication delays in vehicle-to-everything (V2X) scenarios. In this paper, Cross-modal End-to-End Tracking for V2X (XET-V2X), a multimodal fused end-to-end tracking framework for V2X collaboration that unifies multiview multimodal sensing within a shared spatiotemporal representation, is proposed. To efficiently align heterogeneous viewpoints and modalities, XET-V2X introduces a dual-layer spatial cross-attention module based on multiscale deformable attention. Multiview image features are aggregated to enhance semantic consistency, followed by point cloud fusion guided by the updated spatial queries, enabling effective cross-modal interaction while reducing computational overhead. Experiments based on the real-world V2X Sequential Perception Dataset (V2X-Seq-SPD) dataset and two simulated V2X-Sim-derived subsets, namely the vehicle-to-vehicle (V2X-Sim-V2V) and vehicle-to-infrastructure (V2X-Sim-V2I) subsets, demonstrate consistent improvements in detection and tracking performance under varying communication delays, with XET-V2X achieving up to 15-20% relative gains in mean average precision (mAP) and average multi-object tracking accuracy (AMOTA) over single-view or single-modal baselines, while also outperforming representative tracking-by-detection cooperative perception methods.</p>
@@ -1336,18 +1408,6 @@
                 </div>
                 <div class="paper-card">
                     <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2602.17330v5" target="_blank" class="paper-title">SubQuad: Near-Quadratic-Free Structure Inference with Distribution-Balanced Objectives in Adaptive Receptor framework</a>
-                        <span class="paper-date">2026-07-22</span>
-                    </div>
-                                        <span class="paper-comment">📝 27 pages, 9 figures. In the previous version, Juntendo University was erroneously listed as the affiliation; we must clarify that this paper has absolutely no relation to Juntendo University. Therefore, we have replaced this affiliation in the new version</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Comparative analysis of adaptive immune repertoires at population scale is hampered by two practical bottlenecks: the near-quadratic cost of pairwise affinity evaluations and dataset imbalances that obscure clinically important minority clonotypes. We introduce SubQuad, an end-to-end pipeline that addresses these challenges by combining antigen-aware, near-subquadratic retrieval with GPU-accelerated affinity kernels, learned multimodal fusion, and fairness-constrained clustering. The system employs compact MinHash prefiltering to sharply reduce candidate comparisons, a differentiable gating module that adaptively weights complementary alignment and embedding channels on a per-pair basis, and an automated calibration routine that enforces proportional representation of rare antigen-specific subgroups. On large viral and tumor repertoires SubQuad achieves measured gains in throughput and peak memory usage while preserving or improving recall@k, cluster purity, and subgroup equity. By co-designing indexing, similarity fusion, and equity-aware objectives, SubQuad offers a scalable, bias-aware platform for repertoire mining and downstream translational tasks such as vaccine target prioritization and biomarker discovery.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
                         <a href="https://arxiv.org/abs/2607.19086v1" target="_blank" class="paper-title">Advancing Multimodal Fusion on Heterogeneous Medical Data with Hybrid Geometry Attention</a>
                         <span class="paper-date">2026-07-21</span>
                     </div>
@@ -1416,18 +1476,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Audio-visual event recognition (AVER) has achieved significant performance improvements through transformer-based multimodal architectures. However, the high computational complexity, large memory footprint, and inference cost of these models hinder their deployment on edge and resource-constrained devices. This paper presents an efficient compression framework for hybrid cross-attention-based audiovisual event recognition by combining architectural model compression, knowledge distillation, and dynamic INT8 quantization. A high-capacity teacher model integrates VideoMAE for visual representation learning, the Audio Spectrogram Transformer (AST) for audio feature extraction, and a hybrid cross-attention fusion network for multimodal feature integration. A lightweight student model is constructed by reducing the hidden feature dimension, the number of attention heads, and the feedforward network size while preserving the overall network architecture. The student model is trained using knowledge distillation to effectively transfer discriminative knowledge from the teacher. Finally, dynamic INT8 post-training quantization is applied to further reduce the model size for efficient deployment. Experimental results on the Audio-Visual Event (AVE) dataset show that the proposed framework reduces the number of trainable parameters in the multimodal fusion module by 59.06%, with only a 2.14% decrease in classification accuracy compared with the teacher model. Furthermore, dynamic INT8 quantization reduces the model size from 10.71 MB to 2.04 MB while maintaining competitive recognition performance. These results demonstrate that the proposed framework provides an effective trade-off between recognition accuracy and computational efficiency, making it a promising solution for deployment on resource-constrained edge AI platforms.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.16898v1" target="_blank" class="paper-title">Cross-Branch Conflict as a Shield: Safeguarding Facial Identities in Unified Multimodal Image Editing</a>
-                        <span class="paper-date">2026-07-18</span>
-                    </div>
-                                        <span class="paper-comment">📝 8 pages, preprint</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Unified multimodal models (UMMs) have recently demonstrated powerful instruction-based image editing capabilities, but they also raise serious concerns about unauthorized manipulation of personal portraits. Existing adversarial protection methods are mainly designed for either visual understanding or image generation models and often become ineffective when transferred to UMMs, which process an image through multiple complementary visual pathways. In this work, we first conduct a feature-level analysis of unified image editing. We observe that the ViT-based understanding branch and the VAE-based generation branch exhibit non-trivial structural agreement for the same input image. Although perturbing an individual branch can reduce this agreement and induce intermediate hidden-state deviations, such effects are asymmetric and gradually attenuated during multimodal fusion and generation. These observations reveal that single-branch feature distortion is insufficient for consistently disrupting unified image editing. Motivated by this finding, we propose CCS, a unified adversarial protection framework that jointly drives the ViT and VAE representations away from their clean counterparts while explicitly disrupting their cross-branch compatibility through linear CKA. By simultaneously removing stable information from both visual pathways and creating incompatible visual contexts, CCS prevents the UMM from recovering reliable identity information during editing. Extensive experiments demonstrate that CCS consistently outperforms existing protection methods in suppressing identity-preserving edits.</p>
                     </details>
                 </div>
                 <div class="paper-card">
@@ -1932,30 +1980,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Field-scale retrieval of surface soil moisture (SM), leaf area index (LAI), and plant height (PH) is essential for precision agriculture, yet it remains an ill-posed inverse problem. Concurrent variations in soil moisture and canopy density generate substantial ambiguities in radar backscatter and spectral responses, which reduces the effectiveness of traditional feedforward regression models in heterogeneous smallholder cropping systems. This study presents the Iterative Energy-Based Transformer (iEBT) for the joint retrieval of coupled soil-canopy states from Sentinel-1 C-band SAR and Sentinel-2 multispectral time series. Instead of direct regression, iEBT embeds multi-modal predictors within a shared sequence, produces an initial state estimate, and iteratively updates the target [SM, LAI, PH] vector through normalized gradient descent to minimize a learned scalar compatibility energy function. Using 700 quality-controlled field measurements from Varanasi, India, iEBT achieved the highest learned-model performance on the random test split, with a four-seed mean R^2 of 0.854 \pm 0.012 (R_SM^2 = 0.841, R_LAI^2 = 0.905, R_PH^2 = 0.821). WCM and PROSAIL were retained as physically interpretable SAR and optical reference models for comparison. Modality ablations confirmed that Sentinel-1 drives SM retrieval, while Sentinel-2 dominates LAI, whereas PH relies on combined structural-phenological signatures. Crucially, the model's terminal energy functions as an uncalibrated post-retrieval quality diagnostic; screening the 10% highest-energy samples markedly reduced target level root-mean-square errors. While leave-one-campaign-out validation highlights persistent cross-season domain shift challenges due to localized management variations, compatibility-guided multimodal fusion offers a structured self-diagnostic path toward reliable biophysical parameter estimation</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.23213v1" target="_blank" class="paper-title">Deep learning-based detection of cessation of breathing in pre-term infants</a>
-                        <span class="paper-date">2026-06-22</span>
-                    </div>
-                                        <span class="paper-comment">📝 14 pages main text, 8 figures. Submitted to IEEE Journal of Biomedical and Health Informatics (JBHI)</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Apnoea of prematurity is characterised by recurrent episodes of cessation of breathing and remains difficult to detect reliably using routinely monitored physiological signals in the Neonatal Intensive Care Unit (NICU). Existing bedside monitors rely primarily on respiratory rate and oxygen saturation thresholds, often generating high false-positive alarm rates and missing short or irregular events. Improving automated detection using routinely acquired clinical signals could enhance identification of clinically meaningful events without additional sensing hardware. We evaluated deep learning-based detection of apnoea-related Cessation Of BrEathing (COBE) events using impedance pneumography (IP), electrocardiography (ECG), and photoplethysmography (PPG) signals from approximately 430 hours of NICU recordings collected from 24 pre-term infants. Three independent reviewers annotated COBE events, producing a dataset of 346 COBE and 608 non-COBE events. We compared a shallow convolutional neural network (CNN), residual networks (ResNets), and a ConvNeXt architecture using an independent held-out test set. Across all architectures, detection performance was influenced more strongly by signal modality than by architectural complexity. Unimodal IP-based models achieved balanced accuracies of 86.8-88.0%, outperforming ECG-derived (62.6-69.7%) and PPG-derived (65.1-66.4%) respiratory surrogates. Multimodal fusion yielded modest improvements over IP alone. The best-performing model, a ConvNeXt architecture combining IP and PPG inputs, achieved 88.7% balanced accuracy and an F1 score of 0.75 on the independent test set. These findings demonstrate that deep learning models applied to routinely monitored NICU signals can reliably detect COBE events and highlight the importance of signal modality in data-constrained neonatal monitoring settings.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.23058v1" target="_blank" class="paper-title">Three-Step Hierarchical Transformer for Multi-Pedestrian Trajectory Prediction</a>
-                        <span class="paper-date">2026-06-22</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Pedestrian trajectory prediction requires modeling temporal dynamics, multimodal cues, and social interactions in crowded environments. Existing methods often address these factors separately or entangle them in costly attention blocks, limiting scalability, flexibility, and interpretability. We propose a three-step hierarchical Transformer that explicitly separates temporal encoding, multimodal fusion, and scene-level interaction reasoning. Lightweight GRU summaries enable efficient cross-modal attention, while social attention over time--agent tokens captures inter-pedestrian influences at manageable cost. Experiments on JTA, JRDB, and the Pedestrians and Cyclists in Road Traffic dataset show state-of-the-art performance on real-world datasets (JRDB, Urban) and competitive results on JTA. Ablation and qualitative analyses confirm the contribution of each stage and the model's ability to anticipate complex behaviors such as early turning.</p>
                     </details>
                 </div>
             </div>

@@ -590,7 +590,7 @@
                 <a href="World-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">World Model</span>
-                    <span class="nav-count">80</span>
+                    <span class="nav-count">78</span>
                 </a>
                 <a href="3D-Foundation-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
@@ -600,7 +600,7 @@
                 <a href="LLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
                     <span class="nav-label">LLM</span>
-                    <span class="nav-count">80</span>
+                    <span class="nav-count">78</span>
                 </a>
                 <a href="VLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f97316"></span>
@@ -690,12 +690,12 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">68</span>
+                    <span class="nav-count">64</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">77</span>
+                    <span class="nav-count">78</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -750,7 +750,7 @@
                 <a href="Multimodal-Fusion.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#6366f1"></span>
                     <span class="nav-label">Multimodal Fusion</span>
-                    <span class="nav-count">75</span>
+                    <span class="nav-count">77</span>
                 </a>
                 <a href="Scene-Understanding.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
@@ -809,7 +809,7 @@
             <a href="World-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">World Model</span>
-                <span class="nav-count">80</span>
+                <span class="nav-count">78</span>
             </a>
             <a href="3D-Foundation-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
@@ -819,7 +819,7 @@
             <a href="LLM.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
                 <span class="nav-label">LLM</span>
-                <span class="nav-count">80</span>
+                <span class="nav-count">78</span>
             </a>
             <a href="VLM.html" class="nav-item">
                 <span class="nav-dot" style="background:#f97316"></span>
@@ -909,12 +909,12 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">68</span>
+                <span class="nav-count">64</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">77</span>
+                <span class="nav-count">78</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -969,7 +969,7 @@
             <a href="Multimodal-Fusion.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
                 <span class="nav-label">Multimodal Fusion</span>
-                <span class="nav-count">75</span>
+                <span class="nav-count">77</span>
             </a>
             <a href="Scene-Understanding.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
@@ -1028,6 +1028,81 @@
                 <span class="topic-count">46 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.02316v1" target="_blank" class="paper-title">Residual-Based Adaptive Kalman Filtering for Legged Robot State Estimation</a>
+                        <span class="paper-date">2026-08-03</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：腿式机器人状态估计中，卡尔曼滤波器的噪声参数（Q和R）难以手动调整，且固定参数无法适应不同步态和环境变化。&#10;&#10;🛠 **方法**：提出一种基于滤波残差和新息的自适应协方差调整策略，在不变扩展卡尔曼滤波器（InEKF）中在线更新过程噪声Q和测量噪声R，融合IMU与腿部运动学数据。&#10;&#10;✨ **主要贡献**：实验表明，仅自适应调整R即可将小跑步态下的估计精度提升25%（相比固定调参的InEKF），且无需足底力传感器或额外参数调整，性能与基于足力的方法相当。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>State estimation is a key component in model-based control of walking robots and, more broadly, applicable wherever hidden variables must be inferred. The Kalman filter is widely used to estimate floating-base position and velocity by fusing multiple sensing modalities. However, tuning noise parameters is challenging and typically requires expert knowledge. Moreover, fixed noise parameters are unsuitable for varying gaits and environments. We propose an online adaptation strategy for the process noise covariance matrix Q and the measurement noise covariance matrix R. Specifically, we introduce a filter residual and innovation-based covariance adaptation method for legged robot state estimation and evaluate it against a baseline approach relying on IMU and foot force measurements. The proposed adaptation is implemented within an Invariant Extended Kalman Filter (InEKF) fusing IMU and leg kinematics. Experiments on indoor and outdoor datasets with a Unitree Go2 quadruped show that adapting R is sufficient and improves accuracy by 25% for the trotting gait compared to the fixed-tuned InEKF. Finally, the proposed residual-based adaptation achieves comparable performance to the foot force approach, without requiring foot force measurements or additional parameter tuning.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.15807v2" target="_blank" class="paper-title">Deployment-Ready UWB Localization for Industrial Ground Robots with Automatic Anchor Calibration and Terrain-Aware Fusion</a>
+                        <span class="paper-date">2026-08-03</span>
+                    </div>
+                                        <span class="paper-comment">📝 Content unchanged from v1; updated depiction of mobile robots in Fig. 1</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：工业自主移动机器人（AMR）的UWB定位在实际部署中面临两个难题：静态锚点校准耗时且易出错，以及UWB与车载传感器的融合需要精心设计以保证鲁棒性。&#10;&#10;🛠 **方法**：提出端到端流水线，包含自动锚点校准（估计锚点位置和距离偏差）和基于偏差感知扩展卡尔曼滤波的多传感器融合（结合UWB与本体感知），并针对地面车辆运动进行优化。&#10;&#10;✨ **主要贡献**：在仓库环境中实现高精度室内外定位，相比先前方法一致性显著提升；在独立叉车数据集上验证了跨平台迁移性；在视距受限和锚点稀疏场景下仍有效，大幅减少人工校准工作量，并公开了仓库数据集。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Ultra-Wideband (UWB) ranging has become a viable option for industrial Autonomous Mobile Robot (AMR) localization due to improved accuracy and low cost. However, real-world deployments remain limited by two recurring challenges: calibrating static anchors can be time-consuming and error-prone, and integrating UWB with existing onboard sensors requires careful design to ensure robust and consistent pose estimation. Addressing these challenges, this paper presents an end-to-end pipeline that combines automatic anchor calibration with a generic multi-sensor estimator tailored to surface-bound vehicle motion. It targets existing AMR stacks in scenarios where robot pose priors are available for initialization. The calibration stage estimates anchor positions and range biases, while the localization stage fuses UWB with proprioceptive sensing in a bias-aware Extended Kalman Filter to improve consistency without extensive parameter tuning. Experiments on a commercial logistics AMR in a warehouse setting demonstrate accurate positioning indoors and across outdoor transitions, with improved consistency compared to an earlier estimator formulation. Evaluation on an independent forklift dataset further indicates transferability to other platforms. The method remains effective in test cases with limited line-of-sight and sparse anchor coverage. These results show that UWB localization can be deployed with substantially reduced manual effort while preserving the accuracy required for industrial AMRs. The collected warehouse dataset is made publicly available.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.02093v1" target="_blank" class="paper-title">Dynamic UAV-based search operations using probabilistic diffusion modeling of Man Overboard incident victims</a>
+                        <span class="paper-date">2026-08-03</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决邮轮人员落水（Man Overboard）后，如何快速预测落水者可能位置并利用无人机高效搜索，以提升搜救成功率的问题。&#10;&#10;🛠 **方法**：采用扩展卡尔曼滤波（EKF）结合Leeway漂移模型预测落水者动态位置，并设计五种无人机搜索策略（Zigzag、Boustrophedon、Spiral、Probability Informed Search及改进的IPIS），在仿真环境中评估其性能。&#10;&#10;✨ **主要贡献**：提出改进的概率知情搜索（IPIS）方法，在落水后20分钟启动搜索且检测成功率仅30%的条件下，平均找到落水者的成功率超过80%；同时公开了全部仿真代码，便于复现和进一步研究。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>More than 70% of the people that fell overboard cruise ships in the period 2010-2019 lost their lives. This paper presents a strategy for reliably predicting the area a person may be in after a man overboard incident, and describes in detail the search methods to find them utilizing UAV technology. The search area prediction method employs an Extended Kalman Filter that capitalizes on the information from the Leeway model to track the missing person in the sea by taking into account the uncertainty of the movement of the person and the weather conditions in the area. Then, a UAV uses this information to search for the person. Five different methods for searching in this dynamic area are presented and evaluated - the Zigzag, the Boustrophedon, the Spiral, the Probability Informed Search and the Improved Probability Informed Search (IPIS) methods. The IPIS method provides success rate of over 80% on average for finding a person, even if the UAV initiates the search mission 20 minutes after the man overboard incident and even assuming a detection method with a success rate of 30%. All code for the simulation environment and the evaluation of the methods is available on our GitHub page at https://github.com/diangeli/pdms-man-overboard.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.20939v2" target="_blank" class="paper-title">Interaction Dynamics Modeling and Predictive Control for Safe Steerable Catheter--Tissue Interaction</a>
+                        <span class="paper-date">2026-08-03</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决可操控导管与组织交互时的安全控制问题，需在跟踪运动轨迹的同时，严格限制接触力不超过临床安全阈值（如0.5N），并抑制摩擦、迟滞等干扰。&#10;&#10;🛠 **方法**：提出基于交互动力学建模的预测控制框架，包括：部分物理前馈补偿标称弯曲动力学、配置不变的线性交互动力学模型、带硬约束的预测优化器，以及扩展卡尔曼滤波器将接触、摩擦和建模误差压缩为无传感器扰动状态。&#10;&#10;✨ **主要贡献**：在八连杆肌腱驱动导管的MuJoCo仿真中，扰动增强将自由空间接近误差降低90%；仅有力约束的预测交互动力学控制器能在保持相同跟踪精度下将接触力限制在0.47N（无约束时为0.60N），且该约束在0.5mm、1.2Hz心脏运动下依然有效。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Safe steerable catheter control is fundamentally a problem of interaction dynamics: the tip must follow a planned motion, remain compliant against moving tissue, reject friction and hysteresis, and respect a clinically meaningful never-exceed contact-force bound. We formulate catheter--tissue interaction dynamics in the scalar tip-normal coordinate of a single-segment single-tendon catheter. A partial-physics feedforward cancels only the reliable nominal bending dynamics, exposing a configuration-invariant linear interaction-dynamics model whose input gain varies through the scalar catheter inertia. A predictive optimizer then regulates this interaction state subject to hard contact-force, tendon-force, and curvature constraints. An augmented Kalman filter compresses contact, friction, and modeling error into one sensor-free disturbance state, giving nominal offset-free regulation in free space while leaving force safety to the explicit constraint. The unconstrained and disturbance-free limit recovers classical catheter impedance as a special realization of the same interaction dynamics, rather than as the main design object. In a MuJoCo distributed-compliance simulation of an eight-link tendon-driven catheter, disturbance augmentation cuts free-space approach error by 90\%, and only the force-constrained predictive interaction-dynamics controller reconciles tracking with the 0.5\,N bound: the unconstrained controller drives contact force to 0.60\,N against a penetrating target, while the constrained one holds 0.47\,N at identical tracking. These results show that offset-free motion regulation and contact-force safety are coupled interaction-dynamics objectives, and that the explicit predictive constraint resolves their tension under stiff tissue contact. The bound also holds under $0.5$\,mm, $1.2$\,Hz cardiac motion. Hardware validation is future work.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.00272v1" target="_blank" class="paper-title">Localization in Spatiotemporal Fields via Environmental PDEs</a>
+                        <span class="paper-date">2026-07-31</span>
+                    </div>
+                                        <span class="paper-comment">📝 Accepted to the 2026 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2026)</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：本文解决在缺乏GPS或GNSS信号的环境中，如何利用环境时空场（如水流、温度、盐度等）实现自主载具的定位问题。&#10;&#10;🛠 **方法**：提出基于偏微分方程（PDE）驱动的时空场作为定位特征，结合浅水方程和扩散-对流方程进行数值预测，并采用Rao-Blackwellized粒子滤波（RBPF）融合多模态场测量，其中粒子采样非线性状态，卡尔曼滤波解析跟踪线性传感器偏差。&#10;&#10;✨ **主要贡献**：RBPF相比标准粒子滤波在相同粒子数下显著降低定位误差和RMSE；通过仿真验证了两种PDE场景的有效性，并在真实水域实验中利用盐度、温度和溶解氧测量成功实现了自主水面艇的定位，证明环境PDE场具有足够的空间变异性用于实际定位。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>This paper proposes a localization framework that uses spatiotemporal fields governed by partial differential equations (PDEs) as localization signatures. Two PDE classes are considered: the shallow water equations, which describe free-surface flows in coastal and riverine environments, and the advection-diffusion equation, which models the transport and mixing of scalar quantities such as temperature, salinity, and dissolved oxygen. A numerical PDE solver provides predicted fields over the domain, and multiple field channels are fused as multimodal measurements to improve localization accuracy. We formulate the problem within a Rao-Blackwellized particle filter (RBPF) that partitions the vehicle state into a nonlinear component sampled by particles and a linear sensor bias component tracked analytically via per-particle Kalman filters. This factorization reduces the required number of particles compared to a standard particle filter while accounting for realistic sensor drift. Simulation studies on both PDE scenarios show that the RBPF consistently outperforms a standard particle filter in terms of final position error and Root Mean Square Error (RMSE) across varying particle counts. Field experiments with an autonomous surface vehicle measuring salinity, temperature, and dissolved oxygen validate that PDE-governed environmental fields provide sufficient spatial variability for practical localization. Related experimental videos are available at https://localization-environmental-pdes.github.io/.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2607.28756v1" target="_blank" class="paper-title">Sovereign Cognitive Digital Twins: Fusing 6G ISAC, AI-RAN, and Zero-Trust Edge Grids for National Resilience in the Global South</a>
@@ -1109,10 +1184,7 @@
                         <span class="paper-date">2026-07-28</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：针对多IMU（惯性测量单元）铰接刚体系统（如机器人或人体）的扩展位姿（姿态、速度、位置）估计，现有不变扩展卡尔曼滤波（IEKF）仅适用于单刚体，无法直接处理多体间的位姿耦合与关节运动学约束。&#10;&#10;🛠 **方法**：提出相对L-扩展位姿的李群表示，将每个刚体上的IMU数据建模为群仿射动力学，并通过无噪声伪测量将关节约束以不变形式融入迭代IEKF（IterIEKF）框架中。&#10;&#10;✨ **主要贡献**：在UR5e机器人和人体腿部实验中，所提方法相比所有EKF、IterEKF及绝对位姿IterIEKF基线，收敛更快、运行变异性更低，且均方根误差（RMSE）至少降低50%。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Accurate extended pose estimation (orientation, velocity, and position) for IMU-instrumented articulated rigid-body systems is a key challenge in robotics and human motion analysis. The invariant extended Kalman filter (IEKF) addresses this problem for a single rigid body with convergence guarantees and consistency under unobservability, but extending these properties to articulated systems is nontrivial: inter-body pose coupling prevents a direct application, and incorporating joint kinematic constraints within the invariant framework remains an open problem. To address this gap, we introduce the relative L-extended pose, a Lie group representation for kinematic-tree systems based on relative poses between bodies. With one IMU per body, it yields group-affine dynamics and allows joint constraints to be expressed in invariant form. We incorporate these constraints as noise-free pseudo-measurements within an iterated IEKF (IterIEKF), thereby preserving the convergence and consistency guarantees of invariant filtering. The absolute pose of each body is then recovered by chaining the relative blocks along the kinematic tree. Validated on both a UR5e robot and a human leg, the proposed IterIEKF outperforms all EKF, IterEKF, and absolute-pose IterIEKF baselines. It converges faster, exhibits lower run-to-run variability, and consistently achieves the lowest RMSE, with reductions of at least 50% compared to the second-best filter across all scenarios considered in this work.</p>
@@ -1124,10 +1196,7 @@
                         <span class="paper-date">2026-07-27</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有深度逆强化学习方法多为离线、依赖大批量梯度下降，难以在实时场景中高效推断对手目标。  &#10;🛠 **方法**：提出在线递归深度逆强化学习（RDIRL），通过类似扩展卡尔曼滤波的序贯二阶牛顿更新，最小化引导代价学习目标的上界。  &#10;✨ **主要贡献**：在标准与对抗性基准任务中，RDIRL能快速恢复专家智能体的代价/奖励函数，且收敛速度与性能优于多种主流逆强化学习算法。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Inferring an adversary's goals from exhibited behavior is crucial for counterplanning and non-cooperative multi-agent systems in domains like cybersecurity, military, and strategy games. Deep Inverse Reinforcement Learning (IRL) methods based on maximum entropy principles show promise in recovering adversaries goals but are typically offline, require large batch sizes with gradient descent, and rely on first-order updates, limiting their applicability in real-time scenarios. We propose an online Recursive Deep Inverse Reinforcement Learning (RDIRL) approach to recover the cost function governing the adversary actions and goals. Specifically, we minimize an upper bound on the standard Guided Cost Learning (GCL) objective using sequential second-order Newton updates, akin to the Extended Kalman Filter (EKF), leading to a fast (in terms of convergence) learning algorithm. We demonstrate that RDIRL is able to recover cost and reward functions of expert agents in standard and adversarial benchmark tasks. Experiments on benchmark tasks show that our proposed approach outperforms several leading IRL algorithms.</p>
@@ -1139,10 +1208,7 @@
                         <span class="paper-date">2026-07-27</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在高维随机偏微分方程的参数识别中，传统集合卡尔曼滤波（EnKF）需要大量样本进行预测，导致计算成本过高。&#10;&#10;🛠 **方法**：提出基于神经网络（NN）的替代模型，并引入增广拉格朗日乘子域分解法（DDM），将全局问题分解为局部子问题，独立优化局部NN模型后再进行全局通信耦合；同时采用分布式去中心化EnKF，各局部估计器利用本地信息更新参数，相邻子域间通信重建一致全局估计。&#10;&#10;✨ **主要贡献**：显著减少NN参数数量并提高局部近似精度，在三维材料参数识别问题中，该方法能以较低计算成本获得与EnKF和MCMC相当的参数估计结果，尤其优于MCMC的计算效率。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Ensemble Kalman filters (EnKF) provide an efficient framework for parameter identification of physics based laws from spatially distributed measurements. Their forecast models require a large number of samples to accurately represent uncertainties, leading to high computational costs. A NN-based surrogate model is introduced to replace the sample-based forecast model. The proposed NN surrogate maps spatial coordinates and physics-based parameters to the forecasted observation. Such maps require a large number of parameters for high-dimensional spatial domains. To overcome this limitation, a augmented Lagrange multiplier domain decomposition method (DDM) is developed, where local NN models are optimized independently before global communication and coupling. This reduces the number of NN parameters while improving local approximation accuracy. Furthermore, a distributed and decentralized ensemble Kalman filter approach based on DDM-NN surrogate model is investigated, where the parameter identification problem is decomposed into local subproblems. Each local estimator updates the material parameters using locally available information, while communication between neighboring subdomains enables the reconstruction of a consistent global estimate to reduce the computational cost. The proposed method is evaluated on a three-dimensional material parameter identification problem and compared with an EnKF and a MCMC reference solution. The results show that the proposed DDM NN-based KF captures the posterior parameter distribution and approaches the solutions obtained with both EnKF and MCMC. While MCMC provides the most accurate representation of the posterior distribution, the proposed approach achieves comparable parameter estimates with reduced computational requirements for the forecast model.</p>
@@ -1154,10 +1220,7 @@
                         <span class="paper-date">2026-07-27</span>
                     </div>
                                         <span class="paper-comment">📝 12 pages, technical report</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决视觉地点识别（VPR）在长期部署中适应新环境时出现的灾难性遗忘问题。&#10;&#10;🛠 **方法**：提出结构化局部解析流形适应框架（SLAM），通过无迹变换实现不确定性感知平滑，利用高斯混合模型进行拓扑空间划分，并结合H∞鲁棒边界优化，形成统一的闭式解析递归。&#10;&#10;✨ **主要贡献**：不确定性平滑与局部映射的协同组合（U+G配置）达到27.5%的最优标称精度；H∞边界无需架构拆分，通过单一正则化参数即可在标称定位精度与最坏情况扰动抑制之间实现数学保证的权衡。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Visual Place Recognition (VPR) under long-term operation is essential for autonomous mobile robots. While Analytic Class-Incremental Learning (ACIL) provides memory-free ($O(1)$) task adaptation with exact forgetting immunity, applying it to lifelong VPR suffers from extreme vulnerability to non-linear domain shifts induced by environmental variations. In this work, we introduce the concept of the \textbf{ACIL-Domain (ACIL-D)}---a canonical invariant feature manifold where autocorrelation states remain locked. We resolve the domain vulnerability via Disentangled Domain Alignment (D-DA), which decouples latent features into invariant semantics within ACIL-D and variant style vectors for directional projection. Furthermore, by uncovering an algebraic isomorphism between recursive ACIL updates and Extended Kalman Filter (EKF) covariance propagation, we establish a control-theoretic framework designated as \textbf{SLAM} (\textbf{S}tructured and \textbf{L}ocalized \textbf{A}nalytic \textbf{M}anifold adaptation). SLAM integrates dynamic temperature-scaled Gaussian Mixture Models (GMM) to isolate topological non-linearities, Unscented perturbed propagation to dampen feature variations, and minimax $H_{\infty}$-robust criteria to bound worst-case noise accumulation. Empirical evaluations on the non-stationary NCLT dataset demonstrate that our proposed framework substantially outperforms existing baselines, achieving a final all-class accuracy of 27.7\% with the full SLAM framework (and up to 29.0\% with the U+H variant) while guaranteeing complete forgetting immunity.</p>
@@ -1169,10 +1232,7 @@
                         <span class="paper-date">2026-07-27</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：如何从数字化音乐遗产中建模跨文化风格演变，而非仅进行静态分类或相似性计算。&#10;&#10;🛠 **方法**：提出“表示到动力学”框架，从符号和弦序列提取上下文嵌入，构建作品级表示并映射到共享和声空间，通过时间因果卡尔曼滤波重建国家层面轨迹，再以DeGroot和Friedkin-Johnsen动力学建模，生成可解释的影响网络和风格锚定估计。&#10;&#10;✨ **主要贡献**：在1875-1940年西方艺术音乐语料上验证了框架，估计的轨迹与影响模式与音乐史记载一致（如德奥传统紧密、俄法交流），并通过递归预测评估了模型稳定性，为文化遗产研究提供了可复现的定量分析层。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Digitized musical heritage collections offer new opportunities to examine how stylistic traditions change over historical time, but computational analyses often reduce musical works to static classifications or similarity scores. This article proposes a representation-to-dynamics framework for studying cross-cultural harmonic change in Western art music. Starting from symbolic chord sequences, we derive contextual chord embeddings, project work-level representations into a shared harmonic space, and reconstruct country-level trajectories through temporally causal Kalman filtering. These trajectories are then modeled with DeGroot and Friedkin--Johnsen dynamics, yielding interpretable influence-like networks and estimates of stylistic anchoring. We apply the framework to a curated corpus of 480 dated works from 1875 to 1940 across Russia, France, Germany, Austria, and a heterogeneous ''Others'' group. Models fitted on 1875--1925 are evaluated through recursive forecasts for 1930--1940, testing whether the estimated dependency structure remains informative across a potentially changing historical and stylistic regime. The estimated trajectories and influence patterns are broadly consistent with established music-historical accounts of late Romantic and early modernist exchange, including the close relationship between German and Austrian traditions and historically plausible cross-currents between Russian and French traditions. PCA-variance-weighted estimation provides modest improvements while preserving a single interpretable influence network. Rather than treating the estimated matrices as direct causal evidence, the framework offers a reproducible quantitative layer for cultural heritage research, complementing archival and musicological interpretation.</p>
@@ -1224,18 +1284,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>In this paper, we present a generalized temporal-difference (TD) reinforcement learning framework based on the theory of conditional expectations. The value and action-value (Q-value) functions are treated as uncertain quantities, and their estimation is formulated as a stochastic inference problem. Unlike classical Kalman-based temporal-difference learning, which relies on linear-Gaussian assumptions, the proposed formulation is derived directly from the conditional expectation framework and naturally extends to nonlinear models and non-Gaussian probability distributions. The proposed method recursively estimates not only the conditional expectation of the value function but also its second probabilistic moment, thereby quantifying the uncertainty associated with the learned value function throughout the learning process. To obtain a computationally tractable algorithm, the stochastic problem is discretized using either polynomial chaos expansions or ensemble-based approximations, providing efficient representations of the underlying random variables. The proposed framework is demonstrated on two optimal control problems: a linear mass--spring--damper system and a nonlinear heat conduction problem in a closed cavity. The numerical examples illustrate the capability of the proposed method to accurately estimate both the value function and its associated uncertainty, while extending classical Kalman-based temporal-difference learning to a broader class of stochastic systems.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.20939v1" target="_blank" class="paper-title">Interaction Dynamics Modeling and Predictive Control for Safe Steerable Catheter--Tissue Interaction</a>
-                        <span class="paper-date">2026-07-23</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Safe steerable catheter control is fundamentally a problem of interaction dynamics: the tip must follow a planned motion, remain compliant against moving tissue, reject friction and hysteresis, and respect a clinically meaningful never-exceed contact-force bound. We formulate catheter--tissue interaction dynamics in the scalar tip-normal coordinate of a single-segment single-tendon catheter. A partial-physics feedforward cancels only the reliable nominal bending dynamics, exposing a configuration-invariant linear interaction-dynamics model whose input gain varies through the scalar catheter inertia. A predictive optimizer then regulates this interaction state subject to hard contact-force, tendon-force, and curvature constraints. An augmented Kalman filter compresses contact, friction, and modeling error into one sensor-free disturbance state, giving nominal offset-free regulation in free space while leaving force safety to the explicit constraint. The unconstrained and disturbance-free limit recovers classical catheter impedance as a special realization of the same interaction dynamics, rather than as the main design object. In a MuJoCo distributed-compliance simulation of an eight-link tendon-driven catheter, disturbance augmentation cuts free-space approach error by 90\%, and only the force-constrained predictive interaction-dynamics controller reconciles tracking with the 0.5\,N bound: the unconstrained controller drives contact force to 0.60\,N against a penetrating target, while the constrained one holds 0.47\,N at identical tracking. These results show that offset-free motion regulation and contact-force safety are coupled interaction-dynamics objectives, and that the explicit predictive constraint resolves their tension under stiff tissue contact. The bound also holds under $0.5$\,mm, $1.2$\,Hz cardiac motion. Hardware validation is future work.</p>
                     </details>
                 </div>
                 <div class="paper-card">
@@ -1320,18 +1368,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Accurate articulation angle estimation of trucks with trailers is critical for autonomous driving and advanced driver assistance system (ADAS). Existing methods either require manual initialization, additional sensors, or prior knowledge and signals from trailers, or they lack real-world validation, limiting practical deployment. This paper presents multiple learning-based models to directly estimate articulation angles from visual and kinematic inputs, eliminating the need for dedicated driving maneuvers for initialization, bounding box annotations, trailer-mounted sensor signals, or prior knowledge of trailer parameters. Two learning-based models are integrated with a kinematic model within an extended Kalman filter (EKF) framework, and an adaptive weighting scheme based on uncertainty quantification is applied for measurements involving visual input. Extensive real-world experiments with different trailer types demonstrate the approaches' robustness and generalization under out-of-domain conditions, including new trailers, varying colors, and lighting conditions. Results show that the hybrid method achieves accurate and reliable articulation angle estimation while maintaining reduced implementation requirements and practical deployment advantages.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.15807v1" target="_blank" class="paper-title">Deployment-Ready UWB Localization for Industrial Ground Robots with Automatic Anchor Calibration and Terrain-Aware Fusion</a>
-                        <span class="paper-date">2026-07-17</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Ultra-Wideband (UWB) ranging has become a viable option for industrial Autonomous Mobile Robot (AMR) localization due to improved accuracy and low cost. However, real-world deployments remain limited by two recurring challenges: calibrating static anchors can be time-consuming and error-prone, and integrating UWB with existing onboard sensors requires careful design to ensure robust and consistent pose estimation. Addressing these challenges, this paper presents an end-to-end pipeline that combines automatic anchor calibration with a generic multi-sensor estimator tailored to surface-bound vehicle motion. It targets existing AMR stacks in scenarios where robot pose priors are available for initialization. The calibration stage estimates anchor positions and range biases, while the localization stage fuses UWB with proprioceptive sensing in a bias-aware Extended Kalman Filter to improve consistency without extensive parameter tuning. Experiments on a commercial logistics AMR in a warehouse setting demonstrate accurate positioning indoors and across outdoor transitions, with improved consistency compared to an earlier estimator formulation. Evaluation on an independent forklift dataset further indicates transferability to other platforms. The method remains effective in test cases with limited line-of-sight and sparse anchor coverage. These results show that UWB localization can be deployed with substantially reduced manual effort while preserving the accuracy required for industrial AMRs. The collected warehouse dataset is made publicly available.</p>
                     </details>
                 </div>
                 <div class="paper-card">
@@ -1572,42 +1608,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Reliable localization in GNSS-denied environments remains a fundamental challenge for intelligent vehicles, as inertial navigation systems accumulate unbounded drift without external correction. Existing approaches provide drift correction through dedicated infrastructure, expensive external sensors, or complex multi-sensor fusion, each introducing practical deployment barriers. We propose Evidential Velocity Correction using Mamba (EVC-Mamba), a learning-based architecture that transforms onboard vehicle sensor data into a virtual velocity sensor for IMU drift correction without additional hardware. A Mamba-based selective state space model captures the temporal dynamics of vehicle motion, while evidential deep learning with a Normal-Inverse-Gamma distribution provides principled uncertainty quantification. The resulting uncertainty-aware velocity estimate is incorporated as a virtual correction measurement into an Error-State Extended Kalman Filter to reduce position drift. Evaluation on real-world vehicle data demonstrates that inertial navigation using the proposed velocity correction achieves localization accuracy within 10% of a dedicated external velocity sensor across different outage durations. The proposed architecture supports real-time onboard deployment at 40 Hz on edge hardware, enabling reliable localization during prolonged GNSS outages.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.05663v1" target="_blank" class="paper-title">Physics-Regularized Machine Learning for Proprioceptive Vehicle Localization Using Onboard Sensors</a>
-                        <span class="paper-date">2026-07-06</span>
-                    </div>
-                                        <span class="paper-comment">📝 Accepted at the 2026 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2026). 8 pages, 4 figures</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Accurate and robust localization is essential for autonomous mobility systems in real-world environments. While fusing Inertial Measurement Unit (IMU) data with satellite-based correction signals provides precise vehicle pose estimates, performance degrades substantially during outages. Recent studies indicate that Machine Learning (ML) can improve IMU-based proprioceptive localization, highlighting untapped potential for onboard sensors readily available in production vehicles. This paper introduces Physics-Regularized Machine Learning for Localization (PRML2), a hybrid framework that combines the complementary strengths of Kalman filtering and data-driven learning to estimate vehicle pose directly from onboard sensors. A key aspect of PRML2 is its physics-regularized learning, enabled by end-to-end training of an ML model through a differentiable Kalman filter. This improves consistency with vehicle motion models, thereby enhancing both localization accuracy and generalization across driving conditions. We evaluate the performance limits of ML-enhanced onboard odometry on a publicly available dataset and show that PRML2 achieves superior localization accuracy and demonstrates real-time capability. This work also introduces a novel dataset to support vehicle localization research under low-friction conditions. The proposed framework provides a robust and cost-effective solution for vehicle localization under degraded sensing conditions by integrating learning with physics-based priors.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.05451v1" target="_blank" class="paper-title">Quaternion-Averaging-Based Adaptive Complementary Filter for Pedestrian Dead Reckoning With a Foot-Mounted AHRS</a>
-                        <span class="paper-date">2026-07-05</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Pedestrian Dead Reckoning (PDR) can be applied to indoor navigation systems. GPS suffers from signal degradation due to roofs and high-rise buildings, whereas PDR can estimate positions without being affected by such signal degradation. The accuracy of a foot-mounted AHRS(Attitude and Heading Reference System)-based PDR depends on the accuracy of the attitude estimation algorithm used in the AHRS. In this article, a Quaternion-Averaging-Based Adaptive Complementary Filter (QAACF) for PDR with a foot-mounted AHRS is proposed to improve estimation accuracy while reducing computational cost. QAACF fuses a quaternion derived from angular velocity with quaternions derived from acceleration and magnetic field measurements using Markley's quaternion averaging, which combines two quaternions more rigorously than linear interpolation. In addition, QAACF adaptively adjusts the weights of angular velocity, acceleration, and magnetic field measurements according to gait phases and the level of magnetic disturbances. Experimental results showed that the proposed QAACF achieves low Root Mean Square Errors (RMSEs) compared to existing attitude estimation filters while requiring lower computational cost than Kalman filters.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.29936v2" target="_blank" class="paper-title">OpenSPM: An Environment-Transferable Robotic Key Spatial Pose Memory and Closed-Loop High-Frequency Flow-Matching Action Generation Model</a>
-                        <span class="paper-date">2026-07-05</span>
-                    </div>
-                                        <span class="paper-comment">📝 Preprint</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Open-environment tabletop robotic manipulation requires systems to possess semantic understanding, precise geometric pose estimation, and high-frequency action generation. While end-to-end vision-language-action (VLA) models excel at semantic generalization, they often lack explicit geometric constraints for fine-grained tasks and require costly training. To bridge the gap between high-level semantics and low-level physical execution, we propose OpenSPM, an open environment spatial persistent memory framework consisting of spatial pose memory and flow-matching action generation model. OpenSPM first leverages semantically conditioned 3D perception and Kalman filtering to track continuous 6D poses. It then extracts key spatial poses from human demonstrations, keeping them as transferable, object-centric spatial persistent memory entries. During inference, OpenSPM retrieves relevant memory entries in terms of natural language instructions, transfers the spatial poses to new scenes using SE(3) transformations, and generates high-frequency action chunks via a lightweight conditional flow-matching model. Combined with real-time proprioceptive state feedback and terminal residual correction, the system effectively suppresses trajectory error accumulation. Evaluated on ten LIBERO-GOAL tasks, OpenSPM achieves an 85.6% success rate and an equivalent control frequency of 1033.3 Hz, while requiring minimal inference AI computing power. Extensive ablations illustrate that structured spatial persistent memory and closed-loop residual correction play a crucial role in reliable, high-frequency robotic manipulation.</p>
                     </details>
                 </div>
             </div>

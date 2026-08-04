@@ -590,7 +590,7 @@
                 <a href="World-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">World Model</span>
-                    <span class="nav-count">80</span>
+                    <span class="nav-count">78</span>
                 </a>
                 <a href="3D-Foundation-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
@@ -600,7 +600,7 @@
                 <a href="LLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
                     <span class="nav-label">LLM</span>
-                    <span class="nav-count">80</span>
+                    <span class="nav-count">78</span>
                 </a>
                 <a href="VLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f97316"></span>
@@ -690,12 +690,12 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">68</span>
+                    <span class="nav-count">64</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">77</span>
+                    <span class="nav-count">78</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -750,7 +750,7 @@
                 <a href="Multimodal-Fusion.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#6366f1"></span>
                     <span class="nav-label">Multimodal Fusion</span>
-                    <span class="nav-count">75</span>
+                    <span class="nav-count">77</span>
                 </a>
                 <a href="Scene-Understanding.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
@@ -809,7 +809,7 @@
             <a href="World-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">World Model</span>
-                <span class="nav-count">80</span>
+                <span class="nav-count">78</span>
             </a>
             <a href="3D-Foundation-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
@@ -819,7 +819,7 @@
             <a href="LLM.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
                 <span class="nav-label">LLM</span>
-                <span class="nav-count">80</span>
+                <span class="nav-count">78</span>
             </a>
             <a href="VLM.html" class="nav-item">
                 <span class="nav-dot" style="background:#f97316"></span>
@@ -909,12 +909,12 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">68</span>
+                <span class="nav-count">64</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">77</span>
+                <span class="nav-count">78</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -969,7 +969,7 @@
             <a href="Multimodal-Fusion.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
                 <span class="nav-label">Multimodal Fusion</span>
-                <span class="nav-count">75</span>
+                <span class="nav-count">77</span>
             </a>
             <a href="Scene-Understanding.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
@@ -1030,6 +1030,126 @@
             <div class="paper-list">
                 <div class="paper-card">
                     <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.02332v1" target="_blank" class="paper-title">Diffusion Policy with Behavioral Advantage Correction for Offline Reinforcement Learning</a>
+                        <span class="paper-date">2026-08-03</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：离线强化学习中，行为数据与学习策略之间的分布偏移会导致Q值估计错误，从而误导策略优化方向。&#10;&#10;🛠 **方法**：提出行为优势校正策略评估（BAC-PE），利用行为策略的Q函数校正学习策略的Q函数，以缓解悲观保守与过估计偏差；同时采用扩散模型表示行为策略和学习策略，进行分布匹配，并引入Q值引导实现策略改进。&#10;&#10;✨ **主要贡献**：理论上证明了BAC-PE的收敛性，并推导了学习Q函数与真实Q函数差异的上界；提出DPBAC算法，在D4RL多领域任务上优于现有SOTA方法，展现出更强的策略表示能力和更低的Q值估计偏差。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>In offline reinforcement learning (RL), the distribution shift between behavioral data and the learned policy can lead to erroneous \emph{Q}-value estimation, thereby misguiding the direction of policy optimization. To address this issue, we develop a behavioral advantage corrected policy evaluation (BAC-PE) approach, which utilizes the \emph{Q}-function of the behavior policy to correct the learned policy's \emph{Q}-function, thus mitigating pessimistic conservatism and overestimation bias. Furthermore, the convergence of BAC-PE is analyzed theoretically, and an upper bound on the difference between the learned \emph{Q}-function and the true \emph{Q}-function is derived. To alleviate distribution shift, this work employs diffusion models to represent both the behavior policy and the learned policy, performing distribution matching for accurate policy regularization. Additionally, \emph{Q}-value guidance is incorporated into the training process to achieve effective policy improvement. By combining BAC-PE with diffusion policy modeling, we propose the diffusion policy with behavioral advantage correction (DPBAC) algorithm. Compared to existing offline methods, DPBAC demonstrates stronger policy representation capabilities and effectively mitigates the bias in \emph{Q}-value estimation. Experimental results on multiple domains of D4RL tasks show that DPBAC achieves superior performance, with notable advantages over state-of-the-art (SOTA) algorithms.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2409.07163v3" target="_blank" class="paper-title">Mamba Policy: Towards Efficient 3D Diffusion Policy with Hybrid Selective State Models</a>
+                        <span class="paper-date">2026-08-03</span>
+                    </div>
+                                        <span class="paper-comment">📝 Accepted to IROS 2025. Project Page: https://sagecao1125.github.io/mamba_policy/</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：传统3D扩散策略依赖大规模UNet骨干网络，参数多、计算开销大，难以部署在资源受限设备上。&#10;&#10;🛠 **方法**：提出Mamba Policy，引入XMamba Block，将输入信息与条件特征融合，并组合Mamba与注意力机制进行深度特征提取，以轻量级混合选择性状态模型替代重型UNet。&#10;&#10;✨ **主要贡献**：参数减少超过80%，在Adroit、Dexart和MetaWorld数据集上性能优于基线，计算资源需求显著降低，并在长时程任务中展现出更强鲁棒性，同时通过真实实验验证了有效性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Diffusion models have been widely employed in the field of 3D manipulation due to their efficient capability to learn distributions, allowing for precise prediction of action trajectories. However, diffusion models typically rely on large parameter UNet backbones as policy networks, which can be challenging to deploy on resource-constrained devices. Recently, the Mamba model has emerged as a promising solution for efficient modeling, offering low computational complexity and strong performance in sequence modeling. In this work, we propose the Mamba Policy, a lighter but stronger policy that reduces the parameter count by over 80% compared to the original policy network while achieving superior performance. Specifically, we introduce the XMamba Block, which effectively integrates input information with conditional features and leverages a combination of Mamba and Attention mechanisms for deep feature extraction. Extensive experiments demonstrate that the Mamba Policy excels on the Adroit, Dexart, and MetaWorld datasets, requiring significantly fewer computational resources. Additionally, we highlight the Mamba Policy's enhanced robustness in long-horizon scenarios compared to baseline methods and explore the performance of various Mamba variants within the Mamba Policy framework. Real-world experiments are also conducted to further validate its effectiveness. Our open-source project page can be found at https://sagecao1125.github.io/mamba_policy/.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2603.11655v4" target="_blank" class="paper-title">Concurrent Prehensile and Nonprehensile Manipulation: A Practical Approach to Multi-Stage Dexterous Tasks</a>
+                        <span class="paper-date">2026-08-03</span>
+                    </div>
+                                        <span class="paper-comment">📝 12 pages, 6 figures</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：灵巧手在执行多阶段任务时，需要同时进行抓取与非抓取操作（如握住一个物体同时操作另一个），但现有方法因演示数据昂贵且端到端策略泛化性差，难以高效学习这类长时序、多接触的复杂行为。&#10;&#10;🛠 **方法**：提出DexMulti框架，将演示分解为以物体为中心的技能，并定义明确的时间边界；通过基于当前物体几何形状检索演示技能，利用不确定性感知估计器（跟踪质心和偏航角）对齐到观测状态，最后执行“检索-对齐-执行”流程。&#10;&#10;✨ **主要贡献**：在Allegro和LEAP两种灵巧手上完成超过1000次真实世界实验，仅需每个物体3-4次演示即可在训练物体上达到66%平均成功率，性能比扩散策略基线提升2-3倍，并展现出对未见过物体及±25厘米空间变化的鲁棒泛化能力。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Dexterous hands enable concurrent prehensile and nonprehensile manipulation, such as holding one object while interacting with another, a capability essential for everyday tasks yet underexplored in robotics. Learning such long-horizon, contact-rich multi-stage behaviors is challenging because demonstrations are expensive to collect and end-to-end policies require substantial data to generalize across varied object geometries and placements. We present DexMulti, a sample-efficient approach for real-world dexterous multi-task manipulation that decomposes demonstrations into object-centric skills with well-defined temporal boundaries. Rather than learning monolithic policies, our method retrieves demonstrated skills based on current object geometry, aligns them to the observed object state using an uncertainty-aware estimator that tracks centroid and yaw, and executes them via a retrieve-align-execute paradigm. We evaluate on three multi-stage tasks requiring concurrent manipulation (Grasp + Pull, Grasp + Open, and Grasp + Grasp) across two dexterous hands (Allegro and LEAP) in over 1,000 real-world trials. Our approach achieves an average success rate of 66% on training objects with only 3-4 demonstrations per object, outperforming diffusion policy baselines by 2-3x while requiring far fewer demonstrations. Results demonstrate robust generalization to held-out objects and spatial variations up to +/-25 cm.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2510.03011v2" target="_blank" class="paper-title">3D-CovDiffusion: 3D-Aware Diffusion Policy for Coverage Path Planning</a>
+                        <span class="paper-date">2026-08-02</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有覆盖路径规划方法在工业表面处理（如喷漆、抛光）中难以生成全局有序、时间连贯的轨迹，常依赖拼接无序局部片段，导致覆盖质量差。&#10;&#10;🛠 **方法**：将覆盖路径规划重构为条件序列生成任务，采用几何条件扩散模型，直接从原始3D点云合成连续轨迹，通过简单顺序拼接生成时间有序的轨迹块，无需后处理启发式排序。&#10;&#10;✨ **主要贡献**：提出3D-CovDiffusion框架，单一共享策略可泛化至不同几何形状；相比学习基线，点级Chamfer距离降低98.2%，抖动降低97.0%，重叠表面覆盖率平均提升67.5个百分点。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Diffusion models have shown strong potential for robot skill learning, yet their role in coverage path planning remains underexplored. In industrial surface processing (painting, polishing, spray coating), high coverage requires globally ordered, temporally coherent trajectories rather than stitching unordered local segments. We reformulate coverage path planning as conditional sequence generation and adopt a geometry-conditioned diffusion framework that synthesizes continuous trajectories directly from raw 3D point clouds. Our method produces temporally ordered trajectory chunks and avoids post-hoc heuristic ordering or stitching in prior learning-based methods via simple sequential concatenation, improving sequence-level consistency. A single shared policy generalizes across different geometries without category-specific architectures. Extensive benchmarks show substantial gains over prior learning-based baselines: 98.2\% lower point-wise Chamfer Distance (lower is better), 97.0\% lower jerk (smoother trajectories), and +67.5 percentage points overlapping surface coverage on average.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.01102v1" target="_blank" class="paper-title">CAAT: Contact-Aware Attention Scaling and Tactile Masking for Data-Efficient Contact-Rich Manipulation</a>
+                        <span class="paper-date">2026-08-02</span>
+                    </div>
+                                        <span class="paper-comment">📝 11 pages, 6 figures</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在接触丰富的机器人操作任务中，标准Transformer策略缺乏显式的接触先验，难以高效地从视觉-触觉演示中学习跨模态表征。&#10;&#10;🛠 **方法**：提出CAAT框架，通过注意力缩放（接触前强调视觉、接触时强调触觉）和动态触觉掩蔽（基于非接触参考抑制静态背景token），可无缝集成到现有Transformer策略中。&#10;&#10;✨ **主要贡献**：在仿真中，集成CAAT的ACT策略成功率比直接融合提升18.0个百分点、比门控融合提升10.0个百分点；在真实UMI平台上，CAAT在ACT、Diffusion Policy和π₀上平均成功率60.0%，超越最强基线21.1个百分点，验证了显式接触先验和动态掩蔽的通用有效性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>In contact-rich manipulation, visual observations primarily guide motion in free space, whereas tactile observations become particularly informative during contact. However, standard Transformer-based visuo-tactile policies typically rely on either token concatenation or learnable gating. These approaches lack explicit contact-aware priors, making it difficult to efficiently learn effective cross-modal representations from demonstrations. To address this limitation, we propose CAAT, a lightweight contact-aware framework that explicitly incorporates contact priors through attention scaling and dynamic tactile masking. Specifically, CAAT emphasizes visual information before contact and tactile information during contact. It also suppresses static background tokens by comparing the current tactile observation with a non-contact reference. CAAT can be integrated into commonly used Transformer-based policies without modifying their action decoders. In simulation, integrating CAAT with ACT improves the average success rate by 18.0 percentage points over direct visuo-tactile fusion and by 10.0 percentage points over gated fusion. In real-world experiments using a visuo-tactile UMI platform, CAAT achieves an average success rate of 60.0% across ACT, Diffusion Policy, and $π_0$, outperforming the strongest baseline by an average of 21.1 percentage points. These results demonstrate that explicit contact priors and dynamic tactile masking are effective in improving visuo-tactile policy learning and task performance of diverse policy architectures. https://mrjiangjm.github.io/caat/</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.01035v1" target="_blank" class="paper-title">WAM-Diff2: Hierarchical AR-to-Diffusion Distillation for Highly Efficient Autonomous Driving VLA</a>
+                        <span class="paper-date">2026-08-02</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：自动驾驶VLA模型因自回归解码导致高计算延迟和曝光偏差，而扩散策略虽可并行执行但缺乏多任务认知能力，两者难以兼顾。&#10;&#10;🛠 **方法**：提出WAM-Diff2框架，通过三阶段分层蒸馏（逐块结构适配、逐块蒸馏、跨尺度模型蒸馏），将预训练自回归模型转化为多任务离散扩散模型。&#10;&#10;✨ **主要贡献**：在保持多任务语义能力的同时，有效缓解曝光偏差并达到与自回归基线相当的性能；解码速度提升2.8倍，结合FlashInfer和CUDA Graphs系统优化后最高加速15.1倍。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Vision-Language-Action (VLA) models have emerged as a prominent paradigm for end-to-end autonomous driving; however, their efficient deployment is severely constrained by high computational latency and exposure bias arising from sequential autoregressive decoding. Conversely, while specialized diffusion policies enable low-latency, parallel execution, training them from scratch typically yields narrow, single-task architectures that lack holistic visual-linguistic reasoning. Successfully transforming pre-trained autoregressive generalists into parallel diffusion models could combine multi-task cognitive intelligence with execution efficiency, yet this transition presents a formidable architectural challenge due to mismatched attention patterns (causal versus bidirectional) and divergent optimization objectives. To bridge this divide, we introduce WAM-Diff2, a multi-task discrete diffusion VLA framework powered by a three-stage hierarchical distillation strategy. By structuring the architectural shift through progressive block-wise adaptation, block-wise distillation, and model-wise cross-scale distillation, WAM-Diff2 preserves the underlying semantic foundations of the base model while accelerating inference. Extensive evaluations across driving understanding, perception, and planning benchmarks demonstrate that WAM-Diff2 effectively mitigates exposure bias and achieves performance parity with autoregressive baselines. Crucially, the autoregressive-to-diffusion transition yields a 2.8x decoding speedup, which scales to an ultimate 15.1x acceleration when combined with system-level optimizations including FlashInfer and CUDA Graphs.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.00730v1" target="_blank" class="paper-title">Push-Wiper: Toward General-Purpose Robotic Cleaning across Varied Stains and Surfaces with Segmented Pushing Trajectories</a>
+                        <span class="paper-date">2026-08-01</span>
+                    </div>
+                                        <span class="paper-comment">📝 8 pages, 8 figures. Accepted to the 2026 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2026)</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决机器人清洁高粘度污渍时，传统擦拭易扩散污渍、刷洗易损伤表面的难题。&#10;&#10;🛠 **方法**：提出Push-Wiper框架，将粘稠污渍清洁重构为“聚集”问题，通过分段推动轨迹用海绵逐步收集污渍，结合Diffusion Policy生成自适应推动序列，并利用任意表面位姿插值器（ASPI）与混合力位控制器执行。&#10;&#10;✨ **主要贡献**：清洁评分（污渍去除面积百分比）比基线方法最高提升130%，且无需额外训练即可零样本泛化至固体残渣、液体溢出、未见粘稠污渍及不同曲率曲面，验证了强泛化能力。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Viscous stains, characterized by high viscosity and complex rheological properties, remain a major challenge for robotic surface cleaning. Conventional wiping often spreads the stain, while scrubbing provides stronger friction but risks damaging the surface. In this paper, we propose Push-Wiper, a framework that reformulates viscous stain cleaning as an aggregation problem. Push-Wiper employs a sponge to progressively gather stains through segmented pushing trajectories, followed by a post-processing phase that detaches the aggregated material and enables sponge self-cleaning. We adopt a stepwise strategy for stain gathering and leverage Diffusion Policy to generate adaptive pushing action sequences. These sequences are executed through our Arbitrary Surface Pose Interpolator (ASPI) and a hybrid force-position controller, allowing the method to generalize to stains with diverse spatial distributions. Push-Wiper achieves a cleaning score (CS), defined as the percentage of stain area removed, up to 130% higher than baseline methods. Without additional training, Push-Wiper also transfers in a zero-shot manner to solid residues, liquid spills, unseen viscous stains, and curved surfaces with varying geometries. Our experiments demonstrate the cleaning effectiveness of Push-Wiper and its strong generalization ability. The project website is available at https://push-wiper.github.io/.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2602.10719v2" target="_blank" class="paper-title">From Representational Complementarity to Dual Systems: Synergizing VLM and Vision-Only Backbones for End-to-End Driving</a>
+                        <span class="paper-date">2026-08-01</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：本文旨在探究端到端自动驾驶中，视觉-语言模型（VLM）与纯视觉编码器在表征和行为上的差异，以及如何利用两者的互补性提升规划性能与计算效率。&#10;&#10;🛠 **方法**：在统一的“VLM隐藏层+扩散策略”框架下，系统比较多种VLM（如InternVL3、Qwen3VL）与纯视觉编码器（如ResNet、ViT、EVA-CLIP），并引入Shared-Unique SAE分析共享与残差子空间，进而提出双分支架构HybridDriveVLA和快速-慢速变体DualDriveVLA，通过学习轨迹评分器进行分支选择。&#10;&#10;✨ **主要贡献**：发现VLM与纯视觉策略存在行为相关的互补残差——纯视觉擅长几何主导场景，VLM擅长长尾语义复杂场景；HybridDriveVLA在NAVSIM上达到92.10 PDMS（+1.30），DualDriveVLA仅用15%场景调用VLM，实现91.00 PDMS（+0.20）并带来约1.9倍延迟加速。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Vision-Language-Action (VLA) driving augments end-to-end (E2E) planning with language-enabled visual backbones, yet it remains unclear how vision-language models (VLMs) differ from standard vision-only encoders and whether these differences survive policy learning. We study this question under a unified VLM-hidden + diffusion-policy paradigm, comparing multiple VLM families/scales (e.g., InternVL3 and Qwen3VL) with vision-only encoders (e.g., ResNet, ViT, and EVA-CLIP). We ask three questions: how similar are their representations, do residual differences induce meaningful behavioral differences, and how can they improve accuracy-cost trade-offs? We find that VLM and vision-only policies share a substantial common subspace after policy learning, yet both retain non-transferable residual subspaces. Using a Shared-Unique SAE, we show that these residual factors are behaviorally relevant: vision-only encoders are stronger in simple, geometry-dominant scenarios, whereas VLMs are stronger in long-tail, semantically complex, and interaction-heavy cases. The two policy families also exhibit distinct driving styles, with vision-only models being more conservative on average and VLMs more assertive. Exploiting the complementarity between a VLM branch and a ViT branch yields an oracle upper bound of 93.58 PDMS on NAVSIM. We introduce HybridDriveVLA, which runs both branches and uses a learned trajectory scorer for selection, improving PDMS to 92.10 (+1.30 over the VLM baseline), and DualDriveVLA, a fast-slow variant that invokes the VLM in only 15% of scenarios, achieving 91.00 PDMS (+0.20) with about a 1.9x latency speedup over the VLM baseline. Code will be released.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
                         <a href="https://arxiv.org/abs/2607.26924v2" target="_blank" class="paper-title">Temporally Centered SIGReg Improves Multi-Task LeWorldModel Learning: From Analysis to Method</a>
                         <span class="paper-date">2026-07-31</span>
                     </div>
@@ -1064,10 +1184,7 @@
                         <span class="paper-date">2026-07-30</span>
                     </div>
                                         <span class="paper-comment">📝 Project page: https://fa-rdp.github.io</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在接触丰富的机器人操作任务中，标准扩散策略在单一回合内无法兼顾接触前的动作多模态性和接触后的快速力反馈响应，导致两者之间存在根本性权衡。&#10;&#10;🛠 **方法**：提出FA-RDP，一种频率自适应反应式扩散策略。它使用共享的多频率视觉-力Transformer同时预测低、高频动作块，并通过学习到的多模态指示器动态选择接触前多步低频采样和接触后单步高频采样；同时引入流形一致性蒸馏（MCD），将扩散网络重参数化以在机器人动作流形上预测动作，并保留DDPM残差监督。&#10;&#10;✨ **主要贡献**：在三个接触丰富的操作任务上，FA-RDP实现了最高成功率，同时保留了接触前多样的轨迹模式，有效解决了多模态性与反应性之间的权衡问题。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>In contact-rich manipulation, action multimodality and reactivity dominate different stages of a single episode. Before contact, multiple trajectories might be equally valid, making it important to preserve diverse action modes. After contact, geometric constraints and force limits narrow the solution space, while successful execution demands rapid responses to force feedback. However, standard diffusion policies use a fixed inference frequency and sampling steps throughout the episode, forcing a fundamental compromise: low-frequency, multi-step sampling better preserves pre-contact multimodality but responds slowly to force feedback, whereas high-frequency sampling improves reactivity but tends to collapse distinct pre-contact modes. To resolve this tradeoff, we present FA-RDP, a frequency-adaptive reactive diffusion policy. A shared multi-frequency visual-force Transformer predicts action chunks at both low and high frequencies, while a learned multimodality indicator dynamically selects multi-step low-frequency sampling before contact and one-step high-frequency sampling as action ambiguity decreases. We further introduce Manifold Consistency Distillation (MCD), which reparameterizes the diffusion network to predict actions on the robot action manifold while retaining DDPM-based residual supervision. Experiments on three contact-rich manipulation tasks show that FA-RDP achieves the highest success rate while preserving diverse pre-contact trajectory modes. Code and videos are available at https://fa-rdp.github.io.</p>
@@ -1079,10 +1196,7 @@
                         <span class="paper-date">2026-07-30</span>
                     </div>
                                         <span class="paper-comment">📝 20 pages, 4 figures</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：导航扩散策略依赖大规模专家演示，且通常针对单一机器人设计，导致其难以泛化到不同机器人形态和复杂场景（如死胡同或长障碍绕行），需要仅依赖局部观测的多样化反应行为。&#10;&#10;🛠 **方法**：提出GQRM（Group Q-score Reweighted Matching）框架，包含两个互补设计：一是带行为扰动的自举探索策略，保留预训练策略先验；二是分组Q值归一化机制，计算每个状态上的轨迹级价值，用于高效重加权分数匹配。通过跨异构机器人形态的分布式在线RL训练微调策略。&#10;&#10;✨ **主要贡献**：微调后的策略X-NavDP在跨形态视觉导航中达到SOTA性能，仿真成功率从61.20%提升至84.28%，真实世界困难场景从10%提升至65%，代码和模型已开源。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Pretraining navigation diffusion policies rely on large-scale expert demonstrations. These data are typically generated by a fully-informed oracle planner suited to a single nominal robot. This limits the policy's generalization to diverse embodiments and challenging scenarios (e.g., escaping dead ends or detouring long obstacles) that demand diverse local reactive behaviors with only onboard local observations. Post-training the policy with reinforcement learning (RL) offers a principled remedy. However, previous RL for diffusion approaches lead to only marginal improvements. This is because the intractable likelihood of diffusion policies renders policy gradients unstable in addition to inefficient policy exploration. To address these challenges, we propose a data-efficient diffusion RL post-training framework - GQRM (Group Q-score Reweighted Matching). Our framework introduces two complementary designs: (i) a self-bootstrapped exploration strategy with behavior perturbation that preserves the pretrained policy prior, and (ii) a group Q-score normalization mechanism that computes per-trajectory values on each state for efficient reweighted score matching. By conducting distributed online RL training across heterogeneous embodiments, the resulting fine-tuned policy, X-NavDP, achieves state-of-the-art cross-embodiment visual navigation performance, improving the overall success rate from 61.20% to 84.28% in simulation and 10% to 65% in real-world hard cases. The code and model are publicly available at https://yty-sky.github.io/x-navdp-project-page.</p>
@@ -1094,10 +1208,7 @@
                         <span class="paper-date">2026-07-30</span>
                     </div>
                                         <span class="paper-comment">📝 8pages, 6 figures</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：灵巧操作演示数据的高效采集是机器人学习的瓶颈，现有方法要么硬件昂贵、设置复杂，要么控制精度低、操作者认知负担重。&#10;&#10;🛠 **方法**：提出DexDirect，操作者直接拖动6自由度重力补偿机械臂手柄进行运动引导，同时用单个网络摄像头将操作者另一只手的手势重定向到16关节13自由度的灵巧手上。&#10;&#10;✨ **主要贡献**：用户研究表明，相比纯视觉（AnyTeleop）和姿态追踪（TeleDex）基线，DexDirect成功演示数量分别提升17.2倍和3.2倍；NASA-TLX评估显示其大幅降低脑力需求、努力和挫败感，尽管体力需求增加；基于DexDirect演示训练的扩散策略在立方体抓取放置任务中达到90%成功率，证明该方法高效、低设置成本且可扩展。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Scalable collection of dexterous manipulation demonstrations remains a major bottleneck for robot learning. High-fidelity interfaces often require costly hardware and extensive setup, while low-setup, low cost alternatives tend to provide less precise control and impose greater cognitive workload on operators. We present DexDirect, a direct kinesthetic arm guidance for efficient dexterous demonstration collection. The operator drags a 6-DoF gravity-compensated robot arm directly by a handle, while a single webcam retargets operator's other hand onto a 16 joints 13-DoF dexterous robot hand. User studies suggest DexDirect collects 17.2x and 3.2x more successful demonstrations compared to purely vision (AnyTeleop) and pose-tracking (TeleDex) baselines. An adapted NASA-TLX shows DexDirect greatly reduces mental demand, effort, and frustration, despite raising physical demand. A diffusion policy trained on DexDirect demonstrations reaches a 90% success rate on a cube pick-and-place task. These results suggest that direct kinesthetic arm guidance combined with vision-based hand retargeting provides an efficient low-setup and scalable interface for collecting dexterous manipulation demonstrations</p>
@@ -1109,10 +1220,7 @@
                         <span class="paper-date">2026-07-30</span>
                     </div>
                                         <span class="paper-comment">📝 17 pages, 13 figures</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：模仿学习中的扩散策略（Diffusion Policy）在增加观测历史长度时性能下降，难以有效处理长时域机器人操作任务。&#10;&#10;🛠 **方法**：提出自演化门控注意力（SEGA）模块，通过门控注意力机制维护随时间演化的隐状态，实现高效循环更新，将长时域上下文压缩为紧凑表示并过滤无关信息；将其集成到扩散策略中形成自演化扩散策略（SeedPolicy）。&#10;&#10;✨ **主要贡献**：在RoboTwin 2.0基准的50个操作任务上，SeedPolicy相比扩散策略在干净和随机挑战设置中分别实现36.8%和169%的相对性能提升；相比1.2B参数的视觉-语言-动作模型，SeedPolicy以少1-2个数量级的参数在干净设置中取得更强性能，成为长时域机器人操作的最优模仿学习方法。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Imitation Learning (IL) enables robots to acquire manipulation skills from expert demonstrations. Diffusion Policy (DP) models multi-modal expert behaviors but degrades when naively increasing stacked observation horizons, limiting long-horizon manipulation. We propose Self-Evolving Gated Attention (SEGA), a temporal module that maintains a time-evolving latent state via gated attention, enabling efficient recurrent updates that accumulate long-term context into a compact latent representation while filtering irrelevant temporal information. Integrating SEGA into DP yields Self-Evolving Diffusion Policy (SeedPolicy), which resolves the temporal modeling bottleneck and extends the effective temporal horizon with moderate overhead. On the RoboTwin 2.0 benchmark with 50 manipulation tasks, SeedPolicy outperforms DP and other IL baselines. Averaged across both CNN and Transformer backbones, SeedPolicy achieves 36.8% relative improvement in clean settings and 169% relative improvement in randomized challenging settings over the DP. Compared to vision-language-action models such as RDT with 1.2B parameters, SeedPolicy achieves stronger performance in the clean setting with one to two orders of magnitude fewer parameters, demonstrating strong efficiency. These results establish SeedPolicy as a state-of-the-art imitation learning method for long-horizon robotic manipulation. Code is available at: https://github.com/Youqiang-Gui/SeedPolicy.</p>
@@ -1124,10 +1232,7 @@
                         <span class="paper-date">2026-07-30</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：人形机器人 locomotion-manipulation 任务中，离线训练的扩散策略（DP）运动规划器与操作控制器解耦，导致命令跟踪差、分布偏移和任务失败，且扩大演示数据成本过高。&#10;&#10;🛠 **方法**：提出 REFINE-DP 分层框架，联合优化 DP 运动规划器和基于强化学习（RL）的操作控制器。DP 通过 PPO 扩散策略梯度微调以提升任务成功率，控制器同步更新以准确跟踪规划器演化的命令分布，减少分布不匹配。&#10;&#10;✨ **主要贡献**：在仿真中实现超 90% 成功率（含预训练未见分布外场景），并支持无特权状态信息的真实世界执行；显著优于预训练 DP 基线，证明 RL 微调是人形机器人可靠操作的关键。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Humanoid loco-manipulation requires coordinated task-space motion planning with stable loco-manipulation command tracking under complex robot-environment dynamics and long-horizon tasks. While diffusion policies (DPs) show promise for learning from demonstrations, deploying them on humanoids poses critical challenges: the motion planner trained offline is decoupled from the loco-manipulation controller, leading to poor command tracking, compounding distribution shift, and task failures. The common approach of scaling demonstration data is prohibitively expensive for high-dimensional humanoid systems. To address this challenge, we present REFINE-DP (REinforcement learning FINE-tuning of Diffusion Policy), a hierarchical framework that jointly optimizes a DP motion planner and an RL-based loco-manipulation controller. The DP is fine-tuned via a PPO-based diffusion policy gradient to improve task success rate, while the controller is simultaneously updated to accurately track the planner's evolving command distribution, reducing the distributional mismatch that degrades motion quality. We validate REFINE-DP on a humanoid robot performing loco-manipulation tasks, including door traversal and long-horizon object transport. REFINE-DP achieves an over 90% success rate in simulation, even in out-of-distribution cases not seen in the pre-training data, and enables real-world execution without privileged state information. Our proposed method substantially outperforms pre-trained DP baselines and demonstrates that RL fine-tuning is key to reliable humanoid loco-manipulation. https://refine-dp.github.io/REFINE-DP/</p>
@@ -1139,10 +1244,7 @@
                         <span class="paper-date">2026-07-28</span>
                     </div>
                                         <span class="paper-comment">📝 Project page: https://azuma413.github.io/projects/s2a2</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决机器人在操作任务中如何利用听觉信息（如声音位置和音色）来定位和识别目标，实现声学感知的模仿学习。&#10;&#10;🛠 **方法**：提出多模态模仿学习框架S2A2，融合视觉特征与声学空间及信号信息，并集成ACT、扩散策略、VQ-BeT和π₀等策略。&#10;&#10;✨ **主要贡献**：首次引入声学感知操作任务集，仿真实验证明该方法在需要位置和音色信息的任务中最有效，真实机器人实验验证了其实际应用可行性。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Acoustic information provides rich cues about object location, material properties, and changes caused by contact or motion. This paper introduces a new set of acoustic-aware manipulation tasks for imitation learning, in which robots must use auditory cues to determine manipulation targets. These tasks require sound source localization and identification for active exploration in robotic manipulation. Also, we propose a multimodal imitation learning framework, Spatial-Spectral Audio Action (S2A2), that integrates visual features with acoustic spatial and acoustic signal information for the acoustic-aware manipulation tasks. We implemented S2A2 models that integrates policies such as ACT, Diffusion Policy, VQ-BeT, and $π_0$, into our framework. Simulation experiments showed that the proposed method is the most effective for tasks requiring both position and timbre. Furthermore, real-robot experiments confirm the applicability of the proposed tasks and framework to real-world manipulation.</p>
@@ -1154,28 +1256,10 @@
                         <span class="paper-date">2026-07-27</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：扩散策略（DPs）在机器人操作任务中，面对有限数据训练时泛化能力不足，标准去噪目标无法有效控制模型性能。&#10;&#10;🛠 **方法**：提出PAC-DP方法，将扩散策略建模为贝叶斯神经网络，并基于PAC-Bayes泛化界推导新训练目标，在标准去噪损失上增加后验与先验参数分布间的KL散度正则项。&#10;&#10;✨ **主要贡献**：从理论上提供了原则性的正则化方法而不显著增加训练时间；实验表明在多个机器人操作基准上，去噪性能、变分负对数似然和任务成功率均有提升，尤其在低数据训练和复杂任务中改进最显著。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Diffusion Policies (DPs) are able to perform complex manipulation tasks. However, DPs are typically trained by minimizing a denoising objective, which provides limited control over generalization in the finite-data regimes common in robotics. In this letter, we propose PAC-DP, an approach that increases the performance of DPs in robotic manipulation tasks. By modeling the DP as a Bayesian neural network, and defining a PAC-Bayes generalization bound, we derive a novel training objective that augments the standard denoising loss with a Kullback-Leibler divergence regularizer between the posterior and prior parameter distributions. From the theoretical perspective, our approach provides a principled approach to regularize the training of DPs without significantly increasing the training time. From the practical point of view, experimental results demonstrate improved denoising performance, lower variational negative log-likelihood, and higher success rates across multiple robotic manipulation benchmarks. Crucially, the largest improvements are observed in low-data training regimes and complex tasks, establishing PAC-DP as a theoretically grounded framework for robot policy learning.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2603.11655v3" target="_blank" class="paper-title">Concurrent Prehensile and Nonprehensile Manipulation: A Practical Approach to Multi-Stage Dexterous Tasks</a>
-                        <span class="paper-date">2026-07-26</span>
-                    </div>
-                                        <span class="paper-comment">📝 12 pages, 6 figures</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：灵巧手在执行多阶段任务时，需要同时进行抓取与非抓取操作（如握住一个物体同时操作另一个），但现有方法因演示数据昂贵且端到端策略泛化性差，难以高效学习这类长时序、多接触的复杂行为。&#10;&#10;🛠 **方法**：提出DexMulti框架，将演示分解为以物体为中心的技能，并定义明确的时间边界；通过基于当前物体几何形状检索演示技能，利用不确定性感知估计器（跟踪质心和偏航角）对齐到观测状态，最后执行“检索-对齐-执行”流程。&#10;&#10;✨ **主要贡献**：在Allegro和LEAP两种灵巧手上完成超过1000次真实世界实验，仅需每个物体3-4次演示即可在训练物体上达到66%平均成功率，性能比扩散策略基线提升2-3倍，并展现出对未见过物体及±25厘米空间变化的鲁棒泛化能力。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Dexterous hands enable concurrent prehensile and nonprehensile manipulation, such as holding one object while interacting with another, a capability essential for everyday tasks yet underexplored in robotics. Learning such long-horizon, contact-rich multi-stage behaviors is challenging because demonstrations are expensive to collect and end-to-end policies require substantial data to generalize across varied object geometries and placements. We present DexMulti, a sample-efficient approach for real-world dexterous multi-task manipulation that decomposes demonstrations into object-centric skills with well-defined temporal boundaries. Rather than learning monolithic policies, our method retrieves demonstrated skills based on current object geometry, aligns them to the observed object state using an uncertainty-aware estimator that tracks centroid and yaw, and executes them via a retrieve-align-execute paradigm. We evaluate on three multi-stage tasks requiring concurrent manipulation (Grasp + Pull, Grasp + Open, and Grasp + Grasp) across two dexterous hands (Allegro and LEAP) in over 1,000 real-world trials. Our approach achieves an average success rate of 66% on training objects with only 3-4 demonstrations per object, outperforming diffusion policy baselines by 2-3x while requiring far fewer demonstrations. Results demonstrate robust generalization to held-out objects and spatial variations up to +/-25 cm.</p>
                     </details>
                 </div>
                 <div class="paper-card">
@@ -1920,90 +2004,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>We present AEM, an Action-Effect Memory pretraining framework for robot manipulation that learns compact temporal representations from vision-action history. Unlike prior robot representation pretraining methods that mainly focus on single-frame visual encoding, AEM targets the temporal nature of manipulation, where the current observation alone is often insufficient under partial observability. AEM models manipulation as an action-driven interaction process by interleaving visual and action features and applying masked modeling to recover missing content from incomplete histories, thereby learning action-conditioned state evolution. The Mamba-encoded output of the final vision token is used as a compact history representation, serving as the global context for decoding and downstream control. This design preserves a single-vector temporal bottleneck while keeping inference efficient. We evaluate AEM with Diffusion Policy and Flow Policy. AEM consistently improves manipulation performance in both simulation and real-world settings, outperforming baselines across clean scenes, cluttered and random scenes, and non-Markovian tasks. Ablation studies further show that history-aware pretraining surpasses single-frame pretraining and direct frame stacking, while reducing inference latency and computational cost.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2601.08136v2" target="_blank" class="paper-title">Reverse Flow Matching: A Unified Framework for Online Reinforcement Learning with Diffusion and Flow Policies</a>
-                        <span class="paper-date">2026-06-10</span>
-                    </div>
-                                        <span class="paper-comment">📝 ICML 2026 (Spotlight); Code: https://github.com/azizanlab/ReverseFlowMatching</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Diffusion and flow policies are gaining prominence in online reinforcement learning (RL) due to their expressive power, yet training them efficiently remains a critical challenge. A fundamental difficulty that distinguishes online RL from standard generative modeling is the lack of direct samples from the target Boltzmann distribution defined by the Q-function. To address this, two seemingly distinct families of methods have been proposed for diffusion policies: a noise-expectation family, which uses a weighted average of noise as the training target, and a gradient-expectation family, which employs a weighted average of Q-function gradients. However, it remains unclear how these objectives are formally related, or whether they can be synthesized into a more general formulation. In this paper, we propose a unified framework, reverse flow matching (RFM), which rigorously addresses the problem of training diffusion and flow models without direct target samples. By adopting a reverse inferential perspective, we formulate the training target as a posterior mean estimation problem given an intermediate noisy sample. Crucially, we introduce Langevin Stein operators to construct zero-mean control variates, deriving a general class of estimators that share the same expectation. We show that existing noise-expectation and gradient-expectation methods are simply two specific instances within this broader class. This unified view yields two key advancements: it extends the capability of targeting Boltzmann distributions from diffusion to flow policies, and it enables the principled combination of Q-value and Q-gradient information to form an effective estimator, thereby improving training efficiency and stability. We instantiate RFM to train a flow policy in online RL and demonstrate improved performance on continuous-control benchmarks compared to diffusion policy baselines.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2602.18291v2" target="_blank" class="paper-title">Diffusing to Coordinate: Efficient Online Multi-Agent Diffusion Policies</a>
-                        <span class="paper-date">2026-06-10</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Online Multi-Agent Reinforcement Learning (MARL) is a prominent framework for efficient agent coordination. Crucially, enhancing policy expressiveness is pivotal for achieving superior performance. Diffusion-based generative models are well-positioned to meet this demand, having demonstrated remarkable expressiveness and multimodal representation in image generation and offline settings. Yet, their potential in online MARL remains largely under-explored. A major obstacle is that the intractable likelihoods of diffusion models impede entropy-based exploration and coordination. To tackle this challenge, we propose among the first \underline{O}nline off-policy \underline{MA}RL framework using \underline{D}iffusion policies (\textbf{OMAD}) to orchestrate coordination. Our key innovation is a relaxed policy objective that maximizes scaled joint entropy, facilitating effective exploration without relying on tractable likelihood. Complementing this, within the centralized training with decentralized execution (CTDE) paradigm, we employ a joint distributional value function to optimize decentralized diffusion policies. It leverages tractable entropy-augmented targets to guide the simultaneous updates of diffusion policies, thereby ensuring stable coordination. Extensive evaluations on MPE and MAMuJoCo establish our method as the new state-of-the-art across $10$ diverse tasks, demonstrating a remarkable $2.5\times$ to $5\times$ improvement in sample efficiency.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2501.12942v2" target="_blank" class="paper-title">Offline Diffusion Policy for Multi-User Delay-Constrained Scheduling</a>
-                        <span class="paper-date">2026-06-10</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Effective multi-user delay-constrained scheduling is crucial in various real-world applications, including embodied AI, instant messaging, live streaming, and data center management, where efficient resource allocation is required among users with diverse delay sensitivities. In these scenarios, schedulers must make real-time decisions to satisfy both delay and resource constraints without prior knowledge of system dynamics, which are often time-varying and challenging to estimate. {Current learning-based methods typically require online interactions with actual systems during the training stage. Therefore, these approaches are often difficult or impractical, as they can significantly degrade system performance and incur substantial service costs.} To address these challenges, we propose a novel offline reinforcement learning-based algorithm, named \underline{S}cheduling By \underline{O}ffline Learning with \underline{C}ritic Guidance and \underline{D}iffusion Model (SOCD), to learn efficient scheduling policies purely from pre-collected \emph{offline data}. SOCD innovatively employs a diffusion policy, complemented by a sampling-free critic network for policy guidance. By integrating the Lagrangian multiplier optimization into the offline reinforcement learning, SOCD efficiently trains high-quality constraint-aware policies exclusively from available datasets, eliminating the need for online interactions with the system. Experimental results demonstrate that SOCD is resilient to various system dynamics, including partially observable and large-scale environments, and delivers superior performance compared to existing methods.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.11535v1" target="_blank" class="paper-title">Adversarial Attacks on Learned Policies for Surgical Robotic Tasks</a>
-                        <span class="paper-date">2026-06-10</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Learning-based policies are being considered to augment the dexterity of human surgeons in robot-assisted surgery. Can the end-to-end mapping from visual observations to robot actions be vulnerable to adversarial attacks, potentially leading to patient injury? In this paper, we present the first study of adversarial threats to learning-based policies in surgical robotics. We investigate two threat modes: (a) disruptive attacks, where imperceptible visual perturbations interrupt policy execution, and (b) steering attacks, where such perturbations steer policy actions toward attacker-specified directions. We formulate three adversarial attack methods, each with increasing access to policy information, and evaluate their impact on two surgical subtasks: debridement and suturing. Our evaluation covers three end-to-end policy architectures: ACT, Diffusion Policy, and Pi0. In addition, we introduce a new class of photometric adversarial attacks that mimic natural visual changes, such as lighting variations, to generate effective yet visually plausible perturbations. Results from 560 physical experiments using phantoms for debridement and suturing suggest that state-of-the-art policies can be significantly disrupted, resulting in an average 61% reduction in surgical subtask success rates. Project page: https://sites.google.com/view/adversary-surgery</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.06323v2" target="_blank" class="paper-title">VOLT: Vision and Language Trajectory Segmentation for Faster-than-Demonstration Policies</a>
-                        <span class="paper-date">2026-06-09</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Humans often take longer to demonstrate a task than a robot would need to execute it. Rather than learning to replicate the demonstration at the same pace, many industrial and practical applications require robots to perform tasks as quickly as possible. In this paper, we investigate several hypotheses for learning policies that operate faster-than-demonstrations. Our experiments show that the most effective strategy is to downsample recorded demonstrations and train the robot's policy on this accelerated data. However, uniformly downsampling an entire trajectory can be problematic. Some parts of a task can be safely sped up (e.g., unconstrained motion), while others demand slower, more precise motion (e.g., object interactions or fine manipulation). To address this challenge, we introduce VOLT, a vision-and-language trajectory segmentation method that reasons over video demonstrations, and leverages contextual cues to determine when acceleration is appropriate and when careful precision is required. VOLT identifies segments where slow, deliberate motion is necessary, then selectively downsamples the remaining segments. The resulting reformatted trajectories can be used with standard imitation learning approaches, such as diffusion policies. Our results highlight that segmentation quality is critical -- baseline methods often misidentify when acceleration is possible, leading to overly cautious or unreliable policies. Compared to state-of-the-art alternatives, VOLT allows robots to execute tasks faster while maintaining strong performance.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.10825v1" target="_blank" class="paper-title">MODIP: Efficient Model-Based Optimization for Diffusion Policies</a>
-                        <span class="paper-date">2026-06-09</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Diffusion policies (DPs) have emerged as expressive policy representations for robot learning, often used with imitation learning methods such as behavioral cloning (BC). However, while their success has largely been confined to BC, direct reinforcement learning (RL) fine-tuning remains challenging because actions are generated through a multi-step denoising process. In this work, we propose MODIP, a framework for the offline-to-online fine-tuning of DPs. Rather than directly applying RL to the DPs, MODIP leverages a world model (WM) to guide policy adaptation and keeps the simplicity and stability of BC. We utilize model predictive control (MPC) to generate high-quality trajectories within the WM, and use them as supervised targets for fine-tuning the DP. To make MPC planning efficient, MODIP uses a terminal state value instead of a policy-dependent state-action value, reducing inference time. Additionally, MODIP trains critics with policy-independent TD targets, reducing training time. Experiments on D4RL (MuJoCo, Kitchen) and RoboMimic tasks show that MODIP improves diffusion policies beyond BC, and is competitive with or outperforms diffusion policy RL fine-tuning methods and strong model-based baselines such as TD-MPC2.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2603.05291v2" target="_blank" class="paper-title">Online Self-Training for Co-Adaptation in Hierarchical Diffusion Policies</a>
-                        <span class="paper-date">2026-06-09</span>
-                    </div>
-                                        <span class="paper-comment">📝 Accepted at ICML 2026 Workshop on Decision-Making from Offline Datasets to Online Adaptation (DEMO)</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Hierarchical policies decompose language-conditioned long-horizon robotic manipulation into a high-level planner and a low-level controller. However, effective coordination between HL and LL requires that both components operate on compatible subgoal distributions. We propose ORCHID, a self-training framework that enables stable online improvement of hierarchical diffusion policies by aligning planning and control through iterative refinement. By filtering policy samples via environment feedback, ORCHID identifies trajectories where the planner and controller are jointly successful and distills them back into both modules via supervised learning. This process induces a bidirectional co-adaptation: the planner grounds its subgoals in the actual reaching capabilities of the controller, while the controller specializes in the trajectory structures the planner produces. By relying on supervised distillation of filtered on-policy samples, ORCHID avoids the instability typical of online hierarchical gradient-based RL training with diffusion models. On the CALVIN benchmark, ORCHID allows a lightweight, initially weak model to outperform pure offline methods, including a Vision-Language-Action model twice its size.</p>
                     </details>
                 </div>
             </div>
