@@ -600,7 +600,7 @@
                 <a href="LLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
                     <span class="nav-label">LLM</span>
-                    <span class="nav-count">78</span>
+                    <span class="nav-count">79</span>
                 </a>
                 <a href="VLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f97316"></span>
@@ -675,7 +675,7 @@
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Kalman Filter</span>
-                    <span class="nav-count">46</span>
+                    <span class="nav-count">45</span>
                 </a>
                 <a href="Loop-Closure-Detection.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -695,7 +695,7 @@
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">78</span>
+                    <span class="nav-count">77</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -819,7 +819,7 @@
             <a href="LLM.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
                 <span class="nav-label">LLM</span>
-                <span class="nav-count">78</span>
+                <span class="nav-count">79</span>
             </a>
             <a href="VLM.html" class="nav-item">
                 <span class="nav-dot" style="background:#f97316"></span>
@@ -894,7 +894,7 @@
             <a href="Kalman-Filter.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Kalman Filter</span>
-                <span class="nav-count">46</span>
+                <span class="nav-count">45</span>
             </a>
             <a href="Loop-Closure-Detection.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -914,7 +914,7 @@
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">78</span>
+                <span class="nav-count">77</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -1030,6 +1030,51 @@
             <div class="paper-list">
                 <div class="paper-card">
                     <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.03323v1" target="_blank" class="paper-title">PolyLayout: Multi-room Manhattan Layout Estimation</a>
+                        <span class="paper-date">2026-08-04</span>
+                    </div>
+                                        <span class="paper-comment">📝 Accepted at the European Conference on Computer Vision (ECCV) 2026</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：从多视角图像估计室内房间布局时，现有方法泛化能力差、几何假设受限，且独立估计各房间，未利用建筑共享结构。&#10;&#10;🛠 **方法**：提出PolyLayout，将房间布局参数化为曼哈顿3D多边形，通过神经网络预测优化目标，并基于预训练视觉特征端到端训练，同时保持相机投影和多边形更新的显式模型化，迭代执行墙分割与合并以自适应调整拓扑。&#10;&#10;✨ **主要贡献**：首次实现多房间联合布局优化，利用跨房间结构线索，提升对新数据集和相机参数的泛化性；构建两个多视角多房间布局基准，实验表明在精度和鲁棒性上优于现有方法。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Estimating room layouts from multi-view imagery is a core task for indoor scene understanding. Existing methods are typically limited either by poor generalization to new datasets or restrictive geometric assumptions of the room shape or camera configuration. Most also estimate rooms independently, failing to exploit shared building structure such as dominant directions, ground plane or ceiling height. We propose PolyLayout, a multi-room layout estimation method that parameterizes room layouts as Manhattan 3D polygons and optimizes them jointly across multiple rooms. The optimization objective is predicted by a neural network on top of robust pre-trained visual features and trained end-to-end with supervision only on output room layouts. At the same time, camera projection and polygon updates remain explicit and model-based. This separation between learned scoring and geometry improves generalization to new datasets and camera parameters. During optimization, PolyLayout adaptively refines the polygon topology through iterative wall split and merge operations while jointly utilizing structural cues across rooms. We introduce two new multi-view multi-room layout benchmarks by providing layout annotations to existing datasets, and experiments show that PolyLayout outperforms prior approaches, both in terms of accuracy and robustness. Project page: https://ghanning.github.io/PolyLayout</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.03084v1" target="_blank" class="paper-title">SUV: Future Scene Understanding as Video Generation for End-to-End Driving</a>
+                        <span class="paper-date">2026-08-04</span>
+                    </div>
+                                        <span class="paper-comment">📝 16 pages, 5 figures. Code: https://github.com/ASH-2046/SUV</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：端到端驾驶需要对未来场景有一致性理解，但现有方法使用任务特定输出头，可扩展性有限，缺乏统一的未来场景预测方式。&#10;&#10;🛠 **方法**：提出SUV框架，将未来场景理解建模为视频生成任务，利用预训练视频基础模型统一预测未来外观、语义、相对深度和实例级动态四个视频流，并通过联合视频-动作注意力让动作专家直接关注这些未来流以生成自车轨迹。&#10;&#10;✨ **主要贡献**：SUV无需任务特定预测头即可直接生成四种未来流，在NAVSIM-v2两个子集上分别达到91.0 EPDMS和36.9，优于多种最新方法；在WOD-E2E基准上取得7.94 RFS，且仅需单前视摄像头、无需候选轨迹选择，验证了结构化未来监督和直接未来流访问的有效性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>End-to-end driving requires a coherent understanding of future scenes, yet existing methods model these scenes using task-specific heads and output formats, with limited scalability. Can video generation instead provide a shared predictor? We introduce SUV, a unified end-to-end driving framework that casts future Scene Understanding as Video generation using a pretrained video foundation model. SUV models future appearance, semantics, relative depth, and instance-level dynamics as video streams with a shared video expert, without stream-specific visual prediction heads. Through joint video-action attention, the action expert attends to the latent representations of all future streams and generates the ego trajectory. Experiments show that SUV directly predicts all four future streams, while controlled ablations show that structured future supervision and direct future-stream access yield higher trajectory planning scores. With only a single front camera and no candidate-trajectory selection, SUV outperforms a broad set of recent state-of-the-art methods on both NAVSIM-v2 splits, achieving 91.0 EPDMS on navtest and 36.9 on navhard. On the long-tail WOD-E2E benchmark, SUV achieves a competitive RFS of 7.94.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2511.14019v5" target="_blank" class="paper-title">RISE: Single Static Radar-based Indoor Scene Understanding</a>
+                        <span class="paper-date">2026-08-03</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="好的，作为一名人工智能研究与学术论文分析专家，我将严格按照您的要求，对论文《RISE: Single Static Radar-based Indoor Scene Understanding》进行详细的中文解读。&#10;&#10;---&#10;&#10;## 0. 概览（Concise Summary）&#10;&#10;- **主题（Topic）**：基于单静态毫米波雷达的室内场景理解，包括布局重建和物体检测。&#10;- **问题（Problem）**：传统光学传感器（RGB、LiDAR）存在隐私风险和视线遮挡问题；现有无线方案（WiFi、毫米波）要么分辨率低，要么需要移动设备扫描，部署成本高。如何仅用一个静态的毫米波雷达实现高精度的室内场景理解是一个挑战，主要难点在于毫米波信号的镜面反射特性导致大量环境信息不可见。&#10;- **方法（Method）**：提出RISE系统，核心思想是利用人体移动引入的多径反射（传统视为噪声）来推断环境结构。具体包括：1）**双角度多径增强（BAME）**模块，通过显式建模到达角（AOA）和离开角（AOD）来恢复被传统波束成形抑制的“鬼影”信号；2）**模拟到真实的分层扩散（SRHD）**框架，利用合成数据训练扩散模型，将碎片化的雷达观测转化为完整的布局和物体检测结果。&#10;- **创新（Innovation）**：1）首次提出并实现仅用单静态毫米波雷达进行室内布局重建和物体检测的完整系统与基准；2）提出BAME模块，解决了因AOA≠AOD导致的多径鬼影信号丢失问题；3）提出SRHD框架，通过模拟数据生成和分层扩散模型，弥合了模拟与真实之间的差距，实现了从稀疏、不完整观测到完整场景理解的跨越。&#10;- **意义（Significance）**：RISE证明了利用现有静态无线设备（如路由器）进行隐私保护、高精度室内感知的可行性，为智能家居、安防、VR/AR等应用开辟了新路径。它首次将毫米波雷达的感知能力从粗略的墙壁轮廓提升到包含家具检测的细粒度场景理解。&#10;- **一句话总结**：RISE通过巧妙利用人体移动产生的多径反射，结合创新的信号处理与生成式AI模型，首次实现了仅用单个静态毫米波雷达即可完成高精度的室内布局重建与物体检测。&#10;&#10;## 1. 研究动机（Motivation）&#10;&#10;- **解决的问题**：室内场景理解是计算机视觉和机器人领域的核心问题，但传统方法依赖RGB相机和LiDAR等光学传感器。这些传感器存在两个根本性缺陷：&#10;    1.  **隐私风险**：在智能家居、办公室等环境中，摄像头会捕捉到敏感的个人信息。&#10;    2.  **视线遮挡**：光学信号无法穿透墙壁、家具等障碍物，导致感知存在大量盲区。&#10;- **为什么重要**：如果能用无线信号（如毫米波）替代光学传感器，就能同时解决隐私和遮挡问题。毫米波雷达可以穿透非金属障碍物，且不捕捉视觉细节，保护隐私。&#10;- **挑战在哪里**：现有无线方案存在局限性：&#10;    - **WiFi方案**：分辨率低，只能提供粗略的环境轮廓。&#10;    - **移动毫米波方案**：需要将雷达安装在机器人上主动扫描环境，增加了部署复杂度和成本，不适用于静态场景。&#10;    - **静态毫米波方案**：面临**镜面反射**（specularity）的挑战。毫米波信号像镜子一样反射，只有与雷达法线方向对齐的表面才能被直接探测到，导致大部分墙壁、物体“隐形”，只能获得稀疏、不完整的点云（如图1(a.2)所示）。如何从这些稀疏的观测中恢复完整的场景结构是核心难题。&#10;&#10;## 2. 创新点（Innovation）&#10;&#10;论文提出了三个关键创新，共同构成了RISE系统：&#10;&#10;1.  **首个单静态雷达室内场景理解基准与系统**：RISE是第一个专门针对“仅使用单个静态毫米波雷达”进行室内布局重建和物体检测的完整系统。为此，作者还构建了包含50,000帧、100条真实轨迹的大规模数据集（RISE-Indoor Benchmark），为后续研究提供了标准化评估平台。&#10;2.  **双角度多径增强（BAME）模块**：这是信号处理层面的核心创新。传统毫米波雷达处理（如式2）隐式假设信号的到达角（AOA）等于离开角（AOD），这适用于直接反射。但对于多径反射（如雷达→墙壁→人→雷达），AOA和AOD往往不同，导致这些携带丰富几何信息的“鬼影”信号被抑制或丢失。BAME模块通过**分离处理AOA和AOD**（式4），构建完整的Range-AOA-AOD三维数据立方体，从而恢复这些被传统方法忽略的“离轴”鬼影信号，显著增强了雷达对隐藏结构的感知能力。&#10;3.  **模拟到真实的分层扩散（SRHD）框架**：这是数据处理和模型层面的创新。BAME模块虽然能恢复更多信号，但输出仍然是碎片化的线段。为了得到完整的布局和物体检测，RISE引入了生成式AI模型。&#10;    - **模拟引擎**：由于真实雷达-布局配对数据稀缺，作者构建了一个高保真模拟器，基于35,000个真实室内平面图生成合成雷达信号，并设计了随机缺失、旋转、缩放等数据增强策略来模拟真实世界的噪声。&#10;    - **分层扩散模型**：采用两阶段扩散模型。第一阶段预测物体检测图，第二阶段结合物体图和原始观测来预测完整的墙壁布局。这种分层设计让物体信息作为语义先验，指导布局重建。&#10;    - **空间一致性优化**：在推理阶段，利用人体运动轨迹（已知）对生成的布局进行反向优化，惩罚轨迹与墙壁/物体的碰撞，确保最终结果在物理上是合理的。&#10;&#10;## 3. 主要内容（Main Content）【重点】&#10;&#10;### 3.1 设计架构与方法&#10;&#10;RISE的整体流程如图3所示，分为三个主要阶段：&#10;&#10;1.  **信号增强与多径反演（BAME + Multipath Inversion）**：&#10;    - **输入**：一段连续的人体运动轨迹的毫米波信号序列。&#10;    - **BAME模块**：对每一帧信号，通过双角度波束成形（式4）和3D CFAR检测，恢复被传统方法抑制的鬼影信号（如G1'）。&#10;    - **多径反演**：利用恢复后的鬼影信号（G1, G1', G2, G2'）和人体目标（H）之间的几何关系（图4），通过公式（3）估算出反射点（墙壁上的点）的位置。然后通过GMM聚类和RANSAC直线拟合，得到每一帧的初始、碎片化的墙壁线段。&#10;2.  **时间累积与初始布局生成（Temporal Accumulation）**：&#10;    - 将多帧（整个轨迹）估算出的反射点累积起来，形成一个稀疏但覆盖范围更广的初始布局假设（图1(b.2)中的蓝点）。&#10;3.  **模拟到真实的分层扩散重建（SRHD）**：&#10;    - **输入**：上述初始布局（碎片化线段）。&#10;    - **Stage 1: 物体检测**：一个扩散模型（f1）以初始布局为条件，从高斯噪声中生成一个二值的物体检测图（X0）。&#10;    - **Stage 2: 布局重建**：第二个扩散模型（f2）以初始布局和第一阶段生成的物体检测图为条件，生成完整的墙壁布局图（Y0）。&#10;    - **优化**：利用人体轨迹进行空间一致性优化，修正不合理的布局。&#10;&#10;### 3.2 关键算法与数学推导&#10;&#10;1.  **传统波束成形（AOA=AOD假设）**：&#10;    $$P(\theta) = \sum_{n=1}^{N} s_n e^{j2\pi(nd\cos\theta)/\lambda}$$&#10;    该公式将接收信号在单一角度 $\theta$ 上聚焦，隐含了AOA=AOD的假设。&#10;&#10;2.  **双角度波束成形（BAME核心）**：&#10;    $$S(\theta_{AOA}, \theta_{AOD}, r) = \sum_{i=1}^{N_r} \left( \sum_{k=1}^{N_t} s_{ikr} e^{j2\pi(kd_t \cos\theta_{AOD})/\lambda} \right) e^{j2\pi(id_r \cos\theta_{AOA})/\lambda}$$&#10;    该公式将AOA和AOD作为两个独立的维度进行处理。内层求和计算AOD响应，外层求和计算AOA响应，从而可以探测到AOA≠AOD的信号。&#10;&#10;3.  **反射点估计**：&#10;    对于鬼影G1'，其对应的反射点 $c_1$ 的位置可以通过以下公式估算（推导见附录）：&#10;    $$s_{c_1} = \frac{2|\vec{s}_{g'_1}|^2 - 2|\vec{s}_{g'_1}||\vec{s}_h|}{2|\vec{s}_{g'_1}| - |\vec{s}_h|\cos(\theta_2^s - \theta_1^s) - |\vec{s}_h|}$$&#10;    其中，$\vec{s}_{g'_1}$ 和 $\vec{s}_h$ 分别是雷达到鬼影G1'和人体H的向量，$\theta_1^s$ 和 $\theta_2^s$ 是相关的角度。&#10;&#10;4.  **数据增强中的旋转与缩放**：&#10;    - **随机旋转**：&#10;      $$\begin{bmatrix} x'_p \\ y'_p \end{bmatrix} = \begin{bmatrix} \cos\alpha_i &amp; -\sin\alpha_i \\ \sin\alpha_i &amp; \cos\alpha_i \end{bmatrix} \begin{bmatrix} x_p - x_c \\ y_p - y_c \end{bmatrix} + \begin{bmatrix} x_c \\ y_c \end{bmatrix}$$&#10;    - **随机缩放**：&#10;      $$\begin{bmatrix} x'_p \\ y'_p \end{bmatrix} = \begin{bmatrix} x_r \\ y_r \end{bmatrix} + a_i \left( \begin{bmatrix} x_p \\ y_p \end{bmatrix} - \begin{bmatrix} x_r \\ y_r \end{bmatrix} \right)$$&#10;&#10;5.  **空间一致性优化损失函数**：&#10;    $$L_{overlap} = \sum_{(x_t, y_t) \in T} \left[ \mathbb{1}[(x_t, y_t) \in W] + \mathbb{1}[(x_t, y_t) \in B] \right]$$&#10;    该损失函数惩罚人体轨迹点 $(x_t, y_t)$ 落入预测的墙壁区域 $W$ 或物体区域 $B$ 的情况，从而确保生成的布局与已知的人体运动轨迹在物理上不冲突。&#10;&#10;### 3.3 模型、训练与数据集&#10;&#10;- **模型**：SRHD框架包含两个独立的扩散模型（f1和f2），具体架构未详述，但提到了使用通道注意力融合模块来整合几何和语义信息。&#10;- **训练**：扩散模型完全在**合成数据**上训练。合成数据由布局模拟引擎生成，该引擎基于35,000个真实室内平面图，并模拟了雷达的物理传播特性（仅保留首次反射点）和随机物体。通过三种数据增强（随机缺失、旋转、缩放）来提升模型对真实噪声的鲁棒性。&#10;- **数据集**：RISE-Indoor Benchmark。&#10;    - **传感器**：TI MMWCAS-RF-EVM Cascade毫米波雷达（固定高度1.2m），Intel Realsense深度相机（用于获取真值）。&#10;    - **规模**：100+条人体运动轨迹，每条约30秒，共50,000帧（20Hz）。&#10;    - **环境**：11个不同的室内场景（办公室、走廊、实验室、客厅等）。&#10;    - **标注**：提供两层标注：&#10;        1.  **结构布局标注**：墙壁边界和房间轮廓的多边形。&#10;        2.  **物体标注**：家具（桌子、柜子、沙发等）的轴对齐边界框。&#10;&#10;### 3.4 实验设置与结果&#10;&#10;- **任务**：布局重建（Chamfer Distance, F1-score）和物体检测（IoU, Dice系数）。&#10;- **基线**：&#10;    - **物体检测**：BRL [22]（单帧雷达检测器），EMT [9] + SRHD（将RISE的SRHD模块应用于EMT输出）。&#10;    - **布局重建**：EMT [9]（现有最强的多帧雷达布局重建方法）。&#10;- **主要结果**：&#10;    - **物体检测（表1）**：RISE在所有场景下均大幅领先。平均IoU为**57.78%**，Dice系数为**69.34%**，而最佳基线（EMT+SRHD）仅为7.70%和12.66%。这表明BAME模块对于恢复小物体反射至关重要。&#10;    - **布局重建（图7）**：RISE的平均Chamfer距离为**16.03 cm**，F1-score为**83.63**；而基线EMT [9]为39.06 cm和63.43。RISE在精度和完整性上均有显著提升（Chamfer距离降低60%）。&#10;    - **轨迹长度影响（图9）**：即使只使用40%的轨迹数据，RISE的Chamfer距离仍优于基线使用完整轨迹的性能，展示了其鲁棒性。&#10;    - **消融实验（表2）**：逐步验证了各模块的贡献。&#10;        - 基线（EMT）：Chamfer 39.06 cm&#10;        - + Ghost Enhancement (BAME)：Chamfer 32.31 cm&#10;        - + Diffusion Model：Chamfer 19.82 cm&#10;        - + Reverse Optimization：Chamfer **16.32 cm**&#10;        这表明每个组件都对最终性能有正向贡献，其中扩散模型和反向优化带来的提升最为显著。&#10;&#10;### 3.5 技术细节&#10;&#10;- **鬼影识别**：通过CFAR检测和RANSAC聚类后，利用四个步骤识别H、G1、G1'、G2'等鬼影。例如，H是幅度最大且距离最近的簇，G1与H方向相同但距离稍远。&#10;- **阈值**：两个点被认为是同一个点，如果它们的距离差&lt;15 cm或角度差&lt;15°。&#10;- **模拟引擎细节**：模拟器中，每个布局被转换为2D结构骨架，虚拟雷达随机放置。发射多条射线，仅保留每条射线的第一个交点。为模拟多径，随机插入N个边界框作为物体，并为每个框选择一个反射线段来模拟随机散射。&#10;- **扩散模型**：采用标准的去噪扩散概率模型（DDPM），但条件输入是BAME和反演模块输出的碎片化布局。推理时，通过优化初始噪声（X1000, Y1000）来最小化重叠损失。&#10;&#10;## 4. 意义与影响（Significance and Impact）&#10;&#10;- **解决的问题与贡献**：&#10;    1.  **解决了单静态雷达场景理解的难题**：首次证明了仅用一个不动的毫米波雷达，结合人体移动产生的多径效应，就能实现高精度的室内布局重建和物体检测。&#10;    2.  **提出了有效的技术方案**：BAME模块解决了多径信号丢失这一关键信号处理问题；SRHD框架解决了从稀疏观测到完整场景的生成式重建问题。&#10;    3.  **建立了新的基准**：RISE-Indoor Benchmark为后续研究提供了标准化的数据集和评估指标，将推动该领域的发展。&#10;- **对未来研究/应用的影响**：&#10;    - **智能家居**：可以利用现有的WiFi路由器或智能音箱中的毫米波雷达，实现无需摄像头的隐私保护式家庭监控、老人跌倒检测、智能空间管理。&#10;    - **安防与监控**：在需要保护隐私的场所（如更衣室、浴室、办公室）进行入侵检测和空间态势感知。&#10;    - **VR/AR**：无需额外传感器，即可实时重建用户所处的室内环境，用于沉浸式体验或空间映射。&#10;    - **机器人**：为机器人提供一种低成本、低功耗、隐私友好的环境感知方式，尤其适用于烟雾、黑暗等恶劣环境。&#10;- **局限与开放问题**：&#10;    - **依赖人体移动**：系统需要有人在环境中移动才能产生多径效应。对于完全静态的场景，该方法失效。&#10;    - **多目标场景**：论文主要针对单人场景。如何处理多人同时移动带来的更复杂的多径干扰是一个开放问题。&#10;    - **轨迹长度**：性能随轨迹长度缩短而下降，如何从更短的轨迹中重建场景是未来的研究方向。&#10;    - **物体检测能力**：虽然实现了首次检测，但58%的IoU仍有很大提升空间，特别是对于小物体和形状不规则的物体。&#10;&#10;## 5. 澄清与简化（Clarifications and Simplifications）&#10;&#10;- **镜面反射 vs. 漫反射**：&#10;    - **类比**：想象一下，用手电筒照一个镜子（镜面反射），你只能在特定角度看到反射光；而照一张白纸（漫反射），光会向四面八方散射，你从任何角度都能看到。毫米波雷达就像手电筒照镜子，大部分墙壁对它来说都是“镜子”，所以只有少数正对着雷达的墙才能被直接“看到”。&#10;- **多径鬼影**：&#10;    - **类比**：在一个房间里，你（雷达）和一个朋友（人）说话。你不仅能听到朋友直接说的话（直接反射），还能听到朋友的声音从墙壁反弹回来的回声（多径反射）。这个回声听起来像是从墙壁后面传来的“鬼影”朋友。RISE就是利用这些“鬼影”回声的位置和变化，来推断墙壁的位置和形状。&#10;- **AOA vs. AOD**：&#10;    - **类比**：想象一个台球从球杆（雷达发射器）击出，撞到墙壁（反射点）后弹向球洞（雷达接收器）。球杆的方向就是离开角（AOD），球洞接收球的方向就是到达角（AOA）。对于直接反射，球杆和球洞在同一个位置，AOA=AOD。但对于多径反射（球先撞墙再进球洞），AOA和AOD就不同了。传统雷达处理假设它们相同，所以会漏掉这种“拐弯”的信号。BAME模块则分别处理这两个角度，从而捕捉到这些“拐弯”的信号。&#10;- **分层扩散模型**：&#10;    - **类比**：这就像一个画家在作画。首先，他根据一些模糊的线条（初始布局）和记忆，先画出房间里的大件家具（物体检测）。然后，他再">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Robust and privacy-preserving indoor scene understanding remains a fundamental open problem. While optical sensors such as RGB and LiDAR offer high spatial fidelity, they suffer from severe occlusions and introduce privacy risks in indoor environments. In contrast, millimeter-wave (mmWave) radar preserves privacy and penetrates obstacles, but its inherently low spatial resolution makes reliable geometric reasoning difficult. We introduce RISE, the first benchmark and system for single-static-radar indoor scene understanding, jointly targeting layout reconstruction and object detection. RISE is built upon the key insight that multipath reflections-traditionally treated as noise-encode rich geometric cues. To exploit this, we propose a Bi-Angular Multipath Enhancement that explicitly models Angle-of-Arrival and Angle-of-Departure to recover secondary (ghost) reflections and reveal invisible structures. On top of these enhanced observations, a simulation-to-reality Hierarchical Diffusion framework transforms fragmented radar responses into complete layout reconstruction and object detection. Our benchmark contains 50,000 frames collected across 100 real indoor trajectories, forming the first large-scale dataset dedicated to single, static, radar-based indoor scene understanding. Extensive experiments show that RISE reduces the Chamfer Distance by 60% (down to 16 cm) compared to the state of the art in mmWave layout reconstruction, and delivers the first mmWave-based object detection, achieving 58% IoU. These results establish RISE as a new foundation for geometry-aware and privacy-preserving indoor scene understanding using a single static radar. Our website and code are available at https://rise-cvpr.github.io.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
                         <a href="https://arxiv.org/abs/2510.14546v2" target="_blank" class="paper-title">QuASH: Using Natural-Language Heuristics to Query Visual-Language Robotic Maps</a>
                         <span class="paper-date">2026-08-03</span>
                     </div>
@@ -1139,10 +1184,7 @@
                         <span class="paper-date">2026-07-30</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有开放词汇3D场景理解方法依赖多视角采集、场景特定优化，且存储稠密语言特征导致内存开销巨大，难以从单目视频高效构建可查询的3D语义地图。&#10;&#10;🛠 **方法**：提出训练无关的流水线MonoVoc，显式解耦3D几何重建与语义集成——先独立提取几何结构，再通过轻量模块化后处理将语义以对象级嵌入方式附着，而非在重建循环中嵌入稠密语言特征。&#10;&#10;✨ **主要贡献**：在Replica数据集上保持高渲染保真度和竞争力分割精度，同时将内存使用量较SOTA降低一个数量级，为单目视频驱动的开放词汇3D检索与问答提供高效、可扩展的实用方案。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Open vocabulary 3D scene understanding is essential for next-generation interactive systems, empowering users to intuitively query and navigate reconstructed environments using natural language. However, current 3D Gaussian frameworks are often bottlenecked by restrictive multiview capture requirements, costly scene-specific optimization, and the massive memory overhead of storing dense language features. We present a novel, training-free pipeline that fundamentally reimagines this paradigm by explicitly decoupling 3D geometric reconstruction from semantic integration. Given a standard monocular video sequence as input, our method efficiently outputs a compact, highly interpretable, and fully searchable object-level semantic Gaussian map. Rather than entangling heavy language embeddings within the mapping loop, we extract geometry independently and ground semantics through a lightweight, modular post-processing framework. Extensive evaluations on the Replica dataset demonstrate that this decoupled architecture preserves strong rendering fidelity and competitive segmentation accuracy. Crucially, by replacing dense per-Gaussian storage with modular, object-level semantic embeddings, our approach delivers an order-of-magnitude reduction in memory usage compared to SOTA baselines. This provides a highly efficient, scalable, and practical solution for open-vocabulary 3D retrieval and question answering directly from everyday monocular video.</p>
@@ -1154,10 +1196,7 @@
                         <span class="paper-date">2026-07-30</span>
                     </div>
                                         <span class="paper-comment">📝 v5: Accepted version at Journal of Vision. Note: v2/v3 had a false citation (citation key 16) which was fixed in v4 and was already correct in v1. Code is available here: https://github.com/ag-perception-wallis-lab/MRD</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：如何揭示视觉模型对3D场景的隐式理解，即模型在2D输入下是否真正编码了物理场景属性（如形状、材质）。&#10;&#10;🛠 **方法**：提出MRD（metamers rendered differentiably）方法，利用基于物理的可微渲染，搜索与原始场景物理属性不同但产生相同模型激活的3D场景参数（即模型“元音”），从而在物理约束下探测模型敏感性。&#10;&#10;✨ **主要贡献**：首次将模型表征分析锚定于物理场景描述，可独立控制形状、材质和光照等属性进行探测；实验表明不同模型在几何和BRDF恢复上表现各异，能定性揭示模型对物理属性的敏感或不变性，为理解机器与人类视觉提供了新工具。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>While deep learning methods have achieved impressive success in many vision benchmarks, it remains difficult to understand and explain the representations and decisions of these models. Though vision models are typically trained on 2D inputs, they are often assumed to develop an implicit representation of the underlying 3D scene (for example, showing tolerance to partial occlusion, or the ability to reason about relative depth). Here, we introduce MRD (metamers rendered differentiably), an approach that uses physically based differentiable rendering to probe vision models' implicit understanding of generative 3D scene properties, by finding 3D scene parameters that are physically different but produce the same model activation (i.e. are model metamers). Unlike previous pixel-based methods for evaluating model representations, these reconstruction results are always grounded in physical scene descriptions. This means we can, for example, probe a model's sensitivity to object shape while holding material and lighting constant. As a proof-of-principle, we assess multiple models in their ability to recover scene parameters of geometry (shape) and bidirectional reflectance distribution function (material). The results show high similarity in model activation between target and optimized scenes, with varying visual results. Qualitatively, these reconstructions help investigate the physical scene attributes to which models are sensitive or invariant. MRD holds promise for advancing our understanding of both computer and human vision by enabling analysis of how physical scene parameters drive changes in model responses.</p>
@@ -1169,10 +1208,7 @@
                         <span class="paper-date">2026-07-30</span>
                     </div>
                                         <span class="paper-comment">📝 Accepted to IROS 2026. 8 pages, 6 figures</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：预训练的视觉-语言-动作（VLA）模型在部署为真实机器人智能体时，缺乏失败恢复机制、长程任务执行不一致，且对观测、任务或本体变化鲁棒性不足。&#10;&#10;🛠 **方法**：提出RoboBRIDGE模块化框架，通过五个协调模块（Monitor、Perceptor、Planner、Controller、Robot Interface）对现成组件（包括预训练VLA）进行编排，实现快速失败检测与分层恢复、异步场景更新与重规划，以及基于LoRA适配器的原始技能微调。&#10;&#10;✨ **主要贡献**：在LIBERO、RoboCasa及多平台真实世界案例中，RoboBRIDGE一致优于独立策略和现有增强VLA部署，证明可靠的机器人智能体不仅依赖扩展动作预测器，更需围绕其进行结构化编排。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Vision-Language-Action (VLA) models have attracted growing interest as a scalable approach to robotic manipulation. While these models are effective action predictors, deploying them as robotic agents exposes critical gaps: no mechanism for failure recovery, inconsistent execution over long horizons, and limited robustness to shifts in observations, tasks, or embodiments. Existing solutions address these limitations individually through model retraining or environment-specific modules, yet what is needed is a general framework that systematically transforms a pretrained VLA into a robotic agent. We present RoboBRIDGE, a modular framework that provides an orchestration layer over five coordinated modules, namely Monitor, Perceptor, Planner, Controller, and Robot Interface, to compose robust robotic agents from off-the-shelf components, including pretrained VLAs. The Monitor pairs rapid failure detection with hierarchical recovery to correct errors before they cascade. When the environment diverges from the current plan, the Planner triggers replanning while the Perceptor updates scene understanding asynchronously, avoiding execution stalls. Within the Controller, primitive skill fine-tuning factors manipulation into domain-invariant primitives with dedicated LoRA adapters, reducing sensitivity to domain shifts when a VLA is used. Across LIBERO, RoboCasa, and real-world case studies spanning multiple robot platforms and VLA backbones, RoboBRIDGE consistently outperforms both standalone policies and prior augmented VLA deployments. These results suggest that reliable robotic agency does not arise from scaling action predictors alone, but from structured orchestration around them.</p>
@@ -1320,18 +1356,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Vision-language models (VLMs) are facing the challenges of understanding and following multimodal assembly instructions, particularly when fine-grained spatial reasoning and precise object state detection are required. In this work, we explore LEGO Co-builder, a hybrid benchmark combining real-world LEGO assembly logic with programmatically generated multimodal scenes. The dataset captures stepwise visual states and procedural instructions, allowing controlled evaluation of instruction-following, object detection, and state detection. We introduce a unified framework and assess leading VLMs such as GPT-4o, Gemini, and Qwen-VL, under zero-shot and fine-tuned settings. We also evaluated the framework using a reasoning-focused model, GLM-4.1-thinking. Our results show that while object detection achieved high performance (98.16% with fine-tuned InstructBLIP), fine-grained scene understanding and assembly state detection remain challenging: Fine-tuned MiniGPT-v2 reached only 37.52% F1 for identifying theme entities, and even advanced models such as GPT-4o achieved just 40.54% F1 on state detection. This highlights gaps in fine-grained visual understanding among existing models. We release the benchmark, codebase, and generation pipeline to support future research on multimodal assembly assistants grounded in real-world workflows.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2511.14019v4" target="_blank" class="paper-title">RISE: Single Static Radar-based Indoor Scene Understanding</a>
-                        <span class="paper-date">2026-07-24</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Robust and privacy-preserving indoor scene understanding remains a fundamental open problem. While optical sensors such as RGB and LiDAR offer high spatial fidelity, they suffer from severe occlusions and introduce privacy risks in indoor environments. In contrast, millimeter-wave (mmWave) radar preserves privacy and penetrates obstacles, but its inherently low spatial resolution makes reliable geometric reasoning difficult. We introduce RISE, the first benchmark and system for single-static-radar indoor scene understanding, jointly targeting layout reconstruction and object detection. RISE is built upon the key insight that multipath reflections-traditionally treated as noise-encode rich geometric cues. To exploit this, we propose a Bi-Angular Multipath Enhancement that explicitly models Angle-of-Arrival and Angle-of-Departure to recover secondary (ghost) reflections and reveal invisible structures. On top of these enhanced observations, a simulation-to-reality Hierarchical Diffusion framework transforms fragmented radar responses into complete layout reconstruction and object detection. Our benchmark contains 50,000 frames collected across 100 real indoor trajectories, forming the first large-scale dataset dedicated to single, static, radar-based indoor scene understanding. Extensive experiments show that RISE reduces the Chamfer Distance by 60% (down to 16 cm) compared to the state of the art in mmWave layout reconstruction, and delivers the first mmWave-based object detection, achieving 58% IoU. These results establish RISE as a new foundation for geometry-aware and privacy-preserving indoor scene understanding using a single static radar. Our website and code are available at https://rise-cvpr.github.io.</p>
                     </details>
                 </div>
                 <div class="paper-card">
@@ -1968,30 +1992,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Open-vocabulary 3D scene understanding aims to segment 3D scenes beyond predefined categories by transferring semantic knowledge from vision-language models. Existing methods have advanced this task by lifting language-aligned 2D features into 3D, yet they often rely on context-independent semantic representations, leaving object relationships underexplored for contextual refinement. We propose RelGraphOV, a relationship-aware framework that uses 3D scene graphs to enhance open-vocabulary 3D understanding. Our method constructs relational scene graphs from multi-view observations by leveraging vision-language reasoning to infer object relationships and prune geometrically implausible connections, without manual relationship annotations. To aggregate relational context while avoiding feature interference, we introduce an Adaptive Gated Dual-Stream Contextual GAT that separates dense geometric features and semantic CLIP embeddings, performs edge-guided message passing, and adaptively fuses complementary semantics. A hierarchical contrastive objective further promotes instance-level consistency and category-level discrimination. Experiments on ScanNetV2, ScanNet200, ScanNet$++$, and Replica demonstrate strong performance and generalization ability. Project Page: https://cxavireh.github.io/relgraphov-projectpage</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2508.03177v2" target="_blank" class="paper-title">SAVER: Mitigating Hallucinations in Large Vision-Language Models via Style-Aware Visual Early Revision</a>
-                        <span class="paper-date">2026-07-06</span>
-                    </div>
-                                        <span class="paper-comment">📝 Accepted at AAAI 2026. 24 pages, 10 figures. Code: https://github.com/llizhaoxu/SAVER</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Large Vision-Language Models (LVLMs) recently achieve significant breakthroughs in understanding complex visual-textual contexts. However, hallucination issues still limit their real-world applicability. Although previous mitigation methods effectively reduce hallucinations in photographic images, they largely overlook the potential risks posed by stylized images, which play crucial roles in critical scenarios such as game scene understanding, art education, and medical analysis. In this work, we first construct a dataset comprising photographic images and their corresponding stylized versions with carefully annotated caption labels. We then conduct head-to-head comparisons on both discriminative and generative tasks by benchmarking 13 advanced LVLMs on the collected datasets. Our findings reveal that stylized images tend to induce significantly more hallucinations than their photographic counterparts. To address this issue, we propose Style-Aware Visual Early Revision SAVER, a novel mechanism that dynamically adjusts LVLMs' final outputs based on the token-level visual attention patterns, leveraging early-layer feedback to mitigate hallucinations caused by stylized images. Extensive experiments demonstrate that SAVER achieves state-of-the-art performance in hallucination mitigation across various models, datasets, and tasks.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2601.03326v3" target="_blank" class="paper-title">Higher order PCA-like rotation-invariant features for detailed shape descriptors modulo rotation</a>
-                        <span class="paper-date">2026-07-06</span>
-                    </div>
-                                        <span class="paper-comment">📝 6 pages, 4 figures</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>PCA can be used for rotation invariant features, describing a shape with its $p_{ab}=E[(x_i-E[x_a])(x_b-E[x_b])]$ covariance matrix approximating shape by ellipsoid, allowing for rotation invariants like its traces of powers. However, real shapes are usually much more complicated, hence there is proposed its extension to e.g. $p_{abc}=E[(x_a-E[x_a])(x_b-E[x_b])(x_c-E[x_c])]$ order-3 or higher tensors describing central moments, or polynomial times Gaussian allowing decodable shape descriptors of arbitrarily high accuracy, and their analogous rotation invariants. Its practical applications could be rotation-invariant features to include shape modulo rotation e.g. for molecular shape descriptors, or for up to rotation object recognition in 2D images/3D scans maybe also for 3D scene understanding, or shape similarity metric allowing inexpensive comparison of objects modulo rotation avoiding costly optimization over rotations.</p>
                     </details>
                 </div>
             </div>

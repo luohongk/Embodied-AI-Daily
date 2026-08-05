@@ -600,7 +600,7 @@
                 <a href="LLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
                     <span class="nav-label">LLM</span>
-                    <span class="nav-count">78</span>
+                    <span class="nav-count">79</span>
                 </a>
                 <a href="VLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f97316"></span>
@@ -675,7 +675,7 @@
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Kalman Filter</span>
-                    <span class="nav-count">46</span>
+                    <span class="nav-count">45</span>
                 </a>
                 <a href="Loop-Closure-Detection.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -695,7 +695,7 @@
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">78</span>
+                    <span class="nav-count">77</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -819,7 +819,7 @@
             <a href="LLM.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
                 <span class="nav-label">LLM</span>
-                <span class="nav-count">78</span>
+                <span class="nav-count">79</span>
             </a>
             <a href="VLM.html" class="nav-item">
                 <span class="nav-dot" style="background:#f97316"></span>
@@ -894,7 +894,7 @@
             <a href="Kalman-Filter.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Kalman Filter</span>
-                <span class="nav-count">46</span>
+                <span class="nav-count">45</span>
             </a>
             <a href="Loop-Closure-Detection.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -914,7 +914,7 @@
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">78</span>
+                <span class="nav-count">77</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -1030,6 +1030,51 @@
             <div class="paper-list">
                 <div class="paper-card">
                     <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.03409v1" target="_blank" class="paper-title">Hierarchical Constrained Reinforcement Learning with Dynamic Boundary for Spatio-Temporal Vehicle-to-Grid Scheduling</a>
+                        <span class="paper-date">2026-08-04</span>
+                    </div>
+                                        <span class="paper-comment">📝 WAICA 2026 Best Student Paper Award Runner-Up</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：大规模电动汽车接入电网后，V2G调度面临空间与时间耦合约束，现有强化学习方法难以在严格约束满足和可扩展性之间取得平衡。&#10;&#10;🛠 **方法**：提出分层策略的约束强化学习框架（HPC-RL），上层采用基于广义约化梯度法的RL算法严格满足电网空间硬约束，下层设计动态边界策略实时计算每辆EV的可行充电功率范围，以满足时间充电需求。&#10;&#10;✨ **主要贡献**：通过分层解耦同时处理空间与时间耦合约束，显著提升大规模场景的泛化能力；在IEEE 14、30及改进141节点系统上，相比模型预测控制和先进安全RL基线，在约束违反率接近零、充电需求满足率近100%的同时，将在线计算时间从小时级降至分钟级，实现近最优调度策略。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>The rapid proliferation of Electric Vehicles (EVs) introduces significant spatio-temporal uncertainties into power grids, while Vehicle-to-Grid (V2G) technology offers critical flexibility through bidirectional power flow. However, integrating large-scale EVs into the Optimal Power Flow framework presents substantial challenges due to computational bottlenecks arising from solver complexity and coupled spatio-temporal constraints. Existing Reinforcement Learning (RL) methods often struggle to balance strict constraint satisfaction with scalability in highly dynamic EV fleet environments. To address these challenges, this paper proposes a Hierarchical Policy for Constrained Reinforcement Learning (HPC-RL) framework for spatially and temporally coupled V2G scheduling. The framework adopts a two-layer architecture: the upper level utilizes a RL algorithm based on the Generalized Reduced Gradient method to strictly enforce spatial grid-level hard constraints; the lower level implements a novel dynamic boundary strategy to compute real-time feasible charging power bounds for individual EVs, thereby ensuring the satisfaction of temporal charging demands. This integrated design not only enables the simultaneous handling of spatially and temporally coupled constraints during the RL optimization process but also significantly enhances generalization capabilities for large-scale fleets through hierarchical decoupling. Extensive experiments on IEEE 14, 30, and modified 141-bus systems demonstrate that HPC-RL outperforms Model Predictive Control and state-of-the-art safe RL baselines across all metrics. The proposed method achieves near-optimal scheduling strategies and drastically reduces online computation time in large-scale scenarios from hours to minutes, while maintaining a near-zero constraint violation rate and nearly 100\% charging demand satisfaction.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.03051v1" target="_blank" class="paper-title">CUDA MPC: A GPU-Native Solver for Model Predictive Control</a>
+                        <span class="paper-date">2026-08-04</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：模型预测控制（MPC）依赖在线优化，在快速动态、高维模型或长预测时域下计算开销大，现有GPU实现因频繁内核启动和内存传输而效率低下。&#10;&#10;🛠 **方法**：提出CUDA MPC框架，将并行时域ADMM分裂算法与融合CUDA内核结合，整个迭代求解在设备端完成；优化变量驻留于片上共享内存，并通过原子标志协议仅同步相邻时域块，减少主机干预和全局内存访问。&#10;&#10;✨ **主要贡献**：在六个非线性机器人基准上，CUDA MPC在比CPU求解器长1-2个数量级的时域下保持实时性能；例如，0.1秒采样间隔内解决100步避障泊车问题，并成为唯一能实时协调10智能体集群的求解器（acados和CasADi无法求解）。相比张量框架实现，融合内核速度提升高达965倍。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Model Predictive Control (MPC) delivers constraint-aware control, but its reliance on online optimization limits its use on systems with fast dynamics, high-dimensional models, or long horizons. Existing GPU implementations typically treat the device as a linear-algebra accelerator, leaving the optimization loop dependent on repeated kernel launches and high-latency memory transfers. This paper introduces CUDA MPC, a GPU-native MPC framework that co-designs the optimization algorithm, execution model, and memory architecture for CUDA hardware. CUDA MPC pairs a parallel-in-horizon alternating direction method of multipliers (ADMM) splitting with a fused CUDA kernel that runs the entire iterative solve on the device. Intermediate optimization variables stay in low-latency, on-chip shared memory, and a localized atomic-flag protocol synchronizes only adjacent horizon blocks, minimizing host intervention, kernel-dispatch overhead, and global-memory traffic. Across six nonlinear robotics benchmarks spanning increasing state dimension and constraint density, CUDA MPC sustains real-time rates at horizons one to two orders of magnitude longer than CPU solvers: it solves an optimization-based collision-avoidance parking problem with 100 s of lookahead within a 0.1 s sampling interval, and is the only solver evaluated that achieves both real-time execution and collision-free coordination for a centralized 10-agent swarm, where acados and CasADi return no feasible solution and require 3.5 s and 4.5 s per solve. Against tensor-framework implementations of the same ADMM splitting, the fused kernel is up to $965\times$ faster.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2605.19209v2" target="_blank" class="paper-title">Graph Neural Planning and Predictive Control for Multi-Robot Communication-Constrained Unlabeled Motion Planning</a>
+                        <span class="paper-date">2026-08-03</span>
+                    </div>
+                                        <span class="paper-comment">📝 8 pages, 6 figures, Accepted at the IEEE International Conference on Robotics and Automation (ICRA) 2026</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决多机器人系统中未标记运动规划问题，即在通信受限和动态可行性约束下，同时为机器人分配目标并生成安全轨迹。&#10;&#10;🛠 **方法**：提出分层框架，结合图注意力规划器（GATP）提供中间子目标，以及分散式非线性模型预测控制器（NMPC）在非线性动力学和驱动约束下保障安全。&#10;&#10;✨ **主要贡献**：通过注意力机制和最小通信需求，实现向更大机器人团队的泛化、对高达200毫秒通信延迟的鲁棒性，并在真实四旋翼实验中验证了分散式机载推理的可行性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>The multi-robot unlabeled motion planning problem of concurrently assigning robots to goals and generating safe trajectories is central in many collaborative tasks. Recent Graph Neural Network methods offer scalable decentralized solutions but rely on simplified dynamics and simulation environments, overlooking key challenges of real-world deployment such as dynamic feasibility and communication constraints. To address these gaps, we propose a hierarchical framework that combines a Graph ATtention Planner (GATP) with a decentralized Nonlinear Model Predictive Controller (NMPC). GATP provides intermediate subgoals through multi-robot cooperation, and the NMPC enforces safety under nonlinear dynamics and actuation constraints. We evaluate our framework in both simulation and real-world quadrotor experiments. Thanks to attention mechanisms and minimal communication requirements, we demonstrate improved generalization to larger teams, robustness to communication delays up to 200 ms and practical feasibility with decentralized on-board inference.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
                         <a href="https://arxiv.org/abs/2607.03557v2" target="_blank" class="paper-title">CoorGrasp: Coordinated Contact Control for Adaptive Dexterous Grasping Under Uncertainty</a>
                         <span class="paper-date">2026-08-03</span>
                     </div>
@@ -1139,10 +1184,7 @@
                         <span class="paper-date">2026-07-29</span>
                     </div>
                                         <span class="paper-comment">📝 8 pages, 8 figures</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决多架无人机在高速敏捷飞行时的相互碰撞避免问题，减少对通信的依赖。  &#10;🛠 **方法**：提出基于非线性模型预测控制（NMPC）的方法，集成时间相关的互逆速度约束（RVCs），仅依赖可观测信息，并以100 Hz频率运行。  &#10;✨ **主要贡献**：在模拟（最多10架无人机、速度25 m/s）和真实实验（加速度30 m/s²）中实现无碰撞导航，相比现有方法飞行时间缩短31%。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>This paper presents an approach to mutual collision avoidance based on Nonlinear Model Predictive Control (NMPC) with time-dependent Reciprocal Velocity Constraints (RVCs). Unlike most existing methods, the proposed approach relies solely on observable information about other robots, eliminating the need for excessive communication. The computationally efficient algorithm for computing RVCs, together with the direct integration of these constraints into the NMPC problem formulation at the controller level, allows the whole pipeline to run at 100 Hz. This high processing rate, combined with modeled nonlinear dynamics of the controlled Uncrewed Aerial Vehicles (UAVs), is a key feature that facilitates the use of the proposed approach for agile UAV flight. The proposed approach was evaluated through extensive simulations emulating real-world conditions in scenarios involving up to 10 UAVs and velocities of up to 25 m/s, and in real-world experiments with accelerations up to 30 m/s$^2$. Comparison with the state of the art shows 31% improvement in terms of flight time reduction in challenging scenarios, while maintaining a collision-free navigation in all trials.</p>
@@ -1154,10 +1196,7 @@
                         <span class="paper-date">2026-07-29</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有JEPA世界模型在规划时依赖嵌入空间的欧氏距离作为目标进度度量，但该度量是表征学习的副产品，未能从离线数据中挖掘出有向的时间进度成本，导致训练与规划之间存在差距。&#10;&#10;🛠 **方法**：提出TD-JEPA，保留LeWM的编码器-预测器结构，从无奖励轨迹中挖掘有向时间成本：利用同轨迹步序作为正样本、跨轨迹对作为启发式负样本，并引入滚动一致性项匹配规划器视野，同时将挖掘的成本作为规划度量与表征学习信号。&#10;&#10;✨ **主要贡献**：在锁定评估下，TD-JEPA在Two-Room任务中成功率提升至100.0%（LeWM为97.4%），在OGB-Cube上提升14.2个百分点，在Push-T任务中也有改进；消融实验验证了有向头、跨轨迹负样本和滚动一致性各自的有效性，缩小了JEPA世界模型训练与规划之间的差距。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Joint-Embedding Predictive Architectures (JEPAs) learn world models by predicting in representation space rather than reconstructing pixels, making them a natural backbone for latent model predictive control from offline demonstration logs. JEPA-style training optimizes short-horizon latent prediction, whereas planning requires a multi-step ranking of imagined futures by goal progress. Prior JEPA planners often inherit that ranking from embedding geometry, typically latent Euclidean distance, which arises as a byproduct of representation learning rather than as a progress cost mined from the logs. We propose Temporal-Distance-JEPA, which retains the LeWM encoder--predictor backbone and mines a directed temporal cost from reward-free trajectories: same-trajectory step order supplies positive targets, cross-trajectory pairs act as heuristic negatives, and a rollout-consistency term matches the planner horizon. The mined supervision serves two roles: as the deployed planning cost when progress is topological, and as a representation signal that improves Euclidean planning when contact geometry dominates. Under locked evaluation, deploying the mined cost raises Two-Room success to 100.0% versus LeWM's 97.4%, while shared Euclidean planning on the same temporally trained checkpoint raises OGB-Cube by 14.2 points over LeWM and improves Push-T. Against LeWM and the concurrent RC-aux baseline under locked evaluation, Temporal-Distance-JEPA matches or exceeds both methods on every environment. Ablations show that the directed head, cross-trajectory negatives, and rollout consistency each contribute. Temporal-Distance-JEPA narrows the train--plan gap for JEPA world-model planners by discovering temporal progress structure in offline logs and co-designing cost form with plan-time deployment. Code is available at https://github.com/HKBU-KnowComp/Temporal-Distance-JEPA.</p>
@@ -1169,10 +1208,7 @@
                         <span class="paper-date">2026-07-29</span>
                     </div>
                                         <span class="paper-comment">📝 10 pages, 5 figures</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有潜在世界模型在长时域规划中会出现“上下文崩溃”问题，即不同动作序列下生成的未来状态高度相似，导致模型对动作不敏感，影响规划效果。&#10;&#10;🛠 **方法**：提出ActSWM，基于“转移分离原则”构建动作敏感的潜在世界模型，通过约束潜在轨迹保持动作差异，并确保每个局部转移的动作可恢复。&#10;&#10;✨ **主要贡献**：在Minecraft等开放世界游戏中，ActSWM在步进漂移分析、闭环长时域规划和跨游戏动作恢复任务中，均优于现有基线，显著提升长时域交互任务的成功率，并支持从离线游戏视频中恢复动作。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Latent world models support efficient model-predictive control by optimizing future control sequences in latent space and replanning in a receding-horizon manner. However, existing latent predictors often lack stable long-horizon rollout ability, and prediction accuracy alone does not ensure that rollouts remain responsive to the actions being planned. We identify Context Collapse, a failure mode in which autoregressive latent predictors maintain high similarity to future states while producing nearly indistinguishable futures under different action sequences. To address this issue, we propose ActSWM, an action-sensitive latent world model grounded in a transition-separation principle: a planning-useful latent dynamics model should keep alternative-action futures distinguishable and make the action associated with each local transition recoverable. Under this principle, action sensitivity is enforced as a constraint on latent rollouts rather than treated only as an auxiliary prediction target, encouraging predicted futures to preserve action-dependent differences over long horizons. Across step-drift analysis, closed-loop Minecraft planning, and cross-game local action recovery, ActSWM preserves larger action-dependent rollout gaps than existing baselines, improves task success in long-horizon interactive settings, and enables world-model-based action recovery from offline gameplay videos.</p>
@@ -1656,42 +1692,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Simulating deformable objects is essential for a wide range of robotic manipulation applications, yet accurately predicting their dynamics remains challenging. We propose Physics-Guided Residual Dynamics (PGRD), a hybrid simulation framework that combines the advantages of physics-based and learning-based approaches. Specifically, PGRD combines an optimizable spring-mass simulator as a backbone with a learned neural network that predicts residual corrections to the physics-based predictions. We adopt a velocity-based formulation to ensure stable simulation and a sliding-window transformer architecture to capture temporal dependencies. We show that PGRD produces more accurate results than both purely physics-based and learning-based methods on a set of diverse real-world deformable objects. We further demonstrate the utility of PGRD in two applications: manipulation planning via Model Predictive Control, including a language-conditioned setting with a generated goal image; and interactive simulation via action-conditioned video prediction by 3D Gaussian Splatting.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2601.10930v4" target="_blank" class="paper-title">Where to Touch, How to Contact: A Hierarchical RL-MPC Framework for Geometry-Aware Sim-to-Real Manipulation</a>
-                        <span class="paper-date">2026-07-15</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>A key challenge in contact-rich dexterous manipulation is the need to jointly reason over global geometry and nonsmooth contact dynamics. End-to-end policies bypass this complexity, but often require large amounts of data and transfer poorly from simulation to reality. We address the limitations with a simple insight: dexterous manipulation is inherently hierarchical--at a high level, a robot decides where to touch (geometry); at a low level it determines how to move the object through contact dynamics. Building on this insight, we propose a hierarchical RL--MPC framework in which a high-level reinforcement learning (RL) policy predicts a contact intention, a novel object-centric interface that specifies (i) an object-surface contact location and (ii) a post-contact object subgoal pose. Conditioned on the contact intention, a low-level contact-implicit model predictive control (MPC) optimizes local contact modes and real-time (re)plans through contact dynamics to generate robot actions that robustly move the object toward each subgoal. We evaluate the framework on non-prehensile tasks, including geometry-generalized pushing across diverse object shapes, pivoting/flipping-based object reorientation, and environment-assisted object repositioning. It achieves high success rate with substantially reduced data (10 times less than end-to-end baselines), highly robust performance, and zero-shot sim-to-real transfer.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.13348v1" target="_blank" class="paper-title">Safe Overtaking for Autonomous Racing Using Hierarchical Optimization and Learning-Based Control</a>
-                        <span class="paper-date">2026-07-15</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Autonomous racing overtaking requires balancing competitive performance with safety under nonlinear vehicle dynamics and real-time constraints. Model Predictive Control (MPC) combined with Control Barrier Functions (CBFs) provides a principled mechanism for certifying forward invariance of a safe set. However, commonly used fixed-decay discrete-time CBF formulations can become overly conservative in interactive racing scenarios, limiting overtaking performance and requiring manual tuning across track conditions. This paper proposes a hierarchical overtaking framework that explicitly separates maneuver-level decision making from safety-certified trajectory control, reducing conservatism while preserving safety. A high-level Mixed-Integer Quadratic Program (MIQP) resolves the combinatorial passing-side selection problem by selecting a feasible overtaking topology, while a nonlinear Frenet-frame MPC enforces vehicle dynamics and safety through embedded discrete-time CBF constraints. This decomposition isolates the combinatorial complexity of maneuver selection from the continuous trajectory optimization. To further mitigate the sensitivity of fixed-decay barrier constraints, a reinforcement learning policy adapts the discrete-time CBF decay parameter online, enabling context-dependent modulation of safety margins without directly controlling vehicle inputs. Simulation and scaled-hardware experiments show that no single fixed decay parameter achieves uniformly strong performance across tracks, whereas the adaptive strategy attains the highest aggregate success rate and consistently strong safety--performance trade-offs without per-track tuning, improving robustness to environment variation while maintaining safety constraint satisfaction in nominal operation.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.13319v1" target="_blank" class="paper-title">Adapting Generalist Vehicle Models for High-Speed MPC Across Terrains</a>
-                        <span class="paper-date">2026-07-14</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>High-speed off-road autonomy requires precise closed-loop control for a target vehicle while remaining robust across changing terrains. Recent forward kinodynamic (FKD) prediction foundation models suggest a promising path, starting from a generalist model and specializing it to the target platform. However, effective specialization remains challenging, as it often requires substantial real-world data, and models adapted to one setting can still overfit to specific terrains or driving regimes. We present OptCar (Optimized Car), a recipe for bridging the gap from generalist to specialist FKD models that preserves cross-terrain generalization while optimizing performance for a specific vehicle. $\texttt{OptCar}$ introduces a history-conditioned dynamics adaptation module that encodes recent state-action observations into a dynamics context token, and then fine-tunes the generalist model using limited real-world data together with targeted synthetic rollouts from environment-specific system identification. In closed-loop model predictive control (MPC) experiments across three terrains and an out-of-distribution cart-pulling task, the largest gains appear at 6~m/s, the highest speed evaluated and the regime in which slip dominates tracking error. On vegetation and dirt, the most slip-diverse terrain, OptCar reduces 6~m/s trajectory tracking error by roughly 55% relative to a fine-tuned AnyCar baseline, and remains the most accurate even when an unseen cart payload changes the dynamics. With only 5 minutes of real data per terrain, OptCar is competitive on road with a specialist trained on 30 minutes of road data, and substantially outperforms it once the terrain changes.</p>
                     </details>
                 </div>
             </div>

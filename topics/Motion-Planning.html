@@ -600,7 +600,7 @@
                 <a href="LLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
                     <span class="nav-label">LLM</span>
-                    <span class="nav-count">78</span>
+                    <span class="nav-count">79</span>
                 </a>
                 <a href="VLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f97316"></span>
@@ -675,7 +675,7 @@
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Kalman Filter</span>
-                    <span class="nav-count">46</span>
+                    <span class="nav-count">45</span>
                 </a>
                 <a href="Loop-Closure-Detection.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -695,7 +695,7 @@
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">78</span>
+                    <span class="nav-count">77</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -819,7 +819,7 @@
             <a href="LLM.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
                 <span class="nav-label">LLM</span>
-                <span class="nav-count">78</span>
+                <span class="nav-count">79</span>
             </a>
             <a href="VLM.html" class="nav-item">
                 <span class="nav-dot" style="background:#f97316"></span>
@@ -894,7 +894,7 @@
             <a href="Kalman-Filter.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Kalman Filter</span>
-                <span class="nav-count">46</span>
+                <span class="nav-count">45</span>
             </a>
             <a href="Loop-Closure-Detection.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -914,7 +914,7 @@
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">78</span>
+                <span class="nav-count">77</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -1030,6 +1030,51 @@
             <div class="paper-list">
                 <div class="paper-card">
                     <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.03159v1" target="_blank" class="paper-title">Accelerating Human-Aware Robot Trajectory Generation via Diffusion and Consistency Distillation</a>
+                        <span class="paper-date">2026-08-04</span>
+                    </div>
+                                        <span class="paper-comment">📝 8 pages, 4 figures</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在人机交互环境中，非冗余机械臂在末端位姿完全确定时，难以同时满足碰撞避免和自碰撞避免等运动学与安全约束，导致关节空间轨迹生成困难。&#10;&#10;🛠 **方法**：利用RRT和RRT*算法生成满足碰撞与自碰撞约束的轨迹数据集，训练扩散模型通过引导采样生成约束满足的轨迹；引入一致性蒸馏加速推理，并在损失函数中加入关节加权加加速度正则项以平滑轨迹。&#10;&#10;✨ **主要贡献**：一致性模型可在100毫秒内生成150条候选轨迹，保持高任务成功率，且加加速度正则化显著降低了关节和末端执行器的抖动，实现了实时且平滑的轨迹生成。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>This research proposes a constrained motion planning framework for robot manipulators in human-robot interaction (HRI). For a non-redundant manipulator with a fully specified end-effector pose, additional requirements such as collision avoidance and self-collision avoidance are difficult to handle as simple null-space secondary tasks. This limitation makes it challenging to generate feasible joint-space trajectories in HRI environments where safety and kinematic constraints must be considered simultaneously. To address this limitation, collision- and self-collision-aware trajectories are generated using Rapidly-exploring Random Tree (RRT) and RRT* algorithms, and the resulting dataset is used to train a diffusion model that generates constraint-satisfying trajectories through guided sampling. To reduce the inference time required for iterative diffusion sampling, consistency distillation is applied, and a joint-weighted jerk regularization term is incorporated into the loss function to promote smoother trajectories by penalizing abrupt changes in joint acceleration. Simulation results show that the consistency model generates 150 trajectory candidates in less than 100 ms, maintains a high episode success rate, and substantially reduces joint and end-effector jerk when jerk regularization is applied.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2605.19209v2" target="_blank" class="paper-title">Graph Neural Planning and Predictive Control for Multi-Robot Communication-Constrained Unlabeled Motion Planning</a>
+                        <span class="paper-date">2026-08-03</span>
+                    </div>
+                                        <span class="paper-comment">📝 8 pages, 6 figures, Accepted at the IEEE International Conference on Robotics and Automation (ICRA) 2026</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决多机器人系统中未标记运动规划问题，即在通信受限和动态可行性约束下，同时为机器人分配目标并生成安全轨迹。&#10;&#10;🛠 **方法**：提出分层框架，结合图注意力规划器（GATP）提供中间子目标，以及分散式非线性模型预测控制器（NMPC）在非线性动力学和驱动约束下保障安全。&#10;&#10;✨ **主要贡献**：通过注意力机制和最小通信需求，实现向更大机器人团队的泛化、对高达200毫秒通信延迟的鲁棒性，并在真实四旋翼实验中验证了分散式机载推理的可行性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>The multi-robot unlabeled motion planning problem of concurrently assigning robots to goals and generating safe trajectories is central in many collaborative tasks. Recent Graph Neural Network methods offer scalable decentralized solutions but rely on simplified dynamics and simulation environments, overlooking key challenges of real-world deployment such as dynamic feasibility and communication constraints. To address these gaps, we propose a hierarchical framework that combines a Graph ATtention Planner (GATP) with a decentralized Nonlinear Model Predictive Controller (NMPC). GATP provides intermediate subgoals through multi-robot cooperation, and the NMPC enforces safety under nonlinear dynamics and actuation constraints. We evaluate our framework in both simulation and real-world quadrotor experiments. Thanks to attention mechanisms and minimal communication requirements, we demonstrate improved generalization to larger teams, robustness to communication delays up to 200 ms and practical feasibility with decentralized on-board inference.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.02834v1" target="_blank" class="paper-title">Biconvex Optimization for Smooth Minimum-Time Trajectories around Convex Obstacles</a>
+                        <span class="paper-date">2026-08-03</span>
+                    </div>
+                                        <span class="paper-comment">📝 18 pages, 9 figures, 4 tables. Submitted to IEEE Transactions on Robotics. Project page: https://wernerpe.github.io/bmtp-website/ Code: https://github.com/wernerpe/pybmtp</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决在凸障碍物环境中，如何高效求解满足任意阶导数约束的最小时间运动规划问题，同时保证收敛性和鲁棒性。&#10;&#10;🛠 **方法**：提出一种双凸优化方法，通过变量替换将最小时间目标和导数约束凸化，并利用时变分离平面处理避障，将问题转化为双凸规划，通过交替优化分离平面和轨迹来求解。&#10;&#10;✨ **主要贡献**：该方法保证从简单无碰撞多边形曲线收敛，支持任意阶导数约束，能跳出局部极小值；实验表明在无人机导航和双臂卸箱任务中，计算速度与最先进方法相当，但适用问题更广且对初始化更鲁棒。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>We present a biconvex approach for minimum-time motion planning around convex obstacles that is guaranteed to converge, is anytime, and supports derivative constraints to arbitrary order. We jointly convexify the minimum-time objective and all derivative constraints through a change of variables, and handle collision avoidance via time-varying separating planes, reducing the problem to a biconvex program. This program is solved by alternating between computing maximum-margin separating planes and optimizing the trajectory. By only adding planes for obstacles that the current iterate collides with, the trajectory can jump around obstacles and escape local minima. The method is guaranteed to converge starting from a simple collision-free polygonal curve. In our experiments on drone navigation and dual-arm bin unloading, we find that the proposed method reliably produces high-quality trajectories with computation times comparable to state-of-the-art decomposition-based motion planners, while handling a larger class of problems and being substantially more robust to bad initialization. Project page:https://wernerpe.github.io/bmtp-website/</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
                         <a href="https://arxiv.org/abs/2506.03270v3" target="_blank" class="paper-title">Grounded Vision-Language Interpreter for Long-Horizon Bimanual Task and Motion Planning</a>
                         <span class="paper-date">2026-08-03</span>
                     </div>
@@ -1139,10 +1184,7 @@
                         <span class="paper-date">2026-07-31</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决移动机械臂在人类环境中自主穿越推门和拉门时，需要协调移动底盘与机械臂运动以生成动态可行且无碰撞轨迹的问题。&#10;&#10;🛠 **方法**：提出一种基于非线性模型预测控制（MPC）的运动规划框架，将机器人与门建模为耦合动力学系统，并通过惩罚约束确保操作可行性，避免在规划器中显式建模机械臂运动学。&#10;&#10;✨ **主要贡献**：通过仿真和硬件实验验证，该方法能成功规划穿越门洞的可行轨迹，无需复杂臂运动学建模，提升了规划效率与实用性。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Navigating doorways is a fundamental capability for mobile manipulators operating in human environments, requiring coordinated motion between the mobile base and manipulator arm. This paper presents a motion planning framework that generates dynamically feasible and collision-free trajectories for autonomously opening and traversing both push and pull doors. The proposed method formulates the robot and door as a coupled dynamical system within a nonlinear Model Predictive Control (MPC) optimization framework. Manipulation feasibility is enforced through a penalty-based constraint, avoiding explicit arm kinematic modeling in the planner. Simulations and a hardware experiment demonstrate that the approach successfully plans feasible trajectories for door traversal.</p>
@@ -1154,10 +1196,7 @@
                         <span class="paper-date">2026-07-31</span>
                     </div>
                                         <span class="paper-comment">📝 8 pages, 8 figures. Accepted for publication in IEEE Robotics and Automation Letters (RA-L)</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有安全走廊生成方法依赖预定义参考路径，导致走廊几何形状受限，且无法充分探索不同的同伦类别，影响机器人运动规划的灵活性与安全性。&#10;&#10;🛠 **方法**：提出一种无需参考路径的走廊生成框架，基于凸集图（GCS），直接生成凸集序列作为走廊；扩展基于可见性的变形方法以比较和融合走廊；并开发自适应多尺度GCS，结合采样细尺度图与可见性粗尺度图，支持局部更新与全局探索。&#10;&#10;✨ **主要贡献**：实现了无偏见的走廊结构生成，能保留多种同伦路径；自适应多尺度机制在环境变化时无需重建全图；数值实验显示高效建图、稳定轨迹性能及更短时长的同伦感知轨迹；地面与空中机器人硬件实验验证了其在未知障碍物下的实用性。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Generating safe corridors is essential for collision-free robotic motion planning, yet most existing methods rely on predefined reference paths, which bias corridor geometry and implicitly limit the homotopy classes that can be explored. We propose a reference-path-free corridor generation framework on graphs of convex sets (GCS) that constructs corridors directly as sequences of convex sets, allowing corridor structure to emerge from the free-space representation rather than from a guiding path. To reason about similarity among corridors, we extend visibility-based deformation from paths to convex-set sequences, enabling the fusion of topologically redundant corridors while preserving distinct alternatives. To overcome the limited adaptability of existing GCS methods based on static global decompositions, we further develop an adaptive multi-scale GCS, in which a sampling-based fine-scale graph supports localized updates and a visibility-based coarse-scale graph enables compact global exploration. The two levels maintain topological consistency, allowing incremental updates without full graph reconstruction under environmental uncertainty. Numerical experiments characterize GCS construction, corridor generation, homotopy-aware exploration, and local updates, showing efficient graph construction, stable trajectory-level performance, and shorter-duration homotopy-aware trajectories than existing baselines. Hardware experiments on ground and aerial robots, including deployment with onboard localization, further validate the framework under translated and previously unknown obstacles.</p>
@@ -1169,10 +1208,7 @@
                         <span class="paper-date">2026-07-31</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：面向大型移动机器人的视觉目标到达控制，解决强化学习探索式训练难以安全部署的问题。&#10;&#10;🛠 **方法**：提出分层框架，包括立体视觉位姿估计、带约束的RL运动规划、基于SCG训练的DNN前馈映射与对数障碍自适应鲁棒控制，以及安全监督与返回逻辑。&#10;&#10;✨ **主要贡献**：在6000 kg机器人上实现3–4 cm终点RMSE，优于两种RAC基线，并成功实现故障注入后的自主恢复，验证了分层框架的鲁棒性与实用性。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Reinforcement learning (RL) has strong potential in robotics, but exploration-based training complicates safe deployment on large-scale robots. For such applications, this paper proposes a novel hierarchical goal-reaching framework that integrates stereo visual pose estimation, constrained RL-based motion planning, actuator-level robust adaptive control (RAC), and supervisory safe-return logic. Stereo visual localization is used as the real-time pose-estimation interface with loop closing, map fusion, and relocalization. The RL planner generates smooth, feasible goal-reaching references using a problem-specific reward structure and motion constraints that promote goal progress, reduce oscillations, preserve vision-consistent smoothness, and respect the mechanical limits of a heavy skid-steered robot. At the actuation layer, a scaled conjugate-gradient (SCG)-trained deep neural network (DNN) approximates a quasi-static actuator feedforward map from wheel-speed data to nominal control input. This feedforward map is combined with a logarithmic-barrier-based RAC to compensate for residual modeling errors, slip-induced disturbances, and bounded mismatch between the nominal map and real actuator response. For the actuator-level wheel-tracking subsystem, uniformly ultimately bounded tracking with exponential convergence to a disturbance-dependent residual set is established under bounded uncertainty. A logarithmic safety supervisor monitors execution, detects unsafe operating conditions, including faults and localization inconsistencies, and switches the robot to safe-return mode. Experiments on a 6000 kg robot over asphalt and loose-soil terrain demonstrate approximately 3--4 cm final-position root mean square error (RMSE), accurate tracking of RL-generated commands, improved actuator-level performance over two RAC baselines, and successful autonomous recovery after fault injection.</p>
@@ -1944,42 +1980,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Long-horizon manipulation has been a long-standing challenge in the robotics community. We propose ReinforceGen, a system that combines task decomposition, data generation, imitation learning, and motion planning to form an initial solution, and improves each component through reinforcement-learning-based fine-tuning. ReinforceGen first segments the task into multiple localized skills, which are connected through motion planning. The skills and motion planning targets are trained with imitation learning on a dataset generated from 10 human demonstrations, and then fine-tuned through online adaptation and reinforcement learning. When benchmarked on the Robosuite dataset, ReinforceGen reaches 80% success rate on all tasks with visuomotor controls in the highest reset range setting. Additional ablation studies show that our fine-tuning approaches contribute to an 89% average performance increase. Finally, ReinforceGen demonstrates significant improvement through fine-tuning in our real-world evaluations. More results and videos are available at https://reinforcegen.github.io.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2405.03411v4" target="_blank" class="paper-title">Greedy Heuristics for Sampling-Based Motion Planning in High-Dimensional State Spaces</a>
-                        <span class="paper-date">2026-07-10</span>
-                    </div>
-                                        <span class="paper-comment">📝 Submitted to the Autonomous Robots journal</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Informed sampling techniques accelerate the convergence of sampling-based motion planners by biasing sampling toward regions of the state space that are most likely to yield better solutions. However, when the current solution path contains redundant or tortuous segments, the resulting informed subset may remain unnecessarily large, slowing convergence. Our prior work addressed this issue by introducing the greedy informed set, which reduces the sampling region based on the maximum heuristic cost along the current solution path. In this article, we formally characterize the behavior of the greedy informed set within Rapidly-exploring Random Tree (RRT*)-like planners and analyze how greedy sampling affects exploration and asymptotic optimality. We then present Greedy RRT* (G-RRT*), a bi-directional anytime variant of RRT* that leverages the greedy informed set to focus sampling in the most promising regions of the search space. Experiments on abstract planning benchmarks, manipulation tasks from the MotionBenchMaker dataset, and a dual-arm Barrett WAM problem demonstrate that G-RRT* rapidly finds initial solutions and converges asymptotically to optimal paths, outperforming state-of-the-art sampling-based planners.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2510.18999v3" target="_blank" class="paper-title">OREN: Octree Residual Network for Real-Time Euclidean Signed Distance Mapping</a>
-                        <span class="paper-date">2026-07-08</span>
-                    </div>
-                                        <span class="paper-comment">📝 Accepted to IEEE/RSJ International Conference Intelligent Robots & Systems (IROS) 2026</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Reconstructing signed distance functions (SDFs) from point cloud data benefits many robot autonomy capabilities, including localization, mapping, motion planning, and control. Methods that support online and large-scale SDF reconstruction often rely on discrete volumetric data structures, which affects the continuity and differentiability of the SDF estimates. Neural network methods have demonstrated high-fidelity differentiable SDF reconstruction but they tend to be less efficient, experience catastrophic forgetting and memory limitations in large environments, and are often restricted to truncated SDF. This work proposes OREN, a hybrid method that combines an explicit prior from octree interpolation with an implicit residual from neural network regression. Our method achieves non-truncated (Euclidean) SDF reconstruction with computational and memory efficiency comparable to volumetric methods and differentiability and accuracy comparable to neural network methods. Extensive experiments demonstrate that OREN outperforms the state of the art in terms of accuracy and efficiency, providing a scalable solution for downstream tasks in robotics and computer vision.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.07844v1" target="_blank" class="paper-title">Shift & Drift: A Zero-Shot Benchmark for Generalizable and Robust Autonomous Driving Motion Planning</a>
-                        <span class="paper-date">2026-07-08</span>
-                    </div>
-                                        <span class="paper-comment">📝 Accepted at 2026 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2026)</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>While closed-loop motion planners trained on large-scale, object-level datasets, e.g., nuPlan, demonstrate strong in-distribution (ID) performance, their generalization to novel urban topologies and recovery mechanisms following execution perturbations remain under-explored. To address this, we present Shift & Drift, a novel dual-track benchmark designed to rigorously stress-test motion planners across two critical axes of distribution shift: (1) The Semantic Shift Track leverages a novel conversion pipeline that transforms the aerial, DeepScenario Open 3D dataset into the nuPlan simulation framework. This enables zero-shot evaluation of planners trained on North American and Singaporean data against 1,182 scenarios spanning four German cities and the US city of San Francisco featuring dense pedestrian-cyclist interactions. (2) The State-Distribution Drift Track injects stochastic perturbations into the ego vehicle's dynamics to quantify robustness against compounding execution errors. Based on this, we systematically evaluate the failure modes of diverse planning paradigms under semantic and state-distribution shifts. While imitation learning methods achieve high scores in ID benchmarks, they exhibit significant failures under semantic shift, particularly in pedestrian-dense environments, and suffer from persistent drift when subjected to temporally correlated actuation noise. In contrast, the evaluated reinforcement-learning-based planner demonstrates more graceful degradation, maintaining higher safety and progress metrics across both tracks. Our findings reveal an empirical trade-off between imitation fidelity and closed-loop resilience, providing the community with a rigorous benchmark to evaluate progress toward reliable deployment.</p>
                     </details>
                 </div>
             </div>

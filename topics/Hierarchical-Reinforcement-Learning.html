@@ -600,7 +600,7 @@
                 <a href="LLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
                     <span class="nav-label">LLM</span>
-                    <span class="nav-count">78</span>
+                    <span class="nav-count">79</span>
                 </a>
                 <a href="VLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f97316"></span>
@@ -675,7 +675,7 @@
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Kalman Filter</span>
-                    <span class="nav-count">46</span>
+                    <span class="nav-count">45</span>
                 </a>
                 <a href="Loop-Closure-Detection.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -695,7 +695,7 @@
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">78</span>
+                    <span class="nav-count">77</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -819,7 +819,7 @@
             <a href="LLM.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
                 <span class="nav-label">LLM</span>
-                <span class="nav-count">78</span>
+                <span class="nav-count">79</span>
             </a>
             <a href="VLM.html" class="nav-item">
                 <span class="nav-dot" style="background:#f97316"></span>
@@ -894,7 +894,7 @@
             <a href="Kalman-Filter.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Kalman Filter</span>
-                <span class="nav-count">46</span>
+                <span class="nav-count">45</span>
             </a>
             <a href="Loop-Closure-Detection.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -914,7 +914,7 @@
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">78</span>
+                <span class="nav-count">77</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -1028,6 +1028,36 @@
                 <span class="topic-count">79 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2602.12913v2" target="_blank" class="paper-title">Hierarchical Reinforcement Learning for Cooperative Air-Ground Delivery in Urban System</a>
+                        <span class="paper-date">2026-08-04</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="好的，作为一名人工智能研究与学术论文分析专家，我将严格按照您的要求，对这篇题为《Hierarchical Reinforcement Learning for Cooperative Air-Ground Delivery in Urban System》的论文进行详细的中文解读。&#10;&#10;---&#10;&#10;## 0. 概览（Concise Summary）&#10;&#10;- **主题（Topic）**：城市物流系统中的协同空地配送调度问题。具体涉及使用无人机（UAVs）和地面运输车（Carriers）的异构车队进行订单分配。&#10;- **问题（Problem）**：现有方法面临两大挑战：1）**异构性差距**：无人机和地面车辆在移动逻辑、能量约束和距离度量上存在根本差异，统一建模会导致次优决策；2）**可扩展性瓶颈**：当车队规模扩大时，联合动作空间呈指数级增长，导致计算效率低下，难以实时响应。&#10;- **方法（Method）**：提出一个名为 **HRL4AG** 的**分层强化学习（HRL）** 框架。该框架包含一个高层级的**管理者（Manager）** 代理，负责将订单分配给无人机车队或地面车队，以分解动作空间；以及多个低层级的、针对特定模式的**工人（Worker）** 代理，负责在各自的车队内进行精细的订单-车辆匹配。&#10;- **创新（Innovation）**：1）首次提出一个从调度到执行的完整异构协同空地配送框架；2）设计了分层决策结构，并引入了一种新颖的**内部奖励机制**，以解决稀疏奖励环境下的信用分配问题，指导分层策略学习；3）构建了基于轨迹的**奖励塑形（Reward Shaping）** 函数，提供密集的反馈信号。&#10;- **意义（Significance）**：该方法在真实数据集上显著提升了配送成功率（最高提升26%），同时实现了**80倍的计算效率提升**，为大规模、实时响应的城市物流系统提供了可行且高效的解决方案。&#10;- **一句话总结**：本文通过设计一个带有内部激励机制的分层强化学习框架，有效解决了异构车队协同配送中的异构性差距和可扩展性瓶颈，实现了高效且可扩展的智能调度。&#10;&#10;## 1. 研究动机（Motivation）&#10;&#10;随着按需物流的快速发展，协同空地配送系统（结合无人机和地面车辆）因其互补优势而备受关注。无人机速度快、不受地面交通影响，但受限于电池和载重；地面车辆续航长、载重大，但受制于道路拥堵。如何高效调度这两种异构资源，是一个关键的**序列决策问题**。&#10;&#10;然而，现有方法面临两个核心挑战：&#10;&#10;1.  **异构性差距（Heterogeneity Gap）**：如图1(b)所示，大多数基于强化学习（RL）的调度方法将所有车辆视为同质，使用统一的状态表示和策略网络。但无人机和地面车辆在移动逻辑（3D飞行 vs. 2D路网）、能量约束（电池 vs. 燃油）和距离度量（欧几里得距离 vs. 路网距离）上存在根本差异。统一建模无法捕捉这些特性，可能导致次优决策，例如将长距离订单分配给电量不足的无人机，或将时效性订单分配给拥堵区域的车辆。&#10;&#10;2.  **可扩展性瓶颈（Scalability Bottleneck）**：如图1(c)所示，现实物流中车辆和订单数量巨大。传统的集中式RL架构面临动作空间随车辆数量指数级爆炸的问题。多智能体RL（MARL）方法受限于其扁平化的协调结构，也难以管理大规模异构车队联合动作空间的组合爆炸。这导致训练收敛慢、推理延迟高，无法满足大规模实时响应的需求。&#10;&#10;因此，本文的研究动机是设计一种能够同时解决**异构性**和**可扩展性**两大挑战的智能调度框架。&#10;&#10;## 2. 创新点（Innovation）&#10;&#10;本文的关键创新点在于提出了 **HRL4AG** 框架，其核心创新包括：&#10;&#10;1.  **分层决策架构（Hierarchical Decision-Making Architecture）**：引入一个高层级的**管理者（Manager）** 代理和低层级的**工人（Worker）** 代理。管理者负责将订单分解到无人机或地面车队，从而将巨大的联合动作空间分解为两个更小的子空间，有效解决了**可扩展性瓶颈**。这比传统的扁平化RL或MARL结构更高效。&#10;&#10;2.  **模式特定的工人代理（Mode-Specific Worker Agents）**：针对**异构性差距**，为无人机和地面车辆分别设计了独立的工人代理。这些工人代理使用不同的嵌入层来编码各自异构的状态信息（如无人机的电池电量、地面车辆的路网约束）和距离度量。这使得模型能够学习针对每种运输模式的专门化评分函数，从而做出更精准的匹配决策。&#10;&#10;3.  **内部奖励机制（Internal Reward Mechanism）**：为了解决分层强化学习中常见的**信用分配问题**（即工人代理如何知道自己的行为是否符合管理者的意图），设计了一种新颖的内部奖励机制。管理者不仅输出决策，还输出一个“目标”（即选择哪个车队），工人代理的奖励由两部分组成：共享的全局奖励（`r_ext`）和基于其执行与管理目标一致性的内部奖励（`r_int`）。这极大地稳定了双层策略的训练。&#10;&#10;4.  **轨迹驱动的奖励塑形（Trajectory-Driven Reward Shaping）**：为了缓解长周期配送任务中奖励稀疏的问题，设计了一个密集的奖励函数。该函数不仅奖励最终送达，还奖励过程中的里程碑事件（如匹配成功、取货成功），并加入了执行率和时间衰减项，为代理提供了更丰富的学习信号，引导其快速收敛。&#10;&#10;## 3. 主要内容（Main Content）【重点】&#10;&#10;### 3.1 设计架构与方法&#10;&#10;HRL4AG框架的整体架构如图3所示，包含三个紧密耦合的模块：&#10;&#10;1.  **异构状态编码（Heterogeneous State Encoding）**：该模块使用三个并行的、不带位置编码的Transformer编码器，分别处理无人机、地面车辆和订单的原始特征。这样做的目的是提取**排列不变性**的特征，即特征只依赖于实体属性，而不依赖于输入顺序。然后，将这些特征与全局系统上下文（`G_t`）融合，为不同层级构建不同的输入表示。&#10;&#10;2.  **管理者与工人模块（Manager &amp; Worker Module）**：这是核心决策模块。&#10;    -   **管理者（Manager）**：基于全局状态表示（`Z_o_t`），通过一个策略网络（`π_m`）为每个活跃订单输出一个二元选择（`g_o_t`），即该订单应分配给无人机车队还是地面车队。这相当于一个高层级的目标。&#10;    -   **工人（Worker）**：基于管理者的目标（`g_o_t`）和模式特定的上下文表示（`U_o_t` 或 `C_o_t`），通过一个门控机制融合信息，然后为每个可行的订单-车辆对（O-D pair）输出一个连续分数（`a_t,(o,v)`）。最终，系统采用贪心策略选择分数最高的配对进行分配。&#10;&#10;3.  **轨迹驱动的奖励塑形（Trajectory-driven Reward Shaping）**：该模块构建一个密集的奖励信号，以引导代理学习。它通过评估订单生命周期中的中间里程碑（如匹配、取货）和执行效率，确保策略稳定地向全局目标收敛。&#10;&#10;### 3.2 关键算法与数学推导&#10;&#10;**1. 问题形式化（ILP模型）**：&#10;&#10;目标函数是最大化总配送订单数：&#10;$$P_{opt}: \max \sum_{p \in P} \left( \sum_{u \in U} x_{p,u} + \sum_{v \in V} y_{p,v} \right)$$&#10;&#10;约束条件包括：&#10;- $C1$: 决策变量为二进制。&#10;- $C2$: 每个订单最多由一个车辆服务。&#10;- $C3, C4$: 分配必须可行，即车辆有能力完成订单。对于无人机，还需满足**安全返航能量约束**：&#10;$$E_{curr}^u \ge \eta \cdot (d(loc_u, loc_p) + d(loc_p, C_{nearest}))$$&#10;&#10;**2. 分层策略网络**：&#10;&#10;- **管理者策略**：基于全局表示 `Z_o_t`，输出模式选择分布。&#10;  $$h_t^o = MLP_m(LN(Z_t^o)), \quad g_t^o = Softmax(h_t^o)$$&#10;&#10;- **工人策略**：融合模式特定表示和管理者目标，输出配对分数。&#10;  $$q_t^o = ReLU(\phi(U_t^o, C_t^o) \oplus \psi(g_t^o))$$&#10;  $$a_{t,(o,v)} = \tanh(MLP_w(q_t^o))$$&#10;&#10;**3. 混合奖励机制**：&#10;&#10;工人代理的奖励由外部奖励和内部奖励组成：&#10;$$r_t^w = r_t^{ext} + \alpha \cdot r_t^{int}$$&#10;其中，`r_t^{int}` 衡量工人执行与管理目标的一致性。&#10;&#10;**4. 轨迹驱动的奖励塑形**：&#10;&#10;外部奖励 `r_t^{ext}` 被设计为密集信号，包含完成梯度、执行率和时间衰减：&#10;$$r_t^{ext} = (\lambda_m N_t^m + \lambda_p N_t^p + \lambda_d N_t^d) + \lambda_r \frac{N_t^p + N_t^d}{\sum_{i=0}^{t} N_i^m} + \lambda_t (1 - \frac{t}{T_{max}})$$&#10;&#10;**5. 分层优化过程**：&#10;&#10;使用DDPG算法进行训练，管理者和工人各自拥有独立的Actor-Critic网络。Critic网络通过最小化均方误差（MSE）损失来更新：&#10;$$\mathcal{L}(\theta^Q) = \mathbb{E}_D \left[ (y_t - Q(s_t, a_t | \theta^Q))^2 \right]$$&#10;其中，$y_t = r_t + \gamma Q'(s_{t+1}, \mu'(s_{t+1}) | \theta^{Q'})$。&#10;&#10;Actor网络通过确定性策略梯度来更新：&#10;$$\nabla_{\theta^\mu} J \approx \mathbb{E}_{s_t \sim D} \left[ \nabla_a Q(s_t, a | \theta^Q) |_{a=\mu(s_t)} \nabla_{\theta^\mu} \mu(s_t | \theta^\mu) \right]$$&#10;&#10;### 3.3 模型、训练与数据集&#10;&#10;- **模型**：HRL4AG模型由多个神经网络组成，包括用于状态编码的Transformer、管理者的MLP策略网络、工人的MLP策略网络，以及各自的Critic网络。&#10;- **训练**：使用DDPG算法进行端到端训练。所有代理共享一个经验回放池 `D`，存储转移元组 `(s_t, a_m_t, a_w_t, r_ext_t, r_int_t, s_{t+1})`。采用软更新（soft update）目标网络参数以保证训练稳定性。&#10;- **数据集**：使用两个真实世界数据集：&#10;    - **上海数据集**：包含30天、20,664个订单，覆盖6400平方公里区域，订单稀疏。&#10;    - **成都数据集**：包含6天、96,376个订单，订单密集。&#10;    两个数据集都包含了订单的取货点、送货点、时间戳，并映射到了真实路网节点上。&#10;&#10;### 3.4 实验设置与结果&#10;&#10;- **基线方法**：对比了多种启发式算法（B&amp;B, Greedy, HGR）和RL算法（D2SN, DECO, GRC, DDPG-JOTOCC）。&#10;- **评估指标**：取货数（PN）、送达数（DN）和执行时间（ET）。&#10;- **主要结果（RQ1）**：如表2所示，HRL4AG在所有设置下均显著优于所有基线。&#10;    - **性能提升**：在上海数据集上，送达数（DN）相比第二名提升约18%-28%；在成都数据集上提升约20%-25%。&#10;    - **效率提升**：HRL4AG的执行时间（ET）极低（&lt;1秒），而其他RL基线需要数秒甚至数十秒，实现了**80倍的计算效率提升**。这证明了分层结构在解决可扩展性瓶颈上的巨大优势。&#10;- **消融实验（RQ2）**：如图4所示，移除分层结构（w/o Hie）、内部奖励（w/o IR）或奖励塑形（w/o RS）都会导致性能显著下降，验证了每个关键组件的必要性。&#10;- **模式利用分析（RQ3）**：如图5所示，HRL4AG优于纯无人机或纯地面车辆的方案，证明了协同的必要性。HRL4AG能智能地将短途、时效性强的订单分配给无人机，将长途、重载订单分配给地面车辆，实现了优势互补。&#10;- **案例研究（RQ4）**：如图6所示，通过可视化平台直观展示了HRL4AG相比其他方法在决策质量和效率上的优势。&#10;&#10;### 3.5 技术细节&#10;&#10;- **动作屏蔽（Action Masking）**：为了处理动态变化的动作空间，采用动作屏蔽机制，将不可行的订单-车辆对的分数设为 `-∞`，确保模型只考虑有效动作。&#10;- **门控机制（Gating Mechanism）**：工人代理使用门控机制（公式6）将管理者的高层目标（`g_t^o`）融合到车辆特征中，使低层决策能感知高层意图。&#10;- **安全返航约束**：对于无人机，系统强制执行一个关键约束：只有当无人机当前电量足以支持“当前位置 -&gt; 取货点 -&gt; 送货点 -&gt; 最近充电站”的完整回路时，该订单-无人机配对才被认为是可行的。这确保了任务安全。&#10;- **充电策略**：无人机完成任务后，如果电量低于安全阈值（如40%），会被强制送往最近的充电站充电，否则才变为空闲状态。&#10;&#10;## 4. 意义与影响（Significance and Impact）&#10;&#10;- **解决的问题与贡献**：&#10;    1.  **理论贡献**：首次将分层强化学习（HRL）成功应用于异构协同空地配送问题，并针对该问题的特有挑战（异构性、可扩展性）设计了有效的解决方案（模式特定工人、内部奖励机制）。&#10;    2.  **实践贡献**：提出了一个从理论到部署的完整框架，包括状态表示、决策流程、奖励设计和优化算法。实验证明其在真实数据上效果显著，且计算效率极高，具备大规模部署的潜力。&#10;    3.  **方法论贡献**：提出的内部奖励机制和轨迹驱动奖励塑形方法，为解决分层RL中的信用分配和稀疏奖励问题提供了新的思路，可推广到其他类似的协同任务中。&#10;&#10;- **对未来研究/应用的影响**：&#10;    - **应用层面**：为城市物流公司（如美团、京东、亚马逊）提供了一种高效、可扩展的智能调度方案，有望显著提升配送效率、降低成本，并推动无人机配送的商业化落地。&#10;    - **研究层面**：启发了后续研究在更复杂的异构多智能体系统（如空地协同、海陆空协同）中应用分层决策思想。其内部奖励机制也为解决多智能体系统中的协调问题提供了新范式。&#10;&#10;- **局限与开放问题**（作者未明确提及，但可推断）：&#10;    - **动态环境适应性**：模型假设了相对静态的环境（如固定的充电站位置、已知的路网）。未来工作可考虑更动态的场景，如充电站排队、实时交通拥堵变化、天气影响等。&#10;    - **模型泛化性**：模型在特定城市数据集上训练，其在不同城市规模、路网结构和订单分布下的泛化能力有待进一步验证。&#10;    - **公平性与鲁棒性**：模型目标是最大化总配送量，可能忽略了偏远地区或低价值订单的服务公平性。此外，模型对传感器噪声或通信延迟的鲁棒性也需要研究。&#10;&#10;## 5. 澄清与简化（Clarifications and Simplifications）&#10;&#10;- **分层强化学习（HRL）的类比**：可以把HRL4AG想象成一个大型物流公司的运作方式。&#10;    - **管理者（Manager）** 就像公司的**调度总监**。他/她不会去管具体哪个司机去送哪个包裹，而是根据全局情况（如哪个区域订单多、哪个区域交通堵）决定：“这批订单交给无人机部门处理，那批订单交给地面车队处理。” 这大大简化了决策的复杂性。&#10;    - **工人（Worker）** 就像**无人机部门主管**和**地面车队主管**。他们收到总监的指令后，会根据自己的专业知识（无人机主管知道每架无人机的电量和位置，地面主管知道每辆车的路线和拥堵情况），在各自的部门内部进行最优的订单-车辆匹配。&#10;&#10;- **内部奖励机制（Internal Reward）的类比**：这就像总监给部门主管的**绩效考核**。&#10;    - 总监说：“这批订单交给无人机部门。” 如果无人机主管真的用无人机完成了任务，总监就会给这个主管**额外的奖金**（正内部奖励）。如果主管不听指挥，非要用地面车去送，即使最后也送到了，但因为没有遵循总监的全局策略，主管就拿不到这笔奖金。这个机制确保了低层主管的行为与高层的战略目标保持一致。&#10;&#10;- **奖励塑形（Reward Shaping）的类比**：这就像教一个孩子学走路。&#10;    - 如果只在孩子最终能独立行走100米时才给奖励（稀疏奖励），孩子可能很久都学不会。奖励塑形就是**分解目标**：孩子能站起来就给一个小红花，能迈出一步再给一个，能走三步再给一个……这样，孩子每一步都能得到反馈，学习速度会快得多。HRL4AG的奖励函数就是这样，不仅奖励最终送达，还奖励匹配成功、取货成功等中间步骤。&#10;&#10;## 6. 补充说明（Additional Notes）&#10;&#10;- **相关工作关联**：论文在“相关工作”部分将现有研究分为**交互式配送**和**并行配送**。HRL4AG属于后者，即订单被独立分配给无人机或地面车辆，两者在执行过程中没有物理交互。这避免了交互式配送中复杂的同步和协调问题，更适合大规模部署。论文指出，现有并行配送方法多使用简化的环境假设（如忽略路网约束），而HRL4AG则更贴近现实。&#10;&#10;- **最重要的图表**：&#10;    - **图1**：清晰地展示了研究动机，即协同配送的互补优势（a）以及面临的两个核心挑战：异构性差距（b）和可扩展性瓶颈（c）。&#10;    - **图3**：是论文的核心，完整展示了HRL4AG的架构，包括异构状态编码、管理者-工人模块和奖励塑形模块，是理解方法的关键。&#10;    - **表2**：是核心实验结果，直观地展示了">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Cooperative air-ground delivery has emerged as a promising logistics paradigm by leveraging the complementary strengths of UAVs and ground carriers. However, effective dispatching in such heterogeneous systems faces two critical challenges: i) the heterogeneity between flight and road dynamics, ii) the scalability bottleneck raised by the exponential decision variables in large-scale fleets. To address these challenges, we propose HRL4AG, a Hierarchical Reinforcement Learning framework for cooperative Air-Ground delivery. Specifically, HRL4AG employs a high-level manager to tackle the scalability bottleneck by decomposing the joint action space, and mode-specific workers that encode distinct flight and road dynamics to address the heterogeneity. Furthermore, a novel internal reward mechanism is designed to guide the hierarchical policy learning, addressing the credit assignment problem in sparse-reward settings. Extensive experiments on two real-world datasets and an evaluation platform demonstrate that HRL4AG significantly outperforms state-of-the-art baselines, improving the delivery success rate by up to 26% while achieving an 80-fold increase in computational efficiency.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.02993v1" target="_blank" class="paper-title">Neurosymbolic Reasoning with Incremental Knowledge for Sample Efficient Hierarchical Reinforcement Learning</a>
+                        <span class="paper-date">2026-08-04</span>
+                    </div>
+                                        <span class="paper-comment">📝 Published in ECML-PKDD 2026</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：标准分层强化学习（HRL）在稀疏奖励和长时程推理任务中样本效率低下，因为其编码的知识固定且不可更新，无法利用探索过程中逐步获得的增量知识。&#10;&#10;🛠 **方法**：提出神经符号HRL框架（InK），高层符号组件基于可更新的增量知识表示执行符号规划（如D*算法），低层神经模块通过奖励塑形学习目标条件运动原语；同时开发信念世界树搜索（BWTS）以利用先验知识进行最优符号规划。&#10;&#10;✨ **主要贡献**：在导航任务中验证了增量知识能显著提升样本效率，并提供了可复现的代码实现（https://github.com/CPS-research-group/ink_bwts）。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>(Flat) Reinforcement Learning (RL) agents face significant challenges in environments with sparse rewards that require long-horizon reasoning. A compelling approach to improve sample efficiency is to incorporate knowledge into learning and decision-making. In standard Hierarchical RL (HRL), knowledge is encoded in a fixed, non-updatable form, such as architectural choices, and remains unchanged throughout learning. With fixed HRL, reasoning with incremental knowledge learned during exploration is impractical before sufficient environmental knowledge is acquired, leading to poor sample efficiency. In this work, we propose neurosymbolic HRL with {\em Incremental Knowledge (InK)}: symbolic high-level components perform {\em symbolic planning} (e.g. using $D^*$) on an updatable representation of current InK, while low-level goal-conditioned neural modules learn motion primitives through experience using reward shaping. Experiments on navigation tasks demonstrate that incorporating InK substantially improves sample efficiency. Additionally, to perform {\em optimal} symbolic planning given {\em prior} knowledge about the world, we develop Belief World Tree Search. The code is available at https://github.com/CPS-research-group/ink_bwts.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2607.17143v2" target="_blank" class="paper-title">EdgeCoInfer: Hierarchical Collaborative Inference for On-Device Multimodal Large Models</a>
@@ -1154,10 +1184,7 @@
                         <span class="paper-date">2026-07-21</span>
                     </div>
                                         <span class="paper-comment">📝 Manuscript accepted to the Eighteenth Workshop on Adaptive and Learning Agents (ALA), at the 25th International Conference of Autonomous Agents and Multi Agent Systems 2026</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：分层强化学习中高层智能体因稀疏延迟奖励和依赖低层执行能力，导致子目标选择不稳定，难以应对长时域复杂任务。&#10;&#10;🛠 **方法**：提出基于粗粒度动力学的内在动机方法，通过混合密度网络建模多步聚合环境转移的预测不确定性，并以此生成密集奖励引导高层策略。&#10;&#10;✨ **主要贡献**：首次利用粗粒度动力学不确定性实现风险规避的子目标选择，在非平稳长时域环境中显著优于现有分层强化学习方法。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Hierarchical Reinforcement Learning (HRL) intends to separate strategic planning from primitive execution. It has been widely successful in solving long-horizon and complex tasks, where flat-RL algorithms have difficulty in learning. However, while the low-level agent in HRL benefits from dense feedback and abundant trial opportunities, the high-level agent receives sparse, delayed feedback from the environment and its performance depends on the low-level execution capability. In this paper, we study whether subgoal selection by the high-level agent can be performed more strategically, by providing it with dynamics-aware intrinsic motivation. Since motivation based on primitive transition dynamics would require broad coverage of the state-action space, we propose to use coarse dynamics, i.e., environment transitions aggregated over multiple steps at the temporal scale at which the high-level agent operates. This approach stabilizes the high-level policy by learning to minimize the predictive uncertainty associated with the coarse dynamics, and provides a guided structure for navigation. We model the predictive uncertainty by evaluating different dispersion metrics as approximated by a Mixture Density Network (MDN). Empirically, we observe that a dense, dynamics-aware intrinsic reward leads to risk-averse subgoal selection, enabling it to outperform state-of-the-art HRL methods in non-stationary long-horizon environments.</p>
@@ -1169,10 +1196,7 @@
                         <span class="paper-date">2026-07-20</span>
                     </div>
                                         <span class="paper-comment">📝 15 pages (main text) + 4 pages (supplementary material), 13 figures. This work has been accepted for publication in IEEE Transactions on Artificial Intelligence (IEEE-TAI). This replaces the previous conference-version presented at the 2021 International Conference on Unmanned Aircraft System (ICUAS 21), June 15-18, 2021, Athens, Greece</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决高维连续状态空间中自主空战控制的复杂性与高风险挑战，提升AI在模拟空战中的可信度与可行性。  &#10;🛠 **方法**：提出分层深度强化学习框架，包含高层策略选择器与多个低层专用策略，采用离策略最大熵方法训练，并通过奖励塑形融入专家知识。  &#10;✨ **主要贡献**：在DARPA AlphaDogfight Trials中击败人类专家飞行员，获得亚军，验证了分层强化学习在复杂空战控制中的有效性。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Autonomous control in high-dimensional, continuous state spaces is a persistent and important challenge in the fields of robotics and artificial intelligence. Because of high risk and complexity, the adoption of AI for autonomous combat systems has been a long-standing difficulty. In order to address these issues, DARPA's AlphaDogfight Trials (ADT) program sought to vet the feasibility of and increase trust in AI for autonomously piloting an F-16 in simulated air-to-air combat. Our submission to ADT solves the high-dimensional, continuous control problem using a novel hierarchical deep reinforcement learning approach consisting of a high-level policy selector and a set of separately trained low-level policies specialized for excelling in specific regions of the state space. Both levels of the hierarchy are trained using off-policy, maximum entropy methods with expert knowledge integrated through reward shaping. Our approach outperformed human expert pilots and achieved a second-place rank in the ADT championship event.</p>
@@ -1980,30 +2004,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Controlling soccer robots involves multi-time-scale decision-making, which requires balancing long-term tactical planning and short-term motion execution. Traditional end-to-end reinforcement learning (RL) methods face challenges in complex dynamic environments. This paper proposes HierKick, a vision-guided soccer robot control framework based on dual-frequency hierarchical RL. The framework adopts a hierarchical control architecture featuring a 5 Hz high-level policy that integrates YOLOv8 for real-time detection and selects tasks via a coach model, and a pre-trained 50 Hz low-level controller for precise joint control. Through this architecture, the framework achieves the four steps of approaching, aligning, dribbling, and kicking. Experimental results show that the success rates of this framework are 95.2\% in IsaacGym, 89.8\% in Mujoco, and 80\% in the real world. HierKick provides an effective hierarchical paradigm for robot control in complex environments, extendable to multi-time-scale tasks, with its modular design and skill reuse offering a new path for intelligent robot control.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2505.04317v5" target="_blank" class="paper-title">Mastering Multi-Drone Volleyball through Hierarchical Co-Self-Play Reinforcement Learning</a>
-                        <span class="paper-date">2026-02-26</span>
-                    </div>
-                                        <span class="paper-comment">📝 Accepted by CoRL 2025</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>In this paper, we tackle the problem of learning to play 3v3 multi-drone volleyball, a new embodied competitive task that requires both high-level strategic coordination and low-level agile control. The task is turn-based, multi-agent, and physically grounded, posing significant challenges due to its long-horizon dependencies, tight inter-agent coupling, and the underactuated dynamics of quadrotors. To address this, we propose Hierarchical Co-Self-Play (HCSP), a hierarchical reinforcement learning framework that separates centralized high-level strategic decision-making from decentralized low-level motion control. We design a three-stage population-based training pipeline to enable both strategy and skill to emerge from scratch without expert demonstrations: (I) training diverse low-level skills, (II) learning high-level strategy via self-play with fixed low-level skills, and (III) joint fine-tuning through co-self-play. Experiments show that HCSP achieves superior performance, outperforming non-hierarchical self-play and rule-based hierarchical baselines with an average 82.9% win rate and a 71.5% win rate against the two-stage variant. Moreover, co-self-play leads to emergent team behaviors such as role switching and coordinated formations, demonstrating the effectiveness of our hierarchical design and training scheme. The project page is at https://hi-co-self-play.github.io.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2602.15854v2" target="_blank" class="paper-title">Decoupling Strategy and Execution in Task-Focused Dialogue via Goal-Oriented Preference Optimization</a>
-                        <span class="paper-date">2026-02-20</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Large language models show potential in task-oriented dialogue systems, yet existing training methods often rely on token-level likelihood or preference optimization, which poorly align with long-horizon task success. To address this, we propose Goal-Oriented Preference Optimization (GOPO), a hierarchical reinforcement learning framework that decouples strategy planning from response generation via an Expert Agent and a Customer Service Agent. The Expert Agent optimizes multi-turn goal preferences at the dialogue-trajectory level, while the Customer Service Agent generates responses strictly aligned with the selected strategy. We evaluate GOPO on public benchmarks and e-commerce customer service datasets, and introduce Task-focused Sequential Engagement (TSE), a sequence-level metric derived from real e-commerce interaction data. On the Mgshop dataset, GOPO improves TSE by 7.7% and 10.3% over PPO and Memento, with consistent gains in sequence-level reward and generation quality. Furthermore, a 14B model trained with GOPO achieves 2.7% and 1.5% higher TSE than Qwen-235B and GPT-5.2, respectively. Ablation studies confirm the Expert Agent's critical role in long-horizon optimization. GOPO demonstrates consistent improvements across other datasets as well. This work establishes a new paradigm for task-oriented dialogue systems in commercial scenarios, with code and datasets to be made public.</p>
                     </details>
                 </div>
             </div>

@@ -600,7 +600,7 @@
                 <a href="LLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
                     <span class="nav-label">LLM</span>
-                    <span class="nav-count">78</span>
+                    <span class="nav-count">79</span>
                 </a>
                 <a href="VLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f97316"></span>
@@ -675,7 +675,7 @@
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Kalman Filter</span>
-                    <span class="nav-count">46</span>
+                    <span class="nav-count">45</span>
                 </a>
                 <a href="Loop-Closure-Detection.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -695,7 +695,7 @@
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">78</span>
+                    <span class="nav-count">77</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -819,7 +819,7 @@
             <a href="LLM.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
                 <span class="nav-label">LLM</span>
-                <span class="nav-count">78</span>
+                <span class="nav-count">79</span>
             </a>
             <a href="VLM.html" class="nav-item">
                 <span class="nav-dot" style="background:#f97316"></span>
@@ -894,7 +894,7 @@
             <a href="Kalman-Filter.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Kalman Filter</span>
-                <span class="nav-count">46</span>
+                <span class="nav-count">45</span>
             </a>
             <a href="Loop-Closure-Detection.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -914,7 +914,7 @@
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">78</span>
+                <span class="nav-count">77</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -1030,6 +1030,51 @@
             <div class="paper-list">
                 <div class="paper-card">
                     <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.03979v1" target="_blank" class="paper-title">Video-DeepResearch: Towards the Next-Generation Multimodal Deepresearch Agent</a>
+                        <span class="paper-date">2026-08-04</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有多模态智能体在处理连续视频流时存在两大瓶颈——模态偏差（智能体绕过视觉工具而依赖文本搜索）和参数知识泄漏（模型依赖内部记忆而非真实工具增强执行），导致视频深度研究任务表现不佳。&#10;&#10;🛠 **方法**：提出Video-DeepResearch框架，采用解耦的感知-探索流水线，通过分阶段工具解锁强制在网页检索前进行跨帧视觉定位；训练上采用两阶段策略，先监督微调再使用GRPO强化学习，突破模仿学习上限。&#10;&#10;✨ **主要贡献**：构建了包含200个复杂多跳VQA实例的Video-DR-Bench基准；提出的Video-DeepResearch-35B-A3B模型以64.0%平均准确率超越Claude-4.5-Sonnet（59.0%）5.0个百分点，显著优于GPT-5（52.5%）和Gemini 2.5 Pro（57.5%）；30B-A3B变体以59.3%的准确率在紧凑规模下达到与Claude-4.5-Sonnet相当的水平，验证了训练范式的有效性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>We introduce Video-DeepResearch (Video-DR), extending multimodal agents from static images to continuous video streams, a setting that demands dense spatiotemporal grounding coupled with open-web exploration. Preliminary evaluations reveal two critical bottlenecks in current models: (1) modality bias, where agents bypass visual tools in favor of textual search, and (2) parametric knowledge leakage, where models rely on internal memory rather than genuine tool-augmented execution. To address these challenges, we propose Video-DR, featuring a decoupled perception-exploration pipeline with stage-wise tool unlocking that compels exhaustive cross-frame visual grounding prior to web retrieval. Our framework adopts a two-stage training recipe: supervised fine-tuning followed by Group Relative Policy Optimization (GRPO), enabling autonomous exploration that breaks the imitation-learning ceiling. Furthermore, we curate Video-DR-Bench, a human-AI collaborative benchmark comprising 200 complex, multi-hop VQA instances. Empirical results demonstrate that our Video-DeepResearch-35B-A3B establishes a new state-of-the-art of 64.0% average accuracy, surpassing proprietary Claude-4.5-Sonnet (59.0%) by 5.0 points and significantly outperforming GPT-5 (52.5%) and Gemini 2.5 Pro (57.5%). The 30B-A3B variant achieves 59.3%, competitive with Claude-4.5-Sonnet and demonstrating the effectiveness of our training paradigm even at compact scale. Code: https://github.com/Osilly/Vision-DeepResearch.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.03938v1" target="_blank" class="paper-title">Bimanual Manipulation Within an 8 GB Budget: Zero-Copy Sensing and Quantized ACT on an Entry-Level Jetson</a>
+                        <span class="paper-date">2026-08-04</span>
+                    </div>
+                                        <span class="paper-comment">📝 9 pages, 8 tables. Work conducted at the Georgia Tech Research Institute (GTRI), Aerospace, Transportation and Advanced Systems Laboratory (ATAS)</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：研究双臂操作策略在入门级嵌入式设备（Jetson Orin Nano Super 8GB）上的部署可行性与性能表现，填补该领域在低成本硬件上部署的空白。&#10;&#10;🛠 **方法**：构建基于NVMM缓冲区的GStreamer零拷贝感知管线，对比传统路径；在相同演示数据上训练ACT和Diffusion Policy，并将ACT转换为TensorRT FP16/INT8精度。&#10;&#10;✨ **主要贡献**：零拷贝感知降低CPU峰值利用率（98%→77%）和延迟（117ms→102ms）；ACT在19/20次试验中成功而Diffusion Policy未收敛；TensorRT量化使推理延迟降低6.4倍（FP16）和9倍（INT8），且发现INT8量化仅作用于ResNet18骨干、拒绝全部145个Transformer层，以及量化需求取决于动作分块配置。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Bimanual manipulation policies trained with imitation learning are typically evaluated on workstation or datacenter-class GPUs, leaving the cost of deploying them on embedded hardware largely uncharacterized. We present a bimanual SO-101 system running entirely on an NVIDIA Jetson Orin Nano Super (8 GB), the entry-level tier of NVIDIA's embedded line, using a desktop GPU (RTX 3070) only for offline training, evaluated on pick-and-place of a deformable beanbag. First, we build a GStreamer capture pipeline backed by NVMM buffers that removes redundant host-device copies from three-camera sensing. Contrary to expectation, the conventional path fit the memory budget and dropped no frames; what zero-copy sensing recovers is CPU headroom (peak single-core utilization 98.0% to 77.0%) and worst-case latency (117.31 ms to 101.52 ms). Second, we train ACT and Diffusion Policy on identical demonstrations, each at its own reference budget (100k gradient steps for ACT, 200k for Diffusion Policy). ACT converges to a task-competent policy (19/20 trials) while Diffusion Policy does not converge to a usable one (0/10) even at twice the step count, which we attribute to differing convergence costs rather than an accuracy ceiling. Third, we convert ACT to TensorRT. FP16 reduces mean inference latency from 114.02 ms to 17.93 ms (6.4x) and INT8 to 12.65 ms (9.0x), with task success preserved at all three precisions (19/20, 18/20, 19/20). We report two findings not previously documented for ACT: TensorRT's general-purpose INT8 calibration quantizes the ResNet18 backbone but accepts zero of 145 transformer layers, explaining INT8's negligible size reduction over FP16 (0.9%) despite a further 28% latency gain; and the need for quantization is conditional on ACT's action-chunking configuration, feasible in full precision at n_action_steps = 100 but not at the per-step re-prediction temporal ensembling requires.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.03103v1" target="_blank" class="paper-title">A Hierarchical Approach to Imitation Learning for Manipulation Tasks Requiring Time Varying Forces</a>
+                        <span class="paper-date">2026-08-04</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：扩散策略在接触丰富的拆解任务中面临推理延迟与高频力控制之间的权衡，难以应对断裂事件引发的快速力瞬变。&#10;&#10;🛠 **方法**：提出DPA-FTG，将低频规划（5 Hz条件扩散模型预测任务原语序列）与高频力调节（60 Hz轻量级力条件策略作为神经阻抗控制器）解耦，实现分层控制。&#10;&#10;✨ **主要贡献**：在双臂电池拆解任务中，DPA-FTG优于包括Reactive Diffusion Policy在内的现有基线，验证了分层架构在动态接触任务中的有效性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Diffusion policies have shown strong performance in learning complex, multi-modal behaviors for robotic manipulation. However, their application to contact-rich disassembly tasks remains limited by a key trade-off: the iterative denoising process introduces inference latencies that makes high frequency control difficult, which is essential for realizing dynamic interactions such as chiseling and prying. Recent action-chunking techniques mitigate latency but use an open-loop execution window, rendering the system blind to rapid force transients caused by fracture events. To bridge this gap, we introduce the Diffusion Policy Augmented by Fast Trajectory Generation (DPA-FTG). Compared to recent visual-tactile approaches that focus on positional correction, DPA-FTG decouples low-frequency planning from high-frequency force regulation. At the high level ($5$ Hz), a conditional diffusion model predicts a sequence of latent parameters for selecting a strategy from a learned vocabulary of task primitives. At the low level ($60$ Hz), a lightweight, force-conditioned policy acts as a neural impedance controller, modulating execution in real-time to maintain contact stability. We validate our approach on a bimanual battery disassembly task involving the separation of a compliant sheet. Experimental evaluation demonstrates that DPA-FTG outperforms state-of-the-art baselines, including Reactive Diffusion Policy (RDP).</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
                         <a href="https://arxiv.org/abs/2606.29517v2" target="_blank" class="paper-title">CORE: Common Outcome Regularities from Action-Free Visual Demonstrations for Robot Manipulation</a>
                         <span class="paper-date">2026-08-03</span>
                     </div>
@@ -1139,10 +1184,7 @@
                         <span class="paper-date">2026-07-31</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在模仿学习中，当学习者无法完美表示专家策略时，交互式查询和值函数估计如何提升性能？具体而言，专家交互是否以及为何能降低学习者的表示能力要求。&#10;&#10;🛠 **方法**：提出交互式在线模仿学习算法OVI，该算法利用专家沿学习者轨迹的交互查询，仅需学习者能表示专家的值函数（而非完整策略），并借助线性最大化预言机实现高效计算。&#10;&#10;✨ **主要贡献**：理论上证明专家交互可放宽表示需求（只需值函数可实现性），并给出负结果说明无交互时离线算法必须依赖专家策略类的复杂度；实验表明OVI优于BC、DAgger及离线值基方法，尤其在学习者网络远不如专家表达力时增益最大。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Imitation learning (IL)---training an agent to replicate expert behavior from demonstrations---underpins applications from robotics to language model training. Standard approaches such as Behavior Cloning (BC) are known to suffer from compounding errors and performance plateaus, particularly when the learner cannot perfectly represent the expert's policy (as is typical, e.g., in distillation). Two interventions are widely understood empirically to improve performance: querying the expert interactively along the learner's own trajectories, and using value function estimation en route to generating a policy rather than directly fitting the expert's full action distribution. We investigate the nature of these improvements and their potentially surprising interplay. Our main finding is that expert interaction relaxes the representational demands on the learner: one only needs a model capable of realizing the expert's value function, bypassing the (often stricter) requirement of realizing the expert's policy itself. Concretely, we introduce OVI, an interactive on-policy IL algorithm that is statistically efficient whenever the learner can represent the expert's value function and computationally efficient given access to a linear maximization oracle. We complement this with a negative result showing that interaction is necessary. Namely, without stronger assumptions beyond expert-value realizability alone, any offline IL algorithm must scale with the complexity of the expert policy class. Our findings bear out empirically. OVI outperforms offline policy-based (BC), interactive policy-based (DAgger), and offline value-based IL methods, with the largest gains when the learner network is substantially less expressive than the expert's.</p>
@@ -1154,10 +1196,7 @@
                         <span class="paper-date">2026-07-31</span>
                     </div>
                                         <span class="paper-comment">📝 Accepted for publication in IEEE Robotics and Automation Letters</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决自动驾驶系统无法个性化匹配用户驾驶风格的问题，使系统生成的驾驶行为能贴近用户自身习惯。&#10;&#10;🛠 **方法**：提出STAGE方法，基于模仿学习训练，融合风格值和潜在动作模态编码；通过偏好学习将用户风格映射为连续单调值，并设计规则降低人工标注成本；推理时用户输入风格值控制动作生成。&#10;&#10;✨ **主要贡献**：实现驾驶动作的风格可控生成，验证了在多种典型场景下与人类期望高度一致；相比其他方法，STAGE在风格可控性、连续性、驾驶风格对齐能力及安全性上具有独特优势。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Driving style refers to the behavioral preferences that drivers maintain during driving, shaped by their diverse experiences, habits, and needs, and is typically reflected in varying levels of aggressiveness. If humans choose to use autonomous driving systems, they would expect the driving style of the systems to closely resemble their own habit. However, this is challenging for current industrial autonomous driving systems. To address this, we developed a style controllable action generation method, STAGE, for driving tasks. Its training process is based on imitation learning, incorporating both style value and latent value action modality encoding. Preference learning is then used to identify the user's driving style as a continuous, monotonic style value. And to reduce the cost of human involvement in the preference training process, we also developed a set of rules to compare driving style in data pairs. Then, during inference, the user inputs the style value to control the generated action patterns, dynamically meeting the user's expectations. Using the STAGE method, we verified that the style-controlled action generation results in several typical road scenarios significantly align with human expectations. Furthermore, through comparisons between the STAGE method and various other approaches, we reveal the unique functionalities of STAGE, including its style controllability, style continuity, driving style alignment capability and driving safety. The code for this work is available at: https://github.com/CarlDegio/STAGE</p>
@@ -1169,10 +1208,7 @@
                         <span class="paper-date">2026-07-31</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：扩散模型轨迹规划器虽能建模多模态驾驶行为，但迭代去噪过程导致推理延迟过高，难以满足实时闭环自动驾驶需求。&#10;&#10;🛠 **方法**：提出RAPiD框架，通过奖励引导的一致性蒸馏将预训练的DiffusionPlanner压缩为少步（2步）学生模型，并利用隐式Q学习评论员对生成轨迹进行安全感知的择优选择。&#10;&#10;✨ **主要贡献**：在nuPlan上推理延迟从100.91ms降至18.41ms（5.5倍加速），性能与扩散教师相当；在interPlan上取得学习类方法最高分，验证了奖励引导蒸馏在保持安全性的同时显著降低计算成本。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Diffusion-based trajectory planners can model multi-modal driving behavior, but their iterative denoising process introduces a latency bottleneck for real-time closed-loop deployment. We present RAPiD, a reward-guided consistency distillation framework that distills a pretrained DiffusionPlanner into a few-step consistency student while retaining multi-modal trajectory generation. The student is trained using deterministic teacher denoising steps from the frozen diffusion planner, together with a low-noise data anchor that keeps generated trajectories grounded in expert demonstrations. To make distillation safety-aware, we train an Implicit Q-Learning critic on a balanced mixture of ground-truth log-replay and DiffusionPlanner rollout trajectories, each scored using a modified PDM-style reward, providing trajectory-level supervision beyond conventional imitation learning. During deployment, the 2-step student generates K trajectories, and the trained critic performs best-of-K trajectory selection conditioned on the latent state. On nuPlan, RAPiD maintains comparable performance to the diffusion teacher on non-reactive closed-loop splits and remains competitive on reactive splits, while reducing complete-pipeline inference latency from 100.91 ms to 18.41 ms, corresponding to a 5.5x speedup. On interPlan, RAPiD achieves the highest aggregate score among learning-based methods, demonstrating competitive generalization in interactive long-tail scenarios. These results show that reward-guided consistency distillation can convert a pretrained diffusion planner into a few-step closed-loop planner that substantially reduces inference cost while preserving safety-oriented trajectory selection. The official website of this work is: https://github.com/ruturajreddy/RAPiD</p>
@@ -1968,42 +2004,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Long-horizon manipulation has been a long-standing challenge in the robotics community. We propose ReinforceGen, a system that combines task decomposition, data generation, imitation learning, and motion planning to form an initial solution, and improves each component through reinforcement-learning-based fine-tuning. ReinforceGen first segments the task into multiple localized skills, which are connected through motion planning. The skills and motion planning targets are trained with imitation learning on a dataset generated from 10 human demonstrations, and then fine-tuned through online adaptation and reinforcement learning. When benchmarked on the Robosuite dataset, ReinforceGen reaches 80% success rate on all tasks with visuomotor controls in the highest reset range setting. Additional ablation studies show that our fine-tuning approaches contribute to an 89% average performance increase. Finally, ReinforceGen demonstrates significant improvement through fine-tuning in our real-world evaluations. More results and videos are available at https://reinforcegen.github.io.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.26428v2" target="_blank" class="paper-title">Play2Perfect: What Matters in Dexterous Play Pretraining for Precise Assembly?</a>
-                        <span class="paper-date">2026-07-09</span>
-                    </div>
-                                        <span class="paper-comment">📝 22 pages, 12 figures, 4 tables. Project page: https://play2perfect.github.io</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Multi-fingered robots promise the speed and dexterity of human hands, yet challenging problems such as precise assembly have remained out of reach. These tasks are contact-rich, making data collection for imitation learning difficult, and sparse-reward, making direct exploration with reinforcement learning (RL) intractable. Consequently, prior work has made progress by structuring the problem with specialized grippers, tool attachments, and environment fixtures. In this work, we argue that before a robot can perfect precise assembly, it must first learn to play. We further ask the question: what factors in the process of learning to play matter for precise assembly? We propose Play2Perfect, an RL framework for task-agnostic pretraining through play on diverse objects and goals, which is then perfected on precise assembly. The goal of play is to acquire reusable manipulation priors, such as grasping, in-hand reorientation and pose reaching. Finetuning then adapts this general prior to assembly, focusing exploration on the final contact-rich, high-precision interactions needed for success. We systematically study key design choices in play pretraining, including object diversity, training objective, trajectory diversity, and goal precision. We show that our prior is 33x more sample-efficient than RL training from scratch, even when provided with dense, multi-stage rewards. We demonstrate zero-shot sim-to-real transfer, achieving 60% success on tight insertions with only 0.5 mm contact clearance, and over 50% success on long-horizon multi-part assembly and screwing.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.08341v1" target="_blank" class="paper-title">AnyDexRT: Calibration-Free Dexterous Hand Retargeting with Few-Shot Human Guidance</a>
-                        <span class="paper-date">2026-07-09</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Teleoperation is a key interface for controlling dexterous robotic hands and collecting demonstrations for imitation learning. Its effectiveness largely depends on kinematic retargeting, which maps operator hand motions to feasible and intuitive robot hand motions. Existing methods often require hand-crafted objectives, precise calibration, or global shape matching between human and robot hand spaces, making them sensitive to hand-specific tuning and less reliable across different dexterous hands. We propose AnyDexRT, a calibration-free retargeting method for intuitive dexterous teleoperation across human-like dexterous hands. AnyDexRT combines self-supervised fingertip correspondence learning with few-shot human guidance to anchor the mapping in task-relevant regions, and further refines pinch-related poses using a contact classifier. Experiments on diverse dexterous hands and real-world teleoperation tasks show that AnyDexRT improves retargeting quality, reduces manual tuning, and provides more intuitive and efficient control than prior retargeting methods. Project website: https://chenxi-wang.github.io/projects/anydexrt</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.16447v2" target="_blank" class="paper-title">Training and Evaluating Diffusion Policies with Long Context Lengths</a>
-                        <span class="paper-date">2026-07-09</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Imitation learning has enabled highly-dexterous robotic manipulation from RGB observations. Policies trained with these methods, however, typically condition robot actions on only a short history of observations. These policies cannot solve tasks that require memory and can get stuck repeatedly executing the same failing motions. In this work, we first benchmark policy performance as context length is incrementally increased from short to long, across a spectrum of tasks with varying local stability and memory requirements, and in multiple data regimes. To our knowledge, this is the first study to investigate context length for Diffusion Policies at this level of detail. Our results challenge prior claims: naively scaling context length is not as brittle as advertised in literature. With an appropriate conditioning method and denoising backbone (UNet+Cross-Attention), single-task policies achieve high success rates on many tasks in the usual data regime even with naive scaling. Next, we propose a training algorithm to jointly train policies at multiple context lengths, further reducing the sample complexity of long-context learning. Finally, we apply our findings to re-evaluate some previously proposed solutions to long-context imitation learning.</p>
                     </details>
                 </div>
             </div>

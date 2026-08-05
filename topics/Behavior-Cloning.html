@@ -600,7 +600,7 @@
                 <a href="LLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
                     <span class="nav-label">LLM</span>
-                    <span class="nav-count">78</span>
+                    <span class="nav-count">79</span>
                 </a>
                 <a href="VLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f97316"></span>
@@ -675,7 +675,7 @@
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Kalman Filter</span>
-                    <span class="nav-count">46</span>
+                    <span class="nav-count">45</span>
                 </a>
                 <a href="Loop-Closure-Detection.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -695,7 +695,7 @@
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">78</span>
+                    <span class="nav-count">77</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -819,7 +819,7 @@
             <a href="LLM.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
                 <span class="nav-label">LLM</span>
-                <span class="nav-count">78</span>
+                <span class="nav-count">79</span>
             </a>
             <a href="VLM.html" class="nav-item">
                 <span class="nav-dot" style="background:#f97316"></span>
@@ -894,7 +894,7 @@
             <a href="Kalman-Filter.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Kalman Filter</span>
-                <span class="nav-count">46</span>
+                <span class="nav-count">45</span>
             </a>
             <a href="Loop-Closure-Detection.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -914,7 +914,7 @@
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">78</span>
+                <span class="nav-count">77</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -1030,6 +1030,51 @@
             <div class="paper-list">
                 <div class="paper-card">
                     <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.03606v1" target="_blank" class="paper-title">Learning Clinical-Trial Strategy: Offline Policy Training for Decision Agents</a>
+                        <span class="paper-date">2026-08-04</span>
+                    </div>
+                                        <span class="paper-comment">📝 Accepted for a spotlight at the ICML 2026 Workshop on Generative and Agentic AI for Biology (GenBio) and as a poster at the ICML 2026 Workshop on Decision-Making from Offline Datasets to Online Adaptation: Black-Box Optimization to Reinforcement Learning (DEMO). 15 pages, 3 figures, 11 tables</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：将肿瘤药物临床开发建模为离线决策问题，预测给定药物项目未来六个月的试验组合，以应对临床开发中的序贯决策不确定性。&#10;&#10;🛠 **方法**：构建包含31.7k条异构公共数据记录的时间数据集，整合为881个离线决策片段，对比四种离线训练目标（行为克隆、奖励加权行为克隆、学习奖励训练、隐式Q学习）与四种前沿LLM智能体（共享日期门控检索框架），在多种数据划分下评估。&#10;&#10;✨ **主要贡献**：离线训练模型显著优于未微调基线，其中奖励加权行为克隆表现最佳，在2025年8月后的无污染测试集上达到46.2%的适应症F1和14.2%的严格F1，远超最优工具智能体（25.0%和2.1%），证明结构化离线学习可有效训练临床实验规划智能体。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Clinical development is sequential decision-making under uncertainty, where a sponsor must plan a portfolio of experiments from heterogeneous evidence. We study this setting by framing oncology clinical development as an offline decision-making problem in which an agent predicts the next six-month trial portfolio of an oncology drug program from information available at the decision date. To support this, we construct a temporal dataset that combines 31.7k heterogeneous public data records, including trial registries, regulatory reviews, sponsor filings, utilization data, and epidemiology, into 881 offline decision episodes across 45 historical programs. We compare four offline objectives: behavioral cloning, reward-weighted behavioral cloning, learned-reward training, and value-based implicit Q-learning against four frontier LLM agents that share a common date-gated retrieval scaffold across held-out drug, sponsor, drug-class, and temporal splits. Models trained offline outperform the non-fine-tuned baselines, particularly in the post-August 2025 contamination-clean holdout. Reward-weighted behavioral cloning performs the best, obtaining 46.2% indication F1 and 14.2% strict F1 against 25.0% and 2.1%, respectively, for the best-performing tool agent on each metric. These results suggest that structured offline learning can teach agents to plan clinical experiments.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.22739v2" target="_blank" class="paper-title">Cortex: Compact Behavior Cloning for Quake with Frozen Visual Features</a>
+                        <span class="paper-date">2026-08-04</span>
+                    </div>
+                                        <span class="paper-comment">📝 14 pages, 3 figures, 9 tables</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：研究在视觉丰富的第一人称游戏中，仅使用简单的行为克隆策略（不依赖强化学习或显式记忆）能达到何种表现水平。&#10;&#10;🛠 **方法**：采用紧凑的Transformer策略（Cortex），包含6层Transformer和1098万可训练参数，使用冻结的DINOv3视觉编码器，在公开的Pixels2Play数据集的Quake子集上训练，输入为四帧窗口的键盘鼠标动作。&#10;&#10;✨ **主要贡献**：Cortex虽未完成关卡，但每局都能到达关键区域，多数局有击杀记录；相比同条件下的P2P-150M和NitroGen模型表现更深；消融实验表明密集视觉令牌可提升战斗和生存能力，同时揭示了协变量偏移问题，为后续针对性数据修正提供了方向。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>We study how far a deliberately simple behavioral-cloning policy can progress in a visually rich first-person game before adding reinforcement learning or explicit memory. Cortex is a compact Quake policy with 10.98 million trainable parameters in a six-layer transformer over a frozen DINOv3 encoder. It is trained on the Quake subset of the public Pixels2Play corpus: 6,849 recordings (about 474.7 hours), represented as 17.09 million cached decision frames with keyboard and mouse actions. One sampled training epoch uses 517,048 four-frame windows and takes 3.3 minutes of policy-head optimization on one RTX 5080, excluding one-time feature extraction. We evaluate two independent batches of 20 stochastic, 120-second episodes on Quake E1M1. Cortex does not complete the level, but every episode reaches the opening door, button room, and gate descent; 19 of 20 episodes in each batch record at least one kill. Under the same time-controlled harness, released P2P-150M and NitroGen checkpoints remain shallower in five matched-duration episodes each. These comparisons are limited by small reference samples and different native interfaces. Ablations show that denser visual tokens improve combat and survival, while longer optimization and naive action history improve offline metrics without consistently improving play. The remaining failures are consistent with covariate shift and motivate targeted corrective data. We release the policy implementation, checkpoint, and a representative rollout.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.02958v1" target="_blank" class="paper-title">ValueFormer: A Causal Transformer Value Function with Stage-Aware Labels for Semi-Autonomous Vision-Language-Action Policies</a>
+                        <span class="paper-date">2026-08-03</span>
+                    </div>
+                                        <span class="paper-comment">📝 22 pages, 17 figures, 8 tables</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：行为克隆训练的视觉-语言-动作（VLA）策略在失败时无法从动作流中察觉异常，因为模仿学习缺乏进度信号，而强化学习因真实机器人成本高且变形食物难以仿真而不实用。&#10;&#10;🛠 **方法**：提出ValueFormer，一个基于冻结DINOv3骨干的紧凑因果Transformer，单次前向输出两个逐帧信号——平滑的蒙特卡洛价值（用于优势估计）和尖锐的二元价值（用于在线错误检测）；失败片段采用阶段感知的成功-衰减回报标签，错误检测从错误区间而非单一失败时刻监督。&#10;&#10;✨ **主要贡献**：在真实双臂三明治组装任务（1427个片段）中，评论家派生的逐帧训练权重将任务完成率从70%提升至85%（n=20噪声范围内）；批处理bf16编码器将实时服务成本降低3-5倍，使评论家与策略在单GPU上以2Hz并行运行。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Vision-Language-Action (VLA) policies trained by behavior cloning fail silently: from the action stream alone, a collapsing rollout looks much like one making clean progress, because imitation supplies no notion of progress. Reinforcement learning would supply one, but it is impractical here, where real-robot experience is costly and deformable food resists simulation. The cheap alternative, a terminal success / failure bit, is learnable in principle yet far too sparse to say when a rollout went wrong. We argue that the per-frame label, not the architecture, is the hard part: to be useful it must be dense, continuous, and correctly shaped. We present ValueFormer, a compact policy-agnostic causal transformer over a frozen DINOv3 backbone that emits two per-frame signals in one forward pass: a smooth Monte Carlo value, V_mc, for advantage estimation and a sharp binary value for online mistake detection, targets that pull in opposite directions by design. Failed episodes are labeled with a stage-aware, success-then-decay return that preserves the success curve before the failure stage, and detection is supervised from mistake intervals rather than a single failure time, so mistakes the policy recovers from also carry signal. On a real-robot bimanual sandwich-assembly task 1,427 episodes), a critic-derived per-frame training weight lifts task completion from 70% to 85% (within noise at n=20), and a batched bf16 encoder cuts the live serving cost 3~5 times so the critic runs at 2 Hz alongside the policy on a single GPU.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
                         <a href="https://arxiv.org/abs/2608.02547v1" target="_blank" class="paper-title">Why Does Action Chunking Improve Behavioral Cloning Performance in Robotic Control?</a>
                         <span class="paper-date">2026-08-03</span>
                     </div>
@@ -1139,10 +1184,7 @@
                         <span class="paper-date">2026-07-28</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：机器人操作任务中，如何让机器人不仅准确完成任务，还能根据任务、物体和交互场景灵活调整动作的执行方式（如速度、动态程度等），并将这种执行层面的变化作为可复用的行为因素。&#10;&#10;🛠 **方法**：提出MoMo框架，采用两阶段模仿学习：先通过时空动作分词器将动作序列离散化，再使用行为克隆Transformer，以任务和连续的运动模式条件作为输入，学习生成不同风格的动作。&#10;&#10;✨ **主要贡献**：在6个真实机器人操作任务中，通过调整运动模式条件可产生稳定、动态及中间态的行为，且人类可区分；在仅用一种模式演示的任务上，MoMo能迁移到未见过的模式并保持任务成功率，证明了任务-模式组合的泛化能力，表明运动模式可作为跨任务复用的控制因素。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>To operate effectively across diverse contexts, robots must not only perform manipulation tasks accurately but also adapt how their actions unfold to the task, object, and interaction setting. We ask whether this execution-level variation can be learned as a reusable behavioral factor shared across tasks. We present \textbf{MoMo}, a two-stage imitation-learning framework consisting of a spatiotemporal action tokenizer and a behavior-cloning transformer that takes task and a continuous motion-mode condition as inputs. Across six real-robot manipulation tasks, varying this condition produces steady, dynamic, and intermediate behaviors that human raters can distinguish and that differ in joint speed, acceleration, and end-effector approach pitch. On tasks demonstrated in only one mode, MoMo transfers the unseen requested mode while largely preserving task success. Together, these results provide evidence of compositional generalization to unseen task--mode combinations and show that motion mode can be reused across tasks to control how a manipulation skill is performed.</p>
@@ -1154,10 +1196,7 @@
                         <span class="paper-date">2026-07-28</span>
                     </div>
                                         <span class="paper-comment">📝 Accepted at EAI SmartSP 2025</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：研究行为克隆（BC）策略在训练过程中对数据集投毒攻击的脆弱性，特别是清洁标签后门攻击的影响。&#10;&#10;🛠 **方法**：通过在专家演示数据集中注入视觉触发器（如特定图案）污染数据，训练后门策略；并引入基于熵的测试时触发攻击，在关键状态激活后门以最大程度降低策略性能。&#10;&#10;✨ **主要贡献**：首次系统分析清洁标签后门攻击对BC策略的有效性，发现即使极小比例（如1%）的投毒数据也能使策略在测试时被后门触发显著降级，而任务表现仍接近基线，揭示了BC策略的隐蔽安全风险。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Behavior Cloning (BC) is a popular framework for training sequential decision policies from expert demonstrations via supervised learning. As these policies are increasingly being deployed in the real world, their robustness and potential vulnerabilities are an important concern. In this work, we perform the first analysis of the efficacy of clean-label backdoor attacks on BC policies. Our backdoor attacks poison a dataset of demonstrations by injecting a visual trigger to create a spurious correlation that can be exploited at test time. We evaluate how policy vulnerability scales with the fraction of poisoned data, the strength of the trigger, and the trigger type. We also introduce a novel entropy-based test-time trigger attack that substantially degrades policy performance by identifying critical states where test-time triggering of the backdoor is expected to be most effective at degrading performance. We empirically demonstrate that BC policies trained on even minimally poisoned datasets exhibit deceptively high, near-baseline task performance despite being highly vulnerable to backdoor trigger attacks during deployment. Our results underscore the urgent need for more research into the robustness of BC policies, particularly as large-scale datasets are increasingly used to train policies for real-world cyber-physical systems. Videos and code are available at https://sites.google.com/view/dataset-poisoning-in-bc.</p>
@@ -1169,10 +1208,7 @@
                         <span class="paper-date">2026-07-26</span>
                     </div>
                                         <span class="paper-comment">📝 35 pages, 40 figures</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：提升自动驾驶汽车在交通标志识别、车辆检测、车道检测和行为克隆等关键任务中的性能与可靠性。&#10;&#10;🛠 **方法**：采用预训练与自定义神经网络，结合几何与颜色变换的数据增强、图像归一化、迁移学习等技术，在GTSRB、道路分割、车辆检测及Udacity模拟器数据集上进行训练与评估。&#10;&#10;✨ **主要贡献**：提出了一种多模型集成方法，有效解决了自动驾驶中的多项挑战，并验证了其在提高系统鲁棒性和可靠性方面的有效性，为未来更安全高效的自动驾驶技术提供了基础。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Deep learning and computer vision techniques have become increasingly important in the development of self-driving cars. These techniques play a crucial role in enabling self-driving cars to perceive and understand their surroundings, allowing them to safely navigate and make decisions in real-time. Using Neural Networks self-driving cars can accurately identify and classify objects such as pedestrians, other vehicles, and traffic signals. Using deep learning and analyzing data from sensors such as cameras and radar, self-driving cars can predict the likely movement of other objects and plan their own actions accordingly. In this study, a novel approach to enhance the performance of self-driving cars by using pre-trained and custom-made neural networks for key tasks, including traffic sign classification, vehicle detection, lane detection, and behavioral cloning is provided. The methodology integrates several innovative techniques, such as geometric and color transformations for data augmentation, image normalization, and transfer learning for feature extraction. These techniques are applied to diverse datasets, including the German Traffic Sign Recognition Benchmark (GTSRB), road and lane segmentation datasets, vehicle detection datasets, and data collected using the Udacity self-driving car simulator to evaluate the model efficacy. The primary objective of the work is to review the state-of-the-art in deep learning and computer vision for self-driving cars. The findings of the work are effective in solving various challenges related to self-driving cars like traffic sign classification, lane prediction, vehicle detection, and behavioral cloning, and provide valuable insights into improving the robustness and reliability of autonomous systems, paving the way for future research and deployment of safer and more efficient self-driving technologies.</p>
@@ -1212,18 +1248,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>General-purpose robot learning requires dense, instruction-conditioned feedback that can distinguish meaningful task progress from stalled, failed, or partially completed behavior. Yet obtaining such feedback at scale remains difficult, since existing approaches often rely on manual progress annotations, task-specific demonstrations, or reward models trained on curated robot datasets. We introduce TOPReward, a training-free progress reward method that probes pretrained Video-Language Models (VLMs) through their internal token probabilities rather than asking them to generate numerical progress values. Given a video prefix and a language instruction, TOPReward measures the model's likelihood that the instructed task has been completed, converting latent video-language understanding into a dense reward signal without task-specific reward-model training or manually annotated progress labels. We evaluate TOPReward on ManiRewardBench, our real-world manipulation benchmark spanning 130 unique tasks and four robot platforms, as well as on Open X-Embodiment datasets. Across these settings, TOPReward substantially outperforms prior training-free VLM reward methods on open-source models and is competitive with a trained reward-model baseline on progress-estimation metrics, while requiring no reward-model training. Additional analyses show that the reward is sensitive to the specified instruction and is not explained by time index alone. Finally, TOPReward supports downstream applications including success detection and offline reward-weighted behavior cloning.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.22739v1" target="_blank" class="paper-title">Cortex: Compact Behavior Cloning for Quake with Frozen Visual Features</a>
-                        <span class="paper-date">2026-07-22</span>
-                    </div>
-                                        <span class="paper-comment">📝 13 pages, 2 figures, made with heavy assistance from LLM</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>We study how far a deliberately simple behavioral-cloning policy can progress in a visually rich first-person game before adding reinforcement learning or explicit memory. Cortex is a compact Quake policy with 10.98 million trainable parameters in a six-layer transformer over a frozen DINOv3 encoder. It is trained on the Quake subset of the public Pixels2Play corpus: 6,849 recordings (about 474.7 hours), represented as 17.09 million cached decision frames with keyboard and mouse actions. One sampled training epoch uses 517,048 four-frame windows and takes 3.3 minutes of policy-head optimization on one RTX 5080, excluding one-time feature extraction. We evaluate two independent batches of 20 stochastic, 120-second episodes on Quake E1M1. Cortex does not complete the level, but every episode reaches the opening door, button room, and gate descent; 19 of 20 episodes in each batch record at least one kill. Under the same time-controlled harness, released P2P-150M and NitroGen checkpoints remain shallower in five matched-duration episodes each. These comparisons are limited by small reference samples and different native interfaces. Ablations show that denser visual tokens improve combat and survival, while longer optimization and naive action history improve offline metrics without consistently improving play. The remaining failures are consistent with covariate shift and motivate targeted corrective data. We release the policy implementation, checkpoint, and a representative rollout.</p>
                     </details>
                 </div>
                 <div class="paper-card">
@@ -1992,30 +2016,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Fine-tuning vision-language-action (VLA) policies for long-horizon manipulation still relies heavily on behavior cloning, which requires costly high-quality demonstrations and keeps policies near the demonstration distribution. Reward models can reduce this dependence by reweighting demonstrations and providing dense supervision for on-robot reinforcement learning (RL), but they must be dense, accurate, and general. Existing methods fall short: task-specific stage-aware models are accurate but require per-task annotations, while general vision-language-model (VLM) reward models are broadly applicable but too coarse for fine-grained long-horizon progress. We introduce RM, a multi-task stage-aware reward model that combines an action-primitive-based stage estimator with a multi-gate Mixture-of-Experts (MMoE) value head to produce dense per-step rewards across manipulation tasks. Building on RM, we further propose SPIRAL (Self-Policy Improvement via Reward-Aligned Learning), an on-policy reward-guided framework that improves VLA policies from cheap autonomous rollouts. On a 10-task benchmark, RM reduces value-estimation MSE by 80% over the strongest baselines; when used in SPIRAL, it improves task success from around 50% to near-perfect performance on Folding Shorts (58% to 100%) and Cleaning Whiteboard (50% to 90%), showing that high-quality dense rewards are key to a stable robot data flywheel. Project website: https://qianzhong-chen.github.io/sarm2.github.io/.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.10229v1" target="_blank" class="paper-title">What Demonstration Curation Metrics Do to Your Policy</a>
-                        <span class="paper-date">2026-06-08</span>
-                    </div>
-                                        <span class="paper-comment">📝 6 pages, 1 figure, 2 tables</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>We study whether demonstration-curation metrics that detect defective training episodes also improve the downstream behavior-cloning policy that trains on the curated data. On a contact-rich LIBERO pick-and-place benchmark with a controlled structural defect (early gripper release during the carry phase), we find that the two quantities are sharply decoupled. The metric with the highest defect-detection AUROC (0.804) produces the worst curated policy (13.3% task success), while a metric with a substantially lower AUROC (0.638) produces a policy that nearly matches the oracle trained on ground-truth clean data (90.0% vs. 93.3%). We further show that five of the seven metrics we evaluate exploit episode length as a trivial proxy for the defect label, a confound that inflates reported AUROCs to near-perfect values and disappears once episode length is controlled. Across all conditions, the contaminated baseline succeeds on only 3.3% of rollouts, and the two best curation methods close this to within 3 percentage points of the 93.3% oracle ceiling. Our results argue that curation methods should be evaluated by the policy they produce, not the defects they flag, and that any curation benchmark must control for episode length before reporting detection accuracy. We release the testbed, all metric implementations, and the evaluation pipeline.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.09758v1" target="_blank" class="paper-title">Difference-Aware Retrieval Policies for Imitation Learning</a>
-                        <span class="paper-date">2026-06-08</span>
-                    </div>
-                                        <span class="paper-comment">📝 12 pages, 7 figures, 3 tables. Accepted to ICLR 2026. Code and demos available at https://weirdlabuw.github.io/darp-site/</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Parametric imitation learning via behavior cloning can suffer from poor generalization to out-of-distribution states due to compounding errors during deployment. We show that reusing the training data during inference via a semi-parametric retrieval-based imitation learning approach can alleviate this challenge. We present Difference-Aware Retrieval Policies for Imitation Learning (DARP), a semi-parametric retrieval-based imitation learning approach that addresses this limitation by reparameterizing the imitation learning problem in terms of local neighborhood structure rather than direct state-to-action mappings. Instead of learning a global policy, DARP trains a model to predict actions based on $k$-nearest neighbors from expert demonstrations, their corresponding actions, and the relative distance vectors between neighbor states and query states. DARP requires no additional assumptions beyond those made for standard behavior cloning -- it does not require additional data collection, online expert feedback, or task-specific knowledge. We demonstrate consistent performance improvements of 15-46% over standard behavior cloning across diverse domains, including continuous control and robotic manipulation, and across different representations, including high-dimensional visual features. Code and demos are available at https://weirdlabuw.github.io/darp-site/.</p>
                     </details>
                 </div>
             </div>

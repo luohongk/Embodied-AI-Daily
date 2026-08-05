@@ -600,7 +600,7 @@
                 <a href="LLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
                     <span class="nav-label">LLM</span>
-                    <span class="nav-count">78</span>
+                    <span class="nav-count">79</span>
                 </a>
                 <a href="VLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f97316"></span>
@@ -675,7 +675,7 @@
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Kalman Filter</span>
-                    <span class="nav-count">46</span>
+                    <span class="nav-count">45</span>
                 </a>
                 <a href="Loop-Closure-Detection.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -695,7 +695,7 @@
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">78</span>
+                    <span class="nav-count">77</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -819,7 +819,7 @@
             <a href="LLM.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
                 <span class="nav-label">LLM</span>
-                <span class="nav-count">78</span>
+                <span class="nav-count">79</span>
             </a>
             <a href="VLM.html" class="nav-item">
                 <span class="nav-dot" style="background:#f97316"></span>
@@ -894,7 +894,7 @@
             <a href="Kalman-Filter.html" class="nav-item active">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Kalman Filter</span>
-                <span class="nav-count">46</span>
+                <span class="nav-count">45</span>
             </a>
             <a href="Loop-Closure-Detection.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -914,7 +914,7 @@
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">78</span>
+                <span class="nav-count">77</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -1025,9 +1025,24 @@
         <section class="topic-section">
             <div class="topic-header">
                 <span class="topic-badge" style="background:#8b5cf6">Kalman Filter</span>
-                <span class="topic-count">46 papers</span>
+                <span class="topic-count">45 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2512.18928v4" target="_blank" class="paper-title">The Ensemble Schr{ö}dinger Bridge filter for Nonlinear Data Assimilation</a>
+                        <span class="paper-date">2026-08-04</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决非线性数据同化中，传统滤波方法（如集合卡尔曼滤波和粒子滤波）在高维、强非线性系统中精度不足或计算代价高的问题。&#10;&#10;🛠 **方法**：提出“集合薛定谔桥非线性滤波器”，将标准预测步骤与基于扩散生成模型的分析步骤结合，完成一次完整滤波更新；该方法无结构模型误差，且无需导数、无需训练、高度可并行化。&#10;&#10;✨ **主要贡献**：在高达40维及以上的混沌系统中表现优异，优于经典集合卡尔曼滤波和粒子滤波，适用于强非线性的动态与观测过程；未来将扩展至气象应用并建立收敛理论。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>This work introduces a novel nonlinear optimal filtering method, termed the Ensemble Schr{ö}dinger Bridge nonlinear filter. The proposed filter combines the standard prediction step with a diffusion-generative-modeling-based analysis step, thereby completing one full filtering update. The resulting approach introduces no structural model error, and is derivative-free, training-free, and highly parallelizable. Numerical experiments demonstrate that the proposed algorithm performs effectively for highly nonlinear dynamics and nonlinear observation processes, including chaotic systems with dimension up to 40 and beyond. The results also show that the method outperforms classical approaches such as the ensemble Kalman filter and particle filter across a range of tests with varying degrees of nonlinearity. Future work will focus on extending the proposed method to practical meteorological applications and developing a rigorous convergence theory.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2608.02316v1" target="_blank" class="paper-title">Residual-Based Adaptive Kalman Filtering for Legged Robot State Estimation</a>
@@ -1169,10 +1184,7 @@
                         <span class="paper-date">2026-07-28</span>
                     </div>
                                         <span class="paper-comment">📝 Originally presented at the 2025 IEEE ICRA Workshop on Field Robotics, extended to cover real world experiments. 13 pages, 8 figures, 3 tables</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决自主水面船（ASV）在开阔海洋环境中，因缺乏固定地标相对位置测量，且仅能获取偏航模糊的部分姿态信息（如横滚和俯仰）时的精确状态估计问题。&#10;&#10;🛠 **方法**：提出一种不变扩展卡尔曼滤波（InEKF）框架，创新性地集成前视单目相机估计的基于地平线的横滚/俯仰观测，并结合双天线GPS航向测量，实现部分姿态信息下的状态估计。&#10;&#10;✨ **主要贡献**：首次在InEKF中引入部分方向测量集成框架，克服传统InEKF需完整姿态测量的限制；通过对比完整姿态InEKF和乘法EKF（MEKF），验证了该方法在开阔海洋环境中ASV状态估计的准确性和鲁棒性。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Autonomous surface vessels (ASVs) are increasingly vital for marine science, offering robust platforms for underwater mapping and inspection. Accurate state estimation, particularly of vehicle pose, is paramount for precise seafloor mapping, as even small surface deviations can have significant consequences when sensing the seafloor below. To address this challenge, we propose an Invariant Extended Kalman Filter (InEKF) framework designed to integrate partial orientation measurements. While conventional estimation often relies on relative position measurements to fixed landmarks, open ocean ASVs primarily observe a receding horizon. We leverage forward-facing monocular cameras to estimate roll and pitch with respect to this horizon, which provides yaw-ambiguous partial orientation information. To effectively utilize these measurements within the InEKF, we introduce a novel framework for incorporating such partial orientation data. This approach contrasts with traditional InEKF implementations that assume full orientation measurements and is particularly relevant for vehicles operating in a \say{semi-planar} environment, where the attitude is characterized by a dominant yaw rotation with limited roll and pitch variations. This paper details the developed InEKF framework; its integration with horizon-based roll/pitch observations and dual-antenna GPS heading measurements for ASV state estimation; and provides a comparative analysis against the InEKF using full orientation and a Multiplicative EKF (MEKF). Our results demonstrate the efficacy and robustness of the proposed partial orientation measurements for accurate ASV state estimation in open ocean environments.</p>
@@ -1584,30 +1596,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Predicting temporal Quality of Service (QoS) data is critical for optimizing network services and rationalizing resource allocation in cloud computing and service-oriented systems. Existing mainstream methods have achieved promising predictive performance. However, their purely data-driven manner limits their ability to capture non-stationary temporal patterns, thereby leading to accuracy degradation when temporal QoS data exhibits fluctuations. To tackle this limitation, we propose a novel Extended Kalman Filter-Enhanced Latent Feature Analysis (EKL) model to perform efficient and accurate temporal QoS prediction from the perspective of bidirectional model-data-driven learning. Its main idea is three-fold: a) designing a model-driven feature producer to obtain the temporal latent features to capture the intricate temporal pattern following the principle of an Extended Kalman Filter; b) building a data-driven feature producer based on the alternating least squares algorithm to identify time-invariant latent features describing intrinsic user-service characteristics; c) exploiting a density-oriented parallel strategy that achieves workload balancing by sorting users in accordance with their service invocation density, which effectively elevates computational efficiency. In addition, we provide a rigorous theoretical analysis to formally prove the convergence of the proposed EKL. Experimental evaluations conducted on real-world temporal QoS datasets reveal that our proposed EKL surpasses existing state-of-the-art models with respect to both computational efficiency and prediction accuracy for missing temporal QoS data.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.06896v1" target="_blank" class="paper-title">Dynamic Object Detection and Tracking in Construction: A Fisheye Camera and LiDAR Sensor Fusion Model</a>
-                        <span class="paper-date">2026-07-08</span>
-                    </div>
-                                        <span class="paper-comment">📝 4 pages, 8 figures, submitted to IEEE International Conference on Robotics and Automation (ICRA) 2025 Future of Construction Workshop</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Robust dynamic object detection and tracking are essential for enabling robots to operate safely and effectively alongside humans in complex environments such as construction sites. While LiDAR-based SLAM and occupancy grid methods offer viable solutions for detecting and tracking motion, many state-of-the-art 3D vision approaches rely heavily on pre-trained neural networks and require additional post-processing to identify moving objects. Sensor fusion techniques, combining the precision of LiDAR with the semantic richness of RGB imagery, offer a promising alternative. In this work, we present a novel framework that enhances a quadruped robot equipped with a LiDAR sensor and an upward-facing fisheye camera for real-time dynamic object detection and tracking. After identifying moving objects within a registered point cloud, our method assigns semantic labels by projecting 3D coordinates onto a 2D cylindrical panorama, aligning with real-time image-based detections for observation update of the Kalman filter. The proposed system demonstrates high precision, simplicity, and robustness, particularly in handling objects transitioning between dynamic and static states, thus it is well-suited for deployment in real-world construction environments.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.05669v1" target="_blank" class="paper-title">Uncertainty-Aware Velocity Correction for Proprioceptive Vehicle Localization using Evidential Mamba</a>
-                        <span class="paper-date">2026-07-06</span>
-                    </div>
-                                        <span class="paper-comment">📝 Accepted at the 2026 International Conference on Indoor Positioning and Indoor Navigation (IPIN 2026), Rome, Italy. 6 pages, 4 figures</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Reliable localization in GNSS-denied environments remains a fundamental challenge for intelligent vehicles, as inertial navigation systems accumulate unbounded drift without external correction. Existing approaches provide drift correction through dedicated infrastructure, expensive external sensors, or complex multi-sensor fusion, each introducing practical deployment barriers. We propose Evidential Velocity Correction using Mamba (EVC-Mamba), a learning-based architecture that transforms onboard vehicle sensor data into a virtual velocity sensor for IMU drift correction without additional hardware. A Mamba-based selective state space model captures the temporal dynamics of vehicle motion, while evidential deep learning with a Normal-Inverse-Gamma distribution provides principled uncertainty quantification. The resulting uncertainty-aware velocity estimate is incorporated as a virtual correction measurement into an Error-State Extended Kalman Filter to reduce position drift. Evaluation on real-world vehicle data demonstrates that inertial navigation using the proposed velocity correction achieves localization accuracy within 10% of a dedicated external velocity sensor across different outage durations. The proposed architecture supports real-time onboard deployment at 40 Hz on edge hardware, enabling reliable localization during prolonged GNSS outages.</p>
                     </details>
                 </div>
             </div>
