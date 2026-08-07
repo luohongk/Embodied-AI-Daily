@@ -2,7 +2,7 @@
 
 > **56 papers** fetched from arXiv for the keyword **Feed Forward Reconstruction**.
 
-> Last update: 2026-08-07
+> Last update: 2026-08-08
 
 [← Back to README](../README.md)
 
