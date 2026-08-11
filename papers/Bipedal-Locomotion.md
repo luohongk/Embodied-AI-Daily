@@ -2,7 +2,7 @@
 
 > **79 papers** fetched from arXiv for the keyword **Bipedal Locomotion**.
 
-> Last update: 2026-08-10
+> Last update: 2026-08-11
 
 [← Back to README](../README.md)
 
