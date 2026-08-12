@@ -2,7 +2,7 @@
 
 > **79 papers** fetched from arXiv for the keyword **Diffusion Policy**.
 
-> Last update: 2026-08-12
+> Last update: 2026-08-13
 
 [← Back to README](../README.md)
 
