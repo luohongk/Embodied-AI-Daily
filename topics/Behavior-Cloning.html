@@ -615,7 +615,7 @@
                 <a href="Gaussian-Splatting.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#84cc16"></span>
                     <span class="nav-label">Gaussian Splatting</span>
-                    <span class="nav-count">79</span>
+                    <span class="nav-count">80</span>
                 </a>
                 <a href="Visual-SLAM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#22c55e"></span>
@@ -675,7 +675,7 @@
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Kalman Filter</span>
-                    <span class="nav-count">45</span>
+                    <span class="nav-count">47</span>
                 </a>
                 <a href="Loop-Closure-Detection.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -690,12 +690,12 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">66</span>
+                    <span class="nav-count">70</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">78</span>
+                    <span class="nav-count">75</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -730,7 +730,7 @@
                 <a href="Model-Predictive-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#14b8a6"></span>
                     <span class="nav-label">Model Predictive Control</span>
-                    <span class="nav-count">51</span>
+                    <span class="nav-count">52</span>
                 </a>
                 <a href="Whole-Body-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#06b6d4"></span>
@@ -834,7 +834,7 @@
             <a href="Gaussian-Splatting.html" class="nav-item">
                 <span class="nav-dot" style="background:#84cc16"></span>
                 <span class="nav-label">Gaussian Splatting</span>
-                <span class="nav-count">79</span>
+                <span class="nav-count">80</span>
             </a>
             <a href="Visual-SLAM.html" class="nav-item">
                 <span class="nav-dot" style="background:#22c55e"></span>
@@ -894,7 +894,7 @@
             <a href="Kalman-Filter.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Kalman Filter</span>
-                <span class="nav-count">45</span>
+                <span class="nav-count">47</span>
             </a>
             <a href="Loop-Closure-Detection.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -909,12 +909,12 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">66</span>
+                <span class="nav-count">70</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">78</span>
+                <span class="nav-count">75</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -949,7 +949,7 @@
             <a href="Model-Predictive-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#14b8a6"></span>
                 <span class="nav-label">Model Predictive Control</span>
-                <span class="nav-count">51</span>
+                <span class="nav-count">52</span>
             </a>
             <a href="Whole-Body-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#06b6d4"></span>
@@ -1028,6 +1028,81 @@
                 <span class="topic-count">80 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2603.29426v2" target="_blank" class="paper-title">Diffusion-Guided Cooperative Policy Learning for Target Tracking Based on Underwater Mobile Agent Networks</a>
+                        <span class="paper-date">2026-08-12</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：针对水下多AUV协同目标跟踪中，多智能体策略非平稳性、探索经验质量不均导致的学习效率低下，以及动态水下扰动下随机探索与确定性执行之间的策略漂移问题。&#10;&#10;🛠 **方法**：提出一种四层分层MARL架构（全局训练调度、多智能体协调、局部策略生成、实时动作执行），并基于此设计SDA-MARL算法，融合扩散生成分支与DDPG分支的双决策策略，结合监督样本选择机制和行为克隆损失。&#10;&#10;✨ **主要贡献**：通过分离经验池减少训练干扰，利用高质量转移动作引导反向扩散以聚焦有效动作空间，并借助行为克隆对齐探索与执行，从而抑制策略漂移。在六自由度水下环境多配置实验中，SDA-MARL相比现有MARL方法收敛更快、跟踪精度更高、AUV间速度更一致且路径更短。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Multi-agent reinforcement learning (MARL) provides a promising solution for cooperative target tracking in networks of autonomous underwater vehicles (AUVs). However, existing methods still face three major challenges: 1) policy non-stationarity caused by concurrent updates among multiple agents; 2) inefficient policy learning caused by the heterogeneous quality of experiences accumulated during exploration; and 3) policy drift between stochastic exploration and deterministic execution under dynamic underwater disturbances. To address these challenges, this paper develops a four-layer hierarchical MARL architecture comprising global training scheduling, multi-agent coordination, local policy generation, and real-time action execution. Building on this architecture, we propose a Supervised Diffusion-Aided MARL (SDA-MARL) algorithm with three closely coupled mechanisms. First, a dual-decision policy integrates a diffusion-based generative branch with a Deep Deterministic Policy Gradient (DDPG) branch, while segregated experience pools reduce training interference between the two branches. Second, a supervised sample-selection mechanism identifies high-quality tracking transitions and uses their actions to guide reverse diffusion, enabling the generative policy to concentrate on effective regions of the action space. Third, a behavioral-cloning loss transfers diffusion-generated actions to the deterministic DDPG Actor, thereby aligning exploration with execution and suppressing policy drift. Experiments conducted in six-degree-of-freedom underwater environments across multiple AUV-target configurations show that SDA-MARL achieves faster convergence, higher tracking accuracy, more consistent inter-AUV velocities, and shorter tracking paths than the compared MARL methods.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.11870v1" target="_blank" class="paper-title">Enhancing Visual Domain Robustness in Behaviour Cloning via Saliency-Guided Augmentation</a>
+                        <span class="paper-date">2026-08-12</span>
+                    </div>
+                                        <span class="paper-comment">📝 Accepted at the Conference on Robot Learning (CoRL) 2024</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在视觉行为克隆中，传统图像增强方法（如随机裁剪、颜色抖动）在面对显著视觉域偏移（如阴影、干扰物、背景变化）时泛化能力不足，而叠加类增强方法可能破坏任务关键语义和时空关系。&#10;&#10;🛠 **方法**：提出RoboSaGA，一种基于显著性引导的叠加增强方法，利用策略驱动的显著性图在像素级动态调整增强强度，对非关键区域进行强增强，同时保留任务关键信息，无需修改网络结构或增加额外训练目标。&#10;&#10;✨ **主要贡献**：在仿真和真实环境中验证，RoboSaGA在保持域内性能的同时，显著提升了对视觉域偏移（包括干扰物、背景、光照和阴影变化）的鲁棒性，且易于集成到现有BC架构中。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>In vision-based behavior cloning (BC), conventional image augmentations such as Random Crop and Color Jitter often fall short under substantial visual domain shifts, including changes in shadows, distractors, and backgrounds. Superimposition-based augmentations, which blend in-domain and out-of-domain images, have shown promise for improving generalization in computer vision, but their suitability for BC remains uncertain because task-critical semantics, spatiotemporal relationships, and agent-target interactions must be preserved. To address this, we introduce RoboSaGA, a Saliency-Guided Augmentation method within the superimposition family tailored for vision-based BC. RoboSaGA dynamically adjusts augmentation intensity at the pixel level using policy-driven saliency, enabling aggressive augmentation in task-irrelevant regions while preserving task-critical information. It integrates seamlessly into existing architectures without requiring structural modifications or additional learning objectives. Experiments in both simulated and real-world settings show that RoboSaGA preserves in-domain performance while substantially improving robustness to visual domain shifts, including distractor and background changes, as well as lighting and shadow variations. Code is available at https://github.com/Zheyu-Zhuang/RoboSaGA.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2606.12406v2" target="_blank" class="paper-title">FACTR 2: Learning External Force Sensing for Commodity Robot Arms Improves Policy Learning</a>
+                        <span class="paper-date">2026-08-12</span>
+                    </div>
+                                        <span class="paper-comment">📝 Website at https://jasonjzliu.com/factr2</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="好的，作为人工智能研究与学术论文分析专家，我将严格遵循您的要求，对论文《FACTR 2: Learning External Force Sensing for Commodity Robot Arms Improves Policy Learning》进行详细的中文解读。&#10;&#10;---&#10;&#10;## 0. 概览（Concise Summary）&#10;&#10;- **主题（Topic）**：机器人操作中的力觉感知与模仿学习。具体关注于如何在无专用力传感器的低成本机器人上实现力觉反馈，并利用该信息提升策略学习性能。&#10;- **问题（Problem）**：接触丰富的操作任务需要力觉信息，但专用力传感器价格昂贵，限制了其在低成本机器人上的应用。现有无传感器力估计方法精度低，且已有的力感知策略学习方法未能充分利用力信息来优化训练数据分布。&#10;- **方法（Method）**：提出一个两阶段系统 FACTR 2。1) **NEXT (Neural External Torque Estimation)**：一种数据驱动的无传感器外力矩估计方法，通过训练一个LSTM网络学习机器人自由空间动力学，从而从电机电流中分离出外力矩。2) **FIRST (Force-Informed Re-Sampling Training)**：一种行为克隆训练方法，利用NEXT估计的外力矩将演示数据分割为自由空间、预接触和接触三个阶段，并在训练时对后两个阶段进行过采样。&#10;- **创新（Innovation）**：1) 提出了一种仅需10分钟自由运动数据和1分钟训练的轻量级神经网络方法NEXT，其估计精度可与专用传感器媲美。2) 提出了FIRST训练策略，首次将外力估计用于识别和重加权训练数据中的关键接触阶段（尤其是预接触阶段），显著提升了策略在接触丰富任务上的表现。&#10;- **意义（Significance）**：FACTR 2 将力觉感知和力感知策略学习的能力“民主化”到了任何商用机器人上，无需昂贵硬件改造。它证明了通过数据驱动方法可以从低成本硬件中提取高质量的力信息，并揭示了在模仿学习中关注“预接触”阶段的重要性，为未来低成本、高鲁棒性的机器人操作研究提供了新范式。&#10;- **一句话总结**：本文通过数据驱动的无传感器外力估计（NEXT）和基于接触阶段重加权的训练方法（FIRST），使得低成本商用机器人也能实现高性能的力觉反馈和接触丰富的操作策略学习。&#10;&#10;## 1. 研究动机（Motivation）&#10;&#10;- **问题与空白**：许多日常操作任务（如插入、拧螺丝）需要精确的力觉控制。然而，高精度的专用力/力矩传感器价格昂贵（有时甚至超过机器人本身），且体积大、安装复杂，这主要限制了其在高端机器人平台上的应用。低成本机器人虽然普及，但普遍缺乏力觉能力，导致其无法进行力反馈遥操作，也无法学习到鲁棒的、对接触敏感的操作策略。&#10;- **重要性**：解决这个问题对于将机器人技术推广到更广泛的工业和家庭应用场景至关重要。如果能让低成本机器人具备力觉能力，将极大降低机器人系统的整体成本，并提升其在复杂、非结构化环境中的操作可靠性和安全性。&#10;- **挑战**：&#10;    1.  **无传感器力估计的精度**：传统基于模型的方法（如逆动力学模型）对机器人动力学参数（如惯性、摩擦）的辨识误差非常敏感，且难以处理非线性、时变的执行器效应（如死区、转矩脉动、滞回），导致估计精度低。&#10;    2.  **力信息的有效利用**：已有的力感知策略学习方法（如FACTR）虽然使用了力信息，但并未深入分析力信号在训练过程中的作用。作者观察到策略失败往往发生在接触发生前后的关键时刻（预接触和接触阶段），而标准的行为克隆训练对所有数据一视同仁，未能有效聚焦于这些“困难”样本。&#10;&#10;## 2. 创新点（Innovation）&#10;&#10;- **关键创新 1：NEXT - 数据驱动的无传感器外力矩估计**&#10;    - **新方法**：提出使用一个**LSTM循环神经网络**来学习机器人的自由空间逆动力学模型。该模型输入一段历史窗口内的关节位置、速度和跟踪误差，预测在无接触情况下电机应有的转矩。&#10;    - **与现有方案的不同**：不同于需要精确物理模型和系统辨识的传统方法（如FILIC、扰动观测器），NEXT完全从数据中学习，无需任何力传感器、负载校准或手动参数调整。它能够隐式地学习到复杂的、难以建模的执行器非线性特性。&#10;    - **为何奏效**：LSTM的时序建模能力使其能够捕捉到历史依赖的效应（如摩擦记忆、滞回），从而比基于瞬时状态的模型更准确地预测自由空间转矩。通过从测量转矩中减去这个预测值，得到的残差即为更纯净的外力信号。&#10;&#10;- **关键创新 2：FIRST - 力引导的重采样训练**&#10;    - **新方法**：提出一种基于外力估计的数据重加权训练策略。它利用NEXT估计的外力矩，通过阈值将演示轨迹自动分割为**自由空间、预接触（接触前1秒）和接触**三个阶段。在训练时，对预接触和接触阶段的样本进行过采样。&#10;    - **与现有方案的不同**：现有方法要么将力作为额外输入（如Base Policy + Torque），要么使用辅助损失（如TA-VLA），或者修改训练噪声（如FACTR）。FIRST的创新在于**直接修改训练数据的采样分布**，有意识地增加困难样本（尤其是预接触阶段）的出现频率。&#10;    - **为何奏效**：作者通过实验（图7）证明，预接触和接触阶段的验证损失远高于自由空间阶段，说明它们是策略学习的瓶颈。通过过采样，FIRST迫使模型在这些关键阶段进行更多学习，从而降低了这些阶段的损失，提升了整体策略在接触任务上的成功率。消融实验（表2）进一步表明，**预接触阶段**的过采样对性能提升最为关键。&#10;&#10;## 3. 主要内容（Main Content）【重点】&#10;&#10;### 3.1 设计架构与方法&#10;&#10;FACTR 2 系统由两个核心模块组成，其整体流程如图1所示。&#10;&#10;1.  **NEXT (Neural External Torque Estimation)**：&#10;    - **训练阶段**：收集约10分钟的无接触自由运动数据（关节位置、速度、跟踪误差和电机电流）。训练一个LSTM模型 $f_\theta$，输入为历史观测 $x_i$，输出为预测的自由空间转矩 $\hat{\tau}_f$。训练目标是使 $\hat{\tau}_f$ 逼近测量到的电机转矩 $\tau_m$（因为在无接触时，$\tau_m = \tau_f$）。&#10;    - **部署阶段**：实时获取电机电流并转换为测量转矩 $\tau_m$。将当前和历史观测 $x_i$ 输入训练好的LSTM模型，得到 $\hat{\tau}_f$。外力矩估计值即为残差：$\hat{\tau}_{ext} = \tau_m - \hat{\tau}_f$。该过程如图2所示。&#10;&#10;2.  **FIRST (Force-Informed Re-Sampling Training)**：&#10;    - **阶段分割**：利用NEXT估计的外力矩 $\hat{\tau}_{ext}$，计算接触分数 $f_t = \|\hat{\tau}_{ext,t}\|_1$。使用滞回阈值法（$T_{high}, T_{low}$）确定接触指示器 $c_t$。根据 $c_t$ 将每个时间步标记为：**自由空间**（$c_t=0$）、**接触**（$c_t=1$）或**预接触**（接触开始前的 $F$ 个时间步）。&#10;    - **重采样训练**：为三个阶段分配不同的采样权重 $w_F, w_{PC}, w_C$，其中 $w_{PC}, w_C &gt; w_F$。在训练行为克隆策略时，根据这些权重进行加权随机采样，使得每个小批量中包含更多的预接触和接触样本。&#10;&#10;### 3.2 关键算法与数学推导&#10;&#10;1.  **NEXT 的力估计模型**：&#10;    外力矩估计的核心公式为：&#10;    $$ \tau_{ext} = \tau_m - \tau_f $$&#10;    其中 $\tau_f$ 是自由空间转矩。NEXT用神经网络 $f_\theta$ 来学习 $\tau_f$：&#10;    $$ \hat{\tau}_f = f_\theta(x), \quad \hat{\tau}_{ext} = \tau_m - \hat{\tau}_f $$&#10;    输入 $x_i$ 是一个历史窗口内的观测量：&#10;    $$ x_i = [q_{i-H:i}, \dot{q}_{i-H:i}, \Delta q_{d, i-H:i}] $$&#10;    其中 $q$ 是关节位置，$\dot{q}$ 是关节速度，$\Delta q_d$ 是目标位置与当前位置的差值（跟踪误差），$H$ 是历史长度。&#10;    训练损失函数为 $L_2$ 回归损失：&#10;    $$ \mathcal{L}(\theta) = \frac{1}{N} \sum_{i=1}^{N} \| f_\theta(x_i) - \tau_{m,i} \|_2^2 $$&#10;&#10;2.  **FIRST 的接触阶段分割**：&#10;    接触分数：$f_t = \|\hat{\tau}_{ext,t}\|_1$&#10;    滞回阈值确定接触指示器 $c_t$：&#10;    $$ c_t = \begin{cases} 1, &amp; \text{if } f_t \geq T_{high} \\ 0, &amp; \text{if } f_t \leq T_{low} \\ c_{t-1}, &amp; \text{otherwise} \end{cases} $$&#10;    接触开始时间点集：$T_{onset} = \{t | c_{t-1} = 0, c_t = 1\}$&#10;    阶段标签 $s_t$ 定义为：&#10;    $$ s_t = \begin{cases} \text{Contact (C)}, &amp; c_t = 1, \\ \text{Pre-Contact (PC)}, &amp; \exists t_{onset} \in T_{onset}: t_{onset} - F \leq t &lt; t_{onset}, \\ \text{Free Space (F)}, &amp; \text{otherwise}. \end{cases} $$&#10;&#10;3.  **FIRST 的重采样训练**：&#10;    策略 $\pi_\theta$ 是一个流匹配（Flow Matching）模型，其训练目标是预测从噪声 $x_0$ 到专家动作 $x_1$ 的速度场 $v_\theta$：&#10;    $$ \mathcal{L}_{FM}(\theta) = \mathbb{E} \left[ \| v_\theta(x_\alpha, \alpha, o_t) - (x_1 - x_0) \|_2^2 \right] $$&#10;    其中 $x_\alpha = (1-\alpha)x_0 + \alpha x_1$，$\alpha \sim U(0,1)$。&#10;    FIRST 修改了数据采样概率 $p_t$：&#10;    $$ p_t = \frac{w(s_t)}{\sum_{j=1}^{N} w(s_j)} $$&#10;    其中 $w(s_t)$ 是阶段 $s_t$ 对应的权重。&#10;&#10;### 3.3 模型、训练与数据集&#10;&#10;- **NEXT 模型**：2层LSTM，隐藏层大小128，后接2层MLP预测头（隐藏层256）。采用滑动窗口方式，无状态。&#10;- **NEXT 训练**：在NVIDIA RTX 3090上训练约1分钟。优化器为AdamW，学习率 $1 \times 10^{-3}$。使用早停法。&#10;- **NEXT 数据集**：约10分钟的自由运动数据。收集策略包括：1) 每个关节独立运动；2) 末端执行器进行笛卡尔运动；3) 重复慢速和快速运动以覆盖速度相关动力学。数据频率100Hz。&#10;- **策略模型**：基于多模态扩散Transformer（Multi-modal Diffusion Transformer）的流匹配策略，或动作分块Transformer（ACT）。动作分块大小为30。&#10;- **策略训练**：训练20个epoch。输入包括多视角RGB图像（4个相机）、关节位置和估计的外力矩。&#10;- **任务与数据集**：在5个长时域、接触丰富的双机械臂任务上评估（图3）：LEGO组装、NIST皮带、NIST插入、工具清理、瓶盖拧紧。每个任务收集250个演示。&#10;&#10;### 3.4 实验设置与结果&#10;&#10;- **外力估计实验**：&#10;    - **设置**：在Franka（有专用传感器）和AgileX Piper（低成本，无传感器）上评估。以Franka内置传感器信号或零力矩作为真值。&#10;    - **基线**：FILIC（基于模型逆动力学）、扰动观测器（DO）。&#10;    - **结果（表1，图5）**：NEXT在Franka上的接触和自由空间场景下均取得最低的 $L_1$ 误差（接触：0.547 Nm，自由空间：0.414 Nm），显著优于FILIC和DO。在自由空间，NEXT的估计甚至比Franka的专用传感器噪声更小。&#10;&#10;- **力反馈遥操作用户研究**：&#10;    - **设置**：20名参与者使用Franka和Piper执行擦拭任务，比较不同反馈条件。&#10;    - **基线**：无反馈、DO反馈、位置-位置反馈、FACTR Teleop（使用Franka传感器）、FACTR Teleop + NEXT。&#10;    - **结果（图4）**：NEXT在易用性评分上优于所有无传感器基线，与使用专用传感器的FACTR Teleop性能相当。同时，使用NEXT反馈时，操作者施加的关节力矩更低，表明力反馈更有效。&#10;&#10;- **模仿学习实验**：&#10;    - **设置**：在5个任务上比较不同策略的“任务进度”指标。&#10;    - **基线**：Base Policy（无力信息）、Base Policy + Torque（加力输入）、FACTR（加力输入+图像模糊）、TA-VLA（加力输入+辅助损失）。&#10;    - **结果（图6）**：FIRST在所有5个任务上均取得了最高的任务进度，平均提升超过17%。在需要精确对齐的NIST皮带任务上优势尤为明显。&#10;    - **消融实验（表2，图7）**：&#10;        - **阶段重采样消融**：仅过采样预接触（PC）阶段效果最好，平均任务进度0.818；同时过采样预接触和接触（PC+C）效果次之（0.811）；仅过采样接触（C）效果最差（0.670）。这证明了预接触阶段的关键性。&#10;        - **损失分析（图7）**：Base Policy + Torque在预接触和接触阶段的验证损失远高于自由空间。FIRST通过过采样显著降低了这两个阶段的损失，使其与自由空间损失接近，从而提升了整体性能。&#10;&#10;### 3.5 技术细节&#10;&#10;- **NEXT 输入选择**：消融实验（表4）表明，输入包含关节位置、速度和跟踪误差（$q, \dot{q}, \Delta q_d$）时效果最好。历史窗口长度 $H=50$ 步（0.5秒）为最优。&#10;- **NEXT 架构选择**：LSTM优于GRU和MLP，尤其在接触场景下，表明长时记忆对于建模复杂的执行器动态至关重要。&#10;- **接触检测阈值**：使用滞回阈值（$T_{high}, T_{low}$）来避免噪声导致的误触发。&#10;- **预接触窗口长度**：$F$ 设置为控制频率（100Hz）对应的1秒，即100个时间步。&#10;- **为什么不用原始电流？**：实验（表10）表明，使用NEXT估计的外力矩作为策略输入，效果优于直接使用原始电机电流。这是因为NEXT通过减去学习到的自由空间动力学，提供了一个更干净、更直接的接触表征。&#10;&#10;## 4. 意义与影响（Significance and Impact）&#10;&#10;- **解决的问题与贡献**：&#10;    1.  **解决了低成本机器人缺乏力觉感知的难题**：NEXT提供了一种极其轻量、高效且无需硬件的解决方案，使得任何机器人（尤其是低成本机器人）都能获得高质量的力觉信息。&#10;    2.  **揭示了模仿学习中数据重加权的新方向**：FIRST首次系统地证明了在接触丰富任务中，**预接触阶段**的数据对于策略学习至关重要。这为未来数据增强和课程学习策略提供了重要的实证指导。&#10;    3.  **提升了策略学习的性能和鲁棒性**：通过聚焦于困难样本，FIRST在多个长时域任务上显著优于现有方法，展示了其在复杂操作任务中的实用价值。&#10;&#10;- **对未来研究/应用的影响**：&#10;    - **硬件民主化**：FACTR 2 有望推动低成本机器人臂在精密装配、柔性操作等领域的应用，降低自动化门槛。&#10;    - **数据效率**：FIRST的理念可以推广到其他模仿学习或强化学习框架中，通过识别并重加权关键状态（如接近目标、接触瞬间）来提高数据利用效率。&#10;    - **新范式**：证明了“从数据中学习物理模型”可以替代昂贵的物理传感器，为机器人感知提供了一种新的、可扩展的范式。&#10;&#10;- **局限与开放问题**：&#10;    1.  **绝对力矩尺度依赖**：NEXT的绝对尺度依赖于电机转矩常数 $K$，如果 $K$ 不准确，需要校准。作者认为在遥操作（可缩放）和策略学习（会归一化）中，这并非严重问题。&#10;    2.  **机器人特异性**：NEXT模型是针对特定机器人训练的，不同硬件之间需要重新训练。未来工作可以探索跨平台迁移或元学习。&#10;&#10;## 5. 澄清与简化（Clarifications and Simplifications）&#10;&#10;- **NEXT 是如何工作的？**&#10;    - **类比**：想象一个举重运动员。如果他闭着眼睛举起一个空杆，他的肌肉会施加一个特定的力。如果突然有人在杆上放了一个重物，他的肌肉会感受到额外的力。NEXT就像是在训练这个运动员“闭着眼睛举起空杆”的感觉。之后，当他再举重时，他就能通过“当前肌肉感觉”减去“空杆感觉”来精确知道重物有多重。&#10;    - **技术简化**：机器人有电机，电机电流可以反映它用了多大力。NEXT训练一个神经网络，让它学会预测“当机器人空载运动时，电流应该是多少”。在真实操作时，机器人实际电流减去这个“预测的空载电流”，剩下的就是由外部接触引起的电流，从而推算出外力。&#10;&#10;- **FIRST 为什么有效？**&#10;    - **类比**：学习投篮。如果你只是随机地投1000次篮，你可能大部分时间都在练习">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Contact-rich manipulation requires force sensitivity, but many robot arms lack dedicated force sensors due to their high cost. We present Neural External Torque Estimation (NEXT), a data-driven method that estimates external joint torques without needing any dedicated force sensors. NEXT trains in 1 minute from only 10 minutes of free-motion data, yet achieves estimates comparable to dedicated joint-torque sensors. NEXT enables force-feedback teleoperation on low-cost arms and improves policy learning through Force-Informed Re-Sampling Training (FIRST), which up-samples pre-contact and contact segments during behavior cloning. Across five long-horizon tasks, FIRST outperforms prior force-aware policies by over 17% in task progress. Together, NEXT and FIRST bring force-aware teleoperation and policy learning to off-the-shelf robots without additional sensing hardware. Video results and code are available at https://jasonjzliu.com/factr2</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2605.12236v2" target="_blank" class="paper-title">TMRL: Diffusion Timestep-Modulated Pretraining Enables Exploration for Efficient Policy Finetuning</a>
+                        <span class="paper-date">2026-08-12</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="好的，作为一名人工智能研究与学术论文分析专家，我将严格按照您的要求，对这篇论文《TMRL: Diffusion Timestep-Modulated Pretraining Enables Exploration for Efficient Policy Finetuning》进行详细的中文解读。&#10;&#10;---&#10;&#10;## 0. 概览（Concise Summary）&#10;&#10;- **主题（Topic）**：机器人策略学习。具体涉及如何通过预训练（Pre-training）和强化学习（RL）微调（Fine-tuning）相结合的方式，高效地训练机器人完成复杂任务。&#10;- **问题（Problem）**：标准的模仿学习（Behavior Cloning, BC）预训练会产生狭窄的动作分布，导致在遇到未见过的环境或任务时，策略缺乏探索能力，使得后续的强化学习微调样本效率低下，甚至无法学习。&#10;- **方法（Method）**：提出一个两阶段框架。1）**上下文平滑预训练（Context-Smoothed Pre-training, CSP）**：在预训练阶段，向策略的输入（如状态、图像、语言指令等）注入可控的扩散噪声，使策略学会在精确模仿和广泛动作覆盖之间进行插值。2）**时间步调制强化学习（Timestep-Modulated Reinforcement Learning, TMRL）**：在微调阶段，训练一个高层强化学习策略来动态调整注入到上下文中的噪声量（即扩散时间步），从而实现对探索与利用的显式控制。&#10;- **创新（Innovation）**：1）将探索问题从“动作空间加噪声”转变为“上下文空间加噪声”，通过上下文平滑（Context Smoothing）实现了结构化、连贯的动作覆盖扩展，而非随机的抖动。2）将扩散时间步作为一个可学习的“探索-利用”旋钮，让RL智能体在微调过程中自适应地调整策略的保守程度。&#10;- **意义（Significance）**：该方法显著提升了机器人策略微调的样本效率，能够在一小时内完成真实世界复杂操作任务的微调。它统一了BC预训练和RL微调之间的鸿沟，为利用大规模离线数据训练的策略进行高效在线适应提供了新范式。&#10;- **一句话总结**：本文通过向策略输入注入可控扩散噪声进行预训练，并在微调时让RL智能体学习动态调节该噪声量，从而在保持行为连贯性的同时，极大地提升了策略的探索能力和微调效率。&#10;&#10;## 1. 研究动机（Motivation）&#10;&#10;- **问题与空白**：当前机器人学习的流行范式是先在大型演示数据集上通过模仿学习（BC）预训练策略，然后通过强化学习（RL）在部署环境中进行微调。然而，这个RL微调阶段存在一个关键瓶颈：**样本效率低下**。主要原因在于标准BC预训练产生的策略，其动作分布非常狭窄，只对训练数据中见过的上下文（状态、指令等）有效。当遇到分布外（Out-of-Distribution, OOD）的上下文时，策略会过度自信地输出错误动作，导致RL在探索初期无法获得有效的奖励信号，从而无法学习。&#10;- **为什么重要**：解决这个瓶颈对于将机器人技术从实验室推广到现实世界至关重要。现实世界环境复杂多变，无法为每一种可能的情况都收集演示数据。因此，需要一种方法，使得预训练的策略能够高效地适应新环境、新任务，而无需从头开始收集海量数据。&#10;- **挑战**：核心挑战在于如何平衡**任务熟练度**和**动作覆盖度**。BC策略熟练度高但覆盖度低，而随机动作覆盖度高但毫无任务熟练度。简单的动作空间加噪声（如PostBC）虽然能增加覆盖，但会导致动作不连贯（抖动），影响执行质量。如何在不牺牲行为质量的前提下，实现结构化、可控的探索，是主要挑战。&#10;&#10;## 2. 创新点（Innovation）&#10;&#10;- **关键创新**：本文的核心创新在于提出了一个统一的预训练和微调框架，其包含两个紧密耦合的创新点：&#10;    1.  **上下文平滑预训练（CSP）**：不同于以往在动作空间加噪声，CSP在**上下文输入空间**加噪声。通过向策略的输入（如状态、图像嵌入）注入不同强度的扩散噪声，策略被迫学习在“精确模仿”和“借用附近上下文的动作”之间进行插值。这创造了一个从条件分布 $p(a|c)$ 到边缘分布 $p(a)$ 的平滑连续体。&#10;    2.  **时间步调制强化学习（TMRL）**：CSP预训练出的策略可以接受一个“噪声量”参数（即扩散时间步 $t_c$）。TMRL的核心创新在于，它将这个噪声量作为一个**可学习的控制变量**，交给一个高层RL策略 $\pi_{HL}(z, \sigma|s)$ 来动态选择。这使得智能体在微调过程中，能够根据当前状态，自主决定是更多地依赖精确模仿（低噪声）还是进行广泛探索（高噪声）。&#10;- **与现有方案的不同**：&#10;    - 相比于**PostBC**（动作空间加噪声），CSP/TMRL的探索是**结构化**的。它通过上下文平滑“借用”了数据集中其他相似上下文的连贯动作序列，而不是执行不连贯的随机抖动。&#10;    - 相比于**DSRL**（在潜空间进行RL），TMRL的探索能力不再受限于基础策略 $p(a|c)$ 的狭窄支持集。通过调节噪声，TMRL可以访问到 $p(a)$ 甚至更广的动作分布，从而在OOD情况下也能找到有效动作。&#10;    - 相比于**CFG（Classifier-Free Guidance）**，CSP/TMRL通过直接对上下文进行噪声化，将OOD上下文“拉回”到训练分布中，而CFG仍然依赖于可能已经失效的条件分布 $p(a|c)$。&#10;- **为什么能奏效**：理论分析（Theorem 1）证明，上下文平滑增加了不同上下文之间动作分布的重叠度。这意味着，当智能体处于一个陌生的状态时，通过增加噪声，它可以“借用”到与它相似的、在训练数据中出现过的状态下的成功动作，从而进行有意义的探索。这种探索是连贯且高效的。&#10;&#10;## 3. 主要内容（Main Content）【重点】&#10;&#10;### 3.1 设计架构与方法&#10;&#10;整体框架分为两个阶段，如图3所示：&#10;&#10;1.  **预训练阶段（Context-Smoothed Pre-training, CSP）**：&#10;    - **输入**：离线数据集 $D = \{(c_i, a_i)\}$，其中 $c$ 是上下文（状态、图像等），$a$ 是动作。&#10;    - **过程**：对于每个训练样本，首先从一个分布 $S$ 中采样一个噪声级别 $\sigma$（在本文中对应扩散时间步 $t_c$）。然后，使用一个**损坏核（corruption kernel）** $q_\sigma(\tilde{c}|c)$ 对原始上下文 $c$ 进行加噪，得到损坏的上下文 $\tilde{c}$。最后，训练一个策略 $p_\theta(a|\tilde{c}, z, \sigma)$ 来根据损坏的上下文预测动作。这个策略被训练在所有噪声级别下都能工作。&#10;    - **输出**：一个**可操纵的基础策略（steerable base policy）**，它可以通过调整 $\sigma$ 来在 $p(a|c)$ 和 $p(a)$ 之间平滑插值。&#10;&#10;2.  **微调阶段（Timestep-Modulated RL, TMRL）**：&#10;    - **输入**：冻结的CSP预训练策略 $p_\theta(a|\tilde{c}, z, \sigma)$。&#10;    - **过程**：训练一个高层RL策略 $\pi_{HL}(z, \sigma|s)$。在每个时间步，$\pi_{HL}$ 根据当前状态 $s$ 输出一个潜变量 $z$ 和一个噪声级别 $\sigma$。然后，使用 $\sigma$ 对当前上下文 $c$ 进行加噪得到 $\tilde{c}$，最后从基础策略 $p_\theta(a|\tilde{c}, z, \sigma)$ 中采样动作并执行。&#10;    - **输出**：一个能够自适应调节探索与利用的最终策略。&#10;&#10;### 3.2 关键算法与数学推导&#10;&#10;- **损坏核（Corruption Kernel）**：&#10;  使用扩散模型的前向过程作为损坏核。设原始上下文为 $c_0 \equiv c$，方差调度为 $\{\beta_t\}_{t=1}^{T_c}$，则损坏后的上下文 $c_t$ 的分布为：&#10;  $$q(c_t|c_0) = \mathcal{N}(\sqrt{\bar{\alpha}_t}c_0, (1-\bar{\alpha}_t)I)$$&#10;  其中 $\bar{\alpha}_t = \prod_{i=1}^t \alpha_i$，$\alpha_i = 1 - \beta_i$。噪声级别 $\sigma$ 由扩散时间步 $t_c$ 参数化。&#10;&#10;- **CSP预训练目标**：&#10;  标准BC的目标是最大化 $\log p_\theta(a|c)$。CSP的目标是：&#10;  $$\min_\theta \mathbb{E}_{(c,a)\sim D} \mathbb{E}_{\sigma \sim S} \mathbb{E}_{\tilde{c} \sim q_\sigma(\cdot|c)} [\ell(\theta; a, \tilde{c}, \sigma)]$$&#10;  其中 $\ell$ 是适用于生成式控制策略（GCP）的损失函数，如去噪得分匹配或流匹配损失。&#10;&#10;- **TMRL微调目标**：&#10;  高层策略 $\pi_{HL}(z, \sigma|s)$ 的目标是最大化累积折扣奖励：&#10;  $$\max_{\pi_{HL}} \mathbb{E} \left[ \sum_{t \ge 0} \gamma^t r_t \right]$$&#10;  约束条件为：&#10;  $$z_t, \sigma_t \sim \pi_{HL}(\cdot | s_t), \quad \tilde{c}_t \sim q_{\sigma_t}(\cdot | c(s_t)), \quad a_{1:H}^t \sim p_\theta(\cdot | \tilde{c}_t, z_t, \sigma_t)$$&#10;&#10;- **理论分析（Theorem 1）**：&#10;  对于高斯上下文平滑，两个上下文 $c, c'$ 的平滑后分布的总变差距离（TV）有上界：&#10;  $$TV(p_\sigma(\cdot|c), p_\sigma(\cdot|c')) \le \frac{\mathbb{E}\|w\|}{\sigma} \|c - c'\|$$&#10;  **解释**：&#10;  1.  **更多噪声 $\Rightarrow$ 更广覆盖**：对于固定的 $c, c'$，增加 $\sigma$ 会减小TV距离的上界，即增加两个分布的重叠度。这保证了在陌生状态下，通过增加噪声可以借用已知状态的动作，从而提升动作覆盖。&#10;  2.  **更近的上下文 $\Rightarrow$ 更连贯的覆盖**：对于固定的 $\sigma$，TV距离的上界与 $\|c - c'\|$ 成正比。这意味着策略会优先从更相似的上下文中借用动作，保证了探索的连贯性和结构性。&#10;&#10;### 3.3 模型、训练与数据集&#10;&#10;- **模型**：基础策略 $p_\theta$ 采用生成式控制策略（GCP），特别是扩散策略（Diffusion Policy）或流匹配策略（Flow Matching Policy）。高层策略 $\pi_{HL}$ 是一个标准的神经网络策略，输出 $z$ 和 $\sigma$ 的分布。&#10;- **训练**：&#10;    - **预训练**：使用算法1，在离线数据集上训练CSP策略。噪声级别 $\sigma$ 从均匀分布 $S$ 中采样。&#10;    - **微调**：使用算法2，冻结CSP策略，使用离策略的RL算法（如SAC）训练高层策略 $\pi_{HL}$。&#10;- **数据集**：&#10;    - **模拟环境**：OGBench（点迷宫、方块操作）、LIBERO（基于图像的任务）、IsaacLab（灵巧手抓取）。&#10;    - **真实世界**：BridgeData v2（WidowX 250机械臂）、DROID（Franka Panda机械臂）。&#10;&#10;### 3.4 实验设置与结果&#10;&#10;实验旨在回答四个研究问题（Q1-Q4），结果如图5-13所示。&#10;&#10;- **(Q1) 预训练动作覆盖比较**：在OGBench任务上，CSP策略的零样本成功率（Success@K）显著高于标准BC和PostBC（图7）。这表明CSP确实产生了更宽的动作覆盖。&#10;- **(Q2) 不同策略条件下的RL微调**：&#10;    - **状态输入**：在`pointmaze-giant`和`cube-single`任务上，TMRL的成功率和样本效率均大幅优于RLPD、SPiRL、DSRL和PostBC（图6左两图）。&#10;    - **图像/VLM嵌入输入**：在`libero-goal`和`libero-90`任务上，TMRL在长周期任务`libero-90`上表现突出，是唯一能有效学习的算法（图6右两图）。&#10;    - **点云输入**：在灵巧手抓取任务上，TMRL比DSRL学习更快，最终成功率高出2.5倍（图9）。&#10;- **(Q3) 真实世界VLA微调**：在WidowX和Franka机器人上，TMRL能够在不到一小时的实验时间内，将预训练的π0 VLA策略微调至接近完美的成功率，而DSRL则完全失败（图10）。&#10;- **(Q4) 分析与消融**：&#10;    - **与CFG对比**：TMRL（使用CSP）在OGBench任务上远优于TMRL-CFG（使用CFG进行插值）（图11），证明了上下文平滑的有效性。&#10;    - **探索行为可视化**：TMRL的探索行为比DSRL更广泛且更连贯（图12）。&#10;    - **噪声量动态变化**：TMRL学会在任务开始时使用高噪声进行探索，在接近目标时使用低噪声进行精确执行（图13）。&#10;&#10;### 3.5 技术细节&#10;&#10;- **上下文平滑的实现**：对于不同的输入类型，噪声注入方式不同。对于状态向量，直接加高斯噪声。对于VLM嵌入，对嵌入向量加噪声。对于点云，对点云坐标加噪声。&#10;- **与现有VLA模型的集成**：CSP可以无缝集成到π0等VLA模型中，只需在VLM嵌入输入到动作专家（Action Expert）之前，添加一个噪声注入步骤（图8）。&#10;- **高层策略设计**：高层策略 $\pi_{HL}$ 输出两个头，一个用于潜变量 $z$，一个用于扩散时间步 $\sigma$（或 $t_c$）。$\sigma$ 的输出经过sigmoid函数映射到 $[0, 1]$ 区间。&#10;&#10;## 4. 意义与影响（Significance and Impact）&#10;&#10;- **解决的问题与贡献**：&#10;    1.  **解决了RL微调中的探索瓶颈**：通过上下文平滑，为BC预训练策略提供了结构化、可控的探索能力，从根本上解决了因动作分布狭窄导致的微调失败问题。&#10;    2.  **提出了统一的预训练-微调框架**：CSP和TMRL形成了一个完整的解决方案，从预训练阶段就开始为高效的RL微调做准备，而非事后补救。&#10;    3.  **提供了理论支撑**：通过理论分析（Theorem 1）证明了上下文平滑如何增加动作覆盖，为方法的有效性提供了坚实的理论基础。&#10;    4.  **展示了强大的实用性**：在多种模拟和真实世界任务上，包括状态、图像、点云输入，以及VLA模型上，都取得了显著优于现有方法的效果，证明了其通用性和可扩展性。&#10;&#10;- **对未来研究/应用的影响**：&#10;    - **新范式**：本文可能引领一种新的机器人策略预训练范式，即预训练的目标不仅仅是模仿，更是为了后续的在线适应和探索。&#10;    - **VLA模型微调**：为如何高效地将大规模预训练的VLA模型微调到特定任务上提供了有效途径，这对于机器人领域的大模型应用至关重要。&#10;    - **安全探索**：虽然本文提到了安全问题，但其结构化探索的特性（借用连贯动作）为设计更安全的探索策略提供了思路。&#10;&#10;- **局限与开放问题**：&#10;    1.  **安全性**：通过上下文平滑借用动作可能导致不安全的行为，需要结合安全过滤器或世界模型来缓解。&#10;    2.  **样本效率**：虽然比现有方法好，但在许多实际任务中，其样本效率仍然不够高，需要进一步改进。&#10;    3.  **噪声级别的选择**：虽然TMRL可以学习调节噪声，但如何更高效地学习这个调节策略本身仍是一个开放问题。&#10;&#10;## 5. 澄清与简化（Clarifications and Simplifications）&#10;&#10;- **核心思想类比**：想象一个只会照着菜谱做菜的厨师（标准BC策略）。如果菜谱上没有某个菜（OOD上下文），他就完全不会做。CSP/TMRL相当于给这个厨师一个“模糊滤镜”。当他遇到一个不熟悉的菜时，他可以戴上这个滤镜，让菜谱上的字变得模糊。模糊后，他看到的可能就不再是某个特定菜名，而是一些通用的烹饪步骤（如“切菜”、“翻炒”），这些步骤是从其他菜谱中“借用”来的。这样他就能开始尝试，而不是束手无策。当他逐渐熟悉这个新菜后，就可以摘下滤镜，按照精确的菜谱操作。TMRL就是训练厨师自己决定什么时候戴滤镜、戴多厚的滤镜。&#10;&#10;- **为什么在上下文加噪声比在动作加噪声好？**&#10;    - **动作加噪声（如PostBC）**：就像让厨师在切菜时手抖，动作变得随机、不连贯。虽然可能碰巧切到正确的菜，但效率低，且动作质量差。&#10;    - **上下文加噪声（CSP）**：就像让厨师看一个模糊的菜谱。他看到的不是随机的动作，而是从其他相关菜谱中“借用”来的、连贯的烹饪步骤。这种探索是结构化的、有意义的，执行质量也更高。&#10;&#10;- **什么是“上下文平滑”？**&#10;    简单来说，就是让策略的输入变得“模糊”。通过向输入（如机器人关节角度、摄像头图像）添加不同量的噪声，使得原本截然不同的输入状态变得相似。例如，一个机械臂在位置A和位置B，当输入噪声很大时，这两个位置在策略看来可能就没什么区别了。这样，策略在位置A时，就可能“借用”它学到的在位置B时的动作。&#10;&#10;## 6. 补充说明（Additional Notes）&#10;&#10;- **相关工作关联**：&#10;    - **PostBC [1]**：本文最直接的竞争对手。PostBC通过动作空间加噪声来增加覆盖，而本文通过上下文加">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Fine-tuning pre-trained robot policies with reinforcement learning (RL) often inherits the bottlenecks introduced by pre-training with behavioral cloning (BC), which produces narrow action distributions that lack the coverage necessary for downstream exploration. We present a unified framework that enables the exploration necessary to enable efficient robot policy finetuning by bridging BC pre-training and RL fine-tuning. Our pre-training method, Context-Smoothed Pre-training (CSP), injects forward-diffusion noise into policy inputs, creating a continuum between precise imitation and broad action coverage. We then fine-tune pre-trained policies via Timestep-Modulated Reinforcement Learning (TMRL), which trains the agent to dynamically adjust this conditioning during fine-tuning by modulating the diffusion timestep, granting explicit control over exploration. Integrating seamlessly with arbitrary policy inputs, e.g., states, 3D point clouds, or image-based VLA policies, we show that TMRL improves RL fine-tuning sample efficiency. Notably, TMRL enables successful real-world fine-tuning on complex manipulation tasks in under one hour. Videos and code available at https://weirdlabuw.github.io/tmrl/.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.11363v1" target="_blank" class="paper-title">Adaptation of Generalist Robot Policies with Minimal Data</a>
+                        <span class="paper-date">2026-08-11</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：如何让预训练的通用机器人策略仅凭极少数据（如一条演示）就能快速适应新任务，并进一步通过自主在线交互提升性能。&#10;&#10;🛠 **方法**：提出MiDAS框架，采用“离线到在线”强化学习流程：先用单条/少量演示通过行为克隆将预训练VLA策略锚定到目标任务，再基于残差策略参数化进行价值型在线强化学习优化。&#10;&#10;✨ **主要贡献**：在LIBERO和RoboCasa基准上，MiDAS仅凭一条演示即可恢复强任务性能，显著优于基线并泛化到未演示条件；在双臂YAM平台上经约6小时在线交互，从单演示的低成功率策略提升至鲁棒新行为，首次实现单条演示驱动的可靠机器人策略适应。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>A central goal in robot learning is to move beyond task-specific human data collection toward robots that improve through autonomous interaction. Yet fully autonomous learning remains difficult with current policies: sparse rewards and weak zero-shot exploration make it unlikely that a robot will discover successful behavior from scratch. We study minimal-data adaptation, a regime in which a pre-trained robot policy must learn a new task from as little as one demonstration followed by autonomous online interaction. This setting serves as the closest tractable proxy for fully autonomous improvement, allowing us to study whether minimal human guidance can bootstrap autonomous learning and what algorithmic ingredients make it feasible. We build MiDAS, a simple offline-to-online RL recipe that first anchors a pre-trained VLA to the target task with behavior cloning on single/few demonstrations, then improves it through value-based online RL on a residual policy parameterization. Across LIBERO and RoboCasa, MiDAS recovers strong task performance from as little as one demonstration, substantially outperforming baselines and generalizing beyond demonstrated conditions. We further evaluate MiDAS on a bimanual YAM platform. Starting from a fragile low-success policy obtained from a single demonstration, MiDAS improves its robustness and learns new successful behaviors over ~6 hours of online interaction. To the best of our knowledge, this is the first demonstration of reliable robot policy adaptation from a single task demonstration.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2608.09467v1" target="_blank" class="paper-title">RecoverFly: A Failure-Aware Reinforcement Learning Post-Training Framework for Aerial Vision-Language Navigation</a>
@@ -1109,10 +1184,7 @@
                         <span class="paper-date">2026-08-04</span>
                     </div>
                                         <span class="paper-comment">📝 Accepted for a spotlight at the ICML 2026 Workshop on Generative and Agentic AI for Biology (GenBio) and as a poster at the ICML 2026 Workshop on Decision-Making from Offline Datasets to Online Adaptation: Black-Box Optimization to Reinforcement Learning (DEMO). 15 pages, 3 figures, 11 tables</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：将肿瘤药物临床开发建模为离线决策问题，预测给定药物项目未来六个月的试验组合，以应对临床开发中的序贯决策不确定性。&#10;&#10;🛠 **方法**：构建包含31.7k条异构公共数据记录的时间数据集，整合为881个离线决策片段，对比四种离线训练目标（行为克隆、奖励加权行为克隆、学习奖励训练、隐式Q学习）与四种前沿LLM智能体（共享日期门控检索框架），在多种数据划分下评估。&#10;&#10;✨ **主要贡献**：离线训练模型显著优于未微调基线，其中奖励加权行为克隆表现最佳，在2025年8月后的无污染测试集上达到46.2%的适应症F1和14.2%的严格F1，远超最优工具智能体（25.0%和2.1%），证明结构化离线学习可有效训练临床实验规划智能体。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Clinical development is sequential decision-making under uncertainty, where a sponsor must plan a portfolio of experiments from heterogeneous evidence. We study this setting by framing oncology clinical development as an offline decision-making problem in which an agent predicts the next six-month trial portfolio of an oncology drug program from information available at the decision date. To support this, we construct a temporal dataset that combines 31.7k heterogeneous public data records, including trial registries, regulatory reviews, sponsor filings, utilization data, and epidemiology, into 881 offline decision episodes across 45 historical programs. We compare four offline objectives: behavioral cloning, reward-weighted behavioral cloning, learned-reward training, and value-based implicit Q-learning against four frontier LLM agents that share a common date-gated retrieval scaffold across held-out drug, sponsor, drug-class, and temporal splits. Models trained offline outperform the non-fine-tuned baselines, particularly in the post-August 2025 contamination-clean holdout. Reward-weighted behavioral cloning performs the best, obtaining 46.2% indication F1 and 14.2% strict F1 against 25.0% and 2.1%, respectively, for the best-performing tool agent on each metric. These results suggest that structured offline learning can teach agents to plan clinical experiments.</p>
@@ -1124,10 +1196,7 @@
                         <span class="paper-date">2026-08-04</span>
                     </div>
                                         <span class="paper-comment">📝 14 pages, 3 figures, 9 tables</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：研究在视觉丰富的第一人称游戏中，仅使用简单的行为克隆策略（不依赖强化学习或显式记忆）能达到何种表现水平。&#10;&#10;🛠 **方法**：采用紧凑的Transformer策略（Cortex），包含6层Transformer和1098万可训练参数，使用冻结的DINOv3视觉编码器，在公开的Pixels2Play数据集的Quake子集上训练，输入为四帧窗口的键盘鼠标动作。&#10;&#10;✨ **主要贡献**：Cortex虽未完成关卡，但每局都能到达关键区域，多数局有击杀记录；相比同条件下的P2P-150M和NitroGen模型表现更深；消融实验表明密集视觉令牌可提升战斗和生存能力，同时揭示了协变量偏移问题，为后续针对性数据修正提供了方向。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>We study how far a deliberately simple behavioral-cloning policy can progress in a visually rich first-person game before adding reinforcement learning or explicit memory. Cortex is a compact Quake policy with 10.98 million trainable parameters in a six-layer transformer over a frozen DINOv3 encoder. It is trained on the Quake subset of the public Pixels2Play corpus: 6,849 recordings (about 474.7 hours), represented as 17.09 million cached decision frames with keyboard and mouse actions. One sampled training epoch uses 517,048 four-frame windows and takes 3.3 minutes of policy-head optimization on one RTX 5080, excluding one-time feature extraction. We evaluate two independent batches of 20 stochastic, 120-second episodes on Quake E1M1. Cortex does not complete the level, but every episode reaches the opening door, button room, and gate descent; 19 of 20 episodes in each batch record at least one kill. Under the same time-controlled harness, released P2P-150M and NitroGen checkpoints remain shallower in five matched-duration episodes each. These comparisons are limited by small reference samples and different native interfaces. Ablations show that denser visual tokens improve combat and survival, while longer optimization and naive action history improve offline metrics without consistently improving play. The remaining failures are consistent with covariate shift and motivate targeted corrective data. We release the policy implementation, checkpoint, and a representative rollout.</p>
@@ -1139,10 +1208,7 @@
                         <span class="paper-date">2026-08-03</span>
                     </div>
                                         <span class="paper-comment">📝 22 pages, 17 figures, 8 tables</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：行为克隆训练的视觉-语言-动作（VLA）策略在失败时无法从动作流中察觉异常，因为模仿学习缺乏进度信号，而强化学习因真实机器人成本高且变形食物难以仿真而不实用。&#10;&#10;🛠 **方法**：提出ValueFormer，一个基于冻结DINOv3骨干的紧凑因果Transformer，单次前向输出两个逐帧信号——平滑的蒙特卡洛价值（用于优势估计）和尖锐的二元价值（用于在线错误检测）；失败片段采用阶段感知的成功-衰减回报标签，错误检测从错误区间而非单一失败时刻监督。&#10;&#10;✨ **主要贡献**：在真实双臂三明治组装任务（1427个片段）中，评论家派生的逐帧训练权重将任务完成率从70%提升至85%（n=20噪声范围内）；批处理bf16编码器将实时服务成本降低3-5倍，使评论家与策略在单GPU上以2Hz并行运行。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Vision-Language-Action (VLA) policies trained by behavior cloning fail silently: from the action stream alone, a collapsing rollout looks much like one making clean progress, because imitation supplies no notion of progress. Reinforcement learning would supply one, but it is impractical here, where real-robot experience is costly and deformable food resists simulation. The cheap alternative, a terminal success / failure bit, is learnable in principle yet far too sparse to say when a rollout went wrong. We argue that the per-frame label, not the architecture, is the hard part: to be useful it must be dense, continuous, and correctly shaped. We present ValueFormer, a compact policy-agnostic causal transformer over a frozen DINOv3 backbone that emits two per-frame signals in one forward pass: a smooth Monte Carlo value, V_mc, for advantage estimation and a sharp binary value for online mistake detection, targets that pull in opposite directions by design. Failed episodes are labeled with a stage-aware, success-then-decay return that preserves the success curve before the failure stage, and detection is supervised from mistake intervals rather than a single failure time, so mistakes the policy recovers from also carry signal. On a real-robot bimanual sandwich-assembly task 1,427 episodes), a critic-derived per-frame training weight lifts task completion from 70% to 85% (within noise at n=20), and a batched bf16 encoder cuts the live serving cost 3~5 times so the critic runs at 2 Hz alongside the policy on a single GPU.</p>
@@ -1154,10 +1220,7 @@
                         <span class="paper-date">2026-08-03</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：探究动作分块（action chunking）在机器人控制的行为克隆中为何能提升性能，并检验现有假设是否成立。&#10;&#10;🛠 **方法**：通过模拟和真实环境的严格实验，对比动作分块策略与马尔可夫策略、延迟策略，并分析其非马尔可夫表达性、复合误差及隐式集成效应。&#10;&#10;✨ **主要贡献**：否定了现有假设（时间一致性、视野缩减、表征学习），揭示动作分块的核心优势在于隐式集成（学习多种时间关系），并证明可通过随机延迟的集成策略匹配其性能，同时提出显式集成的新策略类，进一步超越动作分块效果。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Action chunking---predicting and executing multiple actions instead of a single action---has proven to be a critical component for learning effective robotic control policies. However, our precise understanding of why action chunking improves performance has remained limited. In this work we seek to close this gap. Through rigorous experimental evaluations in both simulated and real-world settings, we show that existing hypotheses for the success of action chunking---temporal consistency, horizon reduction, and representation learning---fail to explain the success of action chunking. Instead, we find that action chunking benefits from greater non-Markovian expressivity and reduced compounding error compared to Markovian policies, but, in many settings of interest, these effects can be fully captured by delayed policies, which at each step predict a single action based on the observation $k$ steps in the past. We then show that there exists an additional benefit of action chunking that we refer to as implicit ensembling. In particular, by learning a diversity of temporal relationships (that is, $a_t | o_t, a_t | o_{t-1}, \ldots$), action-chunked policies exhibit behavior matching that of a model ensemble, increasing their robustness and generalization ability over policies that only learn a single temporal relationship. Building on these insights, we show that in simulated and real-world robotic control settings, we can match the performance of action chunking without action chunking---by deploying an action chunking policy as an ensemble of policies with randomized delays. Furthermore, we propose a policy class that amplifies the benefits of action chunking by explicitly instantiating an ensemble, and which we show significantly improves over the performance of action chunking in many domains.</p>
@@ -1169,10 +1232,7 @@
                         <span class="paper-date">2026-08-03</span>
                     </div>
                                         <span class="paper-comment">📝 43 pages, 12 figures</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在严格计算预算下，实时调度器需处理紧截止时间任务，现有方法难以兼顾全局推理与近线性计算效率。  &#10;🛠 **方法**：提出TempoNet，结合置换不变Transformer与深度Q近似，通过松弛量化分词器离散化时间松弛，并采用延迟感知稀疏注意力堆栈（含块级top-k选择与局部敏感分块）实现亚毫秒级推理，最后通过掩码贪婪选择或可微匹配将Q值映射到多核处理器。  &#10;✨ **主要贡献**：在工业混合关键性轨迹与大规模多处理器场景中，相比分析调度器与神经网络基线，持续提升截止时间满足率；验证了松弛量化稳定性、注意力机制可解释性、行为克隆预训练样本效率及与演员-评论家变体的兼容性，为基于Transformer的高吞吐实时调度提供实用框架。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Real-time schedulers must reason about tight deadlines under strict compute budgets. We present TempoNet, a reinforcement learning scheduler that pairs a permutation-invariant Transformer with a deep Q-approximation. An Urgency Tokenizer discretizes temporal slack into learnable embeddings, stabilizing value learning and capturing deadline proximity. A latency-aware sparse attention stack with blockwise top-k selection and locality-sensitive chunking enables global reasoning over unordered task sets with near-linear scaling and sub-millisecond inference. A multicore mapping layer converts contextualized Q-scores into processor assignments through masked-greedy selection or differentiable matching. Extensive evaluations on industrial mixed-criticality traces and large multiprocessor settings show consistent gains in deadline fulfillment over analytic schedulers and neural baselines, together with improved optimization stability. Diagnostics include sensitivity analyses for slack quantization, attention-driven policy interpretation, hardware-in-the-loop and kernel micro-benchmarks, and robustness under stress with simple runtime mitigations; we also report sample-efficiency benefits from behavioral-cloning pretraining and compatibility with an actor-critic variant without altering the inference pipeline. These results establish a practical framework for Transformer-based decision making in high-throughput real-time scheduling.</p>
@@ -1956,66 +2016,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Flow Matching (FM) is a powerful approach for behavior cloning in multimodal action spaces [Jiang et al., 2025], but because it is not trained to directly maximize expected return, there is still room to improve how FM policies act at test time. This work investigates whether a learned world model can improve FM policies by enabling Model Predictive Path Integral (MPPI) planning over candidate action sequences proposed by the policy. Building on TD-MPC2 [Hansen et al., 2024], I introduce FlowMPC, a framework that combines an imitation-learned FM policy with a learned world model for test-time planning in ManiSkill manipulation tasks [Tao et al., 2025]. Across PickCube and PickSingleYCB, adding the world model improved performance over the FM policy alone, with especially clear gains in end-of-episode success. These results suggest that world-model-based planning can effectively complement flow-based imitation policies without modifying the FM training objective.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.10495v2" target="_blank" class="paper-title">Act on What You See: Unlocking Safe Social Navigation in Vision-Language-Action Models</a>
-                        <span class="paper-date">2026-06-14</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Safe social navigation requires robots to distinguish people from ordinary obstacles and to react before danger becomes imminent. We show that pretrained Vision-Language-Action (VLA) models already encode pedestrian-object distinctions and future collision signals in their internal representations, but behavior cloning fails to translate these signals into socially appropriate actions. To address this mismatch, we propose SALSA, a two-stage annotation-free post-training framework: (1) social behavioral alignment bridges intermediate-layer social features to the action head and trains on counterfactual human-object scene pairs to break visual saliency shortcuts; (2) temporal safety alignment provides automatically generated future-risk supervision to enable anticipatory collision avoidance. On SCAND and real-world deployment, SALSA reduces near-collisions by 86.4% and improves social counterfactual accuracy from 53% to 93%, demonstrating that safer social navigation can be achieved by teaching VLA policies to act on representations they already possess. These results show that pretrained VLA policies can be adapted for safer social navigation by better aligning their latent representations with action generation.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.10449v2" target="_blank" class="paper-title">GuideWalk: Learning Unified Autonomous Navigation and Locomotion for Humanoid Robots across Versatile Terrains</a>
-                        <span class="paper-date">2026-06-13</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Humanoid robots have achieved strong locomotion capabilities, but reliable navigation on versatile terrains remains challenging because obstacle avoidance must be coordinated with dynamically feasible motion. In this work, we present GuideWalk, a unified end-to-end framework that integrates traversability-aware navigation guidance with terrain-adaptive locomotion teacher for humanoid navigation. Specifically, we introduce a navigation module that provides explicit velocity guidance, decoupling obstacle avoidance from terrain conditions to enable robust planning across diverse environments. We propose a composite teacher distillation scheme, where goal-directed commands and dynamically consistent actions are aggregated and distilled into a single policy. To further improve robustness, the distilled policy is refined with reinforcement learning and an auxiliary behavior cloning objective, which promotes exploration while preserving desirable teacher behaviors. Experiments demonstrate that GuideWalk achieves stable and effective navigation while maintaining stable humanoid locomotion.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.13675v2" target="_blank" class="paper-title">Improving Robotic Generalist Policies via Flow Reversal Steering</a>
-                        <span class="paper-date">2026-06-12</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Generalist policies can learn a wide range of skills from diverse robot datasets. In order to solve or improve on challenging new tasks, we need a way to infer and invoke the appropriate actions from the policy's rich behavioral prior, especially when directly commanding the policy fails. We focus on flow matching generalists and propose Flow Reversal Steering (FRS): a method that takes suboptimal but ``reasonable'' actions, finds their latent noises by passing them through the flow policy in reverse, and maps them to nearby generalist action modes. We evaluate FRS across many simulated and real-world manipulation settings. First, FRS can turn coarse semantic guidance from humans or vision-language models (VLMs) into corresponding good robot actions, improving zero-shot control. These gains can be distilled with behavioral cloning by training an auxiliary policy to output noises that the generalist maps to good actions -- showing up to 95% absolute task success rate boosts in under a minute of training. Finally, FRS enables policy improvement by bootstrapping reinforcement learning with semantic knowledge, improving on several tasks that standard RL fails to improve on.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.14433v1" target="_blank" class="paper-title">Kine2Go: Kinematic dataset for the Unitree Go2 robot with diverse gaits and motions</a>
-                        <span class="paper-date">2026-06-12</span>
-                    </div>
-                                        <span class="paper-comment">📝 9 pages, 6 figures</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>The recent popularity of robotics, combined with the steadily decreasing cost of robotic hardware, has lowered the entry barrier to robotics research and enabled rapid advancements in the field. One of the primary examples is the Unitree Go2 quadruped robot, which is often used by researchers in the areas of locomotion, navigation, control, and others. Many researchers use the Go2 robot in combination with techniques like imitation learning, reinforcement learning, and behavioral cloning to allow machine learning systems to take full control of the robot. At the same time, many of those techniques require demonstration data consisting of the robot's kinematics information and actions applied to the motors. Obtaining such data is difficult, requires building complex pipelines, and can take significant time. To aid in those kinds of efforts, we present Kine2Go - a dataset with 800 diverse gait kinematics trajectory motion data for the Unitree Go2 robot, derived from 40 distinct policies. Our pipeline accepts data from various quadruped morphologies and translates them to a Go2-compatible format. Then we use Reinforcement Learning to train policies following a given motion, and finally we gather data from those policies, which grants robust, perturbed kinematic data with corresponding motor-level actions.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2510.02695v3" target="_blank" class="paper-title">RAMAC: Multimodal Risk-Aware Offline Reinforcement Learning and the Role of Behavior Regularization</a>
-                        <span class="paper-date">2026-06-11</span>
-                    </div>
-                                        <span class="paper-comment">📝 ICML 2026</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>In safety-critical domains where online data collection is infeasible, offline reinforcement learning (RL) is attractive only if policies achieve high returns without catastrophic lower-tail risk. Prior work on risk-averse offline RL achieves safety at the cost of either (i) value/model-based pessimism or (ii) restricted policy classes that limit expressiveness, whereas diffusion/flow-based expressive generative policies have largely been used in risk-neutral settings. We introduce \textbf{Risk-Aware Multimodal Actor-Critic (RAMAC)}, a simple, modular, model-free framework that couples an expressive generative actor (e.g., diffusion/flow) with a distributional critic and optimizes a composite objective that combines Conditional Value-at-Risk (CVaR) with behavioral cloning (BC), enabling risk-sensitive learning in complex multimodal scenarios. Since out-of-distribution (OOD) actions are a major driver of catastrophic failures in offline RL, we further provide an objective-level analysis showing that controlling behavior divergence via BC suppresses OOD actions and stabilizes CVaR. Instantiating RAMAC with a diffusion actor, we illustrate these insights on a 2-D risky bandit and evaluate on Stochastic-D4RL, observing consistent gains in $\mathrm{CVaR}_{0.1}$ while maintaining strong returns. The code and experimental results are available on the \href{https://kaifukazawa.github.io/ramac-project/} {project website}</p>
                     </details>
                 </div>
             </div>

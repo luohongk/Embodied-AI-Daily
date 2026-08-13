@@ -615,7 +615,7 @@
                 <a href="Gaussian-Splatting.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#84cc16"></span>
                     <span class="nav-label">Gaussian Splatting</span>
-                    <span class="nav-count">79</span>
+                    <span class="nav-count">80</span>
                 </a>
                 <a href="Visual-SLAM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#22c55e"></span>
@@ -675,7 +675,7 @@
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Kalman Filter</span>
-                    <span class="nav-count">45</span>
+                    <span class="nav-count">47</span>
                 </a>
                 <a href="Loop-Closure-Detection.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -690,12 +690,12 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">66</span>
+                    <span class="nav-count">70</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">78</span>
+                    <span class="nav-count">75</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -730,7 +730,7 @@
                 <a href="Model-Predictive-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#14b8a6"></span>
                     <span class="nav-label">Model Predictive Control</span>
-                    <span class="nav-count">51</span>
+                    <span class="nav-count">52</span>
                 </a>
                 <a href="Whole-Body-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#06b6d4"></span>
@@ -834,7 +834,7 @@
             <a href="Gaussian-Splatting.html" class="nav-item">
                 <span class="nav-dot" style="background:#84cc16"></span>
                 <span class="nav-label">Gaussian Splatting</span>
-                <span class="nav-count">79</span>
+                <span class="nav-count">80</span>
             </a>
             <a href="Visual-SLAM.html" class="nav-item">
                 <span class="nav-dot" style="background:#22c55e"></span>
@@ -894,7 +894,7 @@
             <a href="Kalman-Filter.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Kalman Filter</span>
-                <span class="nav-count">45</span>
+                <span class="nav-count">47</span>
             </a>
             <a href="Loop-Closure-Detection.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -909,12 +909,12 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">66</span>
+                <span class="nav-count">70</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">78</span>
+                <span class="nav-count">75</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -949,7 +949,7 @@
             <a href="Model-Predictive-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#14b8a6"></span>
                 <span class="nav-label">Model Predictive Control</span>
-                <span class="nav-count">51</span>
+                <span class="nav-count">52</span>
             </a>
             <a href="Whole-Body-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#06b6d4"></span>
@@ -1028,6 +1028,21 @@
                 <span class="topic-count">48 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.11790v1" target="_blank" class="paper-title">High-Order Liquid Evidence Encoding for Gradual GNSS Spoofing Detection in Autonomous Driving</a>
+                        <span class="paper-date">2026-08-12</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：针对自动驾驶中GNSS定位易受渐进式欺骗攻击（连续且隐蔽，单个观测看似合理但位移与车载运动不一致逐渐增大）而难以检测的问题，现有方法未显式建模这种演化过程。&#10;&#10;🛠 **方法**：提出因果高阶液体证据框架，先构建物理引导的GNSS-运动不一致残差，再分别提取残差水平及其一阶、二阶离散变化作为独立证据流，每流用自适应液体编码器处理，并分层耦合时间状态，仅利用当前及过去观测预测窗口端点的欺骗概率。&#10;&#10;✨ **主要贡献**：在真实AV-GPS数据集三个子集上，所提方法在Dataset 1和Dataset 3上取得最高F1分数（0.9535和0.9777），且在Dataset 3上能在四个采样步内检测到所有标注的正常到攻击转换，代码和数据集已公开。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Accurate Global Navigation Satellite System (GNSS)-based localization is essential for safe and reliable autonomous driving. However, spoofing attacks can manipulate vehicle position estimates. Continuous and subtle attacks are particularly difficult to detect because individual GNSS observations may remain plausible while the inconsistency between GNSS-implied displacement and onboard vehicle motion gradually increases. Existing methods often rely on static vehicle-behavior features or a single residual signal and do not explicitly model this evolution. To address this problem, we propose a causal high-order liquid evidence framework for GNSS spoofing detection. The method first constructs a physics-guided GNSS--motion inconsistency residual by comparing GNSS-implied displacement with onboard-motion-derived displacement. It then forms separate evidence streams for the residual level and its first- and second-order discrete variations, with relevant contextual cues selected according to the evidence order. Each stream is processed by a separate adaptive liquid encoder, and the resulting temporal states are hierarchically coupled to predict spoofing at the window endpoint using only current and past observations. Experiments on three subsets of the real-world AV-GPS dataset show that the proposed method achieves the highest F1-scores among the evaluated temporal models on Dataset~1 and Dataset~3, reaching 0.9535 and 0.9777, respectively. On Dataset~3, it detects both labeled normal-to-attack transitions within four sampling steps. Code and datasets are publicly available at: https://github.com/pangjunbiao/GNSS_Spoofing.git.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2608.08831v1" target="_blank" class="paper-title">Treating Statewide CORS Networks as Spatially Distributed Sensors for GNSS Integrity Monitoring under Unintentional and Deliberate Threats</a>
@@ -1169,10 +1184,7 @@
                         <span class="paper-date">2026-06-29</span>
                     </div>
                                         <span class="paper-comment">📝 10 pages, 7 figures</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在GNSS信号缺失的沿海环境中，无人水面艇（USV）无法远距离发现目标并保持全局参考导航。&#10;&#10;🛠 **方法**：提出AUSLUN系统，利用固定悬停的无人机（UAV）通过视觉惯性里程计（VIO）自定位，作为远程感知与导航锚点；采用多边形感知环形吊舱扫描、模态感知方位-距离定位、目标相对USV引导及视觉丢失恢复三个耦合模块，并通过门控递归估计器融合激光测距（非合作目标）与数据链测距（合作USV）。&#10;&#10;✨ **主要贡献**：自适应偏航边界扫描相比固定扇区扫描减少时间与冗余覆盖；门控递归估计器在定位精度上优于非递归基线方法；完整验证了从搜索到导航的流程，包括故意触发的视觉丢失恢复，证明了固定悬停无人机辅助USV在GNSS缺失环境中接近静止目标的可行性与操作边界。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Global navigation satellite system (GNSS) denial can prevent an unmanned surface vehicle (USV) from both finding a distant vessel and maintaining a globally referenced approach. This paper presents AUSLUN (Automatic UAV Search, Localization, and USV Navigation), a fixed-hover aerial-surface system that uses a coastal unmanned aerial vehicle (UAV), which estimates its own pose through visual-inertial odometry (VIO), as a long-range sensing and navigation anchor. The central design shifts sensing motion from UAV translation to a zoom pod and closes the loop through three coupled elements: polygon-aware annular pod scanning, modality-aware bearing-range localization, and target-relative USV guidance with visual-loss recovery. The same gated recursive estimator uses laser range for the non-cooperative target and datalink range for the cooperative USV. Search-planning simulations show that the adaptive yaw bounds reduce scan time and redundant coverage relative to a matched fixed-sector scan, and GPS-referenced field data show that the gated recursive estimator outperforms non-recursive baselines in localization accuracy. An integrated maritime mission further demonstrates the complete search-to-navigation sequence, including a deliberately triggered visual-loss recovery. These results establish the feasibility and operating boundary of fixed-hover UAV assistance for stationary-target approach in coastal GNSS-denied environments. The source code and a video demonstration are publicly available at https://github.com/xirhxq/pod_search and https://youtu.be/S-5RkJs35JI.</p>
@@ -1620,18 +1632,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Autonomous Unmanned Underwater Vehicles (UUVs) enable military and civilian covert operations in coastal areas without relying on support vessels or Global Navigation Satellite Systems (GNSS). Such operations are critical when surface access is not possible and stealthy navigation is required in restricted environments such as protected zones or dangerous areas under access ban. GNSS denied navigation is then essential to maintaining concealment as surfacing could expose UUVs to detection. To ensure a precise fleet positioning a constellation of beacons deployed by aerial or surface drones establish a synthetic landmark network that will guide the fleet of UUVs along an optimized path from the continental shelf to the goal on the shore. These beacons either submerged or floating emit acoustic signals for UUV localisation and navigation. A hierarchical planner generates an adaptive route for the drones executing primitive actions while continuously monitoring and replanning as needed to maintain trajectory accuracy.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2507.05999v4" target="_blank" class="paper-title">Geo-Registration of Terrestrial LiDAR Point Clouds with Satellite Images without GNSS</a>
-                        <span class="paper-date">2026-01-21</span>
-                    </div>
-                                        <span class="paper-comment">📝 Submitted to IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing. Under reviewing now</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Accurate geo-registration of LiDAR point clouds remains a significant challenge in urban environments where Global Navigation Satellite System (GNSS) signals are denied or degraded. Existing methods typically rely on real-time GNSS and Inertial Measurement Unit (IMU) data, which require pre-calibration and assume stable signals. However, this assumption often fails in dense cities, resulting in localization errors. To address this, we propose a structured post-hoc geo-registration method that accurately aligns LiDAR point clouds with satellite images. The proposed approach targets point cloud datasets where reliable GNSS information is unavailable or degraded, enabling city-scale geo-registration as a post-processing solution. Our method uses a pre-trained Point Transformer to segment road points, then extracts road skeletons and intersections from the point cloud and the satellite image. Global alignment is achieved through rigid transformation using corresponding intersection points, followed by local non-rigid refinement with radial basis function (RBF) interpolation. Elevation discrepancies are corrected using terrain data from the Shuttle Radar Topography Mission (SRTM). To evaluate geo-registration accuracy, we measure the absolute distances between the roads extracted from the two modalities. Our method is validated on the KITTI benchmark and a newly collected dataset of Perth, Western Australia. On KITTI, our method achieves a mean planimetric alignment error of 0.69m, corresponding to a 50% reduction in global geo-registration bias compared to the raw KITTI annotations. On Perth dataset, it achieves a mean planimetric error of 2.17m from GNSS values extracted from Google Maps, corresponding to 57.4% improvement over rigid alignment. Elevation correlation factor improved by 30.5% (KITTI) and 55.8% (Perth).</p>
                     </details>
                 </div>
             </div>

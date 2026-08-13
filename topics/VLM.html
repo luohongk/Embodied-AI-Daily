@@ -615,7 +615,7 @@
                 <a href="Gaussian-Splatting.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#84cc16"></span>
                     <span class="nav-label">Gaussian Splatting</span>
-                    <span class="nav-count">79</span>
+                    <span class="nav-count">80</span>
                 </a>
                 <a href="Visual-SLAM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#22c55e"></span>
@@ -675,7 +675,7 @@
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Kalman Filter</span>
-                    <span class="nav-count">45</span>
+                    <span class="nav-count">47</span>
                 </a>
                 <a href="Loop-Closure-Detection.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -690,12 +690,12 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">66</span>
+                    <span class="nav-count">70</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">78</span>
+                    <span class="nav-count">75</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -730,7 +730,7 @@
                 <a href="Model-Predictive-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#14b8a6"></span>
                     <span class="nav-label">Model Predictive Control</span>
-                    <span class="nav-count">51</span>
+                    <span class="nav-count">52</span>
                 </a>
                 <a href="Whole-Body-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#06b6d4"></span>
@@ -834,7 +834,7 @@
             <a href="Gaussian-Splatting.html" class="nav-item">
                 <span class="nav-dot" style="background:#84cc16"></span>
                 <span class="nav-label">Gaussian Splatting</span>
-                <span class="nav-count">79</span>
+                <span class="nav-count">80</span>
             </a>
             <a href="Visual-SLAM.html" class="nav-item">
                 <span class="nav-dot" style="background:#22c55e"></span>
@@ -894,7 +894,7 @@
             <a href="Kalman-Filter.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Kalman Filter</span>
-                <span class="nav-count">45</span>
+                <span class="nav-count">47</span>
             </a>
             <a href="Loop-Closure-Detection.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -909,12 +909,12 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">66</span>
+                <span class="nav-count">70</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">78</span>
+                <span class="nav-count">75</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -949,7 +949,7 @@
             <a href="Model-Predictive-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#14b8a6"></span>
                 <span class="nav-label">Model Predictive Control</span>
-                <span class="nav-count">51</span>
+                <span class="nav-count">52</span>
             </a>
             <a href="Whole-Body-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#06b6d4"></span>
@@ -1028,6 +1028,81 @@
                 <span class="topic-count">80 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.12127v1" target="_blank" class="paper-title">SCOPE-Router: Cost-Aware Open-Set VLM Routing for Execution-Oriented Tasks</a>
+                        <span class="paper-date">2026-08-12</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有视觉语言模型（VLM）路由研究局限于传统VQA评估，缺乏面向开放集场景的系统性校准优化，且训练目标因softmax归一化稀释多正样本信号且未考虑成本。&#10;&#10;🛠 **方法**：提出SCOPE-Router双塔路由器，通过混合校准（随机/诊断/多样性采样）构建模型行为画像，使新模型无需重训练即可加入路由；并设计CRM+RCCR成本感知目标，通过逐对独立评分将成本偏好编码为连续相关目标，消除多正样本稀释并正则化查询空间。&#10;&#10;✨ **主要贡献**：构建首个面向执行任务的VLM路由基准VLM-ExecRouterBench（覆盖代码、智能体、搜索域，含11个价格跨度近两个数量级的候选模型）；SCOPE-Router在三个基准上均取得最佳Rank Score，在OOD设置下超越第二名1.84分，双重OOD开放集评估下超越6.75分；CRM+RCCR应用于四种路由器时提升Rank Score 1.25–6.21分。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Model routing aims to select the most suitable model from a candidate pool for each query, balancing quality and cost. Existing VLM routing research is limited to traditional VQA evaluation, lacks systematic calibration optimization for open-set scenarios, and employs training objectives that dilute multi-positive signals via softmax normalization without incorporating cost. We address these limitations with three contributions: (1)VLM-ExecRouterBench, the first execution-oriented VLM routing benchmark covering Code, Agentic, and Search domains with 11 candidate models spanning nearly two orders of magnitude in pricing; (2)SCOPE-Router, a dual-tower router that matches queries to model behavior profiles constructed via hybrid calibration (random/diagnostic/diversity sampling), enabling new models to join routing without retraining; (3)CRM+RCCR, an architecture-agnostic cost-aware objective that encodes cost preference into continuous relevance targets through per-pair independent scoring, eliminating multi-positive dilution while regularizing queries with similar routing preferences to be closer in the routing space. Empirically, SCOPE-Router achieves the best Rank Score on all three benchmarks, surpassing the runner-up by 1.84 points under OOD settings and by 6.75 points under doubly OOD open-set evaluation. When applied to four diverse routers, CRM+RCCR improves Rank Score by 1.25--6.21 points.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.11777v1" target="_blank" class="paper-title">VOLA: Improving Open-World Driving by VLM-Based Semantic Attribute Prediction</a>
+                        <span class="paper-date">2026-08-12</span>
+                    </div>
+                                        <span class="paper-comment">📝 16 pages, 8 figures</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决开放世界驾驶中，系统遇到训练数据之外的未知物体时，仅识别类别名称不足以指导安全驾驶，需要感知每个区域对运动的影响（如可行驶性和碰撞严重性）。&#10;&#10;🛠 **方法**：提出VOLA框架，将场景感知从类别标签转为稠密的行动相关属性（7级可行驶性和5级脆弱性），直接读取Qwen3.5图像token的隐藏状态作为空间语义表示，通过轻量级边界感知解码器生成全分辨率属性图，无需自回归文本生成或SAM等外部掩码模型。&#10;&#10;✨ **主要贡献**：在CARLA中训练并在真实场景及未见障碍物上测试，模型在熟悉类别上与强视觉分割器相当，在开放世界异常迁移上显著提升（平均脆弱性召回率69.4%，优于视觉基线57.1%和VLM基线53.9%），证明VLM图像token能为训练词汇外的物体提供有效的语义迁移线索。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Driving in the real world is open-world: a car may encounter a fallen mattress, a deer, or other objects outside its training data. Naming them is not enough. The system must know how to treat each region: can it drive over it, and how severe would a collision be? We therefore shift scene perception from category labels to dense action-relevant attributes, where each pixel is labeled by how it should affect motion rather than by object name. We instantiate this general formulation with two ordered attributes: 7-rank drivability and 5-rank vulnerability. We read Qwen3.5 image-token hidden states directly as a spatial semantic representation. A lightweight boundary-aware decoder then turns this coarse token grid into sharp full-resolution attribute maps. The whole process requires neither autoregressive text generation nor an external mask model such as SAM. We train on dense attribute labels built in CARLA and test transfer to real scenes and to novel obstacles never seen in training. We compare with vision-only segmenters trained on the same attributes and prompted VLM segmenters. Our model matches strong vision-only segmenters on familiar categories and improves transfer to real open-world anomalies, reaching 69.4% mean vulnerability-rank recall versus 57.1% for the best vision-only baseline and 53.9% for the best prompted VLM baseline. These results show that VLM image tokens provide useful semantic cues for transferring driving attributes to objects outside the training vocabulary.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.14616v3" target="_blank" class="paper-title">SportD: How do VLMs physically strategize?</a>
+                        <span class="paper-date">2026-08-12</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：评估视觉语言模型（VLMs）在足球场景中能否利用视觉信息做出策略性决策，而非仅完成常规视觉理解任务。&#10;&#10;🛠 **方法**：构建SportD基准，包含2022年世界杯478个持球决策事件，通过对比模型选择与基于控球价值的优化策略（最大化进球概率）来量化决策质量。&#10;&#10;✨ **主要贡献**：发现最佳VLM仅31.4%事件选择最优动作（职业球员38.9%），且模型偏好低风险低回报动作（少射门、少传威胁球），并存在模仿球员常见模式而非理性评估的倾向。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Vision-language models (VLMs) can describe a scene, but can they act well within one? We study whether VLMs can make sound strategic decisions, using soccer as an objective testbed with quantifiably-valued actions. We introduce SportD, a dataset and evaluation consisting of 1415 decision scenarios across professional men's and women's soccer games, where a VLM observes the seconds before a decision and chooses the next action. Models only select the optimal action around 30% of the time, even less frequently than humans do. Furthermore, they exhibit a clear preference for safer actions, favoring lower-variance, lower-value choices that also make less physical progress toward goal. Frontier VLMs are better at estimating whether an action will succeed, placing the highest-success-probability action among their top choices in 83-92% of cases. Yet VLMs systematically conflate likelihood with value, assigning higher value to actions that are more likely to succeed (Spearman corr. 0.30 to +0.52), despite no such relationship in the ground truth (Spearman corr. -0.08). The conservatism therefore reflects a mis-calibration of value. SportD opens a new direction for rigorously evaluating physical strategic decision-making in VLMs, showing that careful decomposition of their choices can reveal the mechanisms underlying systematic biases such as risk aversion.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.11425v1" target="_blank" class="paper-title">VLMs Win a Systematic Evaluation of Underwater Image Reconstruction</a>
+                        <span class="paper-date">2026-08-11</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：水下图像重建缺乏系统性评估方法，现有方法难以准确衡量重建精度、跨视角一致性和水参数影响。&#10;&#10;🛠 **方法**：提出一套系统化评估流程，涵盖重建准确性、相机移动下的重建一致性及水参数效应，并用于对比基于物理散射模型的传统方法与视觉语言模型（VLMs）。&#10;&#10;✨ **主要贡献**：实验表明VLMs在各项指标上全面且显著优于基于物理模型的方法，主要得益于其强大的图像先验能力；真实水下场景图像结果进一步验证了该评估体系的有效性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Underwater image restoration consists of recovering an image which looks like there is no water present. To date, evaluation has not been systematic. This paper describes a systematic evaluation pipeline for underwater reconstruction, which can be used to assess a method for accuracy; consistency of reconstruction over camera moves; and the effect of water parameters. We use this pipeline to evaluate a range of current procedures, from models constructed using explicit but approximate physical models of scattering to Vision-Language Models (VLMs which are not currently trained with explicit physical models). Overall, VLMs wholly and significantly outperform physically based models in our evaluation, likely because of the importance of a strong image prior. Results on images of real underwater scenes strongly confirm the evaluation.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.11424v1" target="_blank" class="paper-title">Click2Poly: A VLM for vector mapping buildings and walls</a>
+                        <span class="paper-date">2026-08-11</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：建筑和墙体矢量化制图依赖人工编辑，效率低且难以满足制图标准，需要自动化辅助工具来加速人工质量控制与修正过程。&#10;&#10;🛠 **方法**：基于Florence-2视觉语言模型（VLM）扩展，开发了Click2Poly人机协同AI助手，通过用户点击直接编辑建筑或墙体矢量图层，并集成于QGIS插件中。&#10;&#10;✨ **主要贡献**：提出了一种交互式矢量编辑范式，将VLM与地理信息生产工具结合，显著提升真实生产环境中建筑和墙体矢量编辑的速度与效率。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Accurate vector mapping of buildings and walls is critical for geospatial applications but remains a labor-intensive process. While recent deep learning methods have improved automatic extraction, in order to meet cartographic standards they always require a human to perform quality control and fix complex cases in the extraction. We present Click2Poly, a human-in-the-loop AI assistant designed to speed up this manual step. Extending the Florence-2 Vision Language Model (VLM), Click2Poly responds to user clicks by editing the building or wall vector layer directly. Implemented as a QGIS plugin, Click2Poly speeds up the manual editing of building and wall vector layers in a real-world production environment.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2604.26148v3" target="_blank" class="paper-title">Beyond Screenshots: Evaluating VLMs' Understanding of UI Animations</a>
@@ -1109,10 +1184,7 @@
                         <span class="paper-date">2026-08-11</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：视觉语言模型（VLM）中大量视觉token导致推理成本过高，现有剪枝方法仅基于局部相似性引导，未考虑整个推理过程中的跨模态信息吸收现象。&#10;&#10;🛠 **方法**：提出跨模态残差（CMR）引导机制，通过Tikhonov正则化最小二乘将视觉token投影到文本子空间，利用重建残差量化文本无法解释的视觉信息；结合CMR、文本注意力相关性和残差空间多样性，提出无需训练的SIEVE剪枝方法。&#10;&#10;✨ **主要贡献**：首次从几何视角量化文本对视觉信息的吸收（CMA），并据此设计高效剪枝方案。在LLaVA-NeXT-7B上仅保留11.1%视觉token即可保持97.5%性能，实现3.62倍预填充加速、2.49倍端到端加速和6.02倍KV缓存缩减。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Abundant visual information strengthens vision-language model (VLM) perception, yet massive visual tokens raise inference costs. Existing visual token pruning methods rely on similarity-based guidance, which exploits pairwise text-vision and vision-vision token correlations for compression. However, such methods only capture local layer-level signals and overlook the whole inference process in VLM. In this paper, we revisit VLM inference and present a new efficient guidance scheme that complements similarity-based guidance. In particular, we identify a key observation: as LLM layers deepen, text tokens continuously aggregate visual information via self-attention and progressively absorb partial visual content into textual representations. To quantify this phenomenon, we propose Cross Modal Absorption (CMA) from a geometric representation perspective to measure how much visual information is absorbed by text, revealing that more visual tokens in deeper layers can be approximately explained by the text subspace. We accordingly propose Cross Modal Residual (CMR). It projects visual tokens onto the text subspace via Tikhonov regularized least squares and exploits reconstruction residuals to quantify visual information that cannot be explained by text. Finally, based on CMR, we present SIEVE, a training-free visual token compression method that combines CMR, text-attention relevance, and residual-space diversity to retain task-relevant and complementary tokens. Experiments on diverse VLM architectures verify the effectiveness of SIEVE. For instance, on LLaVA-NeXT-7B, SIEVE keeps only $11.1\%$ of visual tokens while preserving $97.5\%$ of the original average performance, achieving $3.62\times$ prefill speedup, $2.49\times$ end-to-end speedup, and a $6.02\times$ KV-cache reduction.</p>
@@ -1124,10 +1196,7 @@
                         <span class="paper-date">2026-08-11</span>
                     </div>
                                         <span class="paper-comment">📝 Accepted to UIST 2026</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有基于视觉语言模型（VLM）的实时辅助工具在动态场景中为盲人和低视力（BLV）用户服务时，存在“默认视力偏见”——即隐含假设用户能同时看到周围环境，导致输出冗长、以视觉为中心，忽视听觉感知的序列性，占用用户有限的认知带宽且信息不及时。&#10;&#10;🛠 **方法**：通过一项N=15的形成性研究识别出“默认视力偏见”这一结构性问题，据此提出三项设计原则（连续性、简洁性、校准诚实性），并开发了VIA-Agent系统，将专用认知核心与低延迟实时通信（RTC）架构协同优化，实现连续双向流式交互。&#10;&#10;✨ **主要贡献**：在N=9的受试者内评估中，VIA-Agent在成功率上与Doubao相当，但将平均任务时间显著缩短21.4%（91.7秒 vs. 116.7秒），对话轮次从5.9降至4.3，同时获得更高的用户信任度。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Vision-Language Model (VLM)-based assistance is reshaping independence for blind and low-vision (BLV) users, yet current tools fail in dynamic settings. While request-response architectures like BeMyAI impose prohibitive latencies, our formative study (N = 15) reveals that even real-time alternatives like Doubao fail due to a deeper structural problem: sighted-default bias -- the implicit assumption that users possess parallel visual access to their surroundings. This bias manifests as verbose, vision-centric narratives that overlook the serial nature of auditory perception, flooding the user's limited cognitive bandwidth with information that is neither timely nor actionable. To address this, we derive three design principles: Continuity, Conciseness, and Calibrated Honesty. We present VIA-Agent, which co-optimizes a specialized cognitive core with a low-latency Real-Time Communication (RTC) architecture for continuous bidirectional streaming. In a within-subjects evaluation (N = 9), VIA-Agent matched Doubao's success rate, significantly reducing mean task time by 21.4% (91.7s vs. 116.7s) and conversational turns from 5.9 to 4.3 while achieving higher trust.</p>
@@ -1139,10 +1208,7 @@
                         <span class="paper-date">2026-08-11</span>
                     </div>
                                         <span class="paper-comment">📝 iMIMIC Workshop 2026</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：当前医学视觉语言模型（VLM）在胸部X光片上使用的注意力热图是否真正反映了驱动模型预测的图像证据，缺乏因果性验证。&#10;&#10;🛠 **方法**：通过放射科医生标注框的重叠度、掩码内的归因质量以及16x16分块遮挡图（隐藏区域后答案是否改变）来审计热图的忠实性，并评估多个VLM模型（如MedGemma、LLaVA-RAD、Qwen3-VL等）及两个胸部X光分类器作为阳性对照。&#10;&#10;✨ **主要贡献**：所有评估的VLM均未同时满足“模型使用图像”和“注意力集中在遮挡后改变预测的区域”这两个忠实性标准；注意力与分块遮挡重要性呈负相关或弱相关，且无法准确覆盖解剖结构；而两个分类器通过所有指标，表明失败源于VLM热图本身，而非评估方法。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Attention and saliency heatmaps are widely used to explain medical Vision-Language Model (VLM) outputs on chest X-rays, yet whether they truly highlight the image evidence driving predictions has not been causally tested. We audit faithfulness via overlap with radiologist bounding boxes on PadChest (n=637), attribution mass within radiologist masks on CheXlocalize (n=643), and 16x16 patch-occlusion maps that record which regions, when hidden, change the answer. We study three MedGemma-4B variants, cross-family probes on LLaVA-RAD and Qwen3-VL-8B-Instruct, and the specialist CheXagent-2-3b, with two CXR-trained classifiers (DenseNet121, ResNet50) as positive controls. A heatmap is faithful only if the model uses the image and attention concentrates on regions whose occlusion alters the prediction. No evaluated VLM meets both criteria. MedGemma and Qwen3-VL use the image, but attention anti-correlates with patch-occlusion importance (rho < 0 with 95% bootstrap CIs below zero). LLaVA-RAD's attention correlates positively, but the model is almost text-only (99.1% text-only agreement, near-zero causal mass), so correlation ties two near-zero signals. Attention also misses annotated anatomy: overlap with true regions never beats shifted or random controls, and no method places more than 22% of its mass inside radiologist masks. The two CXR classifiers pass all metrics, indicating the failure is specific to VLM heatmaps, not the evaluation. These heatmaps are visually reassuring but not faithful; clinical explanations require controlled localization metrics and causal perturbation, not visual inspection alone.</p>
@@ -1154,10 +1220,7 @@
                         <span class="paper-date">2026-08-10</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决自动驾驶中单车感知范围有限、遮挡导致决策不可靠，以及大模型在车载部署时计算和延迟开销过大的问题。&#10;&#10;🛠 **方法**：提出DH-VLM双视野协同潜在推理框架，通过基础设施聚合多层隐藏状态生成全局推理视野的潜在引导，并利用基础设施驱动的潜在演化机制将其融入自车模型，实现非对称语义协同。&#10;&#10;✨ **主要贡献**：构建了面向协同的问答数据集支持反事实与安全推理；在规划性能上L2误差降低14.6%、碰撞率降低26.9%；相比查询式端到端协同方法，通信成本减少57.3%、GPU内存占用减少25.5%，且对基础设施引导误差具有强鲁棒性。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Large-scale language models for autonomous driving enable enhanced global understanding and long-horizon planning. However, when deployed in isolated vehicles, limited sensing range and occlusions restrict reliable decision-making, and the substantial computational and latency overhead makes on-board deployment impractical. Cooperative driving provides a potential solution by leveraging external agents for information exchange, but existing methods remain limited in semantic reasoning capability under practical constraints. To address these challenges, we propose DH-VLM, a dual-horizon cooperative latent reasoning framework that enables asymmetric semantic cooperation between the infrastructure and ego vehicle. The infrastructure aggregates multi-layer hidden states to form a global-reasoning horizon latent guidance, which is integrated into the ego model through an Infrastructure-Driven Latent Evolution mechanism for conditional latent refinement. This enables the ego vehicle to leverage long-range contextual understanding while preserving autonomous decision-making within its local planning horizon. Furthermore, we construct a cooperation-oriented question-answer (QA) dataset covering fundamental scene understanding and ego-personalized comprehension to support counterfactual and safety-aware reasoning. Extensive experiments demonstrate that DH-VLM achieves state-of-the-art planning performance, outperforming the previous state of the art by 14.6% in L2 error and 26.9% in collision rate. Compared with query-based end-to-end cooperative driving methods, our approach reduces the communication cost by 57.3% and GPU memory usage by 25.5%, while maintaining strong robustness against infrastructure guidance errors, providing a practical and robust paradigm for cooperative autonomous driving.</p>
@@ -1169,10 +1232,7 @@
                         <span class="paper-date">2026-08-10</span>
                     </div>
                                         <span class="paper-comment">📝 Preprint</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：当前视觉-语言模型（VLM）的训练依赖大规模数据集，但缺乏系统性的基准来评估数据筛选、混合等数据策展策略的有效性。&#10;&#10;🛠 **方法**：提出DataComp for VLMs（DCVLM）基准，收集160个数据集（含图像-文本对、多模态交错文档、纯文本和指令微调数据），构建6T多模态token语料库，支持在1B-8B模型规模和6.25B-200B token预算下测试过滤、混合、格式化、采样等策略，并通过9个领域52个下游任务评估模型性能。&#10;&#10;✨ **主要贡献**：发现数据混合（而非过滤）是提升训练质量的关键，指令密集型数据混合比标题密集型扩展性更好；基于此构建的DCVLM-Baseline数据集，在8B模型、200B token训练下，33项核心任务平均准确率达63.6%，比当前最优开源数据集FineVision提升5.4个百分点。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Building performant Vision-Language Models (VLMs) requires carefully curating large-scale training datasets, yet the community lacks systematic benchmarks for evaluating such curation strategies. We introduce DataComp for VLMs (DCVLM), a benchmark for controlled data-centric experiments to improve VLM training. As part of DCVLM, we collect 160 datasets spanning four data types -- image-caption pairs, multimodal interleaved documents, text-only, and instruction-tuning data -- into a corpus of 6T multimodal tokens. DCVLM allows participants to test curation strategies (filtering, mixing, formatting, sampling) across 1B-8B models and 6.25B-200B token budgets. Models are then evaluated on a carefully selected suite of up to 52 downstream benchmarks across 9 domains. We conduct extensive experiments on DCVLM and find that data mixing, not filtering, is key to a high-quality training dataset: instruction-heavy mixtures scale better than caption-heavy ones, with gains widening at larger scales. The resulting dataset, DCVLM-Baseline, enables training an 8B VLM to 63.6% accuracy on our 33-task core suite with 200B training tokens. Compared to FineVision, the state-of-the-art open VLM training dataset, this represents an improvement of +5.4pp. DCVLM and all accompanying artifacts will be made publicly available at https://www.datacomp.ai/dcvlm/.</p>
@@ -1956,66 +2016,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Training-free few-shot adaptation methods have gained significant attention recently in the context of Vision-language Models (VLMs). Yet, current benchmarks rely on strong assumptions about the statistics of the adaptation data, e.g., class balance. We question these simplifying assumptions and introduce a more realistic benchmark that varies both the levels of class balance and the effective number of classes in few-shot tasks via Dirichlet sampling. Surprisingly, under our setting, we observe substantial drops in the performances of state-of-the-art methods, more so when the number of labeled samples increases. To mitigate this, we introduce PRiSM, a class-prototype regularization that can be deployed as a plug and play module on top of any existing baseline method, significantly improving performances. Our method optimizes a novel multi-term loss, which includes a regularizer maximizing inter-class pairwise distances, along with additional terms promoting support-feature alignment and fidelity to the baseline prototypes. Furthermore, we introduce an effective and computationally efficient block Majorize-Minimize optimizer for our objective. More specifically, we derive a valid blockwise Lipschitz constant (i.e., a bound on the Hessian's spectral norm), which can be computed efficiently via the Gershgorin circle theorem. Extensive experiments show that PRiSM improves several training-free baselines, with large gains when dealing with severe class imbalance and high numbers of classes.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.19288v1" target="_blank" class="paper-title">No Training, Better Flights: Test-Time Scaled VLMs for UAV Navigation</a>
-                        <span class="paper-date">2026-07-21</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Test-time scaling offers a promising method to improve the inference performance of Vision-Language Models (VLMs) without additional training. Existing approaches to vision-language navigation (VLN) for Unmanned Aerial Vehicle (UAV) typically relies on a single inference pass, which can falter in complex environments by producing suboptimal or unsafe trajectories. In this paper, we explore a simple and effective approach to apply test-time scaling to VLN for UAV. We enhance navigation reasoning through an iterative refinement process that requires no extra model training, guiding the model to re-evaluate its initial navigation plan for better accuracy and safety. Our method first prompts the model to generate multiple parallel candidates and then performs a self-correction step, achieving deeper and more robust planning without changing the underlying model. To further strengthen decision-making, we design a multi-criteria scoring function to evaluate the refined candidates based on safety, goal alignment, and forward-progress. This simple yet powerful combination enables a frozen UAV navigation VLMs to self-correct and generate more accurate and reliable flight plans, achieving SOTA performance in this task.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2604.01848v4" target="_blank" class="paper-title">Semantic Richness or Geometric Reasoning? The Fragility of VLM's Visual Invariance</a>
-                        <span class="paper-date">2026-07-21</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>This work investigates the fundamental fragility of state-of-the-art Vision-Language Models (VLMs) under basic geometric transformations. While modern VLMs excel at semantic tasks such as recognizing objects in canonical orientations and describing complex scenes, they exhibit systematic failures at a more fundamental level: lack of robust spatial invariance and equivariance required to reliably determine object identity under simple rotations, scaling, and identity transformations. We demonstrate this limitation through a systematic evaluation across diverse visual domains, including symbolic sketches, natural photographs, and abstract art. Performance drops sharply as semantic content becomes sparse, and this behavior is observed across architectures, model capacities, and prompting strategies. Overall, our results reveal a systematic gap between semantic understanding and spatial reasoning in current VLMs, highlighting the need for stronger geometric grounding in future multimodal systems.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2511.16107v4" target="_blank" class="paper-title">T2T-VICL: Cross-Task Visual In-Context Learning via Implicit Text-Driven VLMs</a>
-                        <span class="paper-date">2026-07-21</span>
-                    </div>
-                                        <span class="paper-comment">📝 22 pages, 6 figures, under submission</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Visual in-context learning (VICL) solves visual tasks by conditioning on a few input-output demonstrations without any model training. Recent advances in large vision-language models (VLMs) have shown promising VICL capability when the demonstration pair and the query belong to the same vision task, but real use cases often provide mismatched examples, making it unclear whether a VLM should imitate the demonstrated transformation or infer a new one from the query. This raises a fundamental question: Can VLMs perform cross-task VICL where demonstration and query differ? In the paper, we study this cross-task VICL setting and propose T2T-VICL, a collaborative prompt-transfer framework, which converts mismatched visual demonstrations into implicit textual guidance without explicitly naming the tasks. To do so, a large teacher VLM first generates structured descriptions of visual changes and task differences between task pairs, from which we construct a dataset of diverse implicit cross-task relations. We then distill this capability into a lightweight student VLM that produces content-dependent prompts from a task-A demonstration pair and a task-B query. The generated prompt is used to guide a frozen image-editing VLM, and a score-based inference strategy is introduced to rank multiple candidates. Experiments on 12 low-level vision tasks and over 20 evaluated cross-task pairs show that T2T-VICL consistently improves task-aware alignment over fixed prompting and often also improves image fidelity, revealing both the potential and limits of cross-task VICL. Our code is available on GitHub.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.18230v1" target="_blank" class="paper-title">Simple Domain Generalization for Strong Pixel-Level Image Tampering Detection in Modern VLMs</a>
-                        <span class="paper-date">2026-07-20</span>
-                    </div>
-                                        <span class="paper-comment">📝 Our code is available at https://github.com/VILA-Lab/PIXAR-DG</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Modern vision-language models (VLMs) have significantly improved image generation and editing capabilities, making pixel-level image tampering detection increasingly important yet challenging under cross-model and out-of-distribution shifts. This work studies domain generalization for pixel-level image tampering detection in modern VLMs like ChatGPT, Gemini, Qwen-Image, etc., aiming to learn tampering localization models that remain robust across diverse VLM-generated manipulation distributions. We propose a simple yet effective domain-generalized training framework built on two practical strategies. First, we introduce a balanced minibatch sampling scheme that strategically samples tampered and real images in each minibatch, preventing biased optimization toward either manipulated artifacts or clean-image priors and avoiding training collapse, ensuring that each optimization step receives proper sampled gradient signals. Second, we adopt a simple late-injection strategy, where the detector is first trained on large-scale base data until stable convergence, and then exposed to a small amount of newly selected supporting data from emerging VLM distributions, improving adaptability without overfitting to limited new domains. Together, these components provide a simple yet strong recipe for improving pixel-level tampering localization and OOD robustness across modern VLMs. Despite the conceptual simplicity, our framework outperforms the prior state-of-the-art PIXAR by a large margin of 26.1% and 26.8% relative improvement in average gIoU and cIoU, respectively, across OOD VLMs of GPT-Images-2.0, Gemini-3.1, FLUX.2, and Seedream 4.5. Our code is available at https://github.com/VILA-Lab/PIXAR-DG</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.13569v2" target="_blank" class="paper-title">GHR-VLM: Making Zero-Shot Transit Video Analytics Realizable with Grounded Hybrid Reasoning</a>
-                        <span class="paper-date">2026-07-20</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Transit video understanding can provide valuable fine-grained data that conventional passenger counters and fare systems cannot capture. However, supervised video models require task-specific annotations, while applying vision-language models (VLMs) directly to long onboard videos is unreliable and costly. To leverage the complementary strengths of both approaches, we propose GHR-VLM, a visual grounded hybrid reasoning framework for zero-shot transit-bus video analytics. It is motivated by the observation that explicit visual grounding can improve VLM reasoning by converting long surveillance streams into compact, passenger-centered spatiotemporal evidence. Specifically, we propose an edge-cloud design in which a lightweight edge-based monitor continuously tracks door status and segments passenger clips. A backend VLM then identifies boarding passengers and classifies payment behavior through a two-stage coarse-to-fine refinement of spatiotemporal evidence. By invoking the VLM only on grounded passenger clips and contact sheets, GHR-VLM reduces cloud inference, avoids payment-specific training data, and supplies the localized evidence that VLMs otherwise struggle to identify. Evaluation on 486 minutes of real-world bus surveillance video demonstrates the potential of grounded edge-cloud reasoning for passenger-level payment analytics while highlighting the challenges posed by degraded video conditions.</p>
                     </details>
                 </div>
             </div>

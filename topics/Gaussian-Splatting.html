@@ -615,7 +615,7 @@
                 <a href="Gaussian-Splatting.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#84cc16"></span>
                     <span class="nav-label">Gaussian Splatting</span>
-                    <span class="nav-count">79</span>
+                    <span class="nav-count">80</span>
                 </a>
                 <a href="Visual-SLAM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#22c55e"></span>
@@ -675,7 +675,7 @@
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Kalman Filter</span>
-                    <span class="nav-count">45</span>
+                    <span class="nav-count">47</span>
                 </a>
                 <a href="Loop-Closure-Detection.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -690,12 +690,12 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">66</span>
+                    <span class="nav-count">70</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">78</span>
+                    <span class="nav-count">75</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -730,7 +730,7 @@
                 <a href="Model-Predictive-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#14b8a6"></span>
                     <span class="nav-label">Model Predictive Control</span>
-                    <span class="nav-count">51</span>
+                    <span class="nav-count">52</span>
                 </a>
                 <a href="Whole-Body-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#06b6d4"></span>
@@ -834,7 +834,7 @@
             <a href="Gaussian-Splatting.html" class="nav-item active">
                 <span class="nav-dot" style="background:#84cc16"></span>
                 <span class="nav-label">Gaussian Splatting</span>
-                <span class="nav-count">79</span>
+                <span class="nav-count">80</span>
             </a>
             <a href="Visual-SLAM.html" class="nav-item">
                 <span class="nav-dot" style="background:#22c55e"></span>
@@ -894,7 +894,7 @@
             <a href="Kalman-Filter.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Kalman Filter</span>
-                <span class="nav-count">45</span>
+                <span class="nav-count">47</span>
             </a>
             <a href="Loop-Closure-Detection.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -909,12 +909,12 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">66</span>
+                <span class="nav-count">70</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">78</span>
+                <span class="nav-count">75</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -949,7 +949,7 @@
             <a href="Model-Predictive-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#14b8a6"></span>
                 <span class="nav-label">Model Predictive Control</span>
-                <span class="nav-count">51</span>
+                <span class="nav-count">52</span>
             </a>
             <a href="Whole-Body-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#06b6d4"></span>
@@ -1025,15 +1025,30 @@
         <section class="topic-section">
             <div class="topic-header">
                 <span class="topic-badge" style="background:#84cc16">Gaussian Splatting</span>
-                <span class="topic-count">79 papers</span>
+                <span class="topic-count">80 papers</span>
             </div>
             <div class="paper-list">
                 <div class="paper-card">
                     <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2608.11150v1" target="_blank" class="paper-title">CausalSplat: Towards Comprehensive Hierarchical Reasoning in 3D Gaussian Splatting</a>
-                        <span class="paper-date">2026-08-11</span>
+                        <a href="https://arxiv.org/abs/2608.11928v1" target="_blank" class="paper-title">Seed2GS: Camera-Free, Training-Free Object Extraction from 3D Gaussian Scenes via a Single Reference-View Grounding</a>
+                        <span class="paper-date">2026-08-12</span>
                     </div>
-                                        <span class="paper-comment">📝 Accepted to ECCV 2026</span>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：从预构建的3D高斯泼溅（3DGS）场景中提取目标物体，现有方法要么需要逐场景训练（耗时数十分钟），要么依赖原始重建相机（预构建资产可能缺失），且精度有限。&#10;&#10;🛠 **方法**：提出Seed2GS，将目标身份识别与3D覆盖分离。先用QD-SAM3从多个开放词汇候选掩码中选出可靠参考掩码，固定身份；再通过种子提升和可见性自适应虚拟轨道从新视角暴露物体，用跟踪传播种子而无需重复检测；最后仅用这些掩码监督每个高斯的一个临时前景logit，场景保持冻结。&#10;&#10;✨ **主要贡献**：在无需原始相机和场景特定训练的情况下，达到最高报告精度——LERF-MASK上92.1% mIoU（比最强场景训练基线高3.7点，比最接近的无相机基线高7.6点），计算延迟仅9.3秒；3D-OVS上达95.7% mIoU。固定参考视图时仍保持91.1% mIoU，且用真实掩码替换预测种子仅提升0.72点，证明方法鲁棒性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Extracting a target object from a pre-built 3D Gaussian Splatting (3DGS) scene enables interactive 3D editing. Existing methods either train for tens of minutes per scene, sacrifice accuracy, or require original reconstruction cameras that pre-built assets may not include. We present Seed2GS, which achieves the highest reported LERF-MASK accuracy without original reconstruction cameras or scene-specific representation training. Its key insight is to separate target identity from 3D coverage. QD-SAM3 selects one reliable reference mask from several open-vocabulary candidates, fixing identity once. Seed lift and visibility-adaptive virtual orbits then expose the object from new viewpoints, while tracking propagates the seed without repeated detection. Because the scene remains frozen, these masks supervise only one temporary foreground logit per Gaussian. On LERF-MASK, Seed2GS reaches 92.1% mean intersection over union (mIoU) with a measured compute-only latency of 9.3 seconds, 3.7 points above the strongest scene-trained baseline and 7.6 points above the closest camera-free baseline. With one fixed test reference per scene, the complete pipeline retains 91.1% mIoU; replacing its predicted seed with a ground-truth mask improves mIoU by only 0.72 points. On 3D-OVS, Seed2GS reaches 95.7% mIoU.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.11150v2" target="_blank" class="paper-title">CausalSplat: Towards Comprehensive Hierarchical Reasoning in 3D Gaussian Splatting</a>
+                        <span class="paper-date">2026-08-12</span>
+                    </div>
+                                        <span class="paper-comment">📝 Accepted to ACM MM 2026</span>
                                         <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有3D高斯泼溅（3DGS）方法仅能处理显式查询，无法理解隐式意图、复杂空间约束和常识推理，难以支持实际具身交互中的高阶推理需求。&#10;&#10;🛠 **方法**：提出CausalSplat框架，将视觉-语言模型与3D场景图结合，显式解耦结构感知与隐式逻辑推理，并构建Causal-LERF和Causal-ScanNet两个推理基准数据集。&#10;&#10;✨ **主要贡献**：首次系统评估3D分割中的常识、空间、功能与反事实推理；CausalSplat在推理基准上达到最优性能，同时在标准指代与开放词汇分割任务上展现强泛化能力。">
                         <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
                         <div class="ai-content markdown-body"></div>
@@ -1041,6 +1056,36 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>While 3D Gaussian Splatting (3DGS) has advanced open vocabulary scene understanding, existing methods remain confined to explicit queries. They struggle to interpret implicit intents, complex spatial constraints, and commonsense reasoning required for practical embodied interactions. To address this gap, we introduce the task of reasoning 3D Gaussian segmentation and construct two benchmarks, Causal-LERF and Causal-ScanNet. These benchmarks systematically evaluate commonsense, spatial, affordance, and counterfactual reasoning. Evaluations reveal that current state of the art methods perform poorly on these reasoning challenges. Therefore, we propose CausalSplat, a framework that integrates vision-language models with 3D scene graphs to disentangle explicit structural perception from implicit logical inference. Extensive experiments demonstrate that CausalSplat achieves state of the art performance on our reasoning benchmarks while showing strong generalizability on standard referring and open vocabulary 3D segmentation tasks. Project Page: https://jiayuding031020.github.io/CausalSplat</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2601.04348v2" target="_blank" class="paper-title">SCAR-GS: Spatial Context Attention for Residuals in Progressive Gaussian Splatting</a>
+                        <span class="paper-date">2026-08-12</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：3D高斯泼溅（3D Gaussian Splatting）模型在中等和大型场景中存储需求过高，限制了其在云服务和流媒体传输中的部署。&#10;&#10;🛠 **方法**：提出一种渐进式编解码器，用残差向量量化（Residual Vector Quantization）替代传统标量量化来压缩高斯特征，并引入基于多分辨率哈希网格的自回归熵模型，以预测每个传输索引的条件概率，实现高效压缩。&#10;&#10;✨ **主要贡献**：创新性地结合残差向量量化与空间上下文注意力，显著提升率失真性能，使粗粒度和细化层的压缩效率更高，同时保持实时高保真渲染质量。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Recent advances in 3D Gaussian Splatting have allowed for real-time, high-fidelity novel view synthesis. Nonetheless, these models have significant storage requirements for large and medium-sized scenes, hindering their deployment over cloud and streaming services. Some of the most recent progressive compression techniques for these models rely on progressive masking and scalar quantization techniques to reduce the bitrate of Gaussian attributes using spatial context models. While effective, scalar quantization may not optimally capture the correlations of high-dimensional feature vectors, which can potentially limit the rate-distortion performance. In this work, we introduce a novel progressive codec for 3D Gaussian Splatting that replaces traditional methods with a more powerful Residual Vector Quantization approach to compress the primitive features. Our key contribution is an auto-regressive entropy model, guided by a multi-resolution hash grid, that accurately predicts the conditional probability of each successive transmitted index, allowing for coarse and refinement layers to be compressed with high efficiency.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2605.13794v2" target="_blank" class="paper-title">BlitzGS: City-Scale Gaussian Splatting at Lightning Speed</a>
+                        <span class="paper-date">2026-08-11</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：城市级大规模3D高斯泼溅（3DGS）训练计算开销巨大，因为大量冗余高斯原语导致存储、通信和渲染成本过高，且现有方法未系统解决“哪些高斯应存储、渲染和保留”的问题。&#10;&#10;🛠 **方法**：提出BlitzGS分布式框架，在三个层面协同优化：系统层按索引奇偶分片而非空间分块，并通过单次跨GPU交换路由投影高斯；模型层通过重要性评分剪枝和轻量级生成门控控制密度；视图层通过距离LOD门控和重要性掩码裁剪每相机的激活集。&#10;&#10;✨ **主要贡献**：在保持与最新大规模基线相当渲染质量的同时，实现近一个数量级的加速，将城市级场景训练时间缩短至几十分钟，并开源代码。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Large-scale 3D Gaussian Splatting underpins digital twins, simulation, and aerial mapping, yet city-scale training remains computationally expensive even with multi-GPU execution because every iteration must preprocess, communicate, and rasterize an overly dense set of primitives. At any given step, only a small fraction of these primitives contribute meaningfully to the loss; the rest incur redundant storage, communication, and rasterization costs. Existing approaches improve individual cost factors but do not fully address the underlying question: which Gaussians should be stored on each GPU, rendered for each view, and retained after early geometry formation? We present BlitzGS, a distributed 3DGS framework that reduces the active Gaussian workload at three coupled levels. At the system level, it shards Gaussians across GPUs by index parity rather than spatial blocks, mitigating the cross-block visibility redundancy of spatial partitioning, and distributes each render step through a single cross-GPU exchange that routes projected Gaussians to their tile owners. At the model level, it controls the population from both ends of densification. Scheduled importance-scoring passes prune redundant survivors, and a lightweight spawn gate withholds candidates predicted not to survive. The same importance signal also feeds back into density control. At the view level, a distance-based LOD gate and an importance-based mask trim each camera's active set. On large-scale benchmarks, BlitzGS matches the rendering quality of recent large-scale baselines while delivering nearly an order-of-magnitude speedup, training city-scale scenes in tens of minutes. Our code is available at https://github.com/AkierRaee/BlitzGS.</p>
                     </details>
                 </div>
                 <div class="paper-card">
@@ -1139,10 +1184,7 @@
                         <span class="paper-date">2026-08-11</span>
                     </div>
                                         <span class="paper-comment">📝 Accepted to the ECCV 2026 MUSTCV Workshop. Project page: https://haeyun-choi.github.io/Cascaded2D3D_page/</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：仅从两张运动模糊图像重建一致的三维场景，且不依赖输入视角位姿、辅助清晰图像或逐场景测试优化，解决极端稀疏视角下的模糊神经渲染难题。&#10;&#10;🛠 **方法**：提出级联框架CasDeblurGS，分两阶段逐步恢复跨视角信息——第一阶段通过遮挡感知对应过滤构建局部可靠引导，第二阶段将中间复原结果聚合为无位姿的3D高斯表示，其输入视角重渲染提供密集全局引导以完成最终复原。&#10;&#10;✨ **主要贡献**：在真实和合成Deblur-NeRF场景上分别提升PSNR 1.19 dB和2.11 dB，并通过渐进消融、对应可视化和相机重投影分析验证了渲染质量与多视角几何一致性的双重改进。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Free-viewpoint 3D scene media is increasingly important for immersive applications, yet practical capture often suffers from severe view sparsity and motion blur. Although neural rendering has advanced sparse-view synthesis, existing blur-aware methods typically require substantial multi-view redundancy, accurate camera poses, or costly per-scene optimization. We address a stringent yet practical setting: reconstructing a coherent 3D scene from only two motion-blurred images with known intrinsics, without input-view poses, auxiliary sharp images, or per-scene test-time optimization. To this end, we propose CasDeblurGS, a cascaded framework that progressively recovers reliable cross-view information from local 2D correspondences to global 3D guidance. Stage 1 constructs locally reliable guidance through occlusion-aware correspondence filtering, while Stage 2 aggregates the intermediate restorations into a provisional pose-free 3D Gaussian representation whose input-view re-renders provide dense global guidance for final restoration. The resulting views enable a more coherent 3D representation and higher-quality novel-view synthesis. Experiments on real-world and synthetic Deblur-NeRF scenes show consistent gains over strong baselines, improving PSNR by 1.19 dB and 2.11 dB, respectively. Progressive ablations, cross-view correspondence visualization, and camera reprojection analysis further demonstrate improvements in both rendering quality and multi-view geometric consistency.</p>
@@ -1154,10 +1196,7 @@
                         <span class="paper-date">2026-08-10</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有基于扩散模型的稀疏视角3D高斯泼溅（3DGS）重建方法在推理时因几何约束不足导致去噪偏差累积，性能受限。&#10;&#10;🛠 **方法**：提出TRACE-GS框架，采用在线策略轨迹蒸馏，利用训练时额外视角提供的丰富几何信息作为特权条件，引导稀疏视角学生模型沿自身轨迹去噪，并对齐跨视角响应。&#10;&#10;✨ **主要贡献**：首次将特权几何信息用于在线策略监督的稀疏视角3DGS重建，无需额外推理开销即可显著提升重建质量，并在多个数据集和稀疏视角设置下展现一致增益和强泛化能力。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>We present TRACE-GS, an on-policy trajectory distillation framework that leverages privileged geometric conditioning at training time, thereby adapting a diffusion prior to sparse-view 3D Gaussian Splatting (3DGS) restoration. Rather than pursuing increasingly sophisticated restoration architectures, we identify a more fundamental limitation shared by existing diffusion-based approaches: supervision at independently noised states does not cover those reached during inference. In sparse-view 3DGS, under-constrained geometry biases denoising from the outset, and the resulting deviations compound along the rollout. TRACE-GS instead performs on-policy trajectory distillation: a teacher conditioned on richer geometry from additional training views supplies targets along the sparse-view student's own rollout, aligning denoising directions and cross-view responses at each visited state. This training-only geometry places TRACE-GS in the learning using privileged information (LUPI) setting. At deployment, only the sparse-view student is retained, and its restored renderings serve as pseudo-observations for 3DGS refinement. To the best of our knowledge, TRACE-GS is the first to derive on-policy supervision from privileged geometry for sparse-view 3DGS restoration, achieving consistent gains and strong generalization across datasets and sparse-view settings.</p>
@@ -1169,10 +1208,7 @@
                         <span class="paper-date">2026-08-10</span>
                     </div>
                                         <span class="paper-comment">📝 Accepted to ECCV 2026. Project page: https://pz0826.github.io/LEGO-Webpage/</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有3D场景理解方法难以捕捉场景中固有的语义层级结构（如“花盆→花束→花苞→花瓣”），且多粒度2D分割缺乏跨视角一致性。&#10;&#10;🛠 **方法**：提出LEGO框架，将多视角SAM产生的易变粒度自适应重分级为统一的3D一致层级，并用CLIP嵌入对各层级片段进行语义标注，同时结合空间关系构建层级语言场景图。&#10;&#10;✨ **主要贡献**：实现了3D场景的多层级、开放词汇分割与上下文感知空间推理，在可提示和开放词汇3D分割基准上均达到最先进性能，显著提升层级分解与复杂空间理解能力。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>We introduce LEGO for advanced open-vocabulary scene understanding. Beyond basic concept recognition, its core innovation lies in capturing the intrinsic semantic hierarchies within the scene, such as the "flowerpot -> bouquet -> bud -> petal" lineage. While foundation models like SAM can identify multi-granular structures in 2D, their partitions are strictly perspective-bound and lack cross-view consensus. LEGO self-adaptively re-grades volatile multi-view SAM granularities into a unified, 3D-consistent hierarchy. This provides precise supervision for the structurally coherent, multi-level segmentation of 3D scenes. By grounding these segments with CLIP embeddings, LEGO recovers open-vocabulary semantic logic across hierarchical levels. Furthermore, by incorporating spatial relationships, we elevate these segments into level-wise language scene graphs, effectively empowering Large Language Models to perform complex, context-aware spatial reasoning and precise visual grounding. Experimental results demonstrate that LEGO establishes new state-of-the-art performance across both promptable and open-vocabulary 3D segmentation benchmarks, exhibiting advanced hierarchical scene decomposition and context-aware spatial reasoning.</p>
@@ -1980,30 +2016,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Creating photorealistic animatable head avatars from a single image remains a fundamental challenge in digital human synthesis. While recent 3D Gaussian Splatting methods have achieved promising results, they rely on external tracking pipelines whose latency is excluded from inference measurements. Furthermore, they adopt unified representations that entangle geometrically distinct facial regions, limiting both expressiveness and rendering fidelity. We propose SpiD (Split and Drive), a single-image Gaussian head avatar framework built on two disentanglement axes. The compute axis internalizes per-frame driving, eliminating external tracking dependency at inference. The feature axis decomposes the avatar into three specialized Gaussian branches, each modeling a geometrically distinct facial domain. Extensive experiments demonstrate consistently strong performance against state-of-the-art methods while achieving the fastest inference speed among all compared methods on a single GPU with the complete driving pipeline included.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.27634v1" target="_blank" class="paper-title">4DHumanDiff: Direct Text-to-4DGS Generation for Consistent 360-Degree Dynamic Humans</a>
-                        <span class="paper-date">2026-07-30</span>
-                    </div>
-                                        <span class="paper-comment">📝 14 pages</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Generating high-quality 360-degree dynamic human assets from text prompts is challenging. Existing methods usually synthesize monocular or multi-view videos first and then fit a 4D representation, which is expensive and often causes incomplete geometry or view-inconsistent renderings. We present 4DHumanDiff, a diffusion framework that directly generates dynamic humans represented by 4D Gaussian Splatting (4DGS) from text prompts. By modeling the structured 4D representation space end-to-end, 4DHumanDiff avoids video pre-generation and per-scene reconstruction, making it better suited for view-consistent and temporally coherent asset generation. The model uses a 3D U-Net backbone with temporal attention for motion-aware generation. We further construct a large-scale text-to-4DGS dataset with 60,000 high-quality pairs, and introduce 2D regularization and training-free 4D interpolation to improve rendering quality and motion smoothness. Experiments show that 4DHumanDiff generates consistent 360-degree dynamic humans within one minute, achieves better temporal and multi-view consistency, and reduces inference time by more than 10x.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.24353v2" target="_blank" class="paper-title">Open-Vocabulary BEV Segmentation with 3D-Aware Geometric Constraints</a>
-                        <span class="paper-date">2026-07-29</span>
-                    </div>
-                                        <span class="paper-comment">📝 This paper has been accepted to ECCV 2026</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Bird's-eye view (BEV) perception fuses multi-camera images into a unified top-down representation for autonomous driving. Despite recent progress, state-of-the-art methods remain confined to closed-set scenarios, making them vulnerable to unpredictable real-world environments. In this work, we introduce open-vocabulary BEV segmentation (OVBS), which leverages vision-language models (VLMs) to recognize categories beyond the training set while maintaining precise BEV perception and real-time efficiency. A key challenge in OVBS lies in the 3D geometric inconsistency inherent in the ill-posed lifting of 2D VLM semantics into BEV. To address this, we propose OVBEVSeg, a geometry-aware OVBS framework that enhances efficient Gaussian splatting (GS)-based unprojection by leveraging robust 3D geometric constraints across three progressive stages: (1) 2D-to-BEV pseudo-labeling via reliable 3D projection for OV generalization; (2) joint 2D-BEV per-scene optimization with BEV structural constraints for 3D geometric consistency; and (3) 3D geometric distillation for online efficiency. On the nuScenes dataset, OVBEVSeg achieves state-of-the-art performance, outperforming closed-set methods by 15.3 mIoU on unseen categories. Remarkably, even with no novel-class ground-truth labels, it remains competitive with self- and semi-supervised baselines trained with up to 40% of ground-truth annotations. Furthermore, it achieves 2.5x faster inference with only 0.22x the memory consumption of projection-based methods. Project page: https://hchoi256.github.io/projects/ovbevseg/.</p>
                     </details>
                 </div>
             </div>

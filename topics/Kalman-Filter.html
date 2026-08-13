@@ -615,7 +615,7 @@
                 <a href="Gaussian-Splatting.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#84cc16"></span>
                     <span class="nav-label">Gaussian Splatting</span>
-                    <span class="nav-count">79</span>
+                    <span class="nav-count">80</span>
                 </a>
                 <a href="Visual-SLAM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#22c55e"></span>
@@ -675,7 +675,7 @@
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Kalman Filter</span>
-                    <span class="nav-count">45</span>
+                    <span class="nav-count">47</span>
                 </a>
                 <a href="Loop-Closure-Detection.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -690,12 +690,12 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">66</span>
+                    <span class="nav-count">70</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">78</span>
+                    <span class="nav-count">75</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -730,7 +730,7 @@
                 <a href="Model-Predictive-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#14b8a6"></span>
                     <span class="nav-label">Model Predictive Control</span>
-                    <span class="nav-count">51</span>
+                    <span class="nav-count">52</span>
                 </a>
                 <a href="Whole-Body-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#06b6d4"></span>
@@ -834,7 +834,7 @@
             <a href="Gaussian-Splatting.html" class="nav-item">
                 <span class="nav-dot" style="background:#84cc16"></span>
                 <span class="nav-label">Gaussian Splatting</span>
-                <span class="nav-count">79</span>
+                <span class="nav-count">80</span>
             </a>
             <a href="Visual-SLAM.html" class="nav-item">
                 <span class="nav-dot" style="background:#22c55e"></span>
@@ -894,7 +894,7 @@
             <a href="Kalman-Filter.html" class="nav-item active">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Kalman Filter</span>
-                <span class="nav-count">45</span>
+                <span class="nav-count">47</span>
             </a>
             <a href="Loop-Closure-Detection.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -909,12 +909,12 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">66</span>
+                <span class="nav-count">70</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">78</span>
+                <span class="nav-count">75</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -949,7 +949,7 @@
             <a href="Model-Predictive-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#14b8a6"></span>
                 <span class="nav-label">Model Predictive Control</span>
-                <span class="nav-count">51</span>
+                <span class="nav-count">52</span>
             </a>
             <a href="Whole-Body-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#06b6d4"></span>
@@ -1025,9 +1025,84 @@
         <section class="topic-section">
             <div class="topic-header">
                 <span class="topic-badge" style="background:#8b5cf6">Kalman Filter</span>
-                <span class="topic-count">45 papers</span>
+                <span class="topic-count">47 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2604.13309v2" target="_blank" class="paper-title">Utilizing Inpainting for Keypoint Detection for Vision-Based Control of Robotic Manipulators</a>
+                        <span class="paper-date">2026-08-12</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决机器人操作器在视觉伺服控制中依赖人工标记或精确模型的问题，特别是在部分遮挡条件下难以持续检测关键点。&#10;&#10;🛠 **方法**：利用图像修复（inpainting）技术去除机器人身上的ArUco标记并重建遮挡区域，生成自动标注的无标记图像；训练数据驱动的关键点检测器，并结合无迹卡尔曼滤波（UKF）提升时间一致性和鲁棒性。&#10;&#10;✨ **主要贡献**：实现了无需相机标定或机器人模型的模型无关视觉伺服控制，在完全可见和部分遮挡场景下均验证成功；并将感知流程扩展到软体折纸机械臂，展示了跨平台的通用性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>We present a novel visual servoing framework for controlling a robotic manipulator in configuration space using only natural visual features. To train our data-driven keypoint detector, we attach ArUco markers along the robot body, use their centers as keypoint labels, and apply image inpainting to remove the markers and reconstruct the occluded regions. This produces automatically labeled, markerless robot images without requiring accurate camera calibration or robot models. At runtime, a second inpainting model reconstructs robot regions that are partially occluded, enabling continuous keypoint detection. An Unscented Kalman Filter (UKF) further improves temporal consistency and robustness of the keypoint estimates. We demonstrate successful model-free, vision-based control using natural robot features under both full visibility and partial occlusion. To show broader applicability, we also extend the perception pipeline to two-module and three-module soft origami arms and qualitatively evaluate keypoint detection and temporal tracking on these platforms.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.04201v2" target="_blank" class="paper-title">Unscented KalmanNet: Structure-Preserving Deep Learning with Calibrated Posterior Uncertainty under Incomplete Physics and Unknown Noise</a>
+                        <span class="paper-date">2026-08-12</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：非线性状态估计中，传统无迹卡尔曼滤波（UKF）在噪声统计未知、时变或模型失配时，估计精度和协方差校准会显著退化。&#10;&#10;🛠 **方法**：提出Unscented KalmanNet（UKN），在UKF的显式sigma点协方差递推基础上，引入两个学习组件——NoiseNet预测有界乘性噪声协方差修正，GainNet对解析增益施加有界残差修正，并用校准感知的联合训练目标优化精度与校准。&#10;&#10;✨ **主要贡献**：UKN在三个合成系统和UZH-FPV真实飞行数据上均取得最低状态估计误差，相比UKF在合成案例中RMSE降低26.4%-49.7%，在11次飞行交叉验证中位置和速度RMSE分别降低22.4%和34.3%，且协方差校准（NEES和覆盖率）最接近理想值，折叠间变异性最小。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Nonlinear state estimation requires sequentially fusing model-based predictions with noisy measurements. Under imperfect dynamics and unknown, time-varying noise statistics, this fusion can degrade in both accuracy and statistical consistency. Existing learning-aided filters largely treat accuracy and uncertainty estimation separately, limiting their ability to correct model-mismatch-induced bias while retaining an explicit, calibrated posterior covariance. This paper introduces Unscented KalmanNet (UKN), a model-based deep learning architecture that extends the Unscented Kalman Filter (UKF) with learned mechanisms for these two sources of filtering error while preserving explicit posterior covariance propagation. NoiseNet learns time-varying process and measurement covariances as bounded multiplicative corrections to baseline covariances, guaranteeing positive definiteness, while GainNet learns a bounded residual correction to the analytical UKF gain to compensate for model-mismatch-induced bias. A calibration-aware training objective couples state error with posterior covariance and innovation consistency terms through adaptive weighting, jointly optimizing accuracy and calibration. UKN is benchmarked against UKF, KalmanNet, and Bayesian KalmanNet on three synthetic systems and real-flight UZH-FPV data. It achieves the lowest state-estimation error in all four examples and reduces RMSE by 26.4-49.7% compared with UKF in the synthetic cases. Leave-one-sequence-out cross-validation over 11 flights shows 22.4% and 34.3% reductions in mean position and velocity RMSE, respectively. UKN also yields the lowest fold-to-fold variability, with dimension-normalized NEES and empirical coverage closest to nominal values among covariance-reporting filters. These results show that structured learned adaptation improves estimation accuracy while retaining calibrated uncertainty.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2512.14426v2" target="_blank" class="paper-title">Decoupled Quadratic Kalman Filter for Elliptical Extended Object Tracking with Log-normal Axis Modeling</a>
+                        <span class="paper-date">2026-08-12</span>
+                    </div>
+                                        <span class="paper-comment">📝 19 pages, 16 figures, submitted to IEEE Transactions on Aerospace and Electronic Systems</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：针对扩展目标跟踪中同时估计目标形状（椭圆半轴长度）与运动状态的问题，现有方法在精度或计算效率上存在不足，且难以保证轴长估计的正性。&#10;&#10;🛠 **方法**：提出一种确定性闭式解耦二次卡尔曼滤波器，将目标运动学、朝向和轴长分别独立估计，忽略三者间相关性以减少近似误差；半轴长度采用对数正态分布建模，确保轴长始终为正，并引入批处理变体提升计算效率。&#10;&#10;✨ **主要贡献**：该算法在仿真和真实汽车雷达数据上均优于现有方法，精度接近采样类算法，同时批处理版本在计算效率上显著超越同类最优算法，且严格保证轴长正性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Extended object tracking involves estimating both the physical extent and kinematic parameters of a target object, where typically multiple measurements are observed per time step. In this article, we propose a deterministic closed-form elliptical extended object tracker, based on decoupling of the kinematics, orientation, and axis lengths. By disregarding potential correlations between these state components, fewer approximations are required for the individual estimators than for an overall joint solution. This also enables a log-normal representation of the semi-axis lengths, i.e., opposed to related approaches, only positive axis lengths have support. The resulting algorithm outperforms existing algorithms, reaching the accuracy of sampling-based procedures. Additionally, a batch-based variant is introduced, yielding highly efficient computation while outperforming all comparable state-of-the-art algorithms. This is validated both by a simulation study using common models from literature, as well as an extensive quantitative evaluation on real automotive radar data.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.11995v1" target="_blank" class="paper-title">Latent variable models for simultaneous EOV identification and removal in population-based SHM</a>
+                        <span class="paper-date">2026-08-12</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在基于群体的结构健康监测（PBSHM）中，如何在不测量环境与运行变化（EOV）信号的情况下，同时识别并移除这些潜在变量，同时避免传统投影方法因损伤方向与EOV方差方向接近而丢失损伤敏感性的问题。&#10;&#10;🛠 **方法**：将潜在EOV建模为状态空间高斯过程，利用卡尔曼滤波器实现线性时间复杂度的推理；并构建分层贝叶斯识别框架，通过拉普拉斯近似实现群体层面的EOV识别和无EOV残差特征提取。&#10;&#10;✨ **主要贡献**：在实验室热EOV基准结构上验证了方法的鲁棒损伤检测与EOV恢复能力；在模拟九涡轮海上风电场（含错峰部署与损伤）中，与投影法和协整法相比，在相同误报率下显著提升了真正例率。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>The robust treatment of environmental and operational variability (EOV) is an open challenge in population-based structural health monitoring (PBSHM). The difficulty is compounded in the case that the EOV signals are unmeasured. A common approach in conventional SHM is to apply \emph{projection-based} methods that discard subspaces of healthy feature data, reasoning that the EOV signal dominates the variance of the measured features. However, a common pitfall of projection-based approaches is that when damage acts close to the same variance-dominant direction, damage sensitivity is removed along with the EOV. An alternative identifying assumption for the removal of particular unmeasured EOVs is slowness; the latent EOV process is characterised by its long temporal correlation. In this paper, the latent EOV is cast as a state-space Gaussian process, enabling tractable $\mathcal{O}(T)$ inference via a Kalman filter. A robust hierarchical Bayesian identification framework is developed that enables population-level identification of latent EOVs and EOV-free residual features, using a Laplace approximation. The approach is first validated on a single laboratory-scale benchmark structure from the literature, subject to thermal EOVs, demonstrating robust damage detection and EOV recovery. The method is then applied to a simulated nine-turbine offshore wind farm with staggered deployment and damage, where it delivers a substantial true-positive uplift over projection and cointegration-based baselines at matched false-positive rates.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.11481v1" target="_blank" class="paper-title">Time-Varying Multi-Seasonal ARMA Models</a>
+                        <span class="paper-date">2026-08-11</span>
+                    </div>
+                                        <span class="paper-comment">📝 34 pages, 22 plots (supplementary materials included)</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有ARMA模型难以同时处理多个季节性周期和时变参数，尤其在面对突发事件（如疫情）导致的季节性结构突变时表现不足。&#10;&#10;🛠 **方法**：提出一种时变多季节性ARMA模型，允许规则与季节性成分的参数随时间变化，通过动态收缩过程刻画参数平稳期、渐变和突变，并引入随机波动成分处理异质噪声；采用精确似然的Gibbs采样器，结合扩展卡尔曼滤波实现时变AR/MA参数的联合高效采样。&#10;&#10;✨ **主要贡献**：首次在ARMA框架中统一支持多季节性周期与时变参数，并保证每个时点的稳定性和可逆性；通过1990-2024年美国月度航空旅客数据案例，成功揭示了新冠疫情期间季节性的显著变化，验证了模型对真实复杂动态的捕捉能力。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>We propose an ARMA model that allows for multiple seasonal periods and time varying parameters in both regular and seasonal components, building upon previous work for pure AR processes and the conditional likelihood. The model is parameterized to ensure stability and invertibility at each time point. The parameter evolution is governed by dynamic shrinkage processes, enabling extended periods of essentially constant parameters, gradual changes, and abrupt shifts. The model includes a stochastic volatility component to account for potentially heterogeneous noise, also modeled by a dynamic shrinkage process. A Gibbs sampler is developed using the exact likelihood, with separate updating steps for the latent errors and the unobserved pre-sample history of the process. The time-varying AR and MA parameters are sampled jointly using a fast posterior sampler based on the extended Kalman filter. The model and the efficiency of the Gibbs sampler are evaluated using simulated and real data. A case study on monthly air passenger data in the US during 1990-2024 reveals significant changes in seasonality during the Covid-19 pandemic.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2608.09807v1" target="_blank" class="paper-title">WRAP: Wasserstein-Robust Adaptive Plug-in for Robot Localization</a>
@@ -1109,10 +1184,7 @@
                         <span class="paper-date">2026-08-07</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决高海拔雪地环境中，因能见度低和地面不稳定导致传统导航方法失效的无人机-无人车协同自主导航问题。&#10;&#10;🛠 **方法**：提出一种轻量级U-Net架构用于实时道路分割，结合合成雪数据增强技术；无人机定位采用扩展卡尔曼滤波（EKF）融合GPS与IMU数据；无人车位置通过YOLOv5和RGB-D深度数据的视觉跟踪确定，并利用动态路径规划算法适应雪堆变化。&#10;&#10;✨ **主要贡献**：实现了96.5%的分割准确率，无人机定位误差控制在±0.5米以内，并在雪地遮蔽环境中成功完成导航且路径偏差极小，验证了该框架在恶劣条件下的有效性。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>This paper presents a collaborative UAV-UGV navigation framework for high-altitude, snow-covered terrain, where reduced visibility and unstable ground render conventional methods ineffective. We introduce a custom efficient U-Net architecture that falls under the computational constraints for real-time road segmentation, utilizing a novel synthetic snow data augmentation technique to achieve 96.5% segmentation accuracy. For UAV localization, we implement an Extended Kalman Filter (EKF) fusing onboard GPS and IMU data, achieving a maximum observed positional error of +-0.5 meters. The UGV position is determined via a visual tracking pipeline using YOLOv5 and depth data from the UAV's RGB-D camera. A dynamic path planning algorithm utilizes this segmentation to adjust for snow drifts, enabling successful navigation in obscured test environment with minimal deviation.</p>
@@ -1124,10 +1196,7 @@
                         <span class="paper-date">2026-08-07</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：研究无人机状态估计器（如扩展卡尔曼滤波器）的可学习性是否会被攻击者利用，通过仅观察输入/输出行为来学习并操纵状态估计，从而在不被异常检测器发现的情况下导致无人机物理偏离预定路径。&#10;&#10;🛠 **方法**：提出REQUIEM框架，包含两个关键步骤：一是构建深度代理模型模拟状态估计更新函数，二是优化欺骗模型生成难以被标准异常检测器识别的传感器值，最终实现物理层面的攻击。&#10;&#10;✨ **主要贡献**：在真实四旋翼实验和Gazebo/PX4高保真仿真中，REQUIEM成功使无人机显著偏离任务路径，同时规避了PX4控制器和最新SAVIOR异常检测器，且无需root权限。研究表明，状态估计器的可靠性设计本身可能成为安全漏洞，为安全关键系统引入“可学习性”攻击面提供了新视角。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>If a mathematical function can be learned from its input/output behavior alone, can an adversary exploit that ``learnability'' to compromise it? What if the function is core to estimating the state of, and controlling, unmanned vehicles such as drones? We investigate this question by targeting state estimators in unmanned aerial vehicles (UAVs) - specifically Extended Kalman Filters (EKFs), an industry standard for autonomous systems, whose inherent modeling of uncertainties and sensor noise create an adversarial space that ML can exploit. We present REQUIEM, a machine-learning based framework for investigating such vulnerabilities. Our framework functions by, (i) constructing deep surrogate models that emulate the state estimation update function using only observed inputs and outputs and (ii) optimizing spoofer models to manipulate sensor values so that they're not easily detectable by standard anomaly detectors - all of which results in physical deviations by the autonomous vehicle. We evaluate REQUIEM's efficacy against both, standard PX4 controllers and the state-of-the-art SAVIOR anomaly detector. Across real-world quadrotor experiments and high-fidelity simulations (Gazebo/PX4), REQUIEM demonstrates significant deviations from planned mission paths while evading anomaly detection methods, without the need for intrusive root/administrative access. Our findings suggest that the very properties making state estimators reliable may constitute a security liability, motivating investigation into ``learnability'' as an attack surface in safety-critical systems.</p>
@@ -1139,10 +1208,7 @@
                         <span class="paper-date">2026-08-07</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：机器人抓取物体时，难以快速检测和定位物体与环境之间发生的瞬时、细微外部接触，导致精细操作笨拙或失败。&#10;&#10;🛠 **方法**：提出TECDAR方法，在夹爪指尖集成单个2.5×3 mm的6D惯性测量单元，以7 kHz采样率捕捉亚毫秒级形变，并通过扩展卡尔曼滤波融合触觉数据与机器人位姿，实现外部接触的快速检测与定位。&#10;&#10;✨ **主要贡献**：系统在180 ms内达到毫米级定位精度，线接触和点接触的平均定位误差约7 mm；数据流仅84 KB/s，带宽低且响应快，使机器人能在毫秒级修正轨迹，支持纯触觉探索下的精细工具操作与环境感知，适用于精密装配、手术辅助等场景。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Delicate manipulation often involves transient and subtle collisions between a grasped object and the environment. While the human hand localizes these contacts effortlessly thanks to superior tactile sensitivity, robotic systems often lack the requisite resolution to acquire the information necessary for motion planning, resulting in clumsy manipulation or even task failure. Here, we propose transient extrinsic contact detection and ranging (TECDAR), a simple yet fast and efficient method for detecting and ranging extrinsic contact of grasped objects. Our design of gripper tips employs dynamic tactile sensing leveraging a single 2.5$\times$3 mm 6D inertial measurement unit. The sensor captures sub-millisecond tip deformations at a 7 kHz sampling rate, but operating on a data stream of only 84 KB/s. High bandwidth and compact data size enable the system to rapidly detect and localize contact between grasped objects and their surroundings. Specifically, fusing tactile data with robot pose via an extended Kalman filter enables fast and precise localization of extrinsic contact, reaching millimeter-level accuracy within 180 ms. Experimental results demonstrate that the system achieves an average localization accuracy of approximately 7\,mm in both line-contact and point-contact localization tasks. Furthermore, this near-instantaneous localization enables the robot to rectify its trajectory on a millisecond scale, facilitating precise tool manipulation and enhanced perception of complex environments purely through tactile exploration and mapping. We envision such techniques advancing the future of robotics across domains requiring delicate manipulation, including precision assembly, surgical assistance, and autonomous exploration in touch-dominant environments. Project page: humitlab.github.io/TECDAR/</p>
@@ -1154,10 +1220,7 @@
                         <span class="paper-date">2026-08-06</span>
                     </div>
                                         <span class="paper-comment">📝 20 pages, 13 figures</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：评估LiAISON导航方法在近二体小行星系统中的适用性，特别是能否利用小行星重力扰动来估计航天器状态和引力场参数。&#10;&#10;🛠 **方法**：采用多模型自适应估计（MMAE）框架，结合无迹卡尔曼滤波（UKF），仅利用测距和测距率数据，对灶神星和谷神星附近的航天器状态及扰动进行估计。&#10;&#10;✨ **主要贡献**：通过蒙特卡洛分析验证了该方法在灶神星和谷神星场景下能准确、一致地估计位置、速度和引力扰动，扩展了LiAISON在二体系统中的应用潜力。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>This paper evaluates the Linked Autonomous Interplanetary Satellite Orbit Navigation (LiAISON) method in near two-body asteroid systems. While LiAISON's usefulness has been proven in multibody environments such as the cislunar region, the application of a two-body system with gravity perturbations has not been sufficiently demonstrated. Vesta and Ceres are good candidates to test LiAISON, because the asteroids have sufficiently strong perturbations to use LiAISON method. The study utilizes a Multi-Model Adaptive Estimation (MMAE) framework integrated with Unscented Kalman Filters (UKF) to estimate the spacecraft states and perturbations using only range and range rate measurements. Results from the Monte Carlo analysis indicate that the proposed framework makes accurate and consistent estimates of position, velocity, and the perturbations for cases of Ceres and Vesta.</p>
@@ -1169,10 +1232,7 @@
                         <span class="paper-date">2026-08-06</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有紧耦合LiDAR-视觉-惯性里程计（LIVO）中，LiDAR和视觉传感器各自存在独立失效模式（如LiDAR在几何约束不足时退化，视觉在光照差或无纹理时退化），但现有方法仅在模态层面处理退化，未考虑联合信息矩阵的方向依赖性，导致视觉残差在LiDAR已良好约束的方向上仍被引入，而在退化方向上视觉补偿分散于全状态空间而非集中所需方向。&#10;&#10;🛠 **方法**：提出SA-LIVO系统，通过子空间感知信息融合（SAIF）框架对联合LiDAR-视觉信息矩阵进行特征分解，并在每个特征方向上应用线性-钳位软门控，衰减退化方向同时保持可观测方向的全强度；随后在一个共享线性化点的InEKF循环中联合优化LiDAR和视觉残差，且视觉雅可比矩阵仅在循环前组装一次并在迭代中复用，避免传统迭代滤波器的逐次计算开销。&#10;&#10;✨ **主要贡献**：在三个基准（HILTI'22、New College、Oxford Spires）的29个序列及并发退化场景中，SA-LIVO达到与最强基线相当的精度，并在竞争系统发散时保持有界漂移；在笔记本电脑CPU上平均每帧12.3毫秒，嵌入式ARM板上26.8毫秒，峰值内存降低3.6-6.3倍，代码将开源。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Tightly coupled LiDAR-inertial-visual odometry (LIVO) fuses geometric depth with visual measurements, but its exteroceptive sensors fail independently: LiDAR when scan geometry is under-constrained, vision under poor illumination or texture absence. Existing countermeasures (binary degeneracy detection, covariance inflation, scene-level quality gating) act at the modality level, so a single isotropic gain sends visual residuals into directions LiDAR already constrains well and cannot concentrate them where constraints are deficient. We propose Subspace-Aware LiDAR-inertial-visual odometry (SA-LIVO), whose Subspace-Aware Information Fusion (SAIF) eigendecomposes the joint LiDAR-visual information matrix and gates each eigendirection by a single-threshold linear clamp, attenuating low-amplitude directions while passing well-observed ones at full strength; robust per-residual gating and a scene-level quality factor screen corrupted measurements. LiDAR and visual residuals share one invariant extended Kalman filter (InEKF) loop and linearization point, letting photometric Jacobians be assembled once and reused across iterations. On 29 public-benchmark sequences (HILTI'22, Newer College Dataset (NCD), Oxford Spires), plus additional concurrent-degradation scenarios, SA-LIVO matches the strongest baselines in accuracy and stays bounded where competing systems diverge. On the HILTI'22 subset that every baseline completes, it averages 12.3 ms per frame on a laptop CPU and 26.8 ms on an embedded ARM board without GPU, at 3.6-6.3x lower peak memory.</p>
@@ -1200,18 +1260,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>This article presents a kinematic-inertial-LiDAR-visual odometry for humanoid robots, called KILVO. Tailored to the platform features, requirements, and real-world complexity, it fully utilizes the sensors commonly equipped on humanoid robots, including joint encoders, IMU, LiDAR, and camera, within an asynchronous-sequential hybrid error-state iterated Kalman filter (ESIKF). Specifically, inertial data are used for prediction, leg kinematics are processed asynchronously at a high rate and provide proprioceptive constraints, while exteroception is updated sequentially, first by registering LiDAR points for geometric priors and then by updating the visual component via photometric errors. Moreover, the framework is elaborately designed with multimodal adaptation for resilience to sensor failures. A compact contact estimation module is also developed, sharing information with state estimation without additional sensors. Extensive experiments on public datasets and in the real world across multiple humanoid robots, gait patterns, and scenarios demonstrate that KILVO achieves highly competitive accuracy, efficiency, and output rates, with strong robustness against sensor degradation and failures, making it more suitable for humanoid robots than state-of-the-art fusion methods. Our code and datasets are released on GitHub.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2608.04201v1" target="_blank" class="paper-title">Unscented KalmanNet: a hybrid deep learning filter with calibrated posterior covariance for nonlinear state estimation</a>
-                        <span class="paper-date">2026-08-04</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>State estimation for nonlinear dynamical systems is commonly performed with the Unscented Kalman filter (UKF), which propagates the state moments through deterministic sigma points and reports a posterior covariance at every step. In practice, however, unknown and time-varying noise statistics and model mismatch degrade both estimation accuracy and covariance calibration. Existing learned filters improve accuracy but are largely built on the extended Kalman filter and either forgo an explicit covariance or learn uncertainty without correcting mismatch-induced gain bias. This paper introduces the Unscented KalmanNet (UKN), a hybrid recursive estimator that augments the UKF with two structurally distinct learned components while preserving its explicit sigma-point covariance recursion. NoiseNet predicts time-varying process and measurement covariances as bounded multiplicative corrections to fixed baselines, guaranteeing positive definiteness, while GainNet applies a bounded residual correction to the analytical gain. A calibration-aware training objective combines state error with covariance- and innovation-consistency terms through adaptive weights, jointly optimizing accuracy and calibration. UKN is benchmarked against UKF, KalmanNet, and Bayesian KalmanNet on three synthetic systems and UZH-FPV real-flight data. It achieves the lowest aggregate state-estimation error in all four examples and reduces RMSE by $26.4$-$49.7\%$ compared to UKF in the synthetic cases. Leave-one-sequence-out cross-validation over 11 flights shows $22.4\%$ and $34.3\%$ reductions in mean position and velocity RMSE, respectively. UKN also yields the lowest fold-to-fold variability, with normalized NEES and empirical coverage closest to nominal values among the other filters.</p>
                     </details>
                 </div>
                 <div class="paper-card">
@@ -1572,30 +1620,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Vehicle coordination at unsignalized intersections relies on accurate real-time vehicle state acquisition and reliable command-and-control (C&C) signal delivery. However, existing studies typically treat sensing, communication, and control separately, which may lead to redundant transmissions, outdated state information, and unreliable vehicle coordination. In this paper, we investigate a new scenario of distributed integrated sensing and communication (ISAC)-enabled vehicle coordination at intersections, where multiple roadside units (RSUs) collaboratively transmit sensing signals for vehicle state acquisition and C&C signals for vehicle movement control under the management of a central base station (BS). To improve signaling efficiency, we propose a unified goal-oriented semantic communication (GSC) framework, which transmits sensing and C&C signals only when they are semantically important for improving intersection traffic throughput. Specifically, an extended Kalman filter (EKF) is adopted to predict vehicle states and fuse distributed sensing measurements. A masked hybrid proximal policy optimization (MHPPO) framework is then developed to jointly determine sensing transmission decisions, C&C transmission decisions, and C&C signal contents based on a value-of-information (VoI) reward. Furthermore, we propose an uncertainty-aware transmission design (UTD), including robust beamforming and VoI-based time-division power allocation, to improve sensing and communication reliability under vehicle state uncertainty and inter-RSU interference. Simulation results show that our proposed framework achieves 100% collision-free vehicle coordination with significantly reduced signaling overhead compared with predictive ISAC baselines adapted from state-of-the-art related studies and several ablation baselines.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.10735v2" target="_blank" class="paper-title">GNet: A scalable and flexible Gaussian process network with nonparametric neurons</a>
-                        <span class="paper-date">2026-07-15</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>We develop GNet, a scalable and flexible Gaussian process network with nonparametric activation functions modeled by Gaussian processes. To reduce computational and storage costs, we introduce the jointly inverse Kalman filter, a fast algorithm together with closed-form expressions of gradients for accelerating model training and predictions without the need to form covariance matrices. Using a unified optimization setting, GNet shows competitive performance across a diverse range of test problems, including predicting nonlinear functions, nonparametric regression of real-world data, and predicting one-body direct correlation functions with high-dimensional inputs in classical density function theory. The strong performance of GNet, accelerated by the jointly inverse Kalman filter, suggests broad applicability to large-scale predictive modeling with substantially reduced computational and storage costs.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.13405v1" target="_blank" class="paper-title">WNOJ-LIO: A White-Noise-on-Jerk Motion-Prior EKF for High-Dynamic LiDAR-IMU Fusion</a>
-                        <span class="paper-date">2026-07-15</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>LiDAR-inertial odometry (LIO) is a key component of autonomous navigation, but high-dynamic driving exposes two coupled challenges: intra-scan motion distortion and vibration-contaminated inertial measurements. Most real-time LiDAR-inertial pipelines propagate the system state by integrating raw IMU measurements and then use the propagated trajectory for point cloud de-distortion, thereby propagating inertial noise into both the corrected scan and the subsequent scan-to-map registration. This paper presents WNOJ-LIO, a LiDAR-IMU fusion framework based on a White-Noise-on-Jerk (WNOJ) Extended Kalman Filter (EKF). WNOJ-LIO employs a decoupled WNOJ prior on $\R^3 \times \SO(3)$ for state prediction and treats the IMU as a high-frequency measurement source rather than the driver of state propagation. The resulting posterior state history is then used for LiDAR scan de-distortion and subsequent point-to-plane LiDAR updates. The decoupled process model enables closed-form covariance propagation, thereby bridging the gap between batch WNOJ Gaussian process (GP) trajectory priors and recursive filtering. Simulation results demonstrate improvements in acceleration and angular-velocity denoising, scan de-distortion, and localization accuracy over a FAST-LIO-style baseline. Real-world experiments were conducted using an autonomous racing car on four driving segments with maximum speeds ranging from 53 to 208~km/h, covering a wide range of vehicle vibration levels. The experiments further validate the proposed method and provide a comprehensive evaluation of its performance in estimating acceleration, angular velocity, body-frame linear velocity, attitude, and position under highly dynamic driving. The source code of WNOJ-LIO is publicly available at https://github.com/LvJohny/wnoj-ekf-lio.git.</p>
                     </details>
                 </div>
             </div>
