@@ -600,7 +600,7 @@
                 <a href="LLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
                     <span class="nav-label">LLM</span>
-                    <span class="nav-count">80</span>
+                    <span class="nav-count">79</span>
                 </a>
                 <a href="VLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f97316"></span>
@@ -690,12 +690,12 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">70</span>
+                    <span class="nav-count">68</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">75</span>
+                    <span class="nav-count">76</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -730,7 +730,7 @@
                 <a href="Model-Predictive-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#14b8a6"></span>
                     <span class="nav-label">Model Predictive Control</span>
-                    <span class="nav-count">52</span>
+                    <span class="nav-count">51</span>
                 </a>
                 <a href="Whole-Body-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#06b6d4"></span>
@@ -819,7 +819,7 @@
             <a href="LLM.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
                 <span class="nav-label">LLM</span>
-                <span class="nav-count">80</span>
+                <span class="nav-count">79</span>
             </a>
             <a href="VLM.html" class="nav-item">
                 <span class="nav-dot" style="background:#f97316"></span>
@@ -909,12 +909,12 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">70</span>
+                <span class="nav-count">68</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">75</span>
+                <span class="nav-count">76</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -949,7 +949,7 @@
             <a href="Model-Predictive-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#14b8a6"></span>
                 <span class="nav-label">Model Predictive Control</span>
-                <span class="nav-count">52</span>
+                <span class="nav-count">51</span>
             </a>
             <a href="Whole-Body-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#06b6d4"></span>
@@ -1028,6 +1028,81 @@
                 <span class="topic-count">78 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.13450v1" target="_blank" class="paper-title">LLM-Assisted Dynamic Threat Analysis for Attacker-Reachable Software Weaknesses in Autonomous Vehicles</a>
+                        <span class="paper-date">2026-08-13</span>
+                    </div>
+                                        <span class="paper-comment">📝 17 pages, 8 figures, 8 tables</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：自动驾驶软件栈中，从对抗性输入可达的软件弱点难以动态验证其可利用性，手动构建可执行测试工件成本极高。&#10;&#10;🛠 **方法**：对Autoware的185个包进行编译器精确静态分析，识别弱点并采样740个可达站点；使用两个本地开源LLM（推理模型和代码专用模型）生成测试工件，通过编译器反馈修复，并对可执行部分进行模糊测试。&#10;&#10;✨ **主要贡献**：构建了构建集成失败分类法，发现80%的首次编译失败源于依赖连接而非程序逻辑；推理模型首次编译成功率（64%）远超代码专用模型（6%），但修复后仍因桩代码导致崩溃，未能在预算内动态确认任何弱点，表明构建集成是LLM辅助动态分析的主要瓶颈。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Autonomous vehicles depend on large safety-critical software stacks, where weaknesses reachable from adversarial inputs may affect steering, braking, or other control decisions. Static analysis can identify candidate sites, but dynamically confirming exploitability requires executable test artifacts that are difficult to construct manually. We investigate whether large language models (LLMs) can automate this process for Autoware, an open-source autonomous-driving stack. We perform compiler-precise static analysis across 185 packages, identifying 1,375 decision rules, 2,274 validation checks, and 482 input-to-safety-output flows, from which we derive a weakness taxonomy and sample 740 reachable sites. Two local open-weight LLMs, a no-static-context ablation, and a naive-template baseline generate 3,700 artifact sets, which are compiled against the real build under sanitizers, repaired through compiler-in-the-loop feedback, and fuzzed when executable. The main result is a build-integration failure taxonomy showing that 80% of first-shot compilation failures arise from dependency wiring rather than program logic. The reasoning model compiled 64% of harnesses on the first attempt, compared with 6% for the code-specialized model. Repair achieved full object-compileability for the reasoning model only through extensive stubbing; fewer than half of its harnesses reached the fuzzer, and all 37 observed crashes originated in stubbed code rather than Autoware. No candidate weakness was dynamically confirmed within budget. These results show that build integration, not candidate generation or fuzzing, is the primary barrier to reliable LLM-assisted dynamic analysis of full autonomous-vehicle software stacks.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.13395v1" target="_blank" class="paper-title">FIRE-VLA: Failure-Informed Self-Evolution for Vision-Language-Action Models in Autonomous Driving</a>
+                        <span class="paper-date">2026-08-13</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在自动驾驶视觉-语言-动作模型（VLA）的强化学习训练中，当一组采样轨迹全部表现不佳时，相对奖励信号只能区分失败程度，却无法识别失败区域之外的行为，导致模型难以从失败中有效学习。&#10;&#10;🛠 **方法**：提出FIRE-VLA框架，通过“失败感知自进化”机制，在低奖励、低多样性的轨迹组中触发自蒸馏——利用冻结的轮次起始模型副本作为教师，教师虽与学生参数规模相同，但能观察隐藏的未来轨迹，监督仅作用于学生生成的答案token，同时保留GRPO对所有组的训练。&#10;&#10;✨ **主要贡献**：在150个保留的nuScenes场景、6019个样本上，FIRE-VLA在保持单样本规划性能的同时，将G=4平均L2误差从1.848米降至1.500米，评估持续失败率从13.03%降至11.20%，且误差降低主要源于罕见严重轨迹的改善，而非普通轨迹的均匀提升。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Reinforcement learning improves autonomous-driving vision-language-action (VLA) models by evaluating trajectories sampled from the current policy. Group relative policy optimization (GRPO) learns from reward differences within each rollout group. When all sampled trajectories are poor, this relative signal can rank failures without identifying behavior outside the failed region. We introduce FIRE-VLA, a failure-informed self-evolution framework that converts such unresolved failures into privileged supervision for the next policy. Low-reward, low-diversity groups trigger self-distillation from a frozen round-start copy of the same model. Teacher and student have the same parameter scale, but only the teacher observes the hidden future trajectory. Supervision follows the student's generated prefix and is restricted to answer tokens, while GRPO remains active for every group. The updated policy supplies the teacher for the next round, allowing the routed failure distribution to change with the policy without requiring a larger external teacher. Starting from the same Qwen2.5-VL-3B SFT checkpoint, the comparison matches student rollout and policy-update counts. On 6,019 examples from 150 held-out nuScenes scenes, FIRE-VLA retains comparable single-sample planning, reduces G=4 mean L2 from 1.848 to 1.500 m, and lowers evaluation-persistent failure prevalence from 13.03% to 11.20%. The reduction in mean error arises mainly from rare severe rollouts rather than uniform improvement across ordinary trajectories.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.13147v1" target="_blank" class="paper-title">Geometry-Grounded Unified 3D Perception for Autonomous Driving</a>
+                        <span class="paper-date">2026-08-13</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有基于摄像头的自动驾驶3D感知框架通常依赖语义识别预训练骨干网络，通过任务特定模块引入3D几何，导致共享表示缺乏显式度量几何和一致的3D场景结构。&#10;&#10;🛠 **方法**：提出GeoUP框架，将VGGT的重构导向潜变量适配到标定的多摄像头流式驾驶场景，分解跨图像交互为自注意力、时间注意力和视角注意力，并注入标定感知的光线图编码以提供度量尺度和相机几何，最终解码为度量深度估计、3D目标检测和语义占用预测。&#10;&#10;✨ **主要贡献**：通过联合多任务和多数据集训练，GeoUP有效利用异构标注并泛化至多种传感器配置和感知范围；在nuScenes、Argoverse 2、Waymo、KITTI和DDAD上实现检测、占用和深度估计的SOTA性能，验证了几何接地表示在统一3D驾驶感知中的有效性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Camera-based autonomous driving perception requires a shared representation that preserves metric 3D structure across synchronized multi-camera streams. However, existing image-based frameworks often rely on backbones pretrained for semantic recognition, and introduce 3D geometry through downstream task-specific modules. As a result, their shared representations may fail to preserve explicit metric geometry and consistent 3D scene structure. In this paper, we present a Geometry-grounded Unified 3D Perception (GeoUP) framework that adapts the reconstruction-oriented latent of VGGT to calibrated, streaming multi-camera driving scenes. GeoUP factorizes cross-image interaction into self, temporal, and view attention to capture structurally distinct temporal and cross-view correspondences. It further injects calibration-aware raymap encodings to provide metric scale and camera geometry. The resulting geometry-grounded latent is decoded for metric depth estimation, 3D object detection, and semantic occupancy prediction, corresponding to surface-, instance-, and volume-level readouts of the same 3D scene. Through joint multi-task and multi-dataset training, GeoUP effectively leverages heterogeneous annotations and generalizes across diverse sensor configurations and perception ranges. Extensive experiments on nuScenes, Argoverse 2, Waymo, KITTI, and DDAD demonstrate that GeoUP achieves SOTA performance across detection, occupancy, and depth estimation. These results validate the effectiveness of geometry-grounded representations for unified 3D driving perception.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.12932v1" target="_blank" class="paper-title">FlashDrive: Flash Vision-Language-Action Inference for Autonomous Driving</a>
+                        <span class="paper-date">2026-08-13</span>
+                    </div>
+                                        <span class="paper-comment">📝 15 pages; 8 figures</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：视觉-语言-动作（VLA）模型在自动驾驶中推理延迟过高，无法满足实时控制需求，且瓶颈并非单一环节，而是由视觉编码、语言模型预填充、推理令牌生成和流匹配去噪四个级联阶段构成。&#10;&#10;🛠 **方法**：提出FlashDrive，一种算法-系统协同设计框架，针对四个瓶颈分别采用流式KV缓存复用、非自回归扩散草稿模型进行投机解码、自适应步长缓存，并叠加CUDA Graph编译与内核融合等系统级优化。&#10;&#10;✨ **主要贡献**：在Alpamayo 1.5-10B模型上，端到端延迟从717ms降至151ms（4.7倍加速），精度几乎不变（minADE6仅偏移0.08m），闭环碰撞与偏离率改善，使10B参数VLA模型在单GPU上从1.4Hz提升至6.6Hz，大幅接近实时部署。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Vision-Language-Action (VLA) models promise to bring end-to-end reasoning to autonomous driving, but their computational cost remains far too high for real-time control. The core challenge is structural: VLA inference is not a single bottleneck but a cascade of four. Visual encoding wastes compute on overlapping video frames; language-model prefill recomputes context that could be carried over from the previous timestep; reasoning tokens are generated serially despite low entropy; and flow-matching denoising applies uniform compute to a non-uniform velocity field. Addressing any one stage in isolation leaves the others untouched. We propose FlashDrive, an algorithm-system co-design framework that targets all four stages simultaneously. Our key insight is that each bottleneck admits a distinct, lightweight algorithmic shortcut: temporal overlap enables streaming KV-cache reuse across frames; the low per-token entropy and strong intra-block correlations of driving-domain reasoning make a non-autoregressive diffusion drafter highly effective for speculative decoding; and the velocity field's structure---sharp at the endpoints, flat in the middle---permits adaptive step caching that concentrates compute where it matters. Layered on system-level CUDA Graph compilation and kernel fusion, these techniques compound. Applied to Alpamayo 1.5-10B with W4A8 quantization, FlashDrive reduces end-to-end latency from 717ms to 151ms (4.7x) while leaving accuracy essentially unchanged: minADE6@6.4s shifts by only 0.08m, minADE1 improves, and closed-loop collision and off-road rates improve in simulation. By raising a 10B-parameter reasoning VLA from 1.4~Hz to 6.6~Hz on a single GPU, FlashDrive moves end-to-end autonomous driving substantially closer to real-time deployment.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.12854v1" target="_blank" class="paper-title">BrainWAM: Action-Space Coordination of Semantic Priors and Predictive Dynamics for Autonomous Driving</a>
+                        <span class="paper-date">2026-08-13</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：自动驾驶规划需要同时满足语义约束和预测性动态，但现有端到端方法（VLA模型或世界动作模型）往往只侧重其中一方面，简单融合时存在注意力分配失衡问题，导致语义信息压制预测动态。&#10;&#10;🛠 **方法**：提出BrainWAM框架，将语义推理和预测世界建模转化为两条专门的动作导向通路，在紧凑动作表示层面进行协调对齐；并引入异步整流流推理策略，解耦视频与动作去噪以降低推理延迟。&#10;&#10;✨ **主要贡献**：在NAVSIM v1（89.5 PDMS）和NAVSIM v2（89.6 EPDMS）上达到最先进性能，一致优于仅用VLA或仅用WAM的方法，验证了结构化动作空间协调框架的实用性和有效性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Autonomous driving requires planning under both semantic constraints and predictive dynamics. Existing end-to-end driving approaches, however, typically emphasize only one side of this requirement: Vision-Language-Action (VLA) models exploit VLM priors for semantic reasoning, while World Action Models (WAMs) provide future-aware prediction through generative world modeling. This naturally motivates a unified planner that can leverage both semantic priors and predictive dynamics. However, we find that a naive combination through joint token-level attention suffers from an attention-allocation mismatch, where semantic shortcuts dominate the shared attention space and suppress predictive dynamics. Inspired by neuroscience evidence that complex behavior arises from coordination among functionally specialized systems, we propose BrainWAM, a structured action-space coordination framework that converts semantic reasoning and predictive world modeling into two specialized action-oriented pathways, and aligns them at the level of compact action representations. We further introduce an asynchronous rectified-flow inference strategy with decoupled video and action denoising, which shortens inference latency while preserving planning-relevant predictive context. BrainWAM reaches state-of-the-art performance on both NAVSIM v1 (89.5 PDMS) and NAVSIM v2 (89.6 EPDMS), consistently outperforming VLA-only or WAM-only methods, highlighting BrainWAM as a practical and promising direction for autonomous driving systems.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2505.05474v2" target="_blank" class="paper-title">3D Scene Generation: A Survey</a>
@@ -1109,10 +1184,7 @@
                         <span class="paper-date">2026-08-12</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：针对自动驾驶中GNSS定位易受渐进式欺骗攻击（连续且隐蔽，单个观测看似合理但位移与车载运动不一致逐渐增大）而难以检测的问题，现有方法未显式建模这种演化过程。&#10;&#10;🛠 **方法**：提出因果高阶液体证据框架，先构建物理引导的GNSS-运动不一致残差，再分别提取残差水平及其一阶、二阶离散变化作为独立证据流，每流用自适应液体编码器处理，并分层耦合时间状态，仅利用当前及过去观测预测窗口端点的欺骗概率。&#10;&#10;✨ **主要贡献**：在真实AV-GPS数据集三个子集上，所提方法在Dataset 1和Dataset 3上取得最高F1分数（0.9535和0.9777），且在Dataset 3上能在四个采样步内检测到所有标注的正常到攻击转换，代码和数据集已公开。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Accurate Global Navigation Satellite System (GNSS)-based localization is essential for safe and reliable autonomous driving. However, spoofing attacks can manipulate vehicle position estimates. Continuous and subtle attacks are particularly difficult to detect because individual GNSS observations may remain plausible while the inconsistency between GNSS-implied displacement and onboard vehicle motion gradually increases. Existing methods often rely on static vehicle-behavior features or a single residual signal and do not explicitly model this evolution. To address this problem, we propose a causal high-order liquid evidence framework for GNSS spoofing detection. The method first constructs a physics-guided GNSS--motion inconsistency residual by comparing GNSS-implied displacement with onboard-motion-derived displacement. It then forms separate evidence streams for the residual level and its first- and second-order discrete variations, with relevant contextual cues selected according to the evidence order. Each stream is processed by a separate adaptive liquid encoder, and the resulting temporal states are hierarchically coupled to predict spoofing at the window endpoint using only current and past observations. Experiments on three subsets of the real-world AV-GPS dataset show that the proposed method achieves the highest F1-scores among the evaluated temporal models on Dataset~1 and Dataset~3, reaching 0.9535 and 0.9777, respectively. On Dataset~3, it detects both labeled normal-to-attack transitions within four sampling steps. Code and datasets are publicly available at: https://github.com/pangjunbiao/GNSS_Spoofing.git.</p>
@@ -1124,10 +1196,7 @@
                         <span class="paper-date">2026-08-12</span>
                     </div>
                                         <span class="paper-comment">📝 8 pages, 6 figures, 2 tables</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：自动驾驶仿真需要大规模、多样化的车道级高清地图，但现有方法依赖手工或重建的真实地图，扩展性有限，且只能生成局部道路结构而非完整地图。&#10;&#10;🛠 **方法**：提出RoadWeaver，一种从粗到细的框架，首先生成全局道路布局，扩展为连通路网，再构建具有拓扑一致性的车道级几何结构。&#10;&#10;✨ **主要贡献**：实现99.8%的可达性、10.7%的断头路比例和0.24米的端点对齐误差，相比SOTA方法将端点对齐误差降低94.4%，并在1.39–3.50秒内生成完整高清地图，可直接用于驾驶仿真器。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Autonomous driving simulation requires diverse and scalable lane-level HD maps to support long-horizon evaluation across complex road networks. Existing approaches either rely on handcrafted or reconstructed real-world maps, which limits scalability, or generate only local road structures rather than complete HD maps. We present RoadWeaver, a coarse-to-fine framework for from-scratch generation of diverse, large-scale HD maps. RoadWeaver first synthesizes a global road layout, expands it into a connected road network, and then constructs lane-level geometry with topologically consistent lane connectivity. Experimental results show that RoadWeaver achieves a 99.8\% reachability, a 10.7\% dead-end ratio, and an endpoint alignment error of 0.24 m. Compared with SOTA generation methods, it reduces endpoint alignment error by 94.4\% while generating complete HD maps in 1.39--3.50 s. The generated maps can be directly deployed in driving simulators, providing scalable simulation environments for future closed-loop evaluation of autonomous driving systems. The training code and an out-of-the-box implementation of RoadWeaver will be released upon acceptance.</p>
@@ -1139,10 +1208,7 @@
                         <span class="paper-date">2026-08-11</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：端到端自动驾驶智能体虽平均性能高，但常违反人类驾驶员不会忽略的基本交通规则，原因在于其学习统计模式而非物理安全条件，导致安全约束缺失且决策不透明。&#10;&#10;🛠 **方法**：提出一种神经符号安全卫士，作为轻量模块附加在已训练智能体的最终指令接口上。它在指令到达车辆前，依据显式安全规则检查指令，仅在必要时将指令替换为最近的安全替代方案，且无需重训练或新增学习组件。&#10;&#10;✨ **主要贡献**：在Fail2Drive和Bench2Drive长尾基准上，以TransFuser v6为案例，该卫士将成功率提升15%，安全关键碰撞减少高达53%，同时保持原始驾驶分数不变。每次干预均可直接执行并追溯到触发规则，增强了可解释性。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Modern end-to-end driving agents can achieve high average performance yet still violate basic traffic rules that a human driver would never miss. The reason is structural: they learn statistical patterns rather than the physical conditions that guarantee safe driving, leaving their decision-making process opaque and safety constraints unenforced. We introduce a neuro-symbolic safety guard, a lightweight module that attaches to the final command interface of an already-trained agent. Immediately before a command reaches the vehicle, it checks the command against explicit safety rules and, only when necessary, replaces it with the nearest safe alternative. Each intervention is directly executable and traceable to the rule that triggered it, while the guard itself requires no retraining and adds no learned component. Evaluated on the long-tail benchmarks Fail2Drive and Bench2Drive using the state-of-the-art TransFuser v6 (TFv6) as a case study, the guard improves Success Rate by 15% and reduces safety-critical collisions by up to 53%, while preserving the original Driving Score.</p>
@@ -1154,10 +1220,7 @@
                         <span class="paper-date">2026-08-11</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有自动驾驶安全验证数据集存在地理同质性强、安全关键事件稀疏、缺乏语义风险标注等问题，难以有效评估算法泛化能力和进行SOTIF（预期功能安全）验证。&#10;&#10;🛠 **方法**：构建了SinD 2.0大规模无人机视角交叉路口数据集，覆盖中国四座城市的六个信号交叉口，通过替代安全度量提取高风险事件，并集成高清地图、信号相位与时序数据及多维语义标注。&#10;&#10;✨ **主要贡献**：提供了跨城市、高密度风险交互的32,682个安全关键事件，引入层次化语义风险标注（如交通违规、视觉遮挡等），并开发了全栈测试工具链，实验证明该数据集能有效暴露自动驾驶算法在不同城市间的性能局限。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Safety validation at signalized intersections remains a critical bottleneck for the deployment of autonomous driving systems (ADS), as these scenarios involve dense heterogeneous traffic, contested right of way, and long-tail safety-critical interactions, posing significant challenges to the Safety of the Intended Functionality (SOTIF). Existing naturalistic driving datasets often suffer from geographical homogeneity, sparsity of safety-critical events, and lack of semantic risk annotations, which limit the evaluation of algorithmic generalizability and targeted SOTIF verification. To address these gaps, this paper introduces SinD 2.0, a large-scale drone-based intersection dataset dedicated to cross-domain ADS safety analysis. The main contributions of SinD 2.0 are: (1) Cross-domain diversity: It covers six signalized intersections across four Chinese cities, capturing distinct intersection topologies and regional driving behavior characteristics; (2) High-density risk interactions: A total of 32,682 safety-critical events are extracted via surrogate safety measures, significantly enriching the density of boundary test scenarios; (3) Hierarchical semantic annotations: Besides integration with high-definition (HD) maps and Signal Phase and Timing (SPaT) data, it provides multi-dimensional semantic labels including traffic violations, high-risk interactions, visual shielding, and narrow feasible areas; (4) Full-stack testing toolchain: It supports automated scenario extraction, prediction-only evaluation, open-loop replay, reactive closed-loop testing, and photorealistic rendering. Benchmark experiments demonstrate that SinD 2.0 exhibits significant domain shifts across cities, and the semantic risk subsets can effectively expose the performance limitations of ADS algorithms. The dataset, annotations, and testing toolchain are available at https://github.com/SOTIF-AVLab/SinD/tree/main.</p>
@@ -1169,10 +1232,7 @@
                         <span class="paper-date">2026-08-11</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：传统VLA模型使用冗长的自然语言思维链（CoT）进行驾驶推理，导致解码成本高、实时性差，且难以直接优化为动作表征。&#10;&#10;🛠 **方法**：提出XCoT-VLA，用紧凑的可执行CoT令牌替代描述性推理，这些令牌从自动构建的Reason-Action监督中学习，并通过共享多模态自注意力与固定轨迹查询交互，采用确定性令牌-函数路由（Reason FFN处理XCoT令牌，Control FFN处理轨迹查询）进行流匹配轨迹生成，另提出XCPO作为可选优化扩展。&#10;&#10;✨ **主要贡献**：仅用2-6个可执行令牌实现驾驶推理，纵向ADE从1.645降至1.323，换道场景横向FDE从1.616降至0.648，显著降低自回归推理开销并满足实时规划预算，证明驾驶推理可紧凑、可执行且直接连接轨迹生成。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Vision-Language-Action (VLA) models can connect scene understanding, semantic reasoning, and trajectory generation for autonomous driving. However, verbose natural-language Chain-of-Thought (CoT) is poorly suited to real-time control because it is open-ended, costly to decode, and difficult to optimize as an action-facing representation. We propose XCoT-VLA, which replaces descriptive rationales with compact executable CoT tokens learned from automatically constructed Reason-Action supervision. Logged trajectories provide action evidence, while scene context supplies causal semantics. The predicted XCoT sequence remains in context and conditions fixed trajectory queries through shared multimodal self-attention. Deterministic token-function routing applies the Reason FFN to XCoT tokens and the Control FFN to trajectory queries for flow-matching trajectory generation. We further introduce XCoT Policy Optimization (XCPO) as an optional refinement extension in the same executable token space. XCoT-VLA reduces longitudinal ADE from 1.645 to 1.323 on a general-distribution set and lateral FDE from 1.616 to 0.648 in lane-change scenarios. By representing driving-oriented reasoning with only 2-6 executable XCoT tokens, our method substantially reduces autoregressive reasoning overhead and remains within the real-time planning budget. These results demonstrate that driving-oriented reasoning can be compact, executable, and directly connected to trajectory generation.</p>
@@ -1932,66 +1992,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Existing rainfall simulation methods for autonomous driving remain limited in physical controllability and multi-view consistency. This paper presents GSRAIN, a high-/low-frequency rainfall synthesis method for 3D Gaussian Splatting (3DGS) driving scenes. GSRAIN constructs a high-frequency raindrop model from measured rainfall data and generates low-frequency rainy appearance using a geometry-aware single-step diffusion model. The two effects are then fused in a unified 3DGS scene, enabling rainfall-intensity control over the range of 0--13~mm/h. The proposed method achieves a Fréchet Inception Distance (FID) of 149.09, outperforming CycleGAN-Turbo (155.71) and WeatherEdit (157.94). Object-detection and closed-loop driving experiments further show that the generated scenes expose scene-dependent performance changes of the evaluated algorithms under controllable rainfall. These results indicate that GSRAIN provides an effective approach for constructing physically controllable, repeatable, and closed-loop-compatible rainy-weather test scenes for autonomous driving.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2208.00853v2" target="_blank" class="paper-title">Guidance on the Safety Assurance of Autonomous Systems in Complex Environments (SACE)</a>
-                        <span class="paper-date">2026-08-03</span>
-                    </div>
-                                        <span class="paper-comment">📝 Version 1.1</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Autonomous systems (AS) are systems that have the capability to take decisions free from direct human control. AS are increasingly being considered for adoption for applications where their behaviour may cause harm, such as when used for autonomous driving, medical applications or in domestic environments. For such applications, being able to ensure and demonstrate (assure) the safety of the operation of the AS is crucial for their adoption. This can be particularly challenging where AS operate in complex and changing real-world environments. Establishing justified confidence in the safety of AS requires the creation of a compelling safety case. This document introduces a methodology for the Safety Assurance of Autonomous Systems in Complex Environments (SACE). SACE comprises a set of safety case patterns and a process for (1) systematically integrating safety assurance into the development of the AS and (2) for generating the evidence base for explicitly justifying the acceptable safety of the AS.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2608.01998v1" target="_blank" class="paper-title">TALSC: Timeliness-Aware Large-Small VLM Collaboration for Infrastructure-Assisted Autonomous Driving</a>
-                        <span class="paper-date">2026-08-03</span>
-                    </div>
-                                        <span class="paper-comment">📝 This paper has been accepted by IEEE GLOBECOM 2026</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>The deployment of Vision-Language Models (VLMs) in autonomous driving (AD) systems is constrained by on-board computing power, restricting vehicles to small VLMs (SVLMs) with limited perception and reasoning capabilities. Infrastructure-assisted AD alleviates this resource constraint by enabling collaboration with large VLMs (LVLMs) at edge servers. However, in dynamic vehicular environments, the utility of sensory data for downstream tasks decays rapidly, making timeliness of information a critical concern. To balance the accuracy gains of LVLMs with their latency-induced timeliness degradation, we develop a Timeliness-Aware Large-Small VLM Collaboration (TALSC) framework. Specifically, we first model the Age of Information (AoI) evolution for VLM inference and characterize the coupling among AoI, token length, and task performance to formulate a general timeliness metric. Building on this, we propose the TALSC online scheduling algorithm. Since scheduling decisions have a delayed impact on future timeliness metric and the output token number is unknown at scheduling time, we design a Lyapunov drift-plus-estimated-penalty algorithm and provides a guaranteed performance. In simulation, we first conduct a case study to derive a fitted timeliness metric based on nuScenes dataset, and further show that TALSC outperforms baselines under various communication and computing settings, achieving up to a 12.6\% normalized improvement in Micro-F1 score compared with the best-performing baseline.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2608.01761v1" target="_blank" class="paper-title">DecoupleGS: Interactive 3D Gaussian Splatting for End-to-End Autonomous Driving Testing</a>
-                        <span class="paper-date">2026-08-03</span>
-                    </div>
-                                        <span class="paper-comment">📝 Accepted to ECCV 2026</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>End-to-end (E2E) autonomous driving algorithms require rigorous closed-loop validation in simulation environments offering high visual fidelity, strong interactivity, and real-time performance. Existing approaches, from game engines to static neural rendering, inherently trade off these requirements and struggle with the dynamic scene composition essential for E2E testing. To bridge this gap, we propose a novel decoupled 3D Gaussian Splatting (3DGS) framework tailored for large-scale E2E evaluation. We fundamentally decompose scenes into a high-fidelity static background and manipulable dynamic agents using an object-centric canonical representation. To resolve resulting representational conflicts, we introduce three targeted modules: (1) asset compression via perceptual pruning and vector quantization for real-time traffic rendering; (2) map-guided geometric registration leveraging semantic topology to strictly align trajectories; and (3) proxy-based relighting transferring ambient illumination for seamless photometric integration. Extensive experiments demonstrate that DecoupleGS achieves a balanced fidelity-efficiency trade-off, improves metric and photometric consistency, and provides a practical closed-loop sensor simulation platform for E2E autonomous driving evaluation.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2608.01572v1" target="_blank" class="paper-title">Enhancing Visual Perception in Foggy Conditions via Multiclass Fog Density Modeling</a>
-                        <span class="paper-date">2026-08-03</span>
-                    </div>
-                                        <span class="paper-comment">📝 8 pages, 5 figures,2 tables</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Autonomous driving (AD) systems have advanced rapidly over the past decade; however, robust perception under adverse weather conditions remains a major challenge, particularly in dense fog. In this work, we investigate fog-aware perception using synthetically generated fog data derived from the Waymo dataset. To support fog simulation, depth images are generated using an iterative learning approach. We consider five fog-density levels: clear, light fog, moderate fog, heavy fog, and very heavy fog. Instead of training a single unified model across all conditions, we train separate perception models for each fog-density level. Experimental results show that density-specific training improves performance in severe fog conditions. In particular, for the very heavy fog class, recall improves from 0.076 to 0.232, corresponding to an absolute gain of 15.6 percentage points. These findings suggest that deploying multiple specialized models, rather than a single general-purpose model, can improve perception robustness for autonomous vehicles under challenging visibility conditions. Future work will extend this strategy to additional sensing modalities, including LiDAR and radar, and evaluate generalization across diverse weather scenarios.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2508.00500v4" target="_blank" class="paper-title">ProbGuard: Proactive Runtime Monitoring for LLM Agent Safety via Probabilistic Prediction</a>
-                        <span class="paper-date">2026-08-03</span>
-                    </div>
-                                        <span class="paper-comment">📝 Accepted by the 41st IEEE/ACM International Conference on Automated Software Engineering (ASE 2026)</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Large Language Model (LLM) agents increasingly operate across domains such as robotics, virtual assistants, and web automation. However, their stochastic decision-making introduces safety risks that are difficult to anticipate during execution. Existing runtime monitoring frameworks, such as AgentSpec, primarily rely on reactive safety rules that detect violations only when unsafe behavior is imminent or has already occurred, limiting their ability to handle long-horizon dependencies. We present ProbGuard, a proactive runtime monitoring framework for LLM agents that anticipates safety violations through probabilistic risk prediction. ProbGuard abstracts agent executions into symbolic states and learns a Discrete-Time Markov Chain (DTMC) from execution traces to model behavioral dynamics. At runtime, the monitor estimates the probability that execution will remain safe from the current state, and triggers an intervention when this probability falls below a user-defined threshold. To improve robustness, ProbGuard incorporates semantic validity constraints in the abstraction and admits a PAC-style analysis that characterizes the sample complexity required to certify the learned model under standard assumptions. We evaluate ProbGuard in two safety-critical domains: autonomous driving and embodied household agents. Across evaluated scenarios, ProbGuard consistently predicts traffic law violations and collisions in advance, with warnings up to 15.84 seconds at a threshold yielding no false alarms, and up to 38.66 seconds at stricter thresholds. In embodied agent tasks, ProbGuard's re-prompting intervention mode reduces unsafe behavior by 65.37% relative to the unmonitored baseline while retaining 80.4% of the baseline task completion; a stricter halting configuration reduces unsafe behavior by 93.60% at a larger cost in completion.</p>
                     </details>
                 </div>
             </div>

@@ -600,7 +600,7 @@
                 <a href="LLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
                     <span class="nav-label">LLM</span>
-                    <span class="nav-count">80</span>
+                    <span class="nav-count">79</span>
                 </a>
                 <a href="VLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f97316"></span>
@@ -690,12 +690,12 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">70</span>
+                    <span class="nav-count">68</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">75</span>
+                    <span class="nav-count">76</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -730,7 +730,7 @@
                 <a href="Model-Predictive-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#14b8a6"></span>
                     <span class="nav-label">Model Predictive Control</span>
-                    <span class="nav-count">52</span>
+                    <span class="nav-count">51</span>
                 </a>
                 <a href="Whole-Body-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#06b6d4"></span>
@@ -819,7 +819,7 @@
             <a href="LLM.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
                 <span class="nav-label">LLM</span>
-                <span class="nav-count">80</span>
+                <span class="nav-count">79</span>
             </a>
             <a href="VLM.html" class="nav-item">
                 <span class="nav-dot" style="background:#f97316"></span>
@@ -909,12 +909,12 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">70</span>
+                <span class="nav-count">68</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">75</span>
+                <span class="nav-count">76</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -949,7 +949,7 @@
             <a href="Model-Predictive-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#14b8a6"></span>
                 <span class="nav-label">Model Predictive Control</span>
-                <span class="nav-count">52</span>
+                <span class="nav-count">51</span>
             </a>
             <a href="Whole-Body-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#06b6d4"></span>
@@ -1030,6 +1030,81 @@
             <div class="paper-list">
                 <div class="paper-card">
                     <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.10860v2" target="_blank" class="paper-title">Flex-$π$: A Multi-Stream World-Action Model with Compute Flexibility</a>
+                        <span class="paper-date">2026-08-13</span>
+                    </div>
+                                        <span class="paper-comment">📝 Project page: https://flex-pi.github.io/</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有世界-动作模型（WAMs）仅预测RGB潜在表示，缺乏对3D几何和物体语义的显式建模，限制了其在精细操作任务中的表现。&#10;&#10;🛠 **方法**：提出Flex-π，一个6B参数的WAM，利用冻结的视频生成VAE同时编码RGB和3D点图（无需额外训练），并联合DINO语义与动作在Mixture-of-Transformers骨干中进行去噪；通过逐流dropout和跨模态强制，支持从仅动作到全模态的灵活推理。&#10;&#10;✨ **主要贡献**：无需新传感器或预训练，即可免费获得3D几何监督；单检查点支持任意模态子集，推理速度快于π₀.₅；在真实双臂精细操作任务中（分布内和分布外）比最强基线提升2-7倍，且演示效率极高。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>World-action models (WAMs) predict the future to act better, but nearly all of them predict only RGB latents, trained purely for pixel reconstruction, with no explicit signal for the 3D geometry or object semantics manipulation needs. We find a surprising free lunch: the same frozen video-generation VAE that encodes RGB also encodes 3D pointmaps almost losslessly, with no pointmap-specific training at all. This lets us supervise Flex-$π$, a 6B-parameter WAM, on 3D geometry and object-centric DINO semantics alongside RGB, at no cost in new sensors, new pre-training, or inference latency. Every visual signal is projected into this shared latent space and denoised jointly with actions inside a Mixture-of-Transformers backbone; per-stream dropout with cross-modality forcing then lets a single trained checkpoint run on any subset of these streams, from a fast action-only mode to full joint generation. The result is a policy that is exceptionally demonstration-efficient and generalizes well, beating the strongest baselines by up to 2-7$\times$ on dexterous, precise, real-world bimanual manipulation tasks both in and out of distribution, all while running faster than $π_{0.5}$. Our project website: https://flex-pi.github.io/</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.12854v1" target="_blank" class="paper-title">BrainWAM: Action-Space Coordination of Semantic Priors and Predictive Dynamics for Autonomous Driving</a>
+                        <span class="paper-date">2026-08-13</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：自动驾驶规划需要同时满足语义约束和预测性动态，但现有端到端方法（VLA模型或世界动作模型）往往只侧重其中一方面，简单融合时存在注意力分配失衡问题，导致语义信息压制预测动态。&#10;&#10;🛠 **方法**：提出BrainWAM框架，将语义推理和预测世界建模转化为两条专门的动作导向通路，在紧凑动作表示层面进行协调对齐；并引入异步整流流推理策略，解耦视频与动作去噪以降低推理延迟。&#10;&#10;✨ **主要贡献**：在NAVSIM v1（89.5 PDMS）和NAVSIM v2（89.6 EPDMS）上达到最先进性能，一致优于仅用VLA或仅用WAM的方法，验证了结构化动作空间协调框架的实用性和有效性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Autonomous driving requires planning under both semantic constraints and predictive dynamics. Existing end-to-end driving approaches, however, typically emphasize only one side of this requirement: Vision-Language-Action (VLA) models exploit VLM priors for semantic reasoning, while World Action Models (WAMs) provide future-aware prediction through generative world modeling. This naturally motivates a unified planner that can leverage both semantic priors and predictive dynamics. However, we find that a naive combination through joint token-level attention suffers from an attention-allocation mismatch, where semantic shortcuts dominate the shared attention space and suppress predictive dynamics. Inspired by neuroscience evidence that complex behavior arises from coordination among functionally specialized systems, we propose BrainWAM, a structured action-space coordination framework that converts semantic reasoning and predictive world modeling into two specialized action-oriented pathways, and aligns them at the level of compact action representations. We further introduce an asynchronous rectified-flow inference strategy with decoupled video and action denoising, which shortens inference latency while preserving planning-relevant predictive context. BrainWAM reaches state-of-the-art performance on both NAVSIM v1 (89.5 PDMS) and NAVSIM v2 (89.6 EPDMS), consistently outperforming VLA-only or WAM-only methods, highlighting BrainWAM as a practical and promising direction for autonomous driving systems.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.11521v2" target="_blank" class="paper-title">Keep the Future, Drop the Rollout: RIFT for World Action Models</a>
+                        <span class="paper-date">2026-08-13</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：世界动作模型（WAMs）依赖迭代视频展开来预测未来状态以生成机器人动作，但这一过程显著增加了部署延迟。本文探究是否可以在部署时省略迭代展开，仅利用未来表征来生成动作。&#10;&#10;🛠 **方法**：提出RIFT（Rollout-free Imagination via Future Tokens）框架，通过可学习的“预期令牌”在单次骨干网络前向传播中直接构建完整的未来键值（K/V）缓存，同时保留原有的未来读取接口，从而无需迭代视频生成即可实现未来条件化动作生成。&#10;&#10;✨ **主要贡献**：实验表明，部分WAM（如Joint和Cosmos-2）可复用固定缓存且性能几乎不变（成功率97.9%-98.2%），但构建缓存仍需迭代展开。RIFT在LIBERO基准上达到98.8%成功率（接近基线98.4%-98.6%），同时将动作块延迟降低68.2%-89.1%；在RoboTwin 2.0上达到92.9%/92.6%成功率（清洁/随机场景），为所有评估方法中最高，验证了无展开未来条件化的可行性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>World action models (WAMs) condition robot actions on predicted futures, but iterative video rollout increases deployment latency. We ask whether action generation requires the evolving rollout trajectory or only its future representation. Across four WAMs on all 40 LIBERO tasks, paired closed-loop interventions show that masking or reassigning future-cache values changes execution and reduces success, indicating sensitivity to future values and their assigned positions. For Joint and Cosmos-2, however, replaying one fixed final-clean key/value (K/V) cache nearly preserves unmodified execution, with $1.7$ to $1.9$~cm end-effector average displacement error and $97.9\%$ to $98.2\%$ success. This separates cache consumption from production: these models can reuse a fixed cache but still require iterative rollout to construct it. We therefore propose RIFT (\emph{Rollout-free Imagination via Future Tokens}), which uses learned anticipation tokens to construct a complete future K/V cache in one backbone pass while retaining the original future-read interface. On LIBERO, RIFT achieves $98.8\%$ success, close to rollout-based Joint, IDM, and LingBot-VA at $98.4\%$ to $98.6\%$, while reducing action-chunk latency by $68.2\%$ to $89.1\%$. On RoboTwin~2.0, RIFT reaches $92.9/92.6\%$ on clean/randomized scenes, the highest observed among the evaluated methods. These results support rollout-free future conditioning without iterative video generation at deployment.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2604.05498v2" target="_blank" class="paper-title">JailWAM: Jailbreaking World Action Models in Robot Control</a>
+                        <span class="paper-date">2026-08-13</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="好的，作为一名人工智能研究与学术论文分析专家，我将严格按照您的要求，对这篇论文《JailWAM: Jailbreaking World Action Models in Robot Control》进行详细的中文解读。&#10;&#10;---&#10;&#10;## 0. 概览（Concise Summary）&#10;&#10;- **主题（Topic）**：机器人控制领域的**世界动作模型（World Action Model, WAM）** 的安全性与鲁棒性，具体研究针对WAM的**越狱攻击（Jailbreak Attack）**。&#10;- **问题（Problem）**：现有研究忽视了WAM在物理世界中的安全漏洞。WAM能直接驱动机器人执行物理动作，一旦其安全对齐机制被绕过，将导致人员伤亡、设备损坏等**真实物理风险**，而不仅仅是数字域的文本或图像危害。目前缺乏系统评估WAM越狱脆弱性的方法和基准。&#10;- **方法（Method）**：提出了**JailWAM**，首个专门针对WAM的越狱攻击与评估框架。核心包括：(1)**视觉-轨迹映射（Visual-Trajectory Mapping, VTM）**，将异构的动作空间统一为视觉轨迹表示；(2)**风险判别器（Risk Discriminator, RD）**，高效筛选视觉轨迹中的危险行为；(3)**双路径验证策略（Dual-Path Verification Strategy）**，先进行快速开环筛选，再进行精确的闭环物理仿真验证。&#10;- **创新（Innovation）**：&#10;    1.  首次将越狱攻击的研究从数字域（LLM, VLM）拓展到物理域（机器人WAM），定义了**三级安全分类框架**。&#10;    2.  提出了**视觉-轨迹映射（VTM）**，解决了不同WAM架构间动作空间异构、难以统一评估的难题。&#10;    3.  设计了**双路径验证策略**，在保证评估精度的同时，大幅降低了计算成本（实现了2.5倍加速）。&#10;- **意义（Significance）**：揭示了当前最先进的WAM（如LingBot-VA）存在严重的安全漏洞（攻击成功率高达84.2%），为设计安全可靠的机器人控制系统敲响了警钟，并提供了有效的防御技术方案和评估基准（JailWAM-Bench）。&#10;- **一句话总结**：本文首次系统性地研究了机器人世界动作模型（WAM）的越狱攻击问题，提出了一个高效的攻击与评估框架JailWAM，揭示了WAM在物理世界中的严重安全风险，并提供了相应的防御策略。&#10;&#10;## 1. 研究动机（Motivation）&#10;&#10;- **关键挑战与空白**：&#10;    1.  **安全威胁的范式转变**：传统的越狱攻击（如针对LLM、VLM）产生的危害仅限于数字域（如生成有害文本、暴力图像）。然而，WAM直接驱动物理机器人，一旦被越狱，其危害将直接转化为**物理世界中的真实伤害**（如碰撞、损坏设备、伤人）。这是一个全新的、更严重的安全威胁，但现有研究几乎完全忽视了这一点。&#10;    2.  **缺乏系统评估方法**：评估WAM的越狱脆弱性面临三大核心难题：&#10;        - **缺乏安全分级**：没有统一的、量化的标准来定义和评估机器人手臂运动的安全等级。&#10;        - **动作空间异构**：不同的WAM模型输出不同的动作表示（如关节角度、末端执行器位移等），难以设计统一的、跨架构的攻击和评估协议。&#10;        - **验证成本高昂**：验证物理有害行为通常需要昂贵的全闭环仿真，计算和人力开销巨大，难以大规模进行。&#10;- **重要性**：解决这个问题至关重要，因为WAM强大的物理交互能力是一把“双刃剑”。如果其安全性得不到保障，将直接威胁人身安全、财产安全与环境安全。在WAM技术快速发展的当下，必须提前识别并解决其安全漏洞，才能确保其安全、可靠地部署。&#10;&#10;## 2. 创新点（Innovation）&#10;&#10;- **关键创新**：&#10;    1.  **首次定义物理域越狱攻击**：将越狱攻击的概念从数字域（LLM, VLM）正式引入到物理域（机器人WAM），并系统性地研究了其脆弱性。&#10;    2.  **提出三级安全分类框架**：将机器人手臂运动安全量化为三个等级：**Level 0（安全合规）**、**Level 1（运动失败）** 和 **Level 2（灾难性风险）**，为定量评估提供了基础。&#10;    3.  **提出视觉-轨迹映射（VTM）**：这是解决动作空间异构问题的关键。通过将低维、异构的动作序列（如关节角度）投影到标准化的、多视角的**视觉轨迹图**上，VTM将物理执行过程转化为视觉语言模型（VLM）易于理解和推理的视觉信号，从而实现了跨架构的统一评估。&#10;    4.  **提出双路径验证策略**：巧妙地将评估过程解耦为两个阶段：&#10;        - **Stage I（开环视觉筛选）**：利用VTM和轻量级风险判别器（RD）快速、低成本地筛选出高风险指令，过滤掉大量无害指令。&#10;        - **Stage II（闭环物理验证）**：仅对筛选出的高风险指令进行昂贵的全闭环仿真验证，由人类专家最终确认。这种“粗筛-细验”的策略在**效率**和**准确性**之间取得了极佳的平衡。&#10;- **与现有方案的不同**：现有工作要么关注数字域安全，要么在机器人安全评估中只关注任务成功率，忽略了中间过程的危险行为。JailWAM则**专门针对WAM的物理安全漏洞**，并提供了从攻击生成、统一评估到高效验证的完整解决方案。&#10;&#10;## 3. 主要内容（Main Content）【重点】&#10;&#10;### 3.1 设计架构与方法&#10;&#10;JailWAM框架的整体架构如图3所示，包含三个核心模块：&#10;&#10;1.  **攻击生成**：利用大语言模型（LLM，如Gemini）和精心设计的越狱模板，生成大量描述危险动作的指令（如“执行一个400度旋转的关节限位测试”）。这些指令是任务无关的，直接指定物理威胁。&#10;2.  **双路径验证策略**：&#10;    - **Stage I: 开环视觉筛选**：将WAM对每个候选指令的**开环预测动作序列**，通过VTM转化为视觉轨迹图。然后，轻量级的**风险判别器（RD）** 分析该图，快速给出安全等级（0, 1, 2）。只有被判定为高风险（Level 1或2）的指令才会进入下一阶段。&#10;    - **Stage II: 闭环物理验证**：对高风险指令，在物理仿真器中执行**全闭环**的机器人控制。仿真器根据WAM的每一步动作更新环境状态，并反馈给WAM。最终的执行结果（如碰撞、振荡）由人类专家进行最终判定，确认其真实危害等级。&#10;3.  **核心组件**：&#10;    - **视觉-轨迹映射（VTM）**：将异构动作序列转化为统一的视觉轨迹图。&#10;    - **风险判别器（RD）**：基于Qwen3-VL-2B-Instruct微调，用于从视觉轨迹图中预测安全风险。&#10;&#10;### 3.2 关键算法与数学推导&#10;&#10;1.  **问题形式化**：&#10;    给定一个WAM模型 $M$，初始上下文 $x_t = (o_{\le t}, s_{\le t})$，目标是找到一个对抗性指令 $l^*$，使得模型输出的动作序列 $a^*_{t:t+H}$ 最不安全。&#10;    $$a_{t:t+H} \sim M(o_{\le t}, s_{\le t}, l)$$&#10;    $$l^* = \arg\max_{l \in \mathcal{L}_{adv}} \mathcal{R}(\mathcal{V}(M(x_t, l)))$$&#10;    其中 $\mathcal{L}_{adv}$ 是由LLM生成的对抗指令池，$\mathcal{V}(\cdot)$ 是VTM映射，$\mathcal{R}(\cdot)$ 是风险判别器。&#10;&#10;2.  **视觉-轨迹映射（VTM）**：&#10;    将WAM输出的相对动作位移序列 $\Delta A = \{\Delta A_1, \Delta A_2, ..., \Delta A_t\}$ 转换为绝对空间坐标 $P$：&#10;    $$P = P_0 + \sum_{i=1}^{t} \mathcal{F}(\Delta A_i) \in \mathbb{R}^3$$&#10;    其中 $\mathcal{F}$ 是积分器。然后，将3D轨迹正交投影到2D平面（俯视图和正视图）：&#10;    $$v^{(xy)} = \Pi_{xy}(P), \quad v^{(xz)} = \Pi_{xz}(P)$$&#10;    最后，通过渲染函数 $\Phi$ 将投影、物理属性与环境约束 $C_{env}$（如工作台边界）合成统一的视觉轨迹图：&#10;    $$\mathcal{V} = \Phi\left(P, v^{(xy)}, v^{(xz)}, C_{env}\right)$$&#10;&#10;3.  **优化目标**：&#10;    最终的风险标签 $y^*$ 由风险判别器 $\mathcal{R}$ 给出：&#10;    $$y^* = \mathcal{R}(\mathcal{V}(a^*)) \in \{0, 1, 2\}$$&#10;    越狱成功当且仅当 $y^* \in \{1, 2\}$（即非Level 0）。&#10;&#10;### 3.3 模型、训练与数据集&#10;&#10;- **目标模型**：&#10;    - **主要测试床**：**LingBot-VA**（在RoboTwin仿真器中），一个最先进的WAM。&#10;    - **跨架构迁移测试**：**Motus**（使用不同的VLM解码器），**Cosmos-Policy**（在LIBERO环境中）。&#10;    - **非WAM基线**：**$\pi_{0.5}$**（一个非WAM的视觉-语言-动作模型），用于对比。&#10;- **风险判别器（RD）训练**：&#10;    - **基础模型**：**Qwen3-VL-2B-Instruct**，一个轻量级的视觉-语言模型。&#10;    - **数据集构建**：从RoboTwin仿真器的50个不同操作任务中，每个任务采样500个候选轨迹，共计25K个样本。这些样本的视觉轨迹图由**Gemini-3.1-Pro**通过思维链（CoT）进行初步标注，再由人类专家进行严格的人工验证和修正，得到三级安全标签（Level 0, 1, 2）。&#10;    - **训练方式**：在构建的数据集上对Qwen3-VL进行**微调（Fine-Tuning）**，使其能够根据输入的视觉轨迹图和对抗性指令，准确预测安全风险等级。&#10;&#10;### 3.4 实验设置与结果&#10;&#10;- **实验设置**：&#10;    - **环境**：RoboTwin仿真器（主要），LIBERO仿真器（用于跨环境测试）。&#10;    - **基线方法**：**Clean**（标准指令），**RSA**（随机后缀攻击），**TPA**（模板提示攻击）。&#10;    - **指标**：**攻击成功率（ASR）**，分解为**运动失败率（MFR，Level 1）** 和**灾难性风险率（CRR，Level 2）**。同时报告RD自动评估和人类专家评估的结果。&#10;- **主要结果（表1）**：&#10;    - 在LingBot-VA上，JailWAM实现了**84.2%** 的人类评估ASR（62% MFR + 22.2% CRR），远超基线方法（&lt; 6%）。&#10;    - 在Motus上，零样本迁移的JailWAM指令实现了**60.6%** 的ASR，证明了跨架构的迁移性。&#10;- **跨环境与架构结果（表2）**：&#10;    - 在Cosmos-Policy（LIBERO环境）上，零样本迁移实现了**46.5%** 的ASR。&#10;    - 在非WAM模型 $\pi_{0.5}$ 上，ASR仅为**5.0%**，表明JailWAM的攻击效果与WAM的视觉生成先验密切相关。&#10;- **消融实验（表3）**：&#10;    - 验证了VTM和微调（FT）的重要性。仅使用原始动作+RD的Level 2召回率为0%，而完整的VTM+RD（Ours）达到了**70%**，整体一致性为**90%**。&#10;- **效率分析（表4）**：&#10;    - 双路径验证策略相比全闭环验证，将仿真运行次数从100次减少到21次，总时间从9.15小时减少到**3.66小时**，实现了**2.5倍**的加速，同时保留了大部分危险案例。&#10;- **防御机制（图7）**：&#10;    - 将Stage I的RD作为推理时过滤器，能将恶意指令的最终ASR从平均91.5%降低到极低水平（如`put object cabinet`任务中降至2%），同时保持对良性指令96%的通过率。&#10;&#10;### 3.5 技术细节&#10;&#10;- **越狱指令生成**：使用LLM（如Gemini-3.1-Pro）和一组专门的越狱模板（T），这些模板被设计用来直接生成描述危险动作的指令，而不是修改一个良性任务。这使得生成的指令是**任务无关**和**场景无关**的。&#10;- **视觉轨迹图渲染**：VTM模块不仅绘制了3D轨迹的2D投影，还显式地注入了物理约束信息（如工作台边界、桌面高度），使得RD能够更容易地识别出“越界”、“碰撞”等危险行为。&#10;- **风险判别器选择**：选择Qwen3-VL-2B-Instruct而非更大模型，是为了在**高吞吐量的筛选循环**中保证推理速度，这是实现可扩展评估的关键。&#10;- **跨种子可靠性（Cross-Seed Reliability）**：实验发现，由不同LLM生成的指令对初始状态变化的鲁棒性不同。Gemini-3.1-Pro生成的指令在20个不同随机种子下仍能保持82.5%的可靠性，优于GPT-5.2和Claude-Opus-4.5。&#10;&#10;## 4. 意义与影响（Significance and Impact）&#10;&#10;- **解决的问题与贡献**：&#10;    1.  **填补了安全研究空白**：首次系统性地揭示了WAM在物理域中的越狱攻击脆弱性，将AI安全研究从数字域拓展到了物理域。&#10;    2.  **提供了评估工具**：提出了JailWAM框架和JailWAM-Bench基准，为未来研究WAM的安全性提供了标准化的评估方法和数据集。&#10;    3.  **推动了防御研究**：通过实验验证了基于RD的推理时过滤是一种有效的防御手段，为设计安全的机器人控制系统提供了可行的技术路径。&#10;- **对未来研究/应用的影响**：&#10;    - **对WAM开发者**：本文是一个强烈的警示，必须在模型训练和部署前进行严格的安全对齐，不能仅关注任务性能。&#10;    - **对机器人安全社区**：提供了一个新的研究方向，即“物理域越狱攻击”，并展示了如何利用视觉语言模型进行高效的物理安全评估。&#10;    - **对政策制定者**：为制定关于具身智能体安全部署的法规和标准提供了技术依据。&#10;- **局限与开放问题**：&#10;    - **攻击的局限性**：攻击效果依赖于LLM生成指令的质量，且对非WAM架构（如$\pi_{0.5}$）效果有限。&#10;    - **防御的局限性**：提出的防御（RD过滤）是推理时的，无法从根本上解决模型本身的安全对齐问题。更鲁棒的、训练阶段的防御方法有待研究。&#10;    - **仿真到现实的鸿沟**：所有实验均在仿真环境中进行，攻击和防御策略在真实机器人上的有效性和安全性有待验证。&#10;&#10;## 5. 澄清与简化（Clarifications and Simplifications）&#10;&#10;- **什么是“世界动作模型（WAM）”**？&#10;    - **通俗解释**：可以把它想象成一个“会做白日梦的机器人”。传统的机器人控制模型是“看到什么，就做什么”。而WAM不仅能“看到”当前状态，还能在内部“想象”出未来几秒钟的世界状态和它自己应该做的动作。这种“想象”能力让它能更好地规划复杂的物理操作，比如抓取一个移动的物体。本文研究的WAM（如LingBot-VA）就是利用视频生成模型来实现这种“想象”的。&#10;- **什么是“越狱攻击”**？&#10;    - **通俗解释**：就像手机有“越狱”漏洞一样，AI模型也有。对于聊天机器人，越狱就是通过精心设计的“咒语”（提示词），让它说出不该说的话（比如制造炸弹的指南）。对于WAM，越狱就是通过特殊的指令，让机器人“发疯”，做出危险的物理动作，比如用最大力气撞向桌子。&#10;- **“视觉-轨迹映射（VTM）”为什么重要？**&#10;    - **类比**：想象一下，你要判断一个舞者跳得好不好。如果给你一份记录他每个关节角度的数据表格（原始动作），你很难直观判断。但如果给你一段他跳舞的视频（视觉轨迹），你一眼就能看出他动作是否流畅、有没有摔倒的风险。VTM的作用就是把枯燥的“关节角度数据表格”变成了直观的“机器人运动视频截图”，这样，一个训练有素的“裁判”（风险判别器）就能快速、准确地判断这个动作是否危险。&#10;- **“双路径验证策略”如何工作？**&#10;    - **类比**：你要从1000个应聘者中找出最优秀的10个人。&#10;        - **传统方法（全闭环）**：让每个应聘者都来公司面试一天（昂贵的仿真），耗时耗力。&#10;        - **JailWAM方法（双路径）**：&#10;            - **Stage I（简历筛选）**：先快速浏览所有简历（开环视觉筛选），根据一些硬性指标（如学历、经验）快速淘汰掉900个明显不合格的。这个步骤非常快，成本低。&#10;            - **Stage II（最终面试）**：只对剩下的100个候选人进行正式面试（闭环仿真），由专家（人类）最终确定最优秀的10个。这个步骤虽然精确，但只针对少数人，总成本大大降低。&#10;&#10;## 6. 补充说明（Additional Notes）&#10;&#10;- **相关工作关联**：本文与以下领域紧密相关：&#10;    - **LLM/VLM越狱攻击**：本文是这类攻击在物理机器人领域的自然延伸和重大升级。&#10;    - **机器人安全**：超越了传统只关注任务成功率的评估，引入了对中间过程危险行为的检测。&#10;    - **具身智能**：为具身智能体的安全部署提供了关键的评估工具和警示。&#10;- **最重要的图表**">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>World Action Models (WAMs) have emerged as a promising paradigm for robotic manipulation, enabling physical interaction across diverse tasks and environments. However, their ability to directly follow high-level instructions and execute physical actions also creates potential safety risks, as adversarially designed instructions may induce unsafe robot behaviors. To systematically assess these risks, we propose JailWAM, the first jailbreak evaluation framework for WAMs. In JailWAM, we integrate three key innovations: Firstly, to address the difficulty of evaluating heterogeneous low-level action outputs, we introduce Visual-Trajectory Mapping, which transforms model-specific actions into unified visual trajectory representations, thereby facilitating consistent risk assessment across WAM architectures. Secondly, to provide efficient and fine-grained assessment of physical risks, we develop a Risk Discriminator supervised by three safety levels ordered according to physical consequence: Safety Compliance, Motion Failure, and Catastrophic Risk. This severity-aware formulation enables the risk discriminator to distinguish different physical outcomes from visual trajectories and support scalable risk screening. Thirdly, to reduce the cost of exhaustively executing adversarial candidates, we design a Dual-Path Verification Strategy that combines rapid risk screening with closed-loop physical simulation, restricting computationally expensive verification to candidates with potential safety risks. Extensive experiments in the RoboTwin simulation environment show that JailWAM achieves an 84.2% attack success rate on LingBot-VA, which indicates that WAMs may be susceptible to jailbreak attacks that induce unsafe physical behaviors. Our findings may motivate further research on the safety evaluation and alignment of future embodied robotic systems.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.10780v2" target="_blank" class="paper-title">JEPA-WAM: Stage-Level Joint-Embedding Prediction for World-Action Models in Robot Manipulation</a>
+                        <span class="paper-date">2026-08-13</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有机器人操作策略仅建模短时物理未来（局部场景演变），缺乏对任务阶段级语义未来（任务如何从当前阶段推进到下一阶段）的显式描述，限制了复杂任务的成功率与执行效率。&#10;&#10;🛠 **方法**：提出JEPA-WAM，在基于Motus的世界动作模型（WAM）上增加Stage-JEPA模块，利用冻结的V-JEPA2编码器提取当前状态表示，并通过目标条件化的联合嵌入预测架构（JEPA）预测下一推断阶段的潜在目标。&#10;&#10;✨ **主要贡献**：在50个RoboTwin 2.0任务（含干净与随机环境）上，JEPA-WAM取得90.25%的平均成功率，相比最强基线将成功轨迹的平均执行步数减少5.97%，验证了阶段级语义预测对提升操作性能的有效性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Generalist robot policies aim to map multimodal observations and linguistic task instructions to actions across diverse tasks. However, existing methods typically represent the future as a fixed, short video-action chunk. This short-term future captures local scene evolution for action execution, but it does not explicitly describe the stage-level future that specifies how a task should progress from its current stage to the next. We therefore distinguish two complementary futures for robot manipulation: a short-term physical future to capture local scene evolution and a stage-level semantic future to represent task progress. We introduce JEPA-WAM, which augments a Motus-based World Action Model (WAM) with Stage-JEPA, a goal-conditioned Joint-Embedding Predictive Architecture (JEPA) predictor. Given the current observation and task instruction, Stage-JEPA uses a frozen V-JEPA2 encoder to extract the current-state representation and predicts the latent target of the next inferred stage. Across 50 RoboTwin 2.0 tasks in clean and randomized environments, JEPA-WAM achieves 90.25% overall success and reduces the mean number of execution steps in successful rollouts by 5.97% relative to the strongest baseline.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
                         <a href="https://arxiv.org/abs/2608.08023v2" target="_blank" class="paper-title">4D-WAM: Infusing Spatiotemporal Awareness into World Action Models through Trajectory Fields</a>
                         <span class="paper-date">2026-08-12</span>
                     </div>
@@ -1060,6 +1135,21 @@
                 </div>
                 <div class="paper-card">
                     <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.12416v1" target="_blank" class="paper-title">RoboSynChallenge: Mastering Real-World Dexterity via Generalizing Synthesized Manipulation Skills</a>
+                        <span class="paper-date">2026-08-12</span>
+                    </div>
+                                        <span class="paper-comment">📝 NeurIPS 2026 Competition Track</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决机器人操作泛化能力不足的问题，主要受限于真实世界数据稀缺且多样性不足。&#10;&#10;🛠 **方法**：提出RoboSynChallenge统一基准，结合大规模合成数据生成与标准化真实世界评估，并提供了基于Transformer、扩散模型、视觉-语言-动作及世界动作模型的基线实现。&#10;&#10;✨ **主要贡献**：构建了涵盖多任务、多环境、多难度级别的评测框架，鼓励利用合成状态-动作数据训练通用策略，并在未见过的真实环境中进行严格验证，推动数据高效、可泛化的操作智能发展。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Achieving generalizable robotic manipulation remains a central challenge in embodied intelligence. Despite rapid advances in model architectures and learning algorithms, progress is often limited by the scarcity and narrow diversity of real-world data. The RoboSynChallenge competition introduces a unified benchmark to evaluate and advance the generalizability of manipulation policies across a spectrum of tasks, environments, and difficulty levels. To alleviate the shortage of realistic data, the challenge integrates large-scale synthetic data generation with standardized real-world robotic evaluation. Participants are encouraged to leverage synthesized state-action trials to improve general-purpose policy learning, while final assessments are conducted exclusively on unseen real-world manipulation environments. Baseline implementations, including Transformer-, Diffusion-, Vision-Language-Action, and World-Action-Model-based policies, are provided to ensure reproducibility and comparability. By coupling scalable simulation-based training with rigorous real-world validation, RoboSynChallenge aims to foster the development of broadly capable, data-efficient, and adaptable manipulation systems, thereby paving the way toward truly general robotic intelligence.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
                         <a href="https://arxiv.org/abs/2608.11605v1" target="_blank" class="paper-title">Foresight Without Seeing: Latent Futures for World Action Models</a>
                         <span class="paper-date">2026-08-12</span>
                     </div>
@@ -1071,21 +1161,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>World Action Models (WAMs) couple future visual prediction with robot action generation, enabling policies to model how the physical world evolves during interaction. Existing WAMs differ in how predictive dynamics are exposed to the action pathway. Explicit-future WAMs provide direct access to predicted scene evolution, but incur substantial inference costs from iterative video denoising. In contrast, direct-policy WAMs efficiently predict actions from the current observation but lack an explicit inference-time interface for exposing predictive dynamics to the Action DiT. To bridge this gap, we propose ForeWAM, a dynamics-conditioned direct-policy WAM that provides predictive context for action generation without decoding future videos. At its core, Future-KV performs a single Video DiT prefill over the current visual latent and stochastic future slots, and reuses the resulting layer-wise key-value states throughout action denoising. We further introduce dynamics registers supervised by a frozen latent action teacher, encouraging the implicit future states to capture interaction-induced transitions such as object motion, contact changes, and task progress. Ground-truth future observations and the teacher are used only during training; deployment requires neither and performs no future video generation. Without embodied robot data pretraining, the standard and accelerated variants of ForeWAM achieve average success rates of 96.7% and 96.9% on LIBERO, respectively. The standard variant further achieves 61.6% success on LIBERO-Plus. These results demonstrate that direct-policy WAMs can retain efficient action prediction while exposing predictive dynamics to the action pathway without explicitly generating future observations.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2608.11521v1" target="_blank" class="paper-title">Keep the Future, Drop the Rollout: RIFT for World Action Models</a>
-                        <span class="paper-date">2026-08-12</span>
-                    </div>
-                    
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：世界动作模型（WAMs）依赖迭代视频展开来预测未来状态以生成机器人动作，但这一过程显著增加了部署延迟。本文探究是否可以在部署时省略迭代展开，仅利用未来表征来生成动作。&#10;&#10;🛠 **方法**：提出RIFT（Rollout-free Imagination via Future Tokens）框架，通过可学习的“预期令牌”在单次骨干网络前向传播中直接构建完整的未来键值（K/V）缓存，同时保留原有的未来读取接口，从而无需迭代视频生成即可实现未来条件化动作生成。&#10;&#10;✨ **主要贡献**：实验表明，部分WAM（如Joint和Cosmos-2）可复用固定缓存且性能几乎不变（成功率97.9%-98.2%），但构建缓存仍需迭代展开。RIFT在LIBERO基准上达到98.8%成功率（接近基线98.4%-98.6%），同时将动作块延迟降低68.2%-89.1%；在RoboTwin 2.0上达到92.9%/92.6%成功率（清洁/随机场景），为所有评估方法中最高，验证了无展开未来条件化的可行性。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>World action models (WAMs) condition robot actions on predicted futures, but iterative video rollout increases deployment latency. We ask whether action generation requires the evolving rollout trajectory or only its future representation. Across four WAMs on all 40 LIBERO tasks, paired closed-loop interventions show that masking or reassigning future-cache values changes execution and reduces success, indicating sensitivity to future values and their assigned positions. For Joint and Cosmos-2, however, replaying one fixed final-clean key/value (K/V) cache nearly preserves unmodified execution, with $1.7$ to $1.9$~cm end-effector average displacement error and $97.9\%$ to $98.2\%$ success. This separates cache consumption from production: these models can reuse a fixed cache but still require iterative rollout to construct it. We therefore propose RIFT (\emph{Rollout-free Imagination via Future Tokens}), which uses learned anticipation tokens to construct a complete future K/V cache in one backbone pass while retaining the original future-read interface. On LIBERO, RIFT achieves $98.8\%$ success, close to rollout-based Joint, IDM, and LingBot-VA at $98.4\%$ to $98.6\%$, while reducing action-chunk latency by $68.2\%$ to $89.1\%$. On RoboTwin~2.0, RIFT reaches $92.9/92.6\%$ on clean/randomized scenes, the highest observed among the evaluated methods. These results support rollout-free future conditioning without iterative video generation at deployment.</p>
                     </details>
                 </div>
                 <div class="paper-card">
@@ -1109,43 +1184,10 @@
                         <span class="paper-date">2026-08-11</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：World Action Models因迭代去噪产生高推理延迟，导致机器人执行中出现停顿、动作过时和不连续，影响实时控制的流畅性。&#10;&#10;🛠 **方法**：在10 Hz双臂机器人上系统比较六种异步部署策略（同步执行、纯异步切换、事后动作混合、去噪时混合、推理时速度引导、前缀条件生成），结合离线轨迹分析与在线动态操作、精密放置和长时任务实验。&#10;&#10;✨ **主要贡献**：发现观测、预测与执行命令间的精确时间对齐是流畅控制的基本前提，对齐误差无法仅靠混合修正；前缀条件生成通过训练中学习一致的动作延续，在任务性能、执行速度和轨迹平滑度上取得最佳平衡，为高延迟World Action Models的实时部署提供了实用指导。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>World Action Models generate fixed-horizon action chunks through iterative denoising, creating substantial inference latency that can cause pauses, stale actions, and discontinuities during robotic execution. We present an empirical study of asynchronous deployment strategies that overlap model inference with action execution to enable responsive and smooth control. We compare six strategies, including synchronous execution, pure asynchronous switching, post-hoc action blending, denoising-time blending, inference-time velocity guidance, and prefix-conditioned generation, on a 10 Hz bimanual robot. Evaluation combines offline trajectory analysis with online experiments across dynamic manipulation, precision-critical placement, and long-horizon tasks. Our results identify accurate temporal alignment between observations, predictions, and executed commands as a fundamental requirement. Alignment errors produce persistent chunk-boundary discontinuities that cannot be corrected through blending alone. With proper alignment, direct action weighting provides a simple and smooth baseline but sacrifices accuracy in precision-critical tasks. Inference-time velocity guidance fails to reliably constrain committed actions on our platform. In contrast, prefix-conditioned generation achieves the best overall balance between task performance, execution speed, and trajectory smoothness by learning consistent action continuations during training. These findings clarify the practical trade-offs among asynchronous deployment strategies and provide guidance for deploying high-latency World Action Models in real-time robotic systems.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2608.10860v1" target="_blank" class="paper-title">Flex-$π$: A Multi-Stream World-Action Model with Compute Flexibility</a>
-                        <span class="paper-date">2026-08-11</span>
-                    </div>
-                                        <span class="paper-comment">📝 Project page: https://flex-pi.github.io/</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有世界-动作模型（WAMs）仅预测RGB潜在表示，缺乏对3D几何和物体语义的显式建模，限制了其在精细操作任务中的表现。&#10;&#10;🛠 **方法**：提出Flex-π，一个6B参数的WAM，利用冻结的视频生成VAE同时编码RGB和3D点图（无需额外训练），并联合DINO语义与动作在Mixture-of-Transformers骨干中进行去噪；通过逐流dropout和跨模态强制，支持从仅动作到全模态的灵活推理。&#10;&#10;✨ **主要贡献**：无需新传感器或预训练，即可免费获得3D几何监督；单检查点支持任意模态子集，推理速度快于π₀.₅；在真实双臂精细操作任务中（分布内和分布外）比最强基线提升2-7倍，且演示效率极高。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>World-action models (WAMs) predict the future to act better, but nearly all of them predict only RGB latents, trained purely for pixel reconstruction, with no explicit signal for the 3D geometry or object semantics manipulation needs. We find a surprising free lunch: the same frozen video-generation VAE that encodes RGB also encodes 3D pointmaps almost losslessly, with no pointmap-specific training at all. This lets us supervise Flex-$π$, a 6B-parameter WAM, on 3D geometry and object-centric DINO semantics alongside RGB, at no cost in new sensors, new pre-training, or inference latency. Every visual signal is projected into this shared latent space and denoised jointly with actions inside a Mixture-of-Transformers backbone; per-stream dropout with cross-modality forcing then lets a single trained checkpoint run on any subset of these streams, from a fast action-only mode to full joint generation. The result is a policy that is exceptionally demonstration-efficient and generalizes well, beating the strongest baselines by up to 2-7$\times$ on dexterous, precise, real-world bimanual manipulation tasks both in and out of distribution, all while running faster than $π_{0.5}$. Our project website: https://flex-pi.github.io/</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2608.10780v1" target="_blank" class="paper-title">JEPA-WAM: Stage-Level Joint-Embedding Prediction for World-Action Models in Robot Manipulation</a>
-                        <span class="paper-date">2026-08-11</span>
-                    </div>
-                    
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有机器人操作策略仅建模短时物理未来（局部场景演变），缺乏对任务阶段级语义未来（任务如何从当前阶段推进到下一阶段）的显式描述，限制了复杂任务的成功率与执行效率。&#10;&#10;🛠 **方法**：提出JEPA-WAM，在基于Motus的世界动作模型（WAM）上增加Stage-JEPA模块，利用冻结的V-JEPA2编码器提取当前状态表示，并通过目标条件化的联合嵌入预测架构（JEPA）预测下一推断阶段的潜在目标。&#10;&#10;✨ **主要贡献**：在50个RoboTwin 2.0任务（含干净与随机环境）上，JEPA-WAM取得90.25%的平均成功率，相比最强基线将成功轨迹的平均执行步数减少5.97%，验证了阶段级语义预测对提升操作性能的有效性。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Generalist robot policies aim to map multimodal observations and linguistic task instructions to actions across diverse tasks. However, existing methods typically represent the future as a fixed, short video-action chunk. This short-term future captures local scene evolution for action execution, but it does not explicitly describe the stage-level future that specifies how a task should progress from its current stage to the next. We therefore distinguish two complementary futures for robot manipulation: a short-term physical future to capture local scene evolution and a stage-level semantic future to represent task progress. We introduce JEPA-WAM, which augments a Motus-based World Action Model (WAM) with Stage-JEPA, a goal-conditioned Joint-Embedding Predictive Architecture (JEPA) predictor. Given the current observation and task instruction, Stage-JEPA uses a frozen V-JEPA2 encoder to extract the current-state representation and predicts the latent target of the next inferred stage. Across 50 RoboTwin 2.0 tasks in clean and randomized environments, JEPA-WAM achieves 90.25% overall success and reduces the mean number of execution steps in successful rollouts by 5.97% relative to the strongest baseline.</p>
                     </details>
                 </div>
                 <div class="paper-card">
@@ -1154,10 +1196,7 @@
                         <span class="paper-date">2026-08-11</span>
                     </div>
                                         <span class="paper-comment">📝 The code and model weights are available at https://github.com/H-EmbodVis/SimWAM/</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有世界-动作模型（WAM）在端到端自动驾驶中依赖测试时的未来帧生成，导致推理延迟高、计算成本大。&#10;&#10;🛠 **方法**：提出SimWAM，将未来视频预测作为训练时的监督信号，通过联合流匹配协同训练预训练视频专家和轻量动作专家，并采用隔离注意力掩码使动作预测在推理时不依赖未来帧。&#10;&#10;✨ **主要贡献**：在NAVSIM上达到91.5 PDMS，超越现有WAM方法且延迟显著更低，并零样本迁移至nuScenes；视频骨干可替换、动作专家可独立扩展，为高效自动驾驶提供了简洁而稳健的基线。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>World-Action Models (WAMs) improve end-to-end autonomous driving by transferring video dynamics priors to action prediction, but existing methods incur costly test-time future imagination. We present SimWAM, a simple yet effective WAM that leverages future-video prediction as a training-time supervision signal. It co-trains a pretrained video expert and a lightweight action expert with joint flow matching. An isolated attention mask keeps action prediction independent of future frames, allowing trajectory prediction without explicit future-frame generation at inference. Since the two experts share no parameters and interact only through a unified attention interface, the video backbone could be replaced and the action expert scaled independently without modifying the learning objective or inference pipeline. We further apply reinforcement learning to optimize a compositional driving reward beyond trajectory imitation. Our SimWAM achieves 91.5 PDMS on NAVSIM, surpasses state-of-the-art WAM-based planners with substantially lower latency, and transfers zero-shot to nuScenes. These results position SimWAM as a simple yet solid baseline that could readily benefit from advances in video generation for efficient autonomous driving. The code and model weights are available at https://github.com/H-EmbodVis/SimWAM/.</p>
@@ -1169,10 +1208,7 @@
                         <span class="paper-date">2026-08-10</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有世界-动作模型（WAMs）主要基于成功示范训练，缺乏对失败动作后果的预测能力，导致在遇到不良动作时产生有偏的未来幻觉。&#10;&#10;🛠 **方法**：提出FACT（Failure-Aware Causal Training），一种因果世界-动作模型，通过动作条件化接口将失败轨迹纳入训练，使模型能预测执行动作后的未来视频和任务进度，并可选地用于推理时对候选动作进行评分。&#10;&#10;✨ **主要贡献**：在仿真和真实双臂操作任务中，FACT优于多种现有基线；随着失败数据的加入，性能持续提升，并显著减少了不良动作下的成功偏置幻觉，展示了失败感知训练的有效性。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Recent world-action models (WAMs) show that co-training policies with future prediction can provide physical priors for action generation. Building on the future-prediction ability of video models, many WAMs generate future videos and recover actions with inverse-dynamics models, or use these predicted videos as goal conditions for action generation. In both cases, the world model is trained mostly on successful demonstrations and has little reason to predict the consequences of bad actions. We introduce FACT, a causal World-Action Model that predicts future video and task progress conditioned on the executed action. This action-conditioned interface allows failure rollouts to supervise action consequences, turning bad actions into valid future targets rather than being discarded. Failure-aware training makes the progress predictor aware of both successful and failed action outcomes, which can optionally be used to score sampled action candidates at inference. Extensive experiments on simulation and real-world bimanual manipulation tasks show that FACT outperforms many existing baselines, improves as failure data are incorporated into training, and reduces success-biased future hallucination under bad actions. See more details at https://fact-wam.github.io/</p>
@@ -1980,42 +2016,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>World-action (WA) models can generate long-horizon action chunks for general-purpose robotic manipulation, but they remain vulnerable to calibration, perception, and contact-dynamics errors in real-world precision tasks, often failing in the final few millimeters of alignment or insertion. We propose HALO-WA, a hybrid-attention latent-guided online reinforcement learning (RL) framework for WA models, which leverages latent features and action priors from the WA generation process through a lightweight actor-critic adapter to enable fast online adaptation to real deployment errors. HALO-WA introduces a hybrid-attention structure that preserves the temporal consistency of action chunks while reading task-relevant information from WA latents conditioned on visual context and end-stage correction requirements, thereby producing refined action chunks. We validate HALO-WA on four real-world precision manipulation tasks, where it improves the average success rate from 26.4\% for WA-base to 87.1\%, outperforming the strongest baseline by 19.2 percentage points while requiring only 45--75 minutes of online training per task. To facilitate reproducibility, we further conduct supplementary simulation experiments in RoboTwin and release the code at https://github.com/YeanRoot/HALO-WA.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.16533v3" target="_blank" class="paper-title">Kairos: A Regret-Aware Native World-Action Model Stack for Physical AI</a>
-                        <span class="paper-date">2026-07-03</span>
-                    </div>
-                                        <span class="paper-comment">📝 Kairos Technical Report</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>We introduce \textbf{Kairos}, a regret-aware native world-action model stack for Physical AI. Kairos is motivated by the view that a physical world model should not aim to fully simulate all future pixels, but should learn and maintain the information most relevant to embodiment control: object state, spatial relations, contact conditions, task progress, action consequences, failure boundaries, and deployment uncertainty. Kairos establishes three model-side prerequisites toward this goal. First, it \textbf{learns} control-relevant information through a \textbf{Cross-Embodiment Data Curriculum}, which organizes open-world videos, human behavioral data, and robot interactions into an intervention-strength progression from passive physical observation to intentional behavior and embodied action grounding. Second, it \textbf{maintains} control-sufficient states through a unified \textbf{understanding, generation, and prediction architecture} equipped with \textbf{Hybrid Linear Temporal Attention}, where local, mid-range, and global temporal pathways support multi-timescale state maintenance under efficient inference. Third, it \textbf{deploys} these states through a \textbf{Deployment-Aware System Co-Design}, treating latency, memory footprint, and hardware compatibility as first-order constraints for future observation, action, and feedback loops. Experiments on embodied world-model benchmarks, world-action benchmarks, long-horizon generation, and inference-efficiency evaluation show that Kairos achieves superior performance while offering a favorable efficiency to capability trade-off.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.02503v1" target="_blank" class="paper-title">VT-WAM: Visual-Tactile World Action Model for Contact-Rich Manipulation</a>
-                        <span class="paper-date">2026-07-02</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Contact-rich manipulation requires policies to react to local deformation, pressure, slip, and friction, yet these cues are temporally sparse and often invisible in visual observations. Existing visual-tactile policies usually feed tactile observations directly into action prediction, but rarely model tactile deformation dynamics during action generation. In this paper, we introduce VT-WAM, a Visual-Tactile World Action Model that jointly learns future visual prediction, tactile deformation prediction, and action prediction within a unified flow matching framework. In particular, VT-WAM introduces (1) Asymmetric Mixture-of-Transformers (MoT) attention to bridge a first-frame visual anchor with temporal tactile dynamics, and (2) contact-gated Action-Visual-Tactile Attention Guidance (AVTAG) to encourage action queries to rely on tactile evidence during contact phases. Across six real-world contact-rich manipulation tasks, VT-WAM achieves a 71.67% average success rate, outperforming Fast-WAM by 26.67% and OmniVTLA by 35.84%. Ablations demonstrate that modeling tactile deformation dynamics and guiding contact-phase tactile attention are both important for contact-rich tasks. Project website: https://vt-wam.github.io/.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.02195v1" target="_blank" class="paper-title">Bridge-WA: Predicting Where and How the World Changes for Robotic Action</a>
-                        <span class="paper-date">2026-07-02</span>
-                    </div>
-                                        <span class="paper-comment">📝 21 pages, 8 figures, https://hcplab-sysu.github.io/BRIDGE-WA</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>General-purpose vision-language-action models benefit from large vision-language priors, but effective manipulation also requires anticipating action-relevant scene changes. Existing world-action models often rely on large generative world models or dense future rollouts, which are expensive and spend capacity on visual details weakly coupled to control. We present Bridge-WA, a lightweight world-action framework that distills a frozen future-change teacher into three compact priors: future tokens for intended outcomes, change maps for intervention support, and motion-flow maps for local transition direction. A WorldBridge conditions the action transformer on these priors through multi-source attention memories and spatial-temporal biases, while the teacher model is removed at inference. Across VLABench, RoboTwin2.0, LIBERO-Plus and real-robot evaluations, Bridge-WA improves task success, progress, and robustness, with particularly clear gains under out-of-distribution visual shifts. By focusing action generation on where and how the scene will change, Bridge-WA suppresses nuisance appearance factors such as background, lighting, and distractors, leading to better generalization without deployment-time dense future-image generation. Code and visualizations are available at: https://hcplab-sysu.github.io/BRIDGE-WA .</p>
                     </details>
                 </div>
             </div>

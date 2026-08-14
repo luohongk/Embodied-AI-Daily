@@ -600,7 +600,7 @@
                 <a href="LLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
                     <span class="nav-label">LLM</span>
-                    <span class="nav-count">80</span>
+                    <span class="nav-count">79</span>
                 </a>
                 <a href="VLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f97316"></span>
@@ -690,12 +690,12 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">70</span>
+                    <span class="nav-count">68</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">75</span>
+                    <span class="nav-count">76</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -730,7 +730,7 @@
                 <a href="Model-Predictive-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#14b8a6"></span>
                     <span class="nav-label">Model Predictive Control</span>
-                    <span class="nav-count">52</span>
+                    <span class="nav-count">51</span>
                 </a>
                 <a href="Whole-Body-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#06b6d4"></span>
@@ -819,7 +819,7 @@
             <a href="LLM.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
                 <span class="nav-label">LLM</span>
-                <span class="nav-count">80</span>
+                <span class="nav-count">79</span>
             </a>
             <a href="VLM.html" class="nav-item">
                 <span class="nav-dot" style="background:#f97316"></span>
@@ -909,12 +909,12 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">70</span>
+                <span class="nav-count">68</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">75</span>
+                <span class="nav-count">76</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -949,7 +949,7 @@
             <a href="Model-Predictive-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#14b8a6"></span>
                 <span class="nav-label">Model Predictive Control</span>
-                <span class="nav-count">52</span>
+                <span class="nav-count">51</span>
             </a>
             <a href="Whole-Body-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#06b6d4"></span>
@@ -1028,6 +1028,66 @@
                 <span class="topic-count">80 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.13448v1" target="_blank" class="paper-title">Mind the Context: Continual Learning of Socially Appropriate Robot Actions via Environmental-Social Disentanglement</a>
+                        <span class="paper-date">2026-08-13</span>
+                    </div>
+                                        <span class="paper-comment">📝 Extended version of the paper accepted at the 2026 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2026)</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：社交机器人在不同环境中需要根据环境和社会线索调整行为，但现有持续学习方法未处理领域增量场景（如客厅、会议室等），导致机器人难以在连续学习新环境时保持旧知识并生成合适动作。&#10;&#10;🛠 **方法**：提出显式解耦双分支（EDD）框架，将环境知识与社会智能体知识显式分离，并通过基于回放的排练机制缓解灾难性遗忘，在多个室内领域间持续学习动作适宜性。&#10;&#10;✨ **主要贡献**：EDD在多个室内场景的动作适宜性任务上优于现有基线方法，消融实验验证了解耦策略的有效性及对领域顺序的敏感性，代码已开源。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Social robots are expected to operate across diverse environments, where similar arrangements can imply different socially appropriate actions, e.g., starting a conversation may be acceptable in a crowded home but disruptive in an office meeting. Because such norms and environments cannot all be anticipated in advance, robots require continual learning (CL) to adapt from sequential experience while retaining previously acquired knowledge. Prior work has studied CL for generating socially appropriate robot actions, but it has not addressed domain-incremental settings in which the robot incrementally encounters diverse contexts (e.g., living room, meeting room, office, hallway), where both environmental (e.g., whether the space is open or cluttered with furniture) and social cues (e.g., how people or other agents are positioned around the robot) jointly shape the appropriateness of robot actions. We address this gap with the Explicit Disentanglement Dual-Branch (EDD) framework. EDD explicitly separates environmental and social-agent related knowledge and uses replay-based rehearsal to mitigate forgetting while learning the appropriateness of robot actions (e.g., cleaning, serving, starting a conversation) across several indoor domains. Experiments show that EDD outperforms several state-of-the-art baselines, and ablation studies further evaluate different disentanglement strategies and the sensitivity to domain ordering. Our code is publicly available at https://github.com/Cambridge-AFAR/Mind-the-Context.git.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2606.21253v2" target="_blank" class="paper-title">Gradient-Free Warm-Start Library Recovery: an Amortized-Regret Separation</a>
+                        <span class="paper-date">2026-08-13</span>
+                    </div>
+                                        <span class="paper-comment">📝 21 pages, 2 figures. v2: expanded related work (switching-regret with memory; universal coding for repeating statistics; concurrent TTA-learnability work); two clarifying remarks. No changes to results</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在无梯度、在线、仅追加的持续学习场景中，如何实现高效的热启动库恢复，以降低重复流数据下的计算成本。&#10;&#10;🛠 **方法**：提出一种解耦机制，将识别已知流模式（成本与维度无关）与估计新模式（成本与维度成正比）分离，通过计数校准变体实现无超参数、无遗忘的在线学习。&#10;&#10;✨ **主要贡献**：理论证明热启动学习器的摊销恢复成本远低于无记忆重估计器，且每个项均达到极小极大最优；实验验证了维度依赖的分离优势，并揭示了可识别模式数量受单纯形填充限制等边界条件。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Continual learning that is gradient-free, local, online, and append-only is attractive for edge and streaming deployment, but its value is usually argued informally. We give a provable account on recurring-regime streams. Given segmentation, a warm-start library learner attains amortized recovery cost $O\!\big(KD/\varepsilon^2+(R-K)\logK/Δ^2\big)$ versus a memoryless re-estimator's $Θ(RD/\varepsilon^2)$, an advantage $(R-K)\,Θ(D/\varepsilon^2)$ growing with dimension $D$ and recurrence density. The mechanism is a decoupling: recognizing which of $K$ seen regimes is active costs $O(\log K/Δ^2)$, independent of $D$, whereas estimating a regime costs $Θ(D/\varepsilon^2)$. We prove this is tight: matching lower bounds give recognition $Θ(\log K/Δ^2)$ and a memoryless-class bound $Ω(RD/\varepsilon^2)$, so each term is individually minimax-tight (the joint statement is conditional). The separation is born-immune (a memoryless learner's advantage is identically zero) and paradigm-level: it matches, and does not beat, a fair spawn-capable Bayesian baseline; the contribution is attaining this cost structure without end-to-end backprop and with zero forgetting by construction. A count-calibrated variant ties the baseline's leading constant up to a bounded, never-negative per-recurrence overshoot, hyperparameter-free and with no per-step transcendentals. We bound the scope: recognizable regimes are capped by simplex packing (walls $e^{Θ(D)}$); autonomous segmentation is impossible at the packing wall (no detector escapes the false-alarm/delay frontier as regimes overlap); the advantage vanishes under overlap. The dimension-dependent separation is corroborated on synthetic streams and real $k$-mer genome distributions (memoryless cost $\propto D^{1.04}$, recognition $D$-independent); the one real sequential stream sits in the $D{=}1$ near-null corner.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.12874v1" target="_blank" class="paper-title">Sustaining Plasticity via Learnable Wavelet Activations in Continual Learning</a>
+                        <span class="paper-date">2026-08-13</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：持续学习中神经网络在连续任务学习时出现可塑性损失，现有激活函数存在低频偏好或更新不受控导致灾难性遗忘的问题。&#10;&#10;🛠 **方法**：提出可学习小波激活函数，将激活分解为低频和高频分量以对抗频谱偏差；采用动态小波注入增强新任务可塑性，并结合正则化策略保持旧知识稳定性。&#10;&#10;✨ **主要贡献**：理论上证明了混合小波架构对L²逼近的结构必要性，并验证解耦学习率机制可恢复高频可塑性；实验表明该方法在多个持续学习基准上达到最先进性能，显著提升训练性和泛化能力。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Plasticity loss has emerged as a critical challenge in continual learning that significantly hinders the acquisition of sequential tasks. While optimizing activation designs offers a potential solution, current fixed-form functions suffer from an inherent spectral bias towards low-frequency variations, whereas learnable variants permit unconstrained updates that induce catastrophic forgetting. To address these limitations, we propose a novel learnable wavelet activation that decomposes the activation function into low-frequency and high-frequency components to explicitly counter spectral bias. Furthermore, we employ dynamic wavelet injection to adaptively enhance plasticity for new tasks, alongside a regularization strategy to ensure the stability of previous learned knowledge. Theoretically, we provide rigorous mathematical guarantees for the proposed framework, proving the structural necessity of the hybrid wavelet architecture for efficient $L^2$ approximation and demonstrating that the decoupled learning rate mechanism successfully restores network plasticity for high-frequency information. Additionally, we provide a formal derivation of the loss-driven injection trigger mechanism to precisely guide the injection. Extensive empirical evaluations demonstrate that our approach maintains superior trainability and generalization throughout the learning process and achieves state-of-the-art performance across diverse continual learning benchmarks.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2407.13911v5" target="_blank" class="paper-title">Continual Distillation Learning for Rehearsal-Free Class-Incremental Learning via Decoupled Prompting</a>
+                        <span class="paper-date">2026-08-12</span>
+                    </div>
+                                        <span class="paper-comment">📝 Accepted at CoLLAs 2026</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在无回放的基于提示的类增量学习中，如何将大规模ViT骨干的持续学习能力有效迁移到小规模模型，以提升其性能。&#10;&#10;🛠 **方法**：提出Decoupled Continual Distillation Learning (D-CDL)，引入持久的知识蒸馏提示（KD-prompts）和专用KD分支，将蒸馏知识与任务适应解耦，KD-prompts跨任务传播以全局传递教师知识，原始提示继续负责持续学习。&#10;&#10;✨ **主要贡献**：首次定义CDL蒸馏设置，D-CDL可通用集成到多种提示式持续学习方法中，在Split CIFAR-100和Split ImageNet-R上显著优于现有蒸馏基线，并在多种师生配置下稳定提升学生模型性能。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Prompt-based continual learning has shown strong performance in rehearsal-free class-incremental learning by adapting learnable prompts while freezing a pre-trained Vision Transformer (ViT) backbone. However, the effect of backbone scale remains underexplored. We observe that larger ViT backbones consistently yield better continual learning performance, which motivates us to study how to transfer such capability from a larger model to a smaller one. In this paper, we introduce Continual Distillation Learning (CDL), a new setting for knowledge distillation in rehearsal-free prompt-based continual learning. We show that conventional distillation methods provide only limited gains in CDL, mainly because task-specific prompts are forced to encode both continual adaptation and distillation knowledge, while lacking a persistent mechanism for cross-task knowledge transfer. To address this problem, we propose Decoupled Continual Distillation Learning (D-CDL), which introduces persistent Knowledge-Distillation prompts (KD-prompts) and a dedicated KD branch to explicitly decouple distillation from task adaptation. The proposed KD-prompts are propagated across tasks as a global carrier of teacher knowledge, while the original prompts remain responsible for continual learning. D-CDL is simple, general, and can be integrated into various prompt-based continual learning frameworks. Extensive experiments on Split CIFAR-100 and Split ImageNet-R across four representative continual learning methods show that D-CDL consistently outperforms existing distillation baselines and substantially improves student performance under different teacher-student settings.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2603.20667v2" target="_blank" class="paper-title">REVERE: Reflective Evolving Research Engineer</a>
@@ -1124,10 +1184,7 @@
                         <span class="paper-date">2026-08-11</span>
                     </div>
                                         <span class="paper-comment">📝 Accepted at the Conference on Lifelong Learning Agents (CoLLAs 2026)</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决大规模预训练模型在长任务序列中持续学习时，如何高效添加新知识并避免灾难性遗忘，同时保持计算和参数开销可控。&#10;&#10;🛠 **方法**：提出GLAM框架，基于LoRA适配器合并。每个任务训练一个轻量低秩适配器并附带重要性标量，随后对适配器进行剪枝、重缩放和顺序分组，实现结构化知识复用并限制参数增长；推理时将全部分组合并为单一模块，保证计算成本恒定。&#10;&#10;✨ **主要贡献**：在多达50个任务的视觉基准上取得最高准确率，相比最优基线，仅用其16–19%的可训练参数，训练时间减少约63–74%，展示了高效且可扩展的持续学习能力，并公开源代码。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>The ability to learn continuously over time remains a major challenge for modern machine learning systems, even in the era of Foundation Models. While the rich representations learned by large pre-trained models can partially mitigate catastrophic forgetting, they still struggle to adapt efficiently to evolving data distributions. A key challenge remains, how to continually add new knowledge to a large pretrained model in a way that is scalable and computationally efficient over long task sequences. In this work, we introduce GLAM, a simple and effective framework for class-incremental continual learning based on LoRA adapters merging. For each task, GLAM trains a lightweight low-rank adapter with an importance scalar, incurring minimal computational overhead. Adapters are then pruned, rescaled, and sequentially grouped to enable structured knowledge reuse and limit parameter growth. At inference, all groups are combined into a single module, ensuring constant computational cost regardless of the number of tasks. We evaluate GLAM on vision benchmarks with sequences of up to 50 tasks, significantly extending beyond standard protocols. GLAM achieves the highest accuracy across the evaluated benchmarks. Compared with the baseline attaining the highest average accuracy across benchmarks, it uses 16--19\% of the trainable parameters and reduces training time by approximately 63--74\%, demonstrating efficient and scalable continual learning. Our source code is publicly available at https://github.com/atlas-luiss/GLAM.</p>
@@ -1139,10 +1196,7 @@
                         <span class="paper-date">2026-08-10</span>
                     </div>
                                         <span class="paper-comment">📝 49 pages, technical report</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：如何构建一个能够在真实环境中持续学习、部署后仍不断自我改进的开放持续学习（Open Continual Learning）智能体模型系统。&#10;&#10;🛠 **方法**：提出Macaron-V1系统，采用Mixture-of-LoRA（MoL）架构冻结基座模型并组合多个专家LoRA适配器，结合模型-工具链协同设计（Model-Harness Co-design）与递归自我改进循环，并配套MinT训练平台、LongStraw长上下文强化学习方法及稀疏MoE稳定性技术。&#10;&#10;✨ **主要贡献**：发布了旗舰版Macaron-V1-Venti（744B GLM-5.2基座+4个LoRA）和本地部署版Macaron-V1-Tall（50B Qwen3.6），在Personal Intelligence、GenUI和通用能力基准上验证了系统有效性，为持续学习与集体智能的复合增益提供了开放研究基础。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Macaron-V1 is an open agent-model family for experiential intelligence: learning from experience in real environments and continuing to learn after deployment. It is organized around two system goals. Adaptation is pursued through recursive improvement of versioned model-harness pairs, where experience from one configuration is evaluated under an external contract and used to construct its successor. Collaboration is pursued via the Mixture-of-LoRA (MoL) architecture that freezes a base model, composes specialist LoRA adapters, and selects one LoRA per user turn. The flagship Macaron-V1-Venti combines a 744B GLM-5.2 base with four LoRAs for chat, agent, coding, and GenUI; the Qwen3.6-based Macaron-V1-Tall (50B) uses the same design for local deployment. This report presents Macaron-V1 as a co-designed system spanning architecture, algorithms, and infrastructure. The MoL architecture supports continual learning through extensible LoRA specialists. The algorithm combines Model-Harness Co-design and recursive self-improvement loop, including the UI4A component-native GenUI harness, a stateful action substrate, versioned HCP contract, and the agentic RL framework MindForge. The supporting infrastructure includes the post-training platform MinT, the long-context RL method LongStraw, and stability techniques for sparse MoE and DSA base models. We evaluate Macaron-V1 on Personal Intelligence, GenUI, and general capability benchmarks against frontier baselines. Our results validate the current system, while compounding gains from continual learning and collective intelligence remain open questions.</p>
@@ -1154,10 +1208,7 @@
                         <span class="paper-date">2026-08-10</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在边缘设备上同时实现视觉异常检测（VAD）的持续学习，解决计算资源受限与数据分布动态变化带来的双重挑战。&#10;&#10;🛠 **方法**：提出首个面向边缘持续学习场景的VAD基准，评估7种VAD模型在3种轻量级骨干架构上的表现；并设计Tiny-Dinomaly（基于DINO的轻量化模型）及对PatchCore和PaDiM的针对性改进。&#10;&#10;✨ **主要贡献**：Tiny-Dinomaly将内存占用降低11倍、计算成本降低20倍，同时像素级F1分数提升5个百分点；基准测试为边缘场景下骨干网络与VAD方法的选择提供了权衡指导。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Visual Anomaly Detection (VAD) is a critical task for many applications including industrial inspection and healthcare. While VAD has been extensively studied, two key challenges remain largely unaddressed in conjunction: edge deployment, where computational resources are severely constrained, and continual learning, where models must adapt to evolving data distributions without forgetting previously acquired knowledge. Our benchmark provides guidance for the selection of the optimal backbone and VAD method under joint efficiency and adaptability constraints, characterizing the trade-offs between memory footprint, inference cost, and detection performance. Studying these challenges in isolation is insufficient, as methods designed for one setting make assumptions that break down when the other constraint is simultaneously imposed. In this work, we propose the first comprehensive benchmark for VAD on the edge in the continual learning scenario, evaluating seven VAD models across three lightweight backbone architectures. Furthermore, we propose Tiny-Dinomaly, a lightweight adaptation of the Dinomaly model built on the DINO foundation model that achieves a 11$\times$ smaller memory footprint and 20$\times$ lower computational cost while improving localization (Pixel F1) by 5 percentage points. Finally, we introduce targeted modifications to PatchCore and PaDiM to improve their efficiency in the continual learning setting.</p>
@@ -1169,10 +1220,7 @@
                         <span class="paper-date">2026-08-10</span>
                     </div>
                                         <span class="paper-comment">📝 ICML 2026. 33 pages, 11 figures. Code: https://github.com/HUBERILT/HMCL_ICML</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：多模态持续学习在双曲空间中面临灾难性遗忘，且现有方法未考虑双曲几何特性对表征保持的影响。&#10;&#10;🛠 **方法**：提出基于双曲等距变换的跨模态不变性约束，同时保持语义关系漂移与层级结构失真，构建保留几何结构的持续学习框架。&#10;&#10;✨ **主要贡献**：首次从几何视角建立双曲空间表征保持的理论基础，证明遗忘与跨模态等距不变性相关，并在多模态持续学习基准上验证了方法的有效性。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Hyperbolic geometry has recently emerged as a powerful representation space for multimodal learning, as it naturally captures hierarchical semantic structure across modalities. Despite this progress, how such representations behave under continual learning poses fundamentally different challenges that remain underexplored. This work provides a geometric perspective on this problem and establishes a theoretical foundation for representation preservation in hyperbolic space, showing that preventing forgetting requires cross-modal invariance under a shared hyperbolic isometry. We further show that forgetting in hyperbolic continual learning involves both semantic relation drift and hierarchy-related distortion, motivating preservation of both cross-modal relational structure and hierarchical geometry. Guided by these insights, a principled continual learning framework is derived that preserves essential geometric structure while allowing effective adaptation to new tasks. Experiments on continual multimodal benchmarks corroborate the effectiveness of the proposed approach.</p>
@@ -1968,54 +2016,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Many continual-learning methods modify gradients upstream (e.g., projection, penalty rescaling, replay mixing) while treating Adam as a neutral backend. We show this composition has a hidden failure mode. In a high-overlap, non-adaptive 8-domain continual LM, all shared-routing projection baselines collapse close to vanilla forgetting (12.5--12.8 vs. 13.2). A 0.5% replay buffer is the strongest shared alternative but still reaches 11.6, while fixed-strength decoupling falls below vanilla at 14.1. Only adaptive decoupled routing remains stable at 9.4, improving over vanilla by 3.8 units. On a 16-domain stream, its gain over the strongest shared-routing projection baseline grows to 4.5--4.8 units. The failure is largely invisible on clean benchmarks. We explain this effect through Adam's second-moment pathway: in the tested regime, projection induces a 1/(1-alpha) inflation of the old-direction effective learning rate, matching measurements within 8% across eight alpha values. The same conflict appears with penalty methods, replay mixing, and at 7B scale under LoRA. Our fix routes the modified gradient only to the first moment while preserving magnitude-faithful second-moment statistics, with overlap-aware adaptive strength. This simple change is the only tested configuration that consistently avoids collapse across methods, optimizers, and scale.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.20064v2" target="_blank" class="paper-title">PRO-LONG: Programmatic Memory Enables Long-Horizon Reasoning</a>
-                        <span class="paper-date">2026-07-23</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Long-horizon tasks require sustained perception, reasoning, and exploration, and are a persistent challenge for large language model (LLM) agents. This gap is reflected in their limited performance on continual learning benchmarks such as ARC-AGI-3, especially when models are evaluated out of the box. Various agent harnesses have been proposed to close this gap, and each commits to a strategy for handling long sequences of observations, i.e., what information to save from the environment and how to load it into model context, a choice we argue is particularly consequential. Existing methods for context management face a significant tradeoff, as preserving more information makes retrieving relevant details less tractable. We propose PRO-LONG, a minimal context management framework built around programmatic memory for LLM agents in long-horizon, exploratory settings. PRO-LONG addresses the tradeoff by keeping a complete, structured interaction log and capitalizing on recent progress in coding agents to search this history efficiently. On the full ARC-AGI-3 public game set, PRO-LONG improves over a base coding agent by an average of 18.0 percentage points across frontier models, and matches or exceeds state-of-the-art specialized harnesses (up to 76.1% pass@1) while using 4.2-5.8x fewer tokens. With Fable 5, PRO-LONG achieves 97.4% best@2 at a total cost of \$1,750. Relevant code and logs are available at https://github.com/alexisfox7/PRO-LONG.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2511.12997v2" target="_blank" class="paper-title">WebCoach: Self-Evolving Web Agents with Cross-Session Memory Guidance</a>
-                        <span class="paper-date">2026-07-22</span>
-                    </div>
-                                        <span class="paper-comment">📝 18 pages</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Multimodal LLM-powered agents have recently demonstrated impressive capabilities in web navigation, enabling agents to complete complex browsing tasks across diverse domains. However, current agents struggle with repetitive errors and lack the ability to learn from past experiences across sessions, limiting their long-term robustness and sample efficiency. We introduce WebCoach, a model-agnostic self-evolving framework that equips web browsing agents with persistent cross-session memory, enabling improved long-term planning, reflection, and continual learning without retraining. WebCoach consists of three key components: (1) a WebCondenser, which standardizes raw navigation logs into concise summaries; (2) an External Memory Store, which organizes complete trajectories as episodic experiences; and (3) a Coach, which retrieves relevant experiences based on similarity and recency, and decides whether to inject task-specific advice into the agent via runtime hooks. This design empowers web agents to access long-term memory beyond their native context window, improving robustness in complex browsing tasks. Moreover, WebCoach achieves self-evolution by continuously curating episodic memory from new navigation trajectories, enabling agents to improve over time without retraining. Evaluations on the WebVoyager benchmark demonstrate that WebCoach consistently improves the performance of browser-use agents across three different LLM backbones. With a 38B model, it increases task success rates from 47% to 61% while reducing or maintaining the average number of steps. Notably, smaller base models with WebCoach achieve performance comparable to the same web agent using GPT-4o.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.20110v1" target="_blank" class="paper-title">Extreme-RGMT: Continual Learning of Highly Dynamic Skills for Robust Generalist Humanoid Control</a>
-                        <span class="paper-date">2026-07-22</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Humans can progressively acquire highly dynamic motor skills while preserving reliable everyday motor abilities. In contrast, existing humanoid controllers face a trade-off between generalist and specialist capabilities: generalist motion tracking policies struggle to reliably execute rare highly dynamic motions, whereas specialist training can degrade previously acquired behaviors. We introduce Extreme-RGMT, a two-stage continual learning framework for robust generalist humanoid control. The method first learns a generalist motion-tracking base policy from diverse multi-source motion data, then employs an asymmetric skill acquisition and capability consolidation mechanism to constrain policy drift on mastered motions while emphasizing difficult dynamic segments. To address the scarcity of highly dynamic motions, their high failure rates, and the resulting shortage of informative samples, Extreme-RGMT combines difficulty-aware sampling with advantage-prioritized trajectory resampling to emphasize critical segments. Experiments show that Extreme-RGMT achieves state-of-the-art generalist whole-body motion-tracking performance, including substantially improved completion of challenging highly dynamic motions. The resulting controller directly executes diverse unseen highly dynamic motions under fixed references and online inertial motion-capture inputs, advancing generalist whole-body motion-tracking controllers toward highly dynamic motor capabilities at the human-expert level.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2605.31119v2" target="_blank" class="paper-title">Don't Fool Me Twice: Adapting to Adversity in the Wild with Experience-Driven Reasoning</a>
-                        <span class="paper-date">2026-07-22</span>
-                    </div>
-                                        <span class="paper-comment">📝 Accepted at 2026 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>In robotics, dangers and adversity modes are often embodiment-specific and relative to each agent. A frontier of autonomous mobile robotics is to enable agents to operate effectively in the wild in unseen unstructured environments. A significant challenge in unseen unstructured environments is that it may not be possible to predict all the dangers to the specific robot. Although recent work has used large foundation vision-language models (VLMs) to preemptively predict an exhaustive list of common-sense dangers, it remains difficult to capture possible interaction and embodiment-dependent adversities. We propose a continual learning framework for a mobile embodied agent to learn online from disturbances and attribute anomalous behaviours to causes through semantics, enabling better prediction and planning of the world in the future. Our framework, "Don't Fool Me Twice", first observes disturbances and describes their effects on the robot; this description is augmented with visual context to query a VLM to predict possible causes; the local disturbance is characterized using kernel regression, which allows for efficient, few-shot modeling of transient anomalies. We leverage semantic voxel-centric modeling to estimate epistemic uncertainty, enabling richer downstream recovery by treating interaction-driven disturbances as learnable spatial behaviors. We present four hypotheses and validate them in simulation and on hardware across embodiments and adversity modes.</p>
                     </details>
                 </div>
             </div>

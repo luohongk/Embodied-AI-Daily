@@ -600,7 +600,7 @@
                 <a href="LLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
                     <span class="nav-label">LLM</span>
-                    <span class="nav-count">80</span>
+                    <span class="nav-count">79</span>
                 </a>
                 <a href="VLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f97316"></span>
@@ -690,12 +690,12 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">70</span>
+                    <span class="nav-count">68</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">75</span>
+                    <span class="nav-count">76</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -730,7 +730,7 @@
                 <a href="Model-Predictive-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#14b8a6"></span>
                     <span class="nav-label">Model Predictive Control</span>
-                    <span class="nav-count">52</span>
+                    <span class="nav-count">51</span>
                 </a>
                 <a href="Whole-Body-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#06b6d4"></span>
@@ -819,7 +819,7 @@
             <a href="LLM.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
                 <span class="nav-label">LLM</span>
-                <span class="nav-count">80</span>
+                <span class="nav-count">79</span>
             </a>
             <a href="VLM.html" class="nav-item">
                 <span class="nav-dot" style="background:#f97316"></span>
@@ -909,12 +909,12 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">70</span>
+                <span class="nav-count">68</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">75</span>
+                <span class="nav-count">76</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -949,7 +949,7 @@
             <a href="Model-Predictive-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#14b8a6"></span>
                 <span class="nav-label">Model Predictive Control</span>
-                <span class="nav-count">52</span>
+                <span class="nav-count">51</span>
             </a>
             <a href="Whole-Body-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#06b6d4"></span>
@@ -1028,6 +1028,21 @@
                 <span class="topic-count">74 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.12877v1" target="_blank" class="paper-title">ReflectFact: Self-Reflective Agents for Improving Comprehension and Reasoning in Multi-Hop Fact Verification</a>
+                        <span class="paper-date">2026-08-13</span>
+                    </div>
+                                        <span class="paper-comment">📝 9 pages, 4 figures, 3 tables</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：多跳事实验证中，现有智能体方法缺乏全局验证目标意识，且参数化知识与证据冲突时易导致推理偏差，影响验证准确性。&#10;&#10;🛠 **方法**：提出ReflectFact框架，包含显式推理路径规划、证据漂移验证和推理反思验证三个关键任务，通过自我反思机制校准证据偏差并修正推理缺陷。&#10;&#10;✨ **主要贡献**：在HOVER和EX-FEVER数据集上分别超越最强基线3.32%和2.78%，达到最先进性能，有效改善了现有方法的理解与推理缺陷。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Multi-hop fact verification, which verifies claims by reasoning over multiple pieces of evidence, is critical for combating misinformation on social media yet remains highly challenging. Recent methods primarily rely on multi-agent collaboration to decompose fact verification into specialized subtasks. However, these methods face two critical limitations: (1) agents may perform individual subtasks without sufficient awareness of the global verification objective, causing their reasoning to deviate from the intended direction; and (2) conflicts between parametric knowledge and the provided evidence may undermine evidence-grounded reasoning and lead to incorrect verdicts. To address these challenges, we propose ReflectFact, a novel self-reflective agent framework for multi-hop fact verification. ReflectFact introduces three key tasks. Explicit Reasoning Path Planning builds an evidence-grounded reasoning path by resolving implicit entities, decomposing the claim into sub-questions, and integrating the verified facts into a verdict. Evidence-Drift Verification makes the agent re-answer by quoting the supporting evidence when a grounded answer merely echoes its parametric prior, thereby calibrating evidence deviation to ensure grounded comprehension. Reasoning Reflection Verification re-examines each reasoning step and regenerates it once an inconsistency is detected, correcting reasoning flaws such as location bias and replacement bias through a global task perspective. Subsequently, the agent aggregates validated reasoning chains to yield reliable verdicts. Extensive experiments on HOVER and EX-FEVER demonstrate that ReflectFact effectively remedies the comprehension and reasoning defects of existing methods, achieving state-of-the-art performance and respectively outperforming the strongest baseline by 3.32\% and 2.78\% on the two datasets.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2608.10220v1" target="_blank" class="paper-title">Whole-Body Planning for Humanoids Navigating Confined Spaces via Self-Collision Avoidance References</a>
@@ -1169,10 +1184,7 @@
                         <span class="paper-date">2026-08-05</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有大语言模型在约束感知的PCB布线推理方面能力尚未被系统评估，缺乏针对真实工业设计规则、可制造性和连通性约束的基准测试。&#10;&#10;🛠 **方法**：构建了首个大规模PCB布线推理基准OmniRouting，包含1,681个工业级原理图耦合PCB设计，并设计四个递进任务：几何布线推理、设计规则感知布线、电气功能推理和工具增强的智能体布线。&#10;&#10;✨ **主要贡献**：揭示了当前多模态大模型在PCB布线中的显著缺陷（路径规划弱、规则遵循差、电气功能保持不一致），并开源全部数据、评估代码和工具接口，为EDA领域LLM研究提供标准化评测平台。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Recent large language models (LLMs) have demonstrated remarkable progress in constraint-aware navigation, maze reasoning, and graph reasoning. However, their ability to reason about complex routing problems under strict geometric, topological, and electrical constraints remains largely unexplored, despite routing being one of the most challenging and critical stages of electronic design automation (EDA). To bridge this gap, we introduce OmniRouting, the first large-scale benchmark designed to evaluate LLMs on printed-circuit-board (PCB) routing reasoning under real-world industrial design-rule, manufacturability, and connectivity constraints. OmniRouting contains 1,681 industrial-grade schematic-coupled PCB designs, including board geometries, routable component placements by human engineers, footprints, pad locations, netlists, stackup information, and routing constraints. The benchmark comprises four tasks: (1) geometric routing reasoning, generating physically valid copper traces, vias, and layer assignments to connect circuit nets within constrained board regions; (2) design-rule-aware routing reasoning, producing routable layouts that satisfy clearance, trace-width, via, obstacle-avoidance, and board-boundary constraints; (3) electrical functionality reasoning, preserving schematic-specified connectivity while reasoning over net names and functional roles to produce electrically correct routing; and (4) tool-augmented agentic routing, leveraging external tools for tasks (1)-(3). Our results reveal substantial limitations of current LMMs in PCB routing, including weak path-planning capabilities, poor adherence to design-rule constraints, and inconsistent preservation of electrical functionality. We will open-source all benchmark data, evaluation code, and tool interfaces to facilitate future research.</p>
@@ -1932,18 +1944,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>We study strategic space- and time-constrained cooperation between two self-interested agents through the Intermittent Strategic Cooperation-Based Two-Agent Path Planning (IC2PP) problem, a shortest-path game on graphs in which agents navigate toward individual targets while optionally cooperating at specific nodes to reduce their own travel times. Although such cooperation can strictly benefit both agents, it is strategically fragile: agents may deviate at any point along their paths. Modeled as a 2-player game, we characterize the structure of Pure Nash Equilibrium (PNE) joint strategies in IC2PP, and show that stable cooperation must follow a highly constrained form. We further prove that at least one PNE exists in every instance of IC2PP, and present a polynomial-time algorithm for enumerating all relevant PNEs. When multiple equilibria arise, we study coordination mechanisms based on bargaining-theoretic selection concepts and empirically compare equilibrium outcomes in terms of individual travel times and social welfare.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.16232v1" target="_blank" class="paper-title">PolyMerge: Compressing 3D Gaussian Splats with Polytope Coverings for Provably Safe Resource-Constrained Navigation</a>
-                        <span class="paper-date">2026-06-15</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Obstacle avoidance is essential for safe navigation and motion planning. Recent radiance field reconstruction methods enable object detection and modeling with high fidelity, but remain too memory- and compute-intensive for on-board perception-based path planning. To address these limitations, we propose PolyMerge to convert a large, photorealistic 3D Gaussian Splatting (3DGS) model of a scene into a lightweight representation of convex polytopes whose union provably over-approximates all obstacles in the original 3DGS model. PolyMerge tunes the polytope count to trade off conservativeness and compute cost, and integrates with control barrier functions (CBFs) to plan collision-free paths. We showcase PolyMerge in simulation and hardware experiments on a Crazyflie drone, which uses PolyMerge to compute and follow safe trajectories in real time under severe onboard compute constraints, outperforming baselines in speed while guaranteeing safety. For our code and videos, visit https://athlon76.github.io/PolyMerge-website/.</p>
                     </details>
                 </div>
             </div>

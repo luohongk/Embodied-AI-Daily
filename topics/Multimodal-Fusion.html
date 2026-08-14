@@ -600,7 +600,7 @@
                 <a href="LLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
                     <span class="nav-label">LLM</span>
-                    <span class="nav-count">80</span>
+                    <span class="nav-count">79</span>
                 </a>
                 <a href="VLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f97316"></span>
@@ -690,12 +690,12 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">70</span>
+                    <span class="nav-count">68</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">75</span>
+                    <span class="nav-count">76</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -730,7 +730,7 @@
                 <a href="Model-Predictive-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#14b8a6"></span>
                     <span class="nav-label">Model Predictive Control</span>
-                    <span class="nav-count">52</span>
+                    <span class="nav-count">51</span>
                 </a>
                 <a href="Whole-Body-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#06b6d4"></span>
@@ -819,7 +819,7 @@
             <a href="LLM.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
                 <span class="nav-label">LLM</span>
-                <span class="nav-count">80</span>
+                <span class="nav-count">79</span>
             </a>
             <a href="VLM.html" class="nav-item">
                 <span class="nav-dot" style="background:#f97316"></span>
@@ -909,12 +909,12 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">70</span>
+                <span class="nav-count">68</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">75</span>
+                <span class="nav-count">76</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -949,7 +949,7 @@
             <a href="Model-Predictive-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#14b8a6"></span>
                 <span class="nav-label">Model Predictive Control</span>
-                <span class="nav-count">52</span>
+                <span class="nav-count">51</span>
             </a>
             <a href="Whole-Body-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#06b6d4"></span>
@@ -1028,6 +1028,36 @@
                 <span class="topic-count">78 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.09001v2" target="_blank" class="paper-title">Optimal Transport-based Semantic Alignment for LLM-based Audio-Visual Speech Recognition</a>
+                        <span class="paper-date">2026-08-13</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有基于大语言模型的音视频语音识别方法在融合多模态特征时，未显式处理音频、视觉与文本模态间的表征差异，限制了跨模态整合效果。&#10;&#10;🛠 **方法**：提出基于最优传输的语义对齐框架，通过最优传输估计模态特征与语言嵌入间的概率耦合矩阵，并利用该矩阵作为软伪标签监督对比学习，将音视频特征对齐到大语言模型的语义空间后再进行融合与解码。&#10;&#10;✨ **主要贡献**：在LRS3-TED基准上，该方法在干净和不同信噪比的噪声条件下均超越强基线，达到当前最优性能，验证了显式跨模态语义对齐对提升音视频语音识别鲁棒性的有效性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Large language model (LLM)-based audio-visual speech recognition (LLM-AVSR) has recently demonstrated strong robustness in adverse acoustic environments by leveraging complementary audio and visual information. Existing approaches typically employ independently pretrained acoustic and visual encoders, whose outputs are projected and fused as soft prompts to condition an LLM for speech recognition. However, most methods perform multimodal fusion without explicitly addressing the representational discrepancy between audio, visual and text modalities, potentially limiting the effectiveness of cross-modal integration. In this paper, we propose an optimal transport (OT)-based semantic alignment framework for LLM-AVSR. The proposed method explicitly bridges the modality gap by aligning the acoustic and visual representations with reference to the linguistic embedding space of the LLM before multimodal fusion. Specifically, OT is used to estimate probabilistic coupling matrices that characterize structured correspondences between modality-specific features and linguistic embeddings. The resulting OT couplings are further utilized as soft pseudo-labels to supervise contrastive learning, encouraging the extraction of semantically coherent and cross-modal consistent audio-visual representations. By anchoring multimodal features to the linguistic space of the LLM, the proposed framework facilitates more effective multimodal fusion and decoding. We implement the proposed framework using a Whisper-based acoustic encoder, an AV-HuBERT-based visual encoder, and a LLaMA3.2-3B decoder. Experiments conducted on the LRS3-TED benchmark demonstrate consistent improvements over strong baselines and achieve state-of-the-art performance under both clean and noisy evaluation conditions across a wide range of signal-to-noise ratios (SNRs).</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.12570v1" target="_blank" class="paper-title">Attribute-Conditioned Multimodal Slot Factorization for Controllable Fashion Retrieval</a>
+                        <span class="paper-date">2026-08-12</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：时尚检索需同时满足多个属性（如类别、颜色、图案、人群），但现有单一嵌入或语义ID方法无法实现属性级别的独立控制。&#10;&#10;🛠 **方法**：提出MM-slotgate，一种多模态槽编码器，将Fashion-CLIP的文本和图像嵌入分解为四个命名属性槽，每个槽学习独立的文本-图像门控，以自适应融合视觉与文本证据。&#10;&#10;✨ **主要贡献**：在H&amp;M数据集上，MM-slotgate的ConstraintSatisfied@10达0.7566，显著优于多模态融合（0.7142）和纯文本检索（0.4755）；颜色属性提升最大（+0.568），且门控权重可解释（颜色偏图像、类别偏文本），槽码支持定向干预（颜色检索提升15.3倍），同时线性探针显示无额外信息泄漏。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Fashion retrieval often requires satisfying multiple attributes at once, such as category, color, pattern, and demographic. Monolithic embeddings mix these signals into a single vector, making attribute-specific control difficult at retrieval time. Many existing semantic-ID methods provide discrete item codes, but these codes are typically optimized as item-level or residual addresses and do not expose named, independently controllable attribute slots. We introduce MM-slotgate, a multimodal slot encoder that factorizes Fashion-CLIP text and image embeddings into four named attribute slots. Each slot learns its own text-image gate, so visually grounded attributes such as color and pattern can rely more on image evidence, while taxonomy-oriented attributes such as category and demographic can remain more text-driven. On H&M, using a combined slot-similarity and slot-logit retrieval score, MM-slotgate achieves 0.7566 macro ConstraintSatisfied@10, outperforming equal-weight multimodal fusion (0.7142) and fCLIP text-only retrieval (0.4755). The largest gain is on color, which improves from 0.321 to 0.889 (+0.568 absolute), as the learned color gate assigns 57.4% weight to image evidence. The learned gates are interpretable without modality supervision: color is image-leaning, category is text-leaning, and pattern and demographic lie near the middle. The resulting slots also remain controllable: linear probes show no measured excess leakage beyond the label-correlation baseline, and quantized slot codes support targeted intervention, including a 15.3x lift for color. These results suggest that controllable fashion retrieval benefits from typed, attribute-conditioned multimodal slots rather than either a single global embedding or opaque item-level semantic IDs.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2606.17598v2" target="_blank" class="paper-title">MuseVLA: An Adaptive Multimodal Sensing Vision-Language-Action Model for Robotic Manipulation</a>
@@ -1154,10 +1184,7 @@
                         <span class="paper-date">2026-08-08</span>
                     </div>
                                         <span class="paper-comment">📝 7 Pages, 4 figures, under review at AAAI 27</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：医学视觉问答（Med-VQA）需要对齐细微的视觉证据（如病灶纹理、边界锐度、弥漫性密度变化）与临床语言，但现有空间域多模态融合方法未能充分利用视觉和文本表示中的互补频率信息。&#10;&#10;🛠 **方法**：提出双分支频域融合模块，根据输入问题自适应调节频谱滤波，选择性保留全局低频结构和细粒度高频细节；从冻结的BiomedCLIP编码器的早期纹理敏感层和最终语义层提取互补特征，用对称InfoNCE目标对齐问题表示，并与BioBART解码器进行分阶段联合训练。&#10;&#10;✨ **主要贡献**：在PMC-VQA上预训练并在VQA-RAD和SLAKE上微调，证明频率感知的多模态融合能提升医学VQA性能，同时保持轻量高效架构。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Medical Visual Question Answering (VQA) requires aligning subtle visual evidence, including lesion texture, boundary sharpness, and diffuse density changes, with clinical language. Existing multimodal fusion approaches operating in the spatial domain may not fully exploit complementary frequency information present in visual and textual representations. We introduce a dual-branch frequency-domain fusion module that conditions spectral filtering on the input question, enabling adaptive selection of global low-frequency structure and fine-grained high-frequency detail before reconstructing the spatial representation for answer generation. To provide a richer spectrum for filtering, we extract complementary features from early texture-sensitive and final semantic layers of a frozen BiomedCLIP encoder and align both with the question representation using a symmetric InfoNCE objective prior to staged joint training with a BioBART decoder. We pretrain the proposed model on PMC-VQA and fine-tune it on the VQA-RAD and SLAKE benchmarks, demonstrating that frequency-aware multimodal fusion improves medical VQA performance while maintaining a lightweight and efficient architecture.</p>
@@ -1169,10 +1196,7 @@
                         <span class="paper-date">2026-08-07</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：多模态融合模型在推理时假设所有模态均可用，但实际中常出现模态缺失，现有方法仅关注预测精度，未解决缺失模态下置信度估计是否仍保持校准的问题。&#10;&#10;🛠 **方法**：提出Modality-Conditioned Conformal Fusion (MCCF)，结合模态丢弃训练的多模态瓶颈融合骨干、逐模态证据头（生成Dirichlet分布）、Dempster-Shafer证据融合规则（缺失模态贡献空证据被结构忽略），以及基于模态存在掩码的Mondrian共形校准模块，实现任意模态子集的有限样本组条件覆盖保证。&#10;&#10;✨ **主要贡献**：首次通过架构集成（而非事后重校准）在任意模态可用性下提供形式化覆盖保证；逐模态空泛分数可定位不确定性来源；在合成问题和三个真实多模态基准上，对所有模态子集维持目标覆盖率，显著缩小全模态与部分模态间的覆盖差距，且不牺牲预测精度。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Multimodal fusion architectures typically assume all modalities are available at inference, yet sensor failures, acquisition variability, and cost constraints routinely produce incomplete observations. Existing work treats modality absence as a prediction-accuracy problem, leaving a more basic question unanswered: whether a model's confidence estimates remain calibrated when an entire input stream is removed. We argue that missing-modality robustness and calibrated uncertainty are a single coupled property, and introduce Modality-Conditioned Conformal Fusion (MCCF), an architecture that addresses both at once. MCCF combines a multimodal bottleneck fusion backbone trained with modality dropout, per-modality evidential heads producing modality-decomposed Dirichlet distributions, and a Dempster-Shafer combination rule that fuses the per-modality evidence into a joint predictive distribution; an absent modality contributes vacuous evidence that is structurally ignored, so the fused uncertainty automatically reflects the reduced information without test-time imputation. A Mondrian conformal calibration module keyed on the modality-presence mask then provides finite-sample group-conditional coverage for every non-empty modality subset. MCCF is, to our knowledge, the first method with formal coverage guarantees under arbitrary modality availability through architectural integration rather than post-hoc recalibration, and the evidential decomposition yields per-modality vacuity scores that localise uncertainty to the absent modality responsible. Across a synthetic problem and three real multimodal benchmarks, MCCF holds its target coverage on every modality-presence subset, substantially narrows the coverage gap between full and partial modalities relative to a marginal split-conformal baseline, and imposes no measurable accuracy cost relative to temperature-scaled and evidential baselines.</p>
@@ -1744,18 +1768,6 @@
                 </div>
                 <div class="paper-card">
                     <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.09001v1" target="_blank" class="paper-title">Optimal Transport-based Semantic Alignment for LLM-based Audio-Visual Speech Recognition</a>
-                        <span class="paper-date">2026-07-10</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Large language model (LLM)-based audio-visual speech recognition (LLM-AVSR) has recently demonstrated strong robustness in adverse acoustic environments by leveraging complementary audio and visual information. Existing approaches typically employ independently pretrained acoustic and visual encoders, whose outputs are projected and fused as soft prompts to condition an LLM for speech recognition. However, most methods perform multimodal fusion without explicitly addressing the representational discrepancy between audio, visual and text modalities, potentially limiting the effectiveness of cross-modal integration. In this paper, we propose an optimal transport (OT)-based semantic alignment framework for LLM-AVSR. The proposed method explicitly bridges the modality gap by aligning the acoustic and visual representations with reference to the linguistic embedding space of the LLM before multimodal fusion. Specifically, OT is used to estimate probabilistic coupling matrices that characterize structured correspondences between modality-specific features and linguistic embeddings. The resulting OT couplings are further utilized as soft pseudo-labels to supervise contrastive learning, encouraging the extraction of semantically coherent and cross-modal consistent audio-visual representations. By anchoring multimodal features to the linguistic space of the LLM, the proposed framework facilitates more effective multimodal fusion and decoding. We implement the proposed framework using a Whisper-based acoustic encoder, an AV-HuBERT-based visual encoder, and a LLaMA3.2-3B decoder. Experiments conducted on the LRS3-TED benchmark demonstrate consistent improvements over strong baselines and achieve state-of-the-art performance under both clean and noisy evaluation conditions across a wide range of signal-to-noise ratios (SNRs).</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
                         <a href="https://arxiv.org/abs/2607.08573v1" target="_blank" class="paper-title">SHAP-Weighted Cross-Modal Expert Fusion for Emotion and Sentiment Recognition: Evidence and Limits</a>
                         <span class="paper-date">2026-07-09</span>
                     </div>
@@ -1980,18 +1992,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Protein automodeling from cryo-EM density maps faces unique challenges in enforcing physicochemical validity and managing conformational heterogeneity. Current solvers are often limited to static predictions or require computationally intensive heuristic searches. We present CryoACE, an end-to-end framework that reconstructs precise atomic graphs for both homogeneous and heterogeneous structures. Our method features two key innovations: an atom-centric reconstruction paradigm, where density features are sampled directly at atomic coordinates and iteratively recycled to refine structures, replacing expensive voxel convolutions for efficient multimodal fusion; and a training-free guidance mechanism that leverages predicted local resolution priors to resolve dynamic ambiguity. Validated on a newly constructed high-quality dataset, CryoACE significantly outperforms existing baselines on static benchmarks and, for the first time, unveils atomic-level dynamic conformations on complex real-world datasets like EMPIAR-10345 without relying on pre-built static structures.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.30189v1" target="_blank" class="paper-title">DAIN: Dynamic Agent-Based Interaction Network for Efficient and Collaborative Multimodal Reasoning</a>
-                        <span class="paper-date">2026-06-29</span>
-                    </div>
-                                        <span class="paper-comment">📝 19 pages</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Current multimodal fusion approaches, particularly those based on static Mixture-of-Experts (MoE) architectures, often struggle to provide the adaptive and efficient collaborative reasoning required by complex real-world applications. We introduce the Dynamic Agent-based Interaction Network (DAIN), which reconceptualizes multimodal fusion as a dynamic, multi-agent collaborative process. DAIN employs a context-aware Meta-Controller that dynamically schedules sparse activation of specialized interaction agents and orchestrates compressed inter-agent communication for consensus-building. The framework is guided by a multi-objective loss function that jointly optimizes task accuracy, agent specialization, and operational efficiency through sparse activation and communication regularization. Comprehensive evaluations across five diverse benchmarks -- ADNI, MIMIC-IV, MM-IMDB, CMU-MOSI, and ENRICO -- establish DAIN as a new state-of-the-art, delivering significant performance improvements including a 2.6\% accuracy gain on ADNI. Ablation studies verify the critical roles of both dynamic scheduling and agent communication. Furthermore, DAIN offers enhanced interpretability by exposing context-dependent agent roles and collaboration patterns while maintaining computational efficiency through sample-wise sparse agent activation. Our work demonstrates the promise of dynamic, agent-based paradigms for multimodal reasoning.</p>
                     </details>
                 </div>
             </div>

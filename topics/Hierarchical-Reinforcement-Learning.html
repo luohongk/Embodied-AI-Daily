@@ -600,7 +600,7 @@
                 <a href="LLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
                     <span class="nav-label">LLM</span>
-                    <span class="nav-count">80</span>
+                    <span class="nav-count">79</span>
                 </a>
                 <a href="VLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f97316"></span>
@@ -690,12 +690,12 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">70</span>
+                    <span class="nav-count">68</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">75</span>
+                    <span class="nav-count">76</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -730,7 +730,7 @@
                 <a href="Model-Predictive-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#14b8a6"></span>
                     <span class="nav-label">Model Predictive Control</span>
-                    <span class="nav-count">52</span>
+                    <span class="nav-count">51</span>
                 </a>
                 <a href="Whole-Body-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#06b6d4"></span>
@@ -819,7 +819,7 @@
             <a href="LLM.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
                 <span class="nav-label">LLM</span>
-                <span class="nav-count">80</span>
+                <span class="nav-count">79</span>
             </a>
             <a href="VLM.html" class="nav-item">
                 <span class="nav-dot" style="background:#f97316"></span>
@@ -909,12 +909,12 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">70</span>
+                <span class="nav-count">68</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">75</span>
+                <span class="nav-count">76</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -949,7 +949,7 @@
             <a href="Model-Predictive-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#14b8a6"></span>
                 <span class="nav-label">Model Predictive Control</span>
-                <span class="nav-count">52</span>
+                <span class="nav-count">51</span>
             </a>
             <a href="Whole-Body-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#06b6d4"></span>
@@ -1028,6 +1028,21 @@
                 <span class="topic-count">78 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.13032v1" target="_blank" class="paper-title">Pareto-Aware Hierarchical Reinforcement Learning for Online Resource Allocation in RIS-assisted Large-Scale IoT Systems</a>
+                        <span class="paper-date">2026-08-13</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在RIS辅助的大规模物联网系统中，高维物理层变量和非凸Pareto最优速率集导致实时资源分配面临严峻的计算挑战。&#10;&#10;🛠 **方法**：提出一种降维的分层强化学习框架PAAERL，先用低维权向量替代高维RIS波束赋形变量以严格表征Pareto最优前沿，再集成自编码器进行二次数据驱动压缩，将优先级空间映射为紧凑的连续潜在动作空间。&#10;&#10;✨ **主要贡献**：在凸与非凸速率区域均理论上避免几何信息损失，显著缩短离线训练时间、加速在线策略收敛并降低网络总成本，在包括多用户移动边缘计算在内的实际场景中优于现有基准方法，展现出卓越的可扩展性和实用价值。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>With the rapid evolution of 5G and emerging 6G networks, reconfigurable intelligent surfaces (RIS) have become a critical technology for enhancing wireless communication scenarios. However, optimizing RIS-assisted multi-user systems typically introduces high-dimensional physical layer variables and non-convex Pareto-optimal rate sets, posing severe computational challenges for real-time applications. To address these limitations, this paper proposes a dimension-reduced, hierarchical reinforcement learning (RL) framework, termed Pareto-aware autoencoder-assisted RL (PAAERL), to optimize online resource allocation in RIS-assisted Internet of Things (IoT) networks. Our approach first substitutes high-dimensional continuous RIS beamforming variables with lower-dimensional weight vectors that strictly represent the Pareto-optimal frontier, theoretically avoiding geometric information loss across both convex and non-convex rate regions. To further mitigate the curse of dimensionality in dense networks, an autoencoder architecture is integrated to execute a secondary, data-driven compression phase, mapping the priority space into a highly condensed continuous latent action space. Extensive simulations conducted across practical communication scenarios, including multi-user mobile edge computing (MEC) networks, demonstrate that the proposed PAAERL framework drastically reduces offline training times, accelerates online policy convergence, and significantly decreases overall network costs compared to state-of-the-art benchmarks, underscoring its exceptional scalability and practical viability for next-generation intelligent IoT environments.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2608.05832v1" target="_blank" class="paper-title">Enhancing Social Intelligence in LLMs with Hierarchical Reasoning and Utterance-Level Goal Rewarding</a>
@@ -1169,10 +1184,7 @@
                         <span class="paper-date">2026-07-26</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：全球运营中突发冲击频发，需要能适应市场与运营条件变化的决策规则，尤其针对具有层级结构（长期与短期决策共享目标）的系统，如何联合优化这些相互依赖的规则以增强运营韧性。&#10;&#10;🛠 **方法**：提出一种双时间尺度层级强化学习框架，分别在长期与短期时间尺度上自适应调整策略，并通过同步更新耦合策略，首次证明了此类耦合双时间尺度学习的收敛性。&#10;&#10;✨ **主要贡献**：在理论层面，证明了策略对与最优策略对的平均差距为 \(O(T^{-1/2})\)，在决策失误导致明显利润损失时可改进至 \(O(\log T/T)\)；在二手车案例中，该框架在联合供需冲击下平均利润提升9.2%，在长期冲击情景下提升11.8%，且利润轨迹更稳定，无需改变现有层级决策结构即可增强运营韧性。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Unexpected shocks recur in global operations, requiring decision rules that adapt as market and operating conditions change. Many operational systems also have hierarchical structures in which long-term and short-term decisions pursue a shared objective. We study how hierarchical reinforcement learning can strengthen resilience by adapting these interdependent rules jointly. We develop a two-timescale hierarchical reinforcement learning framework that adapts long-term and short-term policies at their respective time scales. Because the policies are interdependent, we synchronize their updates and prove, to our knowledge, the first convergence guarantees for coupled two-timescale learning. Over $T$ periods, our policies' average gap from an optimal policy pair is $O(T^{-1/2})$, improving to $O(\log T/T)$ when poor decisions produce clearer profit losses. In a used-car case study, inventory replenishment is the long-term decision and customer-arrival pricing the short-term decision. Relative to the strongest partially adaptive benchmark, the framework increases mean profit by $9.2\%$ under joint demand-supply shocks and by $11.8\%$ under a prolonged shock scenario, while maintaining a more stable profit trajectory over time. Short-term adaptation addresses routine seasonality and one-sided disruptions by responding immediately to changing conditions. Under joint demand-supply shocks, however, it is insufficient alone; long-term adaptation is also needed to create favorable conditions for short-term decisions. Joint adaptation thus yields higher and more stable profits through disruption and recovery. Because many organizations already use hierarchical planning, the framework strengthens operational resilience without altering existing decision structures.</p>
@@ -1980,18 +1992,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Vision-language models (VLMs) enhance the planning capability of end-to-end (E2E) driving policy by leveraging high-level semantic reasoning. However, existing approaches often overlook the dual-system consistency between VLM's high-level decision and E2E's low-level planning. As a result, the generated trajectories may misalign with the intended driving decisions, leading to weakened top-down guidance and decision-following ability of the system. To address this issue, we propose Senna-2, an advanced VLM-E2E driving policy that explicitly aligns the two systems for consistent decision-making and planning. Our method follows a consistency-oriented three-stage training paradigm. In the first stage, we conduct driving pre-training to achieve preliminary decision-making and planning, with a decision adapter transmitting VLM decisions to E2E policy in the form of implicit embeddings. In the second stage, we align the VLM and the E2E policy in an open-loop setting. In the third stage, we perform closed-loop alignment via bottom-up Hierarchical Reinforcement Learning in 3DGS environments to reinforce the safety and efficiency. Extensive experiments demonstrate that Senna-2 achieves superior dual-system consistency (19.3% F1 score improvement) and significantly enhances driving safety in both open-loop (5.7% FDE reduction) and closed-loop settings (30.6% AF-CR reduction).</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2603.10306v1" target="_blank" class="paper-title">SteadyTray: Learning Object Balancing Tasks in Humanoid Tray Transport via Residual Reinforcement Learning</a>
-                        <span class="paper-date">2026-03-11</span>
-                    </div>
-                                        <span class="paper-comment">📝 Project website: https://steadytray.github.io/</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Stabilizing unsecured payloads against the inherent oscillations of dynamic bipedal locomotion remains a critical engineering bottleneck for humanoids in unstructured environments. To solve this, we introduce ReST-RL, a hierarchical reinforcement learning architecture that explicitly decouples locomotion from payload stabilization, evaluated via the SteadyTray benchmark. Rather than relying on monolithic end-to-end learning, our framework integrates a robust base locomotion policy with a dynamic residual module engineered to actively cancel gait-induced perturbations at the end-effector. This architectural separation ensures steady tray transport without degrading the underlying bipedal stability. In simulation, the residual design significantly outperforms end-to-end baselines in gait smoothness and orientation accuracy, achieving a 96.9% success rate in variable velocity tracking and 74.5% robustness against external force disturbances. Successfully deployed on the Unitree G1 humanoid hardware, this modular approach demonstrates highly reliable zero-shot sim-to-real generalization across various objects and external force disturbances.</p>
                     </details>
                 </div>
             </div>

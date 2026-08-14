@@ -600,7 +600,7 @@
                 <a href="LLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
                     <span class="nav-label">LLM</span>
-                    <span class="nav-count">80</span>
+                    <span class="nav-count">79</span>
                 </a>
                 <a href="VLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f97316"></span>
@@ -690,12 +690,12 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">70</span>
+                    <span class="nav-count">68</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">75</span>
+                    <span class="nav-count">76</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -730,7 +730,7 @@
                 <a href="Model-Predictive-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#14b8a6"></span>
                     <span class="nav-label">Model Predictive Control</span>
-                    <span class="nav-count">52</span>
+                    <span class="nav-count">51</span>
                 </a>
                 <a href="Whole-Body-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#06b6d4"></span>
@@ -819,7 +819,7 @@
             <a href="LLM.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
                 <span class="nav-label">LLM</span>
-                <span class="nav-count">80</span>
+                <span class="nav-count">79</span>
             </a>
             <a href="VLM.html" class="nav-item active">
                 <span class="nav-dot" style="background:#f97316"></span>
@@ -909,12 +909,12 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">70</span>
+                <span class="nav-count">68</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">75</span>
+                <span class="nav-count">76</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -949,7 +949,7 @@
             <a href="Model-Predictive-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#14b8a6"></span>
                 <span class="nav-label">Model Predictive Control</span>
-                <span class="nav-count">52</span>
+                <span class="nav-count">51</span>
             </a>
             <a href="Whole-Body-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#06b6d4"></span>
@@ -1030,6 +1030,96 @@
             <div class="paper-list">
                 <div class="paper-card">
                     <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2606.20077v2" target="_blank" class="paper-title">The Hidden Evolution of Disguised Visual Context inside the VLM</a>
+                        <span class="paper-date">2026-08-13</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：视觉令牌（visual tokens）进入大语言模型（LLM）后如何被转化为有意义的表示，以及不同集成架构（如上下文注入与逐层注入）如何影响视觉信息与语言空间的交互，目前缺乏公平对比和深入理解。&#10;&#10;🛠 **方法**：在相同训练条件下，对上下文注入和逐层注入两种视觉-语言模型（VLM）集成范式进行公平比较，在单图像、多图像和视频基准上评估，并分析视觉令牌在LLM内部的频率特征变化和表示演化过程。&#10;&#10;✨ **主要贡献**：揭示了视觉令牌在LLM内部从“伪装视觉上下文”（缺乏语言结构的原始表示）逐步演化的隐藏过程，发现不同集成范式捕获视觉信号的不同频率特征，并证明注意力分配不足以解释性能，各层的视觉表示质量才是关键驱动因素。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Visual tokens enter Large Language Models (LLMs) as raw, foreign signals. How they are transformed into meaningful representations and interact with the language space depends entirely on the integration architecture. Whether by treating visual tokens as in-context prompts within the input sequence or injecting them directly into the LLM's intermediate layers. A controlled comparison and understanding of how these architectural choices affect visual information and its internal transformation to integrate with the LLM remains underexplored. We provide a fair comparison by evaluating in-context and layer-wise injection VLM integration paradigms under identical training conditions across single image, multi-image, and video benchmarks. In doing so, we uncover a hidden evolution where visual tokens enter the LLM as disguised visual context, raw representations lacking linguistic structure, but are progressively reshaped depending on the integration paradigm, each capturing fundamentally different frequency characteristics of the visual signal. We show that this evolution inside the LLM determines what visual features the VLM can utilize effectively, how visual representations align with the language space, and ultimately how each paradigm performs across different tasks. We further demonstrate that attention allocation alone is insufficient, and that performance is driven by the quality of visual representations at each layer.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.13416v1" target="_blank" class="paper-title">StreamTTT: Reconciling Real-Time Perception and Long-Term Memory in Streaming VLMs</a>
+                        <span class="paper-date">2026-08-13</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：流式视觉语言模型（VLMs）在实时感知与长期记忆之间存在权衡，缩短上下文虽能提升当前场景感知，却损害了长程回忆能力。&#10;&#10;🛠 **方法**：提出StreamTTT，将长程历史写入在线更新的快速权重（fast weights）中，使其脱离注意力上下文，同时保留短滑动键值缓存用于近期证据，从而缓解注意力稀释；模型在离线长视频问答和新构建的实时问答语料上联合训练。&#10;&#10;✨ **主要贡献**：在OVO-Bench上，StreamTTT-4B相比SimpleStream-4B在实时感知上提升1.4点，在回溯推理上提升3.7点；在StreamingBench的RTVU子集上，与更大的SimpleStream-8B表现相当，实现了实时感知与长期记忆的有效调和。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Humans effortlessly perceive the present while remembering the past, yet streaming VLMs often trade off real-time perception against long-term memory. Prior work shows that shortening the context can sharpen current-scene perception at the expense of long-range recall. To reconcile these abilities, we introduce StreamTTT, which writes long-range history into online-updated fast weights outside the attention context. This leaves a short sliding key-value cache dedicated to recent evidence, mitigating attention dilution. We train StreamTTT jointly on offline long-video QA and a newly constructed real-time QA corpus. On OVO-Bench, StreamTTT-4B outperforms SimpleStream-4B by 1.4 points in real-time perception and 3.7 points in backward tracing. It also remains competitive with the larger SimpleStream-8B on the Real-Time Visual Understanding (RTVU) subset of StreamingBench. Our code will be released.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.13267v1" target="_blank" class="paper-title">How Do VLMs Behave When Blind or Misled? Behavioral Evaluation of VLMs on Scientific Figures</a>
+                        <span class="paper-date">2026-08-13</span>
+                    </div>
+                                        <span class="paper-comment">📝 25 pages including appendix. Project website: https://scifigbench.nlp4sci.com</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有视觉语言模型（VLM）基准过度关注感知与推理准确性，忽视了模型在视觉证据缺失或误导时的行为可靠性（如是否承认不确定、抵抗误导信息）。&#10;&#10;🛠 **方法**：构建SciFigBench诊断基准，包含250张科学图表及34,000+测试配置，并设计Admittance-Resistance-Inductance（A-R-I）框架，通过选择性模糊、误导性标题等探针系统评估模型在不确定情境下的行为。&#10;&#10;✨ **主要贡献**：发现高感知与推理精度并不保证行为可靠性——GPT-5.2虽描述质量最高（MQM 91.6），但在96%的不可读案例中产生幻觉；而Gemini 3.1 Pro在71%此类案例中承认不确定，且抵抗误导得分最高（0.91），揭示行为可靠性是科学工作流部署的关键维度。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Existing vision-language model (VLM) benchmarks emphasize perception and reasoning accuracy (how well VLMs describe and reason about what they see in an image), with limited attention to behavioral reliability under uncertainty (how they behave when visual evidence is missing or misleading). We introduce SciFigBench, a diagnostic VLM benchmark for scientific figure understanding that jointly evaluates perception, reasoning, and behavioral reliability under uncertainty. It contains 250 figures with high-quality human annotations across three evaluation aspects, totaling 600+ hours of annotation effort. We further extend these figures via image transformations, reasoning questions, resistance probes, caption-bias probes, and confirmed selective-blur targets, producing over 34,000 evaluation setups for stress testing. We further propose the Admittance-Resistance-Inductance (A-R-I) framework to evaluate whether models acknowledge insufficient evidence, resist misleading context, and infer cautiously from partial information. Our results reveal substantial behavioral differences among models. GPT-5.2 achieves the highest description quality (MQM 91.6) with strong reasoning accuracy (78.4%), yet hallucinates unreadable content in 96% of cases, whereas Gemini 3.1 Pro, a comparably capable model (MQM 90.2, reasoning 81.0%), admits uncertainty in 71% of such cases and achieves the strongest resistance score (0.91). These findings show that high perception and reasoning accuracy alone do not guarantee behavioral reliability, a dimension critical for deployment in scientific workflows.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.13226v1" target="_blank" class="paper-title">CoverPrune: Coverage-Driven Token Pruning for 3D VLMs via Optimal Transport</a>
+                        <span class="paper-date">2026-08-13</span>
+                    </div>
+                                        <span class="paper-comment">📝 Accepted to ECCV 2026 as an Oral Presentation</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：3D视觉语言模型（3D VLMs）在推理时因视觉token数量庞大而产生严重计算瓶颈，现有基于多样性的token剪枝方法会丢弃代表性原型token，破坏多视角一致性和几何结构，影响空间推理能力。&#10;&#10;🛠 **方法**：提出CoverPrune，一种无需训练的框架，将推理时token剪枝建模为最优传输（OT）问题；设计特征-空间-时间（FST）传输代价和目标容量，并采用空间引导的贪心选择（SGS）算法近似求解；另提出加速变体CoverPrune-Lite，利用空间结构化局部匹配降低开销。&#10;&#10;✨ **主要贡献**：将剪枝范式从“最大化多样性”转向“保留视觉证据覆盖”，在多个3D空间推理基准上取得最先进的token效率，即使在极高剪枝预算下仍保持稳健推理性能，代码已开源。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>While 3D Vision-Language Models (3D VLMs) have demonstrated remarkable spatial reasoning capabilities, they suffer from massive visual token counts that create severe computational bottlenecks during inference. Existing token pruning methods primarily rely on diversity-based selection, discarding similar tokens to maximize dispersion. However, in 3D environments, this approach frequently drops representative prototype tokens in favor of outliers, breaking the multi-view consistencies and geometric structures essential for spatial reasoning. In this paper, we propose a paradigm shift for 3D VLM token pruning: from maximizing diversity to preserving visual evidence coverage. We introduce CoverPrune, a training-free framework that formulates inference-time token pruning as an Optimal Transport (OT) problem. To overcome the intractable combinatorial subset selection inherent in this formulation, we design the Feature-Spatial-Temporal (FST) transport cost and target capacity, along with an efficient Spatial-Guided Greedy Selection (SGS) algorithm to approximate the OT objective. Furthermore, we propose CoverPrune-Lite, an accelerated variant utilizing spatially structured local matching for minimal overhead. Extensive experiments across multiple 3D visual-spatial reasoning benchmarks demonstrate that our methods achieve state-of-the-art token efficiency, maintaining robust reasoning performance even under highly aggressive pruning budgets. Visit our project website at https://github.com/Brucess/CoverPrune.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.13119v1" target="_blank" class="paper-title">QuISE: Defense against Typographic Attacks on VLMs via Query-Irrelevant Semantic Editing</a>
+                        <span class="paper-date">2026-08-13</span>
+                    </div>
+                                        <span class="paper-comment">📝 10 pages, 7 figures; includes supplementary material</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：针对视觉语言模型（VLMs）面临的文字攻击（typographic attacks）威胁，现有防御方法依赖模型内部结构或额外训练，难以适用于闭源模型。&#10;&#10;🛠 **方法**：提出QuISE，一种无需训练、模型无关的黑盒防御方法，通过影响感知的文字定位识别与当前查询相关的文本区域，并用与查询和图像无关的两种语义替代文本进行编辑，最终基于编辑后图像的答案一致性确定输出。&#10;&#10;✨ **主要贡献**：在三个基准、四种攻击设置和四个VLMs上验证了有效性，防御准确率持续提升，恢复率达67.9-75.0%，伤害率仅0.5-1.1%，且无需访问模型内部组件。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Typographic attacks pose a critical threat to vision-language models (VLMs) by injecting misleading text into images and causing models to rely on adversarial textual cues rather than visual evidence. Existing defenses often require model-specific modifications, additional training, or access to internal model components, limiting their applicability to modern closed-source VLMs. In this paper, we propose QuISE, a model-agnostic, training-free black-box defense based on query-irrelevant semantic editing. QuISE first identifies text regions likely to affect the current query through influence-aware text localization. QuISE then replaces these regions with two semantically distinct replacement texts that are irrelevant to both the query and the image. The final answer is determined by answer consistency across the edited images. Extensive experiments on three typographic-attack benchmarks, four attack settings, and four VLMs show that QuISE consistently improves defended accuracy. QuISE achieves a recovery rate of 67.9-75.0% with a harm rate of 0.5-1.1%.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2506.17337v5" target="_blank" class="paper-title">Can Generalist Vision Language Models (VLMs) Rival Specialist Medical VLMs? Benchmarking and Strategic Insights</a>
+                        <span class="paper-date">2026-08-12</span>
+                    </div>
+                                        <span class="paper-comment">📝 version 5</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：探究通用视觉语言模型（VLMs）与专用医学VLMs在临床诊断任务中的性能差异，明确各自适用的条件。&#10;&#10;🛠 **方法**：系统对比通用VLMs（经高效微调）与专用医学VLMs在多种医学模态任务上的表现，包括已知模态和未见/罕见分布外（OOD）模态的迁移测试。&#10;&#10;✨ **主要贡献**：发现高效微调的通用VLMs在多数任务上能达到甚至超越专用医学模型，尤其在OOD模态迁移中优势明显，表明通用模型可作为更具可扩展性和成本效益的临床AI发展路径。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Vision Language Models (VLMs) have shown promise in automating image diagnosis and interpretation in clinical settings. However, developing specialist medical VLMs requires substantial computational resources and carefully curated datasets, and it remains unclear under which conditions generalist and specialist medical VLMs each perform best. This study highlights the complementary strengths of specialist medical and generalist VLMs. Specialists remain valuable in modality-aligned use cases, but we find that efficiently fine-tuned generalist VLMs can achieve comparable or even superior performance in most tasks, particularly when transferring to unseen or rare OOD medical modalities. These results suggest that generalist VLMs, rather than being constrained by their lack of specialist medical pretraining, may offer a scalable and cost-effective pathway for advancing clinical AI development.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
                         <a href="https://arxiv.org/abs/2608.12127v1" target="_blank" class="paper-title">SCOPE-Router: Cost-Aware Open-Set VLM Routing for Execution-Oriented Tasks</a>
                         <span class="paper-date">2026-08-12</span>
                     </div>
@@ -1041,6 +1131,21 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Model routing aims to select the most suitable model from a candidate pool for each query, balancing quality and cost. Existing VLM routing research is limited to traditional VQA evaluation, lacks systematic calibration optimization for open-set scenarios, and employs training objectives that dilute multi-positive signals via softmax normalization without incorporating cost. We address these limitations with three contributions: (1)VLM-ExecRouterBench, the first execution-oriented VLM routing benchmark covering Code, Agentic, and Search domains with 11 candidate models spanning nearly two orders of magnitude in pricing; (2)SCOPE-Router, a dual-tower router that matches queries to model behavior profiles constructed via hybrid calibration (random/diagnostic/diversity sampling), enabling new models to join routing without retraining; (3)CRM+RCCR, an architecture-agnostic cost-aware objective that encodes cost preference into continuous relevance targets through per-pair independent scoring, eliminating multi-positive dilution while regularizing queries with similar routing preferences to be closer in the routing space. Empirically, SCOPE-Router achieves the best Rank Score on all three benchmarks, surpassing the runner-up by 1.84 points under OOD settings and by 6.75 points under doubly OOD open-set evaluation. When applied to four diverse routers, CRM+RCCR improves Rank Score by 1.25--6.21 points.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2604.23724v4" target="_blank" class="paper-title">Zoom In, Reason Out: Efficient Far-field Anomaly Detection in Expressway Surveillance Videos via Focused VLM Reasoning Guided by Bayesian Inference</a>
+                        <span class="paper-date">2026-08-12</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：高速公路监控视频中远距离目标异常行为难以检测，现有视觉语言模型处理全局画面时注意力分散且计算成本高。&#10;&#10;🛠 **方法**：提出VIBES异步协作框架，通过在线贝叶斯推理模块动态评估车辆轨迹，更新正常驾驶行为的概率边界，精准定位异常时空区域，仅将局部画面输入视觉语言模型进行语义推理。&#10;&#10;✨ **主要贡献**：显著提升远距离异常检测精度，降低计算开销，实现高实时性与可解释性，并在多种高速公路场景下展现良好泛化能力。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Expressway video anomaly detection is important for traffic safety, but remains challenging across diverse scenes, particularly for far-field vehicles with subtle abnormal motion. Vision-Language Models (VLMs) provide strong semantic reasoning capabilities, yet processing full frames can dilute evidence from distant targets and introduce substantial computational overhead. To address these challenges, we propose VIBES, an asynchronous framework that uses Bayesian inference to guide focused VLM reasoning. Specifically, an online kinematics-guided Bayesian inference module continuously estimates a context-dependent normal-motion distribution from vehicle trajectories and updates its probabilistic boundaries. Deviations from these boundaries produce asynchronous triggers that localize candidate anomalies in time and space. Instead of processing continuous full-frame video, the VLM reasons only over selected frames and localized visual regions associated with the triggers, reducing irrelevant visual content and unnecessary inference. Extensive experiments show that VIBES improves far-field anomaly detection and semantic interpretation while achieving real-time processing efficiency across diverse expressway conditions.</p>
                     </details>
                 </div>
                 <div class="paper-card">
@@ -1079,10 +1184,7 @@
                         <span class="paper-date">2026-08-11</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：水下图像重建缺乏系统性评估方法，现有方法难以准确衡量重建精度、跨视角一致性和水参数影响。&#10;&#10;🛠 **方法**：提出一套系统化评估流程，涵盖重建准确性、相机移动下的重建一致性及水参数效应，并用于对比基于物理散射模型的传统方法与视觉语言模型（VLMs）。&#10;&#10;✨ **主要贡献**：实验表明VLMs在各项指标上全面且显著优于基于物理模型的方法，主要得益于其强大的图像先验能力；真实水下场景图像结果进一步验证了该评估体系的有效性。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Underwater image restoration consists of recovering an image which looks like there is no water present. To date, evaluation has not been systematic. This paper describes a systematic evaluation pipeline for underwater reconstruction, which can be used to assess a method for accuracy; consistency of reconstruction over camera moves; and the effect of water parameters. We use this pipeline to evaluate a range of current procedures, from models constructed using explicit but approximate physical models of scattering to Vision-Language Models (VLMs which are not currently trained with explicit physical models). Overall, VLMs wholly and significantly outperform physically based models in our evaluation, likely because of the importance of a strong image prior. Results on images of real underwater scenes strongly confirm the evaluation.</p>
@@ -1094,10 +1196,7 @@
                         <span class="paper-date">2026-08-11</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：建筑和墙体矢量化制图依赖人工编辑，效率低且难以满足制图标准，需要自动化辅助工具来加速人工质量控制与修正过程。&#10;&#10;🛠 **方法**：基于Florence-2视觉语言模型（VLM）扩展，开发了Click2Poly人机协同AI助手，通过用户点击直接编辑建筑或墙体矢量图层，并集成于QGIS插件中。&#10;&#10;✨ **主要贡献**：提出了一种交互式矢量编辑范式，将VLM与地理信息生产工具结合，显著提升真实生产环境中建筑和墙体矢量编辑的速度与效率。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Accurate vector mapping of buildings and walls is critical for geospatial applications but remains a labor-intensive process. While recent deep learning methods have improved automatic extraction, in order to meet cartographic standards they always require a human to perform quality control and fix complex cases in the extraction. We present Click2Poly, a human-in-the-loop AI assistant designed to speed up this manual step. Extending the Florence-2 Vision Language Model (VLM), Click2Poly responds to user clicks by editing the building or wall vector layer directly. Implemented as a QGIS plugin, Click2Poly speeds up the manual editing of building and wall vector layers in a real-world production environment.</p>
@@ -1109,10 +1208,7 @@
                         <span class="paper-date">2026-08-11</span>
                     </div>
                                         <span class="paper-comment">📝 Published in ACL 2026 Findings</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有视觉语言模型（VLM）在UI理解上主要基于静态截图，缺乏对动态UI动画的理解能力，本文旨在评估VLM在UI动画感知、目的识别和意义解读上的表现。&#10;&#10;🛠 **方法**：构建了AniMINT数据集，包含300个密集标注的UI动画视频，并系统评估了多个先进VLM在动画效果感知、动画目的识别和动画意义解释上的能力，同时引入Motion、Context和Perceptual Cues（MCPC）因素分析性能瓶颈。&#10;&#10;✨ **主要贡献**：发现VLM能可靠检测基础运动，但在高层动画理解上表现不稳定，与人类水平存在显著差距；通过MCPC分析揭示了影响VLM性能的关键因素，为未来UI动画理解研究指明了改进方向。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>AI agents operating on user interfaces must understand how interfaces communicate state and feedback to act reliably. As a core communicative modality, animations are increasingly used in modern interfaces, serving critical functional purposes beyond mere aesthetics. Thus, understanding UI animation is essential for comprehensive interface interpretation. However, recent studies of Vision Language Models (VLMs) for UI understanding have focused primarily on static screenshots, leaving it unclear how well these models handle dynamic UI animations. To address this gap, we created AniMINT, a novel dataset of 300 densely annotated UI animation videos. We systematically evaluate state-of-the-art VLMs on UI animation understanding, including their abilities to perceive the animation effects, identify animation purposes, and interpret animation meaning. Our results show that VLMs can reliably detect primitive motion. However, their high-level animation interpretation remains inconsistent, with substantial gaps relative to human performance. Finally, we use Motion, Context, and Perceptual Cues (MCPC) to probe factors affecting VLM performance, revealing key bottlenecks and directions for future improvement.</p>
@@ -1124,10 +1220,7 @@
                         <span class="paper-date">2026-08-11</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有视觉语言模型（VLM）的后门攻击通常被视为静态漏洞，绑定固定触发器与有限目标，低估了攻击者可动态控制模型输出的威胁。&#10;&#10;🛠 **方法**：提出一种可编程后门攻击，包含两个组件：一是启发式投毒策略，让模型学习“触发器即指令”的通用规则；二是特征空间触发器隐写方法，将任意指定目标描述映射为隐蔽视觉触发器（范数控制扰动或非语义补丁），插入图像后诱导模型输出对齐目标语义。&#10;&#10;✨ **主要贡献**：首次实现任意到任意的标题控制范式，攻击者可在推理时选择未见过的目标语义并合成触发器，无需重训练；实验证明该方法在多种后门防御下仍保持高成功率、模型清洁效用和隐蔽性。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Existing vision-language model (VLM) backdoors are usually treated as static vulnerabilities: one-to-one and N-to-N attacks bind one or more triggers to a finite set of targets before victim training. This assumption substantially underestimates the threat. We show that a single poisoning phase can implant a programmable backdoor into a VLM, allowing an attacker to choose previously unseen target-caption semantics at inference time and synthesize corresponding stealthy triggers on demand. Unlike fixed-mapping attacks, the proposed any-to-any caption-control paradigm decouples post-training target selection from poisoning, enabling dynamic control of target captions without retraining the VLM. Our method has two components. First, a heuristic poisoning strategy exposes the model to diverse trigger-caption pairs, encouraging it to learn a general trigger-as-instruction rule rather than memorize a specific backdoor pattern. Second, a feature-space trigger steganography method maps any attacker-specified target caption to a stealthy visual trigger, implemented as either a norm-controlled perturbation or a non-semantic patch. Once inserted into arbitrary images, these triggers cause the poisoned VLM to generate outputs semantically aligned with the chosen target caption, even when the target was unseen during poisoning. Extensive experiments show that our attack achieves high any-to-any caption-control success rates, preserves clean model utility, and remains effective under several classical backdoor defenses.</p>
@@ -1139,10 +1232,7 @@
                         <span class="paper-date">2026-08-11</span>
                     </div>
                                         <span class="paper-comment">📝 9 pages, 6 figures, 3 tables</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有图像编辑模型可被恶意利用来篡改公开图片，而现有防御方法要么通过明显破坏暴露保护意图，要么无法真正阻止编辑行为本身。&#10;&#10;🛠 **方法**：提出NullEdit，通过重定向VLM对“参考图像+指令”的联合表征来抑制编辑，利用正常编辑与无编辑锚点引导表征偏移，并通过跨提示梯度平均增强对未见指令的泛化能力。&#10;&#10;✨ **主要贡献**：在Step1X-Edit和Qwen-Image-Edit上，NullEdit将EditReward IF分数平均降低0.813（相对SOTA），同时保持主体身份和源内容不变，实现隐蔽且无害的编辑抑制。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Modern image editors combine vision-language models (VLMs) with diffusion transformer backbones to modify a single reference image according to instructions without fine-tuning. This capability also enables unauthorized manipulation of publicly released images. Existing inference-time defenses either invalidate edits through conspicuous corruption, thereby exposing the protection, or allow them to proceed with identity or reference content drift, thereby failing to prevent the editing behavior itself. We instead target a stealthy and harmless no-op in which the requested edit is suppressed, the output remains natural and source-preserving without conspicuous artifacts or identity replacement, and harmful semantics requested by malicious instructions are absent. We propose NullEdit, which targets the VLM representation jointly formed from the reference image and instruction before it conditions the downstream DiT backbone. Using normal-edit and no-edit anchors, NullEdit redirects this representation, while cross-prompt gradient averaging transfers protection to held out instructions. Across Step1X-Edit and Qwen-Image-Edit on CelebA-HQ and VGGFace2, NullEdit reduces the EditReward IF score by 0.813 on average relative to the SOTA baseline while preserving subject identity and source content.</p>
@@ -1154,10 +1244,7 @@
                         <span class="paper-date">2026-08-11</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有3D室内布局生成研究主要针对矩形房间和简单家具摆放，忽略了真实住宅中常见的非矩形几何结构和严格的门窗约束，难以直接应用于家居零售场景。&#10;&#10;🛠 **方法**：提出一个混合式分层框架，将布局生成分为三个阶段：功能家具聚类与区内细粒度摆放、基于视觉语言模型（VLM）的宏观路由以在多样多边形边界内锚定区域和独立家具、以及基于规则的优化实现无碰撞且符合建筑约束的微观排列。&#10;&#10;✨ **主要贡献**：在量产级目录和真实不规则户型上验证，该方法在感知合理性上达到最优，同时保持良好几何合规性和较低延迟，并能支持现有方法无法处理的非矩形边界，填补了学术研究与实际应用之间的空白。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Generating physically plausible 3D room layouts is essential for home furnishing retail, enabling customers to visualize products in their own homes and confidently make purchasing decisions. However, a gap exists between academic research and real-world application: existing solutions primarily focus on algorithmic strategies for furniture placement, largely neglecting the non-rectangular geometries and strict door/window constraints prevalent in real homes. To bridge the gap, we introduce a hybrid, hierarchical framework tailored for retail, specifically designed to support scalable spatial planning applications. Our system decouples generation into three stages: (1) functional furniture clustering and fine-grained intra-zone placement; (2) macro-routing guided by a vision-language model (VLM) to anchor both these clustered zones and any remaining standalone furniture within diverse polygonal boundaries; and (3) rule-based optimization for collision-free micro-arrangements that respect architectural constraints. We evaluate our system on production-scale catalogs and a representative set of irregular real-world topologies. Our results show that our approach attains the highest perceptual plausibility while maintaining good geometric compliance at relatively low latency, and extends to irregular boundaries that existing methods do not natively support.</p>
@@ -1169,10 +1256,7 @@
                         <span class="paper-date">2026-08-11</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有视觉语言模型（VLM）基准主要评估单视角或有限视角感知，缺乏对模型将多视角观测整合为以世界为中心的3D心智模型这一核心认知能力的测试。&#10;&#10;🛠 **方法**：提出MultiView-Bench诊断基准，要求模型将物体位置从瞬态视角中解耦并映射到固定全局坐标系；同时设计ViewNavigator多智能体框架，通过主动选择信息视角、感知并融合多视角证据来提升模型性能。&#10;&#10;✨ **主要贡献**：揭示了前沿VLM在3D空间关系和多视角信息聚合上的系统性失败，并发现其对非常规轴方向、物体颜色和纹理的偏差；ViewNavigator在严格预算匹配下显著提升多种基础模型性能（完整智能体提升3-5倍）。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Recent benchmarks for VLMs largely assess single- or limited-view perception, leaving untested the core cognitive ability to integrate observations across viewpoints into a coherent, world-centric (allocentric) 3D mental model. We introduce MultiView-Bench, a diagnostic benchmark expressly designed to evaluate multi-view integration for holistic 3D scene comprehension. Unlike existing datasets that focus on pixel-level mapping or camera-relative navigation, MultiView-Bench requires models to decouple object positioning from transient perspectives and ground them in a fixed global coordinate system. This capability serves as a prerequisite for VLMs before being deployed for downstream tasks such as mechanical part assembly. Our systematic evaluation of frontier VLMs reveals consistent failure modes: strong performance on 2D planar relations from a single image, but marked difficulty with 3D spatial relations and with aggregating information across views. We further identify biases in VLMs, such as struggles with unconventional axis directions and sensitivity to object colorways and texture variations. Acknowledging these limitations, we propose ViewNavigator, which uses active viewpoint selection and evidence fusion to improve four base models by 12.3--20.0 percentage points under a six-image cap matching the fixed-view baseline; budget-extended gains are model-dependent and reach 27 percentage points for GPT-5.</p>
@@ -1932,90 +2016,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Large Vision-Language Models (VLMs) now act as agents in interactive environments, where success requires coherent reasoning and decision-making across turns. Although end-to-end training in agentic environments can improve such multi-turn decision-making abilities, current methods mainly rely on either token-wise optimization over concatenated token trajectories or turn-wise optimization with uniform within-turn credit. In this work, we establish theoretical formulations for the two levels of optimization and derive a hybrid advantage that serves both objectives. Furthermore, with an appropriate choice of discount factor and learning target, we prove that a unified critic model can estimate values for both turn-wise and token-wise. As such, we propose HyGAE, an actor-critic framework that jointly optimizes token- and turn-level objectives with the hybrid advantage and unified critic. We conduct extensive evaluations of HyGAE across five multi-turn decision-making environments, where it achieves an average success rate of 91% and a significant improvement of 10% over other methods. Furthermore, we provide an in-depth analysis showing that the exact analytic form of the hybrid advantage and return is crucial for optimization. Project Page: https://wx-zhang.github.io/hygae-web/.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2512.24125v3" target="_blank" class="paper-title">Unified Embodied VLM Reasoning with Robotic Action via Autoregressive Discretized Pre-training</a>
-                        <span class="paper-date">2026-07-26</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>General-purpose robotic systems operating in open-world environments must achieve both broad generalization and high-precision action execution, a combination that remains challenging for existing Vision-Language-Action (VLA) models. While large Vision-Language Models (VLMs) improve semantic generalization, insufficient embodied reasoning leads to brittle behavior, and conversely, strong reasoning alone is inadequate without precise control. To provide a decoupled and quantitative assessment of this bottleneck, we introduce Embodied Reasoning Intelligence Quotient (ERIQ), a large-scale embodied reasoning benchmark in robotic manipulation, comprising 6K+ question-answer pairs across four reasoning dimensions. By decoupling reasoning from execution, ERIQ enables systematic evaluation and reveals a strong positive correlation between embodied reasoning capability and end-to-end VLA generalization. To bridge the gap from reasoning to precise execution, we propose FACT, a flow-matching-based action tokenizer that converts continuous control into discrete sequences while preserving high-fidelity trajectory reconstruction. The resulting GenieReasoner jointly optimizes reasoning and action in a unified space, outperforming both continuous-action and prior discrete-action baselines in real-world tasks. Together, ERIQ and FACT provide a principled framework for diagnosing and overcoming the reasoning-precision trade-off, advancing robust, general-purpose robotic manipulation. Project page: https://geniereasoner.github.io/GenieReasoner/</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.18681v2" target="_blank" class="paper-title">Moving Beyond Diversity: Visual Token Pruning as Subspace Reconstruction for Efficient VLMs</a>
-                        <span class="paper-date">2026-07-24</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Despite their remarkable performance, Vision Language Models (VLMs) incur substantial computational overhead due to the large number of visual tokens. While diversity maximization has become a dominant strategy for token reduction, existing methods rely on cosine-based normalized similarity that discards magnitude information, failing to faithfully approximate the original feature representation and leading to suboptimal performance, particularly on compositional multi-skill reasoning tasks. In this paper, we introduce SPARE, a subspace reconstruction method that reformulates token pruning as a column subset selection problem and explicitly minimizes reconstruction error. By iteratively selecting tokens with large projection residuals, SPARE performs reconstruction-driven pruning beyond angular diversity. Moreover, we reveal a counterintuitive anti-relevance phenomenon: tokens with lower image-text relevance score can better preserve contextual information. Based on this finding, we incorporate anti-relevance into SPARE as an additional selection criterion to promote context-aware token selection. Extensive experiments across multiple VLMs and benchmarks demonstrate that SPARE consistently achieves state-of-the-art performance, with strong gains on compositional tasks. When applied to LLaVA, SPARE removes up to 94% of visual tokens while retaining 95% of the baseline performance, all in a fully training-free manner.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.11957v2" target="_blank" class="paper-title">Anomalous Frame Detection Using VLM-Based Description Comparison for Extracting Expert-Specific Actions and Contextual Decision-Making Scenes with Intra-Video Self-Similarity</a>
-                        <span class="paper-date">2026-07-24</span>
-                    </div>
-                                        <span class="paper-comment">📝 17 pages, 11 figures, 2 tables</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Maintenance of critical infrastructures, such as railways and power plants, is essential for ensuring operational safety and reliability. However, the declining number of skilled maintenance workers highlights the need to transfer expert know-how to less experienced workers. Previous studies have attempted to extract candidates of expert knowledge by comparing videos of manual-based work with those of expert workers, mainly focusing on differences in observable actions. However, expert know-how is often embedded not only in actions but also in contextual decision-making during task execution. This paper proposes a method that detects anomalous frames between two task videos to automatically extract candidate scenes containing expert-specific actions and contextual decision-making scenes. The method generates frame-wise visual descriptions using a vision-language model (VLM). Expert-specific actions are extracted based on frame similarities computed from description comparisons between two videos, while contextual decision-making scenes are extracted using segment similarities derived from intra-video self-similarity of the descriptions. In simulated distribution board maintenance experiments involving 27 task scenarios, the proposed method achieved extraction rates of 65% for action candidates and 61% for decision-scene candidates, improving over conventional methods that achieved 59% and 33%, respectively. These results demonstrate the effectiveness of the proposed approach in discovering candidate scenes containing expert know-how.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.21595v1" target="_blank" class="paper-title">3D-Aware VLMs with Implicit and Explicit Geometries</a>
-                        <span class="paper-date">2026-07-23</span>
-                    </div>
-                                        <span class="paper-comment">📝 Accepted by ECCV 2026, Open Sourced</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Despite rapid progress, most existing vision-language models (VLMs) built from 2D visual inputs often struggle when handling various 3D tasks that require fine-grained spatial understanding and reasoning. To bridge this gap, we present VLM-IE3D, a unified framework that enhances the 3D spatial awareness of VLMs by equipping them with both implicit and explicit 3D geometries learned from RGB videos. Our VLM-IE3D introduces Implicit Geometry Tokens (IGTs) that capture high-level geometric priors from input videos, as well as complementary Explicit Geometry Tokens (EGTs) that encode detailed geometric structures from reconstructed 3D attributes. On top of that, VLM-IE3D comes with a 3D-aware adapter that effectively fuses the two types of geometric representations with 2D visual cues. This RGB-only design injects strong 3D inductive biases for fine-grained spatial understanding and reasoning without requiring any additional 3D inputs. Extensive experiments show that VLM-IE3D achieves superior performance consistently across various 3D tasks including 3D video detection, 3D visual grounding, 3D dense captioning, and spatial reasoning. Code and models are available at https://github.com/Vegetebird/VLM-IE3D.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.00543v2" target="_blank" class="paper-title">ETC: Extreme Token Compression via Task-aware Visual Information Distillation in VLMs</a>
-                        <span class="paper-date">2026-07-23</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>In Vision-Language Models (VLMs), high-resolution images produce a large number of visual tokens, resulting in high computational costs and KV-cache overhead during inference. To address this problem, we propose an Extreme Token Compression (ETC) framework that minimizes task loss when reducing the number of input tokens based on the principle of variational information distillation. Specifically, from an information-theoretic perspective, we show that minimizing task loss requires the compact representation to preserve the instruction-aware sufficient statistic of the task-relevant visual information for prediction. In practice, ETC leverages text-to-image cross-attention to weight the original visual features to approximate the latent instruction-aware predictive statistic. Moreover, ETC introduces a variational information distillation, enabling the compact representation to preserve the essential information to recover this predictive statistic. Experiments on LLaVA-1.5-7B and Qwen3-VL-2B show that ETC remains effective even under single-token compression, substantially reducing KV-cache overhead while retaining strong task performance.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.19701v1" target="_blank" class="paper-title">SafeGen: Goal-Conditioned Video Diffusion of Safety-Critical Scenarios for VLM-Based Autonomous Driving</a>
-                        <span class="paper-date">2026-07-22</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>VLMs are increasingly deployed in AD systems, creating an urgent need for rigorous safety evaluation under rare yet safety-critical scenarios. Among these, interactions with vulnerable road users represent a major source of real-world failures. However, existing safety-critical scenario generation methods predominantly rely on simulator-based pipelines, which suffer from a substantial sim-to-real gap and often fail to capture realistic, diverse, and unforeseen human-vehicle interaction dynamics. We present SafeGen, a goal-conditioned diffusion framework for safety-critical scenario generation in VLMADs. Our key insight is to formulate scenario generation as a goal-conditioned diffusion process, where a predefined catastrophic end-state serves as a strong supervisory signal, guiding the generation of temporally coherent video trajectories that naturally evolve toward safety-critical outcomes. Building on this formulation, we introduce Context Grounded End State Reasoning, which leverages VLMs to analyze benign driving contexts and infer latent vulnerabilities in human-vehicle interactions, producing structured end-state specifications that induce high-risk scenarios. Conditioned on these targets, we further propose End State Conditioned Video Evolution, which grounds semantic threats into physically plausible visual dynamics. Specifically, we instantiate high-risk agents within the scene via depth-aware geometric projection, followed by boundary-conditioned diffusion to generate intermediate frames with consistent motion patterns and temporal coherence. Extensive experiments across 3 VLMADs demonstrate that SafeGen increases the Judge Overall Score, a metric using a VLM judge to evaluate VLMADs' understanding and decision-making, by 24.25% on average compared to SoTA baselines. Furthermore, fine-tuning a VLMAD improves performance in real-world driving scenes by an average of 15.9%.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.17820v2" target="_blank" class="paper-title">PRiSM: Prototype Regularization for Few-Shot VLMs</a>
-                        <span class="paper-date">2026-07-21</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Training-free few-shot adaptation methods have gained significant attention recently in the context of Vision-language Models (VLMs). Yet, current benchmarks rely on strong assumptions about the statistics of the adaptation data, e.g., class balance. We question these simplifying assumptions and introduce a more realistic benchmark that varies both the levels of class balance and the effective number of classes in few-shot tasks via Dirichlet sampling. Surprisingly, under our setting, we observe substantial drops in the performances of state-of-the-art methods, more so when the number of labeled samples increases. To mitigate this, we introduce PRiSM, a class-prototype regularization that can be deployed as a plug and play module on top of any existing baseline method, significantly improving performances. Our method optimizes a novel multi-term loss, which includes a regularizer maximizing inter-class pairwise distances, along with additional terms promoting support-feature alignment and fidelity to the baseline prototypes. Furthermore, we introduce an effective and computationally efficient block Majorize-Minimize optimizer for our objective. More specifically, we derive a valid blockwise Lipschitz constant (i.e., a bound on the Hessian's spectral norm), which can be computed efficiently via the Gershgorin circle theorem. Extensive experiments show that PRiSM improves several training-free baselines, with large gains when dealing with severe class imbalance and high numbers of classes.</p>
                     </details>
                 </div>
             </div>
