@@ -590,7 +590,7 @@
                 <a href="World-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">World Model</span>
-                    <span class="nav-count">76</span>
+                    <span class="nav-count">77</span>
                 </a>
                 <a href="3D-Foundation-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
@@ -690,12 +690,12 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">68</span>
+                    <span class="nav-count">70</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">76</span>
+                    <span class="nav-count">77</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -809,7 +809,7 @@
             <a href="World-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">World Model</span>
-                <span class="nav-count">76</span>
+                <span class="nav-count">77</span>
             </a>
             <a href="3D-Foundation-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
@@ -909,12 +909,12 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">68</span>
+                <span class="nav-count">70</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">76</span>
+                <span class="nav-count">77</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -1030,6 +1030,66 @@
             <div class="paper-list">
                 <div class="paper-card">
                     <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2512.14732v3" target="_blank" class="paper-title">INFORM-CT: INtegrating LLMs and VLMs FOR Incidental Findings Management in Abdominal CT</a>
+                        <span class="paper-date">2026-08-14</span>
+                    </div>
+                                        <span class="paper-comment">📝 Spotlight presentation at the 9th International Conference on Medical Imaging with Deep Learning (MIDL) 2026 Additional code and implementation details available at https://idan-tankel.github.io/InformCT_ProjectPage/</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：CT扫描中偶然发现的异常（incidental findings）常被漏报或报告不一致，传统人工阅片耗时且主观性强，需要自动化检测、分类和报告流程。&#10;&#10;🛠 **方法**：提出INFORM-CT框架，采用“计划-执行”（plan-and-execute）智能体架构，由LLM生成Python脚本（计划器），再由执行器调用VLM、分割模型和图像处理子程序完成检测与分类，并遵循医学指南。&#10;&#10;✨ **主要贡献**：在腹部CT基准上对三个器官实现全自动端到端管理，相比纯VLM方法，在准确性和效率上均更优，展示了LLM+VLM协同的实用价值。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Incidental findings in CT scans, though often benign, can have significant clinical implications and should be reported following established guidelines. Traditional manual inspection by radiologists is time-consuming and variable. This paper proposes a novel framework that leverages large language models (LLMs) and foundational vision-language models (VLMs) in a plan-and-execute agentic approach to improve the efficiency and precision of incidental findings detection, classification, and reporting for abdominal CT scans. Given medical guidelines for abdominal organs, the process of managing incidental findings is automated through a planner-executor framework. The planner, based on LLM, generates Python scripts using predefined base functions, while the executor runs these scripts to perform the necessary checks and detections, via VLMs, segmentation models, and image processing subroutines. We demonstrate the effectiveness of our approach through experiments on a CT abdominal benchmark for three organs, in a fully automatic end-to-end manner. Our results show that the proposed framework outperforms existing pure VLM-based approaches in terms of accuracy and efficiency.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.14616v4" target="_blank" class="paper-title">SportD: How do VLMs physically strategize?</a>
+                        <span class="paper-date">2026-08-14</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：评估视觉语言模型（VLMs）在足球场景中能否利用视觉信息做出策略性决策，而非仅完成常规视觉理解任务。&#10;&#10;🛠 **方法**：构建SportD基准，包含2022年世界杯478个持球决策事件，通过对比模型选择与基于控球价值的优化策略（最大化进球概率）来量化决策质量。&#10;&#10;✨ **主要贡献**：发现最佳VLM仅31.4%事件选择最优动作（职业球员38.9%），且模型偏好低风险低回报动作（少射门、少传威胁球），并存在模仿球员常见模式而非理性评估的倾向。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Vision-language models (VLMs) can describe a scene, but can they act well within one? We study whether VLMs can make sound strategic decisions, using soccer as an objective testbed with quantifiably-valued actions. We introduce SportD, a dataset and evaluation consisting of 1415 decision scenarios across professional men's and women's soccer games, where a VLM observes the seconds before a decision and chooses the next action. Models only select the optimal action around 30% of the time, even less frequently than humans do. Furthermore, they exhibit a clear preference for safer actions, favoring lower-variance, lower-value choices that also make less physical progress toward goal. Frontier VLMs are better at estimating whether an action will succeed, placing the highest-success-probability action among their top choices in 83-92% of cases. Yet VLMs systematically conflate likelihood with value, assigning higher value to actions that are more likely to succeed ($ρ$=+0.30 to +0.52), despite no such relationship in the ground truth ($ρ$=-0.08). The conservatism therefore reflects a mis-calibration of value. Replacing a single deliberation sentence with one that steers toward risk lifts the frontier models towards the real players' skills. SportD opens a new direction for rigorously evaluating physical strategic decision-making in VLMs, showing that careful decomposition of their choices can reveal the mechanisms underlying systematic biases such as risk aversion.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.08904v2" target="_blank" class="paper-title">From Recovery to Drop-off: How Action Post-training Reduces a VLM's Late-Layer Depth Decodability</a>
+                        <span class="paper-date">2026-08-14</span>
+                    </div>
+                                        <span class="paper-comment">📝 Accepted to the archival proceedings track of the Embodied Multimodal Reasoning (EMR) Workshop at ECCV 2026</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：探究视觉-语言模型（VLM）在经历动作后训练（构建视觉-语言-动作模型，VLA）后，其空间理解能力（特别是深度感知）在解码器各层中保留了多少，以及退化发生在何处。&#10;&#10;🛠 **方法**：对权重匹配的开源基础VLM（Molmo2-ER）与VLA（MolmoAct2-LIBERO）逐层探测深度解码能力，并通过消融实验（分别移除晚期层MLP和注意力写入）进行因果定位，辅以模块级分解分析。&#10;&#10;✨ **主要贡献**：发现VLA在所有层深度解码能力均下降（“地板”效应），且晚期层出现额外骤降（“悬崖”效应）；因果定位表明该悬崖主要由晚期层MLP干扰导致，消融MLP可恢复大部分性能，而注意力消融或基础VLM中相同操作无此效果；模块分解揭示基础VLM依赖累积的MLP写入承载深度信息，而动作后训练破坏了晚期累积写入中的深度可解码性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>How much of a vision-language model's (VLM) spatial understanding remains after the action post-training process of building a vision-language-action model (VLA)? We probe depth perception, a primitive of spatiogeometric understanding, from every decoder layer of a weight-matched open-source base VLM/VLA pair: Molmo2-ER and MolmoAct2-LIBERO. First, the VLA decodes depth worse at every layer, a persistent gap we call the floor. Second, the degradation is not uniform: while the base VLM's depth decodability improves through its final layers, the VLA's collapses, an additional late-layer drop we call the cliff. We causally localize the cliff to late-layer MLP interference: ablating the late-layer MLP writes recovers the majority of the terminal decodability cliff, while matched attention ablations and the same intervention in the weight-matched base VLM produce no comparable recovery. A module-level decomposition explains this dissociation: the base VLM carries depth most accessibly in accumulated MLP writes, whereas action post-training collapses depth decodability in the late accumulated writes.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.13791v1" target="_blank" class="paper-title">VLM- and LLM-Driven Multi-Agent System for PET Image Denoising</a>
+                        <span class="paper-date">2026-08-13</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：PET成像存在空间分辨率低和信噪比低的问题，现有深度学习去噪方法在实际应用中需要多个专用模型和专家干预，缺乏自动化决策能力。&#10;&#10;🛠 **方法**：提出一种由视觉语言模型（VLM）和大型语言模型（LLM）驱动的多智能体PET去噪框架，动态评估图像质量和病灶状态，自主选择最优去噪模型与参数，并支持带回滚机制的闭环反馈。&#10;&#10;✨ **主要贡献**：在Siemens Biograph Vision Quadra PET/CT数据上（1/20和1/50低剂量），完整框架在PSNR和SSIM上均优于UNet、GAN和DDPM基线，验证了闭环多智能体框架自适应调整去噪策略的可行性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Positron emission tomography (PET) imaging suffers from limited spatial resolution and low signal-to-noise ratio, which can compromise quantitative accuracy and lesion detectability. Deep learning-based denoising methods have demonstrated strong potential for improving PET image quality. However, their practical deployment in real-world settings remains challenging, often requiring multiple specialized models and expert interventions, such as identifying motion-induced misregistration artifacts, estimating noise levels to select an appropriate denoiser, and performing lesion-focused quantitative assessment after denoising. Recent advances in vision-language models (VLMs) for image quality understanding and large language models (LLMs) for contextual reasoning provide new opportunities for automated, decision-driven workflows. Inspired by expert workflows for PET image quality enhancement, we propose an VLM- and LLM-driven multi-agent PET denoising framework that dynamically assesses image quality and lesion status, autonomously selects optimal denoising models and parameters, and enables closed-loop feedback with rollback mechanisms. Experiments were conducted on Siemens Biograph Vision Quadra PET/CT data with 1/20 and 1/50 low-dose settings. Individual module evaluations demonstrated the reliability of the agentic components, while the complete framework achieved higher PSNR and SSIM than UNet, GAN, and DDPM baselines at both dose levels. These preliminary results demonstrate the feasibility of using a closed-loop multi-agent framework to adapt PET denoising strategies to different image conditions.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
                         <a href="https://arxiv.org/abs/2606.20077v2" target="_blank" class="paper-title">The Hidden Evolution of Disguised Visual Context inside the VLM</a>
                         <span class="paper-date">2026-08-13</span>
                     </div>
@@ -1124,10 +1184,7 @@
                         <span class="paper-date">2026-08-12</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有视觉语言模型（VLM）路由研究局限于传统VQA评估，缺乏面向开放集场景的系统性校准优化，且训练目标因softmax归一化稀释多正样本信号且未考虑成本。&#10;&#10;🛠 **方法**：提出SCOPE-Router双塔路由器，通过混合校准（随机/诊断/多样性采样）构建模型行为画像，使新模型无需重训练即可加入路由；并设计CRM+RCCR成本感知目标，通过逐对独立评分将成本偏好编码为连续相关目标，消除多正样本稀释并正则化查询空间。&#10;&#10;✨ **主要贡献**：构建首个面向执行任务的VLM路由基准VLM-ExecRouterBench（覆盖代码、智能体、搜索域，含11个价格跨度近两个数量级的候选模型）；SCOPE-Router在三个基准上均取得最佳Rank Score，在OOD设置下超越第二名1.84分，双重OOD开放集评估下超越6.75分；CRM+RCCR应用于四种路由器时提升Rank Score 1.25–6.21分。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Model routing aims to select the most suitable model from a candidate pool for each query, balancing quality and cost. Existing VLM routing research is limited to traditional VQA evaluation, lacks systematic calibration optimization for open-set scenarios, and employs training objectives that dilute multi-positive signals via softmax normalization without incorporating cost. We address these limitations with three contributions: (1)VLM-ExecRouterBench, the first execution-oriented VLM routing benchmark covering Code, Agentic, and Search domains with 11 candidate models spanning nearly two orders of magnitude in pricing; (2)SCOPE-Router, a dual-tower router that matches queries to model behavior profiles constructed via hybrid calibration (random/diagnostic/diversity sampling), enabling new models to join routing without retraining; (3)CRM+RCCR, an architecture-agnostic cost-aware objective that encodes cost preference into continuous relevance targets through per-pair independent scoring, eliminating multi-positive dilution while regularizing queries with similar routing preferences to be closer in the routing space. Empirically, SCOPE-Router achieves the best Rank Score on all three benchmarks, surpassing the runner-up by 1.84 points under OOD settings and by 6.75 points under doubly OOD open-set evaluation. When applied to four diverse routers, CRM+RCCR improves Rank Score by 1.25--6.21 points.</p>
@@ -1139,10 +1196,7 @@
                         <span class="paper-date">2026-08-12</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：高速公路监控视频中远距离目标异常行为难以检测，现有视觉语言模型处理全局画面时注意力分散且计算成本高。&#10;&#10;🛠 **方法**：提出VIBES异步协作框架，通过在线贝叶斯推理模块动态评估车辆轨迹，更新正常驾驶行为的概率边界，精准定位异常时空区域，仅将局部画面输入视觉语言模型进行语义推理。&#10;&#10;✨ **主要贡献**：显著提升远距离异常检测精度，降低计算开销，实现高实时性与可解释性，并在多种高速公路场景下展现良好泛化能力。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Expressway video anomaly detection is important for traffic safety, but remains challenging across diverse scenes, particularly for far-field vehicles with subtle abnormal motion. Vision-Language Models (VLMs) provide strong semantic reasoning capabilities, yet processing full frames can dilute evidence from distant targets and introduce substantial computational overhead. To address these challenges, we propose VIBES, an asynchronous framework that uses Bayesian inference to guide focused VLM reasoning. Specifically, an online kinematics-guided Bayesian inference module continuously estimates a context-dependent normal-motion distribution from vehicle trajectories and updates its probabilistic boundaries. Deviations from these boundaries produce asynchronous triggers that localize candidate anomalies in time and space. Instead of processing continuous full-frame video, the VLM reasons only over selected frames and localized visual regions associated with the triggers, reducing irrelevant visual content and unnecessary inference. Extensive experiments show that VIBES improves far-field anomaly detection and semantic interpretation while achieving real-time processing efficiency across diverse expressway conditions.</p>
@@ -1154,28 +1208,10 @@
                         <span class="paper-date">2026-08-12</span>
                     </div>
                                         <span class="paper-comment">📝 16 pages, 8 figures</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决开放世界驾驶中，系统遇到训练数据之外的未知物体时，仅识别类别名称不足以指导安全驾驶，需要感知每个区域对运动的影响（如可行驶性和碰撞严重性）。&#10;&#10;🛠 **方法**：提出VOLA框架，将场景感知从类别标签转为稠密的行动相关属性（7级可行驶性和5级脆弱性），直接读取Qwen3.5图像token的隐藏状态作为空间语义表示，通过轻量级边界感知解码器生成全分辨率属性图，无需自回归文本生成或SAM等外部掩码模型。&#10;&#10;✨ **主要贡献**：在CARLA中训练并在真实场景及未见障碍物上测试，模型在熟悉类别上与强视觉分割器相当，在开放世界异常迁移上显著提升（平均脆弱性召回率69.4%，优于视觉基线57.1%和VLM基线53.9%），证明VLM图像token能为训练词汇外的物体提供有效的语义迁移线索。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Driving in the real world is open-world: a car may encounter a fallen mattress, a deer, or other objects outside its training data. Naming them is not enough. The system must know how to treat each region: can it drive over it, and how severe would a collision be? We therefore shift scene perception from category labels to dense action-relevant attributes, where each pixel is labeled by how it should affect motion rather than by object name. We instantiate this general formulation with two ordered attributes: 7-rank drivability and 5-rank vulnerability. We read Qwen3.5 image-token hidden states directly as a spatial semantic representation. A lightweight boundary-aware decoder then turns this coarse token grid into sharp full-resolution attribute maps. The whole process requires neither autoregressive text generation nor an external mask model such as SAM. We train on dense attribute labels built in CARLA and test transfer to real scenes and to novel obstacles never seen in training. We compare with vision-only segmenters trained on the same attributes and prompted VLM segmenters. Our model matches strong vision-only segmenters on familiar categories and improves transfer to real open-world anomalies, reaching 69.4% mean vulnerability-rank recall versus 57.1% for the best vision-only baseline and 53.9% for the best prompted VLM baseline. These results show that VLM image tokens provide useful semantic cues for transferring driving attributes to objects outside the training vocabulary.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.14616v3" target="_blank" class="paper-title">SportD: How do VLMs physically strategize?</a>
-                        <span class="paper-date">2026-08-12</span>
-                    </div>
-                    
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：评估视觉语言模型（VLMs）在足球场景中能否利用视觉信息做出策略性决策，而非仅完成常规视觉理解任务。&#10;&#10;🛠 **方法**：构建SportD基准，包含2022年世界杯478个持球决策事件，通过对比模型选择与基于控球价值的优化策略（最大化进球概率）来量化决策质量。&#10;&#10;✨ **主要贡献**：发现最佳VLM仅31.4%事件选择最优动作（职业球员38.9%），且模型偏好低风险低回报动作（少射门、少传威胁球），并存在模仿球员常见模式而非理性评估的倾向。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Vision-language models (VLMs) can describe a scene, but can they act well within one? We study whether VLMs can make sound strategic decisions, using soccer as an objective testbed with quantifiably-valued actions. We introduce SportD, a dataset and evaluation consisting of 1415 decision scenarios across professional men's and women's soccer games, where a VLM observes the seconds before a decision and chooses the next action. Models only select the optimal action around 30% of the time, even less frequently than humans do. Furthermore, they exhibit a clear preference for safer actions, favoring lower-variance, lower-value choices that also make less physical progress toward goal. Frontier VLMs are better at estimating whether an action will succeed, placing the highest-success-probability action among their top choices in 83-92% of cases. Yet VLMs systematically conflate likelihood with value, assigning higher value to actions that are more likely to succeed (Spearman corr. 0.30 to +0.52), despite no such relationship in the ground truth (Spearman corr. -0.08). The conservatism therefore reflects a mis-calibration of value. SportD opens a new direction for rigorously evaluating physical strategic decision-making in VLMs, showing that careful decomposition of their choices can reveal the mechanisms underlying systematic biases such as risk aversion.</p>
                     </details>
                 </div>
                 <div class="paper-card">
@@ -1320,18 +1356,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Building performant Vision-Language Models (VLMs) requires carefully curating large-scale training datasets, yet the community lacks systematic benchmarks for evaluating such curation strategies. We introduce DataComp for VLMs (DCVLM), a benchmark for controlled data-centric experiments to improve VLM training. As part of DCVLM, we collect 160 datasets spanning four data types -- image-caption pairs, multimodal interleaved documents, text-only, and instruction-tuning data -- into a corpus of 6T multimodal tokens. DCVLM allows participants to test curation strategies (filtering, mixing, formatting, sampling) across 1B-8B models and 6.25B-200B token budgets. Models are then evaluated on a carefully selected suite of up to 52 downstream benchmarks across 9 domains. We conduct extensive experiments on DCVLM and find that data mixing, not filtering, is key to a high-quality training dataset: instruction-heavy mixtures scale better than caption-heavy ones, with gains widening at larger scales. The resulting dataset, DCVLM-Baseline, enables training an 8B VLM to 63.6% accuracy on our 33-task core suite with 200B training tokens. Compared to FineVision, the state-of-the-art open VLM training dataset, this represents an improvement of +5.4pp. DCVLM and all accompanying artifacts will be made publicly available at https://www.datacomp.ai/dcvlm/.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2608.08904v1" target="_blank" class="paper-title">From Recovery to Drop-off: How Action Post-training Reduces a VLM's Late-Layer Depth Decodability</a>
-                        <span class="paper-date">2026-08-09</span>
-                    </div>
-                                        <span class="paper-comment">📝 Accepted to the archival proceedings track of the Embodied Multimodal Reasoning (EMR) Workshop at ECCV 2026</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>How much of a vision-language model's (VLM) spatial understanding remains after the action post-training process of building a vision-language-action model (VLA)? We probe depth perception, a primitive of spatiogeometric understanding, from every decoder layer of a weight-matched open-source base VLM/VLA pair: Molmo2-ER and MolmoAct2-LIBERO. First, the VLA decodes depth worse at every layer, a persistent gap we call the floor. Second, the degradation is not uniform: while the base VLM's depth decodability improves through its final layers, the VLA's collapses, an additional late-layer drop we call the cliff. We causally localize the cliff to late-layer MLP interference: ablating the late-layer MLP writes recovers the majority of the terminal decodability cliff, while matched attention ablations and the same intervention in the weight-matched base VLM produce no comparable recovery. A module-level decomposition explains this dissociation: the base VLM carries depth most accessibly in accumulated MLP writes, whereas action post-training collapses depth decodability in the late accumulated writes.</p>
                     </details>
                 </div>
                 <div class="paper-card">
@@ -1992,30 +2016,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Pathological images are inherently multi-scale, requiring pathologists to integrate evidence from global tissue architecture at low magnification to cellular morphology at higher magnification for accurate diagnosis. While existing pathological datasets for vision-language models (VLMs) include various scales, they often lack explicit cross-scale reasoning objectives. This limitation prevents VLMs from capturing essential cross-scale representations and learning evidence-based reasoning. To bridge this gap, we introduce the first cross-scale training and evaluation paradigm that formulates pathology interpretation as multi-magnification reasoning. However, creating such a task reveals a critical challenge: multi-image visual question answering (VQA) is prone to text-only shortcuts, which allow models to guess answers using magnification-dependent artifacts rather than visual evidence. To address this, we propose a leakage-aware curation pipeline that combines adversarial text-only screening with constraint-guided question design. Using this pipeline, we construct Scale-VQA, a high-quality benchmark with 4,685 multiple-choice questions grounded in 2,537 pathology images across multiple magnification levels. Finally, we present ScaleReasoner-R1, a model trained via reinforcement learning to optimize performance on cross-scale VQA tasks. ScaleReasoner-R1 achieves state-of-the-art performance on our cross-scale reasoning benchmark and generalizes to SOTA performance on established single-scale benchmarks. Findings suggest that even the limited cross-scale supervision can significantly improve pathological understanding. Code is available at https://github.com/iMVR-PL/ScaleReasoner-R1.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.24516v1" target="_blank" class="paper-title">DecoupleMix: Decoupled Ratio Search and Convex Allocation for Scalable VLM Data Recipes</a>
-                        <span class="paper-date">2026-07-27</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>While data curation for Vision Language Models (VLMs) is increasingly active, public practice for constructing pretraining mixtures remains largely heuristic: practitioners stack datasets that pass quality filters, set cross-domain ratios by intuition, and lack a principled, attributable criterion for admitting new data, while frontier recipes remain undisclosed. We formulate data construction as a systematic mixture-optimization problem and turn it into a reproducible engineering discipline by decoupling the mixture into two orthogonal sub-problems: inter-class ratios across capabilities and intra-class ratios within a category. For inter-class allocation, we use a single-variable iterative search; for intra-class composition, we apply a multidimensional, dataset-level assessment scoring Quality and Difficulty, and formulate selection as a constrained convex optimization with a diversity objective. The DecoupleMix framework delivers two critical capabilities: guiding what data to collect next and rendering dataset validation a controlled, attributable experiment. Experiments show our approach consistently surpasses heuristic baselines. Moreover, optimal ratios discovered on small-scale proxies transfer seamlessly to larger scales without retuning. Using 80B additional multimodal continue-pretraining tokens, our VLM is competitive with strong open-source models trained with substantially larger multimodal budgets.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.23605v1" target="_blank" class="paper-title">Hybrid Advantage Estimation with Unified Critic for VLM Agentic Reinforcement Learning</a>
-                        <span class="paper-date">2026-07-26</span>
-                    </div>
-                                        <span class="paper-comment">📝 Accepted by ECCV 2026</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Large Vision-Language Models (VLMs) now act as agents in interactive environments, where success requires coherent reasoning and decision-making across turns. Although end-to-end training in agentic environments can improve such multi-turn decision-making abilities, current methods mainly rely on either token-wise optimization over concatenated token trajectories or turn-wise optimization with uniform within-turn credit. In this work, we establish theoretical formulations for the two levels of optimization and derive a hybrid advantage that serves both objectives. Furthermore, with an appropriate choice of discount factor and learning target, we prove that a unified critic model can estimate values for both turn-wise and token-wise. As such, we propose HyGAE, an actor-critic framework that jointly optimizes token- and turn-level objectives with the hybrid advantage and unified critic. We conduct extensive evaluations of HyGAE across five multi-turn decision-making environments, where it achieves an average success rate of 91% and a significant improvement of 10% over other methods. Furthermore, we provide an in-depth analysis showing that the exact analytic form of the hybrid advantage and return is crucial for optimization. Project Page: https://wx-zhang.github.io/hygae-web/.</p>
                     </details>
                 </div>
             </div>

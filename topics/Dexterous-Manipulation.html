@@ -590,7 +590,7 @@
                 <a href="World-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">World Model</span>
-                    <span class="nav-count">76</span>
+                    <span class="nav-count">77</span>
                 </a>
                 <a href="3D-Foundation-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
@@ -690,12 +690,12 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">68</span>
+                    <span class="nav-count">70</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">76</span>
+                    <span class="nav-count">77</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -809,7 +809,7 @@
             <a href="World-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">World Model</span>
-                <span class="nav-count">76</span>
+                <span class="nav-count">77</span>
             </a>
             <a href="3D-Foundation-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
@@ -909,12 +909,12 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">68</span>
+                <span class="nav-count">70</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">76</span>
+                <span class="nav-count">77</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -1028,6 +1028,36 @@
                 <span class="topic-count">80 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.14028v1" target="_blank" class="paper-title">AdvDex: Learning Dexterous Manipulation from Human Demonstrations via Joint-Aligned Actions and Adversarial Learning</a>
+                        <span class="paper-date">2026-08-14</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：灵巧操作技能难以规模化，因为机器人演示数据采集昂贵，且不同执行器（人手、灵巧手、平行夹爪）的动作空间不一致，导致跨本体泛化困难。&#10;&#10;🛠 **方法**：提出AdvDex框架，包含三个关键组件：1）OmniShare大规模多模态人手演示数据集（提供运动学监督和触觉测量）；2）联合对齐动作空间（JAAS），将手腕SE(3)位姿与15个手指关节统一为规范动作表示；3）域对抗学习，消除视觉表征中的本体特定信息。&#10;&#10;✨ **主要贡献**：在手部动作预测和真实世界灵巧操作实验中，AdvDex相比基线持续提升，实现了有效的零样本人-机器人技能迁移、对未见物体和环境的泛化，以及数据高效的少样本适应。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Dexterous manipulation is a fundamental capability for embodied intelligence, but scaling it remains difficult because robot demonstrations are expensive to collect and action spaces vary across embodiments. Policies trained on heterogeneous data can also entangle task-relevant visual cues with embodiment-specific appearance, limiting cross-embodiment generalization. We present AdvDex, a unified Vision-Language-Action framework for learning dexterous manipulation from human and robot demonstrations. First, we introduce OmniShare, a large-scale multimodal dataset of human manipulation demonstrations that provides high-quality kinematic supervision and tactile measurements while reducing reliance on robot teleoperation. Second, we propose the Joint-Aligned Action Space (JAAS), a canonical action representation comprising an $\mathrm{SE}(3)$ wrist pose and 15 finger joints, thereby functionally aligning human hands, dexterous robot hands, and parallel grippers. Finally, we use domain-adversarial learning to reduce embodiment-specific information in the learned visual representation. Experiments on hand-action prediction and real-world dexterous manipulation show consistent improvements over baselines, effective zero-shot human-to-robot skill transfer, generalization to unseen objects and environments, and data-efficient few-shot adaptation.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.00033v2" target="_blank" class="paper-title">Learning Dexterous Manipulation Using Contact Wrench Guidance From Human Demonstration</a>
+                        <span class="paper-date">2026-08-14</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：如何利用人类演示数据，实现长时程、接触丰富的灵巧机器人操作任务，并克服演示到机器人策略迁移的困难。&#10;&#10;🛠 **方法**：提出CHORD框架，以物体为中心构建“接触力/力矩空间”作为人类与机器人动作的共性表征，通过诱导瞬时运动度量相似性，并以此作为强化学习的引导信号。&#10;&#10;✨ **主要贡献**：构建了包含4,739个双手灵巧操作任务的大规模仿真基准，在1,831个任务上平均成功率达82.12%；方法可泛化至全身操作（90.77%成功率），并成功迁移至真实机器人（开环与闭环）。&#10;&#10;---&#10;**关键术语**：接触力/力矩空间（Contact Wrench Space）、强化学习、灵巧操作、人类演示、双手操作">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Dexterous robot manipulation can benefit from the abundance of human demonstrations, but transferring such demonstrations to robot policies remains challenging. We present Contact Wrench Guidance from Human Demonstration in Robotic Dexterous Manipulation (CHORD), a framework for long-horizon manipulation of rigid and articulated objects with reinforcement learning. The key idea is object-centric contact wrench space guidance: we represent human and robot motions by the forces and torques they can induce on the object, enabling similarity to be measured by the induced instantaneous motions. This guidance makes reinforcement learning more scalable for contact-rich dexterous manipulation. We further introduce a large-scale simulation benchmark with 4,739 bimanual dexterous manipulation tasks, constructed from motion-capture datasets and reconstructed in-house videos. Evaluated on 1,831 benchmark tasks, CHORD achieves an average success rate of 82.12%, demonstrating strong scalability. CHORD also generalizes to whole-body manipulation from hand-only and third-person demonstrations, achieving a 90.77% success rate, and the learned policies transfer to the real world in both open-loop and closed-loop settings.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2608.13362v1" target="_blank" class="paper-title">NestDex: Nested Policy Learning with Copilot Assisted Teleoperation for Dexterous Manipulation</a>
@@ -1154,10 +1184,7 @@
                         <span class="paper-date">2026-08-03</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：如何有效融合触觉反馈，提升机器人在接触丰富场景中的灵巧操作能力，尤其是在动态物理交互下的鲁棒性和成功率。&#10;&#10;🛠 **方法**：提出ReTouch，一种视觉-语言-动作模型（VLA），包含触觉补丁编码器（保留手指身份和局部接触结构）和高频动作模块（联合预测未来触觉状态与动作块，并利用执行中的触觉反馈在线修正预测）。&#10;&#10;✨ **主要贡献**：引入XHT-Dataset（含7类接触丰富任务的900条真实演示），ReTouch在标准与挑战条件下平均成功率分别超越最强基线18.4和23.8个百分点，验证了在线触觉预测修正对灵巧操作的有效性和鲁棒性。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Fusing tactile signals has proven effective for contact-rich manipulation, enabling robots to perceive contact states and adapt to rapidly changing physical interactions. Yet effectively integrating tactile feedback into dexterous manipulation remains underexplored. In this work, we introduce ReTouch, a vision-language-action model (VLA) that supports contact-rich dexterous manipulation through tactile predictions continually refined online using execution-time feedback. ReTouch builds on two main innovations for tactile representation and closed-loop action generation. First, its Tactile-Patch Encoder represents tactile observations as structured tactile patch features that preserve finger identity and local contact structure, providing contact cues for fine-grained dexterous control. Second, its high-frequency action module jointly predicts future tactile states and action chunks and refines both using incoming tactile feedback during execution. This closed-loop refinement keeps tactile predictions aligned with evolving physical interactions, enabling responsive action correction and improving robustness to contact changes and execution errors. We further introduce XHT-Dataset, comprising 900 real-world demonstrations across seven contact-rich tasks collected on an XHand--UR7e platform, and evaluate ReTouch through closed-loop real-robot experiments. ReTouch surpasses the strongest baseline by 18.4 and 23.8 percentage points in average success rate under standard and challenging conditions, respectively, demonstrating its effectiveness and robustness.</p>
@@ -1169,10 +1196,7 @@
                         <span class="paper-date">2026-08-03</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有可微仿真在摩擦接触场景中存在梯度失真问题，导致优化停滞或失败，尤其在复杂接触和大变形任务中。&#10;&#10;🛠 **方法**：提出统一的全GPU加速可微仿真器，通过强制马尔可夫动力学、质量对齐预条件器与软Fischer-Burmeister算子，以及“块内交换”条件，实现稳定且精确的梯度计算。&#10;&#10;✨ **主要贡献**：首次在摩擦接触中实现数学一致的梯度传播，显著提升灵巧操作、布料折叠等接触密集任务的仿真到现实迁移精度，并有效抑制传统方法的梯度不稳定性。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Differentiable simulation establishes the mathematical foundation for solving challenging inverse problems in computer graphics and robotics, such as physical system identification and inverse dynamics control. However, rigor in frictional contact remains the "elephant in the room." Current frameworks often avoid contact singularities via non-Markovian position approximations or heuristic gradients. This lack of mathematical consistency distorts gradients, causing optimization stagnation or failure in complex frictional contact and large-deformation scenarios. We introduce our unified fully GPU-accelerated differentiable simulator, which establishes a rigorous theoretical paradigm through: Long-Horizon Consistency: enforcing strict Markovian dynamics on a coupled position-velocity manifold to prevent gradient collapse; Unified Contact Stability: employing a mass-aligned preconditioner and soft Fischer--Burmeister operator for smooth frictional optimization; Robust Material Identification: resolving FEM singularities via a derived "Within-block Commutation" condition. Our experiments demonstrate our solver efficacy in bridging the Sim-to-Real gap, delivering precise, low-noise gradients in contact-rich tasks like dexterous manipulation and cloth folding. By mitigating the gradient instability issues common in conventional approaches, our framework significantly enhances the fidelity of physical system identification and control.</p>
@@ -1744,18 +1768,6 @@
                 </div>
                 <div class="paper-card">
                     <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.00033v1" target="_blank" class="paper-title">Learning Dexterous Manipulation Using Contact Wrench Guidance From Human Demonstration</a>
-                        <span class="paper-date">2026-06-22</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Dexterous robot manipulation can benefit from the abundance of human demonstrations, but transferring such demonstrations to robot policies remains challenging. We present Contact Wrench Guidance from Human Demonstration in Robotic Dexterous Manipulation (CHORD), a framework for long-horizon manipulation of rigid and articulated objects with reinforcement learning. The key idea is object-centric contact wrench space guidance: we represent human and robot motions by the forces and torques they can induce on the object, enabling similarity to be measured by the induced instantaneous motions. This guidance makes reinforcement learning more scalable for contact-rich dexterous manipulation. We further introduce a large-scale simulation benchmark with 4,739 bimanual dexterous manipulation tasks, constructed from motion-capture datasets and reconstructed in-house videos. Evaluated on 1,831 benchmark tasks, CHORD achieves an average success rate of 82.12%, demonstrating strong scalability. CHORD also generalizes to whole-body manipulation from hand-only and third-person demonstrations, achieving a 90.77% success rate, and the learned policies transfer to the real world in both open-loop and closed-loop settings.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
                         <a href="https://arxiv.org/abs/2606.23680v1" target="_blank" class="paper-title">CoorDex: Coordinating Body and Hand Priors for Continuous Dexterous Humanoid Loco-Manipulation</a>
                         <span class="paper-date">2026-06-22</span>
                     </div>
@@ -2004,18 +2016,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>We present ART-Glove, an articulated tactile glove designed to capture contact-grounded dexterous demonstrations while preserving human dexterity. ART-Glove makes hand-side contact geometry explicit with 16 rigid functional surfaces covering the fingers, thumb, and palm. Twenty-two anatomically aligned joints connect these surfaces and allow them to follow human hand motion during dexterous manipulation. Encoder-based sensing tracks surface motion, while dense piezoresistive tactile sensing records contact over the same surfaces. The complete system captures synchronized 22-DoF joint measurements and 2048-taxel tactile measurements at 120 Hz. We evaluate ART-Glove across experiments on motion freedom, joint sensing, tactile sensing, and contact-rich interaction capture, demonstrating its ability to preserve human dexterity while recording contact-grounded information that can support downstream dexterous robot learning.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.15434v1" target="_blank" class="paper-title">A Bilateral Teleoperation Framework for Dexterous Manipulation</a>
-                        <span class="paper-date">2026-06-13</span>
-                    </div>
-                                        <span class="paper-comment">📝 4 pages, 7 figures, 1 appendix,</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Dexterous teleoperation requires precise arm-hand coordination, low-latency feedback, and robust interaction in real-world contact-rich environments. This paper presents a modular bilateral teleoperation framework that integrates operator-side input interfaces with a robot-side dexterous hand and compliant robotic arm in a unified control architecture. The system supports position-based hand retargeting, differential arm control, multi-scale haptic feedback, and shared control for stable manipulation. We validate the framework through a real-world dexterous manipulation task, highlighting coordinated arm-hand control and contact-aware interaction. Beyond feasibility, we identify key design insights related to cross-embodiment mismatch, haptic feedback granularity, and shared control. The proposed platform provides a practical teleoperation system and a foundation for collecting high-quality demonstrations for future learning-from-demonstration research.</p>
                     </details>
                 </div>
             </div>

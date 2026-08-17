@@ -590,7 +590,7 @@
                 <a href="World-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">World Model</span>
-                    <span class="nav-count">76</span>
+                    <span class="nav-count">77</span>
                 </a>
                 <a href="3D-Foundation-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
@@ -690,12 +690,12 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">68</span>
+                    <span class="nav-count">70</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">76</span>
+                    <span class="nav-count">77</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -809,7 +809,7 @@
             <a href="World-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">World Model</span>
-                <span class="nav-count">76</span>
+                <span class="nav-count">77</span>
             </a>
             <a href="3D-Foundation-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
@@ -909,12 +909,12 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">68</span>
+                <span class="nav-count">70</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">76</span>
+                <span class="nav-count">77</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -1030,6 +1030,66 @@
             <div class="paper-list">
                 <div class="paper-card">
                     <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.14531v1" target="_blank" class="paper-title">Spatiotemporal Tube-Based Safety-Certificate for Autonomous Navigation of Articulated Vehicles</a>
+                        <span class="paper-date">2026-08-14</span>
+                    </div>
+                                        <span class="paper-comment">📝 Accepted for presentation at the 2026 IEEE International Conference on Intelligent Transportation Systems (ITSC 2026)</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：铰接式车辆（如牵引车-半挂车、卡车-拖车等）在狭窄路线上自主导航时，因物理特性和运动约束导致操纵困难，需确保拖挂系列始终不偏离道路走廊。&#10;&#10;🛠 **方法**：提出一种基于时空管道的规划方法，利用铰接元件的运动学与摆动约束，为驱动牵引车构建安全管道，并通过允许的修正量调整管道，生成路径安全证书。&#10;&#10;✨ **主要贡献**：首次将时空管道与安全证书结合，为铰接式车辆提供可验证的路径规划，确保拖车序列在复杂路线上始终处于道路边界内，并在卡车-拖车仿真中验证了有效性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Articulated vehicles are the workhorses of freight transportation, and their autonomous navigation is challenging. Their physical characteristics and motion constraints pose significant challenges in manoeuvring these vehicles on narrow routes. This paper presents a spatiotemporal tube-based approach to plan autonomous navigation of vehicles like tractor semi-trailers, truck/ tractor trailers, towing Automated Guided Vehicles (AGVs), and road trains. This planning approach provides a certified path plan for the truck or tractor, ensuring that the towed series of trailers always remains within the road corridor, limited by permissible corrections. The planning leverages the kinematics of the linked elements along with sway constraints to arrive at a safe tube for the actuated prime mover. We modify the spatiotemporal tube using permissible corrections to provide a route safety certificate to the vehicle for the given route. The proposed planning method is verified on a truck-trailer navigation simulation for a complex route.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.14466v1" target="_blank" class="paper-title">Expected Free Energy-based Informative Path Planning for Robotic Mars Exploration</a>
+                        <span class="paper-date">2026-08-14</span>
+                    </div>
+                                        <span class="paper-comment">📝 accepted for IWAI 2026</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在火星探测等未知环境探索中，机器人需同时构建准确的信息地图并快速定位高价值区域，同时受限于路径长度和测量成本，而传统方法仅能优化单一目标。&#10;&#10;🛠 **方法**：提出基于期望自由能（EFE）的主动推理框架，结合高斯过程建模信息场，在硬路径长度约束下规划连续轨迹，以最小化EFE作为统一决策准则。&#10;&#10;✨ **主要贡献**：EFE规划能同时实现高精度后验地图构建与高价值区域定位，在相同条件下优于信息论基线方法，且参数易调，兼顾探索效率与资源约束，适用于自主部署。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>An autonomous robot efficiently exploring an unknown environment, such as looking for water sources on Mars, faces two simultaneous demands: building an accurate information map while quickly finding the regions of greatest value, and paying for every meter of travel and the cost of every measurement it takes. Classical information-seeking and reward-seeking criteria address only one of these objectives at a time. Here, we propose Expected Free Energy (EFE), the principled action-selection objective from active inference, as a unifying criterion for budgeted robotic informative path planning. Maintaining a Gaussian-process belief over the information field, our agent plans continuous trajectories that minimize expected free energy under hard path-length constraints. The results from multiple realizations show that EFE-based planning yields accurate posterior maps and locates the highest-value regions simultaneously, outperforming information-theoretic baselines under the same settings. In robotic exploration, these unified, easy-to-tune principled information-gathering strategies facilitate autonomous deployment while enforcing efficiency and resource constraints.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2503.01236v3" target="_blank" class="paper-title">LLM-Advisor: An LLM Advisor for Cost-efficient Path Planning across Multiple Terrains</a>
+                        <span class="paper-date">2026-08-14</span>
+                    </div>
+                                        <span class="paper-comment">📝 This paper has been accepted by IEEE Transactions on Automation Science and Engineering</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在固定图路径规划中，全局规划器受限于预定义路线空间，可能错失原生分辨率地图中成本更低的地形走廊，导致路径成本非最优。&#10;&#10;🛠 **方法**：提出LLM-Advisor框架，利用多模态语义地形上下文生成备选路线，结合地图分离的参考示例增强（REA）和确定性验证回退机制，仅部署可行且成本严格低于基线的路线。&#10;&#10;✨ **主要贡献**：引入MultiTerraPath基准（2000张地图，含Easy/Hard子集），在粗格点A*（步长r=50）基线下，LLM-Advisor（GPT-5.5）在Easy和Hard上分别提升52.00%和45.00%的FIR，验证回退保证100%有效性，且在r=100时恢复49.16%（Easy）和29.98%（Hard）的粗-最优间隙。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>This paper addresses fixed-graph terrain-aware path refinement, in which a global planner is restricted to a predefined route space and may remain optimal within that space while missing lower-cost terrain corridors available in the native-resolution map. We propose LLM-Advisor, an external verification-guided multimodal refinement framework that uses semantic terrain context to propose route alternatives with lower cost than the baseline route. The framework combines a multimodal prompt, map-disjoint Reference Example Augmentation (REA), and deterministic validation with fallback: a proposed route is deployed only when it is feasible and strictly lower in cost than the baseline. To evaluate the method, we introduce MultiTerraPath, a controlled 2,000-map benchmark with Easy and Hard subsets for fixed-graph terrain-cost refinement, and further conduct a semantic-cost transfer evaluation on RUGD. Using coarse-lattice A* with stride r=50 as the fixed baseline planner, we compare LLM-Advisor with direct LLM planning and LLM-A*. LLM-Advisor with GPT-5.5 achieves the highest FIR on MultiTerraPath, improving 52.00% of Easy maps and 45.00% of Hard maps. Deterministic verification and fallback yield 100.00% NDR and Final Validity across all evaluated RUGD scene groups. Across lattice strides from r=10 to r=100, offline oracle analysis shows that coarser graphs create larger coarse--oracle gaps, while LLM-Advisor recovers up to 49.16% and 29.98% of the available gap on Easy and Hard maps when r=100, respectively.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2604.16509v2" target="_blank" class="paper-title">Learning-Guided Sparsification of Dynamic Graphs in Robotic Exploration</a>
+                        <span class="paper-date">2026-08-13</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：机器人探索算法中动态图（如RRT）快速增长，积累冗余信息，导致计算和存储性能下降。&#10;&#10;🛠 **方法**：提出一种基于Transformer的混合框架，使用近端策略优化（PPO）进行训练，在探索过程中对动态图进行剪枝，限制其规模增长。&#10;&#10;✨ **主要贡献**：在基于RRT的前沿探索仿真中，该方法将图规模减少高达96%，且优于随机剪枝基线，在复杂长时程任务中同时提升探索效率和计算效率，首次验证了强化学习用于机器人探索动态图剪枝的可行性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Many robotic exploration algorithms rely on graph structures for frontier-based exploration and dynamic path planning. However, these graphs grow rapidly, accumulating redundant information and impacting performance. We present a hybrid transformer-based framework trained with Proximal Policy Optimization which complements exploration algorithms by pruning these graphs during exploration, limiting their growth and reducing the accumulation of excess information. The framework was evaluated on simulations of a robotic agent using Rapidly-Exploring Random Trees to carry out frontier-based exploration, where the learned policy reduces graph size by up to 96%. We find preliminary evidence that our framework enables effective, generalizable exploration under reduced information density, consistently outperforming the randomly pruned baseline and improving both exploration efficiency and computational efficiency beyond the unpruned baseline for complex long-horizon exploration tasks. To the best of our knowledge, these results are the first suggesting the viability of RL to prune dynamic graphs used in robotic exploration algorithms.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
                         <a href="https://arxiv.org/abs/2608.12877v1" target="_blank" class="paper-title">ReflectFact: Self-Reflective Agents for Improving Comprehension and Reasoning in Multi-Hop Fact Verification</a>
                         <span class="paper-date">2026-08-13</span>
                     </div>
@@ -1124,10 +1184,7 @@
                         <span class="paper-date">2026-08-07</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：构建一个全自动的机器人肖像绘制系统，将实时人脸检测、AI草图生成与机械臂绘制无缝集成，以生成高质量、可识别的机器人肖像。&#10;&#10;🛠 **方法**：采用感知-认知-规划-行动四阶段流水线：利用实时人脸检测提取面部区域，通过Gemini Vision API将面部转换为极简单线草图，使用基于图的路径规划优化笔画顺序，最后由6自由度协作机械臂执行平滑轨迹绘制。&#10;&#10;✨ **主要贡献**：首次将视觉感知、神经艺术抽象、运动优化与机器人控制整合为端到端自主系统；用户评分显示草图质量4.33、执行感知4.53、用户体验4.65（5分制），验证了生成肖像的辨识度、美观性与用户吸引力。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>We present an autonomous robotic portrait-generation system combining real-time face detection, AI-based sketch generation, and robotic drawing. The system captures video frames, extracts facial regions, converts them into minimalist single-line sketches using the Gemini Vision API, optimizes stroke order through graph-based path planning, and executes smooth trajectories on a 6-DoF collaborative manipulator. This perception-cognition-action pipeline integrates computer vision, neural artistic abstraction, motion optimization, and robot control. User ratings on a 5-point scale were high for sketch quality 4.33, perceived execution 4.53, and user experience 4.65, indicating recognizable, appealing, and engaging robotic portraits.</p>
@@ -1139,10 +1196,7 @@
                         <span class="paper-date">2026-08-06</span>
                     </div>
                                         <span class="paper-comment">📝 6 pages, 3 figures, 2 tables. Accepted for publication at the 14th IEEE European Conference on Visual Information Processing (EUVIP 2026)</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：传统无人机摄影测量航线规划未充分考虑场景几何结构，导致局部重建误差和覆盖不完整。&#10;&#10;🛠 **方法**：提出一种迭代式混合离散-连续视点规划方法，基于代理重建模型，利用摄影测量启发式（如正面性、成像距离、视差、多视角观测数）评分表面点，并通过聚类CMA-ES优化细化候选视点，同时评估视点集的可见性、重叠和图连通性，最终融合近景细节视点与广域覆盖视点生成飞行路径。&#10;&#10;✨ **主要贡献**：在三个合成场景上的实验表明，该方法相比现有无人机路径规划方法，显著提升了重建精度和完整性，有效平衡了局部重建质量与全局图像网络鲁棒性。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Unmanned aerial vehicle (UAV) photogrammetry requires camera networks that provide sufficient surface coverage, image overlap, parallax, and resolution, yet conventional flight patterns are often poorly adapted to scene geometry resulting in local reconstruction errors. This paper proposes an iterative hybrid discrete-continuous viewpoint planning method for targeted UAV photogrammetry from a proxy reconstruction. The method scores sampled surface points using photogrammetric heuristics based on frontality, imaging distance, parallax, and multi-view observation count, while also evaluating the full viewpoint set in terms of visibility, pairwise overlap, and graph connectivity. Candidate viewpoints are generated around weakly observed regions, refined using clustered Covariance matrix adaptation evolution strategy (CMA-ES) optimisation, and removed when redundant. The final flight path combines close-range detail viewpoints with wider model-coverage viewpoints, balancing local reconstruction quality with global image-network robustness. Evaluation on three synthetic scenes shows that the proposed method improves both reconstruction accuracy and completeness compared with prior UAV path-planning methods.</p>
@@ -1154,10 +1208,7 @@
                         <span class="paper-date">2026-08-06</span>
                     </div>
                                         <span class="paper-comment">📝 7 pages with 11 figures</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：清洁机器人在不同环境中进行全覆盖路径规划时，传统强化学习模型需针对每个新环境重新训练，缺乏泛化能力，且现有方法多局限于简单路径段而非全局清扫。&#10;&#10;🛠 **方法**：提出将近端策略优化（PPO）算法与迁移学习（TL）、最近已清洁瓷砖检测、奖励塑形及精英集构建相结合，实现跨多种清洁环境的高效路径规划。&#10;&#10;✨ **主要贡献**：通过消融实验和与随机、Z字形等传统方法的对比，验证了该方法在训练性能和收敛速度上优于原始PPO，且整体清扫效率显著高于传统方法，具备更强的环境适应性。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Recently, as the demand for cleaning robots has steadily increased, therefore household electricity consumption is also increasing. To solve this electricity consumption issue, the problem of efficient path planning for cleaning robot has become important and many studies have been conducted. However, most of them are about moving along a simple path segment, not about the whole path to clean all places. As the emerging deep learning technique, reinforcement learning (RL) has been adopted for cleaning robot. However, the models for RL operate only in a specific cleaning environment, not the various cleaning environment. The problem is that the models have to retrain whenever the cleaning environment changes. To solve this problem, the proximal policy optimization (PPO) algorithm is combined with an efficient path planning that operates in various cleaning environments, using transfer learning (TL), detection nearest cleaned tile, reward shaping, and making elite set methods. The proposed method is validated with an ablation study and comparison with conventional methods such as random and zigzag. The experimental results demonstrate that the proposed method achieves improved training performance and increased convergence speed over the original PPO. And it also demonstrates that this proposed method is better performance than conventional methods (random, zigzag).</p>
@@ -1169,10 +1220,7 @@
                         <span class="paper-date">2026-08-06</span>
                     </div>
                                         <span class="paper-comment">📝 11 pages, 7 figures, fixed a template bug in the Latex</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有主动重建系统采用贪婪的“下一最佳视角”策略，忽略全局信息结构，导致传感器轨迹低效，浪费感知能力。&#10;&#10;🛠 **方法**：将主动重建建模为遍历覆盖问题，在线从不确定性和可见性推导目标信息分布，并通过核遍历水平规划器（含梯度流和足迹消减）计算遍历轨迹，实现建图与轨迹优化的闭环。&#10;&#10;✨ **主要贡献**：在Replica数据集上相比NBV基线，PSNR提升1.5 dB，并开源代码（https://github.com/spikelab-jhu/trace-active-reconstruction）。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Existing active reconstruction systems with Gaussian-splatting maps select observations greedily, optimizing a single next-best-view (NBV) at each step and connecting the chosen views by short-horizon path planning. This greedy decoupling disregards the global structure of scene information, producing inefficient trajectories that waste sensing capacity in transit between selected views. In this work, we study active reconstruction as an ergodic coverage problem: the time-averaged spatial statistics of the sensor trajectory should match a target information distribution induced by the current map. Our approach derives this target distribution online from uncertainty and visibility, and calculates ergodic trajectories via a kernel-ergodic horizon planner with gradient flow and footprint depletion, closing the loop between mapping and trajectory optimization. We thoroughly evaluate TRACE on the Replica dataset against the Next-Best-View (NBV) baselines, improving PSNR by 1.5 dB. Code: https://github.com/spikelab-jhu/trace-active-reconstruction.</p>
@@ -1896,54 +1944,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Autonomous exploration in unknown environments requires unmanned aerial vehicles (UAVs) to efficiently generate informative trajectories while simultaneously constructing accurate maps. Although many existing exploration methods rely on geometric information, they often lack semantic awareness, resulting in suboptimal exploration efficiency and limited environmental understanding. To address this limitation, this paper proposes a semantic-aware exploration framework that adds semantic information to a roadmap-based exploration strategy. The proposed method builds on the Dynamic Exploration Planner (DEP), which incrementally constructs a Probabilistic Roadmap (PRM), and augments this roadmap with a semantic layer. A semantic reward function is introduced to prioritize regions containing meaningful objects and structures, enabling the UAV to focus on areas with higher information value. Furthermore, the roadmap is continuously updated to support efficient frontier selection and path planning during exploration. The proposed framework is implemented in ROS Noetic and Gazebo using an RGB-D sensor for simultaneous acquisition of geometric and semantic information. Experimental results in multiple simulated environments demonstrate that the proposed approach achieves exploration coverage rates between 90% and 94% while reducing exploration time and travel distance compared with conventional geometry-based exploration methods.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2605.28654v2" target="_blank" class="paper-title">Integrated Exploration-Aware UAV Route Optimization and Path Planning</a>
-                        <span class="paper-date">2026-06-18</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Uncrewed aerial vehicles (UAVs) are increasingly used for exploration-driven monitoring in hazardous environments such as disaster zones, contaminated sites, wildfire areas, and damaged infrastructure, where limited flight endurance must be allocated between visiting reported locations and gathering new information. In these settings, prior information regarding hazards is often incomplete, spatially imprecise, and subject to change during execution. For example, initial reports may identify a region where a hazard is likely to exist, but the actual hazard may be displaced, partially observed, or entirely unreported. We present an integrated exploration-aware UAV route optimization and path planning framework for hazard monitoring under uncertain and evolving prior information. The environment is represented as a spatial risk map, where each location has an associated belief of hazardous conditions. Reported hazards are modeled as uncertain regions of interest (ROIs) rather than confirmed target locations, requiring the UAV to inspect reported areas while also using its limited flight endurance to explore informative regions. The proposed method solves a vehicle routing problem over reported ROIs, augments the route with auxiliary pseudo-nodes to improve spatial coverage, allocates the remaining flight distance budget across route segments, and optimizes dynamically feasible B-spline trajectories for local exploration. During execution, UAV measurements update a grid-based belief map, and the remaining trajectory is replanned when new information and the remaining budget justify adaptation. Across 48 scenario configurations, online replanning improves average KL reduction by 15.9% over the offline optimized planner and 48.6% over straight-line traversal.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.20495v1" target="_blank" class="paper-title">Increasing Resilience of Continuum Robots via Motion Planning Algorithms</a>
-                        <span class="paper-date">2026-06-18</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>This paper presents an experimental study of motion planning for resilient continuum robots. In this study we mainly focused on multi-criteria decision-making, its application for path-planning algorithms, impact on the generated path and execution time. To do this, we used two well-known algorithms for path planning, namely Genetic algorithm and A star algorithm, and modified them by adding the Analytical Hierarchy Process algorithm to evaluate the quality of the paths generated. In our experiment the Analytical Hierarchy Process considers four different criteria, i.e. distance, motors damage, mechanical damage of the robot's arm and accuracy, each considered to contribute to the resilience of a continuum robot. The use of different criteria is necessary to increase the time to maintenance operations of the continuum robot. We conducted the experiments using two different simulated environments of the robot. Although we significantly simplified the robot's model and its environment, we still implemented some of the features of the environment based on the real robot prototype. In particular, one of the environments has single- as well as multi-path points, and other consists of the multi-path points only. The results show that, in contrast to A star, the performance time of Genetic algorithm does not depend on the environment's cardinality. It generates more diverse paths, which increases the robot's resilience.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.16780v2" target="_blank" class="paper-title">DIFF-IPPO: Diffusion-Based Informative Path Planning with Open-Vocabulary Belief Maps</a>
-                        <span class="paper-date">2026-06-18</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Exploration and object search require robots to perceive their environment, identify regions of interest, and plan trajectories that improve target-detection likelihood or maximize information gain. Many IPP methods, especially in continuous environmental monitoring, rely on Gaussian-process belief models, while object-search settings often produce complex, multimodal belief maps from semantic or open-vocabulary perception. Global trajectory generation directly conditioned on such non-Gaussian belief maps remains comparatively underexplored. Although diffusion-based planners offer strong capabilities for modeling such distributions, their use in informative path planning remains limited. In this work, we propose DIFF-IPPO, a pipeline that integrates an open-vocabulary belief map generator with a diffusion-based planner for global trajectory generation over belief maps. The method generates trajectories that concentrate sensor coverage over high-belief regions, achieving normalized detection scores between 81.49% and 86.55% across different dataset scenarios. We validate the system in a simulated search-and-rescue scenario where the planner searches candidate building regions to locate a burning building. In this setting, a team of five drones using batched belief-map-conditioned trajectory generation achieves first detections in 3.5 minutes.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.17216v1" target="_blank" class="paper-title">Intermittent Strategic Cooperation of Two Selfish Agents on Graphs</a>
-                        <span class="paper-date">2026-06-15</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>We study strategic space- and time-constrained cooperation between two self-interested agents through the Intermittent Strategic Cooperation-Based Two-Agent Path Planning (IC2PP) problem, a shortest-path game on graphs in which agents navigate toward individual targets while optionally cooperating at specific nodes to reduce their own travel times. Although such cooperation can strictly benefit both agents, it is strategically fragile: agents may deviate at any point along their paths. Modeled as a 2-player game, we characterize the structure of Pure Nash Equilibrium (PNE) joint strategies in IC2PP, and show that stable cooperation must follow a highly constrained form. We further prove that at least one PNE exists in every instance of IC2PP, and present a polynomial-time algorithm for enumerating all relevant PNEs. When multiple equilibria arise, we study coordination mechanisms based on bargaining-theoretic selection concepts and empirically compare equilibrium outcomes in terms of individual travel times and social welfare.</p>
                     </details>
                 </div>
             </div>

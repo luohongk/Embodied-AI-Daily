@@ -590,7 +590,7 @@
                 <a href="World-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">World Model</span>
-                    <span class="nav-count">76</span>
+                    <span class="nav-count">77</span>
                 </a>
                 <a href="3D-Foundation-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
@@ -690,12 +690,12 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">68</span>
+                    <span class="nav-count">70</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">76</span>
+                    <span class="nav-count">77</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -809,7 +809,7 @@
             <a href="World-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">World Model</span>
-                <span class="nav-count">76</span>
+                <span class="nav-count">77</span>
             </a>
             <a href="3D-Foundation-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
@@ -909,12 +909,12 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">68</span>
+                <span class="nav-count">70</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">76</span>
+                <span class="nav-count">77</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -1028,6 +1028,36 @@
                 <span class="topic-count">80 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.14490v1" target="_blank" class="paper-title">Twin: Playing an Unknown Game with a Test-Time Digital Twin</a>
+                        <span class="paper-date">2026-08-14</span>
+                    </div>
+                                        <span class="paper-comment">📝 Project website with action-by-action replays of all 25 runs: https://arc-agi-3-twin.vercel.app/ Code: https://github.com/Alexyskoutnev/TWIN-ARC-AGI-3</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在未知规则和目标的网格游戏中，如何仅通过模拟与交互自动构建可执行的世界模型，以完成持续学习任务（如ARC-AGI-3游戏）。&#10;&#10;🛠 **方法**：提出Twin系统，利用前沿编码智能体编写可执行世界模型，通过回放验证（在数字孪生环境中重放已观察的转换）和反例修复机制，逐步修正模型直至与真实游戏转换一致，并推断或搜索游戏目标。&#10;&#10;✨ **主要贡献**：Twin在183个关卡中清除179个（97.8%），且在88.3%的清除关卡中比人类更高效；将基础模型得分从7.8%提升至93.3%。关键发现是构建可用世界模型比预期简单，而推断正确目标才是难点。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>We present a Test-time World-model Inference (Twin) system, in which a frontier coding agent writes an executable world model for completing continual learning tasks, such as ARC-AGI-3 games. Traditional approaches hand-engineer such models, one custom design per task. Each game hides its rules and goal, and our system constructs them from simulation and interaction alone. Its inductive prior over grid games is strong enough to recover the true transitions of the game and the goal on nearly all levels. Replay validation happens in a twin world model. The harness enforces that an action is not made until the program reproduces every previous observed game transition. Each mismatch between a world model prediction and the actual action result becomes a counterexample that is used to repair the world model. Twin clears 179 out of 183 levels (97.8%), and does so more efficiently than humans in 158 out of 179 levels (88.3%). The system infers the goal before any reward on 156 of the levels it clears (87.2%), and in the remaining levels automatically discovers the goal by search. The benchmark scores completion and action efficiency, between 0 and 100, against humans playing each game for the first time. Played directly, the base model scores only 7.8%; an off-the-shelf harness increases it to 61.1%, whereas our twin world model increases the same base model to 93.3%, clearing 23 out of 25 games. Building a usable world model is simpler than anticipated, whereas the harder problem is inferring the right goal.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.13660v1" target="_blank" class="paper-title">What to Preserve, Where to Adapt: A Depth-Wise Analysis of Forgetting in Continual Gynecological Image Segmentation</a>
+                        <span class="paper-date">2026-08-13</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在妇科医学图像分割中，面对跨成像模态、解剖结构和标注协议的显著分布差异，持续学习模型如何避免灾难性遗忘，以及网络不同深度区域对遗忘的影响机制。&#10;&#10;🛠 **方法**：采用分块消融分析（block-wise ablation）和受控适应实验，系统研究编码器-解码器不同区域（早期编码器、晚期解码器、瓶颈邻近区域等）在持续分割任务中的性能贡献和遗忘敏感性。&#10;&#10;✨ **主要贡献**：发现早期编码器和晚期解码器对分割性能最关键，而遗忘主要源于浅层编码器/解码器的更新——当更新仅限制在瓶颈邻近区域时遗忘有限，一旦浅层区域可训练则遗忘急剧增加，揭示了网络深度位置对持续学习遗忘的决定性影响。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Medical image segmentation models are typically trained under the assumption that all data are available simultaneously. However, in clinical practice, datasets often arrive sequentially, requiring models to adapt continuously to evolving data distributions. We study this problem in gynecological image segmentation, where substantial heterogeneity across imaging modalities, anatomical structures, and annotation protocols creates a particularly challenging continual learning setting. Under these large distribution shifts, existing continual learning methods struggle to preserve previously learned knowledge, leading to catastrophic forgetting. To better understand forgetting in this setting, we investigate how different encoder--decoder regions influence segmentation performance and forgetting during continual gynecological segmentation. Through block-wise ablation analysis, we observe that ablating early encoder and late decoder regions results in the largest performance degradation, indicating that segmentation performance depends unevenly across the network hierarchy. Using controlled adaptation experiments, we further show that forgetting remains limited when updates are restricted to bottleneck-adjacent regions, but increases sharply once shallower encoders and decoders become trainable, even when only a small subset of parameters is updated. These findings suggest that forgetting in the encoder-decoder architecture is strongly influenced by where updates occur across network depth during continual learning. Full code and analysis pipelines will be made publicly available upon acceptance.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2608.13448v1" target="_blank" class="paper-title">Mind the Context: Continual Learning of Socially Appropriate Robot Actions via Environmental-Social Disentanglement</a>
@@ -1154,10 +1184,7 @@
                         <span class="paper-date">2026-08-11</span>
                     </div>
                                         <span class="paper-comment">📝 To appear in the Proceedings of the Fifth Conference on Lifelong Learning Agents (CoLLAs), 2026</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有持续学习中的灾难性遗忘评估多停留在性能或最后一层表征层面，缺乏对遗忘背后机制的理解。&#10;&#10;🛠 **方法**：提出一个基于特征编码的几何解释框架，将遗忘视为个体特征编码的变换（容量减少或下游读取中断），并通过玩具模型形式化分析，结合Crosscoders对实际Vision Transformer进行案例研究。&#10;&#10;✨ **主要贡献**：首次将机械可解释性引入持续学习，提供特征中心的遗忘分析词汇，并通过实验验证深度对遗忘的负面影响，为实际模型分析提供新工具。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Catastrophic forgetting in continual learning is often measured at the performance or last-layer representation level, overlooking the underlying mechanisms. We introduce a mechanistic framework that offers a geometric interpretation of catastrophic forgetting as the result of transformations to the encoding of individual features. These transformations can lead to forgetting by reducing the allocated capacity of features or by disrupting their readout by downstream computations. Analysis of a tractable toy model formalizes this view, allowing us to identify best- and worst-case scenarios. Through experiments on this model, we empirically test our formal analysis and highlight the detrimental effect of depth. Finally, we demonstrate how our framework can be used in the analysis of practical models through the use of Crosscoders. We do so through a case study example of a Vision Transformer trained on sequential CIFAR-10. Our work provides a new, feature-centric vocabulary for continual learning.</p>
@@ -1169,13 +1196,22 @@
                         <span class="paper-date">2026-08-11</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：Agentic coding 中的提示文件（如 CLAUDE.md）会无限增长，导致“灾难性记忆”（catastrophic remembering）问题，即旧指令难以删除，提示词不断膨胀。&#10;&#10;🛠 **方法**：通过分析 1,867 个仓库中的 247,694 条指令生命周期，量化提示词增长规律；并引入“提示注释”（prompt comments）技术，通过编码潜在推理来抑制指令累积。&#10;&#10;✨ **主要贡献**：发现提示词平均增长 +226%，每提交增加 4.9 条指令，且旧指令删除概率极低；提示注释可减少 99.3% 的冗余指令，并在真实任务中提升指令遵循能力达 23.1%。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Agentic coding READMEs like CLAUDE.md grow without bound in real repositories, stopping only when the repository retires or someone rewrites the file wholesale. We trace this to imperfect recall: appending an instruction is always cheap, but once an instruction's rationale is gone, deleting it without risking a correctness regression costs O(2^|D|) in a prompt of |D| instructions. We name the resulting divergence catastrophic remembering, the inverse of catastrophic forgetting around which continual learning is organized. First, we characterize this phenomenon across 247,694 instruction lifetimes in 1,867 repositories: agentic prompts grow without bound, more than tripling over their lifetime (+226%), gaining +4.9 net instructions every commit; further, the older an instruction gets, the less likely it is to be deleted (log-hazard -0.032/commit). Then, we show that prompt comments can halt the growth: inverting IFEval yields verifiable worlds whose optimal prompts are known, and there comments encoding latent reasoning remove 99.3% of excess instructions (+211.3% to +1.4%). Finally, applying the same inversion to WildIFEval, we show that prompt comments can improve real-world agentic instruction-following by up to 23.1%. If English is the new code, why don't we have comments yet?</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.13608v1" target="_blank" class="paper-title">Evaluating Agentic Learning Harness Capabilities Without Labels via the Scaling Hypothesis</a>
+                        <span class="paper-date">2026-08-11</span>
+                    </div>
+                                        <span class="paper-comment">📝 18 pages, 6 figures. Accepted at CAMLIS 2025 (Conference on Applied Machine Learning for Information Security)</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Agentic "Continual Learning Harnesses", systems that pair an LLM with retrieval or memory to improve from feedback without retraining, have shown growing value in cybersecurity. But their value is conventionally measured by gains against labeled benchmarks, an approach that often fails in operational security settings. Benchmark labels are scarce, stale, and unrepresentative, so a practitioner often cannot tell whether a given harness helps at all or which of two is better for their task. Traditional LLM-as-a-judge offers little signal because it is no stronger than the agent it evaluates, and distillation is unreliable on scarce, sporadic, and biased labels. We propose a framework for evaluating learning harnesses end-to-end without a labeled benchmark, grounded in the scaling hypothesis. A stronger teacher model provides sparsely sampled corrections to a smaller student with a continual learning harness. We score a harness by how much its student converges toward the teacher over time. Across security tasks, model families, and harness designs, we show that improvement relative to the teacher correlates with improvement relative to a held-out gold standard, validating teacher-relative lift as a proxy for true harness uplift when labels are absent. We further show that LLM-as-a-judge between similarly powered models yields no usable signal. These results suggest that a teacher-sized model can be improved through the same harness when humans provide the same kind of sparse, high-precision corrections.</p>
                     </details>
                 </div>
                 <div class="paper-card">
@@ -1188,6 +1224,18 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>The ability to learn continuously over time remains a major challenge for modern machine learning systems, even in the era of Foundation Models. While the rich representations learned by large pre-trained models can partially mitigate catastrophic forgetting, they still struggle to adapt efficiently to evolving data distributions. A key challenge remains, how to continually add new knowledge to a large pretrained model in a way that is scalable and computationally efficient over long task sequences. In this work, we introduce GLAM, a simple and effective framework for class-incremental continual learning based on LoRA adapters merging. For each task, GLAM trains a lightweight low-rank adapter with an importance scalar, incurring minimal computational overhead. Adapters are then pruned, rescaled, and sequentially grouped to enable structured knowledge reuse and limit parameter growth. At inference, all groups are combined into a single module, ensuring constant computational cost regardless of the number of tasks. We evaluate GLAM on vision benchmarks with sequences of up to 50 tasks, significantly extending beyond standard protocols. GLAM achieves the highest accuracy across the evaluated benchmarks. Compared with the baseline attaining the highest average accuracy across benchmarks, it uses 16--19\% of the trainable parameters and reduces training time by approximately 63--74\%, demonstrating efficient and scalable continual learning. Our source code is publicly available at https://github.com/atlas-luiss/GLAM.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.13606v1" target="_blank" class="paper-title">MobileMem: Learning from a Year of Mobile Experiences</a>
+                        <span class="paper-date">2026-08-11</span>
+                    </div>
+                                        <span class="paper-comment">📝 Technical Report; Project Page: http://mobilemem.openkg.cn/</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>The next generation of AI agents is increasingly moving beyond systems that answer isolated questions toward persistent personal assistants that can understand, remember, and continuously learn from users' experiences. Such assistants require long-term memory to accumulate and leverage user-specific experiences over time, yet existing benchmarks remain inadequate for realistic mobile settings, where experiences are heterogeneous, multimodal, evolving, and deeply personal. We introduce MobileMem, a benchmark and framework for studying on-device long-term memory, grounded in a year-scale collection of mobile experiences. MobileMem employs a knowledge-grounded synthesis pipeline to construct coherent and temporally consistent long-horizon trajectories from user-app sessions. It provides complementary text and multimodal settings covering multi-hop and temporal reasoning, knowledge updating, and implicit preference inference. Specifically, MobileMem enables agents to remember the past, understand the present, and adapt to the future. By modeling experiences rather than isolated facts, MobileMem moves memory beyond information retrieval toward experiential intelligence for continuous personal learning.</p>
                     </details>
                 </div>
                 <div class="paper-card">
@@ -1968,54 +2016,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>AI agents encounter learning opportunities in every episode they run, and discard nearly all of them: the underlying models are frozen at deployment, so an agent that resolves a difficult request today starts from zero when it recurs tomorrow. Yet ordinary operation already produces feedback, in the form of outcome verdicts and after-the-fact corrections. We show that this feedback is a sufficient signal for continual learning when the frozen model is paired with an external memory that distils each episode into retrievable natural-language rules. On the banking domain of $τ$-bench, against a static-RAG control retrieving over the complete policy corpus, learning from the one-bit outcome verdict lifts single-trial success to 1.6$\times$ the baseline, and learning from corrections to 2.6$\times$, converting 22 of the 84 tasks the baseline never solves. The result spans the deployment spectrum, measured on Mistral Large, an open-weights model that organisations with data sovereignty requirements can self-host, and replicated on a frontier model, Claude Sonnet 5. The accumulated memory also transfers: each model, reading the store built by the other, rises above its own no-memory baseline. The harness, protocol, and data are released.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.22075v1" target="_blank" class="paper-title">FSE: Continual Learning for Named Entity Recognition by Fast-Slow Experts</a>
-                        <span class="paper-date">2026-07-24</span>
-                    </div>
-                                        <span class="paper-comment">📝 Preprint submitted to Pattern Recognition Letters</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Continual Learning for Named Entity Recognition (CLNER) enable models to incrementally learn new entity types without forgetting previously acquired ones. However, existing methods suffer from catastrophic forgetting and insufficient exploitation of shared information across tasks. This paper proposes FSE, a Fast-Slow Experts enhanced span-based NER model for CLNER. The shared fast expert learns token-level links to efficiently filter out unlikely spans, while the task-specific slow expert performs span classification only on the remaining candidates. It stabilizes learning by promoting knowledge sharing across tasks and maintains plasticity by reducing learning burden at each task. A length-decay negative sampling strategy to mitigate span imbalance is also introduced. Extensive experiments on OntoNotes and FewNERD synthestic datasets demonstrate that FSE achieves state-of-the-art performance in CLNER scenarios, with effectiveness of each component, empirical evidence of faster convergence and expected functionality of both experts.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.28663v1" target="_blank" class="paper-title">NeuroSynth: A Biologically Inspired Continual Reinforcement Learning Architecture for Mitigating Catastrophic Forgetting</a>
-                        <span class="paper-date">2026-07-24</span>
-                    </div>
-                                        <span class="paper-comment">📝 Disclaimer. This manuscript is provided as an arXiv preprint to establish a public record of the NeuroSynth continual reinforcement learning architecture and its evaluation on the NeuroMaze-CL benchmark. This full manuscript has been submitted to the Journal of High School Science for peer review</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Artificial Intelligence (AI) systems often perform well on isolated tasks but struggle under continual learning conditions, where training on new tasks can overwrite previously acquired knowledge, a failure mode known as catastrophic forgetting. Biological learning systems reduce this interference through complementary memory processes involving rapid hippocampal encoding and slower cortical consolidation. This study introduces NeuroSynth, a brain-inspired continual reinforcement learning architecture designed to mitigate catastrophic forgetting through a dual-pathway consolidation mechanism. NeuroSynth separates rapid task acquisition from long-term retention using distinct "plan" and "habit" pathways combined with replay and knowledge distillation. NeuroSynth was evaluated against Proximal Policy Optimization (PPO) and Elastic Weight Consolidation (EWC) across three sequential navigation tasks with changing goal locations in a non-revisitation continual learning setting. Across six independent seeds, NeuroSynth preserved substantially more early-task knowledge than PPO after sequential training, achieving 18.00% Task A success rate compared to 0.33% for PPO (p = 0.014929, Cohen's d = 1.49) and 35.33% Task B success rate compared to 0.00% for PPO (p = 0.002376, Cohen's d = 2.31). NeuroSynth also demonstrated higher final Task C performance than EWC, achieving 9.00% compared to 2.00% (p = 0.226643, Cohen's d = 0.56), indicating a moderate but not statistically significant advantage. These findings suggest that biologically inspired consolidation mechanisms may improve the stability-plasticity balance in continual reinforcement learning systems.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.21949v1" target="_blank" class="paper-title">MA-DAR: Manifold-Aligned Dynamic Adaptive Routing for Continual Temporal Knowledge Graph Reasoning</a>
-                        <span class="paper-date">2026-07-24</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Continual temporal knowledge graph (TKG) reasoning aims to continuously incorporate newly emerging facts while preserving previously acquired knowledge. Replay-based continual learning has achieved promising performance by revisiting historical representations. However, existing methods primarily focus on what to replay, while largely overlooking how replayed representations should be integrated with current ones. Such direct integration often gives rise to two critical forms of representation conflict: \textit{norm domination} and \textit{semantic blurring}, ultimately degrading continual reasoning performance. To address these challenges, we propose MA-DAR (Manifold-Aligned Dynamic Adaptive Routing), a lightweight plug-and-play framework for replay representation fusion. MA-DAR first aligns replayed and current representations onto a shared manifold to alleviate distribution discrepancies. It then employs a dynamic gating mechanism to learn dimension-wise fusion weights, adaptively determining the contribution of replayed and current representations to the fused representation. Furthermore, a polarization regularizer encourages more decisive routing behaviors by discouraging ambiguous gating decisions, resulting in more stable and effective knowledge integration. Extensive experiments on four public continual TKG benchmarks demonstrate that MA-DAR consistently improves the performance of representative TKG encoders while remaining effective under different replay settings. Comprehensive ablation studies and visualization analyses further verify the effectiveness of manifold alignment and dynamic adaptive routing in mitigating representation conflicts and improving continual reasoning.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2604.22407v2" target="_blank" class="paper-title">Hidden Failure Modes of Gradient Modification under Adam in Continual Learning, and Adaptive Decoupled Moment Routing as a Repair</a>
-                        <span class="paper-date">2026-07-24</span>
-                    </div>
-                                        <span class="paper-comment">📝 The authors have identified substantial issues in the experimental design and evaluation that affect the validity of the main conclusions. Therefore, the authors have decided to withdraw this manuscript</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Many continual-learning methods modify gradients upstream (e.g., projection, penalty rescaling, replay mixing) while treating Adam as a neutral backend. We show this composition has a hidden failure mode. In a high-overlap, non-adaptive 8-domain continual LM, all shared-routing projection baselines collapse close to vanilla forgetting (12.5--12.8 vs. 13.2). A 0.5% replay buffer is the strongest shared alternative but still reaches 11.6, while fixed-strength decoupling falls below vanilla at 14.1. Only adaptive decoupled routing remains stable at 9.4, improving over vanilla by 3.8 units. On a 16-domain stream, its gain over the strongest shared-routing projection baseline grows to 4.5--4.8 units. The failure is largely invisible on clean benchmarks. We explain this effect through Adam's second-moment pathway: in the tested regime, projection induces a 1/(1-alpha) inflation of the old-direction effective learning rate, matching measurements within 8% across eight alpha values. The same conflict appears with penalty methods, replay mixing, and at 7B scale under LoRA. Our fix routes the modified gradient only to the first moment while preserving magnitude-faithful second-moment statistics, with overlap-aware adaptive strength. This simple change is the only tested configuration that consistently avoids collapse across methods, optimizers, and scale.</p>
                     </details>
                 </div>
             </div>

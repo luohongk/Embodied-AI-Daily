@@ -590,7 +590,7 @@
                 <a href="World-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">World Model</span>
-                    <span class="nav-count">76</span>
+                    <span class="nav-count">77</span>
                 </a>
                 <a href="3D-Foundation-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
@@ -690,12 +690,12 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">68</span>
+                    <span class="nav-count">70</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">76</span>
+                    <span class="nav-count">77</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -809,7 +809,7 @@
             <a href="World-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">World Model</span>
-                <span class="nav-count">76</span>
+                <span class="nav-count">77</span>
             </a>
             <a href="3D-Foundation-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
@@ -909,12 +909,12 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">68</span>
+                <span class="nav-count">70</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">76</span>
+                <span class="nav-count">77</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -1028,6 +1028,36 @@
                 <span class="topic-count">79 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.14082v1" target="_blank" class="paper-title">PILOT: Privileged Imitation Learning for End-to-End Motion Planning of Autonomous UAVs under Partial Observability</a>
+                        <span class="paper-date">2026-08-14</span>
+                    </div>
+                                        <span class="paper-comment">📝 13 Pages, 12 figures</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在部分可观测的杂乱环境中，无人机端到端运动规划面临感知受限和动态约束的挑战，现有方法难以兼顾安全性与实时性。&#10;&#10;🛠 **方法**：提出PILOT框架，采用特权模仿学习，从最优控制专家策略中蒸馏知识到学生网络，并通过双目标损失函数施加安全与动态约束；同时设计基于时间卷积网络（TCN）的时空感知融合模块，整合历史深度图像与里程计数据以缓解部分可观测性；最后引入轨迹参数化层，在训练中显式施加连续性、动态一致性和障碍物软惩罚。&#10;&#10;✨ **主要贡献**：在四旋翼和固定翼仿真中达到与特权专家相当的性能，同时计算开销降低超80%；室内外零样本部署成功，验证了跨域泛化能力和实际可行性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Autonomous navigation in cluttered environments is hampered by partial observability and dynamic constraints. This paper presents PILOT, a constraint-aware privileged imitation learning framework for vision-based end-to-end UAV motion planning under partial observability. The framework distills planning strategies from a computationally intensive optimal control expert into a student policy regularized toward safety and dynamic requirements via a dual-objective loss function. To mitigate partial observability, a spatiotemporal perception fusion module using a Temporal Convolutional Network (TCN) is developed to integrate historical depth images and odometry. This module infers task-relevant latent context from historical observations, enhancing spatial awareness beyond the instantaneous FOV without maintaining persistent map memory. A trajectory parameterization layer mapping network outputs to a structured trajectory, while enabling explicit continuity, dynamic-consistency, and obstacle soft penalties during training, encouraging constraint satisfaction for unseen observations without formal guarantees. Simulations on quadrotor and fixed-wing aircraft demonstrate that PILOT achieves performance comparable to the privileged expert while reducing computational overhead by over 80\%. Successful indoor and outdoor zero-shot deployment confirms the practical feasibility and cross-domain generalization of the planner.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2605.04649v2" target="_blank" class="paper-title">From Reach to Insert: Tactile-Augmented Precision Assembly under Sub-Millimeter Tolerances</a>
+                        <span class="paper-date">2026-08-14</span>
+                    </div>
+                                        <span class="paper-comment">📝 The current version is not yet suitable for public dissemination and requires further development and refinement</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：高精度装配中，亚毫米级间隙的插入任务极易因微小位姿误差导致卡阻或过大接触力，难以获得稳健且安全的插入策略。&#10;&#10;🛠 **方法**：提出一种触觉增强的两阶段方法，结合模仿学习（IL）和强化学习（RL）。IL阶段学习带位置泛化的抓取与接近策略，RL阶段执行插入并支持接触交互中的失败恢复；同时引入触觉组采样和触觉评论家网络，以更充分利用触觉反馈。&#10;&#10;✨ **主要贡献**：在五种孔几何形状和三种间隙设置下系统验证，方法在所有设置中显著提升插入性能；在最具挑战的0.05 mm间隙下，成功率达67%，同时最大接触力降低60%、扭矩降低44%，验证了高精度装配中的有效性与安全性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>High-precision assembly frequently involves tight-tolerance insertions, where even slight pose errors can cause jamming or excessive interaction forces, making robust and safe insertion policies difficult to obtain. This paper proposes a tactile-augmented two-stage method that combines Imitation Learning (IL) and Reinforcement Learning (RL) for precision insertion tasks. In the first stage, IL learns a reaching policy with position generalization that grasps the peg and brings it to the vicinity of the target region. In the second stage, RL executes the insertion and enables recovery from failures during contact-rich interactions. To better exploit tactile feedback, we introduce tactile group sampling to increase coverage of critical contact segments during training, and design a tactile critic to more accurately evaluate policy values, improving insertion performance while maintaining low contact forces. We conduct systematic experiments across five hole geometries and three clearance settings. Results show that our method substantially improves insertion performance across all settings; under the most challenging 0.05\,mm clearance, it achieves a 67\% success rate while keeping contact forces low, reducing the maximum interaction force by 60\% and torque by 44\%, thereby validating both effectiveness and safety for precision assembly.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2509.11109v4" target="_blank" class="paper-title">FEWT: Frequency-Enhanced Wavelet-based Transformer for Multimodal Wheeled Bimanual Manipulation</a>
@@ -1154,10 +1184,7 @@
                         <span class="paper-date">2026-08-07</span>
                     </div>
                                         <span class="paper-comment">📝 9 pages, 7 figures</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：动作分块模仿学习策略在部署时因感知误差和执行漂移，可能产生与当前状态不一致的动作，导致任务失败。&#10;&#10;🛠 **方法**：提出AutoIntervene在线框架，利用视觉-动作支持记忆评估策略生成的动作块，结合视觉相似性和动作一致性，通过相位局部和全局支持分别控制策略到操作员及操作员到策略的切换，并用经验分位数校准切换阈值。&#10;&#10;✨ **主要贡献**：在真实双臂操作任务中，相比人工干预，该方法显著提高任务成功率并减少操作员控制时间，同时利用干预片段进行策略更新，提升适应性。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Action-chunking visuomotor policies learn from demonstrations and improve temporal consistency by predicting short action sequences rather than single-step commands. Yet perception errors and execution drift can move the robot outside the demonstration distribution, while the policy continues to produce smooth action chunks that are inconsistent with the observed state. We present AutoIntervene, an online framework that selectively transfers control between an action-chunking policy and an operator during deployment. AutoIntervene evaluates proposed chunks against a visual-action support memory built from successful task executions, combining visual similarity with consistency between proposed and reference actions. Phase-local support governs policy-to-operator transfer within the current task phase, whereas global support governs the return to policy control after operator recovery. We calibrate separate switching thresholds for the two directions from empirical quantiles of evaluation-level scores on held-out expert demonstrations, avoiding direct manual tuning of score cutoffs. Intervention segments retained from successful rollouts target learner-induced states and provide corrective supervision for subsequent policy updates. Experiments on real-world bimanual manipulation tasks show higher post-adaptation task success and lower operator-control time than manual intervention. Videos and additional results are available at https://aus.bot/research/autointervene/.</p>
@@ -1169,10 +1196,7 @@
                         <span class="paper-date">2026-08-07</span>
                     </div>
                                         <span class="paper-comment">📝 Accepted by Reinforcement Learning Conference 2026</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在模仿学习中，如何从少量专家演示中设计奖励函数，以最小化结构需求并实现有效的下游强化学习性能。&#10;&#10;🛠 **方法**：沿两个设计轴（邻近度近似和时间对齐）系统评估奖励分配，在32个基准（涵盖离线和在线设置）上结合三种下游RL算法进行实证分析，并辅以轻量级理论分析。&#10;&#10;✨ **主要贡献**：发现离线场景下仅邻近度即可捕获所需奖励结构，而时间对应在在线或多演示场景中至关重要；提出奖励设计应优先采用极简方案，避免过度复杂化。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Reward assignment from scarce demonstrations is a key challenge in both offline and online imitation learning. A common and intuitive strategy assigns rewards according to how closely learner trajectories match expert demonstrations. Although this principle underlies many existing methods, the core ingredients that drive performance remain systematically underexplored. We therefore ask: what is the minimal structure that reward assignment must encode to achieve effective downstream RL performance across settings? We approach this question along two design axes: proximity approximation and temporal alignment. Across 32 benchmarks spanning offline and online settings, and with three downstream RL algorithms, our empirical findings suggest: (1) In offline regimes, proximity alone captures the reward structure necessary for effective offline RL, while (2) lightweight temporal correspondence provides consistent gains that are modest offline but essential online or in the presence of multiple demonstrations. We further complement our offline results with a lightweight theory characterizing when simple proximity approximation suffices. Overall, these findings advocate algorithmic minimalism in reward design before introducing complex schemes in both offline and online imitation learning.</p>
@@ -1980,30 +2004,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Reinforcement learning holds great promise for improving robot policies beyond the limits of imitation learning. However, its practical adoption remains bottlenecked by the lack of reliable vision-language reward models that provide dense and informative feedback. Two key challenges remain: acquiring diverse failure data at scale and obtaining fine-grained reward signals beyond sparse trajectory-level success labels. Collecting failure trajectories typically requires laborious human effort, while pseudo-failures constructed by relabeling successful demonstrations fail to capture the diverse physical failure modes that arise during robot execution. Meanwhile, existing reward models often predict sparse binary or trajectory-level rewards, which provide limited guidance for efficient policy optimization. We introduce DenseReward, a dense robotic reward model that addresses both challenges. To train DenseReward, we develop an automated failure data generation pipeline that synthesizes physically realistic failure trajectories in simulation without human labeling, covering diverse failure modes such as collisions, missed grasps, object drops, and recovery behaviors. DenseReward predicts dense frame-level reward scores from visual observations and language instructions, enabling fine-grained estimation of task progress throughout an episode. Experiments show that DenseReward outperforms general-purpose VLMs and existing robotic reward models in dense reward prediction across both simulated and real-world manipulation. We further demonstrate that DenseReward provides effective reward guidance for downstream model predictive control and reinforcement learning. We release the dataset, trained reward models, and evaluation suite to support the development of failure-aware dense reward modeling for robot learning.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.06978v2" target="_blank" class="paper-title">SPECTRA: Context-Conditioned Spectral Movement Primitives for Robot Skill Generalization</a>
-                        <span class="paper-date">2026-07-14</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Robot imitation learning for manipulation should preserve demonstrated task geometry while producing dynamically admissible robot motions. Existing pipelines often learn task-dependent trajectories and impose execution limits afterward through filtering, smoothing, clipping, or time scaling, which may distort task-critical end-effector paths. We propose the Spectral Movement Primitive (SMP), a frequency-domain imitation learning framework that couples task-space skill generation with joint-space execution regulation. Demonstrations are represented by truncated finite-horizon Fourier coefficients. An empirically selected low-frequency task band captures the dominant motion geometry, while higher harmonics contribute disproportionately to derivative growth. A frame-aware context-conditioned GMM/GMR prior predicts the task-band coefficients in a canonical task frame, and the resulting Cartesian trajectory is mapped to joint space through sequential inverse kinematics. A phase-coupled regulator then limits the requested phase progression without modifying the spectral coefficients, thereby enforcing joint velocity and acceleration limits while preserving the represented path. Experiments evaluate task-band reconstruction, robustness to composite demonstration corruption, out-of-distribution cross-board generalization, joint-space dynamic admissibility, end-effector path preservation, and deployment on a Franka Panda robot. Results show compact geometric reconstruction, consistent transfer across unseen task frames, substantial reductions in dynamic violations and jerk, and preservation of the intended end-effector path during phase regulation.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2603.05576v3" target="_blank" class="paper-title">Task Parameter Extrapolation via Learning Inverse Tasks from Forward Demonstrations</a>
-                        <span class="paper-date">2026-07-13</span>
-                    </div>
-                                        <span class="paper-comment">📝 Accepted for publication in IEEE RA-L</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Generalizing skill policies to novel conditions remains a key challenge in robot learning. Imitation learning methods, while data-efficient, are largely confined to the training region and consistently fail on input data outside it, leading to unpredictable policy failures. Alternatively, transfer learning approaches offer methods for trajectory generation robust to both changes in environment and tasks, but they remain data-hungry and lack accuracy in zero-shot generalization. We address these challenges in the context of task inversion learning and propose a novel joint learning approach to achieve accurate and efficient knowledge transfer. Our method constructs a common representation of the forward and inverse tasks, and leverages auxiliary forward demonstrations from novel configurations to successfully execute the corresponding inverse tasks, without any direct supervision. We demonstrate the extrapolation capabilities of our framework through ablation studies and experiments in simulated and real-world environments that require complex manipulation skills with a diverse set of objects and tools, where we outperform diffusion-based and multimodal VAE alternatives.</p>
                     </details>
                 </div>
             </div>

@@ -590,7 +590,7 @@
                 <a href="World-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">World Model</span>
-                    <span class="nav-count">76</span>
+                    <span class="nav-count">77</span>
                 </a>
                 <a href="3D-Foundation-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
@@ -690,12 +690,12 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">68</span>
+                    <span class="nav-count">70</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">76</span>
+                    <span class="nav-count">77</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -809,7 +809,7 @@
             <a href="World-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">World Model</span>
-                <span class="nav-count">76</span>
+                <span class="nav-count">77</span>
             </a>
             <a href="3D-Foundation-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
@@ -909,12 +909,12 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">68</span>
+                <span class="nav-count">70</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">76</span>
+                <span class="nav-count">77</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -1028,6 +1028,36 @@
                 <span class="topic-count">75 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2511.08001v3" target="_blank" class="paper-title">Effective Game-Theoretic Motion Planning via Nested Search</a>
+                        <span class="paper-date">2026-08-14</span>
+                    </div>
+                                        <span class="paper-comment">📝 Updated version. Offline graph creation runtime added. Acknowledgements added</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有博弈论运动规划方法在一般动力学系统中难以高效计算纳什均衡，优化方法受限于简化模型和局部最优，而枚举方法因显式遍历所有轨迹而扩展性差。&#10;&#10;🛠 **方法**：提出Game-Theoretic Nested Search (GTNS)，通过外层搜索所有智能体的动作空间，并在低维空间内进行内层搜索以丢弃违反纳什均衡约束（无单方面偏离）的轨迹，从而高效计算一般动态系统中的纳什均衡。&#10;&#10;✨ **主要贡献**：GTNS具有可扩展性和可证明正确性，支持通过用户指定的全局目标显式选择均衡，适用于自动驾驶和赛车等复杂场景，在普通硬件上数秒内即可求解。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>To facilitate effective, safe deployment in the real world, individual robots must reason about interactions with other agents, which often occur without explicit communication. Recent work has identified game theory, particularly the concept of Nash Equilibrium (NE), as a key enabler for behavior-aware decision-making. Yet, existing work falls short of fully unleashing the power of game-theoretic reasoning. Specifically, popular optimization-based methods require simplified robot dynamics and tend to get trapped in local minima due to convexification. Other works that rely on payoff matrices suffer from poor scalability due to the explicit enumeration of all possible trajectories. To bridge this gap, we introduce Game-Theoretic Nested Search (GTNS), a novel, scalable, and provably correct approach for computing NEs in general dynamical systems. GTNS efficiently searches the action space of all agents involved, while discarding trajectories that violate the NE constraint (no unilateral deviation) through an inner search over a lower-dimensional space. Our algorithm enables explicit selection among equilibria by utilizing a user-specified global objective, thereby capturing a rich set of realistic interactions. We demonstrate the approach on a variety of autonomous driving and racing scenarios where we achieve solutions in mere seconds on commodity hardware.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.14082v1" target="_blank" class="paper-title">PILOT: Privileged Imitation Learning for End-to-End Motion Planning of Autonomous UAVs under Partial Observability</a>
+                        <span class="paper-date">2026-08-14</span>
+                    </div>
+                                        <span class="paper-comment">📝 13 Pages, 12 figures</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在部分可观测的杂乱环境中，无人机端到端运动规划面临感知受限和动态约束的挑战，现有方法难以兼顾安全性与实时性。&#10;&#10;🛠 **方法**：提出PILOT框架，采用特权模仿学习，从最优控制专家策略中蒸馏知识到学生网络，并通过双目标损失函数施加安全与动态约束；同时设计基于时间卷积网络（TCN）的时空感知融合模块，整合历史深度图像与里程计数据以缓解部分可观测性；最后引入轨迹参数化层，在训练中显式施加连续性、动态一致性和障碍物软惩罚。&#10;&#10;✨ **主要贡献**：在四旋翼和固定翼仿真中达到与特权专家相当的性能，同时计算开销降低超80%；室内外零样本部署成功，验证了跨域泛化能力和实际可行性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Autonomous navigation in cluttered environments is hampered by partial observability and dynamic constraints. This paper presents PILOT, a constraint-aware privileged imitation learning framework for vision-based end-to-end UAV motion planning under partial observability. The framework distills planning strategies from a computationally intensive optimal control expert into a student policy regularized toward safety and dynamic requirements via a dual-objective loss function. To mitigate partial observability, a spatiotemporal perception fusion module using a Temporal Convolutional Network (TCN) is developed to integrate historical depth images and odometry. This module infers task-relevant latent context from historical observations, enhancing spatial awareness beyond the instantaneous FOV without maintaining persistent map memory. A trajectory parameterization layer mapping network outputs to a structured trajectory, while enabling explicit continuity, dynamic-consistency, and obstacle soft penalties during training, encouraging constraint satisfaction for unseen observations without formal guarantees. Simulations on quadrotor and fixed-wing aircraft demonstrate that PILOT achieves performance comparable to the privileged expert while reducing computational overhead by over 80\%. Successful indoor and outdoor zero-shot deployment confirms the practical feasibility and cross-domain generalization of the planner.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2608.10383v2" target="_blank" class="paper-title">Real-World Cooperative Bimanual Dexterous Grasp of Large Objects from Single-View Observations</a>
@@ -1154,10 +1184,7 @@
                         <span class="paper-date">2026-08-09</span>
                     </div>
                                         <span class="paper-comment">📝 42 pages</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：针对部分可观测机器人规划问题，传统顺序轨迹无法有效应对观测带来的不确定性，导致控制成本高且任务规划受限。&#10;&#10;🛠 **方法**：提出在置信空间中优化轨迹树（trajectory-trees），分别用于模型预测控制（PO-MPC）和任务与运动规划（PO-LGP）；开发分布式增广拉格朗日算法（D-AuLa）加速树优化，并利用逻辑几何规划框架扩展至部分可观测场景。&#10;&#10;✨ **主要贡献**：通过单分支轨迹树显著降低控制成本，D-AuLa算法满足实时性要求；PO-LGP在小规模置信状态问题上有效，并通过探索性策略扩展到更大问题，验证了轨迹树在不确定环境中的优越性。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>This paper explores the benefits of computing arborescent trajectories (trajectory-trees) instead of commonly used sequential trajectories for partially observable robotic planning problems. In such environments, a robot infers knowledge from observations, and the optimal course of action depends on these observations. Trajectory-trees, optimized in belief space, naturally capture this dependency by branching where the belief state is expected to evolve into multiple distinct scenarios, such as upon receiving an observation. Unlike sequential trajectories, which model a single forward evolution of the system, trajectory-trees capture multiple possible contingencies. First, we focus on Model Predictive Control (MPC) and demonstrate the benefits of planning tree-like trajectories. We formulate the control problem as the optimization of a tree with a single branching (PO-MPC). This improves performance by reducing control costs through more informed planning. To satisfy the real-time constraints of MPC, we develop an optimization algorithm called Distributed Augmented Lagrangian (D-AuLa), which leverages the decomposability of the PO-MPC formulation to parallelize and accelerate the optimization. We apply the method to both linear and non-linear MPC problems using autonomous driving examples. Second, we address Task And Motion Planning (TAMP), and introduce a planner (PO-LGP) reasoning on decision trees at task level, and trajectory-trees at motion-planning level. This approach builds upon the Logic-Geometric-Programming Framework (LGP) and extends it to partially observable problems. The experiments show the method's applicability to problems with a small belief state size, and scales to larger problems by optimizing explorative policies, which are used as macro-actions in an overarching task plan.</p>
@@ -1169,10 +1196,7 @@
                         <span class="paper-date">2026-08-09</span>
                     </div>
                                         <span class="paper-comment">📝 15 pages, 11 figures, 11 tables. Project page: https://peel-disassembly.surge.sh/</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决长时程多部件物体拆解中，机器人在狭窄、紧凑的逃逸通道下计算无碰撞移除序列的难题。&#10;&#10;🛠 **方法**：提出PEEL算法，采用尺度不变采样方案（先通过预热阶段估计物体尺度，再利用方向性采样器），并集成到多臂老虎机快速探索随机树（MAB-RRT）规划器中，通过奖励信号动态切换采样器，并行运行多个规划器以生成有序拆解图。&#10;&#10;✨ **主要贡献**：MAB-RRT在76个装配体上实现100%的单部件拆解成功率，且对参数鲁棒；PEEL成功解决4个包含10至17个部件的长时程拆解任务，并在Fetch机械臂上完成实际执行验证。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Long-horizon multi-part object disassembly requires robots to compute feasible sequences of collision-free removal motions, even in the presence of tight, narrow escape corridors. To efficiently solve such disassembly problems, we propose Parallel Extraction for Long-Horizon Disassembly (PEEL), an algorithm which efficiently computes disassembly motions for object assemblies and feeds them to a robot manipulator for execution. PEEL uses sampling-based motion planning to compute single-object motions through the use of a scale-invariant sampling scheme, where the object scale is estimated in a burn-in phase and a subsequent directional sampler exploits the scale. This sampling scheme is integrated into a multi-arm bandit rapidly-exploring random tree (MAB-RRT) planner, which switches between different samplers depending on the reward signal received. Using MAB-RRT, the PEEL algorithm runs a batch of planners in parallel to obtain an ordered graph specifying the sequence in which object parts have to be removed. We show that MAB-RRT can efficiently solve single-part disassemblies with 100 percent success rate on 76 assemblies, and that it is robust to its parameters. By integrating MAB-RRT into PEEL, we solve four long-horizon disassembly problems using the Fetch manipulator robot involving 10 to 17 individual object parts.</p>
@@ -1932,30 +1956,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>While current Behavior Foundation Models (BFMs) provide robust control priors for humanoids, they only execute pre-defined reference motions. As a result, they are vulnerable to environmental shifts and incapable of reactive whole-body coordination. Naively cascading them with generative motion planners fails to achieve true reactivity, as inevitable tracking discrepancies induce fatal cumulative exposure bias. To bridge this gap, we propose ReactiveBFM, a real-time closed-loop planning-control framework. At its core, we effectively mitigate exposure bias via a scheduled prefix sampling curriculum, forcing the generative planner to actively learn error-recovery behaviors from imperfect physical states rather than ground-truth trajectories. Systematically, to reconcile the severe latency mismatch between auto-regressive planning and high-frequency tracking, we introduce an asynchronous replanning mechanism. Combined with trajectory chunking to temporally ensemble spatial references, our system guarantees spatio-temporally fluid execution without physical jitter. Deployed on the Unitree G1 humanoid, ReactiveBFM demonstrates unprecedented physical agility across a vast repertoire of text-conditioned closed-loop motions. Notably, ReactiveBFM achieves zero-shot moving target reaching, showcasing intricate whole-body coordination and on-the-fly replanning. In sim-to-sim benchmarking under severe perturbations, ReactiveBFM achieves a 93.1% success rate, significantly outperforming cascaded open-loop baselines by 28.6%.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2605.00261v2" target="_blank" class="paper-title">Task-Conditioned Uncertainty Costmaps for Legged Locomotion</a>
-                        <span class="paper-date">2026-07-18</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Legged robots maintain dynamic feasibility through multicontact interactions with terrain. Learned foothold prediction can provide feasibility-aware costs for motion planning and path selection, but accurately predicting future contacts from perceptual inputs such as height scans remains challenging on highly unstructured terrain, even with a repetitive gait cycle. In this work, we show that modeling epistemic uncertainty in predicted footholds, conditioned on terrain observations and commanded motion, distinguishes in-distribution from out-of-distribution operating regimes in simulation and real-world settings. This allows a single learned model, trained on limited data distributions, to express uncertainty caused by missing training coverage. We use this learned uncertainty to detect OOD regions and incorporate them into a unified costmap-generation framework for uncertainty-aware path planning. Using these uncertainty-aware costmaps, we evaluate feasibility error across in-distribution and OOD terrains in simulation and real-world settings. The results show improved OOD detection, up to a 37% reduction in simulation feasibility error, and more reliable planning behavior than geometry-only baselines.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2603.12361v3" target="_blank" class="paper-title">GNN-DIP: Neural Corridor Selection for Decomposition-Based Motion Planning</a>
-                        <span class="paper-date">2026-07-18</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Motion planning through narrow passages remains a core challenge: sampling-based planners rarely place samples inside these narrow but critical regions, and even when samples land inside a passage, the straight-line connections between them run close to obstacle boundaries and are frequently rejected by collision checking. Decomposition-based planners resolve both issues by partitioning free space into convex cells -- every passage is captured exactly as a cell boundary, and any path within a cell is collision-free by construction. However, the number of candidate corridors through the cell graph grows combinatorially with environment complexity, creating a bottleneck in corridor selection. We present GNN-DIP, a framework that addresses this by integrating a Graph Neural Network (GNN) with a two-phase Decomposition-Informed Planner (DIP). The GNN predicts portal scores on the cell adjacency graph to bias corridor search toward near-optimal regions while preserving completeness. In 2D, Constrained Delaunay Triangulation (CDT) with the Funnel algorithm yields exact shortest paths within corridors; in 3D, Slab convex decomposition with portal-face sampling provides near-optimal path evaluation. Benchmarks on 2D narrow-passage scenarios, 3D bottleneck environments with up to 246 obstacles, and dynamic 2D settings show that GNN-DIP achieves 99--100% success rates with 2--280 times speedup over sampling-based baselines.</p>
                     </details>
                 </div>
             </div>

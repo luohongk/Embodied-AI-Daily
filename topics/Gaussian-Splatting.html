@@ -590,7 +590,7 @@
                 <a href="World-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">World Model</span>
-                    <span class="nav-count">76</span>
+                    <span class="nav-count">77</span>
                 </a>
                 <a href="3D-Foundation-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
@@ -690,12 +690,12 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">68</span>
+                    <span class="nav-count">70</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">76</span>
+                    <span class="nav-count">77</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -809,7 +809,7 @@
             <a href="World-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">World Model</span>
-                <span class="nav-count">76</span>
+                <span class="nav-count">77</span>
             </a>
             <a href="3D-Foundation-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
@@ -909,12 +909,12 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">68</span>
+                <span class="nav-count">70</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">76</span>
+                <span class="nav-count">77</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -1030,6 +1030,66 @@
             <div class="paper-list">
                 <div class="paper-card">
                     <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2601.12122v2" target="_blank" class="paper-title">OctoSplat: Hybrid OctoMap-Gaussian Splatting for Active Semantic Mapping and Phenotyping with Horticultural Robots</a>
+                        <span class="paper-date">2026-08-14</span>
+                    </div>
+                                        <span class="paper-comment">📝 23 pages, 12 figures</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：针对园艺环境中基于占用网格的主动建图方法精度不足，难以满足表型分析和产量估计等任务需求的问题。&#10;&#10;🛠 **方法**：提出一种融合OctoMap与3D高斯泼溅的主动建图框架，利用低分辨率OctoMap提供占用信息以指导视点选择和路径规划，同时通过3D高斯泼溅结合几何、光度与语义信息实现高保真场景重建，并引入鲁棒建图策略和背景剪枝方法。&#10;&#10;✨ **主要贡献**：在仿真、实验室和真实温室场景中均优于现有方法，相比0.01m分辨率OctoMap，在噪声条件下果实级F1分数翻倍且运行时间降低至1/3；新视角合成质量提升（PSNR最高+1.5dB，mIoU最高+18%），果实计数和体积估计准确率接近80%。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Semantic reconstruction of agricultural scenes plays a vital role in tasks such as phenotyping and yield estimation. However, traditional approaches based on manual scanning or fixed camera setups remain a major bottleneck, while active-mapping methods based solely on occupancy grids are too coarse for accurate trait estimation. To address this gap, we propose an active 3D reconstruction framework for horticultural environments using a mobile manipulator. The system integrates OctoMap with 3D Gaussian Splatting to enable accurate and efficient target-aware mapping. A low-resolution OctoMap provides probabilistic occupancy information for informative viewpoint selection and collision-free planning, while 3D Gaussian Splatting leverages geometric, photometric, and semantic information to optimize 3D Gaussians for high-fidelity scene reconstruction. We further introduce a robust mapping strategy that mitigates semantic segmentation and depth noise, together with a background pruning method that reduces memory and computational cost. We validate our framework across simulated, laboratory, and real greenhouse scenes, showing consistent improvements across three state-of-the-art Gaussian Splatting backbones. In simulation, where ground-truth geometry is available, our approach outperforms occupancy-based mapping in both reconstruction accuracy and runtime efficiency: compared with a 0.01m-resolution OctoMap, it doubles the fruit-level F1 score under noisy conditions while achieving up to a threefold reduction in runtime. Beyond simulation, novel-view synthesis quality also improves consistently in laboratory and real greenhouse environments, with PSNR and mIoU improving by up to 1.5 dB and 18%, respectively. Finally, the reconstructed semantic maps enable fruit counting and volume estimation with accuracies approaching 80%.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2602.12314v2" target="_blank" class="paper-title">LatentAM: Real-Time, Large-Scale Latent Gaussian Attention Mapping via Online Dictionary Learning</a>
+                        <span class="paper-date">2026-08-14</span>
+                    </div>
+                                        <span class="paper-comment">📝 8 pages, 7 figures. Accepted for RA-L. Homepage: https://junwoonlee.github.io/projects/LatentAM/ Code: https://github.com/UMich-SSI-Lab/latentam</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有3D高斯泼溅（3DGS）映射框架在构建大规模开放词汇机器人感知的潜在特征图时，依赖模型特定的解码器蒸馏高维视觉语言模型（VLM）嵌入，导致模型不通用且需要预训练，难以实时扩展到长轨迹和大场景。&#10;&#10;🛠 **方法**：提出在线字典学习框架LatentAM，将每个高斯基元关联一个紧凑查询向量，通过可学习字典的注意力机制近似VLM嵌入；字典从流式观测中高效初始化，并在信任域正则化下在线优化；同时采用基于体素哈希的地图管理策略，将优化限制在GPU上的活跃局部地图，全局地图存储于CPU以控制内存。&#10;&#10;✨ **主要贡献**：LatentAM是模型无关且免预训练的即插即用方案，可在测试时适配不同VLM；在公共基准和大型自定义数据集上，特征重建保真度显著优于现有方法，并达到近实时速度（12-35 FPS），代码已开源。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>We present LatentAM, an online 3D Gaussian Splatting (3DGS) mapping framework that builds scalable latent feature maps from streaming RGB-D observations for open-vocabulary robotic perception. Instead of distilling high-dimensional Vision-Language Model (VLM) embeddings using model-specific decoders, LatentAM proposes an online dictionary learning approach that is both model-agnostic and pretraining-free, enabling plug-and-play integration with different VLMs at test time. Specifically, our approach associates each Gaussian primitive with a compact query vector that can be converted into approximate VLM embeddings using an attention mechanism with a learnable dictionary. The dictionary is initialized efficiently from streaming observations and optimized online to adapt to evolving scene semantics under trust-region regularization. To scale to long trajectories and large environments, we further propose an efficient map management strategy based on voxel hashing, where optimization is restricted to an active local map on the GPU, while the global map is stored and indexed on the CPU to maintain bounded GPU memory usage. Experiments on public benchmarks and a large-scale custom dataset demonstrate that LatentAM attains significantly better feature reconstruction fidelity compared to state-of-the-art methods, while achieving near-real-time speed (12-35 FPS) on the evaluated datasets. Our project page, including the code, is available at: https://junwoonlee.github.io/projects/LatentAM</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.14136v1" target="_blank" class="paper-title">HiCo-GS: Hierarchical Context Aggregation and Geometric Consistency for Octree Gaussian Splatting</a>
+                        <span class="paper-date">2026-08-14</span>
+                    </div>
+                                        <span class="paper-comment">📝 21 pages, including supplementary material. To appear in the Proceedings of the 34th ACM International Conference on Multimedia (MM '26)</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有基于八叉树的锚点高斯泼溅方法存在跨层级特征隔离问题，导致建筑立面颜色漂移和纹理区域过度平滑，影响城市场景渲染质量。&#10;&#10;🛠 **方法**：提出HiCo-GS框架，包含两个互补模块：跨层级上下文聚合（CLCA）利用八叉树空间包含结构，将父-自-子三层上下文向量融合并注入双向层级先验；深度-法向几何一致性（DNGC）正则化通过alpha加权一致性损失和边缘感知平滑损失，利用城市几何的平面先验抑制漂浮伪影。&#10;&#10;✨ **主要贡献**：在Mill19、UrbanScene3D、MatrixCity及新提出的China-Pagoda数据集（8座古塔，每座超1200张图像）上达到最先进渲染质量，同时获得更干净的几何重建，且计算开销可忽略。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Octree-based anchor Gaussian Splatting has emerged as a scalable representation for city-scale novel view synthesis, where multi-level anchors adaptively capture scene content from coarse building structures to fine architectural details. However, we identify a fundamental limitation in existing methods: cross-level feature isolation, where each level's anchor features are optimized independently with no inter-level communication, causing color drift on building facades and over-smoothing in textured regions. We present HiCo-GS, a high-fidelity reconstruction framework with two complementary modules. Cross-Level Context Aggregation (CLCA) enables bidirectional hierarchical prior injection by leveraging the octree's spatial containment structure to aggregate per-level context vectors into parent-self-child triplets, fused via a lightweight MLP with residual connection. Coarse-level structural priors flow down to inform fine-level anchors, while fine-level detail statistics feed back to prevent over-smoothing, at negligible computational overhead. Depth-Normal Geometric Consistency (DNGC) regularization enforces agreement between rendered normals and depth-derived normals through an alpha-weighted consistency loss, complemented by edge-aware smoothness losses with progressive warmup that exploit the strong planar priors ubiquitous in urban geometry to suppress floating artifacts. We further introduce the China-Pagoda dataset comprising 8 ancient Chinese pagodas with over 1,200 images each, featuring dense ornamental carvings, curved multi-layer eaves, and repetitive fine-grained textures. Extensive experiments on Mill19, UrbanScene3D, MatrixCity, and China-Pagoda demonstrate that HiCo-GS achieves state-of-the-art rendering quality and substantially cleaner geometry across real-world and synthetic urban benchmarks.Code: https://github.com/WZ-CS/HiCo-GS.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2606.18734v2" target="_blank" class="paper-title">Point-Cloud-Assistant Localized Statistical Channel Prediction by Tangent Gaussian Splatting</a>
+                        <span class="paper-date">2026-08-14</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有局部统计信道模型（LSCM）无法在无测量数据的位置预测角度功率谱（APS），限制了其在大型真实场景中的适用性。&#10;&#10;🛠 **方法**：提出点云辅助切线高斯泼溅（PC-TGS）框架，利用LiDAR点云初始化各向异性3D高斯，通过切线平面投影和深度感知电磁泼溅，将稀疏无线电测量外推至未测量网格。&#10;&#10;✨ **主要贡献**：首次实现基于几何的APS外推，推导出闭式高斯加权平均（GWA）用于APS积分并给出误差界；在城市级数据集上（500万点、6310个RSRP样本）相比现有方法取得更优的APS和RSRP预测性能，且推理速度更快。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Accurate, site-specific channel information is crucial for optimizing next-generation wireless networks. Among various approaches, localized statistical channel modeling (LSCM), which models the channel multipath angular power spectrum (APS) from the reference signal received power (RSRP) measurement, has emerged as a state-of-the-art method tailored for efficient network optimization. However, despite its effectiveness, LSCM cannot predict APS at the vast majority of locations where no measurements are available, which significantly restricts its applicability in large-scale, real-world scenarios. To address this challenge, we present point-cloud-assisted tangent Gaussian splatting (PC-TGS), the first framework to extrapolate APS to unmeasured outdoor grids by integrating sparse radio measurements with dense LiDAR-based geometry. PC-TGS represents environmental scatterers as anisotropic 3D Gaussians, initialized and refined through a relaxed-mean reparameterization of the raw point cloud. A tangent-plane projection accurately maps each Gaussian into the local angular domain, while a depth-aware electromagnetic splatting process aggregates their contributions. To ensure practical deployment, we derive a closed-form Gaussian-weighted average (GWA) for APS bin integration and provide a provable error bound. { Evaluations on a LiDAR-scanned city-scale dataset (5M points, 6,310 RSRP samples) demonstrate that PC-TGS achieves better APS and RSRP prediction performance compared to state-of-the-art baselines and faster inference time for APS extrapolation task. These results highlight the potential of PC-TGS to enable geometry-aware and data-efficient channel prediction in large-scale wireless digital twins.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
                         <a href="https://arxiv.org/abs/2608.13502v1" target="_blank" class="paper-title">GS$^{2}$CI: Robust Gaussian Splatting For Snapshot Compressive Imaging via Large Vision Model Priors</a>
                         <span class="paper-date">2026-08-13</span>
                     </div>
@@ -1124,10 +1184,7 @@
                         <span class="paper-date">2026-08-12</span>
                     </div>
                                         <span class="paper-comment">📝 Accepted to ACM MM 2026</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有3D高斯泼溅（3DGS）方法仅能处理显式查询，无法理解隐式意图、复杂空间约束和常识推理，难以支持实际具身交互中的高阶推理需求。&#10;&#10;🛠 **方法**：提出CausalSplat框架，将视觉-语言模型与3D场景图结合，显式解耦结构感知与隐式逻辑推理，并构建Causal-LERF和Causal-ScanNet两个推理基准数据集。&#10;&#10;✨ **主要贡献**：首次系统评估3D分割中的常识、空间、功能与反事实推理；CausalSplat在推理基准上达到最优性能，同时在标准指代与开放词汇分割任务上展现强泛化能力。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>While 3D Gaussian Splatting (3DGS) has advanced open vocabulary scene understanding, existing methods remain confined to explicit queries. They struggle to interpret implicit intents, complex spatial constraints, and commonsense reasoning required for practical embodied interactions. To address this gap, we introduce the task of reasoning 3D Gaussian segmentation and construct two benchmarks, Causal-LERF and Causal-ScanNet. These benchmarks systematically evaluate commonsense, spatial, affordance, and counterfactual reasoning. Evaluations reveal that current state of the art methods perform poorly on these reasoning challenges. Therefore, we propose CausalSplat, a framework that integrates vision-language models with 3D scene graphs to disentangle explicit structural perception from implicit logical inference. Extensive experiments demonstrate that CausalSplat achieves state of the art performance on our reasoning benchmarks while showing strong generalizability on standard referring and open vocabulary 3D segmentation tasks. Project Page: https://jiayuding031020.github.io/CausalSplat</p>
@@ -1139,10 +1196,7 @@
                         <span class="paper-date">2026-08-12</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：3D高斯泼溅（3D Gaussian Splatting）模型在中等和大型场景中存储需求过高，限制了其在云服务和流媒体传输中的部署。&#10;&#10;🛠 **方法**：提出一种渐进式编解码器，用残差向量量化（Residual Vector Quantization）替代传统标量量化来压缩高斯特征，并引入基于多分辨率哈希网格的自回归熵模型，以预测每个传输索引的条件概率，实现高效压缩。&#10;&#10;✨ **主要贡献**：创新性地结合残差向量量化与空间上下文注意力，显著提升率失真性能，使粗粒度和细化层的压缩效率更高，同时保持实时高保真渲染质量。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Recent advances in 3D Gaussian Splatting have allowed for real-time, high-fidelity novel view synthesis. Nonetheless, these models have significant storage requirements for large and medium-sized scenes, hindering their deployment over cloud and streaming services. Some of the most recent progressive compression techniques for these models rely on progressive masking and scalar quantization techniques to reduce the bitrate of Gaussian attributes using spatial context models. While effective, scalar quantization may not optimally capture the correlations of high-dimensional feature vectors, which can potentially limit the rate-distortion performance. In this work, we introduce a novel progressive codec for 3D Gaussian Splatting that replaces traditional methods with a more powerful Residual Vector Quantization approach to compress the primitive features. Our key contribution is an auto-regressive entropy model, guided by a multi-resolution hash grid, that accurately predicts the conditional probability of each successive transmitted index, allowing for coarse and refinement layers to be compressed with high efficiency.</p>
@@ -1154,10 +1208,7 @@
                         <span class="paper-date">2026-08-11</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：城市级大规模3D高斯泼溅（3DGS）训练计算开销巨大，因为大量冗余高斯原语导致存储、通信和渲染成本过高，且现有方法未系统解决“哪些高斯应存储、渲染和保留”的问题。&#10;&#10;🛠 **方法**：提出BlitzGS分布式框架，在三个层面协同优化：系统层按索引奇偶分片而非空间分块，并通过单次跨GPU交换路由投影高斯；模型层通过重要性评分剪枝和轻量级生成门控控制密度；视图层通过距离LOD门控和重要性掩码裁剪每相机的激活集。&#10;&#10;✨ **主要贡献**：在保持与最新大规模基线相当渲染质量的同时，实现近一个数量级的加速，将城市级场景训练时间缩短至几十分钟，并开源代码。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Large-scale 3D Gaussian Splatting underpins digital twins, simulation, and aerial mapping, yet city-scale training remains computationally expensive even with multi-GPU execution because every iteration must preprocess, communicate, and rasterize an overly dense set of primitives. At any given step, only a small fraction of these primitives contribute meaningfully to the loss; the rest incur redundant storage, communication, and rasterization costs. Existing approaches improve individual cost factors but do not fully address the underlying question: which Gaussians should be stored on each GPU, rendered for each view, and retained after early geometry formation? We present BlitzGS, a distributed 3DGS framework that reduces the active Gaussian workload at three coupled levels. At the system level, it shards Gaussians across GPUs by index parity rather than spatial blocks, mitigating the cross-block visibility redundancy of spatial partitioning, and distributes each render step through a single cross-GPU exchange that routes projected Gaussians to their tile owners. At the model level, it controls the population from both ends of densification. Scheduled importance-scoring passes prune redundant survivors, and a lightweight spawn gate withholds candidates predicted not to survive. The same importance signal also feeds back into density control. At the view level, a distance-based LOD gate and an importance-based mask trim each camera's active set. On large-scale benchmarks, BlitzGS matches the rendering quality of recent large-scale baselines while delivering nearly an order-of-magnitude speedup, training city-scale scenes in tens of minutes. Our code is available at https://github.com/AkierRaee/BlitzGS.</p>
@@ -1169,10 +1220,7 @@
                         <span class="paper-date">2026-08-11</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有物理 wildfire 模拟依赖理想化合成环境，无法直接应用于真实森林场景，缺乏从观测数据构建 wildfire 数字孪生的途径。&#10;&#10;🛠 **方法**：提出 WildFireGS 框架，在语义增强的 3D Gaussian Splatting 森林重建上直接运行基于粒子的燃烧模型，模拟点火、传热、燃烧与火焰传播，无需网格或网格转换；并引入雨驱冷却机制作为能量汇实现火势控制。&#10;&#10;✨ **主要贡献**：首次实现大规模真实森林重建上的物理 wildfire 模拟，验证了火焰传播与植被密度、风速、地形坡度的物理一致性，并通过防火带实验和生物量损失估计验证了模型有效性。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Climate-driven environmental change is driving an increase in both the frequency and severity of wildfire events, making accurate simulation and prediction critical for effective risk mitigation and landscape management. While recent physics-based wildfire models achieve high realism by explicitly simulating combustion, heat transfer, and fuel dynamics, they remain largely restricted to synthetic environments with complete and idealized knowledge of forest structure, limiting their applicability to real-world environments captured via aerial imagery. To provide a pathway toward real-world wildfire digital twins derived directly from observational data, we present WildFireGS, a physics-based wildfire simulation framework operating directly on large-scale, semantics-enriched 3D Gaussian Splatting forest reconstructions. Our approach bridges learning-based scene reconstruction and environmental simulation by augmenting Gaussian primitives with semantics and material properties that encode vegetation type and fuel characteristics. We introduce a particle-based combustion model that operates natively on Gaussian representations, simulating ignition, heat transfer, combustion, and flame propagation across complex forest structures. This enables direct physics-based simulation of fire behavior on reconstructed real-world environments, without requiring conversion to explicit meshes or volumetric grids. We demonstrate the modularity of WildFireGS through a rain-driven cooling mechanism in terms of an energy-sink process to realistically model fire containment. Evaluations on synthetic scenes and real aerial forest captures show physically consistent wildfire behavior, reproducing characteristic dynamics including propagation scaling with vegetation density, wind velocity, and terrain slope. In addition, we validate our model through novel firebreak experiments and biomass loss estimation.</p>
@@ -1968,54 +2016,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Neural radiance fields and 3D Gaussian Splatting assume that each training image is a sharp and geometrically consistent observation of the scene. Motion blur violates this assumption because a single exposure integrates a continuous range of camera poses. Exposure integration also removes the temporal information needed to recover the corresponding sharp observation. Event cameras preserve this information at microsecond resolution and therefore provide a natural complement to conventional images. Existing event-assisted reconstruction methods predominantly obtain image supervision through analytical inversion of the Event Double Integral. Learned restoration from frames and events offers a second prior. Although weaker when used alone, it fails in different regions and provides complementary evidence. We present JADE-GS, which formulates the combination of these priors as spatial evidence allocation. A lightweight Spatial Prior Router predicts a pixelwise allocation using only the blurry frame and event stream, then fuses the two fixed restorations into an additional supervision target. The router is trained without a sharp reference using consistency with the scene under reconstruction and the measured exposure, and is removed after optimization. Experiments show that JADE-GS achieves leading perceptual quality on both benchmarks, attains the best fidelity on the real benchmark, and remains competitive on the synthetic one. It requires substantially lower training overhead than diffusion-based alternatives and preserves native 3DGS rendering with no generative decoding at inference.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.29284v1" target="_blank" class="paper-title">FillGS: Filling Observation Gaps in 4D Gaussian Splatting via Viewpoint-Time Selection and Generative Refinement</a>
-                        <span class="paper-date">2026-07-31</span>
-                    </div>
-                                        <span class="paper-comment">📝 Accepted at ECCV2026</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>4D Gaussian Splatting (4DGS) can render dynamic scenes photorealistically. However, with limited viewpoint coverage, some spatiotemporal regions remain sparsely observed, leading to artifacts, particularly in scenes with large motion. Existing approaches leveraging generative models rely on heuristic virtual-viewpoint selection before refining rendered views. As a result, they cannot actively explore such sparsely observed regions. To address this issue, we propose a pipeline that actively selects spatiotemporal virtual viewpoints to improve 4DGS reconstruction. Our method selects virtual viewpoints for generative enhancement based on the rendering sensitivity and motion-aware observation density of 4D Gaussians, prioritizing views that alleviate observation sparsity. In the refined images, we filter out regions that conflict with captured observations or are likely to contain generative artifacts and then fine-tune 4DGS using only the reliable regions. We evaluate our method on multi-view video benchmarks using new train/test splits designed to induce observation gaps. Results show consistent improvements over prior viewpoint selection strategies and fine-tuning methods in both qualitative and quantitative evaluations, while reducing artifacts.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.13682v2" target="_blank" class="paper-title">Posterior Variance Is a Constraint Map, Not an Error Map: Closed-Form Uncertainty for Radiative Gaussian Splatting in Sparse-View CT</a>
-                        <span class="paper-date">2026-07-31</span>
-                    </div>
-                                        <span class="paper-comment">📝 v2: substantially revised and condensed; 31 pages total, 9 figures</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Radiative Gaussian splatting reconstructs sparse-view CT fast and accurately, and recent work attaches per-Gaussian posteriors to yield per-voxel uncertainty maps. We ask what such a map actually measures: posterior variance is a data-constraint map, not an error map -- its alarms are trustworthy, its all-clears are not. Exploiting the strict linearity of X-ray rendering in the per-Gaussian densities, we derive a clamp-aware closed form that the unchanged rasterizer evaluates exactly in one forward pass, in volume and projection space: the infinite-sample limit of the sampling estimator of concurrent work, at ~8x lower cost. On the official 15-scene benchmark this uncertainty ranks true error on 14 of 15 scenes. Restricted to the object interior -- the tissue a clinician reads -- the ranking collapses (median Spearman 0.11, 0/15 pass), identically for a deep ensemble and for a strictly positive log-normal posterior: three constructions, two estimator families, no survivors. The mechanism is structural: about 90% of in-object error is bias that reproduces across retrainings, invisible to model disagreement; 73-81% of the full-volume correlation is carried by object/surround contrast; and an exactly solvable control puts the observed in-object ranking 4-5x below what a perfectly calibrated posterior with the same sigma-spread would score. The error scale, by contrast, is an engineering problem, and we solve it: reparameterizing the posterior contracts the cross-scene temperature spread from 19.3x to 2.6x, one scene-agnostic temperature transfers to unseen scenes (10/15 leave-one-scene-out), and the repaired scale tracks photon count at the Poisson-predicted -1/2 power. We distill evaluation practice that would have caught the illusion -- masked calibration, seed-wise bias decomposition, an exact-posterior reference -- and release all protocols, seeds and per-run evidence.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2604.01207v2" target="_blank" class="paper-title">TRACE: High-Fidelity 3D Scene Editing via Tangible Reconstruction and Geometry-Aligned Contextual Video Masking</a>
-                        <span class="paper-date">2026-07-31</span>
-                    </div>
-                                        <span class="paper-comment">📝 9 pages, 9 figures</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Existing 3D Gaussian Splatting (3DGS) editing methods primarily focus on appearance modification and often struggle to support flexible geometry editing while preserving structural integrity and scene-consistent appearance. To address this limitation, we present TRACE, a mesh-guided 3DGS editing framework that automatically aligns explicit 3D geometry with Gaussian scenes and decouples Geometric Anchoring from Appearance Harmonization. First, Multi-view 3D-Anchor Synthesis, trained on our MV-TRACE dataset for scene-coherent object addition and modification, generates geometrically aligned editing anchors, while Tangible Geometry Alignment (TGA) performs coarse-to-fine mesh-scene registration. Then, Contextual Video Masking (CVM) integrates projected 3D anchors into an autoregressive video diffusion pipeline, harmonizing their appearance with the surrounding scene while maintaining multi-view consistency. We evaluate TRACE on eight held-out scenes across six editing categories. TRACE completes each edit in approximately 10 minutes on a single NVIDIA RTX Pro 6000 GPU. Extensive experiments demonstrate consistent improvements over existing methods in editing versatility, structural integrity, semantic alignment, multi-view consistency, and visual quality.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2605.00177v2" target="_blank" class="paper-title">FieryGS: In-the-Wild Fire Synthesis with Physics-Integrated Gaussian Splatting</a>
-                        <span class="paper-date">2026-07-31</span>
-                    </div>
-                                        <span class="paper-comment">📝 ICLR 2026</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>We consider the problem of synthesizing photorealistic, physically plausible combustion effects in in-the-wild 3D scenes. Traditional CFD and graphics pipelines can produce realistic fire effects but rely on handcrafted geometry, expert-tuned parameters, and labor-intensive workflows, limiting their scalability to the real world. Recent scene modeling advances like 3D Gaussian Splatting (3DGS) enable high-fidelity real-world scene reconstruction, yet lack physical grounding for combustion. To bridge this gap, we propose FieryGS, a physically-based framework that integrates physically-accurate and user-controllable combustion simulation and rendering within the 3DGS pipeline, enabling realistic fire synthesis for real scenes. Our approach tightly couples three key modules: (1) multimodal large-language-model-based physical material reasoning, (2) efficient volumetric combustion simulation, and (3) a unified renderer for fire and 3DGS. By unifying reconstruction, physical reasoning, simulation, and rendering, FieryGS removes manual tuning and automatically generates realistic, controllable fire dynamics consistent with scene geometry and materials. Our framework supports complex combustion phenomena -- including flame propagation, smoke dispersion, and surface carbonization -- with precise user control over fire intensity, airflow, ignition location and other combustion parameters. Evaluated on diverse indoor and outdoor scenes, FieryGS outperforms all comparative baselines in visual realism, physical fidelity, and controllability. Project page can be found at https://pku-vcl-geometry.github.io/FieryGS/.</p>
                     </details>
                 </div>
             </div>

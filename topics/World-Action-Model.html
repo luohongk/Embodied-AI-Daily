@@ -590,7 +590,7 @@
                 <a href="World-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">World Model</span>
-                    <span class="nav-count">76</span>
+                    <span class="nav-count">77</span>
                 </a>
                 <a href="3D-Foundation-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
@@ -690,12 +690,12 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">68</span>
+                    <span class="nav-count">70</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">76</span>
+                    <span class="nav-count">77</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -809,7 +809,7 @@
             <a href="World-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">World Model</span>
-                <span class="nav-count">76</span>
+                <span class="nav-count">77</span>
             </a>
             <a href="3D-Foundation-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
@@ -909,12 +909,12 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">68</span>
+                <span class="nav-count">70</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">76</span>
+                <span class="nav-count">77</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -1030,6 +1030,36 @@
             <div class="paper-list">
                 <div class="paper-card">
                     <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.10780v3" target="_blank" class="paper-title">StageWAM: Joint-Embedding Stage Prediction for World-Action Models in Robot Manipulation</a>
+                        <span class="paper-date">2026-08-14</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有机器人操作策略仅建模短时物理未来（局部场景演变），缺乏对任务阶段级语义未来（任务如何从当前阶段推进到下一阶段）的显式描述，限制了复杂任务的成功率与执行效率。&#10;&#10;🛠 **方法**：提出JEPA-WAM，在基于Motus的世界动作模型（WAM）上增加Stage-JEPA模块，利用冻结的V-JEPA2编码器提取当前状态表示，并通过目标条件化的联合嵌入预测架构（JEPA）预测下一推断阶段的潜在目标。&#10;&#10;✨ **主要贡献**：在50个RoboTwin 2.0任务（含干净与随机环境）上，JEPA-WAM取得90.25%的平均成功率，相比最强基线将成功轨迹的平均执行步数减少5.97%，验证了阶段级语义预测对提升操作性能的有效性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Generalist robot policies aim to map multimodal observations and linguistic task instructions to actions across diverse tasks. However, existing methods typically represent the future as a fixed, short video-action chunk. This short-term future captures local scene evolution for action execution, but it does not explicitly describe the stage-level future that specifies how a task should progress from its current stage to the next. We therefore distinguish two complementary futures for robot manipulation: a short-term physical future to capture local scene evolution and a stage-level semantic future to represent task progress. We introduce StageWAM, which augments a Motus-based World Action Model (WAM) with Stage-JEPA, a goal-conditioned Joint-Embedding Predictive Architecture (JEPA) predictor. Given the current observation and task instruction, Stage-JEPA uses a frozen V-JEPA2 encoder to extract the current-state representation and predicts the latent target of the next inferred stage. Across 50 RoboTwin 2.0 tasks in clean and randomized environments, StageWAM achieves 90.25% overall success and reduces the mean number of execution steps in successful rollouts by 5.97% relative to the strongest baseline.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.03682v3" target="_blank" class="paper-title">PhyAI: Real-Time Physical AI at the Edge, Scalable Rollouts in the Cloud</a>
+                        <span class="paper-date">2026-08-14</span>
+                    </div>
+                                        <span class="paper-comment">📝 25 pages, 9 figures</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：物理AI策略在评估、云端强化学习、边缘GPU推理和机载部署等全生命周期中需要统一且高效的推理引擎，而现有实现常依赖分离的推理程序，导致部署复杂且性能不均。&#10;&#10;🛠 **方法**：构建PhyAI推理引擎，采用单一运行时，通过模型适配器（adapter）隔离架构特定的条件化、求解器、缓存和输出逻辑，同时共享图执行、内核、内存管理和并行服务，支持VLA模型和世界动作模型在单/多GPU上的机载、边缘和云端部署。&#10;&#10;✨ **主要贡献**：PhyAI在pi0、pi0.5、GR00T N1.7和MiniCPM-Robot上实现1.40x-4.65x加速，在Cosmos3-Nano-Policy-DROID上延迟从2.46s降至1.18s（2.08x加速）；提出控制时间Roofline模型区分推理受限与环境受限控制，并揭示不同模型需不同执行策略（如pi0.5在batch=1时动作专家占8.8% FLOPs但57.2%延迟）。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Physical AI policies require inference throughout their lifecycle, including model evaluation, cloud reinforcement learning rollout, edge GPU serving, and onboard deployment. Although these settings share the same checkpoint and action semantics, they often rely on separate inference programs. To unify them, we build PhyAI, a Physical AI inference engine with a single runtime that keeps architecture-specific conditioning, solver, cache, and output logic in model adapters while sharing graph execution, kernels, memory management, and parallel services. The same codebase runs vision-language-action (VLA) models and world-action models (WAMs) on single or multiple GPUs across onboard, edge, and cloud deployments. We used the adapter interface to add MiniCPM-Robot on the day of its release. PhyAI achieves 1.40x-4.65x speedups over the official implementations of pi0, pi0.5, GR00T N1.7, and MiniCPM-Robot. On Cosmos3-Nano-Policy-DROID it reduces latency from 2.46 to 1.18 s on eight H20 GPUs (CFG=2, TP=4), a 2.08x speedup. Specialized runtimes remain faster in several configurations, so our goal is one runtime with competitive latency rather than the fastest result in every case. Detailed profiles reveal why different models need different execution policies: on a Hopper-series GPU at batch size one, the pi0.5 action expert accounts for 8.8% of FLOPs but 57.2% of latency; at batch size 32 its share drops to 13.5% and throughput reaches about 100 samples/s. Cosmos3 remains generation-dominated and gains only 14.3% throughput as batch size increases from 1 to 16. We further introduce the control-time Roofline, which distinguishes inference-bound from environment-bound control; the measured pi0.5 points on four LIBERO suites are environment-bound while Cosmos3 stays inference-bound. Code and benchmarks: https://github.com/mingti-org/phyai.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
                         <a href="https://arxiv.org/abs/2608.10860v2" target="_blank" class="paper-title">Flex-$π$: A Multi-Stream World-Action Model with Compute Flexibility</a>
                         <span class="paper-date">2026-08-13</span>
                     </div>
@@ -1086,21 +1116,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>World Action Models (WAMs) have emerged as a promising paradigm for robotic manipulation, enabling physical interaction across diverse tasks and environments. However, their ability to directly follow high-level instructions and execute physical actions also creates potential safety risks, as adversarially designed instructions may induce unsafe robot behaviors. To systematically assess these risks, we propose JailWAM, the first jailbreak evaluation framework for WAMs. In JailWAM, we integrate three key innovations: Firstly, to address the difficulty of evaluating heterogeneous low-level action outputs, we introduce Visual-Trajectory Mapping, which transforms model-specific actions into unified visual trajectory representations, thereby facilitating consistent risk assessment across WAM architectures. Secondly, to provide efficient and fine-grained assessment of physical risks, we develop a Risk Discriminator supervised by three safety levels ordered according to physical consequence: Safety Compliance, Motion Failure, and Catastrophic Risk. This severity-aware formulation enables the risk discriminator to distinguish different physical outcomes from visual trajectories and support scalable risk screening. Thirdly, to reduce the cost of exhaustively executing adversarial candidates, we design a Dual-Path Verification Strategy that combines rapid risk screening with closed-loop physical simulation, restricting computationally expensive verification to candidates with potential safety risks. Extensive experiments in the RoboTwin simulation environment show that JailWAM achieves an 84.2% attack success rate on LingBot-VA, which indicates that WAMs may be susceptible to jailbreak attacks that induce unsafe physical behaviors. Our findings may motivate further research on the safety evaluation and alignment of future embodied robotic systems.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2608.10780v2" target="_blank" class="paper-title">JEPA-WAM: Stage-Level Joint-Embedding Prediction for World-Action Models in Robot Manipulation</a>
-                        <span class="paper-date">2026-08-13</span>
-                    </div>
-                    
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有机器人操作策略仅建模短时物理未来（局部场景演变），缺乏对任务阶段级语义未来（任务如何从当前阶段推进到下一阶段）的显式描述，限制了复杂任务的成功率与执行效率。&#10;&#10;🛠 **方法**：提出JEPA-WAM，在基于Motus的世界动作模型（WAM）上增加Stage-JEPA模块，利用冻结的V-JEPA2编码器提取当前状态表示，并通过目标条件化的联合嵌入预测架构（JEPA）预测下一推断阶段的潜在目标。&#10;&#10;✨ **主要贡献**：在50个RoboTwin 2.0任务（含干净与随机环境）上，JEPA-WAM取得90.25%的平均成功率，相比最强基线将成功轨迹的平均执行步数减少5.97%，验证了阶段级语义预测对提升操作性能的有效性。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Generalist robot policies aim to map multimodal observations and linguistic task instructions to actions across diverse tasks. However, existing methods typically represent the future as a fixed, short video-action chunk. This short-term future captures local scene evolution for action execution, but it does not explicitly describe the stage-level future that specifies how a task should progress from its current stage to the next. We therefore distinguish two complementary futures for robot manipulation: a short-term physical future to capture local scene evolution and a stage-level semantic future to represent task progress. We introduce JEPA-WAM, which augments a Motus-based World Action Model (WAM) with Stage-JEPA, a goal-conditioned Joint-Embedding Predictive Architecture (JEPA) predictor. Given the current observation and task instruction, Stage-JEPA uses a frozen V-JEPA2 encoder to extract the current-state representation and predicts the latent target of the next inferred stage. Across 50 RoboTwin 2.0 tasks in clean and randomized environments, JEPA-WAM achieves 90.25% overall success and reduces the mean number of execution steps in successful rollouts by 5.97% relative to the strongest baseline.</p>
                     </details>
                 </div>
                 <div class="paper-card">
@@ -1169,10 +1184,7 @@
                         <span class="paper-date">2026-08-11</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在动作标注数据（如dVRK遥操作轨迹）稀缺的情况下，如何利用丰富的无动作内窥镜视频提升手术机器人的闭环操控能力。&#10;&#10;🛠 **方法**：提出Surgical WAM模型，基于Cosmos Policy构建统一生成模型，先通过无动作视频预训练学习手术场景的视觉动态，再在固定动作标注预算下微调，部署时作为滚动时域闭环控制器执行预测动作块并重规划。&#10;&#10;✨ **主要贡献**：在四个模拟手术任务中，视频预训练将平均成功率从63.5%提升至77.8%（PegTransfer任务绝对提升20个百分点），尤其在接触密集和双臂协调任务上增益显著，证明无动作视频可提供可迁移的视觉动态先验，为数据高效的手术机器人学习提供了实用路径。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Learning reliable surgical manipulation policies is bottlenecked by the scarcity of action-labeled demonstrations: teleoperated surgical robot (e.g., dVRK) trajectories with synchronized kinematics are costly to collect, while surgical tasks demand precise contact handling, long-horizon reasoning, and bimanual coordination. Endoscopic video is comparatively inexpensive and abundant relative to synchronized video--kinematics trajectories, and a natural way to exploit it is to learn world models of surgical scenes. However, existing surgical world models use video primarily for simulation or policy evaluation, and rarely translate the learned dynamics into closed-loop control. This gap raises our central question: under a fixed budget of action-labeled demonstrations, does action-free video pretraining improve closed-loop surgical manipulation? To answer it, we introduce the Surgical World-Action Model (Surgical WAM), a unified generative model built on Cosmos Policy that jointly predicts future endoscopic observations and executable surgical robot action chunks. Surgical WAM first learns surgical visual dynamics from action-free video and is then fine-tuned on the fixed action-labeled budget; at deployment, it acts as a closed-loop, receding-horizon controller that executes a short prefix of each predicted action chunk and replans from the resulting observation. On a suite of four simulated surgical manipulation tasks, video pretraining improves the average success rate from 63.5% to 77.8%, including an absolute gain of 20 percentage points on PegTransfer, with the largest improvements on contact-rich and bimanual tasks. These results demonstrate that action-free video provides transferable visual dynamics priors for learning surgical robot control with limited action supervision, positioning data-efficient video pretraining as a practical path toward scaling up surgical robot learning.</p>
@@ -1440,18 +1452,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>World Action Models (WAMs) learn action-relevant representations by predicting how the observed world will evolve. Most existing WAMs define this future in RGB space, where task-relevant state transitions are entangled with nuisance variations in texture, illumination, background, and viewpoint. We argue that WAMs should explicitly predict action-relevant future state rather than relying on RGB prediction alone. We introduce DreamWAM, which reformulates future prediction as structured world modeling beyond RGB, representing future states through complementary views of appearance, motion, geometry, and semantics. During training, DreamWAM combines joint latent denoising of RGB and motion with lightweight gated residual branches for geometry and semantics. Shared attention between VideoDiT and ActionDiT allows the action branch to learn from these future-state predictions, while all beyond-RGB supervision branches are disabled at inference and deployment remains RGB-only. Across both no-rollout and joint video-action inference, DreamWAM consistently improves the matched RGB-only baselines on LIBERO, from 97.30\% to 98.40\% and from 98.00\% to 98.90\%, respectively. The gains become larger under unseen LIBERO-Plus perturbations, from 51.36\% to 63.44\% and from 69.16\% to 75.47\%. The same robustness extends to real-world manipulation, where DreamWAM attains an average success rate of 74.4\% across unseen changes in lighting, background, and object layout, compared with 55.6\% for Fast-WAM-Joint. These results show that robust world-action learning depends not only on predicting the future, but on representing it in a form that matters for action. The code and models are publicly released at https://github.com/hustvl/DreamWAM.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2608.03682v2" target="_blank" class="paper-title">PhyAI: Real-Time Physical AI at the Edge, Scalable Rollouts in the Cloud</a>
-                        <span class="paper-date">2026-08-05</span>
-                    </div>
-                                        <span class="paper-comment">📝 25 pages, 9 figures</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Physical AI policies require inference throughout their lifecycle, including model evaluation, cloud reinforcement learning rollout, edge GPU serving, and onboard deployment. Although these settings share the same checkpoint and action semantics, they often rely on separate inference programs. To unify them, we build PhyAI, a Physical AI inference engine with a single runtime that keeps architecture-specific conditioning, solver, cache, and output logic in model adapters while sharing graph execution, kernels, memory management, and parallel services. The same codebase runs vision-language-action (VLA) models and world-action models (WAMs) on single or multiple GPUs across onboard, edge, and cloud deployments. We used the adapter interface to add MiniCPM-Robot on the day of its release. PhyAI achieves 1.40x-4.65x speedups over the official implementations of pi0, pi0.5, GR00T N1.7, and MiniCPM-Robot. On Cosmos3-Nano-Policy-DROID it reduces latency from 2.46 to 1.18 s on eight H20 GPUs (CFG=2, TP=4), a 2.08x speedup. Specialized runtimes remain faster in several configurations, so our goal is one runtime with competitive latency rather than the fastest result in every case. Detailed profiles reveal why different models need different execution policies: on a Hopper-series GPU at batch size one, the pi0.5 action expert accounts for 8.8% of FLOPs but 57.2% of latency; at batch size 32 its share drops to 13.5% and throughput reaches about 100 samples/s. Cosmos3 remains generation-dominated and gains only 14.3% throughput as batch size increases from 1 to 16. We further introduce the control-time Roofline, which distinguishes inference-bound from environment-bound control; the measured pi0.5 points on four LIBERO suites are environment-bound while Cosmos3 stays inference-bound. Code and benchmarks: https://github.com/mingti-org/phyai.</p>
                     </details>
                 </div>
                 <div class="paper-card">

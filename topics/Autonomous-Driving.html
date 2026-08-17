@@ -590,7 +590,7 @@
                 <a href="World-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">World Model</span>
-                    <span class="nav-count">76</span>
+                    <span class="nav-count">77</span>
                 </a>
                 <a href="3D-Foundation-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
@@ -690,12 +690,12 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">68</span>
+                    <span class="nav-count">70</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">76</span>
+                    <span class="nav-count">77</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -809,7 +809,7 @@
             <a href="World-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">World Model</span>
-                <span class="nav-count">76</span>
+                <span class="nav-count">77</span>
             </a>
             <a href="3D-Foundation-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
@@ -909,12 +909,12 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">68</span>
+                <span class="nav-count">70</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">76</span>
+                <span class="nav-count">77</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -1030,6 +1030,126 @@
             <div class="paper-list">
                 <div class="paper-card">
                     <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.14428v1" target="_blank" class="paper-title">GhostPoint: Self-Supervised Representation Learning by Hallucinating Occluded LiDAR Structure</a>
+                        <span class="paper-date">2026-08-14</span>
+                    </div>
+                                        <span class="paper-comment">📝 Accepted by ECCV2026</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有LiDAR点云自监督学习方法仅约束可见表面，忽略遮挡和未观测区域，导致下游3D检测性能较弱，尤其在稀疏扫描和标签有限场景下。&#10;&#10;🛠 **方法**：提出GhostPoint框架，通过实例体素膨胀在局部邻域生成幻觉特征，编码器处理观测点云，额外预测器从观测上下文推断邻域表示，并对可见/掩码体素与未观测体素分别施加教师编码器和教师预测器的监督。&#10;&#10;✨ **主要贡献**：在nuScenes和Waymo上达到最先进性能，显著提升3D检测精度，尤其在稀疏扫描和少标签条件下，验证了显式建模未观测结构对检测任务的有效性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>3D object detection from LiDAR point clouds is a core problem in autonomous driving. Recent advances in self-supervised learning (SSL) enable scalable pretraining and transfers well to per-point tasks such as semantic and panoptic segmentation, but transfer to 3D detection remains weaker. We analyze recent SSL methods and find that most objectives are defined only on measured LiDAR returns from visible surfaces, leaving occluded and unobserved regions unconstrained. This visible-surface bias can be sufficient for point-wise prediction, but 3D detection requires robustness to missing structure. To address this gap, we propose GhostPoint, an SSL framework that hallucinates latent features in local neighborhoods around discovered instances, generated via a novel instance voxel dilation. In GhostPoint, an encoder processes observed returns, and an additional predictor infers neighborhood representations from observed context. In addition to standard encoder-level supervision, we introduce a predictor-level supervision scheme on sampled voxels from generated neighborhoods. Specifically, observed (visible/masked) voxels match teacher-encoder targets, while unobserved voxels match teacher-predictor hallucinations. This design encourages the learned representation to explicitly model structure beyond observed returns. Extensive evaluations on nuScenes and Waymo demonstrate that our method achieves state-of-the-art performance, consistently improving downstream 3D detection, especially under sparse scans and limited labels.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.14394v1" target="_blank" class="paper-title">IRGNN: Efficient Invariant Radar Graph Neural Network for Radar Point Cloud Object Detection</a>
+                        <span class="paper-date">2026-08-14</span>
+                    </div>
+                                        <span class="paper-comment">📝 Accepted at ICONIP 2026</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决自动驾驶中雷达点云稀疏、无序且信息量少，导致现有基于LiDAR的检测方法难以直接应用的问题。&#10;&#10;🛠 **方法**：提出IRGNN，将雷达点云重构为具有平移和旋转不变性的图表示，采用改进的消息传递神经网络（含残差连接和虚拟节点层）增强局部特征传播与全局上下文建模，最后用任务特定头进行目标分类和边界框预测。&#10;&#10;✨ **主要贡献**：在RadarScenes数据集上超越现有雷达检测方法，同时显著降低推理时的计算成本和内存占用，验证了高效雷达感知的实用潜力。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Perception is a fundamental component of autonomous driving systems. While LiDAR-based methods have achieved remarkable progress in object detection, their reliability can degrade under adverse weather conditions. Radar point clouds provide a robust alternative due to their resilience to bad weather and low-illumination scenarios. However, radar point clouds are typically sparse, unordered, and less informative than LiDAR data, making it challenging to directly apply existing LiDAR-based perception methods. To address these challenges, we propose IRGNN, an Invariant Radar Graph Neural Network for radar point cloud object detection. IRGNN first reconstructs radar point clouds into graph representations using translation- and rotation-invariant feature designs, enabling robust modeling of sparse radar measurements. It then employs an improved message passing neural network (MPNN) with residual connections and a virtual node layer to enhance local feature propagation and global context modeling. Finally, task-specific heads are applied to the learned graph representations for object classification and bounding box prediction. Experimental results on the RadarScenes dataset show that IRGNN outperforms existing radar-based object detection methods and achieves competitive performance. In addition, IRGNN significantly reduces computational cost and memory usage during inference, demonstrating its effectiveness and practical potential for efficient radar-based perception in autonomous driving.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2511.08001v3" target="_blank" class="paper-title">Effective Game-Theoretic Motion Planning via Nested Search</a>
+                        <span class="paper-date">2026-08-14</span>
+                    </div>
+                                        <span class="paper-comment">📝 Updated version. Offline graph creation runtime added. Acknowledgements added</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有博弈论运动规划方法在一般动力学系统中难以高效计算纳什均衡，优化方法受限于简化模型和局部最优，而枚举方法因显式遍历所有轨迹而扩展性差。&#10;&#10;🛠 **方法**：提出Game-Theoretic Nested Search (GTNS)，通过外层搜索所有智能体的动作空间，并在低维空间内进行内层搜索以丢弃违反纳什均衡约束（无单方面偏离）的轨迹，从而高效计算一般动态系统中的纳什均衡。&#10;&#10;✨ **主要贡献**：GTNS具有可扩展性和可证明正确性，支持通过用户指定的全局目标显式选择均衡，适用于自动驾驶和赛车等复杂场景，在普通硬件上数秒内即可求解。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>To facilitate effective, safe deployment in the real world, individual robots must reason about interactions with other agents, which often occur without explicit communication. Recent work has identified game theory, particularly the concept of Nash Equilibrium (NE), as a key enabler for behavior-aware decision-making. Yet, existing work falls short of fully unleashing the power of game-theoretic reasoning. Specifically, popular optimization-based methods require simplified robot dynamics and tend to get trapped in local minima due to convexification. Other works that rely on payoff matrices suffer from poor scalability due to the explicit enumeration of all possible trajectories. To bridge this gap, we introduce Game-Theoretic Nested Search (GTNS), a novel, scalable, and provably correct approach for computing NEs in general dynamical systems. GTNS efficiently searches the action space of all agents involved, while discarding trajectories that violate the NE constraint (no unilateral deviation) through an inner search over a lower-dimensional space. Our algorithm enables explicit selection among equilibria by utilizing a user-specified global objective, thereby capturing a rich set of realistic interactions. We demonstrate the approach on a variety of autonomous driving and racing scenarios where we achieve solutions in mere seconds on commodity hardware.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2606.31109v2" target="_blank" class="paper-title">InfiniVerse: Occupancy Guided Unbounded Scene Generation for Autonomous Driving</a>
+                        <span class="paper-date">2026-08-14</span>
+                    </div>
+                                        <span class="paper-comment">📝 Paper accepted as poster at ECCV workshop SPAD</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：自动驾驶领域缺乏能够生成真实、可控且时间连贯的无限长动态城市场景的方法，现有方法在场景范围、跨模态对齐和稳定性上存在不足。&#10;&#10;🛠 **方法**：提出InfiniVerse统一流程，先从单帧多视角输入重建3D占用表示，再沿任意轨迹自回归扩展场景，随后用视频扩散模型将占用网格转化为时空一致的视频序列；最后通过层级“草图-细化”范式，将生成视频重投影为图像条件反馈，增强3D占用表示，实现视觉与空间域的交叉对齐和互促。&#10;&#10;✨ **主要贡献**：在Waymo Open Dataset和nuScenes上达到SOTA性能，FID为6.4、FVD为67.97，显著优于现有基准，支持长距离、2D-3D对齐的可控动态场景生成，并验证了跨模态反馈机制的有效性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Generating realistic, controllable, and temporally coherent urban environments is a critical yet unresolved challenge in the autonomous driving community. In this paper, we introduce InfiniVerse, a unified pipeline for long-range, 2D-3D-aligned, and controllable synthesis of dynamic urban scenes from a single frame. In practice, our approach first reconstructs a 3D occupancy representation from the input multi-view frame. This representation serves as a foundation for autoregressive scene extension along arbitrary trajectories. Subsequently, a video diffusion model translates the coarse occupancy grid into realistic, spatiotemporally consistent video sequences. Moreover, we propose a hierarchical sketch-and-refine paradigm, in which the generated videos are re-projected as image-conditioned feedback to enhance the 3D occupancy representation, establishing cross-modal alignment and mutual enhancement between the visual and spatial domains. Extensive evaluations on the Waymo Open Dataset and nuScenes demonstrate that InfiniVerse achieves state-of-the-art performance, with a FID of 6.4 and FVD of 67.97, significantly outperforming existing benchmarks in both duration and stability.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.14024v1" target="_blank" class="paper-title">SSP: An Event-Matched Syn2Sim2Phy Cross-Domain Evaluation Framework for Autonomous Driving VLA Models</a>
+                        <span class="paper-date">2026-08-14</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有自动驾驶VLA模型评估常使用独立选取的合成、仿真和物理数据，导致性能差异可能源于场景内容变化而非真实域敏感性，缺乏可控的跨域对比。&#10;&#10;🛠 **方法**：提出SSP框架，从合成长尾视频构建事件规范（保留道路拓扑、参与者角色、相对运动等关键属性），再在CARLA和封闭试验场生成平台特定实现，并通过迁移审计确保事件属性保留，最后将异构模型输出映射到统一语义槽和1秒轨迹窗口进行评估。&#10;&#10;✨ **主要贡献**：构建了首个事件匹配的Syn2Sim2Phy跨域评估链，在Cut-in和弱势道路使用者场景中测得综合能力分数（合成0.259、仿真0.291、物理0.325），发现最佳域因场景而异，且Alpamayo-R1（0.405）优于OpenEMMA（0.338）和LLaViDA（0.131），证明物理域并非普遍最优。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Vision-language-action (VLA) models for autonomous driving jointly produce scene interpretation, language-based reasoning, and driving trajectories. Existing evaluations often use independently selected synthetic, simulated, and physical data, so measured performance gaps can be confounded by changes in scenario content rather than genuine domain sensitivity. We propose SSP (Synthetic-Simulation-Physical), an event-matched Syn2Sim2Phy evaluation framework that anchors cross-domain comparison to the same safety-critical interaction. Starting from a synthetic long-tail video, SSP builds a validated event specification that preserves road topology, participant roles, relative motion, conflict evolution, passing order, response constraints, and event phases. Platform-specific realizations are then constructed in CARLA and on a closed proving ground and are evaluated only after transfer audits confirm preservation of mandatory event properties. SSP maps heterogeneous outputs from OpenEMMA, LLaViDA, and Alpamayo-R1 into common semantic slots and a 1 s trajectory window to assess output validity, semantic accuracy, critical-interaction recognition, trajectory quality, and risk response. Across Cut-in and vulnerable-road-user crossing cases, the macro-averaged Integrated VLA Capability Scores are 0.259, 0.291, and 0.325 in the Synthetic, Simulation, and Physical domains, respectively, while the best domain varies by scenario. Alpamayo-R1, OpenEMMA, and LLaViDA obtain scores of 0.405, 0.338, and 0.131. SSP provides a reproducible scene-transfer chain and an evidence-qualified evaluation of VLA behavior without assuming that the Physical domain is universally superior.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.01035v3" target="_blank" class="paper-title">WAM-Diff2: Hierarchical AR-to-Diffusion Distillation for Highly Efficient Autonomous Driving VLA</a>
+                        <span class="paper-date">2026-08-14</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：自动驾驶VLA模型因自回归解码导致高计算延迟和曝光偏差，而扩散策略虽可并行执行但缺乏多任务认知能力，两者难以兼顾。&#10;&#10;🛠 **方法**：提出WAM-Diff2框架，通过三阶段分层蒸馏（逐块结构适配、逐块蒸馏、跨尺度模型蒸馏），将预训练自回归模型转化为多任务离散扩散模型。&#10;&#10;✨ **主要贡献**：在保持多任务语义能力的同时，有效缓解曝光偏差并达到与自回归基线相当的性能；解码速度提升2.8倍，结合FlashInfer和CUDA Graphs系统优化后最高加速15.1倍。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Vision-Language-Action (VLA) models have emerged as a prominent paradigm for end-to-end autonomous driving; however, their efficient deployment is severely constrained by high computational latency and exposure bias arising from sequential autoregressive decoding. Conversely, while specialized diffusion policies enable low-latency, parallel execution, training them from scratch typically yields narrow, single-task architectures that lack holistic visual-linguistic reasoning. Successfully transforming pre-trained autoregressive generalists into parallel diffusion models could combine multi-task cognitive intelligence with execution efficiency, yet this transition presents a formidable architectural challenge due to mismatched attention patterns (causal versus bidirectional) and divergent optimization objectives. To bridge this divide, we introduce WAM-Diff2, a multi-task discrete diffusion VLA framework powered by a three-stage hierarchical distillation strategy. By structuring the architectural shift through progressive block-wise adaptation, block-wise distillation, and model-wise cross-scale distillation, WAM-Diff2 preserves the underlying semantic foundations of the base model while accelerating inference. Extensive evaluations across driving understanding, perception, and planning benchmarks demonstrate that WAM-Diff2 effectively mitigates exposure bias and achieves performance parity with autoregressive baselines. Crucially, the autoregressive-to-diffusion transition yields a 2.8x decoding speedup, which scales to an ultimate 15.1x acceleration when combined with system-level optimizations including FlashInfer and CUDA Graphs.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2503.06821v2" target="_blank" class="paper-title">HierDAMap: Towards Universal Domain Adaptive BEV Mapping via Hierarchical Perspective Priors</a>
+                        <span class="paper-date">2026-08-14</span>
+                    </div>
+                                        <span class="paper-comment">📝 Accepted to IEEE Transactions on Intelligent Transportation Systems (T-ITS). The source code will be made publicly available at https://github.com/lynn-yu/HierDAMap</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：针对BEV（鸟瞰图）映射模型在无标注真实世界场景中因域差异导致的性能下降问题，现有无监督域适应研究仅关注图像级学习，无法普适地支持所有BEV映射任务。&#10;&#10;🛠 **方法**：提出HierDAMap框架，从全局、稀疏和实例三个层级利用透视先验知识，包含三个核心组件：语义引导的伪监督（SGPS）通过视觉基础模型生成2D伪标签约束特征分布；动态感知一致性学习（DACL）利用不确定性感知的预测深度生成动态BEV标签；跨域视锥混合（CDFM）通过视锥掩码混合双域多视角图像，引导跨域视图变换学习。同时引入域内特征交换数据增强。&#10;&#10;✨ **主要贡献**：首次提出通用且整体的BEV域适应框架，从三个层级系统性地利用透视先验，有效缓解空间变化导致的特征分布差异，提升跨域BEV映射性能。代码将开源。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>The exploration of Bird's-Eye View (BEV) mapping technology has driven significant innovation in visual perception technology for autonomous driving. BEV mapping models need to be applied to the unlabeled real world, making the study of unsupervised domain adaptation models an essential path. However, research on unsupervised domain adaptation for BEV mapping remains limited and cannot perfectly accommodate all BEV mapping tasks. To address this gap, this paper proposes HierDAMap, a universal and holistic BEV domain adaptation framework with hierarchical perspective priors. Unlike existing research that solely focuses on image-level learning using prior knowledge, this paper explores the guiding role of perspective prior knowledge across three distinct levels: global, sparse, and instance levels. With these priors, HierDAMap consists of three essential components, including Semantic-Guided Pseudo Supervision (SGPS), Dynamic-Aware Coherence Learning (DACL), and Cross-Domain Frustum Mixing (CDFM). SGPS constrains the cross-domain consistency of perspective feature distribution through pseudo labels generated by vision foundation models in 2D space. To mitigate feature distribution discrepancies caused by spatial variations, DACL employs uncertainty-aware predicted depth as an intermediary to derive dynamic BEV labels from perspective pseudo-labels, thereby constraining the coarse BEV features derived from corresponding perspective features. CDFM, on the other hand, leverages perspective masks of the view frustum to mix multi-view perspective images from both domains, which guides cross-domain view transformation and encoding learning through mixed BEV labels. Furthermore, this paper introduces intra-domain feature exchange data augmentation to enhance the efficiency of domain adaptation learning. The source code will be made publicly available at https://github.com/lynn-yu/HierDAMap.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.13719v1" target="_blank" class="paper-title">Coverage Aware Active Evaluation for Failure Discovery with Paired Systems</a>
+                        <span class="paper-date">2026-08-13</span>
+                    </div>
+                                        <span class="paper-comment">📝 9 main pages followed by Appendix, total 21 pages, 12 figures</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在有限测试预算下，如何有效发现自主系统在真实世界中罕见且多样化的严重故障，同时克服代理系统（如模拟器或低保真系统）与目标系统之间的差异。&#10;&#10;🛠 **方法**：提出一种自适应故障发现方法，结合代理评估与有限的目标系统测试结果，利用控制变量启发的残差建模修正代理故障信号，并采用支持感知的互信息目标函数，在偏好现实可行区域的同时扩展故障模式的覆盖范围。&#10;&#10;✨ **主要贡献**：在自动驾驶、操作和四足速度跟踪任务中，该方法发现的故障数量是随机采样和主动学习基线的2倍，且能发现其他方法遗漏的严重和多样化故障。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Autonomous systems can fail in rare and heterogeneous ways, making real-world failure discovery difficult under limited testing budgets. Although cheaper proxies such as simulators, lower-fidelity systems, or related policies can be sampled extensively to find failures, proxy failures often do not transfer to the real world due to sim-to-real and system-to-system gaps. The key challenge is therefore to effectively leverage proxy system information for accurate prediction of severe target system failures. We propose an adaptive failure discovery method that combines proxy evaluations with limited target system results to guide scenario selection for target system testing. Our method learns a local predictor of target risk by correcting proxy failure signals using control-variate-inspired residual modeling. To find failures that are both likely and diverse, we combine this predictor with a support-aware mutual-information objective that favors realistic, well-supported regions while expanding coverage across failure modes. Across autonomous driving, manipulation, and quadruped velocity-tracking tasks, our method discovers up to 2$\times$ as many failures as random sampling and active-learning baselines, including severe and diverse failures missed by competing methods.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
                         <a href="https://arxiv.org/abs/2608.13450v1" target="_blank" class="paper-title">LLM-Assisted Dynamic Threat Analysis for Attacker-Reachable Software Weaknesses in Autonomous Vehicles</a>
                         <span class="paper-date">2026-08-13</span>
                     </div>
@@ -1064,10 +1184,7 @@
                         <span class="paper-date">2026-08-13</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有基于摄像头的自动驾驶3D感知框架通常依赖语义识别预训练骨干网络，通过任务特定模块引入3D几何，导致共享表示缺乏显式度量几何和一致的3D场景结构。&#10;&#10;🛠 **方法**：提出GeoUP框架，将VGGT的重构导向潜变量适配到标定的多摄像头流式驾驶场景，分解跨图像交互为自注意力、时间注意力和视角注意力，并注入标定感知的光线图编码以提供度量尺度和相机几何，最终解码为度量深度估计、3D目标检测和语义占用预测。&#10;&#10;✨ **主要贡献**：通过联合多任务和多数据集训练，GeoUP有效利用异构标注并泛化至多种传感器配置和感知范围；在nuScenes、Argoverse 2、Waymo、KITTI和DDAD上实现检测、占用和深度估计的SOTA性能，验证了几何接地表示在统一3D驾驶感知中的有效性。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Camera-based autonomous driving perception requires a shared representation that preserves metric 3D structure across synchronized multi-camera streams. However, existing image-based frameworks often rely on backbones pretrained for semantic recognition, and introduce 3D geometry through downstream task-specific modules. As a result, their shared representations may fail to preserve explicit metric geometry and consistent 3D scene structure. In this paper, we present a Geometry-grounded Unified 3D Perception (GeoUP) framework that adapts the reconstruction-oriented latent of VGGT to calibrated, streaming multi-camera driving scenes. GeoUP factorizes cross-image interaction into self, temporal, and view attention to capture structurally distinct temporal and cross-view correspondences. It further injects calibration-aware raymap encodings to provide metric scale and camera geometry. The resulting geometry-grounded latent is decoded for metric depth estimation, 3D object detection, and semantic occupancy prediction, corresponding to surface-, instance-, and volume-level readouts of the same 3D scene. Through joint multi-task and multi-dataset training, GeoUP effectively leverages heterogeneous annotations and generalizes across diverse sensor configurations and perception ranges. Extensive experiments on nuScenes, Argoverse 2, Waymo, KITTI, and DDAD demonstrate that GeoUP achieves SOTA performance across detection, occupancy, and depth estimation. These results validate the effectiveness of geometry-grounded representations for unified 3D driving perception.</p>
@@ -1079,10 +1196,7 @@
                         <span class="paper-date">2026-08-13</span>
                     </div>
                                         <span class="paper-comment">📝 15 pages; 8 figures</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：视觉-语言-动作（VLA）模型在自动驾驶中推理延迟过高，无法满足实时控制需求，且瓶颈并非单一环节，而是由视觉编码、语言模型预填充、推理令牌生成和流匹配去噪四个级联阶段构成。&#10;&#10;🛠 **方法**：提出FlashDrive，一种算法-系统协同设计框架，针对四个瓶颈分别采用流式KV缓存复用、非自回归扩散草稿模型进行投机解码、自适应步长缓存，并叠加CUDA Graph编译与内核融合等系统级优化。&#10;&#10;✨ **主要贡献**：在Alpamayo 1.5-10B模型上，端到端延迟从717ms降至151ms（4.7倍加速），精度几乎不变（minADE6仅偏移0.08m），闭环碰撞与偏离率改善，使10B参数VLA模型在单GPU上从1.4Hz提升至6.6Hz，大幅接近实时部署。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Vision-Language-Action (VLA) models promise to bring end-to-end reasoning to autonomous driving, but their computational cost remains far too high for real-time control. The core challenge is structural: VLA inference is not a single bottleneck but a cascade of four. Visual encoding wastes compute on overlapping video frames; language-model prefill recomputes context that could be carried over from the previous timestep; reasoning tokens are generated serially despite low entropy; and flow-matching denoising applies uniform compute to a non-uniform velocity field. Addressing any one stage in isolation leaves the others untouched. We propose FlashDrive, an algorithm-system co-design framework that targets all four stages simultaneously. Our key insight is that each bottleneck admits a distinct, lightweight algorithmic shortcut: temporal overlap enables streaming KV-cache reuse across frames; the low per-token entropy and strong intra-block correlations of driving-domain reasoning make a non-autoregressive diffusion drafter highly effective for speculative decoding; and the velocity field's structure---sharp at the endpoints, flat in the middle---permits adaptive step caching that concentrates compute where it matters. Layered on system-level CUDA Graph compilation and kernel fusion, these techniques compound. Applied to Alpamayo 1.5-10B with W4A8 quantization, FlashDrive reduces end-to-end latency from 717ms to 151ms (4.7x) while leaving accuracy essentially unchanged: minADE6@6.4s shifts by only 0.08m, minADE1 improves, and closed-loop collision and off-road rates improve in simulation. By raising a 10B-parameter reasoning VLA from 1.4~Hz to 6.6~Hz on a single GPU, FlashDrive moves end-to-end autonomous driving substantially closer to real-time deployment.</p>
@@ -1094,10 +1208,7 @@
                         <span class="paper-date">2026-08-13</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：自动驾驶规划需要同时满足语义约束和预测性动态，但现有端到端方法（VLA模型或世界动作模型）往往只侧重其中一方面，简单融合时存在注意力分配失衡问题，导致语义信息压制预测动态。&#10;&#10;🛠 **方法**：提出BrainWAM框架，将语义推理和预测世界建模转化为两条专门的动作导向通路，在紧凑动作表示层面进行协调对齐；并引入异步整流流推理策略，解耦视频与动作去噪以降低推理延迟。&#10;&#10;✨ **主要贡献**：在NAVSIM v1（89.5 PDMS）和NAVSIM v2（89.6 EPDMS）上达到最先进性能，一致优于仅用VLA或仅用WAM的方法，验证了结构化动作空间协调框架的实用性和有效性。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Autonomous driving requires planning under both semantic constraints and predictive dynamics. Existing end-to-end driving approaches, however, typically emphasize only one side of this requirement: Vision-Language-Action (VLA) models exploit VLM priors for semantic reasoning, while World Action Models (WAMs) provide future-aware prediction through generative world modeling. This naturally motivates a unified planner that can leverage both semantic priors and predictive dynamics. However, we find that a naive combination through joint token-level attention suffers from an attention-allocation mismatch, where semantic shortcuts dominate the shared attention space and suppress predictive dynamics. Inspired by neuroscience evidence that complex behavior arises from coordination among functionally specialized systems, we propose BrainWAM, a structured action-space coordination framework that converts semantic reasoning and predictive world modeling into two specialized action-oriented pathways, and aligns them at the level of compact action representations. We further introduce an asynchronous rectified-flow inference strategy with decoupled video and action denoising, which shortens inference latency while preserving planning-relevant predictive context. BrainWAM reaches state-of-the-art performance on both NAVSIM v1 (89.5 PDMS) and NAVSIM v2 (89.6 EPDMS), consistently outperforming VLA-only or WAM-only methods, highlighting BrainWAM as a practical and promising direction for autonomous driving systems.</p>
@@ -1109,10 +1220,7 @@
                         <span class="paper-date">2026-08-12</span>
                     </div>
                                         <span class="paper-comment">📝 Accepted by IJCV. Project Page: https://github.com/hzxie/Awesome-3D-Scene-Generation</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：3D场景生成旨在合成具有空间结构、语义意义和逼真外观的虚拟环境，以满足沉浸式媒体、机器人、自动驾驶和具身智能等应用需求，但现有方法在保真度、多样性和视图一致性上存在不足。&#10;&#10;🛠 **方法**：该综述将现有方法系统划分为四种范式——程序化生成、基于神经3D的生成（如NeRF、3D高斯）、基于图像的生成和基于视频的生成，并分析了各范式的技术基础与权衡；同时总结了常用数据集、评估协议和下游应用。&#10;&#10;✨ **主要贡献**：首次对3D场景生成领域进行系统梳理，明确了各范式的优缺点和适用场景，指出了生成能力、3D表示、数据标注和评估方面的关键挑战，并展望了高保真、物理感知、交互式生成及统一感知-生成模型等未来方向。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>3D scene generation seeks to synthesize spatially structured, semantically meaningful, and photorealistic environments for applications such as immersive media, robotics, autonomous driving, and embodied AI. Early methods based on procedural rules offered scalability but limited diversity. Recent advances in deep generative models (e.g., GANs, diffusion models) and 3D representations (e.g., NeRF, 3D Gaussians) have enabled the learning of real-world scene distributions, improving fidelity, diversity, and view consistency. Recent advances like diffusion models bridge 3D scene synthesis and photorealism by reframing generation as image or video synthesis problems. This survey provides a systematic overview of state-of-the-art approaches, organizing them into four paradigms: procedural generation, neural 3D-based generation, image-based generation, and video-based generation. We analyze their technical foundations, trade-offs, and representative results, and review commonly used datasets, evaluation protocols, and downstream applications. We conclude by discussing key challenges in generation capacity, 3D representation, data and annotations, and evaluation, and outline promising directions including higher fidelity, physics-aware and interactive generation, and unified perception-generation models. This review organizes recent advances in 3D scene generation and highlights promising directions at the intersection of generative AI, 3D vision, and embodied intelligence. To track ongoing developments, we maintain an up-to-date project page: https://github.com/hzxie/Awesome-3D-Scene-Generation.</p>
@@ -1124,10 +1232,7 @@
                         <span class="paper-date">2026-08-12</span>
                     </div>
                                         <span class="paper-comment">📝 IROS 2026</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：视觉语言模型（VLM）在端到端自动驾驶中常出现“命令跟随差距”，即预测轨迹对导航指令不敏感，导致关键决策点行为错误，本质上是条件策略崩溃。&#10;&#10;🛠 **方法**：提出潜在质心引导（LCS），基于均值漂移解释的无分类器引导（CFG），用预计算的命令特定质心替代实例级残差，实现单次前向传播的类级潜在空间引导。&#10;&#10;✨ **主要贡献**：LCS将推理延迟降低约50%，同时在Bench2Drive（闭环）和nuScenes（开环）基准上显著提升命令遵循度和驾驶性能，且比标准双通道CFG更稳定高效。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Vision-language models (VLMs) have recently emerged as a promising paradigm for end-to-end autonomous driving, enabling agents to map multimodal inputs and high-level navigation instructions directly to executable trajectories. However, in practice, these models exhibit a persistent command-following gap: predicted trajectories often show weak sensitivity to navigation commands, resulting in incorrect behavior at critical decision points. We identify this issue as a form of conditional policy collapse, where regression-based training under multimodal trajectory distributions encourages the model to rely on dominant visual priors while marginalizing the language-conditioned signal. To address this issue, we introduce a principled formulation of classifier-free guidance (CFG) for regression-based vision-language driving. We show that CFG can be interpreted as isolating the instruction-induced residual in the action space by contrasting conditional and unconditional predictions, thereby explicitly amplifying the effect of the navigation command at inference time. However, a standard two-pass CFG introduces prohibitive latency for real-time control and produces noisy instance-level guidance directions. Building on a mean-shift interpretation of CFG, we propose Latent-Centroid Steering (LCS), a single-pass guidance mechanism that replaces instance-level residuals with class-level latent shifts. By projecting conditional representations toward precomputed command-specific centroids, LCS performs class-level latent steering based on cluster geometry that is both more stable and computationally efficient. We demonstrate that LCS reduces inference latency by approximately 50% while achieving stronger command adherence and improved driving performance on both closed-loop (Bench2Drive) and open-loop (nuScenes) benchmarks. Code will be released.</p>
@@ -1139,10 +1244,7 @@
                         <span class="paper-date">2026-08-12</span>
                     </div>
                                         <span class="paper-comment">📝 14 pages, 3 figures, 5 tables. Accepted at the ECCV 2026 Workshop on Safe and Defensive Autonomous Driving (SDAD). Non-archival workshop paper</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有自动驾驶评估依赖聚合指标，难以反映高风险驾驶场景中的性能不足，且缺乏对测试覆盖范围的明确说明。&#10;&#10;🛠 **方法**：提出RISC协议，通过风险引导的切片覆盖测试，将安全关切转化为机器可读的风险切片，利用轻量信号筛选数据，并借助LLM辅助发现易被忽略的测试条件。&#10;&#10;✨ **主要贡献**：在单目行人感知实验中，风险引导选择将关键故障发现率从随机采样的34.0%提升至98.5%；该协议模型无关，可作为轻量级评估层补充现有测试验证流程。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Aggregate metrics may not fully reflect performance in insufficiently examined high-risk driving conditions. We propose RISC (Risk-Informed Slice Coverage), a practical protocol for risk-guided stress testing and coverage-qualified evaluation. Risk-guided stress testing directs a finite audit budget toward risk-relevant sub-datasets, called risk slices, while coverage-qualified evaluation reports results together with explicit statements about which slices are sufficiently or insufficiently covered. The protocol translates safety concerns into machine-readable risk slices, uses lightweight signals to tag candidate data, selects a compact audit set by risk, and qualifies the results using coverage evidence. An LLM can optionally support this process by surfacing relevant but potentially overlooked conditions during test planning, thereby helping engineers not to forget the obvious. RISC is model-agnostic and can be applied to perception modules, driving models, and other autonomous-driving subsystems. We instantiate the protocol for monocular pedestrian perception using 1,000 frames from the Zenseact Open Dataset, image statistics, and a YOLO-based detector proxy. In this proof-of-concept study, risk-guided selection increases critical failure discovery from 34.0% under random sampling to 98.5%. RISC provides a lightweight, assurance-oriented evaluation layer that complements scenario categorization, coverage assessment, and broader testing-and-verification workflows.</p>
@@ -1154,10 +1256,7 @@
                         <span class="paper-date">2026-08-12</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="好的，作为一名人工智能研究与学术论文分析专家，我将严格按照您的要求，对这篇题为《Multi-Agent Embodied Autonomous Driving: From V2X Information Exchange to Shared World Models》的论文进行详细的中文解读。&#10;&#10;---&#10;&#10;## 0. 概览（Concise Summary）&#10;&#10;- **主题（Topic）**：多智能体具身自动驾驶（MAEAD），特别是从V2X信息交换向共享世界模型（SWM）驱动的协同驾驶的范式转变。&#10;- **问题（Problem）**：传统的单智能体自动驾驶受限于局部视野、传感器遮挡和长尾预测问题。现有的V2X协同方法主要停留在“信息交换”层面，缺乏对共享预测状态、意图对齐和联合推理的深度整合，难以应对密集、不确定的交通场景。&#10;- **方法（Method）**：本文是一篇综述，提出了一个统一的“共享世界模型（SWM）驱动的协同”视角。该视角将多智能体自动驾驶视为一个感知-推理-行动的闭环，其中智能体通过V2X通信协同构建和维护一个动态的、预测性的共享环境表征（SWM），并以此为基础进行意图对齐和协调行动。论文系统性地回顾了协同感知、多智能体通信、协同规划、端到端驾驶、基础模型应用以及仿真验证等领域的380余篇文献。&#10;- **创新（Innovation）**：本文的核心创新在于提出了一个**统一的、系统级的分析框架**——SWM驱动的协同。它超越了以往仅关注单一技术层面（如感知、通信或规划）的综述，将V2X信息交换、协同感知、世界模型、基础模型和端到端驾驶等不同技术路线整合到一个连贯的叙事中，并定义了三个可操作的证据标准（C1: 跨智能体状态对齐，C2: 意图与规划对齐，C3: 协调的下游行动）来评估不同方法的贡献。&#10;- **意义（Significance）**：本文为多智能体自动驾驶领域提供了一个清晰的路线图和评估框架。它指出了当前研究的局限性（如过度依赖仿真、缺乏实时安全保证），并明确了未来的关键研究方向：**可验证的共享状态维护、鲁棒的意图和规划对齐、以及在通信、延迟和部署约束下的安全协调行动**。对于该领域的研究者和实践者具有重要的参考价值。&#10;- **一句话总结**：本文通过“共享世界模型”这一统一视角，系统综述了多智能体具身自动驾驶从信息交换到协同认知与行动的演进，并定义了关键的研究挑战与未来方向。&#10;&#10;## 1. 研究动机（Motivation）&#10;&#10;- **解决的问题**：当前自动驾驶研究主要集中于单智能体范式，即车辆依靠自身传感器进行感知、预测和规划。这种“孤岛式”智能存在根本性局限：&#10;    1.  **部分可观测性（Partial Observability）**：单辆车视野有限，易受遮挡，无法感知盲区中的危险（如被大车遮挡的行人）。&#10;    2.  **长尾预测（Long-range Prediction）**：难以准确预测远处或复杂交互场景中的其他交通参与者行为。&#10;    3.  **密集社交交互（Dense Social Interaction）**：在紧密耦合的交通流（如合流、无保护左转）中，无法有效理解和协调其他车辆的意图，导致反应滞后或决策失误。&#10;- **为什么重要**：解决这些问题对于实现**更安全、更高效、更流畅**的L4/L5级自动驾驶至关重要。单靠提升单车智能的硬件和算法，其边际收益递减，且无法从根本上解决上述由“信息孤岛”带来的固有问题。&#10;- **挑战在哪里**：&#10;    1.  **从“信息交换”到“认知协同”的鸿沟**：现有的V2X技术（如V2V、V2I）主要实现了数据层面的交换（如原始点云、特征图、目标列表），但缺乏一个**共享的、预测性的认知模型**来支撑智能体间的意图理解和联合推理。简单交换信息后各自决策，无法实现真正的协同。&#10;    2.  **系统级整合的复杂性**：协同驾驶涉及感知、通信、规划、控制等多个紧密耦合的环节。如何设计一个统一的架构，使得通信塑造共享状态，共享状态支持推理，推理影响行动，行动反馈更新感知，形成一个高效的闭环，是巨大挑战。&#10;    3.  **安全与可靠性验证**：在开放、动态的真实交通环境中，基于基础模型（如LLM）的协同规划缺乏经过验证的实时安全保证。现有评估多集中在仿真和离线数据集上，距离实际部署有较大差距。&#10;&#10;## 2. 创新点（Innovation）&#10;&#10;- **关键创新**：本文的核心创新在于提出了一个**系统级的、以“共享世界模型（SWM）”为驱动的协同驾驶分析框架**。这不是提出一个新的算法，而是为理解和组织该领域的大量文献提供了一个全新的、统一的视角。&#10;- **与现有方案的不同**：&#10;    - **超越V2X信息交换**：现有综述多将V2X视为一个通信和感知增强工具。本文则将其视为构建SWM的基石，强调从“交换什么”到“共同相信什么”的转变。SWM不仅是感知数据的融合，更是对未来状态、意图和行动后果的**预测性表征**。&#10;    - **整合分散的技术路线**：以往综述通常只关注协同感知、多智能体决策或基础模型中的一个或两个层面。本文首次将**协同感知、多智能体通信、世界模型、基础模型（LLM/VLM）、端到端驾驶和仿真验证**整合到一个统一的“感知-推理-行动”闭环框架下，分析了它们之间的相互作用和约束。&#10;    - **提出可操作的评估标准**：为了统一评估不同技术（从简单的消息广播到复杂的语言协商），本文定义了三个清晰的、可操作的证据标准（C1, C2, C3），使得不同方法可以在“对协同驾驶的贡献”这一维度上进行公平比较。&#10;- **为什么能奏效**：这个框架之所以有效，是因为它抓住了多智能体协同的本质：**共同构建一个对世界的一致理解，并基于此进行协调行动**。它将技术细节（如BEV融合、图神经网络、Transformer）抽象为更高层次的认知功能（状态对齐、意图建模、联合规划），从而揭示了不同技术之间的内在联系和演进路径。&#10;&#10;## 3. 主要内容（Main Content）【重点】&#10;&#10;### 3.1 设计架构与方法&#10;&#10;论文的核心架构是一个**多智能体感知、推理与行动闭环**，如图2所示。该架构将MAEAD系统分解为三个核心阶段：&#10;&#10;1.  **共享状态构建（Shared-State Construction）**：智能体通过本地传感器和V2X通信获取信息。协同感知（CP）方法（如早期、中期、晚期融合）负责将这些异构信息融合成一个**对齐的、共享的环境表征**，即SWM的初始状态。这个阶段对应证据标准**C1（跨智能体状态对齐）**。&#10;2.  **意图与规划对齐（Intent and Plan Alignment）**：基于构建的SWM，智能体进行未来意图推理和规划对齐。这包括预测其他智能体的行为、协商角色（如谁先走）、交换规划轨迹等。基础模型（LLM/VLM）可以在此阶段提供高层语义理解和协商能力。这个阶段对应证据标准**C2（意图与规划对齐）**。&#10;3.  **协调的下游行动（Coordinated Downstream Action）**：在对齐的意图和规划指导下，智能体执行协调的联合策略，如生成轨迹、控制车辆。执行结果反馈到下一轮的感知和通信循环中，更新SWM。这个阶段对应证据标准**C3（协调的下游行动）**。&#10;&#10;论文通过这个闭环框架，系统地回顾了各个技术环节的文献，并评估了它们在实现C1、C2、C3上的贡献。&#10;&#10;### 3.2 关键算法与数学推导&#10;&#10;论文本身是综述，不提出新算法。但它回顾了多种关键算法，并给出了其核心思想。以下是一些代表性方法的数学或逻辑描述：&#10;&#10;- **协同感知中的特征融合**：以V2X-ViT为例，其核心是使用Transformer的交叉注意力机制来融合来自不同智能体的BEV特征。&#10;    - 设智能体 $i$ 的BEV特征为 $F_i \in \mathbb{R}^{H \times W \times C}$。&#10;    - 目标智能体 $t$ 的查询（Query）为 $Q_t = F_t W_Q$，其他智能体 $j$ 的键（Key）和值（Value）为 $K_j = F_j W_K, V_j = F_j W_V$。&#10;    - 融合后的特征 $F_t'$ 通过多头注意力计算：&#10;      $$F_t' = \text{Concat}(\text{head}_1, ..., \text{head}_h)W_O$$&#10;      其中每个头 $\text{head}_k = \text{Softmax}\left(\frac{Q_t K_j^T}{\sqrt{d_k}}\right) V_j$。&#10;    - 这个机制允许目标车辆根据自身特征（Query）动态地关注其他车辆特征中（Key）最相关的部分（Value），实现空间对齐和特征选择。&#10;&#10;- **协同规划中的扩散模型**：以MotionDiffuser为例，它使用条件扩散模型来生成多智能体的联合轨迹。&#10;    - 前向扩散过程：逐步向联合轨迹 $x^0$ 添加噪声，得到 $x^1, x^2, ..., x^T$。&#10;    - 反向去噪过程：学习一个神经网络 $\epsilon_\theta(x^t, t, c)$ 来预测噪声，其中 $c$ 是条件（如场景上下文、SWM状态）。&#10;    - 生成过程从随机噪声 $x^T$ 开始，逐步去噪：&#10;      $$x^{t-1} = \frac{1}{\sqrt{\alpha_t}}\left(x^t - \frac{1-\alpha_t}{\sqrt{1-\bar{\alpha}_t}}\epsilon_\theta(x^t, t, c)\right) + \sigma_t z$$&#10;      其中 $\alpha_t, \bar{\alpha}_t, \sigma_t$ 是噪声调度参数，$z$ 是随机噪声。&#10;    - 最终生成的 $x^0$ 即为多智能体的联合轨迹，天然具备协调性。&#10;&#10;### 3.3 模型、训练与数据集&#10;&#10;- **模型**：论文回顾了多种模型架构，包括：&#10;    - **协同感知模型**：V2X-ViT (Transformer), CoBEVT (BEV Transformer), DiscoNet (知识蒸馏), F-Cooper (特征级融合)。&#10;    - **通信模型**：When2com (学习何时通信), Where2Comm (学习何处通信), PragComm (任务导向通信)。&#10;    - **规划模型**：MotionDiffuser (扩散模型), MAPPO (多智能体强化学习)。&#10;    - **基础模型**：DriveGPT4 (VLM), DriveLM (图VQA), AgentsCoDriver (LLM社会推理)。&#10;- **训练**：训练方式多样，包括端到端训练（如UniV2X）、多任务学习、强化学习（如MAPPO）、知识蒸馏（如DiscoNet）、以及预训练+微调（如基础模型）。&#10;- **数据集**：论文重点提及了多个关键数据集和仿真平台，用于不同任务的评估：&#10;    - **协同感知**：OPV2V, DAIR-V2X, V2XSet, V2V4Real, V2X-Sim。&#10;    - **协同规划/端到端**：InterDrive, CARLA, AutoCastSim, HighwayEnv, SUMO。&#10;    - **基础模型**：nuScenes, HighD, Waymo Open Motion Dataset。&#10;&#10;### 3.4 实验设置与结果&#10;&#10;论文本身不包含实验，但它通过**表II（代表性横截面导航图）** 总结了不同方法在三个证据标准（C1, C2, C3）上的表现和评估设置。&#10;&#10;- **评估设置**：论文指出，当前绝大多数方法的评估集中在**仿真环境、精心策划的基准测试和离线协议**上。例如，协同感知方法多在OPV2V、DAIR-V2X等数据集上评测检测精度；协同规划方法多在CARLA、HighwayEnv等仿真器中进行闭环测试。&#10;- **结果总结**：从表II可以看出：&#10;    - **协同感知方法**（如V2X-ViT, CoBEVT）在C1（状态对齐）上表现**显式支持**，但在C2和C3上多为**不支持**或**部分支持**，说明它们主要解决“看”的问题，而非“想”和“动”。&#10;    - **语言协商方法**（如AgentsCoDriver, CoLMDriver）在C2（意图对齐）上表现**显式支持**，但在C3（协调行动）上多为**部分支持**，表明其规划能力仍有待验证。&#10;    - **生成式规划方法**（如MotionDiffuser）在C2和C3上表现**显式支持**，但在C1上可能为**部分支持**，因为它们可能依赖于理想化的状态输入。&#10;    - **端到端协同驾驶方法**（如UniV2X, COOPERNAUT）在三个标准上均有**显式支持**，代表了最全面的尝试，但其评估环境仍以仿真为主。&#10;&#10;### 3.5 技术细节&#10;&#10;- **协同感知三大范式**：论文详细对比了早期融合（原始数据）、中期融合（特征图）和晚期融合（目标级）的优缺点。中期融合因其在精度和带宽之间的良好平衡而成为主流研究方向。&#10;- **通信效率**：论文强调了通信带宽、延迟和可靠性是实际部署的关键瓶颈。因此，大量工作致力于**稀疏特征交换**（Where2Comm）、**学习式消息选择**（When2com）、**任务导向通信**（PragComm）和**鲁棒融合**（CoBEVFlow, HEAL）。&#10;- **基础模型的角色**：论文将LLM/VLM定位为**语义接地（Semantic Grounding）** 的工具，用于将高层场景理解、意图和协商约束显式化，而安全关键的底层控制仍应依赖于可验证的规划器。这避免了将安全责任完全交给黑盒模型。&#10;- **世界模型**：论文将世界模型视为**预测接地（Predictive Grounding）** 的工具，用于模拟未来场景演化、不确定性以及行动的后果，为SWM提供预测能力。GAIA-2、Epona等生成式世界模型是这一方向的前沿。&#10;&#10;## 4. 意义与影响（Significance and Impact）&#10;&#10;- **解决的问题与贡献**：&#10;    1.  **提供了统一视角**：解决了该领域研究碎片化的问题，为理解不同技术路线（感知、通信、规划、基础模型）在协同驾驶中的角色和相互关系提供了清晰的蓝图。&#10;    2.  **明确了评估标准**：提出的C1、C2、C3三个证据标准，为未来研究提供了一个可操作的评估框架，有助于研究者定位自己工作的贡献和不足。&#10;    3.  **指出了关键差距**：明确指出现有研究过度依赖仿真、缺乏实时安全保证、以及从“信息交换”到“认知协同”的鸿沟，为未来研究指明了方向。&#10;- **对未来研究/应用的影响**：&#10;    - **研究层面**：将引导研究者从孤立的模块优化转向系统级的协同设计。未来的工作可能会更关注如何构建可验证的SWM、如何设计鲁棒的意图对齐协议、以及如何在真实约束下实现安全的协调行动。&#10;    - **应用层面**：为V2X技术从“信息共享”向“智能协同”的演进提供了理论指导。未来的V2X标准可能不仅需要定义消息格式，还需要定义共享认知模型的交互协议。&#10;- **局限与开放问题**：&#10;    1.  **形式化收敛与部署认证**：论文承认其提出的SWM框架是一个“组织透镜”，而SWM的数学形式化、收敛性证明以及系统级的安全认证是**独立且开放的问题**。&#10;    2.  **基础模型的安全性**：基于LLM的协商和规划在延迟、可靠性和安全方面的含义尚不明确，是未来研究的重点。&#10;    3.  **评估的真实性**：如何构建更逼真、更具挑战性的仿真环境，以及如何从仿真平滑过渡到真实世界部署，是巨大的挑战。&#10;&#10;## 5. 澄清与简化（Clarifications and Simplifications）&#10;&#10;- **“共享世界模型（SWM）”是什么？**&#10;    - **通俗解释**：想象一群盲人摸象，每个人只能摸到一部分（局部感知）。如果他们只是通过电话告诉对方自己摸到的形状（V2X信息交换），每个人脑子里的大象形象仍然是片面的。但如果他们能共同构建一个“虚拟大象”模型，并不断根据新信息更新它，使得每个人脑中的大象形象都越来越完整、一致，并且能预测大象下一步会怎么动（比如甩鼻子），那么这个“虚拟大象”就是**共享世界模型**。&#10;    - **类比**：SWM就像是一个**团队共享的“数字孪生”**，它不仅包含当前场景的静态信息（谁在哪），还包含动态预测（谁要去哪、会怎么走），并且所有团队成员都能实时访问和更新它。&#10;&#10;- **“从信息交换到SWM驱动”的转变意味着什么？**&#10;    - **信息交换**：就像两个人交换各自拍的照片。他们看到了对方看到的，但仍然是各自基于自己的照片做判断。&#10;    - **SWM驱动**：就像两个人一起用乐高搭一个场景模型。他们不仅交换照片，还共同决定模型的结构、预测模型未来的变化，并基于这个共同的模型来决定下一步搭什么。这是一种**更深层次的认知协同**。&#10;&#10;- **C1, C2, C3 三个标准的作用？**&#10;    - 这三个标准就像是一个**协同驾驶的“能力检查清单”**。&#10;    - **C1（状态对齐）**：检查大家是否“看”到了同一个世界。这是基础。&#10;    - **C2（意图对齐）**：检查大家是否“想”到了同一个未来。这是关键。&#10;    - **C3（协调行动）**：检查大家是否“做”出了协调的动作。这是最终目标。&#10;    - 一个系统可能只通过C1（如协同感知），但无法通过C2和C3，说明它只解决了“看”的问题，没有解决“协同”的问题。&#10;&#10;## 6. 补充说明（Additional Notes）&#10;&#10;- **相关工作的关联**：本文与多篇综述有紧密关联，如表I所示。它明确指出了与以往综述的区别：以往综述多专注于单一层面（如[3]关注协同感知，[13]关注MARL，[18]关注世界">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Autonomous driving is shifting from isolated vehicle intelligence toward multi-agent embodied systems that share perception, infer intent, and coordinate action under uncertainty. This survey examines this transition through the lens of Shared World Models (SWMs): predictive cross-agent representations maintained across vehicles, infrastructure, and other traffic participants. We review approximately 400 publications covering vehicle-to-everything (V2X) communication, collaborative perception, inter-agent cognition, cooperative planning, end-to-end cooperative driving, and simulation and data engines for closed-loop validation. The organizing question is how exchanged observations become aligned state, intent-aware interaction, and coordinated downstream action. Across the surveyed literature, evaluation remains concentrated in simulation, curated benchmarks, and offline protocols. Foundation-model-based coordination also lacks verifiable real-time safety guarantees in open traffic. These gaps motivate key research priorities for multi-agent embodied autonomous driving (MAEAD): verifiable shared-state maintenance, robust intent and plan alignment, and safe coordinated action under communication and computing constraints in real-world deployment. We maintain an open-source project to continuously track the latest developments at https://github.com/dl-m9/Multi-Agent-Embodied-Autonomous-Driving.</p>
@@ -1169,10 +1268,7 @@
                         <span class="paper-date">2026-08-12</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：针对多时相城市LiDAR点云中物体级变化检测缺乏明确检测限和一致物体级标签的问题，提出一种端到端的物体级3D变化检测方法。&#10;&#10;🛠 **方法**：构建了集成检测限感知配准、基于几何代理的规则化语义与实例分割，以及高度、体积和表面法向位移线索的流水线，将位姿不确定性传播到空间变化的检测限中，并抑制误检。&#10;&#10;✨ **主要贡献**：提出了LoDA基准（含Subiaco区多模态车辆LiDAR地图及物体级标注），在自建基准上达到95.0%准确率、90.8%宏F1和83.0%宏IoU，超过最强基线8.7 IoU点；在公开Urb3DCD-V2上mAcc和mIoUch分别提升1.36和3.18点。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>High-definition 3D LiDAR maps are important for autonomous driving and smart-city services, which require reliable detection of object-level changes in multi-temporal urban LiDAR to keep digital maps aligned with the physical world. Existing approaches from raster height differencing to depth image and point-cloud networks often remain tile-based and threshold-driven, yielding per-point scores without explicit detection limits or consistent object-level labels. We propose an object-level 3D change-detection pipeline that integrates detection-limit-aware registration, geometry-driven object proxies with rule-based semantic and instance segmentation, and displacement cues in height, volume, and surface-normal direction to assign five change labels with confidence. By decoupling registration, geometry, and semantics, the pipeline propagates pose uncertainty into spatially varying detection limits, stabilizes cross-epoch correspondences, and suppresses false changes caused by residual misalignment and density variation. We also present LoDA, a level-of-detection (LoD) aware benchmark for the Subiaco district with fused multi-temporal vehicle-LiDAR maps constructed with LiDAR, GNSS, and IMU support, semantic instances, and object-level annotations. On this benchmark, our method achieves 95.0% accuracy, 90.8% macro F1, and 83.0% macro IoU, exceeding the best baseline by 8.7 IoU points and 4.4 F1 points. On the public Urb3DCD-V2 benchmark evaluated under the official point-wise protocol, it reaches 96.81% mean accuracy and 89.52% mean change IoU, improving over the strongest reported baselines by 1.36 points in mAcc and 3.18 points in mIoUch.</p>
@@ -1600,18 +1696,6 @@
                 </div>
                 <div class="paper-card">
                     <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2608.01035v2" target="_blank" class="paper-title">WAM-Diff2: Hierarchical AR-to-Diffusion Distillation for Highly Efficient Autonomous Driving VLA</a>
-                        <span class="paper-date">2026-08-07</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Vision-Language-Action (VLA) models have emerged as a prominent paradigm for end-to-end autonomous driving; however, their efficient deployment is severely constrained by high computational latency and exposure bias arising from sequential autoregressive decoding. Conversely, while specialized diffusion policies enable low-latency, parallel execution, training them from scratch typically yields narrow, single-task architectures that lack holistic visual-linguistic reasoning. Successfully transforming pre-trained autoregressive generalists into parallel diffusion models could combine multi-task cognitive intelligence with execution efficiency, yet this transition presents a formidable architectural challenge due to mismatched attention patterns (causal versus bidirectional) and divergent optimization objectives. To bridge this divide, we introduce WAM-Diff2, a multi-task discrete diffusion VLA framework powered by a three-stage hierarchical distillation strategy. By structuring the architectural shift through progressive block-wise adaptation, block-wise distillation, and model-wise cross-scale distillation, WAM-Diff2 preserves the underlying semantic foundations of the base model while accelerating inference. Extensive evaluations across driving understanding, perception, and planning benchmarks demonstrate that WAM-Diff2 effectively mitigates exposure bias and achieves performance parity with autoregressive baselines. Crucially, the autoregressive-to-diffusion transition yields a 2.8x decoding speedup, which scales to an ultimate 15.1x acceleration when combined with system-level optimizations including FlashInfer and CUDA Graphs.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
                         <a href="https://arxiv.org/abs/2603.13108v2" target="_blank" class="paper-title">Panoramic Multimodal Semantic Occupancy Prediction for Quadruped Robots</a>
                         <span class="paper-date">2026-08-07</span>
                     </div>
@@ -1908,90 +1992,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>This thesis addresses fundamental challenges in traffic scene prediction for autonomous driving by introducing robust and computationally efficient models based on polynomial representations. While conventional sequence-based representations often struggle with noise and generalization, this work demonstrates that polynomial representations offer significant advantages in computational efficiency, generalization, and prediction plausibility. Through theoretical analysis and empirical validation, this thesis demonstrates that moderate-degree polynomials capture real-world motion dynamics with high fidelity without constraining predictive performance. Building on this foundation, a prediction model representing both trajectories and map geometry with polynomial representations achieves near state-of-the-art accuracy on standard benchmarks while substantially improving generalization under distribution shift. Extending this concept, a diffusion- based generative framework enables multi-agent scene generation, producing traffic continuations that are more plausible and kinematically consistent than those generated by conventional baselines. Evaluations on the Argoverse 2 and Waymo Open datasets confirm that polynomial representations reduce computational cost, enhance cross-dataset generalization, and yield smoother trajectories and higher behavioral plausibility. The findings reveal that standard in-distribution evaluation and regression-based metrics may fail to reflect true model generalization and prediction plausibility. By providing theoretical justification and empirical validation, this dissertation estab- lishes polynomial trajectory representations as an efficient, expressive, and generalizable foundation for traffic scene prediction in safety critical autonomous driving.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2505.12715v2" target="_blank" class="paper-title">VLC Fusion: Vision-Language Conditioned Sensor Fusion for Robust Object Detection</a>
-                        <span class="paper-date">2026-08-04</span>
-                    </div>
-                                        <span class="paper-comment">📝 27 pages, 20 figures, Accepted for presentation at ECML PKDD 2026, Shortlisted for the Best Research Track Student Paper Award</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Although fusing multiple sensor modalities can enhance object detection performance, existing fusion approaches often overlook subtle variations in environmental conditions and sensor inputs. As a result, they struggle to adaptively weight each modality under such variations. To address this challenge, we introduce Vision-Language Conditioned Fusion (VLC Fusion), a novel fusion framework that leverages a Vision-Language Model (VLM) to condition the fusion process on nuanced environmental cues. By capturing high-level environmental context such as darkness, rain, and camera blurring, the VLM guides the model to dynamically adjust modality weights based on the current scene, ensuring robustness against environmental shifts. We evaluate VLC Fusion on real-world autonomous driving and military target detection datasets that include image, LIDAR, and mid-wave infrared modalities. Our experiments show that VLC Fusion consistently outperforms conventional fusion baselines, achieving improved detection accuracy in both seen and unseen scenarios.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2608.01755v2" target="_blank" class="paper-title">Deferred Exposure of Future Trajectories for Verifiable Reasoning in Autonomous Driving VLMs</a>
-                        <span class="paper-date">2026-08-04</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Recent Vision-Language-Action (VLA) models for autonomous driving (AD) increasingly utilize chain-of-thought (CoT) supervision to enhance the reasoning capabilities of their Vision-Language Model (VLM) components, yet existing annotation pipelines commonly expose the teacher model to the logged ground-truth (GT) future trajectory. We empirically show that this induces trajectory anchoring bias: teacher models rationalize the revealed outcome rather than infer a decision from scene evidence, producing less causally faithful CoTs and substantially more severe hallucinations, especially in causally challenging scenes. Removing the GT trajectory eliminates this shortcut, but open-ended trajectory generation entangles high-level decision-making with precise geometric synthesis and low-level dynamics. To make trajectory-level driving decisions verifiable without requiring open-ended trajectory synthesis, we introduce Autonomous-Driving Multiple-Choice Question (AD-MCQ), which casts planning as selection among explicit trajectory candidates. Taking this a step further, we propose Deferred Exposure of Future Trajectories for RLVR (DEFT-RLVR) to transform future trajectories from pre-decision anchors into post-decision verification targets. Experimental results show that DEFT-RLVR improves AD reasoning while preserving or even enhancing general visual capabilities. With VLM-only inference and controllable difficulty through candidate construction, AD-MCQ provides a flexible, scalable, and extensible foundation for future research on verifiable AD reasoning.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.14438v3" target="_blank" class="paper-title">CADET: Physics-Grounded Causal Auditing and Training-Free Deconfounding of End-to-End Driving Planners</a>
-                        <span class="paper-date">2026-08-04</span>
-                    </div>
-                                        <span class="paper-comment">📝 8pages 4figures</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>End-to-end (E2E) autonomous-driving planners trained by imitation are prone to statistical shortcuts: they associate scene elements that merely co-occur with expert actions (a roadside object, a building facade) with driving decisions, rather than the variables that causally determine them. Such causal confusion silently compromises reliability in long-tail scenarios, and it is difficult to detect, because prevailing open-loop metrics (L2 displacement and collision rate) are dominated by ego status and do not indicate whether a planner depends on spurious cues. Existing remedies based on causal-intervention training require retraining large models and cannot audit a planner that is already deployed. We present CADET, a training-free framework that audits, benchmarks, and repairs spurious reliance in pretrained E2E planners without any parameter update.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2608.02449v1" target="_blank" class="paper-title">MoRAL: Sensor-Grounded BEV Reasoning for Compact VLMs toward Edge-Oriented Autonomous Driving</a>
-                        <span class="paper-date">2026-08-03</span>
-                    </div>
-                                        <span class="paper-comment">📝 7 pages, 5 figures, 6 tables. Accepted to the 14th IEEE International Conference on Intelligent Mobile Computing (IEEE IMC 2026), Fukuoka, Japan, July 27-30, 2026</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Deploying vision-language models (VLMs) for safety-critical spatial reasoning on resource-constrained autonomous driving platforms requires both compact model size and reliable metric grounding. We present MoRAL (Multimodal Reasoning for Autonomous Language Models), a two-stage fine-tuning pipeline that teaches Cosmos-Reason2-2B to first read a physics-encoded Bird's Eye View (BEV) representation and then reason over it for driving decisions. The BEV image encodes LiDAR metric distance as color bands, object class as cluster morphology, and radar Doppler velocity as directional wedge overlays, externalizing spatial perception into the input image so that no learned 3D backbone is required at inference. Stage 1 fine-tunes the vision encoder on 60,000 grounding records; zero-shot baselines produce no parseable BEV outputs, confirming the vocabulary requires explicit training. Stage 2 fine-tunes the full model (52M parameters, 2.4% of total) on 57,696 chain-of-thought records generated by Cosmos-Reason2-8B as teacher, spanning eight driving question types. On 2,304 held-out nuScenes frames evaluated by Gemma 4 (31B) calibrated against human review, MoRAL wins seven of eight question types over a zero-shot 8B baseline despite using four times fewer parameters, with the largest margins on question types requiring structured multi-step physics reasoning. Emergency braking recall improves from 10.8% to 47.8%, output degeneration falls from 94.1% to 20.8%, and the full pipeline fits a consumer 8 GB GPU at 42 tok/s without quantization. These results establish a reproducible foundation for compact, physics-grounded VLM reasoning on mobile edge platforms.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2608.02200v1" target="_blank" class="paper-title">RSC-GestureNet: Reliability-Aware Selective Causal Recognition of Chinese Traffic Police Gestures</a>
-                        <span class="paper-date">2026-08-03</span>
-                    </div>
-                                        <span class="paper-comment">📝 2026 PRCV Oral; Project Page: https://github.com/chengli24/rsc-gesturenet-prcv2026</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Traffic police gestures are safety-critical perception cues for autonomous driving. A deployable recognizer must infer commands causally from continuous full-frame video, remain stable around transitional arm motion, and avoid over-trusting corrupted pose measurements. This study presents RSC-GestureNet, a reliability-aware selective causal recognizer, for Chinese traffic police gestures. The model treats pose confidence as a first-class signal: unreliable joints are down weighted during graph reasoning, temporal evidence is aggregated causally, and calibrated predictions are selectively emitted through a reliability-aware inference rule. We further introduce CTPGesture-C, a reproducible feature-level corruption benchmark with seven pose/RGB degradation families, and an RGB-level diagnostic in which corrupted frames are reprocessed by MediaPipe before recognition. On the complete official CTPGesture v1 split (134,424 labeled frames and 33,451 causal windows), RSC-GestureNet achieves 93.33+-0.24% accuracy, 91.71+-0.27% macro-F1, 91.69+-0.29% online macro-F1, 98.80+-0.07% Early@10, 0.153+-0.013 s TTC, and the best robust macro-F1 among evaluated methods. Under the same split and causal protocol, it exceeds reproduced traffic-specific MD-GCN and HLP-GCN baselines by 3.23-4.11 macro-F1 points and 2.15-3.07 online-F1 points. These results, together with calibration, selective-risk, statistical, adaptive-branching, and image-level re-extraction analyses, indicate that explicit pose-reliability modeling improves early, stable, and robust traffic-command recognition.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2608.02191v1" target="_blank" class="paper-title">DerainSplat: Feed-Forward Clean 3D Gaussian Splatting from Sparse Rainy Views</a>
-                        <span class="paper-date">2026-08-03</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Although image deraining has advanced substantially, existing methods mainly focus on 2D image restoration. As spatial intelligence applications such as embodied AI and autonomous driving continue to emerge, reconstructing clean 3D scenes from sparse rainy views in a feed-forward manner becomes increasingly important. Existing feed-forward 3D Gaussian Splatting (3DGS) methods often assume clean inputs and collapse under rainy conditions. To this end, we present \textbf{\textit{DerainSplat}}, a feed-forward framework that reconstructs clean 3D scenes from only a few rainy views. To support this task, we build a large-scale multi-view derain dataset through a four-stage synthesis pipeline that sequentially models overcast illumination, depth-dependent haze, rain streaks, and lens raindrops, producing privileged weather factors. We introduce a weather net that predicts the weather factors from rainy context and yields two support maps. Scene support modulates cross-view cost-volume matching, while radiance support drives depth-aligned appearance fusion to fill corrupted pixels. The derived geometry evidence further attenuates Gaussian opacity to reduce spurious structures. A rainy cycle consistency re-renders clean views using the predicted factors and aligns them with rainy inputs. Extensive experiments show that \textbf{\textit{DerainSplat}} outperforms existing methods on various datasets, including RealEstate10K, ACID, Mip-NeRF360, and real-world rainy scenes, with strong cross-dataset generalization.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2608.02177v1" target="_blank" class="paper-title">GSRAIN: Physically Calibrated High-/Low-Frequency Rainfall Synthesis for 3D Gaussian Driving Scenes</a>
-                        <span class="paper-date">2026-08-03</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Existing rainfall simulation methods for autonomous driving remain limited in physical controllability and multi-view consistency. This paper presents GSRAIN, a high-/low-frequency rainfall synthesis method for 3D Gaussian Splatting (3DGS) driving scenes. GSRAIN constructs a high-frequency raindrop model from measured rainfall data and generates low-frequency rainy appearance using a geometry-aware single-step diffusion model. The two effects are then fused in a unified 3DGS scene, enabling rainfall-intensity control over the range of 0--13~mm/h. The proposed method achieves a Fréchet Inception Distance (FID) of 149.09, outperforming CycleGAN-Turbo (155.71) and WeatherEdit (157.94). Object-detection and closed-loop driving experiments further show that the generated scenes expose scene-dependent performance changes of the evaluated algorithms under controllable rainfall. These results indicate that GSRAIN provides an effective approach for constructing physically controllable, repeatable, and closed-loop-compatible rainy-weather test scenes for autonomous driving.</p>
                     </details>
                 </div>
             </div>
