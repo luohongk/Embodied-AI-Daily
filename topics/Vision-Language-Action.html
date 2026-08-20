@@ -645,7 +645,7 @@
                 <a href="GNSS.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#3b82f6"></span>
                     <span class="nav-label">GNSS</span>
-                    <span class="nav-count">49</span>
+                    <span class="nav-count">47</span>
                 </a>
                 <a href="Graph-Optimization.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#6366f1"></span>
@@ -670,7 +670,7 @@
                 <a href="Autonomous-Driving.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#6366f1"></span>
                     <span class="nav-label">Autonomous Driving</span>
-                    <span class="nav-count">79</span>
+                    <span class="nav-count">80</span>
                 </a>
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
@@ -690,12 +690,12 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">68</span>
+                    <span class="nav-count">69</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">73</span>
+                    <span class="nav-count">70</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -755,7 +755,7 @@
                 <a href="Scene-Understanding.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Scene Understanding</span>
-                    <span class="nav-count">78</span>
+                    <span class="nav-count">79</span>
                 </a>
                 <a href="Domain-Randomization.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -784,7 +784,7 @@
         <div class="sidebar-header">
             <h1><a href="../index.html" style="background:linear-gradient(135deg,#6366f1,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">🚀 Embodied AI Daily</a></h1>
             <div class="update">by <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent);text-decoration:none;font-weight:500;">Hongkun Luo</a> (罗宏昆)</div>
-            <div class="update" style="margin-top:2px">Last update: 2026-08-20</div>
+            <div class="update" style="margin-top:2px">Last update: 2026-08-21</div>
         </div>
             <a href="Continuous-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
@@ -864,7 +864,7 @@
             <a href="GNSS.html" class="nav-item">
                 <span class="nav-dot" style="background:#3b82f6"></span>
                 <span class="nav-label">GNSS</span>
-                <span class="nav-count">49</span>
+                <span class="nav-count">47</span>
             </a>
             <a href="Graph-Optimization.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
@@ -889,7 +889,7 @@
             <a href="Autonomous-Driving.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
                 <span class="nav-label">Autonomous Driving</span>
-                <span class="nav-count">79</span>
+                <span class="nav-count">80</span>
             </a>
             <a href="Kalman-Filter.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
@@ -909,12 +909,12 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">68</span>
+                <span class="nav-count">69</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">73</span>
+                <span class="nav-count">70</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -974,7 +974,7 @@
             <a href="Scene-Understanding.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Scene Understanding</span>
-                <span class="nav-count">78</span>
+                <span class="nav-count">79</span>
             </a>
             <a href="Domain-Randomization.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -1028,6 +1028,81 @@
                 <span class="topic-count">80 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.19066v1" target="_blank" class="paper-title">GS-VLA: Plug-and-Play Viewpoint Canonicalization for Frozen VLA Policies via Gaussian Splatting</a>
+                        <span class="paper-date">2026-08-19</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：视觉-语言-动作（VLA）策略在部署时对相机视角变化极其敏感，即使微小的相机位移也会导致成功率大幅下降（如LIBERO基准上从约90%降至约10%），而现有微调或数据增强方法计算成本高且存在灾难性遗忘风险。&#10;&#10;🛠 **方法**：提出GS-VLA，一个轻量级即插即用框架，在冻结的VLA策略前添加一个仅4M参数的3D高斯泼溅（3D Gaussian Splatting）视角规范化模块，将视角偏移问题重构为局部新视角合成任务，在局部性假设下实现场景无关的遮挡补全。&#10;&#10;✨ **主要贡献**：首次直接利用3D高斯新视角合成进行VLA观测空间适配；无需修改策略权重即可在策略架构、未见任务套件和扰动尺度三个正交维度上显著恢复因视角偏移导致的性能损失，验证了轻量视觉模块的有效性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>This paper proposes a lightweight, plug-and-play framework that improves robustness to viewpoint shifts in Vision-Language-Action (VLA) policies without policy retraining. To our knowledge, this is the first approach to directly leverage 3D Gaussian-based novel-view synthesis for observation-space adaptation in VLA policies. Current VLA performance relies on the implicit assumption that training and deployment camera configurations are identical. Our experiments show that even a small displacement of the camera mount can reduce the success rate on the LIBERO benchmark from about 90% to about 10% in the worst case. Prior approaches, such as large-scale fine-tuning or generative data augmentation, are computationally expensive and risk catastrophic forgetting. To address this, viewpoint shifts are reformulated as a localized novel-view synthesis problem. Under a Locality assumption, that camera perturbations remain within a small bounded region relative to the workspace, viewpoint normalization reduces to a scene- and policy-independent disocclusion task. Our work implements this idea with a 4M-parameter 3D-Gaussian canonicalizer prepended to a frozen VLA policy. Without modifying policy weights, GS-VLA improves performance across three orthogonal axes: (1) Policy architectures, (2) Unseen task suites, and (3) Perturbation scales. These results show that a lightweight visual module can recover a large fraction of the performance lost under viewpoint shift, without policy retraining.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.12854v2" target="_blank" class="paper-title">BrainWAM: Action-Space Coordination of Semantic Priors and Predictive Dynamics for Autonomous Driving</a>
+                        <span class="paper-date">2026-08-19</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：自动驾驶规划需要同时满足语义约束和预测性动态，但现有端到端方法（VLA模型或世界动作模型）往往只侧重其中一方面，简单融合时存在注意力分配失衡问题，导致语义信息压制预测动态。&#10;&#10;🛠 **方法**：提出BrainWAM框架，将语义推理和预测世界建模转化为两条专门的动作导向通路，在紧凑动作表示层面进行协调对齐；并引入异步整流流推理策略，解耦视频与动作去噪以降低推理延迟。&#10;&#10;✨ **主要贡献**：在NAVSIM v1（89.5 PDMS）和NAVSIM v2（89.6 EPDMS）上达到最先进性能，一致优于仅用VLA或仅用WAM的方法，验证了结构化动作空间协调框架的实用性和有效性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Autonomous driving requires planning under both semantic constraints and predictive dynamics. Existing end-to-end driving approaches, however, typically emphasize only one side of this requirement: Vision-Language-Action (VLA) models exploit VLM priors for semantic reasoning, while World Action Models (WAMs) provide future-aware prediction through generative world modeling. This naturally motivates a unified planner that can leverage both semantic priors and predictive dynamics. However, we find that a naive combination through joint token-level attention suffers from an attention-allocation mismatch, where semantic shortcuts dominate the shared attention space and suppress predictive dynamics. Inspired by neuroscience evidence that complex behavior arises from coordination among functionally specialized systems, we propose BrainWAM, a structured action-space coordination framework that converts semantic reasoning and predictive world modeling into two specialized action-oriented pathways, and aligns them at the level of compact action representations. We further introduce an asynchronous rectified-flow inference strategy with decoupled video and action denoising, which shortens inference latency while preserving planning-relevant predictive context. BrainWAM reaches state-of-the-art performance on both NAVSIM v1 (89.5 PDMS) and NAVSIM v2 (89.6 EPDMS), consistently outperforming VLA-only or WAM-only methods, highlighting BrainWAM as a practical and promising direction for autonomous driving systems.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.17453v2" target="_blank" class="paper-title">EATR-Stereo: Embodiment-Aware Token Routing of Paired Stereo Evidence for Humanoid Vision-Language-Action Control</a>
+                        <span class="paper-date">2026-08-19</span>
+                    </div>
+                                        <span class="paper-comment">📝 8 pages, 5 figures</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：长时程人形机器人视觉-语言-动作（VLA）控制中，头戴双目相机提供的互补立体视觉信息常被丢弃或未与预训练表示有效融合，导致空间定位和任务成功率受限。&#10;&#10;🛠 **方法**：提出EATR-Stereo框架，保留主视图token，通过查询同步辅助视图token序列构建主视图对齐的跨视图辅助token（CVAT），并利用基于身体分割的本体感受编码器，根据机器人配置历史对辅助token使用进行条件化路由，冻结视觉-语言模型仅增强其上下文。&#10;&#10;✨ **主要贡献**：在33自由度物理人形机器人上，EATR-Stereo实现60.0%全任务成功率、100.0%抓取成功率和80.0%阶段成功率；严重不对称遮挡下恢复率从30%提升至80%。消融实验证明保留主token和结合跨视图特征与结构化本体感受路由的关键性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Long-horizon humanoid vision--language--action (VLA) control with head-mounted stereo cameras requires visual interfaces that can exploit complementary views while maintaining compatibility with pretrained representations. Existing interfaces often discard complementary stereo evidence or fuse additional observations without preserving the native primary-view pathway and adapting auxiliary information to robot embodiment. We present EATR-Stereo, an embodiment-aware token-routing framework that retains primary-view tokens and constructs primary-aligned Cross-View Auxiliary Tokens (CVATs) by querying the synchronized auxiliary-view token sequence. A body-segmented proprioceptive encoder further conditions token-wise auxiliary usage on robot configuration history, enabling selective incorporation of stereo evidence during action generation. The routed auxiliary stream augments the language and primary-visual context of a pretrained VLA while keeping its vision--language model frozen. On a 33-DoF physical humanoid with a 37-D proprioceptive state, we evaluate nine configurations in over-100-s search--approach--grasp--place--return tasks. EATR-Stereo achieves 60.0% full-task success, 100.0% grasp success, and 80.0% stage success. Under severe asymmetric occlusion, it improves recovery to 80% compared with 30% for CVAT alone. Ablation studies further show the importance of preserving primary tokens and combining cross-view auxiliary features with structured proprioceptive routing. These results demonstrate that selectively routed paired stereo evidence improves spatial grounding for reliable long-horizon humanoid VLA control.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.18433v1" target="_blank" class="paper-title">The Embodiment Gap in Robot Foundation Models</a>
+                        <span class="paper-date">2026-08-19</span>
+                    </div>
+                                        <span class="paper-comment">📝 32 pages, 4 figures. Published in Transactions on Machine Learning Research (TMLR), August 2026</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：机器人基础模型（RFM）在跨不同机器人本体部署时，存在“具身差距”（embodiment gap），即模型可复用部分与在目标机器人上实际执行所需工作之间的差异，而现有评估常忽略这一差距。&#10;&#10;🛠 **方法**：本文以综述形式，提出二维映射框架（共享结构类型与适配阶段），并梳理三个研究方向：语义与感知共享、机器人数据与接口共享、跨本体对应学习；同时提出一个超越成功率、报告适配工作的评估框架。&#10;&#10;✨ **主要贡献**：首次系统定义“具身差距”概念，提供跨本体学习的分类与评估工具，强调部署中未披露的适配工作量，为未来研究提出关键问题。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Robot foundation models (RFMs), including vision-language-action (VLA) policies, are often discussed through a scaling view: more data, larger models, and broader benchmarks should improve generalization. In robotics, however, a model can generalize while work still remains before it can run on a robot with a particular body. The work required differs across methods and target robots, and those differences affect practical deployment. We call the gap between reusable models, representations, or data and their use in execution on the target robot the embodiment gap. This survey examines what can be reused across robot embodiments and what must still be implemented on a new robot. We place existing methods on a two-axis map that shows the type of shared structure and the stage at which adaptation is needed for execution on the target robot. We then examine recent work through three overlapping research directions: sharing semantics and perception, sharing robot data and interfaces, and learning correspondence across embodiments. We also propose a reporting framework for adaptation work that success rate alone does not reveal. The framework identifies the work that should be checked when comparing cross-embodiment learning and highlights work that remains on a new robot and questions for future study.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.18410v1" target="_blank" class="paper-title">Role-Conditioned Sub-Token Routing for Efficient Vision-Language-Action Policies</a>
+                        <span class="paper-date">2026-08-19</span>
+                    </div>
+                                        <span class="paper-comment">📝 12 pages, 5 tables</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：视觉-语言-动作（VLA）模型处理长多模态token序列时推理成本高，现有token剪枝方法在激进压缩下会丢失完整表示，导致性能脆弱。&#10;&#10;🛠 **方法**：提出RoleSub（角色条件子token路由），在保留token的基础上压缩其值表示的宽度。将每个值表示在正交空间中分组，用轻量路由器根据token表示、潜在角色表示和语言上下文决定保留哪些组，并同样应用于语言值。&#10;&#10;✨ **主要贡献**：在OpenVLA-OFT-7B的LIBERO基准上，匹配视觉KV预算时，RoleSub在36个设置中33个优于仅token剪枝的基线，激进压缩下增益最大。结合视觉与语言压缩可将总KV降至原始的9.2–11.3%，同时保持多数任务的控制性能，证明子token压缩是token剪枝的有效补充。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Vision-Language-Action (VLA) models process long multimodal token sequences, making inference expensive in both memory and computation. Existing efficiency methods mainly reduce visual tokens, but aggressive token pruning becomes fragile because removing a token discards its entire representation. Sub-token compression provides a complementary alternative by retaining more tokens while reducing their value width. However, directly applying sub-token compression to VLA policies is less effective because information important for perception, language understanding, and control is distributed differently across the multimodal representation. We introduce Role-Conditioned Sub-Token Routing (RoleSub), which learns how to compress the value representations of retained tokens. After visual token reduction, RoleSub partitions each retained value representation into groups in an orthogonal space and uses a lightweight router to determine which groups should be preserved. The routing decision is conditioned on the token representation, a learned latent role representation, and language context. The same mechanism can also be applied to language values, allowing visual and language representations to be compressed without removing additional tokens. We evaluate RoleSub on OpenVLA-OFT-7B across the four LIBERO suites. At matched visual-KV budgets, RoleSub outperforms a trained token-only control in 33 of 36 settings, with the largest gains under aggressive compression. Combining visual and language compression reduces total KV to 9.2--11.3% of the original while retaining strong control performance on most tasks. These results show that reducing the representation within retained tokens provides an effective complement to token pruning for aggressive VLA compression.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2608.18035v1" target="_blank" class="paper-title">Plug-and-Play Traffic Element Awareness for End-to-End Autonomous Driving</a>
@@ -1109,10 +1184,7 @@
                         <span class="paper-date">2026-08-18</span>
                     </div>
                                         <span class="paper-comment">📝 17 pages, 9 figures. Simulation-only empirical results on LIBERO-Long (no real-robot experiments). Source, figure-generation scripts and reproducibility checklist included. Level-3 offline reranking significance test not executed; see Sec. 7 (Scope and honesty statement) for detailed disclosure</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：视觉-语言-动作策略在执行时缺乏安全保证，而传统模型规划器泛化能力差，如何在异构机器人上实现既安全又泛化的动作执行。&#10;&#10;🛠 **方法**：提出一个滚动时域决策管线，包含动作条件JEPA世界模型（在冻结编码器潜在空间中预测任务进展和物理风险）、校准的不确定性头、基于具体机器人的确定性安全盾牌（过滤不可行动作）以及回退阶梯（处理无可行动作的情况）。&#10;&#10;✨ **主要贡献**：在LIBERO-Long模拟中，完整框架相比仅用安全盾牌提升了成功率，并在相同召回率下减少了碰撞漏检；同时提供了在机器人端和边缘加速器上的部署效率测量，为异构机器人提供了可部署的安全执行方案。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Vision-language-action policies generalize broadly but provide no execution-time guarantees; classical model-based planners respect kinematic and geometric constraints but generalize poorly. We study whether an action-conditioned Joint-Embedding Predictive Architecture (JEPA) world model can predict, before execution, both task progress and physical risk for candidate action chunks, and whether coupling these predictions to an embodiment-specific model-based safety shield yields a deployable pipeline for heterogeneous robots. We propose a receding-horizon decision pipeline: (1) a proposer produces K candidate action chunks; (2) an action-conditioned JEPA rolls each candidate forward in a frozen-encoder latent space conditioned on an embodiment embedding; (3) calibrated risk and progress heads score each rollout and report uncertainty; (4) a deterministic per-embodiment safety shield filters inadmissible candidates; (5) a fallback ladder handles empty-admissible-set cases. The learned ranking only reorders admissible candidates; enforcement guarantees come from the deterministic shield and fallback ladder. We evaluate with a pre-registered protocol in simulation (LIBERO-Long). In 600-episode configurations the full framework improved success over a shield-only baseline and reduced collision false negatives at matched recall. Deployment-efficiency measurements on target on-robot and edge accelerators are included. Real-robot experiments and an offline reranking significance test remain future work; see the paper for disclosures.</p>
@@ -1124,28 +1196,10 @@
                         <span class="paper-date">2026-08-18</span>
                     </div>
                                         <span class="paper-comment">📝 Accepted to ECCV 2026 workshop</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：如何判断部署的冻结视觉-语言-动作（VLA）策略在测试时最需要哪种增强方式——是额外采样（重试）还是外部演示检索。&#10;&#10;🛠 **方法**：提出两个可测量因素——可恢复余量（recoverable headroom）和检索互补性（retrieval complementarity），并设计一个基于episode级别的重试选择器，在可重试或并行执行下与检索结合，评估多个冻结VLA策略。&#10;&#10;✨ **主要贡献**：在LIBERO上，选择器一致恢复潜在能力，成功率提升最高达21.0个百分点，且能迁移到不同机器人和模拟器；检索则对动作先验差距最大的策略提升显著，并与选择结合产生额外增益，为测试时增强决策提供了实证依据。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Frozen vision-language-action (VLA) policies are increasingly improved at test time by sampling additional policy behaviors or introducing external demonstrations. Yet there is little guidance for deciding which intervention a deployed policy actually needs. Additional sampling is useful only when better behavior already exists within the policy's stochastic rollouts and can be identified, whereas retrieval is most useful when the relevant action prior is not reliably represented by the policy. We study this decision through two measurable factors, recoverable headroom and retrieval complementarity, which characterize how much useful behavior is already available to recover and whether an external action prior fills a measurable gap. We evaluate an episode-level retry selector under retryable or parallel execution, together with retrieval across multiple frozen VLA policies and environments. The selector consistently recovers substantial latent capability across all tested VLA backbones on LIBERO, with gains of up to 21.0 success-rate points that closely track recoverable headroom. It also transfers to a different robot and simulator and remains effective under degraded observations, while experiments with autoregressive OpenVLA illustrate the distinction between available headroom and the ability to rank candidate rollouts. Retrieval behaves differently, improving the policy with the largest measured action-prior gap and providing further gains when combined with selection. Together, these results provide an empirical basis for characterizing test-time augmentation opportunities by separating capability that can be recovered from the frozen policy from behavioral priors that may need to be introduced externally.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2608.17453v1" target="_blank" class="paper-title">EATR-Stereo: Embodiment-Aware Routing of Paired Stereo Evidence for Humanoid Vision-Language-Action Control</a>
-                        <span class="paper-date">2026-08-18</span>
-                    </div>
-                                        <span class="paper-comment">📝 8 pages, 5 figures</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：长时程人形机器人视觉-语言-动作（VLA）控制中，头戴双目相机提供的互补立体视觉信息常被丢弃或未与预训练表示有效融合，导致空间定位和任务成功率受限。&#10;&#10;🛠 **方法**：提出EATR-Stereo框架，保留主视图token，通过查询同步辅助视图token序列构建主视图对齐的跨视图辅助token（CVAT），并利用基于身体分割的本体感受编码器，根据机器人配置历史对辅助token使用进行条件化路由，冻结视觉-语言模型仅增强其上下文。&#10;&#10;✨ **主要贡献**：在33自由度物理人形机器人上，EATR-Stereo实现60.0%全任务成功率、100.0%抓取成功率和80.0%阶段成功率；严重不对称遮挡下恢复率从30%提升至80%。消融实验证明保留主token和结合跨视图特征与结构化本体感受路由的关键性。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Long-horizon humanoid vision--language--action (VLA) control with head-mounted stereo cameras requires visual interfaces that can exploit complementary views while maintaining compatibility with pretrained representations. Existing interfaces often discard complementary stereo evidence or fuse additional observations without preserving the native primary-view pathway and adapting auxiliary information to robot embodiment. We present EATR-Stereo, an embodiment-aware token-routing framework that retains primary-view tokens and constructs primary-aligned Cross-View Auxiliary Tokens (CVATs) by querying the synchronized auxiliary-view token sequence. A body-segmented proprioceptive encoder further conditions token-wise auxiliary usage on robot configuration history, enabling selective incorporation of stereo evidence during action generation. The routed auxiliary stream augments the language and primary-visual context of a pretrained VLA while keeping its vision--language model frozen. On a 33-DoF physical humanoid with a 37-D proprioceptive state, we evaluate nine configurations in over-100-s search--approach--grasp--place--return tasks. EATR-Stereo achieves 60.0% full-task success, 100.0% grasp success, and 80.0% stage success. Under severe asymmetric occlusion, it improves recovery to 80% compared with 30% for CVAT alone. Ablation studies further show the importance of preserving primary tokens and combining cross-view auxiliary features with structured proprioceptive routing. These results demonstrate that selectively routed paired stereo evidence improves spatial grounding for reliable long-horizon humanoid VLA control.</p>
                     </details>
                 </div>
                 <div class="paper-card">
@@ -1154,10 +1208,7 @@
                         <span class="paper-date">2026-08-18</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：GRPO在VLA策略强化学习中因组内所有轨迹同成功或同失败导致优势为零、样本被丢弃，尤其在训练早期失败居多时浪费大量昂贵的机器人 rollout 预算。&#10;&#10;🛠 **方法**：提出 Prism-GRPO，在二元成功奖励基础上引入加权轨迹级执行质量分数，将同结果组拆分为质量谱系，从而恢复训练信号，同时保证所有成功仍优于所有失败。质量分数可来自仿真接触、执行动作或视觉观测，无需任务特定进度奖励。&#10;&#10;✨ **主要贡献**：理论上证明 Prism-GRPO 不会增加组被丢弃的概率，并给出梯度对齐条件确保更新方向有效；在四个 RoboTwin 任务上以相同 rollout 预算提升成功率与质量，达到目标成功率最多减少 56% 的 rollout；抑制奖励黑客行为，且真实机器人部署表现更干净；消融实验显示接触、平滑度和 VLM 质量信号均带来一致增益。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>GRPO is increasingly used for reinforcement learning of vision-language-action (VLA) policies because, unlike PPO, it does not require training a critic. This simplification comes with a sampling cost: group-relative advantages require multiple rollouts from each scene. Under binary success rewards, groups whose rollouts all succeed or all fail have zero advantage and are discarded by dynamic sampling. These groups are especially common early in training, when most rollouts fail, wasting much of the expensive robotic rollout budget. We introduce Prism-GRPO, which augments binary outcome reward with a weighted trajectory-level execution-quality score. By splitting same-outcome groups into a quality spectrum, Prism-GRPO recovers training signal while ensuring that every success still outranks every failure. Quality scores can be derived from simulator contacts, executed actions, or visual observations, avoiding task-specific progress rewards. We prove that Prism-GRPO never increases the probability that a sampled group is discarded for having zero advantages, and derive a gradient-alignment condition under which its combined update remains a local ascent direction for task success. Across four RoboTwin tasks spanning different horizons and coordination patterns, Prism-GRPO improves success and quality at matched rollout budgets and reaches target success rates with up to 56% fewer rollouts. It also suppresses a reward-hacking shortcut, with the cleaner behavior transferring under direct deployment to a real robot. Through ablations, we show consistent gains across contact-, smoothness-, and VLM-derived quality signals.</p>
@@ -1169,10 +1220,7 @@
                         <span class="paper-date">2026-08-18</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：如何有效融合触觉反馈，提升机器人在接触丰富场景中的灵巧操作能力，尤其是在动态物理交互下的鲁棒性和成功率。&#10;&#10;🛠 **方法**：提出ReTouch，一种视觉-语言-动作模型（VLA），包含触觉补丁编码器（保留手指身份和局部接触结构）和高频动作模块（联合预测未来触觉状态与动作块，并利用执行中的触觉反馈在线修正预测）。&#10;&#10;✨ **主要贡献**：引入XHT-Dataset（含7类接触丰富任务的900条真实演示），ReTouch在标准与挑战条件下平均成功率分别超越最强基线18.4和23.8个百分点，验证了在线触觉预测修正对灵巧操作的有效性和鲁棒性。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Fusing tactile signals has proven effective for contact-rich manipulation, enabling robots to perceive contact states and adapt to rapidly changing physical interactions. Yet effectively integrating tactile feedback into dexterous manipulation remains underexplored. In this work, we introduce ReTouch, a vision-language-action model (VLA) that supports contact-rich dexterous manipulation through tactile predictions continually refined online using execution-time feedback. ReTouch builds on two main innovations for tactile representation and closed-loop action generation. First, its Tactile-Patch Encoder represents tactile observations as structured tactile patch features that preserve finger identity and local contact structure, providing contact cues for fine-grained dexterous control. Second, its high-frequency action module jointly predicts future tactile states and action chunks and refines both using incoming tactile feedback during execution. This closed-loop refinement keeps tactile predictions aligned with evolving physical interactions, enabling responsive action correction and improving robustness to contact changes and execution errors. We further introduce XHT-Dataset, comprising 900 real-world demonstrations across seven contact-rich tasks collected on an XHand--UR7e platform, and evaluate ReTouch through closed-loop real-robot experiments. ReTouch surpasses the strongest baseline by 18.4 and 23.8 percentage points in average success rate under standard and challenging conditions, respectively, demonstrating its effectiveness and robustness.</p>
@@ -1272,18 +1320,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Humanoid robots hold great promise as general-purpose agents in human-centered environments, yet generalist vision-language-action (VLA) foundation models are not readily applicable to humanoid whole-body loco-manipulation. The high dimensionality and interdependence of humanoid motions make it challenging for conventional single-stage VLA architectures to coordinate locomotion, waist posture, and dual-arm manipulation effectively. Moreover, policies trained through offline behavior cloning can remain suboptimal during real-world deployment. Although online reinforcement learning can refine policies through real-world interaction, directly tuning large VLA backbones demands excessive computation and may introduce safety risks during real-robot exploration. To address these bottlenecks, we introduce HAF (Humanoid Adaptation Framework), a two-part framework consisting of HAF-VLA and HAF-Steer that transfers off-the-shelf generalist VLA foundation models to humanoid whole-body loco-manipulation. HAF-VLA is a hierarchical action-flow generator built on a pretrained flow-matching VLA. It splits full-body action denoising into three sequential stages with stage embeddings and cross-stage KV caches that retain kinematic dependencies, avoiding incoherent whole-body actions from one-shot generation. On top of the frozen HAF-VLA, HAF-Steer is a latent offline-to-online RL pipeline that leverages flow-matching invertibility and DCT-based dimensionality reduction to restrict RL optimization to a compact noise subspace and train a regularized SAC policy. This avoids updating the large VLA backbone and enables efficient real-world policy refinement. Evaluated on seven real-world humanoid loco-manipulation tasks, HAF surpasses vanilla single-stage VLA baselines and improves whole-body coordination and task performance. Project website: https://grange007.github.io/HAF .</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2608.16806v1" target="_blank" class="paper-title">When State Becomes an Attack Surface: State-Semantic Injection in LLM-Driven Embodied Agents</a>
-                        <span class="paper-date">2026-08-17</span>
-                    </div>
-                                        <span class="paper-comment">📝 submitted to USENIX Security 2027</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Large Language Models (LLMs) have demonstrated capabilities in in-context learning, task decomposition, step-by-step reasoning, and code generation, driving their gradual evolution from text generation models into the core of agents capable of perceiving environments, invoking tools, and executing tasks. Traditional LLM Agents typically obtain information through webpages, documents, databases, or external tools and generate corresponding invocation sequences according to user goals; when this technology is further integrated with robotic systems, large language models begin to undertake functions such as task understanding, high-level planning, and behavioral decision-making. SayCan combines the task reasoning capability of language models with the affordances of robotic skills, while Code as Policies and ProgPrompt generate robot task plans through policy code and programmatic prompting, respectively, and VoxPoser uses language models and vision-language models to construct three-dimensional value maps to guide robotic manipulation \cite{6,7,8,9}. Vision-language-action models such as PaLM-E, RT-2, and GR00T N1 further strengthen the connection among language, visual perception, and robotic actions \cite{10,11,12}. In such LLM-driven embodied agents, the model not only needs to understand user instructions, but also needs to combine scene states, object attributes, spatial relations, and execution feedback to complete task grounding, and then hand the generated action plan to skill libraries, motion planners, or controllers for execution.</p>
                     </details>
                 </div>
                 <div class="paper-card">
@@ -1708,18 +1744,6 @@
                 </div>
                 <div class="paper-card">
                     <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2608.12854v1" target="_blank" class="paper-title">BrainWAM: Action-Space Coordination of Semantic Priors and Predictive Dynamics for Autonomous Driving</a>
-                        <span class="paper-date">2026-08-13</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Autonomous driving requires planning under both semantic constraints and predictive dynamics. Existing end-to-end driving approaches, however, typically emphasize only one side of this requirement: Vision-Language-Action (VLA) models exploit VLM priors for semantic reasoning, while World Action Models (WAMs) provide future-aware prediction through generative world modeling. This naturally motivates a unified planner that can leverage both semantic priors and predictive dynamics. However, we find that a naive combination through joint token-level attention suffers from an attention-allocation mismatch, where semantic shortcuts dominate the shared attention space and suppress predictive dynamics. Inspired by neuroscience evidence that complex behavior arises from coordination among functionally specialized systems, we propose BrainWAM, a structured action-space coordination framework that converts semantic reasoning and predictive world modeling into two specialized action-oriented pathways, and aligns them at the level of compact action representations. We further introduce an asynchronous rectified-flow inference strategy with decoupled video and action denoising, which shortens inference latency while preserving planning-relevant predictive context. BrainWAM reaches state-of-the-art performance on both NAVSIM v1 (89.5 PDMS) and NAVSIM v2 (89.6 EPDMS), consistently outperforming VLA-only or WAM-only methods, highlighting BrainWAM as a practical and promising direction for autonomous driving systems.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
                         <a href="https://arxiv.org/abs/2608.12763v1" target="_blank" class="paper-title">ARIES-Mission2: A Zero-Shot Vision-Language-Action Framework for Fast Large-Scale Aerial Mission Generation</a>
                         <span class="paper-date">2026-08-13</span>
                     </div>
@@ -1994,37 +2018,13 @@
                         <p>Unmanned aerial vehicle vision-language navigation (UAV-VLN) requires agents to translate visual observations and language instructions into reliable flight actions in complex environments. Although recent end-to-end UAV vision-language-action (UAV-VLA) policies reduce reliance on separately designed perception, planning, and control modules, their behavior-cloning objectives provide limited corrective supervision for interactive closed-loop execution. Reinforcement learning (RL) offers a promising solution, while its effectiveness is constrained by inefficient use of samples, long-tailed scene distributions, and policy distribution shift during optimization. To this end, we propose RecoverFly, a failure-aware RL post-training framework for end-to-end UAV-VLA policies. Specifically, RecoverFly adapts token-level RL for stable optimization of grammar-constrained autoregressive UAV actions, revisits unresolved failure cases to strengthen corrective learning and sample utilization, and combines a two-stage long-tail scene curriculum with reference-policy regularization to improve scene adaptation while preserving acquired capabilities. Experiments on the TravelUAV benchmark demonstrate that RecoverFly achieves the best performance on the seen, unseen-map, and unseen-object splits. Moreover, compared to the AerialVLA initialization, RecoverFly improves success rate by 3.12 to 8.37 percentage points under a total rollout budget of about 30\% of the training-set size, validating its effectiveness, robustness, and generalization capabilities.</p>
                     </details>
                 </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2608.09410v1" target="_blank" class="paper-title">Skills in Weights, Memory in Code: Hybrid Learning for Memory-Dependent Robot Manipulation</a>
-                        <span class="paper-date">2026-08-10</span>
-                    </div>
-                                        <span class="paper-comment">📝 9 pages, 4 figures, and 3 tables</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Modern vision-language-action (VLA) policies have acquired broad manipulation skills, but typically generate each action chunk from the current observation or a short fixed-length history. However, real-world manipulation is often non-Markovian, requiring robots to retain and reason over task-relevant information from long-horizon interaction histories to determine the next action. To address this challenge, we propose HyMeS, a hybrid learning framework that leverages the reasoning and memory-management capabilities of coding agents to steer a Markovian VLA for memory-dependent manipulation. Specifically, HyMeS learns low-level motor skills through gradient-based imitation learning, while a coding agent acquires high-level memory-management strategies through heuristic learning by iteratively updating an executable heuristic system from rollout feedback. Furthermore, we close the loop between steering and execution through multimodal stage-completion verification, which updates memory using proprioceptive signals and multi-frame VLM judgments. Compared with end-to-end memory-augmented VLAs, HyMeS requires demonstrations only for reusable motor skills rather than for every history-dependent task configuration, enabling data-efficient compositional generalization. On RoboMemArena, HyMeS improves mean cumulative success from 52.5% to 66.2% and mean task success from 41.3% to 60.1% over pi0.5, while outperforming PrediMem by 4.5 points in cumulative success and 14.5 points in task success.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2608.09381v1" target="_blank" class="paper-title">JEPA-WAM: Learning Vision-Language-Action Policies with Joint-Embedding World Modeling</a>
-                        <span class="paper-date">2026-08-10</span>
-                    </div>
-                                        <span class="paper-comment">📝 22 pages, 7 figures. Project page: https://spritewithoutice.github.io/JEPA_WAM/</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Robust robot control benefits from explicitly modeling state transitions, but video-generation world action models (WAMs) introduce substantial deployment cost. Existing latent WAMs avoid explicit future generation, but often compress predictive representations or separate predictive modeling from the representations used for action generation. We introduce JEPA-WAM, a latent WAM built in a pretrained V-JEPA space, which couples latent transition prediction with continuous action generation through a shared predictor. JEPA-WAM predicts a spatially structured joint current-future target that captures task-shared visual temporal structure between current and future observations, while preserving dense patch-level correspondence. Through the shared predictor, transition supervision directly shapes the backbone, from which dedicated representations are extracted for action prediction. The same design can also be instantiated in pretrained VLA policies while preserving their original perception and action pathways. On LIBERO-Plus, JEPA-WAM achieves 79.2%, the best result without large-scale robot-policy pretraining, while its pretrained $π_{0.5}$ instantiation reaches 86.3%, achieving the best overall performance. Experiments on RoboTwin 2.0 and real-world bimanual manipulation further demonstrate strong generalization under visual and spatial shifts.</p>
-                    </details>
-                </div>
             </div>
         </section>
 
         <footer class="footer">
             <p>👤 <strong>Hongkun Luo (罗宏昆)</strong> · <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent)">Academic Page</a> · <a href="https://github.com/luohongk" target="_blank" style="color:var(--accent)">GitHub</a></p>
             <p style="margin-top:8px">🤖 Generated automatically from <a href="https://arxiv.org" style="color:var(--accent)">arXiv</a> · <a href="https://github.com/luohongk/Embodied-AI-Daily" style="color:var(--accent)">GitHub Repo</a></p>
-            <p style="margin-top:4px">Last update: 2026-08-20 (Beijing Time)</p>
+            <p style="margin-top:4px">Last update: 2026-08-21 (Beijing Time)</p>
         </footer>
     </main>
 

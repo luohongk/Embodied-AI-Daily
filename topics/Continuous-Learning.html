@@ -645,7 +645,7 @@
                 <a href="GNSS.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#3b82f6"></span>
                     <span class="nav-label">GNSS</span>
-                    <span class="nav-count">49</span>
+                    <span class="nav-count">47</span>
                 </a>
                 <a href="Graph-Optimization.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#6366f1"></span>
@@ -670,7 +670,7 @@
                 <a href="Autonomous-Driving.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#6366f1"></span>
                     <span class="nav-label">Autonomous Driving</span>
-                    <span class="nav-count">79</span>
+                    <span class="nav-count">80</span>
                 </a>
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
@@ -690,12 +690,12 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">68</span>
+                    <span class="nav-count">69</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">73</span>
+                    <span class="nav-count">70</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -755,7 +755,7 @@
                 <a href="Scene-Understanding.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Scene Understanding</span>
-                    <span class="nav-count">78</span>
+                    <span class="nav-count">79</span>
                 </a>
                 <a href="Domain-Randomization.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -784,7 +784,7 @@
         <div class="sidebar-header">
             <h1><a href="../index.html" style="background:linear-gradient(135deg,#6366f1,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">🚀 Embodied AI Daily</a></h1>
             <div class="update">by <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent);text-decoration:none;font-weight:500;">Hongkun Luo</a> (罗宏昆)</div>
-            <div class="update" style="margin-top:2px">Last update: 2026-08-20</div>
+            <div class="update" style="margin-top:2px">Last update: 2026-08-21</div>
         </div>
             <a href="Continuous-Learning.html" class="nav-item active">
                 <span class="nav-dot" style="background:#6366f1"></span>
@@ -864,7 +864,7 @@
             <a href="GNSS.html" class="nav-item">
                 <span class="nav-dot" style="background:#3b82f6"></span>
                 <span class="nav-label">GNSS</span>
-                <span class="nav-count">49</span>
+                <span class="nav-count">47</span>
             </a>
             <a href="Graph-Optimization.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
@@ -889,7 +889,7 @@
             <a href="Autonomous-Driving.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
                 <span class="nav-label">Autonomous Driving</span>
-                <span class="nav-count">79</span>
+                <span class="nav-count">80</span>
             </a>
             <a href="Kalman-Filter.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
@@ -909,12 +909,12 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">68</span>
+                <span class="nav-count">69</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">73</span>
+                <span class="nav-count">70</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -974,7 +974,7 @@
             <a href="Scene-Understanding.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Scene Understanding</span>
-                <span class="nav-count">78</span>
+                <span class="nav-count">79</span>
             </a>
             <a href="Domain-Randomization.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -1030,6 +1030,81 @@
             <div class="paper-list">
                 <div class="paper-card">
                     <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.19013v1" target="_blank" class="paper-title">Harness Continual Learning: Continual Adaptation Beyond Model Parameters</a>
+                        <span class="paper-date">2026-08-19</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：传统持续学习聚焦于模型参数更新，但现代智能体通过提示、记忆、工具等“外部装备”（harness）适应环境，装备更新可能导致已学行为遗忘。本文提出装备持续学习（HCL）范式，解决在冻结基础模型下如何持续改进外部状态而不丢失旧能力的问题。&#10;&#10;🛠 **方法**：定义HCL框架，包含四个执行组件（任务接口、经验记忆、能力图谱、自适应路由），并引入“受保护的装备演化”机制——持续优化器从执行反馈中生成候选装备，持续评估器在提交前检查当前改进、历史保留和有效性，实现更新生成与状态提交的分离。&#10;&#10;✨ **主要贡献**：在文本推理、多模态感知和开放世界交互任务上验证了能力积累与失败恢复，相对基线提升超10%；消融实验量化了装备级遗忘，并证明可通过调节稳定性-可塑性权衡显式控制遗忘程度。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Continual learning has largely been model-centric, treating model parameters as the state that changes with sequential experience. Modern agents can also adapt through a harness of prompts, memories, tools, skills, and routing rules. Because these contents jointly shape later execution, a harness update can disrupt previously reliable behavior even when the model is frozen. This raises a new question: how can an agent continually improve its state outside the model while retaining behavior acquired earlier? We formulate Harness Continual Learning (HCL), a new continual learning paradigm in which the harness evolves around a frozen foundation model, and define the resulting loss of earlier behavior as harness-level forgetting. We instantiate HCL with four execution-facing components: the Task Interface, Experience Memory, Capability Map, and Adaptive Router. We further introduce guarded harness evolution to separate update generation from state commitment. A Continual Optimizer proposes candidate harnesses from post-execution feedback, and a Continual Evaluator commits the resulting candidate harness only after checking current improvement, historical retention, and validity. Experiments on textual reasoning, multimodal perception, and open-world interaction demonstrate capability accumulation and failure recovery, with relative gains exceeding 10% over corresponding baselines in multiple settings. Component ablations assess the contribution of each harness component, while controlled retention sweeps reveal measurable harness-level forgetting and show that the stability--plasticity trade-off can be explicitly adjusted.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.18976v1" target="_blank" class="paper-title">Catastrophic Learning: A New Attack Vector on Continual Learning Networks</a>
+                        <span class="paper-date">2026-08-19</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：本文发现持续学习（CL）模型存在一种新型安全漏洞——攻击者可通过操纵数据降低当前或未来迭代的“可学习性”，而非仅触发灾难性遗忘，从而破坏模型的塑性（plasticity）。&#10;&#10;🛠 **方法**：作者形式化了该攻击场景并定义威胁模型，提出六种攻击策略：Label-Exchange、Tensor-Exchange、Attraction-Coincident、Attraction-Preceding、Repulsion-Coincident和Repulsion-Preceding。这些策略通过最小化或最大化中毒样本与受害者迭代标签间的损失，在特征空间中拉近或推远表示，以干扰学习过程。&#10;&#10;✨ **主要贡献**：首次提出“学习阻断器”（learning blockers）和“灾难性学习”（catastrophic learning）概念，并在MNIST和Split-CIFAR10上针对DER、ER-ACE和iCaRL三种CL策略进行了超过4,480次模拟实验，证明攻击者能选择性抑制新知识获取并加剧旧知识遗忘，揭示了CL模型对这类攻击的显著脆弱性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Continual Learning (CL) enables deep learning models to iteratively learn from a stream of data without forgetting prior knowledge. Existing adversarial research on CL primarily aims to re-enable catastrophic forgetting, attacking stability and reducing availability. We identify a novel security flaw: data manipulated by an attacker can reduce the learnability of current or upcoming iterations. We term such manipulations learning blockers, as they attack the plasticity of CL algorithms. They are particularly harmful because they are difficult to detect during training of the current iteration, since they can target iterations whose data the model has not yet encountered. When learning blockers additionally induce catastrophic forgetting, the resulting overall degradation is what we call catastrophic learning. We formalize this scenario, define a threat model and propose six attack strategies: Label-Exchange, Tensor-Exchange, Attraction-Coincident, Attraction-Preceding, Repulsion-Coincident, and Repulsion-Preceding. The Attraction variants minimize the loss between the poisoned and the victim iteration label, pulling their representations together in feature space; the Repulsion variants maximize this loss, pushing them apart so stability mechanisms resist the required parameter shift. In the Coincident variants, the poisoned and the victim iteration coincide, using a clean reference iteration only as a label source; in the Preceding variants, the poisoned iteration precedes the victim, leaving it unlearnable due to distorted representations. We evaluate on MNIST and Split-CIFAR10 against three CL strategies - DER, ER-ACE, and iCaRL - across more than 4,480 simulations. Our results demonstrate a strong vulnerability: an adversary can selectively impede plasticity to hinder the acquisition of new knowledge, while promoting loss of prior knowledge, inducing a catastrophic learning scenario.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.18803v1" target="_blank" class="paper-title">Forgetting, plasticity, and co-observation: a third facet of continual learning</a>
+                        <span class="paper-date">2026-08-19</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：本文指出灾难性遗忘和可塑性丧失不足以完全解释持续学习与离线联合训练之间的性能差距，提出数据共同观察（co-observation）作为影响持续学习性能的第三个独立因素。&#10;&#10;🛠 **方法**：通过解耦数据访问限制与稳定性/可塑性约束，在监督和自监督学习范式下，系统比较联合训练与分离训练在数据增量“分块”场景中的表现，并控制遗忘和可塑性因素。&#10;&#10;✨ **主要贡献**：实证表明共同观察训练数据能带来超越知识保留的泛化收益，且该效应不依赖特定分布偏移；同时揭示记忆回放的成功不仅缓解遗忘，还主动重新引入共同观察的益处，而蒸馏方法仅起知识保留作用。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Efficient continual learning remains a fundamental challenge for deep neural networks. While catastrophic forgetting and loss of plasticity are widely considered the primary obstacles to overcome, we show that these two issues cannot fully explain the performance gap between naive sequential training and offline joint training. In this paper, we highlight data co-observation as a distinct factor influencing continual learning performance. By decoupling the constraints of separate data access from stability and plasticity, we systematically investigate the representational benefits gained by observing training data together. Empirically, we demonstrate a consistent performance difference between joint and separate training across both supervised and self-supervised paradigms in generic data-incremental "chunking" scenarios, whilst mitigating forgetting and controlling for plasticity. Our findings indicate that simultaneous observation of training data (co-observation) yields benefits to the learner's generalization that extend well beyond mere knowledge retention, and that this effect does not require a specific continual distribution shift. Furthermore, we contextualize prominent continual learning mechanisms through this lens: while distillation-based approaches act only as effective knowledge retention mechanisms, our results suggest that the empirical success of memory replay goes beyond the mitigation of forgetting, actively reintroducing the benefits of data co-observation into the learning process.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2604.01499v3" target="_blank" class="paper-title">Matching Accuracy, Different Geometry: Evolution Strategies vs GRPO in LLM Post-Training</a>
+                        <span class="paper-date">2026-08-19</span>
+                    </div>
+                                        <span class="paper-comment">📝 Accepted to Conference on Language Modeling (COLM) 2026</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：探究进化策略（ES）与基于梯度的强化学习方法（GRPO）在LLM后训练中，任务性能相近时，其参数空间中的解是否具有几何相似性。&#10;&#10;🛠 **方法**：在单任务和序列持续学习场景下，对四个任务分别应用ES和GRPO进行微调，并对比其任务准确率、参数更新幅度、KL散度以及解的线性连通性，同时构建ES的分析理论框架。&#10;&#10;✨ **主要贡献**：发现ES与GRPO虽任务性能相当，但ES产生更大、更分散的参数更新和更广的离任务KL漂移，而GRPO更新更小更局部；两者解虽更新方向近乎正交却无损失障碍地线性连通；理论解释了ES在弱信息方向积累大偏移的同时仍能保持任务精度，揭示了无梯度与基于梯度微调在遗忘和知识保留上的重要差异。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Evolution Strategies (ES) have emerged as a scalable gradient-free alternative to reinforcement learning based LLM fine-tuning, but it remains unclear whether comparable task performance implies comparable solutions in parameter space. We compare ES and Group Relative Policy Optimization (GRPO) across four tasks in both single-task and sequential continual-learning settings. ES matches or exceeds GRPO in single-task accuracy and remains competitive sequentially when its iteration budget is controlled. Despite this similarity in task performance, the two methods produce markedly different model updates: ES makes much larger changes and induces broader off-task KL drift, whereas GRPO makes smaller, more localized updates. Strikingly, the ES and GRPO solutions are linearly connected with no loss barrier, even though their update directions are nearly orthogonal. We develop an analytical theory of ES that explains all these phenomena within a unified framework, showing how ES can accumulate large off-task movement on weakly informative directions while still making enough progress on the task to match gradient-based RL in downstream accuracy. These results show that gradient-free and gradient-based fine-tuning can reach similarly accurate yet geometrically distinct solutions, with important consequences for forgetting and knowledge preservation. The source code is publicly available: https://github.com/Bhoy1/ESvsGRPO.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2507.09471v3" target="_blank" class="paper-title">CKAA: Cross-subspace Knowledge Alignment and Aggregation for Robust Continual Learning</a>
+                        <span class="paper-date">2026-08-19</span>
+                    </div>
+                                        <span class="paper-comment">📝 Accepted by IEEE Transactions on Image Processing (TIP), 2026</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：针对基于参数高效微调（PEFT）的持续学习方法中，独立训练的子模块导致特征子空间不对齐，进而在任务ID误导时产生模糊决策的问题。&#10;&#10;🛠 **方法**：提出跨子空间知识对齐与聚合框架（CKAA），包含双层级知识对齐（DKA）和任务置信度引导的适配器混合（TC-MoA）两个关键组件。&#10;&#10;✨ **主要贡献**：DKA通过对齐不同子空间的类内特征分布并借助特征模拟学习鲁棒全局分类器，TC-MoA则基于任务置信度自适应聚合相关子模块知识，避免对误导性任务ID的过度信任。实验表明CKAA在多个基准上优于现有PEFT-based持续学习方法。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Continual Learning (CL) empowers AI models to continuously learn from sequential task streams. Recently, parameter-efficient fine-tuning (PEFT)-based CL methods have garnered increasing attention due to their superior performance. They typically allocate a unique sub-module for learning each task, with a task recognizer to select the appropriate sub-modules for testing images. However, due to the feature subspace misalignment from independently trained sub-modules, these methods tend to produce ambiguous decisions under misleading task-ids. To address this, we propose Cross-subspace Knowledge Alignment and Aggregation (CKAA), a novel framework that enhances model robustness against misleading task-ids through two key innovations: (1) Dual-level Knowledge Alignment (DKA): By aligning intra-class feature distributions across different subspaces and learning a robust global classifier through a feature simulation process, DKA enables the model to distinguish features from both correct and incorrect subspaces during training. (2) Task-Confidence-guided Mixture of Adapters (TC-MoA): A robust inference scheme that adaptively aggregates task-specific knowledge from relevant sub-modules based on task-confidence scores, avoiding overconfidence in misleading task-id predictions. Extensive experiments demonstrate that CKAA outperforms existing PEFT-based CL methods.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
                         <a href="https://arxiv.org/abs/2608.18027v1" target="_blank" class="paper-title">Chain-of-Experience for Continual LLM Improvement</a>
                         <span class="paper-date">2026-08-18</span>
                     </div>
@@ -1060,17 +1135,17 @@
                 </div>
                 <div class="paper-card">
                     <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2507.09471v2" target="_blank" class="paper-title">CKAA: Cross-subspace Knowledge Alignment and Aggregation for Robust Continual Learning</a>
+                        <a href="https://arxiv.org/abs/2608.18177v1" target="_blank" class="paper-title">Towards Reversible Forgetting: Managing Obsolete Knowledge in Continual Enterprise AI Agents</a>
                         <span class="paper-date">2026-08-18</span>
                     </div>
-                                        <span class="paper-comment">📝 Accepted by IEEE Transactions on Image Processing (TIP), 2026</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：针对基于参数高效微调（PEFT）的持续学习方法中，独立训练的子模块导致特征子空间不对齐，进而在任务ID误导时产生模糊决策的问题。&#10;&#10;🛠 **方法**：提出跨子空间知识对齐与聚合框架（CKAA），包含双层级知识对齐（DKA）和任务置信度引导的适配器混合（TC-MoA）两个关键组件。&#10;&#10;✨ **主要贡献**：DKA通过对齐不同子空间的类内特征分布并借助特征模拟学习鲁棒全局分类器，TC-MoA则基于任务置信度自适应聚合相关子模块知识，避免对误导性任务ID的过度信任。实验表明CKAA在多个基准上优于现有PEFT-based持续学习方法。">
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：传统持续学习将遗忘视为失败，但企业AI智能体在动态环境中可能因保留过时知识而产生负面迁移和运营风险，因此需要管理过时知识而非一味保留。&#10;&#10;🛠 **方法**：提出“可逆遗忘”框架，包含活跃、休眠、退役三种记忆状态及重激活转换，并实现为滞回可逆记忆控制器，通过累积相关性证据、非对称阈值防振荡、影子模式测试重激活、策略门控退役。&#10;&#10;✨ **主要贡献**：首次将遗忘视为可逆过程而非永久删除，在不混淆临时抑制与永久擦除的前提下减少过时信息影响，并以金融领域为例验证其在不同市场条件下知识价值动态变化的适用性。">
                         <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
                         <div class="ai-content markdown-body"></div>
                     </details>
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
-                        <p>Continual Learning (CL) empowers AI models to continuously learn from sequential task streams. Recently, parameter-efficient fine-tuning (PEFT)-based CL methods have garnered increasing attention due to their superior performance. They typically allocate a unique sub-module for learning each task, with a task recognizer to select the appropriate sub-modules for testing images. However, due to the feature subspace misalignment from independently trained sub-modules, these methods tend to produce ambiguous decisions under misleading task-ids. To address this, we propose Cross-subspace Knowledge Alignment and Aggregation (CKAA), a novel framework that enhances model robustness against misleading task-ids through two key innovations: (1) Dual-level Knowledge Alignment (DKA): By aligning intra-class feature distributions across different subspaces and learning a robust global classifier through a feature simulation process, DKA enables the model to distinguish features from both correct and incorrect subspaces during training. (2) Task-Confidence-guided Mixture of Adapters (TC-MoA): A robust inference scheme that adaptively aggregates task-specific knowledge from relevant sub-modules based on task-confidence scores, avoiding overconfidence in misleading task-id predictions. Extensive experiments demonstrate that CKAA outperforms existing PEFT-based CL methods.</p>
+                        <p>Continual learning has traditionally treated forgetting as a failure, emphasizing preservation of previously acquired knowledge as environments evolve. We argue that this objective is incomplete for enterprise AI agents operating in non-stationary environments, where customers, policies, tools, workflows, regulations, and market conditions change over time. Indiscriminate retention can allow obsolete knowledge to influence decisions, creating negative transfer and operational risk. We therefore propose reversible forgetting: a conceptual framework with three operational memory states: active, dormant, and retired, and a reactivation transition that can restore dormant knowledge when its relevance returns. We instantiate the framework as a Hysteretic Reversible Memory Controller that accumulates relevance evidence, uses asymmetric thresholds to prevent state oscillation, tests reactivation in shadow mode, and gates retirement through policy. The framework reduces the influence of obsolete information without conflating temporary suppression with permanent erasure. Finance illustrates the idea: knowledge useful under one market regime may become harmful under another yet regain relevance when similar conditions recur.</p>
                     </details>
                 </div>
                 <div class="paper-card">
@@ -1109,10 +1184,7 @@
                         <span class="paper-date">2026-08-17</span>
                     </div>
                                         <span class="paper-comment">📝 99 pages, 16 figures, 12 tables</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决传统神经网络在训练后冻结结构、无法在持续服务中动态扩展能力的问题，提出“完全可塑性”的终身学习范式。&#10;&#10;🛠 **方法**：提出SoftModel，一种可生长的软模型，通过结构算子（宽度、层级、组合、输入接口、循环、注意力头）动态调整拓扑，并由“现实门控”机制统一评估参数与结构变化，仅当验证有效时才采纳修改。&#10;&#10;✨ **主要贡献**：将稳定性转化为生命周期审计属性，使结构随需求增长而突破固定拓扑的能力上限；实验证明受控生长在长任务序列中保持学习能力，并通过预注册实验报告正负结果，为持续学习提供可治理的架构方案。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Today, a neural system is almost always used in two phases -- trained, then deployed -- and in that regime it freezes twice: training ends, and the topology itself was never a degree of freedom. We take the opposite premise as an axiom -- total plasticity: no part of a model, including its structure, is ever frozen -- and derive the governance a lifelong learner then requires. The design's target regime is continual, in-service learning: a long-lived model on a non-stationary stream, whose stability comes from governance rather than immobility and whose capacity follows demand. The result is a growable soft model: an algebra of structural operators (width, hierarchy, composition, input interface, grown cycles, attention heads), each exact at application, budgeted, and audited, with adoption decided solely by a held-out reality gate that treats parametric and structural change uniformly. A complete from-scratch system realizes the whole account; its factory surface is operated end-to-end by a production LLM. Two conclusions follow from the axiom by construction: stability under lifelong change becomes an audit property of the lifecycle, and structure that follows demand removes the silent cap a fixed topology places on later capability where the capacity floor binds. A third is measured: in the worlds where this was measured, the marginal value of new capacity was unobservable before adoption, so workable growth governance took its ex-post form. The same governance extends to evaluative signals, and the core method is evaluated on standard continual-learning benchmarks, where governed growth preserves the ability to keep learning along long task sequences. A pre-registered experimental program adjudicates the mechanism and value claims on the tested problems and reports its failures at full prominence; the map -- positive and negative -- is the contribution.</p>
@@ -1124,10 +1196,7 @@
                         <span class="paper-date">2026-08-17</span>
                     </div>
                                         <span class="paper-comment">📝 7pages, 4figures, 5tables</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在基于预训练模型的持续学习场景中，不同任务间语义纠缠导致跨任务预测时输入类别模糊，即使预训练特征强大，模型也难以可靠推断所有已学任务。&#10;&#10;🛠 **方法**：提出TAILS（任务锚定推理潜在塑造）模块，使用固定任务锚点作为累积知识的持久参考，将样本特征相对锚点进行解释，并跨任务组合相关证据形成潜在召回，在预测前直接修正特征表示，而不改变预训练模型、方法特定模块或分类器。&#10;&#10;✨ **主要贡献**：TAILS是轻量级后置模块，可集成到多种持续学习器中，通过解耦步骤优化，在表示层面解决跨任务歧义，仅需少量参数开销和可忽略的推理成本，即可显著提升分类和任务推断性能。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Pre-trained models (PTMs) provide a strong foundation for continual learning by offering stable representations that facilitate lightweight adaptation to new tasks. However, adapting well to each task does not ensure reliable inference over all learned tasks. Since task boundaries are often artificial and semantically entangled, an input from an unknown task can remain ambiguous even with strong PTM features, making cross-task prediction a key bottleneck. We propose Task-Anchored Inference Latent Shaping (TAILS), a lightweight post-PTM module that can be integrated into diverse continual learners and optimized through a decoupled step. TAILS uses fixed task anchors as persistent references to accumulated knowledge. It interprets each sample's feature representation relative to these references, then composes relevant evidence across tasks into latent recall. Rather than selecting a task-specific path or adjusting classifier outputs, TAILS uses latent recall to directly correct the feature representation before prediction. It therefore resolves cross-task ambiguity at the representation level, while leaving the original PTM, method-specific modules, and classifier unchanged. Extensive experiments across multiple PTM-based continual learning paradigms show that TAILS can improve classification and task-inference performance with modest parameter overhead and negligible inference cost.</p>
@@ -1139,10 +1208,7 @@
                         <span class="paper-date">2026-08-17</span>
                     </div>
                                         <span class="paper-comment">📝 Accepted to CIKM 2026 full research paper</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：持续推荐系统面临数据稀疏性挑战，引入大语言模型增强后产生稳定性-可塑性-认知性（SPC）三难困境，即通用语义先验与保留个性化历史偏好、适应个体兴趣变化之间存在冲突。&#10;&#10;🛠 **方法**：提出TRACER框架，通过三个专门模块分别针对稳定性、可塑性和认知性进行协同优化，并设计机制防止任一模块主导，使语义知识辅助历史保留和兴趣适应而不干扰持续学习。&#10;&#10;✨ **主要贡献**：首次系统定义SPC三难困境，提出平衡三者的整体解决方案；在五个真实数据集上验证有效性，相比最先进基线性能提升最高达14.38%，并开源代码。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Continual recommendation aims to capture evolving user interests from streaming data but struggles with sparsity. LLM enhancers mitigate this with semantic knowledge, but naive integration creates a new conflict. We identify this as the Stability-Plasticity-Cognitivity (SPC) Trilemma, where generalized LLM semantic priors (Cognitivity) conflict with retaining personalized historical preferences (Stability) and adapting to individual interest shifts (Plasticity). To address this, we propose Trilemma-Responsive Adaptive Continual Enhancement for Recommendation (TRACER). TRACER synergistically combines three specialized modules, each targeting stability, plasticity, or cognitivity, while preventing any single lemma from dominating. This holistic design enables semantic knowledge to support history retention and adaptation to evolving interests without disrupting continual learning. Across five real-world datasets, TRACER effectively harmonizes the SPC trilemma and outperforms state-of-the-art baselines by up to 14.38%. Our code is available at https://github.com/woo-joo/TRACER_CIKM26.</p>
@@ -1154,10 +1220,7 @@
                         <span class="paper-date">2026-08-16</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有持续学习正则化方法（如EWC）使用逐参数对角Fisher信息衡量参数重要性，但忽略了每层Hessian矩阵的顶部特征值信息，导致对遗忘的控制不准确。&#10;&#10;🛠 **方法**：在块对角Hessian假设下，理论证明遗忘可分解为各层顶部特征值加权的和，并据此提出层自适应正则化策略——对早期层施加强约束，允许深层更自由更新。&#10;&#10;✨ **主要贡献**：首次从理论上揭示对角Fisher无法捕捉层间敏感性差异（可相差层宽度倍），并证明均匀正则化会损失新任务性能（与层条件数相关）；将该策略应用于EWC和SLCA，显著提升平均性能与遗忘指标。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Continual learning regularizers like EWC fight forgetting by penalizing changes from previous-task parameters with per-parameter importance, typically diagonal Fisher values. Per-parameter looks more flexible than per-layer, but each layer's diagonal Fisher is a weak summary of its actual curvature, missing the top-eigenvalue information that controls forgetting. Adversarial bit-flip attacks and Hessian-spectrum studies show that this missing per-layer sensitivity spans orders of magnitude in neural networks. Under a block-diagonal Hessian assumption, the layer-level analogue of EWC's existing diagonal assumption, we prove three things. Forgetting decomposes as a sum of per-layer terms weighted by each layer's top Hessian eigenvalue. Diagonal-Fisher weights cannot recover this eigenvalue. For instance, two layers with identical Fisher averages can have top eigenvalues differing by a factor as large as the layer width. For the same level of forgetting, uniform regularization loses new-task performance by an amount scaling with the layer condition number. Our theoretical analysis leads to a simple recipe: protect early layers strongly, let deeper layers move. We apply this recipe to EWC and SLCA and show clear improvements in average performance and forgetting metrics.</p>
@@ -1169,10 +1232,7 @@
                         <span class="paper-date">2026-08-16</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：持续学习中神经网络在学习新任务时会灾难性遗忘旧知识，现有方法多从参数正则化或经验回放入手，但对表征空间动态与遗忘的关系理解不足。&#10;&#10;🛠 **方法**：提出“表征通量”（representation flux）作为样本级表征位移的几何度量，并基于此设计FlowLess-R正则化方法，通过约束回放样本表征与存储参考的一致性来稳定潜在表征，同时允许继续学习。&#10;&#10;✨ **主要贡献**：首次系统揭示表征通量与灾难性遗忘的强关联，且通量升高可预测后续性能下降；FlowLess-R与多种回放方法（ER、DER++、ER-ACE）兼容，在四个基准数据集上显著提升最终平均准确率并降低遗忘，为缓解遗忘提供了简单有效的表征空间策略。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Catastrophic forgetting remains a fundamental obstacle to continual learning, where neural networks lose previously acquired knowledge while learning new tasks. Existing methods primarily mitigate forgetting through parameter regularization or experience replay, while the representation-space dynamics associated with forgetting remain less understood. We investigate latent representation evolution during sequential learning and introduce representation flux, a geometric measure of sample-level representation displacement across training. We show that representation flux is strongly associated with catastrophic forgetting across multiple benchmarks, with temporal analyses indicating that elevated flux can precede subsequent performance degradation. Representation displacement is also associated with confidence degradation, while complementary geometric properties provide additional information about sample-level forgetting. Motivated by these observations, we propose FlowLess-R, a representation-space regularization method that constrains replay representations relative to stored references while allowing continued learning. FlowLess-R is architecture-agnostic and integrates into replay-based methods through a representation-matching term. Experiments on SplitMNIST, SplitFashionMNIST, SplitCIFAR10, and SplitTinyImageNet show improved final average accuracy and reduced forgetting with ER, DER++, and ER-ACE. Our results identify representation flux as an informative geometric marker of forgetting and show that stabilizing latent representations provides a simple strategy for mitigating catastrophic forgetting.</p>
@@ -1452,18 +1512,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Large language model (LLM) agents provide a promising interface for command-line-based network operations, but a plausible command may still fail or introduce operational risk after execution. Existing approaches mainly focus on command generation or final configuration correctness, and do not use execution-grounded experience to jointly improve candidate coverage and action selection. We propose an execution-grounded dual-path consequence-aware agent for CLI-based SONiC operations, which generates multiple complete actions, predicts their execution consequences, and selects the final action through utility- and risk-aware reranking. The proposal-side path abstracts reusable operational lessons into retrievable guidance to improve feasible-action coverage without modifying the proposal LLM, while the selection-side path adapts the consequence predictor through session-level LoRA updates using real SSH feedback to improve conditional selection quality. Experiments over multi-turn SONiC operation sessions with different Qwen3 proposal models show that the framework improves feasible-action coverage and top-1 execution success, and that the two adaptation paths provide complementary gains over interaction.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2604.01499v2" target="_blank" class="paper-title">Matching Accuracy, Different Geometry: Evolution Strategies vs GRPO in LLM Post-Training</a>
-                        <span class="paper-date">2026-08-09</span>
-                    </div>
-                                        <span class="paper-comment">📝 Accepted to Conference on Language Modeling (COLM) 2026</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Evolution Strategies (ES) have emerged as a scalable gradient-free alternative to reinforcement learning based LLM fine-tuning, but it remains unclear whether comparable task performance implies comparable solutions in parameter space. We compare ES and Group Relative Policy Optimization (GRPO) across four tasks in both single-task and sequential continual-learning settings. ES matches or exceeds GRPO in single-task accuracy and remains competitive sequentially when its iteration budget is controlled. Despite this similarity in task performance, the two methods produce markedly different model updates: ES makes much larger changes and induces broader off-task KL drift, whereas GRPO makes smaller, more localized updates. Strikingly, the ES and GRPO solutions are linearly connected with no loss barrier, even though their update directions are nearly orthogonal. We develop an analytical theory of ES that explains all these phenomena within a unified framework, showing how ES can accumulate large off-task movement on weakly informative directions while still making enough progress on the task to match gradient-based RL in downstream accuracy. These results show that gradient-free and gradient-based fine-tuning can reach similarly accurate yet geometrically distinct solutions, with important consequences for forgetting and knowledge preservation. The source code is publicly available: https://github.com/Bhoy1/ESvsGRPO.</p>
                     </details>
                 </div>
                 <div class="paper-card">
@@ -1958,61 +2006,13 @@
                         <p>With the rapid advancement of the Internet of Things (IoT), massive amounts of data are generated across distributed edge networks. Training models on full data incurs significant computational overhead and storage bottlenecks, rendering coreset selection a critical paradigm. Furthermore, given the privacy-sensitive nature of local data and the escalating demand for model robustness in real-world deployments, developing an effective distributed optimization framework for robust coreset selection is vital, yet remains largely unexplored. To this end, this work first characterizes the hierarchical dependencies among coreset selection, robust optimization, and distributed learning, and formulates the distributed robust coreset selection as a trilevel optimization problem with level-wise constraints. Furthermore, to effectively solve the trilevel problem in a distributed manner, the \underline{F}ederated \underline{F}irst-order \underline{C}onstrained \underline{T}rilevel \underline{O}ptimization (F$^2$CTO) is proposed, which synergistically integrates a hierarchical composite value-function reformulation and a distributed alternating projected gradient algorithm. To the best of our knowledge, F$^2$CTO is the first method developed for distributed robust coreset selection, as well as the first distributed optimization approach for trilevel optimization problems with level-wise constraints. Additionally, we prove that the proposed method achieves a non-asymptotic convergence rate of $\mathcal{O}(ε^{-3/2})$ for finding an $ε$-stationary point. Extensive empirical evaluations on reliable continual learning demonstrate the effectiveness and efficiency of the proposed F$^2$CTO.</p>
                     </details>
                 </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2603.12055v3" target="_blank" class="paper-title">Continual Learning with Vision-Language Models via Semantic-Geometry Preservation</a>
-                        <span class="paper-date">2026-07-30</span>
-                    </div>
-                                        <span class="paper-comment">📝 Accepted by IEEE TCSVT 2026</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Continual learning of pretrained vision-language models (VLMs) is prone to catastrophic forgetting, yet current approaches adapt to new tasks without explicitly preserving the cross-modal semantic geometry inherited from pretraining and previous stages, allowing new-task supervision to induce geometric distortion. We observe that the most pronounced drift tends to concentrate in vulnerable neighborhoods near the old-new semantic interface, where shared visual patterns are easily re-explained by new textual semantics. To address this under an exemplar-free constraint, we propose Semantic Geometry Preservation for Continual Learning (SeGP-CL). SeGP-CL first probes the drift-prone region by constructing a compact set of adversarial anchors with dual-targeted projected gradient descent (DPGD), which drives selected new-task seeds toward old-class semantics while remaining faithful in raw visual space. During training, we preserve cross-modal structure by anchor-guided cross-modal geometry distillation (ACGD), and stabilize the textual reference frame across tasks via a lightweight text semantic-geometry regularization (TSGR). After training, we estimate anchor-induced raw-space drift to transfer old visual prototypes and perform dual-path inference by fusing cross-modal and visual cues. Extensive experiments on five continual learning benchmarks demonstrate that SeGP-CL consistently improves stability and forward transfer, achieving state-of-the-art performance while better preserving semantic geometry of VLMs. Code is available at: https://github.com/chiyuan-IVIPLab/SeGP-CL.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.27557v1" target="_blank" class="paper-title">Training Skills Like Parameters via Self-Supervised Semantic Diffusion</a>
-                        <span class="paper-date">2026-07-30</span>
-                    </div>
-                                        <span class="paper-comment">📝 Preprint, work in progress</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>While Large Language Models (LLMs) demonstrate remarkable general instruction-following capabilities, they often fall short of human experts in highly specialized, open-ended domains such as creative screenwriting. Prior approaches typically adopt post-training, yet both supervised fine-tuning and reinforcement learning require weight access that closed-source frontier models do not offer, and demand heavy compute. Moreover, what is learned is tied to a single checkpoint and cannot be inspected by humans. Recent advancements in agentic continual learning instead attempt to bridge this gap by accumulating external textual skills. However, these methods heavily rely on costly human expert annotations or unreliable LLM-as-a-judge feedback for reflection. To overcome this bottleneck, we propose a novel, unsupervised self-evolving agent framework inspired by the corruption-and-reconstruction paradigm of diffusion models. Instead of relying on explicit external scoring, we leverage existing high-quality human artifacts to construct self-supervised signals. Training then follows the familiar loop of neural network training, forward, loss, and backward, with the loss coming from contrasting the agent's reconstruction against the human original. What is updated is not model weights but an external library of textual skills. We evaluate our framework on the challenging task of short drama screenwriting. Experimental results demonstrate that our method enables the agent to autonomously extract and internalize highly generalizable skills, significantly enhancing its domain-specific generation capabilities. Furthermore, this self-contrastive reflection paradigm offers a scalable pathway for agents to teach themselves the production of complex, high-quality human artifacts, without requiring external supervision.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.26523v1" target="_blank" class="paper-title">The Art of Not Forgetting A Local Learning Architecture for Continual Learning</a>
-                        <span class="paper-date">2026-07-29</span>
-                    </div>
-                                        <span class="paper-comment">📝 28 pages, 11 figures</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>We introduce CMP (Cognitive Memory Primitive), a continual-learning architecture that repre?sents inputs as sparse relational codes, stores them in a two-tier competitive memory, and learns through local updates without end-to-end backpropagation through its feature-generating system. We investigate whether combining sparse representations, local learning, and persistent memory can reduce catastrophic forgetting relative to conventional backpropagation-based continual?learning approaches. On a controlled domain-incremental byte-level language modeling protocol, CMP demonstrates substantially lower backward transfer than a parameter-matched Trans?former trained with online Elastic Weight Consolidation (EWC). Across a three-seed replicated 15-domain experiment, CMP exhibits stable forgetting behavior, while separate head-to-head comparisons and domain-order analyses show consistently lower forgetting than the evaluated Transformer baseline under the reported experimental settings. We report these findings alongside a substantial single-domain accuracy gap relative to the Transformer, a null result on a vision benchmark, and a documented failure to combine CMP with an independent accuracy-improving mechanism, reflecting our commitment to reporting both positive and negative outcomes. These results suggest that the combination of sparse representations, local learning, and persistent memory is a promising direction for continual learning, while motivating further investigation into the respective roles of learning rules, representations, and architectural design in mitigating catastrophic forgetting.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.27260v1" target="_blank" class="paper-title">Regularizing modality contribution drift in multimodal continual learning</a>
-                        <span class="paper-date">2026-07-29</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Multimodal continual learning (MMCL) aims to learn emerging knowledge from multimodal data while preserving knowledge. To mitigate forgetting, current MMCL methods usually focus on cross-modal representation alignment or semantic similarity, but they overlook whether the relative contributions of individual modalities and their interactions remain stable across incremental tasks. We term this decision-level shift Modality Contribution Drift (MCD) and quantify it with the MCD score, which combines contribution-strength and relative-reliance changes under controlled interventions on modality subsets. Theoretical and empirical analyses further explain why current MMCL methods cannot reliably mitigate this drift. To this end, we propose Continual Modality Contribution Drift Regularization (CMCDR), which preserves the modality contribution structure of previously learned tasks. Since MMCL settings differ in whether old exemplars are available, CMCDR includes both replay-based and replay-free versions. The replay-based version uses modality-subset interventions as diagnostic probes on stored old samples, compares their contribution profiles between the current model and a frozen previous model, and constrains changes in old-sample modality-specific and interaction contributions. The replay-free version uses current-task samples as probes and distills the frozen model's old-task contribution responses, thereby regularizing the observed contribution profile without exemplars. Experiments on multimodal class-incremental learning and continual visual question answering validate the generality and effectiveness of CMCDR.</p>
-                    </details>
-                </div>
             </div>
         </section>
 
         <footer class="footer">
             <p>👤 <strong>Hongkun Luo (罗宏昆)</strong> · <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent)">Academic Page</a> · <a href="https://github.com/luohongk" target="_blank" style="color:var(--accent)">GitHub</a></p>
             <p style="margin-top:8px">🤖 Generated automatically from <a href="https://arxiv.org" style="color:var(--accent)">arXiv</a> · <a href="https://github.com/luohongk/Embodied-AI-Daily" style="color:var(--accent)">GitHub Repo</a></p>
-            <p style="margin-top:4px">Last update: 2026-08-20 (Beijing Time)</p>
+            <p style="margin-top:4px">Last update: 2026-08-21 (Beijing Time)</p>
         </footer>
     </main>
 
