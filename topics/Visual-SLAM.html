@@ -675,7 +675,7 @@
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Kalman Filter</span>
-                    <span class="nav-count">46</span>
+                    <span class="nav-count">45</span>
                 </a>
                 <a href="Loop-Closure-Detection.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -690,12 +690,12 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">69</span>
+                    <span class="nav-count">68</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">70</span>
+                    <span class="nav-count">72</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -730,7 +730,7 @@
                 <a href="Model-Predictive-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#14b8a6"></span>
                     <span class="nav-label">Model Predictive Control</span>
-                    <span class="nav-count">44</span>
+                    <span class="nav-count">47</span>
                 </a>
                 <a href="Whole-Body-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#06b6d4"></span>
@@ -750,7 +750,7 @@
                 <a href="Multimodal-Fusion.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#6366f1"></span>
                     <span class="nav-label">Multimodal Fusion</span>
-                    <span class="nav-count">78</span>
+                    <span class="nav-count">79</span>
                 </a>
                 <a href="Scene-Understanding.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
@@ -894,7 +894,7 @@
             <a href="Kalman-Filter.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Kalman Filter</span>
-                <span class="nav-count">46</span>
+                <span class="nav-count">45</span>
             </a>
             <a href="Loop-Closure-Detection.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -909,12 +909,12 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">69</span>
+                <span class="nav-count">68</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">70</span>
+                <span class="nav-count">72</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -949,7 +949,7 @@
             <a href="Model-Predictive-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#14b8a6"></span>
                 <span class="nav-label">Model Predictive Control</span>
-                <span class="nav-count">44</span>
+                <span class="nav-count">47</span>
             </a>
             <a href="Whole-Body-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#06b6d4"></span>
@@ -969,7 +969,7 @@
             <a href="Multimodal-Fusion.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
                 <span class="nav-label">Multimodal Fusion</span>
-                <span class="nav-count">78</span>
+                <span class="nav-count">79</span>
             </a>
             <a href="Scene-Understanding.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
@@ -1028,6 +1028,21 @@
                 <span class="topic-count">80 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.19693v1" target="_blank" class="paper-title">RIPE++: Reinforced Keypoint Learning from Positive Pairs Only</a>
+                        <span class="paper-date">2026-08-20</span>
+                    </div>
+                                        <span class="paper-comment">📝 LIMIT@ECCV 2026</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有稀疏关键点提取与匹配方法通常依赖相机位姿或深度监督，在真实场景中难以获取；而基于强化学习的现有方法（如RIPE）依赖粗糙的二元奖励和精心构造的负样本对，导致训练不稳定且描述子判别性不足。&#10;&#10;🛠 **方法**：提出RIPE++，设计一种仅从单一正样本对中同时提取奖励和惩罚的强化学习目标，充分利用几何一致性信号，无需负样本对比；并将该目标扩展到匹配阶段，通过适配LightGlue实现弱监督的完整稀疏匹配流程训练。&#10;&#10;✨ **主要贡献**：在MegaDepth1500上将AUC@5从56.58提升至59.65；在标准基准上达到与全监督方法相当的性能；能在无相机位姿的低纹理医学视频序列上训练，而传统SfM流程在此类场景常失败。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Sparse keypoint extraction and matching underpin core tasks in geometric computer vision, including structure-from-motion, visual SLAM, augmented reality, and medical image registration. Learning robust local feature representations, however, typically requires accurate camera poses or depth supervision, which are often unavailable in real-world settings. Reinforcement learning (RL) has recently emerged as a promising alternative, requiring only the information if two images show the same scene or not. However, existing RL formulations such as RIPE rely on coarse binary rewards and carefully constructed negative training pairs, limiting training stability and descriptor discriminability. In this paper, we revisit RL-based keypoint learning and propose a reward that fully exploits the geometric consistency signal, deriving both reward and penalty from a single positive pair without contrasting against negatives. This richer signal provides sufficient supervisory contrast to learn discriminative detectors and descriptors from positive image pairs alone, enabling representation learning under extremely limited supervision. Furthermore, we show that the same RL objective can be extended to the matching stage by adapting LightGlue, raising AUC@5 on MegaDepth1500 from 56.58 to 59.65 and enabling weakly-supervised training of the full sparse matching pipeline from image pairs with partial visual overlap. We validate our approach on established benchmarks, demonstrating competitive results compared to fully-supervised methods. We further show that the method can be even trained on low texture medical video sequences, where camera poses are usually unavailable and standard SfM pipelines often fail. Code and data are available at https://github.com/fraunhoferhhi/RIPEpp .</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2608.06439v1" target="_blank" class="paper-title">A Low-Latency ASIC Architecture for Real-Time Line Segment Detection</a>
@@ -1169,10 +1184,7 @@
                         <span class="paper-date">2026-07-07</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在建筑工地等复杂环境中，如何利用低成本360度相机和惯性测量单元实现高精度视觉SLAM和基于楼层平面图的定位，以支持自动化进度监测。&#10;&#10;🛠 **方法**：构建了一个包含30个视觉-惯性序列的数据集，覆盖建筑项目七层楼、八个月内的真实挑战（如光照变化、移动工人、快速运动等），并通过高精度LiDAR-惯性SLAM系统提供地面真值轨迹。&#10;&#10;✨ **主要贡献**：提供了首个结合楼层平面图先验的360度视觉-惯性基准数据集，并基于公开挑战赛结果揭示了SLAM方法相对成熟（62支队伍参与），而楼层平面图定位误差更高、更具挑战性（22支队伍），为后续研究提供了标准化评估平台。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Automated progress monitoring on construction sites is an active area of research and development. Robot and human-carried mapping systems have been developed to build 3D maps of building and infrastructure projects. While LiDAR-based mapping systems achieve high accuracy, the cost of LiDAR can be prohibitive. Consumer-grade cameras with wide field of view ("360 cameras") combined with embedded inertial measurement units (IMUs) provide a cost-effective alternative. To support change detection and progress monitoring, highly accurate visual Simultaneous Localization and Mapping (SLAM) and floor plan-referenced localization systems are required. In this paper we present a high-quality dataset collected at an active construction site, which captures realistic challenges such as variable lighting conditions, moving workers, fast motions, and repetitive structures. The dataset offers thirty visual-inertial sequences recorded across seven floors over an eight-month period of the construction project. Ground truth trajectories were collected using a high quality LiDAR-inertial SLAM system rigidly attached to the 360 camera. Additionally, we report the results of an open research challenge evaluating the best visual SLAM and localization systems from around the world. The Challenge attracted substantially higher participation in SLAM, with 62 teams compared to 22 in floor-plan-referenced localization, reflecting the broader maturity of SLAM methods. The higher errors in localization further highlight the difficulty of this task in construction and point to the need for continued research, which this dataset is intended to support. The dataset and the benchmark are publicly available at: https://hilti-trimble-challenge.com/dataset-2026.</p>
@@ -2004,18 +2016,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Neural implicit scene representations have recently shown promising results in dense visual SLAM. However, existing implicit SLAM algorithms are constrained to single-agent scenarios, and fall difficulties in large-scale scenes and long sequences. Existing NeRF-based multi-agent SLAM frameworks cannot meet the constraints of communication bandwidth. To this end, we propose the first distributed multi-agent collaborative neural SLAM framework with hybrid scene representation, distributed camera tracking, intra-to-inter loop closure, and online distillation for multiple submap fusion. A novel triplane-grid joint scene representation method is proposed to improve scene reconstruction. A novel intra-to-inter loop closure method is designed to achieve local (single-agent) and global (multi-agent) consistency. We also design a novel online distillation method to fuse the information of different submaps to achieve global consistency. Furthermore, to the best of our knowledge, there is no real-world dataset for NeRF-based/GS-based SLAM that provides both continuous-time trajectories groundtruth and high-accuracy 3D meshes groundtruth. To this end, we propose the first real-world Dense slam (DES) dataset covering both single-agent and multi-agent scenarios, ranging from small rooms to large-scale outdoor scenes, with high-accuracy ground truth for both 3D mesh and continuous-time camera trajectory. This dataset can advance the development of the research in both SLAM, 3D reconstruction, and visual foundation model. Experiments on various datasets demonstrate the superiority of the proposed method in both mapping, tracking, and communication. The dataset and code will open-source on https://github.com/dtc111111/mcnslam.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2508.04597v1" target="_blank" class="paper-title">Pseudo Depth Meets Gaussian: A Feed-forward RGB SLAM Baseline</a>
-                        <span class="paper-date">2025-08-06</span>
-                    </div>
-                                        <span class="paper-comment">📝 IROS 2025</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Incrementally recovering real-sized 3D geometry from a pose-free RGB stream is a challenging task in 3D reconstruction, requiring minimal assumptions on input data. Existing methods can be broadly categorized into end-to-end and visual SLAM-based approaches, both of which either struggle with long sequences or depend on slow test-time optimization and depth sensors. To address this, we first integrate a depth estimator into an RGB-D SLAM system, but this approach is hindered by inaccurate geometric details in predicted depth. Through further investigation, we find that 3D Gaussian mapping can effectively solve this problem. Building on this, we propose an online 3D reconstruction method using 3D Gaussian-based SLAM, combined with a feed-forward recurrent prediction module to directly infer camera pose from optical flow. This approach replaces slow test-time optimization with fast network inference, significantly improving tracking speed. Additionally, we introduce a local graph rendering technique to enhance robustness in feed-forward pose prediction. Experimental results on the Replica and TUM-RGBD datasets, along with a real-world deployment demonstration, show that our method achieves performance on par with the state-of-the-art SplaTAM, while reducing tracking time by more than 90\%.</p>
                     </details>
                 </div>
             </div>

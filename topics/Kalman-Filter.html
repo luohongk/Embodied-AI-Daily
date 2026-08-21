@@ -675,7 +675,7 @@
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Kalman Filter</span>
-                    <span class="nav-count">46</span>
+                    <span class="nav-count">45</span>
                 </a>
                 <a href="Loop-Closure-Detection.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -690,12 +690,12 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">69</span>
+                    <span class="nav-count">68</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">70</span>
+                    <span class="nav-count">72</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -730,7 +730,7 @@
                 <a href="Model-Predictive-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#14b8a6"></span>
                     <span class="nav-label">Model Predictive Control</span>
-                    <span class="nav-count">44</span>
+                    <span class="nav-count">47</span>
                 </a>
                 <a href="Whole-Body-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#06b6d4"></span>
@@ -750,7 +750,7 @@
                 <a href="Multimodal-Fusion.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#6366f1"></span>
                     <span class="nav-label">Multimodal Fusion</span>
-                    <span class="nav-count">78</span>
+                    <span class="nav-count">79</span>
                 </a>
                 <a href="Scene-Understanding.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
@@ -894,7 +894,7 @@
             <a href="Kalman-Filter.html" class="nav-item active">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Kalman Filter</span>
-                <span class="nav-count">46</span>
+                <span class="nav-count">45</span>
             </a>
             <a href="Loop-Closure-Detection.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -909,12 +909,12 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">69</span>
+                <span class="nav-count">68</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">70</span>
+                <span class="nav-count">72</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -949,7 +949,7 @@
             <a href="Model-Predictive-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#14b8a6"></span>
                 <span class="nav-label">Model Predictive Control</span>
-                <span class="nav-count">44</span>
+                <span class="nav-count">47</span>
             </a>
             <a href="Whole-Body-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#06b6d4"></span>
@@ -969,7 +969,7 @@
             <a href="Multimodal-Fusion.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
                 <span class="nav-label">Multimodal Fusion</span>
-                <span class="nav-count">78</span>
+                <span class="nav-count">79</span>
             </a>
             <a href="Scene-Understanding.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
@@ -1025,7 +1025,7 @@
         <section class="topic-section">
             <div class="topic-header">
                 <span class="topic-badge" style="background:#8b5cf6">Kalman Filter</span>
-                <span class="topic-count">46 papers</span>
+                <span class="topic-count">45 papers</span>
             </div>
             <div class="paper-list">
                 <div class="paper-card">
@@ -1596,18 +1596,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Human-like private chat requires more than fluent response generation: a system must preserve persona, relationship, memory, bounded knowledge, medium-specific timing, and a coherent multi-turn arc. We present AnthroDial, a closed-loop framework that formulates anthropomorphic dialogue as a joint problem of system architecture, executable evaluation, and diagnostic alignment. It combines (1) a role-conditioned scheduled dialogue runtime with persona and scenario cards, long-term memory, virtual time, and single-draft message decisions; (2) an executable benchmark with an L0 validity gate, five per-turn dimensions, and five dialogue-level dimensions; and (3) a post-training pipeline that filters 16,436 scheduled-decision examples for SFT and applies GRPO with a cognitive-diagnostic, ZPD-aware reward. The reward maintains Kalman-filtered capability estimates for each behavioral dimension, upweights dimensions with larger capability deficits, and uses rollout scores as task-level ZPD matches to focus optimization on learnable weak skills. On a benchmark with 55 personas, 50 scenarios, 50 persona-scenario bindings, and 100 role-conditioned cases per model, we evaluate 16 systems spanning frontier baselines, open models, thinking/no-think variants, and SFT/RL ablations. The strongest non-trained baseline reaches 32.00% strict ACC, while Qwen3.6-27B-SFT+RL reaches 39.00% strict ACC and a 98.5 overall score. In the 9B no-think setting, SFT and RL improve strict ACC from 0.00% to 13.00% and 18.37%. These results show that anthropomorphic dialogue benefits when generation, evaluation, and reward shaping share the same behavioral dimensions.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.19590v1" target="_blank" class="paper-title">Learning to Transmit: Volatility-Aware Predictive Communication for Energy-Efficient IoT Networks</a>
-                        <span class="paper-date">2026-07-21</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Communication is the dominant source of energy consumption in Internet-of-Things (IoT) networks, yet many sensed measurements exhibit strong temporal correlations and provide little new information to the receiver. This paper introduces \textsc{ADAPTIVEML}, a volatility-aware predictive communication framework that enables IoT devices to intelligently decide when communication is necessary. Each sensor maintains a lightweight machine learning predictor and transmits only when the prediction residual exceeds an adaptive threshold proportional to the local signal volatility. By normalizing prediction errors using a rolling estimate of signal variability, the proposed transmission policy automatically adapts to changing environmental conditions, seasonal variations, and deployment-specific dynamics without manual threshold tuning. To address long-term non-stationarity, we further propose \textsc{ADAPTIVEML-RLS}, an online learning extension based on Recursive Least Squares (RLS) with exponential forgetting, allowing continuous adaptation to sensor drift and evolving signal characteristics. Extensive experiments are conducted on three heterogeneous real-world datasets comprising more than 2.4 million sensor observations from outdoor environmental monitoring, indoor wireless sensor networks, and urban air-quality sensing. Compared with six representative baselines, including periodic transmission, static-threshold suppression, ARIMA, Kalman filtering, EMA, and LMS filtering, \textsc{ADAPTIVEML} achieves up to 94.7\% transmission reduction while maintaining a reconstruction error of 0.352$^\circ$C. \textsc{ADAPTIVEML-RLS} further reduces reconstruction error by 12--18\% under drift conditions while preserving transmission reduction above 93\%. These results demonstrate the effectiveness of volatility-aware predictive communication for energy-efficient and adaptive IoT networks.</p>
                     </details>
                 </div>
             </div>

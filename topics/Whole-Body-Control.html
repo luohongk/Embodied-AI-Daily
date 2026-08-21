@@ -675,7 +675,7 @@
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Kalman Filter</span>
-                    <span class="nav-count">46</span>
+                    <span class="nav-count">45</span>
                 </a>
                 <a href="Loop-Closure-Detection.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -690,12 +690,12 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">69</span>
+                    <span class="nav-count">68</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">70</span>
+                    <span class="nav-count">72</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -730,7 +730,7 @@
                 <a href="Model-Predictive-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#14b8a6"></span>
                     <span class="nav-label">Model Predictive Control</span>
-                    <span class="nav-count">44</span>
+                    <span class="nav-count">47</span>
                 </a>
                 <a href="Whole-Body-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#06b6d4"></span>
@@ -750,7 +750,7 @@
                 <a href="Multimodal-Fusion.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#6366f1"></span>
                     <span class="nav-label">Multimodal Fusion</span>
-                    <span class="nav-count">78</span>
+                    <span class="nav-count">79</span>
                 </a>
                 <a href="Scene-Understanding.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
@@ -894,7 +894,7 @@
             <a href="Kalman-Filter.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Kalman Filter</span>
-                <span class="nav-count">46</span>
+                <span class="nav-count">45</span>
             </a>
             <a href="Loop-Closure-Detection.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -909,12 +909,12 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">69</span>
+                <span class="nav-count">68</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">70</span>
+                <span class="nav-count">72</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -949,7 +949,7 @@
             <a href="Model-Predictive-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#14b8a6"></span>
                 <span class="nav-label">Model Predictive Control</span>
-                <span class="nav-count">44</span>
+                <span class="nav-count">47</span>
             </a>
             <a href="Whole-Body-Control.html" class="nav-item active">
                 <span class="nav-dot" style="background:#06b6d4"></span>
@@ -969,7 +969,7 @@
             <a href="Multimodal-Fusion.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
                 <span class="nav-label">Multimodal Fusion</span>
-                <span class="nav-count">78</span>
+                <span class="nav-count">79</span>
             </a>
             <a href="Scene-Understanding.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
@@ -1028,6 +1028,21 @@
                 <span class="topic-count">80 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.20114v1" target="_blank" class="paper-title">DECOWAM: Decoupled Whole-Body World-Action Model for Legged Mobile Manipulation</a>
+                        <span class="paper-date">2026-08-20</span>
+                    </div>
+                                        <span class="paper-comment">📝 8 pages, 5 figures. Introduces DECOWAM, a decoupled whole-body world-action model for legged mobile manipulation, and the ARMDOG real-robot dataset</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有世界-动作模型主要针对固定基座平台，未显式区分移动操作中相机自身运动与基座/手臂动作，导致在腿式移动操作场景下视觉预测和动作控制效果不佳。&#10;&#10;🛠 **方法**：提出DECOWAM，一种解耦的全身世界-动作模型，通过专用条件接口分离基座与手臂动作，采用冻结FastWAM骨干加残差适配器、从特权观测蒸馏的动作等价未来瓶颈、对抗分离的基座/手臂潜变量，以及基座速度条件化视频预测。&#10;&#10;✨ **主要贡献**：引入ARMDOG真实机器人数据集，在固定回放协议下相比FastWAM将动作MSE降低21.7%（仅需25.95M可训练参数），在79次闭环实验中取得最佳全身协调性和基座位移鲁棒性，任务完成率与最强基线相当，证明具身感知因子分解可支持参数高效的联合视觉预测与全身控制。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Mobile manipulation requires a robot to predict how locomotion and arm motion jointly alter future observations and control. Existing world-action models, developed largely for fixed-base platforms, do not explicitly distinguish camera ego-motion from base and arm actions. Here we introduce DECOWAM, a whole-body world-action model that separates these factors through dedicated conditional interfaces. DECOWAM freezes an adapted FastWAM backbone and trains residual adapters, an action-equivalent future bottleneck distilled from privileged observations, adversarially separated base and arm latents, and base-velocity conditioning for video prediction. We further introduce ARMDOG, a real-robot dataset that synchronizes video, whole-body state and action, and language. On a fixed replay protocol, DECOWAM improved both future-video and action prediction over FastWAM, reducing action MSE by 21.7% with 25.95M trainable adaptation parameters. Across 79 closed-loop trials per method, it achieved the highest observed whole-body coordination and base-displacement robustness among the compared systems, while task completion remained comparable to the strongest baseline. These results show that embodiment-aware factorization can support parameter-efficient joint visual prediction and whole-body control under moving viewpoints.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2608.18234v1" target="_blank" class="paper-title">GigaBrain-WBC-0.5: A Behavior World Model for Robust Whole-Body Control with Environment Interaction</a>
@@ -1169,10 +1184,7 @@
                         <span class="paper-date">2026-07-19</span>
                     </div>
                                         <span class="paper-comment">📝 Project page: https://xiao-chen.tech/reactivebfm/</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有行为基础模型（BFM）只能执行预定义参考动作，无法应对环境变化，且与生成式运动规划器级联时因跟踪误差导致累积暴露偏差，缺乏真正的反应式全身协调能力。&#10;&#10;🛠 **方法**：提出ReactiveBFM框架，通过调度前缀采样课程缓解暴露偏差，迫使生成规划器从非完美物理状态学习错误恢复行为；并引入异步重规划机制与轨迹分块，解决自回归规划与高频跟踪间的延迟不匹配问题。&#10;&#10;✨ **主要贡献**：在Unitree G1人形机器人上实现文本驱动的实时闭环运动，零样本完成移动目标追踪，展现全身协调与动态重规划能力；在严重扰动下的仿真基准测试中达到93.1%成功率，较级联开环基线提升28.6%。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>While current Behavior Foundation Models (BFMs) provide robust control priors for humanoids, they only execute pre-defined reference motions. As a result, they are vulnerable to environmental shifts and incapable of reactive whole-body coordination. Naively cascading them with generative motion planners fails to achieve true reactivity, as inevitable tracking discrepancies induce fatal cumulative exposure bias. To bridge this gap, we propose ReactiveBFM, a real-time closed-loop planning-control framework. At its core, we effectively mitigate exposure bias via a scheduled prefix sampling curriculum, forcing the generative planner to actively learn error-recovery behaviors from imperfect physical states rather than ground-truth trajectories. Systematically, to reconcile the severe latency mismatch between auto-regressive planning and high-frequency tracking, we introduce an asynchronous replanning mechanism. Combined with trajectory chunking to temporally ensemble spatial references, our system guarantees spatio-temporally fluid execution without physical jitter. Deployed on the Unitree G1 humanoid, ReactiveBFM demonstrates unprecedented physical agility across a vast repertoire of text-conditioned closed-loop motions. Notably, ReactiveBFM achieves zero-shot moving target reaching, showcasing intricate whole-body coordination and on-the-fly replanning. In sim-to-sim benchmarking under severe perturbations, ReactiveBFM achieves a 93.1% success rate, significantly outperforming cascaded open-loop baselines by 28.6%.</p>
@@ -2004,18 +2016,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>This paper proposes a fully decentralized model predictive control (MPC) framework with control barrier function (CBF) constraints for safety-critical trajectory planning in multi-robot legged systems. The incorporation of CBF constraints introduces explicit inter-agent coupling, which prevents direct decomposition of the resulting optimal control problems. To address this challenge, we reformulate the centralized safety-critical MPC problem using a structured distributed optimization framework based on the alternating direction method of multipliers (ADMM). By introducing a novel node-edge splitting formulation with consensus constraints, the proposed approach decomposes the global problem into independent node-local and edge-local quadratic programs that can be solved in parallel using only neighbor-to-neighbor communication. This enables fully decentralized trajectory optimization with symmetric computational load across agents while preserving safety and dynamic feasibility. The proposed framework is integrated into a hierarchical locomotion control architecture for quadrupedal robots, combining high-level distributed trajectory planning, mid-level nonlinear MPC enforcing single rigid body dynamics, and low-level whole-body control enforcing full-order robot dynamics. The effectiveness of the proposed approach is demonstrated through hardware experiments on two Unitree Go2 quadrupedal robots and numerical simulations involving up to four robots navigating uncertain environments with rough terrain and external disturbances. The results show that the proposed distributed formulation achieves performance comparable to centralized MPC while reducing the average per-cycle planning time by up to 51% in the four-agent case, enabling efficient real-time decentralized implementation.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2509.11839v3" target="_blank" class="paper-title">TrajBooster: Boosting Humanoid Whole-Body Manipulation via Trajectory-Centric Learning</a>
-                        <span class="paper-date">2026-03-19</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Recent Vision-Language-Action models show potential to generalize across embodiments but struggle to quickly align with a new robot's action space when high-quality demonstrations are scarce, especially for bipedal humanoids. We present TrajBooster, a cross-embodiment framework that leverages abundant wheeled-humanoid data to boost bipedal VLA. Our key idea is to use end-effector trajectories as a morphology-agnostic interface. TrajBooster (i) extracts 6D dual-arm end-effector trajectories from real-world wheeled humanoids, (ii) retargets them in simulation to Unitree G1 with a whole-body controller trained via a heuristic-enhanced harmonized online DAgger to lift low-dimensional trajectory references into feasible high-dimensional whole-body actions, and (iii) forms heterogeneous triplets that couple source vision/language with target humanoid-compatible actions to post-pre-train a VLA, followed by only 10 minutes of teleoperation data collection on the target humanoid domain. Deployed on Unitree G1, our policy achieves beyond-tabletop household tasks, enabling squatting, cross-height manipulation, and coordinated whole-body motion with markedly improved robustness and generalization. Results show that TrajBooster allows existing wheeled-humanoid data to efficiently strengthen bipedal humanoid VLA performance, reducing reliance on costly same-embodiment data while enhancing action space understanding and zero-shot skill transfer capabilities. For more details, For more details, please refer to our \href{https://jiachengliu3.github.io/TrajBooster/}.</p>
                     </details>
                 </div>
             </div>
