@@ -1,0 +1,1715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GNSS — Embodied AI Daily</title>
+    <style>
+        :root {
+            --bg: #f8fafc;
+            --surface: #ffffff;
+            --text: #1e293b;
+            --text-secondary: #64748b;
+            --border: #e2e8f0;
+            --accent: #6366f1;
+            --sidebar-width: 280px;
+            --radius: 12px;
+            --shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04);
+            --shadow-md: 0 4px 12px rgba(0,0,0,.08);
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0f172a;
+                --surface: #1e293b;
+                --text: #e2e8f0;
+                --text-secondary: #94a3b8;
+                --border: #334155;
+                --shadow: 0 1px 3px rgba(0,0,0,.3);
+                --shadow-md: 0 4px 12px rgba(0,0,0,.4);
+            }
+        }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        html { scroll-behavior:smooth; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            display: flex;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            position: fixed;
+            top: 0; left: 0;
+            width: var(--sidebar-width);
+            height: 100vh;
+            background: var(--surface);
+            border-right: 1px solid var(--border);
+            overflow-y: auto;
+            padding: 24px 20px;
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        .sidebar-header {
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 8px;
+        }
+        .sidebar-header h1 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #6366f1, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 4px;
+        }
+        .sidebar-header h1 a { text-decoration: none; }
+        .sidebar-header .update {
+            font-size: .75rem;
+            color: var(--text-secondary);
+        }
+        .nav-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 12px;
+            border-radius: 8px;
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: .85rem;
+            transition: all .15s;
+        }
+        .nav-item:hover {
+            background: var(--bg);
+            color: var(--text);
+        }
+        .nav-item.active {
+            background: var(--bg);
+            color: var(--text);
+            font-weight: 600;
+        }
+        .nav-dot {
+            width: 8px; height: 8px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+        .nav-label {
+            flex: 1;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .nav-count {
+            font-size: .72rem;
+            background: var(--bg);
+            padding: 2px 7px;
+            border-radius: 10px;
+            font-weight: 600;
+        }
+
+        /* Main content */
+        .main {
+            margin-left: var(--sidebar-width);
+            flex: 1;
+            padding: 40px 48px;
+            max-width: calc(100% - var(--sidebar-width));
+        }
+        .hero {
+            text-align: center;
+            padding: 40px 0 48px;
+        }
+        .hero h2 {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+        .hero .subtitle {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            margin-bottom: 16px;
+        }
+        .author-line {
+            margin-top: 14px;
+            font-size: .88rem;
+            color: var(--text-secondary);
+        }
+        .author-line a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .author-line a:hover {
+            text-decoration: underline;
+        }
+        .author-sep {
+            color: var(--border);
+            margin: 0 8px;
+        }
+        .badges {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .badges img {
+            height: 20px;
+        }
+
+        /* Topic directory grid (index page) */
+        .topic-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 16px;
+            margin-bottom: 40px;
+        }
+        .topic-card {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 18px 20px;
+            text-decoration: none;
+            color: var(--text);
+            box-shadow: var(--shadow);
+            transition: box-shadow .2s, transform .15s;
+        }
+        .topic-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+        .topic-card-name {
+            font-weight: 700;
+            font-size: 1rem;
+        }
+        .topic-card-count {
+            font-size: .8rem;
+            color: var(--text-secondary);
+        }
+        .topic-card-go {
+            margin-top: 4px;
+            font-size: .82rem;
+            font-weight: 600;
+            color: var(--accent);
+        }
+
+        /* Topic page header */
+        .topic-section {
+            margin-bottom: 48px;
+        }
+        .topic-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--border);
+            flex-wrap: wrap;
+        }
+        .topic-badge {
+            display: inline-block;
+            color: #fff;
+            padding: 5px 14px;
+            border-radius: 20px;
+            font-size: .85rem;
+            font-weight: 600;
+            letter-spacing: .01em;
+        }
+        .topic-count {
+            font-size: .82rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 18px;
+            font-size: .85rem;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .back-link:hover { text-decoration: underline; }
+
+        /* Paper cards */
+        .paper-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .paper-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 16px 20px;
+            box-shadow: var(--shadow);
+            transition: box-shadow .2s, transform .15s;
+        }
+        .paper-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-1px);
+        }
+        .paper-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .paper-title {
+            font-weight: 600;
+            font-size: .95rem;
+            color: var(--text);
+            text-decoration: none;
+            flex: 1;
+            min-width: 0;
+        }
+        .paper-title:hover {
+            color: var(--accent);
+            text-decoration: underline;
+        }
+        .paper-date {
+            font-size: .78rem;
+            color: var(--text-secondary);
+            white-space: nowrap;
+            font-variant-numeric: tabular-nums;
+        }
+        .paper-comment {
+            display: inline-block;
+            margin-top: 6px;
+            font-size: .78rem;
+            color: var(--text-secondary);
+            background: var(--bg);
+            padding: 2px 10px;
+            border-radius: 6px;
+        }
+        .paper-abstract {
+            margin-top: 10px;
+            font-size: .85rem;
+            color: var(--text-secondary);
+        }
+        .paper-abstract summary {
+            cursor: pointer;
+            font-weight: 500;
+            color: var(--accent);
+            font-size: .82rem;
+            user-select: none;
+        }
+        .paper-abstract summary:hover {
+            text-decoration: underline;
+        }
+        .paper-abstract p {
+            margin-top: 8px;
+            line-height: 1.7;
+            padding: 12px 16px;
+            background: var(--bg);
+            border-radius: 8px;
+            border-left: 3px solid var(--accent);
+        }
+
+        /* AI Summary */
+        .ai-summary {
+            margin-top: 10px;
+            padding: 10px 14px;
+            background: linear-gradient(135deg, rgba(99,102,241,0.07), rgba(168,85,247,0.07));
+            border-radius: 8px;
+            border-left: 3px solid var(--accent);
+        }
+        .ai-label {
+            font-size: .8rem;
+            font-weight: 600;
+            color: var(--accent);
+            cursor: pointer;
+            user-select: none;
+            letter-spacing: .02em;
+        }
+        .ai-label:hover {
+            text-decoration: underline;
+        }
+        .ai-content {
+            font-size: .85rem;
+            color: var(--text);
+            line-height: 1.75;
+            margin-top: 10px;
+            max-height: 480px;
+            overflow-y: auto;
+            padding-right: 6px;
+        }
+        /* Rendered markdown inside AI summary */
+        .markdown-body h2 {
+            font-size: 1rem;
+            margin: 14px 0 6px;
+            padding-bottom: 4px;
+            border-bottom: 1px solid var(--border);
+            color: var(--text);
+        }
+        .markdown-body h3 {
+            font-size: .9rem;
+            margin: 10px 0 4px;
+            color: var(--accent);
+        }
+        .markdown-body p { margin: 6px 0; }
+        .markdown-body ul, .markdown-body ol { margin: 6px 0 6px 20px; }
+        .markdown-body li { margin: 3px 0; }
+        .markdown-body strong { color: var(--text); }
+        .markdown-body code {
+            background: var(--bg);
+            padding: 1px 5px;
+            border-radius: 4px;
+            font-size: .82em;
+        }
+        .markdown-body pre {
+            background: var(--bg);
+            padding: 10px 12px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-size: .8em;
+        }
+        .markdown-body table {
+            border-collapse: collapse;
+            margin: 8px 0;
+            font-size: .82em;
+        }
+        .markdown-body th, .markdown-body td {
+            border: 1px solid var(--border);
+            padding: 4px 8px;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 40px 0 20px;
+            color: var(--text-secondary);
+            font-size: .82rem;
+            border-top: 1px solid var(--border);
+            margin-top: 20px;
+        }
+
+        /* Sponsor banner */
+        .sponsor {
+            margin: 0 auto 8px;
+            max-width: 640px;
+            background: linear-gradient(135deg, rgba(16,185,129,0.10), rgba(99,102,241,0.10));
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 16px 20px;
+            text-align: center;
+        }
+        .sponsor-title {
+            font-size: .95rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 6px;
+        }
+        .sponsor-desc {
+            font-size: .82rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        .sponsor details { margin-top: 4px; }
+        .sponsor summary {
+            cursor: pointer;
+            display: inline-block;
+            background: #07c160;
+            color: #fff;
+            font-size: .82rem;
+            font-weight: 600;
+            padding: 7px 18px;
+            border-radius: 20px;
+            user-select: none;
+            list-style: none;
+        }
+        .sponsor summary::-webkit-details-marker { display: none; }
+        .sponsor summary:hover { opacity: .9; }
+        .sponsor-qr {
+            margin-top: 14px;
+        }
+        .sponsor-qr img {
+            width: 220px;
+            max-width: 80%;
+            border-radius: 10px;
+            box-shadow: var(--shadow-md);
+        }
+
+        /* Mobile top bar */
+        .mobile-bar {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            height: 52px;
+            background: var(--surface);
+            border-bottom: 1px solid var(--border);
+            z-index: 200;
+            padding: 0 16px;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .mobile-bar .mobile-title {
+            font-weight: 700;
+            font-size: .95rem;
+            background: linear-gradient(135deg, #6366f1, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .menu-toggle {
+            background: none;
+            border: none;
+            font-size: 1.4rem;
+            cursor: pointer;
+            color: var(--text);
+            padding: 4px 8px;
+            border-radius: 6px;
+            line-height: 1;
+            transition: background .15s;
+        }
+        .menu-toggle:hover {
+            background: var(--bg);
+        }
+
+        /* Mobile nav overlay */
+        .mobile-nav-overlay {
+            display: none;
+            position: fixed;
+            top: 52px; left: 0; right: 0; bottom: 0;
+            background: var(--surface);
+            z-index: 199;
+            overflow-y: auto;
+            padding: 8px 16px 24px;
+            flex-direction: column;
+        }
+        .mobile-nav-overlay.open {
+            display: flex;
+        }
+        .mobile-nav-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0 12px;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 4px;
+            font-weight: 600;
+            font-size: .85rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: .04em;
+        }
+        .mobile-nav-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 13px 8px;
+            border-radius: 8px;
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: .88rem;
+            border-bottom: 1px solid var(--border);
+            transition: background .1s;
+        }
+        .mobile-nav-item:active {
+            background: var(--bg);
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .sidebar {
+                display: none;
+            }
+            .mobile-bar {
+                display: flex;
+            }
+            .main {
+                margin-left: 0;
+                max-width: 100%;
+                padding: 68px 16px 20px;
+            }
+            .hero h2 {
+                font-size: 1.4rem;
+            }
+            .hero {
+                padding: 20px 0 32px;
+            }
+            .paper-header {
+                flex-direction: column;
+                gap: 4px;
+            }
+        }
+    </style>
+    <!-- MathJax for rendering LaTeX math in AI summaries -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true
+            },
+            options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'] }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+</head>
+<body>
+    <!-- Mobile top bar -->
+    <div class="mobile-bar">
+        <span class="mobile-title">🚀 Embodied AI Daily</span>
+        <button class="menu-toggle" id="menuToggle" onclick="toggleMenu()" aria-label="Toggle menu">☰</button>
+    </div>
+
+    <!-- Mobile nav overlay -->
+    <div class="mobile-nav-overlay" id="mobileNav">
+        <div class="mobile-nav-header">
+            <span>Topics</span>
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Close menu">✕</button>
+        </div>
+                <a href="Continuous-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#6366f1"></span>
+                    <span class="nav-label">Continuous Learning</span>
+                    <span class="nav-count">79</span>
+                </a>
+                <a href="Feed-Forward-Reconstruction.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#8b5cf6"></span>
+                    <span class="nav-label">Feed Forward Reconstruction</span>
+                    <span class="nav-count">56</span>
+                </a>
+                <a href="Vision-and-Language-Navigation.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#a855f7"></span>
+                    <span class="nav-label">Vision and Language Navigation</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="Vision-Language-Action.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#d946ef"></span>
+                    <span class="nav-label">Vision Language Action</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="World-Model.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#ec4899"></span>
+                    <span class="nav-label">World Model</span>
+                    <span class="nav-count">77</span>
+                </a>
+                <a href="3D-Foundation-Model.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#f43f5e"></span>
+                    <span class="nav-label">3D Foundation Model</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="LLM.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#ef4444"></span>
+                    <span class="nav-label">LLM</span>
+                    <span class="nav-count">79</span>
+                </a>
+                <a href="VLM.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#f97316"></span>
+                    <span class="nav-label">VLM</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="World-Action-Model.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#f59e0b"></span>
+                    <span class="nav-label">World Action Model</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="Gaussian-Splatting.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#84cc16"></span>
+                    <span class="nav-label">Gaussian Splatting</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="Visual-SLAM.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#22c55e"></span>
+                    <span class="nav-label">Visual SLAM</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="Visual-Inertial-SLAM.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#10b981"></span>
+                    <span class="nav-label">Visual Inertial SLAM</span>
+                    <span class="nav-count">78</span>
+                </a>
+                <a href="Visual-Inertial-Odometry.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#14b8a6"></span>
+                    <span class="nav-label">Visual Inertial Odometry</span>
+                    <span class="nav-count">79</span>
+                </a>
+                <a href="Lidar-SLAM.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#06b6d4"></span>
+                    <span class="nav-label">Lidar SLAM</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="LiDAR-Odometry.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#0ea5e9"></span>
+                    <span class="nav-label">LiDAR Odometry</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="GNSS.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#3b82f6"></span>
+                    <span class="nav-label">GNSS</span>
+                    <span class="nav-count">47</span>
+                </a>
+                <a href="Graph-Optimization.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#6366f1"></span>
+                    <span class="nav-label">Graph Optimization</span>
+                    <span class="nav-count">70</span>
+                </a>
+                <a href="Dynamic-SLAM.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#8b5cf6"></span>
+                    <span class="nav-label">Dynamic SLAM</span>
+                    <span class="nav-count">44</span>
+                </a>
+                <a href="Semantic-SLAM.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#a855f7"></span>
+                    <span class="nav-label">Semantic SLAM</span>
+                    <span class="nav-count">77</span>
+                </a>
+                <a href="Gaussian-SLAM.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#d946ef"></span>
+                    <span class="nav-label">Gaussian SLAM</span>
+                    <span class="nav-count">25</span>
+                </a>
+                <a href="Autonomous-Driving.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#6366f1"></span>
+                    <span class="nav-label">Autonomous Driving</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#8b5cf6"></span>
+                    <span class="nav-label">Kalman Filter</span>
+                    <span class="nav-count">45</span>
+                </a>
+                <a href="Loop-Closure-Detection.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#a855f7"></span>
+                    <span class="nav-label">Loop Closure Detection</span>
+                    <span class="nav-count">79</span>
+                </a>
+                <a href="Visual-Place-Recognition.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#d946ef"></span>
+                    <span class="nav-label">Visual Place Recognition</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#ec4899"></span>
+                    <span class="nav-label">Deep Learning</span>
+                    <span class="nav-count">68</span>
+                </a>
+                <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#f43f5e"></span>
+                    <span class="nav-label">Reinforcement Learning</span>
+                    <span class="nav-count">72</span>
+                </a>
+                <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#ef4444"></span>
+                    <span class="nav-label">PPO</span>
+                    <span class="nav-count">75</span>
+                </a>
+                <a href="Hierarchical-Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#f97316"></span>
+                    <span class="nav-label">Hierarchical Reinforcement Learning</span>
+                    <span class="nav-count">78</span>
+                </a>
+                <a href="Model-Based-RL.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#f59e0b"></span>
+                    <span class="nav-label">Model-Based RL</span>
+                    <span class="nav-count">79</span>
+                </a>
+                <a href="Imitation-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#84cc16"></span>
+                    <span class="nav-label">Imitation Learning</span>
+                    <span class="nav-count">77</span>
+                </a>
+                <a href="Behavior-Cloning.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#22c55e"></span>
+                    <span class="nav-label">Behavior Cloning</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="Diffusion-Policy.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#10b981"></span>
+                    <span class="nav-label">Diffusion Policy</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="Model-Predictive-Control.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#14b8a6"></span>
+                    <span class="nav-label">Model Predictive Control</span>
+                    <span class="nav-count">47</span>
+                </a>
+                <a href="Whole-Body-Control.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#06b6d4"></span>
+                    <span class="nav-label">Whole-Body Control</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="Motion-Planning.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#0ea5e9"></span>
+                    <span class="nav-label">Motion Planning</span>
+                    <span class="nav-count">75</span>
+                </a>
+                <a href="Path-Planning.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#3b82f6"></span>
+                    <span class="nav-label">Path Planning</span>
+                    <span class="nav-count">75</span>
+                </a>
+                <a href="Multimodal-Fusion.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#6366f1"></span>
+                    <span class="nav-label">Multimodal Fusion</span>
+                    <span class="nav-count">79</span>
+                </a>
+                <a href="Scene-Understanding.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#8b5cf6"></span>
+                    <span class="nav-label">Scene Understanding</span>
+                    <span class="nav-count">79</span>
+                </a>
+                <a href="Domain-Randomization.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#a855f7"></span>
+                    <span class="nav-label">Domain Randomization</span>
+                    <span class="nav-count">79</span>
+                </a>
+                <a href="Bipedal-Locomotion.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#d946ef"></span>
+                    <span class="nav-label">Bipedal Locomotion</span>
+                    <span class="nav-count">79</span>
+                </a>
+                <a href="Dexterous-Manipulation.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#6366f1"></span>
+                    <span class="nav-label">Dexterous Manipulation</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="Mobile-Manipulation.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#8b5cf6"></span>
+                    <span class="nav-label">Mobile Manipulation</span>
+                    <span class="nav-count">80</span>
+                </a>
+    </div>
+
+    <!-- Desktop sidebar -->
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <h1><a href="../index.html" style="background:linear-gradient(135deg,#6366f1,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">🚀 Embodied AI Daily</a></h1>
+            <div class="update">by <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent);text-decoration:none;font-weight:500;">Hongkun Luo</a> (罗宏昆)</div>
+            <div class="update" style="margin-top:2px">Last update: 2026-08-23</div>
+        </div>
+            <a href="Continuous-Learning.html" class="nav-item">
+                <span class="nav-dot" style="background:#6366f1"></span>
+                <span class="nav-label">Continuous Learning</span>
+                <span class="nav-count">79</span>
+            </a>
+            <a href="Feed-Forward-Reconstruction.html" class="nav-item">
+                <span class="nav-dot" style="background:#8b5cf6"></span>
+                <span class="nav-label">Feed Forward Reconstruction</span>
+                <span class="nav-count">56</span>
+            </a>
+            <a href="Vision-and-Language-Navigation.html" class="nav-item">
+                <span class="nav-dot" style="background:#a855f7"></span>
+                <span class="nav-label">Vision and Language Navigation</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="Vision-Language-Action.html" class="nav-item">
+                <span class="nav-dot" style="background:#d946ef"></span>
+                <span class="nav-label">Vision Language Action</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="World-Model.html" class="nav-item">
+                <span class="nav-dot" style="background:#ec4899"></span>
+                <span class="nav-label">World Model</span>
+                <span class="nav-count">77</span>
+            </a>
+            <a href="3D-Foundation-Model.html" class="nav-item">
+                <span class="nav-dot" style="background:#f43f5e"></span>
+                <span class="nav-label">3D Foundation Model</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="LLM.html" class="nav-item">
+                <span class="nav-dot" style="background:#ef4444"></span>
+                <span class="nav-label">LLM</span>
+                <span class="nav-count">79</span>
+            </a>
+            <a href="VLM.html" class="nav-item">
+                <span class="nav-dot" style="background:#f97316"></span>
+                <span class="nav-label">VLM</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="World-Action-Model.html" class="nav-item">
+                <span class="nav-dot" style="background:#f59e0b"></span>
+                <span class="nav-label">World Action Model</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="Gaussian-Splatting.html" class="nav-item">
+                <span class="nav-dot" style="background:#84cc16"></span>
+                <span class="nav-label">Gaussian Splatting</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="Visual-SLAM.html" class="nav-item">
+                <span class="nav-dot" style="background:#22c55e"></span>
+                <span class="nav-label">Visual SLAM</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="Visual-Inertial-SLAM.html" class="nav-item">
+                <span class="nav-dot" style="background:#10b981"></span>
+                <span class="nav-label">Visual Inertial SLAM</span>
+                <span class="nav-count">78</span>
+            </a>
+            <a href="Visual-Inertial-Odometry.html" class="nav-item">
+                <span class="nav-dot" style="background:#14b8a6"></span>
+                <span class="nav-label">Visual Inertial Odometry</span>
+                <span class="nav-count">79</span>
+            </a>
+            <a href="Lidar-SLAM.html" class="nav-item">
+                <span class="nav-dot" style="background:#06b6d4"></span>
+                <span class="nav-label">Lidar SLAM</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="LiDAR-Odometry.html" class="nav-item">
+                <span class="nav-dot" style="background:#0ea5e9"></span>
+                <span class="nav-label">LiDAR Odometry</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="GNSS.html" class="nav-item active">
+                <span class="nav-dot" style="background:#3b82f6"></span>
+                <span class="nav-label">GNSS</span>
+                <span class="nav-count">47</span>
+            </a>
+            <a href="Graph-Optimization.html" class="nav-item">
+                <span class="nav-dot" style="background:#6366f1"></span>
+                <span class="nav-label">Graph Optimization</span>
+                <span class="nav-count">70</span>
+            </a>
+            <a href="Dynamic-SLAM.html" class="nav-item">
+                <span class="nav-dot" style="background:#8b5cf6"></span>
+                <span class="nav-label">Dynamic SLAM</span>
+                <span class="nav-count">44</span>
+            </a>
+            <a href="Semantic-SLAM.html" class="nav-item">
+                <span class="nav-dot" style="background:#a855f7"></span>
+                <span class="nav-label">Semantic SLAM</span>
+                <span class="nav-count">77</span>
+            </a>
+            <a href="Gaussian-SLAM.html" class="nav-item">
+                <span class="nav-dot" style="background:#d946ef"></span>
+                <span class="nav-label">Gaussian SLAM</span>
+                <span class="nav-count">25</span>
+            </a>
+            <a href="Autonomous-Driving.html" class="nav-item">
+                <span class="nav-dot" style="background:#6366f1"></span>
+                <span class="nav-label">Autonomous Driving</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="Kalman-Filter.html" class="nav-item">
+                <span class="nav-dot" style="background:#8b5cf6"></span>
+                <span class="nav-label">Kalman Filter</span>
+                <span class="nav-count">45</span>
+            </a>
+            <a href="Loop-Closure-Detection.html" class="nav-item">
+                <span class="nav-dot" style="background:#a855f7"></span>
+                <span class="nav-label">Loop Closure Detection</span>
+                <span class="nav-count">79</span>
+            </a>
+            <a href="Visual-Place-Recognition.html" class="nav-item">
+                <span class="nav-dot" style="background:#d946ef"></span>
+                <span class="nav-label">Visual Place Recognition</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="Deep-Learning.html" class="nav-item">
+                <span class="nav-dot" style="background:#ec4899"></span>
+                <span class="nav-label">Deep Learning</span>
+                <span class="nav-count">68</span>
+            </a>
+            <a href="Reinforcement-Learning.html" class="nav-item">
+                <span class="nav-dot" style="background:#f43f5e"></span>
+                <span class="nav-label">Reinforcement Learning</span>
+                <span class="nav-count">72</span>
+            </a>
+            <a href="PPO.html" class="nav-item">
+                <span class="nav-dot" style="background:#ef4444"></span>
+                <span class="nav-label">PPO</span>
+                <span class="nav-count">75</span>
+            </a>
+            <a href="Hierarchical-Reinforcement-Learning.html" class="nav-item">
+                <span class="nav-dot" style="background:#f97316"></span>
+                <span class="nav-label">Hierarchical Reinforcement Learning</span>
+                <span class="nav-count">78</span>
+            </a>
+            <a href="Model-Based-RL.html" class="nav-item">
+                <span class="nav-dot" style="background:#f59e0b"></span>
+                <span class="nav-label">Model-Based RL</span>
+                <span class="nav-count">79</span>
+            </a>
+            <a href="Imitation-Learning.html" class="nav-item">
+                <span class="nav-dot" style="background:#84cc16"></span>
+                <span class="nav-label">Imitation Learning</span>
+                <span class="nav-count">77</span>
+            </a>
+            <a href="Behavior-Cloning.html" class="nav-item">
+                <span class="nav-dot" style="background:#22c55e"></span>
+                <span class="nav-label">Behavior Cloning</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="Diffusion-Policy.html" class="nav-item">
+                <span class="nav-dot" style="background:#10b981"></span>
+                <span class="nav-label">Diffusion Policy</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="Model-Predictive-Control.html" class="nav-item">
+                <span class="nav-dot" style="background:#14b8a6"></span>
+                <span class="nav-label">Model Predictive Control</span>
+                <span class="nav-count">47</span>
+            </a>
+            <a href="Whole-Body-Control.html" class="nav-item">
+                <span class="nav-dot" style="background:#06b6d4"></span>
+                <span class="nav-label">Whole-Body Control</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="Motion-Planning.html" class="nav-item">
+                <span class="nav-dot" style="background:#0ea5e9"></span>
+                <span class="nav-label">Motion Planning</span>
+                <span class="nav-count">75</span>
+            </a>
+            <a href="Path-Planning.html" class="nav-item">
+                <span class="nav-dot" style="background:#3b82f6"></span>
+                <span class="nav-label">Path Planning</span>
+                <span class="nav-count">75</span>
+            </a>
+            <a href="Multimodal-Fusion.html" class="nav-item">
+                <span class="nav-dot" style="background:#6366f1"></span>
+                <span class="nav-label">Multimodal Fusion</span>
+                <span class="nav-count">79</span>
+            </a>
+            <a href="Scene-Understanding.html" class="nav-item">
+                <span class="nav-dot" style="background:#8b5cf6"></span>
+                <span class="nav-label">Scene Understanding</span>
+                <span class="nav-count">79</span>
+            </a>
+            <a href="Domain-Randomization.html" class="nav-item">
+                <span class="nav-dot" style="background:#a855f7"></span>
+                <span class="nav-label">Domain Randomization</span>
+                <span class="nav-count">79</span>
+            </a>
+            <a href="Bipedal-Locomotion.html" class="nav-item">
+                <span class="nav-dot" style="background:#d946ef"></span>
+                <span class="nav-label">Bipedal Locomotion</span>
+                <span class="nav-count">79</span>
+            </a>
+            <a href="Dexterous-Manipulation.html" class="nav-item">
+                <span class="nav-dot" style="background:#6366f1"></span>
+                <span class="nav-label">Dexterous Manipulation</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="Mobile-Manipulation.html" class="nav-item">
+                <span class="nav-dot" style="background:#8b5cf6"></span>
+                <span class="nav-label">Mobile Manipulation</span>
+                <span class="nav-count">80</span>
+            </a>
+    </nav>
+
+    <main class="main">
+        <a href="../index.html" class="back-link">← 返回汇总 / Back to all topics</a>
+        <section class="hero" style="padding:20px 0 24px">
+            <div class="sponsor">
+                <div class="sponsor-title">☕ 支持本项目 · Support this project</div>
+                <div class="sponsor-desc">
+                    每篇论文的 AI 深度总结都会调用大量 DeepSeek API（需付费）。<br>
+                    如果这个项目对你有帮助，欢迎请作者喝杯咖啡，支持服务器与 API 开销 🙏
+                </div>
+                <details>
+                    <summary>💚 微信赞助 / Sponsor via WeChat Pay</summary>
+                    <div class="sponsor-qr" style="display:flex;gap:16px;align-items:flex-start;flex-wrap:wrap;">
+                        <div style="text-align:center;">
+                            <img src="../images/qr_code.png" alt="QR Code" style="max-width:180px;">
+                            <div style="font-size:13px;color:#888;">🔗 二维码</div>
+                        </div>
+                        <div style="text-align:center;">
+                            <img src="../images/wechat_pay.jpg" alt="WeChat Pay QR code" style="max-width:180px;">
+                            <div style="font-size:13px;color:#888;">💚 微信赞助</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </section>
+        <section class="topic-section">
+            <div class="topic-header">
+                <span class="topic-badge" style="background:#3b82f6">GNSS</span>
+                <span class="topic-count">47 papers</span>
+            </div>
+            <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.17092v1" target="_blank" class="paper-title">Structured Driving-State Narratives for Small Language Model-Based GNSS Spoofing Detection</a>
+                        <span class="paper-date">2026-08-17</span>
+                    </div>
+                                        <span class="paper-comment">📝 This work has been submitted to the Transportation Research Record: Journal of the Transportation Research Board for possible publication</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：自动驾驶车辆依赖GNSS定位，但欺骗信号可导致错误车辆状态，需实时检测并分类GNSS欺骗攻击。&#10;&#10;🛠 **方法**：将GNSS与其他传感源的独立驾驶状态转换为结构化语义叙述，输入小型语言模型（SLM）进行欺骗检测与攻击分类，并与微调的大型语言模型（LLM）对比。&#10;&#10;✨ **主要贡献**：SLM在检测性能上与LLM相当（平均准确率96.99%、F1分数97.18%），但推理延迟更低、GPU内存占用更少，且在地理未见区域实测数据中验证有效，适合部署于资源受限的车载平台。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Autonomous vehicles (AVs) depend on reliable Global Navigation Satellite System (GNSS) positioning. However, spoofed GNSS signals can induce plausible but incorrect vehicle states. This study develops a small language model (SLM)-based framework for detecting and classifying GNSS spoofing attacks by comparing vehicle behaviors independently derived from GNSS and other sensing sources. The framework converts independent driving states from GNSS and other sensing sources into structured semantic narratives that are provided to an SLM for spoofing detection and attack classification. The performance of the SLM-based framework is compared with large language models (LLMs) fine-tuned on identical training data and evaluated on the same test set. The evaluation considers five classes: no attack, overshoot attack, stopped attack, turn-by-turn attack, and wrong-turn attack. The framework is also evaluated with geographically unseen field data collected in Clemson, South Carolina, United States. Experimental results indicate that the evaluated SLMs achieve performance similar to the LLMs, achieving an average accuracy of 96.99%, precision of 99.05%, recall of 95.59%, and F1-score of 97.18%. In terms of computational efficiency and resource utilization, the SLMs demonstrate advantages over the LLMs by requiring lower inference latency and less GPU memory during both fine-tuning and inference. Evaluation using field data collected in a geographically distinct location further demonstrated its efficacy. The presented framework can detect and classify GNSS spoofing attacks in real-time while requiring relatively low computational and memory resources, and is therefore suitable for deployment on resource-constrained vehicular computing platforms.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.16281v1" target="_blank" class="paper-title">Marker-Constrained Pose-Graph Correction for Cross-Platform Georeferencing in GNSS-Denied Environments</a>
+                        <span class="paper-date">2026-08-17</span>
+                    </div>
+                                        <span class="paper-comment">📝 14 pages, 5 figures, 5 tables, submitted to SPIE Security + Defence conference</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在GNSS拒止环境中，异构建图系统难以维持一致的空间参考，导致轨迹和稠密重建缺乏地理参考。&#10;&#10;🛠 **方法**：提出利用胆甾球形反射器（CSR）制成的伪装匹配标记物作为预测量视觉锚点，结合粗相似性对齐与标记约束的位姿图优化，将LiDAR里程计轨迹和RTAB-Map稠密重建统一到LUREF地理坐标系。&#10;&#10;✨ **主要贡献**：在模拟UGV和UAV的手持采集实验中，标记锚点校正将回访不一致性分别降低97.9%和99.1%，跨会话稠密重建中位最近邻距离达58厘米，且无需跨会话显式配准；标记处理实时运行，轨迹校正每会话耗时&lt;0.25秒，验证了GNSS拒止环境下使用视觉隐蔽预测量锚点进行地理参考的可行性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Autonomous operation in GNSS-denied environments requires heterogeneous mapping pipelines to maintain a consistent spatial reference. This paper presents a framework using camouflage-matched fiducial markers fabricated from Cholesteric Spherical Reflectors (CSRs) as pre-surveyed visual anchors. The anchors georeference both a lightweight LiDAR-odometry trajectory and a dense RTAB-Map reconstruction, allowing their outputs to be expressed in a common LUREF frame (geodetic coordinate reference system used in Luxembourg) without requiring GNSS measurements during operation. The method combines coarse similarity alignment with marker-constrained pose-graph optimization. We evaluate it using two handheld acquisition sessions with ground-level and elevated motion profiles emulating UGV and UAV operation. A single iMarker was relocated among six surveyed positions, with the first position revisited to quantify drift correction. Marker-anchor correction reduced revisit inconsistency by 97.9% and 99.1% for the UAV- and UGV-emulating sessions, respectively, and improved held-out anchor prediction compared with one-time alignment. Separately georeferenced dense reconstructions achieved a median cross-session nearest-neighbour distance of 58 cm without explicit cross-session registration. Marker processing operated in real time, while trajectory correction required less than 0.25 s per session. These results demonstrate a proof of concept for georeferencing lightweight odometry and dense reconstructions using visually unobtrusive, pre-surveyed anchors during GNSS-denied operation.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2603.11055v2" target="_blank" class="paper-title">AIS-Based Maritime GNSS RFI Monitoring With Multi-Vessel Coherence and Communication-Integrity Artifact Mitigation</a>
+                        <span class="paper-date">2026-08-13</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="好的，作为一名人工智能研究与学术论文分析专家，我将严格按照您的要求，对这篇论文进行详细的中文解读。&#10;&#10;---&#10;&#10;## 0. 概览（Concise Summary）&#10;&#10;- **主题（Topic）**：海事导航安全，具体是利用船舶自动识别系统（AIS）数据检测大范围全球导航卫星系统（GNSS）欺骗和干扰。&#10;- **问题（Problem）**：AIS数据本身包含大量通信层缺陷（如重复MMSI、时间戳错误）和传感器故障，这些缺陷会模仿GNSS干扰的迹象，导致现有检测方法产生极高的误报率。同时，现有方法难以区分单船传感器故障与大范围、多船协同的GNSS干扰事件。&#10;- **方法（Method）**：提出一个三阶段层次化处理框架：&#10;    1.  **通信完整性诊断**：通过规则算法（如算法1、2）剔除由通信层问题（如MMSI重复、数据重传）引起的伪影。&#10;    2.  **异常线索生成**：对剩余数据，使用交互式多模型（IMM）滤波器提取运动学一致性异常，并通过分析AIS报文发送间隔提取连续性异常（用于检测干扰）。&#10;    3.  **时空聚类与分类**：使用时空DBSCAN（ST-DBSCAN）算法对异常线索进行聚类，根据多船协同性和时间持续性，将聚类结果分类为传感器故障、GNSS欺骗或GNSS干扰。&#10;- **创新（Innovation）**：&#10;    1.  **系统性分离**：首次明确提出并实现了将通信层伪影、传感器故障和真正的GNSS干扰在同一个框架内进行层次化分离。&#10;    2.  **统一检测框架**：将运动学异常（欺骗）和传输中断（干扰）两种截然不同的GNSS干扰表现形式统一在一个处理流程中。&#10;    3.  **多船协同性分析**：利用ST-DBSCAN分析异常在多艘船舶间的时空一致性，这是区分单船故障与大范围干扰的关键。&#10;- **意义（Significance）**：该框架证明了在无需专用GNSS监测基础设施的情况下，仅通过预处理后的AIS数据即可实现大范围、高可靠性的GNSS干扰检测。它极大地降低了误报率（相对朴素聚类方法降低98.6%），为海事安全监控提供了实用、经济且鲁棒的解决方案。&#10;- **一句话总结**：本文提出一个三阶段层次化AIS数据处理框架，通过先剔除通信伪影，再结合运动学与传输连续性分析，最后利用时空聚类识别多船协同异常，从而高精度、低误报地检测大范围GNSS欺骗和干扰事件。&#10;&#10;## 1. 研究动机（Motivation）&#10;&#10;- **核心问题**：海事导航严重依赖GNSS信号，而AIS系统又直接使用GNSS定位信息。因此，GNSS欺骗和干扰会严重威胁船舶航行安全。虽然利用AIS数据检测GNSS干扰是一个活跃的研究方向，但现有方法面临两个关键挑战：&#10;    1.  **高误报率**：AIS数据本身存在大量非GNSS相关的“伪异常”，例如：&#10;        - **通信层缺陷**：MMSI（海上移动通信业务标识）重复使用、时间戳错误、数据重传等。这些缺陷产生的轨迹异常（如位置跳跃、倒退）与GNSS欺骗的迹象非常相似。&#10;        - **传感器故障**：单个船舶的GNSS接收机故障或多径效应也会导致运动学异常。&#10;        现有方法无法有效区分这些“伪异常”和真正的GNSS干扰，导致极高的误报率，使得系统不可靠。&#10;    2.  **无法检测大范围干扰**：大范围GNSS欺骗或干扰的一个关键特征是**多艘船舶同时、在相近区域出现异常**。然而，大多数现有方法（如基于单船轨迹的卡尔曼滤波）只分析单艘船舶，无法捕捉这种多船协同性，因此容易将单船故障误判为干扰，或遗漏真正的干扰事件。&#10;- **重要性**：解决这些问题对于实现可靠、实用的海事GNSS干扰监测至关重要。高误报率会淹没真实警报，降低操作人员的信任度；而漏报则可能导致严重的安全事故。一个能够准确区分不同异常来源、并能识别大范围协同事件的系统，对于保障海上生命安全和航运效率具有重大意义。&#10;- **挑战**：挑战在于如何设计一个统一的框架，能够：&#10;    - 自动识别并剔除AIS通信层引入的复杂伪影。&#10;    - 同时处理两种不同类型的GNSS干扰：欺骗（导致错误位置）和干扰（导致位置缺失）。&#10;    - 利用多船信息，可靠地区分单船传感器故障和区域性的GNSS干扰事件。&#10;&#10;## 2. 创新点（Innovation）&#10;&#10;论文的关键创新在于其**层次化、多阶段、基于因果分离**的框架设计，具体体现在：&#10;&#10;1.  **提出“先清洗，后分析”的层次化处理流程**：这是最核心的创新。不同于以往直接将AIS数据用于异常检测，本文首先通过**规则驱动的通信完整性诊断**（算法1和2）主动识别并移除由通信层问题（MMSI重复、数据重传）引起的伪影。这从根本上解决了误报的主要来源，为后续分析提供了“干净”的数据基础。&#10;&#10;2.  **统一处理欺骗和干扰两种异质事件**：现有方法通常只关注一种干扰类型。本文的框架通过生成**两种互补的异常线索**，实现了统一检测：&#10;    - **运动学一致性线索**：通过IMM滤波器检测轨迹的物理不可行性（如位置跳跃），用于识别**欺骗**。&#10;    - **传输连续性线索**：通过分析AIS报文发送间隔，检测异常中断，用于识别**干扰**。&#10;    这种设计使得框架能同时应对两种截然不同的威胁。&#10;&#10;3.  **利用时空聚类（ST-DBSCAN）实现基于多船协同性的最终分类**：这是区分单船故障和大范围干扰的关键。框架不急于对单个异常线索下结论，而是将所有线索（运动学和传输中断）放入一个统一的时空空间进行聚类。只有那些在**空间上邻近、时间上同步、且涉及多艘船舶**的异常簇，才会被归类为GNSS干扰事件。单船、孤立的异常则被归为传感器故障。这种基于群体行为的判断逻辑，极大地提高了检测的准确性和鲁棒性。&#10;&#10;## 3. 主要内容（Main Content）【重点】&#10;&#10;### 3.1 设计架构与方法&#10;&#10;论文提出的框架是一个三阶段层次化处理管道，如图1所示：&#10;&#10;1.  **阶段一：通信完整性诊断 (Communication-Integrity Diagnostics)**&#10;    - **目标**：识别并移除AIS通信层引入的伪影，防止其干扰后续分析。&#10;    - **方法**：使用两个规则算法：&#10;        - **算法1：MMSI重复检测**。通过检查同一MMSI是否在重叠时间内出现在两个相距甚远的位置，并验证每个子轨迹的运动学合理性，来识别MMSI重复使用。&#10;        - **算法2：数据重传检测**。通过查找重复的导航元组（经纬度、航速、航向）但时间戳不一致的记录，来识别数据重传。&#10;    - **输出**：被标记为“MMSI重复”或“数据重传”的记录被移除，其余数据进入下一阶段。&#10;&#10;2.  **阶段二：异常线索生成 (Anomaly Cue Generation)**&#10;    - **目标**：从清洗后的AIS数据中提取可能指示GNSS问题的“线索”，但不做最终判断。&#10;    - **方法**：生成两种线索：&#10;        - **运动学异常线索**：对每个有位置报告的船舶轨迹，使用**IMM滤波器**（图2）进行状态估计。当AIS报告的测量值与IMM预测值之间的残差过大时，标记为运动学异常线索。&#10;        - **传输中断异常线索**：分析每艘船舶的AIS报文发送间隔。如果间隔超过一个动态阈值（公式3），则标记为传输中断异常线索。&#10;    - **输出**：两组异常线索（运动学和传输中断），它们被保留下来，不进行任何分类或移除。&#10;&#10;3.  **阶段三：时空聚类与最终分类 (Spatiotemporal Clustering and Final Categorization)**&#10;    - **目标**：对所有异常线索进行联合分析，根据其时空分布特征进行分类。&#10;    - **方法**：使用**ST-DBSCAN**算法对所有异常线索进行聚类。算法根据空间距离（公式5）和时间距离（公式5）将邻近的线索归为一簇。&#10;    - **分类规则**：&#10;        - **单船簇**：如果一个簇只包含一艘船的异常线索，则根据其时间持续性分为：&#10;            - **持续性传感器故障**：长期、反复出现的单船异常。&#10;            - **瞬时性传感器故障**：短期、偶发的单船异常。&#10;        - **多船簇**：如果一个簇包含至少5艘船，且簇内超过60%的船舶都表现出异常，则被认定为区域性的GNSS干扰事件。&#10;            - **GNSS欺骗**：如果该簇主要由运动学异常线索构成。&#10;            - **GNSS干扰**：如果该簇主要由传输中断异常线索构成。&#10;&#10;### 3.2 关键算法与数学推导&#10;&#10;1.  **IMM滤波器状态向量**：&#10;    $$x_k = [p_x, p_y, v, \psi, \dot{\psi}]^T$$&#10;    其中 $p_x, p_y$ 是平面位置，$v$ 是速度，$\psi$ 是航向角，$\dot{\psi}$ 是偏航率。&#10;&#10;2.  **IMM滤波器状态融合**：&#10;    IMM滤波器结合了恒速（CV）和恒转弯率速度（CTRV）模型。最终的估计状态和协方差是各模型估计的加权和：&#10;    $$\hat{x}_k = \sum_i \mu_{i,k} \hat{x}_{i,k}$$&#10;    $$P_k = \sum_i \mu_{i,k} [P_{i,k} + (\hat{x}_{i,k} - \hat{x}_k)(\hat{x}_{i,k} - \hat{x}_k)^T]$$&#10;    其中 $\mu_{i,k}$ 是模型 $i$ 在时刻 $k$ 的归一化概率。&#10;&#10;3.  **传输中断异常阈值**：&#10;    对于每艘船舶，计算其在正常航行（SOG &gt; 1 m/s）时的中位报告间隔 $\tilde{T}$。用于判断是否发生干扰的阈值定义为：&#10;    $$T_{th} = \max(60s, 3\tilde{T})$$&#10;    如果一个报告间隔 $T_k$ 满足 $T_k &gt; T_{th}$，则被标记为传输中断异常线索。&#10;&#10;4.  **ST-DBSCAN的邻域定义**：&#10;    两个异常线索 $i$ 和 $j$ 被认为是邻居，当且仅当：&#10;    $$d_{space}(i, j) = \text{dist}_{geo}((\phi_i, \lambda_i), (\phi_j, \lambda_j)) &lt; \varepsilon_s$$&#10;    $$d_{time}(i, j) = |t_i - t_j| &lt; \varepsilon_t$$&#10;    其中 $\text{dist}_{geo}$ 是大地距离，$\varepsilon_s = 10 \text{ km}$，$\varepsilon_t = 1800 \text{ s}$。&#10;&#10;### 3.3 模型、训练与数据集&#10;&#10;- **模型**：本文提出的框架是一个**无监督的、基于规则和物理模型的系统**，不涉及任何需要训练的机器学习模型（如神经网络）。IMM滤波器是一个经典的贝叶斯滤波算法，其参数（如过程噪声协方差）是根据物理常识设定的，而非从数据中学习。ST-DBSCAN是一个无监督聚类算法。&#10;- **训练**：**无训练过程**。所有参数（表2）都是基于领域知识、物理约束或数据统计（如中位报告间隔）预先设定的。&#10;- **数据集**：&#10;    - **来源**：韩国船舶与海洋工程研究所（KRISO）的国家AIS档案。&#10;    - **时间**：2024年11月1日至12月30日，共两个月。&#10;    - **范围**：朝鲜半岛周边海域（纬度32-37°N，经度123-133°E）。&#10;    - **规模**：约**9.66亿条**AIS消息，预处理后约**8.2亿条**有效消息。这是一个非常大规模的真实世界数据集。&#10;    - **内容**：主要使用动态信息（时间戳、经纬度、SOG、COG）。静态和航次信息仅用于识别。&#10;&#10;### 3.4 实验设置与结果&#10;&#10;- **实验设置**：将提出的三阶段框架应用于上述大规模AIS数据集。关键参数配置见表2。&#10;- **主要结果（表3）**：&#10;    - **阶段一**：移除了约66.5万个MMSI重复点和275个数据重传点，这是误报的主要来源。&#10;    - **阶段二**：生成了8.1万个运动学异常线索和554万个传输中断异常线索。&#10;    - **阶段三**：经过ST-DBSCAN聚类和分类后，最终识别出：&#10;        - **17个GNSS欺骗事件簇**（占初始运动学线索的0.47%）&#10;        - **343个GNSS干扰事件簇**（占初始传输中断线索的1.50%）&#10;        - 其余绝大多数异常被归类为传感器故障或噪声。&#10;    - **误报率降低**：与直接对原始AIS数据进行朴素聚类相比，该框架将误报率降低了**98.6%**。这是一个非常显著的效果。&#10;- **案例分析**：&#10;    - **图4**：展示了MMSI重复的典型案例，两个真实轨迹被错误地合并成一个。&#10;    - **图5 &amp; 6**：展示了持续性（图5）和瞬时性（图6）传感器故障，它们虽然看起来像异常，但仅限于单艘船舶。&#10;    - **图7**：展示了GNSS欺骗事件，11艘船在20秒内、18公里范围内同时出现位置偏差，表现出强烈的时空协同性。&#10;    - **图8**：展示了GNSS干扰事件，11艘船在21公里范围内同时出现位置报告中断，并呈现出“双脉冲”的周期性结构。&#10;&#10;### 3.5 技术细节&#10;&#10;- **预处理**：仅进行了简单的去重、去除同一时间戳的分散位置点、以及地理范围过滤，没有进行任何运动学或异常相关的处理。&#10;- **参数选择**：所有参数（表2）的选择都有明确的依据，如参考前人工作、基于物理常识（如最大船速30 m/s）或基于数据分布（如中位间隔的3倍）。这保证了方法的可解释性和泛化能力。&#10;- **MMSI重复检测算法（算法1）**：这是一个复杂的多步骤过程，包括识别相关簇、提取子轨迹、使用IMM滤波器验证子轨迹的“正常性”，最后根据正常子轨迹的数量做出决策。这体现了对通信伪影的精细处理。&#10;- **数据重传检测算法（算法2）**：通过维护一个哈希表来高效地查找重复的导航元组，实现简单但有效。&#10;&#10;## 4. 意义与影响（Significance and Impact）&#10;&#10;- **解决的问题与贡献**：&#10;    1.  **解决了高误报率问题**：通过系统性地分离通信伪影，将误报率降低了两个数量级，使得AIS-based GNSS干扰检测从理论走向实用成为可能。&#10;    2.  **提供了统一的检测框架**：首次将欺骗和干扰这两种异质威胁统一在一个框架下处理，避免了为每种威胁开发独立系统。&#10;    3.  **提出了基于多船协同性的分类逻辑**：利用ST-DBSCAN分析群体行为，是区分单船故障和大范围干扰的关键创新，提高了检测的鲁棒性和准确性。&#10;    4.  **验证了方法的有效性**：在近10亿条真实AIS数据上的实验，有力地证明了该方法在大规模、真实海事环境中的可行性和有效性。&#10;&#10;- **对未来研究/应用的影响**：&#10;    - **应用层面**：该框架可以直接集成到船舶交通服务（VTS）系统、港口管理系统或船载安全系统中，提供低成本的广域GNSS干扰监测能力，无需部署昂贵的专用监测站。&#10;    - **研究层面**：为AIS数据清洗和异常检测领域提供了新的范式，即“先清洗伪影，再分析真实异常”。其层次化、基于因果分离的设计思想可以启发其他领域（如物联网传感器数据分析）的研究。&#10;    - **数据价值**：证明了经过严格预处理的AIS数据本身就是一个极具价值的“传感器网络”，可以用于监测大范围环境事件。&#10;&#10;- **局限与开放问题（作者提及）**：&#10;    - **验证挑战**：最大的局限是缺乏真实GNSS干扰事件的“地面真值”（ground truth）。作者承认，由于干扰事件的隐蔽性和缺乏报告，很难对检测结果进行绝对验证。他们通过多船协同性、时间模式等间接证据来增强结论的可信度，但这仍然是领域内普遍存在的挑战。&#10;    - **参数敏感性**：虽然参数有依据，但在不同海域（如内河、大洋）可能需要调整。未来的研究可以探索自适应参数设置。&#10;    - **计算效率**：处理近10亿条数据对计算资源有要求。未来可以研究更高效的算法或分布式处理方案。&#10;    - **对抗性攻击**：如果攻击者了解该检测框架，可能会设计更复杂的欺骗模式（如模拟单船故障）来规避检测。这需要更高级的防御策略。&#10;&#10;## 5. 澄清与简化（Clarifications and Simplifications）&#10;&#10;- **IMM滤波器（图2）**：可以把它想象成一个“智能轨迹预测器”。它内部有两个“专家”：一个假设船在直行（CV模型），另一个假设船在转弯（CTRV模型）。IMM会根据船的实际运动情况，动态地给这两个专家的预测结果分配权重。如果船的AIS报告的位置和速度与这两个专家的预测都相差甚远（比如突然跳到了几公里外），就说明这个报告很可能是异常的。这比只用单一模型（比如只假设直行）要准确得多，因为它能适应船舶的正常机动。&#10;&#10;- **ST-DBSCAN**：可以把它想象成一个“时空放大镜”。普通的DBSCAN只考虑空间上的“抱团”，而ST-DBSCAN还考虑时间上的“同步”。它寻找的是那些在**同一时间、同一片区域**内，多艘船同时出现异常的情况。比如，如果只有一艘船在某个点出现位置跳跃，它可能只是传感器坏了。但如果10艘船在同一时间、方圆10公里内都出现了位置跳跃，那几乎可以肯定是有外部干扰（欺骗）发生了。这个“放大镜”能">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Global Navigation Satellite System (GNSS) radio-frequency interference (RFI), including spoofing and jamming, threatens maritime positioning, navigation, and timing. Automatic Identification System (AIS) reports provide GNSS-derived vessel positions, offering an opportunistic wide-area monitoring source; however, raw AIS streams contain communication-integrity artifacts, such as duplicated ship identifiers and stale-data retransmissions, that can mimic trajectory distortion or reporting outages, and isolated single-vessel anomalies cannot be unambiguously attributed to GNSS interference. This paper proposes an AIS-based framework that mitigates communication-integrity artifacts, generates kinematic-consistency and transmission-continuity anomaly cues, and groups retained cues into multi-vessel events using spatiotemporal Density-Based Spatial Clustering of Applications with Noise (ST-DBSCAN). Applied to approximately 966 million AIS messages from Korean coastal waters, the framework retained 48 spoofing-consistent distortion events and 98 jamming-consistent reporting-outage events. These results suggest that AIS can serve as a complementary source for maritime GNSS RFI monitoring.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.11790v1" target="_blank" class="paper-title">High-Order Liquid Evidence Encoding for Gradual GNSS Spoofing Detection in Autonomous Driving</a>
+                        <span class="paper-date">2026-08-12</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：针对自动驾驶中GNSS定位易受渐进式欺骗攻击（连续且隐蔽，单个观测看似合理但位移与车载运动不一致逐渐增大）而难以检测的问题，现有方法未显式建模这种演化过程。&#10;&#10;🛠 **方法**：提出因果高阶液体证据框架，先构建物理引导的GNSS-运动不一致残差，再分别提取残差水平及其一阶、二阶离散变化作为独立证据流，每流用自适应液体编码器处理，并分层耦合时间状态，仅利用当前及过去观测预测窗口端点的欺骗概率。&#10;&#10;✨ **主要贡献**：在真实AV-GPS数据集三个子集上，所提方法在Dataset 1和Dataset 3上取得最高F1分数（0.9535和0.9777），且在Dataset 3上能在四个采样步内检测到所有标注的正常到攻击转换，代码和数据集已公开。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Accurate Global Navigation Satellite System (GNSS)-based localization is essential for safe and reliable autonomous driving. However, spoofing attacks can manipulate vehicle position estimates. Continuous and subtle attacks are particularly difficult to detect because individual GNSS observations may remain plausible while the inconsistency between GNSS-implied displacement and onboard vehicle motion gradually increases. Existing methods often rely on static vehicle-behavior features or a single residual signal and do not explicitly model this evolution. To address this problem, we propose a causal high-order liquid evidence framework for GNSS spoofing detection. The method first constructs a physics-guided GNSS--motion inconsistency residual by comparing GNSS-implied displacement with onboard-motion-derived displacement. It then forms separate evidence streams for the residual level and its first- and second-order discrete variations, with relevant contextual cues selected according to the evidence order. Each stream is processed by a separate adaptive liquid encoder, and the resulting temporal states are hierarchically coupled to predict spoofing at the window endpoint using only current and past observations. Experiments on three subsets of the real-world AV-GPS dataset show that the proposed method achieves the highest F1-scores among the evaluated temporal models on Dataset~1 and Dataset~3, reaching 0.9535 and 0.9777, respectively. On Dataset~3, it detects both labeled normal-to-attack transitions within four sampling steps. Code and datasets are publicly available at: https://github.com/pangjunbiao/GNSS_Spoofing.git.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.08831v1" target="_blank" class="paper-title">Treating Statewide CORS Networks as Spatially Distributed Sensors for GNSS Integrity Monitoring under Unintentional and Deliberate Threats</a>
+                        <span class="paper-date">2026-08-09</span>
+                    </div>
+                                        <span class="paper-comment">📝 Submitted to TRBAM 2027</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决州级CORS网络在面临无意（环境）和有意（网络）干扰时，如何有效监测GNSS完整性并识别局部异常的问题。&#10;&#10;🛠 **方法**：提出基于图的网络一致性框架（NCF），利用邻域残差、空间梯度、残差和图平滑度四个指标，结合网络一致性指数（NCI），对CORS站点观测值与空间邻域进行一致性评估。&#10;&#10;✨ **主要贡献**：首次将州级CORS网络作为区域GNSS完整性观测站，通过阿拉巴马州50个站点的四星座观测数据验证了框架的有效性，成功量化网络空间一致性并识别局部异常，为交通部门提供了可实施的完整性监测工具。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>State departments of transportation (DOTs) in the United States increasingly rely on statewide continuously operating reference station (CORS) networks to support high-precision Global Navigation Satellite System (GNSS)-based positioning and timing for intelligent transportation systems. These networks also provide continuous observations that can support regional GNSS integrity monitoring. This study develops and demonstrates a framework that treats a statewide CORS network as a spatially distributed sensor system for identifying unintentional (environmental) and intentional (cyber) interference when GNSS measurements deviate from expected spatial patterns. We develop a graph-based Network Consistency Framework (NCF) that evaluates each station against its spatial neighborhood using four metrics: neighborhood residual, spatial gradient, residual, and graph smoothness. These metrics are combined into a Network Consistency Index (NCI). The framework is demonstrated using two consecutive days of four-constellation observations from 50 stations in the Alabama DOT-maintained CORS network, using changes in vertical total electron content (ΔVTEC) and the Rate of TEC Index (ROTI) as spatially coherent observables. The framework quantified network-wide spatial consistency and identified localized anomalies. Detected anomalies indicate stations whose observations deviated from the surrounding regional network, signaling potential integrity issues. Determining whether anomalies result from receiver faults, localized interference, spoofing, or other causes requires further investigation. This study introduces statewide CORS networks as regional GNSS integrity observatories and presents the NCF and NCI for graph-based spatial integrity monitoring. Transportation agencies can implement the framework using existing CORS observations to monitor network integrity and identify localized anomalies.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.06885v1" target="_blank" class="paper-title">Rigid-Covert GNSS Spoofing of UAV Swarms: A Structural Blind Spot, Its Detection Limit, and Absolute-Anchor Defenses</a>
+                        <span class="paper-date">2026-08-07</span>
+                    </div>
+                                        <span class="paper-comment">📝 15 pages, 15 figures, Simulation-based study</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：无人机蜂群协同防御中，基于相对几何校验GNSS位置的方法存在结构性盲区——共同且缓慢变化的平移（RigidShift）不改变任意两机间距，导致任何仅依赖相对距离的检测器无法察觉该欺骗。&#10;&#10;🛠 **方法**：提出集中式锚定恢复管线，利用机间距离重建蜂群几何，通过拜占庭鲁棒拟合对齐到可信锚点子集，恢复非锚定无人机绝对位置；并设计分段估计器联合估计锚漂移、攻击速率和攻击起始时刻。&#10;&#10;✨ **主要贡献**：理论推导了漂移相关检测下限2γ/(1-t_s/T)，实验验证了检测器噪声下限（斜率2.66 vs 预测2.67）；在ArduPilot软件在环和Gazebo仿真中，GNSS漂移约10.1米时恢复误差中位数0.39米，渲染视觉锚定场景下误差7.1厘米；同时刻画了非共线锚几何、锚覆盖、τ→0漂移攻击混叠及多数锚被攻陷的显式限制。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Cooperative UAV-swarm defenses commonly cross-check GNSS positions against measured inter-drone geometry. We show that this relative-geometry channel has a structural blind spot: a common, slowly varying translation (a rigid-covert shift, RigidShift) preserves all pairwise distances and is therefore unobservable to any relative-only detector (a gauge-freedom argument). We validate this blindness on distance-verification and semidefinite-feasibility baselines, while explicitly distinguishing it from onboard inertial/GNSS monitors that can raise a bare alarm but cannot recover the swarm's true position. To quantify when an external reference restores observability, we derive the drift-dependent detection floor $2γ/(1-t_s/T)$ for a calibrated anchor-residual detector and empirically identify an additional detector-specific noise floor (measured slope 2.66 vs. predicted 2.67). We then present a centralized anchor-rooted recovery pipeline that reconstructs swarm geometry from inter-drone ranges, aligns it to a trusted-anchor subset with Byzantine-robust fitting, and recovers the absolute positions of non-anchored drones. A segmented estimator jointly estimates anchor drift, attack rate, and onset when no clean-epoch label is available. Across statistical simulations, ArduPilot software-in-the-loop experiments, and Gazebo experiments with rendered vision anchors, the method recovers the positions of non-anchored drones to a median error of 0.39 m (20 seeds) under approximately 10.1 m of GNSS drift, and to 7.1 cm (5 seeds) in the rendered-vision multi-SITL setting. We also characterize the explicit limits imposed by non-collinear anchor geometry, anchor coverage, $τ\to0$ drift-attack aliasing, and majority anchor compromise. All evaluations are simulation-based and use no RF spoofing hardware or physical swarm.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.23962v1" target="_blank" class="paper-title">Development of Vision-Language Model-based GNSS Spoofing Detection for Autonomous Vehicle Navigation</a>
+                        <span class="paper-date">2026-07-27</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：自动驾驶车辆依赖GNSS进行定位导航，易受欺骗攻击导致路径偏移或危险操作，现有信号级检测方法难以应对复杂攻击。&#10;&#10;🛠 **方法**：首次提出基于视觉-语言模型（VLM）的GNSS欺骗检测框架，通过融合前置摄像头视觉数据与车载传感器（速度、加速度、偏航率）信息，采用三阶段微调流程将视觉线索与传感器数据对齐到共享语义空间，检测GNSS推算轨迹与预测轨迹的差异。&#10;&#10;✨ **主要贡献**：在真实道路数据集上，微调后的VLM模型F1分数从零样本的23%-32%提升至94%-95%，对错误转向和停止攻击实现100%分类准确率；提出自适应推理策略将VLM调用次数降低86%，单次4秒窗口处理时间仅65-73毫秒，为自动驾驶提供实用的道路级防御层。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Autonomous vehicles (AVs) depend on Global Navigation Satellite Systems (GNSS) for localization and navigation, making them vulnerable to spoofing attacks that can covertly redirect vehicles or induce unsafe maneuvers. In this paper, we develop the first Vision-Language Model (VLM)-based framework for GNSS spoofing detection for autonomous vehicles by fusing front-camera visual data with in-vehicle sensor readings (e.g., speed, acceleration, yaw rate) against GNSS-derived maneuvers. Our approach introduces a three-stage fine-tuning process that first grounds visual cues, and then calibrates sensor data within a shared semantic space to detect discrepancies between predicted and GNSS-derived maneuvers across three attack scenarios. We also generated an independent real-world dataset by driving an instrumented vehicle on public roads in Tuscaloosa, Alabama, equipped with time-synchronized GNSS, IMU, and camera logs to validate cross-regional generalization of our fine-tuned model on unseen data from training data. On this dataset, we then generated intelligent spoofing attacks, including trajectory mirroring with road-network snapping for wrong-turn attacks, position freezing for overshoot scenarios, and drift generation for stop attacks. On this validation dataset, the zero-shot VLMs baseline F1-score ranges from 23% to 32%, whereas our fine-tuned model achieves an F1-score ranging from 94% to 95%. Results show that our VLM-based approach correctly classified every wrong-turn and stop attacks, and attains 88%-93% accuracy for overshoot attacks. Furthermore, we introduce an adaptive inference policy that reduces VLM invocations to 14% (~86% computational reduction) and yields 65ms-73ms per 4s window. These results point to a practical, on-road layer of defense that complements signal-level integrity checks with the use of VLMs.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.05658v2" target="_blank" class="paper-title">Integrating GNSS-Derived Zenith Wet Delay into a Weather Foundation Model Improves Precipitation Forecasting</a>
+                        <span class="paper-date">2026-07-26</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有机器学习天气模型（MLWM）在预测强降水时存在系统性低估，而GNSS导出的天顶湿延迟（ZWD）作为大气水汽的直接观测指标，尚未被MLWM利用。&#10;&#10;🛠 **方法**：将GNSS-derived ZWD集成到先进天气基础模型Aurora中，通过微调使其学习ZWD特征，并针对6小时累积降水进行优化训练。&#10;&#10;✨ **主要贡献**：首次将GNSS-ZWD引入MLWM，使强降水预测的Equitable Threat Score在99百分位提升8.8%，同时降水功率谱在天气尺度更符合实际，证明直接GNSS观测可被MLWM有效利用以改进高影响降水预报。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Global Navigation Satellite Systems (GNSS), best known for positioning, also serve weather science, as atmospheric water vapour delays their signals. This delay, the Zenith Wet Delay (ZWD), is a direct, all-weather measure of column moisture. Although assimilated into numerical weather prediction for decades, ZWD is not yet used by leading Machine Learning Weather Models (MLWM), despite addressing a known deficiency: the underestimation of severe precipitation. Here we present the first integration of GNSS-derived ZWD into Aurora, a state-of-the-art weather foundation model. Our extended Aurora learns ZWD with skill comparable to its pretrained variables. More importantly, including ZWD systematically improves forecasts when fine-tuning for 6-hour accumulated precipitation. Gains grow with severity, reaching an 8.8% increase in Equitable Threat Score at the 99th percentile, while the precipitation power spectrum becomes more realistic at synoptic and planetary scales. GNSS observations therefore encode information that MLWM can exploit for high-impact precipitation.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.11398v1" target="_blank" class="paper-title">GNSS Spoofing Detection in TDD Networks: A 3GPP Standards-Based Security Framework</a>
+                        <span class="paper-date">2026-07-13</span>
+                    </div>
+                                        <span class="paper-comment">📝 13 pages, 5 figures, 7 tables</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：时分双工（TDD）移动网络依赖GNSS授时实现±1.5μs同步精度，但GNSS欺骗攻击已成为实际威胁，而3GPP现有管理框架（SA5）和安全框架（SA3）缺乏标准化检测与报告机制。&#10;&#10;🛠 **方法**：提出一个在现有3GPP管理结构内运行的检测监控框架，包括GNSS定时告警与性能计数器（符合TS 28.111/28.552）、拓扑感知关联机制（按主时钟分组gNB-DU分类异常），以及将故障管理与SECHAND事件处理（TR 33.894）桥接的安全事件机制。&#10;&#10;✨ **主要贡献**：蒙特卡洛仿真表明，在良好PTP网络条件下，对高于0.5 ns/s的漂移率检测概率超过95%，误报率低于1%；框架无需新接口、代际无关，并通过场景分析验证了其区分欺骗与信号丢失、设备故障及维护瞬态的能力。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Time Division Duplex (TDD) mobile networks require synchronization accuracy of $\pm$1.5 $μ$s (3GPP TS 38.104), with GNSS-disciplined grandmaster clocks as the predominant timing source. GNSS spoofing -- now a documented operational threat -- can corrupt timing across all downstream base stations, yet neither the 3GPP management framework (SA5) nor the security framework (SA3) provides standardized mechanisms to detect or report such attacks. This paper proposes a detection and monitoring framework operating within existing 3GPP management structures. The framework introduces GNSS timing alarms and performance counters aligned with TS 28.111 and TS 28.552, a topology-aware correlation mechanism that classifies anomalies by grouping gNB-DUs by serving grandmaster, and a security event bridging fault management with SECHAND incident handling (TR 33.894). Monte Carlo simulation demonstrates detection probability exceeding 95% for drift rates above 0.5 ns/s with false positive rates below 1% under well-provisioned PTP network conditions. The framework requires no new interfaces, is generation-agnostic, and is validated through scenario analysis distinguishing spoofing from signal loss, equipment faults, and maintenance transients.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.10014v1" target="_blank" class="paper-title">Runtime Safety Filtering for Learned Small UAS Separation Policies under GNSS Degradation</a>
+                        <span class="paper-date">2026-07-10</span>
+                    </div>
+                                        <span class="paper-comment">📝 Accepted for publication at the 2026 IEEE/AIAA Digital Avionics Systems Conference (DASC). 9 pages, 8 figures</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在GNSS信号受城市环境干扰（如多径效应、信号遮挡）导致导航精度下降时，如何保障基于学习的无人机分离策略的安全性。&#10;&#10;🛠 **方法**：对比两种运行时安全机制——动作过滤（通过离散时间控制屏障函数约束策略输出）与观测过滤（将最坏情况下的交通状态直接作为策略的修正输入），两者均基于有界观测不确定性估计最坏情况状态。&#10;&#10;✨ **主要贡献**：实验表明，动作过滤几乎无法提升安全性，而观测过滤可将近距空中碰撞风险降低90%，且对控制屏障函数中分离距离与接近速率的权衡具有鲁棒性；结论指出，对于已学习安全行为的策略，保留其决策权优于用人工设计的约束覆盖其动作。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Learning-based separation assurance for small Unmanned Aircraft Systems (sUAS) achieves near-zero collision rates in simulation, but assumes accurate position and velocity information from Global Navigation Satellite Systems (GNSS). This assumption fails in urban environments, where multipath propagation, signal blockage, and intentional interference degrade navigation integrity. This raises a fundamental architectural question for deploying learned separation policies under GNSS degradation: should runtime safety mechanisms filter the policy's actions or its observations? This work evaluates both approaches for multi-agent sUAS separation under adversarial GNSS degradation. Both architectures first estimate a worst-case traffic state consistent with bounded observation uncertainty, then diverge: action filtering constrains policy outputs via discrete-time control barrier functions evaluated at the worst-case state, while observation filtering presents the worst-case state directly to the policy as corrected input. Experimental results show that action filtering provides negligible safety improvement, while observation filtering reduces near mid-air collisions by 90% and remains robust to the barrier function's tradeoff between separation distance and closing rate. These results suggest that, for policies with learned safety behaviors, preserving the policy's decision authority outperforms overriding its actions with hand-designed constraints.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.07737v1" target="_blank" class="paper-title">SASGeo: Stability-Aware Semantic Map Localization for GNSS-Denied UAVs -- A Framework and Synthetic Proof of Concept</a>
+                        <span class="paper-date">2026-07-07</span>
+                    </div>
+                                        <span class="paper-comment">📝 7 pages, 5 figures</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>GNSS-denied unmanned aerial vehicles require occasional absolute position fixes to bound the drift of visual-inertial odometry. Cross-view image retrieval can provide such fixes, but raw appearance is sensitive to season, illumination, viewpoint, map age, and sensor modality. We propose \sas, a semantic map-localization framework that represents the environment through persistent structures such as roads, buildings, waterways, railways, intersections, and field boundaries. The method combines semantic raster alignment, relational graph evidence, feature stability and geographic distinctiveness, explicit positive/contradictory/unknown observations, and integrity-aware rejection of ambiguous fixes. Unlike a broad architecture-only proposal, this paper specifies concrete weighting and decision models and reports a reproducible synthetic proof of concept. In 220 randomized retrieval trials with rotation, scale changes, partial crops, occlusion, simulated map changes, and hard semantic decoys, a global semantic descriptor achieved 58.6\% Recall@1, while spatial semantic matching variants achieved 94.5-95.5%. Wilson 95\% intervals separate the global descriptor from the spatial variants but overlap among the spatial variants, so the experiment supports semantic geometry rather than a definitive benefit from each proposed module. The preliminary experiment does not validate real-flight navigation; rather, it demonstrates that structured semantic geometry can discriminate locations under controlled cross-view perturbations and identifies the harder aliasing, map-aging, and rejection tests required next.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.04879v1" target="_blank" class="paper-title">WinTA-GIL: Windowed Trajectory Alignment for GNSS-IMU-LiDAR Heading Refinement in Intermittent Signal Environments</a>
+                        <span class="paper-date">2026-07-06</span>
+                    </div>
+                                        <span class="paper-comment">📝 Accepted to IROS 2026.8 pages,10 figures</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Although multi-source fusion positioning systems have achieved significant progress, accurate and reliable heading estimation remains a critical challenge due to the lack of gravitational constraints and the inherent weak observability of heading in complex environments. Most existing methodologies are specifically tailored for the startup phase, relying on a singular initial alignment to establish the heading reference. Consequently, these approaches lack the adaptability required to refine heading estimates dynamically, which renders the system highly vulnerable to accumulated drift and observation noise during prolonged navigation or immediately following GNSS signal outages. To address these limitations, this paper proposes WinTA-GIL, a novel heading refinement framework that integrates information from Global Navigation Satellite System (GNSS), Inertial Measurement Unit (IMU), and Light Detection and Ranging (LiDAR) through a temporal window-based optimization strategy. Unlike conventional alignment methods restricted to the startup phase, WinTA-GIL leverages high-precision local trajectories from LiDAR-Inertial Odometry (LIO) to register against filtered GNSS observations. This approach transforms heading estimation into a repeatable, trajectory-based consistency optimization problem. In particular, an adaptive re-estimation mechanism based on state discrimination is incorporated to trigger heading corrections whenever necessary, thereby effectively suppressing the inertial drift accumulated during challenging conditions. Extensive experiments on both open-source and self-collected datasets demonstrate that WinTA-GIL significantly outperforms state-of-the-art approaches in both estimation accuracy and system robustness.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2606.31415v1" target="_blank" class="paper-title">Ensuring Deterministic Timing in a Federated GNSS Correction Pipeline with Lingua Franca</a>
+                        <span class="paper-date">2026-06-30</span>
+                    </div>
+                                        <span class="paper-comment">📝 4 pages, ReCPS, DATE Conference at Verona 2026</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Embedded systems that combine hardware interrupts, buffering, and distributed communication are often perceived as inherently asynchronous and difficult to analyze. However, such systems can exhibit a deterministic timing structure when modeled using explicit logical-time semantics. This paper presents a Global Navigation Satellite System (GNSS) correction-data pipeline implemented as a federated Lingua Franca (LF) application. The federated LF program decomposes the end-to-end pipeline into reactors with explicit time semantics, including a time-triggered GNSS receiver, a UART interrupt stream derived from baud rate and First-In First-Out (FIFO) buffer characteristics, a periodic forwarding task, and downstream processing with jitter monitoring. Federated execution and runtime logs validate the analytically derived deterministic timing structure-including interrupt cadence, ring-buffer evolution, packetization behavior, and physical--logical jitter-yielding a reproducible and predictable timing profile.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2606.29875v1" target="_blank" class="paper-title">AUSLUN: A Fixed-Hover UAV--USV System for GNSS-Denied Maritime Search and Navigation</a>
+                        <span class="paper-date">2026-06-29</span>
+                    </div>
+                                        <span class="paper-comment">📝 10 pages, 7 figures</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Global navigation satellite system (GNSS) denial can prevent an unmanned surface vehicle (USV) from both finding a distant vessel and maintaining a globally referenced approach. This paper presents AUSLUN (Automatic UAV Search, Localization, and USV Navigation), a fixed-hover aerial-surface system that uses a coastal unmanned aerial vehicle (UAV), which estimates its own pose through visual-inertial odometry (VIO), as a long-range sensing and navigation anchor. The central design shifts sensing motion from UAV translation to a zoom pod and closes the loop through three coupled elements: polygon-aware annular pod scanning, modality-aware bearing-range localization, and target-relative USV guidance with visual-loss recovery. The same gated recursive estimator uses laser range for the non-cooperative target and datalink range for the cooperative USV. Search-planning simulations show that the adaptive yaw bounds reduce scan time and redundant coverage relative to a matched fixed-sector scan, and GPS-referenced field data show that the gated recursive estimator outperforms non-recursive baselines in localization accuracy. An integrated maritime mission further demonstrates the complete search-to-navigation sequence, including a deliberately triggered visual-loss recovery. These results establish the feasibility and operating boundary of fixed-hover UAV assistance for stationary-target approach in coastal GNSS-denied environments. The source code and a video demonstration are publicly available at https://github.com/xirhxq/pod_search and https://youtu.be/S-5RkJs35JI.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2606.29192v1" target="_blank" class="paper-title">Empowering a Single-Frequency GNSS Receiver to Achieve High-Precision Positioning with Relative Observations</a>
+                        <span class="paper-date">2026-06-28</span>
+                    </div>
+                                        <span class="paper-comment">📝 8 pages,7 figures</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Global Navigation Satellite System (GNSS) navigation is widely used to provide absolute, outdoor positioning in field robotics. Advances in Real-Time Kinematic (RTK) technology can achieve centimeter-level accuracy, facilitating autonomous navigation tasks. However, the cost and extra infrastructure used for RTK still hinder the application and more cost-effective solutions are desired. In this letter, we present a novel tightly-coupled state estimation framework that achieves high-precision localization by using low-cost, mass-market single-frequency GNSS receivers with any relative motion sensors (e.g., wheel encoder, camera, LiDAR). We propose a sliding-window factor graph that integrates generic relative motion with global epoch-to-anchor constraints derived from continuous carrier phase tracking. To eliminate the reliance on physical base stations, we introduce a virtual anchor mechanism: upon the initial observation of a satellite, its state is locked as a virtual reference to establish global epoch-to-anchor constraints. By substituting multi-frequency hardware redundancy with single-frequency multi-modal kinematic priors and a robust cycle-slip recovery technique, our approach ensures carrier-phase integrity on cheap receivers. Extensive real-world experiments on heterogeneous low-cost sensor suites validate that our method improves the accuracy of a single-frequency receiver from several meters to decimeter-level precision across diverse environments, providing an accurate, cost-effective and reliable alternative for autonomous navigation.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2605.07412v2" target="_blank" class="paper-title">Tracking Large-scale Shared Bikes with Inertial Motion Learning in GNSS Blocked Environments</a>
+                        <span class="paper-date">2026-06-24</span>
+                    </div>
+                                        <span class="paper-comment">📝 This paper has been accepted by IEEE Transactions on Intelligent Transportation Systems (T-ITS) on June 23, 2026. Journal article. 15 pages, 18 figures, 11 tables</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Although Global Navigation Satellite Systems (GNSS) provide a general solution for bike tracking outdoors, there still exist complex riding environments where only inertial navigation systems work, such as urban canyons. Despite decades of research, localization using only low-cost inertial sensors still faces challenges such as cumulative drifts and poor robustness caused by filtering methods. Furthermore, sensors such as visual and LiDAR could provide reliable measurements, but they are not suitable for large-scale deployment. In this paper, we propose an inertial tracking framework that integrates bicycle mechanical constraints with a mixture-of-experts model. Specifically, we leverage multiple expert modules to capture shared representations and weight them through the gating mechanism, thus improving multi-task learning performance and enabling uncertainty-aware trajectory estimation. Furthermore, based on the mechanical transmission between the pedal and the rear wheel of a bike, we explore the intrinsic relationship between the rider's periodic pedalling behaviors and acceleration variations, and convert such patterns into bike's wheel speed for dynamic calibration. Experiments with real-world riding data from shared bikes of the DiDi ride-hailing platform demonstrate that our system improves the accuracy of baselines by at least 12%, with wheel speed errors below 0.5 m/s at 95-percentile.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2606.19190v2" target="_blank" class="paper-title">FAST-LIVGO: A Degeneracy-Robust LiDAR-Inertial-Visual-GNSS Fusion Odometry</a>
+                        <span class="paper-date">2026-06-24</span>
+                    </div>
+                                        <span class="paper-comment">📝 Accepted for presentation at the 2026 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2026)</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Robust state estimation and mapping in long-term, large-scale, and highly dynamic environments remains a key challenge in robotics. Existing LiDAR-Inertial-Visual Odometry (LIVO) systems achieve strong local accuracy but suffer from accumulated drift over long distances and may fail in geometrically degraded or textureless scenes. Meanwhile, GNSS-aided fusion frameworks often rely on LiDAR or visual odometry for state prediction and outlier rejection, making them vulnerable when odometry degenerates. To address these limitations, we propose a tightly coupled LiDAR-Inertial-Visual-GNSS fusion framework based on an Error-State Iterated Kalman Filter. An online spatiotemporal alignment module using Dynamic Time Warping is introduced for highly dynamic conditions. To better exploit GNSS precision, we develop observation models based on Doppler shifts and fixed-anchor Time-Differenced Carrier Phase, providing millimeter-level relative constraints without augmenting historical anchor states. We further design a degeneracy-aware dual-mode outlier rejection strategy that switches between LIVO-prior-guided rejection and GNSS-aided recovery according to the LIVO degeneracy level. Experiments on the public M3DGR dataset and a custom 20~m/s fixed-wing UAV dataset demonstrate that our system reduces accumulated drift and map ghosting, outperforming state-of-the-art methods in accuracy and robustness.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2606.24210v1" target="_blank" class="paper-title">A Conditional Timing Protection Level: Holdover-Limited Undetected Time Error Under GNSS Spoofing</a>
+                        <span class="paper-date">2026-06-23</span>
+                    </div>
+                                        <span class="paper-comment">📝 8 pages, 5 figures, 2 tables. Calibrated on the public JammerTest 2024 dataset (Zenodo 10.5281/zenodo.15911589). TPL primitives, CUSUM detector, and calibration example open source in the Kshana simulator (AGPL-3.0)</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>A GNSS timing receiver under spoofing has no nominal-geometry fault for position-domain RAIM to bound: the threat is a slow, common-mode pull of served clock time that the receiver's own time-accuracy flag need not reveal. We make three graded contributions. First, a field measurement: solving the receiver clock trajectory from raw L1 pseudoranges and broadcast ephemeris, we show a recorded over-the-air spoof from the public JammerTest 2024 campaign pulled a u-blox ZED-F9P by about 1.01 ms of served time while it reported at most 51 ns, a gap near 20,000x. Second, an impossibility: against an adversary free to choose the ramp rate, no finite unconditional bound on undetected time error exists under a single self-referential clock-aided monitor, because a ramp slow enough to keep the disciplined reference in lock-step is never alarmed while the error grows without limit, so any finite guarantee is conditional. Third, the conditional bound: the Timing Protection Level (TPL), a model-free monitor's static detectability floor plus the oscillator's coast over the detection latency, holds given detection by an independent cross-satellite consistency check a coherent spoofer does not drive in lock-step. Each term is a closed form over a primitive verified in the open Kshana simulator, so the sum is reproducible by hand. Calibrated on the recorded attack, the budget is 114 ns at one-second recovery and 458 ns at a 60-second coast, thousands of times below the 1.01 ms accepted; a clock-aided sequential test alone gives essentially no protection on this slow ramp (it alarms only near the ~1 ms capture), while the model-free monitor alarms during the ramp. We are explicit: the bound is calibrated, not field-validated; carries no integrity-risk budget; and is reported as a band at long coast. The simulator, bound, and calibration example are open source under AGPL-3.0.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2606.22456v1" target="_blank" class="paper-title">BLENDS: Bayesian Learning-Enhanced Deep Smoothing for GNSS-Denied Environments</a>
+                        <span class="paper-date">2026-06-21</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Maintaining accurate navigation during GNSS outages remains a significant challenge for autonomous systems relying on low-cost inertial sensors. While classical smoothing methods, such as the two-filter smoother and Rauch-Tung-Striebel smoother, exploit measurements collected before and after an outage, their performance remains limited by the accuracy of conventional GNSS measurements. This paper presents Bayesian learning-enhanced navigation with deep smoothing (BLENDS), a transformer-based framework that augments Bayesian smoothing with learned covariance adaptation and state correction. The proposed method preserves the statistical foundations of Bayesian estimation while leveraging data-driven learning to improve navigation accuracy. Evaluations on the quadrotor dataset with GNSS outages demonstrate that BLENDS consistently outperforms both model-based smoothers, achieving up to 25.6% improvement in the position root mean square error while also reducing estimation uncertainty. Furthermore, BLENDS learns to compensate for the systematic bias between conventional GNSS positioning and RTK ground truth, enabling accuracy beyond that achievable with conventional GNSS measurements alone. The results demonstrate the potential of learning-enhanced Bayesian smoothing for resilient and high-accuracy navigation in GNSS-challenged environments.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2606.20215v1" target="_blank" class="paper-title">GNSS Spoofing Threat for V2X communications</a>
+                        <span class="paper-date">2026-06-18</span>
+                    </div>
+                                        <span class="paper-comment">📝 2026 IEEE\@. Personal use of this material is permitted. Permission from IEEE must be obtained for all other uses, in any current or future media, including reprinting/republishing this material for advertising or promotional purposes, creating new collective works, for resale or redistribution to servers or lists, or reuse of any copyrighted component of this work in other works</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Global Navigation Satellite Systems (GNSS) constitute a core technology for delivering crucial positioning, navigation, and timing (PNT) services in the Vehicle-to-Everything (V2X) domain, where they are indispensable for generating Cooperative Awareness Messages (CAM) that uphold network reliability and vehicular safety. Yet, GNSS signals are acutely exposed to spoofing, an advanced attack in which an adversary transmits crafted signals that replicate legitimate satellite characteristics, misleading the receiver into computing a false position. This work presents a methodology for conducting physical spoofing with inexpensive Software Defined Radio (SDR), describing a coordinate generation pipeline that employs Haversine-based distance calculations, temporal discretization to emulate constant velocity, and linear interpolation to produce high-fidelity GPS baseband signals. The proposed attack is experimentally validated on real Commsignia OnBoard Unit (OBU) and RoadSide Unit (RSU) devices using a HackRF One across three scenarios that emulate synthetic trajectories at steady speeds of 90 km/h, 145 km/h, and 200 km/h. The most significant contribution of this paper is the demonstration that V2X communications are not secured, as they are susceptible to GNSS spoofing attacks, which cause service degradation without being detected.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2512.14428v2" target="_blank" class="paper-title">Odyssey: An Automotive Lidar-Inertial Odometry Dataset with GNSS-denied situations</a>
+                        <span class="paper-date">2026-06-17</span>
+                    </div>
+                                        <span class="paper-comment">📝 10 pages, 4 figures, 3 tables, submitted to International Journal of Robotics Research (IJRR)</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>The development and evaluation of Lidar-Inertial Odometry (LIO) and Simultaneous Localization and Mapping (SLAM) systems requires a precise ground truth. The Global Navigation Satellite System (GNSS) is often used as a foundation for this, but its signals can be unreliable in obstructed environments due to multi-path effects or loss-of-signal. While existing datasets compensate for sporadic GNSS loss by incorporating Inertial Measurement Unit (IMU) measurements, the commonly used systems do not permit prolonged study of GNSS-denied environments due to accumulated drift. Therefore, the diversity of such datasets is limited. To close this gap, we present Odyssey, an automotive LIO dataset featuring: (1) a ground truth derived from a navigation-grade Ring Laser Gyroscope (RLG)-based RTK/INS, offering bias stability one to four orders of magnitude better than existing automotive datasets; (2) a comprehensive collection of 36 sequences across diverse environments, enabling robust and comprehensive evaluation and (3) prolonged GNSS-denied environments, including tunnels and, previously unseen in the context of automotive benchmarks, indoor parking garages. Here, our RLG-based system enables accurate evaluation in scenarios where commonly employed systems would drift excessively. Besides providing data for LIO, Odyssey also supports place recognition tasks through threefold trajectory repetition and integration of external mapping data via precise geodetic coordinates. All data, dataloader and supplementary material are available online at https://odyssey.uni-goettingen.de/ .</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2606.16795v1" target="_blank" class="paper-title">WaveDINO: Learning-Based Atmospheric Correction of Unwrapped InSAR Interferograms Validated by GNSS: Results at Laguna del Maule and Campi Flegrei Volcanoes</a>
+                        <span class="paper-date">2026-06-15</span>
+                    </div>
+                                        <span class="paper-comment">📝 11 pages, 6 figures</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Interferometric Synthetic Aperture Radar (InSAR) enables effective monitoring of volcanic deformation; however, the observed signals are often corrupted by atmospheric phase delays, seasonal surface changes, and decorrelation effects. Existing atmospheric correction methods, such as numerical weather model-based methods, can reduce these effects but do not consistently remove atmospheric artefacts and may introduce residual biases. To address these limitations, we propose a novel learning-based method for denoising unwrapped InSAR interferograms, using a hybrid training strategy that combines physically motivated synthetic deformation with real atmospheric noise. Specifically, we introduce WaveDINO, a wavelet-based multi-scale denoising framework conditioned on frozen DINOv3 foundation-model features and terrain information. Training uses synthetic magma-source deformation superimposed on short-term interferograms to expose the network to realistic atmospheric statistics while retaining known ground truth. Performance is evaluated on both controlled synthetic data and long-term real interferograms from Laguna del Maule (Chile) and Campi Flegrei (Italy), with independent GNSS measurements used for validation. WaveDINO consistently outperforms competing models, improving agreement with GNSS measurements, and reducing mean GNSS misfit by approximately 3% and 19% at two sites, respectively, while surpassing weather-model-based corrections.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2606.07725v1" target="_blank" class="paper-title">GNSS-FM: A Self-Supervised Foundation Model for Daily GNSS Displacement Time Series</a>
+                        <span class="paper-date">2026-06-05</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Displacement time series from Global Navigation Satellite Systems (GNSS) are essential for a wide range of applications, including monitoring tectonic crustal deformations and investigating the different stages of the earthquake cycle. Machine learning methods have proven promising for GNSS applications; however, most remain fully supervised. This creates a bottleneck as labeled data are scarce, even though large amounts of unlabeled GNSS data are freely available. We present GNSS-FM, a self-supervised foundation model for daily GNSS time series. The model uses a dual-stream input combining displacement and velocity-like increments, and is pretrained using a masked latent prediction objective with vector-quantized targets adapted from wav2vec 2.0, with several modifications for geodetic data. Pretrained on data from over 17,000 globally distributed GNSS stations, an analysis of the learned codebook suggests that the representations capture the main signal types in GNSS displacement data, including seismic offsets, tectonic drift, and seasonal patterns. The foundation model is later fine-tuned on two downstream tasks, namely 90-day displacement forecasting and seismic step localization, where it outperforms strong task-specific baselines in both cases. These results show that self-supervised pretraining is a promising approach for GNSS time series analysis.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2606.03265v1" target="_blank" class="paper-title">Wheel-Mounted/GNSS Fusion with AI-Aided Position Updates</a>
+                        <span class="paper-date">2026-06-02</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Accurate and robust localization remains a fundamental challenge for autonomous ground vehicles. In this work, we propose a hybrid neural inertial navigation framework that integrates a wheel-mounted inertial sensors, enforced periodic trajectories, and a simple, efficient neural network capable of regressing vehicle displacement with GNSS position updates in an error-state extended Kalman filter. The periodic trajectories increase the inertial signal-to-noise ratio, allowing the network to use only inertial readings to estimate displacement. The approach is validated through real-world experiments using multiple wheel-mounted inertial sensors. Experimental results demonstrate that the proposed method achieves a significant improvement in positioning accuracy, reducing the position root mean squared error by approximately 46 % compared to standard wheel-mounted inertial sensor fusion with GNSS updates.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2510.20480v2" target="_blank" class="paper-title">Degradation-Aware Cooperative Multi-Modal GNSS-Denied Localization Leveraging LiDAR-Based Robot Detections</a>
+                        <span class="paper-date">2026-05-27</span>
+                    </div>
+                                        <span class="paper-comment">📝 Preprint version. This work has been submitted to Elsevier for possible publication</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Accurate long-term localization using onboard sensors is crucial for robots operating in Global Navigation Satellite System (GNSS)-denied environments. While complementary sensors mitigate individual degradations, carrying all the available sensor types on a single robot significantly increases the size, weight, and power demands. Distributing sensors across multiple robots enhances the deployability but introduces challenges in fusing asynchronous, multi-modal data from independently moving platforms. We propose a novel adaptive multi-modal multi-robot cooperative localization approach using a factor-graph formulation to fuse asynchronous Visual-Inertial Odometry (VIO), LiDAR-Inertial Odometry (LIO), and 3D inter-robot detections from distinct robots in a loosely-coupled fashion. The approach adapts to changing conditions, leveraging reliable data to assist robots affected by sensory degradations. A novel interpolation-based factor enables fusion of the unsynchronized measurements. LIO degradations are evaluated based on the approximate scan-matching Hessian. A novel approach of weighting odometry data proportionally to the Wasserstein distance between the consecutive VIO outputs is proposed. A theoretical analysis is provided, investigating the cooperative localization problem under various conditions, mainly in the presence of sensory degradations. The proposed method has been extensively evaluated on real-world data gathered with heterogeneous teams of an Unmanned Ground Vehicle (UGV) and Unmanned Aerial Vehicles (UAVs), showing that the approach provides significant improvements in localization accuracy in the presence of various sensory degradations.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2510.01348v2" target="_blank" class="paper-title">Kilometer-Scale GNSS-Denied UAV Navigation via Heightmap Gradients: A Winning System from the SPRIN-D Challenge</a>
+                        <span class="paper-date">2026-05-25</span>
+                    </div>
+                                        <span class="paper-comment">📝 8 pages</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Reliable long-range flight of unmanned aerial vehicles (UAVs) in GNSS-denied environments is challenging: integrating odometry leads to drift, loop closures are unavailable in previously unseen areas and embedded platforms provide limited computational power. We present a fully onboard UAV system developed for the SPRIN-D Funke Fully Autonomous Flight Challenge, which required 9 km long-range waypoint navigation below 25 m AGL (Above Ground Level) without GNSS or prior dense mapping. The system integrates perception, mapping, planning, and control with a lightweight drift-correction method that matches LiDAR-derived local heightmaps to a prior geo-data heightmap via gradient-template matching and fuses the evidence with odometry in a clustered particle filter. Deployed during the competition, the system executed kilometer-scale flights across urban, forest, and open-field terrain and reduced drift substantially relative to raw odometry, while running in real time on CPU-only hardware. We describe the system architecture, the localization pipeline, and the competition evaluation, and we report practical insights from field deployment that inform the design of GNSS-denied UAV autonomy.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2605.24767v1" target="_blank" class="paper-title">Enhanced INS/GNSS State Estimation using GNSS-Based Acceleration Measurements</a>
+                        <span class="paper-date">2026-05-23</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Accurate and reliable navigation is essential for autonomous ground vehicle operations. Standard INS/GNSS fusion relies on GNSS position updates, which provide limited observability of orientation and inertial sensor error states, particularly during low-dynamic motion. In this work, we propose utilizing past GNSS measurements alongside a motion model to extract meaningful vehicle acceleration information. This acceleration measurement is then integrated into the INS/GNSS filter to improve its robustness and accuracy. The proposed approach is evaluated on two real-world unmanned ground vehicle datasets collected from different mobile platforms and inertial sensor grades. Results demonstrate consistent positioning accuracy improvements relative to the standard position-aided filter, with mean position root mean square error improvements of 11.40 % and 20.74 % on the two datasets, respectively.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2605.21461v1" target="_blank" class="paper-title">A Machine Learning Framework for Weighted Least Squares GNSS Positioning based on Activation Functions</a>
+                        <span class="paper-date">2026-05-20</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Global Navigation Satellite Systems (GNSS) are widely used to provide position, velocity, and timing (PVT) information for various applications, including transportation, location-based communication services, and intelligent agriculture. In urban canyons, high-rise buildings and narrow streets can cause signal obstruction, non-line-of-sight (NLOS) reception, and multipath effects that introduce errors in GNSS pseudorange measurements. Although multi-constellations GNSS effectively increase the number of available satellites, the inclusion of degraded signals can lead to severe positioning errors. This study proposes a machine learning framework for the weighted least squares (WLS) algorithm incorporating activation functions to enhance positioning accuracy. Several signal quality indicators are employed as training features for ensemble learning algorithms to identify poor quality signals by providing quality scores. Then, activation functions are employed to transform the machine learning predicted scores to appropriate weights for WLS positioning. To evaluate the performance of our approach, experiments are conducted using real-world datasets from Hong Kong and Tokyo urban areas. Comparative analysis of activation functions reveals that sigmoid functions consistently yield the greatest improvements with different machine learning algorithms and GNSS constellation configurations. The proposed algorithm demonstrates substantial reductions in positioning errors for both single- and multiconstellation scenarios. Furthermore, our results indicate that the proposed algorithm exhibits strong geographical transferability. The proposed algorithm maintains comparable level of performance when trained on data from other regions with similar levels of urbanization.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2605.20484v1" target="_blank" class="paper-title">Enhancing Graph-Based SLAM in GNSS-Denied environments by leveraging leg odometry</a>
+                        <span class="paper-date">2026-05-19</span>
+                    </div>
+                                        <span class="paper-comment">📝 4 pages, 3 figures, 2 tables, for ICRA workshop on Robot Meets GNSS and Ranging for Seamless Autonomy</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Autonomous navigation in GNSS-denied environments remains a core challenge for legged robots, where exteroceptive sensors such as LiDAR are prone to elevation drift in geometrically sparse or repetitive scenes. We present a factor graph architecture that augments the LIO-SAM framework with a parallel kinematic lane driven by proprioceptive leg odometry, coupled to the main LiDAR-inertial lane via an identity relative pose constraint with a selective noise model. Applied to a Linxai D50 quadruped platform across two outdoor loops totaling over one kilometer, our approach reduces elevation drift from over 30m to under 30cm and enables convergence in a scene where the baseline pipeline fails entirely. These results suggest that proprioceptive data, already computed onboard for gait control, constitutes a lightweight and effective vertical anchor for SLAM in GNSS-denied settings.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2512.20931v2" target="_blank" class="paper-title">Certifiable Alignment of GNSS and Local Frames via Lagrangian Duality</a>
+                        <span class="paper-date">2026-05-19</span>
+                    </div>
+                                        <span class="paper-comment">📝 Final version in RA-L</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Estimating the absolute orientation of a local system relative to a global navigation satellite system (GNSS) reference often suffers from local minima and high dependency on satellite availability. Existing methods for this alignment task rely on abundant satellites unavailable in GNSS-degraded environments, or use local optimization methods which cannot guarantee the optimality of a solution. This work introduces a globally optimal solver that transforms raw pseudo-range or Doppler measurements into a convexly relaxed problem. The proposed method is certifiable, meaning it can numerically verify the correctness of the result, filling a gap where existing local optimizers fail. We first formulate the original frame alignment problem as a nonconvex quadratically constrained quadratic program (QCQP) problem and relax the QCQP problem to a concave Lagrangian dual problem that provides a lower cost bound for the original problem. Then we perform relaxation tightness and observability analysis to derive criteria for certifiable optimality of the solution. Finally, simulation and real world experiments are conducted to evaluate the proposed method. The experiments show that our method provides certifiably optimal solutions even with only 2 satellites with Doppler measurements and 2D vehicle motion, while the traditional velocity-based VOBA method and the advanced GVINS alignment technique may fail or converge to local optima without notice. To support the development of GNSS-based navigation techniques in robotics, all code and data are open-sourced at https://github.com/Baoshan-Song/Certifiable-Doppler-alignment.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2605.14839v1" target="_blank" class="paper-title">GenAI for Energy-Efficient and Interference-Aware Compressed Sensing of GNSS Signals on a Google Edge TPU</a>
+                        <span class="paper-date">2026-05-14</span>
+                    </div>
+                                        <span class="paper-comment">📝 12 pages</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Traditional methods for classifying global navigation satellite system (GNSS) jamming signals typically involve post-processing raw or spectral data streams, requiring complex and costly data transmission to cloud-based interference classification systems. In contrast, our proposed approach efficiently compresses GNSS data streams directly at the hardware receiver while simultaneously classifying jamming and spoofing attacks in real time. Given the growing prevalence of GNSS jamming, there is a critical need for real-time solutions suitable for power-constrained environments. This paper introduces a novel method for compressing and classifying GNSS jamming threats using generative artificial intelligence (GenAI), specifically variational autoencoders (VAEs), deployed on Google Edge tensor processing units (TPUs). The study evaluates various autoencoder (AE) architectures to compress and reconstruct GNSS signals, focusing on preserving interference characteristics while minimizing data size near the receiver hardware. The pipeline adapts large-scale AE models for Google Edge TPUs through 8-bit quantization to ensure energy-efficient deployment. Tests on raw in-phase and quadrature-phase (IQ) data, Fast Fourier Transform (FFT) data, and handcrafted features show the system achieves significant compression (>42x) and accurate classification of approximately 72 interference types on reconstructed signals (F2-score 0.915), closely matching the original signals (F2-score 0.923). The hardware-centric GenAI approach also substantially reduces jammer signal transmission costs, offering a practical solution for interference mitigation. Ablation studies on conditional and factorized VAEs (i.e., FactorVAE) explore latent feature disentanglement for data generation, enhancing model interpretability and fostering trust in machine learning (ML) solutions for sensitive interference applications.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2605.10264v1" target="_blank" class="paper-title">Low-Cost GNSS Anti-Jamming Through 2-Bit Phase Shift Beamforming with Machine Learning</a>
+                        <span class="paper-date">2026-05-11</span>
+                    </div>
+                                        <span class="paper-comment">📝 Accepted for presentation at RAST 2026. Author accepted version. Final version to appear in IEEE Xplore</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>We investigate low-cost GNSS anti-jamming using beamforming with inexpensive 2-bit phase shifters, constraining each complex array weight to one of four QPSK phase states (real/imaginary = -1 or +1). This severe quantization sharply limits the beampattern solution space, making conventional real-valued beamforming and naive weight quantization highly suboptimal. We formulate a discrete optimization that trades interference suppression against satellite-direction gain, and benchmark known combinatorial optimization methods across array sizes and interference conditions. Simulations show that performance improves with array size, with oracle and greedy search achieving up to 34 dB nulling, but oracle incurs exponential latency and greedy sampling is stochastic. To obtain deterministic low-latency performance, we propose an ML-aided method based on gradient-boosted decision trees followed by local search, which performs similar to the oracle for larger arrays at fixed latency. We further validate the approach experimentally using a fully digital emulation of the QPSK oracle beamformer and compare against a GNSS receiver without beamforming capability. Under mild jamming (J/S approximately 44 dB) both receivers maintain adequate tracking, with QPSK yielding a 4.2 dB higher average C/N0 (37.3 vs. 33.1 dB-Hz). Under moderate and strong jamming (J/S approximately 62-70 dB) the benefit is substantial. At J/S = 70 dB the unprotected receiver degrades to near tracking limits (avg C/N0 = 9.3 dB-Hz) while the QPSK oracle sustains an average C/N0 of 20.8 dB-Hz. These results confirm that 2-bit phase-shift beamforming provides considerable anti-jamming benefit over a standard GNSS receiver, motivating further research on oracle-level practical methods.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2509.14000v4" target="_blank" class="paper-title">JaGuard: Position Error Correction of GNSS Jamming with Deep Temporal Graphs</a>
+                        <span class="paper-date">2026-04-28</span>
+                    </div>
+                                        <span class="paper-comment">📝 12 pages, 8 figures</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Global Navigation Satellite Systems (GNSS) face growing disruption from intentional jamming, undermining critical infrastructure where precise positioning and timing are essential. Current position error correction (PEC) methods mainly focus on multi-path propagation errors and fail to exploit the spatio-temporal coherence of satellite constellations. We recast jamming mitigation as a dynamic graph regression problem. We propose Jamming Guardian (JaGuard), a receiver-centric deep temporal graph network that estimates and corrects jamming-induced positional drift at fixed locations like roadside units. Modeling the satellite-receiver scene as a heterogeneous star graph at each 1 Hz epoch, our Heterogeneous Graph ConvLSTM fuses spatial context (SNR, azimuth, elevation) with short-term temporal dynamics to predict 2D positional deviation. Evaluated on a real-world dataset from two commercial receivers under synthesized RF interference (three jammer types, -45 to -70 dBm), JaGuard consistently yields the lowest Mean Absolute Error (MAE) compared to advanced baselines. Under severe jamming (-45 dBm), it maintains an MAE of 2.85-5.92 cm, improving to sub-2 cm at lower interference. On mixed-power datasets, JaGuard surpasses all baselines with MAEs of 2.26 cm (GP01) and 2.61 cm (U-blox 10). Even under extreme data starvation (10% training data), JaGuard remains stable, bounding error at 15-20 cm and preventing the massive variance increase seen in baselines. This confirms that dynamically modeling the physical deterioration of the constellation graph is strictly necessary for resilient interference correction.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2603.19640v2" target="_blank" class="paper-title">Logistic-aided Huber M-estimator for robust GNSS positioning</a>
+                        <span class="paper-date">2026-04-11</span>
+                    </div>
+                                        <span class="paper-comment">📝 Submitted to IEEE Transactions on Aerospace and Electronic Systems</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>This paper develops a logistic-aided Huber (LAH) M-estimator for robust GNSS positioning under long-tailed, multipath-affected measurement errors. The key idea is to leverage a logistic measurement error assumption and establish a one-to-one approximation between the logistic-based loglikelihood (i.e., quasi-log-cosh) and the Huber kernel by matching their score functions. This yields closed-form tuning rules for the scale and threshold parameters in the Huber estimator, grounded on logistic error statistical properties. We further show that the proposed LAH estimator preserves comparable efficiency and robustness to the connected logistic-based least quasi-log-cosh (LQLC) estimator. Both Monte Carlo simulations with long-tailed measurement errors and a one-hour urban GNSS dataset confirm that the proposed logistic-statistics-based tuning improves positioning accuracy and precision while suppressing large error spikes. Specifically, LAH reduces the 2D RMSE/STD by 28.03%/38.83% versus conventional 95%-efficiency-based Huber tuning in simulation, and reduces the overall 3D RMSE/STD by 4.85%/16.68% in real-world experiments while suppressing large positioning error spikes by up to 51%.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2604.07151v1" target="_blank" class="paper-title">An RTK-SLAM Dataset for Absolute Accuracy Evaluation in GNSS-Degraded Environments</a>
+                        <span class="paper-date">2026-04-08</span>
+                    </div>
+                                        <span class="paper-comment">📝 Accepted by ISPRS congress 2026</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>RTK-SLAM systems integrate simultaneous localization and mapping (SLAM) with real-time kinematic (RTK) GNSS positioning, promising both relative consistency and globally referenced coordinates for efficient georeferenced surveying. A critical and underappreciated issue is that the standard evaluation metric, Absolute Trajectory Error (ATE), first fits an optimal rigid-body transformation between the estimated trajectory and reference before computing errors. This so-called SE(3) alignment absorbs global drift and systematic errors, making trajectories appear more accurate than they are in practice, and is unsuitable for evaluating the global accuracy of RTK-SLAM. We present a geodetically referenced dataset and evaluation methodology that expose this gap. A key design principle is that the RTK receiver is used solely as a system input, while ground truth is established independently via a geodetic total station. This separation is absent from all existing datasets, where GNSS typically serves as (part of) the ground truth. The dataset is collected with a handheld RTK-SLAM device, comprising two scenes. We evaluate LiDAR-inertial, visual-inertial, and LiDAR-visual-inertial RTK-SLAM systems alongside standalone RTK, reporting direct global accuracy and SE(3)-aligned relative accuracy to make the gap explicit. Results show that SE(3) alignment can underestimate absolute positioning error by up to 76\%. RTK-SLAM achieves centimeter-level absolute accuracy in open-sky conditions and maintains decimeter-level global accuracy indoors, where standalone RTK degrades to tens of meters. The dataset, calibration files, and evaluation scripts are publicly available at https://rtk-slam-dataset.github.io/.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2507.16600v3" target="_blank" class="paper-title">A Robust 5G Terrestrial Positioning System with Sensor Fusion in GNSS-denied Scenarios</a>
+                        <span class="paper-date">2026-04-07</span>
+                    </div>
+                                        <span class="paper-comment">📝 Submitted to IEEE Transactions on Vehicular Technology</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>This paper presents a terrestrial localization system based on 5G infrastructure as a viable alternative to GNSS, particularly in scenarios where GNSS signals are obstructed or unavailable. It discusses network planning aimed at enabling positioning as a primary service, in contrast to the traditional focus on communication services in terrestrial networks. Building on a network infrastructure optimized for positioning, the paper proposes a system that leverages carrier phase (CP) ranging in combination with trilateration to localize the user within the network when at least three base stations (BSs) provide line-of-sight (LOS) conditions. Achieving accurate CP-based positioning requires addressing three key challenges: integer ambiguity resolution, LOS/NLOS link identification, and localization under obstructed LOS conditions. To this end, the system employs a multi-carrier CP approach, which eliminates the need for explicit integer ambiguity estimation. Additionally, a deep learning model is developed to identify NLOS links and exclude them from the trilateration process. In cases where LOS is obstructed and CP ranging becomes unreliable, the system incorporates an error-state extended Kalman filter to fuse complementary data from other sensors, such as inertial measurement units (IMUs) and cameras. This hybrid approach enables robust tracking of moving users across diverse channel conditions. The performance of the proposed terrestrial positioning system is evaluated using the real-world KITTI dataset, featuring a moving vehicle in an urban environment. Simulation results show that the system can achieve a positioning error of less than 5 meters in the KITTI urban scenario--comparable to that of public commercial GNSS services--highlighting its potential as a resilient and accurate solution for GNSS-denied environments.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2604.05156v1" target="_blank" class="paper-title">Synchronous Observer Design for Landmark-Inertial SLAM with Magnetometer and Intermittent GNSS Measurements</a>
+                        <span class="paper-date">2026-04-06</span>
+                    </div>
+                                        <span class="paper-comment">📝 8 pages, 2 figures, This work has been submitted to CDC 2026</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>In Landmark-Inertial Simultaneous Localisation and Mapping (LI-SLAM), the positions of landmarks in the environment and the robot's pose relative to these landmarks are estimated using landmark position measurements, and measurements from the Inertial Measurement Unit (IMU). However, the robot and landmark positions in the inertial frame, and the yaw of the robot, are not observable in LI-SLAM. This paper proposes a nonlinear observer for LI-SLAM that overcomes the observability constraints with the addition of intermittent GNSS position and magnetometer measurements. The full-state error dynamics of the proposed observer is shown to be both almost-globally asymptotically stable and locally exponentially stable, and this is validated using simulations.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2603.18360v1" target="_blank" class="paper-title">LEO-based Carrier-Phase Positioning for 6G: Design Insights and Comparison with GNSS</a>
+                        <span class="paper-date">2026-03-18</span>
+                    </div>
+                                        <span class="paper-comment">📝 7 pages, 6 figures</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>The integration of non-terrestrial networks (NTN) into 5G new radio (NR) enables a new class of positioning capabilities based on cellular signals transmitted by Low-Earth Orbit (LEO) satellites. In this paper, we investigate joint delay-and-carrier-phase positioning for LEO-based NR-NTN systems and provide a convergence-centric comparison with Global Navigation Satellite Systems (GNSS). We show that the rapid orbital motion of LEO satellites induces strong temporal and geometric diversity across observation epochs, thereby improving the conditioning of multi-epoch carrier-phase models and enabling significantly faster integer-ambiguity convergence. To enable robust carrier-phase tracking under intermittent positioning reference signal (PRS) transmissions, we propose a dual-waveform design that combines wideband PRS for delay estimation with a continuous narrowband carrier for phase tracking. Using a realistic simulation framework incorporating LEO orbit dynamics, we demonstrate that LEO-based joint delay-and-carrier-phase positioning achieves cm-level accuracy with convergence times on the order of a few seconds, whereas GNSS remains limited to meter-level accuracy over comparable short observation windows. These results establish LEO-based cellular positioning as a strong complement and potential alternative to GNSS for high-accuracy positioning, navigation, and timing (PNT) services in future wireless networks.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2603.26706v1" target="_blank" class="paper-title">Evaluating Smartphone GNSS Accuracy for Geofenced 6 GHz Operations</a>
+                        <span class="paper-date">2026-03-17</span>
+                    </div>
+                                        <span class="paper-comment">📝 Submitted to 2026 IEEE International Symposium on Dynamic Spectrum Access Networks (DySPAN) - Dynamic and Innovative Spectrum Sharing (DISS) Workshop</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>The recently deployed 6 GHz spectrum in the U.S. utilizes distinct power categories, with the latest proposed "Geofenced Variable Power" (GVP) category permitting indoor and outdoor operations without continuous Automated Frequency Coordination (AFC) by relying instead on local databases of exclusion zones. Consequently, the safe operation of GVP devices depends entirely on reliable GNSS localization to respect these geofences. However, GNSS accuracy is highly variable and significantly degrades in environments like urban canyons or indoors. This paper presents the first comprehensive empirical study evaluating GNSS reliability specifically for GVP compliance. Utilizing the SigCap Android application, we document and compare GNSS accuracy across an extensive array of real-world conditions, encompassing urban versus suburban landscapes, varying mobility states (stationary, walking, driving), and indoor versus outdoor settings. The results demonstrate that while device hardware causes variations in GNSS accuracy, the operational environment is the primary driver of error. Indoor settings and dense urban areas consistently degrade localization. Moreover, outdoor positions adjacent to buildings often surprisingly produce significant inaccuracies, even near low-elevation structures. We further analyze the contribution of different GNSS constellations to device positioning and show that satellites from non-U.S.-licensed constellations-although currently used in a substantial portion of location fixes-are not permitted for regulatory geolocation under FCC requirements.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2505.04095v2" target="_blank" class="paper-title">Scalable Aerial GNSS Localization for Marine Robots</a>
+                        <span class="paper-date">2026-03-09</span>
+                    </div>
+                                        <span class="paper-comment">📝 International Conference on Robotics and Automation 2025 Workshop Robots in the Wild</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Accurate localization is crucial for water robotics, yet traditional onboard Global Navigation Satellite System (GNSS) approaches are difficult or ineffective due to signal reflection on the water's surface and its high cost of aquatic GNSS receivers. Existing approaches, such as inertial navigation, Doppler Velocity Loggers (DVL), SLAM, and acoustic-based methods, face challenges like error accumulation and high computational complexity. Therefore, a more efficient and scalable solution remains necessary. This paper proposes an alternative approach that leverages an aerial drone equipped with GNSS localization to track and localize a marine robot once it is near the surface of the water. Our results show that this novel adaptation enables accurate single and multi-robot marine robot localization.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2511.18694v2" target="_blank" class="paper-title">Stable Multi-Drone GNSS Tracking System for Marine Robots</a>
+                        <span class="paper-date">2026-03-08</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Stable and accurate tracking is essential for marine robotics, yet Global Navigation Satellite System (GNSS) signals vanish immediately below the sea surface. Traditional alternatives suffer from error accumulation, high computational demands, or infrastructure dependence. In this work, we present a multi-drone GNSS-based tracking system for surface and near-surface marine robots. Our approach combines efficient visual detection, lightweight multi-object tracking, GNSS-based triangulation, and a confidence-weighted Extended Kalman Filter (EKF) to provide stable GNSS estimation in real time. We further introduce a cross-drone tracking ID alignment algorithm that enforces global consistency across views, enabling robust multi-robot tracking with cooperative aerial coverage. We validate our system in diversified complex settings to show the accuracy and robustness of the proposed algorithm.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2602.21366v2" target="_blank" class="paper-title">Environment-Aware Learning of Smooth GNSS Covariance Dynamics for Autonomous Racing</a>
+                        <span class="paper-date">2026-03-05</span>
+                    </div>
+                                        <span class="paper-comment">📝 8 pages, Accepted to IEEE International Conference on Robotics and Automation (ICRA) 2026</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Ensuring accurate and stable state estimation is a challenging task crucial to safety-critical domains such as high-speed autonomous racing, where measurement uncertainty must be both adaptive to the environment and temporally smooth for control. In this work, we develop a learning-based framework, LACE, capable of directly modeling the temporal dynamics of GNSS measurement covariance. We model the covariance evolution as an exponentially stable dynamical system where a deep neural network (DNN) learns to predict the system's process noise from environmental features through an attention mechanism. By using contraction-based stability and systematically imposing spectral constraints, we formally provide guarantees of exponential stability and smoothness for the resulting covariance dynamics. We validate our approach on an AV-24 autonomous racecar, demonstrating improved localization performance and smoother covariance estimates in challenging, GNSS-degraded environments. Our results highlight the promise of dynamically modeling the perceived uncertainty in state estimation problems that are tightly coupled with control sensitivity.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2603.03556v1" target="_blank" class="paper-title">Real-time tightly coupled GNSS and IMU integration via Factor Graph Optimization</a>
+                        <span class="paper-date">2026-03-03</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Reliable positioning in dense urban environments remains challenging due to frequent GNSS signal blockage, multipath, and rapidly varying satellite geometry. While factor graph optimization (FGO)-based GNSS-IMU fusion has demonstrated strong robustness and accuracy, most formulations remain offline. In this work, we present a real-time tightly coupled GNSS-IMU FGO method that enables causal state estimation via incremental optimization with fixed-lag marginalization, and we evaluate its performance in a highly urbanized GNSS-degraded environment using the UrbanNav dataset.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2603.03546v1" target="_blank" class="paper-title">Real-time loosely coupled GNSS and IMU integration via Factor Graph Optimization</a>
+                        <span class="paper-date">2026-03-03</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Accurate positioning, navigation, and timing (PNT) is fundamental to the operation of modern technologies and a key enabler of autonomous systems. A very important component of PNT is the Global Navigation Satellite System (GNSS) which ensures outdoor positioning. Modern research directions have pushed the performance of GNSS localization to new heights by fusing GNSS measurements with other sensory information, mainly measurements from Inertial Measurement Units (IMU). In this paper, we propose a loosely coupled architecture to integrate GNSS and IMU measurements using a Factor Graph Optimization (FGO) framework. Because the FGO method can be computationally challenging and often used as a post-processing method, our focus is on assessing its localization accuracy and service availability while operating in real-time in challenging environments (urban canyons). Experimental results on the UrbanNav-HK-MediumUrban-1 dataset show that the proposed approach achieves real-time operation and increased service availability compared to batch FGO methods. While this improvement comes at the cost of reduced positioning accuracy, the paper provides a detailed analysis of the trade-offs between accuracy, availability, and computational efficiency that characterize real-time FGO-based GNSS/IMU fusion.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2603.01404v2" target="_blank" class="paper-title">D-GVIO: A Buffer-Driven and Efficient Decentralized GNSS-Visual-Inertial State Estimator for Multi-Agent Systems</a>
+                        <span class="paper-date">2026-03-03</span>
+                    </div>
+                                        <span class="paper-comment">📝 Accepted by ICRA 2026</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Cooperative localization is essential for swarm applications like collaborative exploration and search-and-rescue missions. However, maintaining real-time capability, robustness, and computational efficiency on resource-constrained platforms presents significant challenges. To address these challenges, we propose D-GVIO, a buffer-driven and fully decentralized GNSS-Visual-Inertial Odometry (GVIO) framework that leverages a novel buffering strategy to support efficient and robust distributed state estimation. The proposed framework is characterized by four core mechanisms. Firstly, through covariance segmentation, covariance intersection and buffering strategy, we modularize propagation and update steps in distributed state estimation, significantly reducing computational and communication burdens. Secondly, the left-invariant extended Kalman filter (L-IEKF) is adopted for information fusion, which exhibits superior state estimation performance over the traditional extended Kalman filter (EKF) since its state transition matrix is independent of the system state. Thirdly, a buffer-based re-propagation strategy is employed to handle delayed measurements efficiently and accurately by leveraging the L-IEKF, eliminating the need for costly re-computation. Finally, an adaptive buffer-driven outlier detection method is proposed to dynamically cull GNSS outliers, enhancing robustness in GNSS-challenged environments.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2602.21266v1" target="_blank" class="paper-title">Dual-Branch INS/GNSS Fusion with Inequality and Equality Constraints</a>
+                        <span class="paper-date">2026-02-24</span>
+                    </div>
+                                        <span class="paper-comment">📝 12 pages, 5 figuers</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Reliable vehicle navigation in urban environments remains a challenging problem due to frequent satellite signal blockages caused by tall buildings and complex infrastructure. While fusing inertial reading with satellite positioning in an extended Kalman filter provides short-term navigation continuity, low-cost inertial sensors suffer from rapid error accumulation during prolonged outages. Existing information aiding approaches, such as the non-holonomic constraint, impose rigid equality assumptions on vehicle motion that may be violated under dynamic urban driving conditions, limiting their robustness precisely when aiding is most needed. In this paper, we propose a dual-branch information aiding framework that fuses equality and inequality motion constraints through a variance-weighted scheme, requiring only a software modification to an existing navigation filter with no additional sensors or hardware. The proposed method is evaluated on four publicly available urban datasets featuring various inertial sensors, road conditions, and dynamics, covering a total duration of 4.3 hours of recorded data. Under Full GNSS availability, the method reduces vertical position error by 16.7% and improves altitude accuracy by 50.1% over the standard non-holonomic constraint. Under GNSS-denied conditions, vertical drift is reduced by 24.2% and altitude accuracy improves by 20.2%. These results demonstrate that replacing hard motion equality assumptions with physically motivated inequality bounds is a practical and cost-free strategy for improving navigation resilience, continuity, and drift robustness without relying on additional sensors, map data, or learned models.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2601.16393v3" target="_blank" class="paper-title">GNSS-based Lunar Orbit and Clock Estimation With Stochastic Cloning UD Filter</a>
+                        <span class="paper-date">2026-02-18</span>
+                    </div>
+                                        <span class="paper-comment">📝 Submitted to the Journal of Guidance, Control, and Dynamics</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>This paper presents a terrestrial GNSS-based orbit and clock estimation framework for lunar navigation satellites. To enable high-precision estimation under the low-observability conditions encountered at lunar distances, we develop a stochastic-cloning UD-factorized filter and delayed-state smoother that provide enhanced numerical stability when processing precise time-differenced carrier phase (TDCP) measurements. A comprehensive dynamics and measurement model is formulated, explicitly accounting for relativistic coupling between orbital and clock states, lunar time-scale transformations, and signal propagation delays including ionospheric, plasmaspheric, and Shapiro effects. The proposed approach is evaluated using high-fidelity Monte-Carlo simulations incorporating realistic multi-constellation GNSS geometry, broadcast ephemeris errors, lunar satellite dynamics, and ionospheric and plasmaspheric delay computed from empirical electron density models. Simulation results demonstrate that combining ionosphere-free pseudorange and TDCP measurements achieves meter-level orbit accuracy and sub-millimeter-per-second velocity accuracy, satisfying the stringent signal-in-space error requirements of future Lunar Augmented Navigation Services (LANS).</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>👤 <strong>Hongkun Luo (罗宏昆)</strong> · <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent)">Academic Page</a> · <a href="https://github.com/luohongk" target="_blank" style="color:var(--accent)">GitHub</a></p>
+            <p style="margin-top:8px">🤖 Generated automatically from <a href="https://arxiv.org" style="color:var(--accent)">arXiv</a> · <a href="https://github.com/luohongk/Embodied-AI-Daily" style="color:var(--accent)">GitHub Repo</a></p>
+            <p style="margin-top:4px">Last update: 2026-08-23 (Beijing Time)</p>
+        </footer>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+        /* ── Mobile menu ── */
+        function toggleMenu() {
+            var overlay = document.getElementById('mobileNav');
+            var btn = document.getElementById('menuToggle');
+            var open = overlay.classList.toggle('open');
+            btn.textContent = open ? '✕' : '☰';
+            document.body.style.overflow = open ? 'hidden' : '';
+        }
+        function closeMenu() {
+            var overlay = document.getElementById('mobileNav');
+            var btn = document.getElementById('menuToggle');
+            overlay.classList.remove('open');
+            btn.textContent = '☰';
+            document.body.style.overflow = '';
+        }
+
+        /* ── Lazy AI-summary renderer ── */
+        // Render markdown + re-typeset MathJax only when a summary is opened.
+        // Math spans ($...$, $$...$$, \(...\), \[...\]) are stashed as
+        // placeholders before marked runs so Markdown never mangles LaTeX.
+        function renderAISummary(details) {
+            if (!details.dataset.lazy) return;   // already rendered
+            var rawMd = details.dataset.md || '';
+
+            // Decode HTML entities we encoded in Python.
+            // Order matters: &amp; must be last (it re-encodes other entities).
+            rawMd = rawMd
+                .replace(/&#10;/g, '\n')
+                .replace(/&quot;/g, '"')
+                .replace(/&lt;/g, '<')
+                .replace(/&gt;/g, '>')
+                .replace(/&amp;/g, '&');
+
+            // 1. Stash math spans.
+            var store = [];
+            function stash(m) { store.push(m); return '\x02MATH' + (store.length - 1) + 'END\x03'; }
+            var protected_ = rawMd
+                .replace(/\$\$[\s\S]+?\$\$/g, stash)
+                .replace(/\\\[[\s\S]+?\\\]/g, stash)
+                .replace(/\$[^$\n]+?\$/g, stash)
+                .replace(/\\\([\s\S]+?\\\)/g, stash);
+
+            // 2. Render markdown.
+            var html = (typeof marked !== 'undefined')
+                ? marked.parse(protected_)
+                : '<pre>' + protected_.replace(/</g, '&lt;') + '</pre>';
+
+            // 3. Restore math spans verbatim.
+            store.forEach(function(expr, i) {
+                html = html.split('\x02MATH' + i + 'END\x03').join(expr);
+            });
+
+            // 4. Inject into DOM.
+            var container = details.querySelector('.ai-content');
+            if (container) container.innerHTML = html;
+
+            // 5. Ask MathJax to typeset just this element.
+            if (window.MathJax && MathJax.typesetPromise) {
+                MathJax.typesetPromise([container]).catch(function(e) {
+                    console.warn('MathJax typeset error:', e);
+                });
+            }
+
+            // Mark done so we never re-render.
+            delete details.dataset.lazy;
+            delete details.dataset.md;
+        }
+
+        // Wire up all existing .ai-summary elements.
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('details.ai-summary[data-lazy]').forEach(function(det) {
+                det.addEventListener('toggle', function () {
+                    if (det.open) renderAISummary(det);
+                }, { once: true });
+            });
+        });
+    </script>
+</body>
+</html>
