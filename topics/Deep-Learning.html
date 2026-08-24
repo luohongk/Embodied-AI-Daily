@@ -570,7 +570,7 @@
                 <a href="Continuous-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#6366f1"></span>
                     <span class="nav-label">Continuous Learning</span>
-                    <span class="nav-count">79</span>
+                    <span class="nav-count">78</span>
                 </a>
                 <a href="Feed-Forward-Reconstruction.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
@@ -590,7 +590,7 @@
                 <a href="World-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">World Model</span>
-                    <span class="nav-count">77</span>
+                    <span class="nav-count">76</span>
                 </a>
                 <a href="3D-Foundation-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
@@ -690,12 +690,12 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">68</span>
+                    <span class="nav-count">70</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">72</span>
+                    <span class="nav-count">75</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -730,7 +730,7 @@
                 <a href="Model-Predictive-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#14b8a6"></span>
                     <span class="nav-label">Model Predictive Control</span>
-                    <span class="nav-count">47</span>
+                    <span class="nav-count">48</span>
                 </a>
                 <a href="Whole-Body-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#06b6d4"></span>
@@ -789,7 +789,7 @@
             <a href="Continuous-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
                 <span class="nav-label">Continuous Learning</span>
-                <span class="nav-count">79</span>
+                <span class="nav-count">78</span>
             </a>
             <a href="Feed-Forward-Reconstruction.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
@@ -809,7 +809,7 @@
             <a href="World-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">World Model</span>
-                <span class="nav-count">77</span>
+                <span class="nav-count">76</span>
             </a>
             <a href="3D-Foundation-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
@@ -909,12 +909,12 @@
             <a href="Deep-Learning.html" class="nav-item active">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">68</span>
+                <span class="nav-count">70</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">72</span>
+                <span class="nav-count">75</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -949,7 +949,7 @@
             <a href="Model-Predictive-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#14b8a6"></span>
                 <span class="nav-label">Model Predictive Control</span>
-                <span class="nav-count">47</span>
+                <span class="nav-count">48</span>
             </a>
             <a href="Whole-Body-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#06b6d4"></span>
@@ -1025,19 +1025,322 @@
         <section class="topic-section">
             <div class="topic-header">
                 <span class="topic-badge" style="background:#ec4899">Deep Learning</span>
-                <span class="topic-count">68 papers</span>
+                <span class="topic-count">70 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2602.01718v2" target="_blank" class="paper-title">Generalization Measures under Controlled Covariate Shift: A Regime-Aware Benchmark</a>
+                        <span class="paper-date">2026-08-21</span>
+                    </div>
+                                        <span class="paper-comment">📝 Accepted to TMLR</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在受控协变量偏移（如图像损坏或扰动）下，预测深度学习模型泛化能力时，现有泛化度量基准仅关注独立同分布（IID）设置，缺乏对非IID场景的系统评估。&#10;&#10;🛠 **方法**：使用CIFAR-10-C/P数据集，在固定标签空间和任务下对输入图像施加受控退化或扰动，评估多种泛化度量（如锐度、输入梯度、优化相关度量等）在三种CNN架构上的相关性和局部可靠性，并进行探索性决策分析。&#10;&#10;✨ **主要贡献**：发现泛化度量的有效性强烈依赖具体偏移场景（regime-dependent），锐度和输入梯度度量在多数情况下表现领先，但架构间差异显著；优化度量和信息准则仅在特定条件下有效。结论强调模型选择不应依赖IID评估偏好的度量，而需针对目标损坏或扰动场景验证度量效用。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Predicting generalization from quantities available before target-test evaluation remains a central challenge in deep learning. The systematic benchmark of Jiang et al. (2020) evaluated many generalization measures, but it focused on independent and identically distributed (IID) settings. We revisit this problem for image classifiers evaluated under controlled corruptions and perturbations. Our study uses CIFAR-10-C/P, where the label space and task remain fixed while the input images are degraded or perturbed. This setting also allows us to revisit the robustness concerns raised by Dziugaite et al. (2020), who showed that the apparent reliability of generalization measures can depend strongly on experimental conditions. Our experiments show that the usefulness of generalization measures is strongly regime-dependent. In our exploratory decision analysis across three CNN-style architectures, sharpness- and input-gradient-based measures are among the leading individual signals, whereas family results are close and architecture dependent. Optimization-based measures, Information Criteria, and Sharpness-based measures provide additional regime-dependent signals in correlation or local-reliability analyses. Together, these findings suggest that model selection should not rely only on measures favored by IID evaluation. Instead, within the evaluated CIFAR-10-C/P setting and architectures, generalization measures should be treated as regime-dependent ranking signals whose utility must be evaluated for the intended corruption or perturbation setting.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.21332v1" target="_blank" class="paper-title">Anatomy-Informed Neural Networks: Encoding Anatomic Priors in Loss and Architecture, with an SE(3) Formulation of Guidewire-Induced Aortoiliac Deformation</a>
+                        <span class="paper-date">2026-08-21</span>
+                    </div>
+                                        <span class="paper-comment">📝 42 pages, 10 figures, 4 tables</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决深度学习模型在解剖结构预测中可能产生数值合理但解剖学上不可能的结果，以及在数据稀缺时泛化能力差的问题。&#10;&#10;🛠 **方法**：提出解剖信息神经网络（AINN），将软解剖先验作为损失函数中的惩罚项（如分支惩罚），将硬解剖先验（如血管连续性）直接编码到网络架构和状态表示中；在临床案例中，将血管中心线和导丝路径提升到SE(3)李群中的曲线，耦合Cosserat杆导丝与血管模型，通过Wasserstein-2最优传输损失实现2D血管造影训练3D预测。&#10;&#10;✨ **主要贡献**：首次将解剖先验以软硬两种方式系统性地融入神经网络，提出SE(3)框架下的导丝诱导主动脉髂动脉变形模型，并验证了运动学、损失函数和投影的准确性；该框架有望减少训练数据需求并提高预测精度。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Deep-learning models of anatomy can be numerically plausible yet anatomically impossible, and they generalize poorly when data are scarce. We introduce Anatomy-Informed Neural Networks (AINN), in which soft anatomic priors enter as penalty terms in the loss (e.g., a branching penalty that treats a renal transplant artery off the iliac instead of the aorta as unexpected rather than impossible), in direct analogy to a physics-informed neural network, and hard anatomic priors (e.g., continuity of the vessel) are built into the architecture and state representation, making such invalid predictions impossible by construction wherever the prior admits architectural enforcement. We develop it on a clinical test case with limited data: how the aortoiliac tree deforms when a stiff wire is introduced endoluminally. This is important to contemporary aortic surgery and will matter to autonomous endovascular navigation. We lift the vessel centerline and the wire path from R^3 to curves of frames in the Lie group SE(3), and couple a Cosserat-rod wire to a tortuosity-modulated, anatomically anchored vessel through a unilateral lumen-contact inequality. The prediction is a constrained minimizer of the coupled elastic energy, with contact forces as its Lagrange multipliers. Supervision is a Wasserstein-2 optimal-transport loss between the predicted projection through the C-arm geometry and the observed angiogram, so a 2D angiogram can train a 3D prediction. The kinematics, loss and projection are verified against known ground truth; the mechanics solver only against its own optimality conditions, and predicted displacement is not yet mesh-converged. Here, no network is trained. Future work will transfer this in silico model to real CT scans and test whether it improves predictive accuracy and reduces the training data required.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2605.10894v2" target="_blank" class="paper-title">Counterfactual Stress Testing for Image Classification Models</a>
+                        <span class="paper-date">2026-08-21</span>
+                    </div>
+                                        <span class="paper-comment">📝 12 pages, 6 figures, 2 tables. Accepted at the MICCAI 2026 Joint FAIMI-BRIDGE-EPIMI Workshop. To appear in Springer LNCS</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：医学影像模型在临床部署时因分布偏移（如人群、设备差异）常出现性能下降，而现有压力测试方法仅使用简单扰动，无法反映真实临床变化，导致鲁棒性评估不准确。&#10;&#10;🛠 **方法**：提出基于因果生成模型的反事实压力测试框架，通过干预属性（如扫描仪类型、记录性别）生成保留解剖身份的“what-if”图像，实现受控且语义明确的分布偏移评估。&#10;&#10;✨ **主要贡献**：在胸部X光和乳腺摄影两种模态、三种模型架构及多种偏移场景下，反事实测试比经典扰动更准确预测真实分布外性能，能捕捉性能变化方向与相对幅度，并显著提升排名一致性，为部署前鲁棒性评估提供有效工具。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Deep learning models in medical imaging often fail when deployed in new clinical environments due to distribution shifts in demographics, scanner hardware, or acquisition protocols. A central challenge is underspecification, where models with similar validation performance exhibit divergent real-world failure modes. Although stress testing has emerged as a tool to assess this, current methods typically rely on simple, uninformed perturbations (e.g., brightness or contrast changes), which fail to capture clinically realistic variation and can overestimate robustness. In this work, we introduce a counterfactual stress testing framework based on causal generative models that create realistic "what if" images by intervening on attributes such as scanner type and recorded sex while largely preserving anatomical identity, enabling controlled and semantically meaningful evaluation under targeted distribution shifts. Across two imaging modalities (chest X-ray and mammography), three model architectures, and multiple shift scenarios, we show that counterfactual stress tests provide a substantially more accurate proxy for real out-of-distribution performance than classical perturbations, capturing the direction and relative magnitude of performance changes and showing stronger overall rank agreement. These results suggest that causal generative models can provide informative synthetic stress tests for assessing robustness under targeted distribution shifts prior to deployment.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.21189v1" target="_blank" class="paper-title">Towards Investigating Residual Hearing Loss: Quantification of Fibrosis in a Novel Cochlear OCT Dataset</a>
+                        <span class="paper-date">2026-08-21</span>
+                    </div>
+                                        <span class="paper-comment">📝 Copyright 2026 IEEE. Personal use of this material is permitted. Citation/DOI: 10.1109/TBME.2025.3537868</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：研究人工耳蜗植入后引发的耳蜗纤维化对残余听力的影响，并探索利用计算机视觉技术客观量化纤维化程度。&#10;&#10;🛠 **方法**：构建了一个新的豚鼠慢性植入耳蜗OCT图像数据集，并采用多种语义分割模型（包括改进的UNET架构2D-OCT-UNET）对纤维化区域进行自动分割。&#10;&#10;✨ **主要贡献**：首次将深度学习分割技术成功应用于植入耳蜗的OCT图像，验证了2D-OCT-UNET在纤维化量化中的可靠性和高精度，为评估EAS疗效和优化CI患者预后提供了新工具。数据集和代码已开源。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Objective: Cochlear implants (CIs) are bionic prostheses that restores hearing via electrical stimulation of the auditory nerve. Hybrid CIs, which use electroacoustic stimulation (EAS), combine residual low-frequency acoustic hearing with CI electrical stimulation. Intracochlear fibrosis, which forms in response to the presence of the implant, may impede residual hearing function and gradually reduce the efficacy of EAS. It is therefore a translational objective to study the formation of cochlear fibrosis in rodents, with the goal of reducing fibrotic burden and improving outcomes for CI patients. Methods: We generate and annotate a novel dataset of optical coherence tomography (OCT) images from chronically implanted guinea pigs as part of an ongoing study focused on implant induced fibrosis. Objectively assessing fibrotic burden in this model, with high resolution and repeatability, presents an obvious use case for computer vision methods. Results: We present the results of several state-of-the-art semantic segmentation models and compare their efficacy for identifying cochlear fibrosis and other relevant annotations, using a new library of manually segmented OCT images. Conclusions: We find that the best performance is achieved by using a modified version of the well-known UNET architecture (which we term 2D-OCT-UNET) that operates on the upscaled OCT input resolution. Significance: For the first time, we have successfully applied computer vision techniques to an OCT dataset of implanted cochleae with fibrosis. Using this deep learning model, the cochlear fibrotic burden calculation can be reliably carried out as we verify in our experimental section. The dataset and the project code are available at: https://github.com/juliadietlmeier/CF-OCT-segmentation</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.21157v1" target="_blank" class="paper-title">HIERA: Workload-Aware Planning Across Implementation Spaces for GPU Kernel Optimization</a>
+                        <span class="paper-date">2026-08-21</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有基于LLM的GPU内核优化方法受限于固定实现空间，难以兼顾优化灵活性与搜索效率。&#10;&#10;🛠 **方法**：提出HIERA框架，通过构建契约增强的任务规范，在PyTorch算子、CUDA库和自定义CUDA内核间动态选择实现空间，并利用性能剖析反馈与专家知识进行结构化迭代优化。&#10;&#10;✨ **主要贡献**：在KernelBench多个负载级别和基础LLM上，HIERA相比现有免训练方法在实现有效性、样本效率和优化性能上更优，且无需额外训练即可媲美基于训练的CUDA-L1；在科学计算stencil算子案例中实现1.53倍于cuDNN的加速，展示出超越标准ML负载的通用性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>High-performance GPU kernels underpin modern deep learning and scientific computing. As workloads become increasingly diverse and GPU hardware evolves rapidly, developing efficient methods for automated GPU kernel generation and optimization has become increasingly important. Existing LLM-based methods typically optimize within a fixed implementation space, limiting either optimization flexibility or search efficiency. We propose \textsc{HIERA}, a hierarchical search-space planning framework for GPU kernel optimization. \textsc{HIERA} constructs contract-augmented task specifications, selects an appropriate implementation space across PyTorch operators, CUDA libraries, and custom CUDA kernels, and uses profiling feedback and expert knowledge to guide structured iterative refinement. Experiments on KernelBench across multiple various workload levels and base LLMs show that \textsc{HIERA} delivers stronger overall implementation validity, sample efficiency, and optimization performance than existing training-free methods, while remaining competitive with the training-based CUDA-L1 without additional model training. A case study on a specialized stencil operator from scientific computing further achieves a \(1.53\times\) speedup over cuDNN, demonstrating the potentiality of the general framework beyond standard machine-learning workloads.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.21148v1" target="_blank" class="paper-title">Statistical and Deep Learning Approaches for Predicting Degradation of Polymeric Materials in Photovoltaics</a>
+                        <span class="paper-date">2026-08-21</span>
+                    </div>
+                                        <span class="paper-comment">📝 32 pages, 13 figures</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：光伏系统中聚合物材料因紫外线辐射发生光降解，如何准确预测其在户外环境下的服役寿命和降解路径。&#10;&#10;🛠 **方法**：结合参数统计模型与深度学习（DL）方法，基于室内加速老化数据建立预测模型，并扩展至含时变环境变量的户外条件，通过模拟量化预测不确定性。&#10;&#10;✨ **主要贡献**：统计模型融合物理化学知识，拟合与预测性能稳健；DL模型灵活捕捉复杂协变量关系，预测精度高但跨数据集鲁棒性较弱；为光伏可靠性评估提供了对比性建模框架与实用见解。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Polymeric materials are widely used in photovoltaic (PV) systems, making it essential to understand their service life to ensure reliable PV performance. The primary failure mechanism of polymeric materials in PV systems is photodegradation caused by ultraviolet (UV) radiation. Degradation modeling provides a framework for predicting service life, with a key step being the development of predictive models for degradation paths. This paper presents statistical and machine learning approaches for predicting the outdoor degradation of polymeric components in PV systems. We describe the study design and data collection process for developing predictive models based on indoor laboratory testing data, which are then extended to outdoor field conditions with time-varying environmental variables, with prediction uncertainty quantified through simulation. Deep learning (DL) methods are also explored, and results are compared across modeling approaches. The parametric statistical model demonstrates good fit and predictive performance across datasets and shows greater robustness by incorporating physical and chemical knowledge. The DL model provides flexibility in capturing complex covariate relationships and often yields accurate predictions, though it is less robust across datasets. The paper concludes with remarks on key findings and their implications for PV reliability.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.21073v1" target="_blank" class="paper-title">Knowledge-guided Transfer Prediction In Underrepresented Populations: A GRU-D-Static Framework For Maternal And Neonatal Outcomes</a>
+                        <span class="paper-date">2026-08-21</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在目标人群数据稀缺或不可得的情况下，如何利用源人群训练的预测模型，提升对代表性不足人群（如孕产妇和新生儿）不良结局的预测性能。&#10;&#10;🛠 **方法**：提出基于外部汇总级科学知识的迁移预测策略，扩展GRU-D框架为GRU-D-Static，融合静态特征嵌入和注意力权重，并利用目标人群的软标签（由汇总统计生成）对源模型进行微调。&#10;&#10;✨ **主要贡献**：在PRISMA研究中，仅用基本协变量的软标签微调即可显著提升六种母婴不良结局的预测性能；加入更多协变量或部分目标特征后性能进一步提升，验证了利用文献知识减少对大规模数据依赖的可行性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Integrating summary-level scientific knowledge into neural network models provides a practical strategy for transferring prediction models trained on adequately sampled source cohorts to underrepresented target populations, where individual-level data in the target domain are often limited or unavailable. In this study, we propose transfer prediction strategies incorporating external summary-level scientific knowledge and illustrate its application on the PRISMA Maternal and Neonatal Health Study, training a neural network model on the source data to predict adverse outcomes in the target cohorts. Besides, we also extend the existing GRU-D framework by incorporating static feature embeddings and attention weights to jointly leverage temporal and static information for improved prediction. Our approach employs soft labels derived from summary-level statistics describing the target population to fine-tune GRU-D-Static models that are initially trained on the source populations. We evaluate six maternal and neonatal outcomes, including stillbirth, preterm birth, low birth weight, small vulnerable newborn, neonatal death, and maternal near miss. Across all tested scenarios, fine-tuning using soft labels from just basic covariates substantially improved predictive performance compared with deep learning models trained on the source sample. Furthermore, the performance slightly improves more when additional covariates were incorporated into the logistic regression model or when partial input features from the target population were available for fine-tuning. These findings demonstrate that integrating existing scientific knowledge in the literature through transfer prediction of source neural network models can enhance prediction performance in underrepresented target populations, reducing reliance on large-scale data collection and supporting risk prediction in global health.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2504.18882v3" target="_blank" class="paper-title">SPD Matrix Learning for Neuroimaging Analysis: Perspectives, Methods, and Challenges</a>
+                        <span class="paper-date">2026-08-21</span>
+                    </div>
+                                        <span class="paper-comment">📝 18 pages, 2 figures, 2 tables; This work was accepted for publication in IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI) in 2026. Copyright may be transferred without notice, after which this version may no longer be accessible</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：神经影像分析中，如何利用对称正定（SPD）矩阵表示脑活动、结构和连接性，并在非欧几里得空间中实现有效的统计推断与机器学习。&#10;&#10;🛠 **方法**：系统梳理了从模态特定表示到几何浅层与深度学习范式的演进，将SPD矩阵学习与黎曼几何相结合，统一了经典几何统计与现代AI方法。&#10;&#10;✨ **主要贡献**：提出了一个连接神经影像与脑机接口应用的SPD矩阵学习框架，强调其在保持底层结构约束的同时，推动现代AI在脑科学中的扩展。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Neuroimaging provides essential tools for characterizing brain activity, structure, and connectivity through modalities that capture complementary aspects of brain organization. Across these diverse modalities, a unifying perspective arises when measurements are modeled as symmetric positive-definite (SPD)-valued representations through appropriate estimation or regularization procedures. Endowed with Riemannian geometry, the SPD manifold provides a non-Euclidean framework for principled statistical inference and machine learning on these representations. This review organizes these analytical and learning approaches within a framework for SPD matrix learning that connects classical geometric statistics with modern machine learning across neuroimaging and neurophysiological applications. We systematically survey the progression from modality-specific representations to geometric shallow and deep learning paradigms, highlighting how SPD matrix learning preserves underlying structural constraints while extending to modern AI applications in neuroimaging and brain-computer interfaces.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.20970v1" target="_blank" class="paper-title">Deep Learning Models Also Recall Features</a>
+                        <span class="paper-date">2026-08-21</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：本文探讨深度学习模型中的“特征回忆”（feature recall）机制，即模型如何从权重中检索存储的信息，而不仅仅是传统理解的“特征组合”。&#10;&#10;🛠 **方法**：作者提出将线性投影视为一种按输入激活缩放的信息检索操作，并论证该机制适用于多种架构，同时探讨了如何在机制层面识别此类操作。&#10;&#10;✨ **主要贡献**：首次系统性地定义“特征回忆”概念，将其与“特征组合”范式区分开来，为哲学理解和机械可解释性研究提供了新的概念工具和实证方向。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Recent work in mechanistic interpretability has studied how large language models recall facts stored in their weights. This paper argues that factual recall points to something broader: a general kind of operation in deep learning models, which I call feature recall. The core observation is that a linear projection can be read as retrieving stored information scaled by input activations. I define feature recall, show it applies across architectures, and contrast it with the established paradigm of feature combination. I also consider how cases of feature recall might be mechanistically identified. The account gives philosophers a new conceptual tool for understanding deep learning, and points to empirical directions for mechanistic interpretability research.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.25222v2" target="_blank" class="paper-title">Ciphertext-Native Watermarking for RLWE-Based Homomorphic Encryption</a>
+                        <span class="paper-date">2026-08-21</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有RLWE同态加密方案缺乏对密文版权保护、来源追踪和计算监督的支持，需要一种不破坏同态计算正确性的密文水印技术。&#10;&#10;🛠 **方法**：利用RLWE多项式的代数结构，将水印信息嵌入密文噪声中；提出两种方案——ARWMark（基于噪声分层，抗同态加法）和MRWMark（基于线性方程根，支持零比特水印，抗同态加法和乘法）。&#10;&#10;✨ **主要贡献**：首次为RLWE同态加密设计密文原生水印方案，理论证明其不降低原始安全性且保持正确性和鲁棒性，实验验证了实际有效性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Homomorphic encryption (HE) schemes based on the Ring Learning with Errors (RLWE) problem have been rapidly developed and widely applied to secure computation tasks, such as privacy-preserving deep learning inference and database queries. However, existing HE schemes mainly focus on the feasibility and efficiency of homomorphic computation, while practical requirements including ciphertext copyright protection, provenance tracking, and computation supervision remain largely unexplored. In this work, we propose a watermarking technique for RLWE-based HE ciphertexts. By exploiting the algebraic structure of RLWE polynomials, we embed watermark information into ciphertext noise without affecting plaintext correctness. To address watermark degradation caused by homomorphic operations, we introduce two practical schemes. The first scheme, ARWMark, leverages noise stratification to achieve robustness against homomorphic additive operations. The second scheme, MRWMark, is based on the roots of a linear equation and supports zero-bit watermarking while remaining robust against both homomorphic addition and multiplication. We provide rigorous theoretical analysis demonstrating that the proposed schemes preserve the original security of HE while maintaining correctness and watermark robustness. Extensive experiments further validate the effectiveness and practicality of the proposed watermarking schemes.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.20809v1" target="_blank" class="paper-title">TRACE: Training-time Report-guided and Clinically Ordered Concept Editing</a>
+                        <span class="paper-date">2026-08-21</span>
+                    </div>
+                                        <span class="paper-comment">📝 Accepted at the 34th ACM International Conference on Multimedia (ACM MM 2026). 9 pages, 3 figures</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Breast ultrasound diagnosis relies on clinically meaningful semantic concepts, yet most deep learning methods adopt end-to-end image-to-label paradigms that lack interpretability and robustness. While concept-based approaches offer a promising alternative, they often assume complete annotations or require multimodal inputs at inference, which significantly limits their real-world applicability. To tackle these issues, we propose Training-time Report-guided and Clinically Ordered Concept Editing (TRACE), a training-time report-guided framework that leverages structured radiology reports as privileged concept supervision while enabling image-only diagnosis at test time. TRACE refines image-derived concepts through a teacher-guided editing mechanism within a malignancy-aware ordered concept space. To address incomplete annotations, we introduce Strategic Concept Missing Training (SCMT) and train an image-only self-editor via edit distillation for autonomous concept refinement. Besides, we introduce BUSC, a concept-enriched benchmark linking images, labels, and structured attributes. Experiments across multiple datasets demonstrate that TRACE achieves superior performance and improved cross-domain robustness compared to existing methods.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.20788v1" target="_blank" class="paper-title">M2Depth: Unifying Monocular Depth Foundation Priors with Multi-View Stereo</a>
+                        <span class="paper-date">2026-08-21</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Deep learning-based Multi-View Stereo (MVS) has advanced significantly but often generalizes poorly to unseen scenes, particularly in occluded areas or regions with limited view overlap. To mitigate this, recent approaches integrate Depth Foundation Models (DFMs) into MVS pipelines to provide monocular depth priors. However, existing methods typically rely on a static, one-way fusion scheme, which fails to fully exploit the complementary strengths of both modalities. We propose a novel framework that overcomes this limitation by tightly coupling a DFM with a cascade MVS pipeline through a bidirectional mutual refinement strategy. Our method leverages MVS depth to resolve the scale ambiguity in monocular predictions, while the monocular depth, in turn, enhances the structural completeness and fine-grained detail of the MVS estimate. Furthermore, we introduce a prior-guided cost volume refinement mechanism that effectively integrates multi-view and monocular information via attention-based fusion and discretized depth bins, thereby promoting local geometric consistency. Extensive experiments demonstrate that our method outperforms state-of-the-art MVS approaches on standard benchmarks, producing more complete and generalizable depth maps with sharp boundaries. Furthermore, although not explicitly designed for sparse-view settings, our framework generalizes remarkably well, competing favorably with even dedicated sparse-view methods while maintaining a superior accuracy-efficiency trade-off.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2604.01626v2" target="_blank" class="paper-title">CogPic: A Multimodal Dataset for Early Cognitive Impairment Assessment via Picture Description Tasks</a>
+                        <span class="paper-date">2026-08-21</span>
+                    </div>
+                                        <span class="paper-comment">📝 11 pages, 3 figures, 5 tables</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>The automated evaluation of cognitive status using multimedia technologies offers a promising avenue for early dementia detection. However, the development of robust machine learning models for cognitive impairment detection is frequently hindered by the scarcity of large-scale, strictly synchronized, and clinically validated multimodal datasets. To bridge this critical gap, we introduce CogPic, a comprehensive Mandarin multimodal benchmark designed for fine-grained cognitive-status assessment. CogPic comprises strictly synchronized acoustic, visual, and linguistic data collected from 574 participants across three standardized picture-description tasks. To establish reliable diagnostic reference labels, expert clinical neuropsychologists conducted comprehensive evaluations and stratified participants into Healthy Control (HC), Mild Cognitive Impairment (MCI), and Alzheimer's Disease (AD) groups through clinical consensus. Extensive benchmark experiments spanning handcrafted and deep learning models in unimodal and multimodal settings yield a best trimodal Macro-F1 of 58.34\%. To our knowledge, CogPic stands as the largest, most modality-rich, and most comprehensively characterized Mandarin dataset of its kind to date. Together, CogPic and its extensive baseline evaluations establish a rigorous empirical foundation for future multimedia research toward robust and clinically generalizable automated cognitive health assessment.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.20692v1" target="_blank" class="paper-title">Mitigating Proxy-Induced Traffic Drift in Website Fingerprinting via Model-Agnostic Traffic Tailoring</a>
+                        <span class="paper-date">2026-08-21</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Website fingerprinting (WF) based on deep learning can effectively identify websites from encrypted traffic. However, users often rely on proxy protocols to bypass censorship, and the diversity of these protocols poses a major challenge, as WF models trained on traffic from one set of protocols perform poorly when evaluated on that from unseen protocols. We attribute this issue to proxy-induced feature drift, where traffic patterns of the same website vary with the proxy protocol, leading to discrepancies that WF models fail to capture and severe performance degradation. To tackle this issue, we propose PA3, a model-agnostic preprocessing framework to analyze and mitigate the proxy-induced drift. PA3 first fingerprints the protocol-specific drift. These fingerprints are then used to tailor the proxied traffic for feature alignment, which mitigates the drift and considerably improves the generalization of WF models on traffic from unseen protocols. Extensive evaluations demonstrate that PA3 substantially enhances generalization on unseen protocols with an average improvement of 0.12 in F1-score (roughly 27% relative), achieving up to a 0.41 absolute gain across models, which narrows the performance gap introduced by the drift. In the best case, PA3 enables WF models to obtain F1-scores above 0.96 on traffic from unseen protocols.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2606.30159v2" target="_blank" class="paper-title">A Dual-domain Refinement Network with FBP-based Jacobian Learning for Sparse-view Dual-Energy CT Material Decomposition</a>
+                        <span class="paper-date">2026-08-21</span>
+                    </div>
+                                        <span class="paper-comment">📝 Accepted to IEEE Transactions on Computational Imaging, 16 pages</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Dual-energy CT (DECT) exploits attenuation differences across different X-ray spectra to provide richer material information and has been widely used in medical imaging. While sparse-view acquisition can lower radiation exposure, it makes DECT material decomposition even more challenging, as the problem is nonlinear and ill-posed. Existing deep unrolling approaches generally do not explicitly incorporate the Jacobian operator induced by the nonlinear forward model, and their sparsity priors are still mainly built on conventional convolutions, which are insufficient for modeling global structural information. This study addresses the challenge of DECT multi-material decomposition in sparse-view settings by representing it as a sparse-regularized nonlinear least-squares problem. To solve it, we propose an iterative dual-domain refinement network (DECT-DRNet). In each iteration, the filtered back-projection (FBP)-based Jacobian approximation module is used first to generate an intermediate material decomposition result. Here, we characterize the forward process of material decomposition using a nonlinear operator, and then construct a theoretically grounded learnable approximation of the adjoint Jacobian operator by integrating the FBP algorithm with a U-Net into the backward process. In addition, to address the limitation of existing deep learning-based decomposition methods in globally suppressing noise and artifacts, we introduce a learnable sparse dual domain regularization term that incorporates Fourier convolutional residual blocks. This refinement block combines geometric feature extraction in the image domain with noise suppression in the frequency domain, allowing the model to capture both global and local features while maintaining structural details. DECT-DRNet demonstrates its ability to achieve more accurate material decomposition under sparse-view conditions.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.20608v1" target="_blank" class="paper-title">A Dataset-Centric Benchmark of Deep Learning Methods for Grape Leaf Disease Classification and Detection</a>
+                        <span class="paper-date">2026-08-20</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Grape leaf disease recognition is important for precision agriculture, enabling early diagnosis, timely intervention, and improved vineyard management. Although deep learning has achieved strong results, many studies rely on few datasets, often acquired under controlled conditions, and may not reflect real vineyard challenges such as complex backgrounds, variable illumination, occlusion, leaf pose, disease severity, and device differences. This paper presents a dataset-centric benchmark of deep learning methods for grape leaf disease classification and detection. We analyze publicly available datasets in terms of disease categories, annotation types, acquisition conditions, image characteristics, class distributions, provenance, and task suitability. Representative models are evaluated in three settings: image-level classification, region-level classification, and object detection. Classification is assessed using accuracy, while detection is evaluated using mAP@50 and mAP@50:95. Cross-dataset experiments further examine transfer between datasets with compatible disease categories but different visual and annotation characteristics. Results show near-saturated classification performance on several controlled or derivative datasets, greater difficulty on heterogeneous datasets, and substantial variation in detection performance across annotation settings. Cross-dataset performance drops sharply, especially for object detection, indicating that shared disease labels do not necessarily define equivalent recognition tasks. The benchmark emphasizes dataset provenance, realistic field evaluation, annotation compatibility, and external validation for reliable vineyard disease recognition.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.25153v2" target="_blank" class="paper-title">OpenPVMapper: A Multi-source, Nationwide Database of Rooftop Photovoltaic Systems in France</a>
+                        <span class="paper-date">2026-08-20</span>
+                    </div>
+                                        <span class="paper-comment">📝 14 pages, 5 tables, 7 figures</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Rooftop photovoltaic (PV) systems account for the vast majority of PV grid connections, yet no open, comprehensive, installation-level dataset of these systems exists: public registries aggregate data only above a capacity threshold, and remote sensing-based detection efforts, while extensive, are typically confined to a single method, a limited geographic scope, or a single point in time. We introduce OpenPVMapper, a nationwide, multi-source database of rooftop PV installations in mainland France, built by aggregating and reconciling complementary sources: a deep learning-based detection pipeline deployed on nationwide aerial imagery, OpenStreetMap and a probabilistic building-level detection dataset. The resulting database contains 1,135,850 installations, totaling approximately 15.01~GWp of installed capacity, each documented with its provenance, detection method, and, where available, a manual validation flag. Manual review of a stratified sample of 1,862 installations places the database's overall precision at approximately 74--75\%, with corroboration across independent sources bringing a substantial, quantified precision gain. By aggregating independent sources rather than relying on any single detection method, OpenPVMapper reaches a level of confidence beyond what any one source could provide on its own, while remaining extensible to further sources as they become available. It is released under an open (CC-BY) license alongside the full source code used to build it.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2405.13346v2" target="_blank" class="paper-title">Convergence of the Deep Galerkin Method for Finite State Mean Field Control Problems</a>
+                        <span class="paper-date">2026-08-20</span>
+                    </div>
+                                        <span class="paper-comment">📝 26 pages, 7 figures. To appear in the SIAM Journal on Mathematics of Data Science</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>We establish the convergence of the deep Galerkin method (DGM), a deep learning-based scheme for solving high-dimensional nonlinear PDEs, for Hamilton-Jacobi-Bellman (HJB) equations that arise from the study of mean field control problems (MFCPs). Based on a recent characterization of the value function of the MFCP as the unique viscosity solution of an HJB equation on the simplex, we establish both an existence and convergence result for the DGM. First, we show that the loss functional of the DGM can be made arbitrarily small given that the value function of the MFCP possesses sufficient regularity. Then, we show that if the loss functional of the DGM converges to zero, the corresponding neural network approximators must converge uniformly to the true value function on the simplex. We also provide numerical experiments demonstrating the DGM's ability to generalize to high-dimensional HJB equations.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2509.21624v4" target="_blank" class="paper-title">HIP: Hessian Interatomic Potentials without derivatives</a>
+                        <span class="paper-date">2026-08-20</span>
+                    </div>
+                                        <span class="paper-comment">📝 https://github.com/BurgerAndreas/hip</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Molecular Hessians, the second derivatives of the potential energy, are fundamental to many workflows in computational chemistry. Usually, accurate Hessians are computationally expensive to calculate and scale poorly with system size, whether computed using quantum chemistry methods or machine-learning interatomic potentials (MLIPs). In this work, we introduce Hessian interatomic potentials (HIPs), a deep learning model that directly predicts Hessians without relying on automatic differentiation or finite differences. To do so, we construct SE(3)-equivariant, symmetric Hessians from irreducible representation (irrep) features up to degree $l$=2, computed by a graph neural network. HIP Hessians are one to two orders of magnitude faster, more accurate, more memory efficient, easier to train, and exhibit more favourable scaling with system size. We validate our predictions across a wide range of downstream tasks, demonstrating consistently superior performance in transition state search, geometry optimization, zero-point energy corrections, and vibrational analysis. We open-source the HIP code and model weights.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.20557v1" target="_blank" class="paper-title">Learning Prostate Anatomy at Test Time for Cancer Detection in Micro-Ultrasound</a>
+                        <span class="paper-date">2026-08-20</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Domain shift across clinical centers using different imaging hardware or acquisition protocols remains a fundamental barrier to deploying deep learning models for prostate cancer (PCa) detection. Existing test-time adaptation (TTA) methods address distribution shift through entropy minimization or augmentation-based self-supervision, correcting for statistical differences in image appearance but ignoring the anatomical structure of the target domain. We propose ANT, a segmentation-guided TTA framework that adapts a pretrained cancer detection encoder to the target domain by solving an auxiliary prostate segmentation task at test time, supervised by pseudo-masks from a frozen pretrained segmentation network. By aligning encoder representations to prostate anatomy in the target domain, ANT corrects domain-specific feature drift while preserving cancer-discriminative structure. The model was trained on 693 patients imaged with an earlier-generation micro-ultrasound scanner in a multi-center clinical trial, and evaluated on 118 patients acquired with a newer-generation system across two centers in another clinical trial. Under a leave-one-center-out protocol with identical evaluation conditions across all methods, ANT improves mean AUC by 2.9% and 3.6% at the biopsy-core and patient levels, respectively, over no adaptation, outperforming TTA baselines. Code is available at: https://github.com/ObedDzik/ant.git.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2512.12142v2" target="_blank" class="paper-title">MeltwaterBench: Deep learning for spatiotemporal downscaling of surface meltwater</a>
+                        <span class="paper-date">2026-08-20</span>
+                    </div>
+                                        <span class="paper-comment">📝 in review at Journal of Advances in Modeling Earth Systems</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>The Greenland ice sheet is melting at an accelerated rate due to processes that are not fully understood and hard to measure. The distribution of surface meltwater can help understand these processes and is observable through remote sensing, but current maps of meltwater face a trade-off: They are either high-resolution in time or space, but not both. We develop a deep learning model that creates gridded surface meltwater maps at daily 100m resolution by fusing data streams from remote sensing observations and physics-based models. In particular, we spatiotemporally downscale regional climate model (RCM) outputs using synthetic aperture radar (SAR), passive microwave (PMW), and a digital elevation model (DEM) over the Helheim Glacier in Eastern Greenland from 2017-2023. Using SAR-derived meltwater as "ground truth", we show that a deep learning-based method that fuses all data streams is over 10 percentage points more accurate over our study area than existing non deep learning-based approaches that only rely on a regional climate model (83% vs. 95% Acc.) or passive microwave observations (72% vs. 95% Acc.). Alternatively, creating a gridded product through a running window calculation with SAR data underestimates extreme melt events, but also achieves notable accuracy (90%) and does not rely on deep learning. We evaluate standard deep learning methods (UNet and DeepLabv3+), and publish our spatiotemporally aligned dataset as a benchmark, MeltwaterBench, for intercomparisons with more complex data-driven downscaling methods. The code and data are available at github.com/blutjens/hrmelt.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.20519v1" target="_blank" class="paper-title">An integrated diffusion-weighted imaging processing and interpretation platform for MR-guided radiotherapy</a>
+                        <span class="paper-date">2026-08-20</span>
+                    </div>
+                                        <span class="paper-comment">📝 29 pages</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Background: Magnetic resonance imaging-guided linear accelerators (MR-Linacs) allow diffusion-weighted imaging (DWI) to be acquired at every treatment fraction, but converting these low-signal-to-noise-ratio acquisitions into clinical decisions requires both reliable quantitative processing and an interpretation that reconciles a scattered and often contradictory literature. Purpose: To describe and evaluate an integrated, web-based platform that carries raw MR-Linac DWI to a structured, literature-grounded clinical interpretation, and to assess its retrieval-augmented generation (RAG) interpretation module by independent expert rating. Methods: The platform couples a deep-learning processing pipeline, comprising distortion correction, denoising, and intravoxel incoherent motion (IVIM)/apparent diffusion coefficient (ADC) fitting, with longitudinal region-of-interest analysis and a RAG interpretation agent. The agent reasons over a two-layer knowledge base of curated publications (a structured catalog index plus line-indexed full text), delegates arithmetic to deterministic tools, and is designed to trace each statement to a source document, section, and line range. One medical physicist and one physician independently rated the agent's reports for nine longitudinal glioblastoma cases on a 1-5 scale across three metrics: clinical-reasoning soundness, literature-citation quality, and overall clinical utility. Results: Across 54 ratings, the pooled mean was 4.65 +/- 0.80, with 93% of ratings >= 4; metric means were 4.6 (reasoning), 4.5 (citation), and 4.8 (utility), and raters agreed within one point on 85% of paired ratings. Conclusions: A single platform can integrate MR-Linac DWI post-processing with traceable, expert-evaluated clinical interpretation, while highlighting the safeguards needed to verify LLM-generated reasoning in radiation oncology.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.18012v2" target="_blank" class="paper-title">Automated ACL Footprint Identification Using 3D Deep Learning</a>
+                        <span class="paper-date">2026-08-20</span>
+                    </div>
+                                        <span class="paper-comment">📝 10 pages, 5 figures</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>One of the most common reasons for anterior cruciate ligament (ACL) reconstruction failure is femoral tunnel malpositioning (ACL footprint center and tunnel orientation). Such failures may lead to the development of meniscal pathology and osteoarthritis. Accurate ACL femoral footprint identification is therefore essential for precise tunnel placement, restoration of the native knee joint mechanics, post-surgical knee joint health and prevention of graft failure. Recent advances in artificial intelligence (AI) bring new opportunities to improve image-guided orthopedic surgery. However, at present, existing AI research focuses primarily on ACL segmentation and rupture classification based on pre- and post-operative magnetic resonance (MR) images. Identification of the ACL footprint center using deep learning methods has not been thoroughly researched. Thus, the purpose of this study is to explore 3D deep learning models for ACL femoral footprint identification directly from 3D MR images. Two comprehensive 3D deep learning architectures were developed: a 3D graph convolutional neural network-based geometric model applied to 3D femoral meshes; and a 3D landmark-enhanced identification model based on 3D MR images. A total of 4883 right and 3087 left knee image sets were used from a publicly available database. Eighty percent (80%) were applied to model generation, and twenty percent (20%) were preserved for model testing. Both models achieved excellent performance; however, the image-based method outperformed the model-based method (average error of 2.1mm vs 2.8 mm). Thus, 3D deep learning provides a feasible clinical approach for ACL footprint localization and has the potential to improve ACL reconstruction footprint accuracy.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2607.07382v2" target="_blank" class="paper-title">Generalist Vision-Language Models for Fast Radio Burst detection: a zero-shot benchmark against a specialized detector</a>
                         <span class="paper-date">2026-08-20</span>
                     </div>
                                         <span class="paper-comment">📝 31 pages, 7 figures. Section added with analysis for real data. New figures and tables added. Other minor changes</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：研究能否在不进行微调、不提供标注样本的零样本条件下，利用小型通用视觉语言模型（VLM）自动检测快速射电暴（FRB），并输出带自然语言解释的结构化判断。&#10;&#10;🛠 **方法**：使用两种小型开源VLM（Gemma 4 2B和4B），仅通过提示词（prompt）在模拟的L波段动态频谱上执行零样本FRB检测，并与专业检测器SwinYNet进行逐样本对比。&#10;&#10;✨ **主要贡献**：零样本VLM（Gemma 4 2B）在平衡基准测试中达到93.65%的准确率，与专业检测器SwinYNet（92.90%）无显著差异，且在结构化射频干扰（RFI）上的假阳性率显著更低（6.4% vs. 25.0%），对纯噪声无误报；仅修改提示词即可实现三分类任务，准确率达86%且无虚假FRB。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Fast Radio Burst (FRB) detection increasingly relies on specialized deep learning models that require large task-specific training sets and cannot be redefined without retraining. We evaluate whether small, open-weight, locally run generalist Vision-Language Models (VLMs) can detect FRBs in dynamic spectra under a zero-shot, prompt-only regime. On a balanced binary benchmark of 2000 simulated L-band spectra, Gemma 4 E2B reaches an accuracy of 94.05\%, statistically indistinguishable from the specialized detector SwinYNet (92.85\%), with a far lower false-positive rate on structured RFI (4.8\% vs. 24.6\%) and none on pure noise, though SwinYNet ranks perfectly (ROC-AUC 1.0000 vs. 0.9520). Rewriting the prompt alone reconfigures the same models for three-class FRB/RFI/noise classification, reaching up to 86.0\% accuracy without a single false FRB while classifying each 2 s spectrum in 1.0--1.5 s, faster than the observation itself. Applied unchanged to the 1600 real FAST observations of FAST-FREX, they reject real interference almost perfectly (2 and 5 false positives in 1000 negatives) but recover only 28.5\% and 27.0\% of the 600 catalogued bursts, against 95.7\% reported for SwinYNet on the same files. Stratifying those bursts by the dispersed signal in the image shows the limit to be the input representation rather than the classifier, recall rising to 84--85\% where the sweep is unambiguous and collapsing to 1\% on the 13\% of positives carrying no detectable signal in a 2 s undedispersed full-band view. The simulated bursts are nearly 30 times brighter in median, and at matched brightness the recalls agree to within a few points.</p>
@@ -1049,10 +1352,7 @@
                         <span class="paper-date">2026-08-20</span>
                     </div>
                                         <span class="paper-comment">📝 Submitted to NDSS 2027</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：X波段SAR卫星（8-12 GHz）缺乏鲁棒的物理层认证（PLA），现有基于射频指纹的方案局限于6 GHz以下频段，且经典深度学习无法充分捕捉IQ相位非线性特征，导致认证性能不足。&#10;&#10;🛠 **方法**：提出QUASAR，一种量子-经典混合架构，将CNN频谱图编码器与变分量子电路（VQC）融合，用于X波段SAR信号的物理层认证，并在三种对抗场景（重放、伪造IQ注入、星载欺骗）下进行测试。&#10;&#10;✨ **主要贡献**：首次将量子增强技术应用于卫星物理层认证；数据效率显著提升（仅需10%训练数据即可匹配经典基线精度）；在相同数据预算下分类精度优于经典方法；三种对抗场景下分别拒绝89.7%、94.1%和81.3%的欺骗传输，为物理层认证开辟了新研究方向。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>X-band SAR satellites (8-12 GHz) play a critical role in disaster response, environmental monitoring, and military intelligence. Yet, they lack robust physical-layer authentication (PLA), a security layer orthogonal to cryptographic solutions. Existing PLA systems, typically based on radio-frequency fingerprinting, are often limited to sub-6 GHz frequencies and rely on classical deep learning. However, this approach underfits the IQ phase nonlinearities that distinguish satellite hardware. In this paper, we present QUASAR, to the best of our knowledge the first quantum-classical hybrid architecture that fuses a CNN spectrogram encoder with a variational quantum circuit (VQC) to provide PLA to X-band SAR signals. Our solution enjoys two distinctive features: (i) it is markedly more data-efficient than classical machine learning, requiring only 10% of the training data to match the accuracy of classical baselines -- data collection being notoriously the most time-consuming phase of PLA; and, (ii) at an equal data budget, it improves classification accuracy over those baselines. In detail, we test our solution under three adversarial scenarios: replay, crafted-IQ injection, and space-borne spoofing. QUASAR rejects spoofed transmissions in 89.7%, 94.1%, and 81.3% of attempts, respectively, establishing the first quantum-enhanced physical-layer classifier for satellite constellations. The fully detailed framework and the supporting results, other than being interesting on their own, show a novel research avenue for physical-layer authentication.</p>
@@ -1064,10 +1364,7 @@
                         <span class="paper-date">2026-08-20</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有医学图像诊断方法依赖孤立视觉证据，缺乏利用相似历史病例和外部知识的能力，导致诊断可解释性不足。&#10;&#10;🛠 **方法**：提出MKG-CARE框架，构建病例感知多模态知识图谱作为结构化诊断记忆，通过自适应检索相似病例并提取子图，利用图像中心图注意力网络聚合语义，再经双向跨模态注意力将病例知识注入视觉表示，最后通过置信度校准机制抑制检索噪声。&#10;&#10;✨ **主要贡献**：在多个医学影像数据集上显著优于强基线，实现了可解释的病例级证据归因，并公开代码。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Medical image diagnosis has achieved significant progress with deep learning, yet existing methods often rely on isolated visual evidence and lack the ability to effectively leverage similar cases and external knowledge. In clinical practice, diagnosis is typically supported by similar historical cases and their associated symptoms. To explicitly model this evidence-based diagnostic process, we propose MKG-CARE, a framework that performs case-aware reasoning using multimodal knowledge graphs for explainable medical image diagnosis. Specifically, we construct a case-aware multimodal knowledge graph as a structured diagnostic memory, where diseases, images, and symptoms are hierarchically organized. Given an input image, MKG-CARE adaptively retrieves similar cases from this memory and extracts their corresponding case-centered subgraphs. We further introduce a knowledge propagation and injection mechanism, where an image-centric Graph Attention Network aggregates heterogeneous semantics within the retrieved case subgraphs, followed by bidirectional cross-modal attention to align and inject the aggregated case knowledge into visual representations. To mitigate retrieval noise, we design a confidence-calibrated decision refinement scheme that estimates each retrieved case's reliability from prediction confidence and sample similarity, and reweights its contribution to the final prediction for interpretable case-level evidence attribution. Extensive experiments on multiple medical imaging datasets demonstrate consistent improvements over strong baselines, while ablation and qualitative analyses validate the effectiveness and interpretability of our method. The code is available at https://github.com/lyxuan1022/MKG-CARE.</p>
@@ -1079,10 +1376,7 @@
                         <span class="paper-date">2026-08-20</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：针对奇异模型（如深度学习）中经典信息准则失效的问题，精确计算局部学习系数（RLCT）以改进贝叶斯模型选择。&#10;&#10;🛠 **方法**：提出首个确定性算法，对任意二维模型（其KL散度与多项式接触等价）精确计算局部RLCT，并推导算法复杂度上界。&#10;&#10;✨ **主要贡献**：首次实现二维奇异模型学习系数的精确代数计算，为采样估计提供基准，揭示代数结构，且在浅层模型中速度优于采样方法，适用于多项式神经网络等广泛模型类。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Classical information criteria such as the Bayesian Information Criterion (BIC) rely on regularity assumptions that break down for singular models, leading to incorrect model selection in settings such as deep learning. The Widely Applicable Bayesian Information Criterion (WBIC) relies on local learning coefficients $λ$, which in the analytic case coincides with local Real Log Canonical Thresholds (RLCT) of the Kullback-Leibler divergence of the model, to capture correct marginal likelihood asymptotics. Exact computation of the learning coefficients has been limited to special cases, and only sampling-based estimation methods are generally applicable. We present the first deterministic algorithm that computes local RLCTs exactly for any two-dimensional model whose Kullback-Leibler distance is contact equivalent to a polynomial, derive a bound on its complexity, and demonstrate its effectiveness for a broad class of models, with applications including polynomial neural networks. Beyond providing ground truth to calibrate sampling-based estimators, exact computation reveals algebraic structure in learning coefficients that sampling cannot and out-speeds it in the shallow regime.</p>
@@ -1094,10 +1388,7 @@
                         <span class="paper-date">2026-08-20</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：结直肠微创手术（MIS-CRS）视频的人工工作流分析耗时费力，且手术流程存在显著变异性，亟需自动化分析工具以提升效率与一致性。&#10;&#10;🛠 **方法**：提出AI-ColoWorkflow深度学习模型，结合微调DINOv3视觉Transformer提取逐帧视觉特征，并采用分层多阶段时序卷积网络联合优化手术阶段与步骤识别；模型在来自4个中心及公开数据集的多中心、多术式视频上训练，并与中心/术式特定模型对比。&#10;&#10;✨ **主要贡献**：AI-ColoWorkflow在阶段识别上取得宏F1 73.01%，优于多数中心/术式特定模型，且跨中心泛化能力良好；但术式特定模型在步骤识别上仍有优势，提示未来可探索混合训练策略以兼顾阶段与步骤识别性能。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Minimally invasive colorectal surgeries (MIS-CRS) are characterised by significant variability and inconsistent outcomes. ColoWorkflow, a tool for the video-based assessment (VBA) of MIS-CRS workflow, was recently validated. However, manual VBA is time-consuming, limiting implementation. This study presents AI-ColoWorkflow, a deep learning model for automated surgical workflow analysis across MIS-CRS. Operative videos of MIS-CRS were collected from 4 centres and a publicly available dataset. Phases and steps were manually annotated according to ColoWorkflow. A deep learning model combining a fine-tuned DINOv3 vision transformer for per-frame visual feature extraction with a hierarchical multi-stage temporal convolutional network was jointly optimized for phase and step recognition. The model trained on pooled multicentric data, namely AI-ColoWorkflow was compared against centre-specific and procedure-specific models on a held-out test set. The following metrics were used for evaluation: macro F1 score, balanced accuracy, precision, and recall. AI-ColoWorkflow achieved a macro F1 of 73.01% $\pm$ 10.27 (balanced accuracy 73.43%) for phase recognition and 39.82% $\pm$ 7.06 (balanced accuracy 38.65%) for step recognition. The global model outperformed centre- and procedure-specific models in most experiments except procedure-specific step recognition. In the generalization analysis, mean F1 was 48.42% for phase recognition. AI-ColoWorkflow can reliably recognize MIS-CRS phases. A single model trained on pooled, multicentric, multi-procedural data generalises at least as well as and often better than centre- or procedure-specific models for phase recognition in MIS-CRS, while procedure-specific step models retain advantages for certain procedure types, motivating hybrid training strategies for future surgical AI development.</p>
@@ -1109,10 +1400,7 @@
                         <span class="paper-date">2026-08-20</span>
                     </div>
                                         <span class="paper-comment">📝 22 pages, 16 Figures, Under Review. A non-archival 2-page version was accepted as an oral presentation at Climate Informatics 2026 (Extended Abstract ID 66, https://github.com/freddy0218/ClimateInformatics2026/tree/main), and a non-archival 4-page version was accepted as an oral presentation at the AICC Workshop at ECCV 2026</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：大型天气与气候数据虽为深度学习建模极端地球事件（如火灾、热带气旋、大气河）提供了机会，但模型缺乏可解释性，限制了其在业务场景中的应用。&#10;&#10;🛠 **方法**：提出SAE-Xplainers框架，包括（i）基于地理位置的输入调制，以捕捉环境模式的局部语义；（ii）基于规则的集成解释器，用于解读多模态环境预测器产生的高维特征。&#10;&#10;✨ **主要贡献**：在三种极端事件预测/检测任务上验证了方法，表明输入调制提升了重建性能和特征利用率，且SAE-Xplainers能将复杂气候模式分解为与科学文献一致的人类可理解规则，并支持特征吸收的识别。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>The emergence of large-scale Weather and Climate (W&C) datasets offers new opportunities for modeling extreme Earth events (ExEE) and their impacts using deep learning. However, their adoption in operational settings remains limited by the lack of models' interpretability. While for conventional text and image modalities, tools such as Sparse Autoencoders (SAEs) have proven effective for extracting human-understandable concepts, their use for the analysis of ExEE remains challenging due to the nature of W&C data. To address this, we introduce (i) a geographic location-based modulation of the inputs of SAE to capture the local semantic meaning of environmental patterns, and (ii) an ensemble of rule-based SAE-Xplainers to interpret the resulting high-dimensional features derived from complex, multi-modal environmental predictors. We evaluate our method on three ExEE types: the prediction of fires, and the detection of tropical cyclones and atmospheric rivers. We show that SAE input modulation improves both reconstruction performance and feature utilization, and that our SAE-Xplainers enable faithful interpretation of complex climatic patterns by unfolding them into human-understandable rules that are consistent with the scientific literature, while also supporting the identification of feature absorption.</p>
@@ -1124,10 +1412,7 @@
                         <span class="paper-date">2026-08-20</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决教育中学习效果客观评估难的问题，具体是预测学习者对知识（人脸事实知识和数学概念知识）的认知熟悉度。&#10;&#10;🛠 **方法**：采集23名参与者的连续EEG数据，提取六个频段的功率谱密度特征，并对比15种机器学习与深度学习模型（如CNN），采用标准分层交叉验证和严格的试次独立验证（Group K-Fold）两种评估策略。&#10;&#10;✨ **主要贡献**：揭示标准交叉验证因时间泄漏导致性能虚高（CNN F1=0.9853），而试次独立验证下峰值降至0.6038但仍显著高于随机水平；通过SHAP分析发现额叶和颞叶的Gamma与Beta振荡是熟悉度的关键生物标志物，为教育技术中的EEG认知监测提供了现实基准。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Objective assessment of learning remains a fundamental challenge in education. Electroencephalography (EEG) provides a direct, non-invasive window into the neural correlates of knowledge acquisition, including cognitive familiarity. This study benchmarks fifteen machine learning (ML) and deep learning (DL) models for EEG-based familiarity prediction across two cognitive domains: faces (factual knowledge) and mathematical equations (conceptual knowledge). Using continuous EEG data from 23 participants, we extract spectral features (Power Spectral Density) across six frequency bands. We show that while standard stratified cross-validation yields artificially high classification performance (up to 0.9853 F1-score using CNN) due to temporal leakage across neighboring epochs, a rigorous trial-independent validation (Group K-Fold) drops the peak performance to 0.6038 F1-score (using CNN), which is still statistically significant above the 25% chance level. This highlights the critical necessity of trial-independent evaluation to avoid overestimating model generalizability. Furthermore, feature importance and SHAP analysis reveal that temporal and frontal Gamma and Beta oscillations are the most critical biomarkers for familiarity. This work establishes a realistic benchmark for EEG-based cognitive monitoring in educational technologies.</p>
@@ -1139,10 +1424,7 @@
                         <span class="paper-date">2026-08-20</span>
                     </div>
                                         <span class="paper-comment">📝 International Workshop on Machine Learning in Medical Imaging (MLMI 2026) @ MICCAI</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：3D医学图像中曲线结构（如血管）分割面临拓扑复杂、类别不平衡、对比度低和形态差异大等挑战，现有方法多针对特定解剖结构或模态，泛化能力有限。&#10;&#10;🛠 **方法**：提出基于流匹配（Flow Matching）的模型3D-CurvSegFlow，学习从简单源分布到目标血管表示的连续变换，实现渐进式细化，同时保持高效推理，避免扩散模型的高计算成本。&#10;&#10;✨ **主要贡献**：在门静脉、脑血管和冠状动脉三个公开数据集上，用统一架构和训练策略超越通用及血管专用方法，尤其擅长保留细分支和血管连续性，为高效、可泛化的临床分割开辟新路径。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Segmentation of curvilinear anatomical structures in 3D medical images remains challenging due to complex topology, severe class imbalance, weak contrast, and large variations in structure morphology. While deep learning approaches for 3D curvilinear segmentation have been proposed, they are often tailored to specific anatomies or modalities, limiting generalization across clinical settings and leaving room for improvement. Recent generative models have shown the benefits of iterative prediction for structured segmentation tasks, yet diffusion-based methods suffer from computationally expensive sampling, hindering their use on high-resolution 3D volumes. We present 3D-CurvSegFlow, a flow matching-based model for 3D curvilinear structure segmentation. The model learns a continuous transformation from a simple source distribution to the target vascular representation, enabling progressive refinement of complex curvilinear geometries with efficient inference. We evaluate our method on Three public challenging datasets covering distinct anatomies and modalities: portal vein, cerebral vessel, and coronary arteries. Using a common architecture and training strategy across all tasks, our method outperforms general-purpose and vessel-specific approaches, with strong preservation of thin branches and vascular continuity. This work not only advances the state-of-the-art in 3D curvilinear segmentation but also opens new avenues for efficient, generalizable, and clinically applicable methods in medical image analysis.</p>
@@ -1154,10 +1436,7 @@
                         <span class="paper-date">2026-08-20</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：深度学习模型在安全关键场景中需进行鲁棒性测试，但现有框架无法高效、系统地探索多种输入扰动组合（如模糊、亮度、缩放）下的模型行为，且组合测试数量呈指数增长。&#10;&#10;🛠 **方法**：提出TestifAI框架，引入“部分模型断层扫描”技术，仅通过低阶（1-2种）扰动组合的测试结果，训练辅助模型来预测高阶（3-4种）扰动组合的鲁棒性，避免执行指数级数量的测试。&#10;&#10;✨ **主要贡献**：在5个图像和语言分类任务上，TestifAI能以低于7%的聚合鲁棒性估计误差预测高阶扰动结果，同时减少60-80%的推理次数，显著提升测试效率与准确性。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>As AI systems are increasingly deployed in safety-critical application domains (e.g., autonomous driving), associated risks increase too. Deep learning models underlying modern AI systems, therefore, must undergo thorough testing to ensure their correct behaviour. A single robustness test involves thousands of inferences to empirically verify if a model's outputs remain stable under a bounded perturbation of its inputs. However, existing testing frameworks lack the means to systematically explore and summarise robustness across a combinatorial space of perturbations. We propose TestifAI, a deep learning testing framework for efficient and accurate estimation of robustness against combinations of perturbations. TestifAI enables users to specify operational conditions as structured spaces of semantic input perturbations (e.g., image blur, brightness and zoom) and discrete severity levels (e.g., low, medium and high). Users can query model robustness for any combination (e.g., "low blur, high brightness, and medium zoom"). To achieve efficiency and accuracy, TestifAI introduces partial model tomography, a novel approach to reconstructing model behaviour in a multi-perturbation space from tests that apply only a small number of perturbations (lower-order projections). To estimate robustness against at least three perturbations, TestifAI trains an auxiliary model on the results of tests involving up to two perturbations only, avoiding execution of an exponential number of tests. Our experiments on five image and language classification tasks show that TestifAI can predict higher-order (3 and 4 perturbations) test outcomes from low-order (1 and 2 perturbations) observations with an aggregate robustness estimation error of less than 7%, while reducing the number of inferences by 60-80%.</p>
@@ -1169,10 +1448,7 @@
                         <span class="paper-date">2026-08-20</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：深度学习模型在面对多种输入扰动同时发生（如亮度变化与运动模糊叠加）时表现脆弱，而组合扰动测试面临扰动空间组合爆炸和大量组合缺乏实际诊断价值两大挑战。&#10;&#10;🛠 **方法**：提出TESTNAV框架，将鲁棒性测试建模为双目标优化（最大化性能下降 vs. 保持输入保真度），采用NSGA-II算法近似帕累托前沿，在有限评估预算下高效搜索离散组合扰动空间。&#10;&#10;✨ **主要贡献**：在视觉、自然语言和代码生成四个基准上，TESTNAV比基于搜索的基线快2.15倍恢复帕累托前沿，仅需探索35.8%-89.3%的扰动空间（4个维度×6个级别），即可发现严重且真实的失败模式。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Deep learning models remain vulnerable to real-world input perturbations, especially when multiple corruptions co-occur in the same input (e.g., brightness shifts and motion blur). Compositional testing reveals these interaction effects but introduces two challenges: combinatorial growth of the perturbation space as dimensions and severity levels increase, and uneven diagnostic value-many combinations yield unrealistically degraded inputs with limited practical relevance. We present TESTNAV, 1 a Pareto-guided robustness testing framework for efficiently exploring discrete, compositional perturbation spaces when only a limited number of perturbation configurations can be evaluated. TESTNAV prioritises severe yet realistic failures by formulating robustness testing as bi-objective optimisation: maximise performance degradation while preserving input fidelity measured by modality-specific metrics (e.g., SSIM and KID for vision; chrF and BERT-F1 for language and code). It uses NSGA-II to approximate the bi-objective Pareto front. Across four benchmarks spanning vision, natural language, and code generation, TESTNAV recovers Pareto fronts up to 2.15x faster than search-based baselines, using 35.8%-89.3% of the discrete perturbation space defined by four perturbation dimensions with six levels each.</p>
@@ -1620,258 +1896,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Precise segmentation of the optic disc and cup is critical for the early detection and diagnosis of glaucoma. However, achieving consistently high performance across datasets while maintaining low computational requirements remains a significant challenge. In glaucoma detection, low-computation methods are crucial for enabling rapid, large-scale screening and facilitating deployment in resource-limited clinical environments. While deep learning models such as UNets, Vision Transformers (ViTs), and Diffusion models have demonstrated strong segmentation performance but these methods often come with substantial computational overhead. UNets are efficient at capturing local features but are limited in modeling global contextual information. Conversely, ViTs excel at long-range dependency modeling but are computationally intensive. Hybrid architectures, such as UNetR, which combine transformer-based encoders with UNet-style decoders, have shown improved performance but while incurring additional complexity. Considering these, in this work, we propose OptiModNet, a light weight novel hybrid architecture tailored for optic disc and cup segmentation. The model integrates diverse attention mechanisms at multiple stages of the network to enhance both local and global feature representation. We include an Aggregated Pyramid Loss that supervises predictions at multiple decoder depths, to promote better gradient flow and structural consistency. We evaluate OptiModNet on the REFUGE2 dataset for both optic disc and cup segmentation tasks. Our method achieves state-of-the-art performance, exceeding existing approaches by over 2.5\%, while maintaining high efficiency with only 3.73 GFLOPs and 1.93M parameters. The code is available at https://github.com/SG1947/OptiModNet.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2608.18500v1" target="_blank" class="paper-title">Tianmu-TC: Physics-constraints Generative Artificial Intelligence for Global Tropical Cyclone Forecasting</a>
-                        <span class="paper-date">2026-08-19</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Tropical cyclones (TCs) pose severe risks from strong winds and heavy rainfall. However, forecasting their track and intensity remains challenging due to chaotic atmosphere and the rapid amplification of initial condition errors, leading to growing forecast uncertainty. While numerical weather prediction (NWP) and deep learning models have made progress, they remain computationally demanding and often fail under complex meteorological scenarios. Here, we present Tianmu-TC, a physics-constraints generative framework for global TC forecasting. Trained on Western North Pacific data, Tianmu-TC leverages physics-constraints to generate controllable outputs with reduced uncertainty thus improving forecast reliability. Experiments show Tianmu-TC outperforms deterministic and ensemble meteorological artificial intelligence models and authoritative NWP systems such as ECMWF in global ocean basins, with significantly lower computational cost. We further show Tianmu-TC performs well in challenging scenarios such as data sparsity, anomaly tracks, rapid intensification and weakening. These findings suggest physics-constraints generative AI offers a promising approach for reliable, efficient global TC forecasting.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.18779v2" target="_blank" class="paper-title">CGMap: A Geospatially Aware Deep Learning Framework for Crop Gap Mapping Using UAV</a>
-                        <span class="paper-date">2026-08-19</span>
-                    </div>
-                                        <span class="paper-comment">📝 15 pages</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>In India, crop germination is primarily monitored by visual inspection and manual counting, which are prone to errors, despite their crucial role in determining eventual yield potential. This paper highlights a deep learning based pipeline which uses object detection methods and drone imagery to assess and provide a precise count of sugarcane germination in fields. The approch uses a pre-trained AI model to find germinated plant sampling and identify gaps, also known as ``bald spots'', which restricts field productivity. The techniques used here relies on the YOLOV8 architecture, which was trained on a carefully selected dataset of UAV photos taken in various agroclimatic zones of India. Here, we bring upon a novel orientation-normalization technique that uses minimum Spanning Trees (MST) to account for variations in planting geometry, allowing for dependable row and column extraction across a variety of field layouts. By converting detected seedlings into spatial point clouds, emergence gaps can be inferred from the anticipated spacing between plants. A geospatial germination map exported in Well-Known Text (WKT) format is the end result, and it can be easily incorporated into GIS platforms used by sugar mills and agronomists to direct transplant initiatives. Timely interventions based on the insights provided by the algorithm can significantly increase yield, resulting in higher profits. Hence, support proper allocation of resources, avoid wastage, and enhance long-term sustainability.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2608.18451v1" target="_blank" class="paper-title">Atrial Fibrillation Detection with Arbitrary Leads via a Codebook-Based Reconstruction-Classification Framework</a>
-                        <span class="paper-date">2026-08-19</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>\textbf{Background and Objective}: Reliable atrial fibrillation (AF) detection from electrocardiogram (ECG) signals remains challenging in real-world clinical settings due to variable lead configurations, cross-dataset domain shifts, and pervasive physiological and technical artifacts. So we develop a robust and generalizable deep learning model for accurate AF detection.\\ \textbf{Methods}: We propose the Dual-Codebook Graph Collaborative Network (DCGCNet), a novel end-to-end vector-quantized variational autoencoder that jointly performs AF classification and ECG reconstruction. DCGCNet introduces two key components: (1) a Local-Global Contrastive Module for learning noise-invariant representations, and (2) an Adaptive Codebook Vector Quantizer that dynamically refines codebook prototypes to better align with input data distributions, thereby preventing codebook collapse and enhancing generalization.\\ \textbf{Results}: DCGCNet achieves state-of-the-art performance in standard intra-dataset 12-lead evaluation and demonstrates exceptional cross-dataset generalization across seven diverse settings, consistently attaining AUC > 0.98 in all cases. Furthermore, it maintains high diagnostic accuracy under realistic noisy conditions, including baseline wander, powerline interference, and EMG artifacts.\\ \textbf{Conclusions}: DCGCNet establishes a new benchmark for robust, generalizable, and noise-resilient AF detection, showing strong potential for deployment in real-world clinical environments.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2608.18415v1" target="_blank" class="paper-title">The Road Taken: The Role of Optimizers at the Edge of Stability</a>
-                        <span class="paper-date">2026-08-19</span>
-                    </div>
-                                        <span class="paper-comment">📝 34 pages, 13 figures</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>The edge of stability refers to a phenomenon in deep learning with gradient-based optimizers where the Hessian eigenvalues of the loss remain stable above a threshold that the classical descent lemma predicts to be unstable. Previous works formulate the edge of stability with respect to the maximum Hessian eigenvalue and the learning rate. However, we observe that many first-order methods, including gradient descent, significantly violate the stability bound predicted by these theories by a factor as large as $\times 21.1$. Moreover, this deviation turns out to be systematic and highly dependent on the underlying optimizer, which is not captured by previous formulations. This calls for a new formulation of the stability threshold, which we derive from the directional Hessian and the gradient-alignment score with respect to the actual update taken by the optimizer, rather than the maximum curvature mode. Our new formulation of the realized edge of stability not only removes optimizer-dependent offsets and provides more consistent predictions of the stability threshold, but also introduces new diagnostic tools that reveal the unique role of the optimizer in actively balancing between the temporal and spatial budgets in first-order optimization.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2608.18316v1" target="_blank" class="paper-title">A Configurable Privacy-Preserving MRI Processing Workflow Using Deep Learning-Based Brain Extraction and Adaptive Anatomical Preservation</a>
-                        <span class="paper-date">2026-08-18</span>
-                    </div>
-                                        <span class="paper-comment">📝 10 pages, 6 figures</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Structural Magnetic Resonance Imaging (MRI) is widely used in neuroimaging research and clinical practice, but structural MRI volumes may retain facial and cranial anatomical information that raises privacy concerns. Existing deep learning-based brain extraction methods generally produce a single fixed output, limiting flexibility when different applications require different balances between privacy and anatomical preservation. This paper presents a configurable privacy-preserving MRI processing workflow that extends deep learning-based brain extraction through adaptive anatomical preservation, interactive preservation selection, and integrated quality control. The workflow employs SynthStrip for automated brain extraction, followed by morphological mask expansion to generate configurable shell-based preservation levels. An Interactive Preservation Framework enables users to compare preservation configurations and select an appropriate output, while an integrated Quality Control Framework provides multi-plane visualisation and brain-mask overlay verification. The workflow was implemented in Python using open-source neuroimaging libraries within the Renku reproducible research environment and evaluated using structural T1-weighted MRI data from the publicly available IXI dataset. Experimental results demonstrate anatomically plausible brain extraction and configurable preservation outputs, supported by systematic visual verification. The principal contribution is a modular and reproducible MRI preprocessing framework that enhances deep learning-based brain extraction with configurable anatomical preservation, interactive user-guided processing, and integrated quality control. The workflow provides a practical foundation for privacy-oriented neuroimaging research and collaborative medical image analysis.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2608.18282v1" target="_blank" class="paper-title">Self-supervised In-context Operator Learning for Stochastic Mean-Field Control</a>
-                        <span class="paper-date">2026-08-18</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Stochastic mean-field control (MFC) provides a fundamental framework for coordinating large populations of interacting agents under uncertainty, with a wide range of applications. Existing numerical and deep-learning methods solve one MFC problem instance at a time and must be re-optimized whenever the task changes. In this work, we formulate stochastic MFC as an operator-learning problem and develop, to the best of our knowledge, the first mesh-free, self-supervised neural operator for stochastic MFC. The main challenge is that the diffusion term in the controlled Fokker--Planck equation precludes deterministic transport-map representations. We address this challenge by combining the probability-flow ODE with an invertible normalizing-flow-based transformer, which recasts the dynamics as a deterministic continuity equation and enables closed-form score evaluation through the exact inverse and analytical log-determinant of the normalizing flow, with $\mathcal{O}(d)$ cost per particle for networks of fixed size. Through transformer-based in-context learning, task prompts, represented by compact distribution parameters or raw particle clouds, condition the transport map, enabling a single pretrained operator to solve unseen tasks in one forward pass. The resulting \emph{Normalizing Flow Invertible Solution Transformer} (NFIST) is trained end-to-end by minimizing the stochastic control objective directly, requiring no precomputed numerical solutions for training. We further prove the consistency of the proposed operator-learning formulation with task-by-task optimization. Numerical experiments on stochastic optimal control, Schrödinger bridge, systemic-risk control, and obstacle-avoiding path planning demonstrate effective zero-shot generalization while substantially reducing the computational cost of solving large families of stochastic MFC problems.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2608.18279v1" target="_blank" class="paper-title">A Comprehensive Review of Large Language Models for Nanophotonics: From Surrogate Modeling to Autonomous Design</a>
-                        <span class="paper-date">2026-08-18</span>
-                    </div>
-                                        <span class="paper-comment">📝 Accepted for publication in Advanced Photonics</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Metasurfaces have revolutionized the development of photonic devices by enabling unprecedented precision in light manipulation. However, their design processes are often constrained by computationally expensive simulations and complex high-dimensional design spaces. Although deep learning has accelerated the design process by serving as a surrogate model, it remains constrained by task-specific architectures and lacks universal reasoning capabilities. This review surveys how Large Language Models (LLMs) are adding semantic interfaces, code generation, and tool orchestration to established numerical nanophotonic workflows. We first outline the development from classical neural networks to transformer-based models and their applications in nanophotonic design. We then review the emergence of LLM-related methods in nanophotonics and organize them into two operational modes: surrogate models that treat structure-spectrum mapping as a language task, and agentic systems that have been demonstrated to generate code, orchestrate selected simulation steps, and support closed-loop optimization. Furthermore, to identify future cross-disciplinary opportunities, we briefly explore applications of LLMs in research fields such as materials science and wireless communications. This review concludes by looking ahead to the next generation of multimodal foundation models with physical perception capabilities. In this vision, artificial intelligence is evolving from passive tools into active collaborators, participating in autonomous scientific discovery.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2608.18272v1" target="_blank" class="paper-title">SeisEvo: Evolution of Seismic Data Reconstruction Algorithms by Agents</a>
-                        <span class="paper-date">2026-08-18</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Classical seismic data reconstruction relies on manually designed structural priors and iterative operators, whose coupled design space is far larger than manual trial and error can explore systematically. Deep-learning methods encode the reconstruction rules in learned weights rather than in an explicit operator that can be inspected and modified. We propose SeisEvo (Seismic Algorithm Evolution), which does not optimize a single reconstruction result but searches for the algorithm that produces it. Starting from a classical reconstruction algorithm, an LLM-driven multi-agent search modifies only the components that the user has opened for editing, without prescribing the mechanism to be discovered. Candidates that violate the physical constraints of the task are rejected outright, and the remaining ones are scored by execution. The output is neither an agent system nor a neural network, but a standalone white-box algorithm that requires no agent or neural network at inference time. For interpolation without added noise, the search discovered a residual-gated, phase-aligned dip-consistency projection; Evo-POCS improves the SNR over classic POCS by 3.49 dB on average across missing ratios from 30% to 70%. For simultaneous interpolation and denoising, it discovered a reliability-grouped singular-value shrinkage; Evo-MSSA improves the average reconstruction SNR by more than 7 dB over classic MSSA and by more than 3 dB over a stronger rank-reduction baseline. Both operators retain their gains on data not used during the search. To the best of our knowledge, this is the first study to formulate the design of a seismic reconstruction operator as a constrained, LLM-driven program evolution task. Agentic algorithm evolution can thus complement deep learning in discovering explicit, inspectable, and deployable seismic processing algorithms.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2608.18036v1" target="_blank" class="paper-title">Harnessing Magnitude-Only and Complex Measurements for Improved Dynamic MRI Reconstruction with Learned Priors</a>
-                        <span class="paper-date">2026-08-18</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>MRI reconstruction methods for undersampled k-space data naturally utilize complex-valued measurements. Parallel developments in sparse phase retrieval have shown that magnitude-only measurements may provide complementary information for signal recovery. However, their use in MRI reconstruction remains largely unexplored, due to lack of practical settings where informative magnitude measurements can be obtained without additional scan time. In this work, we investigate the use of auxiliary k-space magnitude information for accelerated steady-state dynamic MRI reconstruction, and demonstrate strong consistency of k-space magnitudes across time-frames. Building on this observation, we propose $\mathbb{C}+\text{Mag}$, a magnitude-informed physics-driven deep learning reconstruction method. The proposed method employs an ADMM-based unrolling framework with a novel magnitude-aware data-fidelity formulation, where quadratically smoothed optimization and momentum-based updates are introduced to address the non-differentiability and non-convexity of the magnitude constraints. Experiments on retrospectively undersampled cine MRI and phase-contrast flow MRI datasets, as well as prospectively undersampled real-time cine MRI acquisitions, demonstrate improved artifact suppression, sharper anatomical recovery, and better preservation of phase information compared to conventional PD-DL methods, which is further supported through blinded expert reader evaluations.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2608.18012v1" target="_blank" class="paper-title">Automated ACL Footprint Identification Using 3D Deep Learning</a>
-                        <span class="paper-date">2026-08-18</span>
-                    </div>
-                                        <span class="paper-comment">📝 10 pages, 5 figures</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>One of the most common reasons for anterior cruciate ligament (ACL) reconstruction failure is femoral tunnel malpositioning (ACL footprint center and tunnel orientation). Such failures may lead to the development of meniscal pathology and osteoarthritis. Accurate ACL femoral footprint identification is therefore essential for precise tunnel placement, restoration of the native knee joint mechanics, post-surgical knee joint health and prevention of graft failure. Recent advances in artificial intelligence (AI) bring new opportunities to improve image-guided orthopedic surgery. However, at present, existing AI research focuses primarily on ACL segmentation and rupture classification based on pre- and post-operative magnetic resonance (MR) images. Identification of the ACL footprint center using deep learning methods has not been thoroughly researched. Thus, the purpose of this study is to explore 3D deep learning models for ACL femoral footprint identification directly from 3D MR images. Two comprehensive 3D deep learning architectures were developed: a 3D graph convolutional neural network-based geometric model applied to 3D femoral meshes; and a 3D landmark-enhanced identification model based on 3D MR images. A total of 4883 right and 3087 left knee image sets were used from a publicly available database. Eighty percent (80%) were applied to model generation, and twenty percent (20%) were preserved for model testing. Both models achieved excellent performance; however, the image-based method outperformed the model-based method (average error of 2.1mm vs 2.8 mm). Thus, 3D deep learning provides a feasible clinical approach for ACL footprint localization and has the potential to improve ACL reconstruction footprint accuracy.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2608.17971v1" target="_blank" class="paper-title">Evaluating and improving crop-yield forecasting methods during extreme drought</a>
-                        <span class="paper-date">2026-08-18</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>The impact of climate variability on food production has led to the creation of various forecasting models that uses machine learning (ML), numerical weather predictors (NWP) or a hybrid of ML-NWP models to identify structural and physical relationships between meteorological drivers and crop growth, in order to predict crop yield. Droughts, for example the 2012 Midwestern US (Corn Belt) drought, are extreme events that affect crop production and test the limits of these forecasting models. Using 16 meteorological drivers as predictors, we compare ML (non-deep learning) and deep learning forecasting models to predict the county-level corn yield for the extreme drought year, 2012. This forecasting problem is characterized by a dissimilarity between the feature distributions of the training and test data, where the meteorological conditions of the extreme drought year fall outside the range of historically observed values. Additionally, the dataset consists of spatial and temporal irregularities where counties with missing yields introduce spatial sparsity and the use of only a subset of daily values per year introduce temporal sparsity. To overcome this, we use sample weighting and feature selection as modifications to improve our forecasting models. These modifications lead to an improvement for ML models; however, the deep learning model VITA shows little to no improvement. While VITA outperforms the ML models with or without modifications, our current study sheds light on the effect of dissimilarity between train and test feature distributions on forecasting models, compares deep learning versus non-deep learning models, and introduces modifications that are effective for non-deep learning models.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2603.26764v2" target="_blank" class="paper-title">Low-Dose CT for Stroke Diagnosis: A Dual-Pipeline Deep Learning Framework for Portable Neuroimaging</a>
-                        <span class="paper-date">2026-08-18</span>
-                    </div>
-                                        <span class="paper-comment">📝 10 pages, 3 figures, 2 tables. Evaluation of direct classification and residual U-Net denoising followed by classification across five simulated photon-count levels and three deterministic noise seeds. Includes patient-cluster bootstrap confidence intervals. Uses the LDCT Classification dataset; motion and ring artifact experiments are outside the scope of this study</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Portable CT scanners may support earlier stroke assessment, but reduced photon counts introduce noise that affects image quality and may alter automated classification. We compared direct classification of simulated low-dose slices with residual U-Net denoising followed by the same fixed classifier. Poisson noise was generated at photon-count scaling factors of 1, 5, 10, 20, and 40 using three deterministic seeds. The held-out set contained 809 slices, including 242 positive and 567 negative slices. Direct classification reached its highest mean ROC-AUC at a scaling factor of 20 (0.937 +/- 0.002). Denoising followed by classification reached 0.842 +/- 0.005 at a scaling factor of 1 and declined to 0.655 +/- 0.002 at a scaling factor of 40. Meanwhile, reconstruction quality rose steadily from 21.92 to 40.91 dB PSNR and from 0.761 to 0.987 SSIM. Both pathways had poor sensitivity at a fixed 0.5 cutoff because their classification scores were concentrated near zero. Patient-level analysis was limited by the test-set composition: all 10 patients were positive under the mask-derived patient label, preventing estimation of patient-level AUC and specificity. Overall, higher reconstruction fidelity did not translate into better discrimination by the fixed classifier except at the lowest photon-count setting.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2608.17923v1" target="_blank" class="paper-title">AppendiGrade: An XAI-Enhanced Deep Learning Framework for Grading Appendicitis in Ultrasound with Gaussian Blur and Grad-CAM</a>
-                        <span class="paper-date">2026-08-18</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Appendicitis is one of the most common abdominal emergencies worldwide and requires prompt diagnosis and treatment to prevent life-threatening conditions. However, accurately differentiating complicated cases, such as perforation or abscess formation, from uncomplicated appendicitis remains a significant clinical challenge. Among other methods, ultrasound is a safer and more cost-efficient diagnostic technique because of the lack of radiation exposure. In this research, an advanced system capable of automatically detecting complicated appendicitis from ultrasound images was developed. A dataset consisting of 4679 ultrasound images with 5 classes, namely perforated, abscess, acute, appendicolith, and normal, was used for the proposed model training and testing. Four pretrained deep learning models, DenseNet201, InceptionV3, ConvNextTiny, and VGG19, have been employed for detecting and classifying complicated appendicitis. In the initial configuration, InceptionV3 achieved the second highest accuracy, with a value of 69.21%. Owing to suboptimal performance with raw images, further optimization techniques, including image preprocessing, hyperparameter tuning, model fine-tuning, and image sharpening, were applied. These enhancements significantly improved the model's performance, with an accuracy of 95.58% for InceptionV3. The model performance is then explained with gradient-weighted class activation mapping (Grad-CAM), which creates a heatmap of the regions responsible for the model's prediction of the infected areas. This could make crosschecking with experts much easier.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2608.17796v1" target="_blank" class="paper-title">Diff-DDoS: Realistic Cyber-Physical Attack Synthesis and Robust Detection for 5G-Enabled CPS Using Tabular Diffusion Models</a>
-                        <span class="paper-date">2026-08-18</span>
-                    </div>
-                                        <span class="paper-comment">📝 Accepted manuscript. IEEE Transactions on Industrial Informatics, paper no. TII-26-6533. 11 pages + 9-page supplementary material (ancillary PDF). (c) 2026 IEEE. Personal use of this material is permitted</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Deep learning-based DDoS detectors for 5G-enabled cyber-physical systems face scarce labeled attack data and unrealistic synthetic substitutes, which limit robustness against adaptive adversaries. Detectors trained on hand-crafted attacks with fixed scaling multipliers degrade catastrophically (F1-score drops of about 47 percent to 100 percent, depending on scenario) when confronted with realistic, distribution-preserving samples. We propose Diff-DDoS, a three-phase framework for realistic attack synthesis and robust detection using tabular diffusion models. Phase 1 trains a baseline CNN cell-level detector on spatiotemporal grids from call detail records (CDRs). Phase 2 trains a tabular denoising diffusion probabilistic model (TabDDPM) on normal CDR aggregates to generate realistic attacks and expose detector vulnerabilities. Phase 3 introduces adversarial diffusion training (ADT), using inverse classifier guidance to generate hard yet distribution-preserving samples until the detector converges. On a Milano CDR dataset across SMS-flooding, silent-call, Internet-signaling, and blended scenarios, ResNet50 with ADT recovers F1-scores of 79.62 percent (silent-call), 100 percent (Internet), and 92.79 percent (blended). After validation-based threshold calibration, ADT reaches 100 percent SMS F1 versus 47.3 percent for CTGAN, and matches the strongest gradient-based adversarial-training baseline on silent-call. These results support tabular diffusion models for stress-testing and hardening intrusion detectors in data-scarce 5G cyber-physical deployments.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2608.17760v1" target="_blank" class="paper-title">Learnware for CSI Feedback: Scene-specific Small Models Can Do Big</a>
-                        <span class="paper-date">2026-08-18</span>
-                    </div>
-                                        <span class="paper-comment">📝 This work has been accepted by IEEE Transactions on Wireless Communications. Copyright may be transferred without notice, after which this version may no longer be accessible</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Intelligent channel state information (CSI) feedback is essential for realizing the high capacity and spectral efficiency goals of future 6G systems, yet existing deep learning solutions face a trade-off between model generalization and scenario-specific performance. Large neural networks generalize well but incur high computational and tuning costs, while small models excel in particular environments but require repetitive costly end-to-end training for each base station (BS). To address these challenges, we introduce a model repository-based deployment framework in which a centralized AI data center maintains a catalog of scene-specific CSI models. The repository is enhanced with a Learnware-based framework, where each model is associated with a specification including semantic part (network architecture parameters) and statistical part (codeboo-fingerprint embeddings of training-data distributions). A BS submits only its local statistical specifications to retrieve the most relevant pre-trained model, enhancing data privacy by avoiding raw CSI transmission and drastically reducing retrieval latency and communication overhead. We further develop a data-driven search strategy that matches codebook fingerprints to model performance, achieving over 90% selection accuracy. In simulations, our scheme yields 18.8% and 57.7% performance improvements over the General Model in LOS and NLOS scenarios, respectively while reducing local fine-tuning by up to 1000 samples and 100 epochs. This Learnware-based approach minimizes redundant training, maximizes model reuse, and supports rapid,privacy-enhancing deployment of CSI feedback models.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2608.17753v1" target="_blank" class="paper-title">MAGPIE-Net: Predicting short-duration heavy-rainfall events in station neighborhoods from multitemporal FY-4A AGRI observations</a>
-                        <span class="paper-date">2026-08-18</span>
-                    </div>
-                                        <span class="paper-comment">📝 26pages, 10 figures</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Short-duration heavy-rainfall warning determines whether 1 h rainfall will exceed a threshold within a target-station neighborhood over the next few hours. Multitemporal infrared and water-vapor observations from the Fengyun-4A Advanced Geostationary Radiation Imager (FY-4A AGRI) capture cloud-top cooling, moisture evolution, and cloud expansion before substantial surface rainfall develops. However, most deep-learning nowcasting methods convert these signals into local warnings by post-processing gridded precipitation predictions, preventing station-neighborhood event targets from directly supervising the satellite-to-station learning pathway. We propose MAGPIE-Net, which embeds a geographically adaptive, differentiable grid-to-station mapping in a pathway combining convection-initiation features, multiscale encoding, and auxiliary gridded precipitation diagnosis. Station-neighborhood event losses thereby constrain the satellite representation and its mapping to irregular station locations for 0-3 h event prediction. In independent 2023 warm-season tests over central and eastern China, critical success index (CSI) values under the primary 40 km/20 mm h-1 definition were 0.371, 0.304, and 0.238 at 0-1, 1-2, and 2-3 h. Across episodes, MAGPIE-Net achieved a detection rate of 65.1% and a mean lead time of 64.6 min, compared with 23.6% and 18.3 min for the best gridded-output baseline, and remained superior for smaller neighborhoods and the 50 mm h-1 threshold. During the critical early-warning stage, when antecedent 1 h rainfall within 40 km remained below 1 mm, MAGPIE-Net detected 51.9% of episodes with a mean lead time of 38.5 min. These results show that event-oriented satellite-to-station modeling converts multitemporal geostationary cloud and moisture observations into local heavy-rainfall warnings more effectively than gridded-precipitation modeling.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2608.18191v1" target="_blank" class="paper-title">ChiroEcho: extending automated bat vocalisation classification beyond the learned taxonomy</a>
-                        <span class="paper-date">2026-08-18</span>
-                    </div>
-                                        <span class="paper-comment">📝 24 pages, 3 figures. Accepted at the CV4E workshop, ECCV 2026</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Bats are key indicators of ecosystem health and are protected throughout Europe, making reliable population monitoring a conservation priority. Their cryptic nocturnal lifestyle makes passive acoustic monitoring essential, yet automated identification remains difficult as echolocation calls vary with behaviour and environment and overlap among species. We present a deep learning framework that jointly predicts species and genus and combines genus predictions with geographic species distributions at inference. When only one species of a predicted genus occurs in a region, the framework can resolve species absent from the learned taxonomy. This reframes geographic information as a means of extending, rather than constraining, a classifier's effective taxonomy. Using recordings spanning 35 European bat species, we evaluate closed-set classification, examine the instability of performance estimates for sparsely represented species, and conduct a controlled held-out proof-of-principle experiment. The rare-species analysis shows how limited evaluation data can obscure species-level performance, while the held-out experiment shows that genus predictions and location can recover labels unavailable to the species head. Geographic resolution extends operational coverage from 35 to 41 of the 48 native European bat species, increasing coverage from 73% to 85%. To our knowledge, this is the broadest operational coverage reported for automated European bat classification. More broadly, the bat framework provides proof of principle for resolving unseen fine-grained classes by combining coarse predictions with transparent external constraints.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2608.17704v1" target="_blank" class="paper-title">Monitoring Pasture Restoration from Satellite Image Time Series: Caveats and Opportunities</a>
-                        <span class="paper-date">2026-08-18</span>
-                    </div>
-                                        <span class="paper-comment">📝 Accepted at the 3rd Workshop on Computer Vision for Ecology at ECCV 2026</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Monitoring nature restoration at scale is an important but difficult ecological problem. Deep learning methods to analyze satellite image time series (SITS) have been widely used for land surface monitoring. In semi-natural grasslands - the habitat type in focus in this work - restoration outcomes develop gradually, yet satellite observations are influenced by weather, acquisition conditions, and processing artefacts, making it difficult to distinguish genuine restoration signals from unrelated temporal variation. In this work, we examine - to the best of our knowledge, for the first time - whether restoration status can be detected directly from satellite image time series by formulating pasture restoration as a binary deep learning classification problem. We evaluate two common SITS deep learning architectures on different Sentinel-2 image combinations, across 1,397 restored Swedish pastures and find that explicitly modeling intra-year variability and per-pasture normalization increases separability, reaching 0.88 accuracy for the best model. We further investigate our results and perform a targeted bias analysis finding that reliable deployment requires temporally balanced labels and evaluation protocols that explicitly test for year-related confounding. We therefore frame our contribution not as a solved restoration-monitoring system, but as a realistic case study of what works, what fails, and what future studies should control for. Code and models are available at https://github.com/aleksispi/ml-nature-resto.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2506.14934v2" target="_blank" class="paper-title">Vision Transformers for End-to-End Quark-Gluon Jet Classification from Calorimeter Images</a>
-                        <span class="paper-date">2026-08-18</span>
-                    </div>
-                                        <span class="paper-comment">📝 Accepted in Third International Workshop on Generalizing from Limited Resources in the Open World Workshop at International Joint Conference on Artificial Intelligence (IJCAI) 2025</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Distinguishing between quark- and gluon-initiated jets is a critical and challenging task in high-energy physics, pivotal for improving new physics searches and precision measurements at the Large Hadron Collider. While deep learning, particularly Convolutional Neural Networks (CNNs), has advanced jet tagging using image-based representations, the potential of Vision Transformer (ViT) architectures, renowned for modeling global contextual information, remains largely underexplored for direct calorimeter image analysis, especially under realistic detector and pileup conditions. This paper presents a systematic evaluation of ViTs and ViT-CNN hybrid models for quark-gluon jet classification using simulated 2012 CMS Open Data. We construct multi-channel jet-view images from detector-level energy deposits (ECAL, HCAL) and reconstructed tracks, enabling an end-to-end learning approach. Our comprehensive benchmarking demonstrates that ViT-based models, notably ViT+MaxViT and ViT+ConvNeXt hybrids, consistently outperform established CNN baselines in F1-score, ROC-AUC, and accuracy, highlighting the advantage of capturing long-range spatial correlations within jet substructure. This work establishes the first systematic framework and robust performance baselines for applying ViT architectures to calorimeter image-based jet classification using public collider data, alongside a structured dataset suitable for further deep learning research in this domain.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2403.15594v4" target="_blank" class="paper-title">Predicting Male Domestic Violence Using Explainable Ensemble Learning and Exploratory Data Analysis</a>
-                        <span class="paper-date">2026-08-18</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Domestic violence is commonly viewed as a gendered issue that primarily affects women, which tends to leave male victims largely overlooked. This study presents a novel, data-driven analysis of male domestic violence (MDV) in Bangladesh, highlighting the factors that influence it and addressing the challenges posed by a significant categorical imbalance of 5:1 and limited data availability. We collected data from nine major cities in Bangladesh and conducted exploratory data analysis (EDA) to understand the underlying dynamics. EDA revealed patterns such as the high prevalence of verbal abuse, the influence of financial dependency, and the role of familial and socio-economic factors in MDV. To predict and analyze MDV, we implemented 10 traditional machine learning (ML) models, three deep learning models, and two ensemble models, including stacking and hybrid approaches. We propose a stacking ensemble model with ANN and CatBoost as base classifiers and Logistic Regression as the meta-model, which demonstrated the best performance, achieving $95\%$ accuracy, a $99.29\%$ AUC, and balanced metrics across evaluation criteria. Model-specific feature importance analysis of the base classifiers identified key features influencing their decision-making. Model-agnostic explainable AI techniques, such as SHAP and LIME, provided both local and global insights into the decision-making processes of the proposed model, thereby increasing transparency and interpretability. Statistical validation using paired $t$-tests with 10-fold cross-validation and Bonferroni correction ($α= 0.0036$) confirmed the superior performance of our proposed model over alternatives. Our findings challenge the prevailing notion that domestic abuse primarily affects women, emphasizing the need for tailored interventions and support systems for male victims.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2608.18188v1" target="_blank" class="paper-title">A systematic review of machine learning techniques to address diagnosis and treatment of autism: challenges and opportunities</a>
-                        <span class="paper-date">2026-08-18</span>
-                    </div>
-                                        <span class="paper-comment">📝 17 pages, 8 figures</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Autism spectrum disorder (ASD) is a developmental disability characterized by challenges in social interaction and communication. As the causes of ASD remain unclear, identifying relevant features and hidden correlations is crucial for early diagnosis. This systematic review evaluates 55 studies from 2017 to 2023 on the application of machine learning (ML) techniques to ASD. The primary objective is to examine recent ML applications in ASD research, identifying trends, techniques, and datasets that enhance diagnosis and treatment. Supervised learning methods dominate, as they align well with ASD diagnostic needs; however, the role of deep learning is expanding with greater data availability. Emerging techniques based on hybrid methods, where unsupervised, deep learning, and fuzzy logic could be included, will be interesting to observe in the future. The review highlights key challenges and opportunities, particularly the need for models that can integrate complex data -such as genetic and clinical information- to improve diagnostic accuracy and treatment outcomes. Additionally, incorporating innovative data sources, like wearable devices and biometric sensors, could enable continuous and non-intrusive monitoring, providing a more holistic understanding of ASD. Findings emphasize that addressing current challenges requires interdisciplinary collaboration and expanded datasets tailored to ASD. Future ML models will benefit from broader multimodal data integration, enabling researchers to more comprehensively address the complexities of ASD.</p>
                     </details>
                 </div>
             </div>

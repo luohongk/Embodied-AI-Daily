@@ -570,7 +570,7 @@
                 <a href="Continuous-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#6366f1"></span>
                     <span class="nav-label">Continuous Learning</span>
-                    <span class="nav-count">79</span>
+                    <span class="nav-count">78</span>
                 </a>
                 <a href="Feed-Forward-Reconstruction.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
@@ -590,7 +590,7 @@
                 <a href="World-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">World Model</span>
-                    <span class="nav-count">77</span>
+                    <span class="nav-count">76</span>
                 </a>
                 <a href="3D-Foundation-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
@@ -690,12 +690,12 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">68</span>
+                    <span class="nav-count">70</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">72</span>
+                    <span class="nav-count">75</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -730,7 +730,7 @@
                 <a href="Model-Predictive-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#14b8a6"></span>
                     <span class="nav-label">Model Predictive Control</span>
-                    <span class="nav-count">47</span>
+                    <span class="nav-count">48</span>
                 </a>
                 <a href="Whole-Body-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#06b6d4"></span>
@@ -789,7 +789,7 @@
             <a href="Continuous-Learning.html" class="nav-item active">
                 <span class="nav-dot" style="background:#6366f1"></span>
                 <span class="nav-label">Continuous Learning</span>
-                <span class="nav-count">79</span>
+                <span class="nav-count">78</span>
             </a>
             <a href="Feed-Forward-Reconstruction.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
@@ -809,7 +809,7 @@
             <a href="World-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">World Model</span>
-                <span class="nav-count">77</span>
+                <span class="nav-count">76</span>
             </a>
             <a href="3D-Foundation-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
@@ -909,12 +909,12 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">68</span>
+                <span class="nav-count">70</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">72</span>
+                <span class="nav-count">75</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -949,7 +949,7 @@
             <a href="Model-Predictive-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#14b8a6"></span>
                 <span class="nav-label">Model Predictive Control</span>
-                <span class="nav-count">47</span>
+                <span class="nav-count">48</span>
             </a>
             <a href="Whole-Body-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#06b6d4"></span>
@@ -1025,9 +1025,39 @@
         <section class="topic-section">
             <div class="topic-header">
                 <span class="topic-badge" style="background:#6366f1">Continuous Learning</span>
-                <span class="topic-count">79 papers</span>
+                <span class="topic-count">78 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.21307v1" target="_blank" class="paper-title">SPARCL: Spectral Partitioned Analytic Continual Learning</a>
+                        <span class="paper-date">2026-08-21</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解析式持续学习虽用闭式岭回归替代梯度优化，但旧类仍会漂移，原因并非梯度覆盖，而是谱干扰——新任务样本在旧主导特征方向上加载，稀释了共享自相关算子的谱，扰动旧类logits。&#10;&#10;🛠 **方法**：提出SPARCL，将运行自相关分解为高能核心与残差补集，冻结核心子空间中的旧类分类器组件，仅通过递归最小二乘更新残差块，并可选加入残差随机投影扩展。&#10;&#10;✨ **主要贡献**：提供闭式更新并证明核心贡献的不变性保证；在CIFAR-100、CUB-200、ImageNet-R和ImageNet-A上（冻结ViT-B/16协议）大幅缩小了经典解析学习器与强表示匹配器的差距，且与稀疏特征去相关方法（如Fly-CL）互补。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Analytic continual learning has emerged as a strong exemplar-free alternative to gradient-based class-incremental learning because it replaces iterative optimization with closed-form ridge updates. Yet the usual forgetting narrative, centered on stochastic gradient overwriting, does not explain why analytic methods still drift on old classes despite exact recursive solvers. We identify the culprit as spectral interference: the joint ridge classifier for all tasks shares the inverse autocorrelation operator $(R+λI)^{-1}$, so incoming task samples that load onto old dominant eigendirections dilute the spectrum and perturb old-class logits even when old labels are never revisited. Based on this view, we propose SPARCL, a spectral partitioned analytic continual learner that decomposes the running autocorrelation into a high-energy core and a residual complement, freezes old-class classifier components in the core subspace, and updates only the residual block through recursive least squares with an optional residual random-projection expansion. This yields a simple closed-form update with a provable invariance guarantee for the core contribution of old logits. Across CIFAR-100, CUB-200, ImageNet-R, and ImageNet-A under a frozen ViT-B/16 protocol, SPARCL closes most of the gap from classical analytic learners to strong representation matchers, while remaining complementary to sparse feature-decorrelation approaches such as Fly-CL.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.21044v1" target="_blank" class="paper-title">Socialized Division and Collaboration: Rethinking Class-Incremental Learning under Optimization Conflicts</a>
+                        <span class="paper-date">2026-08-21</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：传统类增量学习采用单一模型顺序适应新任务，当连续任务产生不相容的优化方向时，会导致破坏性干扰和灾难性遗忘，这源于在单一参数空间中强制融合异构学习动态的结构性局限。&#10;&#10;🛠 **方法**：提出社会分工与协作（SDC）框架，将连续学习重构为按优化冲突分解到多个专门模型，并基于Helmholtz自由能建立能量化的会话-模型兼容性准则，实现自适应会话分配、模型演化和协作推理的统一流程。&#10;&#10;✨ **主要贡献**：首次从社会团结理论视角重新定义类增量学习，提出替代单模型范式的多模型分工协作机制，为持久优化冲突下的学习提供了新的设计原则。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Class-incremental learning is commonly instantiated as a single-model paradigm, where a unified model sequentially adapts to an unbounded stream of sessions. While effective under mild distributional shifts, this formulation becomes strained when successive sessions induce incompatible optimization directions, leading to destructive interference and catastrophic forgetting. We argue that such forgetting reflects a structural limitation of enforcing heterogeneous learning dynamics within a single parameter space. Motivated by social solidarity theory, we propose Socialized Division and Collaboration (SDC) as a reformulation of continual learning that decomposes session learning across specialized models in response to optimization conflicts, while enabling coordinated collaboration. To support this formulation with a principled allocation mechanism, we introduce an energy-based session-model compatibility criterion grounded in Helmholtz free energy, which guides adaptive session allocation and model evolution under conflicting objectives. This framework integrates session assignment, model evolution, and collaborative inference into a unified pipeline, offering an alternative to monolithic continual learning formulations and highlighting a broader design principle for learning under persistent optimization conflicts.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2608.20038v1" target="_blank" class="paper-title">An Inclusive and Lightweight Approach to Federated Continual Learning for Cultural Heritage</a>
@@ -1154,10 +1184,7 @@
                         <span class="paper-date">2026-08-19</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：本文指出灾难性遗忘和可塑性丧失不足以完全解释持续学习与离线联合训练之间的性能差距，提出数据共同观察（co-observation）作为影响持续学习性能的第三个独立因素。&#10;&#10;🛠 **方法**：通过解耦数据访问限制与稳定性/可塑性约束，在监督和自监督学习范式下，系统比较联合训练与分离训练在数据增量“分块”场景中的表现，并控制遗忘和可塑性因素。&#10;&#10;✨ **主要贡献**：实证表明共同观察训练数据能带来超越知识保留的泛化收益，且该效应不依赖特定分布偏移；同时揭示记忆回放的成功不仅缓解遗忘，还主动重新引入共同观察的益处，而蒸馏方法仅起知识保留作用。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Efficient continual learning remains a fundamental challenge for deep neural networks. While catastrophic forgetting and loss of plasticity are widely considered the primary obstacles to overcome, we show that these two issues cannot fully explain the performance gap between naive sequential training and offline joint training. In this paper, we highlight data co-observation as a distinct factor influencing continual learning performance. By decoupling the constraints of separate data access from stability and plasticity, we systematically investigate the representational benefits gained by observing training data together. Empirically, we demonstrate a consistent performance difference between joint and separate training across both supervised and self-supervised paradigms in generic data-incremental "chunking" scenarios, whilst mitigating forgetting and controlling for plasticity. Our findings indicate that simultaneous observation of training data (co-observation) yields benefits to the learner's generalization that extend well beyond mere knowledge retention, and that this effect does not require a specific continual distribution shift. Furthermore, we contextualize prominent continual learning mechanisms through this lens: while distillation-based approaches act only as effective knowledge retention mechanisms, our results suggest that the empirical success of memory replay goes beyond the mitigation of forgetting, actively reintroducing the benefits of data co-observation into the learning process.</p>
@@ -1169,10 +1196,7 @@
                         <span class="paper-date">2026-08-19</span>
                     </div>
                                         <span class="paper-comment">📝 Accepted to Conference on Language Modeling (COLM) 2026</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：探究进化策略（ES）与基于梯度的强化学习方法（GRPO）在LLM后训练中，任务性能相近时，其参数空间中的解是否具有几何相似性。&#10;&#10;🛠 **方法**：在单任务和序列持续学习场景下，对四个任务分别应用ES和GRPO进行微调，并对比其任务准确率、参数更新幅度、KL散度以及解的线性连通性，同时构建ES的分析理论框架。&#10;&#10;✨ **主要贡献**：发现ES与GRPO虽任务性能相当，但ES产生更大、更分散的参数更新和更广的离任务KL漂移，而GRPO更新更小更局部；两者解虽更新方向近乎正交却无损失障碍地线性连通；理论解释了ES在弱信息方向积累大偏移的同时仍能保持任务精度，揭示了无梯度与基于梯度微调在遗忘和知识保留上的重要差异。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Evolution Strategies (ES) have emerged as a scalable gradient-free alternative to reinforcement learning based LLM fine-tuning, but it remains unclear whether comparable task performance implies comparable solutions in parameter space. We compare ES and Group Relative Policy Optimization (GRPO) across four tasks in both single-task and sequential continual-learning settings. ES matches or exceeds GRPO in single-task accuracy and remains competitive sequentially when its iteration budget is controlled. Despite this similarity in task performance, the two methods produce markedly different model updates: ES makes much larger changes and induces broader off-task KL drift, whereas GRPO makes smaller, more localized updates. Strikingly, the ES and GRPO solutions are linearly connected with no loss barrier, even though their update directions are nearly orthogonal. We develop an analytical theory of ES that explains all these phenomena within a unified framework, showing how ES can accumulate large off-task movement on weakly informative directions while still making enough progress on the task to match gradient-based RL in downstream accuracy. These results show that gradient-free and gradient-based fine-tuning can reach similarly accurate yet geometrically distinct solutions, with important consequences for forgetting and knowledge preservation. The source code is publicly available: https://github.com/Bhoy1/ESvsGRPO.</p>
@@ -1440,6 +1464,18 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Classical continual learning (CL) has primarily focused on enabling models to update and retain knowledge through parameter-centric mechanisms, e.g., training strategies, architectural designs, and weight adaptation. However, emerging paradigms are reshaping the scope of CL beyond this traditional model adaptation view. For instance, on-policy learning broadens the space of update mechanisms; test-time training extends CL from the training phase to inference; and external harness components such as memory, skill libraries, and interaction protocols extend the evolutionary boundaries of model capabilities far beyond the static parameter space. Collectively, these developments indicate a transition from parameter-centric learning toward system-level adaptation. To characterize this transition, we examine the evolution of continual learning through three dimensions: When, How, and Where learning occurs. The How dimension encompasses off-policy, on-policy, and beyond-gradient optimization mechanics. The When dimension captures evolution across pre-training, post-training, and inference-time stages. The Where dimension delineates updates occurring within internal parameters versus external structural constraints. Anchored by this tri-axial framework, we systematically survey representative methods, trace the ongoing transition of continual learning, and discuss the key challenges, broader implications, and future directions arising from this paradigm shift.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.20408v1" target="_blank" class="paper-title">Columnar-Embedder: A Biologically Inspired Cortical Architecture for Binary Sparse Distributed Graph Representations</a>
+                        <span class="paper-date">2026-08-12</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Finding a representative description of graph entities that captures their structural roles and homophily is a challenging goal for graph embedding techniques due to the non-Euclidean nature of graphs. Traditionally, Graph embeddings achieve top performance via random-walk methods and graph neural networks. However, these methods are transductive and utilize an expensive global optimization via softmax or a dense representation trained in an end-to-end pipeline with gradient descent. Nonetheless, other variants of GNNs can map to unseen nodes; they still rely on iterative message passing and backpropagation, incurring high computational and memory costs. Conversely, the mammalian cortex solves structurally similar problems by learning to map its input stream of patterns into a compact representation for downstream regions. We present the biologically inspired Columnar-Embedder architecture for learning binary Sparse Distributed Representations (SDRs) of graph nodes. The learning is driven by a local Bienenstock-Cooper-Munro (BCM) Hebbian rule modulated by positive pointwise mutual information (PPMI) computed from online streams of random walks. Continuous learning from streaming random-walk pairs without labels, backpropagation, or supervision enables the architecture to exhibit natural resistance to catastrophic forgetting. Across five graph benchmarks, the performance of SDRs is competitive with that of real-valued dense embeddings on node classification and link prediction, while the architecture exhibits portability, resilience to noise, and robustness to data corruption.</p>
                     </details>
                 </div>
                 <div class="paper-card">
@@ -1956,54 +1992,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Context: Quantitative studies can identify statistical predictors of training quality, but they often fail to capture what professionals themselves consider genuinely useful learning experiences and why. Objective: This study qualitatively investigates which types of learning experiences are perceived as most useful by Brazilian software engineering professionals and what characteristics define this usefulness. Method: Open-ended responses from 195 software engineering professionals were analyzed using Thematic Analysis, supported by frequency and lemmatization analysis using IRAMUTEQ and co-occurrence analysis between themes. Results: Five themes emerged: Continuous Technical Updating (T1), Practical and Applied Learning (T2), Formal Academic Education (T3), Social Learning and Networking (T4), and Leadership Development and Soft Skills (T5). Technical updating and practical application dominate professionals' accounts. Formal education, social learning, and soft skills are also valued as complementary dimensions. Conclusions: Perceived usefulness is strongly tied to alignment with daily work demands and immediate applicability. The convergence of technical updating (T1) and practical application (T2) in both frequency and co-occurrence reinforces the imperative of continuous learning in software engineering. Useful learning is not reducible to a single modality: genuinely valued experiences span technical, academic, social, and self-directed dimensions. Formal academic education and practical learning are perceived as complementary rather than competing. Organizations should design training ecosystems that integrate these dimensions rather than delivering isolated events.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.29610v1" target="_blank" class="paper-title">Educating the Agentic Engineer: Curricula, Collaboration, and Continuous Learning in the AI Era</a>
-                        <span class="paper-date">2026-07-31</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Generative and agentic artificial intelligence (AI) are reconfiguring software and systems engineering from a discipline centered on human authorship of artifacts to one focused on directing, verifying, and governing autonomous systems. This transition demands a new professional archetype, the \emph{agentic engineer}, whose enduring value lies in intent specification, orchestration of multi-agent workflows, critical evaluation of machine-generated outputs, and ethical judgment. This article presents an integrative conceptual synthesis across engineering education, computing education, human--AI interaction, human factors, and the learning sciences to derive an evidence-grounded educational architecture for this archetype. We introduce the ACCEL framework (Agentic Competencies through Curricula, Collaboration, and Enduring Learning), which organizes five competency pillars and maps them to three delivery vectors: curricula, collaboration, and continuous learning. Drawing on agency theory, trust-in-automation research, and empirical studies of AI-assisted programming, including evidence that AI benefits are unevenly realized and often misperceived, we propose a scaffolded curriculum, a delegation--verification pedagogical loop for human--AI teaming, redesigned assessment, governance-literate ethics integration, and alignment with current curricular guidelines and international AI competency frameworks. We identify key risks, including automation bias, deskilling, superficial engagement, and diffuse accountability, and conclude that educating the agentic engineer requires systemic transformation rather than incremental curricular change: instruction must shift from producing artifacts to exercising judgment over increasingly autonomous socio-technical systems.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.29592v1" target="_blank" class="paper-title">TOOD: Task-Aware Out-of-Distribution Score Calibration for Continual Learners</a>
-                        <span class="paper-date">2026-07-31</span>
-                    </div>
-                                        <span class="paper-comment">📝 21 pages, 9 figures, and 4 tables. Accepted for oral presentation at the Conference on Lifelong Learning Agents (CoLLAs 2026)</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>The primary challenge of continual learning (CL) systems is to learn new tasks while remaining performant on previously learned tasks. A similarly important though less well-studied aspect of CL systems is their ability to distinguish inputs that are unlikely to come from within the set of tasks the system has already encountered, often called out-of-distribution (OOD) detection. This paper presents several findings related to the dynamics of OOD detection in CL systems, causes of performance degradation over time which we call OOD forgetting (OODF), and proposed mitigation strategies for this degradation. Chiefly, we find the unintuitive result that OODF is only weakly anti-correlated with classification performance on previous tasks, suggesting that the underlying mechanisms producing OODF are distinct. Moreover, this effect is observed for both energy-based and feature-based OOD detection methods. Energy-based detectors suffer a drop in logit scale as additional tasks are learned, which we term the Confidence Gap, while feature-based detectors also degrade under a complementary effect we call Manifold Crowding. Motivated by these observations, we propose TOOD, a training-free post-hoc method that decomposes logits into per-task energy scores and re-calibrates them using replay-buffer statistics. Experiments on CIFAR-10, CIFAR-100, and a 100-task ImageNet-1K stream show that TOOD improves OOD detection performance over uncalibrated energy in most settings and ranks first or second in nine of ten CIFAR configurations, with the largest gains when the confidence gap is most severe. These results suggest that a substantial portion of OOD deterioration in continual learning arises from score miscalibration rather than from a complete loss of discriminative structure.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.29353v1" target="_blank" class="paper-title">Versatile On-device Adaptation at the Edge by Unifying Few-shot, Zero-shot, Continual, and In-context Learning</a>
-                        <span class="paper-date">2026-07-31</span>
-                    </div>
-                                        <span class="paper-comment">📝 11 pages, 8 figures, 4 tables</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>With the ever-increasing pervasiveness of smart edge devices, the demand is growing for applications that can be tailored to users (e.g., custom keyword spotting) or patients (e.g., adaptive health monitoring). Yet, most edge devices rely on fixed inference algorithms and thus cannot learn on-device to personalize predictions. When they can, devices typically support only a specific learning scenario, such as few-shot learning (FSL): going beyond this requires resorting either to another specialized device or to cloud-based retraining, which implies significant energy and latency overheads, a lack of real-time capabilities, and privacy concerns. In this work, we introduce embedder-centric learning (ECL), a framework that unifies four different online learning scenarios: FSL for on-the-fly customization, continual learning (CL) for knowledge accumulation, zero-shot learning (ZSL) for leveraging semantic data, and in-context learning (ICL) for adapting beyond classification. We demonstrate in silicon that ECL can be deployed on resource-constrained devices across four real-world use cases representative of the aforementioned learning scenarios. Our approach establishes a new state-of-the-art performance for FSL character recognition (Omniglot: 96.8% for 5-way 1-shot, 83.3% for 32-way 1-shot), and the first hardware baseline for CL in keyword spotting (NeuroBench keyword FSCIL: 71.8% for 200-way 5-shot). Moreover, we present the first hardware demonstrations of ZSL with semantic data (60.6% for 5-way spoken sentence classification) and ICL (46.2% at the 500th token of RegBench) operating at micro-to-milliwatt power budgets. Therefore, by unifying multiple learning scenarios, we pave the way for smart and versatile devices that can adapt right at the edge, without reliance on the cloud.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2512.12816v2" target="_blank" class="paper-title">Optimal Resource Allocation for ML Model Training and Deployment under Concept Drift</a>
-                        <span class="paper-date">2026-07-31</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>We study how to allocate resources for training and deployment of machine learning (ML) models under concept drift and limited budgets. We consider a setting in which a model provider distributes trained models to multiple clients whose devices support local inference but lack the ability to retrain those models, placing the burden of performance maintenance on the provider. We introduce a model-agnostic framework that captures the interaction between resource allocation, concept drift dynamics, and deployment timing. We show that optimal training policies depend critically on the aging properties of concept durations. Under sudden concept changes, we derive optimal training policies subject to budget constraints when concept durations follow distributions with Decreasing Mean Residual Life (DMRL), and show that intuitive heuristics are provably suboptimal under Increasing Mean Residual Life (IMRL). We further study model deployment under communication constraints, prove that the associated optimization problem is quasi-convex under mild conditions, and propose a randomized scheduling strategy that achieves near-optimal client-side performance. These results offer theoretical and algorithmic foundations for cost-efficient ML model management under concept drift, with implications for continual learning, distributed inference, and adaptive ML systems.</p>
                     </details>
                 </div>
             </div>

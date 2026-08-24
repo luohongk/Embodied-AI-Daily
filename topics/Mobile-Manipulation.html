@@ -570,7 +570,7 @@
                 <a href="Continuous-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#6366f1"></span>
                     <span class="nav-label">Continuous Learning</span>
-                    <span class="nav-count">79</span>
+                    <span class="nav-count">78</span>
                 </a>
                 <a href="Feed-Forward-Reconstruction.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
@@ -590,7 +590,7 @@
                 <a href="World-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">World Model</span>
-                    <span class="nav-count">77</span>
+                    <span class="nav-count">76</span>
                 </a>
                 <a href="3D-Foundation-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
@@ -690,12 +690,12 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">68</span>
+                    <span class="nav-count">70</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">72</span>
+                    <span class="nav-count">75</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -730,7 +730,7 @@
                 <a href="Model-Predictive-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#14b8a6"></span>
                     <span class="nav-label">Model Predictive Control</span>
-                    <span class="nav-count">47</span>
+                    <span class="nav-count">48</span>
                 </a>
                 <a href="Whole-Body-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#06b6d4"></span>
@@ -789,7 +789,7 @@
             <a href="Continuous-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
                 <span class="nav-label">Continuous Learning</span>
-                <span class="nav-count">79</span>
+                <span class="nav-count">78</span>
             </a>
             <a href="Feed-Forward-Reconstruction.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
@@ -809,7 +809,7 @@
             <a href="World-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">World Model</span>
-                <span class="nav-count">77</span>
+                <span class="nav-count">76</span>
             </a>
             <a href="3D-Foundation-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
@@ -909,12 +909,12 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">68</span>
+                <span class="nav-count">70</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">72</span>
+                <span class="nav-count">75</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -949,7 +949,7 @@
             <a href="Model-Predictive-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#14b8a6"></span>
                 <span class="nav-label">Model Predictive Control</span>
-                <span class="nav-count">47</span>
+                <span class="nav-count">48</span>
             </a>
             <a href="Whole-Body-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#06b6d4"></span>
@@ -1030,6 +1030,36 @@
             <div class="paper-list">
                 <div class="paper-card">
                     <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.21319v1" target="_blank" class="paper-title">Unified Branch-and-Bound Search for the Steiner Traveling Salesman Problem on Graphs of Convex Sets</a>
+                        <span class="paper-date">2026-08-21</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：本文研究了图上的凸集旅行商问题（Steiner-TSP on GCS），即在包含必需凸集、可选中转顶点和允许重复访问的图中，寻找最小代价的闭合轨迹，并需处理无限解空间中的优化挑战。&#10;&#10;🛠 **方法**：提出了一种统一的基于分支定界（branch-and-bound）的搜索框架，对根行走前缀进行遍历。利用加性下界图成本约束已提交前缀，并通过割分离的连通流松弛来估计访问所有剩余目标并返回根节点的残余成本下界。&#10;&#10;✨ **主要贡献**：在均匀正成本假设下，证明了最佳优先搜索在无初始可行解时有限步终止，深度优先搜索在有有限可行解时终止；并提供了ε近似最优性保证。实验表明，两种策略在30秒内对所有基准实例找到可行解，平均最优性差距约28-30%，优于仅成功一半实例的两种基线方法，并成功应用于移动机械臂的联合感知模式、访问顺序和连续轨迹规划任务。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>We formalize the Steiner Traveling Salesman Problem (Steiner-TSP) on Graphs of Convex Sets (GCS), which seeks a minimum-cost closed trajectory through required convex sets while allowing optional transit vertices and revisits. To explore the resulting infinite solution space, we propose a unified branch-and-bound search over rooted walk prefixes. Additive lower-bound-graph costs bound committed prefixes, while a cut-separated connected-flow relaxation lower-bounds the residual cost of visiting every remaining target and returning to the root. Under a uniform positive-cost assumption, best-first traversal terminates after finitely many expansions on every feasible instance without an initial incumbent, whereas depth-first traversal does so once a finite incumbent is available. For a user-specified factor $ε\geq1$, a global lower bound certifies that either strategy's incumbent cost is at most $ε$ times the global optimum. We further demonstrate joint sensing-mode, visitation-order, and continuous-trajectory selection for a mobile-manipulator inspection task, including action precedences expressed in linear temporal logic over finite traces (LTL$_f$). Both traversal strategies find feasible solutions on all benchmark instances within 30s with mean certified optimality gaps of 28.1% and 29.7%, respectively, whereas two recent baselines succeed on only about half of the instances</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.20114v2" target="_blank" class="paper-title">DECOWAM: Decoupled Whole-Body World-Action Model for Legged Mobile Manipulation</a>
+                        <span class="paper-date">2026-08-21</span>
+                    </div>
+                                        <span class="paper-comment">📝 8 pages, 5 figures. Introduces DECOWAM, a decoupled whole-body world-action model for legged mobile manipulation, and the ARMDOG real-robot dataset</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有世界-动作模型主要针对固定基座平台，未显式区分移动操作中相机自身运动与基座/手臂动作，导致在腿式移动操作场景下视觉预测和动作控制效果不佳。&#10;&#10;🛠 **方法**：提出DECOWAM，一种解耦的全身世界-动作模型，通过专用条件接口分离基座与手臂动作，采用冻结FastWAM骨干加残差适配器、从特权观测蒸馏的动作等价未来瓶颈、对抗分离的基座/手臂潜变量，以及基座速度条件化视频预测。&#10;&#10;✨ **主要贡献**：引入ARMDOG真实机器人数据集，在固定回放协议下相比FastWAM将动作MSE降低21.7%（仅需25.95M可训练参数），在79次闭环实验中取得最佳全身协调性和基座位移鲁棒性，任务完成率与最强基线相当，证明具身感知因子分解可支持参数高效的联合视觉预测与全身控制。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Mobile manipulation requires a robot to predict how locomotion and arm motion jointly alter future observations and control. Existing world-action models, developed largely for fixed-base platforms, do not explicitly distinguish camera ego-motion from base and arm actions. Here we introduce DECOWAM, a whole-body world-action model that separates these factors through dedicated conditional interfaces. DECOWAM freezes an adapted FastWAM backbone and trains residual adapters, an action-equivalent future bottleneck distilled from privileged observations, adversarially separated base and arm latents, and base-velocity conditioning for video prediction. We further introduce ARMDOG, a real-robot dataset that synchronizes video, whole-body state and action, and language. On a fixed replay protocol, DECOWAM improved both future-video and action prediction over FastWAM, reducing action MSE by 21.7% with 25.95M trainable adaptation parameters. Across 79 closed-loop trials per method, it achieved the highest observed whole-body coordination and base-displacement robustness among the compared systems, while task completion remained comparable to the strongest baseline. These results show that embodiment-aware factorization can support parameter-efficient joint visual prediction and whole-body control under moving viewpoints.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
                         <a href="https://arxiv.org/abs/2608.20251v1" target="_blank" class="paper-title">Video2DoorTraversal: Push Door Traversal via Simulated Door Twins</a>
                         <span class="paper-date">2026-08-20</span>
                     </div>
@@ -1041,21 +1071,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Door opening and traversal is a long-horizon loco-manipulation task that requires precise handle interaction and coordinated base-arm control. We present Video2DoorTraversal, a single-video real-to-sim-to-real framework for wheel-legged mobile manipulators. Given one RGB video of a real door, DoorTwin reconstructs an instance-aligned, articulated, and simulation-ready door twin with realistic geometry and appearance. A simulation-in-the-loop agent converts the recovered articulation into a parameterized skill program and iteratively refines failed rollouts to generate physically executable demonstrations. These demonstrations are used to train ArticuACT, a dual-depth policy that predicts coordinated base, arm, and gripper commands using robot-centric camera conditioning and interaction-aware supervision. With all perception and policy inference running onboard, the system achieves a 96.57% average success rate across five real doors and an 80.95% zero-shot success rate on structurally similar unseen doors, while completing the full approach, opening, and traversal sequence in approximately 13s on average. Project Page: https://video2doortraversal.github.io/.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2608.20114v1" target="_blank" class="paper-title">DECOWAM: Decoupled Whole-Body World-Action Model for Legged Mobile Manipulation</a>
-                        <span class="paper-date">2026-08-20</span>
-                    </div>
-                                        <span class="paper-comment">📝 8 pages, 5 figures. Introduces DECOWAM, a decoupled whole-body world-action model for legged mobile manipulation, and the ARMDOG real-robot dataset</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有世界-动作模型主要针对固定基座平台，未显式区分移动操作中相机自身运动与基座/手臂动作，导致在腿式移动操作场景下视觉预测和动作控制效果不佳。&#10;&#10;🛠 **方法**：提出DECOWAM，一种解耦的全身世界-动作模型，通过专用条件接口分离基座与手臂动作，采用冻结FastWAM骨干加残差适配器、从特权观测蒸馏的动作等价未来瓶颈、对抗分离的基座/手臂潜变量，以及基座速度条件化视频预测。&#10;&#10;✨ **主要贡献**：引入ARMDOG真实机器人数据集，在固定回放协议下相比FastWAM将动作MSE降低21.7%（仅需25.95M可训练参数），在79次闭环实验中取得最佳全身协调性和基座位移鲁棒性，任务完成率与最强基线相当，证明具身感知因子分解可支持参数高效的联合视觉预测与全身控制。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Mobile manipulation requires a robot to predict how locomotion and arm motion jointly alter future observations and control. Existing world-action models, developed largely for fixed-base platforms, do not explicitly distinguish camera ego-motion from base and arm actions. Here we introduce DECOWAM, a whole-body world-action model that separates these factors through dedicated conditional interfaces. DECOWAM freezes an adapted FastWAM backbone and trains residual adapters, an action-equivalent future bottleneck distilled from privileged observations, adversarially separated base and arm latents, and base-velocity conditioning for video prediction. We further introduce ARMDOG, a real-robot dataset that synchronizes video, whole-body state and action, and language. On a fixed replay protocol, DECOWAM improved both future-video and action prediction over FastWAM, reducing action MSE by 21.7% with 25.95M trainable adaptation parameters. Across 79 closed-loop trials per method, it achieved the highest observed whole-body coordination and base-displacement robustness among the compared systems, while task completion remained comparable to the strongest baseline. These results show that embodiment-aware factorization can support parameter-efficient joint visual prediction and whole-body control under moving viewpoints.</p>
                     </details>
                 </div>
                 <div class="paper-card">
@@ -1169,10 +1184,7 @@
                         <span class="paper-date">2026-08-07</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：移动机械臂在杂乱环境中搬运大型非凸载荷时，现有规划器要么简化载荷几何，要么忽略机械臂连杆间的运动耦合，导致可行空间丢失或优化停滞。&#10;&#10;🛠 **方法**：提出实时全身运动规划框架，前端采用链分解核基碰撞检测保留真实几何；中端预处理将路径转为平滑可行轨迹并直接执行；后端基于运动耦合SVSDF（KC-SVSDF）进行轨迹优化，沿运动链传播避障梯度。&#10;&#10;✨ **主要贡献**：通过KC-SVSDF实现全身一致避障方向，在差分驱动移动机械臂上验证了可靠穿越狭窄通道和杂乱环境的能力，消融实验和对比基准均优于现有方法。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Mobile manipulators are increasingly tasked with transporting large, non-convex payloads through cluttered environments, yet existing planners either oversimplify the payload geometry or fail to handle the kinematic coupling between manipulator links, leading to lost feasible space or stalled optimization. This letter presents a real-time whole-body motion planning framework for mobile manipulators carrying arbitrarily shaped payloads. The front-end employs a chain-decomposed kernel-based collision check that preserves the true geometry of the robot and payload, with compact storage and fast bit-level queries. A mid-end preprocessing stage converts the front-end path into a continuous trajectory enforcing smoothness and feasibility, and executes it directly when collision-free to bypass the costly back-end. When refinement is required, the back-end performs trajectory optimization built on a Kinematically-Coupled SVSDF (KC-SVSDF), which propagates collision-avoidance gradients along the kinematic chain to produce coherent whole-body escape directions. Ablation studies, comparative benchmarks against state-of-the-art baselines, and real-world experiments on a differential-drive mobile manipulator demonstrate that the proposed framework reliably transports large, non-convex payloads through tight passages and cluttered environments.</p>
@@ -2004,18 +2016,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Legged manipulators extend robotic capabilities beyond static manipulation by integrating agile locomotion with versatile arm control. However, achieving precise manipulation while maintaining coordinated locomotion remains a major challenge. This work presents a hierarchical reinforcement learning framework for dynamic pick-and-place tasks using a quadruped equipped with a 6-DOF robotic arm. The framework incorporates an explicit mass estimation module enabling adaptive whole-body control for objects with varying weights. In simulation, the system achieves an 86.05% success rate with payloads up to 2.3 kg. The approach is further validated through real-world experiments across six representative scenarios with controlled variations in object physical properties (size and mass) and task heights. Specifically, within a wide vertical workspace ranging from ground level to 1.1~m-high tabletops, the system demonstrates an average success rate of 73.3% for payloads up to 1.3 kg, with an average execution time of 4.06 s. Unlike prior works that handle lightweight objects and execute pick-and-place motions with slow, piecewise motions, the proposed framework exploits concurrent locomotion and manipulation for dynamic, continuous execution. These results demonstrate the potential of quadrupedal mobile manipulators for adaptive, whole-body pick-and-place with heavier payloads and extended workspaces.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2603.03243v2" target="_blank" class="paper-title">HoMMI: Learning Whole-Body Mobile Manipulation from Human Demonstrations</a>
-                        <span class="paper-date">2026-05-14</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>We present Whole-Body Mobile Manipulation Interface (HoMMI), a data collection and policy learning framework that learns whole-body mobile manipulation directly from robot-free human demonstrations. We augment UMI interfaces with egocentric sensing to capture the global context required for mobile manipulation, enabling portable, robot-free, and scalable data collection. However, naively incorporating egocentric sensing introduces a larger human-to-robot embodiment gap in both observation and action spaces, making policy transfer difficult. We explicitly bridge this gap with a cross-embodiment hand-eye policy design, including an embodiment agnostic visual representation; a relaxed head action representation; and a whole-body controller that realizes hand-eye trajectories through coordinated whole-body motion under robot-specific physical constraints. Together, these enable long-horizon mobile manipulation tasks requiring bimanual and whole-body coordination, navigation, and active perception. Results are best viewed on: https://hommi-robot.github.io</p>
                     </details>
                 </div>
             </div>
