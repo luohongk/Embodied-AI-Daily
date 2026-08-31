@@ -575,7 +575,7 @@
                 <a href="Feed-Forward-Reconstruction.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Feed Forward Reconstruction</span>
-                    <span class="nav-count">57</span>
+                    <span class="nav-count">58</span>
                 </a>
                 <a href="Vision-and-Language-Navigation.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -600,7 +600,7 @@
                 <a href="LLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
                     <span class="nav-label">LLM</span>
-                    <span class="nav-count">80</span>
+                    <span class="nav-count">79</span>
                 </a>
                 <a href="VLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f97316"></span>
@@ -695,7 +695,7 @@
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">77</span>
+                    <span class="nav-count">74</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -745,7 +745,7 @@
                 <a href="Path-Planning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#3b82f6"></span>
                     <span class="nav-label">Path Planning</span>
-                    <span class="nav-count">75</span>
+                    <span class="nav-count">76</span>
                 </a>
                 <a href="Multimodal-Fusion.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#6366f1"></span>
@@ -794,7 +794,7 @@
             <a href="Feed-Forward-Reconstruction.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Feed Forward Reconstruction</span>
-                <span class="nav-count">57</span>
+                <span class="nav-count">58</span>
             </a>
             <a href="Vision-and-Language-Navigation.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -819,7 +819,7 @@
             <a href="LLM.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
                 <span class="nav-label">LLM</span>
-                <span class="nav-count">80</span>
+                <span class="nav-count">79</span>
             </a>
             <a href="VLM.html" class="nav-item">
                 <span class="nav-dot" style="background:#f97316"></span>
@@ -914,7 +914,7 @@
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">77</span>
+                <span class="nav-count">74</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -964,7 +964,7 @@
             <a href="Path-Planning.html" class="nav-item active">
                 <span class="nav-dot" style="background:#3b82f6"></span>
                 <span class="nav-label">Path Planning</span>
-                <span class="nav-count">75</span>
+                <span class="nav-count">76</span>
             </a>
             <a href="Multimodal-Fusion.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
@@ -1025,9 +1025,39 @@
         <section class="topic-section">
             <div class="topic-header">
                 <span class="topic-badge" style="background:#3b82f6">Path Planning</span>
-                <span class="topic-count">75 papers</span>
+                <span class="topic-count">76 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.28437v1" target="_blank" class="paper-title">LUCID: An Agentic AI Framework on Digital-Twin in the Loop for QoS-Guaranteeing Robotic Control</a>
+                        <span class="paper-date">2026-08-28</span>
+                    </div>
+                                        <span class="paper-comment">📝 10 pages, 17 figures</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：云机器人系统中，动态环境使轨迹规划（TP）与无线资源管理（RRM）的联合决策难以固定优化，导致服务质量（QoS）违规，且缺乏可快速响应的数字孪生测试平台。&#10;&#10;🛠 **方法**：提出LUCID框架，利用LLM智能体根据操作者高层意图动态配置TP-RRM问题模板（变量、目标、约束），并通过SimBridge将大规模机器人场景转换为无线就绪的数字孪生，结合碰撞避免路径规划与谱半径RRM验证器，实时重构问题结构。&#10;&#10;✨ **主要贡献**：实现TP-RRM从固定求解到动态编排的转变，适应意图、机器人数量及场景变化；引入多模态代理模型FastConfigNet降低规划延迟，高效验证可行状态并消除无线瓶颈。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Cloud robotics relies on the timely uplink of high-volume sensing streams, yet dynamic environments continually shift the feasible combinations of trajectories, active-robot count, and per-robot QoS. Because existing approaches formulate trajectory planning (TP) and radio resource management (RRM) as a single fixed optimization problem, they cannot reconfigure these coupled decisions as conditions evolve, resulting in transient QoS violations. However, evolving operator intents change which quantities-such as the active-robot count and per-robot QoS-are fixed, optimized, or relaxed. Furthermore, the computational cost of evaluating trajectory-dependent wireless conflicts has made it difficult to build large-scale Digital-Twin-in-the-Loop (DITL) testbeds responsive enough for such dynamic orchestration. We present LUCID, an LLM-agent--orchestrated, uplink-aware cloud-robotics pipeline that moves TP--RRM from solving a fixed formulation to dynamically orchestrating optimization problem schemas within a DITL environment. Driven by the operator's high-level intent, LUCID treats the TP--RRM formulation as a bounded template whose variables, objectives, and constraints are dynamically configured, while SimBridge enables repeated ray-tracing evaluation by converting large-scale robotics scenes into wireless-ready DTs. By integrating collision-free path planning with a spectral-radius RRM validator, LUCID identifies wireless bottlenecks and restructures the problem schema on the fly to efficiently find the verified feasible state. Experiments confirm that LUCID robustly adapts to changing intents, active-robot counts, and scenes, while a multimodal surrogate model, FastConfigNet, reduces planning latency.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.28214v1" target="_blank" class="paper-title">Probabilistic Multi-Robot Gas Source Localization with Uncalibrated Sensors: A Distributed Estimation Approach</a>
+                        <span class="paper-date">2026-08-28</span>
+                    </div>
+                                        <span class="paper-comment">📝 14 pages, 6 figures, accepted by The 18th International Symposium on Distributed Autonomous Robotic Systems (DARS)</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：多机器人系统在配备未校准、非线性且响应不一致的异构传感器时，难以可靠融合信息进行气体源定位。&#10;&#10;🛠 **方法**：提出一种分布式概率框架，每个机器人利用基于秩的特征独立估计局部信念（该特征对传感器缩放和非线性不变），再通过专家乘积融合局部信念获得全局一致估计，并引入信息区域分配与路径规划策略优化团队协调。&#10;&#10;✨ **主要贡献**：实现了无需校准的异构传感器分布式源定位，在高保真仿真中显著优于基于标准测量聚合的基准方法，展示了校准无关感知表示在分布式系统中的有效扩展潜力。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Estimating environmental states with multi-robot systems becomes particularly challenging when robots are equipped with uncalibrated and therefore heterogeneous sensors, whose nonlinear and inconsistent responses prevent reliable information fusion. In this paper, we propose a distributed probabilistic framework for source localization tasks that enables calibration-free estimation in the presence of sensor heterogeneity. The key idea is that each robot independently estimates a local belief using a rank-based feature that captures the relative evolution of observations and is invariant to sensor scaling and nonlinearities. These local beliefs are then fused through a product of experts formulation to obtain a consistent global estimate across the team. To further improve the efficiency of team coordination, we introduce an informative region allocation and path planning strategy that reduces redundant exploration while balancing exploration and exploitation. We validate the proposed framework using high-fidelity simulations with realistic gas sensor models. Results demonstrate that our method significantly outperforms a benchmark method based on standard measurement aggregation, achieving reliable source localization accuracy despite strong sensor heterogeneity. More broadly, this work demonstrates how calibration-free sensing representations can be effectively extended to distributed robotic systems, paving the way for their application to other estimation tasks involving heterogeneous sensors.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2608.26939v1" target="_blank" class="paper-title">Dynamic Haven Selection for Multi-Agent Pickup and Delivery in Constrained Warehouses</a>
@@ -1154,10 +1184,7 @@
                         <span class="paper-date">2026-08-23</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：传统多机器人覆盖路径规划假设机器人匀速运动，仅平衡几何面积或路径长度，但在实际任务中机器人速度会因感知或交互任务而空间变化，导致相同面积产生显著不同的完成时间。&#10;&#10;🛠 **方法**：提出MDCPP框架，利用高斯混合模型从部分观测中学习工作量分布，预测每个栅格的服务时间，并通过分布式容量约束分配反复重新划分未覆盖区域，实现动态负载均衡。&#10;&#10;✨ **主要贡献**：证明了分配轮次的有限终止性和成对局部最优性，给出了服务时间makespan的误差界及完全覆盖的充分条件；600次仿真表明在强异质性场景下预测价值显著，优于非预测性方法；三台UGV实验验证了实际定位、驱动和无线控制下的路线执行与速度自适应能力。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Multi-robot coverage path planning commonly balances geometric area or path length under a constantspeed assumption. This assumption is inadequate when sensing or interaction tasks cause spatially varying traversal speeds, because equal areas can induce markedly different completion times. We propose Multi-Robot Dynamic Coverage Path Planning (MDCPP), which learns a Gaussian-mixture workload field from partial observations, predicts cell-wise service times, and repeatedly repartitions the uncovered cells through a distributed capacity-constrained assignment. We establish finite termination and pairwise local optimality of each synchronized assignment round, bound the service-time makespan degradation due to estimation error, and state sufficient conditions for complete coverage. A 600-run benchmark against sweeping, LS-MCPP, reactive reassignment, and an oracle shows that prediction is most valuable under strong heterogeneity and improves aggregate paired makespan over the nonpredictive alternatives. A three-UGV experiment further validates route execution and spatial speed adaptation under localization, drivetrain, and wireless-control effects.</p>
@@ -1169,10 +1196,7 @@
                         <span class="paper-date">2026-08-21</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在未知且杂乱的环境中，移动机器人自主进行气体分布测绘（GDM）时，需同时探索可通行空间、构建环境地图并从稀疏化学测量中推断气体分布，现有系统多依赖遥操作，缺乏自主性。&#10;&#10;🛠 **方法**：提出XIT（Exploration and Exploitation Informed Trees）规划器，将主动GDM建模为信息路径规划（IPP）问题，基于气体后验的上置信界（UCB）信息场采样，并生成兼顾探索与利用的并发轨迹；同时引入气体前沿概念和波前气体前沿检测算法（WGFD）以识别高浓度气体附近的未观测区域。&#10;&#10;✨ **主要贡献**：XIT通过平衡探索与利用，在未知环境中高效收集气体信息，显著提升GDM质量与效率；高保真仿真和真实实验验证了其有效性，且方法可推广至其他面临探索-利用权衡的机器人信息采集任务。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Mobile robotic gas distribution mapping (GDM) provides critical situational awareness during emergency responses to hazardous gas releases. However, most systems still rely on teleoperation, limiting scalability and response speed. Autonomous active GDM is challenging in unknown and cluttered environments, because the robot must simultaneously explore traversable space, map the environment, and infer the gas distribution belief from sparse chemical measurements. We address this by formulating active GDM as a next-best-trajectory informative path planning (IPP) problem and propose XIT (Exploration and Exploitation Informed Trees), a sampling-based planner that balances exploration and exploitation by generating concurrent trajectories toward exploration-rich goals while collecting informative gas measurements en route. XIT draws a batch of samples from an Upper Confidence Bound (UCB) information field derived from the current gas posterior and expands trees using a cost that trades off travel effort against information acquisition. To enable plume-aware exploration, we introduce the gas frontier concept, defined as unobserved regions adjacent to high gas concentrations, and propose the Wavefront Gas Frontier Detection (WGFD) algorithm for their identification. High-fidelity simulations and a real-world experiment demonstrate the benefits of XIT in terms of GDM quality and efficiency. Although developed for active GDM, XIT is readily applicable to other robotic information-gathering tasks in unknown environments that face the exploration and exploitation trade-off.</p>
@@ -1944,18 +1968,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Environmental monitoring with unmanned aerial vehicles (UAVs) requires route planning methods that maximize covered area while handling energy limits, operational constraints, and geometric complexity. This paper reports the protocol and preliminary results of an ongoing systematic literature review (SLR) on autonomous UAV route planning for coverage-oriented environmental monitoring. The review follows the PRISMA 2020 framework and searches Scopus and Web of Science for studies published between 2015 and 2026. The protocol focuses on path planning, coverage path planning, and informative path planning, with emphasis on algorithmic families, coverage and energy metrics, obstacle handling, geometric environment representations, and environmental constraints. At the current stage, 562 records have been identified, 161 duplicates have been removed, and 401 unique records have been screened by title, abstract, and keywords. From these, 247 studies were retained for full-text eligibility assessment (235 eligible and 12 borderline records to be resolved during full-text review). A preliminary analysis of the retained studies suggests strong concentration on coverage-oriented formulations, multi-UAV coordination, and energy-aware optimization, while fewer studies explicitly address weather, uncertainty, or obstacle-rich environments. Most retained studies rely on simulation-based validation, highlighting a potential simulation-to-reality gap, and recent publications show increasing interest in reinforcement learning, hybrid optimization, and geometry-aware planning. These early findings indicate an active but fragmented research landscape and support the need for a structured synthesis to identify mature techniques and unresolved gaps for realistic environmental monitoring missions.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.00591v2" target="_blank" class="paper-title">From Real-Time Planning to Reliable Execution:Scalable Coordination for Heterogeneous Multi-Robot Fleets in Industrial Environments</a>
-                        <span class="paper-date">2026-07-03</span>
-                    </div>
-                                        <span class="paper-comment">📝 11 pages, 9 figures</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>With the increasing deployment of heterogeneous robot fleets in industrial environments, efficient coordination remains a critical challenge. Real-time path planning must simultaneously accommodate high robot densities and heterogeneous motion capabilities, while communication delays, execution uncertainties, and other disturbances may cause robots to deviate from the temporal assumptions underlying planned paths. Such deviations can lead to excessive waiting and congestion propagation across the fleet. This paper presents SCALE, a reactive online coordination framework that enables real-time planning while maintaining robust execution. Within this framework, we introduce a motion-induced conflict reduction mechanism to support the online generation of feasible paths for online conflict resolution. To mitigate the effects of disturbances, we further design a generalized Conjugate Action-Precedence Hypergraph (CAPH) that adaptively adjusts precedence relations among robots. Extensive validation experiments, together with a three-day deployment in a warehouse, demonstrate the</p>
                     </details>
                 </div>
             </div>

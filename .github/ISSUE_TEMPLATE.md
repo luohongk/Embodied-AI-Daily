@@ -7,20 +7,21 @@ labels: documentation
 ## Continuous Learning
 | **Title** | **Date** | **Comment** |
 | --- | --- | --- |
+| **[Efficient Online Continual Foundation Model Fine-Tuning for Predictive Process Monitoring](https://arxiv.org/abs/2608.28237v1)** | 2026-08-28 |  |
+| **[RegCL: Compact Continual SAM Adaptation for Visual Grounding in Multi-Sensorial Media](https://arxiv.org/abs/2507.12297v2)** | 2026-08-28 |  |
+| **[Fast Weight Attention for Continual Learning](https://arxiv.org/abs/2608.27763v1)** | 2026-08-27 | <details><summary>Proje...</summary><p>Project Page: https://github.com/yifanzhang-pro/fast-weight-attention</p></details> |
+| **[Class Incremental Continual Learning with Self-Organizing Maps and Synthetic Replay](https://arxiv.org/abs/2508.21240v2)** | 2026-08-27 |  |
+| **[Unsupervised Continual Learning with Growing Self-Organizing Maps and Synthetic Replay](https://arxiv.org/abs/2608.27662v1)** | 2026-08-27 |  |
 | **[Thomson: Continual Learning of Frontier Models for SovereignAI](https://arxiv.org/abs/2608.27147v1)** | 2026-08-27 | <details><summary>Open-...</summary><p>Open-weight model: https://huggingface.co/thomsonreuters/Thomson-1.0-Small</p></details> |
 | **[Unifying Detection and Adaptation in Task-Free Continual Learning](https://arxiv.org/abs/2608.27070v1)** | 2026-08-27 | <details><summary>Accep...</summary><p>Accepted to Findings of EMNLP 2026</p></details> |
 | **[Geo-LoRA: Geometry-Aware Subspace Evolution for Low-Rank Adaptation in Continual Learning](https://arxiv.org/abs/2608.26960v1)** | 2026-08-27 |  |
+| **[When Muon Meets Task Interference: A Spectral Perspective on Continual Learning and Model Merging](https://arxiv.org/abs/2608.27518v1)** | 2026-08-27 |  |
 | **[Parameter Efficient Continual Learning for Sparse Event-Based Transformers](https://arxiv.org/abs/2608.26720v1)** | 2026-08-27 |  |
-| **[Memory Anchors for Continual Robot Learning](https://arxiv.org/abs/2608.26545v1)** | 2026-08-27 | 22 pages, 15 figures |
-| **[Continually learning neural-operator surrogate for three-dimensional airborne electromagnetic Bayesian inversion](https://arxiv.org/abs/2608.25932v1)** | 2026-08-26 |  |
-| **[AI Agentic Selective Laser Sintering Process Optimization](https://arxiv.org/abs/2608.25928v1)** | 2026-08-26 |  |
-| **[Advantage-Driven Explicit Memory for Social Navigation](https://arxiv.org/abs/2608.25610v1)** | 2026-08-26 |  |
-| **[Continual Learning With Participation Privacy: An Auditable Buffering-Aggregation Recipe](https://arxiv.org/abs/2607.07209v2)** | 2026-08-25 | <details><summary>This ...</summary><p>This version corrects and clarifies the independent-decomposability condition underlying the adaptive-safety result in the pre-conference version of the ICML 2026 paper, with corresponding revisions to the affected statements and proofs</p></details> |
-| **[TRACER: Balancing Stability-Plasticity-Cognitivity Trilemma for LLM Enhanced Continual Recommendation](https://arxiv.org/abs/2608.16075v2)** | 2026-08-25 | <details><summary>Accep...</summary><p>Accepted to CIKM 2026 Full Research Paper</p></details> |
 
 ## Feed Forward Reconstruction
 | **Title** | **Date** | **Comment** |
 | --- | --- | --- |
+| **[GeoFF3D: Coordinate-Anchored Feed-Forward Reconstruction for Large-Scale UAV Mapping](https://arxiv.org/abs/2608.28288v1)** | 2026-08-28 |  |
 | **[Cross-Platform Benchmark of Neural 3D Reconstruction for Autonomous Laboratory Robots](https://arxiv.org/abs/2608.26383v1)** | 2026-08-26 | <details><summary>This ...</summary><p>This manuscript is peer-reviewed from the committees in the workshop "VAxAutoSci: Visual Analytics in the Age of Autonomous Scientific Discovery" in conjunction with 2026 IEEE Visualization & Visual Analytics</p></details> |
 | **[RecGen3D: Reconstruction-Guided 3D Generation in a Shared Canonical Space](https://arxiv.org/abs/2604.01479v3)** | 2026-08-21 | <details><summary>Accep...</summary><p>Accepted to SIGGRAPH Asia 2026 (Conference Papers). 21 pages including supplementary material. Code: https://github.com/zsh523/RecGen3D</p></details> |
 | **[IGGT4D: Streaming 4D Instance-Grounded Geometry Transformer](https://arxiv.org/abs/2607.19228v1)** | 2026-07-21 | <details><summary>Proje...</summary><p>Project Page: https://iggt4d.github.io</p></details> |
@@ -30,7 +31,6 @@ labels: documentation
 | **[PointSplat: Compact Gaussian Splatting via Human-Centric Prediction](https://arxiv.org/abs/2606.32036v1)** | 2026-06-30 | <details><summary>Proje...</summary><p>Project Page: https://zju3dv.github.io/pointsplat</p></details> |
 | **[3DCarGen: Scalable 3D Car Generation via 3D-consistent Multi-view Synthesis](https://arxiv.org/abs/2606.24257v2)** | 2026-06-29 |  |
 | **[Scenes as Objects, Not Primitives: Instance-Structured 3D Tokenization from Unposed Views](https://arxiv.org/abs/2606.29513v1)** | 2026-06-28 | <details><summary>Proje...</summary><p>Project page: https://yoomimi.github.io/instok3d</p></details> |
-| **[Surflo: Consistent 3D Surface Flow Model with Global State](https://arxiv.org/abs/2606.13644v1)** | 2026-06-11 | <details><summary>Proje...</summary><p>Project webpage: https://anttwo.github.io/surflo/</p></details> |
 
 ## Vision and Language Navigation
 | **Title** | **Date** | **Comment** |
@@ -49,30 +49,30 @@ labels: documentation
 ## Vision Language Action
 | **Title** | **Date** | **Comment** |
 | --- | --- | --- |
+| **[SCALE: Self-uncertainty Conditioned Adaptive Looking and Execution for Vision-Language-Action Models](https://arxiv.org/abs/2602.04208v3)** | 2026-08-28 | <details><summary>ICML ...</summary><p>ICML 2026 Spotlight. Project page: https://dcahn12.github.io/projects/scale/</p></details> |
+| **[DeicticVLA: Unifying Instruction Modes Based on Language and Deictic Gestures in a Single VLA](https://arxiv.org/abs/2608.28108v1)** | 2026-08-28 |  |
+| **[RecoverFly: A Failure-Aware Reinforcement Learning Post-Training Framework for Aerial Vision-Language Navigation](https://arxiv.org/abs/2608.09467v2)** | 2026-08-28 |  |
+| **[GRAFT: Grounded and Efficient Online Reinforcement Adaptation for Fine-Grained Robot Manipulation](https://arxiv.org/abs/2608.27079v2)** | 2026-08-28 |  |
+| **[Mind-VLA: Instruction-Aware Spatial Representation Alignment for Vision-Language-Action Models](https://arxiv.org/abs/2608.04633v2)** | 2026-08-27 | 9 pages, 4 figures |
+| **[PHR-VLA: Planning Horizon Reasoning for Vision-Language-Action Models](https://arxiv.org/abs/2608.27609v1)** | 2026-08-27 |  |
+| **[Beyond Data Scaling: Representation-Centric Continued Pre-training for Vision-Language-Action Models](https://arxiv.org/abs/2608.27550v1)** | 2026-08-27 | <details><summary>All m...</summary><p>All models and training pipelines are publicly available at https://starvla.github.io/VLAct</p></details> |
 | **[FlashVLA: Streaming Action Decoding for Fast and Asynchronous VLA Inference](https://arxiv.org/abs/2608.27384v1)** | 2026-08-27 | 17 pages, 8 figures |
-| **[GRAFT: Grounded and Efficient Online Reinforcement Adaptation for Fine-Grained Robot Manipulation](https://arxiv.org/abs/2608.27079v1)** | 2026-08-27 |  |
 | **[LM-X: Explainable Action Modeling with Progress, Event, and Uncertainty Prediction for Generalist Robot Manipulation](https://arxiv.org/abs/2608.25757v2)** | 2026-08-27 |  |
 | **[TemporalFlow-VLA: Learning Physically Grounded Execution History for Long-Horizon Robot Manipulation](https://arxiv.org/abs/2608.26821v1)** | 2026-08-27 |  |
-| **[Decoupling Planning and Control for Instructable Agents](https://arxiv.org/abs/2608.26788v1)** | 2026-08-27 | <details><summary>Publi...</summary><p>Published as a conference paper at COLM 2026. Project page: https://zinengtang.github.io/instruct-to-act/</p></details> |
-| **[PredVLA: A Sub-Million-Parameter Predictive-Coding Policy for Robot Manipulation](https://arxiv.org/abs/2608.26673v1)** | 2026-08-27 |  |
-| **[FLARE: A Failure-Aware Framework for Autonomous Correction and Recovery in Visual-Language Robotic Manipulation](https://arxiv.org/abs/2608.26645v1)** | 2026-08-27 | <details><summary>Accep...</summary><p>Accepted to CVPR 2026</p></details> |
-| **[TrapVLA: Trapping Vision-Language-Action Models in Configured Failure Modes](https://arxiv.org/abs/2608.26578v1)** | 2026-08-27 |  |
-| **[StreamPI: Streaming Multimodal Temporal Modeling for Vision-Language-Action Models](https://arxiv.org/abs/2608.26067v1)** | 2026-08-26 |  |
-| **[One Policy, Many Embodiments: Unified Camera-Centric Action Geometry Pre-training for Heterogeneous Embodied Manipulation](https://arxiv.org/abs/2608.26058v1)** | 2026-08-26 | <details><summary>Techn...</summary><p>Technical Report,Project page: https://public-bots.github.io/UCAG-P</p></details> |
 
 ## World Model
 | **Title** | **Date** | **Comment** |
 | --- | --- | --- |
-| **[CLAP: Cross-Embodiment Video World Models are Zero-Shot Physical Simulators](https://arxiv.org/abs/2608.27406v1)** | 2026-08-27 |  |
-| **[Successive Capacity Growth: Task-Complexity-Driven Width and Depth Expansion for Vision Transformer Encoders in JEPA World Models](https://arxiv.org/abs/2608.27367v1)** | 2026-08-27 | <details><summary>12 pa...</summary><p>12 pages, 2 figures, 6 tables</p></details> |
-| **[PAWBench: How Far Are We from Probabilistically Aligned World Modeling?](https://arxiv.org/abs/2608.27345v1)** | 2026-08-27 |  |
-| **[R2M-Bench: Evaluating Revisit Memory via Relative Consistency in Interactive Video World Models](https://arxiv.org/abs/2608.27328v1)** | 2026-08-27 | <details><summary>Code:...</summary><p>Code: https://github.com/AMAP-ML/R2MBench</p></details> |
-| **[Latent Spatial Memory for Video World Models](https://arxiv.org/abs/2606.09828v2)** | 2026-08-27 | <details><summary>Proje...</summary><p>Project Page: https://aka.ms/latent-spatial-memory, Code: https://github.com/microsoft/LatentSpatialMemory</p></details> |
-| **[Mol-JEPA: A multimodal Joint Embedding Predictive Architecture for Molecules](https://arxiv.org/abs/2608.22642v2)** | 2026-08-27 |  |
-| **[SpatialCrafter: Single Image World Modeling with Generative 3D Proxies](https://arxiv.org/abs/2608.27073v1)** | 2026-08-27 | 12 pages |
-| **[NVIDIA Cosmos-H-Dreams: Real-Time Generative Physics Simulation for Surgical Robotics](https://arxiv.org/abs/2608.24199v2)** | 2026-08-27 |  |
-| **[Beyond Instance Slots: Semantically Rich World Models for Physical Interaction Planning](https://arxiv.org/abs/2608.22294v2)** | 2026-08-27 |  |
-| **[Do Coding Agents Need Executable World Models, Simplification, and Verification to Solve ARC-AGI-3?](https://arxiv.org/abs/2607.15439v2)** | 2026-08-27 | 45 pages, 3 figures |
+| **[An Enclosed Mode Is a Gauge Choice: Topology Relative to Reach in Certified Code World Models](https://arxiv.org/abs/2608.28541v1)** | 2026-08-28 | <details><summary>33 pa...</summary><p>33 pages, 2 figures. Paper 3 of a series (companion papers: arXiv:2607.14169, arXiv:2608.17956). Code, data, and Lean formalization: https://github.com/JaviMaligno/code-world-models</p></details> |
+| **[PAWBench: How Far Are We from Probabilistically Aligned World Modeling?](https://arxiv.org/abs/2608.27345v2)** | 2026-08-28 |  |
+| **[AcrossVAM1.0: Particle World Modeling for Text-Assisted Robot Video Prediction](https://arxiv.org/abs/2608.28491v1)** | 2026-08-28 |  |
+| **[SpatialCrafter: Single Image World Modeling with Generative 3D Proxies](https://arxiv.org/abs/2608.27073v2)** | 2026-08-28 | 12 pages |
+| **[Describe-Then-Act: Proactive Agent Steering via Distilled Language-Action World Models](https://arxiv.org/abs/2603.23149v2)** | 2026-08-28 |  |
+| **[WALDO: One-Shot Exemplar-Conditioned Object Detection in Cluttered Scenes](https://arxiv.org/abs/2608.28216v1)** | 2026-08-28 |  |
+| **[JEPA-x: Cross-Predictive Physics Grounding for Forecastable Latent Dynamics](https://arxiv.org/abs/2608.24044v3)** | 2026-08-28 | Under review |
+| **[Learning to Allocate Incentives for Incentivized Advertising via Offline Model-Based Reinforcement Learning](https://arxiv.org/abs/2608.28065v1)** | 2026-08-28 |  |
+| **[Should I Use This Synthetic Dataset for Training? How to Test with Minimal Real Data](https://arxiv.org/abs/2608.27996v1)** | 2026-08-28 | Submitted to IEEE |
+| **[Aligning Agentic World Models via Knowledgeable Experience Learning](https://arxiv.org/abs/2601.13247v2)** | 2026-08-28 | EMNLP 2026 Findings |
 
 ## 3D Foundation Model
 | **Title** | **Date** | **Comment** |
@@ -91,20 +91,23 @@ labels: documentation
 ## LLM
 | **Title** | **Date** | **Comment** |
 | --- | --- | --- |
-| **[Persona-Execution Separation: An Architecture Pattern for Evolving LLM Agents under Execution Audit](https://arxiv.org/abs/2608.27427v1)** | 2026-08-27 | 36 pages |
-| **[Boosting LLM Exploration via Weak-Model Guidance in RLVR](https://arxiv.org/abs/2608.27420v1)** | 2026-08-27 | 13 pages, 4 figures |
-| **[Translation Asymmetry in LLMs as a Data Augmentation Factor: A Case Study for 6 Romansh Language Varieties](https://arxiv.org/abs/2603.25489v2)** | 2026-08-27 | <details><summary>Findi...</summary><p>Findings of EMNLP 2026</p></details> |
-| **[DataKernelBench: Can LLMs Optimize Database Queries on GPUs?](https://arxiv.org/abs/2608.25061v2)** | 2026-08-27 | <details><summary>Accep...</summary><p>Accepted at EMNLP 2026</p></details> |
-| **[Understanding Evolution Strategies for LLM Reasoning: Broader Reasoning Coverage than GRPO](https://arxiv.org/abs/2608.27351v1)** | 2026-08-27 |  |
-| **[ProvenanceGuard: Source-Aware Factuality Verification for MCP-Based LLM Agents](https://arxiv.org/abs/2606.18037v3)** | 2026-08-27 | 20 pages, 4 figures |
-| **[Difference-in-Differences on a Censored Rating Scale Can Manufacture an Effect: Evidence from a Pre-Registered LLM-Judge Audit](https://arxiv.org/abs/2608.27309v1)** | 2026-08-27 | <details><summary>15 pa...</summary><p>15 pages, 3 figures, 3 tables</p></details> |
-| **[LLMs Can Design Near-Optimal OR Algorithms](https://arxiv.org/abs/2608.27296v1)** | 2026-08-27 |  |
-| **[Characterizing CPU-Induced Slowdowns in Multi-GPU LLM Inference](https://arxiv.org/abs/2603.22774v3)** | 2026-08-27 | <details><summary>Accep...</summary><p>Accepted to IISWC 2026. Camera-ready version with updated experiments and discussion on agentic LLM workloads</p></details> |
-| **[What Makes Good Agentic Data? An ACE Lens on Data Generation for LLM Agents](https://arxiv.org/abs/2608.27260v1)** | 2026-08-27 |  |
+| **[Does Finetuning with Scientific Data Increase Hallucinations? A Multi-domain Factuality Evaluation of LLMs](https://arxiv.org/abs/2606.21359v2)** | 2026-08-28 | Camera-ready version |
+| **[Recognition Without Enforcement: Configuration-Dependent Failures in LLM Agent Instruction Arbitration and External Control](https://arxiv.org/abs/2608.28502v1)** | 2026-08-28 | 81 pages, 11 figures |
+| **[Ladders in Chaos: When, How, (and Perhaps Why) Does Test-Time Scaling Improve LLM Machine Translation](https://arxiv.org/abs/2608.28496v1)** | 2026-08-28 | <details><summary>Accep...</summary><p>Accepted to Findings of EMNLP 2026</p></details> |
+| **[Why are all LLMs Obsessed with Japanese Culture? On the Hidden Cultural and Regional Biases of LLMs](https://arxiv.org/abs/2604.21751v2)** | 2026-08-28 |  |
+| **[LLM-Based Agents for Software and Systems Security: Approaches, Applications, and Assessment](https://arxiv.org/abs/2608.28490v1)** | 2026-08-28 |  |
+| **[How Proper Scoring Rules Shape LLM Forecasting](https://arxiv.org/abs/2608.28482v1)** | 2026-08-28 |  |
+| **[NL2AGBench: Benchmarking LLM Auto-Formalization for AlphaGeometry](https://arxiv.org/abs/2608.28481v1)** | 2026-08-28 |  |
+| **[Blind Men and the Elephant: Probing the Epistemic Myopia of LLMs under Long-Tail Divergent Knowledge](https://arxiv.org/abs/2608.28478v1)** | 2026-08-28 | <details><summary>10 pa...</summary><p>10 pages, 10 figurs, 1 table, under review</p></details> |
+| **[Curvature-Conditioned Multiscale Momentum with Sphere Constraints for LLM Pretraining](https://arxiv.org/abs/2608.28442v1)** | 2026-08-28 | 50 pages |
+| **[SymboLLM-FE: LLM-Accelerated Symbolic Regression for Automated Feature Engineering on Tabular Data](https://arxiv.org/abs/2608.28408v1)** | 2026-08-28 |  |
 
 ## VLM
 | **Title** | **Date** | **Comment** |
 | --- | --- | --- |
+| **[Spectral Query-Key Product Weight Steering for Training-Free VLM Hallucination Mitigation](https://arxiv.org/abs/2606.20419v2)** | 2026-08-28 | <details><summary>Publi...</summary><p>Published at the Workshop on Actionable Interpretability at COLM 2026, EMNLP Conference 2026</p></details> |
+| **[GHR-VLM: Making Zero-Shot Transit Video Analytics Realizable with Grounded Hybrid Reasoning](https://arxiv.org/abs/2607.13569v3)** | 2026-08-28 | <details><summary>Accep...</summary><p>Accepted by 2026 IEEE/ACM Symposium on Edge Computing (SEC)</p></details> |
+| **[CAVE-NAV: VLM-Based Autonomous 3D Navigation in Underwater Cave Environments](https://arxiv.org/abs/2608.27793v1)** | 2026-08-28 |  |
 | **[Retrieval Heads Meet Vision: Uncovering How VLMs Locate and Extract Visual Information](https://arxiv.org/abs/2608.27417v1)** | 2026-08-27 |  |
 | **[PACE: A Unified Condense-and-Extract Paradigm for Fast VLM Inference](https://arxiv.org/abs/2608.27206v1)** | 2026-08-27 | <details><summary>22 pa...</summary><p>22 pages, 9 figures, 13 tables. Accepted to Findings of EMNLP 2026</p></details> |
 | **[ReViCo: Unveiling the Limitations of VLMs in Visual Text Understanding via Error Correction](https://arxiv.org/abs/2608.27154v1)** | 2026-08-27 |  |
@@ -112,13 +115,11 @@ labels: documentation
 | **[Many Dialects, Many Languages, One Cultural Lens: Evaluating Multilingual VLMs for Bengali Culture Understanding Across Historically Linked Languages and Regional Dialects](https://arxiv.org/abs/2603.21165v3)** | 2026-08-27 | <details><summary>Accep...</summary><p>Accepted at EMNLP 2026 (Findings)</p></details> |
 | **[EgoArgus: Benchmarking VLMs as Situational Assistants for Modality-Grounded User Supports](https://arxiv.org/abs/2608.25561v1)** | 2026-08-26 | <details><summary>Accep...</summary><p>Accepted by EMNLP 2026 main conference</p></details> |
 | **[Retrieve, Match, Escalate: Accurate and Scalable Product Linking with VLM-Distilled Cross-Encoders and Agentic VLMs](https://arxiv.org/abs/2608.25037v1)** | 2026-08-25 | <details><summary>9 pag...</summary><p>9 pages, 3 figures, 5 tables</p></details> |
-| **[X-MULTI: VLM-based Imaging Factor Disentanglement for Factor-Aware Image Synthesis](https://arxiv.org/abs/2608.24563v1)** | 2026-08-25 | <details><summary>Accep...</summary><p>Accepted to the MUCG Workshop at ECCV 2026</p></details> |
-| **[VIABLE: A Visually Impaired Assistance Benchmark for VLM-as-a-Judge Evaluation](https://arxiv.org/abs/2605.31351v2)** | 2026-08-25 | <details><summary>Accep...</summary><p>Accepted to EMNLP 2026 (Main Conference)</p></details> |
-| **[PinSieve: Production Selective VLM Serving and a Governed Memory Flywheel for Enterprise Content-Quality Triage](https://arxiv.org/abs/2608.24040v1)** | 2026-08-25 | <details><summary>Accep...</summary><p>Accepted at the KDD 2026 workshop "Enterprise AI Agents: From Prototypes to Production."</p></details> |
 
 ## World Action Model
 | **Title** | **Date** | **Comment** |
 | --- | --- | --- |
+| **[Beyond Data Scaling: Representation-Centric Continued Pre-training for Vision-Language-Action Models](https://arxiv.org/abs/2608.27550v1)** | 2026-08-27 | <details><summary>All m...</summary><p>All models and training pipelines are publicly available at https://starvla.github.io/VLAct</p></details> |
 | **[Making Latent Evolution Explicit: Operator-Structured Transitions for World Action Models](https://arxiv.org/abs/2608.27259v1)** | 2026-08-27 |  |
 | **[Zero-WAM: In-Context World-Action Modeling from Human Videos for Open-Ended Task Generalization](https://arxiv.org/abs/2608.26103v2)** | 2026-08-27 | <details><summary>https...</summary><p>https://robbyant-research.github.io/Zero-WAM/</p></details> |
 | **[Riemann-1.0: An Embodied World Action Model for Physical AI](https://arxiv.org/abs/2608.27033v1)** | 2026-08-27 |  |
@@ -128,21 +129,20 @@ labels: documentation
 | **[From World Models to World Action Models: A Concise Tutorial for Robotics](https://arxiv.org/abs/2607.00836v7)** | 2026-08-26 | <details><summary>Githu...</summary><p>Github page: https://github.com/clearlab-sustech/WorldModelSurvey</p></details> |
 | **[DELE-w0.5: Inferring Action from Future Latent State for Robotic Manipulation](https://arxiv.org/abs/2608.22067v3)** | 2026-08-26 |  |
 | **[SANTS: A State-Adaptive Scheduler for World Action Models](https://arxiv.org/abs/2605.27947v3)** | 2026-08-26 | <details><summary>13 pa...</summary><p>13 pages, 5 figures, 8 tables. Project page: https://advanced-robotics-lab.github.io/SANTS/</p></details> |
-| **[Latent Action as Intention Enables Efficient Future Imagination for World Action Models](https://arxiv.org/abs/2608.24882v1)** | 2026-08-25 |  |
 
 ## Gaussian Splatting
 | **Title** | **Date** | **Comment** |
 | --- | --- | --- |
+| **[ChainSplat: A Physics-Inspired Screw-Theoretic Model for Learning Deformable Linear Object Dynamics from Multi-View RGB Videos](https://arxiv.org/abs/2608.28570v1)** | 2026-08-28 | 18 pages, 12 figures |
+| **[Non-Uniform Quantisation for 3DGS Compression](https://arxiv.org/abs/2608.28272v1)** | 2026-08-28 |  |
+| **[WilLaGS: Latent-Conditional 3D Appearance Fields for Robust Gaussian Splatting In-the-Wild](https://arxiv.org/abs/2608.28240v1)** | 2026-08-28 | Accepted by ECCV2026 |
+| **[Camera-Agnostic Pruning of 3D Gaussian Splats via Descriptor-Based Beta Evidence](https://arxiv.org/abs/2603.21933v3)** | 2026-08-28 | <details><summary>16 pa...</summary><p>16 pages, 3 figures, 3 tables. Accepted for publication in the Proceedings of the British Machine Vision Conference (BMVC), 2026</p></details> |
+| **[ABCD: Alpha-Composited Block Coordinate Descent: Constant-VRAM Training for Large Radiance Fields](https://arxiv.org/abs/2608.27735v1)** | 2026-08-27 | <details><summary>Prese...</summary><p>Presented at ACM SIGGRAPH 2026 Posters</p></details> |
 | **[Egosurg: Arbitrary view synthesis for egocentric replay of operating room workflows from ambient cameras](https://arxiv.org/abs/2510.04802v2)** | 2026-08-27 |  |
 | **[Comparative Evaluation of 3D Reconstruction Methods for Immersive Visualization of Laboratory Objects](https://arxiv.org/abs/2608.27301v1)** | 2026-08-27 | <details><summary>36 pa...</summary><p>36 pages, 18 figures, 16 tables</p></details> |
 | **[RefracGS: Novel View Synthesis Through Refractive Water Surfaces with 3D Gaussian Ray Tracing](https://arxiv.org/abs/2603.21695v2)** | 2026-08-27 |  |
 | **[Per-View Gaussian Predictions Enable Training-Free Distractor Filtering in Feed-Forward 3DGS](https://arxiv.org/abs/2608.26951v1)** | 2026-08-27 | Preprint |
 | **[KISS-GS: 3D Gaussian Splatting Compression Kept Simple](https://arxiv.org/abs/2608.26948v1)** | 2026-08-27 |  |
-| **[CGS-SLAM: Collaborative Gaussian Splatting based SLAM for Multi-Agent Reconstruction](https://arxiv.org/abs/2608.26868v1)** | 2026-08-27 |  |
-| **[CoGeo-GS: Concept-Driven and Geometry-Aware Multi-Object Removal in 3D Scenes](https://arxiv.org/abs/2608.26656v1)** | 2026-08-27 | <details><summary>6 pag...</summary><p>6 pages, 4 figures, accepted at ICME 2026</p></details> |
-| **[ReSplat: Learning Recurrent Gaussian Splatting](https://arxiv.org/abs/2510.08575v4)** | 2026-08-26 | <details><summary>ECCV ...</summary><p>ECCV 2026, Spotlight. Project page: https://haofeixu.github.io/resplat/ Code: https://github.com/cvg/resplat</p></details> |
-| **[Cross-Platform Benchmark of Neural 3D Reconstruction for Autonomous Laboratory Robots](https://arxiv.org/abs/2608.26383v1)** | 2026-08-26 | <details><summary>This ...</summary><p>This manuscript is peer-reviewed from the committees in the workshop "VAxAutoSci: Visual Analytics in the Age of Autonomous Scientific Discovery" in conjunction with 2026 IEEE Visualization & Visual Analytics</p></details> |
-| **[Rendering Novel Views of MRI Using 3D Gaussian Splatting](https://arxiv.org/abs/2606.26236v2)** | 2026-08-26 | <details><summary>Spotl...</summary><p>Spotlight at AI4M3D workshop at ECCV 2026</p></details> |
 
 ## Visual SLAM
 | **Title** | **Date** | **Comment** |
@@ -231,6 +231,7 @@ labels: documentation
 ## Graph Optimization
 | **Title** | **Date** | **Comment** |
 | --- | --- | --- |
+| **[Graphon Design for Human-Machine Coordination under Bounded Rationality: Optimality of Stochastic Block Models](https://arxiv.org/abs/2608.27851v1)** | 2026-08-28 | <details><summary>Accep...</summary><p>Accepted for presentation at the IEEE Conference on Decision and Control 2026</p></details> |
 | **[Nova: An End-to-End MLIR Compiler for Deep Learning](https://arxiv.org/abs/2608.00029v2)** | 2026-08-22 |  |
 | **[Quantifying over Optimal MSO-Definable Sets on Graphs of Bounded Clique-Width](https://arxiv.org/abs/2608.20175v1)** | 2026-08-20 | 27pages, 1 figures |
 | **[Near-optimal population protocols on bounded-degree trees](https://arxiv.org/abs/2602.16222v2)** | 2026-08-18 | <details><summary>41 pa...</summary><p>41 pages, 7 figures. To appear in DISC 2026</p></details> |
@@ -240,7 +241,6 @@ labels: documentation
 | **[GaussianSelector: Lightweight Human-Guided Object Selection in 3D Gaussian Splatting with Graph Optimization](https://arxiv.org/abs/2608.01492v1)** | 2026-08-02 | Under Review |
 | **[CSV-Decode: Certifiable Sub-Vocabulary Decoding for Efficient Large Language Model Inference](https://arxiv.org/abs/2511.21702v2)** | 2026-07-26 |  |
 | **[NGPS: GPS-Denied Aerial Geo-Localization and 2.5D Reconstruction via Deep Satellite Image Matching and Multi-Rate Sensor Fusion](https://arxiv.org/abs/2607.18936v1)** | 2026-07-21 | <details><summary>9 pag...</summary><p>9 pages (8-page paper + IEEE copyright/citation cover page), 6 figures. Accepted to IEEE/RSJ IROS 2026</p></details> |
-| **[A Numerically-safe Branch-Price-and-Cut Algorithm for the Length-Constrained Cycle Partition Problem](https://arxiv.org/abs/2607.15837v1)** | 2026-07-17 | <details><summary>arXiv...</summary><p>arXiv admin note: text overlap with arXiv:2401.17937</p></details> |
 
 ## Dynamic SLAM
 | **Title** | **Date** | **Comment** |
@@ -287,16 +287,16 @@ labels: documentation
 ## Autonomous Driving
 | **Title** | **Date** | **Comment** |
 | --- | --- | --- |
+| **[Hierarchical Feature-level Reverse Propagation for Post-Training Neural Networks](https://arxiv.org/abs/2506.07188v2)** | 2026-08-28 |  |
+| **[Reasoning models do not yet follow their reasoning in autonomous driving: The KITScenes LongTail Dataset](https://arxiv.org/abs/2603.23607v3)** | 2026-08-28 | <details><summary>27 pa...</summary><p>27 pages; v2: update MMS values (bugfix); v3: more focus on reasoning</p></details> |
+| **[How Far Can 5,500 Hours of Driving Take You? A Scaling Law Analysis of Video Diffusion Models](https://arxiv.org/abs/2608.28404v1)** | 2026-08-28 |  |
+| **[CARA: Concept-Aware Risk Attention for Interpretable Collision Anticipation](https://arxiv.org/abs/2607.22494v2)** | 2026-08-28 | <details><summary>Accep...</summary><p>Accepted to ACM Multimedia 2026</p></details> |
+| **[Transformer-Based Autonomous Driving Models and Deployment-Oriented Compression: A Survey](https://arxiv.org/abs/2304.10891v4)** | 2026-08-28 |  |
+| **[Deflickering Vision-Based Occupancy Networks through Lightweight Spatio-Temporal Correlation](https://arxiv.org/abs/2502.15438v5)** | 2026-08-28 |  |
 | **[Safety by Design: Realized-Cost Constraints for Contextual Bandits with Continuous Actions](https://arxiv.org/abs/2608.26755v1)** | 2026-08-27 |  |
 | **[DESCENT: Directed Edge Scene Encoding for Airport Surface Movement Prediction](https://arxiv.org/abs/2608.26002v2)** | 2026-08-27 | <details><summary>IROS ...</summary><p>IROS 2026. Project page at https://a-pru.github.io/descent</p></details> |
 | **[DPA-I2P: Depth-Guided Projective Alignment for Image-to-Point-Cloud Registration in Autonomous Driving](https://arxiv.org/abs/2608.26589v1)** | 2026-08-27 |  |
 | **[Barrier Function Conformal Safety Clearance Certification with CVaR for Driving Trajectory Selection](https://arxiv.org/abs/2608.26533v1)** | 2026-08-27 |  |
-| **[SimWAM: A Simple World Action Model for End-to-End Autonomous Driving](https://arxiv.org/abs/2608.07468v4)** | 2026-08-27 | <details><summary>The c...</summary><p>The code and model weights are available at https://github.com/H-EmbodVis/SimWAM/</p></details> |
-| **[Gating Before Commitment: Anticipating Intent Divergence to Prevent Post-Interaction Decision Failures in Autonomous Driving](https://arxiv.org/abs/2608.26074v1)** | 2026-08-26 | <details><summary>8 pag...</summary><p>8 pages, 4 figures. Submitted to the 16th Workshop on Planning, Perception and Navigation for Intelligent Vehicles (PPNIV) at IROS 2026. Supplementary video included as ancillary material</p></details> |
-| **[OVO-S-Bench: A Hierarchical Benchmark for Streaming Spatial Intelligence in Multimodal LLMs](https://arxiv.org/abs/2606.03890v2)** | 2026-08-26 | <details><summary>Accep...</summary><p>Accepted to EMNLP 2026 Main Conference. 55 pages, 12 figures, 20 tables. Project page: https://internlm.github.io/OVO-S-Bench/</p></details> |
-| **[LaGen: Towards Autoregressive LiDAR Scene Generation](https://arxiv.org/abs/2511.21256v3)** | 2026-08-26 | <details><summary>Accep...</summary><p>Accepted to ECCV 2026</p></details> |
-| **[TASE: Truncation-Aware Semantic Embeddings for 3D Scene Understanding and Editing](https://arxiv.org/abs/2606.03314v4)** | 2026-08-26 | <details><summary>Code:...</summary><p>Code: https://github.com/boschresearch/TASE</p></details> |
-| **[3DGAA: Realistic and Robust 3D Gaussian-based Adversarial Attack for Autonomous Driving](https://arxiv.org/abs/2507.09993v4)** | 2026-08-26 | TIFS |
 
 ## Kalman Filter
 | **Title** | **Date** | **Comment** |
@@ -343,30 +343,30 @@ labels: documentation
 ## Deep Learning
 | **Title** | **Date** | **Comment** |
 | --- | --- | --- |
-| **[Detection of Christmas tree plantations from high-resolution aerial imagery. A case study in the French Morvan](https://arxiv.org/abs/2608.27290v1)** | 2026-08-27 | <details><summary>18 pa...</summary><p>18 pages, 9 figures. Submitted to IEEE JSTARS; currently under revision</p></details> |
-| **[Low-ASR Backdoors: Exploiting Attack Success Rate Reduction and Attacker-Defender Asymmetry](https://arxiv.org/abs/2608.27288v1)** | 2026-08-27 | <details><summary>25 pa...</summary><p>25 page, 16 main, 9 appendix</p></details> |
-| **[Importance Scoring of Transformer Attention Heads in Learning Tabular Data](https://arxiv.org/abs/2608.27241v1)** | 2026-08-27 |  |
-| **[Vision-centric generative AI models: A software-hardware perspective](https://arxiv.org/abs/2608.27199v1)** | 2026-08-27 |  |
-| **[TRACE-CRC: Trajectory-Adaptive Conformal Risk Control for Multi-Step Channel State Information Prediction](https://arxiv.org/abs/2608.27124v1)** | 2026-08-27 | <details><summary>Publi...</summary><p>Published in Proceedings of Machine Learning Research (PMLR), volume 329, Conformal and Probabilistic Prediction with Applications (COPA 2026)</p></details> |
-| **[Linear Independence of Polynomial Compositions and Identifiability of Deep Neural Networks](https://arxiv.org/abs/2608.27113v1)** | 2026-08-27 |  |
-| **[Automated 2D and 3D Segmentation of AMD and DME Lesions in OCT](https://arxiv.org/abs/2608.27095v1)** | 2026-08-27 |  |
-| **[Tabular Deep Learning for Algorithmic Trading: Cross-Regime Bayesian Optimisation for Equity Signal Generation](https://arxiv.org/abs/2608.27076v1)** | 2026-08-27 |  |
-| **[Differentiable Jitter Correction using Deep Learning-based Image Quality Metric for Phase-Contrast Micro-CT](https://arxiv.org/abs/2608.27034v1)** | 2026-08-27 |  |
-| **[A Comprehensive Comparison of Deep Learning Architectures for COVID-19 Classification on CT & X-ray Imagery](https://arxiv.org/abs/2605.20445v2)** | 2026-08-27 | <details><summary>6 pag...</summary><p>6 pages, 2 figures, 5 tables</p></details> |
+| **[3D MRI-Based Alzheimer's Disease Classification Using Multi-Modal 3D CNN with Leakage-Aware Subject-Level Evaluation](https://arxiv.org/abs/2603.17304v2)** | 2026-08-28 | <details><summary>4 tab...</summary><p>4 tables, 6 figures, Accepted at 2026 International Conference on Power, Electronics, Communications, Computing, and Intelligent Infrastructure (PECCII)</p></details> |
+| **[Texture Image Classification Using DWT AlexNet Feature Fusion and Deep Neural Networks](https://arxiv.org/abs/2608.28524v1)** | 2026-08-28 | 15 pages, 15 figures |
+| **[A comprehensive and trustworthy benchmark of AI methods for change detection in Earth observation](https://arxiv.org/abs/2608.28247v1)** | 2026-08-28 |  |
+| **[Generalized Context in Cross Attention for Transfer Learning of Disjoint Tabular Data](https://arxiv.org/abs/2608.28209v1)** | 2026-08-28 | <details><summary>Accep...</summary><p>Accepted for publication at Neural Networks (Elsevier)</p></details> |
+| **[Rethinking Vacuity for OOD Detection in Evidential Deep Learning](https://arxiv.org/abs/2605.06382v2)** | 2026-08-28 |  |
+| **[Empowering Local Agriculture: A Deep Learning-Powered Web System for Identifying Bangladeshi Mango Varieties](https://arxiv.org/abs/2608.28161v1)** | 2026-08-28 | <details><summary>Accep...</summary><p>Accept in Journal of Bangladesh Academy of Sciences, Volume 50, Supplement 1, April 2026. 2 authors</p></details> |
+| **[A Controlled Audit of Architectural Complexity in Uncertainty-Aware Multi-Organ Ultrasound Classification](https://arxiv.org/abs/2608.28063v1)** | 2026-08-28 | <details><summary>Suppl...</summary><p>Supplementary material is available as an ancillary file on this arXiv page</p></details> |
+| **[CASTANET: Causality-Aware Spatio-Temporal Adversarial Network Using Traffic Incident Effects](https://arxiv.org/abs/2608.27942v1)** | 2026-08-28 |  |
+| **[A Deep Learning-Based Stacking Ensemble Framework for Turbofan Engine Remaining Useful Life Prediction](https://arxiv.org/abs/2608.27940v1)** | 2026-08-28 |  |
+| **[Automatic Pronunciation Error Detection and Correction of the Holy Quran's Learners Using Deep Learning](https://arxiv.org/abs/2509.00094v2)** | 2026-08-27 |  |
 
 ## Reinforcement Learning
 | **Title** | **Date** | **Comment** |
 | --- | --- | --- |
-| **[TTPO: Test-Time Policy Optimization](https://arxiv.org/abs/2608.27448v1)** | 2026-08-27 | <details><summary>Proje...</summary><p>Project Page: https://zju-real.github.io/TTPO Code: https://github.com/ZJU-REAL/TTPO</p></details> |
-| **[Boosting LLM Exploration via Weak-Model Guidance in RLVR](https://arxiv.org/abs/2608.27420v1)** | 2026-08-27 | 13 pages, 4 figures |
-| **[Consolidating RLVR Capabilities Across Domains: A Deep Dive into Fusion Paradigms](https://arxiv.org/abs/2608.27409v1)** | 2026-08-27 |  |
-| **[A Finite Sample Analysis for Quantile Temporal Difference Learning in Distributional Reinforcement Learning](https://arxiv.org/abs/2608.27313v1)** | 2026-08-27 |  |
-| **[Gradient-free learning of a closed-loop wall controller for turbulent drag reduction](https://arxiv.org/abs/2607.12626v2)** | 2026-08-27 |  |
-| **[DeepPlanner: Scaling Planning Capability for Deep Research Agents via Advantage Shaping](https://arxiv.org/abs/2510.12979v2)** | 2026-08-27 | Accepted by ACL 2026 |
-| **[A Trans-Domain Digital Twin for Bio-Aware Control of Climate and Energy in Cattle Fattening Barns Using Single-Episode Optimizer Learning](https://arxiv.org/abs/2608.27185v1)** | 2026-08-27 | 26 pages, 13 figures |
-| **[Delay-Robust Deep Reinforcement Learning for Ranging-Free Channel Access under Mobility in Underwater Acoustic Networks](https://arxiv.org/abs/2605.06536v2)** | 2026-08-27 | <details><summary>Accep...</summary><p>Accepted to IEEE GLOBECOM 2026</p></details> |
-| **[Diffusion Policies for Short-Horizon Planning in Robot Crowd Navigation](https://arxiv.org/abs/2608.27158v1)** | 2026-08-27 |  |
-| **[GRAIN: Bridging Name and Narrative Shifts in Real-World Graph Reasoning through Invariance-Rewarded Agentic RL](https://arxiv.org/abs/2608.27142v1)** | 2026-08-27 |  |
+| **[Aero Hand Open: A Simulation-Ready Tendon-Driven Hand for Dexterous Manipulation Learning](https://arxiv.org/abs/2608.28578v1)** | 2026-08-28 | <details><summary>20 pa...</summary><p>20 pages, 9 figures. Project page: https://tetheria.github.io/aero-hand-open/</p></details> |
+| **[REPLICANT: Learning Policies for Evading and Hardening Malware Detectors](https://arxiv.org/abs/2608.28499v1)** | 2026-08-28 |  |
+| **[Prequential posteriors](https://arxiv.org/abs/2511.17721v2)** | 2026-08-28 |  |
+| **[Learning to Use Tools: Reinforcement Learning for Tool-Integrated Mathematical Reasoning](https://arxiv.org/abs/2608.28447v1)** | 2026-08-28 |  |
+| **[Program Learning with Verifiable Rewards: Symbolic Backpropagation for Post-Training LLMs](https://arxiv.org/abs/2608.28421v1)** | 2026-08-28 |  |
+| **[Shift Before You Learn: Enabling Low-Rank Representations in Reinforcement Learning](https://arxiv.org/abs/2509.05193v3)** | 2026-08-28 | <details><summary>63 pa...</summary><p>63 pages, 11 figures. Accepted to NeurIPS 2025 (Spotlight). This version includes updated numerical experiments following a correction to the bootstrapping procedure used for TD estimation</p></details> |
+| **[RTPO: Reverse-Turn Policy Optimization for Stabilizing Agentic RL Training](https://arxiv.org/abs/2608.18682v2)** | 2026-08-28 |  |
+| **[Scientific Graphics Program Synthesis via Dual Self-Consistency Reinforcement Learning](https://arxiv.org/abs/2604.06079v2)** | 2026-08-28 |  |
+| **[Learning Fast Monomial Orders for Gröbner Basis Computations](https://arxiv.org/abs/2602.02972v2)** | 2026-08-28 | <details><summary>added...</summary><p>added more experiments against baselines, corrected a few typos and cosmetics</p></details> |
+| **[Fine-Tuning Autobidders with Group Relative Policy Optimization](https://arxiv.org/abs/2608.28199v1)** | 2026-08-28 |  |
 
 ## PPO
 | **Title** | **Date** | **Comment** |
@@ -399,6 +399,7 @@ labels: documentation
 ## Model-Based RL
 | **Title** | **Date** | **Comment** |
 | --- | --- | --- |
+| **[Learning to Allocate Incentives for Incentivized Advertising via Offline Model-Based Reinforcement Learning](https://arxiv.org/abs/2608.28065v1)** | 2026-08-28 |  |
 | **[AlphaClifford: Efficient Clifford Synthesis and Transpilation with Model-based RL](https://arxiv.org/abs/2608.18946v2)** | 2026-08-22 | <details><summary>Accep...</summary><p>Accepted manuscript to appear in the proceedings of the IEEE International Conference on Quantum Computing and Engineering (QCE 2026). 11 pages, 3 figures. v2: Added discussion and citation of concurrent work by Yeung, Kissinger, and Cornish (arXiv:2605.10910)</p></details> |
 | **[Q-Learning With World Models](https://arxiv.org/abs/2608.17163v1)** | 2026-08-17 |  |
 | **[Uncertainty-Aware Predictive Safety Filters for Probabilistic Neural Network Dynamics](https://arxiv.org/abs/2604.26836v3)** | 2026-08-10 | <details><summary>Reinf...</summary><p>Reinforcement Learning Journal, 2026. Reinforcement Learning Conference (RLC), Montréal, August 2026</p></details> |
@@ -408,16 +409,23 @@ labels: documentation
 | **[Learning from World Feedback: Why Model Uncertainty Fails as a Risk Signal in Model-Based RL](https://arxiv.org/abs/2607.16591v1)** | 2026-07-18 | <details><summary>Accep...</summary><p>Accepted at the ICML 2026 Workshop on Reinforcement Learning from X Feedback (RLxF). 14 pages</p></details> |
 | **[Comparative Field Deployment of Reinforcement Learning and Model Predictive Control for Residential HVAC](https://arxiv.org/abs/2510.01475v2)** | 2026-07-16 | <details><summary>26 pa...</summary><p>26 pages, 9 figures, 5 tables. Under review for Applied Energy</p></details> |
 | **[Fully Offline Reinforcement Learning](https://arxiv.org/abs/2505.22442v3)** | 2026-07-15 |  |
-| **[RENEW: Towards Learning World Models and Repairing Model Exploitation from Preferences](https://arxiv.org/abs/2607.14180v1)** | 2026-07-15 |  |
 
 ## Imitation Learning
 | **Title** | **Date** | **Comment** |
 | --- | --- | --- |
+| **[FlowCorrect: Efficient Interactive Correction of Generative Flow Policies for Robotic Manipulation](https://arxiv.org/abs/2602.22056v3)** | 2026-08-28 | <details><summary>8 pag...</summary><p>8 pages, 5 figures, Accepted at IROS 2026</p></details> |
 | **[$R^3$: Training Robots to Reason in Natural Language via Reinforcement Learning](https://arxiv.org/abs/2608.26053v1)** | 2026-08-26 | 42 pages, 23 figures |
 | **[Imitation Learning for Connection-Tableau Construction](https://arxiv.org/abs/2608.26009v1)** | 2026-08-26 | <details><summary>9 pag...</summary><p>9 pages. Code: https://github.com/fredrrom/connections</p></details> |
 | **[One Symptom, Three Levers: A Critical Review of On-Policy Self-Distillation](https://arxiv.org/abs/2608.25936v1)** | 2026-08-26 | <details><summary>30 pa...</summary><p>30 pages, 4 figures. Survey / critical review</p></details> |
 | **[VISTA: Visually Inferred Spatial ConTact Attention for Contact-Rich Manipulation](https://arxiv.org/abs/2608.25872v1)** | 2026-08-26 |  |
 | **[Advantage-Driven Explicit Memory for Social Navigation](https://arxiv.org/abs/2608.25610v1)** | 2026-08-26 |  |
 | **[RA-VLA: Retrieval-Augmented VLA for Test-Time Adaptation](https://arxiv.org/abs/2608.25585v1)** | 2026-08-26 | <details><summary>ICML ...</summary><p>ICML 2026. Contact: s.jang@postech.ac.kr</p></details> |
+| **[SkyDrive: Learning to Drive in a New City from Aerial Traffic Monitoring](https://arxiv.org/abs/2608.25142v1)** | 2026-08-25 |  |
+| **[VGGT-DP: Generalizable Robot Control via Vision Foundation Models](https://arxiv.org/abs/2509.18778v2)** | 2026-08-25 |  |
+| **[RoG-DAgger: Rollout-Guided Post-Training for End-to-End Driving](https://arxiv.org/abs/2608.24525v1)** | 2026-08-25 | <details><summary>prepr...</summary><p>preprint, under review</p></details> |
+
+## Behavior Cloning
+| **Title** | **Date** | **Comment** |
+| --- | --- | --- |
 
 > ⚠️ Issue body truncated to fit GitHub's 65 536-character limit. **[View the full paper list on the website »](http://luohongkun.top/Embodied-AI-Daily/)**

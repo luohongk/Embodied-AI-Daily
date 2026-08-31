@@ -575,7 +575,7 @@
                 <a href="Feed-Forward-Reconstruction.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Feed Forward Reconstruction</span>
-                    <span class="nav-count">57</span>
+                    <span class="nav-count">58</span>
                 </a>
                 <a href="Vision-and-Language-Navigation.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -600,7 +600,7 @@
                 <a href="LLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
                     <span class="nav-label">LLM</span>
-                    <span class="nav-count">80</span>
+                    <span class="nav-count">79</span>
                 </a>
                 <a href="VLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f97316"></span>
@@ -695,7 +695,7 @@
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">77</span>
+                    <span class="nav-count">74</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -745,7 +745,7 @@
                 <a href="Path-Planning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#3b82f6"></span>
                     <span class="nav-label">Path Planning</span>
-                    <span class="nav-count">75</span>
+                    <span class="nav-count">76</span>
                 </a>
                 <a href="Multimodal-Fusion.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#6366f1"></span>
@@ -794,7 +794,7 @@
             <a href="Feed-Forward-Reconstruction.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Feed Forward Reconstruction</span>
-                <span class="nav-count">57</span>
+                <span class="nav-count">58</span>
             </a>
             <a href="Vision-and-Language-Navigation.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -819,7 +819,7 @@
             <a href="LLM.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
                 <span class="nav-label">LLM</span>
-                <span class="nav-count">80</span>
+                <span class="nav-count">79</span>
             </a>
             <a href="VLM.html" class="nav-item">
                 <span class="nav-dot" style="background:#f97316"></span>
@@ -914,7 +914,7 @@
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">77</span>
+                <span class="nav-count">74</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -964,7 +964,7 @@
             <a href="Path-Planning.html" class="nav-item">
                 <span class="nav-dot" style="background:#3b82f6"></span>
                 <span class="nav-label">Path Planning</span>
-                <span class="nav-count">75</span>
+                <span class="nav-count">76</span>
             </a>
             <a href="Multimodal-Fusion.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
@@ -1030,14 +1030,185 @@
             <div class="paper-list">
                 <div class="paper-card">
                     <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2603.17304v2" target="_blank" class="paper-title">3D MRI-Based Alzheimer's Disease Classification Using Multi-Modal 3D CNN with Leakage-Aware Subject-Level Evaluation</a>
+                        <span class="paper-date">2026-08-28</span>
+                    </div>
+                                        <span class="paper-comment">📝 4 tables, 6 figures, Accepted at 2026 International Conference on Power, Electronics, Communications, Computing, and Intelligent Infrastructure (PECCII)</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有基于MRI的阿尔茨海默病（AD）分类研究多采用二维切片分析，忽略了大脑三维结构中的空间关系，且评估协议常存在数据泄漏问题。&#10;&#10;🛠 **方法**：提出一种多模态3D卷积神经网络，结合原始T1 MRI与FSL FAST分割得到的灰质、白质、脑脊液概率图，并在OASIS 1数据集上采用5折受试者级交叉验证进行评估。&#10;&#10;✨ **主要贡献**：在受试者级评估下取得72.34%的平均准确率和0.7781的ROC AUC，GradCAM可视化显示模型关注内侧颞叶和脑室等与AD相关的解剖区域；同时通过切片级与受试者级协议的对比实验，揭示了数据表示和评估策略对性能报告的影响，建立了可复现的受试者级基准。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Deep learning has become an important tool for Alzheimer's disease (AD) classification from structural MRI. Many existing studies analyze individual 2D slices extracted from MRI volumes, while clinical neuroimaging practice typically relies on the full three dimensional structure of the brain. From this perspective, volumetric analysis may better capture spatial relationships among brain regions that are relevant to disease progression. Motivated by this idea, this work proposes a multimodal 3D convolutional neural network for AD classification using raw OASIS 1 MRI volumes. The model combines structural T1 information with gray matter, white matter, and cerebrospinal fluid probability maps obtained through FSL FAST segmentation in order to capture complementary neuroanatomical information. The proposed approach is evaluated on the clinically labelled OASIS 1 cohort using 5 fold subject level cross validation, achieving a mean accuracy of 72.34% plus or minus 4.66% and a ROC AUC of 0.7781 plus or minus 0.0365. GradCAM visualizations further indicate that the model focuses on anatomically meaningful regions, including the medial temporal lobe and ventricular areas that are known to be associated with Alzheimer's related structural changes. To better understand how data representation and evaluation strategies may influence reported performance, additional diagnostic experiments were conducted on a slice based version of the dataset under both slice level and subject level protocols. These observations help provide context for the volumetric results. Overall, the proposed multimodal 3D framework establishes a reproducible subject level benchmark and highlights the potential benefits of volumetric MRI analysis for Alzheimer's disease classification.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.28524v1" target="_blank" class="paper-title">Texture Image Classification Using DWT AlexNet Feature Fusion and Deep Neural Networks</a>
+                        <span class="paper-date">2026-08-28</span>
+                    </div>
+                                        <span class="paper-comment">📝 15 pages, 15 figures</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：纹理图像分类中，手工特征难以表达复杂视觉模式，而深度模型未能充分利用纹理图像固有的多尺度空间-频率信息。&#10;&#10;🛠 **方法**：提出混合特征融合框架DWT_AlexNet_DNN，将离散小波变换（DWT）提取的多尺度特征与AlexNet深度特征相结合，并输入深度神经网络进行分类。&#10;&#10;✨ **主要贡献**：通过融合DWT与AlexNet特征，兼顾了局部纹理细节与高层语义表示，提升了纹理分类的准确性与鲁棒性，验证了混合特征融合在纹理识别任务中的有效性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Texture image classification plays a significant role in computer vision applications, including industrial inspection, medical image analysis, remote sensing, and object recognition. Handcrafted features can capture local texture characteristics but may have limited capability to represent complex visual patterns. In contrast, deep learning models automatically learn discriminative representations but may not fully exploit the multiscale spatial-frequency information inherent in texture images. This paper proposes a hybrid feature fusion framework, termed DWT_AlexNet_DNN, which combines Discrete Wavelet Transform (DWT) features with deep features extracted using AlexNet for texture image classification.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.28247v1" target="_blank" class="paper-title">A comprehensive and trustworthy benchmark of AI methods for change detection in Earth observation</a>
+                        <span class="paper-date">2026-08-28</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：地球观测中的变化检测研究缺乏标准化评估协议，且现有研究过度关注预测精度而忽视计算效率，导致不同方法难以公平比较。&#10;&#10;🛠 **方法**：构建了一个开源基准，统一评估10种代表性深度学习架构（从CNN到ViT）在10个异构变化检测数据集上的表现，采用相同的实验协议，对比从零训练与预训练模型，并同时衡量预测性能与计算效率（参数量、推理延迟）。&#10;&#10;✨ **主要贡献**：发现优化良好的经典架构（如Siamese U-Net）在考虑计算效率时往往优于更复杂的现代模型；预训练能显著提升性能且不增加推理成本。所有实验资源（数据划分、训练脚本、日志、模型权重）均公开并遵循FAIR原则，确保透明可复现。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Change detection in Earth observation (EO) is critical for monitoring land surface transformations, yet recent research in the field is constrained by inconsistent evaluation protocols and a narrow focus on predictive accuracy without regard for computational efficiency. To address this, we present a standardized, open-source benchmark for evaluating state-of-the-art (SOTA) deep learning methods for Earth observation change detection. We conduct a comprehensive analysis of ten representative model architectures, ranging from convolutional networks (CNNs) to vision transformers (ViTs), across ten heterogeneous change detection datasets. We rigorously evaluate these models with identical experimental protocols, comparing models trained from scratch against those utilizing pre-trained weights. Furthermore, we evaluate predictive performance alongside computational efficiency, including parameter counts and inference latency. Our findings reveal that well-optimized classical architectures, such as Siamese U-Nets, frequently outperform more complex contemporary models when computational efficiency is factored in, and that pre-training consistently provides a significant performance boost with no additional inference cost. To ensure complete transparency and reproducibility, all experimental resources, including standardized data splits, training scripts, training logs, and model checkpoints are publicly available and adhere to FAIR principles (Findable, Accessible, Interoperable, and Reusable).</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.28209v1" target="_blank" class="paper-title">Generalized Context in Cross Attention for Transfer Learning of Disjoint Tabular Data</a>
+                        <span class="paper-date">2026-08-28</span>
+                    </div>
+                                        <span class="paper-comment">📝 Accepted for publication at Neural Networks (Elsevier)</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：针对表格数据在跨领域迁移学习中因特征类型、结构和语义差异而难以应用的问题，现有方法依赖共享特征，不切实际。&#10;&#10;🛠 **方法**：提出广义上下文学习，利用Transformer中key、value、query的投影权重捕获规则化上下文，通过源域key权重与目标域query权重交互实现跨域注意力迁移（CATTLE），无需共享特征。&#10;&#10;✨ **主要贡献**：在10对不相交源-目标数据集上，CATTLE平均排名（2.9）优于9种基线方法，平均AUROC提升3.7%，且仅需单个源数据集即可学习广义上下文。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Unlike images and text, applying transfer learning to tabular data is challenging due to heterogeneity in feature types, structures, and semantics across disparate domains. Existing methods assume shared features across data tables to enable knowledge transfer between domains, which is unrealistic in practice. \mds{This paper introduces generalized context learning to remove the requirement of shared features across domains. The generalized context captured by transformer projection weights for $key$, $value$, and $query$ provides rule-based generalization rather than the domain-specific context conventionally learned from transformer activations. Projection weights for $key$ from the source domain interact with the weight for $query$ in the target domain to achieve Cross-domain Attention Transfer Learning (CATTLE) in a data-agnostic manner. Our experiments on ten pairs of disjoint source-target data sets show that CATTLE can learn generalized context from a single source data set and is rank-wise and statistically superior to nine state-of-the-art baselines, including machine learning, deep learning, and transfer learning methods using large-scale pre-trained models. CATTLE achieves the best average rank (2.9) and delivers a 3.7% average AUROC gain over the baseline methods.} The CATTLE source code is available at https://tinyurl.com/pr5s8ywn.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2605.06382v2" target="_blank" class="paper-title">Rethinking Vacuity for OOD Detection in Evidential Deep Learning</a>
+                        <span class="paper-date">2026-08-28</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：论文指出在证据深度学习（EDL）中，基于空泛度（vacuity）的分布外（OOD）检测指标对类别数（K）的差异高度敏感，当ID与OOD的类别数不一致时，AUROC和AUPR结果会被人为扭曲，导致评估失真。&#10;&#10;🛠 **方法**：通过理论分析和实证实验，系统比较了标准EDL和IB-EDL在类别数相差1时的OOD检测性能，并基于因果语言模型（如Llama3-8B）的多选题问答（MCQA）数据集进行验证，同时探讨了ID与OOD的明确定义问题。&#10;&#10;✨ **主要贡献**：首次实证和理论证明了EDL微调大语言模型中，基于空泛度的OOD检测对类别数差异极其敏感（AUROC最大偏差0.427，AUPR最大偏差0.745），并揭示该偏差是评估伪影，可在模型预测不变的情况下人为抬高性能指标，为OOD评估的公平性提供了重要警示。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Vacuity, or Uncertainty Mass (UM), is commonly used as a metric to evaluate Out-of-Distribution (OOD) detection in Evidential Deep Learning (EDL). It generally involves dividing the number of classes ($K$) by the total strength of belief ($S$) of the model's predictions, where $S$ is derived from summing the Dirichlet parameters. As such, UM is sensitive to the cardinality of $K$. As a result, when comparing In Distribution (ID) and OOD results, it is important that $K_{\mathrm{ID}}$ and $K_{\mathrm{OOD}}$ are equal; something that is not always ensured in practice. We provide an empirical demonstration of how results for AUROC and AUPR can substantially differ when class cardinality between ID and OOD differs by 1, with AUROC differing by as much as 0.346 and AUPR by 0.634 for standard EDL, and AUROC by 0.427 and AUPR by 0.745 for IB-EDL (both from Implementation B, Llama3-8B, ARC-E). Our findings isolate an evaluation artefact: when $K$ differs between ID and OOD, AUROC/AUPR can be artificially inflated without any change in model predictions. We further discuss the evaluation of EDL over causal language models using Multiple-Choice Question-Answer (MCQA) datasets and argue for clearer definitions of ID and OOD in this context. Our primary contribution is an empirical and theoretical demonstration that vacuity-based OOD detection in EDL-fine-tuned LLMs is highly sensitive to uncontrolled differences in evaluated class cardinality.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.28161v1" target="_blank" class="paper-title">Empowering Local Agriculture: A Deep Learning-Powered Web System for Identifying Bangladeshi Mango Varieties</a>
+                        <span class="paper-date">2026-08-28</span>
+                    </div>
+                                        <span class="paper-comment">📝 Accept in Journal of Bangladesh Academy of Sciences, Volume 50, Supplement 1, April 2026. 2 authors</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：孟加拉国芒果品种识别困难，因相近品种视觉特征相似且实际拍摄条件多变。&#10;&#10;🛠 **方法**：构建包含9类共2,013张高分辨率芒果图像的数据库，微调ResNet18、ResNet50和EfficientNetB0三种预训练CNN模型，并将最优模型集成到Streamlit网页应用中。&#10;&#10;✨ **主要贡献**：EfficientNetB0取得最佳性能（测试准确率97.36%，F1分数0.93–0.99），模型仅约400万参数适合轻量部署；开发了用户可上传图片并获取品种预测的实用Web系统，为孟加拉农业提供便捷工具。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Mango variety identification in Bangladesh is challenging because closely related cultivars can have similar visual characteristics and images are often captured under varying real-world conditions. This work presents a deep learning-based web system for automatic identification of Bangladeshi mango varieties. We collected 2,013 high-quality mango images (3024x4032 pixels) from local markets and farms and organized them into nine classes, combining Bari-4 and Bari-7 as a single Bari class. The dataset was divided into training (70%), validation (15%), and test (15%) sets, with image augmentation applied to improve model generalization. Three pretrained CNN architectures, ResNet18, ResNet50, and EfficientNetB0, were fine-tuned under consistent training settings. EfficientNetB0 achieved the best performance, obtaining 98.01% validation accuracy and 97.36% test accuracy, compared with 86.47% and 78.55% test accuracy for ResNet18 and ResNet50, respectively. Class-wise F1-scores for EfficientNetB0 ranged from 0.93 to 0.99, while the Bari class achieved an F1-score of 0.97. The selected EfficientNetB0 model has approximately 4 million parameters, making it suitable for lightweight deployment. We integrated the model into a Streamlit web application that enables users to upload a mango image and receive a predicted variety with class probabilities. The system provides an accessible, practical tool for mango identification and demonstrates the potential of deep learning for supporting agricultural applications in Bangladesh.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.28063v1" target="_blank" class="paper-title">A Controlled Audit of Architectural Complexity in Uncertainty-Aware Multi-Organ Ultrasound Classification</a>
+                        <span class="paper-date">2026-08-28</span>
+                    </div>
+                                        <span class="paper-comment">📝 Supplementary material is available as an ancillary file on this arXiv page</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：验证多器官超声分类中，复杂的“不确定性感知”架构（如注意力、专家混合、证据深度学习）是否真的比简单模型更优，避免“设计合理但无实际增益”的陷阱。&#10;&#10;🛠 **方法**：提出“复杂度审计”框架，在固定数据划分、匹配随机种子、容量与优化对齐的条件下，系统比较6种候选模型（含Full-EDL与简化版），并采用温度缩放、非劣效性检验及OOD否决机制。&#10;&#10;✨ **主要贡献**：发现复杂模型（Full-EDL）未带来可靠的宏F1提升，而简单交叉熵+温度缩放（Simple-CE+TS）在校准和选择性风险排序上更优；证据学习的校准优势在温度缩放后消失，且门控机制影响可忽略；Simple-CE在OOD测试中部分触发否决，表明需分别评估分布内与分布外可靠性。最终选择Simple-CE+TS作为部署方案。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Multi-organ ultrasound classifiers increasingly combine attention, mixture-of-experts routing, uncertainty gating, and evidential deep learning (EDL) objectives to address heterogeneous anatomy and acquisition. Yet a plausible design rationale does not by itself establish that an added component improves the trained system. We contribute a controlled complexity-audit framework, applied to the deployment decision between the maximal evidential candidate Full-EDL and simpler alternatives. Six candidates were evaluated on the primary dataset and three in an internal replication, using ten matched seeds, frozen image-level partitions, capacity- and optimisation-aware comparisons, symmetric temperature scaling, paired decision rules, and a separate out-of-distribution (OOD) veto. Retaining Full-EDL did not establish a reliable macro-F1 gain on either dataset, while the simplified alternatives remained inconclusive under the non-inferiority margin. Simple cross-entropy with temperature scaling (Simple-CE+TS) met the calibrated negative log-likelihood criterion on both datasets and showed favourable selective-risk ordering. The raw calibration advantage of evidential training disappeared after temperature scaling and did not recur on the second dataset. The gate had negligible observable influence at the audited checkpoints, and deleting the Full-only chain revealed no stable task or calibrated-loss benefit. Simple-CE nevertheless triggered the OOD veto against the fetal probe but not the lung probe, precluding an unconditional OOD-safety claim. We therefore selected Simple-CE+TS for the evaluated in-distribution objective while retaining Full-EDL as the maximal reference. Components should earn retention through functional and retraining-based evidence, and calibration and distribution-shift reliability should be evaluated separately.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.27942v1" target="_blank" class="paper-title">CASTANET: Causality-Aware Spatio-Temporal Adversarial Network Using Traffic Incident Effects</a>
+                        <span class="paper-date">2026-08-28</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：预测由突发事件（如事故、道路损坏）引起的非周期性交通拥堵，这类事件稀疏、时空分布不均且影响异质，传统深度学习方法难以有效预测。&#10;&#10;🛠 **方法**：提出CASTANET模型，融合时空图神经网络与因果处理效应估计，显式利用事故记录并缓解事件数据的选择偏差。&#10;&#10;✨ **主要贡献**：在东京真实交通与事故数据上，整体RMSE较最优基线降低4.0%，事件条件下降低10.1%，严重拥堵场景下提升达14.55%。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Predicting non-periodic traffic congestion caused by sudden incidents (e.g., accidents and road damage) is crucial for advanced intelligent transportation systems. However, incident-driven congestion is difficult to forecast because incidents are extremely sparse, occur at specific times and locations, and have heterogeneous impacts depending on the traffic context. While recent deep learning approaches have significantly improved periodic traffic forecasting, their performance on non-periodic congestion remains limited, partly because incident records are not explicitly incorporated and their occurrence is strongly biased in space and time. To address these challenges, we propose CASTANET, which integrates spatio-temporal graph neural networks and causal treatment effect estimation to utilize incident records while mitigating selection bias. Experiments on real-world traffic data and accident records from Tokyo, which we treat as incidents, show that CASTANET reduces RMSE by 4.0% overall compared to the best baseline and by 10.1% on incident-conditioned evaluation, with gains reaching 14.55% under severe congestion.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.27940v1" target="_blank" class="paper-title">A Deep Learning-Based Stacking Ensemble Framework for Turbofan Engine Remaining Useful Life Prediction</a>
+                        <span class="paper-date">2026-08-28</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：针对涡扇发动机剩余使用寿命（RUL）预测精度不足的问题，提出一种集成学习框架以提升预测性能。&#10;&#10;🛠 **方法**：构建两级堆叠集成框架，融合LSTM、CNN、CNN-LSTM和CNN-GRU四种异构深度学习基学习器，通过XGBoost元学习器整合其折叠外预测结果。&#10;&#10;✨ **主要贡献**：在NASA C-MAPSS的FD001和FD003子集上，RMSE分别降至9.989和8.613，较最优基线TCAT降低10.2%和21.8%，并通过特征相关性、残差诊断和收敛曲线验证了模型鲁棒性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>This study proposes a two-level stacking ensemble framework for Remaining Useful Life (RUL) prediction of turbofan engines, evaluated on the NASA C-MAPSS benchmark using the FD001 and FD003 subsets. The framework integrates four heterogeneous deep learning base learners: Long Short-Term Memory (LSTM), Convolutional Neural Network (CNN), CNN-LSTM, and CNN-GRU, whose out-of-fold predictions are combined by an XGBoost meta-learner to capture complex degradation patterns while mitigating individual model biases. Comprehensive experiments demonstrate that the stacking ensemble achieves superior predictive performance, with Root Mean Square Error (RMSE) of 9.989 and 8.613, Mean Absolute Error (MAE) of 7.081 and 5.195, and R-squared values of 0.899 and 0.906 for FD001 and FD003, respectively. Compared to the best-reported baseline (TCAT: RMSE 11.12 and 11.02), the proposed method achieves RMSE reductions of 10.2 percent and 21.8 percent for FD001 and FD003, respectively. Feature correlation analysis, residual diagnostics, and training convergence curves validate the model's robustness. These findings underscore the efficacy of stacking ensemble methods for prognostics and health management in safety-critical aerospace applications.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2509.00094v2" target="_blank" class="paper-title">Automatic Pronunciation Error Detection and Correction of the Holy Quran's Learners Using Deep Learning</a>
+                        <span class="paper-date">2026-08-27</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：针对《古兰经》学习者发音错误检测与纠正任务，解决高质量标注数据稀缺和发音评估量化困难的问题。&#10;&#10;🛠 **方法**：构建98%自动化的数据处理流水线（含基于微调wav2vec2-BERT的停顿点切分、转录及Tasmeea算法验证），提出自定义Quran Phonetic Script（QPS）编码体系（11级音素/属性编码），并设计多级CTC模型进行发音错误检测。&#10;&#10;✨ **主要贡献**：发布848小时音频（286K标注话语）、qdat_bench基准（159个真实错误样本），多级CTC模型在测试集和基准上分别达到0.21%和1.94%的平均音素错误率（PER），Tajweed规则F1分数达75.8%，全部代码已开源。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Assessing spoken language is challenging, and quantifying pronunciation metrics for machine learning models is even harder. However, for the Holy Quran, this task is enabled by the rigorous recitation rules (Tajweed) established through the efforts of Muslim scholars, making highly effective assessment possible. Despite this advantage, the scarcity of high-quality annotated data remains a significant barrier. In this work, we bridge these gaps by introducing: (1) A 98% automated pipeline to produce high-quality Quranic datasets -- encompassing collection of recitations from expert reciters, segmentation at pause points (waqf) using our fine-tuned wav2vec2-BERT model, transcription of segments, and transcript verification via our novel Tasmeea algorithm; (2) 848 hours of audio (286K annotated utterances); (3) qdat_bench, a benchmark covering phonemes, diacritization, and Tajweed rules (Ghunnah, Qalqalah, Madd) on real recitation errors containing 159 samples; (4) A novel ASR-based approach for pronunciation error detection utilizing our custom Quran Phonetic Script (QPS) to encode Tajweed rules (unlike the IPA standard for Modern Standard Arabic). QPS uses an 11-level script: phoneme level (encoding Arabic letters with short/long vowels) and sifat level (encoding articulation characteristics of every phoneme). We further present comprehensive modeling with our novel multi-level CTC model, which achieved 0.21% and 1.94% average Phoneme Error Rate (PER) on the test set and qdat_bench respectively, with a 75.8% Tajweed F1 score. We release our work as open-source: https://obadx.github.io/quran-muaalem/en/</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.21756v2" target="_blank" class="paper-title">How Architecture and Training Affect TPC Representations Across Experiments</a>
+                        <span class="paper-date">2026-08-27</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Deep-learning efforts have increasingly shifted toward foundation model approaches. In experimental physics, this allows models and learned representations to be reused beyond the experiments in which they were developed. This work evaluates the reusability of representations across experiments and detector systems using probes on frozen encoders. These probes reveal task-relevant structure before downstream adaptation, complementing fine-tuning. Together with random-weight controls, they distinguish contributions from architecture and encoder training that downstream performance alone cannot resolve. Time projection chamber (TPC) data provide a useful testbed because events from TPC systems can be represented as variable-length sparse tensors, while detector geometries, event topologies, and scientific tasks can differ substantially. We investigate whether fixed-dimensional TPC event representations can be reused across classification tasks, experiments, and detector systems. Sparse ResNet and PointNet-style encoders produce 512-dimensional embeddings for four datasets from the GADGET II TPC and AT-TPC. Randomly initialized encoders isolate the contribution from architecture before supervised training. We then train each encoder on a classification task, freeze its parameters, and train a linear or nonlinear probe for each downstream task. We find that this architecture-induced structure remains useful across experiments and detector systems. The randomly initialized PointNet-style representation is highly informative on several tasks. The two architectures organize their embedding spaces differently, but neither exhibits a large, systematic loss of utility cross-detector. These results show that architecture is a major source of task-relevant structure in TPC embeddings and should be treated explicitly when assessing representation learning and developing reusable detector models.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.27655v1" target="_blank" class="paper-title">Accelerating Data Preprocessing for Efficient Vision Model Inference on Jetson Edge Device</a>
+                        <span class="paper-date">2026-08-27</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Data preprocessing is a crucial part of deep learning workflows on edge devices. However, decoding data saved in JPEG format is very compute-intensive and occupies a major portion of the preprocessing pipeline. Therefore, increasing the decoding speed is vital for improving overall throughput, especially for inputs with large image sizes, which are often subject to preprocessing bottlenecks. On the other hand, edge devices are equipped with specialized hardware units to accelerate media processing and image decoding. For instance, the NVIDIA Jetson platform possesses a dedicated NVJPEG unit. These units can be used to enhance the performance of the preprocessing pipeline. This paper introduces the utilization of such specific hardware acceleration units for offloading decoding tasks. By combining this with a multi-instance approach, it allows for the parallelization of all compute resources including CPU, NVJPEG, GPU, and DLA in Jetson devices. In this work, we compare various potential pipeline designs. On ResNet18, ResNet50, and ResNet152, three models with different sizes, we evaluate the impact of batch sizes and image sizes, as well as the characteristics of GPU/DLA inference. Finally, a fine-tuning experiment for multi-instance design has been conducted. The multi-instance design with a specific hardware decoding unit involved offers up to 30.02% speedup for large image sizes, compared with the most optimized design without it. Based on these findings, we demonstrate the benefits of using the NVJPEG unit in deep learning workflows and provide guidelines for tuning and optimizing edge inference workflows.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
                         <a href="https://arxiv.org/abs/2608.27290v1" target="_blank" class="paper-title">Detection of Christmas tree plantations from high-resolution aerial imagery. A case study in the French Morvan</a>
                         <span class="paper-date">2026-08-27</span>
                     </div>
                                         <span class="paper-comment">📝 18 pages, 9 figures. Submitted to IEEE JSTARS; currently under revision</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：针对高分辨率航空影像中圣诞树种植园的精准分割难题，该任务面临种植密度高、轮作周期短、与周围植被视觉混淆、标签稀缺及类别严重不平衡等挑战。&#10;&#10;🛠 **方法**：将圣诞树种植园映射定义为罕见的语义分割问题，采用DeepLabV3（ResNet-34编码器）作为基础模型，并引入硬负样本挖掘（HNM）策略以增强对混淆背景的判别能力。&#10;&#10;✨ **主要贡献**：提出HNM显著提升精确率-召回率性能（PR曲线下面积从0.204升至0.913）；在2020测试集上达到IoU 0.733和F1 0.846；验证了时间迁移能力（2017/2018年IoU/F1为0.751/0.858，2023年为0.691/0.817）；大规模验证揭示任务固有难度，种植园仅占评估区域总面积的1.72%-2.04%。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Christmas tree plantations are economically relevant, yet a largely unexplored application domain in Remote Sensing (RS). Their delineation is challenging because of high planting density, short rotation cycles, visual confusion with surrounding vegetation, the availability of dense labels for one reference year only, and severe class imbalance at the landscape scale. Although Deep Learning (DL) methods have shown strong potential for vegetation mapping, existing approaches are typically designed for forests, generic plantation systems, or orchards, and do not explicitly address the structural specificity and hard-negative confusion that characterize Christmas tree plantations. In response to these challenges, this work makes three main contributions: (i) it frames Christmas tree plantation mapping as a distinct rare-target semantic segmentation problem; (ii) it introduces a Hard Negative Mining (HNM) strategy to improve discrimination against confusing background patterns; and (iii) it evaluates the proposed framework across complementary levels, including supervised testing, temporal transfer, and large-scale validation. On the 2020 test set held out, the best model, DeepLabV3 with a ResNet-34 encoder, achieves an IoU of 0.733 and an F1-score of 0.846. HNM substantially improves precision-recall behavior, increasing the area under the precision-recall curve from 0.204 to 0.913. Temporal inference further shows meaningful transferability, reaching IoU/F1 values of 0.751/0.858 on 2017/2018 and 0.691/0.817 on 2023. Large-scale validation further highlights the intrinsic difficulty of the task, as Christmas tree plantations occupied only a very small fraction of the extent of the common evaluation, corresponding to 1,498.4 ha (1.72\%) in 2017/2018 and 1,782.2 ha (2.04\%) in 2023 out of 87,309.4 ha in total.</p>
@@ -1049,10 +1220,7 @@
                         <span class="paper-date">2026-08-27</span>
                     </div>
                                         <span class="paper-comment">📝 25 page, 16 main, 9 appendix</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有后门攻击与防御研究普遍假设成功后门具有高攻击成功率（ASR），本文揭示该假设存在根本缺陷——ASR并非后门固有属性，而是可被攻击者主动控制的变量，低ASR后门可绕过现有防御体系。&#10;&#10;🛠 **方法**：提出一种反向训练框架，通过削弱触发器与目标标签之间的关联强度，在保持干净样本性能的同时，刻意降低后门模型的ASR，从而生成低ASR后门模型。&#10;&#10;✨ **主要贡献**：在多个数据集、攻击家族和网络架构上的实验表明，现有最先进防御在低ASR条件下系统性失效，首次系统性地揭示了攻击者与防御者之间的根本不对称性，为后门攻防研究开辟了新方向。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Backdoor attacks are among the most effective and stealthy attacks in deep learning. Existing attacks and defenses are largely designed and evaluated under the assumption that successful backdoors exhibit high Attack Success Rates (ASRs). In this paper, we show that this assumption creates a fundamental weakness in existing defense paradigms. ASR is not an intrinsic property of a backdoor; rather, it is an attacker-controlled variable that can be deliberately reduced without eliminating the underlying backdoor behavior. We introduce a reverse-training framework that weakens the trigger-target association, producing low-ASR backdoor models while preserving clean-input performance. Through extensive evaluation across multiple datasets, diverse attack families, and multiple architectures, we show that state-of-the-art defenses fail consistently under low-ASR conditions, exposing a fundamental attacker-defender asymmetry.</p>
@@ -1064,13 +1232,22 @@
                         <span class="paper-date">2026-08-27</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：如何理解和优化Transformer模型在处理表格数据时的注意力头重要性，以提升模型的可解释性和效率。&#10;&#10;🛠 **方法**：提出一种基于重要性评分的指标，用于评估多头Transformer中每个注意力头对表格数据学习的贡献，并通过逐步移除头部来测试模型性能变化。&#10;&#10;✨ **主要贡献**：在40个表格数据集上验证了该评分方法的鲁棒性，发现移除低重要性头部时模型性能下降最小，而移除高重要性头部时下降最大；重要头部分布无层间规律，且因数据集而异，有助于提升架构效率和冗余性。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Computationally demanding and opaque deep learning models can be better understood and optimized by analyzing how they transform data. While deep transformers have been widely studied in computer vision and natural language processing, their application in tabular data remains relatively underexplored. This paper presents one of the first applications of an importance-scoring metric to interpret multi-head transformer models in learning from tabular data. Experiments conducted on 40 diverse tabular datasets demonstrate robustness to head drops based on the proposed head importance score. In 72.5\% of experimental examples, the model remains most resilient to performance drops when heads with the lowest importance scores are gradually removed. In contrast, removing the most important attention head first results in the greatest reduction in classification performance. A closer look at individual head importance scores across six attention layers reveals that important heads are scattered across layers, with no consistent layer-specific trends. In contrast to the image and language domains, the importance of individual attention heads varies considerably across tabular datasets with different schemas and feature spaces. The proposed importance score can improve efficiency and redundancy within transformer architectures. We make the source code for measuring the importance of individual attention heads publicly available.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.27527v1" target="_blank" class="paper-title">FVeinSyn: Synthetic Finger Vein Image Generator</a>
+                        <span class="paper-date">2026-08-27</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>A major challenge in finger vein recognition is the lack of large-scale public datasets. Existing datasets contain few identities and limited samples per finger, restricting the advancement of deep learning-based methods. To address this, we propose FVeinSyn, a large-scale controllable synthetic data generation framework for finger vein. It explicitly decouples synthesis of vascular topology and imaging appearance to mitigate the limitations caused by insufficient training samples, such as inadequate identity diversity and restricted realism. Specifically: first, a finger vein identity generator models vascular topology under physiological and geometric constraints using stochastic L-systems, producing anatomically valid and identity-distinctive vascular patterns. Then, a cascaded region-aware GAN renders the topological maps into realistic near-infrared images. Finally, an intra-class diversity generator introduces geometric and optical perturbations to simulate realistic intra-class variations. Using FVeinSyn, we generated 500,000 images (10,000 vein identities, 50 samples per identity) and conducted extensive evaluations. Results show that FVeinSyn holds significant advantages in realism, identity diversity, vascular pattern consistency, and intra-class diversity. Models trained with FVeinSyn outperform real-data-only baselines a cross eight public datasets, achieving an average accuracy improvement of 27.43\%. The code is available at: https://github.com/EvanWang98/Synthetic-Finger-Vein-Generator.</p>
                     </details>
                 </div>
                 <div class="paper-card">
@@ -1079,10 +1256,7 @@
                         <span class="paper-date">2026-08-27</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：视觉生成式AI模型在边缘设备（如自动驾驶、农业传感器、移动设备）上部署时面临严格的硬件资源限制，而当前模型发展主要追求输出质量，硬件被动适应，导致部署不可持续。&#10;&#10;🛠 **方法**：从软件-硬件协同设计的视角，量化了多种加速器平台上视觉生成模型的参数成本与能效，并将四类生成模型家族映射到七个实际应用领域，分析其适配性。&#10;&#10;✨ **主要贡献**：主张在模型设计初期就考虑部署约束，实现“正确的模型”运行在“正确的硬件”上服务于“正确的应用”，从而推动生成式AI在更广泛平台上的可持续与可及部署。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Vision generative artificial intelligence (AI) has emerged as one of the most rapidly advancing areas of deep learning. The explosion of multimodal models has made them widely associated with text-to-image applications running on large datacentres. However, vision generative models are equally needed in applications that operate under strict hardware constraints at the edge, including autonomous vehicles, agricultural sensors, and mobile devices. In this Perspective, we argue that progress in vision generative AI has been driven by output quality, with hardware evolving reactively to accommodate growing model demands. We quantify the parameter cost and energy efficiency of these models across a range of accelerator platforms, and map four generative model families against seven real-world application domains. Finally, we advocate a software-hardware co-design approach, where deployment constraints are considered from the start of the design process, ensuring that the "right model" runs on the "right hardware" to serve the "right application", making generative AI deployment sustainable and accessible across a much broader range of platforms.</p>
@@ -1094,10 +1268,7 @@
                         <span class="paper-date">2026-08-27</span>
                     </div>
                                         <span class="paper-comment">📝 Published in Proceedings of Machine Learning Research (PMLR), volume 329, Conformal and Probabilistic Prediction with Applications (COPA 2026)</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：多步信道状态信息（CSI）预测中，深度学习模型仅提供点预测，缺乏校准的不确定性估计，导致下游决策（如波束成形）在预测轨迹不可靠时可能失败。&#10;&#10;🛠 **方法**：提出TRACE-CRC，结合未来步依赖的误差画像、轨迹难度分层和learn-then-test（LTT）风险控制，在预测CSI矩阵周围构建Frobenius范数不确定性球，并控制至少一个未来帧未被覆盖的风险。&#10;&#10;✨ **主要贡献**：实现可靠的轨迹级覆盖，同时产生比保守多步校正更小的不确定性球，并避免紧凑逐步和自适应共形基线导致的轨迹欠覆盖问题。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Reliable prediction of time-varying channel state information (CSI) is essential for efficient wireless communication. Each CSI frame is a matrix-valued representation of the wireless channel response, and a sequence of CSI frames forms a temporal channel trajectory. Modern deep learning-based CSI predictors, however, often provide only point predictions and lack calibrated uncertainty estimates. This limitation is particularly problematic in multi-step CSI prediction, where the target is a sequence of future CSI matrices, and downstream decisions such as beamforming or scheduling may fail if any part of the predicted trajectory is unreliable. We propose trajectory-adaptive calibration and error profiling with conformal risk control (TRACE-CRC), a method for trajectory-aware uncertainty quantification in multi-step CSI prediction. TRACE-CRC constructs Frobenius-norm uncertainty balls around predicted CSI matrices and controls the risk that at least one future frame is uncovered. Instead of calibrating each future step independently, TRACE-CRC combines future-step-dependent error profiling, trajectory difficulty stratification, and learn-then-test (LTT) risk control. Empirically, TRACE-CRC achieves reliable trajectory-level coverage with substantially smaller uncertainty balls than conservative multi-step corrections, while avoiding the trajectory undercoverage of compact stepwise and adaptive conformal baselines.</p>
@@ -1109,10 +1280,7 @@
                         <span class="paper-date">2026-08-27</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：本文研究深度神经网络的可辨识性（即参数对称性），具体探讨多项式复合后线性独立性的猜想，以理解网络参数与函数映射之间的对应关系。&#10;&#10;🛠 **方法**：提出一个关于“固定数量互异非零多项式与一般多项式复合后线性独立”的猜想，并证明其若干特例（如两个多项式、有界度数情形），同时引入“原点传递”变体，结合代数几何工具分析网络参数空间。&#10;&#10;✨ **主要贡献**：证明了猜想在多种情形下成立，并据此完整刻画了具有递增度逐层激活函数的深度全连接网络的参数等价类；特别地，完全解决了浅层多项式网络的可辨识性问题，为深度学习理论提供了严格的数学基础。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Motivated by theoretical problems in deep learning, we conjecture that post-composing a fixed number of pairwise distinct nonconstant polynomials with a generic polynomial of sufficiently large degree yields linearly independent polynomials. This generalizes Newman--Slater's theorem on powers of polynomials. We establish several cases of this conjecture and its origin-passing variant: We prove the result for two polynomials, and for an arbitrary number of polynomials when their degrees are bounded. Furthermore, we show how the conjecture implies a complete understanding of the identifiability (i.e., parameter symmetries) of deep fully connected neural network architectures with generic polynomial activation functions. In particular, for network architectures with layer-specific activations of increasing degree, our established versions of the conjecture fully characterize the set of parameters yielding the same end-to-end network function. As a special case, we fully resolve the identifiability of shallow polynomial networks.</p>
@@ -1124,10 +1292,7 @@
                         <span class="paper-date">2026-08-27</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：针对AMD和DME在OCT图像中的病灶分割，现有深度学习模型大多仅在域内验证，缺乏跨采集协议的临床泛化测试。&#10;&#10;🛠 **方法**：开发并系统消融了四种病灶分割流程（AMD和DME的2D与3D变体），并在外部临床队列OLIVES上通过代理指标框架（生物标志物AUROC、中央子野厚度相关性、纵向一致性）评估泛化能力。&#10;&#10;✨ **主要贡献**：域内验证达到Dice 0.76–0.82且体积/表面校准良好（r≥0.97）；消融实验确立了全容积、校准感知的采纳标准，并发现集成组合是提升性能的最一致因素；外部测试显示预测与临床生物标志物相关，但弱于域内，证明其作为临床工具的潜力而非充分验证。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Age-related macular degeneration (AMD) and diabetic macular edema (DME) are leading causes of vision loss, and optical coherence tomography (OCT) is the standard modality for detecting and monitoring the subtle lesions that drive treatment decisions. Most deep-learning segmentation work for OCT is validated only in-domain, leaving generalization to clinical data collected under different acquisition protocols largely untested. This work develops and systematically ablates four lesion-segmentation pipelines -- 2D and 3D variants for AMD and DME -- reaching Dice scores of 0.76 to 0.82 with strong volumetric and surface calibration (r vol, r surf greater than or equal to 0.97 across all four pipelines) on an in-domain validation set. The ablation process establishes a full-volume, calibration-aware adoption standard that catches mechanisms an ordinary slice-level evaluation would keep, and identifies ensemble composition as the most consistent driver of improvement. To test generalization, the models are evaluated on OLIVES, an external clinical cohort with no lesion-level ground truth, using a proxy-metric framework built around biomarker AUROC, central subfield thickness (CST) correlation, and longitudinal concordance. Predictions track clinical biomarkers outside the training distribution, though less strongly than in-domain -- evidence for, not validation of, automated lesion-burden tracking as a clinical tool.</p>
@@ -1139,10 +1304,7 @@
                         <span class="paper-date">2026-08-27</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在算法交易的股票信号生成中，现有模型评估未明确针对市场制度（regime）变化进行超参数优化，导致模型在不同市场条件下的鲁棒性不足。&#10;&#10;🛠 **方法**：对约300只美国大盘股11年的日度数据，训练五类模型（含表格深度学习），使用贝叶斯优化，目标函数针对三种统计上不同的市场制度下的交易表现进行超参数选择。&#10;&#10;✨ **主要贡献**：提出跨制度鲁棒的超参数选择方法，显著提升样本外泛化能力；构建XGBoost与TabNet的混合集成模型，年化收益51.26%、夏普比率2.44、CAPM alpha显著为正（0.423，p=0.011），且近零beta表明收益源于选股而非市场暴露；另发现另类数据在技术面和基本面特征之后作用有限，且空头贡献强于多头。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Algorithmic trading now represents a market exceeding $20 billion, where even marginal gains in signal robustness can translate into economically significant returns. Existing evaluations of equity prediction models do not explicitly target regime robustness during hyperparameter selection. Five model classes are trained on daily observations from approximately 300 large-cap US equities over eleven years, with Bayesian optimisation configured to target trading performance across three statistically different market regimes. Regime-robust hyperparameter selection is associated with out-of-sample generalisation, as signal precision remains above the random baseline across all four quarters of the test period, and portfolio performance slowly degrades under simulated input noise before collapsing beyond a defined threshold. No individual tabular deep learning architecture outperforms gradient-boosted trees, but combining XGBoost and TabNet using rank aggregation produces a Hybrid ensemble with an annualised return of 51.26%, a Sharpe ratio of 2.44, and a statistically significant CAPM alpha of 0.423 (p = 0.011). A near-zero beta indicates this outperformance is driven by stock selection, not market exposure. Alternative data plays a secondary role once technical and fundamental features are accounted for, as well as contributing more strongly on the short side than the long, and varies by model class. An interactive application makes these results explorable in real time, with live data integration the remaining step toward practical deployment.</p>
@@ -1154,10 +1316,7 @@
                         <span class="paper-date">2026-08-27</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决X射线相衬显微CT中因样本运动导致的逐投影刚性抖动伪影，且无需无运动参考的预扫描数据。&#10;&#10;🛠 **方法**：提出全可微的抖动校正流程，结合基于梯度的自动对焦策略（适配平行束几何），用紧凑3D CNN预测视觉信息保真度（VIF）分数作为无参考图像质量指标，并引入仅作用于背景的空间选择性总变分惩罚以抑制优化中产生的虚假高频结构。&#10;&#10;✨ **主要贡献**：在模拟和实验数据上验证了该方法能可靠恢复因抖动丢失的精细结构细节，并在不同同步辐射线站采集的形态差异显著的生物样本上展示了良好的泛化能力。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>This paper proposes a fully differentiable jitter correction method for X-ray phase-contrast micro computed tomography using a deep learning-based image quality metric that estimates and compensates per-projection rigid jitter directly from the acquired projection data, without a pre-scan motion-free reference. The approach builds on a gradient-based auto-focus strategy adapted to parallel-beam geometry. A set of candidate objective functions is benchmarked in a controlled study, and the sensitivity of the visual information fidelity (VIF) metric to the jitter artifact is verified with the target phase-contrast data. To operate without a clean reference, a compact 3D convolutional neural network is trained to predict the VIF score from a single corrupted volume. A spatially selective total variation penalty applied exclusively to the image background is introduced to penalize spurious high-frequency structures that otherwise emerge during optimization. Experiments on biological specimens acquired at different synchrotron beamlines are conducted. Evaluation uses jitter motion applied to simulated and experimentally acquired projection data. The result confirms that the integrated pipeline reliably recovers fine structural detail lost due to jitter, with generalization demonstrated across morphologically distinct samples.</p>
@@ -1169,10 +1328,7 @@
                         <span class="paper-date">2026-08-27</span>
                     </div>
                                         <span class="paper-comment">📝 6 pages, 2 figures, 5 tables</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：利用深度学习模型自动区分COVID-19与健康肺部影像，以辅助疫情筛查。&#10;&#10;🛠 **方法**：采用多种预训练卷积神经网络（如VGG、ResNet、DenseNet、MobileNet等），分别对两组X射线和两组CT影像数据集进行分类。&#10;&#10;✨ **主要贡献**：系统比较了多种架构的性能，发现ResNet和VGG在X射线与CT数据上均能有效区分COVID-19与正常影像，平均准确率达95%-98%，优于文献中已有结果。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>COVID-19 was a significant challenge that led to the loss of numerous lives daily. Not only a certain country was involved in this outbreak, but even the world has suffered because of the coronavirus. Imaging techniques using computed tomography (CT) and X-rays of the lungs are the most useful tools for the COVID-19 or any other pandemic disease screening process. Technology today has revolutionized the world by using artificial intelligence to replace manual processes with automated machines, which enable the system to imitate the human brain by making wise decisions based on experience. Motivated by this, our work proposes to use convolutional neural networks (CNN) based models for designing a computer-aided diagnosis (CAD) system that differentiates between COVID-19 and healthy lung pictures. We used two different sets of X-ray images of the lungs in addition to two different sets of CT scans and the classification is done using a variety of networks that have been pre-trained such as VGG (16, 19), Densenet (121), Resnet (50, 50 V2, 101 V2), Mobile net (V2), Xception Inception (V3, Resnet V2), Efficient net (B0) and Nasnet (Large). On the X-ray and CT image datasets, Resnet and VGG architecture have shown the ability to properly differentiate COVID-19 from normal images, with an average accuracy of 95 to 98 percent respectively. Our acquired results on the classification datasets are competitive and superior to previously reported findings in the literature.</p>
@@ -1212,6 +1368,18 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Behavioral biometrics-based continuous authentication is a promising authentication scheme, which uses behavioral biometrics recorded by built-in sensors to authenticate smartphone users throughout the session. However, current continuous authentication methods suffer some limitations: 1) behavioral biometrics from impostors are needed to train continuous authentication models. Since the distribution of negative samples from diverse attackers are unknown, it is a difficult problem to solve in real-world scenarios; 2) most deep learning-based continuous authentication methods need to train two models to improve authentication performance. A deep learning model for deep feature extraction, and a machine learning-based classifier for classification; 3) weak capability of capturing users' behavioral patterns leads to poor authentication performance. To solve these issues, we propose a relative attention-based one-class adversarial autoencoder for continuous authentication of smartphone users. First, we propose a one-class adversarial autoencoder to learn latent representations of legitimate users' behavioral patterns, which is trained only with legitimate smartphone users' behavioral biometrics. Second, we present the relative attention layer to capture richer contextual semantic representation of users' behavioral patterns, which modifies the standard self-attention mechanism using convolution projection instead of linear projection to perform the attention maps. Experimental results demonstrate that we can achieve superior performance of 1.05% EER, 1.09% EER, and 1.08% EER with a high authentication frequency (0.7s) on three public datasets.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.27516v1" target="_blank" class="paper-title">Destroy Me: Automatic Artifact Generation for Histopathology Images</a>
+                        <span class="paper-date">2026-08-27</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Deep learning's diagnostic utility in pathology is constrained by model vulnerability to real-world data imperfections. While current strategies favor "perfect data" by filtering low-quality regions, which can lead to the loss of valuable diagnostic context, we propose a paradigm shift: engineering models to thrive in imperfect environments using "Destroy Me", a hybrid framework for realistic artifact synthesis and robust data augmentation. Our approach combines Stable Diffusion, fine-tuned to preserve morphological continuity by realistically integrating artifacts with the underlying tissue architecture, with physics-based procedural modeling to synthesize six common artifact types: tissue folds, precipitates, blur, stitching errors, dust, and pen markers. Artifact fidelity is assessed using Kernel Inception Distance (KID) and color Wasserstein distance metrics. Validating this strategy on lung adenocarcinoma pattern classification with an nnU-Net, we confirm that models trained on "destroyed" patches consistently outperform baselines on independent real-world datasets. Specifically, we observed a 10.5% relative improvement in macro F1-score and a 15% relative increase in the Cohen's Kappa ($κ$) coefficient. Crucially, our results demonstrate that selective, impact-weighted augmentation is vital for balancing practical robustness with the preservation of subtle diagnostic features.</p>
                     </details>
                 </div>
                 <div class="paper-card">
@@ -1296,6 +1464,18 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Subseasonal-to-seasonal (S2S) precipitation forecasting has substantial financial and societal impact, yet remains challenging because of weak predictive signals, high associated uncertainty, and the computational cost of operational systems, which constrains simulation fidelity. We introduce SimCast-S2S, a generative latent-diffusion framework for probabilistic S2S precipitation forecasting that addresses three major bottlenecks in data-driven prediction. First, because S2S prediction requires uncertainty quantification rather than only deterministic point forecasts, SimCast-S2S is the first data-driven system that uses a diffusion-based generative pipeline for S2S prediction, enabling effective sampling from the underlying conditional distribution. Second, since generating large probabilistic ensembles is computationally costly in physical space, SimCast-S2S instead operates in a compact latent space learned by variational autoencoders, enabling efficient large-ensemble generation. Third, diffusion models typically require large training datasets; SimCast-S2S overcomes this via transfer learning with low-rank adaptation (LoRA), pretraining on large ensembles of climate simulations before fine-tuning on limited reanalysis data. On reanalysis data, SimCast-S2S outperforms deep learning baselines, including convolutional neural networks and U-Net architectures. Notably, despite using only a subset of atmospheric input variables and no post-processing, bias correction, or calibration, SimCast-S2S remains competitive with, and in many cases outperforms, state-of-the-art operational systems such as the ECMWF-S2S baseline. These results indicate that latent generative modeling combined with simulation-to-reanalysis transfer learning offers an efficient and scalable path toward data-driven probabilistic S2S precipitation forecasting.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.27502v1" target="_blank" class="paper-title">Image Augmentation as Test Generation for Deep Learning-Based Image Retrieval Systems</a>
+                        <span class="paper-date">2026-08-27</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Ensuring the reliability of deep learning-based image retrieval systems is a software engineering challenge. This paper presents a dual contribution: (1) a literature review of augmentation and generation techniques which resulted in the identification of 50 techniques which we organized into a ten-category taxonomy, and (2) a large-scale empirical study that evaluates these techniques as test generators for embedding-based image retrieval systems. Augmented images are embedded using Amazon Titan and OpenCLIP, and evaluated across four analytical dimensions: (1) embedding-space similarity, (2) embedding uncertainty measured via four estimators, (3) semantic realism scored by LLaVA, and (4) retrieval failure rate. Experiments are performed on three datasets: CIFAR-10, ImageNet-1K, and a dataset from an industrial partner (March Networks). Across all evaluated datasets and embedding models, and under the single severity level tested for each technique, weather simulation and SaSPA are the image augmentation/generation techniques that produce the highest embedding uncertainty and failure rates while maintaining a favorable balance between performance stability, visual realism, and augmentation effectiveness. The results we discuss are configuration-specific and may shift under milder or stronger perturbation settings. In contrast, GAN-based augmentation techniques are among the lowest in realism, indicating the presence of synthetic artifacts and perceptual inconsistencies that reduce their suitability to produce realistic test inputs. Overall, our findings provide practical guidelines for selecting augmentation techniques that maximize test diversity while preserving realistic image characteristics, thereby enabling the construction of comprehensive and effective test suites for image retrieval systems while reducing the cost of manual data labeling through the use of metamorphic testing.</p>
                     </details>
                 </div>
                 <div class="paper-card">
@@ -1692,186 +1872,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>We introduce Rank-Deviation Quality (RDQ), an evaluation metric for retrieval and ranking systems that adapts to queries with varying numbers of reference items, from a single correct answer to many valid results. RDQ scores a candidate ranking against an ordered reference list (ORL): each retrieved reference item contributes its output-position weight multiplied by a rank-deviation penalty, and items outside the ORL receive zero credit. Application-specific parameters control tolerance to misordering. Larger values emphasize retrieving valid reference items, whereas smaller values place more weight on matching their reference order. The output-position weights can reflect visibility in the application's interface, such as a vertical list or a carousel. Unlike metrics that require absolute relevance grades, RDQ operates on ordinal rankings, which annotators can produce through pairwise or listwise judgments. Unlike rank-correlation measures such as Kendall's tau, RDQ accounts for both which items are returned and how they are ordered. On a 5,000-query point-of-interest (POI) dataset with 12 systems, RDQ has the highest median empirical power@100 among the 13 evaluated metric configurations. It reaches mean tau >= 0.8 agreement with its own full-query ordering at 200 queries; RBP(0.9), the strongest tested non-RDQ configuration, reaches the same threshold at 250. On TREC Deep Learning benchmarks, where NDCG uses native graded labels and RDQ uses ordinal tiers derived from them, RDQ reaches comparable median power at n=25, while NDCG is higher at n=100.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2608.25235v1" target="_blank" class="paper-title">Multi-View Trust Evaluation for Collaborator Selection via Evidential Deep Learning</a>
-                        <span class="paper-date">2026-08-25</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Selection of trustworthy collaborators in distributed systems is critical for efficient task completion, necessitating the inference of trustworthiness from their past collaboration experience. However, as a collaborator serves distinct devices across diverse scenarios in past collaborations, its trust-related data, observed from different device-specific views, is inherently multi-source, heterogeneous, and uneven in quality. Consequently, achieving accurate trust evaluations for collaborator selection remains a major challenge. To tackle these issues, we propose a novel multi-view evidential learning (MVE) based trust evaluation method. First, to accommodate the multi-source heterogeneity of observed trust-related data, we model each task owner who has interacted with a potential collaborator as an independent observational view, enabling the evaluation of the collaborator's view-specific trust. Second, to address the dynamic evolution of trust under changing conditions, we leverage the powerful long-sequence modeling capability of the Mamba model to capture the deep temporal patterns of a collaborator's trust state within each view. Furthermore, to quantify the certainty levels of view-specific trust assessments, we incorporate an evidential deep learning mechanism in MVE, which outputs trust evaluation results while quantifying the subjective uncertainty underlying them. Finally, we employ a dynamic evidential fusion strategy to adaptively integrate the multi-view evidence based on their respective quantified uncertainties, thereby yielding a final trust evaluation for the collaborator. Extensive experiments demonstrate that the proposed MVE method outperforms baselines in both trust evaluation accuracy and task success rate.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2608.25204v1" target="_blank" class="paper-title">LibriBrain100: One Hundred Hours of Broad and Deep MEG Data for Neural Speech Decoding at Scale</a>
-                        <span class="paper-date">2026-08-25</span>
-                    </div>
-                                        <span class="paper-comment">📝 10 content pages + 22 pages for references and appendices (in total: 32 pages, 16 figures, 6 tables)</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>We introduce LibriBrain100, a large-scale MEG dataset for speech decoding designed from the ground up for reproducible, standardised evaluation. LibriBrain100 more than doubles the size of the original LibriBrain release, resulting in over 100 hours of high-quality MEG acquired while subjects listened to naturalistic continuous speech. With $\sim$80 hours from a single subject, LibriBrain100 sets a new record for deep, within-subject neural data (8$\times$ more than the next comparable dataset and roughly 80$\times$ more than other datasets). To demonstrate the payoff of this depth-first design, we evaluate on a word-classification benchmark---an increasingly well-established stepping stone towards the open challenge of noninvasive brain-to-text decoding. Using an existing decoding model, we achieve state-of-the-art performance---validating both the quality of the recordings and the value of within-subject data at scale. Because collecting 80 hours of data per user is impractical for real-world applications, we also collected $\sim$40 minutes of additional data from each of 32 subjects. Using the same word-classification benchmark, we demonstrate the value of broad multi-subject data: supervised finetuning of a pre-trained model can substantially compensate for limited per-subject data. We provide standard train, validation, and test splits, all reproducible through an open-sourced Python library that supports easy downloading, optional preprocessing, and data loading for common deep learning frameworks. In addition, the dataset and evaluation infrastructure are being released alongside an open machine-learning competition with a public leaderboard for standardised benchmarking. Ultimately, our hope is that LibriBrain100 will accelerate progress towards practical non-invasive brain-computer interfaces, capable of restoring communication to people living with severe paralysis.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2608.25160v1" target="_blank" class="paper-title">ROMNet: a hybrid reduced order modeling and machine learning approach to waveform inversion</a>
-                        <span class="paper-date">2026-08-25</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Waveform inversion seeks to estimate the wave speed of a heterogeneous, inaccessible medium, from time-resolved measurements of the waves at user controlled sensors. We consider this inverse problem for acoustic waves and an active array of source/receiver sensors that emit probing signals and measure the generated pressure waves. The forward map, from the wave speed to the measurements, is nonlinear and oscillatory. The oscillations cause cycle skipping, the main impediment to using the standard, nonlinear least-squares data fitting formulation, known as full waveform inversion (FWI). A recently introduced alternative waveform inversion approach computes from the measurements an algebraic surrogate of the wave operator, a reduced order model (ROM) matrix, which is then used to estimate the wave speed. The mapping from the measurements to the ROM is nonlinear, but well understood. It is computed efficiently, in a non-iterative manner. The nonlinear mapping from the ROM to the wave speed is less understood, and its approximation involves time-consuming optimization. Our goal in this paper is to use a neural network to map the ROM matrix to a nearby one, that has a simpler and explicit dependence on the wave speed. This simplifies and reduces the computational cost of the ROM-based waveform inversion. We introduce the methodology, called ROMNet, and test it with numerical simulations, using two training data sets: The first set consists of random media with variations of the wave speed modeled by a superposition of Gaussians with random amplitudes and standard deviations. The second is the publicly available GeoFWI dataset introduced for benchmarking FWI using deep learning. We compare the performance of ROMNet with the direct ROM-based inversion and with two representative deep learning approaches to FWI: ``Fourier-DeepONet" and ``InversionNet".</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2608.25140v1" target="_blank" class="paper-title">RefLAM: A Reference-Grounded Line Annotation Pipeline for Historical Arabic Manuscripts</a>
-                        <span class="paper-date">2026-08-25</span>
-                    </div>
-                                        <span class="paper-comment">📝 11 pages, 6 figures, 3 tables, 2 algorithms</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Existing approaches to building line-level Arabic handwritten-text-recognition (HTR) training data either rely on fully manual annotation, which does not scale, or on automatic OCR-to-reference alignment methods not yet extended to multi-script, two-zone (main-plus-margin) manuscript layouts with a provable correctness guarantee. We present RefLAM (Reference-grounded Line Annotation for Manuscripts), a pipeline converting manuscript page images and clean transcriptions into validated, line-level ground truth without sacrificing human oversight. RefLAM couples a deep-learning page-segmentation model with a multimodal large language model (MLLM) for structured OCR and a diacritic-agnostic fuzzy alignment engine that grounds each OCR line in a contiguous span of the reference text, with a character-level confidence score in $[0,100]$. A perfect score is provably equivalent to character-for-character identity of the normalised strings (the Confidence-100 rule), verified with no counterexample across the released corpus. A reviewer can thus trust a perfect score, confirming most lines at a glance rather than retyping them, so annotation becomes triaged, with attention concentrated on uncertain alignments. Across 7 fully page-validated books we measured a 75$\times$ throughput gain over manual annotation (3,000 vs. 40 lines/hr); applying the same guarantee to 7 further books, we retained 16,533 confidence-100 main-text lines within one week, excluding sub-100 lines rather than manually correcting them. Using RefLAM, we release AraMS-28k: 14 historical Arabic manuscript books, 3,043 pages, and 27,971 main-text and 629 margin-line annotations with bounding boxes, layout labels, and insertion anchors for 191 margin entries (30.4%). We also finetune Muharaf-pretrained baselines (including HATFormer) on AraMS-28k and report CER results confirming its practical utility for downstream HTR training.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2608.25126v1" target="_blank" class="paper-title">Multimodal Injury Risk Prediction in Tennis</a>
-                        <span class="paper-date">2026-08-25</span>
-                    </div>
-                                        <span class="paper-comment">📝 7 pages, 2 figures, 5 tables. Published in the 2025 IEEE 5th International Conference on Human-Machine Systems (ICHMS)</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Machine learning has had a significant positive impact on the prediction of athlete performance and injury risk. Most works in this field rely on subjective observations and expert assessments, which restrict their effectiveness. In sports like soccer, basketball, and wrestling, some studies attempt to address this challenge by integrating data from alternative sources, such as readings from wearable devices, alongside traditional subjective observations and expert assessments to enhance accuracy. However, similar research in tennis remains largely unexplored. In this paper, we propose a multimodal Predictive Athlete Readiness framework for Tennis (PART) to assess both performance and injury risk in tennis players. By leveraging machine learning and deep learning techniques, PART processes multiple sources of data collected from nine collegiate tennis players, including physiological metrics, training and match data, sleep data from wearable devices, self-reported information via daily questionnaires, jump assessments, and motion analysis from match play videos. PART captures four characteristics of tennis players: overall wellness, injury risk, physical capability, and playing style. By integrating these four characteristics by supervised learning, it is capable of providing a holistic assessment of the tennis athlete's condition, along with advanced forecasts of specific body areas at risk such as the upper body (e.g., elbows) or lower body (e.g., knees). Our evaluation, conducted with data from nine collegiate tennis players, shows that PART achieves strong performance in predicting both overall wellness and injury risk. Additionally, our framework also shows promise for recreational tennis players, who often suffer from injuries due to incorrect playing techniques.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2604.02513v2" target="_blank" class="paper-title">Sparse Bayesian Learning Algorithms Revisited: From Learning Majorizers to Structured Algorithmic Learning using Neural Networks</a>
-                        <span class="paper-date">2026-08-25</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Sparse Bayesian Learning is one of the most popular sparse signal recovery methods, and various algorithms exist under the SBL paradigm. However, given a performance metric and a sparse recovery problem, it is difficult to know a-priori the best algorithm to choose. This difficulty is in part due to a lack of a unified framework to derive SBL algorithms. We address this issue by first showing that the most popular SBL algorithms can be derived using the majorization-minimization (MM) principle, providing hitherto unknown convergence guarantees to this class of SBL methods. Moreover, we show that the two most popular SBL update rules not only fall under the MM framework but are both valid descent steps for a common majorizer, revealing a deeper analytical compatibility between these algorithms. Using this insight and properties from MM theory we expand the class of SBL algorithms, and address finding the best SBL algorithm via data within the MM framework. Second, we go beyond the MM framework by introducing the powerful modeling capabilities of deep learning to further expand the class of SBL algorithms, aiming to learn a superior SBL update rule from data. We propose a novel deep learning architecture that can outperform the classical MM based ones across different sparse recovery problems. Our architecture's complexity does not scale with the measurement matrix dimension, hence providing a unique opportunity to test generalization capability across different matrices. For parameterized dictionaries, this invariance allows us to train and test the model across different parameter ranges. We also showcase our model's ability to learn a functional mapping by its zero-shot performance on unseen measurement matrices. Finally, we test our model's performance across different numbers of snapshots, signal-to-noise ratios, and sparsity levels.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2603.14603v2" target="_blank" class="paper-title">Latent Dynamics-Aware OOD Monitoring for Trajectory Prediction with Provable Guarantees</a>
-                        <span class="paper-date">2026-08-25</span>
-                    </div>
-                                        <span class="paper-comment">📝 Accepted by 2026 IEEE International Conference on Automation Science and Engineering (CASE 2026)</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>In safety-critical Cyber-Physical Systems (CPS), trajectory prediction guides downstream planning and control. Deep learning models forecast well on validation data, but their reliability drops in out-of-distribution (OOD) scenarios driven by environmental uncertainty or rare traffic behaviors [1, 2]. Such failures are often silent: forecasts stay spatially plausible while accuracy collapses, and reported uncertainty does not rise [3]. Detection is hard because traffic conditions and interaction patterns keep evolving, yet the safety-critical nature of autonomous driving (AD) demands formal guarantees on detection delay and false-alarm rate. Following [4], we reframe OOD monitoring as quickest changepoint detection (QCD), a principled statistical framework with well-established theory. We find that the evolution of prediction errors on in-distribution (ID) data is well modeled by a Hidden Markov Model (HMM). Building on this, we extend a recent cumulative Maximum Mean Discrepancy approach to our setting. The method needs no detailed prior knowledge of the post-change distribution, yet admits provable delay and false-alarm guarantees. On three real-world driving datasets, it reduces detection delay while staying robust to heavy-tailed distributions and unknown post-change conditions.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2608.24793v1" target="_blank" class="paper-title">EMFE: A lightweight, explainable machine learning framework for malaria cell classification</a>
-                        <span class="paper-date">2026-08-25</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Automated malaria diagnosis from stained blood-smear microscopy is dominated by deep convolutional neural networks that are accurate but computationally expensive, poorly interpretable, and rarely validated with patient-level rigor. We present EMFE (Efficient Mathematical Feature Extraction), a five-feature framework for classifying single red-blood-cell images as parasitized or uninfected using Gray World color normalization, adaptive green-channel thresholding, morphological spot detection, and classical machine learning. Using the NIH LHNCBC malaria dataset (27,558 images from 200 patients), we evaluate Random Forest, Histogram Gradient Boosting, and Support Vector Machine classifiers under patient-grouped nested cross-validation (K_outer=20, K_inner=3), ensuring that cells from each patient remain within a single fold. The optimized Random Forest achieves 94.6% pooled out-of-fold accuracy (95% CI [93.6, 95.7]), corroborated by an untouched 40-patient holdout test (94.3%) and a patient-level permutation test (p<0.001, 1,000 permutations). Ablation experiments quantify the contribution of individual features and pipeline stages. Hardware-matched comparisons with retrained DenseNet121, ResNet50, and MobileNetV2 models assess the accuracy-efficiency trade-off. Synthetic perturbations characterize three failure modes, while explainability analysis identifies spot saturation as the dominant discriminative feature. Patient-level aggregation further quantifies sensitivity-specificity trade-offs and false-positive accumulation. These results demonstrate a statistically rigorous, interpretable, and computationally lightweight alternative to deep learning, while explicitly quantifying its limitations.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2608.24771v1" target="_blank" class="paper-title">Ensemble of Convolutional Neural Networks for StrokePrediction: Towards Improved Diagnostic Accuracy</a>
-                        <span class="paper-date">2026-08-25</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Brain stroke, known for its high mortality and incidence rates, poses significant health risks and requires rapid intervention for survival. Early diagnosis and preventive measures can greatly reduce life loss and disabilities. Recent advancements in deep learning have led to novel computer-aided diagnostic techniques for early stroke detection. This study proposes an intelligent system that predicts potential strokes using eleven features, evaluated through seven supervised machine learning algorithms. The process includes a literature review, dataset visualization, data preprocessing, and model evaluation. Ensemble methods like Random Forest, Stacking Classifier, and Bagging Classifier achieved high accuracies of 99.52%, while Decision Tree reached 98.24%. Other models, including KNN and TabNet, demonstrated reliable performance, achieving accuracies of 96.73% and 96.49%, respectively. The custom feedforward model achieved 94.91%, while SVC and logistic regression had lower accuracies at 88.06% and 77.03%. The results highlight the effectiveness of ensemble methods in stroke classification.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2608.24715v1" target="_blank" class="paper-title">Deep Learning Super Resolution for Satellite Cloud Mask Downscaling</a>
-                        <span class="paper-date">2026-08-25</span>
-                    </div>
-                                        <span class="paper-comment">📝 Accepted for 2026 IEEE International Geoscience and Remote Sensing Symposium (IGARSS 2026)</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>A vast amount of optical satellite data is being transmitted to Earth-based servers every day, and more than half of this data is affected by haze or clouds. Additionally, this data suffers from the fundamental trade-off between spatial and temporal resolution, which remains largely unresolved, making the acquisition of continuous high-resolution satellite observations of clouds an ongoing challenge. This work addresses this challenge by proposing two Deep Learning super-resolution methods for the accurate downscaling of SEVIRI cloud mask products, as well as a novel cross-sensor cloud mask dataset called SEVMOD-CM, created by spatially and temporally matching MODIS and SEVIRI satellite observations. The two proposed models are a CNN-based (SpatialCNN) and a GAN-based (SpatialGAN) Neural Network. Trained on the SEVIRI spectral and cloud mask products, the proposed methods predict the corresponding MODIS Cloud masks, achieving a 4x spatial enhancement across sensor domains. Both approaches are evaluated experimentally, and compared against the standard bicubic interpolation upsampling technique. The experimental results demonstrate the value of the proposed models and dataset for the remote sensing community, highlighting the benefits of applying super-resolution techniques to geostationary-derived cloud mask products for applications such as atmospheric monitoring, weather forecasting, disaster risk reduction, solar energy forecasting, and climate research.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2608.24974v1" target="_blank" class="paper-title">Clearing the Underbrush: AI-Enhanced RF Interference Suppression</a>
-                        <span class="paper-date">2026-08-25</span>
-                    </div>
-                                        <span class="paper-comment">📝 7 pages, 10 figures, Accepted to the 2026 IEEE Military Communications Conference (MILCOM)</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>AI-based structured interference rejection has grown more popular because deep learning approaches can outperform traditional methods by jointly considering the signal of interest (SOI) and the signal mixture (SOI plus interference). This work builds on a previous AI-enabled approach utilizing autoregressive transformer-based models by adding a Finite Scalar Quantization (FSQ) tokenizer layer which aims to improve the interference rejection performance while keeping overall latency to a minimum. Additionally, we experiment with other inference optimization techniques with the goal of speeding up inference without much accuracy loss. We explore this space with an experiment where the SOI is a digitally modulated radio frequency (RF) signal and the structured interference is a digital television signal, an extremely common type of Orthogonal Frequency-Division Multiplexing (OFDM) transmission. Our results achieve low latency and increased interference rejection over traditional techniques and prior work with other AI-enabled methods. We demonstrate the benefits of the AI-enabled approaches via audio metrics such as Perceptual Evaluation of Speech Quality (PESQ). Additionally, we explore a variety of applications and detail how our interference rejection algorithm may be used in operationally-relevant scenarios.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2508.21424v3" target="_blank" class="paper-title">Unsupervised Incremental Learning Using Confidence-Based Pseudo-Labels</a>
-                        <span class="paper-date">2026-08-25</span>
-                    </div>
-                                        <span class="paper-comment">📝 8 pages, 4 figures</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Deep learning models have achieved state-of-the-art performance in many computer vision tasks. However, in real-world scenarios, novel classes that were unseen during training often emerge, requiring models to acquire new knowledge incrementally. Class-Incremental Learning (CIL) methods enable a model to learn novel classes while retaining knowledge of previous classes. However, these methods make the strong assumption that the incremental dataset is fully labeled, which is unrealistic in practice. In this work, we propose an unsupervised Incremental Learning method using Confidence-based Pseudo-labels (ICPL), which replaces human annotations with pseudo-labels, enabling incremental learning from unlabeled datasets. We integrate these pseudo-labels into various CIL methods with confidence-based selection and evaluate performance degradation on CIFAR100 and ImageNet100. Then, we compare our approach to popular Class Incremental Novel Category Discovery (class-iNCD) methods addressing similar challenges. Additionally, we apply our method to fine-grained datasets to demonstrate its real-world practicality and measure its computational complexity to validate its suitability for resource-constrained environments. ICPL achieves competitive results compared to supervised methods and outperforms state-of-the-art class-iNCD methods by more than 5% in final accuracy.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2608.24594v1" target="_blank" class="paper-title">Comparative Assessment of Deep Learning Architectures for Underwater Subsurface Kelp Forest Segmentation with The Kelp-o-Tron</a>
-                        <span class="paper-date">2026-08-25</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Submerged kelp forests are vital coastal ecosystems that support marine biodiversity and ecosystem dynamics, yet accurate underwater kelp segmentation remains challenging due to optical degradation, illumination variability, turbidity, overlapping vegetation, and complex benthic backgrounds. We systematically evaluated three deep learning semantic segmentation frameworks, ResNet34-U-Net, ResNet50-DeepLabV3, and a hybrid ResNet50-ASPP-Transformer architecture, for kelp detection using high-resolution underwater RGB imagery collected from northeastern U.S. coastal waters. A dataset of 3,395 SSeg assisted annotated image-mask pairs was developed for model training and validation, while geographically independent sites were used for quantitative and qualitative evaluation. All models used consistent preprocessing, augmentation, and evaluation protocols. On independent test data, ResNet50-DeepLabV3 achieved the highest Dice (0.7120) and Intersection over Union (IoU; 0.6267), followed by ResNet34 U Net (Dice 0.6868; IoU 0.5978). The hybrid ASPP Transformer achieved the highest pixel accuracy (0.8528) but lower Dice (0.6437) and IoU (0.5746). External qualitative evaluation further showed that DeepLabV3 produced more consistent segmentation across varying environmental conditions, image qualities, and benthic habitats. Overall, ResNet50-DeepLabV3, termed Kelp-O-Tron, provided the best balance of segmentation accuracy, robustness, and generalization. The dataset, annotation workflow, and comparative evaluation provide resources for advancing automated underwater habitat mapping and ecological monitoring.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2512.16715v3" target="_blank" class="paper-title">Towards Reproducibility in Predictive Process Mining: SPICE -- A Deep Learning Library</a>
-                        <span class="paper-date">2026-08-25</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>In recent years, Predictive Process Mining (PPM) techniques based on artificial neural networks have evolved as a method for monitoring the future behavior of unfolding business processes and predicting Key Performance Indicators (KPIs). However, many PPM approaches often lack reproducibility, transparency in decision making, usability for incorporating novel datasets and benchmarking, making comparisons among different implementations very difficult. In this paper, we propose SPICE, a Python framework that reimplements three popular, existing baseline deep-learning-based methods for PPM in PyTorch, while designing a common base framework with rigorous configurability to enable reproducible and robust comparison of past and future modelling approaches. We compare SPICE to original reported metrics and with fair metrics on 11 datasets.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2306.14300v2" target="_blank" class="paper-title">Screening Autism Spectrum Disorder in children using Deep Learning Approach : Evaluating the classification model of YOLOv26s by comparing with other models</a>
-                        <span class="paper-date">2026-08-25</span>
-                    </div>
-                                        <span class="paper-comment">📝 7 pages,5 figures, 2 tables</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Autism spectrum disorder (ASD) is a developmental condition that presents significant challenges in social interac- tion, communication, and behavior. Early intervention plays a pivotal role in enhancing cognitive abilities and reducing autistic symptoms in children with ASD. Numerous clinical studies have highlighted distinctive facial characteristics that distinguish ASD children from typically developing (TD) children. In this study, we propose a practical solution for ASD screening using facial images using YOLOv26s model. By employing YOLOv26s, a deep learning technique, we achieved exceptional results. Our model achieved a remarkable 92.86% accuracy in classification and an F1-score of 0.9291. Our findings provide support for the clini- cal observations regarding facial feature discrepancies between children with ASD. The high F1-score obtained demonstrates the potential of deep learning models in screening children with ASD. We conclude that the newest version of YOLOv26s which is usually used for object detection can be used for classification problem of Austistic and Non-autistic images.</p>
                     </details>
                 </div>
             </div>

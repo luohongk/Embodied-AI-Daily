@@ -575,7 +575,7 @@
                 <a href="Feed-Forward-Reconstruction.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Feed Forward Reconstruction</span>
-                    <span class="nav-count">57</span>
+                    <span class="nav-count">58</span>
                 </a>
                 <a href="Vision-and-Language-Navigation.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -600,7 +600,7 @@
                 <a href="LLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
                     <span class="nav-label">LLM</span>
-                    <span class="nav-count">80</span>
+                    <span class="nav-count">79</span>
                 </a>
                 <a href="VLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f97316"></span>
@@ -695,7 +695,7 @@
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">77</span>
+                    <span class="nav-count">74</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -745,7 +745,7 @@
                 <a href="Path-Planning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#3b82f6"></span>
                     <span class="nav-label">Path Planning</span>
-                    <span class="nav-count">75</span>
+                    <span class="nav-count">76</span>
                 </a>
                 <a href="Multimodal-Fusion.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#6366f1"></span>
@@ -794,7 +794,7 @@
             <a href="Feed-Forward-Reconstruction.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Feed Forward Reconstruction</span>
-                <span class="nav-count">57</span>
+                <span class="nav-count">58</span>
             </a>
             <a href="Vision-and-Language-Navigation.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -819,7 +819,7 @@
             <a href="LLM.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
                 <span class="nav-label">LLM</span>
-                <span class="nav-count">80</span>
+                <span class="nav-count">79</span>
             </a>
             <a href="VLM.html" class="nav-item">
                 <span class="nav-dot" style="background:#f97316"></span>
@@ -914,7 +914,7 @@
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">77</span>
+                <span class="nav-count">74</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -964,7 +964,7 @@
             <a href="Path-Planning.html" class="nav-item">
                 <span class="nav-dot" style="background:#3b82f6"></span>
                 <span class="nav-label">Path Planning</span>
-                <span class="nav-count">75</span>
+                <span class="nav-count">76</span>
             </a>
             <a href="Multimodal-Fusion.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
@@ -1028,6 +1028,36 @@
                 <span class="topic-count">43 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2603.28562v2" target="_blank" class="paper-title">Coalition Formation with Limited Information Sharing for Local Energy Management</a>
+                        <span class="paper-date">2026-08-28</span>
+                    </div>
+                                        <span class="paper-comment">📝 Accepted at CDC 2026</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：分布式能源系统中产消者间的能量协调需要保护隐私并降低计算开销，而现有联盟形成方法依赖完全信息共享，存在隐私风险和计算负担。&#10;&#10;🛠 **方法**：提出一种有限信息联盟形成算法，通过构造候选联盟价值的上界避免逐一求解优化问题，并采用ADMM分布式优化联盟策略，嵌入模型预测控制框架。&#10;&#10;✨ **主要贡献**：证明该方法成本不高于分散式运行，在真实数据上相比分散控制提升经济性，且计算复杂度显著低于完全信息方法，同时大幅减少信息交换。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Distributed energy systems with prosumers require new methods for coordinating energy exchange among agents. Coalitional control provides a framework in which agents form groups to cooperatively reduce costs; however, existing bottom-up coalition-formation methods typically require full information sharing, raising privacy concerns and imposing significant computational overhead. In this work, we propose a limited information coalition-formation algorithm that requires only limited aggregate information exchange among agents. By constructing an upper bound on the value of candidate coalitions, we eliminate the need to solve optimisation problems for each potential merge, significantly reducing computational complexity while limiting information exchange. We prove that the proposed method guarantees cost no greater than that of decentralised operation. Coalition strategies are optimised using a distributed approach based on the Alternating Direction Method of Multipliers (ADMM), further limiting information sharing within coalitions. We embed the framework within a model predictive control scheme and evaluate it on real-world data, demonstrating improved economic performance over decentralised control with substantially lower computational cost than full-information approaches.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.27685v1" target="_blank" class="paper-title">Distributed Model-Based Diffusion: Finite Horizon Contraction under Bounded Delay</a>
+                        <span class="paper-date">2026-08-27</span>
+                    </div>
+                                        <span class="paper-comment">📝 8 pages, 3 figures</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：多智能体系统在非线性、非凸、非光滑约束下的轨迹协同优化，以及通信延迟对求解的负面影响。&#10;&#10;🛠 **方法**：提出分布式基于模型的扩散（Distributed Model-Based Diffusion）算法，一种基于采样的模型预测控制方法，结合扩散模型生成轨迹，并引入对延迟的鲁棒性分析。&#10;&#10;✨ **主要贡献**：证明了该算法在多智能体非凸问题中的收缩性和延迟鲁棒性；在圆圈交换、协作驾驶和空战任务中验证，相比集中式方法，圆圈交换任务完成时间缩短31%，空战胜率提升25%。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Simultaneously optimizing the trajectories of multiple agents is a challenging problem plagued by nonlinearity, nonconvexity, and the curse of dimensionality. A collection of interacting aerial vehicles or self-driving cars in an intersection are examples of complex multi-agent systems that remain difficult to solve without many simplifying assumptions. The presence of communication latency between agents further increases the difficulty. In this paper, we analyze Distributed Model-Based Diffusion: a sampling-based Model-Predictive Control method suitable for highly nonlinear, nonconvex, nonsmooth, multi-agent systems. We prove contraction and robustness to latency for multi-agent, nonconvex problems, showing applicability to real-world constraints. We test the algorithm on a circleswap task, a cooperative medium-fidelity driving task, and in an aerial combat scenario. Despite the addition of latency, our algorithm improves circleswap makespan by 31% and increases aerial combat win rate by 25% compared to centralized Model-Based Diffusion.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2608.27185v1" target="_blank" class="paper-title">A Trans-Domain Digital Twin for Bio-Aware Control of Climate and Energy in Cattle Fattening Barns Using Single-Episode Optimizer Learning</a>
@@ -1154,10 +1184,7 @@
                         <span class="paper-date">2026-08-23</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：Actor-Critic模型预测控制（MPC）能处理复杂非凸控制问题，但难以保证基于序列学习的闭环稳定性。&#10;&#10;🛠 **方法**：提出一种Transformer-Actor-Critic MPC架构，通过证明Transformer网络满足全局增量输入-状态稳定性（δISS），并利用黎曼收缩理论分析物理系统与预测神经网络的互联动态，将理论界作为训练正则化项。&#10;&#10;✨ **主要贡献**：首次为Transformer-Actor-Critic MPC提供形式化的鲁棒性保证，并在非线性3D无人机模型上验证了目标到达与避障任务的有效性。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Actor-Critic Model Predictive Control (MPC) effectively addresses complex, non-convex control problems, but guaranteeing the closed-loop stability of sequence-based learning models within these pipelines remains challenging. This paper introduces a novel Transformer-Actor-Critic MPC architecture with formal robustness guarantees. First, we prove that Transformer networks can satisfy global incremental Input-to-State Stability ($δ$ISS). We then leverage Riemannian contraction theory to analyze the interconnected dynamics between the physical plant and the predictive neural network. Finally, we integrate these theoretical bounds as a training regularizer to yield a certifiably robust policy. The framework is validated on a nonlinear 3D drone model executing target-reaching and obstacle-avoidance maneuvers.</p>
@@ -1169,10 +1196,7 @@
                         <span class="paper-date">2026-08-21</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在异构人群和机器人编队中，实现安全且高效的形状感知导航，现有方法常因简化几何或假设同质机器人而难以应对密集场景。&#10;&#10;🛠 **方法**：提出SRL-MPC，结合高阶控制屏障函数（HOCBF）与几何分离特征（GSFs）编码形状安全约束，并利用强化学习（RL）学习神经策略，实时调整MPC参数以适应周围人群几何。&#10;&#10;✨ **主要贡献**：在保留MPC安全性与泛化能力的同时，引入RL的适应性与智能性；在随机人群和任意形状机器人编队实验中，显著优于基线方法，验证了有效性、可扩展性和鲁棒性。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Safe and efficient shape-aware navigation in heterogeneous crowds and robot fleets remains challenging. Traditional approaches often assume homogeneous robots, sparse workspaces, simplified geometry, offline computation, or handcrafted parameters to make the problem tractable, which limits their deployment in dense crowd scenarios. Toward this end, we propose Shape-Aware Reinforcement Learned Model Predictive Control (SRL-MPC), a method for safe, efficient, and adaptive navigation in crowds with heterogeneous shapes without geometry simplification. To encode shape-aware safety, we formulate high-order control barrier function (HOCBF) constraints from geometric separation features (GSFs) based on support function transformation. A reinforcement learning (RL) framework then learns a neural policy that reads GSFs and outputs real-time MPC parameter updates, enabling the MPC solver to adapt to neighboring crowd geometries. The key advantage of SRL-MPC is that it preserves the safety structure and generalizability of MPC while integrating the adaptability and intelligence of RL. Experiments in randomized crowd scenarios with arbitrary shaped robot fleets demonstrate the effectiveness, scalability, and robustness of SRL-MPC. The results show that SRL-MPC substantially outperforms representative baselines in safety and adaptability. Project website: https://hanruihua.github.io/srl_mpc_project/</p>
@@ -1548,30 +1572,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Safe and efficient robot navigation in crowds requires anticipating pedestrian motion despite uncertain and potentially shifting prediction errors. Existing reactive methods can produce oscillatory behavior, while predictive planners often treat forecasts as exact or rely on restrictive error models. Incorporating conservative uncertainty sets as hard constraints can also render model predictive control (MPC) infeasible. We propose \textit{CoCoNav}, a crowd-navigation framework that combines online conformal calibration with runtime-certified planning. A horizon-specific conformal proportional--integral controller adapts trajectory-error bounds to regulate long-run empirical coverage, enabling the framework to respond to changing prediction errors. A \textit{relax-then-verify} planner preserves solver feasibility by generating nominal trajectories with soft-constrained MPC and separately certifying them, together with contingency maneuvers, against the calibrated bounds before execution. Simulations and quadruped experiments show that CoCoNav achieves a favorable balance among collision avoidance, task success, and navigation efficiency relative to the evaluated baselines.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2601.02275v3" target="_blank" class="paper-title">Machine Learning Guided Cooling System Optimization for Data Center</a>
-                        <span class="paper-date">2026-08-06</span>
-                    </div>
-                                        <span class="paper-comment">📝 11 pages, 11 figures; Won Prof. Avram Bar-Cohen Best Paper Award in the Data Centers Thermal Management track at 2026 IEEE ITherm</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Effective data center cooling is crucial for reliable operation; however, cooling systems often exhibit inefficiencies that result in excessive energy consumption. This paper presents a three-stage, physics-guided machine learning framework for identifying and reducing cooling energy waste in high-performance computing facilities. Using one year of 10-minute resolution operational data from the Frontier exascale supercomputer, we first train a monotonicity-constrained gradient boosting surrogate that predicts facility accessory power from coolant flow rates, temperatures, and server power. The surrogate achieves a mean absolute error of 0.026 MW and predicts power usage effectiveness within 0.01 of measured values for 98.7% of test samples. In the second stage, the surrogate serves as a physics-consistent baseline to quantify excess cooling energy, revealing approximately 85 MWh of annual inefficiency concentrated in specific months, hours, and operating regimes. The third stage evaluates guardrail-constrained counterfactual adjustments to supply temperature and subloop flows, demonstrating that up to 96% of identified excess can be recovered through small, safe setpoint changes while respecting thermal limits and operational constraints. The framework yields interpretable recommendations, supports counterfactual analyses such as flow reduction during low-load periods and redistribution of thermal duty across cooling loops, and provides a practical pathway toward quantifiable reductions in accessory power. The developed framework is readily compatible with model predictive control and provides a template that, with site-specific recalibration, could be adapted to other liquid-cooled data centers with different configurations and cooling requirements.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2605.04568v3" target="_blank" class="paper-title">Dream-MPC: Gradient-Based Model Predictive Control with Latent Imagination</a>
-                        <span class="paper-date">2026-08-06</span>
-                    </div>
-                                        <span class="paper-comment">📝 Accepted for International Conference on Machine Learning (ICML) 2026</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>State-of-the-art model-based Reinforcement Learning (RL) approaches either use gradient-free, population-based methods for planning, learned policy networks, or a combination of policy networks and planning. Hybrid approaches that combine Model Predictive Control (MPC) with a learned model and a policy prior to leverage the advantages of both paradigms have shown promising results. However, these approaches typically rely on gradient-free optimization methods, which can be computationally expensive for high-dimensional control tasks. While gradient-based methods are a promising alternative, recent works have empirically shown that gradient-based methods often perform worse than their gradient-free counterparts. We propose Dream-MPC, a novel approach that generates few candidate trajectories from a rolled-out policy and optimizes each trajectory by gradient ascent using a learned world model, uncertainty regularization and amortization of optimization iterations over time by reusing previously optimized actions. Our results on 24 continuous control tasks show that Dream-MPC can significantly improve the performance of the underlying policy and can outperform gradient-free MPC and state-of-the-art baselines. Code and videos are available at https://dream-mpc.github.io.</p>
                     </details>
                 </div>
             </div>
