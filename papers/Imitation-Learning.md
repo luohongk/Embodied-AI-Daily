@@ -2,7 +2,7 @@
 
 > **77 papers** fetched from arXiv for the keyword **Imitation Learning**.
 
-> Last update: 2026-09-02
+> Last update: 2026-09-03
 
 [← Back to README](../README.md)
 
