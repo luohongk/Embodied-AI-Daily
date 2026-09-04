@@ -575,7 +575,7 @@
                 <a href="Feed-Forward-Reconstruction.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Feed Forward Reconstruction</span>
-                    <span class="nav-count">59</span>
+                    <span class="nav-count">60</span>
                 </a>
                 <a href="Vision-and-Language-Navigation.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -615,7 +615,7 @@
                 <a href="Gaussian-Splatting.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#84cc16"></span>
                     <span class="nav-label">Gaussian Splatting</span>
-                    <span class="nav-count">79</span>
+                    <span class="nav-count">80</span>
                 </a>
                 <a href="Visual-SLAM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#22c55e"></span>
@@ -675,7 +675,7 @@
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Kalman Filter</span>
-                    <span class="nav-count">49</span>
+                    <span class="nav-count">50</span>
                 </a>
                 <a href="Loop-Closure-Detection.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -794,7 +794,7 @@
             <a href="Feed-Forward-Reconstruction.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Feed Forward Reconstruction</span>
-                <span class="nav-count">59</span>
+                <span class="nav-count">60</span>
             </a>
             <a href="Vision-and-Language-Navigation.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -834,7 +834,7 @@
             <a href="Gaussian-Splatting.html" class="nav-item">
                 <span class="nav-dot" style="background:#84cc16"></span>
                 <span class="nav-label">Gaussian Splatting</span>
-                <span class="nav-count">79</span>
+                <span class="nav-count">80</span>
             </a>
             <a href="Visual-SLAM.html" class="nav-item">
                 <span class="nav-dot" style="background:#22c55e"></span>
@@ -894,7 +894,7 @@
             <a href="Kalman-Filter.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Kalman Filter</span>
-                <span class="nav-count">49</span>
+                <span class="nav-count">50</span>
             </a>
             <a href="Loop-Closure-Detection.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -1030,6 +1030,51 @@
             <div class="paper-list">
                 <div class="paper-card">
                     <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2609.04103v1" target="_blank" class="paper-title">Corner Cases: Headland Coverage Path Planning for Autonomous Driving in Arable Farming</a>
+                        <span class="paper-date">2026-09-03</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决农田地块转角（headland）区域的覆盖路径规划问题，尤其是传统方法难以完全覆盖的角落区域。&#10;&#10;🛠 **方法**：提出一种改进的多边形转角处理方法，通过修改地块角落形状以支持倒车转弯，从而实现全覆盖路径规划，并与两种现有方法进行对比评估。&#10;&#10;✨ **主要贡献**：新方法在覆盖间隙、重叠和越界方面均有改善，尤其对约90°及240°以上的田角效果显著，并通过多个真实多边形地块地图验证了其实用性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>This paper presents a new method for headland coverage path planning for arable fields. Several earlier approaches suggest covering the headland with nested polygons and smooth turns, however, covering the field corners entirely requires manoeuvres with reversing. In the new method, the polygon corners are modified to allow a reversing turn. A comparison to two other methods considering gap, overlap, and crossing the field boundary shows an improvement in the coverage result especially in field corners of around 90 degrees, and 240 degrees and above. Applicability of the new method is shown with several examples of real polygonal field maps.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2609.03630v1" target="_blank" class="paper-title">Local Path Planning and Obstacle Avoidance for an Omnicopter Platform</a>
+                        <span class="paper-date">2026-09-03</span>
+                    </div>
+                                        <span class="paper-comment">📝 8 pages, accepted paper at ICUAS 2026</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：针对全向多旋翼无人机在杂乱环境中全局规划器（如RRT*）无法以控制频率直接部署的问题，提出实时局部路径规划与避障方案。&#10;&#10;🛠 **方法**：将动态窗口法扩展到六自由度（6D-DWA），结合局部地图体素化、无人机球体近似模型和6D搜索空间自适应速度采样；并引入“敏捷模式”在线调整评分权重，以平衡目标推进、安全距离和姿态约束。&#10;&#10;✨ **主要贡献**：在0.2秒控制周期内稳定运行，路径跟踪平均横向误差&lt;0.1m、航向误差约13°；静态环境避障成功，未知障碍场景下敏捷模式对偏心障碍成功率达79.3%，居中障碍为41.4%，验证了自适应权重的有效性并揭示了高约束几何下的局限。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Autonomous unmanned aerial vehicles (UAVs) increasingly operate in cluttered environments where global planners such as RRT* are not directly deployable at control rates. This paper presents a real-time local planning and obstacle avoidance module for an omnidirectional multirotor (omnicopter) by extending the Dynamic Window Approach to six degrees of freedom (6D-DWA). Our method achieves real-time feasibility through (i) local-map voxelisation, (ii) a compact sphere-based approximation of the vehicle geometry, and (iii) adaptive velocity sampling in the 6D search space. To improve reactivity to unknown obstacles, we introduce a context-aware "Agile Mode" that adjusts scoring weights online to trade-off between goal progress, clearance, and heading/facing constraints during evasive manoeuvres. We evaluate our approach in simulation across computational stress tests, dense-waypoint path tracking, and static/unknown obstacle scenarios. Our planner runs consistently within a 0.2s control loop, tracks waypoint-dense global paths with < 0.1m average cross-track error and 13deg average heading error, and avoids collisions in static environments. For unknown obstacle avoidance, Agile Mode achieves 79.3% success for an off-centre obstacle and 41.4% for a centred obstacle, highlighting both the effectiveness of adaptive weighting and remaining limitations in highly constrained geometries.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2606.27624v2" target="_blank" class="paper-title">Physics-Guided Robotic Radiation Source Localization along Arbitrary Measurement Paths in Unstructured Environments</a>
+                        <span class="paper-date">2026-09-02</span>
+                    </div>
+                                        <span class="paper-comment">📝 17 pages, 14 figures, 2 tables</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有机器人辐射源定位方法依赖靠近辐射源的路径规划，增加了机器人受辐射损伤的风险，且限制了任务灵活性。&#10;&#10;🛠 **方法**：提出一种基于物理信息机器学习（PIML）的自动化框架，通过设计物理启发模型张量处理未知障碍物衰减的伽马射线信号，并并行计算多个模型以提升鲁棒性和精度，支持任意测量路径下的定位。&#10;&#10;✨ **主要贡献**：在多种随机化高保真仿真和物理实验中验证了方法的有效性，引入连续学习技术增强在线部署实用性，将机器人辐射感知从点状通量检测提升至空间智能。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Using robots to estimate the location of the radiation source is an effective way to improve efficiency and safety. Existing methods focus on planning the robot's path to achieve precise estimation, typically approaching the source. However, approaching the source increases the risk of radiation damage to a robot. In addition, a path-planning algorithm designed solely for radiation source localization (RSL) limits the flexibility of missions that deploy robots into radioactive environments. This study presents an automation framework for robotic RSL that leverages a physics-informed machine learning (PIML) model to precisely estimate the source location, regardless of measurement paths, in unknown environments. Physics-inspired model tensors have been designed for PIML to handle attenuated gamma-ray flux signals from unknown obstacles, and multiple models are computed in parallel to improve the robustness and precision of the RSL. The proposed method is evaluated in high-fidelity simulation environments using Monte Carlo particle transport across diverse randomized domains, including spatial scales, radiation source types, obstacle materials and geometries, and robot trajectories. The method is also validated through physical experiments on configurations that are not included in the simulation-based evaluation. The continuous learning technique is applied in real-robot deployment to enhance the practical applicability of the online robotic RSL system. The proposed method advances robot radiation perception from pointwise flux detection to spatial intelligence.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
                         <a href="https://arxiv.org/abs/2604.25284v3" target="_blank" class="paper-title">Optimal UGV-UAV Cooperative Partitioning and Inspection of Shortest Paths</a>
                         <span class="paper-date">2026-09-01</span>
                     </div>
@@ -1139,10 +1184,7 @@
                         <span class="paper-date">2026-08-26</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有基准测试主要覆盖网页导航、GUI操作和软件工程，缺乏对“灵巧视觉工具使用”（即从视觉证据推断参数并精确控制最终结果）这一能力的评估。&#10;&#10;🛠 **方法**：提出EASEL基准，以参考图像引导的视觉重建为主要代理任务（智能体逐步绘制画布匹配参考图），并包含区域标注、手写和路径规划等语义任务；同时提供EASEL-Data（44万样本的两阶段课程数据集）和EASEL-9B模型用于训练与效果验证。&#10;&#10;✨ **主要贡献**：对25个模型的评估显示现有多模态智能体在EASEL上普遍表现不佳（重建相似度仅0.40-0.54），且存在严重的闭环不稳定性；EASEL-9B在训练后相对基础模型提升6.3%，在所有模型中排名第三，揭示了该能力的显著短板与改进潜力。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Evaluation is shifting from static QA toward agentic settings where models act through external tools. We identify a critical yet underexplored capability within this space - dexterous visual tool use: fine-grained, closed-loop parameterized visual action in which models infer tool parameters from visual evidence, and those parameters directly govern the final result. Existing benchmarks cover web navigation, GUI operation, and software engineering, but rarely target this coupling between visual evidence and execution precision. We propose EASEL, a benchmark evaluating a controlled instance of dexterous visual tool use that adopts reference-guided visual reconstruction as its primary proxy task: the agent incrementally paints a canvas to match a reference image. EASEL additionally includes semantic tasks spanning region annotation, handwriting, and path planning. We further provide EASEL-Data, a 440k-sample two-stage curriculum dataset for trajectory supervision, and EASEL-9B to investigate its effect on this capability. Evaluation of 25 models reveals that current multimodal agents systematically struggle on EASEL. Reconstruction similarity bottlenecks at low levels (0.40-0.54), while trajectory diagnostics expose severe closed-loop instability - models typically saturate early or degrade post-peak. Semantic tasks reveal sharp capability boundaries in precision annotation and path planning. EASEL-9B, trained on EASEL-Data, surpasses the base model by a relative 6.3%, ranking third among all evaluated models.</p>
@@ -1154,10 +1196,7 @@
                         <span class="paper-date">2026-08-26</span>
                     </div>
                                         <span class="paper-comment">📝 6 pages, 3 figures, conference</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：传统路径规划方法在解决大规模无人机（UAV）路径规划问题时，常受限于局部最优、扩展性差和收敛速度慢，难以满足智能农业中的实时性需求。&#10;&#10;🛠 **方法**：提出一种基于GPU并行化的Ising求解器框架，利用Fixstars Amplify平台模拟量子退火过程，将路径规划问题建模为二次无约束二进制优化（QUBO）模型，并通过大规模并行计算快速搜索能量最小状态。&#10;&#10;✨ **主要贡献**：该方法突破了物理量子设备的比特数限制，显著缩短了计算时间且不随问题规模增加而恶化；仿真结果表明，相比遗传算法和模拟退火，该方法能稳定找到更优飞行路径，具备高扩展性和实时应用潜力。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Traditional path planning methods are often constrained by local optima, limited scalability, and slow convergence, which significantly restrict their effectiveness in solving large-scale problems. To address these limitations, this paper shifts the problem-solving paradigm from algorithmic refinement to parallelization of computational architecture. We propose a novel optimization framework utilizing a Graphics Processing Unit (GPU)-parallelized Ising solver. Our method mimics the operational principles of quantum annealing on GPU hardware, enabling rapid search for the minimum-energy state of Ising models. Unlike physical quantum devices, which are often constrained by the number of qubits, our approach leverages the Fixstars Amplify (FA) platform to perform parallel annealing on highly parallelized GPUs. This enables the simultaneous evaluation of thousands of potential path candidates and vast state transitions. By leveraging large-scale parallel processing, the core strength of this framework lies in minimizing computation time even as the problem scale increases. Furthermore, to solve the path planning problem using the FA platform, we formulate the problem as a Quadratic Unconstrained Binary Optimization (QUBO) model. This formulation converts the objectives of flight constraints and operational time minimization into an energy state, enabling problem processing via the Ising-based architecture. Simulation results demonstrate that our proposed method consistently identifies superior flight paths while maintaining stable computational performance compared with the genetic algorithm and simulated annealing method. These findings highlight its potential as a robust, scalable real- time solution for next-generation large-scale smart agriculture.</p>
@@ -1169,10 +1208,7 @@
                         <span class="paper-date">2026-08-25</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在嵌入式微移动设备（如电动滑板车）上，如何在低功耗、地图稀疏的杂乱环境中，可靠且实时地从单目摄像头提取人行道路径。&#10;&#10;🛠 **方法**：提出一个单目视觉管道，经过三次设计迭代（骨架图基线→距离变换走廊规划→轻量图像空间架构），采用半监督教师-学生框架（OneFormer Swin-L 生成伪标签训练 SegFormer-B0），并系统比较了五种路径规划方法在鸟瞰图（BEV）和图像空间中的表现。&#10;&#10;✨ **主要贡献**：最终架构（图像空间中点规划为主、距离变换为备选、BEV仅用于可视化）在CPU上实现每帧&lt;50 ms的端到端处理，分割IoU达0.946（11.7 ms/帧），路径规划速度比BEV方法快421倍，同时将时间不稳定性从1.46%降至0.33%，并揭示了单目BEV路径提取的脆弱性（99.3%帧无有效路径）。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Sidewalk-scale path extraction demands perception and planning that run reliably on compact, low-power hardware in cluttered, map-sparse environments. We present a monocular vision pipeline for sidewalk path extraction in micromobility systems that progresses through three design iterations, from a skeleton-graph baseline through distance-transform corridor planning to a lightweight image-space architecture, and provides a systematic comparison of five path-planning methods across both bird's-eye-view (BEV) and image-space domains. A compact SegFormer-B0 student model, trained with a semi-supervised teacher-student framework using OneFormer Swin-L pseudo-labels, achieves a hand-annotated IoU of 0.946 at 11.7 ms per frame, improving over the baseline checkpoint (IoU 0.758, 18.9 ms). In a controlled planner comparison on 32 hand-labeled frames, image-space midpoint planning achieves the lowest lateral center error (14.3 px) at 2.2 ms, a 421x speedup over BEV distance-transform planning (926.8 ms, 65.0 px center error), while maintaining comparable mask-path alignment (98.5% versus 98.6%). A full-video replay across six campus sequences (22,679 frames) confirms that the improved segmentation reduces temporal instability from 1.46% to 0.33% and increases template-path availability from 73.7% to 79.3%. We further show that BEV-only path extraction is fragile in monocular settings: in one profiled run, 99.3% of frames produced no valid BEV path. The final recommended architecture, image-space midpoint primary, image-space distance-transform fallback, and BEV reserved for visualization, runs the full perception-to-path stack in under 50 ms per frame on CPU, making it suitable for embedded pedestrian-speed micromobility systems.</p>
@@ -1908,42 +1944,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Coverage path planning (CPP) is a fundamental problem in robot motion planning, whose aim is to produce robot trajectories that provide complete coverage of target workspaces while minimizing task-specific objectives such as path length, overlap, number of turns, and energy consumption. CPP has widespread applications in cleaning, inspection, mapping, agriculture, manufacturing, surveillance, demining, and environmental monitoring. Although classical CPP has been extensively studied, recent advances have extended CPP beyond single-robot settings to multi-robot systems, complex 3D environments, constrained platforms, learning-based coverage planning, and visual coverage tasks. This paper presents a comprehensive survey of 125 representative works published primarily between 2015 and 2026, while presenting the evolution of recent developments in light of the classical CPP methods published before 2015. The CPP methods are organized into six main categories: single-robot CPP, multi-robot CPP, 3D CPP, constrained CPP, learning-based CPP, and visual CPP. For each category, the review summarizes the main planning formulations, representative algorithms, strengths, and limitations. In addition, the review analyzes how environmental knowledge, workspace geometry, robot constraints, sensing objectives, and coordination requirements shape the CPP problem. The survey further discusses open challenges in scalable online planning, multi-robot coordination, 3D and visual coverage, unified platform-constrained and resource-aware coverage, and learning-enhanced coverage. Thus, the survey provides a structured overview of recent CPP developments and future research directions.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.10161v1" target="_blank" class="paper-title">Millimeter Wave Radar: From Synthetic Aperture to Probabilistic Mapping</a>
-                        <span class="paper-date">2026-07-11</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Robust probabilistic mapping is essential for autonomous robotic systems operating in challenging environments. While traditional sensors fail in adverse conditions such as smoke and fog, millimeter wave (mmWave) radar sensors offer reliable sensing in such conditions. However, creating accurate probabilistic maps from radar data presents significant challenges due to the inherently sparse and noisy characteristics of radio wave measurements and signal processing steps. In an attempt to address these issues, we establish a complete pipeline from raw radar signals to probabilistic occupancy maps, incorporating Synthetic Aperture Radar processing followed by a probabilistic modeling step. We conduct extensive validation across indoor environments, comparing our approach against different signal processing and probabilistic modeling approaches. We also evaluate mapping quality through downstream path planning performance analysis. Furthermore, we investigate the impact of key parameters and antenna array configuration on mapping performance. The experimental results demonstrate both the effectiveness and limitations of SAR-based probabilistic mapping for real-world robotic deployment. To facilitate future research and broader adoption, we contribute an open-source cascaded mmWave radar dataset with an accompanying GPU-accelerated signal processing pipeline available at https://github.com/rpl-cmu/rpm.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.09911v1" target="_blank" class="paper-title">Diffusion for Long-Horizon Multi-Robot Path Planning in Human-Shared Environments</a>
-                        <span class="paper-date">2026-07-10</span>
-                    </div>
-                                        <span class="paper-comment">📝 8 pages, 3 figures, to be published in IROS 2026</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Multi-robot path planning in human-shared environments requires a delicate balance between robust inter-robot coordination and socially aware behavior. While diffusion models excel at generating predictable, human-like paths, existing generative planners are often restricted to paths of fixed duration and high computational latency, limiting their adaptability to varying goal distances and hindering real-time deployment. We present Multi-Robot Rolling Diffusion (MRRD), a novel framework that enables real-time, long-horizon navigation for large robot teams through dense crowds. MRRD combines a rolling-horizon scheme to accommodate the limited prediction horizon of human motion, parallelized diffusion inference for scalable generation of human-like paths, and a conflict-based-search mechanism for resolving inter-robot collisions. It further incorporates urgency-based temporal conditioning to generate paths with varying speeds and employs differentiated guidance terms to maximize both social awareness around humans and efficient coordination between robots. Experimental results in crowded environments demonstrate that MRRD successfully scales to 15 robots in real-time, significantly outperforming existing baselines in both safety and mission success rates.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.06123v1" target="_blank" class="paper-title">MP-MPPI: A Motion Primitive Guided Sampling-Based Optimizer for Model Predictive Control</a>
-                        <span class="paper-date">2026-07-07</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>This paper proposes a novel method that extends the Model Predictive Path Integral (MPPI) method with motion primitives for additional structured sampling, which enhances the convergence towards a globally optimal solution. By evaluating motion primitives and perturbed control sequences in a real-time sampling-based optimization loop, this work addresses the limitations of the path planning capabilities of sampling-based controllers. The algorithm is implemented on a quadcopter simulator and tested on an obstacle field navigation task. It is demonstrated that the proposed approach enhances exploration of the control space while maintaining the fast, reactive behavior required for real-time control.</p>
                     </details>
                 </div>
             </div>

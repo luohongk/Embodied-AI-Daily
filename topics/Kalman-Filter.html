@@ -575,7 +575,7 @@
                 <a href="Feed-Forward-Reconstruction.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Feed Forward Reconstruction</span>
-                    <span class="nav-count">59</span>
+                    <span class="nav-count">60</span>
                 </a>
                 <a href="Vision-and-Language-Navigation.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -615,7 +615,7 @@
                 <a href="Gaussian-Splatting.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#84cc16"></span>
                     <span class="nav-label">Gaussian Splatting</span>
-                    <span class="nav-count">79</span>
+                    <span class="nav-count">80</span>
                 </a>
                 <a href="Visual-SLAM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#22c55e"></span>
@@ -675,7 +675,7 @@
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Kalman Filter</span>
-                    <span class="nav-count">49</span>
+                    <span class="nav-count">50</span>
                 </a>
                 <a href="Loop-Closure-Detection.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -794,7 +794,7 @@
             <a href="Feed-Forward-Reconstruction.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Feed Forward Reconstruction</span>
-                <span class="nav-count">59</span>
+                <span class="nav-count">60</span>
             </a>
             <a href="Vision-and-Language-Navigation.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -834,7 +834,7 @@
             <a href="Gaussian-Splatting.html" class="nav-item">
                 <span class="nav-dot" style="background:#84cc16"></span>
                 <span class="nav-label">Gaussian Splatting</span>
-                <span class="nav-count">79</span>
+                <span class="nav-count">80</span>
             </a>
             <a href="Visual-SLAM.html" class="nav-item">
                 <span class="nav-dot" style="background:#22c55e"></span>
@@ -894,7 +894,7 @@
             <a href="Kalman-Filter.html" class="nav-item active">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Kalman Filter</span>
-                <span class="nav-count">49</span>
+                <span class="nav-count">50</span>
             </a>
             <a href="Loop-Closure-Detection.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -1025,9 +1025,54 @@
         <section class="topic-section">
             <div class="topic-header">
                 <span class="topic-badge" style="background:#8b5cf6">Kalman Filter</span>
-                <span class="topic-count">49 papers</span>
+                <span class="topic-count">50 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2609.04066v1" target="_blank" class="paper-title">Subspace Inference Enables Efficient Active Reward Learning from Preferences</a>
+                        <span class="paper-date">2026-09-03</span>
+                    </div>
+                                        <span class="paper-comment">📝 Published at TMLR</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：从人类偏好中学习奖励模型（RLHF）时，现有方法样本效率低，且对大型神经网络奖励模型进行不确定性量化以支持主动学习非常困难。&#10;&#10;🛠 **方法**：提出PreferenceEKF，将主动偏好学习建模为序贯贝叶斯滤波问题，利用扩展卡尔曼滤波器在低维参数子空间内进行推理，避免全参数空间的高成本后验推断，并高效采样网络参数以计算主动学习的采集函数。&#10;&#10;✨ **主要贡献**：在D4RL和V-D4RL基准上，PreferenceEKF相比其他贝叶斯深度学习方法在样本效率、运行时间、可扩展性和校准性上更优，且学到的奖励模型能带来有竞争力的离线强化学习策略性能。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Reinforcement learning from human feedback (RLHF) has emerged as a powerful yet sample-inefficient approach for learning reward models from human preferences, making active learning a critical component in synthesizing informative preference queries. However, effective uncertainty quantification required for active learning remains a key challenge for large neural network reward models. In this paper, we introduce PreferenceEKF, a sample-efficient approach that tracks reward model uncertainty by framing active preference learning as a sequential Bayesian filtering problem. Instead of relying on computationally prohibitive posterior inference over the full neural network parameter space, our method performs sequential inference via an extended Kalman filter within a low-dimensional parameter subspace, continuously updating the reward model posterior as new preference queries arrive. Our approach enables scalable sampling of neural network parameters to efficiently compute acquisition functions for active reward learning. Experiments on the D4RL and V-D4RL benchmarks demonstrate that our approach achieves better sample efficiency, runtime, scalability, and calibration compared to other Bayesian deep learning approaches, and the learned reward models lead to competitive offline reinforcement learning policy performance. This highlights the potential of scalable Bayesian methods for preference-based reward modeling in RLHF. Our code is available at https://github.com/yutaizhou/bnn_pref.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2503.04580v3" target="_blank" class="paper-title">DogLegs: Robust Proprioceptive State Estimation for Legged Robots Using Multiple Leg-Mounted IMUs</a>
+                        <span class="paper-date">2026-09-03</span>
+                    </div>
+                                        <span class="paper-comment">📝 8 pages, 8 figures</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在激光雷达和相机等外部传感器可能失效的极端环境中，如何实现腿足机器人主躯干的鲁棒且精确的本体状态估计。&#10;&#10;🛠 **方法**：提出DogLegs系统，融合躯干IMU、关节编码器和多个腿部IMU的数据，利用扩展卡尔曼滤波器（EKF）处理所有IMU帧的误差状态，并通过腿部IMU检测足底接触提供零速度更新，同时利用腿部运动学计算躯干与腿部IMU间的相对位置约束来修正主躯干状态。&#10;&#10;✨ **主要贡献**：相比仅使用躯干IMU和关节编码器的传统腿式里程计方法，DogLegs在多种地形上显著提升了状态估计精度，并公开了代码和数据集以促进社区研究。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Robust and accurate proprioceptive state estimation of the main body is crucial for legged robots to execute tasks in extreme environments where exteroceptive sensors, such as LiDARs and cameras, may become unreliable. In this paper, we propose DogLegs, a state estimation system for legged robots that fuses the measurements from a body-mounted inertial measurement unit (Body-IMU), joint encoders, and multiple leg-mounted IMUs (Leg-IMU) using an extended Kalman filter (EKF). The filter system contains the error states of all IMU frames. The Leg-IMUs are used to detect foot contact, thereby providing zero-velocity measurements to update the state of the Leg-IMU frames. Additionally, we compute the relative position constraints between the Body-IMU and Leg-IMUs by the leg kinematics and use them to update the main body state and reduce the error drift of the individual IMU frames. Field experimental results have shown that our proposed DogLegs system achieves better state estimation accuracy compared to the traditional leg odometry method (using only Body-IMU and joint encoders) across various terrains. We make our code and datasets publicly available to benefit the research community (https://github.com/YibinWu/DogLegs).</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.14840v2" target="_blank" class="paper-title">Regularity-informed data assimilation: A hierarchical Bayesian approach to ensemble Kalman filtering for hyperbolic conservation laws</a>
+                        <span class="paper-date">2026-09-02</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：针对双曲守恒律等时间依赖偏微分方程，传统数据同化方法忽视状态的空间正则性，导致估计结果出现非物理振荡或模糊尖锐特征。&#10;&#10;🛠 **方法**：提出一种正则性感知的滤波框架，将边缘保持正则化集成到集合卡尔曼滤波（EnKF）的分析步骤中，并采用层次化广义稀疏贝叶斯学习（GSBL）先验自适应推断空间变化超参数。&#10;&#10;✨ **主要贡献**：开发了GSBL-EnKF方法，在平滑区域抑制振荡、在间断处保持锐利特征，显著提升复杂瞬态系统状态估计的物理真实性与精度，尤其适用于不确定性量化场景。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>We propose a novel regularity-informed filtering framework for data assimilation in the context of hyperbolic conservation laws and other time-dependent partial differential equations. We focus on systems whose states exhibit steep gradients and jump discontinuities. While filtering is widely used to improve numerical simulations by incorporating observational data, traditional filtering methods lack awareness of the spatial regularity of states produced in these systems. As a result, data assimilation often produces unphysical state estimates, introducing spurious oscillations in smooth regions and smearing sharp features. To address this limitation, we introduce a filtering framework that incorporates edge-preserving regularization into the filter's analysis step; this framework balances simulation forecasts, observational data, and structural prior knowledge. We formalize this approach using the ensemble Kalman filter (EnKF) and a class of hierarchical generalized sparse Bayesian learning (GSBL) priors, which adaptively infer spatially varying hyperparameters to promote non-oscillatory behavior in smooth regions while preserving discontinuities. We demonstrate the effectiveness of the resulting GSBL-EnKF method on challenging benchmark problems governed by hyperbolic conservation laws. Our results show that enforcing regularity in the analysis step yields sharper, less oscillatory state estimates and lower errors of the ensemble mean. This sometimes comes at the cost of ensemble spread, which we quantify and discuss.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2609.02332v1" target="_blank" class="paper-title">A simple derivation of the Kalman filter</a>
@@ -1139,10 +1184,7 @@
                         <span class="paper-date">2026-08-30</span>
                     </div>
                                         <span class="paper-comment">📝 8 pages, 6 figures, 4 tables. Supplementary video: https://youtu.be/QkZY0So3myw</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有基于学习的惯性里程计（IO）在速度回归和不确定性估计上存在训练困难，且负对数似然（NLL）损失可能导致过度自信的估计。&#10;&#10;🛠 **方法**：提出VeloBins，将速度回归转化为离散速度箱的分类问题，从箱分布的期望和方差分别解码速度和不确定性，无需独立的不确定性解码器；并用误差条件高斯标签显式监督不确定性，其标准差设为速度误差。&#10;&#10;✨ **主要贡献**：在四个空中数据集（含激进飞行、27g纳米无人机和超21m/s竞速）上，VeloBins均取得最低平均误差，速度、相对轨迹和绝对轨迹误差分别较最强基线降低3-27%、8-40%和6-53%；且在不优化NLL损失的情况下，获得最低NLL和最佳滤波器一致性。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Inertial odometry (IO) is critical for aerial robots, where aggressive maneuvers and poor lighting degrade visual sensors. Recent learning-based IO methods improve traditional integration-based approaches by learning motion priors from IMU and platform-specific sensors, then fusing the predictions within an extended Kalman filter. However, learning velocity through regression is difficult, while jointly estimating uncertainty with a separate decoder and negative log-likelihood (NLL) loss further complicates training and can lead to over-confident estimates. We introduce VeloBins, which reformulates velocity regression as classification over discretized velocity bins. We decode both the velocity from the bin distribution's expectation and the uncertainty from its variance, removing the need for a separate uncertainty decoder. We further supervise the uncertainty explicitly using an error-conditioned Gaussian label centered at the ground-truth velocity, with a standard deviation set to the velocity error. We evaluate VeloBins on four aerial datasets, ranging from free-form aggressive flights and a 27 g nano-quadrotor to drone racing at over 21~m/s. VeloBins achieves the lowest average errors on all four datasets, reducing velocity, relative trajectory, and absolute trajectory errors by 3-27%, 8-40%, and 6-53%, respectively, compared with the strongest baseline. Notably, the proposed supervision achieves the lowest NLL and best filter consistency despite never optimizing an NLL loss. The code will be available upon acceptance.</p>
@@ -1154,10 +1196,7 @@
                         <span class="paper-date">2026-08-30</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在树脂传递模塑成型过程中，因“竞速效应”导致树脂流动前沿不均匀，可能提前到达排气口而形成干斑缺陷，需在填充完成前确保纤维预成型体完全饱和。&#10;&#10;🛠 **方法**：提出联合估计与控制策略，利用填充过程中的压力传感器数据，通过迭代扩展卡尔曼滤波估计未知的竞速强度，并同时优化辅助注入口压力；用神经网络代理模型替代昂贵的有限元-控制体积模型，并采用贝叶斯近似误差框架补偿代理模型与原模型的差异。&#10;&#10;✨ **主要贡献**：证明了流动前沿几何仅取决于时间平均的注入口压力，使代理模型训练可行；在分叉几何上验证了该方法能显著减少填充结束时的未填充节点数，但改善程度强烈依赖于辅助注入口的位置和数量。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>In resin transfer moulding, complete saturation of the fibre preform is necessary before the resin front reaches the outlet vent(s), to prevent dry-spot formation. In practice, the flow front rarely advances uniformly due to race-tracking effects. We propose a combined estimation and control strategy to address this issue. We use pressure-sensor data collected during filling to estimate the unknown race-tracking strengths via an iterated extended Kalman filter, and to simultaneously optimise auxiliary gate pressures to prevent the resin from arriving at the vent before complete saturation occurs. To make this approach feasible in real time, we replace the expensive finite element-control volume model with neural network surrogate models. The Bayesian approximation error framework is used to account for the discrepancy between the surrogates and the original model. To make the training of the surrogates feasible with time-dependent control actions, we prove that the flow-front geometry depends only on the time-averaged gate pressures. We demonstrate the methodology on a representative forked geometry, showing that the combined estimation-and-control framework can substantially reduce the number of unfilled nodes at the end of filling compared with an uncontrolled baseline. However, the level of improvement depends strongly on the location and number of auxiliary gates.</p>
@@ -1169,10 +1208,7 @@
                         <span class="paper-date">2026-08-27</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：仓库移动机器人的转向零位和LiDAR外参常依赖手动校准，易导致路径跟踪误差（如蛇行、横摆）和安全风险。&#10;&#10;🛠 **方法**：提出基于扩展卡尔曼滤波（EKF）的在线联合估计方法，在自行车运动学模型中同时估计转向偏移和平面LiDAR外参。&#10;&#10;✨ **主要贡献**：无需手动校准即可在线修正转向偏移，实验表明能显著降低横向跟踪误差（CTE），提升路径跟踪可靠性。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Accurate steering sensing and LiDAR-to-vehicle extrinsics are crucial for reliable path tracking in warehouse mobile robots (WMRs); miscalibration often leads to snaking, weaving, and elevated cross-track error (CTE). In practice, steering ``zero'' is commonly set manually (e.g., eyeballing straightness via a PS4 joystick), while LiDAR extrinsics are assumed from CAD and may drift after maintenance. Such static, manual procedures frequently cause miscalibration in safety-critical environments. This paper presents an Extended Kalman Filter (EKF)--based method for online estimation of steering offset and planar LiDAR extrinsics within a bicycle-kinematics model, providing a principled alternative to manual calibration. Experiments on real datasets show that correcting steering offset reduces CTE substantially, validating the effectiveness of the proposed approach.</p>
@@ -1368,18 +1404,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>In modern intelligent transportation systems, it is essential to accurately estimate vehicle positions, especially in mixed traffic conditions where both connected and conventional vehicles coexist. Roadside infrastructure and connected vehicles can provide complementary observations of the same traffic scene, but real-world evidence on decision-level fusion between these sources remains limited. This paper proposes a multi-observer vehicle localization framework that fuses compact object-level detections from a static roadside radar and a dynamic LiDAR-equipped connected vehicle. We evaluate the framework with real-world data collected at an urban intersection in Helsinki, Finland, with a separately instrumented target vehicle used as the reference trajectory. Two extended Kalman filter based strategies for the localization task were benchmarked. The performance of the radar and LiDAR sensors were evaluated separately, and the two fusion strategies were explored under nominal sensing conditions, reduced LiDAR update rates, simulated LiDAR occlusions, and different target-vehicle motion states. The results show that, under full LiDAR availability, fusion performance is dominated by the LiDAR observations, while the less accurate and less consistent radar observations provide only limited additional improvement. Nevertheless, AEKF achieves small gains over the LiDAR-only baseline, and object-level connected vehicle observations remain useful when shared at reduced update rates. These findings indicate that decision-level fusion provides scenario-dependent benefits rather than automatic improvement over a strong single-sensor baseline. We release the dataset and implementation on Github to support further research: https://github.com/AppuriAalto/multi-observer-vehicle-tracking</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2608.14840v1" target="_blank" class="paper-title">Regularity-informed data assimilation: A hierarchical Bayesian approach to ensemble Kalman filtering for hyperbolic conservation laws</a>
-                        <span class="paper-date">2026-08-14</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>We propose a novel regularity-informed filtering framework for data assimilation in the context of hyperbolic conservation laws and other time-dependent partial differential equations. We focus on systems whose states exhibit steep gradients and jump discontinuities. While filtering is widely used to improve numerical simulations by incorporating observational data, traditional filtering methods lack awareness of the spatial regularity of states produced in these systems. As a result, data assimilation often produces unphysical state estimates, introducing spurious oscillations in smooth regions and smearing sharp features. To address this limitation, we introduce a filtering framework incorporating edge-preserving regularization into the filter's analysis step; this framework balances simulation forecasts, observation data, and structural prior knowledge. We formalize this approach using the ensemble Kalman filter (EnKF) and a class of hierarchical generalized sparse Bayesian learning (GSBL) priors, which adaptively infer spatially varying hyperparameters to promote non-oscillatory behavior in smooth regions while preserving discontinuities. We demonstrate the effectiveness of the resulting GSBL-EnKF method on challenging benchmark problems governed by hyperbolic conservation laws. Our results show that preserving regularity during the analysis step can improve the physical realism and accuracy of filtering for complicated time-dependent systems, especially when quantifying the uncertainty of transient states of the system.</p>
                     </details>
                 </div>
                 <div class="paper-card">
@@ -1632,18 +1656,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>More than 70% of the people that fell overboard cruise ships in the period 2010-2019 lost their lives. This paper presents a strategy for reliably predicting the area a person may be in after a man overboard incident, and describes in detail the search methods to find them utilizing UAV technology. The search area prediction method employs an Extended Kalman Filter that capitalizes on the information from the Leeway model to track the missing person in the sea by taking into account the uncertainty of the movement of the person and the weather conditions in the area. Then, a UAV uses this information to search for the person. Five different methods for searching in this dynamic area are presented and evaluated - the Zigzag, the Boustrophedon, the Spiral, the Probability Informed Search and the Improved Probability Informed Search (IPIS) methods. The IPIS method provides success rate of over 80% on average for finding a person, even if the UAV initiates the search mission 20 minutes after the man overboard incident and even assuming a detection method with a success rate of 30%. All code for the simulation environment and the evaluation of the methods is available on our GitHub page at https://github.com/diangeli/pdms-man-overboard.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.20939v2" target="_blank" class="paper-title">Interaction Dynamics Modeling and Predictive Control for Safe Steerable Catheter--Tissue Interaction</a>
-                        <span class="paper-date">2026-08-03</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Safe steerable catheter control is fundamentally a problem of interaction dynamics: the tip must follow a planned motion, remain compliant against moving tissue, reject friction and hysteresis, and respect a clinically meaningful never-exceed contact-force bound. We formulate catheter--tissue interaction dynamics in the scalar tip-normal coordinate of a single-segment single-tendon catheter. A partial-physics feedforward cancels only the reliable nominal bending dynamics, exposing a configuration-invariant linear interaction-dynamics model whose input gain varies through the scalar catheter inertia. A predictive optimizer then regulates this interaction state subject to hard contact-force, tendon-force, and curvature constraints. An augmented Kalman filter compresses contact, friction, and modeling error into one sensor-free disturbance state, giving nominal offset-free regulation in free space while leaving force safety to the explicit constraint. The unconstrained and disturbance-free limit recovers classical catheter impedance as a special realization of the same interaction dynamics, rather than as the main design object. In a MuJoCo distributed-compliance simulation of an eight-link tendon-driven catheter, disturbance augmentation cuts free-space approach error by 90\%, and only the force-constrained predictive interaction-dynamics controller reconciles tracking with the 0.5\,N bound: the unconstrained controller drives contact force to 0.60\,N against a penetrating target, while the constrained one holds 0.47\,N at identical tracking. These results show that offset-free motion regulation and contact-force safety are coupled interaction-dynamics objectives, and that the explicit predictive constraint resolves their tension under stiff tissue contact. The bound also holds under $0.5$\,mm, $1.2$\,Hz cardiac motion. Hardware validation is future work.</p>
                     </details>
                 </div>
             </div>

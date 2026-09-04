@@ -575,7 +575,7 @@
                 <a href="Feed-Forward-Reconstruction.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Feed Forward Reconstruction</span>
-                    <span class="nav-count">59</span>
+                    <span class="nav-count">60</span>
                 </a>
                 <a href="Vision-and-Language-Navigation.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -615,7 +615,7 @@
                 <a href="Gaussian-Splatting.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#84cc16"></span>
                     <span class="nav-label">Gaussian Splatting</span>
-                    <span class="nav-count">79</span>
+                    <span class="nav-count">80</span>
                 </a>
                 <a href="Visual-SLAM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#22c55e"></span>
@@ -675,7 +675,7 @@
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Kalman Filter</span>
-                    <span class="nav-count">49</span>
+                    <span class="nav-count">50</span>
                 </a>
                 <a href="Loop-Closure-Detection.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -794,7 +794,7 @@
             <a href="Feed-Forward-Reconstruction.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Feed Forward Reconstruction</span>
-                <span class="nav-count">59</span>
+                <span class="nav-count">60</span>
             </a>
             <a href="Vision-and-Language-Navigation.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -834,7 +834,7 @@
             <a href="Gaussian-Splatting.html" class="nav-item">
                 <span class="nav-dot" style="background:#84cc16"></span>
                 <span class="nav-label">Gaussian Splatting</span>
-                <span class="nav-count">79</span>
+                <span class="nav-count">80</span>
             </a>
             <a href="Visual-SLAM.html" class="nav-item">
                 <span class="nav-dot" style="background:#22c55e"></span>
@@ -894,7 +894,7 @@
             <a href="Kalman-Filter.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Kalman Filter</span>
-                <span class="nav-count">49</span>
+                <span class="nav-count">50</span>
             </a>
             <a href="Loop-Closure-Detection.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -1030,6 +1030,36 @@
             <div class="paper-list">
                 <div class="paper-card">
                     <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2609.04174v1" target="_blank" class="paper-title">Zero-Shot Novel Depth Synthesis Using 3D Foundation Models Scene Representations</a>
+                        <span class="paper-date">2026-09-03</span>
+                    </div>
+                                        <span class="paper-comment">📝 Accepted to the European Conference on Computer Vision (ECCV) 2026. Project page: https://akola-mbey-denis.github.io/Z3D-page/</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：如何利用3D基础模型（3DFM）的内部表示，从单一视角推断场景中未见视角的深度信息，实现零样本的新视角深度合成。&#10;&#10;🛠 **方法**：提出Z3D方法，基于VGGT等3DFM的预训练表示，通过潜在扩散模型（latent diffusion）在3DFM表示空间中生成未见视角的点图（pointmaps），从而解码隐藏表面并估计深度。&#10;&#10;✨ **主要贡献**：首次证明3DFM内部表示可解码隐藏表面，并实现跨多个数据集的新视角深度预测，无需针对特定场景训练，展示了3DFM表示对3D场景的泛化能力。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>3D Foundation Models (3DFMs) such as VGGT have recently pushed the boundaries of 3D vision by predicting rich unified representations with feed-foward transformers. The scene representations learned by these models enable strong performance on multiple 3D vision tasks. In this paper, we investigate using their internal representations to infer 3D in the scene from new views. Our hypothesis is that in order to solve the task of 3D reconstruction, these models need to learn a representation that includes a large amount of general knowledge about 3D scenes. After showing that it is possible to decode hidden surfaces from internal 3DFM representations, we propose a method, Z3D, that estimates pointmaps in unseen views by doing latent diffusion on 3DFM representation. We show that Z3D can predict realistic depth maps for new views across multiple datasets.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2609.03824v1" target="_blank" class="paper-title">VI3: Grounding Pretrained 3D Foundation Models with Inertial Cues</a>
+                        <span class="paper-date">2026-09-03</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：3D基础模型（3DFMs）从单目图像预测相机位姿和深度时，因缺乏度量尺度信息，绝对尺度预测不准确。&#10;&#10;🛠 **方法**：提出VI3框架，利用设备内置的IMU读数（通过预积分获得度量运动参考）来恢复3DFM输出的尺度，并针对不同3DFM架构设计自适应锚定策略。&#10;&#10;✨ **主要贡献**：在无需真值监督的情况下恢复度量尺度，同时保持几何一致性；在合成和真实航拍数据集上验证，运动条件良好时作为精细优化，运动信息不足时作为强先验。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>3D foundation models (3DFMs) excel at predicting camera poses and dense depth from multiple views of a scene, showcasing strong zero-shot generalization. However, as metric scale is not observable from monocular images, their absolute scale predictions are typically inaccurate. Inertial measurement units (IMUs), present in most devices, naturally complement monocular cameras by observing scaled motion. We introduce VI3, a model-agnostic framework that metrically anchors a pretrained 3DFM using only IMU readings. VI3 initializes and preintegrates the IMU to obtain a metric motion reference, which is then used to recover the scale of the 3DFM outputs. Our method includes adaptable anchoring strategies tailored to diverse 3DFM architectures. Experiments on synthetic and real aerial datasets demonstrate that VI3 recovers metric scale without ground-truth supervision while preserving geometric consistency, acting as a fine refinement under well-conditioned motion and as a strong prior when motion is less informative.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
                         <a href="https://arxiv.org/abs/2608.29733v1" target="_blank" class="paper-title">XDG: Accelerated Visual Disambiguation</a>
                         <span class="paper-date">2026-08-30</span>
                     </div>
@@ -1154,10 +1184,7 @@
                         <span class="paper-date">2026-08-08</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：机器人操作通常需要与机器人参考系对齐的、具有公制尺度的3D场景表示，而传统手眼标定依赖标定板，RGB重建又存在尺度未知和坐标系不统一的问题。&#10;&#10;🛠 **方法**：提出Calib3R，一种无需标定板的联合优化方法，利用3D基础模型从RGB图像提取点图（pointmaps），结合机器人位姿，在统一优化框架中同时完成手眼标定和公制尺度的3D场景重建，支持单目和多目相机配置。&#10;&#10;✨ **主要贡献**：在多种数据集上，Calib3R仅用不到10张图像即可实现高精度标定，性能优于现有无标定板和有标定板方法，同时输出与机器人基座对齐的、具有真实尺度的3D重建结果。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Robots often rely on RGB images for tasks like manipulation. However, reliable interaction typically requires a 3D scene representation that is metric-scaled and aligned with the robot reference frame. This depends on accurate hand-eye calibration and dense 3D reconstruction, tasks usually treated separately, despite both relying on geometric correspondences from RGB data. Traditional calibration techniques needs patterns, while RGB-based reconstruction yields 3D geometry with an unknown scale in an arbitrary frame. Multi-camera setups add further complexity, as data must be expressed in a shared reference frame. We present Calib3R, a patternless method that jointly performs hand-eye calibration and metric-scaled 3D reconstruction via unified optimization. Calib3R handles single- and multi-camera setups on robot arms. It builds on a 3D foundation model to extract pointmaps from RGB images, which are combined with robot poses to reconstruct a scaled 3D scene aligned with the robot base reference frame. Experiments on diverse datasets show that Calib3R achieves accurate calibration with less than 10 images, outperforming patternless and pattern-based methods.</p>
@@ -1169,10 +1196,7 @@
                         <span class="paper-date">2026-08-07</span>
                     </div>
                                         <span class="paper-comment">📝 Accepted at the Applications of Medical AI (AMAI) Workshop at MICCAI 2026</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有基于影像的乳腺癌新辅助化疗疗效预测多依赖单一时间点，无法捕捉治疗过程中的动态变化，导致病理完全缓解（pCR）预测不准确。&#10;&#10;🛠 **方法**：提出一个纵向预测框架，结合冻结的3D基础编码器（Pillar-0）与自研时间动态网络（TDN），利用四个临床时间点的动态增强MRI序列，融合时间感知的体积嵌入与临床及治疗数据来预测pCR。&#10;&#10;✨ **主要贡献**：在I-SPY2和ACRIN-6698联合队列的982例患者上验证，模型融合纵向3D影像与临床数据后取得最优性能（测试AUROC 73.6%，平衡准确率69.1%），证明纵向影像能提供互补信息，有效提升pCR预测能力。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Pathologic complete response (pCR) is an important endpoint in neoadjuvant chemotherapy (NAC) for breast cancer, and predicting pCR from imaging during treatment could support treatment response assessment. Many existing imaging-based approaches rely on a single static timepoint, which fails to capture changes that occur during treatment. In this work, we present a longitudinal framework that combines a frozen 3D foundation encoder (Pillar-0) with our Temporal Dynamics Network (TDN) to predict treatment response from serial Dynamic Contrast-Enhanced (DCE) MRI acquired across four clinical timepoints from pre-treatment to pre-surgery. The TDN combines time-aware volumetric embeddings with clinical and treatment data to predict pCR. Evaluated on 982 patients from the combined I-SPY2 and ACRIN-6698 cohort, the proposed model achieves strong performance across all reported metrics when longitudinal 3D imaging is fused with clinical data (test AUROC: 73.6%, balanced accuracy: 69.1%). While clinical variables provide the strongest individual predictive signal, longitudinal 3D imaging contributes complementary information when fused with clinical data, improving pCR prediction. Our source code is available at: https://github.com/omarftt/longitudinal_temporal_pillar.</p>
@@ -1992,30 +2016,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>This paper introduces LaS-Comp, a zero-shot and category-agnostic approach that leverages the rich geometric priors of 3D foundation models to enable 3D shape completion across diverse types of partial observations. Our contributions are threefold: First, \ourname{} harnesses these powerful generative priors for completion through a complementary two-stage design: (i) an explicit replacement stage that preserves the partial observation geometry to ensure faithful completion; and (ii) an implicit refinement stage ensures seamless boundaries between the observed and synthesized regions. Second, our framework is training-free and compatible with different 3D foundation models. Third, we introduce Omni-Comp, a comprehensive benchmark combining real-world and synthetic data with diverse and challenging partial patterns, enabling a more thorough and realistic evaluation. Both quantitative and qualitative experiments demonstrate that our approach outperforms previous state-of-the-art approaches. Our code and data will be available at \href{https://github.com/DavidYan2001/LaS-Comp}{LaS-Comp}.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2603.17625v1" target="_blank" class="paper-title">S-VGGT: Structure-Aware Subscene Decomposition for Scalable 3D Foundation Models</a>
-                        <span class="paper-date">2026-03-18</span>
-                    </div>
-                                        <span class="paper-comment">📝 7 pages, 5 figures. Accepted by ICME 2026</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Feed-forward 3D foundation models face a key challenge: the quadratic computational cost introduced by global attention, which severely limits scalability as input length increases. Concurrent acceleration methods, such as token merging, operate at the token level. While they offer local savings, the required nearest-neighbor searches introduce undesirable overhead. Consequently, these techniques fail to tackle the fundamental issue of structural redundancy dominant in dense capture data. In this work, we introduce \textbf{S-VGGT}, a novel approach that addresses redundancy at the structural frame level, drastically shifting the optimization focus. We first leverage the initial features to build a dense scene graph, which characterizes structural scene redundancy and guides the subsequent scene partitioning. Using this graph, we softly assign frames to a small number of subscenes, guaranteeing balanced groups and smooth geometric transitions. The core innovation lies in designing the subscenes to share a common reference frame, establishing a parallel geometric bridge that enables independent and highly efficient processing without explicit geometric alignment. This structural reorganization provides strong intrinsic acceleration by cutting the global attention cost at its source. Crucially, S-VGGT is entirely orthogonal to token-level acceleration methods, allowing the two to be seamlessly combined for compounded speedups without compromising reconstruction fidelity. Code is available at https://github.com/Powertony102/S-VGGT.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2603.16270v2" target="_blank" class="paper-title">MG-Grasp: Metric-Scale Geometric 6-DoF Grasping Framework with Sparse RGB Observations</a>
-                        <span class="paper-date">2026-03-18</span>
-                    </div>
-                                        <span class="paper-comment">📝 8 pages, 5 figures</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Single-view RGB-D grasp detection remains a common choice in 6-DoF robotic grasping systems, which typically requires a depth sensor. While RGB-only 6-DoF grasp methods has been studied recently, their inaccurate geometric representation is not directly suitable for physically reliable robotic manipulation, thereby hindering reliable grasp generation. To address these limitations, we propose MG-Grasp, a novel depth-free 6-DoF grasping framework that achieves high-quality object grasping. Leveraging two-view 3D foundation model with camera intrinsic/extrinsic, our method reconstructs metric-scale and multi-view consistent dense point clouds from sparse RGB images and generates stable 6-DoF grasp. Experiments on GraspNet-1Billion dataset and real world demonstrate that MG-Grasp achieves state-of-the-art (SOTA) grasp performance among RGB-based 6-DoF grasping methods.</p>
                     </details>
                 </div>
             </div>
