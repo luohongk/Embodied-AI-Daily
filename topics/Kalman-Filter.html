@@ -1,0 +1,1751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalman Filter — Embodied AI Daily</title>
+    <style>
+        :root {
+            --bg: #f8fafc;
+            --surface: #ffffff;
+            --text: #1e293b;
+            --text-secondary: #64748b;
+            --border: #e2e8f0;
+            --accent: #6366f1;
+            --sidebar-width: 280px;
+            --radius: 12px;
+            --shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04);
+            --shadow-md: 0 4px 12px rgba(0,0,0,.08);
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0f172a;
+                --surface: #1e293b;
+                --text: #e2e8f0;
+                --text-secondary: #94a3b8;
+                --border: #334155;
+                --shadow: 0 1px 3px rgba(0,0,0,.3);
+                --shadow-md: 0 4px 12px rgba(0,0,0,.4);
+            }
+        }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        html { scroll-behavior:smooth; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            display: flex;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            position: fixed;
+            top: 0; left: 0;
+            width: var(--sidebar-width);
+            height: 100vh;
+            background: var(--surface);
+            border-right: 1px solid var(--border);
+            overflow-y: auto;
+            padding: 24px 20px;
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        .sidebar-header {
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 8px;
+        }
+        .sidebar-header h1 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #6366f1, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 4px;
+        }
+        .sidebar-header h1 a { text-decoration: none; }
+        .sidebar-header .update {
+            font-size: .75rem;
+            color: var(--text-secondary);
+        }
+        .nav-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 12px;
+            border-radius: 8px;
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: .85rem;
+            transition: all .15s;
+        }
+        .nav-item:hover {
+            background: var(--bg);
+            color: var(--text);
+        }
+        .nav-item.active {
+            background: var(--bg);
+            color: var(--text);
+            font-weight: 600;
+        }
+        .nav-dot {
+            width: 8px; height: 8px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+        .nav-label {
+            flex: 1;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .nav-count {
+            font-size: .72rem;
+            background: var(--bg);
+            padding: 2px 7px;
+            border-radius: 10px;
+            font-weight: 600;
+        }
+
+        /* Main content */
+        .main {
+            margin-left: var(--sidebar-width);
+            flex: 1;
+            padding: 40px 48px;
+            max-width: calc(100% - var(--sidebar-width));
+        }
+        .hero {
+            text-align: center;
+            padding: 40px 0 48px;
+        }
+        .hero h2 {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+        .hero .subtitle {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            margin-bottom: 16px;
+        }
+        .author-line {
+            margin-top: 14px;
+            font-size: .88rem;
+            color: var(--text-secondary);
+        }
+        .author-line a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .author-line a:hover {
+            text-decoration: underline;
+        }
+        .author-sep {
+            color: var(--border);
+            margin: 0 8px;
+        }
+        .badges {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .badges img {
+            height: 20px;
+        }
+
+        /* Topic directory grid (index page) */
+        .topic-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 16px;
+            margin-bottom: 40px;
+        }
+        .topic-card {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 18px 20px;
+            text-decoration: none;
+            color: var(--text);
+            box-shadow: var(--shadow);
+            transition: box-shadow .2s, transform .15s;
+        }
+        .topic-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+        .topic-card-name {
+            font-weight: 700;
+            font-size: 1rem;
+        }
+        .topic-card-count {
+            font-size: .8rem;
+            color: var(--text-secondary);
+        }
+        .topic-card-go {
+            margin-top: 4px;
+            font-size: .82rem;
+            font-weight: 600;
+            color: var(--accent);
+        }
+
+        /* Topic page header */
+        .topic-section {
+            margin-bottom: 48px;
+        }
+        .topic-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--border);
+            flex-wrap: wrap;
+        }
+        .topic-badge {
+            display: inline-block;
+            color: #fff;
+            padding: 5px 14px;
+            border-radius: 20px;
+            font-size: .85rem;
+            font-weight: 600;
+            letter-spacing: .01em;
+        }
+        .topic-count {
+            font-size: .82rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 18px;
+            font-size: .85rem;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .back-link:hover { text-decoration: underline; }
+
+        /* Paper cards */
+        .paper-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .paper-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 16px 20px;
+            box-shadow: var(--shadow);
+            transition: box-shadow .2s, transform .15s;
+        }
+        .paper-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-1px);
+        }
+        .paper-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .paper-title {
+            font-weight: 600;
+            font-size: .95rem;
+            color: var(--text);
+            text-decoration: none;
+            flex: 1;
+            min-width: 0;
+        }
+        .paper-title:hover {
+            color: var(--accent);
+            text-decoration: underline;
+        }
+        .paper-date {
+            font-size: .78rem;
+            color: var(--text-secondary);
+            white-space: nowrap;
+            font-variant-numeric: tabular-nums;
+        }
+        .paper-comment {
+            display: inline-block;
+            margin-top: 6px;
+            font-size: .78rem;
+            color: var(--text-secondary);
+            background: var(--bg);
+            padding: 2px 10px;
+            border-radius: 6px;
+        }
+        .paper-abstract {
+            margin-top: 10px;
+            font-size: .85rem;
+            color: var(--text-secondary);
+        }
+        .paper-abstract summary {
+            cursor: pointer;
+            font-weight: 500;
+            color: var(--accent);
+            font-size: .82rem;
+            user-select: none;
+        }
+        .paper-abstract summary:hover {
+            text-decoration: underline;
+        }
+        .paper-abstract p {
+            margin-top: 8px;
+            line-height: 1.7;
+            padding: 12px 16px;
+            background: var(--bg);
+            border-radius: 8px;
+            border-left: 3px solid var(--accent);
+        }
+
+        /* AI Summary */
+        .ai-summary {
+            margin-top: 10px;
+            padding: 10px 14px;
+            background: linear-gradient(135deg, rgba(99,102,241,0.07), rgba(168,85,247,0.07));
+            border-radius: 8px;
+            border-left: 3px solid var(--accent);
+        }
+        .ai-label {
+            font-size: .8rem;
+            font-weight: 600;
+            color: var(--accent);
+            cursor: pointer;
+            user-select: none;
+            letter-spacing: .02em;
+        }
+        .ai-label:hover {
+            text-decoration: underline;
+        }
+        .ai-content {
+            font-size: .85rem;
+            color: var(--text);
+            line-height: 1.75;
+            margin-top: 10px;
+            max-height: 480px;
+            overflow-y: auto;
+            padding-right: 6px;
+        }
+        /* Rendered markdown inside AI summary */
+        .markdown-body h2 {
+            font-size: 1rem;
+            margin: 14px 0 6px;
+            padding-bottom: 4px;
+            border-bottom: 1px solid var(--border);
+            color: var(--text);
+        }
+        .markdown-body h3 {
+            font-size: .9rem;
+            margin: 10px 0 4px;
+            color: var(--accent);
+        }
+        .markdown-body p { margin: 6px 0; }
+        .markdown-body ul, .markdown-body ol { margin: 6px 0 6px 20px; }
+        .markdown-body li { margin: 3px 0; }
+        .markdown-body strong { color: var(--text); }
+        .markdown-body code {
+            background: var(--bg);
+            padding: 1px 5px;
+            border-radius: 4px;
+            font-size: .82em;
+        }
+        .markdown-body pre {
+            background: var(--bg);
+            padding: 10px 12px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-size: .8em;
+        }
+        .markdown-body table {
+            border-collapse: collapse;
+            margin: 8px 0;
+            font-size: .82em;
+        }
+        .markdown-body th, .markdown-body td {
+            border: 1px solid var(--border);
+            padding: 4px 8px;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 40px 0 20px;
+            color: var(--text-secondary);
+            font-size: .82rem;
+            border-top: 1px solid var(--border);
+            margin-top: 20px;
+        }
+
+        /* Sponsor banner */
+        .sponsor {
+            margin: 0 auto 8px;
+            max-width: 640px;
+            background: linear-gradient(135deg, rgba(16,185,129,0.10), rgba(99,102,241,0.10));
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 16px 20px;
+            text-align: center;
+        }
+        .sponsor-title {
+            font-size: .95rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 6px;
+        }
+        .sponsor-desc {
+            font-size: .82rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        .sponsor details { margin-top: 4px; }
+        .sponsor summary {
+            cursor: pointer;
+            display: inline-block;
+            background: #07c160;
+            color: #fff;
+            font-size: .82rem;
+            font-weight: 600;
+            padding: 7px 18px;
+            border-radius: 20px;
+            user-select: none;
+            list-style: none;
+        }
+        .sponsor summary::-webkit-details-marker { display: none; }
+        .sponsor summary:hover { opacity: .9; }
+        .sponsor-qr {
+            margin-top: 14px;
+        }
+        .sponsor-qr img {
+            width: 220px;
+            max-width: 80%;
+            border-radius: 10px;
+            box-shadow: var(--shadow-md);
+        }
+
+        /* Mobile top bar */
+        .mobile-bar {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            height: 52px;
+            background: var(--surface);
+            border-bottom: 1px solid var(--border);
+            z-index: 200;
+            padding: 0 16px;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .mobile-bar .mobile-title {
+            font-weight: 700;
+            font-size: .95rem;
+            background: linear-gradient(135deg, #6366f1, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .menu-toggle {
+            background: none;
+            border: none;
+            font-size: 1.4rem;
+            cursor: pointer;
+            color: var(--text);
+            padding: 4px 8px;
+            border-radius: 6px;
+            line-height: 1;
+            transition: background .15s;
+        }
+        .menu-toggle:hover {
+            background: var(--bg);
+        }
+
+        /* Mobile nav overlay */
+        .mobile-nav-overlay {
+            display: none;
+            position: fixed;
+            top: 52px; left: 0; right: 0; bottom: 0;
+            background: var(--surface);
+            z-index: 199;
+            overflow-y: auto;
+            padding: 8px 16px 24px;
+            flex-direction: column;
+        }
+        .mobile-nav-overlay.open {
+            display: flex;
+        }
+        .mobile-nav-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0 12px;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 4px;
+            font-weight: 600;
+            font-size: .85rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: .04em;
+        }
+        .mobile-nav-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 13px 8px;
+            border-radius: 8px;
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: .88rem;
+            border-bottom: 1px solid var(--border);
+            transition: background .1s;
+        }
+        .mobile-nav-item:active {
+            background: var(--bg);
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .sidebar {
+                display: none;
+            }
+            .mobile-bar {
+                display: flex;
+            }
+            .main {
+                margin-left: 0;
+                max-width: 100%;
+                padding: 68px 16px 20px;
+            }
+            .hero h2 {
+                font-size: 1.4rem;
+            }
+            .hero {
+                padding: 20px 0 32px;
+            }
+            .paper-header {
+                flex-direction: column;
+                gap: 4px;
+            }
+        }
+    </style>
+    <!-- MathJax for rendering LaTeX math in AI summaries -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true
+            },
+            options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'] }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+</head>
+<body>
+    <!-- Mobile top bar -->
+    <div class="mobile-bar">
+        <span class="mobile-title">🚀 Embodied AI Daily</span>
+        <button class="menu-toggle" id="menuToggle" onclick="toggleMenu()" aria-label="Toggle menu">☰</button>
+    </div>
+
+    <!-- Mobile nav overlay -->
+    <div class="mobile-nav-overlay" id="mobileNav">
+        <div class="mobile-nav-header">
+            <span>Topics</span>
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Close menu">✕</button>
+        </div>
+                <a href="Continuous-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#6366f1"></span>
+                    <span class="nav-label">Continuous Learning</span>
+                    <span class="nav-count">78</span>
+                </a>
+                <a href="Feed-Forward-Reconstruction.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#8b5cf6"></span>
+                    <span class="nav-label">Feed Forward Reconstruction</span>
+                    <span class="nav-count">60</span>
+                </a>
+                <a href="Vision-and-Language-Navigation.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#a855f7"></span>
+                    <span class="nav-label">Vision and Language Navigation</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="Vision-Language-Action.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#d946ef"></span>
+                    <span class="nav-label">Vision Language Action</span>
+                    <span class="nav-count">79</span>
+                </a>
+                <a href="World-Model.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#ec4899"></span>
+                    <span class="nav-label">World Model</span>
+                    <span class="nav-count">79</span>
+                </a>
+                <a href="3D-Foundation-Model.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#f43f5e"></span>
+                    <span class="nav-label">3D Foundation Model</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="LLM.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#ef4444"></span>
+                    <span class="nav-label">LLM</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="VLM.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#f97316"></span>
+                    <span class="nav-label">VLM</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="World-Action-Model.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#f59e0b"></span>
+                    <span class="nav-label">World Action Model</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="Gaussian-Splatting.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#84cc16"></span>
+                    <span class="nav-label">Gaussian Splatting</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="Visual-SLAM.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#22c55e"></span>
+                    <span class="nav-label">Visual SLAM</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="Visual-Inertial-SLAM.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#10b981"></span>
+                    <span class="nav-label">Visual Inertial SLAM</span>
+                    <span class="nav-count">78</span>
+                </a>
+                <a href="Visual-Inertial-Odometry.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#14b8a6"></span>
+                    <span class="nav-label">Visual Inertial Odometry</span>
+                    <span class="nav-count">79</span>
+                </a>
+                <a href="Lidar-SLAM.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#06b6d4"></span>
+                    <span class="nav-label">Lidar SLAM</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="LiDAR-Odometry.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#0ea5e9"></span>
+                    <span class="nav-label">LiDAR Odometry</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="GNSS.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#3b82f6"></span>
+                    <span class="nav-label">GNSS</span>
+                    <span class="nav-count">47</span>
+                </a>
+                <a href="Graph-Optimization.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#6366f1"></span>
+                    <span class="nav-label">Graph Optimization</span>
+                    <span class="nav-count">71</span>
+                </a>
+                <a href="Dynamic-SLAM.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#8b5cf6"></span>
+                    <span class="nav-label">Dynamic SLAM</span>
+                    <span class="nav-count">44</span>
+                </a>
+                <a href="Semantic-SLAM.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#a855f7"></span>
+                    <span class="nav-label">Semantic SLAM</span>
+                    <span class="nav-count">78</span>
+                </a>
+                <a href="Gaussian-SLAM.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#d946ef"></span>
+                    <span class="nav-label">Gaussian SLAM</span>
+                    <span class="nav-count">25</span>
+                </a>
+                <a href="Autonomous-Driving.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#6366f1"></span>
+                    <span class="nav-label">Autonomous Driving</span>
+                    <span class="nav-count">79</span>
+                </a>
+                <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#8b5cf6"></span>
+                    <span class="nav-label">Kalman Filter</span>
+                    <span class="nav-count">50</span>
+                </a>
+                <a href="Loop-Closure-Detection.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#a855f7"></span>
+                    <span class="nav-label">Loop Closure Detection</span>
+                    <span class="nav-count">79</span>
+                </a>
+                <a href="Visual-Place-Recognition.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#d946ef"></span>
+                    <span class="nav-label">Visual Place Recognition</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#ec4899"></span>
+                    <span class="nav-label">Deep Learning</span>
+                    <span class="nav-count">70</span>
+                </a>
+                <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#f43f5e"></span>
+                    <span class="nav-label">Reinforcement Learning</span>
+                    <span class="nav-count">78</span>
+                </a>
+                <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#ef4444"></span>
+                    <span class="nav-label">PPO</span>
+                    <span class="nav-count">75</span>
+                </a>
+                <a href="Hierarchical-Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#f97316"></span>
+                    <span class="nav-label">Hierarchical Reinforcement Learning</span>
+                    <span class="nav-count">78</span>
+                </a>
+                <a href="Model-Based-RL.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#f59e0b"></span>
+                    <span class="nav-label">Model-Based RL</span>
+                    <span class="nav-count">79</span>
+                </a>
+                <a href="Imitation-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#84cc16"></span>
+                    <span class="nav-label">Imitation Learning</span>
+                    <span class="nav-count">77</span>
+                </a>
+                <a href="Behavior-Cloning.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#22c55e"></span>
+                    <span class="nav-label">Behavior Cloning</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="Diffusion-Policy.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#10b981"></span>
+                    <span class="nav-label">Diffusion Policy</span>
+                    <span class="nav-count">79</span>
+                </a>
+                <a href="Model-Predictive-Control.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#14b8a6"></span>
+                    <span class="nav-label">Model Predictive Control</span>
+                    <span class="nav-count">42</span>
+                </a>
+                <a href="Whole-Body-Control.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#06b6d4"></span>
+                    <span class="nav-label">Whole-Body Control</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="Motion-Planning.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#0ea5e9"></span>
+                    <span class="nav-label">Motion Planning</span>
+                    <span class="nav-count">76</span>
+                </a>
+                <a href="Path-Planning.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#3b82f6"></span>
+                    <span class="nav-label">Path Planning</span>
+                    <span class="nav-count">74</span>
+                </a>
+                <a href="Multimodal-Fusion.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#6366f1"></span>
+                    <span class="nav-label">Multimodal Fusion</span>
+                    <span class="nav-count">79</span>
+                </a>
+                <a href="Scene-Understanding.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#8b5cf6"></span>
+                    <span class="nav-label">Scene Understanding</span>
+                    <span class="nav-count">78</span>
+                </a>
+                <a href="Domain-Randomization.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#a855f7"></span>
+                    <span class="nav-label">Domain Randomization</span>
+                    <span class="nav-count">79</span>
+                </a>
+                <a href="Bipedal-Locomotion.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#d946ef"></span>
+                    <span class="nav-label">Bipedal Locomotion</span>
+                    <span class="nav-count">79</span>
+                </a>
+                <a href="Dexterous-Manipulation.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#6366f1"></span>
+                    <span class="nav-label">Dexterous Manipulation</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="Mobile-Manipulation.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#8b5cf6"></span>
+                    <span class="nav-label">Mobile Manipulation</span>
+                    <span class="nav-count">80</span>
+                </a>
+    </div>
+
+    <!-- Desktop sidebar -->
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <h1><a href="../index.html" style="background:linear-gradient(135deg,#6366f1,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">🚀 Embodied AI Daily</a></h1>
+            <div class="update">by <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent);text-decoration:none;font-weight:500;">Hongkun Luo</a> (罗宏昆)</div>
+            <div class="update" style="margin-top:2px">Last update: 2026-09-06</div>
+        </div>
+            <a href="Continuous-Learning.html" class="nav-item">
+                <span class="nav-dot" style="background:#6366f1"></span>
+                <span class="nav-label">Continuous Learning</span>
+                <span class="nav-count">78</span>
+            </a>
+            <a href="Feed-Forward-Reconstruction.html" class="nav-item">
+                <span class="nav-dot" style="background:#8b5cf6"></span>
+                <span class="nav-label">Feed Forward Reconstruction</span>
+                <span class="nav-count">60</span>
+            </a>
+            <a href="Vision-and-Language-Navigation.html" class="nav-item">
+                <span class="nav-dot" style="background:#a855f7"></span>
+                <span class="nav-label">Vision and Language Navigation</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="Vision-Language-Action.html" class="nav-item">
+                <span class="nav-dot" style="background:#d946ef"></span>
+                <span class="nav-label">Vision Language Action</span>
+                <span class="nav-count">79</span>
+            </a>
+            <a href="World-Model.html" class="nav-item">
+                <span class="nav-dot" style="background:#ec4899"></span>
+                <span class="nav-label">World Model</span>
+                <span class="nav-count">79</span>
+            </a>
+            <a href="3D-Foundation-Model.html" class="nav-item">
+                <span class="nav-dot" style="background:#f43f5e"></span>
+                <span class="nav-label">3D Foundation Model</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="LLM.html" class="nav-item">
+                <span class="nav-dot" style="background:#ef4444"></span>
+                <span class="nav-label">LLM</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="VLM.html" class="nav-item">
+                <span class="nav-dot" style="background:#f97316"></span>
+                <span class="nav-label">VLM</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="World-Action-Model.html" class="nav-item">
+                <span class="nav-dot" style="background:#f59e0b"></span>
+                <span class="nav-label">World Action Model</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="Gaussian-Splatting.html" class="nav-item">
+                <span class="nav-dot" style="background:#84cc16"></span>
+                <span class="nav-label">Gaussian Splatting</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="Visual-SLAM.html" class="nav-item">
+                <span class="nav-dot" style="background:#22c55e"></span>
+                <span class="nav-label">Visual SLAM</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="Visual-Inertial-SLAM.html" class="nav-item">
+                <span class="nav-dot" style="background:#10b981"></span>
+                <span class="nav-label">Visual Inertial SLAM</span>
+                <span class="nav-count">78</span>
+            </a>
+            <a href="Visual-Inertial-Odometry.html" class="nav-item">
+                <span class="nav-dot" style="background:#14b8a6"></span>
+                <span class="nav-label">Visual Inertial Odometry</span>
+                <span class="nav-count">79</span>
+            </a>
+            <a href="Lidar-SLAM.html" class="nav-item">
+                <span class="nav-dot" style="background:#06b6d4"></span>
+                <span class="nav-label">Lidar SLAM</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="LiDAR-Odometry.html" class="nav-item">
+                <span class="nav-dot" style="background:#0ea5e9"></span>
+                <span class="nav-label">LiDAR Odometry</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="GNSS.html" class="nav-item">
+                <span class="nav-dot" style="background:#3b82f6"></span>
+                <span class="nav-label">GNSS</span>
+                <span class="nav-count">47</span>
+            </a>
+            <a href="Graph-Optimization.html" class="nav-item">
+                <span class="nav-dot" style="background:#6366f1"></span>
+                <span class="nav-label">Graph Optimization</span>
+                <span class="nav-count">71</span>
+            </a>
+            <a href="Dynamic-SLAM.html" class="nav-item">
+                <span class="nav-dot" style="background:#8b5cf6"></span>
+                <span class="nav-label">Dynamic SLAM</span>
+                <span class="nav-count">44</span>
+            </a>
+            <a href="Semantic-SLAM.html" class="nav-item">
+                <span class="nav-dot" style="background:#a855f7"></span>
+                <span class="nav-label">Semantic SLAM</span>
+                <span class="nav-count">78</span>
+            </a>
+            <a href="Gaussian-SLAM.html" class="nav-item">
+                <span class="nav-dot" style="background:#d946ef"></span>
+                <span class="nav-label">Gaussian SLAM</span>
+                <span class="nav-count">25</span>
+            </a>
+            <a href="Autonomous-Driving.html" class="nav-item">
+                <span class="nav-dot" style="background:#6366f1"></span>
+                <span class="nav-label">Autonomous Driving</span>
+                <span class="nav-count">79</span>
+            </a>
+            <a href="Kalman-Filter.html" class="nav-item active">
+                <span class="nav-dot" style="background:#8b5cf6"></span>
+                <span class="nav-label">Kalman Filter</span>
+                <span class="nav-count">50</span>
+            </a>
+            <a href="Loop-Closure-Detection.html" class="nav-item">
+                <span class="nav-dot" style="background:#a855f7"></span>
+                <span class="nav-label">Loop Closure Detection</span>
+                <span class="nav-count">79</span>
+            </a>
+            <a href="Visual-Place-Recognition.html" class="nav-item">
+                <span class="nav-dot" style="background:#d946ef"></span>
+                <span class="nav-label">Visual Place Recognition</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="Deep-Learning.html" class="nav-item">
+                <span class="nav-dot" style="background:#ec4899"></span>
+                <span class="nav-label">Deep Learning</span>
+                <span class="nav-count">70</span>
+            </a>
+            <a href="Reinforcement-Learning.html" class="nav-item">
+                <span class="nav-dot" style="background:#f43f5e"></span>
+                <span class="nav-label">Reinforcement Learning</span>
+                <span class="nav-count">78</span>
+            </a>
+            <a href="PPO.html" class="nav-item">
+                <span class="nav-dot" style="background:#ef4444"></span>
+                <span class="nav-label">PPO</span>
+                <span class="nav-count">75</span>
+            </a>
+            <a href="Hierarchical-Reinforcement-Learning.html" class="nav-item">
+                <span class="nav-dot" style="background:#f97316"></span>
+                <span class="nav-label">Hierarchical Reinforcement Learning</span>
+                <span class="nav-count">78</span>
+            </a>
+            <a href="Model-Based-RL.html" class="nav-item">
+                <span class="nav-dot" style="background:#f59e0b"></span>
+                <span class="nav-label">Model-Based RL</span>
+                <span class="nav-count">79</span>
+            </a>
+            <a href="Imitation-Learning.html" class="nav-item">
+                <span class="nav-dot" style="background:#84cc16"></span>
+                <span class="nav-label">Imitation Learning</span>
+                <span class="nav-count">77</span>
+            </a>
+            <a href="Behavior-Cloning.html" class="nav-item">
+                <span class="nav-dot" style="background:#22c55e"></span>
+                <span class="nav-label">Behavior Cloning</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="Diffusion-Policy.html" class="nav-item">
+                <span class="nav-dot" style="background:#10b981"></span>
+                <span class="nav-label">Diffusion Policy</span>
+                <span class="nav-count">79</span>
+            </a>
+            <a href="Model-Predictive-Control.html" class="nav-item">
+                <span class="nav-dot" style="background:#14b8a6"></span>
+                <span class="nav-label">Model Predictive Control</span>
+                <span class="nav-count">42</span>
+            </a>
+            <a href="Whole-Body-Control.html" class="nav-item">
+                <span class="nav-dot" style="background:#06b6d4"></span>
+                <span class="nav-label">Whole-Body Control</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="Motion-Planning.html" class="nav-item">
+                <span class="nav-dot" style="background:#0ea5e9"></span>
+                <span class="nav-label">Motion Planning</span>
+                <span class="nav-count">76</span>
+            </a>
+            <a href="Path-Planning.html" class="nav-item">
+                <span class="nav-dot" style="background:#3b82f6"></span>
+                <span class="nav-label">Path Planning</span>
+                <span class="nav-count">74</span>
+            </a>
+            <a href="Multimodal-Fusion.html" class="nav-item">
+                <span class="nav-dot" style="background:#6366f1"></span>
+                <span class="nav-label">Multimodal Fusion</span>
+                <span class="nav-count">79</span>
+            </a>
+            <a href="Scene-Understanding.html" class="nav-item">
+                <span class="nav-dot" style="background:#8b5cf6"></span>
+                <span class="nav-label">Scene Understanding</span>
+                <span class="nav-count">78</span>
+            </a>
+            <a href="Domain-Randomization.html" class="nav-item">
+                <span class="nav-dot" style="background:#a855f7"></span>
+                <span class="nav-label">Domain Randomization</span>
+                <span class="nav-count">79</span>
+            </a>
+            <a href="Bipedal-Locomotion.html" class="nav-item">
+                <span class="nav-dot" style="background:#d946ef"></span>
+                <span class="nav-label">Bipedal Locomotion</span>
+                <span class="nav-count">79</span>
+            </a>
+            <a href="Dexterous-Manipulation.html" class="nav-item">
+                <span class="nav-dot" style="background:#6366f1"></span>
+                <span class="nav-label">Dexterous Manipulation</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="Mobile-Manipulation.html" class="nav-item">
+                <span class="nav-dot" style="background:#8b5cf6"></span>
+                <span class="nav-label">Mobile Manipulation</span>
+                <span class="nav-count">80</span>
+            </a>
+    </nav>
+
+    <main class="main">
+        <a href="../index.html" class="back-link">← 返回汇总 / Back to all topics</a>
+        <section class="hero" style="padding:20px 0 24px">
+            <div class="sponsor">
+                <div class="sponsor-title">☕ 支持本项目 · Support this project</div>
+                <div class="sponsor-desc">
+                    每篇论文的 AI 深度总结都会调用大量 DeepSeek API（需付费）。<br>
+                    如果这个项目对你有帮助，欢迎请作者喝杯咖啡，支持服务器与 API 开销 🙏
+                </div>
+                <details>
+                    <summary>💚 微信赞助 / Sponsor via WeChat Pay</summary>
+                    <div class="sponsor-qr" style="display:flex;gap:16px;align-items:flex-start;flex-wrap:wrap;">
+                        <div style="text-align:center;">
+                            <img src="../images/qr_code.png" alt="QR Code" style="max-width:180px;">
+                            <div style="font-size:13px;color:#888;">🔗 二维码</div>
+                        </div>
+                        <div style="text-align:center;">
+                            <img src="../images/wechat_pay.jpg" alt="WeChat Pay QR code" style="max-width:180px;">
+                            <div style="font-size:13px;color:#888;">💚 微信赞助</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </section>
+        <section class="topic-section">
+            <div class="topic-header">
+                <span class="topic-badge" style="background:#8b5cf6">Kalman Filter</span>
+                <span class="topic-count">50 papers</span>
+            </div>
+            <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2609.04066v1" target="_blank" class="paper-title">Subspace Inference Enables Efficient Active Reward Learning from Preferences</a>
+                        <span class="paper-date">2026-09-03</span>
+                    </div>
+                                        <span class="paper-comment">📝 Published at TMLR</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：从人类偏好中学习奖励模型（RLHF）时，现有方法样本效率低，且对大型神经网络奖励模型进行不确定性量化以支持主动学习非常困难。&#10;&#10;🛠 **方法**：提出PreferenceEKF，将主动偏好学习建模为序贯贝叶斯滤波问题，利用扩展卡尔曼滤波器在低维参数子空间内进行推理，避免全参数空间的高成本后验推断，并高效采样网络参数以计算主动学习的采集函数。&#10;&#10;✨ **主要贡献**：在D4RL和V-D4RL基准上，PreferenceEKF相比其他贝叶斯深度学习方法在样本效率、运行时间、可扩展性和校准性上更优，且学到的奖励模型能带来有竞争力的离线强化学习策略性能。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Reinforcement learning from human feedback (RLHF) has emerged as a powerful yet sample-inefficient approach for learning reward models from human preferences, making active learning a critical component in synthesizing informative preference queries. However, effective uncertainty quantification required for active learning remains a key challenge for large neural network reward models. In this paper, we introduce PreferenceEKF, a sample-efficient approach that tracks reward model uncertainty by framing active preference learning as a sequential Bayesian filtering problem. Instead of relying on computationally prohibitive posterior inference over the full neural network parameter space, our method performs sequential inference via an extended Kalman filter within a low-dimensional parameter subspace, continuously updating the reward model posterior as new preference queries arrive. Our approach enables scalable sampling of neural network parameters to efficiently compute acquisition functions for active reward learning. Experiments on the D4RL and V-D4RL benchmarks demonstrate that our approach achieves better sample efficiency, runtime, scalability, and calibration compared to other Bayesian deep learning approaches, and the learned reward models lead to competitive offline reinforcement learning policy performance. This highlights the potential of scalable Bayesian methods for preference-based reward modeling in RLHF. Our code is available at https://github.com/yutaizhou/bnn_pref.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2503.04580v3" target="_blank" class="paper-title">DogLegs: Robust Proprioceptive State Estimation for Legged Robots Using Multiple Leg-Mounted IMUs</a>
+                        <span class="paper-date">2026-09-03</span>
+                    </div>
+                                        <span class="paper-comment">📝 8 pages, 8 figures</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在激光雷达和相机等外部传感器可能失效的极端环境中，如何实现腿足机器人主躯干的鲁棒且精确的本体状态估计。&#10;&#10;🛠 **方法**：提出DogLegs系统，融合躯干IMU、关节编码器和多个腿部IMU的数据，利用扩展卡尔曼滤波器（EKF）处理所有IMU帧的误差状态，并通过腿部IMU检测足底接触提供零速度更新，同时利用腿部运动学计算躯干与腿部IMU间的相对位置约束来修正主躯干状态。&#10;&#10;✨ **主要贡献**：相比仅使用躯干IMU和关节编码器的传统腿式里程计方法，DogLegs在多种地形上显著提升了状态估计精度，并公开了代码和数据集以促进社区研究。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Robust and accurate proprioceptive state estimation of the main body is crucial for legged robots to execute tasks in extreme environments where exteroceptive sensors, such as LiDARs and cameras, may become unreliable. In this paper, we propose DogLegs, a state estimation system for legged robots that fuses the measurements from a body-mounted inertial measurement unit (Body-IMU), joint encoders, and multiple leg-mounted IMUs (Leg-IMU) using an extended Kalman filter (EKF). The filter system contains the error states of all IMU frames. The Leg-IMUs are used to detect foot contact, thereby providing zero-velocity measurements to update the state of the Leg-IMU frames. Additionally, we compute the relative position constraints between the Body-IMU and Leg-IMUs by the leg kinematics and use them to update the main body state and reduce the error drift of the individual IMU frames. Field experimental results have shown that our proposed DogLegs system achieves better state estimation accuracy compared to the traditional leg odometry method (using only Body-IMU and joint encoders) across various terrains. We make our code and datasets publicly available to benefit the research community (https://github.com/YibinWu/DogLegs).</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.14840v2" target="_blank" class="paper-title">Regularity-informed data assimilation: A hierarchical Bayesian approach to ensemble Kalman filtering for hyperbolic conservation laws</a>
+                        <span class="paper-date">2026-09-02</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：针对双曲守恒律等时间依赖偏微分方程，传统数据同化方法忽视状态的空间正则性，导致估计结果出现非物理振荡或模糊尖锐特征。&#10;&#10;🛠 **方法**：提出一种正则性感知的滤波框架，将边缘保持正则化集成到集合卡尔曼滤波（EnKF）的分析步骤中，并采用层次化广义稀疏贝叶斯学习（GSBL）先验自适应推断空间变化超参数。&#10;&#10;✨ **主要贡献**：开发了GSBL-EnKF方法，在平滑区域抑制振荡、在间断处保持锐利特征，显著提升复杂瞬态系统状态估计的物理真实性与精度，尤其适用于不确定性量化场景。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>We propose a novel regularity-informed filtering framework for data assimilation in the context of hyperbolic conservation laws and other time-dependent partial differential equations. We focus on systems whose states exhibit steep gradients and jump discontinuities. While filtering is widely used to improve numerical simulations by incorporating observational data, traditional filtering methods lack awareness of the spatial regularity of states produced in these systems. As a result, data assimilation often produces unphysical state estimates, introducing spurious oscillations in smooth regions and smearing sharp features. To address this limitation, we introduce a filtering framework that incorporates edge-preserving regularization into the filter's analysis step; this framework balances simulation forecasts, observational data, and structural prior knowledge. We formalize this approach using the ensemble Kalman filter (EnKF) and a class of hierarchical generalized sparse Bayesian learning (GSBL) priors, which adaptively infer spatially varying hyperparameters to promote non-oscillatory behavior in smooth regions while preserving discontinuities. We demonstrate the effectiveness of the resulting GSBL-EnKF method on challenging benchmark problems governed by hyperbolic conservation laws. Our results show that enforcing regularity in the analysis step yields sharper, less oscillatory state estimates and lower errors of the ensemble mean. This sometimes comes at the cost of ensemble spread, which we quantify and discuss.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2609.02332v1" target="_blank" class="paper-title">A simple derivation of the Kalman filter</a>
+                        <span class="paper-date">2026-09-02</span>
+                    </div>
+                                        <span class="paper-comment">📝 To be published in IEEE Signal Processing Magazine</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：如何以最简方式推导离散时间卡尔曼滤波方程，避免复杂的概率论或随机过程背景。  &#10;🛠 **方法**：基于最小二乘估计的基本原理，通过线性代数推导卡尔曼滤波的预测与更新步骤，不依赖贝叶斯或高斯假设的完整框架。  &#10;✨ **主要贡献**：提供了一种简洁、自包含的推导路径，降低了入门门槛，同时保持推导的严谨性和一般性，适合教学或快速理解。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>In this lecture note, we present a concise and self-contained derivation of the discrete-time Kalman filter equations that requires only a basic understanding of least squares estimation. The treatment is designed to minimize mathematical overhead while preserving both rigor and generality.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2609.02222v1" target="_blank" class="paper-title">FOCUS: Foot Observation Confidence for Robust Humanoid Proprioceptive Odometry</a>
+                        <span class="paper-date">2026-09-02</span>
+                    </div>
+                                        <span class="paper-comment">📝 8pages,6figures</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：传统足式里程计依赖二值接触判断，在动态运动（如部分支撑、拖脚、滑脚）中会导致足部前向运动学观测不可靠，累积显著漂移。&#10;&#10;🛠 **方法**：提出FOCUS框架，用神经网络预测每只脚的连续FK可靠性权重，替代二值接触决策；权重用于融合FK速度观测与IMU传播速度，并自适应调整扩展卡尔曼滤波器的观测协方差，实现平滑的可靠性感知融合。&#10;&#10;✨ **主要贡献**：网络仅用IMU和关节运动学数据训练，无需人工标注或扭矩传感；在仿真和真实实验中大幅降低绝对轨迹误差（仿真83.7%、真实行走70.8%、动态动作42.7%），同时保持动态运动保真度。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Foot forward kinematics (FK) is widely used to improve proprioceptive legged odometry by providing reliable velocity constraints during foot support. Existing contact-aided estimators generally rely on binary contact decisions to determine whether the FK measurements of an entire foot should be trusted. However, contact does not necessarily imply FK reliability. Dynamic locomotion often involves partial support, toe dragging, and foot slip, causing binary contact decisions to accumulate significant drift over long trajectories. To address this limitation, we propose FOCUS (Foot Observation Confidence from Unannotated Simulation), which predicts a continuous FK reliability weight for each foot instead of estimating binary foot contact. Rather than replacing the model-based estimator, the predicted reliability weights are used to blend FK velocity observations with IMU-propagated body velocity and to adapt the observation covariance of an extended Kalman filter (EKF), enabling smooth reliability-aware fusion without hard contact switching. The network is trained from automatically generated simulation signals using an FK-weighted velocity consistency loss with lightweight simulator-contact regularization, without manually annotated continuous FK-reliability labels. The deployed model relies only on IMU and joint kinematic measurements, making it suitable for hardware platforms with unreliable torque sensing. Experiments demonstrate that FOCUS reduces absolute trajectory error (ATE) by 83.7% on simulated walking episodes, preserves simulated dynamic-motion fidelity in motion scale and spectral energy, reduces ATE by 70.8% across 19 real walking segments, and reduces mean ATE by 42.7% across four real dynamic-motion routines.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2601.01480v3" target="_blank" class="paper-title">Modeling Information Blackouts in Missing Not-At-Random Time Series Data</a>
+                        <span class="paper-date">2026-09-01</span>
+                    </div>
+                                        <span class="paper-comment">📝 16 pages, 5 figures, 9 tables. Revised and substantially expanded version for AALTD 2026 (ECML-PKDD Workshop)</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：交通传感器数据中出现的连续缺失（黑障）可能并非随机缺失，而是与未观测的交通状态相关，现有方法常忽略这种非随机缺失（MNAR）机制。&#10;&#10;🛠 **方法**：提出一个MNAR感知的潜在状态空间模型，结合线性交通动力学与依赖潜在状态的伯努利缺失通道；推理采用扩展卡尔曼滤波（EKF）和RTS平滑，参数通过近似EM算法学习。&#10;&#10;✨ **主要贡献**：在Seattle基准上，MNAR-LDS将插值RMSE从4.264降至4.177（显著改善），缺失预测ROC-AUC从0.685提升至0.784；该紧凑模型在性能上优于8/9的神经架构，且计算成本更低，并显式量化了精度-复杂度-成本的权衡。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Traffic forecasting systems rely on fixed sensor networks that frequently exhibit contiguous blackouts. Such outages are usually treated as ignorable missingness, although dropout can depend on unobserved traffic conditions. We study this possibility with an MNAR-aware latent state-space model that combines linear traffic dynamics with a Bernoulli missingness channel whose probability depends on the latent state. Inference uses an Extended Kalman Filter (EKF) followed by Rauch-Tung-Striebel (RTS) smoothing, and parameters are learned by approximate EM. We evaluate Seattle using a leakage-free, month-balanced set of 300 unique all-horizon-aligned blackout windows. On this benchmark, MAR-LDS attains 4.264 mph pooled imputation RMSE and MNAR-LDS improves it to 4.177 (difference -0.086); the detector-cluster bootstrap 95% interval is [-0.182,-0.002]. A causal one-step predicted latent representation raises missingness ROC-AUC from 0.685 using observed-only features to 0.784. We further test whether this compact probabilistic model remains competitive with substantially larger neural time-series architectures under the identical masked-imputation protocol. MNAR-LDS ranks second in pooled RMSE and outperforms 8 of 9 evaluated neural architectures; it is within 1.22% of the best neural result, with no statistically resolved difference under detector-cluster bootstrap, while achieving lower P95 error, lower long-blackout RMSE, and orders of magnitude fewer stored scalar entries. MNAR roughly doubles end-to-end training time relative to MAR and increases EKF+RTS inference time by 41%, making the accuracy-complexity-cost tradeoff explicit. Controlled state-dependent blackouts further show larger gains when dropout is genuinely informative, including a 6.34% reduction in 30-minute forecast RMSE relative to MAR.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2602.23188v3" target="_blank" class="paper-title">Efficient Adaptation of ROMs for Unsteady Flows Using Data Assimilation</a>
+                        <span class="paper-date">2026-09-01</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：针对参数化降阶模型（ROM）在非训练参数域（如不同雷诺数）下预测精度下降的问题，提出一种仅依赖稀疏观测数据的高效实时重训练策略。&#10;&#10;🛠 **方法**：采用编码-处理-解码架构，结合变分自编码器（VAE）进行降维，用Transformer网络建模潜空间动力学；通过集成卡尔曼滤波同化稀疏数据，并仅重训练自编码器部分（而非整个模型）以适应新参数域。&#10;&#10;✨ **主要贡献**：发现非样本外预测误差主要源于潜流形畸变而非动力学变化，因此仅需轻量级重训练自编码器即可达到与全量重训练相当的精度，大幅降低计算成本，支持实时适应和不确定性量化。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>We propose an efficient retraining strategy for a parameterized Reduced Order Model (ROM) that attains accuracy comparable to full retraining while requiring only a fraction of the computational time and relying solely on sparse observations of the full system. The architecture employs an encode-process-decode structure: a Variational Autoencoder (VAE) to perform dimensionality reduction, and a transformer network to evolve the latent states and model the dynamics. The ROM is parameterized by an external control variable, the Reynolds number in the Navier-Stokes setting, with the transformer exploiting attention mechanisms to capture both temporal dependencies and parameter effects. The probabilistic VAE enables stochastic sampling of trajectory ensembles, providing predictive means and uncertainty quantification through the first two moments. After initial training on a limited set of dynamical regimes, the model is adapted to out-of-sample parameter regions using only sparse data. Its probabilistic formulation naturally supports ensemble generation, which we employ within an ensemble Kalman filtering framework to assimilate data and reconstruct full-state trajectories from minimal observations. We further show that, for the dynamical system considered, the dominant source of error in out-of-sample forecasts stems from distortions of the latent manifold rather than changes in the latent dynamics. Consequently, retraining can be limited to the autoencoder, allowing for a lightweight, computationally efficient adaptation procedure with very sparse fine-tuning data.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2609.00951v1" target="_blank" class="paper-title">CERF: Communication-Efficient and Retraining-Free Collaborative Perception</a>
+                        <span class="paper-date">2026-09-01</span>
+                    </div>
+                                        <span class="paper-comment">📝 Accepted by ICASSP 2026</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有协同感知方法依赖密集特征图传输与融合，导致通信开销大、异构性挑战突出，难以实际部署。&#10;&#10;🛠 **方法**：提出CERF框架，引入虚拟模态“Poture”（由其他智能体感知输出生成）增强自车BEV特征；利用卡尔曼滤波跟踪器与运动预测模型补偿传输延迟。&#10;&#10;✨ **主要贡献**：在保持与主流中间协同方法相当性能的同时，通信开销降低95%；支持未知异构智能体无缝接入，无需额外重训练。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Collaborative perception shares information among multiple agents to obtain a comprehensive scene representation, enhancing the perceptual capability of individual agents. However, most existing methods rely on transmitting and fusing dense feature maps for collaboration, which incurs inevitable communication overhead and heterogeneity challenges, limiting their practicality for real-world deployment. To address these challenges, we propose CERF, a novel Communication-Efficient and Retraining-Free framework for open heterogeneous collaborative perception. In CERF, we introduce a new virtual modality (termed Poture), which is generated from the perception outputs of other agents, to augment the extracted Bird's Eye View (BEV) features of the ego agent. To mitigate transmission delays, we employ a Kalman-filter based tracker and a motion forecasting model to derive the current predictions from historical perception results. Extensive experiments demonstrate that CERF achieves performance comparable to mainstream intermediate-collaboration methods while reducing communication overhead by 95% across various downstream tasks. Furthermore, CERF enables seamless integration of unknown heterogeneous agents into the existing collaborative framework without additional retraining costs. Code is available at https://github.com/uestchjw/CERF.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2609.00839v1" target="_blank" class="paper-title">Residual Kalman Dynamics for Event-Based UAV Forecasting</a>
+                        <span class="paper-date">2026-09-01</span>
+                    </div>
+                                        <span class="paper-comment">📝 Accepted to the Workshop on Neuromorphic Vision (NEVi) at ECCV 2026, 16 pages</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在事件相机（event camera）数据上，如何提升无人机（UAV）短中期边界框预测的精度，超越传统物理运动模型。&#10;&#10;🛠 **方法**：以恒定速度卡尔曼滤波器作为物理基线，训练残差模型预测加速度类修正项，输入包括历史边界框、滤波状态特征及局部事件表示。&#10;&#10;✨ **主要贡献**：残差公式稳定优于卡尔曼基线，事件条件模型效果最佳；发现部分残差目标仅由锚点位置和速度可预测，并引入去相关子集作为压力测试，证明事件条件模型在削弱捷径后仍保留有效预测信号。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>We study short- and mid-horizon UAV bounding-box forecasting on the FRED event-camera dataset. We use a constant-velocity Kalman filter over a full center-size box state as a strong physical baseline, and train a residual model to predict acceleration-like corrections from recent box history, filtered state features, and local event representations. This simple residual formulation consistently improves over the Kalman baseline, with event-conditioned models giving the strongest results among the evaluated methods. We further show that part of the residual target is predictable from anchor position and velocity alone, indicating that canonical FRED results can reflect both visual evidence and dataset-specific motion priors. To analyze this effect, we introduce decorrelated subsets as a diagnostic stress test, showing that event-conditioned residual models retain useful predictive signal even when measured position- and velocity-based shortcuts are weakened.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2609.00730v1" target="_blank" class="paper-title">Design and Implementation of a Kalman Filter-Infused Algorithm for Tilt Estimation</a>
+                        <span class="paper-date">2026-09-01</span>
+                    </div>
+                                        <span class="paper-comment">📝 13 pages, 24 figures, 7 references</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：低成本惯性传感器（如MPU6050）在倾斜角估计中受噪声和漂移影响，单一传感器（加速度计或陀螺仪）无法同时保证精度与稳定性。&#10;&#10;🛠 **方法**：在RP2040微控制器上实现基于MPU6050的单轴倾斜角估计系统，通过卡尔曼滤波器融合加速度计（提供长期稳定但含噪声的倾角）与陀螺仪（提供短期平滑但积分漂移的角速度）数据。&#10;&#10;✨ **主要贡献**：通过仿真与硬件实验验证，该方法有效降低噪声并抑制长期漂移，同时保持良好动态响应，相比单一传感器提供更稳定、准确的倾斜角估计，展示了嵌入式系统中卡尔曼滤波融合的实用方案。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Accurate tilt angle estimation is important in many engineering applications, such as robotics, motion tracking, and embedded control systems. However, measurements from low-cost inertial sensors are often degraded by noise and drift. This paper presents a single-axis tilt angle estimation system based on the MPU6050 inertial measurement unit, implemented on an RP2040 microcontroller platform, with sensor fusion achieved through a Kalman filter. The accelerometer provides a direct estimate of tilt angle from gravity but is sensitive to noise and short-term fluctuations. The gyroscope provides smooth angular rate measurements, but integration over time introduces drift. To overcome these limitations, a Kalman filter is used to combine measurements from both sensors, leveraging the long-term stability of the accelerometer and the short-term smoothness of the gyroscope. Both simulation and hardware experiments are performed. In simulation, sensor noise and drift are modeled to evaluate the filter performance under control conditions. In the hardware implementation, real-time MPU6050 data is acquired and processed by the RP2040 platform, and the estimated tilt angle is compared with accelerometer-only and gyroscope-only outputs. The results show that the proposed method effectively reduces noise measurements and suppresses long-term drift while preserving good dynamic response. Overall, the system provides more stable and accurate tilt estimation than either sensor alone, demonstrating a practical and accessible approach for Kalman filter based sensor fusion in embedded application.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.29720v1" target="_blank" class="paper-title">VeloBins: Learning Velocity and Its Uncertainty via Bins and Error-Conditioned Gaussian Labels for Aerial Inertial Odometry</a>
+                        <span class="paper-date">2026-08-30</span>
+                    </div>
+                                        <span class="paper-comment">📝 8 pages, 6 figures, 4 tables. Supplementary video: https://youtu.be/QkZY0So3myw</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Inertial odometry (IO) is critical for aerial robots, where aggressive maneuvers and poor lighting degrade visual sensors. Recent learning-based IO methods improve traditional integration-based approaches by learning motion priors from IMU and platform-specific sensors, then fusing the predictions within an extended Kalman filter. However, learning velocity through regression is difficult, while jointly estimating uncertainty with a separate decoder and negative log-likelihood (NLL) loss further complicates training and can lead to over-confident estimates. We introduce VeloBins, which reformulates velocity regression as classification over discretized velocity bins. We decode both the velocity from the bin distribution's expectation and the uncertainty from its variance, removing the need for a separate uncertainty decoder. We further supervise the uncertainty explicitly using an error-conditioned Gaussian label centered at the ground-truth velocity, with a standard deviation set to the velocity error. We evaluate VeloBins on four aerial datasets, ranging from free-form aggressive flights and a 27 g nano-quadrotor to drone racing at over 21~m/s. VeloBins achieves the lowest average errors on all four datasets, reducing velocity, relative trajectory, and absolute trajectory errors by 3-27%, 8-40%, and 6-53%, respectively, compared with the strongest baseline. Notably, the proposed supervision achieves the lowest NLL and best filter consistency despite never optimizing an NLL loss. The code will be available upon acceptance.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.29521v1" target="_blank" class="paper-title">Online Gate-Driven Flow Control in Resin Transfer Moulding Using a Neural-Network Surrogate</a>
+                        <span class="paper-date">2026-08-30</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>In resin transfer moulding, complete saturation of the fibre preform is necessary before the resin front reaches the outlet vent(s), to prevent dry-spot formation. In practice, the flow front rarely advances uniformly due to race-tracking effects. We propose a combined estimation and control strategy to address this issue. We use pressure-sensor data collected during filling to estimate the unknown race-tracking strengths via an iterated extended Kalman filter, and to simultaneously optimise auxiliary gate pressures to prevent the resin from arriving at the vent before complete saturation occurs. To make this approach feasible in real time, we replace the expensive finite element-control volume model with neural network surrogate models. The Bayesian approximation error framework is used to account for the discrepancy between the surrogates and the original model. To make the training of the surrogates feasible with time-dependent control actions, we prove that the flow-front geometry depends only on the time-averaged gate pressures. We demonstrate the methodology on a representative forked geometry, showing that the combined estimation-and-control framework can substantially reduce the number of unfilled nodes at the end of filling compared with an uncontrolled baseline. However, the level of improvement depends strongly on the location and number of auxiliary gates.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.26789v1" target="_blank" class="paper-title">Online Joint Calibration of Steering Offset and Planar LiDAR Extrinsics for Wheeled Mobile Robots</a>
+                        <span class="paper-date">2026-08-27</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Accurate steering sensing and LiDAR-to-vehicle extrinsics are crucial for reliable path tracking in warehouse mobile robots (WMRs); miscalibration often leads to snaking, weaving, and elevated cross-track error (CTE). In practice, steering ``zero'' is commonly set manually (e.g., eyeballing straightness via a PS4 joystick), while LiDAR extrinsics are assumed from CAD and may drift after maintenance. Such static, manual procedures frequently cause miscalibration in safety-critical environments. This paper presents an Extended Kalman Filter (EKF)--based method for online estimation of steering offset and planar LiDAR extrinsics within a bicycle-kinematics model, providing a principled alternative to manual calibration. Experiments on real datasets show that correcting steering offset reduces CTE substantially, validating the effectiveness of the proposed approach.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.06558v2" target="_blank" class="paper-title">Estimating Harmonic Coefficients of Asteroids through LiAISON Navigation</a>
+                        <span class="paper-date">2026-08-26</span>
+                    </div>
+                                        <span class="paper-comment">📝 20 pages, 13 figures</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>This paper evaluates the Linked Autonomous Interplanetary Satellite Orbit Navigation (LiAISON) method in near two-body asteroid systems. While LiAISON's usefulness has been proven in multibody environments such as the cislunar region, the application of a two-body system with gravity perturbations has not been sufficiently demonstrated. Vesta and Ceres are good candidates to test LiAISON, because the asteroids have sufficiently strong perturbations to use LiAISON method. The study utilizes a Multi-Model Adaptive Estimation (MMAE) framework integrated with Unscented Kalman Filters (UKF) to estimate the spacecraft states and perturbations using only range and range rate measurements. Results from the Monte Carlo analysis indicate that the proposed framework makes accurate and consistent estimates of position, velocity, and the perturbations for cases of Ceres and Vesta.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2603.04003v2" target="_blank" class="paper-title">Efficient Bayesian Estimation of Dynamic Structural Equation Models via State Space Marginalization</a>
+                        <span class="paper-date">2026-08-25</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Dynamic structural equation models (DSEMs) combine time-series modeling of within-person processes with hierarchical modeling of between-person differences and differences between timepoints, and have become very popular for the analysis of intensive longitudinal data in the social sciences. An important computational bottleneck has, however, still not been resolved: whenever the underlying process is assumed to be latent and measured by one or more indicators per timepoint, currently published algorithms rely on inefficient brute-force Markov chain Monte Carlo sampling which scales poorly as the number of timepoints and participants increases and results in highly correlated samples. The main result of this paper shows that the within-level part of any DSEM can be reformulated as a linear Gaussian state space model. Consequently, the latent states can be analytically marginalized using a Kalman filter, allowing for highly efficient estimation via Hamiltonian Monte Carlo. This makes estimation of DSEMs computationally tractable for much larger datasets -- both in terms of timepoints and participants -- than what has been previously possible. We demonstrate the proposed algorithm in several simulation experiments, showing it can be orders of magnitude more efficient than standard Metropolis-within-Gibbs approaches.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.21433v2" target="_blank" class="paper-title">The Setting of IMU Parameters in Kalman Filtering-based Information Fusion</a>
+                        <span class="paper-date">2026-08-25</span>
+                    </div>
+                                        <span class="paper-comment">📝 2026 International Conference on Guidance, Navigation and Control</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>The setting or tuning of specifications for the inertial measurement unit (IMU) is tricky in sensor fusion. The underneath conundrum is caused by the fact that the working condition of IMU is more complex than the stationary calibration scenario. Since the noises and biases instabilities calibrated under static condition cannot accommodate other cases, the effective tuning of IMU parameters largely hinges on the experience or profound understanding of the system. In the current work, the setting method of IMU parameters based on Allan variance calibration is delved into within the Kalman filtering framework. Specifically, the relationship between the power sepctral density and Allan variance is leveraged in formulating the process uncertainty in continuous-time filtering. Three typical IMU-based sensor fusion systems, including INS/GNSS integration, LiDAR-inertial odometry, and visual-inertial odometry are considered to show the feasibility and effectiveness of this parameter setting process.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2601.19509v2" target="_blank" class="paper-title">Analytical Covariance Propagation for DVL-Aided Loosely Coupled SINS Under Attitude Uncertainty</a>
+                        <span class="paper-date">2026-08-25</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>In loosely coupled strapdown inertial navigation system/Doppler velocity log (SINS/DVL) integration, the body-frame DVL velocity is projected into the navigation frame using the SINS-computed attitude. Attitude uncertainty consequently affects both the projected velocity observation and its associated measurement covariance. This paper develops an analytical covariance propagation (ACP) method that treats these two effects consistently. The attitude-error-aware observation model represents perturbations in the projected DVL velocity, whereas the covariance construction propagates the body-frame DVL covariance at the matrix level and adds a closed-form term derived from the predicted attitude-error covariance, rather than directly rotating component-wise standard deviations. Simulation and a controlled surface-water field experiment compare ACP with conventional SINS/DVL and adaptive-covariance benchmarks. For the evaluated data sets and parameterizations, ACP yields the lowest position-error metrics among the compared methods. Relative to the variational Bayesian adaptive Kalman filter (VBAKF) in the field experiment, ACP reduces the northward, eastward, and downward position root-mean-square errors (RMSEs) by 48.5%, 55.0%, and 74.8%, respectively. Beyond DVL aiding, ACP provides a transferable covariance-construction principle for attitude-dependent vector-measurement fusion and a physically interpretable alternative to heuristic frame-dependent covariance assignment.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.23813v1" target="_blank" class="paper-title">Data Assimilation: Addressing Spurious Correlations and Scalability Issues</a>
+                        <span class="paper-date">2026-08-24</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Data assimilation in the form of the ensemble Kalman filter (EnKF) is commonly used to combine large-scale physics-based models and real-world observations of a quantity of interest. However, the EnKF is known to be adversely affected by spurious correlations when applied to Numerical Weather Prediction (NWP) models with high-dimensional state spaces. To mitigate the effect of spurious correlations, various localization methods have been proposed in the NWP literature. Unfortunately, the efficacy of and need for these methods in the setting of general PDE-based forward models with large spatial mesh sizes is not well-understood. We conducted a numerical data assimilation experiment on an example PDE model to demonstrate the presence of spurious correlations and need for localization methods outside of the context of NWP. In addition, we compared the computational efficiency of various EnKF implementations in high-dimensional settings for which theoretical complexity bounds are available but empirical costs are unclear.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.23068v1" target="_blank" class="paper-title">Switched Turn-based Adaptive Source Seeking Strategy using Estimation and Information-driven Direction of Improvement</a>
+                        <span class="paper-date">2026-08-24</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Source seeking arises in applications such as gas leak localization, radiation monitoring, and environmental surveillance, where the origin of an unknown signal field must be estimated from spatial measurements. In practice, the source location is not directly observable and must be inferred from noisy scalar measurements collected during motion.In robotic source seeking, estimation and motion are closely linked: measurements improve the source estimate, while the chosen trajectory affects the quality of future measurements.Existing loop-based geometric strategies generate feasible motion but do not explicitly use estimation uncertainty to regulate direction updates.This paper presents a loop-based source-seeking framework that combines Extended Kalman Filter (EKF) estimation with Fisher Information Matrix (FIM)-based direction selection. The source estimate is updated during motion, and the heading is changed at loop boundaries using both estimation uncertainty and predicted information gain. A measurement-based stopping condition is used to detect convergence without requiring prior knowledge of the source location.Simulation results under stationary and moving source scenarios demonstrate improved tracking performance and reduced estimation error compared to purely information-driven or estimate-driven strategies.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.23055v1" target="_blank" class="paper-title">Macro-Action Topological Navigation under Noisy Localization using Reinforcement Learning</a>
+                        <span class="paper-date">2026-08-24</span>
+                    </div>
+                                        <span class="paper-comment">📝 15 pages, Accepted at the Artificial Intelligence Symposium (AIS) 2026</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Navigating large, photorealistic 3D apartments from raw pixels is widely considered infeasible for plain reinforcement learning. We build an agent that does it anyway, estimating its own pose from the camera alone. The agent has to reach several target objects in sequence, and their positions change between episodes, so it must explore to find them. It builds on our earlier object-centric topological controller, which still read the agent's true pose and its object detections from the simulator. Here we replace that true pose with an onboard, object-centric estimate. For each object we keep a bank of ORB features that, when the object is seen again, yield a rough pose measurement, which a minimal Extended Kalman Filter (EKF) fuses with a motion model. As on a real robot, the executed motions are noisy. The estimate drifts, but the agent and the nearby objects drift together, so a locally consistent pose is enough to follow each short edge and then home in visually on the target, which lets us replace full SLAM with a much smaller model, closer to how biological navigation appears to work. In the photorealistic Habitat simulator, the agent reaches its target objects from vision alone, with a pose that only needs to be locally consistent.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.23007v1" target="_blank" class="paper-title">Sensitivity Limits for $φ$-OTDR</a>
+                        <span class="paper-date">2026-08-24</span>
+                    </div>
+                                        <span class="paper-comment">📝 Accepted in 30th International Conference on Optical Fiber Sensors (OFS30)</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>We demonstrate a new lower bound on the sensitivity of $φ$-OTDR by estimating phase using Kalman filtering. Numerical analysis shows a $\sim$35-dB reduction in the minimum detectable SNR, compared to when using conventional phase estimation.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2511.10771v2" target="_blank" class="paper-title">Privacy protection under the exposure of systems' prior information</a>
+                        <span class="paper-date">2026-08-23</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>For systems whose states implicate sensitive information, their privacy is of great concern. While notions like differential privacy have been successfully introduced to dynamical systems, it is still unclear how a system's privacy can be properly protected when facing the challenging yet frequently-encountered scenario where an adversary possesses prior knowledge, e.g., the steady state, of the system. This paper presents a new systematic approach to protect the privacy of a discrete-time linear time-invariant system against adversaries knowledgeable of the system's prior information. We employ a tailored \emph{pointwise maximal leakage (PML) privacy} criterion. PML characterizes the worst-case privacy performance, which is sharply different from that of the better-known mutual-information privacy. We derive necessary and sufficient conditions for PML privacy and construct tractable design procedures. Furthermore, our analysis leads to insight into how PML privacy, differential privacy, and mutual-information privacy are related. We then revisit Kalman filters from the perspective of PML privacy and derive a lower bound on the steady-state estimation-error covariance in terms of the PML parameters. Finally, the derived results are illustrated in a case study of privacy protection for distributed sensing in smart buildings.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.22023v1" target="_blank" class="paper-title">Spectral Pre-Filtering for Context-Adaptive Sensor Fusion: A Four-Role FFT-GDCB Integration for High-Stakes Decision Systems</a>
+                        <span class="paper-date">2026-08-22</span>
+                    </div>
+                                        <span class="paper-comment">📝 15 pages, 3 figures, 3 tables</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Context-adaptive Kalman filters calibrate their noise covariance matrices Q and R from innovation residuals via online regression. When the underlying sensor or signal carries periodic structure -- mechanical LiDAR rotation harmonics, engine vibration, ground multipath, weekly and annual demand cycles, dosing-interval rhythms, weekly media-buying cadence -- the regression input is contaminated and the fitted covariance models structural modes rather than genuine state uncertainty. We introduce a four-role FFT pre-filter that solves this problem at $O(N\log N)$ cost and serves three additional roles "for free": (i) it whitens coloured noise before the Kalman update, restoring the optimality assumption; (ii) it cleans innovations before covariance regression, preventing periodic contamination of $\hat{R}$ and $\hat{Q}$; (iii) it generates spectral context features that enrich the downstream bandit's regime-selection state; (iv) it deseasonalises the input feature vector before any supervised regression that produces a sensitivity coefficient (beta, dose offset, bid modifier). We position the algorithm inside the Gated Decoupled Compositional Bandits (GDCB) family, where it acts as a preprocessing layer for the supervised scaler. The single $O(N\log N)$ FFT call thereby serves four downstream consumers, fits in <0.1% of the sensor-fusion or pricing-pipeline compute budget, and is a drop-in addition with no changes to the Kalman filter, bandit, or runtime composition operator. We summarise empirical validation across six independent domains (rocket descent, autonomous-vehicle tracking, short-term rental pricing, clinical drug dosing, airline fare distribution, and ad-operations bid calibration), all returning a PROVES verdict under a pre-registered evaluation protocol.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.21330v1" target="_blank" class="paper-title">NeSAM: Neuro-Symbolic Kinodynamics with Soil Adaptation for Off-Road Mobility</a>
+                        <span class="paper-date">2026-08-21</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Accurate prediction of off-road vehicle motion over deformable terrain remains challenging because sinkage, slip, and traction vary with local soil conditions. Existing learning-based kinodynamic models directly approximate vehicle-terrain interactions from data but do not explicitly represent soil mechanics and offer limited physical interpretability. To address these limitations, we present NeSAM, a neuro-symbolic framework that combines differentiable Bekker-Wong terramechanics with learned terrain representations and a Transformer-based residual dynamics model for long-horizon, six degree-of-freedom kinodynamic prediction. The terramechanics component models soil-dependent interaction forces, while the residual model corrects discrepancies between the analytical prediction and the observed vehicle dynamics. NeSAM further estimates physically meaningful soil parameters from terrain observations and updates them online using an extended Kalman filter. We evaluate NeSAM in Verti-Bench, a simulator built on the Chrono multiphysics engine, and validate its performance on a physical Verti-4-Wheeler platform. NeSAM improves prediction accuracy by up to 30% in simulation and 29% on real-world data relative to the strongest compared baselines. When integrated with a close-loop navigation controller, NeSAM further improves traversal success rate through online soil adaptation while reduces Hausdorff distance to the reference trajectory by 69.4%, indicating improved trajectory tracking accuracy.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.20891v1" target="_blank" class="paper-title">IMU-Free Body-Frame State Estimation with Sparse Scene Flow for Quadcopters</a>
+                        <span class="paper-date">2026-08-21</span>
+                    </div>
+                                        <span class="paper-comment">📝 56 pages, 5 figures, 2 tables. Evaluated on the VID dataset (arXiv:2103.11152)</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>We present a vision-only state estimation system for X-configuration quadcopters equipped with a canonical stereo camera pair and no inertial sensors. The system operates entirely in the body frame, requiring only synchronised stereo images and motor thrust commands. A continuous-discrete extended Kalman filter on a composite manifold state $\langle SE(3), \mathbb{R}^3, \ldots \rangle$ maintains estimates of body-frame pose, velocity, angular velocity, gravity, and disturbances, using stationary scene points as implicit inertial references. Feature points are detected (FAST, Shi-Tomasi), tracked temporally (SSD, Lucas-Kanade) and matched across cameras (NCC), with search regions predicted from filter-derived pose and point uncertainty. Chi-squared gating on the normalised innovation admits only stationary points to the filter. The system also produces a sparse 3D point cloud carrying per-point position, velocity and joint covariance. These come from a 4-view (two stereo pairs at two timestamps) full bundle adjustment that jointly estimates position and velocity from stereo disparity and temporal parallax, with the filter-derived relative pose as a prior. Feature points in the EKF do not enter the solver; their information is reflected through the pose prior. Point cloud density is spatially adaptive: an external focus point directs allocation, producing dense coverage in the region of attention and sparse coverage elsewhere. The output is a body-frame state estimate, a calibrated pose change, and a sparse scene flow. It is intended as a measurement source for a downstream world model anchored in the current body frame, without dependence on GPS, IMU, or any world-frame infrastructure, though the architecture accommodates their future integration.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.19004v1" target="_blank" class="paper-title">Autonomous Agricultural Tractor: Integrated Weed Detection and LiDAR Navigation for Precision Paddy Farming</a>
+                        <span class="paper-date">2026-08-19</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Site-specific weed management in paddy farming offers substantial reductions in herbicide use over conventional broadcast spraying, but field deployment has been limited by three persistent challenges: robust crop-row navigation under canopy where GNSS degrades, real-time visual discrimination between rice and morphologically diverse weeds, and the asymmetric cost of misclassifying rice as weed, which is irreversible. This paper presents AgriNav, an integrated autonomous tractor system built around four ROS-coupled modules: a custom PyTorch reimplementation of WeedDet for rice detection, a parallel lightweight 1.68M-parameter CNN-FPN variant with asymmetric class weighting, an inverted-logic discrimination module that protects the rice class through a hardcoded confidence-gate veto, and a 6-state constant-velocity-turn-rate Extended Kalman Filter fusing GNSS, IMU, and wheel odometry with three-level outage bridging. Our primary system-level contribution is a four-mechanism LiDAR-camera fusion bridge that uses the navigation LiDAR for region-of-interest constraint, world-coordinate projection, ground-plane filtering, and bidirectional confidence fusion at zero additional hardware cost. Simulation experiments demonstrate continuous position tracking through a 20-second GNSS outage, crop row detection confidence above 0.9 throughout operation, and rice-detection confidences from 0.32 to 0.95 across paddy, aerial, and post-flood imagery. The LiDAR ROI constraint reduces detection inference region by an estimated 30 to 50 percent.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.18625v1" target="_blank" class="paper-title">Payload Swing Estimation and Damping Without Payload Parameters for Multirotor UAVs</a>
+                        <span class="paper-date">2026-08-19</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Cable-suspended payload transport by multirotor UAVs is flexible but generates periodic swing disturbance that degrades tracking and risks instability. Existing anti-swing methods require additional sensors or precise identification of cable length and payload mass, limiting field deployment. We propose a swing-estimation and damping method using only the onboard IMU and throttle command, requiring no payload parameters. An extended Kalman filter extracts the periodic disturbance with the unknown pendulum frequency as an estimated state, and an active damping controller adds a correction angle to the attitude loop to dissipate pendulum energy. Flight experiments confirm robust damping across a tested range of cable-length and mass variations.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.17595v1" target="_blank" class="paper-title">Modified Bryson-Frazier Smoothing and Hyperparameter Learning for Temporal Gaussian Process Regression</a>
+                        <span class="paper-date">2026-08-18</span>
+                    </div>
+                                        <span class="paper-comment">📝 Accepted at the Second International Conference on Probabilistic Numerics (ProbNum 2026)</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>One-dimensional Gaussian processes with stationary, integrable kernel functions admit exact or arbitrarily accurate state-space representations, enabling linear-time inference through Kalman filtering and Rauch-Tung-Striebel (RTS) smoothing. However, the RTS smoother requires inversion of predicted state covariance matrices, which can become ill-conditioned and may therefore lead to numerical instabilities. In this work, we revisit the modified Bryson-Frazier (MBF) smoother as an alternative to the RTS smoother for Gaussian process regression in its state-space representation. In addition to reducing computational cost and memory requirements, the MBF smoother computes the same posterior distributions as the RTS smoother while avoiding the problematic covariance matrix inversion and the associated numerical instabilities. Furthermore, we demonstrate that the intermediate quantities computed by the MBF smoother can be reused to compute gradients of the negative log marginal likelihood, enabling kernel hyperparameter learning with minimal additional cost. Together, these results establish the MBF smoother as a unified and numerically robust approach to inference and kernel hyperparameter learning for one-dimensional Gaussian process regression.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.16966v1" target="_blank" class="paper-title">Multi-Observer Vehicle Localization Case Study with Roadside Radar and Connected Vehicle Sensing</a>
+                        <span class="paper-date">2026-08-17</span>
+                    </div>
+                                        <span class="paper-comment">📝 12 pages, 7 figures and 8 tables</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>In modern intelligent transportation systems, it is essential to accurately estimate vehicle positions, especially in mixed traffic conditions where both connected and conventional vehicles coexist. Roadside infrastructure and connected vehicles can provide complementary observations of the same traffic scene, but real-world evidence on decision-level fusion between these sources remains limited. This paper proposes a multi-observer vehicle localization framework that fuses compact object-level detections from a static roadside radar and a dynamic LiDAR-equipped connected vehicle. We evaluate the framework with real-world data collected at an urban intersection in Helsinki, Finland, with a separately instrumented target vehicle used as the reference trajectory. Two extended Kalman filter based strategies for the localization task were benchmarked. The performance of the radar and LiDAR sensors were evaluated separately, and the two fusion strategies were explored under nominal sensing conditions, reduced LiDAR update rates, simulated LiDAR occlusions, and different target-vehicle motion states. The results show that, under full LiDAR availability, fusion performance is dominated by the LiDAR observations, while the less accurate and less consistent radar observations provide only limited additional improvement. Nevertheless, AEKF achieves small gains over the LiDAR-only baseline, and object-level connected vehicle observations remain useful when shared at reduced update rates. These findings indicate that decision-level fusion provides scenario-dependent benefits rather than automatic improvement over a strong single-sensor baseline. We release the dataset and implementation on Github to support further research: https://github.com/AppuriAalto/multi-observer-vehicle-tracking</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2511.17007v2" target="_blank" class="paper-title">Self-Localizing MIMO Beam Mapping for Intelligent Open RAN with Continuously Evolving Channel Memory</a>
+                        <span class="paper-date">2026-08-13</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Open and intelligent radio access networks (RANs) envisioned for 6G require accurate and reusable wireless channel knowledge for intelligent inference and control. However, full-dimensional channel state information (CSI) and accurate location labels are difficult to acquire and maintain across open and multi-vendor deployments. This paper develops a self-localizing multiple-input multiple-output (MIMO) beam map framework that constructs a hierarchical wireless memory from highly sparse CSI measurements without explicit location labels. To reduce acquisition and processing overhead, we use beam-domain received signal strength (RSS) as compact inputs and theoretically show that they enable asymptotically unbiased spatial signature estimation. A dual-scale extractor captures intra-snapshot angular dependencies and inter-sample correlations for incomplete observations, and a hybrid temporal encoder is designed to consolidate recent CSI into stable short-term context for physical anchor inference. The inferred anchors spatially index a physically structured radio map embedding that stores long-term channel knowledge, which conditions a diffusion decoder for location-consistent full CSI reconstruction. Such a radio map embedding provides a persistent wireless knowledge representation that can be continuously updated and reused by intelligent RAN functions without repeated full CSI acquisition. Experiments demonstrate that the proposed framework improves physical-anchor recovery accuracy by over 30% under sparse measurements and achieves more than 20% channel-capacity gain in non-line-of-sight (NLOS) beam tracking over Kalman-filter-based baselines.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2604.13309v2" target="_blank" class="paper-title">Utilizing Inpainting for Keypoint Detection for Vision-Based Control of Robotic Manipulators</a>
+                        <span class="paper-date">2026-08-12</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>We present a novel visual servoing framework for controlling a robotic manipulator in configuration space using only natural visual features. To train our data-driven keypoint detector, we attach ArUco markers along the robot body, use their centers as keypoint labels, and apply image inpainting to remove the markers and reconstruct the occluded regions. This produces automatically labeled, markerless robot images without requiring accurate camera calibration or robot models. At runtime, a second inpainting model reconstructs robot regions that are partially occluded, enabling continuous keypoint detection. An Unscented Kalman Filter (UKF) further improves temporal consistency and robustness of the keypoint estimates. We demonstrate successful model-free, vision-based control using natural robot features under both full visibility and partial occlusion. To show broader applicability, we also extend the perception pipeline to two-module and three-module soft origami arms and qualitatively evaluate keypoint detection and temporal tracking on these platforms.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.04201v2" target="_blank" class="paper-title">Unscented KalmanNet: Structure-Preserving Deep Learning with Calibrated Posterior Uncertainty under Incomplete Physics and Unknown Noise</a>
+                        <span class="paper-date">2026-08-12</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Nonlinear state estimation requires sequentially fusing model-based predictions with noisy measurements. Under imperfect dynamics and unknown, time-varying noise statistics, this fusion can degrade in both accuracy and statistical consistency. Existing learning-aided filters largely treat accuracy and uncertainty estimation separately, limiting their ability to correct model-mismatch-induced bias while retaining an explicit, calibrated posterior covariance. This paper introduces Unscented KalmanNet (UKN), a model-based deep learning architecture that extends the Unscented Kalman Filter (UKF) with learned mechanisms for these two sources of filtering error while preserving explicit posterior covariance propagation. NoiseNet learns time-varying process and measurement covariances as bounded multiplicative corrections to baseline covariances, guaranteeing positive definiteness, while GainNet learns a bounded residual correction to the analytical UKF gain to compensate for model-mismatch-induced bias. A calibration-aware training objective couples state error with posterior covariance and innovation consistency terms through adaptive weighting, jointly optimizing accuracy and calibration. UKN is benchmarked against UKF, KalmanNet, and Bayesian KalmanNet on three synthetic systems and real-flight UZH-FPV data. It achieves the lowest state-estimation error in all four examples and reduces RMSE by 26.4-49.7% compared with UKF in the synthetic cases. Leave-one-sequence-out cross-validation over 11 flights shows 22.4% and 34.3% reductions in mean position and velocity RMSE, respectively. UKN also yields the lowest fold-to-fold variability, with dimension-normalized NEES and empirical coverage closest to nominal values among covariance-reporting filters. These results show that structured learned adaptation improves estimation accuracy while retaining calibrated uncertainty.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2512.14426v2" target="_blank" class="paper-title">Decoupled Quadratic Kalman Filter for Elliptical Extended Object Tracking with Log-normal Axis Modeling</a>
+                        <span class="paper-date">2026-08-12</span>
+                    </div>
+                                        <span class="paper-comment">📝 19 pages, 16 figures, submitted to IEEE Transactions on Aerospace and Electronic Systems</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Extended object tracking involves estimating both the physical extent and kinematic parameters of a target object, where typically multiple measurements are observed per time step. In this article, we propose a deterministic closed-form elliptical extended object tracker, based on decoupling of the kinematics, orientation, and axis lengths. By disregarding potential correlations between these state components, fewer approximations are required for the individual estimators than for an overall joint solution. This also enables a log-normal representation of the semi-axis lengths, i.e., opposed to related approaches, only positive axis lengths have support. The resulting algorithm outperforms existing algorithms, reaching the accuracy of sampling-based procedures. Additionally, a batch-based variant is introduced, yielding highly efficient computation while outperforming all comparable state-of-the-art algorithms. This is validated both by a simulation study using common models from literature, as well as an extensive quantitative evaluation on real automotive radar data.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.11995v1" target="_blank" class="paper-title">Latent variable models for simultaneous EOV identification and removal in population-based SHM</a>
+                        <span class="paper-date">2026-08-12</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>The robust treatment of environmental and operational variability (EOV) is an open challenge in population-based structural health monitoring (PBSHM). The difficulty is compounded in the case that the EOV signals are unmeasured. A common approach in conventional SHM is to apply \emph{projection-based} methods that discard subspaces of healthy feature data, reasoning that the EOV signal dominates the variance of the measured features. However, a common pitfall of projection-based approaches is that when damage acts close to the same variance-dominant direction, damage sensitivity is removed along with the EOV. An alternative identifying assumption for the removal of particular unmeasured EOVs is slowness; the latent EOV process is characterised by its long temporal correlation. In this paper, the latent EOV is cast as a state-space Gaussian process, enabling tractable $\mathcal{O}(T)$ inference via a Kalman filter. A robust hierarchical Bayesian identification framework is developed that enables population-level identification of latent EOVs and EOV-free residual features, using a Laplace approximation. The approach is first validated on a single laboratory-scale benchmark structure from the literature, subject to thermal EOVs, demonstrating robust damage detection and EOV recovery. The method is then applied to a simulated nine-turbine offshore wind farm with staggered deployment and damage, where it delivers a substantial true-positive uplift over projection and cointegration-based baselines at matched false-positive rates.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.11481v1" target="_blank" class="paper-title">Time-Varying Multi-Seasonal ARMA Models</a>
+                        <span class="paper-date">2026-08-11</span>
+                    </div>
+                                        <span class="paper-comment">📝 34 pages, 22 plots (supplementary materials included)</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>We propose an ARMA model that allows for multiple seasonal periods and time varying parameters in both regular and seasonal components, building upon previous work for pure AR processes and the conditional likelihood. The model is parameterized to ensure stability and invertibility at each time point. The parameter evolution is governed by dynamic shrinkage processes, enabling extended periods of essentially constant parameters, gradual changes, and abrupt shifts. The model includes a stochastic volatility component to account for potentially heterogeneous noise, also modeled by a dynamic shrinkage process. A Gibbs sampler is developed using the exact likelihood, with separate updating steps for the latent errors and the unobserved pre-sample history of the process. The time-varying AR and MA parameters are sampled jointly using a fast posterior sampler based on the extended Kalman filter. The model and the efficiency of the Gibbs sampler are evaluated using simulated and real data. A case study on monthly air passenger data in the US during 1990-2024 reveals significant changes in seasonality during the Covid-19 pandemic.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.09807v1" target="_blank" class="paper-title">WRAP: Wasserstein-Robust Adaptive Plug-in for Robot Localization</a>
+                        <span class="paper-date">2026-08-10</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Robotic localization under changing sensing conditions can suffer from biased errors and miscalibrated covariances. We present WRAP, an adapter-agnostic Wasserstein-robust plug-in for nonlinear extended Kalman filter (EKF) and error-state Kalman filter (ESKF) stacks. A causal module supplies time-varying effective process and measurement statistics; a mean-preserving Wasserstein local update then computes least-favorable covariances and a robust gain without changing the propagation model, residual, or retraction. This separates mean adaptation from covariance robustification and uses distinct radii for propagation and sensing. On 18 UWB--IMU sequences held out from adapter training, adapter-only and WRAP reduce mean 3-D position RMSE by $19.8\%$ and $27.4\%$ relative to the nominal ESKF; an isotropic ablation reaches $19.5\%$, linking the incremental gain to directional process-covariance redistribution. An in-sample GNSS--INS study shows that mean adaptation provides most of the accuracy gain, while DR improves consistency and mitigates over-tightened classical covariance estimates. The robust solve takes 0.05 ms for UWB and 2.92 ms for GNSS on a Jetson Orin Nano.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.09622v1" target="_blank" class="paper-title">Adaptive Sequential Test Planning for Multi-Mechanism Reliability Qualification via Bayesian Monte Carlo Tree Search</a>
+                        <span class="paper-date">2026-08-10</span>
+                    </div>
+                                        <span class="paper-comment">📝 Accepted to IEEE Transactions on Reliability</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Reliability qualification of advanced semiconductor devices requires sequential stress decisions that balance characterization objectives against multiple competing failure mechanisms. Current practice relies on static test plans derived from population-level acceleration models, which cannot adapt to per-unit variability or real-time degradation observations. This paper presents a closed-loop adaptive test planning framework that formulates reliability qualification as a partially observable sequential decision problem and solves it using Monte Carlo tree search for seed-action simulators (MCTS-SA) coupled with extended Kalman filter (EKF) belief-state estimation. The framework models stochastic, per-device variability in bias temperature instability (BTI), electromigration (EM), and time-dependent dielectric breakdown (TDDB), and treats stress selection as a constrained sequential optimization, i.e., to maximize the probability of successful degradation characterization while respecting catastrophic failure constraints. Under the experimental assumptions used here (discrete stress actions, proxy damage observability, and cumulative degradation without recovery), we believe this to be a novel application of tree-search-based adaptive test planning to multi-mechanism reliability qualification. Across 5,000 planning iterations, the characterization yield (CY) improves from 20% in the first 500 iterations to over 54% in the final 500, with 39% cumulative success, while the best successful test sequence terminates with EM and TDDB damage fractions DEM=0.564 and DTDDB=0.537, well within safety margins. These results demonstrate that sequential Bayesian planning can synthesize damage-aware test policies that significantly outperform non-adaptive strategies for reliability qualification under competing failure modes.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2603.29512v3" target="_blank" class="paper-title">Communication Outage-Resistant UUV State Estimation: A Variational History Distillation Approach</a>
+                        <span class="paper-date">2026-08-10</span>
+                    </div>
+                                        <span class="paper-comment">📝 7 pages, 2 figures. Accepted for publication in 2026 IEEE/OES OCEANS Sanya. \c{opyright} 2026 IEEE. Personal use of this material is permitted. See PDF for the full IEEE copyright notice</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>The reliable operation of Unmanned Underwater Vehicle (UUV) clusters is highly dependent on continuous acoustic communication. However, this communication method is highly susceptible to intermittent interruptions. When communication outages occur, standard state estimators such as the Unscented Kalman Filter (UKF) will be forced to make open-loop predictions. If the environment contains unmodeled dynamic factors, such as unknown ocean currents, this estimation error will grow rapidly, which may eventually lead to mission failure. To address this critical issue, this paper proposes a Variational History Distillation (VHD) approach. VHD regards trajectory prediction as an approximate Bayesian reasoning process, which links a standard motion model based on physics with a pattern extracted directly from the past trajectory of the UUV. This is achieved by synthesizing ``virtual measurements'' distilled from historical trajectories. Recognizing that the reliability of extrapolated historical trends degrades over extended prediction horizons, an adaptive confidence mechanism is introduced. This mechanism allows the filter to gradually reduce the trust of virtual measurements as the communication outage time is extended. Extensive Monte Carlo simulations in a high-fidelity environment demonstrate that the proposed method achieves a 91% reduction in prediction Root Mean Square Error (RMSE), reducing the error from approximately 170 m to 15 m during a 40-second communication outage. These results demonstrate that VHD can maintain robust state estimation performance even under complete communication loss.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.08886v1" target="_blank" class="paper-title">Estimation of Spacecraft Inertia Tensor Using Attitude-Only Data from Torque-Free Motion</a>
+                        <span class="paper-date">2026-08-09</span>
+                    </div>
+                                        <span class="paper-comment">📝 34 pages, 12 figures</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>We present an attitude-only framework for estimating a spacecraft's normalized inertia tensor from torque-free rotational motion. Our method supports both continuous single-arc observations and the joint use of multiple short torque-free arcs, while requiring neither gyroscope measurements nor known control torques. A Karush-Kuhn-Tucker formulation provides a fast linear initialization, which is refined by nonlinear shooting using the exact Jacobi-elliptic solution of Euler's equations and a Magnus-expansion quaternion map. Under controlled attitude noise, tests using a single 500-second arc reduced inertia-tensor error by approximately one order of magnitude relative to an Extended Kalman Filter initialized from the same estimate, while requiring nearly two orders of magnitude less computation. Joint estimation from three 100-second arcs provided a similar improvement in accuracy and remained more than one order of magnitude faster. Photorealistic proximity-operations simulations further evaluated both strategies using monocular image-derived attitudes. The 2000-second single-arc cases achieved sub-thousandth median inertia-tensor error and supported 10-hour attitude predictions with single-digit-degree median error. In three-arc cases using 30-300 seconds per arc, our method consistently outperformed the EKF refinement, with performance governed by rotational excitation and temporal sampling.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2606.12691v2" target="_blank" class="paper-title">Two-Layer Linear Auto-Regressive Models Estimate Latent States</a>
+                        <span class="paper-date">2026-08-08</span>
+                    </div>
+                                        <span class="paper-comment">📝 ICML 2026</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Auto-regressive models have emerged as powerful tools for sequential data, from language to video. Understanding how and why these models learn latent representations remains an open theoretical question. In this work, we demonstrate that when trained by empirical risk minimization on data from partially observed linear dynamical systems, two-layer linear auto-regressive models naturally learn to approximate Kalman filtering. In particular, we show that the learned hidden representation coincides, up to a similarity transformation, with the state estimates produced by the optimal (Kalman) filter, even though the model has no explicit knowledge of the underlying dynamics or state. The result follows from three main insights. First, we establish that the Kalman filter is well approximated by an auto-regressive model with bounded truncation error. Second, we show that despite non-convexity, the two-layer optimization landscape is benign, i.e., all stationary points are either strict saddles or global minima. Finally, as our main contributions, we provide finite-sample guarantees on prediction error, parameter estimation error, and latent state recovery. Numerical simulations support the theoretical results and demonstrate that the latent representations of auto-regressive models recover state estimates.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.07797v1" target="_blank" class="paper-title">Drone-Assisted UAV-UGV Collaboration for Autonomous Navigation in Snow-Covered Terrain</a>
+                        <span class="paper-date">2026-08-07</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>This paper presents a collaborative UAV-UGV navigation framework for high-altitude, snow-covered terrain, where reduced visibility and unstable ground render conventional methods ineffective. We introduce a custom efficient U-Net architecture that falls under the computational constraints for real-time road segmentation, utilizing a novel synthetic snow data augmentation technique to achieve 96.5% segmentation accuracy. For UAV localization, we implement an Extended Kalman Filter (EKF) fusing onboard GPS and IMU data, achieving a maximum observed positional error of +-0.5 meters. The UGV position is determined via a visual tracking pipeline using YOLOv5 and depth data from the UAV's RGB-D camera. A dynamic path planning algorithm utilizes this segmentation to adjust for snow drifts, enabling successful navigation in obscured test environment with minimal deviation.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2407.15003v2" target="_blank" class="paper-title">Predictable by Design, Vulnerable by Nature: Security Consequences of Learnability in UAV State Estimators</a>
+                        <span class="paper-date">2026-08-07</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>If a mathematical function can be learned from its input/output behavior alone, can an adversary exploit that ``learnability'' to compromise it? What if the function is core to estimating the state of, and controlling, unmanned vehicles such as drones? We investigate this question by targeting state estimators in unmanned aerial vehicles (UAVs) - specifically Extended Kalman Filters (EKFs), an industry standard for autonomous systems, whose inherent modeling of uncertainties and sensor noise create an adversarial space that ML can exploit. We present REQUIEM, a machine-learning based framework for investigating such vulnerabilities. Our framework functions by, (i) constructing deep surrogate models that emulate the state estimation update function using only observed inputs and outputs and (ii) optimizing spoofer models to manipulate sensor values so that they're not easily detectable by standard anomaly detectors - all of which results in physical deviations by the autonomous vehicle. We evaluate REQUIEM's efficacy against both, standard PX4 controllers and the state-of-the-art SAVIOR anomaly detector. Across real-world quadrotor experiments and high-fidelity simulations (Gazebo/PX4), REQUIEM demonstrates significant deviations from planned mission paths while evading anomaly detection methods, without the need for intrusive root/administrative access. Our findings suggest that the very properties making state estimators reliable may constitute a security liability, motivating investigation into ``learnability'' as an attack surface in safety-critical systems.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.07075v1" target="_blank" class="paper-title">Detection and Ranging of Transient Extrinsic Contacts Based on 6D Dynamic Tactile Sensing</a>
+                        <span class="paper-date">2026-08-07</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Delicate manipulation often involves transient and subtle collisions between a grasped object and the environment. While the human hand localizes these contacts effortlessly thanks to superior tactile sensitivity, robotic systems often lack the requisite resolution to acquire the information necessary for motion planning, resulting in clumsy manipulation or even task failure. Here, we propose transient extrinsic contact detection and ranging (TECDAR), a simple yet fast and efficient method for detecting and ranging extrinsic contact of grasped objects. Our design of gripper tips employs dynamic tactile sensing leveraging a single 2.5$\times$3 mm 6D inertial measurement unit. The sensor captures sub-millisecond tip deformations at a 7 kHz sampling rate, but operating on a data stream of only 84 KB/s. High bandwidth and compact data size enable the system to rapidly detect and localize contact between grasped objects and their surroundings. Specifically, fusing tactile data with robot pose via an extended Kalman filter enables fast and precise localization of extrinsic contact, reaching millimeter-level accuracy within 180 ms. Experimental results demonstrate that the system achieves an average localization accuracy of approximately 7\,mm in both line-contact and point-contact localization tasks. Furthermore, this near-instantaneous localization enables the robot to rectify its trajectory on a millisecond scale, facilitating precise tool manipulation and enhanced perception of complex environments purely through tactile exploration and mapping. We envision such techniques advancing the future of robotics across domains requiring delicate manipulation, including precision assembly, surgical assistance, and autonomous exploration in touch-dominant environments. Project page: humitlab.github.io/TECDAR/</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2606.25699v2" target="_blank" class="paper-title">SA-LIVO: Efficient LiDAR-Inertial-Visual Odometry with Subspace-Aware Degeneracy Handling</a>
+                        <span class="paper-date">2026-08-06</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Tightly coupled LiDAR-inertial-visual odometry (LIVO) fuses geometric depth with visual measurements, but its exteroceptive sensors fail independently: LiDAR when scan geometry is under-constrained, vision under poor illumination or texture absence. Existing countermeasures (binary degeneracy detection, covariance inflation, scene-level quality gating) act at the modality level, so a single isotropic gain sends visual residuals into directions LiDAR already constrains well and cannot concentrate them where constraints are deficient. We propose Subspace-Aware LiDAR-inertial-visual odometry (SA-LIVO), whose Subspace-Aware Information Fusion (SAIF) eigendecomposes the joint LiDAR-visual information matrix and gates each eigendirection by a single-threshold linear clamp, attenuating low-amplitude directions while passing well-observed ones at full strength; robust per-residual gating and a scene-level quality factor screen corrupted measurements. LiDAR and visual residuals share one invariant extended Kalman filter (InEKF) loop and linearization point, letting photometric Jacobians be assembled once and reused across iterations. On 29 public-benchmark sequences (HILTI'22, Newer College Dataset (NCD), Oxford Spires), plus additional concurrent-degradation scenarios, SA-LIVO matches the strongest baselines in accuracy and stays bounded where competing systems diverge. On the HILTI'22 subset that every baseline completes, it averages 12.3 ms per frame on a laptop CPU and 26.8 ms on an embedded ARM board without GPU, at 3.6-6.3x lower peak memory.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.05826v1" target="_blank" class="paper-title">5G ISAC-Based UAV Detection and 3-D Tracking Using Uplink Sounding Reference Signals on an End-to-End O-RAN Simulation Testbed</a>
+                        <span class="paper-date">2026-08-06</span>
+                    </div>
+                                        <span class="paper-comment">📝 27 pages, 17 figures, 11 tables. submitted for publication</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Integrated Sensing and Communication (ISAC) lets cellular infrastructure serve communication users and sense on the same waveform. We present an end-to-end O-RAN simulation testbed for 5G ISAC targeting low-altitude UAV detection and 3-D tracking, built from open-source components: OpenAirInterface, FlexRIC and Sionna RT, in which the NR Uplink Sounding Reference Signal is repurposed as a passive radar waveform: a PHY-layer sensing stage inside the gNB produces detections that reach an Extended Kalman Filter tracking xApp over a custom E2 service model, with no change to the NR standard and no dedicated sensing waveform. A single bistatic pair leaves elevation unobservable, so the tracker needs a height prior; we remove it two independent ways and measure both - a planar receive array supplying a vertical aperture, and a second transmitter supplying range diversity. Both live results corroborate an offline ray-traced study of the same estimator, which converges from a deliberately wrong initial altitude to 1.8 m RMSE at a consistent filter, so altitude observability is established both in the signal-processing chain and end to end through the live stack. Detection coverage is preserved under a concurrent 10 Mbps uplink communications load.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.05647v1" target="_blank" class="paper-title">KILVO: Kinematic-Inertial-LiDAR-Visual Odometry with Robust Multimodal Adaptation for Humanoid Robots</a>
+                        <span class="paper-date">2026-08-06</span>
+                    </div>
+                                        <span class="paper-comment">📝 This article has been accepted for publication in IEEE/ASME Transactions on Mechatronics. Personal use is permitted. All other uses require IEEE permission</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>This article presents a kinematic-inertial-LiDAR-visual odometry for humanoid robots, called KILVO. Tailored to the platform features, requirements, and real-world complexity, it fully utilizes the sensors commonly equipped on humanoid robots, including joint encoders, IMU, LiDAR, and camera, within an asynchronous-sequential hybrid error-state iterated Kalman filter (ESIKF). Specifically, inertial data are used for prediction, leg kinematics are processed asynchronously at a high rate and provide proprioceptive constraints, while exteroception is updated sequentially, first by registering LiDAR points for geometric priors and then by updating the visual component via photometric errors. Moreover, the framework is elaborately designed with multimodal adaptation for resilience to sensor failures. A compact contact estimation module is also developed, sharing information with state estimation without additional sensors. Extensive experiments on public datasets and in the real world across multiple humanoid robots, gait patterns, and scenarios demonstrate that KILVO achieves highly competitive accuracy, efficiency, and output rates, with strong robustness against sensor degradation and failures, making it more suitable for humanoid robots than state-of-the-art fusion methods. Our code and datasets are released on GitHub.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2512.18928v4" target="_blank" class="paper-title">The Ensemble Schr{ö}dinger Bridge filter for Nonlinear Data Assimilation</a>
+                        <span class="paper-date">2026-08-04</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>This work introduces a novel nonlinear optimal filtering method, termed the Ensemble Schr{ö}dinger Bridge nonlinear filter. The proposed filter combines the standard prediction step with a diffusion-generative-modeling-based analysis step, thereby completing one full filtering update. The resulting approach introduces no structural model error, and is derivative-free, training-free, and highly parallelizable. Numerical experiments demonstrate that the proposed algorithm performs effectively for highly nonlinear dynamics and nonlinear observation processes, including chaotic systems with dimension up to 40 and beyond. The results also show that the method outperforms classical approaches such as the ensemble Kalman filter and particle filter across a range of tests with varying degrees of nonlinearity. Future work will focus on extending the proposed method to practical meteorological applications and developing a rigorous convergence theory.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.02316v1" target="_blank" class="paper-title">Residual-Based Adaptive Kalman Filtering for Legged Robot State Estimation</a>
+                        <span class="paper-date">2026-08-03</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>State estimation is a key component in model-based control of walking robots and, more broadly, applicable wherever hidden variables must be inferred. The Kalman filter is widely used to estimate floating-base position and velocity by fusing multiple sensing modalities. However, tuning noise parameters is challenging and typically requires expert knowledge. Moreover, fixed noise parameters are unsuitable for varying gaits and environments. We propose an online adaptation strategy for the process noise covariance matrix Q and the measurement noise covariance matrix R. Specifically, we introduce a filter residual and innovation-based covariance adaptation method for legged robot state estimation and evaluate it against a baseline approach relying on IMU and foot force measurements. The proposed adaptation is implemented within an Invariant Extended Kalman Filter (InEKF) fusing IMU and leg kinematics. Experiments on indoor and outdoor datasets with a Unitree Go2 quadruped show that adapting R is sufficient and improves accuracy by 25% for the trotting gait compared to the fixed-tuned InEKF. Finally, the proposed residual-based adaptation achieves comparable performance to the foot force approach, without requiring foot force measurements or additional parameter tuning.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.15807v2" target="_blank" class="paper-title">Deployment-Ready UWB Localization for Industrial Ground Robots with Automatic Anchor Calibration and Terrain-Aware Fusion</a>
+                        <span class="paper-date">2026-08-03</span>
+                    </div>
+                                        <span class="paper-comment">📝 Content unchanged from v1; updated depiction of mobile robots in Fig. 1</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Ultra-Wideband (UWB) ranging has become a viable option for industrial Autonomous Mobile Robot (AMR) localization due to improved accuracy and low cost. However, real-world deployments remain limited by two recurring challenges: calibrating static anchors can be time-consuming and error-prone, and integrating UWB with existing onboard sensors requires careful design to ensure robust and consistent pose estimation. Addressing these challenges, this paper presents an end-to-end pipeline that combines automatic anchor calibration with a generic multi-sensor estimator tailored to surface-bound vehicle motion. It targets existing AMR stacks in scenarios where robot pose priors are available for initialization. The calibration stage estimates anchor positions and range biases, while the localization stage fuses UWB with proprioceptive sensing in a bias-aware Extended Kalman Filter to improve consistency without extensive parameter tuning. Experiments on a commercial logistics AMR in a warehouse setting demonstrate accurate positioning indoors and across outdoor transitions, with improved consistency compared to an earlier estimator formulation. Evaluation on an independent forklift dataset further indicates transferability to other platforms. The method remains effective in test cases with limited line-of-sight and sparse anchor coverage. These results show that UWB localization can be deployed with substantially reduced manual effort while preserving the accuracy required for industrial AMRs. The collected warehouse dataset is made publicly available.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.02093v1" target="_blank" class="paper-title">Dynamic UAV-based search operations using probabilistic diffusion modeling of Man Overboard incident victims</a>
+                        <span class="paper-date">2026-08-03</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>More than 70% of the people that fell overboard cruise ships in the period 2010-2019 lost their lives. This paper presents a strategy for reliably predicting the area a person may be in after a man overboard incident, and describes in detail the search methods to find them utilizing UAV technology. The search area prediction method employs an Extended Kalman Filter that capitalizes on the information from the Leeway model to track the missing person in the sea by taking into account the uncertainty of the movement of the person and the weather conditions in the area. Then, a UAV uses this information to search for the person. Five different methods for searching in this dynamic area are presented and evaluated - the Zigzag, the Boustrophedon, the Spiral, the Probability Informed Search and the Improved Probability Informed Search (IPIS) methods. The IPIS method provides success rate of over 80% on average for finding a person, even if the UAV initiates the search mission 20 minutes after the man overboard incident and even assuming a detection method with a success rate of 30%. All code for the simulation environment and the evaluation of the methods is available on our GitHub page at https://github.com/diangeli/pdms-man-overboard.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>👤 <strong>Hongkun Luo (罗宏昆)</strong> · <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent)">Academic Page</a> · <a href="https://github.com/luohongk" target="_blank" style="color:var(--accent)">GitHub</a></p>
+            <p style="margin-top:8px">🤖 Generated automatically from <a href="https://arxiv.org" style="color:var(--accent)">arXiv</a> · <a href="https://github.com/luohongk/Embodied-AI-Daily" style="color:var(--accent)">GitHub Repo</a></p>
+            <p style="margin-top:4px">Last update: 2026-09-06 (Beijing Time)</p>
+        </footer>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+        /* ── Mobile menu ── */
+        function toggleMenu() {
+            var overlay = document.getElementById('mobileNav');
+            var btn = document.getElementById('menuToggle');
+            var open = overlay.classList.toggle('open');
+            btn.textContent = open ? '✕' : '☰';
+            document.body.style.overflow = open ? 'hidden' : '';
+        }
+        function closeMenu() {
+            var overlay = document.getElementById('mobileNav');
+            var btn = document.getElementById('menuToggle');
+            overlay.classList.remove('open');
+            btn.textContent = '☰';
+            document.body.style.overflow = '';
+        }
+
+        /* ── Lazy AI-summary renderer ── */
+        // Render markdown + re-typeset MathJax only when a summary is opened.
+        // Math spans ($...$, $$...$$, \(...\), \[...\]) are stashed as
+        // placeholders before marked runs so Markdown never mangles LaTeX.
+        function renderAISummary(details) {
+            if (!details.dataset.lazy) return;   // already rendered
+            var rawMd = details.dataset.md || '';
+
+            // Decode HTML entities we encoded in Python.
+            // Order matters: &amp; must be last (it re-encodes other entities).
+            rawMd = rawMd
+                .replace(/&#10;/g, '\n')
+                .replace(/&quot;/g, '"')
+                .replace(/&lt;/g, '<')
+                .replace(/&gt;/g, '>')
+                .replace(/&amp;/g, '&');
+
+            // 1. Stash math spans.
+            var store = [];
+            function stash(m) { store.push(m); return '\x02MATH' + (store.length - 1) + 'END\x03'; }
+            var protected_ = rawMd
+                .replace(/\$\$[\s\S]+?\$\$/g, stash)
+                .replace(/\\\[[\s\S]+?\\\]/g, stash)
+                .replace(/\$[^$\n]+?\$/g, stash)
+                .replace(/\\\([\s\S]+?\\\)/g, stash);
+
+            // 2. Render markdown.
+            var html = (typeof marked !== 'undefined')
+                ? marked.parse(protected_)
+                : '<pre>' + protected_.replace(/</g, '&lt;') + '</pre>';
+
+            // 3. Restore math spans verbatim.
+            store.forEach(function(expr, i) {
+                html = html.split('\x02MATH' + i + 'END\x03').join(expr);
+            });
+
+            // 4. Inject into DOM.
+            var container = details.querySelector('.ai-content');
+            if (container) container.innerHTML = html;
+
+            // 5. Ask MathJax to typeset just this element.
+            if (window.MathJax && MathJax.typesetPromise) {
+                MathJax.typesetPromise([container]).catch(function(e) {
+                    console.warn('MathJax typeset error:', e);
+                });
+            }
+
+            // Mark done so we never re-render.
+            delete details.dataset.lazy;
+            delete details.dataset.md;
+        }
+
+        // Wire up all existing .ai-summary elements.
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('details.ai-summary[data-lazy]').forEach(function(det) {
+                det.addEventListener('toggle', function () {
+                    if (det.open) renderAISummary(det);
+                }, { once: true });
+            });
+        });
+    </script>
+</body>
+</html>
