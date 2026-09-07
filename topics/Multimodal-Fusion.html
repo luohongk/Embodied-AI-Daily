@@ -675,7 +675,7 @@
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Kalman Filter</span>
-                    <span class="nav-count">50</span>
+                    <span class="nav-count">49</span>
                 </a>
                 <a href="Loop-Closure-Detection.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -690,12 +690,12 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">70</span>
+                    <span class="nav-count">68</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">78</span>
+                    <span class="nav-count">80</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -730,7 +730,7 @@
                 <a href="Model-Predictive-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#14b8a6"></span>
                     <span class="nav-label">Model Predictive Control</span>
-                    <span class="nav-count">42</span>
+                    <span class="nav-count">43</span>
                 </a>
                 <a href="Whole-Body-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#06b6d4"></span>
@@ -760,7 +760,7 @@
                 <a href="Domain-Randomization.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
                     <span class="nav-label">Domain Randomization</span>
-                    <span class="nav-count">79</span>
+                    <span class="nav-count">78</span>
                 </a>
                 <a href="Bipedal-Locomotion.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#d946ef"></span>
@@ -784,7 +784,7 @@
         <div class="sidebar-header">
             <h1><a href="../index.html" style="background:linear-gradient(135deg,#6366f1,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">🚀 Embodied AI Daily</a></h1>
             <div class="update">by <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent);text-decoration:none;font-weight:500;">Hongkun Luo</a> (罗宏昆)</div>
-            <div class="update" style="margin-top:2px">Last update: 2026-09-07</div>
+            <div class="update" style="margin-top:2px">Last update: 2026-09-08</div>
         </div>
             <a href="Continuous-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
@@ -894,7 +894,7 @@
             <a href="Kalman-Filter.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Kalman Filter</span>
-                <span class="nav-count">50</span>
+                <span class="nav-count">49</span>
             </a>
             <a href="Loop-Closure-Detection.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -909,12 +909,12 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">70</span>
+                <span class="nav-count">68</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">78</span>
+                <span class="nav-count">80</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -949,7 +949,7 @@
             <a href="Model-Predictive-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#14b8a6"></span>
                 <span class="nav-label">Model Predictive Control</span>
-                <span class="nav-count">42</span>
+                <span class="nav-count">43</span>
             </a>
             <a href="Whole-Body-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#06b6d4"></span>
@@ -979,7 +979,7 @@
             <a href="Domain-Randomization.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
                 <span class="nav-label">Domain Randomization</span>
-                <span class="nav-count">79</span>
+                <span class="nav-count">78</span>
             </a>
             <a href="Bipedal-Locomotion.html" class="nav-item">
                 <span class="nav-dot" style="background:#d946ef"></span>
@@ -1041,6 +1041,21 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Depth can resolve appearance ambiguity in RGB-D salient object detection (SOD), yet sensor depth is not uniformly reliable. Missing regions, blurred boundaries, and structural artifacts can propagate through multimodal fusion and make an RGB-D detector less accurate than its RGB-only counterpart. Existing quality-aware approaches regulate observed depth but remain dependent on the same potentially defective modality. We propose \method, a reliability-aware geometry distillation framework developed for RGB-D SOD benchmarks without using dataset-provided depth during training or inference. A frozen Depth Anything V2 model serves only as a training-time teacher, transferring dense relative geometry, hierarchical spatial attention, and boundary structure to a compact edge-aware geometry branch. Pooled bidirectional interaction aligns geometry with appearance, and a pixel-wise reliability estimator selectively injects geometry that is compatible with the current RGB representation. The teacher is removed after training, leaving an RGB-only inference network. Trained on 2,985 RGB-mask pairs, \method{} achieves the best or tied-best result in 26 of 36 metric-dataset comparisons against ten recent RGB-D SOD methods, including a 13.4\% relative MAE reduction on ReDWeb-S. When retrained on DUTS-TR, it also improves the strongest prior $F$-measure by 4.2\% on PASCAL-S, showing that the distilled geometry transfers beyond a particular sensor or dataset domain. Code will be released upon publication.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2609.04281v1" target="_blank" class="paper-title">When Seeing Overrides Knowing: Visual Dominance and Deferral-Based Method for Personalized Safety in VLMs</a>
+                        <span class="paper-date">2026-09-03</span>
+                    </div>
+                                        <span class="paper-comment">📝 Published as a main conference paper at COLM 2026</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：视觉语言模型（VLMs）在个性化安全场景中缺乏对用户隐藏上下文（如医疗、情绪或情境）的感知，导致即使通用回答合理，对特定用户仍可能不安全。现有模型几乎总是直接响应（86-99%），而非主动寻求缺失信息，个性化安全得分极低（最高2.6/5）。&#10;&#10;🛠 **方法**：提出MPS-Bench基准（含5,181个场景、584张真实图像、12个高风险领域），并分析模型失败机制，发现“视觉主导”现象——视觉信息在早期层进入文本表示并抑制文本风险信号。基于此，设计PRISM轻量级输入监控器，利用双向跨模态调制预测查询是否需要延迟响应。&#10;&#10;✨ **主要贡献**：首次系统研究VLM个性化安全问题，揭示视觉主导的两阶段因果机制（视觉情感早期转移至文本流并影响最终决策），使后期内部修复不可靠。PRISM在测试模型中达到0.978 AUC，并严格主导安全-效用帕累托前沿，为个性化安全提供高效解决方案。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Vision-language models (VLMs) are increasingly deployed in high-stakes settings, where a response that is reasonable in general may still be unsafe for a particular user whose medical, emotional, or situational context is unknown to the model. We study this problem of personalized safety in multimodal systems and introduce MPS-Bench, a benchmark of 5,181 scenarios from 584 real-world images across 12 high-risk domains, each paired with a hidden user profile. Evaluating eight frontier VLMs, we find that they almost always respond directly (86-99%) rather than seek missing context, and none exceeds 2.6/5 on personalized safety. To understand why these failures arise, we analyze multimodal interactions and identify visual dominance: visual information enters text representations early and suppresses textual risk signals during multimodal fusion. Causal interventions reveal a two-stage mechanism in which visual affect is first transferred into the text stream in early layers and then shapes the final decision through this altered text representation, making late-stage internal remediation unreliable. Motivated by this mechanism, we propose PRISM, a lightweight input monitor that uses bidirectional cross-modal modulation to predict when a query is likely to require deferral. PRISM achieves 0.978 AUC and strictly dominates the safety-utility Pareto frontier across all tested models.</p>
                     </details>
                 </div>
                 <div class="paper-card">
@@ -1169,10 +1184,7 @@
                         <span class="paper-date">2026-08-29</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有反无人机多模态感知系统在RGB与热成像融合时未建模预测不确定性，且无法表达模态间冲突时的怀疑，导致传感器退化或失效时可靠性不足。&#10;&#10;🛠 **方法**：将EDTC框架扩展至RGB-热成像多模态感知，提出折扣信念融合（DBF），将模态间冲突转化为不确定性质量后再聚合意见，并通过选择低不确定性模态确定边界框。&#10;&#10;✨ **主要贡献**：多模态融合在Anti-UAV基准上优于单模态（测试准确率0.670 vs 0.604/0.598），实时速度≥38 FPS；但DBF与无折扣平均效果无显著差异，因基准中模态间冲突近乎为零，融合不确定性校准良好（ECE 0.057）但作为定位失败检测器弱于空间方差（AUROC 0.626 vs 0.739），揭示冲突感知融合仅在特定数据分布下才有增益。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Anti-UAV perception systems must remain reliable when sensor streams degrade under occlusion, fast motion, or modality-specific failure. Existing multimodal anti-UAV systems fuse RGB and thermal streams deterministically, without modeling predictive uncertainty, and cannot express doubt when streams disagree. Evidential Deep Learning (EDL) produces calibrated per-class uncertainty in a single forward pass. EDTC already exploits this for thermal-only perception, yet cross-modal evidential fusion remains unaddressed. This paper extends EDTC to multimodal RGB-Thermal perception via Discounted Belief Fusion (DBF), which converts inter-modal conflict into uncertainty mass before aggregating stream opinions. Bounding boxes are resolved by selecting the lower-uncertainty modality. On the Anti-UAV benchmark, multimodal fusion consistently outperforms either single stream (test Acc 0.670 vs. 0.604 IR, 0.598 RGB) at real-time speed (at least 38 FPS). However, DBF is empirically indistinguishable from undiscounted averaging: near-zero inter-modal conflict on this presence-dominated benchmark leaves the discounting step inert. The fused uncertainty is well-calibrated (ECE 0.057) yet expectedly a weaker localization failure detector than spatial variance (AUROC 0.626 vs. 0.739). The null result is structural: the benchmark's near-universal presence and vacuous miss-encoding jointly suppress inter-modal conflict, a diagnosis that delimits where conflict-aware fusion provides measurable benefit.</p>
@@ -1994,25 +2006,13 @@
                         <p>Glass surface ubiquitous in both daily life and professional environments presents a potential threat to vision-based systems, such as robot and drone navigation. To solve this challenge, most recent studies have shown significant interest in Video Glass Surface Detection (VGSD). We observe that objects in the reflection (or transmission) layer appear farther from the glass surfaces. Consequently, in video motion scenarios, the notable reflected (or transmitted) objects on the glass surface move slower than objects in non-glass regions within the same spatial plane, and this motion inconsistency can effectively reveal the presence of glass surfaces. Based on this observation, we propose a novel network, named MVGD-Net, for detecting glass surfaces in videos by leveraging motion inconsistency cues. Our MVGD-Net features three novel modules: the Cross-scale Multimodal Fusion Module (CMFM) that integrates extracted spatial features and estimated optical flow maps, the History Guided Attention Module (HGAM) and Temporal Cross Attention Module (TCAM), both of which further enhances temporal features. A Temporal-Spatial Decoder (TSD) is also introduced to fuse the spatial and temporal features for generating the glass region mask. Furthermore, for learning our network, we also propose a large-scale dataset, which comprises 312 diverse glass scenarios with a total of 19,268 frames. Extensive experiments demonstrate that our MVGD-Net outperforms relevant state-of-the-art methods.</p>
                     </details>
                 </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.18336v1" target="_blank" class="paper-title">EmoEUS: Uncertainty Supervision for Multimodal Emotion Recognition in Conversation</a>
-                        <span class="paper-date">2026-07-19</span>
-                    </div>
-                                        <span class="paper-comment">📝 Accept by Interspeech 2026</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Multimodal emotion recognition in conversation (MERC) can leverage multimodal and contextual cues to boost recognition performance. However, existing fusion approaches in MERC often ignore modality-specific uncertainty across utterances caused by conflicting cues, varying noise, and missing modality-specific signals. We propose EmoEUS, an explicit uncertainty supervision framework for MERC. EmoEUS performs uncertainty-aware multimodal fusion by dynamically weighting modalities using learned variance estimates. We also introduce an explicitly supervised loss that aligns each utterance's predicted variance with the distance between the utterance's distributional representation and its emotion- and modality-specific cluster center. Experiments on IEMOCAP and MELD show that EmoEUS consistently outperforms state-of-the-art methods.</p>
-                    </details>
-                </div>
             </div>
         </section>
 
         <footer class="footer">
             <p>👤 <strong>Hongkun Luo (罗宏昆)</strong> · <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent)">Academic Page</a> · <a href="https://github.com/luohongk" target="_blank" style="color:var(--accent)">GitHub</a></p>
             <p style="margin-top:8px">🤖 Generated automatically from <a href="https://arxiv.org" style="color:var(--accent)">arXiv</a> · <a href="https://github.com/luohongk/Embodied-AI-Daily" style="color:var(--accent)">GitHub Repo</a></p>
-            <p style="margin-top:4px">Last update: 2026-09-07 (Beijing Time)</p>
+            <p style="margin-top:4px">Last update: 2026-09-08 (Beijing Time)</p>
         </footer>
     </main>
 
