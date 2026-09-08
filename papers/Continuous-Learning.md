@@ -2,7 +2,7 @@
 
 > **78 papers** fetched from arXiv for the keyword **Continuous Learning**.
 
-> Last update: 2026-09-08
+> Last update: 2026-09-09
 
 [← Back to README](../README.md)
 
