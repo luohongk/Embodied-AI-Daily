@@ -2,7 +2,7 @@
 
 > **79 papers** fetched from arXiv for the keyword **Visual Inertial Odometry**.
 
-> Last update: 2026-09-12
+> Last update: 2026-09-16
 
 [← Back to README](../README.md)
 
