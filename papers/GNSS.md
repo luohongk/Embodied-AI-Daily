@@ -2,7 +2,7 @@
 
 > **46 papers** fetched from arXiv for the keyword **GNSS**.
 
-> Last update: 2026-09-21
+> Last update: 2026-09-22
 
 [← Back to README](../README.md)
 
