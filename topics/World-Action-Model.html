@@ -575,7 +575,7 @@
                 <a href="Feed-Forward-Reconstruction.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Feed Forward Reconstruction</span>
-                    <span class="nav-count">63</span>
+                    <span class="nav-count">64</span>
                 </a>
                 <a href="Vision-and-Language-Navigation.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -585,7 +585,7 @@
                 <a href="Vision-Language-Action.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#d946ef"></span>
                     <span class="nav-label">Vision Language Action</span>
-                    <span class="nav-count">80</span>
+                    <span class="nav-count">79</span>
                 </a>
                 <a href="World-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
@@ -600,7 +600,7 @@
                 <a href="LLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
                     <span class="nav-label">LLM</span>
-                    <span class="nav-count">79</span>
+                    <span class="nav-count">78</span>
                 </a>
                 <a href="VLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f97316"></span>
@@ -745,7 +745,7 @@
                 <a href="Path-Planning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#3b82f6"></span>
                     <span class="nav-label">Path Planning</span>
-                    <span class="nav-count">75</span>
+                    <span class="nav-count">74</span>
                 </a>
                 <a href="Multimodal-Fusion.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#6366f1"></span>
@@ -794,7 +794,7 @@
             <a href="Feed-Forward-Reconstruction.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Feed Forward Reconstruction</span>
-                <span class="nav-count">63</span>
+                <span class="nav-count">64</span>
             </a>
             <a href="Vision-and-Language-Navigation.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -804,7 +804,7 @@
             <a href="Vision-Language-Action.html" class="nav-item">
                 <span class="nav-dot" style="background:#d946ef"></span>
                 <span class="nav-label">Vision Language Action</span>
-                <span class="nav-count">80</span>
+                <span class="nav-count">79</span>
             </a>
             <a href="World-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
@@ -819,7 +819,7 @@
             <a href="LLM.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
                 <span class="nav-label">LLM</span>
-                <span class="nav-count">79</span>
+                <span class="nav-count">78</span>
             </a>
             <a href="VLM.html" class="nav-item">
                 <span class="nav-dot" style="background:#f97316"></span>
@@ -964,7 +964,7 @@
             <a href="Path-Planning.html" class="nav-item">
                 <span class="nav-dot" style="background:#3b82f6"></span>
                 <span class="nav-label">Path Planning</span>
-                <span class="nav-count">75</span>
+                <span class="nav-count">74</span>
             </a>
             <a href="Multimodal-Fusion.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
@@ -1028,6 +1028,42 @@
                 <span class="topic-count">80 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2609.24976v1" target="_blank" class="paper-title">DexTacWAM: A Visuo-Tactile World-Action Model for Dexterous Manipulation</a>
+                        <span class="paper-date">2026-09-21</span>
+                    </div>
+                                        <span class="paper-comment">📝 22 pages. Project website: https://dextacwam.github.io/</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Dexterous manipulation depends on contact dynamics that are often only partially observable from vision. Recent World-Action Models (WAMs) couple predictive video world modeling with action generation, but remain largely vision-centric and therefore cannot directly model these contact dynamics. We present DexTacWAM, a visuo-tactile WAM that encodes each fingertip independently, aggregates the resulting features through a finger- and pose-aware tactile compressor, and injects the tactile latent into a video diffusion world model for joint visuo-tactile world modeling. Across six contact-rich dexterous manipulation tasks on a 22-DoF bimanual platform, DexTacWAM achieves the highest score on every task, averaging 70.6 versus 38.0 for the strongest baseline. Ablations attribute the gain to modeling contact evolution as part of the predicted world state rather than tactile conditioning alone: removing tactile world modeling reduces the four-task mean from 74.7 to 26.6 while keeping the same tactile features and action expert. After four hours of tactile-encoder adaptation with a frozen pretrained vision VAE, our continual vision-to-touch learning extends the pretrained video model to touch using roughly 100 demonstrations per task without tactile midtraining, while retaining visual prediction quality within 0.5 dB of vision-only counterparts. The compressor retains 89.4% of pre-fusion contact recall while enabling 2.26x faster training and 1.29x faster inference. Together, these results show that pretrained video priors can be extended to distributed multi-finger contact dynamics in a data- and compute-efficient manner.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2609.24868v1" target="_blank" class="paper-title">DualWAM: Dual-System World Action Models for Asynchronous Global Planning and Local Refinement</a>
+                        <span class="paper-date">2026-09-21</span>
+                    </div>
+                                        <span class="paper-comment">📝 Project page: https://steveouo.github.io/DualWAM-Web/</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>World Action Models (WAMs) jointly generate robot actions and predict future world states, transferring priors from video pretraining to robot control. However, future visual prediction is computationally expensive, so existing WAMs often rely on long action chunks to amortize inference cost across control steps, at the cost of closed-loop responsiveness. We present \method, a dual-system WAM that preserves broader-horizon world-action generation while enabling high-frequency closed-loop action updates by decoupling global planning and local refinement. \systwo periodically performs high-noise bidirectional denoising over a broader world-action chunk to establish a global plan, while wrist-only \sysone extracts a temporally aligned short window from the intermediate denoising state and completes low-noise refinement using the latest wrist observations, which provide action-aligned cues about local geometry, motion, and contact during interaction. The two systems operate asynchronously along a shared denoising trajectory: each global plan is reused across multiple local updates, while \sysone repeatedly incorporates fresh interaction feedback. Across zero-shot manipulation tasks on Franka and Galbot, \method improves success over the strongest evaluated baseline by 4.5 percentage points on average, while achieving a 16.6$\times$ critical-path speedup. Further studies show that role-matched egocentric and UMI data improve success by 14 percentage points, and that the decoupled design naturally supports edge--cloud deployment with substantially lower communication overhead than the baseline.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2609.24745v1" target="_blank" class="paper-title">Beyond Visual Quality: A Study of Test-Time Planning with World Action Models</a>
+                        <span class="paper-date">2026-09-21</span>
+                    </div>
+                                        <span class="paper-comment">📝 17 pages, including appendix</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>World action models generate actions together with visual predictions of their consequences. These paired outputs create the potential for planning by sampling multiple actions from one state, comparing their imagined outcomes, and choosing the action with the most promising predicted outcome. However, how to use imagined futures to guide action selection remains unclear. We examine this planning potential empirically. First, we estimate an oracle upper bound on selection by choosing the sampled candidate whose realised outcome is best. In a controlled same-state analysis, this choice raises success from 68.9% under uniform random selection to 79.2%. We then test selectors based on visual quality, physical consistency, and task progression as controlled interventions. Some tested selectors yield higher observed success, but the gains are uneven and the matched selectors leave much of the measured opportunity unrecovered. To investigate this gap, we examine whether sampled actions lead to different outcomes, whether these differences are visible in the predictions, and whether a score recognises them. Counterfactual branching from the same states shows that selection opportunity is concentrated in relatively few decisions in the initial candidate sets. Action spread and outcome coverage need not increase together. In a further evaluation across trajectory phases with complete action execution, the tested scores again recover little of the available improvement despite a small gain from learned value. These findings distinguish producing consequential action choices from recognising them in generated futures, motivating the evaluation of WAM predictions through their usefulness for decisions rather than visual quality alone.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2607.04265v2" target="_blank" class="paper-title">HALO-WA: Hybrid-Attention Latent-Guided Online Reinforcement Learning for World-Action Models</a>
@@ -1136,10 +1172,7 @@
                         <span class="paper-date">2026-09-20</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有VLA和WAM模型在语言条件机器人操作中，往往将动作、物体与场景几何之间的度量关系隐式处理，缺乏精确的空间反馈来指导操作。&#10;&#10;🛠 **方法**：提出度量交互框架，在统一度量尺度的笛卡尔空间中对物体级和场景级交互建模——物体级用Interaction-Centric Tokens显式表示末端执行器相对物体的位姿轨迹并与动作联合去噪；场景级用Metric Action Interaction Field通过动作和ICT查询关注度量点云特征，学习几何条件化的动作修正。&#10;&#10;✨ **主要贡献**：以少量额外参数和训练步骤即提升多种VLA/WAM基线，在LIBERO和RoboTwin 2.0上分别平均提升0.80和3.59个百分点，真实任务提升6.80个百分点，其分布外变体提升7.45个百分点。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Vision-Language-Action models and World-Action Models have advanced language-conditioned robotic manipulation, yet often leave metric relations among actions, objects, and scene geometry implicit. Human manipulation combines semantic understanding of task-relevant objects with spatial feedback that guides hand motion relative to objects and their surroundings. Inspired by this, we introduce a metric interaction framework that models object-level and scene-level interactions in physical Cartesian space at a shared metric scale. At the object level, Interaction-Centric Tokens (ICTs) explicitly represent end-effector pose trajectories relative to manipulated objects and are jointly denoised with actions, providing physically grounded interaction supervision. At the scene level, the Metric Action Interaction Field (MAIF) uses action and ICT queries to attend to metric scene point-cloud features and learns geometry-conditioned action corrections. Through two-stage adaptation, our framework improves diverse VLA and WAM baselines with a small number of additional parameters and training steps. Experiments demonstrate average success-rate gains of 0.80 and 3.59 percentage points on LIBERO and RoboTwin 2.0, respectively, alongside gains of 6.80 percentage points on real-world tasks and 7.45 percentage points on their out-of-distribution variants.</p>
@@ -1151,10 +1184,7 @@
                         <span class="paper-date">2026-09-20</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有世界动作模型（WAMs）受限于有限的时序上下文、粗粒度的语言监督和纯文本条件，难以实现任务进度跟踪、细粒度语言-视频-动作对齐及跨实体迁移。&#10;&#10;🛠 **方法**：提出WorldScape Policy 2.0，通过推理增强的长短期记忆机制，结合因果短期视觉记忆与长短期事件记忆，并构建包含近500万事件片段的Event-grounded预训练数据集ManipEvent-5M，实现多模态可控规划与执行。&#10;&#10;✨ **主要贡献**：在仿真和真实平台实验中，该方法在长程自主规划、细粒度指令跟随和上下文适应方面表现出显著优势，并提供了从高层指令到细粒度文本、目标图像或视频提示的统一控制接口。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>World Action Models (WAMs) offer a promising paradigm for robotic manipulation by jointly modeling visual state transitions and robot actions. However, existing WAMs are constrained by limited temporal context, coarse episode-level language supervision, and predominantly text-only conditioning, which hinder task-progress tracking and fine-grained language-video-action grounding while limiting visual-context reasoning and cross-embodiment transfer. In this paper, we introduce WorldScape Policy 2.0, a controllable WAM with reasoning-augmented long short-term memory. Its causal short-term visual memory supplies recent observations as DiT prefill to preserve local interaction dynamics, while its long short-term event memory organizes historical VLM outputs into global-history, local-active, and event-boundary representations for progress-aware retrieval. The retrieved history augments perception and autoregressively generated planning tokens, yielding an implicit subgoal condition for autonomous planning; semantic forcing further transfers event-level instruction semantics into this latent planning pathway. To establish fine-grained multimodal controllability, we construct ManipEvent-5M, an event-grounded embodied pretraining dataset containing nearly 5 million event segments with aligned action trajectories, episode-level task instructions, segment-level subtask captions, goal images, and video demonstrations. These designs provide a unified interface for autonomous planning from high-level instructions and controllable execution from fine-grained text, goal-image, or video-context prompts. Experiments in both simulation and real-world platforms demonstrate superior capabilities in long-horizon autonomous planning, fine-grained instruction following and in-context adaptation.</p>
@@ -1962,42 +1992,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>World action models (WAMs) couple visual future prediction with robot action generation, but accelerated students can lose task capabilities during distillation and later encounter states that are poorly represented by offline data. We study whether on-policy distillation (OPD) can repair such a student without requiring sparse-reward reinforcement learning. We introduce WAM-OPD, a deployment-consistent post-training recipe for a video-first WAM. The student acts in the environment and therefore determines the history distribution. A frozen teacher labels those student histories with coherent video and action targets, while the student action branch is trained under its own generated video plan, as it is at deployment. Joint video and action losses update lightweight adapters in the shared backbone, together with an action flow-matching regularizer. In preliminary RoboTwin 2.0 studies on two tasks, the released one-video/one-action-step Flash-WAM improves from 0.0% to 58.3% success on HANDOVER MIC, and from 16.7% to 33.3% on PUT OBJECT CABINET. These task-specific results are an initial capability proof rather than evidence of broad or uniform generalization. They nevertheless suggest that dense teacher supervision on student-induced histories is a promising post-training interface for video-first WAMs.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2608.22197v1" target="_blank" class="paper-title">On the Capability Separation Between World-Model Policy Learning and Imitated World-Action Models</a>
-                        <span class="paper-date">2026-08-23</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>World-action models predict a future outcome and then infer an associated action. Although this factorization can improve representation learning and data efficiency, it is unclear whether it provides stronger control capability than direct behavior cloning when both are trained from the same observational demonstrations. We compare a direct behavior-cloning policy, an imitation-trained world-action policy, and a policy optimized with an action-conditioned world model. At the controller-class level, every world-action policy can be flattened into a direct stochastic policy with the same closed-loop trajectory distribution. At the population level, under realizability, exact optimization, common deployment information, and distribution-preserving deployment, direct behavior cloning and world-action imitation both recover the observational behavior policy. Thus, future prediction changes the learning factorization but not the unrestricted external policy class or ideal imitation target. Action-conditioned world-model learning differs by predicting outcomes under specified actions and comparing them through a control objective. We characterize the irreducible action-specific prediction error of future models that do not condition on the candidate action, identify conditions under which a world-action joint can recover an interventional forward model, and show that observational demonstrations do not identify action effects in general. Finally, we construct an environment family in which every observational learner has positive worst-case regret, whereas one informative intervention permits zero regret. The key distinction is therefore between predicting futures associated with observed behavior and predicting consequences of specified actions for policy optimization.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2501.02189v7" target="_blank" class="paper-title">A Survey of State of the Art Large Vision Language Models: Alignment, Benchmark, Evaluations and Challenges</a>
-                        <span class="paper-date">2026-08-22</span>
-                    </div>
-                                        <span class="paper-comment">📝 26 pages, 4 figures</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Large vision-language models (VLMs) have evolved rapidly from contrastive image-text encoders and adapter-based assistants into natively multimodal foundation models that support long-context reasoning, agentic workflows, and, increasingly, unified perception-generation-action loops. Since 2025, the frontier has consolidated around a small number of large pretraining families, including GPT, Gemini, Claude, Grok, Qwen, Gemma, DeepSeek, Kimi, and MiniMax, while evaluation has shifted from short-form visual question answering toward spatial, temporal, embodied, and calibration-sensitive benchmarks. In this survey, we provide an updated overview of VLMs through 2026 with an emphasis on three developments. First, we trace the architectural evolution from contrastive or bridged two-tower models to LLM-backbone adapter models, native multimodal-input models, omni-modal unified input/output models, and emerging world-action models. Second, we summarize how benchmarks expanded from classical OCR, VQA, and chart understanding toward long-video reasoning, embodied evaluation, reward-model judging, and domain-specific decision making. Third, we review the growing role of post-training, including supervised fine-tuning, preference optimization, and reinforcement learning methods such as GRPO-style multimodal alignment. Rather than exhaustively listing every release, we focus on representative frontier families, influential benchmarks, and the major open challenges that remain in hallucination, safety, efficiency, data quality, and multimodal alignment.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2608.20114v2" target="_blank" class="paper-title">DECOWAM: Decoupled Whole-Body World-Action Model for Legged Mobile Manipulation</a>
-                        <span class="paper-date">2026-08-21</span>
-                    </div>
-                                        <span class="paper-comment">📝 8 pages, 5 figures. Introduces DECOWAM, a decoupled whole-body world-action model for legged mobile manipulation, and the ARMDOG real-robot dataset</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Mobile manipulation requires a robot to predict how locomotion and arm motion jointly alter future observations and control. Existing world-action models, developed largely for fixed-base platforms, do not explicitly distinguish camera ego-motion from base and arm actions. Here we introduce DECOWAM, a whole-body world-action model that separates these factors through dedicated conditional interfaces. DECOWAM freezes an adapted FastWAM backbone and trains residual adapters, an action-equivalent future bottleneck distilled from privileged observations, adversarially separated base and arm latents, and base-velocity conditioning for video prediction. We further introduce ARMDOG, a real-robot dataset that synchronizes video, whole-body state and action, and language. On a fixed replay protocol, DECOWAM improved both future-video and action prediction over FastWAM, reducing action MSE by 21.7% with 25.95M trainable adaptation parameters. Across 79 closed-loop trials per method, it achieved the highest observed whole-body coordination and base-displacement robustness among the compared systems, while task completion remained comparable to the strongest baseline. These results show that embodiment-aware factorization can support parameter-efficient joint visual prediction and whole-body control under moving viewpoints.</p>
                     </details>
                 </div>
             </div>

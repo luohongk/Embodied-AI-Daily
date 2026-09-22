@@ -575,7 +575,7 @@
                 <a href="Feed-Forward-Reconstruction.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Feed Forward Reconstruction</span>
-                    <span class="nav-count">63</span>
+                    <span class="nav-count">64</span>
                 </a>
                 <a href="Vision-and-Language-Navigation.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -585,7 +585,7 @@
                 <a href="Vision-Language-Action.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#d946ef"></span>
                     <span class="nav-label">Vision Language Action</span>
-                    <span class="nav-count">80</span>
+                    <span class="nav-count">79</span>
                 </a>
                 <a href="World-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
@@ -600,7 +600,7 @@
                 <a href="LLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
                     <span class="nav-label">LLM</span>
-                    <span class="nav-count">79</span>
+                    <span class="nav-count">78</span>
                 </a>
                 <a href="VLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f97316"></span>
@@ -745,7 +745,7 @@
                 <a href="Path-Planning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#3b82f6"></span>
                     <span class="nav-label">Path Planning</span>
-                    <span class="nav-count">75</span>
+                    <span class="nav-count">74</span>
                 </a>
                 <a href="Multimodal-Fusion.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#6366f1"></span>
@@ -794,7 +794,7 @@
             <a href="Feed-Forward-Reconstruction.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Feed Forward Reconstruction</span>
-                <span class="nav-count">63</span>
+                <span class="nav-count">64</span>
             </a>
             <a href="Vision-and-Language-Navigation.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -804,7 +804,7 @@
             <a href="Vision-Language-Action.html" class="nav-item">
                 <span class="nav-dot" style="background:#d946ef"></span>
                 <span class="nav-label">Vision Language Action</span>
-                <span class="nav-count">80</span>
+                <span class="nav-count">79</span>
             </a>
             <a href="World-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
@@ -819,7 +819,7 @@
             <a href="LLM.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
                 <span class="nav-label">LLM</span>
-                <span class="nav-count">79</span>
+                <span class="nav-count">78</span>
             </a>
             <a href="VLM.html" class="nav-item">
                 <span class="nav-dot" style="background:#f97316"></span>
@@ -964,7 +964,7 @@
             <a href="Path-Planning.html" class="nav-item">
                 <span class="nav-dot" style="background:#3b82f6"></span>
                 <span class="nav-label">Path Planning</span>
-                <span class="nav-count">75</span>
+                <span class="nav-count">74</span>
             </a>
             <a href="Multimodal-Fusion.html" class="nav-item active">
                 <span class="nav-dot" style="background:#6366f1"></span>
@@ -1028,6 +1028,30 @@
                 <span class="topic-count">79 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2609.24894v1" target="_blank" class="paper-title">SLICEChat: Progressive In-Encoder Token Pruning for Whole-Slide Pathology Language Models</a>
+                        <span class="paper-date">2026-09-21</span>
+                    </div>
+                                        <span class="paper-comment">📝 Project Page: https://cyberiada.github.io/SLICEChat/ Code: https://github.com/ali-kerem/SLICEChat</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Whole-slide pathology images (WSIs) contain gigapixel-scale visual content, creating a major scalability challenge for slide-level multimodal large language models (MLLMs). Existing approaches process thousands of patch tokens and typically apply compression only after slide encoding, leaving multimodal attention computationally expensive. We introduce SLICEChat, a slide-level MLLM that integrates progressive token pruning within a hybrid Mamba--Transformer slide encoder. Mamba layers enable efficient long-range propagation, while Transformer layers preserve global interactions as the sequence is progressively shortened. Between stages, language-supervised, region-aware pruning removes spatially coherent low-utility regions under a controlled keep-rate schedule, producing compact slide representations before multimodal fusion. On SlideBench VQA, SLICEChat achieves 79.84% accuracy on TCGA and 59.09% on BCNB cohorts, outperforming prior slide-level pathology MLLMs, and achieves the highest overall WSI-Bench metrics. It also provides competitive memory usage and the inference latency among the evaluated models. These results demonstrate accurate and computationally efficient multimodal reasoning over gigapixel WSIs.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2511.18028v2" target="_blank" class="paper-title">MambaX: Image Super-Resolution with State Predictive Control</a>
+                        <span class="paper-date">2026-09-21</span>
+                    </div>
+                                        <span class="paper-comment">📝 Published in IEEE TPAMI</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Image super-resolution (SR) is a critical technology for overcoming the inherent hardware limitations of sensors. However, existing approaches mainly focus on directly enhancing the final resolution, often neglecting effective control over error propagation and accumulation during intermediate stages. Recently, Mamba has emerged as a promising approach that can represent the entire reconstruction process as a state sequence with multiple nodes, allowing for intermediate intervention. Nonetheless, its fixed linear mapper is limited by a narrow receptive field and restricted flexibility, which hampers its effectiveness in fine-grained images. To address this, we created a nonlinear state predictive control model \textbf{MambaX} that maps consecutive spectral bands into a latent state space and generalizes the SR task by dynamically learning the nonlinear state parameters of control equations. Compared to existing sequence models, MambaX 1) employs dynamic state predictive control learning to approximate the nonlinear differential coefficients of state-space models; 2) introduces a novel state cross-control paradigm for multimodal SR fusion; and 3) utilizes progressive transitional learning to mitigate heterogeneity caused by domain and modality shifts. Our evaluation demonstrates the superior performance of the dynamic spectrum-state representation model in both single-image SR and multimodal fusion-based SR tasks, highlighting its substantial potential to advance spectrally generalized modeling across arbitrary dimensions and modalities.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2504.14280v2" target="_blank" class="paper-title">CLIP-Powered Domain Generalization and Domain Adaptation: A Comprehensive Survey</a>
@@ -1136,10 +1160,7 @@
                         <span class="paper-date">2026-09-17</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：智能汽车多模态舱内交互中，车载网络QoS异构且时变，标准联邦学习的刚性同步轮次无法适应资源不对称，导致安全关键的超时违规和能耗耗尽。&#10;&#10;🛠 **方法**：提出FedQoS异步事件触发联邦学习框架，通过两阶段门控机制解耦本地计算与全局通信——资源感知训练门控（感知缓冲与能量达阈值才启动本地学习）和QoS感知传输策略（基于效率分数门控上行更新），并在本地引入陈旧度感知近端项动态调整全局锚定强度。&#10;&#10;✨ **主要贡献**：在多模态车载数据集上实现与FedAvg相当的个性化精度，同时大幅减少QoS违规、降低通信开销76.7%、降低延迟成本26.0%，在精度与效率间取得良好平衡。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Modern smart vehicles leverage multimodal sensors, ranging from high-bandwidth vision systems to low-rate physiological monitors, to provide personalized in-cabin services. However, integrating high-fidelity multimodal fusion with collaborative training is often hindered by the heterogeneous and time-varying Quality of Service (QoS) constraints of vehicular networks. Standard Federated Learning (FL) approaches enforce rigid synchronous rounds that fail to account for these resource asymmetries, leading to safety-critical timing violations and energy exhaustion. In this paper, we propose FedQoS, a novel asynchronous, event-triggered FL framework that decouples local computation from global communication via a two-phase gating mechanism. First, we introduce a resource-aware training gate that initializes local learning only when sensing buffers and energy reserves meet safety thresholds, preventing ML tasks from compromising core vehicle mobility. Second, a QoS-aware transmission policy gates uplink updates based on an efficiency score that balances model novelty against instantaneous latency and energy costs. Locally, clients optimize an objective featuring a staleness-aware proximal term that dynamically adjusts the global anchor strength based on update age. Extensive experiments on multimodal vehicular datasets demonstrate that FedQoS achieves competitive personalized accuracy with only marginal performance loss compared to FedAvg, while substantially reducing QoS violations, cutting communication overhead by 76.7\%, and lowering latency cost by 26.0\%, demonstrating a highly favorable accuracy and efficiency balance for real-world vehicular deployments.</p>
@@ -1151,10 +1172,7 @@
                         <span class="paper-date">2026-09-17</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：传统共享自主遥操作仅依赖任务规则（如空间误差边界），忽视操作者的实时情感状态，导致认知负荷高、挫败感强且控制干预错位。&#10;&#10;🛠 **方法**：提出情感感知共享自主框架，融合面部视频、心电信号与双臂运动学数据实时估计操作者情感状态（七类情感分布+三类操作抽象），仅在检测到持续负面状态时触发辅助。&#10;&#10;✨ **主要贡献**：用户研究（N=30）表明该辅助使有效状态提升达39.7%且不损害用户自主性；构建了首个双臂遥操作中时序情感变化的多模态数据集，且融合模型在追踪动态状态上优于零样本基线（Qwen、MiniCPM-V）。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Physical teleoperation integrates human cognitive flexibility with robotic precision, yet demanding manipulation tasks frequently induce severe cognitive workload, acute frustration, and execution breakdown. Conventional shared autonomy paradigms rely primarily on task-based rules, such as spatial error boundaries, which disregard the operator's transient affective state and risk misaligned control interventions. To address this limitation, we propose an affect-aware shared autonomy teleoperation framework that dynamically modulates robotic assistance based on real-time operator state estimation. The system estimates operator affective states from synchronized facial video, cardiac signals, and bilateral arm kinematics, outputting a seven-state affective distribution and a three-category operational abstraction (neutral, productive, adverse). Affect-aware assistance is selectively triggered when the user is detected in a continuous adverse state, preserving task-positive engagement without unnecessary disruption. The empirical user study ($N = 30$) confirms that the proposed affective assistance increases the productive states by up to 39.7% without compromising user agency. The collected dataset represents the first multimodal dataset that provides continuous visual, physiological, and operator's bilateral motion tracking of temporal affective state shifts during bimanual teleoperation. Our multimodal fusion model outperforms zero-shot baselines (Qwen, MiniCPM-V) in tracking temporal state dynamics. This real-world deployment offers a new human-centric framework that integrates visual, physiological, and motion tracking for physical human-robot interaction.</p>
@@ -1962,30 +1980,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Multimodal sequential recommender systems commonly fuse visual and collaborative signals uniformly, treating visual features as generically informative regardless of item or user context. We argue that visual utility, defined as the contribution of visual signals to recommendation quality, is a latent contextual variable that depends on both the item and the user's interaction history rather than a fixed item property. To model this variability, we introduce VisGate, a framework that makes adaptive item-level fusion decisions conditioned on item embeddings and the user's current sequence context. Visual representations are learned through a contrastive objective over sequential co-occurrence patterns, preserving complementarity with collaborative embeddings rather than aligning them into a shared space. Beyond achieving competitive recommendation performance, VisGate's learned gate serves as a measurement tool for understanding when and why visual information is beneficial. Our analyses show that visual utility varies across items, increases under interaction sparsity when collaborative signals are weak, and correlates with visual distinctiveness in semantically meaningful ways. Together, these findings highlight the importance of both fine-grained fusion and modality complementarity, while demonstrating that item-level visual utility can be estimated and interpreted through learned gating behaviour.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2608.09550v1" target="_blank" class="paper-title">PressureMesh: 3D Human Mesh Estimation from Multi-Device Pressure Images</a>
-                        <span class="paper-date">2026-08-10</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Human pose monitoring is crucial in fields such as rehabilitation assessment and human-computer interaction. Due to its privacy-preserving nature, pressure-based human pose monitoring has become a primary approach for unobtrusive sensing. However, existing methods are generally limited to a single device, which restricts the effective monitoring range. To address this limitation, we propose MDP-Net, an end-to-end network capable of directly estimating human meshes from temporal pressure data across multiple devices. We introduce a multimodal fusion mechanism inspired by the Mixture of Experts (MoE) framework to achieve effective complementarity and enhancement of cross-device pressure information. To support the training and evaluation of MDP-Net, we constructed MDP, a high-quality multi-device temporal pressure dataset that includes various pose labels such as 2D/3D joints and human meshes. Experimental results demonstrate that MDP-Net achieves a joint position error of 12.6 cm on the MDP dataset. These results prove that fusing multi-device pressure information is an effective and promising new solution for daily human pose monitoring.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2608.08935v1" target="_blank" class="paper-title">Integrated Multimodal AI System for Retrieval-Augmented Reasoning, Object Sensing, and Damage Analysis</a>
-                        <span class="paper-date">2026-08-09</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>This work presents a unified multimodal AI system for damage assessment that integrates retrieval-augmented generation (RAG) models, thermal spectrum perception, vision foundation model pipelines, and exploratory wireless signal sensing. A RAG component is developed to ground a locally hosted language model in project-specific documentation, including specialized damage level classification criteria to mitigate hallucinations during inference. Controlled comparisons against static few-shot prompting demonstrate that dynamic retrieval improves grounding and factual consistency. We further compare vector-based RAG with a knowledge graph variant constructed via entity-relation extraction, and show that graph-based retrieval produces stronger responses for damage assessment queries requiring cross-document reasoning, motivating hybrid dense, sparse, and graph-aware retrieval. To address limitations of EO imagery under adverse lighting and weather conditions, infrared (IR)/thermal sensing is employed for object detection and segmentation. Our detectors generate candidate detections, yielding improved segmentation of a broad array of objects. Paired IR versus visible spectrum tracking experiments reveal failure modes, motivating multimodal fusion for robust object detection and damage analysis. Vision foundation and vision-language models are leveraged to generate synthetic damage imagery and classify damage severity with high accuracy, supporting training and validation of downstream damage assessment models. Finally, exploratory Wireless-based sensing demonstrates potential to detect presence, motion, and post-event environmental changes where EO and IR sensing are ineffective.</p>
                     </details>
                 </div>
             </div>

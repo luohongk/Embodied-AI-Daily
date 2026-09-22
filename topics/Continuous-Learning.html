@@ -575,7 +575,7 @@
                 <a href="Feed-Forward-Reconstruction.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Feed Forward Reconstruction</span>
-                    <span class="nav-count">63</span>
+                    <span class="nav-count">64</span>
                 </a>
                 <a href="Vision-and-Language-Navigation.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -585,7 +585,7 @@
                 <a href="Vision-Language-Action.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#d946ef"></span>
                     <span class="nav-label">Vision Language Action</span>
-                    <span class="nav-count">80</span>
+                    <span class="nav-count">79</span>
                 </a>
                 <a href="World-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
@@ -600,7 +600,7 @@
                 <a href="LLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
                     <span class="nav-label">LLM</span>
-                    <span class="nav-count">79</span>
+                    <span class="nav-count">78</span>
                 </a>
                 <a href="VLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f97316"></span>
@@ -745,7 +745,7 @@
                 <a href="Path-Planning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#3b82f6"></span>
                     <span class="nav-label">Path Planning</span>
-                    <span class="nav-count">75</span>
+                    <span class="nav-count">74</span>
                 </a>
                 <a href="Multimodal-Fusion.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#6366f1"></span>
@@ -794,7 +794,7 @@
             <a href="Feed-Forward-Reconstruction.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Feed Forward Reconstruction</span>
-                <span class="nav-count">63</span>
+                <span class="nav-count">64</span>
             </a>
             <a href="Vision-and-Language-Navigation.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -804,7 +804,7 @@
             <a href="Vision-Language-Action.html" class="nav-item">
                 <span class="nav-dot" style="background:#d946ef"></span>
                 <span class="nav-label">Vision Language Action</span>
-                <span class="nav-count">80</span>
+                <span class="nav-count">79</span>
             </a>
             <a href="World-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
@@ -819,7 +819,7 @@
             <a href="LLM.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
                 <span class="nav-label">LLM</span>
-                <span class="nav-count">79</span>
+                <span class="nav-count">78</span>
             </a>
             <a href="VLM.html" class="nav-item">
                 <span class="nav-dot" style="background:#f97316"></span>
@@ -964,7 +964,7 @@
             <a href="Path-Planning.html" class="nav-item">
                 <span class="nav-dot" style="background:#3b82f6"></span>
                 <span class="nav-label">Path Planning</span>
-                <span class="nav-count">75</span>
+                <span class="nav-count">74</span>
             </a>
             <a href="Multimodal-Fusion.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
@@ -1030,6 +1030,114 @@
             <div class="paper-list">
                 <div class="paper-card">
                     <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2609.24678v1" target="_blank" class="paper-title">Muon Can Outperform Dedicated Continual Learning Methods</a>
+                        <span class="paper-date">2026-09-21</span>
+                    </div>
+                                        <span class="paper-comment">📝 10 pages, 2 figures, 6 tables. Presented at the 5th Conference on Lifelong Learning Agents (CoLLAs), Work-in-Progress Track, 2026. Sebastian George Sincari and Bogdan Alexandru Gheorghe contributed equally</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Continual learning with Low-Rank Adapters (LoRA) typically mitigates forgetting by penalizing the overlap between a new update and the accumulated past weights, which discourages certain update directions without controlling how an update distributes its energy over the ones that remain. We ask whether that restriction has to be task-aware, or whether a generic one supplied by the optimizer is enough. We train a plain incremental LoRA (IncLoRA) with Muon, which orthogonalizes each update, and compare it against O-LoRA and ELLA over five seeds and three task orders on the Standard CL Benchmark and three seeds on TRACE. IncLoRA+Muon reaches the accuracy band of the dedicated methods on Standard CL and improves on every AdamW configuration on TRACE. One update-constraining mechanism is enough, whether it comes from the loss or from the optimizer; on Standard CL a second one does not help, and for the most restrictive method it costs 8.4 points of accuracy and the plasticity to fit each task. What separates the two optimizers is not the size of the update, which under Muon is 0.91 to 2.06 times that under AdamW, but how it is distributed. AdamW confines it to between 1.4 and 1.8 effective singular directions, Muon spreads it over 7.0, and the two do not overlap in any tracked run. Part of the advantage usually attributed to dedicated CL methods may therefore be explained by the geometry of the optimizer's updates.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2609.24646v1" target="_blank" class="paper-title">iSDFT: Information-Proximal Self-Distillation for Continual Learning in LLMs</a>
+                        <span class="paper-date">2026-09-21</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>On-policy self-distillation fine-tuning (SDFT) learns new skills from demonstrations while reducing forgetting, but it always distils toward the full demonstration-conditioned teacher. This fixes teacher influence at the full-teacher endpoint, providing no control over how much demonstration information should be transferred at each prediction state. We introduce Information-Proximal SDFT (iSDFT), which instead treats the teacher as a budgeted source of information. At each token, iSDFT selects the distribution closest to the current student that satisfies a prescribed teacher-information constraint, yielding a closed-form exponential target with a locally determined tilt. To control cumulative drift, we further anchor the student to its frozen base policy. Across four heterogeneous LLM backbones and two specialisation tasks, iSDFT improves vanilla SDFT in 7 of 8 model-task settings and matches it in the remaining one. It also provides tighter retention on the original SDFT benchmark suite, with 73% of evaluations remaining within 0.5 points of the base model versus 52% for the strongest baseline, while achieving the largest mean improvement on all ten additional mathematics, coding, and competition-mathematics benchmarks. These results show that controlling how much and when teacher information is introduced improves specialisation while preserving broader capability.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2501.06762v4" target="_blank" class="paper-title">Improving the adaptive and continuous learning capabilities of artificial neural networks: Lessons from multi-neuromodulatory dynamics</a>
+                        <span class="paper-date">2026-09-21</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Continuous adaptive learning, the ability to adapt to the environment and keep improving performance, is a hallmark of natural intelligence. Biological organisms excel in acquiring, transferring, and retaining knowledge while adapting to volatile environments, making them a source of inspiration for artificial neural networks (ANNs). This study explores how neuromodulation, a building block of learning in biological systems, can help address catastrophic forgetting and enhance the robustness of ANNs in continual learning. Driven by neuromodulators including dopamine (DA), acetylcholine (ACh), serotonin (5-HT) and noradrenaline (NA), neuromodulatory processes in the brain operate at multiple scales, facilitating dynamic responses to environmental changes through mechanisms ranging from local synaptic plasticity to global network-wide adaptability. Importantly, the relationship between neuromodulators and their interplay in modulating sensory and cognitive processes is more complex than previously expected, demonstrating a "many-to-many" neuromodulator-to-task mapping. To inspire neuromodulation-aware learning rules, we highlight (i) how multi-neuromodulatory interactions enrich single-neuromodulator-driven learning, (ii) the impact of neuromodulators across multiple spatio-temporal scales, and correspondingly, (iii) strategies for approximating and integrating neuromodulated learning processes in ANNs, and (iv) an architectural-general formulation of multi-neuromodulatory dynamics. We also present a conceptual study to showcase how neuromodulation-inspired mechanisms, such as DA-driven reward processing and NA-based cognitive flexibility, can enhance ANN performance in a Go/No-Go task. Though multi-scale neuromodulation, we aim to bridge the gap between biological and artificial learning, paving the way for ANNs with greater flexibility, robustness, and adaptability.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2510.21175v2" target="_blank" class="paper-title">Memory-Free Continual Learning with Null Space Adaptation for Zero-Shot Vision-Language Models</a>
+                        <span class="paper-date">2026-09-21</span>
+                    </div>
+                                        <span class="paper-comment">📝 Published at ICLR 2026. Code: https://github.com/ZoYujin/NuSA-CL</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Pre-trained vision-language models (VLMs), such as CLIP, have demonstrated remarkable zero-shot generalization, enabling deployment in a wide range of real-world tasks without additional task-specific training. However, in real deployment scenarios with evolving environments or emerging classes, these models inevitably face distributional shifts and novel tasks. In such contexts, static zero-shot capabilities are insufficient, and there is a growing need for continual learning methods that allow models to adapt over time while avoiding catastrophic forgetting. We introduce NuSA-CL (Null Space Adaptation for Continual Learning), a lightweight memory-free continual learning framework designed to address this challenge. NuSA-CL employs low-rank adaptation and constrains task-specific weight updates to lie within an approximate null space of the model's current parameters. This strategy minimizes interference with previously acquired knowledge, effectively preserving the zero-shot capabilities of the original model. Unlike methods relying on replay buffers or costly distillation, NuSA-CL imposes minimal computational and memory overhead, making it practical for deployment in resource-constrained, real-world continual learning environments. Experiments show that our framework not only effectively preserves zero-shot transfer capabilities but also achieves highly competitive performance on continual learning benchmarks. These results position NuSA-CL as a practical and scalable solution for continually evolving zero-shot VLMs in real-world applications.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2609.23989v1" target="_blank" class="paper-title">ACLArena: Agent Continue Learning in Multi-stage Post-training</a>
+                        <span class="paper-date">2026-09-21</span>
+                    </div>
+                                        <span class="paper-comment">📝 25 pages, 7 figures, under review</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Building general-purpose agents for industrial deployment requires integrating multiple capabilities, each typically acquired at a distinct stage of training. Yet there is currently no well-established recipe for Agent Continual Learning (ACL), with little understanding of the trade-offs among existing integration paradigms. To address this gap, we introduce ACLArena, a framework for comprehensively studying, analyzing, and evaluating ACL. We first build a sequential training pipeline and conduct an in-depth analysis that explains the mechanisms of forgetting and generalization from two complementary perspectives, the model level and the token level. Guided by these analyses, we systematically compare multi-teacher on-policy distillation, self-distilled fine-tuning, and model merging to assess their ability to recover previously learned capabilities while preserving newly acquired ones. Through extensive experiments, we develop a detailed understanding of how capabilities transfer across stages. Finally, we propose a new ACL recipe that combines offline replay over high-quality trajectories with a routed network of multiple LoRA experts each specialized via RL, substantially improving the agent's ability to learn across multiple domains. Comprehensive experiments on four reasoning and agentic tasks, evaluated under both in-domain and out-of-domain settings, demonstrate the value of our analysis and the effectiveness of our approach.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2609.05435v2" target="_blank" class="paper-title">AhaBench: Do Agents Turn Experience into Reusable Insights? A Long-Horizon Benchmark for Continual Learning</a>
+                        <span class="paper-date">2026-09-21</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Can language agents continually learn from experience, turning earlier interactions into reusable capabilities? AhaBench evaluates this ability through exploration after solved hidden-state puzzles, computational transfer after mathematical teaching, and sustained business operation under delayed feedback. The benchmark is agnostic to how an agent learns; the evaluated agents use fixed model weights. Curriculum profiles, teaching contrasts, and daily trajectories reveal a common challenge: using explicit guidance is more reliable than generalizing beyond it or sustaining useful behavior. Across the Puzzle panel, the advantage over matched cold targets is 36.0-53.5 points greater with trace support than at the trace-free endpoint; Qwen 3.6 Plus nevertheless retains a +12.57-point post-curriculum gain. In Euler, worked procedures yield 80.0-100.0% held-out accuracy across models, while question-plus-answer teaching yields 0.0-73.9%. Vending trajectories separate sustained profit, late recovery, and incomplete operation: Doubao Seed 2.0 Pro finishes nominal operation at +495 but averages -10 over the year. Together, these results make continual learning an operational target: experience should yield capabilities that remain effective as guidance, inputs, and business states change. We release tasks, validators, a simulator, records, and analyses for developing agents that turn useful insights into lasting abilities.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2609.23916v1" target="_blank" class="paper-title">Time-Incremental Continued Pretraining of LLMs: Knowledge Updates Without Catastrophic Forgetting</a>
+                        <span class="paper-date">2026-09-20</span>
+                    </div>
+                                        <span class="paper-comment">📝 Preprint</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Large language models (LLMs) drift out of date the moment their pretraining ends, yet retraining from scratch is prohibitively expensive. Continued pretraining (CPT) is the natural remedy, but it is typically evaluated through a continual learning lens that assumes disjoint data streams. This is a poor fit for time-incremental updates on web-scale crawls, where successive snapshots share substantial URL overlap by design. We study time-incremental CPT in this realistic regime: continued pretraining on FineWeb-Edu dumps drawn strictly from after each model's knowledge cutoff, evaluated across six open-weight models spanning three families (OLMo2, Llama-3.1/3.2, Gemma-3-1B) and four parameter scales (1B-3B-7B-8B). We organize our findings around four practical questions. (i) Is knowledge acquired? Yes, but heterogeneously, and without catastrophic forgetting: five of six models also improve on pre-cutoff factual recall, and the gains track pretraining saturation (driven primarily by token budget per parameter). (ii) What does it cost? Almost nothing: the macro-average across a thirteen-task suite stays within 0.01 of the base for every model. (iii) What is the recipe? Data quality dominates quantity (a curated 6B-token slice matches a broader 40B one); the optima for knowledge acquisition and general capability are separated by roughly an order of magnitude in learning rate; and LoRA at sufficient rank matches full CPT. (iv) Does it survive deployment? CPT gains transfer through SFT, while DPO's effect is family-dependent. Together, these results paint a more optimistic picture of time-incremental CPT than the prior continual learning literature suggests.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2609.23594v1" target="_blank" class="paper-title">Bilinear Optimization Divergence: Diagnosing Factor-Constrained LoRA Continual Learning</a>
+                        <span class="paper-date">2026-09-20</span>
+                    </div>
+                                        <span class="paper-comment">📝 22 pages, 3 figures. Code is available at [https://github.com/legend91019/My_first](https://github.com/legend91019/My_first)</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Orthogonality in a LoRA factor does not by itself specify what the composed update protects: the answer depends on the task-start state, the parameterization, and the realized optimizer displacement. We formalize this question through Bilinear Optimization Divergence (BOD), an anchor-relative diagnostic of effective-update response on selected historical features. The finite-step analysis distinguishes two cases. In a shared adapter, protecting the routing displacement leaves a learned-anchor residual through the changing companion factor. In a fresh zero-output block, a feasible routing state can protect the composed update while both current factors remain trainable. These conditions yield Semi-Frozen Orthogonal Routing (SFOR) for shared adapters and current-block hard protection for cumulative O-LoRA; Weight Residual Projection (WRP) enforces the required displacement after the optimizer step. Controlled two-task traces verify the predicted residual paths, reducing normalized historical response from 19.12% to 0.005% in the shared family and from 7.72% to 0.002% in the cumulative family. Four-task experiments on Qwen3-8B characterize the resulting trade-offs: SFOR improves backward transfer (BWT) from -2.47 to -0.86 with nearly unchanged average accuracy (AA), while O-LoRA hard protection improves three-order mean AA from 80.27% to 81.30% and forgetting measure (FM) from 2.20 to 0.43. Component controls also show that stricter feasibility need not improve final task performance. Together, the analysis and evidence provide an architecture-conditioned account of which constraint to enforce, how to enforce it, and how to interpret its empirical value.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2609.23492v1" target="_blank" class="paper-title">CE$^4$L: Continual Ego, Exo, and Ego-Exo Learning</a>
+                        <span class="paper-date">2026-09-20</span>
+                    </div>
+                                        <span class="paper-comment">📝 23 pages. Accepted by ICML 2026</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Perception for embodied agents is video-based, often multi-view (ego, exo, or both), and inherently continual, with simultaneous task and viewpoint shifts. Yet continual learning (CL) remains dominated by exo-only recognition tasks, obscuring behavior under these real-world coupled shifts. We introduce Continual Ego, E}xo, and Ego-Exo Learning (CE$^4$L), a unified multi-view CL benchmark spanning four representative tasks: cross-view referenced skill assessment, temporal action segmentation, cross-view association, and action anticipation & planning. CE$^4$L highlights challenges largely absent in prior CL benchmarks, including cross-view correspondence, view-dependent asynchrony, and heterogeneous semantic objectives. To this end, we propose Video Incremental Subspace-routed Task Adapters (VISTA), a parameter-efficient baseline method that stores task-specific updates in lightweight adapters and performs training-free routing via residual distance to task-specific whitened subspaces estimated from second-order statistics. Extensive experiments demonstrate the significantly varied efficacy of representative CL methods across CE$^4$L settings, while VISTA is consistently competitive and achieves state-of-the-art overall performance. Our source code for benchmarks and methods is available at https://github.com/AnAppleCore/CE4L .</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
                         <a href="https://arxiv.org/abs/2608.28237v2" target="_blank" class="paper-title">Efficient Online Continual Foundation Model Fine-Tuning for Predictive Process Monitoring</a>
                         <span class="paper-date">2026-09-19</span>
                     </div>
@@ -1061,10 +1169,7 @@
                         <span class="paper-date">2026-09-18</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：如何将世界模型对先前经验的知识复用能力与其学习新任务的能力解耦，从而准确衡量持续学习中的适应性与遗忘问题。&#10;&#10;🛠 **方法**：提出一个面向机器人操作中世界模型的组合式持续学习基准，将任务按动作与感知两个轴进行组合分解，并在标准持续学习方法下评估现有世界模型及一种含显式可复用组件的模块化世界模型。&#10;&#10;✨ **主要贡献**：揭示了模块化设计在知识复用与抗遗忘之间优于传统方法，但尚无方法能完全解决该问题，为构建&quot;复用而不遗忘&quot;的持续世界模型指明了方向。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>A desirable property of a world model is the ability to learn continually across tasks, adapting to new environments without forgetting what the agent has already learnt. In particular, the ability to retain and reuse knowledge obtained from prior experiences underpins an agent's ability to efficiently adapt to novel environments, as the dynamics of the physical world can often be described in recurring mechanisms. However, the world model's measure of adaptation entangles two abilities: the speed and capacity to learn unseen tasks, and the reuse of knowledge already acquired, since incoming tasks carry novel content alongside what recurs. In order to isolate knowledge reuse from prior experiences, we propose a compositional continual learning benchmark for world models in robot manipulation. Specifically, we design each task curriculum with compositional tasks that combine aspects of the tasks seen in the sequence. We further factorise this composition along the axes of action and perception to better understand how different input modalities bottleneck knowledge reuse. We evaluate state-of-the-art world models under canonical continual learning methods, alongside a modular world model whose dynamics backbone contains explicitly reusable components. Results show that modularity balances reuse against forgetting better than conventional methods, but none solve the problem fully, leaving clear room for continual world models built to reuse without forgetting. More details are available on our project website: https://object814.github.io/Compositional-Continual-Learning/.</p>
@@ -1076,10 +1181,7 @@
                         <span class="paper-date">2026-09-18</span>
                     </div>
                                         <span class="paper-comment">📝 9 pages, 6 figures</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：VLA模型在持续适应新任务时，动作归一化策略导致的坐标漂移、运动覆盖不足及训练-测试坐标不匹配等问题被现有研究忽视，严重影响长期部署中的技能保留与获取。&#10;&#10;🛠 **方法**：系统评估五种归一化策略在四类真实任务流中的表现，提出一致性、覆盖性、因果性（3C）设计原则，并引入前瞻动作归一化（FAN）——在持续学习前从少量任务无关校准集中估计归一化统计量并全程冻结。&#10;&#10;✨ **主要贡献**：揭示了现有归一化协议引发的严重失败模式，提出FAN方法在所有评估任务流中取得最高性能并展现一致鲁棒性，为终身VLA适应中的稳定动作表征构建提供了指导。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Vision-Language-Action (VLA) models pre-trained on large-scale, closed datasets have demonstrated remarkable success across diverse robotic manipulation tasks. However, their long-term real-world deployment necessitates continuously acquiring new skills while retaining previously learned capabilities. While pioneering works have explored continual VLA adaptation using techniques such as experience replay and reinforcement fine-tuning, they overlook a foundational mechanism: action normalization, which determines the underlying coordinate system in which policies perceive and execute physical actions. To bridge this gap, we systematically evaluate five normalization strategies across four real-world task streams covering single-arm and bimanual manipulation. Our analysis reveals that existing protocols induce severe failure modes due to inter-task coordinate drift, limited motion coverage, or train-test coordinate mismatches. Motivated by these insights, we formulate three core design principles: consistency, coverage, and causality (3C), and introduce foresight action normalization (FAN). FAN estimates normalization statistics once from a small, task-independent calibration set prior to continual learning and freezes them throughout adaptation. Across all evaluated streams, FAN achieves the highest performance and demonstrates consistent robustness, providing insightful guidance for building stable action representations in achieving effective lifelong VLA adaptation.</p>
@@ -1091,10 +1193,7 @@
                         <span class="paper-date">2026-09-17</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现代数据中心中GPU/TPU等加速器稀缺昂贵，生成式AI等异构、多阶段工作负载的负载均衡困难，传统方法依赖过度配置来维持服务水平目标，成本高昂。&#10;&#10;🛠 **方法**：提出DLB分布式负载均衡器，采用可扩展的点对点探测机制实时感知大规模地理分布式基础设施的服务器容量，并持续学习延迟模型以估计路由决策的延迟影响，同时提供路由算法稳定性与全局性能的理论分析。&#10;&#10;✨ **主要贡献**：在Google实际部署22个月，支撑数千个模型、每秒数百万请求的生成式AI推理，相比旧基线中位延迟降低17%、p95尾延迟降低13%，并通过仿真验证了显著优于现有最先进负载均衡算法。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>The reliance on scarce and expensive accelerators such as GPUs and TPUs in modern datacenters places unprecedented demands on backend infrastructure. For workloads characterized by heterogeneous service times and complex multi-stage processing, such as Generative AI, conventional load balancing techniques are often inadequate, relying heavily on costly overprovisioning to maintain service level objectives. This paper introduces DLB, the Distributed Load Balancer, a novel system designed to minimize end-to-end user latency for large-scale, heterogeneous workloads. DLB employs a scalable, distributed design with peer-to-peer probing to maintain real-time visibility into server capacity across large-scale, geographically distributed infrastructure. The system continuously learns latency models to estimate the latency impact of routing decisions, allowing it to effectively manage heterogeneous hardware and diverse model architectures. We provide a novel theoretical analysis of our routing algorithms that establishes their stability and global performance guarantees over time. We also evaluate DLB through extensive simulations, which show substantial gains compared to state-of-the-art load balancing algorithms. Finally, following a 22-month deployment of DLB at Google, where it facilitates large-scale Generative AI inference for thousands of different machine learning models and millions of requests per second, we detail the design choices and practical experiences gained from the system in production. Analysis of production migrations demonstrates that DLB yields statistically significant latency reductions compared to the legacy baseline, including a 17\% decrease in median latency and a 13\% decrease at the p95 tail.</p>
@@ -1106,10 +1205,7 @@
                         <span class="paper-date">2026-09-17</span>
                     </div>
                                         <span class="paper-comment">📝 Accepted at IJCNN 2026</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：传统人工神经网络依赖统一、局部、基于梯度的参数更新，缺乏生物系统所具有的自适应灵活性与长期稳定性，忽视了神经递质信号等生物内部学习机制。&#10;&#10;🛠 **方法**：这是一篇立场论文，作者通过类比哺乳动物大脑的神经调控机制，提出将神经递质调控作为独立于神经活动和突触可塑性的“第三条学习轴”，并主张在人工神经网络设计中显式建模这一机制。&#10;&#10;✨ **主要贡献**：指出神经调控原理是当前人工神经网络研究中被忽视的重要维度，论证将其纳入网络设计是一个有前景且尚未充分探索的研究方向，呼吁学界在自适应与持续学习系统开发中给予更多关注。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Artificial neural networks (ANNs), as core components of modern deep learning (DL) systems, lack the adaptive flexibility and long-term stability exhibited by biological systems. This limitation largely stems from the fact that conventional ANNs rely on uniform, local, and gradient-based parameter updates, while neglecting internal learning principles that are biological mechanisms such as neurotransmitters signalling or neuroplasticity. Consequently, many existing approaches focus on architectural expansion or mathematical fine-tuning techniques such as regularisation or parameter isolation. Inspired by the superior adaptability and plasticity of mammalian brains, we posit that neuromodulation with neurotransmitters constitutes a third axis of learning, complementary to neural activity and synaptic plasticity, and should be explicitly modelled in artificial neural networks. In this positional paper, we argue that incorporating neuromodulatory principles into ANN design represents a promising and underexplored research direction, and we advocate for greater attention to this perspective in the development of adaptive and continual learning systems.</p>
@@ -1121,10 +1217,7 @@
                         <span class="paper-date">2026-09-17</span>
                     </div>
                                         <span class="paper-comment">📝 Agentic AI, neuro-symbolic AI, unmanned aerial vehicles (UAVs), autonomous decision-making, networked UAV systems</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：网络化低空无人机在不确定观测、动态环境和间歇性连接下难以实现可靠自适应的决策，现有智能体系统受限于幻觉风险、数据依赖和泛化能力弱。&#10;&#10;🛠 **方法**：提出神经符号智能体AI（NSAAI）框架，融合神经接地、符号推理与闭环智能体交互，并构建了包含任务目标管理、神经符号规划、验证与元认知、技能执行与网络交互、共享知识与记忆的参考架构。&#10;&#10;✨ **主要贡献**：通过LAESim城市火灾巡检案例验证了NSAAI在间歇连接下协调感知与云端访问、复用已验证技能、满足显式证据条件的能力，展示了可复用技能、证据驱动决策和自适应任务执行的潜力，并指出了不确定性推理、知识技能扩展、自适应自监控和标准化评估等未来方向。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Networked low-altitude unmanned aerial vehicles (UAVs) need reliable and adaptive decision-making capabilities to operate under uncertain observations, dynamic environments, and intermittent connectivity, while many existing agentic systems remain limited by hallucination risks, data dependence, and weak generalization. This article investigates neuro-symbolic agentic AI (NSAAI) as a framework for combining neural grounding, symbolic reasoning, and closed-loop agentic interaction to support more reliable and adaptive UAV autonomy. We first examine its capability foundations in data efficiency, compositional generalization, continual learning, and zero-shot transfer, and then develop a reference architecture integrating task and goal management, neuro-symbolic planning, verification and metacognition, skill execution and network interaction, and shared knowledge and memory. An urban fire-inspection case implemented in LAESim illustrates how a UAV can coordinate sensing and cloud access under intermittent connectivity, reuse a verified image-delivery skill, and satisfy explicit evidence conditions before completing the mission. The results illustrate the potential of NSAAI to support reusable skills, evidence-grounded decision-making, and adaptive mission execution in networked UAV systems. We further discuss key research directions in uncertainty-aware reasoning, knowledge and skill expansion, adaptive self-monitoring, and standardized evaluation.</p>
@@ -1136,10 +1229,7 @@
                         <span class="paper-date">2026-09-17</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：真实世界机器人操作策略的部署仍高度依赖人工进行失败评估、纠正和环境重置，且模型难以从失败与纠正经验中持续学习。&#10;&#10;🛠 **方法**：提出 REVOLVE 自动化闭环框架，集成数据采集、策略训练部署、失败恢复与持续学习；其 ARC 架构自动重置环境并纠正策略失败，DLE 机制通过真实交互与失败-纠正数据反馈持续优化策略和智能体判断。&#10;&#10;✨ **主要贡献**：在四项真实操作任务中，经五次迭代后策略平均成功率提升 18.5%、智能体判断准确率提升 8.5%，同时将数据采集和部署测试的人工投入分别减少 94.4% 和 95.1%，实现了极少人工干预下策略与监督模型的持续进化。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Recent advances in data-driven robot manipulation policies have substantially improved task execution and generalization. However, real-world deployment still relies heavily on humans for failure assessment, correction, and environment reset, while models often fail to continually learn from failures and corrective experience. We present REVOLVE (Robot Evolving via Orchestrated Loops, Verification, and Experience), an automated closed-loop framework for evolving robot manipulation with minimal human intervention. Built on a unified software platform, REVOLVE integrates data collection, policy training and deployment, failure recovery, and continual learning into a single closed-loop workflow. Its Automated Reset and Correction (ARC) architecture automatically resets the environment and intervenes to correct policy failures. Dual-Loop Evolution (DLE) continually improves the manipulation policy and agent by feeding real-world interaction and failure--correction data back into policy learning and using an external mismatch memory to refine agent judgments. Experiments across four real-world manipulation tasks show that, after five iterations, REVOLVE improves average policy success rate by 18.5% and agent judgment accuracy by 8.5%, while reducing human effort in data collection and deployment testing by 94.4% and 95.1%, respectively. These results demonstrate that REVOLVE transforms real-world deployment into a closed-loop learning process that continually accumulates and uses execution experience, enabling continual evolution of both the policy and supervisory model with substantially less human intervention.</p>
@@ -1151,10 +1241,7 @@
                         <span class="paper-date">2026-09-17</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：语言模型智能体需执行跨越数天乃至数周的长时程任务，远超任何上下文窗口、进程生命周期或人类可关注的间隔，如何让智能体持续运行而不遗忘。&#10;&#10;🛠 **方法**：提出三层分级架构——按时间尺度分层的层级（每层用有界文件总结下层）、作为自主行动单元的时钟节拍（tick）、以及级联智能（仅在评审失败后才升级到更强模型），并强调能力存在于模型外围的&quot;挽具&quot;而非模型本身。&#10;&#10;✨ **主要贡献**：通过为期十天、人类每天仅关注一次的实验复现了已发表的强化学习结果，证明智能体能在每次上下文重置与会话边界间保持任务连贯性、早期写入的操作知识无需改动模型权重即可改变后续行为，并指出持续学习应嵌入挽具已有的检查环节中。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Language-model agents are increasingly asked to carry out work spanning days or weeks, such as an operations remediation or a research programme. Such a task outlives any context window, any process and any interval at which a person can attend. In this paper, we argue that a long-horizon agent must run continually without forgetting before it can learn continually. This ability lies in the harness around the model rather than in the model itself. We derive seven bottlenecks from the long-horizon setting and answer them with a hierarchical architecture of three parts: (i) levels indexed by time scale, each keeping a bounded file summarising the level below; (ii) a clocked tick as the unit of autonomous action; and (iii) cascaded intelligence, where work is escalated to a more capable model only after failing review. We report on a ten-day campaign in which an agent built on this architecture reproduced a published reinforcement-learning result with a human attending once a day, and show (1) the agent kept the thread across every context reset and session boundary of the campaign, (2) operating knowledge written early changed later behaviour with no change to model weights, and (3) where learned components would enter such a system. Overall, our experience suggests continual learning for these agents needs a substrate outliving every context and process, and the checks the harness already runs are where a learner belongs.</p>
@@ -1166,10 +1253,7 @@
                         <span class="paper-date">2026-09-16</span>
                     </div>
                                         <span class="paper-comment">📝 added cited on bound result</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：在多智能体环境中，当学习同伴的策略不断更新时，焦点智能体所面临的马尔可夫决策过程（MDP）会随时间漂移，导致其成功条件相关的可复用结构退化，从而引发持续学习问题。&#10;&#10;🛠 **方法**：提出“不变核心”概念，通过最大化成功轨迹中高频出现的抽象模式来表征可复用结构；并基于轨迹律漂移ε与成功覆盖率的关系，推导出最坏情况下的紧致条件定理，同时结合策略梯度与显式有效冲突条件分析生存期限。&#10;&#10;✨ **主要贡献**：证明了轨迹律漂移对成功覆盖率的衰减上界为ε/p₀且系数紧致；在正覆盖率裕度下，给出Ω(1/η)的生存期限和Θ(1/η)的首达律；通过可解析求解的走廊实验验证了逆速率寿命（R²&gt;0.9999），并在64流持续控制与cue-MNIST实验中证实核心侵蚀可预测失败并支持近最优干预，同时在Level-Based Foraging中观察到同伴学习下的类似侵蚀-失败关联。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Ordinary decentralized multi-agent reinforcement learning presents each focal agent with a continual learning problem: peer updates change its induced rewards and dynamics even when the joint Markov game is stationary. We connect the lifetime of success-conditioned reusable structure to peer learning and policy reuse. An invariant core represents maximal abstract patterns shared by a high fraction of successful trajectories; survival refers to a fixed pattern's coverage, not an unchanged maximal frontier. An established sharp conditioning bound limits coverage loss to $\frac{\varepsilon}{p_0}$, where $\varepsilon$ is trajectory-law drift, $p_0$ is reference success mass, and drift is smaller than the initial compatible-success mass. Combining this bound with peer-policy movement certifies $Ω(\frac{1}η)$ survival under bounded peer updates of size $η$ and positive coverage margin. An effective-conflict condition yields a matching $Θ(\frac{1}η)$ first-exit law and holds in an analytic exact-policy-gradient class. With success-mass and performance calibration, structural survival also yields policy-value and finite-library transfer guarantees. An exactly solvable corridor tests the structural predictions. Two registered 64-stream studies in continual control and cue-MNIST show that coverage erosion predicts impending failure and enables near-oracle intervention. An exploratory reanalysis of eight learned-partner Level-Based Foraging pairings suggests the same erosion--failure link under peer learning.</p>
@@ -1869,114 +1953,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Multi-sensorial media systems, including AR/VR, remote operation, and embodied AI, require visual grounding modules that remain reliable as sensing environments and application domains evolve. The Segment Anything Model (SAM) provides a strong foundation for dense visual segmentation, but its performance degrades on specialized and dynamically arriving domains such as medical imagery, camouflaged scenes, and shadow-dominant environments. Existing continual learning methods often rely on replay data or growing domain-specific modules, limiting compact deployment in evolving media pipelines. To address this issue, we propose RegCL, a non-replay continual adaptation framework that consolidates multi-domain segmentation knowledge into a single SAM adapter through incremental model merging. RegCL merges lightweight adaptation modules, e.g., LoRA-style AugModules, by optimizing prediction consistency between the merged model and domain-specific adapters while carrying forward compact historical feature statistics. Experiments across five heterogeneous segmentation datasets show that RegCL achieves strong retention and adaptation under domain-incremental learning, outperforming competitive non-replay continual learning and merging baselines. These results suggest that RegCL can serve as a compact visual adaptation component for evolving multi-sensorial media pipelines. The code is available at \href{https://github.com/Anderw-S/RegCL}{https://github.com/Anderw-S/RegCL}</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2608.27763v1" target="_blank" class="paper-title">Fast Weight Attention for Continual Learning</a>
-                        <span class="paper-date">2026-08-27</span>
-                    </div>
-                                        <span class="paper-comment">📝 Project Page: https://github.com/yifanzhang-pro/fast-weight-attention</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Recurrent fast-weight memories and selective state-space models compress an expanding context into a fixed-size recurrent state, making the state transition an online learning rule. We study this rule under read-after-write autoregressive semantics. For the prefix-prediction objective considered here, the local fast-memory example revealed at step $t$ is the prefix-aligned pair $(\mathbf{x}_t,\mathbf{y}_t)=(φ(\mathbf{k}_{t-1}),\mathbf{v}_t)$. The common same-step association $(φ(\mathbf{k}_t),\mathbf{v}_t)$ remains causal, but optimizes a different internal objective. We derive normalized first-order updates for squared-error regression and negative inner-product objectives. The regression family comprises Falcon-1 (a scalar NLMS update), Falcon-2 (its per-column extension), and Falcon-3 (a sliding-window mini-batch update); Falcon-1A/Falcon-2A/Falcon-3A are the corresponding inner-product variants. We provide recurrent, masked-parallel, and chunk-parallel forms, together with numerically stable positive-decay renormalization. Representative variants remain competitive in language modeling and improve length extrapolation on variable-digit addition. This framework separates temporal alignment, plasticity, forgetting, and bounded rehearsal in recurrent sequence models.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2508.21240v2" target="_blank" class="paper-title">Class Incremental Continual Learning with Self-Organizing Maps and Synthetic Replay</a>
-                        <span class="paper-date">2026-08-27</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>This work introduces a novel generative continual learning framework based on self-organizing maps (SOMs), a brain-inspired natural computing model, extended with learned distributional statistics and encoder--decoder models for class incremental continual learning. These extended SOMs enable exemplar-free replay with fixed-capacity statistical memory, eliminating the need to store raw data samples. For high-dimensional input spaces, the SOM operates over the latent space of the encoder--decoder, while for lower-dimensional inputs, the SOM operates in a standalone fashion. Our method stores a running mean, variance, and covariance for each SOM unit, from which synthetic samples are then generated during future learning iterations. For the encoder--decoder method, generated samples are fed through the decoder to be used in subsequent replay. Experimental results on standard class-incremental benchmarks show that our approach performs competitively with state-of-the-art memory-based methods and outperforms memory-free methods, notably improving over the best state-of-the-art single-class incremental performance without pretrained encoders on CIFAR-10 and CIFAR-100 by nearly 10% and 7%, respectively. We also achieve the best performance on single-class incremental CIFAR-100 using a foundational encoder-decoder and present the first baseline results for single-class incremental TinyImageNet. Our methodology facilitates easy visualization of the learning process and can also be utilized as a generative model post-training. Overall, the results demonstrate that SOM-based statistical replay offers a scalable, label-free, exemplar-free approach to class-incremental continual learning under standard task-boundary protocols.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2608.27662v1" target="_blank" class="paper-title">Unsupervised Continual Learning with Growing Self-Organizing Maps and Synthetic Replay</a>
-                        <span class="paper-date">2026-08-27</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>This work presents a generative continual learning framework based on growing self-organizing maps (GSOMs) that are augmented with learned distributional statistics as well as encoder-decoder models for class-incremental learning. The proposed approach enables exemplar-free replay using distributional statistical memory, which eliminates the need to store raw data. Each GSOM unit maintains its own mean, variance, and covariance estimates, which are subsequently used to generate synthetic samples for replay; in encoder-decoder configurations, these samples are then decoded back into the input space (via ancestral sampling) for subsequent training. Our method is fully unsupervised, as it does not rely on explicit task boundaries or class labels during training. Results across multiple benchmarks show that the proposed approach achieves performance competitive even with supervised state-of-the-art memory-based methods while consistently outperforming memory-free approaches. In several settings, our framework matches or exceeds existing baselines, particularly in challenging single-class incremental scenarios. We also provide baseline results for single-class incremental TinyImageNet and MiniImageNet, offering a useful reference for future work. This work highlights the effectiveness of an unsupervised, adaptive, topology-driven neural form of statistical replay as a scalable, flexible approach to continual learning.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2608.27147v1" target="_blank" class="paper-title">Thomson: Continual Learning of Frontier Models for SovereignAI</a>
-                        <span class="paper-date">2026-08-27</span>
-                    </div>
-                                        <span class="paper-comment">📝 Open-weight model: https://huggingface.co/thomsonreuters/Thomson-1.0-Small</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>The development of frontier models is commonly perceived to be the exclusive remit of a small number of heavily funded players, creating an information, economic and power asymmetry between developers and the diverse user base of modern AI. Recent public discourse acknowledges this concern, calling for SovereignAI (an organisation's capability to independently build, deploy and govern AI use), but offers little concrete advice on how this can be achieved in the short term under a diversity of funding settings. We argue that frontier performance is achievable by a wide range of institutions through Continual Learning on readily available open-weight models. Unlike limited approaches such as small-scale fine-tuning, prompt engineering, or tool-augmentation of a frozen model, our approach exploits a modern mid- & post-training stack while introducing safeguards that preserve both plasticity and stability at each stage, making the minimal number of high-impact interventions on the parameters. This yields gains comparable to those typically seen across multiple successive model generations, at compute and personnel budgets substantially lower than commonly thought, making ownership of large parts of the SovereignAI stack (model, tool infrastructure, values & data privacy) viable for far more actors. We demonstrate this with Thomson, a general-purpose frontier model trained with an enhanced focus on high-stakes professional work. Thomson performs competitively with recent frontier models across agentic tasks, safety, legal, tax & multilingualism, and large-scale Deep Research. Evaluations show a distinctive $π$-shaped pattern: distinct improvements across a wide range of capabilities, including those not explicitly targeted, while almost completely eliminating the forgetting problem common to narrow domain adaptation.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2608.27070v1" target="_blank" class="paper-title">Unifying Detection and Adaptation in Task-Free Continual Learning</a>
-                        <span class="paper-date">2026-08-27</span>
-                    </div>
-                                        <span class="paper-comment">📝 Accepted to Findings of EMNLP 2026</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>To mitigate catastrophic forgetting in downstream continual learning (CL) for large language models (LLMs), existing methods typically constrain parameter updates or introduce task-specific adaptation modules. However, these methods often rely on explicit task boundaries during training, limiting their applicability to realistic task-free scenarios. In this paper, we propose a \textbf{Fi}sher-guided \textbf{uni}fied (\textbf{FiUni}) framework for batch-level task detection and parameter-efficient continual adaptation. FiUni is motivated by a key observation about the Fisher information matrix (FIM) of pre-trained models: the orthogonality among the principal subspaces of its Kronecker-Factored Approximate Curvature (K-FAC) approximation, estimated from a small number of downstream task samples, can reflect the similarity between different tasks. Based on this observation, FiUni constructs FIM-derived frozen subspaces to guide low-rank adaptation (LoRA), while matching the Fisher principal subspace of each incoming batch window with historical subspaces. This enables FiUni to adaptively determine whether to reuse existing knowledge, expand a related subspace, or create a new subspace, dynamically balancing knowledge sharing and task isolation. Experiments show that FiUni can effectively infer latent batch-level task affiliations and achieve competitive performance against advanced task-aware CL methods with fewer trainable parameters.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2608.26960v1" target="_blank" class="paper-title">Geo-LoRA: Geometry-Aware Subspace Evolution for Low-Rank Adaptation in Continual Learning</a>
-                        <span class="paper-date">2026-08-27</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Rehearsal-free class-incremental learning (CIL) with LoRA adapters remains challenging because the low-rank subspaces updated across tasks evolve without geometric control, causing unstable shared representations and repetitive collapse of task-specific updates into previously occupied directions. We introduce Geo-LoRA, a geometry-aware framework that explicitly regulates how low-rank subspaces, both shared and task-specific, evolve during continual learning. For the shared branch, Subspace Projection Preservation (SPP) constrains consecutive updates to follow smooth trajectories on the Grassmann manifold, and Adaptive Core-Slack Alignment (ACSA) decomposes transitions into principal and residual components, aligning the former while modulating the latter to balance stability and plasticity. For the task-specific branch, Median-Calibrated Block Overlap (MCBO) imposes a statistical constraint via normalized projection overlap, penalizing excessive reuse to mitigate subspace crowding. These constraints jointly regulate the evolution of all LoRA subspaces across layers and tasks without introducing additional adapter types beyond standard LoRA. Geo-LoRA provides a principled geometric formulation for continual low-rank adaptation and consistently achieves state-of-the-art performance across multiple benchmark datasets and different task lengths.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2608.27518v1" target="_blank" class="paper-title">When Muon Meets Task Interference: A Spectral Perspective on Continual Learning and Model Merging</a>
-                        <span class="paper-date">2026-08-27</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Continual learning (CL) and model merging (MM) both aim to obtain a single model that performs well across multiple tasks, challenged respectively by catastrophic forgetting and weight-disentanglement error. In the literature, these difficulties are merely treated separately and mitigated through a variety of solutions, while the geometry induced by the base optimizer is treated as an implementation detail. In this work, we show that the two difficulties are in fact two instances of the same phenomenon: a parameter update useful for one task shifts the model's outputs on another. We formalize this shared phenomenon as \textit{task interference} and reduce it to a common layer-wise Frobenius inner product $\langle ΔW_\ell, J_\ell(x)\rangle_F$. This quantity, in turn, is utilized to expose the role of the optimizer. We theoretically derive an upper bound that isolates the spectral norm $\|ΔW_\ell\|_2$ as an optimizer-controllable factor of task interference, and a per-mode analysis shows that this bound tracks the dominant part of the empirical interference. Specifically, we then identify the recent Muon optimizer as a mechanism that regulates this factor by construction. Our work reveals that its elegant control on spectral norm tightens the interference bound for both CL and MM, positioning Muon as a principled optimizer-centric approach complementary to existing solutions. Our theoretcal analysis is well validated by experimental results. Replacing the AdamW optimizer with Muon improves accuracy by up to +5.02 points on the eight-task model-merging benchmark across three CLIP backbones. For continual learning, Muon also delivers uniformly positive gains across ten class-incremental protocols, three task-incremental protocols, and the 11-task MTIL benchmark.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2608.26720v1" target="_blank" class="paper-title">Parameter Efficient Continual Learning for Sparse Event-Based Transformers</a>
-                        <span class="paper-date">2026-08-27</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Robotic and edge intelligence systems operate in dynamic environments where data arrives continuously, requiring models to adapt while preserving previously learned knowledge under strict memory and energy constraints. While parameter-efficient fine-tuning has shown promise for continual learning with vision transformers, conventional architectures rely on dense computation and remain costly for real-world deployment. Sparse event-based vision transformers provide energy-efficient event-driven computation, yet their continual learning capabilities remain largely unexplored. We here introduce sLoTh, a parameter-efficient continual learning framework for pretrained sparse event-based (spiking) vision transformers. sLoTh freezes the backbone and restricts plasticity to scalable-efficient low-rank attention updates (seLoRA) and shared neuronal threshold modulation, enabling adaptation without replay buffers by updating less than 1% of model parameters. Experiments across CIFAR-100, Tiny-ImageNet, ImageNet-100, and ImageNet-R with up to 100 tasks demonstrate competitive rehearsal-free performance in class-incremental learning and online continual learning, while enabling approximately 6.5x lower energy consumption than conventional dense vision transformers.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2608.26545v1" target="_blank" class="paper-title">Memory Anchors for Continual Robot Learning</a>
-                        <span class="paper-date">2026-08-27</span>
-                    </div>
-                                        <span class="paper-comment">📝 22 pages, 15 figures</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Robot policies deployed in the wild should have the capability to continually learn new tasks without forgetting existing behaviors. A common approach to combat such catastrophic forgetting is to train on new task data with a replay buffer of previously learned task data. Although this buffer is commonly sampled randomly from all prior experiences, we show that a small set of these experiences contributes greatly in anchoring past performance. We call these experiences Memory Anchors. We identify Memory Anchors in regions where representations of new-task observations collapse onto those of old-task observations even though the tasks require conflicting actions, like when a familiar object must be manipulated in a new way. Rehearsing old data in this region plays a key role in preventing destructive overwriting of past task knowledge, serving as this critical Memory Anchor role. Excluding only 10% Memory Anchors before sampling the buffer leads to more than a 4.5x increase in catastrophic forgetting on the LIBERO benchmark suites. Conversely, enriching the replay buffer with Memory Anchors can decrease high-conflict task forgetting by 63% and enables successful continual learning of two task sequences on a real robot. Videos and additional visualizations can be found at https://robot-adaptation.github.io/MemoryAnchors</p>
                     </details>
                 </div>
             </div>
