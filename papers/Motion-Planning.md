@@ -2,7 +2,7 @@
 
 > **76 papers** fetched from arXiv for the keyword **Motion Planning**.
 
-> Last update: 2026-09-26
+> Last update: 2026-09-27
 
 [← Back to README](../README.md)
 
