@@ -2,7 +2,7 @@
 
 > **46 papers** fetched from arXiv for the keyword **Model Predictive Control**.
 
-> Last update: 2026-09-27
+> Last update: 2026-09-28
 
 [← Back to README](../README.md)
 
