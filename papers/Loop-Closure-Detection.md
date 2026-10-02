@@ -2,7 +2,7 @@
 
 > **79 papers** fetched from arXiv for the keyword **Loop Closure Detection**.
 
-> Last update: 2026-10-02
+> Last update: 2026-10-03
 
 [← Back to README](../README.md)
 
