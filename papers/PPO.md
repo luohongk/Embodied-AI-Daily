@@ -2,7 +2,7 @@
 
 > **77 papers** fetched from arXiv for the keyword **PPO**.
 
-> Last update: 2026-10-07
+> Last update: 2026-10-08
 
 [← Back to README](../README.md)
 
