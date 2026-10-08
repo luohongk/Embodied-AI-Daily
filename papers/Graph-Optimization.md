@@ -2,7 +2,7 @@
 
 > **72 papers** fetched from arXiv for the keyword **Graph Optimization**.
 
-> Last update: 2026-10-08
+> Last update: 2026-10-09
 
 [← Back to README](../README.md)
 
