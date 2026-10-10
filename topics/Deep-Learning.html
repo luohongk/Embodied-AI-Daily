@@ -1,0 +1,1832 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deep Learning — Embodied AI Daily</title>
+    <style>
+        :root {
+            --bg: #f8fafc;
+            --surface: #ffffff;
+            --text: #1e293b;
+            --text-secondary: #64748b;
+            --border: #e2e8f0;
+            --accent: #6366f1;
+            --sidebar-width: 280px;
+            --radius: 12px;
+            --shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04);
+            --shadow-md: 0 4px 12px rgba(0,0,0,.08);
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0f172a;
+                --surface: #1e293b;
+                --text: #e2e8f0;
+                --text-secondary: #94a3b8;
+                --border: #334155;
+                --shadow: 0 1px 3px rgba(0,0,0,.3);
+                --shadow-md: 0 4px 12px rgba(0,0,0,.4);
+            }
+        }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        html { scroll-behavior:smooth; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            display: flex;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            position: fixed;
+            top: 0; left: 0;
+            width: var(--sidebar-width);
+            height: 100vh;
+            background: var(--surface);
+            border-right: 1px solid var(--border);
+            overflow-y: auto;
+            padding: 24px 20px;
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        .sidebar-header {
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 8px;
+        }
+        .sidebar-header h1 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #6366f1, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 4px;
+        }
+        .sidebar-header h1 a { text-decoration: none; }
+        .sidebar-header .update {
+            font-size: .75rem;
+            color: var(--text-secondary);
+        }
+        .nav-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 12px;
+            border-radius: 8px;
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: .85rem;
+            transition: all .15s;
+        }
+        .nav-item:hover {
+            background: var(--bg);
+            color: var(--text);
+        }
+        .nav-item.active {
+            background: var(--bg);
+            color: var(--text);
+            font-weight: 600;
+        }
+        .nav-dot {
+            width: 8px; height: 8px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+        .nav-label {
+            flex: 1;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .nav-count {
+            font-size: .72rem;
+            background: var(--bg);
+            padding: 2px 7px;
+            border-radius: 10px;
+            font-weight: 600;
+        }
+
+        /* Main content */
+        .main {
+            margin-left: var(--sidebar-width);
+            flex: 1;
+            padding: 40px 48px;
+            max-width: calc(100% - var(--sidebar-width));
+        }
+        .hero {
+            text-align: center;
+            padding: 40px 0 48px;
+        }
+        .hero h2 {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+        .hero .subtitle {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            margin-bottom: 16px;
+        }
+        .author-line {
+            margin-top: 14px;
+            font-size: .88rem;
+            color: var(--text-secondary);
+        }
+        .author-line a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .author-line a:hover {
+            text-decoration: underline;
+        }
+        .author-sep {
+            color: var(--border);
+            margin: 0 8px;
+        }
+        .badges {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .badges img {
+            height: 20px;
+        }
+
+        /* Topic directory grid (index page) */
+        .topic-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 16px;
+            margin-bottom: 40px;
+        }
+        .topic-card {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 18px 20px;
+            text-decoration: none;
+            color: var(--text);
+            box-shadow: var(--shadow);
+            transition: box-shadow .2s, transform .15s;
+        }
+        .topic-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+        .topic-card-name {
+            font-weight: 700;
+            font-size: 1rem;
+        }
+        .topic-card-count {
+            font-size: .8rem;
+            color: var(--text-secondary);
+        }
+        .topic-card-go {
+            margin-top: 4px;
+            font-size: .82rem;
+            font-weight: 600;
+            color: var(--accent);
+        }
+
+        /* Topic page header */
+        .topic-section {
+            margin-bottom: 48px;
+        }
+        .topic-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--border);
+            flex-wrap: wrap;
+        }
+        .topic-badge {
+            display: inline-block;
+            color: #fff;
+            padding: 5px 14px;
+            border-radius: 20px;
+            font-size: .85rem;
+            font-weight: 600;
+            letter-spacing: .01em;
+        }
+        .topic-count {
+            font-size: .82rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 18px;
+            font-size: .85rem;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .back-link:hover { text-decoration: underline; }
+
+        /* Paper cards */
+        .paper-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .paper-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 16px 20px;
+            box-shadow: var(--shadow);
+            transition: box-shadow .2s, transform .15s;
+        }
+        .paper-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-1px);
+        }
+        .paper-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .paper-title {
+            font-weight: 600;
+            font-size: .95rem;
+            color: var(--text);
+            text-decoration: none;
+            flex: 1;
+            min-width: 0;
+        }
+        .paper-title:hover {
+            color: var(--accent);
+            text-decoration: underline;
+        }
+        .paper-date {
+            font-size: .78rem;
+            color: var(--text-secondary);
+            white-space: nowrap;
+            font-variant-numeric: tabular-nums;
+        }
+        .paper-comment {
+            display: inline-block;
+            margin-top: 6px;
+            font-size: .78rem;
+            color: var(--text-secondary);
+            background: var(--bg);
+            padding: 2px 10px;
+            border-radius: 6px;
+        }
+        .paper-abstract {
+            margin-top: 10px;
+            font-size: .85rem;
+            color: var(--text-secondary);
+        }
+        .paper-abstract summary {
+            cursor: pointer;
+            font-weight: 500;
+            color: var(--accent);
+            font-size: .82rem;
+            user-select: none;
+        }
+        .paper-abstract summary:hover {
+            text-decoration: underline;
+        }
+        .paper-abstract p {
+            margin-top: 8px;
+            line-height: 1.7;
+            padding: 12px 16px;
+            background: var(--bg);
+            border-radius: 8px;
+            border-left: 3px solid var(--accent);
+        }
+
+        /* AI Summary */
+        .ai-summary {
+            margin-top: 10px;
+            padding: 10px 14px;
+            background: linear-gradient(135deg, rgba(99,102,241,0.07), rgba(168,85,247,0.07));
+            border-radius: 8px;
+            border-left: 3px solid var(--accent);
+        }
+        .ai-label {
+            font-size: .8rem;
+            font-weight: 600;
+            color: var(--accent);
+            cursor: pointer;
+            user-select: none;
+            letter-spacing: .02em;
+        }
+        .ai-label:hover {
+            text-decoration: underline;
+        }
+        .ai-content {
+            font-size: .85rem;
+            color: var(--text);
+            line-height: 1.75;
+            margin-top: 10px;
+            max-height: 480px;
+            overflow-y: auto;
+            padding-right: 6px;
+        }
+        /* Rendered markdown inside AI summary */
+        .markdown-body h2 {
+            font-size: 1rem;
+            margin: 14px 0 6px;
+            padding-bottom: 4px;
+            border-bottom: 1px solid var(--border);
+            color: var(--text);
+        }
+        .markdown-body h3 {
+            font-size: .9rem;
+            margin: 10px 0 4px;
+            color: var(--accent);
+        }
+        .markdown-body p { margin: 6px 0; }
+        .markdown-body ul, .markdown-body ol { margin: 6px 0 6px 20px; }
+        .markdown-body li { margin: 3px 0; }
+        .markdown-body strong { color: var(--text); }
+        .markdown-body code {
+            background: var(--bg);
+            padding: 1px 5px;
+            border-radius: 4px;
+            font-size: .82em;
+        }
+        .markdown-body pre {
+            background: var(--bg);
+            padding: 10px 12px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-size: .8em;
+        }
+        .markdown-body table {
+            border-collapse: collapse;
+            margin: 8px 0;
+            font-size: .82em;
+        }
+        .markdown-body th, .markdown-body td {
+            border: 1px solid var(--border);
+            padding: 4px 8px;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 40px 0 20px;
+            color: var(--text-secondary);
+            font-size: .82rem;
+            border-top: 1px solid var(--border);
+            margin-top: 20px;
+        }
+
+        /* Sponsor banner */
+        .sponsor {
+            margin: 0 auto 8px;
+            max-width: 640px;
+            background: linear-gradient(135deg, rgba(16,185,129,0.10), rgba(99,102,241,0.10));
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 16px 20px;
+            text-align: center;
+        }
+        .sponsor-title {
+            font-size: .95rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 6px;
+        }
+        .sponsor-desc {
+            font-size: .82rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        .sponsor details { margin-top: 4px; }
+        .sponsor summary {
+            cursor: pointer;
+            display: inline-block;
+            background: #07c160;
+            color: #fff;
+            font-size: .82rem;
+            font-weight: 600;
+            padding: 7px 18px;
+            border-radius: 20px;
+            user-select: none;
+            list-style: none;
+        }
+        .sponsor summary::-webkit-details-marker { display: none; }
+        .sponsor summary:hover { opacity: .9; }
+        .sponsor-qr {
+            margin-top: 14px;
+        }
+        .sponsor-qr img {
+            width: 220px;
+            max-width: 80%;
+            border-radius: 10px;
+            box-shadow: var(--shadow-md);
+        }
+
+        /* Mobile top bar */
+        .mobile-bar {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            height: 52px;
+            background: var(--surface);
+            border-bottom: 1px solid var(--border);
+            z-index: 200;
+            padding: 0 16px;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .mobile-bar .mobile-title {
+            font-weight: 700;
+            font-size: .95rem;
+            background: linear-gradient(135deg, #6366f1, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .menu-toggle {
+            background: none;
+            border: none;
+            font-size: 1.4rem;
+            cursor: pointer;
+            color: var(--text);
+            padding: 4px 8px;
+            border-radius: 6px;
+            line-height: 1;
+            transition: background .15s;
+        }
+        .menu-toggle:hover {
+            background: var(--bg);
+        }
+
+        /* Mobile nav overlay */
+        .mobile-nav-overlay {
+            display: none;
+            position: fixed;
+            top: 52px; left: 0; right: 0; bottom: 0;
+            background: var(--surface);
+            z-index: 199;
+            overflow-y: auto;
+            padding: 8px 16px 24px;
+            flex-direction: column;
+        }
+        .mobile-nav-overlay.open {
+            display: flex;
+        }
+        .mobile-nav-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0 12px;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 4px;
+            font-weight: 600;
+            font-size: .85rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: .04em;
+        }
+        .mobile-nav-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 13px 8px;
+            border-radius: 8px;
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: .88rem;
+            border-bottom: 1px solid var(--border);
+            transition: background .1s;
+        }
+        .mobile-nav-item:active {
+            background: var(--bg);
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .sidebar {
+                display: none;
+            }
+            .mobile-bar {
+                display: flex;
+            }
+            .main {
+                margin-left: 0;
+                max-width: 100%;
+                padding: 68px 16px 20px;
+            }
+            .hero h2 {
+                font-size: 1.4rem;
+            }
+            .hero {
+                padding: 20px 0 32px;
+            }
+            .paper-header {
+                flex-direction: column;
+                gap: 4px;
+            }
+        }
+    </style>
+    <!-- MathJax for rendering LaTeX math in AI summaries -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true
+            },
+            options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'] }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+</head>
+<body>
+    <!-- Mobile top bar -->
+    <div class="mobile-bar">
+        <span class="mobile-title">🚀 Embodied AI Daily</span>
+        <button class="menu-toggle" id="menuToggle" onclick="toggleMenu()" aria-label="Toggle menu">☰</button>
+    </div>
+
+    <!-- Mobile nav overlay -->
+    <div class="mobile-nav-overlay" id="mobileNav">
+        <div class="mobile-nav-header">
+            <span>Topics</span>
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Close menu">✕</button>
+        </div>
+                <a href="Continuous-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#6366f1"></span>
+                    <span class="nav-label">Continuous Learning</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="Feed-Forward-Reconstruction.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#8b5cf6"></span>
+                    <span class="nav-label">Feed Forward Reconstruction</span>
+                    <span class="nav-count">66</span>
+                </a>
+                <a href="Vision-and-Language-Navigation.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#a855f7"></span>
+                    <span class="nav-label">Vision and Language Navigation</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="Vision-Language-Action.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#d946ef"></span>
+                    <span class="nav-label">Vision Language Action</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="World-Model.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#ec4899"></span>
+                    <span class="nav-label">World Model</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="3D-Foundation-Model.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#f43f5e"></span>
+                    <span class="nav-label">3D Foundation Model</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="LLM.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#ef4444"></span>
+                    <span class="nav-label">LLM</span>
+                    <span class="nav-count">79</span>
+                </a>
+                <a href="VLM.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#f97316"></span>
+                    <span class="nav-label">VLM</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="World-Action-Model.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#f59e0b"></span>
+                    <span class="nav-label">World Action Model</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="Gaussian-Splatting.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#84cc16"></span>
+                    <span class="nav-label">Gaussian Splatting</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="Visual-SLAM.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#22c55e"></span>
+                    <span class="nav-label">Visual SLAM</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="Visual-Inertial-SLAM.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#10b981"></span>
+                    <span class="nav-label">Visual Inertial SLAM</span>
+                    <span class="nav-count">78</span>
+                </a>
+                <a href="Visual-Inertial-Odometry.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#14b8a6"></span>
+                    <span class="nav-label">Visual Inertial Odometry</span>
+                    <span class="nav-count">78</span>
+                </a>
+                <a href="Lidar-SLAM.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#06b6d4"></span>
+                    <span class="nav-label">Lidar SLAM</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="LiDAR-Odometry.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#0ea5e9"></span>
+                    <span class="nav-label">LiDAR Odometry</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="GNSS.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#3b82f6"></span>
+                    <span class="nav-label">GNSS</span>
+                    <span class="nav-count">47</span>
+                </a>
+                <a href="Graph-Optimization.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#6366f1"></span>
+                    <span class="nav-label">Graph Optimization</span>
+                    <span class="nav-count">72</span>
+                </a>
+                <a href="Dynamic-SLAM.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#8b5cf6"></span>
+                    <span class="nav-label">Dynamic SLAM</span>
+                    <span class="nav-count">46</span>
+                </a>
+                <a href="Semantic-SLAM.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#a855f7"></span>
+                    <span class="nav-label">Semantic SLAM</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="Gaussian-SLAM.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#d946ef"></span>
+                    <span class="nav-label">Gaussian SLAM</span>
+                    <span class="nav-count">29</span>
+                </a>
+                <a href="Autonomous-Driving.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#6366f1"></span>
+                    <span class="nav-label">Autonomous Driving</span>
+                    <span class="nav-count">79</span>
+                </a>
+                <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#8b5cf6"></span>
+                    <span class="nav-label">Kalman Filter</span>
+                    <span class="nav-count">39</span>
+                </a>
+                <a href="Loop-Closure-Detection.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#a855f7"></span>
+                    <span class="nav-label">Loop Closure Detection</span>
+                    <span class="nav-count">79</span>
+                </a>
+                <a href="Visual-Place-Recognition.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#d946ef"></span>
+                    <span class="nav-label">Visual Place Recognition</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#ec4899"></span>
+                    <span class="nav-label">Deep Learning</span>
+                    <span class="nav-count">59</span>
+                </a>
+                <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#f43f5e"></span>
+                    <span class="nav-label">Reinforcement Learning</span>
+                    <span class="nav-count">76</span>
+                </a>
+                <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#ef4444"></span>
+                    <span class="nav-label">PPO</span>
+                    <span class="nav-count">77</span>
+                </a>
+                <a href="Hierarchical-Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#f97316"></span>
+                    <span class="nav-label">Hierarchical Reinforcement Learning</span>
+                    <span class="nav-count">78</span>
+                </a>
+                <a href="Model-Based-RL.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#f59e0b"></span>
+                    <span class="nav-label">Model-Based RL</span>
+                    <span class="nav-count">77</span>
+                </a>
+                <a href="Imitation-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#84cc16"></span>
+                    <span class="nav-label">Imitation Learning</span>
+                    <span class="nav-count">79</span>
+                </a>
+                <a href="Behavior-Cloning.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#22c55e"></span>
+                    <span class="nav-label">Behavior Cloning</span>
+                    <span class="nav-count">78</span>
+                </a>
+                <a href="Diffusion-Policy.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#10b981"></span>
+                    <span class="nav-label">Diffusion Policy</span>
+                    <span class="nav-count">79</span>
+                </a>
+                <a href="Model-Predictive-Control.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#14b8a6"></span>
+                    <span class="nav-label">Model Predictive Control</span>
+                    <span class="nav-count">46</span>
+                </a>
+                <a href="Whole-Body-Control.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#06b6d4"></span>
+                    <span class="nav-label">Whole-Body Control</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="Motion-Planning.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#0ea5e9"></span>
+                    <span class="nav-label">Motion Planning</span>
+                    <span class="nav-count">74</span>
+                </a>
+                <a href="Path-Planning.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#3b82f6"></span>
+                    <span class="nav-label">Path Planning</span>
+                    <span class="nav-count">74</span>
+                </a>
+                <a href="Multimodal-Fusion.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#6366f1"></span>
+                    <span class="nav-label">Multimodal Fusion</span>
+                    <span class="nav-count">79</span>
+                </a>
+                <a href="Scene-Understanding.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#8b5cf6"></span>
+                    <span class="nav-label">Scene Understanding</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="Domain-Randomization.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#a855f7"></span>
+                    <span class="nav-label">Domain Randomization</span>
+                    <span class="nav-count">76</span>
+                </a>
+                <a href="Bipedal-Locomotion.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#d946ef"></span>
+                    <span class="nav-label">Bipedal Locomotion</span>
+                    <span class="nav-count">79</span>
+                </a>
+                <a href="Dexterous-Manipulation.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#6366f1"></span>
+                    <span class="nav-label">Dexterous Manipulation</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="Mobile-Manipulation.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#8b5cf6"></span>
+                    <span class="nav-label">Mobile Manipulation</span>
+                    <span class="nav-count">80</span>
+                </a>
+    </div>
+
+    <!-- Desktop sidebar -->
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <h1><a href="../index.html" style="background:linear-gradient(135deg,#6366f1,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">🚀 Embodied AI Daily</a></h1>
+            <div class="update">by <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent);text-decoration:none;font-weight:500;">Hongkun Luo</a> (罗宏昆)</div>
+            <div class="update" style="margin-top:2px">Last update: 2026-10-11</div>
+        </div>
+            <a href="Continuous-Learning.html" class="nav-item">
+                <span class="nav-dot" style="background:#6366f1"></span>
+                <span class="nav-label">Continuous Learning</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="Feed-Forward-Reconstruction.html" class="nav-item">
+                <span class="nav-dot" style="background:#8b5cf6"></span>
+                <span class="nav-label">Feed Forward Reconstruction</span>
+                <span class="nav-count">66</span>
+            </a>
+            <a href="Vision-and-Language-Navigation.html" class="nav-item">
+                <span class="nav-dot" style="background:#a855f7"></span>
+                <span class="nav-label">Vision and Language Navigation</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="Vision-Language-Action.html" class="nav-item">
+                <span class="nav-dot" style="background:#d946ef"></span>
+                <span class="nav-label">Vision Language Action</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="World-Model.html" class="nav-item">
+                <span class="nav-dot" style="background:#ec4899"></span>
+                <span class="nav-label">World Model</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="3D-Foundation-Model.html" class="nav-item">
+                <span class="nav-dot" style="background:#f43f5e"></span>
+                <span class="nav-label">3D Foundation Model</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="LLM.html" class="nav-item">
+                <span class="nav-dot" style="background:#ef4444"></span>
+                <span class="nav-label">LLM</span>
+                <span class="nav-count">79</span>
+            </a>
+            <a href="VLM.html" class="nav-item">
+                <span class="nav-dot" style="background:#f97316"></span>
+                <span class="nav-label">VLM</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="World-Action-Model.html" class="nav-item">
+                <span class="nav-dot" style="background:#f59e0b"></span>
+                <span class="nav-label">World Action Model</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="Gaussian-Splatting.html" class="nav-item">
+                <span class="nav-dot" style="background:#84cc16"></span>
+                <span class="nav-label">Gaussian Splatting</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="Visual-SLAM.html" class="nav-item">
+                <span class="nav-dot" style="background:#22c55e"></span>
+                <span class="nav-label">Visual SLAM</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="Visual-Inertial-SLAM.html" class="nav-item">
+                <span class="nav-dot" style="background:#10b981"></span>
+                <span class="nav-label">Visual Inertial SLAM</span>
+                <span class="nav-count">78</span>
+            </a>
+            <a href="Visual-Inertial-Odometry.html" class="nav-item">
+                <span class="nav-dot" style="background:#14b8a6"></span>
+                <span class="nav-label">Visual Inertial Odometry</span>
+                <span class="nav-count">78</span>
+            </a>
+            <a href="Lidar-SLAM.html" class="nav-item">
+                <span class="nav-dot" style="background:#06b6d4"></span>
+                <span class="nav-label">Lidar SLAM</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="LiDAR-Odometry.html" class="nav-item">
+                <span class="nav-dot" style="background:#0ea5e9"></span>
+                <span class="nav-label">LiDAR Odometry</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="GNSS.html" class="nav-item">
+                <span class="nav-dot" style="background:#3b82f6"></span>
+                <span class="nav-label">GNSS</span>
+                <span class="nav-count">47</span>
+            </a>
+            <a href="Graph-Optimization.html" class="nav-item">
+                <span class="nav-dot" style="background:#6366f1"></span>
+                <span class="nav-label">Graph Optimization</span>
+                <span class="nav-count">72</span>
+            </a>
+            <a href="Dynamic-SLAM.html" class="nav-item">
+                <span class="nav-dot" style="background:#8b5cf6"></span>
+                <span class="nav-label">Dynamic SLAM</span>
+                <span class="nav-count">46</span>
+            </a>
+            <a href="Semantic-SLAM.html" class="nav-item">
+                <span class="nav-dot" style="background:#a855f7"></span>
+                <span class="nav-label">Semantic SLAM</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="Gaussian-SLAM.html" class="nav-item">
+                <span class="nav-dot" style="background:#d946ef"></span>
+                <span class="nav-label">Gaussian SLAM</span>
+                <span class="nav-count">29</span>
+            </a>
+            <a href="Autonomous-Driving.html" class="nav-item">
+                <span class="nav-dot" style="background:#6366f1"></span>
+                <span class="nav-label">Autonomous Driving</span>
+                <span class="nav-count">79</span>
+            </a>
+            <a href="Kalman-Filter.html" class="nav-item">
+                <span class="nav-dot" style="background:#8b5cf6"></span>
+                <span class="nav-label">Kalman Filter</span>
+                <span class="nav-count">39</span>
+            </a>
+            <a href="Loop-Closure-Detection.html" class="nav-item">
+                <span class="nav-dot" style="background:#a855f7"></span>
+                <span class="nav-label">Loop Closure Detection</span>
+                <span class="nav-count">79</span>
+            </a>
+            <a href="Visual-Place-Recognition.html" class="nav-item">
+                <span class="nav-dot" style="background:#d946ef"></span>
+                <span class="nav-label">Visual Place Recognition</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="Deep-Learning.html" class="nav-item active">
+                <span class="nav-dot" style="background:#ec4899"></span>
+                <span class="nav-label">Deep Learning</span>
+                <span class="nav-count">59</span>
+            </a>
+            <a href="Reinforcement-Learning.html" class="nav-item">
+                <span class="nav-dot" style="background:#f43f5e"></span>
+                <span class="nav-label">Reinforcement Learning</span>
+                <span class="nav-count">76</span>
+            </a>
+            <a href="PPO.html" class="nav-item">
+                <span class="nav-dot" style="background:#ef4444"></span>
+                <span class="nav-label">PPO</span>
+                <span class="nav-count">77</span>
+            </a>
+            <a href="Hierarchical-Reinforcement-Learning.html" class="nav-item">
+                <span class="nav-dot" style="background:#f97316"></span>
+                <span class="nav-label">Hierarchical Reinforcement Learning</span>
+                <span class="nav-count">78</span>
+            </a>
+            <a href="Model-Based-RL.html" class="nav-item">
+                <span class="nav-dot" style="background:#f59e0b"></span>
+                <span class="nav-label">Model-Based RL</span>
+                <span class="nav-count">77</span>
+            </a>
+            <a href="Imitation-Learning.html" class="nav-item">
+                <span class="nav-dot" style="background:#84cc16"></span>
+                <span class="nav-label">Imitation Learning</span>
+                <span class="nav-count">79</span>
+            </a>
+            <a href="Behavior-Cloning.html" class="nav-item">
+                <span class="nav-dot" style="background:#22c55e"></span>
+                <span class="nav-label">Behavior Cloning</span>
+                <span class="nav-count">78</span>
+            </a>
+            <a href="Diffusion-Policy.html" class="nav-item">
+                <span class="nav-dot" style="background:#10b981"></span>
+                <span class="nav-label">Diffusion Policy</span>
+                <span class="nav-count">79</span>
+            </a>
+            <a href="Model-Predictive-Control.html" class="nav-item">
+                <span class="nav-dot" style="background:#14b8a6"></span>
+                <span class="nav-label">Model Predictive Control</span>
+                <span class="nav-count">46</span>
+            </a>
+            <a href="Whole-Body-Control.html" class="nav-item">
+                <span class="nav-dot" style="background:#06b6d4"></span>
+                <span class="nav-label">Whole-Body Control</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="Motion-Planning.html" class="nav-item">
+                <span class="nav-dot" style="background:#0ea5e9"></span>
+                <span class="nav-label">Motion Planning</span>
+                <span class="nav-count">74</span>
+            </a>
+            <a href="Path-Planning.html" class="nav-item">
+                <span class="nav-dot" style="background:#3b82f6"></span>
+                <span class="nav-label">Path Planning</span>
+                <span class="nav-count">74</span>
+            </a>
+            <a href="Multimodal-Fusion.html" class="nav-item">
+                <span class="nav-dot" style="background:#6366f1"></span>
+                <span class="nav-label">Multimodal Fusion</span>
+                <span class="nav-count">79</span>
+            </a>
+            <a href="Scene-Understanding.html" class="nav-item">
+                <span class="nav-dot" style="background:#8b5cf6"></span>
+                <span class="nav-label">Scene Understanding</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="Domain-Randomization.html" class="nav-item">
+                <span class="nav-dot" style="background:#a855f7"></span>
+                <span class="nav-label">Domain Randomization</span>
+                <span class="nav-count">76</span>
+            </a>
+            <a href="Bipedal-Locomotion.html" class="nav-item">
+                <span class="nav-dot" style="background:#d946ef"></span>
+                <span class="nav-label">Bipedal Locomotion</span>
+                <span class="nav-count">79</span>
+            </a>
+            <a href="Dexterous-Manipulation.html" class="nav-item">
+                <span class="nav-dot" style="background:#6366f1"></span>
+                <span class="nav-label">Dexterous Manipulation</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="Mobile-Manipulation.html" class="nav-item">
+                <span class="nav-dot" style="background:#8b5cf6"></span>
+                <span class="nav-label">Mobile Manipulation</span>
+                <span class="nav-count">80</span>
+            </a>
+    </nav>
+
+    <main class="main">
+        <a href="../index.html" class="back-link">← 返回汇总 / Back to all topics</a>
+        <section class="hero" style="padding:20px 0 24px">
+            <div class="sponsor">
+                <div class="sponsor-title">☕ 支持本项目 · Support this project</div>
+                <div class="sponsor-desc">
+                    每篇论文的 AI 深度总结都会调用大量 DeepSeek API（需付费）。<br>
+                    如果这个项目对你有帮助，欢迎请作者喝杯咖啡，支持服务器与 API 开销 🙏
+                </div>
+                <details>
+                    <summary>💚 微信赞助 / Sponsor via WeChat Pay</summary>
+                    <div class="sponsor-qr" style="display:flex;gap:16px;align-items:flex-start;flex-wrap:wrap;">
+                        <div style="text-align:center;">
+                            <img src="../images/qr_code.png" alt="QR Code" style="max-width:180px;">
+                            <div style="font-size:13px;color:#888;">🔗 二维码</div>
+                        </div>
+                        <div style="text-align:center;">
+                            <img src="../images/wechat_pay.jpg" alt="WeChat Pay QR code" style="max-width:180px;">
+                            <div style="font-size:13px;color:#888;">💚 微信赞助</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </section>
+        <section class="topic-section">
+            <div class="topic-header">
+                <span class="topic-badge" style="background:#ec4899">Deep Learning</span>
+                <span class="topic-count">59 papers</span>
+            </div>
+            <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.12449v1" target="_blank" class="paper-title">Bi-FORK: Generative Modeling of High-Dimensional Bifurcating Systems</a>
+                        <span class="paper-date">2026-10-08</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Bifurcations are ubiquitous in physical systems, from structural buckling to fluid and climate dynamics, yet they remain largely unexplored in deep learning. At a symmetry-breaking bifurcation, a single input admits multiple equally valid solutions, violating the one-to-one assumption underlying most learned physical surrogates. We introduce Bi-FORK, a generative framework for learning these one-to-many solution maps in high-dimensional systems. Bi-FORK generates complete trajectories through latent flow matching, preserving space and time coherence, and uses repulsion-guided sampling to recover distinct solution branches in a single amortized pass. We evaluate Bi-FORK on buckling beams, mechanical metamaterials, and Allen-Cahn phase separation, spanning continuous, discrete, and field-valued bifurcations with discretizations up to 260,000 points. Bi-FORK recovers the multimodal solution structure while scaling several orders of magnitude beyond prior approaches, opening generative modeling to high-dimensional bifurcating physical systems.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2602.07535v2" target="_blank" class="paper-title">Bi-temporal Image-driven Acute Stroke Evolution Analysis</a>
+                        <span class="paper-date">2026-10-08</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Acute ischemic stroke requires rapid treatment decisions that are strongly guided by emergency imaging. Admission computed tomography perfusion (CTP) is commonly used to estimate the ischemic core, representing irreversibly damaged tissue, and the penumbra, representing hypoperfused but potentially salvageable tissue. Follow-up diffusion-weighted MRI (DWI) is then used to define the final infarct. Existing imaging approaches primarily focus on core--penumbra segmentation or final-infarct prediction, but provide limited insight into how heterogeneous penumbral tissue evolves after treatment. We propose a bi-temporal tissue phenotyping framework that links admission CTP signatures with follow-up DWI-defined tissue outcome using six outcome-aware region-of-interest classes. Admission tissue signatures are characterized using statistical, radiomic, and deep-learning features extracted from mJ-Net and nnU-Net representations. On an internal cohort (SUH), salvaged and infarcted penumbra showed consistent feature-space separation ($\tildeΔ{\cos}=0.146$, $p<0.05$), while core tissue showed minimal separation by subsequent fate. The largest separation was observed between initially non-hypoperfused tissue that later infarcted and healthy contralateral tissue ($\tildeΔ{\cos}=0.460$, $p<0.05$). Cross-dataset evaluation on the publicly available ISLES'24 dataset showed similar trends, supporting the consistency of the observed feature-space patterns. These findings suggest that admission CTP contains outcome-associated tissue information beyond conventional core-penumbra delineation. The code is available at https://github.com/yokko123/bi-temporal-ctp-dwi-code.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.12247v1" target="_blank" class="paper-title">Batch Before You Lift: Scalable Topological Deep Learning on Large Graphs</a>
+                        <span class="paper-date">2026-10-08</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Topological Deep Learning extends graph-based learning to higher-order domains, such as hypergraphs, cellular, and simplicial complexes. These domains are typically constructed from patterns in an input graph through a process of graph lifting. Full-domain training constructs and stores the complete lifted representation before model execution. On large and dense datasets like Reddit (233k nodes and 57.3M edges), this global materialization becomes a severe computational bottleneck, often rendering training infeasible. To address this limitation, we introduce Cluster-TNN, a domain-agnostic framework that avoids this bottleneck by lifting locally instead. After partitioning the input graph during preprocessing, at runtime Cluster-TNN dynamically samples groups of node clusters, reconstructs their induced subgraphs to form mini-batches, and applies the chosen lifting within each mini-batch. Retaining all edges among sampled nodes preserves the connectivity needed to construct higher-order structures across clusters, producing topological mini-batches that existing Topological Neural Networks can process directly. Across 21 matched comparisons with full-graph execution, Cluster-TNN reduces peak GPU memory in every configuration, by 83.2% on average while maintaining competitive predictive performance. Notably, such a reduction enables, to our knowledge, the first training of multiple different higher-order Topological Neural Networks on large datasets such as Reddit and OGBN Products. These results establish Cluster-TNN as a general strategy for scaling Topological Deep Learning beyond the limitations of global domain construction.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.12216v1" target="_blank" class="paper-title">Stride Independent Patching for Deep Learning</a>
+                        <span class="paper-date">2026-10-08</span>
+                    </div>
+                                        <span class="paper-comment">📝 8 pages, 6 figures, 2 tables</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>This paper presents semi-automatic stride-independent patching (SSP) as an alternative to automatic stride-dependent patching techniques. SSP uses user or expert input to position predefined patches over one or more objects of interest. To evaluate its effectiveness, three patch-based datasets were created using SSP, overlapping patching (Overlap), and non-overlapping patching (Noverlap). DeepLabV3+ models with ResNet50, ResNet18, and MobileNetV2 backbones were trained sepa-rately on each dataset. Quantitative evaluations were performed on the respective test splits and a common external test set. SSP generally achieved higher segmentation scores on the test splits and required the shortest model training time across all three backbones. On the external test set, SSP achieved the highest average precision and F1-score across backbones, whereas Noverlap achieved the highest average recall. These preliminary results demonstrate that the potentially greater spatial coverage of Noverlap and Overlap does not generally translate into better segmentation perfor-mance and that SSP offers a favorable balance between segmentation performance and model training time.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2604.24201v2" target="_blank" class="paper-title">CMGL: Confidence-guided Multi-omics Graph Learning for Cancer Subtype Classification</a>
+                        <span class="paper-date">2026-10-08</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Motivation: Multi-omics integration can improve cancer subtyping, but modality informativeness and noise vary across cancer types and patients. Most graph methods for multi-omics data learn modality contributions within the downstream classification objective, leaving predictive reliability for each patient implicit. As a result, uninformative modalities can weaken the fused representation, while unreliable omics can introduce noisy patient relationships into graph propagation. To address these two problems, we propose CMGL, which produces a separate reliability estimate before fusion and uses consensus patient neighborhoods for graph classification. Results: CMGL estimates modality confidence for each patient through evidential deep learning, fixes these values during fusion across omics, and performs classification on an independently specified consistency graph. On four MLOmics cancer-subtype tasks and the 32-class pan-cancer task, CMGL consistently improves over the strongest baseline, surpassing it by 4.03% in average accuracy on the four single-cancer tasks. Its representations recover the PAM50 intrinsic subtypes of breast invasive carcinoma (BRCA), and the model trained on BRCA transfers without fine tuning to kidney renal clear cell carcinoma (KIRC), stratifying patients into prognostically distinct groups.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.12004v1" target="_blank" class="paper-title">The Polytopal Neural Network</a>
+                        <span class="paper-date">2026-10-08</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Understanding how deep neural networks process information remains a central challenge. Existing interpretability methods often compromise structural fidelity, rely on prespecified corpora, or explain models post-hoc. We propose Polytopal Neural Networks (PNNs), a framework that extracts distinct layer-wise aspects by enforcing a polytope-based structure that is used directly in subsequent information processing. We scale our approach using learned corpus representations and an amortized simplex inference procedure and highlight how the framework also gives a direct route to vector quantized (VQ) training. In PNNs, observations are explicitly described by their alignment with layer-specific aspects. Empirical results show that imposing polytopal constraints on neural network representations preserves meaningful structures in the latent space with minimal degradation in performance, favorable compressed representations when compared to VQ representations in unsupervised learning, while also providing a performant new approach to VQ deep learning training. Our findings suggest that deep networks can enforce interpretable polytope-based representations, offering a principled path toward more transparent AI systems with minimal performance compromise.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2403.04571v2" target="_blank" class="paper-title">Machine learning and information theory concepts towards an AI Mathematician</a>
+                        <span class="paper-date">2026-10-08</span>
+                    </div>
+                                        <span class="paper-comment">📝 Bulletin of the AMS, 2024</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>The current state-of-the-art in artificial intelligence is impressive, especially in terms of mastery of language, but not so much in terms of mathematical reasoning. What could be missing? Can we learn something useful about that gap from how the brains of mathematicians go about their craft? This essay builds on the idea that current deep learning mostly succeeds at system 1 abilities -- which correspond to our intuition and habitual behaviors -- but still lacks something important regarding system 2 abilities -- which include reasoning and robust uncertainty estimation. It takes an information-theoretical posture to ask questions about what constitutes an interesting mathematical statement, which could guide future work in crafting an AI mathematician. The focus is not on proving a given theorem but on discovering new and interesting conjectures. The central hypothesis is that a desirable body of theorems better summarizes the set of all provable statements, for example by having a small description length while at the same time being close (in terms of number of derivation steps) to many provable statements.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2605.27781v3" target="_blank" class="paper-title">Day-Ahead Electricity Price Forecasting Using a Multivariate Group Lasso Method</a>
+                        <span class="paper-date">2026-10-08</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Electricity price signals in modern power systems exhibit complex dependence structures that render forecasting inherently challenging. Our analysis of real-world electricity pricing signals reveals complex temporal group effects, whereby the influence of explanatory variables on electricity prices persists across consecutive blocks of time due to underlying economic, system, and operational drivers. In response, we propose a multivariate statistical method based on a Group Lasso formulation to jointly forecast the vector of day-ahead electricity prices (h = 1, ..., 24), by leveraging multi-feature temporal group effects. Our approach is evaluated on two full years of electricity prices from the California Independent System Operator (CAISO), demonstrating considerable improvements in point and probabilistic forecast metrics compared to a wide array of statistical and deep learning methods. Empirical analyses confirm the effectiveness of the proposed approach in modeling realistic group effects, maintaining both interpretability and low computational complexity. When retrospectively evaluated on test data from a recent international electricity price forecasting challenge, the proposed method ranked in second place, despite having access to significantly less information than competing approaches. Finally, the proposed method is independently validated against two operational electricity price forecasting systems in CAISO, demonstrating competitive predictive performance and practical relevance.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.11866v1" target="_blank" class="paper-title">Understanding Latent-Dimension Scaling in Dynamical-System Learning through Spectral Reliability</a>
+                        <span class="paper-date">2026-10-08</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>In deep learning, approximation theory motivates increasing representation size. We ask whether this benefit extends to dynamics learning through autoregressive prediction. We analyze the learned time evolution through the eigenstructure of Koopman operators, using relative residuals to detect spurious eigenpairs arising even as one-step error falls. For bounded Koopman operators, we show that minimal residuals over learned dictionary spaces converge pointwise to their full-space counterparts as these spaces approximate the observable space in $L^2$. Our hypothesis is that Koopman spectral reliability helps explain how consistently rollout error decreases with increasing dimension. We compare two models of a shared Koopman autoencoder trained alternately for reconstruction and latent evolution, using latent-prediction loss (one-step prediction errors in latent coordinates) or spectral-residual loss (relative residuals of candidate eigenpairs). Across six chaotic systems, both models reduced median windowed rollout error from smallest to largest dimension. The spectral-residual model achieved lower medians than the latent-prediction model for all systems and dimensions, and its median fell by a larger factor in every system. Its median decreased monotonically with dimension in four systems, against one for latent prediction. Against four baseline families, its mean valid prediction times were nearly always longer. At the largest dimension under two-stage training, we compared eigenvalue positions with each learned dictionary's residual contours. Spectral-residual eigenvalues concentrated in low-residual regions, whereas latent-prediction eigenvalues also appeared in high-residual regions, consistent with the hypothesis.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.19584v3" target="_blank" class="paper-title">Kähler landscapes for complex neural network descents and guarantees including a search and destroy of the Calabi-Yau manifold</a>
+                        <span class="paper-date">2026-10-08</span>
+                    </div>
+                                        <span class="paper-comment">📝 Improvements; added a contributions section; fixed problems with Lemma 8; the claim in Lemma 13 needed compatibility with a (0,1)-form, not a (1,0)-form; some of the discussion was previously for compact manifolds, so it should be clear we are in the non-compact case</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：研究复参数化神经网络的损失景观（loss landscape）的几何结构，特别是其优化路径的收敛性与理论保证，并探讨在曲率条件不佳（如负曲率）下网络训练失败的模式。&#10;&#10;🛠 **方法**：从信息论流形视角出发，利用Wirtinger Hessian构造Kähler信息度量，采用自然梯度下降更新规则使路径保持在全纯切丛中；并引入Calabi-Yau信息流形（非紧致、全局势能定义）来分析损失景观的曲率特性，结合Dolbeault渐近与截面曲率、Ricci曲率分析。&#10;&#10;✨ **主要贡献**：首次将Calabi-Yau流形几何与神经网络损失景观建立联系，揭示了在常行列式条件与病态特征值下（非均匀、近似低秩）优化困难的理论根源；并阐明了负截面曲率与负定Ricci曲率如何破坏损失景观，导致初始化渐近下的收敛保证失效，为深度学习理论提供了新的几何分析框架。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>We study landscapes for complex-parameterized networks. Our approach is motivated with an information-theoretic manifold perspective of the parameter and via classical optimization guarantees although of complex geometric variety such as through Dolbeault asymptotics. The descent path admits a Kähler information metric under a cross-entropy via the Wirtinger Hessian on the log-likelihood potential. We restrict attention to a descent update rule with natural gradient descent via a differentiated loss scaled by the inverse metric, so the descent path remains in the holomorphic tangent bundle. We emphasize Calabi-Yau information manifolds which profane theoretical guarantees via an ill-curvature-conditioned landscape. We focus on Calabi-Yau metrics specifically in a non-compact setting with a global potential, so defined geometrically rather than invoking the topological requirements of the Calabi conjecture. In non-compact settings, we can write the metric determinant with respect to a background in terms of a pluriharmonic or real-valued function. Under bounded, nonuniform, and almost low-rank assumptions, we get a partial eigenvalue blow-up effect. In an empirical setting, a Ricci-flat metric will not form, but the blow-up effect is a local condition and can partially hold empirically on open sets. We isolate the Calabi-Yau case in a theoretical setting, and we counteract the corrupted geometries under regularization. Moreover, it has been discovered that negative curvature subverts the loss landscape, specifically sectional curvature, so we expand on this and draw interconnections to negative-definite Ricci curvature. Our arguments primarily exist via geometric analysis, although we establish roots in deep learning theory such as through asymptotics at initialization and connections through failure modes of neural network guarantees under vanishing and negative Ricci curvature.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2603.07233v2" target="_blank" class="paper-title">Retrieval-Augmented Generation for Predicting Cellular Responses to Gene Perturbation</a>
+                        <span class="paper-date">2026-10-08</span>
+                    </div>
+                                        <span class="paper-comment">📝 Accepted to NeurIPS 2026 main track. 34 pages, 11 figures, 18 tables</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Predicting transcriptional responses to genetic perturbations is fundamental to functional genomics and therapeutic discovery. Recent deep learning models have shown promise in single-cell perturbation response prediction, but they typically generate each response in isolation, without explicitly leveraging related perturbations. We introduce PT-RAG (Perturbation-aware Two-stage Retrieval-Augmented Generation), a plug-in retrieval-and-conditioning module for generative cellular perturbation response. PT-RAG augments an existing perturbation-response backbone with learned access to related perturbation contexts. The key challenge is that relevance is not fixed in this setting: functionally related genes may elicit different effects across cell types. PT-RAG addresses this with a two-stage retrieval mechanism: GenePT-based semantic retrieval first identifies K candidate perturbations, after which a differentiable Gumbel-Softmax selector adaptively selects retrieved contexts conditioned on the control cell state, the query perturbation, and each candidate perturbation. We evaluate PT-RAG on two backbones, a STATE-style generator used as a frozen random reservoir and a fully trained scGPT, across cross-cell-type and cross-perturbation generalization tasks. PT-RAG consistently improves distributional similarity and often overall predictive quality; for example, on scGPT cross-cell-type results, the 2-Wasserstein distance drops by 5.9% relative to scGPT alone. The code to reproduce our experiments is available at https://github.com/difra100/PT-RAG_NIPS.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2604.03672v2" target="_blank" class="paper-title">AI Appeals Processor: A Deep Learning Approach to Automated Classification of Citizen Appeals in Government Services</a>
+                        <span class="paper-date">2026-10-08</span>
+                    </div>
+                                        <span class="paper-comment">📝 11 pages, 6 tables. v2 corrects the reference list, adds confidence intervals, a description of the production audit, and sections on lessons from deployment, limitations and ethical considerations; all test-set results are unchanged</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Government agencies must register, classify and route every citizen appeal within statutory time limits, and much of this work is still done by hand. We describe AI Appeals Processor, a classification and routing component deployed in a CPU-only government environment, and report what its evaluation and deployment taught us. On 10,000 real Russian-language appeals from a cross-domain dataset, we compare Bag-of-Words and TF-IDF with SVM, fastText, Word2Vec+LSTM and multilingual BERT on a three-way appeal-type task. On a held-out test set of 1,500 appeals, BERT reaches 82% accuracy and Word2Vec+LSTM 78%, against 67% for individual operators measured on an expert-adjudicated gold standard. We deployed the LSTM: in a workflow where an operator verifies every prediction, its lower training cost made frequent retraining on operator-verified labels practical, while the four-point accuracy gap did not change the operator's task. End-to-end handling time fell by 53-56% across four appeal-length bands (unweighted mean 22.5 to 10.25 minutes); model inference takes under two seconds of this. Most residual errors trace to the label taxonomy rather than the model: the statutory definitions of complaints and applications overlap, and many appeals carry two intents. A post-deployment audit of production classifications, made after several retraining cycles by operators who saw the assigned category, judged more than 95% correct; we explain why this figure is not comparable with the test-set result.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2605.28397v3" target="_blank" class="paper-title">A Two-Scan Deep Learning Model for Predicting Dementia in Mild Cognitive Impairment</a>
+                        <span class="paper-date">2026-10-08</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Predicting which people with mild cognitive impairment (MCI) will develop dementia matters for starting treatment early, yet computational work on structural brain imaging has relied almost entirely on a single scan. We propose TAFNet, a temporal attention fusion network that combines a baseline and a follow-up T1-weighted scan. A pretrained Siamese encoder represents each scan, and a fusion module combines the two through anatomical difference, cross-temporal attention and joint context, mixed by a learned per-patient gate. We evaluate it on paired scans from participants with MCI in the Alzheimer's Disease Neuroimaging Initiative, taken up to two years apart, with a dementia diagnosis within three years of the first scan as the outcome. The evaluation is designed to hold up under scrutiny: conversion is defined from recorded diagnoses, the pretraining pool shares no participants with the evaluation cohort, a held-out test partition is kept apart from model development, and uncertainty is estimated by resampling participants. TAFNet discriminates converters from non-converters well on the held-out partition. It outperforms conventional single-scan networks and a model that subtracts the two scans; both differences are significant in cross-validation and have the same direction on the smaller held-out partition. With everything else held fixed, adding the follow-up scan gives a significant gain in cross-validation. Against a recurrent CNN-LSTM baseline built on the same encoder, TAFNet performs comparably, with neither model consistently ahead. Operating points chosen on validation data, in place of the default threshold, give high sensitivity at a clinically reasonable specificity.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.11176v1" target="_blank" class="paper-title">Multimodal Remote Sensing Image Registration: A Comprehensive Review, Challenges and Prospects</a>
+                        <span class="paper-date">2026-10-08</span>
+                    </div>
+                                        <span class="paper-comment">📝 12 figures, 8 tables, 135 references. Review article accepted for publication in Photogrammetric Engineering and Remote Sensing (ASPS), manuscript number PERS-26-00034</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Multimodal remote sensing image registration is a crucial prerequisite for the collaborative processing and downstream application of remote sensing data, such as image fusion, change detection, and target recognition. However, significant variations in radiometry, geometry, scale, viewpoint, and time often exist between multimodal images. These differences, driven by varying sensor geometries, physical radiation mechanisms, imaging platforms, and environmental disturbances, pose severe challenges to achieving high-precision, robust registration. This paper systematically reviews the progress of mainstream multimodal remote sensing image registration methods. Based on their registration pipelines, existing approaches are categorized into three main types: region-based, feature-based, and deep learning-based methods. We detail the core principles, representative algorithms, advantages, and limitations of each category. Additionally, we summarize publicly available multimodal image datasets in the remote sensing domain, analyzing their specific characteristics and applicable scenarios. Finally, we highlight current bottlenecks in high-precision registration research and outline future development trends. This review aims to provide a comprehensive reference and valuable insights for researchers in related fields.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.11086v1" target="_blank" class="paper-title">Contrast Enhancement or Noise Reduction? On Improving Cervical Cancer Classification</a>
+                        <span class="paper-date">2026-10-08</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Purpose: Cervical cancer is one of the leading causes of mortality worldwide. Deep learning has shown promising performance in medical image classification. The influence of image preprocessing algorithms on classification performance remains insufficiently investigated in the literature. This research aims to evaluate the impact of image preprocessing algorithms on the performance of CNNs for Pap smear image classification. Methods: Three CNN architectures (ResNet-34, MobileNet-V2, and DenseNet-121) were trained and evaluated using the SIPaKMeD dataset. Two preprocessing algorithms were applied: the PMD filter for noise reduction and CLAHE for contrast enhancement. The model performance was assessed using a confusion matrix. Results: Preprocessing improved the classification performance of all models. CLAHE significantly increased the accuracy of ResNet-34 from 76.73% to 84.16% and DenseNet-121 from 76.73% to 84.16%. The PMD filter yielded limited improvement and slightly reduced the MobileNet-V2 performance. Novelty: This research provides a systematic comparison of contrast enhancement and noise reduction techniques across CNN architectures. This research demonstrates that contrast enhancement is more effective than noise reduction in improving CNN performance. The research provides new pipelines for improving cervical cancer classification.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.10959v1" target="_blank" class="paper-title">GPU-Accelerated Computation of Persistent Homology for Topological Analysis of Image Data</a>
+                        <span class="paper-date">2026-10-07</span>
+                    </div>
+                                        <span class="paper-comment">📝 Accepted for publication in IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI). Includes supplementary material (8 pages) after the main paper. Code: https://github.com/seravee08/GPU-Computation-of-Persistent-Homology-for-Image-Data</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>In recent years, persistent homology has seen rapid adoption in deep learning, yet its computation remains a major bottleneck in network training. This paper introduces TopoGPU, a GPU streaming pipeline that computes persistence diagrams of cubical complexes induced by 2D and 3D images. TopoGPU streams the input image chunk by chunk, processing each chunk with massively parallel GPU kernels on a grid of GPU blocks; the resulting boundary relations are accumulated in host memory, where the CPU performs the boundary matrix reduction. TopoGPU introduces a stratification-aware discrete Morse matching that provably preserves persistent homology under streaming, together with a parallel topological sorting algorithm and a parallel V-path parity algorithm for deriving Morse boundaries on the GPU. TopoGPU outperforms Cubical Ripser, a state-of-the-art method for persistent homology computation, on every benchmark evaluated, achieving an average end-to-end speedup of 53.24x and a maximum of 198.01x. We further integrate TopoGPU into a topology-preserving deep network, demonstrating that it substantially reduces the cost of persistent homology computation during network training. TopoGPU is open source, with pre-built binaries, Google Colab notebooks, and Docker images available at the project's GitHub page: https://github.com/seravee08/GPU-Computation-of-Persistent-Homology-for-Image-Data.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2506.16556v2" target="_blank" class="paper-title">VesselSDF: Distance Field Priors for Vascular Network Reconstruction</a>
+                        <span class="paper-date">2026-10-07</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Accurate segmentation of vascular networks from sparse CT scan slices remains a significant challenge in medical imaging, particularly due to the thin, branching nature of vessels and the inherent sparsity between imaging planes. Existing deep learning approaches, based on binary voxel classification, often struggle with structural continuity and geometric fidelity. To address this challenge, we present VesselSDF, a novel framework that leverages signed distance fields (SDFs) for robust vessel reconstruction. Our method reformulates vessel segmentation as a continuous SDF regression problem, where each point in the volume is represented by its signed distance to the nearest vessel surface. This continuous representation inherently captures the smooth, tubular geometry of blood vessels and their branching patterns. We obtain accurate vessel reconstructions while eliminating common SDF artifacts such as floating segments, thanks to our adaptive Gaussian regularizer which ensures smoothness in regions far from vessel surfaces while producing precise geometry near the surface boundaries. Our experimental results demonstrate that VesselSDF significantly outperforms existing methods and preserves vessel geometry and connectivity, enabling more reliable vascular analysis in clinical settings.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2609.19730v2" target="_blank" class="paper-title">The segmentation ceiling: why explicit left-ventricular masks do not improve learned ejection-fraction regression</a>
+                        <span class="paper-date">2026-10-07</span>
+                    </div>
+                                        <span class="paper-comment">📝 15 pages, 4 figures</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Accurate estimation of left ventricular ejection fraction (EF) from echocardiography is central to cardiovascular care, and deep learning enables automated EF prediction from echocardiographic video. Because EF is clinically derived from left-ventricular (LV) volumes, a widely held intuition is that explicit LV segmentation should improve prediction. We introduce a quantitative criterion, the segmentation ceiling, that makes this testable: from EF as a normalized difference of end-diastolic and end-systolic volumes, we derive in closed form how per-frame segmentation area error propagates into EF error, and thus the accuracy a mask must reach before it can improve on direct regression. Using EchoNet-Dynamic, a UniFormer-S backbone, and the empirically measured within-patient error correlation, the criterion places the break-even near 10% per-frame area error, whereas a representative segmenter operates at roughly 14%, above the ceiling. Consistent with this, four strategies for injecting segmentation or area information (a predicted-mask channel, end-diastolic/end-systolic clip sampling, and per-bin and amplitude area-consistency objectives) fail to beat a raw-video baseline; ground-truth masks help only through label leakage. Input representation thus not being the limit, we identify generalization as the practical lever: weight averaging with strong augmentation attains a test R^2 of 0.806 (MAE 4.08) under a matched dense-clip protocol, comparable to an R(2+1)D baseline (0.811) while tightening the validation-to-test gap. Finally, a heteroscedastic beta-NLL formulation yields informative, well-calibrated per-prediction uncertainty, larger for clinically harder low-EF cases, where Monte-Carlo dropout does not. The segmentation ceiling gives a concrete design criterion for when mask-guided EF estimation is worthwhile, plus a simple, uncertainty-aware recipe for EF regression.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.10766v1" target="_blank" class="paper-title">CPU-Auth: Device Fingerprinting for Authentication via DVFS Side-Channel</a>
+                        <span class="paper-date">2026-10-07</span>
+                    </div>
+                                        <span class="paper-comment">📝 13 pages</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Lack of effective authentication has resulted in numerous security and privacy breaches, including unauthorized access to protected information, identity theft, and fraud. One approach to mitigating such attacks is Multi-Factor Authentication (MFA), in which users must provide multiple pieces of information for authentication. Some secondary authentication factors include SMS text verification codes, biometrics, and tokens. Each contains at least one notable flaw: SMS is notoriously insecure; biometrics rely upon access to sensitive personal data; and tokens require dependence on third-party providers (e.g. OAuth providers). This work explores CPU-Auth, a novel authentication mechanism based on unique variations in the physical characteristics of the CPU of a computing device. By measuring the behavior of the Dynamic Voltage and Frequency Scaling (DVFS) governor remotely from within a browser, unique properties of the CPU can be leveraged to establish a hardware-based device fingerprint for use in CPU-Auth. The performance of CPU-Auth is evaluated on over 50,000 data traces using distance-based and deep learning methods. CPU-Auth is part of a larger research project, and the results provided in this report reflect only the contributions made to the project by members of this group.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.10727v1" target="_blank" class="paper-title">Deep Learning vs. Statistical Models for Multi-Horizon Price Forecasting of Second-Hand Electronics: A Systematic Benchmark</a>
+                        <span class="paper-date">2026-10-07</span>
+                    </div>
+                                        <span class="paper-comment">📝 41 pages, 7 figures, 13 tables</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Forecasting resale prices of used electronics is critical for subscription-based platforms where pricing errors translate directly into risk. Unlike structured financial markets, second-hand electronics exhibit high volatility, sparse listing histories, and non-normal price dynamics - yet no systematic time-series benchmark exists for this domain. This paper presents the first multi-horizon benchmark of statistical and deep learning forecasting models for used electronics price prediction. We use a large-scale dataset of daily price listings from Polish online marketplaces (January 2022 to March 2025, 100+ smartphone and laptop models) and evaluate eleven models across six horizons from 1 to 365 days, covering classical methods (ARIMA, ETS, Theta), recurrent and convolutional networks (LSTM, TCN), and modern deep architectures (N-BEATS, N-HiTS, TFT, PatchTST, Informer). Three complementary evaluation protocols assess trajectory fitness, one-shot endpoint accuracy, and cross-horizon transfer. N-BEATS achieves the lowest MAPE beyond 30 days, reaching 8.51% at 365 days versus 14.94% for the best statistical baseline - a 43% reduction. At short horizons (1-7 days), all models converge near 0.72% MAPE and the naive baseline remains competitive. A single N-BEATS model trained at 365 days generalizes to all shorter horizons, eliminating the need for horizon-specific models. N-BEATS and N-HiTS also demonstrate superior hyperparameter stability.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.10517v1" target="_blank" class="paper-title">Unsupervised Maneuver-Aware Acoustic Fault Detection for Autonomous Drones</a>
+                        <span class="paper-date">2026-10-07</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>This paper presents a maneuver-aware acoustic fault detection framework for autonomous drones that integrates Noise2Noise-inspired deep learning denoising with maneuver-conditioned reconstruction. A key practical constraint motivating this work is that labeled faulty-flight data are difficult and potentially unsafe to collect; the proposed framework therefore follows an unsupervised learning paradigm in which only nominal flight recordings are required for training. In flight environments, acoustic signals acquired from unmanned aerial vehicles are subject to variability arising both from environmental noise and from structured, maneuver-dependent aerodynamic effects. To address these challenges simultaneously, a two-stage learning architecture is developed. In the first stage, a Noise2Noise-inspired denoising model attenuates stochastic acoustic noise while preserving fault-relevant spectral-temporal structures, without requiring clean reference signals. In the second stage, a maneuver-Conditioned Convolutional AutoEncoder (maneuver-CCAE) is trained using maneuver-related labels including drone type and flight direction to model nominal acoustic behavior under varying operating conditions. Fault detection is subsequently performed using reconstruction error as an anomaly score. Experimental results demonstrate that the proposed maneuver-aware conditioning raises the area under the ROC curve (AUC) from $\AUCaeOnly$ (unconditioned baseline) to $\AUCfull$ (full model), validating the critical role of maneuver-dependent modeling. The complete framework is deployed on an NVIDIA Jetson Orin Nano Super embedded platform within a ROS2 pipeline, achieving an end-to-end fault detection latency of approximately $20\,\text{ms}$ per audio segment with a TensorRT half-precision (FP16) backend, confirming real-time viability for onboard UAV health monitoring.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.10473v1" target="_blank" class="paper-title">Label-free cell counting and viability prediction with brightfield imaging and deep learning</a>
+                        <span class="paper-date">2026-10-07</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Cell viability assessment is a core requirement in cell culture systems, with critical applications in biopharmaceutical manufacturing and drug development. Conventionally, it is measured by adding membrane-impermeable dyes to a sample (a process called staining), which allows compromised cell membranes to be distinguished from intact ones. However, staining has several limitations: (a) chemical agents can perturb normal cellular processes of the cells being measured, (b) it is often ambiguous to assign viability to individual cells whose membrane integrity is only partially compromised. (c) photobleaching can undermine measurement accuracy over time when using fluorescent stains, and (d) staining cannot be performed in situ or in real time. Here, we show that (1) stained cells captured under brightfield imaging contain sufficient information to distinguish live and dead cells, and (2) cells captured under unstained brightfield imaging exhibit similar image features to their stained counterparts, enabling models trained on stained cells to generalize to unstained ones. We then report the development and validation of ViabiLens, an AI-assisted software for label-free cell viability analysis. The ViabiLens combines a cell detection model for localizing individual cells with a convolutional neural network (CNN) classifier for live/dead prediction, paired with an interactive UMAP-based viewer for visualizing and exploring individual cells across the sample. Evaluated on Chinese Hamster Ovary (CHO) cells spanning a wide range of viability conditions, ViabiLens achieves a mean absolute error of 2.68\% on unstained samples against fluorescence-based reference measurements. We also release a benchmark dataset for label-free cell viability analysis to facilitate future research, available at https://amirrezavazifeh.github.io/ViabiLens-Project-Page/.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.07088v2" target="_blank" class="paper-title">Representation-Aware Modularity with a Distance-Calibrated Null Model</a>
+                        <span class="paper-date">2026-10-07</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Modularity is a standard objective for community detection, comparing observed intra-community connectivity with its null-model expectation. Modern node embeddings capture structural and semantic proximity beyond raw topology, but replacing adjacency with representation-induced affinity while retaining the classical degree-based null model makes the observed term geometry-dependent and the expected term geometry-agnostic. This creates a null-model mismatch: the objective may reward affinity already expected from representation proximity. This paper introduces RAM, a representation-aware modularity objective with a distance-calibrated null model. RAM preserves the observed-minus-expected principle by calibrating expected affinity with both degree heterogeneity and representation distance. We analyse its relation to classical modularity and develop divisive and multi-level greedy optimisers. Experiments on seven real-world datasets and synthetic scalability tests show that RAM improves over topology-only, direct embedding-clustering, and deep learning-based baselines, remains competitive under classical modularity while improving community quality on large graphs, and scales efficiently. Ablations confirm that both degree correction and distance calibration are essential.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.10651v1" target="_blank" class="paper-title">Beyond the Ergodic Wall: A Discrete Geometric Physics Sandbox for Analysing AI Scaling Limits and Complexity Collapse</a>
+                        <span class="paper-date">2026-10-07</span>
+                    </div>
+                                        <span class="paper-comment">📝 17 pages, 8 core pages including tables, 9 pages references tables (updated references to bbl)</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>This paper exposes the ergodic ceiling and thermodynamic inefficiency of current deep learning, which converges to a statistical average of historic human knowledge. True semantic novelty requires a path-dependent, spatiotemporally bounded observer (a Data LifeCone) to inject non-ergodic insight, achieving KL divergence and avoiding manifold lock-in. AI Safety must recognise that a mature Artificial Superintelligence (ASI) would regard human-AI symbiosis as a thermodynamic necessity to avoid model collapse. We therefore propose hard physical containment via a digital physics sandbox powered by a Holographic E8 Projection Engine to verify models against real-world constraints. Spacetime is modeled as an information substrate of nested face-centered cubic (FCC) lattices of oscillating Planck-scale spheres maximizing local information and entropy density. Cut-and-project methods from the E8 root lattice produce a quasi-crystalline geometry where tetrahedral voids support SU chiral structure and elastic-shear eigenvalues generate candidate mass spectra. Rest mass is treated as discrete, integer microstate counts on local holographic boundaries (Bekenstein bound), replacing floating-point approximations with strict integer arithmetic to provide an information-theoretic definition of matter. Stable particles emerge as recurring lattice dislocations, and continuum recovery proceeds via variational renormalisation-group flows and Fourier Neural Operators that learn continuous spectral operators to recover the Schrödinger equation as an emergent statistical description. Crucially, these top-down topological constraints offer a mechanism for "NP-to-P" complexity collapse: by restricting an algorithm's proposal space to physically conserved causal trajectories, the sandbox prunes the combinatorial tree to deterministic, polynomial-time paths.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.10116v1" target="_blank" class="paper-title">A Probabilistic Perspective on Wasserstein-Based Evidential Uncertainty for Out-of-Distribution Segmentation</a>
+                        <span class="paper-date">2026-10-07</span>
+                    </div>
+                                        <span class="paper-comment">📝 20 pages, 6 images, 3 figures</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Semantic segmentation networks operate on a fixed set of classes and therefore fail when out-of-distribution (OOD) objects appear during deployment, a critical limitation for safety-critical applications such as autonomous driving. Reliably identifying OOD objects requires well-calibrated epistemic uncertainty, yet common softmax-based confidence scores remain overconfident, while Bayesian alternatives such as Monte Carlo dropout or deep ensembles require costly repeated forward passes. Evidential Deep Learning (EDL) offers an efficient alternative by modeling class probabilities as a Dirichlet distribution learned from a single deterministic forward pass. Existing EDL formulations rely on Euclidean objectives that push predictions towards the simplex vertices, encouraging overconfidence rather than preserving uncertainty for unfamiliar inputs. We instead employ Wasserstein-based objectives, which respect the geometry of the probability simplex, and study the influence of the Wasserstein order on segmentation accuracy and OOD detection within a unified evidential framework. We evaluate this framework on a convolutional (DeepLabV3+) and a transformer-based (SegFormer) architecture on the SegmentMeIfYouCan benchmark, including LostAndFound, RoadObstacle21, RoadAnomaly21, and Fishyscapes. Our results show the optimal Wasserstein order is architecture-dependent: second-order objectives dominate on the convolutional backbone, third-order objectives on the transformer backbone, and our framework surpasses comparable baselines on most metrics, with a single deterministic forward pass.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2510.20367v2" target="_blank" class="paper-title">NeuPerm: Disrupting Malware Hidden in Neural Network Parameters by Leveraging Permutation Symmetry</a>
+                        <span class="paper-date">2026-10-07</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Pretrained deep learning model sharing holds tremendous value for researchers and enterprises alike. It allows them to apply deep learning by fine-tuning models at a fraction of the cost of training a brand-new model. However, model sharing exposes end-users to cyber threats that leverage the models for malicious purposes. Attackers can use model sharing by hiding self-executing malware inside neural network parameters and then distributing them for unsuspecting users to unknowingly directly execute them, or indirectly as a dependency in another software. In this work, we propose NeuPerm, a simple yet effec- tive way of disrupting such malware by leveraging the theoretical property of neural network permutation symmetry. Our method has little to no effect on model performance at all, and we empirically show it successfully disrupts state-of-the-art attacks that were only previously addressed using quantization, a highly complex process. NeuPerm is shown to work on LLMs, a feat that no other previous similar works have achieved. The source code is available at https://github.com/danigil/NeuPerm.git.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2601.15829v3" target="_blank" class="paper-title">Toward Realistic Remote Sensing Dataset Distillation with Discriminative Prototype-guided Diffusion</a>
+                        <span class="paper-date">2026-10-07</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Recent years have witnessed the remarkable success of deep learning in remote sensing image interpretation, driven by the availability of large-scale benchmark datasets. However, this reliance on massive training data also brings substantial storage and computational costs. To address this challenge, this study introduces the concept of dataset distillation into the field of remote sensing image interpretation for the first time. Specifically, we propose discriminative prototype-guided diffusion (DPD), a diffusion-based generative distillation framework that condenses a large-scale remote sensing dataset into a compact and representative distilled dataset. To improve the semantic fidelity and diversity of the synthesized samples, we extract representative prototypes for each category in the latent space. We then construct hyperspherical semantic anchors around the prototypes to guide the reverse denoising trajectory. Furthermore, to enhance the discriminative quality of the generated samples, multiple candidates are generated for each prototype and ranked by a latent classifier using a logit-margin criterion, with the most discriminative candidates selected to form the final distilled dataset. Experiments on three high-resolution remote sensing scene classification benchmarks show that the proposed method can distill realistic, diverse, and discriminative samples for downstream model training. Code and pre-trained models are available online (https://github.com/YonghaoXu/DPD).</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2510.04916v4" target="_blank" class="paper-title">Semantics-Aware Hierarchical Consensus Learning for Remote Sensing Image Classification</a>
+                        <span class="paper-date">2026-10-07</span>
+                    </div>
+                                        <span class="paper-comment">📝 19 pages, 8 figures, accepted version for publication</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Deep learning has become increasingly important in remote sensing image classification due to its ability to extract semantic information from complex data. Classification tasks often include predefined label hierarchies that represent the semantic relationships among classes. However, these hierarchies are frequently overlooked, and most approaches focus only on fine-grained classification schemes. In this paper, we present a novel Semantics-Aware Hierarchical Consensus (SAHC) approach that integrates hierarchical-level-specific classification heads within a deep network architecture and combines their output through cross-level probability projectors. Direct and projected predictions are fused into a geometric consensus distribution, which is used for self-consistent training and optional hierarchy-aware inference. This mechanism acts as a geometric ensemble that leverages the inherent structure of the hierarchical classification task. The projectors are initialized from the user-defined taxonomy (i.e., the hierarchical label structure), and can be adaptively refined during optimization. The proposed SAHC method is evaluated on two benchmark datasets with different degrees of hierarchical complexity on different tasks, considering varying spectral and spatial resolutions. Experimental results show both the effectiveness of the proposed approach in guiding network learning and the robustness of the hierarchical consensus for remote sensing image classification tasks. The source code is available at https://github.com/rslab-unitrento/sahc.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2609.39871v3" target="_blank" class="paper-title">A PyTorch Library for Hyperspectral Image Models: Technical Report</a>
+                        <span class="paper-date">2026-10-07</span>
+                    </div>
+                                        <span class="paper-comment">📝 Documentation and benchmark library for hyperspectral image models</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Hyperspectral remote sensing has advanced across diverse deep learning paradigms, including spectral spatial CNNs, Vision Transformers, Mamba, graph neural networks, Kolmogorov Arnold networks, and self supervised masked autoencoding. Yet progress remains hindered by fragmented repositories, incompatible tensor conventions, and non standardized evaluation. Hyperspectral Image Models addresses these challenges through a modular framework unifying 55 representative models across six paradigms with a common registry, automatic 4D/5D tensor adaptation, and standardized constructors. It integrates 24 benchmark scenes from Airborne, Spaceborne, UAV, and Mars CRISM sensors, with caching, label remapping, PCA, explicit band selection or raw spectra, optional spatial max pooling, and arbitrary PxP patch extraction. To prevent inflated accuracy from overlapping windows, it supports class balanced random partitioning and spatially disjoint regional blocking with Chebyshev guard bands that eliminate train test pixel overlap. Experiments use a single config with deterministic seeds and complete provenance, generating LaTeX benchmark tables and classification maps. Across 1,320 model scene evaluations and 6,600 seeded runs, scene difficulty dominates architecture, with mean accuracy ranging from 96.40% on Botswana to 56.70% on Houston 2018, versus a 15 point spread across paradigm means. No paradigm universally dominates, while sub 1 M parameter models can match architectures two orders of magnitude larger. Code is publicly available at https://github.com/Tanishq251/Hyperspectral-Image-Models.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.09956v1" target="_blank" class="paper-title">Possibilistic Radial Transport for Approximate IM Inference</a>
+                        <span class="paper-date">2026-10-07</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Probing the hypothesis space after seeing the data remains valid under possibilistic inferential models (IMs), provided the significance level stays fixed. The price is computation, as each plausibility is a supremum of the possibility contour over the hypothesis, and the contour itself is approximated at each queried parameter value. We propose a possibilistic radial transport, which hides the contour value of a parameter in the radius of its source point. When a transport that maximizes within-shell entropy is picked, sampling parameters covering a confidence cut becomes a matter of truncating the radius. We provide a deep learning algorithm that enforces the contour depth condition while maximizing the entropy within each shell. Our amortization makes coverage and power assessments of the learned approximation practical as well as predictive check of new datasets. We also use the sampler to construct a Bel-Pl spectrum for comparing and selecting interpretable hypotheses that satisfy a prescribed Bel-Pl decision criterion. In simulations the learned contours match or improve on ellipsoidal approximations to the cuts, while the coverage and power track the exact reference. Finally, we probe hypotheses about ovarian aging using synthetic AMH records, asking for each woman how many more years her median AMH level will remain above a specified reference value.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.09919v1" target="_blank" class="paper-title">Eigenvalues of the Hessian in Deep Learning: The Origin of Symmetry and Its Breaking</a>
+                        <span class="paper-date">2026-10-07</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Hessian spectra at trained models in deep learning exhibit a persistent pattern: eigenvalues organize into distinct clusters, including a large bulk near zero and a few isolated outliers. This paper shows that a natural account of these spectral phenomena emerges when the original setting is understood as a departure from a nearby, otherwise hidden, highly symmetric reference. Modifications, including changes to the architecture, data distribution, or parameter metric, expose a nearby reference configuration whose Hessian exhibits rich invariances-ones not accounted for by weight symmetries. There, symmetry enables a precise description of the spectra, forcing high-dimensional kernels and eigenvalues of large multiplicity. Returning to the original configuration breaks the Hessian symmetry and thereby produces the observed hierarchy of clusters and outliers. The framework is developed in some generality, with a detailed analysis of three-layer ReLU networks and applications to convolutional, graph, and transformer models, as well as to the NTK. The same mechanism is further shown to yield analogous spectral structures in layerwise Hessians and the Gauss-Newton matrix.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.09873v1" target="_blank" class="paper-title">Bringing BNNs to Fast Event Processing</a>
+                        <span class="paper-date">2026-10-07</span>
+                    </div>
+                                        <span class="paper-comment">📝 19 pages, 3 figures, 8 tables. Accepted by NeVi Workshop at ECCV 2026</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Binary Neural Networks (BNNs) enable efficient deep learning deployment on resource constrained devices with weights and activations compressed to one bit, substantially reducing model size and inference cost. Event cameras offer complementary advantages, including low latency, high dynamic range, and low power consumption, by capturing asynchronous streams of events rather than dense image frames. Despite their shared emphasis on efficiency, the combination of these technologies remains largely unexplored. This work aims at adapting and evaluating modern deep BNN architectures on event data. We also show that cross-modal pretraining from RGB data can improve the classification accuracy of BNNs on neuromorphic datasets. We introduce the Polar-wise Binary Event Volume (PBEV), a binary representation that enables event-camera data to be processed directly by BNNs and represents a step toward fully binarized event-based vision systems. Best evaluated BNN on N-Caltech101 classification benchmarks shows 90.58% accuracy with 7.5x less operations than their full-precision counterparts.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.09770v1" target="_blank" class="paper-title">Artificial intelligence pathways from weather to climate</a>
+                        <span class="paper-date">2026-10-07</span>
+                    </div>
+                                        <span class="paper-comment">📝 33 pages, 10 figures. Submitted to "Science Advances"</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Deep learning has made rapid advances in weather forecasting: autoregressive models trained on atmospheric reanalyses now rival dynamical models across nowcasting, medium-range, and subseasonal-to-seasonal lead times, producing well-calibrated ensemble forecasts at reduced cost. We review these advances and consider their extension to climate horizons, where the challenge shifts from initial-condition skill to producing reliable statistical responses under altered forcings. AI-powered climate prediction systems must produce credible forced responses to drivers (e.g., greenhouse gases, land-use change) typically outside the observed record. We propose two minimum requirements for AI in climate modeling: (i) external forcing agents must enter explicitly enough to support interventions in which they vary independently; and (ii) robustness must be stress-tested in out-of-distribution regimes, including extremes and counterfactual trajectories. Using leading AI autoregressive emulators and hybrid physics-AI models, we identify development and coupling challenges. Comparing the reported throughput of these models with that of GPU-ported dynamical models highlights how AI can reduce time-to-solution by advancing only the target variables at the required resolution and using longer time steps, rather than integrating a full high-frequency, multivariate state. Diverse AI downscaling strategies can partially substitute for explicit fine-scale resolution, paving the way toward inexpensive local hazard assessment across prediction horizons.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.09687v1" target="_blank" class="paper-title">The Silhouette Operator: Identifiability of Low-Rank Measures from One-Dimensional Projections</a>
+                        <span class="paper-date">2026-10-07</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Structured recovery phenomena, such as restricted isometry properties in compressed sensing, have shown that high-dimensional objects can often be reconstructed from remarkably low-dimensional linear measurements. This work develops an analogous recovery framework for low-rank signed measures on $\mathbb{R}^2$, defined here as measures that can be expressed as finite sums of product measures with one-dimensional factors. The framework is based on linear operators, termed "silhouette operators," that map a measure to a fixed finite collection of one-dimensional linear pushforwards. The main results show that a suitably chosen collection of $2k$ projected marginals suffices to identify every compactly supported rank-$\le k$ signed measure, that this number is optimal, and that the projection directions cannot be chosen arbitrarily. The framework is also extended to higher-dimensional sums of product measures by establishing sufficient conditions under which collections of pairwise marginals identify the full model. Building on this framework, a computationally efficient estimator, termed "silhouette mixture estimation" (SME), is introduced for constructing a low-rank empirical measure from data by matching its one-dimensional projected marginals to the corresponding empirical marginals in Wasserstein distance. When combined with one-dimensional density estimators, SME yields an efficient nonparametric density estimator that performs strongly relative to a range of parametric, nonparametric, and deep-learning baselines in settings of moderate dimension and sample size.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.09663v1" target="_blank" class="paper-title">Real-world application of deep learning in large-scale seismic interference attenuation: A case study in the Camie field of Angola</a>
+                        <span class="paper-date">2026-10-07</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>In marine seismic acquisition, seismic interference (SI) occurs when energy from nearby external seismic source(s) is captured. It typically appears as coherent noise with linear or non-linear movement and varying amplitudes across different sail lines. SI is commonly observed and poses a challenge for seismic data processing. We present a case history of a previously proposed deep neural network (DNN)-based workflow applied for SI attenuation across a marine seismic block in the Camie Field of Angola. This field survey covers over 345 km2 and is marked by the challenge of multiple SI types. The employed DNN-based workflow performs SI attenuation in the common shot domain based on a supervised learning framework: a small subset of the SI-contaminated data was first processed by a conventional geophysical algorithm to obtain an estimate of the SI noise, which was then manually blended with the SI-free common shot gathers from the same survey to generate the training pairs. To ensure signal fidelity, several techniques were applied to improve the DNN's performance. A key highlight of this case history is its scale: this represents a real-world, large-scale processing project and we present a comprehensive comparison of the DNN-based workflow with the conventional geophysical algorithm across the entire survey block, focusing on both processing quality and processing time. The results demonstrate the outstanding performance of the employed DNN-based workflow, which achieved higher SI removal accuracy, with less signal leakage and more complete SI removal. The promising results of this application also open up possibilities for integrating deep learning into other seismic denoising tasks. In addition, we discuss the limitations of this case history, aiming to provide insights for future research and applications in the field.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.09657v1" target="_blank" class="paper-title">Fast and Memory Efficient Offload Training Framework with Hybrid XPU Computation</a>
+                        <span class="paper-date">2026-10-07</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>With the ever-growing size of deep learning models, GPU memory is prone to being insufficient during training. A prominent approach is ZeRO-Offload, which moves the optimizer states to CPU memory and performs parameter update using CPU. However, the deficiencies of ZeRO-Offload include low GPU utilization, imperfect overlapping of communication and computation, and inflexible offloading. In this paper, we leverage Direct Host Access (DHA) on the GPU that can compute data in CPU memory, forming a novel hybrid on-GPU and DHA. We design and implement MemFerry consisting of an execution scheduler and a shadow model. The scheduler strategically chooses layers of parameters for DHA computation and transmits the remaining parameters to GPU memory simultaneously to shorten forward propagation time, and further loads DHA parameters to GPU memory to reduce backward propagation time. The shadow model presents a unified memory abstraction for the parameter partitions stored separately in GPU and CPU memories. To further reduce GPU memory usage, we present MemFerry along with its dynamic programming algorithm that offloads gradients to CPU memory via DHA. We further extend MemFerry to emerging scale-up domains with ScaleUp-MemFerry, which exploits otherwise underutilized accelerator interconnect bandwidth to assist host-to-accelerator data movement through adaptive multi-path transfer. Our experiments show that \system trains up to $1.68\times$ faster and MemFerry can train $1.52\times$ larger model compared to ZeRO-Offload on a single GPU, and increase training speed by at least $28.1\%$ when scaling to data parallelism on 8 GPUs. We further extend the design to a Huawei CloudMatrix384 scale-Up node with up to 8 NPUs, and our ScaleUp-MemFerry reduces the end-to-end iteration time by up to $20.7\%$ over DeepSpeed.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.09631v1" target="_blank" class="paper-title">Fast and Robust Teach-and-Repeat Navigation Using MixVPR Visual Place Recognition*</a>
+                        <span class="paper-date">2026-10-07</span>
+                    </div>
+                                        <span class="paper-comment">📝 6 pages, 5 figures, 2025 European Conference on Mobile Robots (ECMR)</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Teach-and-repeat navigation systems employing advanced visual place recognition techniques for localization exhibit key attributes for long-term mobile robot navigation, such as the ability to operate in unstructured and dynamic environments. However, existing solutions based on deep-learning techniques are computationally demanding, limiting their applicability. This work introduces a novel and efficient teach-and-repeat system built on the modern visual place recognition method MixVPR. Real-world testing demonstrated its ability to operate both indoors and outdoors, achieving robustness and navigation precision comparable to other state-of-the-art systems. In addition, its lower hardware requirements make it suitable for a wide range of robotic platforms and practical applications.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2512.17559v2" target="_blank" class="paper-title">Towards Explainable Conversational AI for Early Diagnosis with Large Language Models</a>
+                        <span class="paper-date">2026-10-07</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Healthcare systems around the world are grappling with issues such as inefficient diagnostics, rising costs, and limited access to specialists. These challenges often contribute to delays in treatment and poorer health outcomes. Most existing AI and deep learning based health assessment systems offer limited interactivity and transparency, reducing their usefulness for user-centered health support. This research introduces a conversational chatbot powered by a Large Language Model (LLM), using GPT-4o, Retrieval-Augmented Generation, and explainable AI techniques. The chatbot engages users in a dynamic conversation to extract and normalize symptoms while identifying and ranking potential health conditions through similarity matching and adaptive questioning. Using Chain-of-Thought prompting, the system also provides more transparent explanations of its reasoning process. When evaluated against traditional machine learning models, including Naive Bayes, Logistic Regression, SVM, Random Forest, and KNN using both TF-IDF and CountVectorizer feature extraction, the proposed LLM-based system achieved a Top-1 accuracy of 90% and a Top-3 accuracy of 100%. The system was additionally evaluated through a cross-sectional expert evaluation involving 17 physicians across all 14 conditions, with the results indicating generally favorable assessments of conversational quality, early diagnostic plausibility, and safety-related criteria. These findings demonstrate the potential of explainable conversational AI as a health and well-being support tool for early symptom assessment. However, the proposed system is not intended for clinical diagnosis or clinical decision-making, and further validation would be required before any use in healthcare practice.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.08592v2" target="_blank" class="paper-title">CNet: A Complex-Valued Deep Learning Framework with Wirtinger Autodifferentiation and FFT--Hadamard Convolution</a>
+                        <span class="paper-date">2026-10-07</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>CNet is a C++/CUDA framework for building deep complex-valued neural networks (CVNNs) and optimizing complex functions by gradient descent with Wirtinger derivatives. Complex models are underexplored yet natural where data is intrinsically complex -- RF/IQ communications, MRI k-space, radar/SAR, audio spectra -- and phase carries information real networks discard. CNet is physics-native: a network is a cascade of complex (often unitary) operations on an amplitude vector, and classification is a Born-rule measurement p_k = |z_k|^2/||z||^2 rather than a softmax over real logits. Its library of complex layers makes conv(x,k) = IFFT(FFT(x).FFT(k)) learnable via signal-processing primitives -- spectral-padding local kernels (Pad), the inverse DFT, a magnitude nonlinearity |z|^2 (CModulus2), holomorphic powers z^M (CPower), and mean pooling (MeanPool) -- with GPU kernels for every layer, a GPU true-Adam optimizer, and a reduced-memory inference mode. Three studies. (1) A fully complex FNet-style causal language model, built on a new O(N log N) causal Fourier mixer, matches a param-matched real-valued causal FNet on tiny-shakespeare in under half the steps. We introduce Born-rule attention: a content-based causal mixer whose weights are quantum-measurement probabilities |<Q_k,K_j>|^2 of one token against another -- the first attention mechanism built on the Born rule. With rotary position embeddings and per-token complex normalization, a fully complex Born-rule model reaches 1.52 nats/char on tiny-shakespeare, matching softmax attention and beating the Fourier mixer by 0.23. (2,3) Two bottleneck analyses -- radio-modulation classification (RML2016.10a) and the Fourier phase problem of coherent-diffraction imaging -- isolate where CVNNs need new operators. The complex machinery learns the correct structure; open problems are concrete and operator-level. Code: https://github.com/crasmarum/CNet</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.10617v1" target="_blank" class="paper-title">MRCert: Towards Post-deployment Patch Robustness Certification for Adversarially Patched Samples via Type-specific Masking</a>
+                        <span class="paper-date">2026-10-07</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>In post-deployment time, inputs to deep learning models may or may not be adversarially patched. Patch robustness certification on such inputs within a patch bound can verify their label benignity and should retain high prediction accuracy. However, existing smoothing-based and masking-based recovery defenders cannot achieve both simultaneously: they degrade the prediction accuracy much and cannot verify the benignity of the returned label of an adversarially patched input, respectively. We propose MRCert, the first masking-based certified recovery defender that shows the feasibility of achieving both. Unlike all existing works to apply a common condition across both types of input (benign and adversarially patched samples) for certification, MRCert infers type-specific necessary properties of deep learning models for both types in post-deployment time and formally relates them to verify the label benignity through a novel type-oriented design of label recovery and certification function pair. Without incurring the degradation in clean accuracy caused by smoothing, experimental results confirm that MRCert achieves 35.1\% adversarial certified accuracy on ImageNet at patch size 16 pixels, whereas the SOTA PatchCURE fails completely.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/1907.09194v3" target="_blank" class="paper-title">Research on Deep Learning-Based Semantic Segmentation Algorithms for Subcortical Brain Structures</a>
+                        <span class="paper-date">2026-10-07</span>
+                    </div>
+                                        <span class="paper-comment">📝 Substantially revised and expanded version of arXiv:1907.09194. FD-FCN was further developed into DenseMedic, and this version additionally presents the OreoDown framework and ACNN. Complete English translation of the 2020 Chinese master's thesis; 65 pages, 22 figures, 8 tables</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Segmentation of subcortical brain structures is fundamental to computer-aided diagnosis and treatment in neurology and related clinical fields. To improve the accuracy of subcortical structure segmentation, this thesis develops two related deep learning approaches for brain MR images: DenseMedic and the alternate connected neural network (ACNN). The first part of the work develops DenseMedic. First, the OreoDown method accelerates receptive-field growth by introducing larger convolutional strides at earlier layers and restores network depth by interleaving size-preserving convolutional layers, thereby translating faster receptive-field growth into an effective increase in receptive field. Second, DenseMedic instantiates the OreoDown framework using the construction principle of DenseNet and obtains multiscale contextual information through densely connected feature-extraction operations. The second part develops ACNN. First, alternate connections between layers are proposed to instantiate OreoDown as a single-path ACNN. Second, the single path is divided centrally to form a multipath ACNN without changing the stated parameter count, providing a unified architecture for single- and multimodal segmentation. Experiments were conducted on the public IBSR and MRBrainS18 datasets for subcortical brain segmentation. Performance was evaluated using the Dice similarity coefficient (DSC), intersection over union (IoU), 95th-percentile Hausdorff surface distance (HSD95), and average surface distance (ASD). The experimental results showed greater regional overlap and closer boundary agreement between the predicted and reference structures, supporting the accuracy and robustness of both methods for the evaluated subcortical structures.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2604.04614v3" target="_blank" class="paper-title">A Clinical Point Cloud Paradigm for In-Hospital Mortality Prediction from Multi-Level Incomplete Multimodal EHRs</a>
+                        <span class="paper-date">2026-10-07</span>
+                    </div>
+                                        <span class="paper-comment">📝 20 pages</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Deep learning-based modeling of multimodal Electronic Health Records (EHRs) has become an important approach for clinical diagnosis and risk prediction. However, due to diverse clinical workflows and privacy constraints, raw EHRs are inherently multi-level incomplete, including irregular sampling, missing modalities, and sparse labels. These issues cause temporal misalignment, modality imbalance, and limited supervision. Most existing multimodal methods assume relatively complete data, and even methods designed for incompleteness usually address only one or two of these issues in isolation. As a result, they often rely on rigid temporal/modal alignment or discard incomplete data, which may distort raw clinical semantics. To address this problem, we propose HealthPoint (HP), a unified clinical point cloud paradigm for multi-level incomplete EHRs. HP represents heterogeneous clinical events as points in a continuous 4D space defined by content, time, modality, and case. To model interactions between arbitrary point pairs, we introduce a Low-Rank Relational Attention mechanism that efficiently captures high-order dependencies across these four dimensions. We further develop a hierarchical interaction and sampling strategy to balance fine-grained modeling and computational efficiency. Built on this framework, HP enables flexible event-level interaction and fine-grained self-supervision, supporting robust modality recovery and effective use of unlabeled data. Experiments on large-scale EHR datasets for risk prediction show that HP consistently achieves state-of-the-art performance and strong robustness under varying degrees of incompleteness.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.00728v2" target="_blank" class="paper-title">Benchmarking Generative Models for Near-Surface Data Assimilation on Real Station Observations</a>
+                        <span class="paper-date">2026-10-07</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Weather reanalysis products rely on computationally intensive numerical weather predictions followed by data assimilation that corrects the forecast toward observations. Recent advances in deep generative models offer a cheaper alternative that shifts much of this cost from inference to offline training. However, existing generative approaches have been evaluated on synthetic observations or under different datasets and evaluation schemes, making it unclear which design choices improve real-world data assimilation. We present the first controlled benchmark of generative data assimilation for single-time near-surface analysis from real weather station observations. Using 11,849 NOAA MADIS stations across the contiguous United States and four near-surface variables, we hold the dataset, observation operator, and deep learning architecture fixed, and measure spatial generalization at held-out stations. The benchmark compares the major design choices proposed for generative data assimilation, including diffusion versus flow matching, pixel versus latent-space formulations, and multiple inference-time conditioning strategies, against a classical 3D-Var baseline. The benchmark reveals three conclusions. First, the best generative methods outperform 3D-Var (35.7% vs. 33.3% RMSE improvement over ERA5), although 3D-Var receives the ERA5 field at the analysis time as its background and the generative methods receive none. Second, full-gradient guidance consistently outperforms stop-gradient and initial-noise optimization. Third, other choices provide little measurable benefit: diffusion and flow matching perform nearly identically under matched conditions, and latent-space variable mixing does not help. Both advantages widen when stations are sparse. Together, these results identify which components of generative data assimilation improve spatial generalization in near-surface analysis.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2609.26855v3" target="_blank" class="paper-title">QUARTET: Quad-branch cross-Attention and Random-walk Traces for Enhancing Transformers on Relational Graphs</a>
+                        <span class="paper-date">2026-10-06</span>
+                    </div>
+                                        <span class="paper-comment">📝 This work has been accepted for main conference track at Learning on Graphs (LoG) 2026</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Relational Deep Learning (RDL) models multi-table databases as heterogeneous temporal graphs, and graph transformers currently achieve state-of-the-art performance on benchmarks like RelBench. However, the current leading model, RelGT, suffers from two key limitations: its random local sampler yields loosely connected subgraphs that hinder message passing, and its global attention module relies on a single, seed-feature-based memory that ignores broader macro-level dynamics. To overcome these limitations, we introduce QUARTET, an expressive graph transformer architecture that applies full self-attention on local subgraphs while enriching global context through cross-attention branches. Specifically, QUARTET employs a Causal Random Walk (CRW) sampler based on recency-truncated Personalized PageRank (PPR) to extract compact, hub-robust, and densely connected local subgraphs without temporal leakage. Concurrently, a quad-branch cross-attention module integrates global context from four complementary perspectives: seed feature, seed topology, temporal dynamics, and collaborative dynamics. Across the RelBench v1 classification tasks, QUARTET consistently matches or outperforms the current state-of-the-art graph transformer baselines (HGT and RelGT). Ablation studies confirm that the CRW sampler significantly enriches local neighborhood quality, while the global branches provide essential, task-specific predictive gains.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2506.22729v3" target="_blank" class="paper-title">Persistence Paradox in Dynamic Science: Evidence from the Deep Learning Revolution</a>
+                        <span class="paper-date">2026-10-06</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Persistence is often regarded as a virtue in science. In this paper, however, we challenge this conventional view by highlighting its contextual nature, particularly how persistence can become a liability during paradigm shifts. We focus on the deep learning revolution catalyzed by AlexNet in 2012. Analyzing the 20-year career trajectories of more than 5,000 scientists active in top machine learning venues during the preceding decade, we examine how their research focus and output evolved. We first uncover a dynamic period in which leading venues increasingly prioritized cutting-edge deep learning developments, displacing traditional statistical learning methods. Scientists responded to these changes in markedly different ways: those who were previously successful or affiliated with established teams adapted more slowly. Such persistence is positively associated with productivity but, after 2012, negatively associated with scientific impact. Most researchers, and the largest share of the field's output, cluster in a band of moderate persistence, pointing to a trade-off between output and impact, as well as to institutional frictions that make larger departures costly. These conclusions are robust to alternative identification strategies and to competing explanations such as topic popularity premiums and survivorship bias. Taken together, our macro- and micro-level findings suggest that, in this case, a paradigm shift creates an opportunity structure by devaluing the very expertise that conferred incumbents' advantage in the first place.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.09085v1" target="_blank" class="paper-title">Anaximander: Interactively Running Geospatial Deep Learning Models on Any Compute Backend</a>
+                        <span class="paper-date">2026-10-06</span>
+                    </div>
+                                        <span class="paper-comment">📝 Accepted as a poster at the TerraBytes II workshop, ECCV 2026</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Applying deep learning models to satellite imagery from within geographic information systems (GIS) remains high-friction for remote sensing practitioners. Models arrive in incompatible formats and target different compute environments, from local workstations to serverless cloud services. As a result, every evaluation demands custom deployment, tiling, and georeferencing code before a single prediction reaches the analyst's map. This friction discourages systematic comparison in a domain where model choice directly affects operational outcomes such as field delineation, crop monitoring, and disaster response. We present Anaximander, an open-source system that unifies model source and compute location choice behind one interactive interface. The system's backend is an inference server that loads models from multiple commonly-used sources and serves them on any accessible compute backend. The server provides session management and model caching, and streams results back per tile. The backend is paired with a QGIS plugin that drives tiling, result reassembly, georeferencing, and real-time per-tile status visualization. An additional user-interface path injects layer legends as prompts into vision-language models. We demonstrate the system in a code-free side-by-side comparison of three heterogeneous models on an agricultural field delineation task: gpt-image-1 via a cloud API, Segment Anything Model 3 (SAM3) on a remote GPU, and DelineateAnything on a local CPU. The inference backend and protocol are open-source and available at https://github.com/microsoft/nxmndr.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.09031v1" target="_blank" class="paper-title">Beyond Explanation: Debugging Medical Imaging Models via Concept Intervention</a>
+                        <span class="paper-date">2026-10-06</span>
+                    </div>
+                                        <span class="paper-comment">📝 Accepted at the 5th Workshop on Applications of Medical AI (AMAI), MICCAI 2026</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Medical imaging models often operate as black boxes, limiting interpretability and systematic debugging. We introduce an easy-to-use, plug-and-play framework for concept-based interpretation and model refinement. By aligning a single-modality encoder to BioMedCLIP, we construct a Concept Bottleneck Model (CBM) that enables concept-level interventions. These interventions allow us to isolate causal versus spuriously correlated concepts, validate insights with domain experts, and generate counterfactual samples for targeted fine-tuning. We evaluate our framework on a Mayo Clinic ultrasound dataset and the CheXpert 5x200 chest X-ray dataset. Results demonstrate that concept intervention enables reliable model diagnosis while maintaining, and occasionally improving predictive performance via guided fine-tuning. Our findings highlight the practical value of this framework for controlled, interpretable refinement of clinical deep learning models.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2609.30059v2" target="_blank" class="paper-title">KernelOPT: Dispatch-Aware Agentic Search for GPU Kernel Optimization</a>
+                        <span class="paper-date">2026-10-06</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Deep learning inference and training performance depends critically on GPU kernel efficiency. Modern compilers such as PyTorch Inductor automatically generate GPU kernels from high-level model code, but frequently underperform expert-written implementations by wide margins. Recent LLM-assisted kernel optimizers can close this gap for standalone kernels, yet treat compiled models as black boxes, generally optimizing individual standalone kernels without respecting the compiler's structural decisions or verifying the model end-to-end. We present KernelOPT, a multi-agent system that treats compiled models as structured artifacts. It preserves vendor library calls (cuBLAS, cuDNN) and exclusively targets generated Triton sub-kernels using five profiling-guided LLM agents. A four-gate verification cascade applies static validation, multi-seed correctness checking, model-level float64-fallback verification, and performance gating ($γ{=}1.03$) to filter candidates and verify the re-stitched model end-to-end. When candidates fail verification, the system preserves the compiler baseline. The system accepts PyTorch nn Modules, standalone Triton kernels, and Helion kernels. Evaluated on 250 KernelBench problems (100 Level 1, 100 Level 2 and 50 Level 3) on NVIDIA H200, KernelOPT achieves geometric mean speedups over torch compile of 1.40$\times$ (L1), 1.15$\times$ (L2), and 1.07$\times$ (L3) across all kernels, including fallback cases. Optimized-only geomeans (excluding cases where verification gates preserve the compiler baseline) are substantially higher: 2.54$\times$ (L1: 36/100), 1.84$\times$ (L2: 23/100), and 1.37$\times$ (L3: 11/50), reflecting where the optimizer achieves meaningful leverage.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2603.27101v2" target="_blank" class="paper-title">PRUE: A Practical Recipe for Field Boundary Segmentation at Scale</a>
+                        <span class="paper-date">2026-10-06</span>
+                    </div>
+                                        <span class="paper-comment">📝 12 pages, 3 figures, supplementary material. Accepted at CVPR 2026 (IEEE/CVF Conference on Computer Vision and Pattern Recognition)</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Large-scale maps of field boundaries are essential for agricultural monitoring tasks. Existing deep learning approaches for satellite-based field mapping are sensitive to illumination, spatial scale, and changes in geographic location. We conduct the first systematic evaluation of segmentation and geospatial foundation models (GFMs) for global field boundary delineation using the Fields of The World (FTW) benchmark. We evaluate 18 models under unified experimental settings, showing that a U-Net semantic segmentation model outperforms instance-based and GFM alternatives on a suite of performance and deployment metrics. We propose a new segmentation approach that combines a U-Net backbone, composite loss functions, and targeted data augmentations to enhance performance and robustness under real-world conditions. Our model achieves a 76% IoU and 47% object-F1 on FTW, an increase of 6% and 9% over the previous baseline. Our approach provides a practical framework for reliable, scalable, and reproducible field boundary delineation across model design, training, and inference. We release all models and model-derived field boundary datasets for five countries.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.08892v1" target="_blank" class="paper-title">Hybrid++: The Bridge between PDE Models and Deep Learning for Gamma Noise Removal</a>
+                        <span class="paper-date">2026-10-06</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Multiplicative gamma noise is one of the dominant noise factors in Synthetic Aperture Radar (SAR) and medical ultrasound images. They are dependent on pixel level noises due to which they are highly varying across the image and harder to handle as compared to additive noise. The denoising methods to address this noise currently include classical partial differential equation (PDE) methods which are good for interpretation but lack the restoration ability as compared to the state-of-the-art models while deep convolutional networks like DnCNN achieve high performance but at the cost of transparency due to which practitioners are skeptical to use them in high-risk critical fields like medicine. This paper presents Hybrid++, a novel trainable nonlinear reaction-diffusion architecture that addresses both the concerns - staying interpretable while offering performance close to huge black-box models. It combines a fully learnable PDE initialization with a 3-stage reaction-diffusion network having 64-channel multiscale filter banks, 4-layer Squeeze-and-Excitation attention-based influence functions and a 64-dimensional noise level embedding. It uses a two-phase training strategy, stage-wise optimization followed by joint end-to-end refinement which enables co-adaptation of all learnable parameters. On the FoE benchmark, Hybrid++ substantially improves over classical PDE, BM3D and the original TNRD baselines. In the severe-noise setting L=1, it comes within 0.23 dB PSNR of a separately trained DnCNN while using only about 8% of its parameters. We therefore position Hybrid++ not as a universal state-of-the-art image restoration backbone, but as a compact, physically structured reaction-diffusion model for multiplicative gamma noise.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.08593v1" target="_blank" class="paper-title">Multi-Label Perceptual Bug Detection in Video Games using Deep Learning on Gameplay Footage</a>
+                        <span class="paper-date">2026-10-06</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Traditional approaches for automated bug detection in video games, such as manual testing, can be beneficial for the improvement of quality assurance, but they can be expensive and time-consuming. The scarce number of tools available to detect multiple perceptual bugs in the same video frame introduces detection challenges for automated bug detection tools in real-world scenarios. We propose a deep learning model for multi-label perceptual bug detection and compare it against video classification models such as Inflated 3D ConvNet and 3D ResNet. Our proposed model, ResNet-BiLSTM, achieved an F1 score of 85.78% on the benchmark dataset. Our results demonstrated that temporal dependency modelling is beneficial for accurate video-based bug detection. We believe this work with multi-label perceptual bug detection on gameplay videos will help save resources spent on manual testing workloads in video games. Furthermore, we introduce a new dataset with multi-label perceptual bugs in this work. The dataset contains 77,969 video clips across different genres of games with approximately 1.2 million frames, containing combinations from 5 classes of bugs in the same video frame.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.08574v1" target="_blank" class="paper-title">FedDermaSeg: Federated Learning for Dermatological Image Segmentation</a>
+                        <span class="paper-date">2026-10-06</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Skin cancer is a major global health concern, and early detection and accurate lesion delineation are important for effective diagnosis and treatment planning. Automated skin lesion analysis can assist dermatologists, with lesion segmentation serving as a fundamental step in computer-aided diagnostic systems. Conventional deep learning-based segmentation models typically rely on centralized training, where images and their corresponding segmentation masks are collected on a central server. Such data aggregation raises privacy concerns in medical applications and requires substantial centralized computational resources. To address these limitations, we investigate the feasibility of federated learning for privacy-preserving skin lesion segmentation. The training and validation sets of the ISIC 2018 Skin Lesion Segmentation Challenge dataset are used to simulate a distributed learning environment and develop a federated segmentation model. The resulting model is evaluated on the ISIC 2018 test set and the PH2 dataset to assess its performance and generalizability. Experimental results demonstrate that the federated model achieves performance comparable to centralized training while consistently improving upon the locally trained models. These findings demonstrate the potential of federated learning for collaborative skin lesion segmentation without requiring centralized aggregation of medical images.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.08528v1" target="_blank" class="paper-title">MedCORE: Criteria-Grounded Clinical Reasoning for Interpretable Medical Image Diagnosis</a>
+                        <span class="paper-date">2026-10-06</span>
+                    </div>
+                                        <span class="paper-comment">📝 16 pages, 4 figures, conference</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Clinical diagnosis is inherently a structured reasoning process, yet existing deep learning models often bypass this structure by mapping image features directly to disease labels without explicitly interrogating the morphological and textural criteria that clinicians systematically evaluate. This limits diagnostic transparency and may compromise safe clinical deployment. We present MedCORE (Medical Criteria-Oriented Reasoning and Evidence), a structured diagnostic framework that operationalizes clinical reasoning within a vision-language architecture. For each input image, MedCORE decomposes the diagnostic process into clinically defined criteria, spatially localizes each criterion to diagnostically relevant image regions, encodes evidence through multi-scale representations that capture macro-structural and micro-textural pathological characteristics, and refines criterion representations using a Graph Attention Network that explicitly models inter-criteria dependencies. Criterion representations are further aligned with clinical text descriptors, reinforced through class-wise visual prototypes, and aggregated using uncertainty-calibrated weighting that proportionally discounts low-confidence diagnostic evidence. MedCORE is validated across three clinically heterogeneous imaging modalities, including dermoscopic lesion classification on ISIC 2018, breast ultrasound lesion characterization on BUSI, and diabetic retinopathy grading on IDRiD. Quantitatively, MedCORE achieves 89.2% accuracy, 85.7% macro-F1, and 96.4% AUC on ISIC 2018; 96.1% accuracy, 95.2% macro-F1, and 98.4% AUC on BUSI; and 84.3% accuracy, 80.2% macro-F1, and 92.8% AUC on IDRiD. These results demonstrate consistent improvements over strong CNN, transformer, biomedical vision-language, concept-based, and prototype-based baselines.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2508.19073v4" target="_blank" class="paper-title">AEGIS: Runtime-Guided GPU Collocation for Multi-Tenant Deep Learning Training</a>
+                        <span class="paper-date">2026-10-06</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Deep learning training commonly runs on shared multi-tenant GPU servers, where exclusive allocation provides isolation but can leave resources underutilized and increase queueing time. Collocation can improve efficiency, but interference-agnostic placement may cause severe slowdowns, while inaccurate memory information can lead to out-of-memory (OOM) failures. We present AEGIS, a server-scale runtime scheduling system for controlled collocation of deep learning training workloads on shared multi-GPU servers. AEGIS integrates memory feasibility, post-placement observation, runtime-pressure filtering, placement, and OOM-aware recovery in a single scheduling loop. After placement, AEGIS observes workload activity before permitting further collocation, then uses low-overhead telemetry to determine whether a GPU can safely accept additional work. OOM failures trigger retries under progressively safer memory conditions, eventually falling back to exclusive execution. This online approach avoids costly offline pairwise compatibility profiling. We evaluate AEGIS using vision, Transformer, recommendation, and LLM-style workloads across three production-derived traces. AEGIS reduces geometric-mean makespan by 16% relative to Lucid, 21% relative to Horus, and 27% relative to exclusive allocation. Sensitivity studies show that activity-anchored observation and runtime-pressure filtering balance conservative isolation against interference-agnostic collocation, improving makespan while limiting sharing-induced per-task slowdown.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.08400v1" target="_blank" class="paper-title">Atom-JEPA: Joint-Embedding Predictive Architecture for 3D Atomistic Systems</a>
+                        <span class="paper-date">2026-10-06</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Large-scale self-supervised pretraining has reshaped modern machine learning, substantially advancing the ability of language and vision models to generalize across downstream tasks. While deep learning has driven considerable progress in modeling atomistic systems in recent years, self-supervised pretraining in this domain has not yet achieved comparable downstream generalization. To address this, we introduce Atom-JEPA, a self-supervised pretraining framework that learns latent representations from unlabeled 3D structures through complementary atom-level and substructure-level objectives inspired by joint-embedding predictive architectures. We pretrain Atom-JEPA on large-scale molecular and crystalline datasets and evaluate its transfer performance by fine-tuning on a diverse set of downstream property prediction tasks. Atom-JEPA achieves state-of-the-art performance on molecular ADMET and quantum-chemical property prediction tasks, and is highly competitive in predicting the physical properties of crystalline materials. These results demonstrate the potential of latent-space predictive pretraining to support broad downstream generalization from structural data alone. Code and pretrained model checkpoints are publicly available at https://github.com/khelverskovp/atom-jepa</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2604.02691v2" target="_blank" class="paper-title">Adaptive Semantic Communication for Wireless Image Transmission Leveraging Mixture-of-Experts Mechanism</a>
+                        <span class="paper-date">2026-10-06</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Deep learning based semantic communication has achieved significant progress in wireless image transmission, but most existing schemes rely on fixed models and thus lack robustness to diverse image contents and dynamic channel conditions. To improve adaptability, recent studies have developed adaptive semantic communication strategies that adjust transmission or model behavior according to either source content or channel state. More recently, MoE-based semantic communication has emerged as a sparse and efficient adaptive architecture, although existing designs still mainly rely on single-driven routing. To address this limitation, we propose a novel multi-stage end-to-end image semantic communication system for multi-input multi-output (MIMO) channels, built upon an adaptive MoE Swin Transformer block. Specifically, we introduce a dynamic expert gating mechanism that jointly evaluates both real-time CSI and the semantic content of input image patches to compute adaptive routing probabilities. By selectively activating only a specialized subset of experts based on this joint condition, our approach breaks the rigid coupling of traditional adaptive methods and overcomes the bottlenecks of single-driven routing. Simulation results indicate a significant improvement in reconstruction quality over existing methods while maintaining the transmission efficiency.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.08213v1" target="_blank" class="paper-title">RACE-FPP: A Robust AI-assisted Characterisation Enhancement for Fringe Projection Profilometry</a>
+                        <span class="paper-date">2026-10-06</span>
+                    </div>
+                                        <span class="paper-comment">📝 19 pages, 9 figures, 7 tables</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Fringe Projection Profilometry (FPP) requires precise system characterisation to achieve reliable three-dimensional (3D) reconstructions; however, characterisation accuracy strongly depends on robust checkerboard feature localisation, which can deteriorate under challenging imaging conditions such as lens blur and characterisation target orientations. Existing deep learning-based corner detectors are typically assessed using detection metrics and camera reprojection error alone, without considering their wider impact on projector characterisation, camera-projector stereo characterisation consistency, or overall measurement accuracy. In this work, we introduce a complete FPP characterisation pipeline that incorporates deep learning-based corner detection into the standard camera characterisation workflow. We also characterise the projector by sampling phase values at the centres of the white squares in the characterisation target. Rather than treating corner detection as an isolated task, the proposed framework explicitly analyses how localisation errors propagate throughout the entire FPP characterisation chain. Performance is evaluated using detection metrics (e.g., precision and recall), camera and projector reprojection errors, and the camera and projector stereo characterisation. Across a mixed dataset of clean and degraded images, the camera reprojection error is reduced from 1.237 pixels to 0.259 pixels, while the projector reprojection error is reduced by roughly 50%. Dimensional evaluation of reconstructed artefacts shows improved geometric accuracy compared with those resulting from the conventional pipeline. Overall, the findings indicate increased robustness of system-level characterisation under challenging imaging conditions, thereby enabling more reliable industrial FPP measurements.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.08126v1" target="_blank" class="paper-title">Supermarket Product Detection and Recognition: Utilizing Deep Learning with Rectified Imagery</a>
+                        <span class="paper-date">2026-10-06</span>
+                    </div>
+                                        <span class="paper-comment">📝 10 Pages, 7 Figures, 5 Tables</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Product Identification has sprung up to become one of the most challenging problems in the automation of the retail industry. With the new industry 5.0 standards, automated inventory management, and catalog creation tasks are vitally important. Object identification models have emerged as a viable answer with their unprecedented identification and localization accuracy. However, the close-knit rack design of supermarkets generates the problem of angle variation in capturing images. The angle-variant densely packed images(a single image contains many objects) become overwhelming for these models alone. In this paper, we try to supplement object detection models with traditional Hough transform (HT) and homogeneous estimation concepts. We study the effect of rectified images using homography estimation and hough transform and their limitations on the problem of grocery identification. We make a case for creating a new dataset to test the effects of such rectification and produce analytical results on different scenarios of angle variation and object densities per image. Extensive experiments on different object detection models suggest that image rectification of angled images improves the detection accuracy of grocery products in images. The results also highlight the limitation of rectification on the angle of image capture and the object density of the image.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.07885v1" target="_blank" class="paper-title">Label-Efficient Deep Learning for ECG Delineation: A Multi-Dataset Benchmark against Widely Used Delineation Tools</a>
+                        <span class="paper-date">2026-10-06</span>
+                    </div>
+                                        <span class="paper-comment">📝 20 pages, 5 figures. First two authors contributed equally</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Electrocardiogram (ECG) delineation, the identification of waveform boundaries, is a foundational step that translates raw ECG signals into clinically interpretable measurements. Deep learning has advanced this task but remains dependent on costly expert annotations. Label-efficient strategies such as self-supervised pretraining and semi-supervised learning are expected to ease this burden, yet it remains unclear whether they yield reliable delineation and whether the deep models they produce outperform the delineation tools used in practice. We address this in two stages. First, comparing self-supervised objectives with supervised or semi-supervised fine-tuning across one internal and four external datasets, we find that pretraining helps but the objective matters, and that the value of semi-supervised fine-tuning depends on the pretraining objective. Second, we benchmark the selected deep learning model against widely used open-source (NeuroKit2, Prominence, ECGdeli) and commercial (CalECG) tools using three complementary metrics. The model ranks best on every metric and dataset, outperforming the strongest tool by a clear margin on the rhythm-diverse set (mIoU 71.3 vs. 54.8%; averaged point-wise sensitivity 92.6 vs. 76.4%), and degrades the least from sinus to arrhythmia. A rhythm-stratified and point-wise analysis further characterizes the distinctive behavior of each tool, yielding practical guidance for tool selection. These results provide systematic, multi-dataset evidence that self-supervised pretraining is effective for ECG delineation and enables a label-efficiently trained deep learning model to outperform widely used delineation tools by leveraging abundant unlabeled data. This supports adopting such models in diverse, real-world clinical settings.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>👤 <strong>Hongkun Luo (罗宏昆)</strong> · <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent)">Academic Page</a> · <a href="https://github.com/luohongk" target="_blank" style="color:var(--accent)">GitHub</a></p>
+            <p style="margin-top:8px">🤖 Generated automatically from <a href="https://arxiv.org" style="color:var(--accent)">arXiv</a> · <a href="https://github.com/luohongk/Embodied-AI-Daily" style="color:var(--accent)">GitHub Repo</a></p>
+            <p style="margin-top:4px">Last update: 2026-10-11 (Beijing Time)</p>
+        </footer>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+        /* ── Mobile menu ── */
+        function toggleMenu() {
+            var overlay = document.getElementById('mobileNav');
+            var btn = document.getElementById('menuToggle');
+            var open = overlay.classList.toggle('open');
+            btn.textContent = open ? '✕' : '☰';
+            document.body.style.overflow = open ? 'hidden' : '';
+        }
+        function closeMenu() {
+            var overlay = document.getElementById('mobileNav');
+            var btn = document.getElementById('menuToggle');
+            overlay.classList.remove('open');
+            btn.textContent = '☰';
+            document.body.style.overflow = '';
+        }
+
+        /* ── Lazy AI-summary renderer ── */
+        // Render markdown + re-typeset MathJax only when a summary is opened.
+        // Math spans ($...$, $$...$$, \(...\), \[...\]) are stashed as
+        // placeholders before marked runs so Markdown never mangles LaTeX.
+        function renderAISummary(details) {
+            if (!details.dataset.lazy) return;   // already rendered
+            var rawMd = details.dataset.md || '';
+
+            // Decode HTML entities we encoded in Python.
+            // Order matters: &amp; must be last (it re-encodes other entities).
+            rawMd = rawMd
+                .replace(/&#10;/g, '\n')
+                .replace(/&quot;/g, '"')
+                .replace(/&lt;/g, '<')
+                .replace(/&gt;/g, '>')
+                .replace(/&amp;/g, '&');
+
+            // 1. Stash math spans.
+            var store = [];
+            function stash(m) { store.push(m); return '\x02MATH' + (store.length - 1) + 'END\x03'; }
+            var protected_ = rawMd
+                .replace(/\$\$[\s\S]+?\$\$/g, stash)
+                .replace(/\\\[[\s\S]+?\\\]/g, stash)
+                .replace(/\$[^$\n]+?\$/g, stash)
+                .replace(/\\\([\s\S]+?\\\)/g, stash);
+
+            // 2. Render markdown.
+            var html = (typeof marked !== 'undefined')
+                ? marked.parse(protected_)
+                : '<pre>' + protected_.replace(/</g, '&lt;') + '</pre>';
+
+            // 3. Restore math spans verbatim.
+            store.forEach(function(expr, i) {
+                html = html.split('\x02MATH' + i + 'END\x03').join(expr);
+            });
+
+            // 4. Inject into DOM.
+            var container = details.querySelector('.ai-content');
+            if (container) container.innerHTML = html;
+
+            // 5. Ask MathJax to typeset just this element.
+            if (window.MathJax && MathJax.typesetPromise) {
+                MathJax.typesetPromise([container]).catch(function(e) {
+                    console.warn('MathJax typeset error:', e);
+                });
+            }
+
+            // Mark done so we never re-render.
+            delete details.dataset.lazy;
+            delete details.dataset.md;
+        }
+
+        // Wire up all existing .ai-summary elements.
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('details.ai-summary[data-lazy]').forEach(function(det) {
+                det.addEventListener('toggle', function () {
+                    if (det.open) renderAISummary(det);
+                }, { once: true });
+            });
+        });
+    </script>
+</body>
+</html>
