@@ -2,7 +2,7 @@
 
 > **80 papers** fetched from arXiv for the keyword **World Model**.
 
-> Last update: 2026-10-10
+> Last update: 2026-10-11
 
 [← Back to README](../README.md)
 

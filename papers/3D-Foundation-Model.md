@@ -2,7 +2,7 @@
 
 > **80 papers** fetched from arXiv for the keyword **3D Foundation Model**.
 
-> Last update: 2026-10-10
+> Last update: 2026-10-11
 
 [← Back to README](../README.md)
 
