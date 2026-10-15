@@ -575,7 +575,7 @@
                 <a href="Feed-Forward-Reconstruction.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Feed Forward Reconstruction</span>
-                    <span class="nav-count">67</span>
+                    <span class="nav-count">68</span>
                 </a>
                 <a href="Vision-and-Language-Navigation.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -590,7 +590,7 @@
                 <a href="World-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">World Model</span>
-                    <span class="nav-count">78</span>
+                    <span class="nav-count">79</span>
                 </a>
                 <a href="3D-Foundation-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
@@ -690,12 +690,12 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">67</span>
+                    <span class="nav-count">59</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">78</span>
+                    <span class="nav-count">77</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -730,7 +730,7 @@
                 <a href="Model-Predictive-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#14b8a6"></span>
                     <span class="nav-label">Model Predictive Control</span>
-                    <span class="nav-count">55</span>
+                    <span class="nav-count">53</span>
                 </a>
                 <a href="Whole-Body-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#06b6d4"></span>
@@ -794,7 +794,7 @@
             <a href="Feed-Forward-Reconstruction.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Feed Forward Reconstruction</span>
-                <span class="nav-count">67</span>
+                <span class="nav-count">68</span>
             </a>
             <a href="Vision-and-Language-Navigation.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -809,7 +809,7 @@
             <a href="World-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">World Model</span>
-                <span class="nav-count">78</span>
+                <span class="nav-count">79</span>
             </a>
             <a href="3D-Foundation-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
@@ -909,12 +909,12 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">67</span>
+                <span class="nav-count">59</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">78</span>
+                <span class="nav-count">77</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -949,7 +949,7 @@
             <a href="Model-Predictive-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#14b8a6"></span>
                 <span class="nav-label">Model Predictive Control</span>
-                <span class="nav-count">55</span>
+                <span class="nav-count">53</span>
             </a>
             <a href="Whole-Body-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#06b6d4"></span>
@@ -1028,6 +1028,78 @@
                 <span class="topic-count">79 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.20524v1" target="_blank" class="paper-title">Physical Time as a Missing Dimension of Robot Policy Memory Dynamics</a>
+                        <span class="paper-date">2026-10-14</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Existing robot policy memories typically evolve with observation sequences, implicitly treating each update as the same amount of physical time. Yet identical observation histories can span different durations and require different actions, exposing physical time as a missing dimension of policy memory. We introduce Temporal Flow Policy (TFP), which learns memory dynamics to retain past events and evolve the memory state over measured time intervals. Observations and prior memory determine the content and time scales of each transition; elapsed time determines how far the state advances. TFP conditions diffusion and flow-matching policies through this memory state and is trained with their native imitation objectives. We evaluate TFP with Diffusion Policy and $π_{0.5}$ through controlled comparisons of memory designs. These experiments show that successful timing depends on both measured intervals and retained history. TFP achieves higher average success than the recurrent and state-space memories we equip with the same intervals and than a variant that feeds the interval to a learned gate. Memory readouts recover the time since an event and motion information after occlusion. Changing the supplied intervals systematically delays or advances actions, linking time inputs to behavior. Real-robot tasks requiring timing or memory, together with LIBERO evaluations, demonstrate benefits in physical and general manipulation. These results suggest viewing robot memory not as stored observation history, but as a state that retains past events and evolves with physical time.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.19765v1" target="_blank" class="paper-title">Refine Actions If Needed: Adaptive Action Chunk Refinement for Robot Manipulation</a>
+                        <span class="paper-date">2026-10-14</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Computationally lightweight manipulation policies predict executable actions with low inference latency, but prediction errors can limit task success. Iterative generative policies can achieve higher task success rates, but repeated network evaluations increase inference latency. Refining action proposals from computationally lightweight policies can combine these strengths, but the amount of refinement needed varies across states. We introduce RAIN (Refine Actions If Needed), a framework that predicts action errors at different refinement levels to decide whether and how much to refine each executable proposal, before performing any refinement. We train an ensemble to predict these errors by comparing action proposals and their refined versions with expert actions from offline demonstrations, without requiring explicit labels of refinement needs. Calibration balances uncertainty, computation, and temporal consistency. We evaluate RAIN on eight ManiSkill tasks and four real-robot tasks. In simulation, our policy achieves 66.6% success, approaching the best evaluated diffusion-policy success rate with 5.71 times lower policy latency. On the real robot, success increases from 55.0% with Action Chunking with Transformers (ACT) to 72.5%, with comparable average successful completion time. Matched controls show that dynamic routing maintains the strongest observed fixed-refinement success level with 26.6% fewer refiner evaluations. Project page: https://rain-policy.github.io/.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.14691v2" target="_blank" class="paper-title">DexCast: Learning Real-World Dexterous Control from Human Videos</a>
+                        <span class="paper-date">2026-10-14</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Recent advances in 3D hand-object interaction (HOI) perception have opened new opportunities for learning dexterous robotic skills from human videos. However, existing dexterous imitation learning methods often rely on costly and manually teleoperated robot demonstrations, requiring substantial human effort. Therefore, we build DEXCAST, a framework that learns dexterous robotic hand control directly from monocular RGB-D videos by leveraging joint HOI reconstructions, without requiring any teleoperation. Furthermore, how to model high-dimensional robotic hand motion and extract temporal context to inform future action generation remains a key challenge. To this end, we propose a DexHand Motion Perception Module (DMPM) to capture inter-joint coordination and temporal dependencies in compact latent representations that condition our diffusion policy. Extensive real-world experiments demonstrate that DEXCAST achieves exceptional performance across diverse dexterous manipulation tasks.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.09369v2" target="_blank" class="paper-title">Immiscible Diffusion Policy: Preserving Multimodal Robot Actions through Label-Free Noise Assignment</a>
+                        <span class="paper-date">2026-10-14</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>When diffusion policies were first introduced, they were expected to recover multi-modal action distributions. However, we find this expectation does not always hold, as diffusion policies often collapse to a single modality even when we guarantee the balance of dataset modalities and exact within-batch symmetry. Our analysis indicates that independent action-noise pairing contributes to this failure by increasing mixing and crossing among diffusion paths, which can produce averaged denoising responses and suppress modality-specific behavior. This issue is especially severe in robot planning, where action spaces are dense and low-dimensional, significantly increasing such mixing and crossing. To alleviate this problem, we propose Immiscible Diffusion Policy, a label-free training-time add-on to diffusion policy that uses action-noise assignment to preserve relatively distinct noise-to-action routes without modifying the policy architecture or inference procedure. Across five simulated and two real-world humanoid manipulation tasks spanning state, RGB, and point-cloud observations, our method significantly improves the policy's preservation of action modalities while maintaining strong task performance. It increases the proportion of the non-dominant modality by 6.0x-14.6x across three two-modality tasks and recovers demonstrated modalities that are entirely absent from vanilla policy rollouts on both four-modality tasks. These results demonstrate that Immiscible Diffusion Policy provides a simple yet robust approach to preserving action multi-modality in general robot learning tasks.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.19579v1" target="_blank" class="paper-title">Back on Track: Deployment-time Policy Improvement via World Model Planning</a>
+                        <span class="paper-date">2026-10-14</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>State-of-the-art visuomotor policies are increasingly capable of executing complex tasks, yet can fail during deployment in ways they cannot predict or recover from on their own. Improving their performance and robustness typically requires collecting more data, retraining, or modifying the policy architecture, all of which are time- and resource-intensive in practice. We instead propose an offline-trained monitoring-and-intervention framework that improves a policy during deployment using only black-box query access. From a limited set of labeled on-policy rollouts, we learn a policy-conditioned liveness value that measures the nominal policy's progress toward task completion; we additionally train a compact latent world model using these rollouts together with play data. At deployment, the liveness value continuously monitors execution. When it detects a loss of progress, a short-horizon planner searches the world model for corrective actions using the same value as its planning objective, after which control returns to the nominal policy. We evaluate our method on the LIBERO-Goal task suite and on a Franka Panda manipulator, using the vision-language-action model $π_{0.5}$ and a diffusion policy as nominal policies, and demonstrate significant improvements in task success rates, while supporting real-time control. Additional results and videos are available on the project website (https://policy-improvement-wm.pages.dev/).</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.19141v1" target="_blank" class="paper-title">Collective Learning for Unified Robotic Manipulation via Predictive Dynamics Adaptation</a>
+                        <span class="paper-date">2026-10-13</span>
+                    </div>
+                                        <span class="paper-comment">📝 Accepted at IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2026)</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Learning a collective policy for state-based Cartesian manipulation across diverse robotic embodiments presents a fundamental challenge due to embodiment-dependent transition dynamics. Collective learning aggregates multi-robot experience to discover shared task structure, yet naive aggregation can average incompatible action modes when different embodiments realize the same Cartesian command through different transition behavior. This leads to strategy ambiguity and performance collapse on dynamically outlying embodiments. To address this, we propose PACE, a two-stage collective learning framework that separates shared task-space intent from embodiment-dependent transition dynamics. The first stage employs a representation layer pre-trained on offline trajectories to extract task-level context from collective data. The second stage introduces a decision layer equipped with a predictive dynamics adapter. By forcing the latent state to predict future transitions, this adapter acts as a latent regularizer that grounds the policy in the transition behavior of the executing robot while preserving real-time inference without online planning. Evaluations across simulated embodiments demonstrate that our method prevents performance collapse on distinct robots. It achieves over 93\% overall success and 89\% on dynamically out-of-distribution zero-shot simulated robots, outperforming the Transformer behavior cloning (82\%) and diffusion policy baselines (66\%). Physical KUKA deployment further validates the feasibility of the full state-based pipeline under zero-shot sim-to-real transfer.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2610.18850v1" target="_blank" class="paper-title">Collaborative Planning for UAV-UGV Teams under Operational Constraints via Masked Error-bounded Neuro-Symbolic Diffusion</a>
@@ -1118,10 +1190,7 @@
                         <span class="paper-date">2026-10-13</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：如何让预训练的扩散或流匹配策略在推理时生成既符合专家演示分布、又满足安全约束和任务特定目标的轨迹，且无需重新训练模型。&#10;&#10;🛠 **方法**：将约束轨迹生成建模为贝叶斯后验采样，以学习到的演示分布为先验，用推理时的成本函数推导似然来调整后验；并基于Feynman-Kac校正器框架，将其从扩散模型扩展到确定性流匹配策略，实现统一的推理时无重训练采样器。&#10;&#10;✨ **主要贡献**：提出了一种无需重训练的统一推理时采样方法（BayesFP），适用于扩散和流匹配策略；在模拟和真实世界的操作任务中验证了其有效性，包括处理推理时引入的非凸障碍物规划，并在零样本任务上相比基线π₀.₅取得了性能提升。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Robots must generate trajectories that remain faithful to learned expert behavior while satisfying safety constraints and task-specific objectives specified only at inference time. We formulate constrained trajectory generation for pretrained diffusion and flow-matching policies as Bayesian posterior sampling, with the learned demonstration distribution as a prior and an inference-time, cost-derived likelihood tilting it toward feasible, optimal trajectories. To sample from this posterior without any retraining of the base policy, we leverage the Feynman--Kac corrector framework, originally formulated for diffusion models, and extend it to deterministic flow-matching policies. The result is a unified, inference-time, retraining-free sampler for diffusion and flow policies. We validate the approach on pretrained Diffusion Policy, GR00T-N1.6, and $π_{0.5}$ checkpoints across simulated and real-world manipulation tasks, including planning around non-convex obstacles introduced at inference time, and show improvements over the base $π_{0.5}$ on zero-shot tasks.</p>
@@ -1185,18 +1254,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Diffusion policies are increasingly used in robotic control and manipulation, vision-language-action models, and world-model-based agents. Their ability to represent multimodal action distributions offers rich opportunities for exploration in reinforcement learning (RL). However, optimizing diffusion policies with RL can reduce the behavioral diversity and further limit their exploration capability. In RL post-training, directly fine-tuning a pretrained policy may also disrupt its acquired capabilities, while action-space residuals may lack the expressive power for multimodal exploration. Together, these issues reveal a common challenge across online and offline-to-online diffusion RL: improving task performance while retaining the behavioral diversity and capabilities needed for continued adaptation. We introduce CFG-Policy, a unified, plug-and-play framework that separates exploration and exploitation into two generative policies and combines their score or velocity fields during sampling through classifier-free guidance. For online RL, a frozen exploration branch sustains behavioral diversity while an exploitation branch learns from task rewards; for offline-to-online RL, a pretrained exploitation branch remains frozen while a trainable branch steers the composed behavior. CFG-Policy preserves the underlying RL objectives and improves performance with QSM and QVPO on 5 MuJoCo tasks and with Flow-SDE+PPO on 4 RoboTwin manipulation tasks. Project page is at https://zhy-liu.github.io/cfg-policy-page.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2610.14691v1" target="_blank" class="paper-title">DexCast: Learning Real-World Dexterous Control from Human Videos</a>
-                        <span class="paper-date">2026-10-10</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Recent advances in 3D hand-object interaction (HOI) perception have opened new opportunities for learning dexterous robotic skills from human videos. However, existing dexterous imitation learning methods often rely on costly and manually teleoperated robot demonstrations, requiring substantial human effort. Therefore, we build DEXCAST, a framework that learns dexterous robotic hand control directly from monocular RGB-D videos by leveraging joint HOI reconstructions, without requiring any teleoperation. Furthermore, how to model high-dimensional robotic hand motion and extract temporal context to inform future action generation remains a key challenge. To this end, we propose a DexHand Motion Perception Module (DMPM) to capture inter-joint coordination and temporal dependencies in compact latent representations that condition our diffusion policy. Extensive real-world experiments demonstrate that DEXCAST achieves exceptional performance across diverse dexterous manipulation tasks.</p>
                     </details>
                 </div>
                 <div class="paper-card">
@@ -1329,18 +1386,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Visual world models have shown great potential in learning complex system dynamics. Recent advancements leverage these models as transition functions within Model Predictive Control (MPC) frameworks to solve various control tasks. When applied to robotics, however, they are limited to single-stage tasks such as reaching or grasping, and struggle with multi-stage ones that demand complex sequential planning. In this work, we introduce WorldDP, a world model framework designed for multi-stage robotic manipulation. Our hierarchical approach utilizes a high-level world model as a transition function to optimize for feasible subgoals during runtime, which are subsequently reached by a low-level Diffusion Policy. To further aid in learning dynamics and planning, we incorporate object-centric representations that decouple environmental entities and enable us to plan sequentially with respect to each. Evaluated across several robotics benchmarks, WorldDP consistently outperforms existing baselines, validating that coupling the world model's physically grounded planning with diffusion policy's efficient execution yields superior multi-stage performance. Project Page: https://raktimgg.github.io/worlddp-website/.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2610.09369v1" target="_blank" class="paper-title">Immiscible Diffusion Policy: Preserving Multimodal Robot Actions through Label-Free Noise Assignment</a>
-                        <span class="paper-date">2026-10-07</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>When diffusion policies were first introduced, they were expected to recover multi-modal action distributions. However, we find this expectation does not always hold, as diffusion policies often collapse to a single modality even when we guarantee the balance of dataset modalities and exact within-batch symmetry. Our analysis indicates that independent action-noise pairing contributes to this failure by increasing mixing and crossing among diffusion paths, which can produce averaged denoising responses and suppress modality-specific behavior. This issue is especially severe in robot planning, where action spaces are dense and low-dimensional, significantly increasing such mixing and crossing. To alleviate this problem, we propose Immiscible Diffusion Policy, a label-free training-time add-on to diffusion policy that uses action-noise assignment to preserve relatively distinct noise-to-action routes without modifying the policy architecture or inference procedure. Across five simulated and two real-world humanoid manipulation tasks spanning state, RGB, and point-cloud observations, our method significantly improves the policy's preservation of action modalities while maintaining strong task performance. It increases the proportion of the non-dominant modality by 6.0x-14.6x across three two-modality tasks and recovers demonstrated modalities that are entirely absent from vanilla policy rollouts on both four-modality tasks. These results demonstrate that Immiscible Diffusion Policy provides a simple yet robust approach to preserving action multi-modality in general robot learning tasks.</p>
                     </details>
                 </div>
                 <div class="paper-card">
@@ -1929,54 +1974,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>In social navigation, modeling the complex interactions between humans and robots is difficult, and deep reinforcement learning has therefore been actively studied. However, because simulation alone cannot fully reproduce diverse scenarios, robot dynamics, and the social conventions that vary across deployment environments, fine-tuning in the deployment environment is promising. In doing so, learning that preserves the base model's performance is required, so as not to compromise the primary objective of navigation, namely avoiding pedestrians and reaching the destination. In this study, we propose a method that applies diffusion steering via reinforcement learning (DSRL), which trains only the noise policy while keeping the diffusion policy fixed, thereby achieving learning that preserves performance. Furthermore, we integrate diffusion-based RL policies trained with multiple seeds to construct the base policy, improving learning performance. Our evaluation shows that, compared with other methods, the proposed method enables efficient learning while preserving performance, and we confirm flexible behavior control through adaptation to social conventions, as well as its effectiveness on a physical robot through hardware-in-the-loop simulation.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.26603v2" target="_blank" class="paper-title">Bridging Handheld and Teleoperated Supervision for Contact-Rich Manipulation via State-Gated Experts</a>
-                        <span class="paper-date">2026-09-21</span>
-                    </div>
-                                        <span class="paper-comment">📝 Project Page: https://nperi-rai.github.io/bridge-project/</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Handheld data collection systems, such as the Universal Manipulation Interface (UMI), enable scalable data collection across diverse environments but only capture observed actions rather than the desired actions executed by a robot controller. In contrast, teleoperation captures desired actions directly, but requires a robot in-the-loop. We revisit this trade-off through the lens of action validity across task phases. We observe that handheld trajectories provide valid supervision in tolerant, free-space phases, but can be poor supervision targets for contact-sensitive phases, requiring high stiffness to minimize tracking errors, resulting in large contact forces. We study the interaction between these two supervision types for contact-rich manipulation and find that training policies that combine handheld data with a small number of targeted teleoperated demonstrations provide an effective hybrid strategy. Specifically, rather than teleoperating the entire task, we only collect partial teleoperated demonstrations for task segments where base handheld policies fail. However, naively mixing handheld and teleoperated phase-specific data yields worse performance than training on handheld data alone. To address this mismatch between observed and desired supervision, we propose Bi-modal Routing for Imitation Data via Gated Experts (BRIDGE), a mixture of diffusion policy experts that routes between specialist task phase heads conditioned on the current robot state. Notably, our approach enables task-phase specific use of desired actions during contact sensitive segments and improves success rates over handheld-only baselines by up to 36.7% across three contact-rich manipulation tasks.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.14021v3" target="_blank" class="paper-title">Industrial Dexterity Benchmark: A Hardware-Software Benchmarking Platform for Industrial Dexterous Manipulation</a>
-                        <span class="paper-date">2026-09-21</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Dexterous manipulation remains a critical bottleneck in industrial automation; tasks such as cable routing, connector insertion, and precision assembly still rely heavily on manual labor despite decades of robotics research. This work presents a progression from classical, modular robotics pipelines toward an end-to-end multimodal imitation-learning framework for industrial dexterous manipulation. As a part of this work, we introduce three key contributions: a set of Industrial Dexterity Benchmark (IDB) boards aimed to mimic datacenter cable management, automotive cable harnesses, and gearbox assembly tasks; a scalable imitation learning framework (DAG-ROS); and a multimodal diffusion-based policy framework (AG-iDP3) that creates models fusing RGB images, point clouds, joint positions, and wrist-frame wrench data. Focusing on the datacenter cable manipulation board, we evaluate the performance of a task involving cleaning a single cable over variations of an end-to-end AI policy using 48 trials per configuration. The best performing configuration, a multimodal expansion Diffusion Policy (DP), includes a multi-view RGB image source passed through an R3M encoder and reaches a 78% grasp and insert combined task success rate. This performance marks a significant improvement over the 36% observed from the single-camera RGB DP baseline. Each of the tested configurations requires only approximately 100 teleoperated demonstrations per task phase. These results indicate that the correct learned policy can outperform classical vision and control robotic methods in robustness, generalization, and deployment efficiency, justifying a shift toward scalable robotic automation for high up-time industrial environments.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2609.23800v1" target="_blank" class="paper-title">ContactDP: Contact-Guided Diffusion Policy for Tight Insertion Tasks</a>
-                        <span class="paper-date">2026-09-20</span>
-                    </div>
-                                        <span class="paper-comment">📝 8 pages, 5 figures</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>High-precision connector insertion remains challenging for robotic systems due to tight mechanical tolerances, partial observability during contact, and multimodal uncertainty arising from occlusion and contact ambiguity. Successful insertion requires closed-loop contact guidance that continuously integrates global alignment cues with local contact feedback to produce stable corrective actions under interaction. In this work, we present ContactDP (Contact-Guided Diffusion Policy for Tight Insertion Tasks), a multimodal diffusion-policy framework for contact-rich insertion. ContactDP jointly integrates wrist RGB observations, fingertip tactile sensing, and wrist-mounted force-torque measurements to infer contact state and generate temporally consistent corrective motions during insertion. To ensure stable execution under contact, the learned policy operates together with a hybrid position-force controller that provides compliant low-level interaction. We evaluate our approach on a suite of industrial-grade connector insertion tasks with varying connector geometries, grasp conditions, and initial misalignment. Across all tasks, ContactDP significantly outperforms vision-only diffusion policies for performance, reliability and generalization.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2511.07260v3" target="_blank" class="paper-title">PADiff: Predictive and Adaptive Diffusion Policies for Ad Hoc Teamwork</a>
-                        <span class="paper-date">2026-09-20</span>
-                    </div>
-                                        <span class="paper-comment">📝 Accepted by AAAI 2026</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Ad hoc teamwork (AHT) requires agents to collaborate with previously unseen teammates, which is crucial for many real-world applications. The core challenge of AHT is to develop an ego agent that can predict and adapt to unknown teammates on the fly. Conventional RL-based approaches optimize a single expected return, which often causes policies to collapse into a single dominant behavior, thus failing to capture the multimodal cooperation patterns inherent in AHT. In this work, we introduce PADiff, a diffusion-based approach that captures agent's multimodal behaviors, unlocking its diverse cooperation modes with teammates. However, standard diffusion models lack the ability to predict and adapt in highly non-stationary AHT scenarios. To address this limitation, we propose a novel diffusion-based policy that integrates critical predictive information about teammates into the denoising process. Extensive experiments across three cooperation environments demonstrate that PADiff outperforms existing AHT methods significantly.</p>
                     </details>
                 </div>
             </div>

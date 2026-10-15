@@ -575,7 +575,7 @@
                 <a href="Feed-Forward-Reconstruction.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Feed Forward Reconstruction</span>
-                    <span class="nav-count">67</span>
+                    <span class="nav-count">68</span>
                 </a>
                 <a href="Vision-and-Language-Navigation.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -590,7 +590,7 @@
                 <a href="World-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">World Model</span>
-                    <span class="nav-count">78</span>
+                    <span class="nav-count">79</span>
                 </a>
                 <a href="3D-Foundation-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
@@ -690,12 +690,12 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">67</span>
+                    <span class="nav-count">59</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">78</span>
+                    <span class="nav-count">77</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -730,7 +730,7 @@
                 <a href="Model-Predictive-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#14b8a6"></span>
                     <span class="nav-label">Model Predictive Control</span>
-                    <span class="nav-count">55</span>
+                    <span class="nav-count">53</span>
                 </a>
                 <a href="Whole-Body-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#06b6d4"></span>
@@ -794,7 +794,7 @@
             <a href="Feed-Forward-Reconstruction.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Feed Forward Reconstruction</span>
-                <span class="nav-count">67</span>
+                <span class="nav-count">68</span>
             </a>
             <a href="Vision-and-Language-Navigation.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -809,7 +809,7 @@
             <a href="World-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">World Model</span>
-                <span class="nav-count">78</span>
+                <span class="nav-count">79</span>
             </a>
             <a href="3D-Foundation-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
@@ -909,12 +909,12 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">67</span>
+                <span class="nav-count">59</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">78</span>
+                <span class="nav-count">77</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -949,7 +949,7 @@
             <a href="Model-Predictive-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#14b8a6"></span>
                 <span class="nav-label">Model Predictive Control</span>
-                <span class="nav-count">55</span>
+                <span class="nav-count">53</span>
             </a>
             <a href="Whole-Body-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#06b6d4"></span>
@@ -1030,6 +1030,156 @@
             <div class="paper-list">
                 <div class="paper-card">
                     <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.05180v2" target="_blank" class="paper-title">VICON: Visual-Inertial-Contact based Hand-Object Tracking for Manipulation Datasets</a>
+                        <span class="paper-date">2026-10-14</span>
+                    </div>
+                                        <span class="paper-comment">📝 9 pages, 6 figures, 4 tables</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Learning dexterous manipulation benefits from human demonstration datasets that capture diverse and natural hand-object interactions. In particular, contact points and forces provide supervision on where and how strongly to interact, which cannot be fully captured by motion trajectories alone. However, methods for jointly capturing hand and object motion, contact points, and forces remain limited. Moreover, severe occlusion from hand-object interaction challenges accurate tracking of both hands and objects. To address these limitations, we present a Visual-Inertial-CONtact based hand-object tracking (VICON) framework. It holistically captures both hand and object motion along with contact information during manipulation, even under severe occlusion. First, we adopt a visual-inertial glove and an RGB-D camera for accurate hand tracking, and redesign the glove to incorporate contact sensing. Specifically, force-sensitive resistors (FSRs) are placed on the glove based on human grasp frequency to synchronously record contact states and calibrated normal forces. Second, without requiring pre-existing CAD models, we estimate object poses using RGB-D images and a mesh reconstructed from a monocular video. We propose factor-graph-based object trajectory estimation that fuses object-pose estimates weighted by visibility under hand-object occlusion, FSR measurements, and a hand-motion prior. Across 40 motion-capture sessions with five objects, VICON achieves a 2.5% failed-frame rate compared with 50.9-64.6% for the baselines, with median errors of 3.9 mm and 3.0 degrees under occlusion. Using VICON, we construct a dataset containing synchronized hand-object motion, contact points, and normal forces, and will publicly release an expanded dataset covering 10 object categories at https://github.com/VICON-dataset/dataset.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.20320v1" target="_blank" class="paper-title">TacClaw-Infinity: A Large-Scale Vision-Tactile-Language-Action Dataset for Dexterous Manipulation</a>
+                        <span class="paper-date">2026-10-14</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Large-scale robot learning increasingly relies on diverse human demonstrations, yet tactile manipulation data remain difficult to scale, and existing multimodal datasets often lack consistent quality control and structured supervision. We present TacClaw-Infinity, a large-scale structured Vision-Tactile-Language-Action (VTLA) dataset for contact-rich manipulation, collected with TacClaw, a tactile-enabled UMI-style handheld interface that records synchronized visual observations, fingertip tactile signals, and end-effector trajectories without requiring a target robot during data collection. TacClaw-Infinity is built through a distributed worldwide collection across homes, laboratories, industrial workplaces, retail stores, and outdoor environments including tasks contributed by academic and industrial collaborators. Together, these efforts yield over 10,000 hours, 1 million episodes, and 1 billion frames spanning more than 1,000 task types. We develop a scalable pipeline for trajectory reconstruction, multimodal quality control, embodiment-aware filtering, and structured annotation, covering contact-centric segmentation, subtask description, and spatial grounding. We validate TacClaw-Infinity at both the data and model levels: At the data level, we assess the collection interface, the action-space compatibility of the curated demonstrations, and the structured annotations, while for the model level, we demonstrate cross-embodiment transfer across three heterogeneous robots without robot-specific demonstrations.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.13643v3" target="_blank" class="paper-title">DexBioLab: Benchmarking Dexterous Manipulation with Dynamic Experimental Phenomena in Realistic Laboratories</a>
+                        <span class="paper-date">2026-10-14</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Automating biological laboratories requires robots to perform dexterous tool interactions under realistic visual conditions while handling dynamic experimental phenomena, presenting significant challenges for robotic manipulation. To enable systematic evaluation under these conditions, we introduce DexBioLab, a simulation benchmark and framework for dexterous manipulation in realistic biological laboratory environments. DexBioLab comprises 14 tasks across 4 robot embodiments, spanning functional tool use, precision manipulation, language-conditioned visual grounding, and instrument operation. We introduce controllable dynamic experimental phenomena, including flames, vapor, and bubbles, to capture the evolving visual conditions of laboratory procedures. To further enhance environmental realism, we develop a hybrid rendering pipeline that integrates interactive simulated foreground objects with Gaussian-splatting backgrounds reconstructed from 6 real laboratory scenes. For efficient large-scale data generation and evaluation, we further build a parallel simulation framework on top of mjlab, proposing Parallel Finite-State Machine (PFSM) and integrating batched rendering with decoupled trajectory replay for demonstration generation and model-independent closed-loop policy evaluation. Our evaluation reveals substantial variation in policy performance across tasks, exposing distinct strengths and weaknesses of current manipulation policies. Real-world experiments further demonstrate a reduced sim-to-real gap, supporting the validity of AutoBio+ for realistic manipulation evaluation. Supplementary materials are available at https://cumulusalpha.github.io/DexBioLabWebPage.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2609.33551v2" target="_blank" class="paper-title">FoLD: Force-Informed Learning for Dexterous Articulated Object Manipulation</a>
+                        <span class="paper-date">2026-10-14</span>
+                    </div>
+                                        <span class="paper-comment">📝 Project Page: https://gghgghgghgg.github.io/FoLD-project-page/</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Transferring human demonstrations to dexterous robots remains challenging because differences in hand morphology and contact dynamics often cause retargeted motions to fail at producing the intended object behavior. We present \textbf{FoLD}, a framework for learning dexterous manipulation of articulated objects through explicit force guidance. FoLD compute compensatory force fields from human demonstrations together with the robot's current interaction state, yielding a force prior that promotes the demonstrated object motion. This force prior informs a residual policy that adapts retargeted hand motions to the contact requirements of the task. We evaluate FoLD on a public benchmark for articulated object manipulation, where it consistently outperforms state-of-the-art baselines across tasks and embodiments. We further validate FoLD on real dexterous robot platforms, demonstrating successful transfer of human manipulation skills to robot execution. Here is the link of our project page: https://gghgghgghgg.github.io/FoLD-project-page/.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.19753v1" target="_blank" class="paper-title">Coordi-pi: Coordination-Aware Dual-Hand Action Representation for Bimanual Dexterous Manipulation</a>
+                        <span class="paper-date">2026-10-14</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Vision-language-action (VLA) models have shown strong potential for general-purpose robotic manipulation, but extending them to bimanual dexterous manipulation introduces a high-dimensional and structured action space. Existing bimanual VLA policies commonly concatenate right- and left-side arm--hand actions at each control timestep, leaving cross-hand interactions implicit within a single action vector. We introduce Coordi-$π$, a structured action representation for bimanual dexterous manipulation. Coordi-$π$ represents the right- and left-side arm--hand actions as individual action tokens and organizes them into an interleaved sequence, explicitly exposing the two sides within the action sequence. To explicitly encode hand identity and temporal synchronization in this interleaved representation, a learnable hand-identity embedding distinguishes the two sides, while sequence--control-timestep factorized rotary positional encoding (RoPE) separates sequence position from control timestep, allowing actions at the same control timestep to share a temporal coordinate while retaining distinct sequence positions. Across all five bimanual dexterous manipulation tasks in DexJoCo, Coordi-$π$ achieves state-of-the-art performance under both \textit{rand-obj} and \textit{rand-full}, improving the average success rate over $π_{0.5}$ from 31.9\% to 51.3\% and from 18.3\% to 32.3\%, respectively. Coordi-$π$ also consistently outperforms $π_{0.5}$ across four real-world bimanual dexterous manipulation tasks.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.14691v2" target="_blank" class="paper-title">DexCast: Learning Real-World Dexterous Control from Human Videos</a>
+                        <span class="paper-date">2026-10-14</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Recent advances in 3D hand-object interaction (HOI) perception have opened new opportunities for learning dexterous robotic skills from human videos. However, existing dexterous imitation learning methods often rely on costly and manually teleoperated robot demonstrations, requiring substantial human effort. Therefore, we build DEXCAST, a framework that learns dexterous robotic hand control directly from monocular RGB-D videos by leveraging joint HOI reconstructions, without requiring any teleoperation. Furthermore, how to model high-dimensional robotic hand motion and extract temporal context to inform future action generation remains a key challenge. To this end, we propose a DexHand Motion Perception Module (DMPM) to capture inter-joint coordination and temporal dependencies in compact latent representations that condition our diffusion policy. Extensive real-world experiments demonstrate that DEXCAST achieves exceptional performance across diverse dexterous manipulation tasks.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.19518v1" target="_blank" class="paper-title">HiFun: a Hierarchical Framework for Efficient Functional Dexterous Manipulation Learning</a>
+                        <span class="paper-date">2026-10-14</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>While multi-fingered dexterous robot hands have the potential to provide human-level dexterity, using them for functional manipulation remains difficult because task success depends on precise contact, coordinated arm-hand motion, and reactive recovery from execution errors. Precise contact depends on complex contact dynamics that are difficult to model accurately in simulation, motivating real-world learning. However, real-world demonstrations in the full arm-hand control space are costly and noisy because each trajectory must coordinate arm motion with high-DoF multi-finger contact. Small execution deviations can further cause slipped contact or premature force application, making recovery from off-nominal contact states important for robust execution. To deal with these challenges, we propose HiFun, a hierarchical real-world RL framework for functional dexterous manipulation tasks. Our key insight is to decouple the control complexity into a functional hand skill for precise contact execution and an arm-hand coordination policy for arm control and hand-skill activation. This design enables effective real-time human intervention for reactive recovery learning and efficient data collection with Dynamic Movement Primitive (DMP) augmentation. Across six real-world tasks on two dexterous hands, HiFun achieves 98.3% average success within one hour of online training and remains robust to dynamic disturbances. The project page is available at https://hly-123.github.io/HiFun/.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.07968v2" target="_blank" class="paper-title">Soft Robotic Exogloves for Dexterous Mobility -- Towards Personalized Rehabilitation</a>
+                        <span class="paper-date">2026-10-14</span>
+                    </div>
+                                        <span class="paper-comment">📝 8 pages, 14 figures. Accepted in IEEE Transactions on Medical Robotics and Bionics (T-MRB)</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：传统软体机器人外手套依赖标准化尺寸，无法适应个体手部解剖差异，限制了精细操作和康复效果。&#10;&#10;🛠 **方法**：通过拓扑扫描个性化定制手套，采用硅胶模具铸造制造，结合有限元分析（FEA）评估弯曲与接触力，并利用气动压力控制实现手指关节的精准运动。&#10;&#10;✨ **主要贡献**：实现了从结构贴合、关节拓扑到人机接触力建模的全面个性化设计，并通过实验验证了压力控制对掌指关节和近端指间关节的精准驱动，为优化外手套以支持精细操作和神经肌肉康复奠定了基础。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Soft robotic exogloves can provide hand rehabilitation and assistance. Fitting these gloves often relies on standardized measurements not tailored to the individual, limiting their effectiveness, especially for fine articulation necessary for dexterous manipulation. We present the design, fabrication, modeling, and testing of a personalized pneumatically-actuated soft robotic exoglove. The glove was fit to a user's hand with topological scans and fabricated with silicone mold casting. Finite element analysis (FEA) was performed to evaluate actuator bending and forces from physical human-robot interaction (pHRI) between an actuator and a simplified personalized biomechanical finger model. Pneumatic pressure control experiments were conducted to flex the user's finger with static and dynamic references. Fabrication results show that topological scans enable precise tailoring to hand anatomy. Simulations showed that anatomical personalization enables analysis of pHRI contact forces, and results indicate sufficient joint mobilization with non-ideal compression on the proximal phalanx. Pneumatic testing indicates that pressure control allows accurate and targeted mobility of the metacarpophalangeal (MCP) and proximal interphalangeal (PIP) joints with intrinsic stiffness. Testing of multiple designs showed that relaxing the strain-limiting layer improves actuator-to-finger joint alignment during actuation. This work presents personalization to the human hand in structural conformability, joint topology, modeling of pHRI contact, and time-dependent actuation-deformation profiles. This lays the groundwork for informing exoglove design optimization to enable assistance in dexterous manipulation and neuromuscular rehabilitation of fine motor skills.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2606.03177v3" target="_blank" class="paper-title">ConTrack: Constrained Hand Motion Tracking with Adaptive Trade-off Control</a>
+                        <span class="paper-date">2026-10-13</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="好的，作为一名人工智能研究与学术论文分析专家，我将严格按照您的要求，对这篇论文《ConTrack: Constrained Hand Motion Tracking with Adaptive Trade-off Control》进行详细的中文解读。&#10;&#10;---&#10;&#10;## 0. 概览（Concise Summary）&#10;&#10;- **主题（Topic）**：机器人灵巧操作、人类演示到机器人的技能迁移、基于物理仿真的参考轨迹跟踪。&#10;- **问题（Problem）**：将人类演示的灵巧手操作（包含丰富的接触）迁移到机器人上时，存在运动学与动力学差异（具身鸿沟）。现有的参考轨迹跟踪方法在长时域、接触密集的任务中，难以平衡“任务成功”（精确跟踪物体轨迹）与“风格保真”（模仿人类手部运动和接触模式），且通常需要为每个演示序列手动调整奖励权重。&#10;- **方法（Method）**：提出一个名为 **ConTrack** 的强化学习（RL）框架。它将物体跟踪视为一个**约束**，将剩余的控制能力分配给运动风格保真。通过一个**双变量更新机制**在线自适应地调整任务与风格的权衡。同时，引入一个**自适应轨迹中段重置库**，从策略可达的仿真状态重新开始训练，以稳定长时域学习。&#10;- **创新（Innovation）**：&#10;    1.  **在线自适应任务-风格混合机制**：将问题建模为带约束的马尔可夫决策过程（CMDP），通过一个在线更新的拉格朗日乘子（λ）动态调整任务和风格奖励的权重，避免了手动调参。&#10;    2.  **自适应轨迹中段重置库**：不同于直接重置到参考状态（可能物理不可行），该方法从策略自身探索过程中收集“可达的”仿真状态，并优先在策略容易失败的困难片段附近重置，从而高效地学习长时域任务。&#10;- **意义（Significance）**：ConTrack 提供了一个可扩展的框架，能够自动将物理上不可行的人类演示转化为机器人可执行的、高质量的灵巧操作轨迹。它在多个基准测试中显著提升了任务成功率和物体位姿精度，同时保持了关节运动和接触模式的保真度，并验证了在真实机器人上的可行性。这为利用海量人类演示数据训练通用灵巧操作策略铺平了道路。&#10;- **一句话总结**：ConTrack 通过在线自适应权衡任务与风格，并利用策略可达状态进行高效训练，解决了长时域、接触丰富的灵巧手参考轨迹跟踪难题。&#10;&#10;## 1. 研究动机（Motivation）&#10;&#10;- **核心问题**：将人类灵巧操作演示迁移到机器人上时，由于人手与机器人手在形态、关节配置和驱动方式上的根本差异（即“具身鸿沟”），直接复现人类运动在物理上往往是不可行的。例如，一个人类手指的特定姿势，在机器人手上可能无法实现，或者会导致物体掉落。&#10;- **现有方法的不足**：&#10;    - **重定向（Retargeting）**：基于几何优化的方法（如最小化关节角度误差）在接触动力学起主导作用时表现脆弱，容易失败。&#10;    - **固定权重奖励**：许多方法使用固定权重的奖励函数来混合任务目标（跟踪物体）和风格目标（模仿运动）。然而，在接触密集的任务中，不同演示片段、甚至同一片段的不同阶段，任务难度和信号尺度都会变化。固定权重需要为每个序列手动精细调整，缺乏可扩展性，且容易在任务与风格冲突时陷入次优解。&#10;    - **长时域训练不稳定**：从参考轨迹的第一帧开始训练长时域策略效率低下，因为早期的失败会主导整个训练分布，导致策略很少有机会学习到后期的复杂接触阶段。简单的“从中间帧重置”策略又可能因为重置到物理上不可行的状态（如手与物体穿透）而导致训练崩溃。&#10;- **为什么重要**：解决这个问题是实现从海量、低成本的人类演示数据中学习通用、鲁棒机器人灵巧操作技能的关键一步。它能够极大地扩展机器人学习的数据来源，降低对昂贵的遥操作数据的依赖。&#10;&#10;## 2. 创新点（Innovation）&#10;&#10;ConTrack 的核心创新在于其**将参考跟踪问题重构为一个带约束的优化问题，并为此设计了两个关键机制**：&#10;&#10;1.  **在线自适应任务-风格混合机制（Online Adaptive Task-Style Mixing）**：&#10;    - **不同之处**：与使用固定权重混合任务和风格奖励的现有方法不同，ConTrack 将任务成功（物体跟踪）视为一个**硬约束**，而将风格保真（运动模仿）作为**优化目标**。它通过一个在线更新的拉格朗日乘子 λ 来动态调整两者之间的权衡。&#10;    - **为何奏效**：λ 根据当前策略的任务表现（归一化的任务回报）自动调整。当任务表现低于目标阈值时，λ 增加，迫使策略更关注任务；当任务表现良好时，λ 减小，释放更多“控制权”给风格目标。这种机制使得系统能够自适应地处理不同片段和不同阶段的难度变化，无需手动调参，并且能够自动在任务与风格冲突时找到合理的折中点。&#10;&#10;2.  **自适应轨迹中段重置库（Adaptive Mid-Trajectory Reset Library）**：&#10;    - **不同之处**：传统方法要么从第一帧开始（效率低），要么直接重置到参考轨迹的中间帧（可能物理不可行）。ConTrack 维护一个“重置库”，其中存储的是**策略自身在探索过程中成功到达的仿真状态**。&#10;    - **为何奏效**：这些状态是“策略可达的”，保证了重置后训练的有效性。库中的状态会随着策略能力的提升而动态更新（当策略到达更远的帧时，覆盖更早帧的状态）。此外，ConTrack 通过一个“生存率”指标来采样重置帧，优先选择那些策略容易失败、但距离成功仅一步之遥的“困难片段”进行反复训练。这就像一个智能的课程学习，将训练资源集中在最需要改进的地方，从而极大地提高了长时域学习的效率和稳定性。&#10;&#10;## 3. 主要内容（Main Content）【重点】&#10;&#10;### 3.1 设计架构与方法&#10;&#10;ConTrack 的整体架构是一个基于 PPO 的强化学习框架，其核心是围绕一个带约束的优化问题设计的。&#10;&#10;1.  **问题建模**：将参考跟踪问题建模为一个有限时域的 MDP。策略 π 输出一个**残差动作** $a_t$，加到参考关节位置 $q^{ref}_t$ 上，得到最终的目标关节位置 $q^{tar}_t = q^{ref}_t + a_t$。这种参数化方式使探索保持在参考轨迹附近，同时允许必要的修正。&#10;2.  **奖励分解**：奖励函数被分解为三部分：&#10;    - $r_g$：任务奖励，衡量物体位姿与参考目标的接近程度。&#10;    - $r_s$：风格奖励，衡量手部关节运动、接触事件和接触点与参考的一致性。&#10;    - $r_p$：惩罚项，用于抑制高频抖动和不自然的运动。&#10;3.  **核心机制**：&#10;    - **自适应任务-风格混合**：通过一个在线更新的标量控制器 λ 来动态调整任务和风格在策略更新中的权重。&#10;    - **自适应重置库**：维护一个按帧索引的仿真状态库，并动态更新和采样，以稳定和加速长时域训练。&#10;    - **接触先验**：利用参考数据中的接触注释（接触事件和接触点）作为风格奖励的一部分，提供更精细的监督信号。&#10;&#10;### 3.2 关键算法与数学推导&#10;&#10;**1. 带约束的优化问题**&#10;&#10;ConTrack 的目标是在满足任务成功约束的前提下，最大化风格保真度：&#10;$$&#10;\max_{\pi} J^s(\pi) \quad \text{s.t.} \quad J^g(\pi) \ge \alpha J^g_{\star}&#10;$$&#10;其中：&#10;- $J^s(\pi)$ 和 $J^g(\pi)$ 分别是风格和任务的折扣回报。&#10;- $\alpha \in (0, 1]$ 是目标任务比率。&#10;- $J^g_{\star}$ 是任务回报的运行最大值，用于归一化，使约束在不同片段间具有可比性。&#10;&#10;**2. 在线双变量更新（Online Dual-Variable Update）**&#10;&#10;通过拉格朗日松弛将约束问题转化为无约束问题：&#10;$$&#10;\mathcal{L}(\pi, \lambda) = J^s(\pi) - \lambda \left( \alpha - \frac{J^g(\pi)}{J^g_{\star}} \right)&#10;$$&#10;其中 $\lambda$ 是拉格朗日乘子（控制器状态）。&#10;&#10;λ 的更新规则如下：&#10;$$&#10;\lambda \leftarrow \lambda + \eta \left( \alpha - \frac{\hat{J}^g}{J^g_{\star}} \right)&#10;$$&#10;其中 $\eta$ 是步长，$\hat{J}^g$ 是当前策略下任务回报的运行估计。当 $\hat{J}^g / J^g_{\star} &lt; \alpha$ 时，λ 增加；反之则减少。&#10;&#10;λ 通过逻辑斯蒂函数映射到混合权重 $w_{task}$：&#10;$$&#10;w_{task} = \sigma(\lambda)&#10;$$&#10;最终用于计算策略更新的混合优势函数：&#10;$$&#10;A^{mix} = w_{task} A^g + (1 - w_{task}) A^s + A^p&#10;$$&#10;其中 $A^g, A^s, A^p$ 分别是任务、风格和惩罚项的优势估计。&#10;&#10;**3. 自适应重置库采样**&#10;&#10;对于每个帧索引 $k$，定义其“延续长度” $\ell_k$ 为从该帧开始到 episode 结束的步数。维护其指数移动平均 $\bar{\ell}_k$ 和最大值 $\ell^{max}_k$。&#10;&#10;定义“生存率” $u_k$：&#10;$$&#10;u_k = \frac{\bar{\ell}_k}{T - k}&#10;$$&#10;采样概率为：&#10;$$&#10;p(k) \propto \exp\left(-\frac{u_k}{\tau}\right)&#10;$$&#10;其中 $\tau$ 是温度参数。这个公式使得策略更倾向于在生存率低（即容易失败）的帧附近重置，从而集中训练资源攻克难点。&#10;&#10;### 3.3 模型、训练与数据集&#10;&#10;- **模型**：策略 π 是一个神经网络（PPO），输入为观测状态，输出为残差动作 $a_t$。&#10;- **训练**：使用 PPO 算法进行训练。采用非对称的 Actor-Critic 架构。Actor 接收带有延迟和噪声的观测，而 Critic 接收更完整、无噪声的观测以及未来参考信息，以降低价值估计的方差。&#10;- **数据集**：使用三个公开数据集，按接触复杂度分为三个层级：&#10;    - **GRAB**：双手刚性物体交互。&#10;    - **ARCTIC**：双手铰接物体交互。&#10;    - **DexterHand**：单手连续手内旋转。&#10;    每个数据集中的每个演示片段（clip）都作为一个独立的参考跟踪任务，训练一个独立的策略。&#10;&#10;### 3.4 实验设置与结果&#10;&#10;- **设置**：每个片段训练 5000 次 PPO 更新。评估时，所有方法都从参考轨迹的第一帧开始，使用固定的位姿误差阈值（平移 0.10m，旋转 1.00rad）来判断成功与否。&#10;- **主要结果（表 2）**：&#10;    - ConTrack 在**进度（Progress）** 和**接触 F1 分数（Contact F1）** 上显著优于所有基线方法（ManipTrans, DexMachina, SPIDER），同时保持了较低的物体位姿误差。&#10;    - ManipTrans 物体位姿误差最低，但手指运动和接触保真度较差。&#10;    - DexMachina 和 SPIDER 在进度上远不如 ConTrack。&#10;    - 这表明 ConTrack 在任务与风格的权衡上做得更好，并且能更有效地完成长时域跟踪。&#10;- **消融实验**：&#10;    - **自适应 vs. 固定混合（表 4，图 4）**：自适应混合在进度和接触保真度上均优于固定权重。图 4 展示了通过调整目标比率 α 可以绘制出一条帕累托前沿，而固定权重策略点都位于前沿内部，证明了自适应方法的优越性。&#10;    - **重置库消融（表 5，图 5）**：自适应重置库显著优于“从第一帧重置”和“均匀重置”。图 5 展示了重置分布随训练过程动态变化，从后期帧逐渐向前移动，聚焦于当前的失败边界。&#10;    - **接触先验消融（表 6）**：移除接触奖励或接触点距离奖励都会导致性能下降，证明了接触先验的重要性。&#10;&#10;### 3.5 技术细节&#10;&#10;- **动作空间**：残差关节位移，使探索更稳定。&#10;- **观测空间**：非对称 Actor-Critic。Actor 观测当前和过去的状态（带噪声和延迟），Critic 观测当前完整状态、未来参考轨迹和接触信息。&#10;- **奖励设计**：详细定义了任务、风格和惩罚项的具体函数形式和权重（见表 8）。例如，物体位姿跟踪使用高斯核函数将误差映射到 [0,1] 区间。&#10;- **接触注释处理**：将数据集中的 15 个手部分段映射到机器人手（xHand）的 10 个连杆组，并聚合接触事件和点。&#10;- **计算资源**：单张 NVIDIA GeForce RTX 4090 GPU，每个片段训练约 1.9 到 2.9 小时。&#10;&#10;## 4. 意义与影响（Significance and Impact）&#10;&#10;- **解决的问题与贡献**：&#10;    - 解决了灵巧操作中参考轨迹跟踪的核心难题：**如何在任务与风格冲突时，无需手动调参地自动找到最佳平衡点**。&#10;    - 提出了一种**稳定、高效的长时域训练方法**，通过自适应重置库克服了接触密集场景下的训练不稳定问题。&#10;    - 提供了一个**完整的、可扩展的框架**，能够将物理上不可行的人类演示转化为真实机器人可执行的轨迹，并在多个复杂基准测试中取得了领先性能。&#10;- **对未来研究/应用的影响**：&#10;    - **自动化数据利用**：ConTrack 使得利用大规模、低成本的人类演示数据（如视频）来训练机器人灵巧操作策略变得更加可行，有望推动“数据驱动”的灵巧操作研究。&#10;    - **通用策略学习**：其自适应权衡机制和训练策略可以推广到其他需要平衡多个目标的机器人学习任务中。&#10;    - **真实世界部署**：在真实机器人平台上的验证表明，该框架具有实际应用潜力，可用于从人类演示中快速部署灵巧操作技能。&#10;- **局限与开放问题**：&#10;    - **约束满足**：基于运行最大值的归一化方法在实践中有效，但不能严格保证约束的满足。&#10;    - **数据依赖**：接触先验依赖于高质量、带注释的参考数据。&#10;    - **计算预算**：对于最难的手内旋转任务，在固定预算下仍有挑战，需要更长的训练时间。&#10;    - **感知集成**：当前工作聚焦于仿真和执行，未来需要集成更丰富的感知系统以实现更鲁棒的 sim-to-real 迁移。&#10;&#10;## 5. 澄清与简化（Clarifications and Simplifications）&#10;&#10;- **任务 vs. 风格**：可以想象成学跳舞。**任务**是“你的脚必须踩在特定的地砖上”（跟踪物体轨迹）。**风格**是“你的手臂摆动要像老师一样优美”（模仿手部运动）。如果地砖位置和老师手臂动作冲突（比如为了踩到地砖，手臂必须摆得不那么好看），ConTrack 会自动决定是优先踩准地砖，还是优先摆动手臂，并且这个决定会随着你的熟练程度（策略能力）动态变化。&#10;- **自适应混合（λ 的作用）**：λ 就像一个“任务压力计”。当你的脚总是踩不准地砖时，压力计读数升高，大脑（策略）就会更专注于控制脚。当你踩得很准了，压力计读数下降，你就可以把更多精力放在让手臂摆动得更优美上。这个压力计是自动调节的，不需要教练（人类）在旁边喊“现在多注意脚！”。&#10;- **自适应重置库**：想象你在学习一个复杂的杂技动作。如果每次都从第一帧开始练，你大部分时间都在练习前几个简单动作，后面的高难动作很少有机会练到。ConTrack 的做法是，它记录下你每次练习中成功到达的“里程碑”状态（比如成功翻到一半的位置）。下次练习时，它会有意地把你送到你**上次失败的那个点附近**，让你反复练习最难的环节。这就像一个聪明的教练，知道你的瓶颈在哪里，并让你进行针对性训练。而且，这个“里程碑”库会随着你的进步而更新，你走得越远，库里的状态就越靠前。&#10;&#10;## 6. 补充说明（Additional Notes）&#10;&#10;- **相关工作关联**：&#10;    - **与 ManipTrans 和 DexMachina 的关系**：ManipTrans 使用残差 RL 来修正模仿学习的错误，但使用固定权重。DexMachina 侧重于功能性重定向，优先保证物体运动。ConTrack 则通过约束优化框架，在两者之间找到了一个更灵活、更自动化的平衡点。&#10;    - **与 DeepMimic 的关系**：DeepMimic 是物理仿真中角色运动跟踪的经典工作，也使用固定权重。ConTrack 将其思想扩展到灵巧操作领域，并解决了接触带来的新挑战。&#10;    - **与约束 RL 的关系**：ConTrack 借鉴了约束策略优化（CPO）和奖励约束策略优化（RCPO）的思想，但将其应用于在线、自适应的任务-风格权衡，并针对灵巧操作场景进行了定制。&#10;- **最重要的图表**：&#10;    - **图 1**：直观展示了 ConTrack 的目标和效果，即生成物理上合理的物体运动，同时保持手-物接触。&#10;    - **图 4**：**核心结果图**。它清晰地展示了 ConTrack 通过调整目标比率 α 可以绘制出一条帕累托前沿，证明了其自适应机制能够找到比固定权重方法更优的任务-风格权衡点。&#10;    - **图 5**：**核心机制图**。它生动地展示了自适应重置库的动态行为，即随着策略学习，重置分布如何从后期帧向前移动，聚焦于当前的学习瓶颈，解释了 ConTrack 长时域学习高效的原因。&#10;    - **表 2**：**核心结果表**。它定量地证明了 ConTrack 在多个指标上全面优于现有基线方法。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Human demonstrations provide strong priors for robot manipulation, yet it is non-trivial to transfer them to execute on real robots due to the kinematic gap. In dexterous manipulation, it remains challenging to track long-horizon, contact-rich sequences even in simulators: a reference-tracking policy must keep objects on their target trajectories while preserving demonstrated joint motion and contact timing. Existing approaches often rely on hand-crafted reward tuning that require per-sequence tuning and break under limited interaction budgets. We introduce ConTrack, a reinforcement learning (RL) framework that scales with tracking data. ConTrack treats object tracking as a constraint and allocates remaining control authority to motion fidelity, which allows it to adapt task--style trade-offs online using a dual-variable update. In addition, ConTrack also stabilizes long-horizon learning with an adaptive mid-trajectory reset library that reuses policy-reachable simulator states. Our qualitative and quantitative results in simulation tracking and real robot demonstrate that ConTrack improves success and object pose accuracy significantly over prior arts while preserving joint and contact fidelity. Website: https://www.lyt0112.com/projects/ConTrack.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.19155v1" target="_blank" class="paper-title">FACT: A Multimodal Force-Action-Track Foundation Model for Human-to-Robot Dexterity</a>
+                        <span class="paper-date">2026-10-13</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Human demonstrations offer a scalable alternative to costly robot data collection for dexterous manipulation, but most human datasets lack force measurements. Dexterous manipulation requires not only visual and proprioceptive understanding but also the ability to anticipate and regulate interaction forces. To scale force-aware human-robot co-training, we introduce EgoForce, a large-scale human tactile dataset capturing force-rich manipulation experience, and combine it with robot demonstrations for pretraining. We present FACT, a robot foundation model that cascades from prospective visual planning to force-aware refinement for dexterous manipulation. FACT comprises two jointly trained components. A Track-Guided Coarse Planner jointly predicts actions, future video, and visual tracks. Future video and visual tracks also provide a shared task representation that facilitates cross-embodiment knowledge transfer and coarse action generation. Building on this coarse plan, a Force-Action Joint Refiner jointly predicts future force and refines the coarse action, allowing anticipated force and action to shape each other during refinement. We evaluate the model on ten tasks requiring fine-grained coordination and force feedback, including tool use, musical instruments, and precision laboratory procedures. Using as few as 10 robot trajectories with 90 human trajectories for fine-tuning, FACT outperforms both baselines, with success-rate gains of up to 60 percentage points over T-Rex. Ablations show that force supervision in human pretraining data is crucial for downstream robot performance after fine-tuning, while visual track prediction and training with future-force prediction improve dexterous execution. Experiments varying the human-robot data ratio during fine-tuning further suggest that FACT learns from human demonstrations nearly as effectively as from robot demonstrations.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.07681v2" target="_blank" class="paper-title">EigenDEXplore: Structured Exploration for Dexterous Manipulation with Human Priors</a>
+                        <span class="paper-date">2026-10-13</span>
+                    </div>
+                                        <span class="paper-comment">📝 15 pages, 12 figures. Project page: https://eigendexplore.github.io/</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Dexterous manipulation poses a challenging high-dimensional optimization problem, as useful behaviors require coordinated motion across many hand joints. In reinforcement learning (RL) and sampling-based trajectory optimization, exploration commonly relies on independent robot joint perturbations, making coordinated behaviors difficult to discover. Prior work reduces this search space for grasp learning using low-dimensional spaces of coordinated joint motions learned from human hand data, but this restricts the expressivity required for general manipulation. Some combine learned and joint-space actions to restore expressivity, but this increases dimensionality and introduces redundancy. We study these effects across diverse manipulation settings, varying action dimensionality, exploration strategy, and the source of human data. Our experiments suggest that human-motion priors are most effective when used to structure exploration rather than change the action representation. Motivated by this finding, we propose EigenDEXplore, which induces correlated exploration by adding perturbations along human-derived eigenvectors to independent joint-space noise, leaving the action space unchanged. Across multiple dexterous hands, EigenDEXplore consistently outperforms joint-space and learned action-space baselines in grasping, in-hand reorientation, and contact-rich manipulation. These gains span unstructured and reference-guided RL, trajectory optimization, and sim-to-real deployment, and are largest in settings with less reward shaping and curriculum design.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.19089v1" target="_blank" class="paper-title">DexMimic: A Generalist Dexterous Hand-Object Tracking Policy via Value-Guided Reset Allocation</a>
+                        <span class="paper-date">2026-10-13</span>
+                    </div>
+                                        <span class="paper-comment">📝 13 pages, including 4 pages of supplementary material. Project page: https://zhexiluo.github.io/DexMimic/</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Achieving human-like dexterous manipulation remains a central challenge in robotics. Learning from human hand-object interaction (HOI) datasets offers a promising pathway to diverse dexterous skills, yet existing physics-based approaches train specialist policies for individual trajectories, thereby limiting skill reuse at scale. We introduce DexMimic, a generalist dexterous hand-object tracking policy jointly trained across diverse HOI trajectories. Efficient joint training requires allocating each rollout to both an undertrained phase and a starting state that supports continued tracking. DexMimic realizes this insight through Value-Guided Reset Allocation, which adapts the initialization distribution online to prioritize difficult phases and select reset states with higher expected tracking returns. We further introduce a benchmark spanning training, fine-tuning, and generalization. Experiments show improved tracking success and training efficiency, faster fine-tuning, and the potential for zero-shot generalization to unseen trajectories and objects; larger training sets further improve efficiency and generalization. Finally, we validate DexMimic on a real-world dexterous manipulation platform.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
                         <a href="https://arxiv.org/abs/2602.15828v2" target="_blank" class="paper-title">Dex4D: Task-Agnostic Point Track Policy for Zero-Shot Dexterous Manipulation</a>
                         <span class="paper-date">2026-10-13</span>
                     </div>
@@ -1082,10 +1232,7 @@
                         <span class="paper-date">2026-10-13</span>
                     </div>
                                         <span class="paper-comment">📝 Accepted at CoRL 2026 (Spotlight). Camera-ready version with additional simulation and real-robot experiments. 29 pages including references and appendices</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：工业中变形线性物体（如电线、电缆）的操控因无限维状态空间和复杂接触动力学而极具挑战，现有基准缺乏模块化、可配置的工业场景及统一的评估协议。&#10;&#10;🛠 **方法**：提出WireCraft仿真基准，包含连接器插入、夹子布线、通道嵌入三类任务，支持铰接与可变形两种物理模型，并提供仿真与真实UR5机械臂轨迹数据，用于强化学习、模仿学习和视觉-语言-动作策略的评估。&#10;&#10;✨ **主要贡献**：验证了基于特权状态的任务可行性（成功率&gt;82%），但发现视觉策略在连接器插入的接触对齐阶段存在瓶颈，揭示了当前视觉学习方法在工业DLO操控中的开放性挑战。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Deformable Linear Objects (DLOs), such as wires and cables, are central to industrial assembly. Unlike rigid objects, whose state is captured by a 6-DoF pose, DLOs have an infinite-dimensional configuration space and deform continuously under contact with grippers, fixtures, and the workspace, making them a demanding benchmark for general dexterous manipulation. Despite their importance, policy development and comparison remain difficult: existing benchmarks are often tied to specific hardware setups, lack modular and customizable task assets, or study generic deformable-object tasks without the fixtures relevant to real-world industrial wire manipulation. Few benchmarks align simulation, real-world data, and shared evaluation protocols. To bridge this gap, we introduce WireCraft, a simulation benchmark for industrial DLO manipulation with configurable difficulty and assets, spanning three task families: connector insertion, clip routing, and channel seating. It supports two complementary DLO physics models, articulated and deformable, and the released trajectories come from both simulation and a physical UR5. We benchmark reinforcement learning (RL), imitation learning (IL), and vision-language-action (VLA) policies under shared metrics. Privileged state-based RL solves a representative setting in each task family with over 82% success, confirming the tasks are well-posed. Image-based policies remain less successful across the evaluated tasks, with ACT and DiT VLA falling below privileged State PPO. On a physical UR5, supplementing real demonstrations with simulated data improves success by 15-65 percentage points in the best-performing mixture for each task. These results indicate that industrial DLO manipulation, though tractable under privileged state, remains an open challenge for current vision-based learning.</p>
@@ -1125,18 +1272,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Teleoperation is widely used to collect high-quality demonstrations for robot learning. Dexterous manipulation, however, requires coordinated control of motion and contact forces. Operators can specify motion, but struggle to reproduce the subtle force adjustments of human manipulation without feeling the robot's contacts. We introduce Force-Modulated Dexterity (FOMO-Dex), a unified compliance formulation for contact-rich manipulation. FOMO-Dex expresses nominal actions in coordinates defined by task geometry and contact structure. It applies force-driven motion corrections along selected directions while leaving the remaining command components unchanged. Across card picking, paper cutting, screwdriving, and nut-and-bolt assembly, FOMO-Dex reduces excessive contact forces compared with stiff control. A user study shows that operators collect more successful demonstration data per hour after brief practice. For policy learning, imitating the corrected actions improves card-picking success over imitating raw operator commands. Policies trained on FOMO-Dex demonstrations also achieve more rotation in nut-and-bolt manipulation and screwdriving than those trained on demonstrations collected with the stiff controller. Videos are shown on https://yingyuan0414.github.io/fomo-dex/ .</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2610.13643v2" target="_blank" class="paper-title">AutoBio+: Benchmarking Dexterous Manipulation with Dynamic Experimental Phenomena in Realistic Laboratories</a>
-                        <span class="paper-date">2026-10-12</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Automating biological laboratories requires robots to perform dexterous tool interactions under realistic visual conditions while handling dynamic experimental phenomena, presenting significant challenges for robotic manipulation. To enable systematic evaluation under these conditions, we introduce AutoBio+, a simulation benchmark and framework for dexterous manipulation in realistic biological laboratory environments. AutoBio+ comprises 14 tasks across 4 robot embodiments, spanning functional tool use, precision manipulation, language-conditioned visual grounding, and instrument operation. We introduce controllable dynamic experimental phenomena, including flames, vapor, and bubbles, to capture the evolving visual conditions of laboratory procedures. To further enhance environmental realism, we develop a hybrid rendering pipeline that integrates interactive simulated foreground objects with Gaussian-splatting backgrounds reconstructed from 6 real laboratory scenes. For efficient large-scale data generation and evaluation, we further build a parallel simulation framework on top of mjlab, proposing Parallel Finite-State Machine (PFSM) and integrating batched rendering with decoupled trajectory replay for demonstration generation and model-independent closed-loop policy evaluation. Our evaluation reveals substantial variation in policy performance across tasks, exposing distinct strengths and weaknesses of current manipulation policies. Real-world experiments further demonstrate a reduced sim-to-real gap, supporting the validity of AutoBio+ for realistic manipulation evaluation. Supplementary materials are available at https://autobio-plus.github.io/AutoBioPlus.</p>
                     </details>
                 </div>
                 <div class="paper-card">
@@ -1197,18 +1332,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Recent years have witnessed an explosive trend of scaling ego-centric human videos for robot manipulation, yet it remains unclear which data actually benefits dexterous manipulation. We present SiMDex, a similarity-based data mining framework that casts human data selection for VLA post-training in dexterous manipulation as a recommendation problem. For each robot demonstration, SiMDex runs a three-stage recall-ranking-re-ranking cascade over ~32M egocentric human samples: recall and ranking select a task-relevant subset in a morphology-agnostic action space, and re-ranking verifies it on pixels, with no change to VLA architecture or training. Against a strong baseline trained with an equal amount of randomly sampled human data, SiMDex uses only ~1.49M mined samples (<5% of the pool) yet improves the overall success rate from 47.7% to 61.7%, showing that selective curation outperforms indiscriminate data mixing.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2610.14691v1" target="_blank" class="paper-title">DexCast: Learning Real-World Dexterous Control from Human Videos</a>
-                        <span class="paper-date">2026-10-10</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Recent advances in 3D hand-object interaction (HOI) perception have opened new opportunities for learning dexterous robotic skills from human videos. However, existing dexterous imitation learning methods often rely on costly and manually teleoperated robot demonstrations, requiring substantial human effort. Therefore, we build DEXCAST, a framework that learns dexterous robotic hand control directly from monocular RGB-D videos by leveraging joint HOI reconstructions, without requiring any teleoperation. Furthermore, how to model high-dimensional robotic hand motion and extract temporal context to inform future action generation remains a key challenge. To this end, we propose a DexHand Motion Perception Module (DMPM) to capture inter-joint coordination and temporal dependencies in compact latent representations that condition our diffusion policy. Extensive real-world experiments demonstrate that DEXCAST achieves exceptional performance across diverse dexterous manipulation tasks.</p>
                     </details>
                 </div>
                 <div class="paper-card">
@@ -1357,18 +1480,6 @@
                 </div>
                 <div class="paper-card">
                     <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2610.07681v1" target="_blank" class="paper-title">EigenDEXplore: Structured Exploration for Dexterous Manipulation with Human Priors</a>
-                        <span class="paper-date">2026-10-06</span>
-                    </div>
-                                        <span class="paper-comment">📝 15 pages, 12 figures. Project page: https://eigendexplore.github.io/</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Dexterous manipulation poses a challenging high-dimensional optimization problem, as useful behaviors require coordinated motion across many hand joints. In reinforcement learning (RL) and sampling-based trajectory optimization, exploration commonly relies on independent robot joint perturbations, making coordinated behaviors difficult to discover. Prior work reduces this search space for grasp learning using low-dimensional spaces of coordinated joint motions learned from human hand data, but this restricts the expressivity required for general manipulation. Some combine learned and joint-space actions to restore expressivity, but this increases dimensionality and introduces redundancy. We study these effects across diverse manipulation settings, varying action dimensionality, exploration strategy, and the source of human data. Our experiments suggest that human-motion priors are most effective when used to structure exploration rather than change the action representation. Motivated by this finding, we propose EigenDEXplore, which induces correlated exploration by adding perturbations along human-derived eigenvectors to independent joint-space noise, leaving the action space unchanged. Across multiple dexterous hands, EigenDEXplore consistently outperforms joint-space and learned action-space baselines in grasping, in-hand reorientation, and contact-rich manipulation. These gains span unstructured and reference-guided RL, trajectory optimization, and sim-to-real deployment, and are largest in settings with less reward shaping and curriculum design.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
                         <a href="https://arxiv.org/abs/2610.07525v1" target="_blank" class="paper-title">ReDex: Repairing Sim-to-Real Dexterous Policies by Finger-Level Compliant Interaction</a>
                         <span class="paper-date">2026-10-05</span>
                     </div>
@@ -1461,18 +1572,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Human hand-object demonstrations provide a scalable source of data for dexterous robot learning, but transferring them across embodiments requires physically feasible retargeting. Existing physics-based methods typically optimize each demonstration independently, leading to either limited success under finite simulation budgets or training costs that grow with dataset size. We introduce FlashDexRetarget, an RL framework for multi-reference dexterous retargeting. We formulate retargeting as multi-reference tracking, jointly learning a single policy across many demonstrations with off-policy RL and geometric supervision of the demonstrated interactions. This shared training formulation amortizes optimization across references while enabling the policy to track diverse hand-object interactions. On a 50-motion benchmark from TACO, OakInk2, and HOT3D using XHand and Sharpa Wave Hand as target embodiments, FlashDexRetarget retargets 90% of demonstrations using about 30 GPU-hours, compared with about 46% at about 3,000 GPU-hours for CHORD. This corresponds to about 100 times lower training compute and a 44-percentage-point improvement in retargeting success. Ablations examine the key design choices, while experiments with up to 1,000 motions and real-world replay further demonstrate the scalability and practical applicability of our method.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2610.05180v1" target="_blank" class="paper-title">VICON: Visual-Inertial-Contact based Hand-Object Tracking for Manipulation Datasets</a>
-                        <span class="paper-date">2026-10-04</span>
-                    </div>
-                                        <span class="paper-comment">📝 9 pages, 6 figures, 4 tables</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Learning dexterous manipulation benefits from human demonstration datasets that capture diverse and natural hand-object interactions. In particular, contact points and forces provide supervision on where and how strongly to interact, which cannot be fully captured by motion trajectories alone. However, methods for jointly capturing hand and object motion, contact points, and forces remain limited. Moreover, severe occlusion from hand-object interaction challenges accurate tracking of both hands and objects. To address these limitations, we present a Visual-Inertial-CONtact based hand-object tracking (VICON) framework. It holistically captures both hand and object motion along with contact information during manipulation, even under severe occlusion. First, we adopt a visual-inertial glove and an RGB-D camera for accurate hand tracking, and redesign the glove to incorporate contact sensing. Specifically, force-sensitive resistors (FSRs) are placed on the glove based on human grasp frequency to synchronously record contact states and calibrated normal forces. Second, without requiring pre-existing CAD models, we estimate object poses using RGB-D images and a mesh reconstructed from a monocular video. We propose factor-graph-based object trajectory estimation that fuses object-pose estimates weighted by visibility under hand-object occlusion, FSR measurements, and a hand-motion prior. Across 40 motion-capture sessions with five objects, VICON achieves a 2.5% failed-frame rate compared with 50.9-64.6% for the baselines, with median errors of 3.9 mm and 3.0 degrees under occlusion. Using VICON, we construct a dataset containing synchronized hand-object motion, contact points, and normal forces, and will publicly release an expanded dataset covering 10 object categories at https://github.com/VICON-dataset/dataset.</p>
                     </details>
                 </div>
                 <div class="paper-card">
@@ -1741,18 +1840,6 @@
                 </div>
                 <div class="paper-card">
                     <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2609.33551v1" target="_blank" class="paper-title">FoLD: Force-Informed Learning for Dexterous Articulated Object Manipulation</a>
-                        <span class="paper-date">2026-09-27</span>
-                    </div>
-                                        <span class="paper-comment">📝 Project Page: https://gghgghgghgg.github.io/FoLD-project-page/</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Transferring human demonstrations to dexterous robots remains challenging because differences in hand morphology and contact dynamics often cause retargeted motions to fail at producing the intended object behavior. We present \textbf{FoLD}, a framework for learning dexterous manipulation of articulated objects through explicit force guidance. FoLD compute compensatory force fields from human demonstrations together with the robot's current interaction state, yielding a force prior that promotes the demonstrated object motion. This force prior informs a residual policy that adapts retargeted hand motions to the contact requirements of the task. We evaluate FoLD on a public benchmark for articulated object manipulation, where it consistently outperforms state-of-the-art baselines across tasks and embodiments. We further validate FoLD on real dexterous robot platforms, demonstrating successful transfer of human manipulation skills to robot execution. Here is the link of our project page: https://gghgghgghgg.github.io/FoLD-project-page/.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
                         <a href="https://arxiv.org/abs/2510.05382v2" target="_blank" class="paper-title">A multi-modal tactile fingertip design for robotic hands to enhance dexterous manipulation</a>
                         <span class="paper-date">2026-09-27</span>
                     </div>
@@ -1905,90 +1992,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Dexterous manipulation demands long-term foresight and rapid reactive control. Vision-Language-Action (VLA) models, while proficient in high-level reasoning, often lack a fine-grained understanding of physical dynamics and spatial perception. Conversely, World-Action Models (WAMs) typically suffer from high inference latency due to iterative generation. These deficiencies result in a critical temporal misalignment where the model's intent fails to adapt to rapid physical contact changes. To overcome this fundamental bottleneck, we propose LiMA, an asynchronous dual-system generative framework that systematically decouples intent planning from reactive execution. LiMA organizes computation into a multi-scale hierarchy: a slow system handles sparse long-horizon spatiotemporal intent generation, while a fast system focuses on dense high-frequency motion refinement. To align sparse intent predictions with dense action trajectories, we introduce a Latent Schrödinger Bridge Coupling mechanism that formulates refinement as an entropy-regularized probabilistic transport process. LiMA reduces inference latency by 45.8% compared with Cosmos-Policy via asynchronous decoupling. Evaluated across six bimanual dexterous manipulation tasks spanning multiple horizons, LiMA achieves an overall success rate of 70.8% and an average subtask success rate of 78.9%, while maintaining performance in unseen scenarios. The project website is available at https://ccdcs.github.io/LiMA_repo/</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2609.27656v1" target="_blank" class="paper-title">InternW0: A Foundational Physical World Model for Efficient Real-World Interactions</a>
-                        <span class="paper-date">2026-09-23</span>
-                    </div>
-                                        <span class="paper-comment">📝 A technical report of world models, 24 pages, 8 figures, and 7 tables</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Physical intelligence requires more than predicting how the world may evolve: predictions must remain actionable as the world continues to change. We introduce InternW0, the first instantiation of the InternW physical world model series from Shanghai AI Laboratory, built around omnimodal interfaces, asynchronous multi-frequency processing, and local physical modeling under partial observations and external influences. InternW0 jointly learns future visual dynamics and continuous robot control through an asymmetric video--action architecture with flow matching. A high-capacity video expert provides longer-horizon predictive context, while a lightweight action expert operates at a faster timescale. Instead of regenerating the future for every action update, InternW0 reuses layerwise K/V and adapts it to newly observed states through observation-conditioned context routing. Domain-specific interfaces and soft prompts support heterogeneous embodiments, while contact-aware post-training incorporates force and tactile signals for contact-rich manipulation. We train InternW0 on approximately 7,200 hours of heterogeneous robot and egocentric data, including EgoLab, a 275-hour real-laboratory egocentric dataset. Evaluation spans simulation benchmarks and real-world scientific tasks, including a 15-stage metal--organic framework synthesis workflow and 5-stage contact- and force-aware dexterous manipulation for general-purpose quantitative pipetting. These results advance scalable, asynchronous, and science-native physical world models for universal and efficient real-world interactions.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2507.01008v4" target="_blank" class="paper-title">DexWrist: A Robotic Wrist for Constrained and Dynamic Manipulation</a>
-                        <span class="paper-date">2026-09-23</span>
-                    </div>
-                                        <span class="paper-comment">📝 Accepted to IEEE Robotics and Automation Letters (RA-L). 8 pages, 8 figures. Project page: https://martinpeticco.com/dexwrist</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Development of dexterous manipulation hardware has primarily focused on hands and grippers. However, these end-effectors are often paired with bulky and highly stiff wrists that limit performance in human environments. More recent designs have adopted backdrivable actuation, but are still difficult to model and control due to coupled kinematics or high mechanical inertia from heavy links. We present DexWrist, a compact robotic wrist combining quasi-direct-drive actuation with a decoupled parallel kinematic mechanism to advance manipulation in highly constrained environments and enable dynamic, contact-rich tasks. It delivers 3.75$\pm$0.05 Nm rated torque, 0.33$\pm$0.06 Nm backdrive torque, 10.15$\pm$1.34 Hz torque bandwidth, $\pm 40^\circ$ ROM in both DOFs, and a diagonal velocity-constraint Jacobian (one-to-one motor-to-DOF mapping) in a 0.97 kg package. In practice, these properties increase workspace in clutter and stabilize contact without finely tuned admittance control. We evaluate DexWrist as a drop-in upgrade in simulation and on three robot arms across constrained and contact-rich tasks. In learned policy evaluations on the AgileX PiPER and UR3e, DexWrist achieved 50-76% relative improvements in success rate and reduced autonomous task completion times by 3-5x; on a torque-controlled Franka FR3, where a strong joint-impedance baseline already succeeds, it still completed the task 1.4x faster. Project page and videos: https://martinpeticco.com/dexwrist</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.27344v2" target="_blank" class="paper-title">VibeAct: Vibration to Actions for Contact-Rich Reactive Robot Dexterity</a>
-                        <span class="paper-date">2026-09-22</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Dexterous manipulation depends on contact events that are fast, local, and often visually occluded. Piezoelectric microphones provide compact, high-bandwidth sensing of these interactions, but the resulting vibro-acoustic signals are difficult to simulate faithfully for end-to-end sim-to-real policy learning on dexterous robot hands. We propose VibeAct, a framework that bridges real vibrotactile sensing and simulation-based reinforcement learning through a shared compact tactile representation. Guided by the microphones' sensitivity to contact transients and sliding-induced vibrations, we define this representation as binary contact onset, binary slip presence, and scalar slip magnitude for each fingertip. In the real world, we embed piezoelectric microphones in a dexterous robot hand and collect vibro-acoustic signals synchronized with robot and object states during teleoperation. We replay the recorded states in a calibrated digital clone to generate per-finger contact and slip labels for training a tactile estimator to infer the tactile representation from real microphone signals. In simulation, manipulation policies are trained using the same representation computed directly from simulated contact dynamics. This decoupling lets policies exploit rapid tactile feedback without simulating raw audio. Across eight contact-rich manipulation tasks, VibeAct improves average success from 21.6% to 50.5% over a baseline using proprioception and point clouds in simulation. The transferred policies also outperform the baseline on all three tasks evaluated on a physical dexterous hand-arm platform. Project videos and additional details are at https://vibeact.github.io/.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2609.25785v1" target="_blank" class="paper-title">VisForce: Visual Grounding of Current and Desired Forces for Goal-Conditioned Dexterous Manipulation</a>
-                        <span class="paper-date">2026-09-22</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Vision-Language-Action (VLA) models have emerged as general-purpose robotic manipulation policies. However, in dexterous hand manipulation, contact forces are typically provided as separate states or force-specific representations, making it difficult to explicitly represent the spatial correspondence between force and their corresponding visual locations. In this work, we propose VisForce, which visually grounds the current and desired forces at their corresponding fingertip locations. VisForce renders current and desired visual force cues on the current wrist image and a task-specific goal image, and combines the two representations through goal-conditioned cross-attention to generate force-aware actions. We evaluate VisForce using a real UR10 robot equipped with an RH56F1 dexterous hand through force-conditioned grasping and three multi-stage manipulation tasks. In force-conditioned grasping experiments, VisForce exhibited a consistent grip-force response as the desired force increased, and achieved grasp-and-lift success rates of 70% and 80% for an egg and a toothpaste tube, respectively. It further achieved final success rates of 70%, 55%, and 40% on cup insertion/bottle pouring, tong-assisted bread transfer, and slip-modulated peg-in-hole, respectively. These results show that fingertip-aligned visual force representations can be effectively used for force-aware conditioning in VLA-based dexterous hand manipulation.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2609.25696v1" target="_blank" class="paper-title">The Cartesian Hand: In-Hand Manipulation with All-Linear Fingers</a>
-                        <span class="paper-date">2026-09-22</span>
-                    </div>
-                                        <span class="paper-comment">📝 9 pages, 7 figures</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Robotic manipulation has increasingly pursued human-like dexterous hands with many articulated degrees of freedom, offering rich manipulation capabilities at the cost of mechanical and control complexity. At the other extreme, parallel grippers are simple and robust, but provide little ability to manipulate an object after grasping it. Operating articulated objects such as threaded containers, manufacturing tools, and laboratory instruments often requires a second gripper, an external fixture, or coordinated arm motion. We introduce the Cartesian Hand, a 7-DoF end-effector that rethinks dexterous manipulation by combining independent grasping and relative manipulation within a single end-effector using only linear motion. Two independently actuated parallel grippers hold different parts of an object, while four translating fingertips generate relative motion between the grasped parts. Its configuration-independent fingertip kinematics allow manipulation to be composed from simple linear motion primitives. The Cartesian Hand is particularly suited to objects structured around common mechanisms such as threads, pivots, linear guides, plungers, and triggers. We demonstrate cap opening and closing, pipetting, pumping, two-handle manipulation, screwdriving, trigger actuation, and in-grasp reorientation across 35 objects spanning laboratory, manufacturing, and household settings. The same manipulation procedures transfer from a fixed-base robot arm to a humanoid, where we demonstrate bimanual laboratory manipulation using two Cartesian Hands. These results show that versatile in-hand manipulation capability can emerge from a mechanically simple architecture when independent grasping and relative motion are designed directly into the end-effector. We will open-source all software and hardware design. Our website is https://generalroboticslab.com/cartesian_handv1.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2605.16257v2" target="_blank" class="paper-title">DexJoCo: A Benchmark and Toolkit for Task-Oriented Dexterous Manipulation on MuJoCo</a>
-                        <span class="paper-date">2026-09-22</span>
-                    </div>
-                                        <span class="paper-comment">📝 8 pages, 6 figures, project page is available at: https://dexjoco.github.io</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Achieving human-level manipulation requires dexterous robotic hands capable of complex object interactions. Advancing such capabilities further demands standardized benchmarks for systematic evaluation. However, prior work does not focus on task-oriented dexterous manipulation. Existing benchmarks also often lack high quality human demonstrations and an easy-to-use evaluation pipeline. In this paper, we present DexJoCo, a benchmark and toolkit for task-oriented dexterous manipulation, comprising 11 functionally grounded tasks that evaluate tool-use, bimanual coordination, long-horizon execution, and reasoning. We develop a low-cost data collection system and collect 1.1K trajectories across these tasks, with support for domain randomization to assess robustness. We benchmark modern models under diverse settings, including visual and dynamics randomization, multi-task training, and action-head adaptation. Through extensive empirical analysis, we identify several important insights and common limitations of current policies in dexterous manipulation, highlighting key challenges for future research in dexterous hand robot learning. Code is available at: https://dexjoco.github.io</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2609.24976v1" target="_blank" class="paper-title">DexTacWAM: A Visuo-Tactile World-Action Model for Dexterous Manipulation</a>
-                        <span class="paper-date">2026-09-21</span>
-                    </div>
-                                        <span class="paper-comment">📝 22 pages. Project website: https://dextacwam.github.io/</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Dexterous manipulation depends on contact dynamics that are often only partially observable from vision. Recent World-Action Models (WAMs) couple predictive video world modeling with action generation, but remain largely vision-centric and therefore cannot directly model these contact dynamics. We present DexTacWAM, a visuo-tactile WAM that encodes each fingertip independently, aggregates the resulting features through a finger- and pose-aware tactile compressor, and injects the tactile latent into a video diffusion world model for joint visuo-tactile world modeling. Across six contact-rich dexterous manipulation tasks on a 22-DoF bimanual platform, DexTacWAM achieves the highest score on every task, averaging 70.6 versus 38.0 for the strongest baseline. Ablations attribute the gain to modeling contact evolution as part of the predicted world state rather than tactile conditioning alone: removing tactile world modeling reduces the four-task mean from 74.7 to 26.6 while keeping the same tactile features and action expert. After four hours of tactile-encoder adaptation with a frozen pretrained vision VAE, our continual vision-to-touch learning extends the pretrained video model to touch using roughly 100 demonstrations per task without tactile midtraining, while retaining visual prediction quality within 0.5 dB of vision-only counterparts. The compressor retains 89.4% of pre-fusion contact recall while enabling 2.26x faster training and 1.29x faster inference. Together, these results show that pretrained video priors can be extended to distributed multi-finger contact dynamics in a data- and compute-efficient manner.</p>
                     </details>
                 </div>
             </div>

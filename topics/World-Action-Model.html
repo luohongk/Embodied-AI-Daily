@@ -575,7 +575,7 @@
                 <a href="Feed-Forward-Reconstruction.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Feed Forward Reconstruction</span>
-                    <span class="nav-count">67</span>
+                    <span class="nav-count">68</span>
                 </a>
                 <a href="Vision-and-Language-Navigation.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -590,7 +590,7 @@
                 <a href="World-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">World Model</span>
-                    <span class="nav-count">78</span>
+                    <span class="nav-count">79</span>
                 </a>
                 <a href="3D-Foundation-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
@@ -690,12 +690,12 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">67</span>
+                    <span class="nav-count">59</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">78</span>
+                    <span class="nav-count">77</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -730,7 +730,7 @@
                 <a href="Model-Predictive-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#14b8a6"></span>
                     <span class="nav-label">Model Predictive Control</span>
-                    <span class="nav-count">55</span>
+                    <span class="nav-count">53</span>
                 </a>
                 <a href="Whole-Body-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#06b6d4"></span>
@@ -794,7 +794,7 @@
             <a href="Feed-Forward-Reconstruction.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Feed Forward Reconstruction</span>
-                <span class="nav-count">67</span>
+                <span class="nav-count">68</span>
             </a>
             <a href="Vision-and-Language-Navigation.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -809,7 +809,7 @@
             <a href="World-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">World Model</span>
-                <span class="nav-count">78</span>
+                <span class="nav-count">79</span>
             </a>
             <a href="3D-Foundation-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
@@ -909,12 +909,12 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">67</span>
+                <span class="nav-count">59</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">78</span>
+                <span class="nav-count">77</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -949,7 +949,7 @@
             <a href="Model-Predictive-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#14b8a6"></span>
                 <span class="nav-label">Model Predictive Control</span>
-                <span class="nav-count">55</span>
+                <span class="nav-count">53</span>
             </a>
             <a href="Whole-Body-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#06b6d4"></span>
@@ -1030,6 +1030,129 @@
             <div class="paper-list">
                 <div class="paper-card">
                     <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.20604v1" target="_blank" class="paper-title">VITAL: From Visual Motion to Precise Action</a>
+                        <span class="paper-date">2026-10-14</span>
+                    </div>
+                                        <span class="paper-comment">📝 Technical Report; 37 pages, 14 figures, 19 tables; Project Page at https://worldbench.github.io/vital GitHub at https://github.com/worldbench/VITAL</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>World-action models aim to turn visual anticipation into driving decisions, yet typically train action experts on trajectory representations defined independently of visual dynamics. This motivates deriving action targets directly from visual motion. We first examine a simpler setting in which trajectories are reconstructed from recorded future images. Even without the need for future prediction, reconstruction captures the dominant maneuver but leaves centimeter-scale errors. We therefore introduce VITAL (Vision-Induced Tokens for Action Learning), an action tokenizer that couples a visually derived motion scaffold with a compact residual encoding the trajectory error left by that scaffold. This representation makes visual motion the principal prediction target and gives small metric corrections a separate, normalized learning scale. Using flow matching, the action expert jointly predicts both components from the current image, ego state, and navigation command, without generating future images at inference. The same residual coordinates support bounded reinforcement post-training that refines execution while keeping the predicted visual scaffold fixed. With only one action denoising step, VITAL achieves 90.8 PDMS on NAVSIM v1 navtest, within 0.13 points of its ten-step score at 3.29x the end-to-end inference speed. Without retraining, it achieves 91.1 EPDMS on NAVSIM v2 navtest and 38.6 on navhard. Project page: https://worldbench.github.io/vital</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.20442v1" target="_blank" class="paper-title">Towards Agentic Robots: Model, Data, Environment, and Harness</a>
+                        <span class="paper-date">2026-10-14</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Foundation models are driving a paradigm shift in robotic intelligence, moving beyond low-level action prediction to goal-directed orchestration of data collection, model training, task planning, and real-world execution. We characterize this emerging paradigm as an agentic robots, in which agents reason over human instructions, interact with robotic environments, rectify execution errors autonomously, and dynamically adjust operational strategies. Although this field develops fast, current studies are not well connected. Researchers have no consistent view of how to combine different agentic functions into a complete robot system. This paper provides a unified overview of existing research on agentic robots. We first trace the development from robot policies to agentic systems, covering vision-language-action models, world models, and world-action models. We then clarify the definition and scope of agentic robots and organize existing research into seventeen categories across four functional domains: Model, Data, Environment, and Harness. Across these domains, we examine how agents shape model learning and robot decisions, collect and curate robot data, construct worlds, tasks, and tests for learning and evaluation, and organize capabilities for robot use. Finally, we discuss open challenges and outline directions for future research. Looking forward, we hope this work contributes to a clearer understanding of agentic robots and supports new approaches to making them more capable, reliable, and adaptive.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.18855v2" target="_blank" class="paper-title">Interaction Latents as Actions for Contact-Rich Manipulation</a>
+                        <span class="paper-date">2026-10-14</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Contact-rich manipulation requires robots to coordinate not only where to move, but also how contact and force should evolve throughout an interaction. Yet most robot policies represent actions primarily as motion trajectories, using tactile signals as inputs or auxiliary prediction targets without explicitly encoding contact dynamics in the action representation. We propose ILA (Interaction Latents as Actions), which uses decodable interaction latents that jointly capture the evolution of motion, contact, and force application as policy action units, providing a shared representation for action generation, evaluation, and offline improvement. We learn these latents through visually conditioned joint action-tactile reconstruction with a time-conditioned implicit decoder. Using them as flow-matching generation targets supports post-training of pretrained vision-language-action models (VLAs) and world action models (WAMs), as well as training flow-matching policies from scratch. A shared decoder maps generated latents to executable actions. For offline improvement, we learn a tactile-conditioned expert reference model from interaction latents encoded from expert demonstrations. The resulting expert-consistency rewards guide weighted learning from successful rollouts, while observation-compatible expert references guide correction of low-reward predictions from failed rollouts. Across three policy families, ILA improves success rates averaged over four real-world tasks by 21.0-36.5 percentage points relative to tactile-conditioned direct-action baselines. Ablations highlight the benefit of encoding contact evolution in action targets beyond tactile conditioning, while the same latent space supports expert-guided offline improvement. Project website: https://mrsecant.github.io/ILA/.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2609.35445v4" target="_blank" class="paper-title">NeuronSifter: An Agent-in-Twin for Prioritizing Central Nervous System Interventions with World Action Models</a>
+                        <span class="paper-date">2026-10-14</span>
+                    </div>
+                                        <span class="paper-comment">📝 The submission was made without obtaining authorization from all co-authors</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Effective central nervous system (CNS) intervention requires more than predicting biological responses: a scientific system must determine which intervention, observation, or additional evidence can improve a decision under uncertainty. However, in partially observed neuronal microenvironments, identical predicted outcomes may correspond to different exposure states, biological mechanisms, and intervention risks. We propose NeuronSifter, a decision-centric Agent-in-Twin framework, where an AI agent operates with an evolving biological digital twin rather than a fixed predictive model. NeuronSifter compiles interventions into state-conditional target-occupancy representations, propagates them through a mechanism-grounded World Action Model (WAM), and selects informative measurements based on their expected reduction in decision uncertainty. A shared probabilistic belief state couples intervention simulation, observation selection, and outcome assimilation, enabling the digital twin to continuously refine its decision-relevant representations through externally verified evidence. We evaluate NeuronSifter in Alzheimer's disease intervention scenarios using mechanistic neuronal microenvironment simulations and retrospective clinical endpoint references. The evaluation framework examines adaptive evidence acquisition, uncertainty-aware intervention planning, and robustness under model discrepancy through controlled environments and independent comparisons. NeuronSifter demonstrates how an AI system can actively identify missing evidence, refine biological hypotheses, and optimize intervention decisions under limited experimental budgets. Code is available at https://anonymous.4open.science/r/NeuronSifter.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2609.35338v2" target="_blank" class="paper-title">NeuronDiscover: Agent-in-Twin for Mechanistic Discovery in Neuronal Microenvironments with World Action Models</a>
+                        <span class="paper-date">2026-10-14</span>
+                    </div>
+                                        <span class="paper-comment">📝 The submission was made without obtaining authorization from all co-authors</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Mechanistic discovery in neuronal microenvironments requires interventions and measurements that separate competing explanations of solute transport and neuronal response. Predictive accuracy cannot settle the question: a real mechanistic change and an error in the computational twin leave the same signature in sparse observations. We formalize this twin confounding and reason over a joint mechanism--discrepancy belief, designing experiments that separate the two. NeuronDiscover is an Agent-in-Twin framework whose shared, mechanism-grounded World Action Model (WAM) couples prediction, intervention proposals, and observation design; independently adjudicated outcomes revise a scoped Mechanism--Intervention--Observation--Outcome (MIOY) graph, whose supported relations compile into executable programs carrying discrepancy-adjusted acceptance bounds. We evaluate on simulated brain-fluid tracer-transport worlds adjudicated by an independently frozen finer-mesh reference solver, and on donor-disjoint public current-clamp recordings of cortical neurons. Counting only relations that reach a certified terminal status, and scoring abstentions as unresolved for every method, at a matched budget of 16 experiments over 32 source units NeuronDiscover resolves 4.0 relations per assigned world against 3.4 for the strongest baseline and 3.2 without graph revision, at 5% false support and 82% scope accuracy. Joint mechanism--discrepancy acquisition resolves 3.8 relations versus 2.9 for plug-in expected information gain; discrepancy-adjusted verification lowers accepted-program failure from 15% to 9% at 60% acceptance coverage; and transfer to the recordings yields 1.94 versus 1.53 relations per assigned world. Correctness is adjudicated within declared model worlds and archival recordings.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.20157v1" target="_blank" class="paper-title">Atomic-WAM: Execution-Grounded Atomic-Motion Reasoning for World Action Models</a>
+                        <span class="paper-date">2026-10-14</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>World Action Models (WAMs) typically adapt video foundation models to robotic control through joint video and action prediction. However, task-level instructions may leave the next physical interaction underspecified, requiring semantic grounding and state-dependent motion selection. To this end, we introduce Atomic-WAM, an understand-then-execute framework that connects task reasoning to action generation through atomic-motion descriptions. Specifically, a vision-language reasoner describes the next local motion from the task instruction and visual context, guiding a WAM to predict future video and an action chunk. Furthermore, an automatic annotation pipeline curates temporally aligned, contact-enriched supervision from multi-view DROID demonstrations. To make atomic-motion predictions executable by the WAM, we post-train the reasoner with Execution-Grounded GRPO (EG-GRPO). With the WAM fixed, EG-GRPO adapts the reasoner through rewards for motion appropriateness and execution success. Finally, Atomic-WAM achieves 39.6% task success under default instructions and 31.6% under vague instructions in a real-to-sim evaluation on RoboLab. Project page: https://ssj9596.github.io/Atomic-WAM-project</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.18038v2" target="_blank" class="paper-title">Data-Free Continual Learning for World Action Model with Rectified Generative Replay</a>
+                        <span class="paper-date">2026-10-14</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>World action models (WAMs) built on pretrained video generation models adapt quickly to new robotic tasks, but they forget previously learned tasks under sequential fine-tuning. Experience replay (ER) mitigates such forgetting by rehearsing data of previous tasks, yet this data is often unavailable in robotics, where a policy is deployed as weights only and its training data is not shared along with it. In this work, we ask whether a WAM can achieve data-free continual learning by regenerating its own past. Our key observation is that a WAM can indeed autoregressively regenerate complete rollouts of previously learned tasks and replay them to mitigate forgetting. However, replaying such raw rollouts still lags far behind replaying real data, which we attribute to two issues. First, the WAM is unable to recognize task completion and keeps generating purposeless motion after the task is done. Second, under open-loop generation, the generated actions gradually drift away from the generated observations. To address both issues, we present rectified generative replay (R$^2$-WAM), which truncates generated rollouts at task completion with an agentic evaluator and filters out rollouts whose actions are physically inconsistent with the observations. On the four LIBERO suites and five real-world tasks, R$^2$-WAM reduces forgetting by over 90% relative to sequential fine-tuning and nearly matches ER without accessing any data from previous tasks. Our analysis further reveals that forgetting in WAMs concentrates in inverse dynamics modeling: a forgotten WAM still produces visually plausible observations of previous tasks while its generated actions fail. Project page: https://kaipengfang.github.io/r2-wam/</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.19957v1" target="_blank" class="paper-title">Complementary Future Token Pruning for World Action Models</a>
+                        <span class="paper-date">2026-10-14</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>World action models (WAMs) jointly predict future visual states and robot actions, but processing dense future-frame tokens incurs substantial inference latency. We propose CF-Prune, a training-free framework for pruning future-frame tokens in pretrained WAMs. Our key insight is that future visual predictions support action generation and therefore need not preserve every visual detail required for high-fidelity video synthesis. CF-Prune combines instruction and action attention to identify task-relevant tokens during the initial denoising forward pass, even when future-frame and action representations remain highly noisy. An entropy-based phase identification mechanism further retains dense computation during precision phases to mitigate pruning-induced performance degradation. Experiments on RoboLab, RoboCasa, and real-world manipulation tasks demonstrate consistent inference speedups. At a 35% pruning ratio, CF-Prune achieves average speedups of 1.19-1.27x while improving task success rates. At a 50% pruning ratio, it achieves 1.29-1.33x average speedups on both simulation benchmarks, with overall success rates within 1.0 percentage point of the baseline.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.16242v2" target="_blank" class="paper-title">Same Goal, Different Words: Spatial Instruction Sensitivity in World-Action Models</a>
+                        <span class="paper-date">2026-10-14</span>
+                    </div>
+                                        <span class="paper-comment">📝 19 pages, including appendices. Corrected the spelling and affiliation of Taşkın Padır and added his institutional disclaimer. Scientific content unchanged</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>World-action models should preserve the intended manipulation across equivalent descriptions of a spatial goal. We evaluate this consistency in 864 rollouts from three models across four RoboLab scenes, holding initial states and task goals fixed. Describing relations through the reference object rather than the object-to-move lowers the rate of reaching a stable placement by 12.2 percentage points on average. The effect of instruction rephrasing varies across spatial relations, so aggregate scores can hide sensitivity to wording. Standalone tests of the policies' language understanding identify relation reversals and show that adding images can disrupt otherwise correct text-only interpretations. Rollout analysis also distinguishes spatial placement from instruction following: moving the wrong object can satisfy the requested relation, and rates of stable placement fall from 43.2% at any time to 21.8% at episode end. These findings motivate a more thorough evaluation of world-action models' steerability, language understanding, and grounding. Evaluations should test consistency across equivalent instructions, verify that the intended object moved, and check whether the requested arrangement persists to the end of the rollout.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.10232v2" target="_blank" class="paper-title">FACT: Failure-Aware Causal Training for World-Action Models</a>
+                        <span class="paper-date">2026-10-13</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有世界-动作模型（WAMs）主要基于成功示范训练，缺乏对失败动作后果的预测能力，导致在遇到不良动作时产生有偏的未来幻觉。&#10;&#10;🛠 **方法**：提出FACT（Failure-Aware Causal Training），一种因果世界-动作模型，通过动作条件化接口将失败轨迹纳入训练，使模型能预测执行动作后的未来视频和任务进度，并可选地用于推理时对候选动作进行评分。&#10;&#10;✨ **主要贡献**：在仿真和真实双臂操作任务中，FACT优于多种现有基线；随着失败数据的加入，性能持续提升，并显著减少了不良动作下的成功偏置幻觉，展示了失败感知训练的有效性。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Recent world-action models (WAMs) show that co-training policies with future prediction can provide physical priors for action generation. Building on the future-prediction ability of video models, many WAMs generate future videos and recover actions with inverse-dynamics models, or use these predicted videos as goal conditions for action generation. In both cases, the world model is trained mostly on successful demonstrations and has little reason to predict the consequences of bad actions. We introduce FACT, a causal World-Action Model that predicts future video and task progress conditioned on the executed action. This action-conditioned interface allows failure rollouts to supervise action consequences, turning bad actions into valid future targets rather than being discarded. Failure-aware training makes the progress predictor aware of both successful and failed action outcomes, which can optionally be used to score sampled action candidates at inference. Extensive experiments on simulation and real-world bimanual manipulation tasks show that FACT outperforms many existing baselines, improves as failure data are incorporated into training, and reduces success-biased future hallucination under bad actions. See more details at https://fact-wam.github.io/</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
                         <a href="https://arxiv.org/abs/2610.18873v1" target="_blank" class="paper-title">LoopWAM: Closed-Loop Generalist Policy Improvement from Deployment Rollouts</a>
                         <span class="paper-date">2026-10-13</span>
                     </div>
@@ -1038,18 +1161,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Scaling expert demonstrations alone does not enable generalist robot policies to improve from deployment. Real-world rollouts contain successes, suboptimal behavior, and failures: imitating every recorded action can reinforce poor behavior, while filtering out failures discards evidence of physical interactions and their consequences. We introduce \textbf{LoopWAM}, a closed-loop world-action model that learns directly from this full quality spectrum, using rollouts from both itself and other deployed policies. Source-dependent noise sampling unifies behavior learning and action-conditioned world modeling, while quality steering and quality-weighted supervision retain full video supervision across qualities and regulate action imitation. Video and action tokens interact throughout parallel denoising, allowing learned consequences to inform action generation directly. On RoboChallenge Table30-V2, three deployment-and-training rounds raise success from 23.67\% to 43.33\%, a 19.7-percentage-point gain, with a final score of 56.80. LoopWAM also achieves 94.5\% average success on RoboTwin~2.0 and 49.5\% overall success on RoboCasa365 without additional embodied pretraining, obtaining the best overall results among the compared methods across all three benchmarks. On challenging shirt folding task, two rounds of deployment-driven improvement after single-task post-training raise success from 13.20\% to 55.56\%. These results demonstrate closed-loop improvement from mixed-quality experience under both multi-task learning and single-task post-training. \href{https://loop-wam.github.io/}{\textcolor{orange}{Project Page}}</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2610.18855v1" target="_blank" class="paper-title">Interaction Latents as Actions for Contact-Rich Manipulation</a>
-                        <span class="paper-date">2026-10-13</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Contact-rich manipulation requires robots to coordinate not only where to move, but also how contact and force should evolve throughout an interaction. Yet most robot policies represent actions primarily as motion trajectories, using tactile signals as inputs or auxiliary prediction targets without explicitly encoding contact dynamics in the action representation. We propose ILA (Interaction Latents as Actions), which uses decodable interaction latents that jointly capture the evolution of motion, contact, and force application as policy action units, providing a shared representation for action generation, evaluation, and offline improvement. We learn these latents through visually conditioned joint action-tactile reconstruction with a time-conditioned implicit decoder. Using them as flow-matching generation targets supports post-training of pretrained vision-language-action models (VLAs) and world action models (WAMs), as well as training flow-matching policies from scratch. A shared decoder maps generated latents to executable actions. For offline improvement, we learn a tactile-conditioned expert reference model from interaction latents encoded from expert demonstrations. The resulting expert-consistency rewards guide weighted learning from successful rollouts, while observation-compatible expert references guide correction of low-reward predictions from failed rollouts. Across three policy families, ILA improves success rates averaged over four real-world tasks by 21.0-36.5 percentage points relative to tactile-conditioned direct-action baselines. Ablations highlight the benefit of encoding contact evolution in action targets beyond tactile conditioning, while the same latent space supports expert-guided offline improvement. Project website: https://mrsecant.github.io/ILA/.</p>
                     </details>
                 </div>
                 <div class="paper-card">
@@ -1106,10 +1217,7 @@
                         <span class="paper-date">2026-10-13</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有机器人基础模型缺乏对3D物理世界动态和因果效应的推理能力，导致2D视觉感知与3D具身交互之间存在根本性不匹配，严重限制了模型在真实任务中的泛化能力。&#10;&#10;🛠 **方法**：提出WSA₁模型，基于3D-Centric World-Spatial-Action建模范式，学习3D世界感知的视觉思维以预测未来行为，并建模3D世界状态变化与机器人动作之间的相互约束。&#10;&#10;✨ **主要贡献**：仅使用6千小时专家演示数据（其中仅1千小时来自真实机器人）即可实现高效预训练，在RoboTwin2.0仿真基准上达到93%成功率，并在真实机器人控制任务中平均性能提升20%以上，证明无需大规模真实数据即可实现可泛化的机器人基础模型。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>World-Action Models (WAMs) have emerged as a promising paradigm for robot control by using predicted world evolution to guide action generation. However, existing WAMs largely follow a one-way world-to-action paradigm. Real-world interaction, in contrast, is inherently driven by bidirectional temporal causality with implicit physics: the evolving world informs what actions should be taken, while the executed actions, in turn, determine how the world evolves. Without explicitly modeling this action-to-world direction, WAMs cannot assess whether the consequences of their generated actions align with the world evolution they predict, preventing WAMs from capturing consistent interaction dynamics from video demonstrations and thereby constraining their generalization capabilities in real-world scenarios. In this paper, we introduce WSA$_1$, a new modeling paradigm for generalizable robot control. WSA$_1$ develops a World-Spatial-Action understanding by jointly modeling three interconnected processes: how actions transform the 3D world (world level), how spatial states evolve toward desired outcomes (spatial level), and how target 3D world guide appropriate robot behaviors (action level). By integrating these processes, WSA$_1$ enables more coherent and tightly coupled reasoning over embodied interactions. Compared with prior WAMs trained on tens of thousands of hours of real-robot data, WSA$_1$ leverages 6k hours of video demonstrations (only 1k from real robot), demonstrating strong data efficiency. Moreover, even our 3B-parameter WSA$_1$ surpasses larger WAMs with 6B-8B parameters, highlighting its parameter efficiency. Experiments show that WSA$_1$ achieves a 93.3% success rate on RoboTwin2.0, delivering an average 20% improvement over state-of-the-art models on real-world robot control tasks.</p>
@@ -1125,18 +1233,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>World-action models have recently improved autonomous driving by jointly learning future scene prediction and trajectory generation. Most existing approaches model the future primarily through RGB appearance, and recent works have begun to incorporate geometric prediction to improve spatial understanding. However, dense geometry describes the spatial layout of the entire scene without indicating which parts are most relevant to the ego vehicle's action. For driving, the model must also identify and anticipate where it can safely move and which regions may pose collision risks. Jointly modeling action-relevant regions and future geometry can provide the policy with both driving-relevant cues and their corresponding spatial structure. We therefore propose AffordDrive3D, an affordance- and geometry-aware world-action model that jointly learns future action-relevant regions and spatial structure. In order to capture the scene semantics and driving context needed for driving affordance prediction, we build AffordDrive3D on a VLM backbone to forecast drivable areas and collision-critical regions that directly affect ego motion, while predicting future geometry from RGB world-model latents. On NAVSIM, AffordDrive3D achieves state-of-the-art performance with 91.3 PDMS and 89.9 EPDMS, demonstrating the effectiveness of jointly modeling future affordances and geometry for trajectory planning. Project Page: https://afforddrive3d.github.io/</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2610.18038v1" target="_blank" class="paper-title">Data-Free Continual Learning for World Action Model with Rectified Generative Replay</a>
-                        <span class="paper-date">2026-10-13</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>World action models (WAMs) built on pretrained video generation models adapt quickly to new robotic tasks, but they forget previously learned tasks under sequential fine-tuning. Experience replay (ER) mitigates such forgetting by rehearsing data of previous tasks, yet this data is often unavailable in robotics, where a policy is deployed as weights only and its training data is not shared along with it. In this work, we ask whether a WAM can achieve data-free continual learning by regenerating its own past. Our key observation is that a WAM can indeed autoregressively regenerate complete rollouts of previously learned tasks and replay them to mitigate forgetting. However, replaying such raw rollouts still lags far behind replaying real data, which we attribute to two issues. First, the WAM is unable to recognize task completion and keeps generating purposeless motion after the task is done. Second, under open-loop generation, the generated actions gradually drift away from the generated observations. To address both issues, we present rectified generative replay (R$^2$-WAM), which truncates generated rollouts at task completion with an agentic evaluator and filters out rollouts whose actions are physically inconsistent with the observations. On the four LIBERO suites and five real-world tasks, R$^2$-WAM reduces forgetting by over 90% relative to sequential fine-tuning and nearly matches ER without accessing any data from previous tasks. Our analysis further reveals that forgetting in WAMs concentrates in inverse dynamics modeling: a forgotten WAM still produces visually plausible observations of previous tasks while its generated actions fail.</p>
                     </details>
                 </div>
                 <div class="paper-card">
@@ -1269,18 +1365,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Recent world action models draw on video generation priors to jointly predict future observations and robot actions. Adapting these priors to control requires determining how future predictions should guide policy learning. RAP-WAM combines predictive Rehearsal and Action Perturbations (RAP) with future-supervised queries and Coupled Action Projection for policy learning. Predictive rehearsal trains on model-generated inputs while retaining recorded targets, and accumulates recurring errors into a spatial prior. We perturb actions and measure changes in video predictions. Action-response-based spatiotemporal credit assignment combines these responses, prediction error, and the rehearsal prior to allocate visual supervision; spatially aggregating the responses determines supervision intensity across future action steps. No separate scoring network or deployment-time probe is required. The base learns from a video-pretrained backbone without intermediate pretraining on external embodied data. We evaluate the fixed base and its agent-refined, task-conditioned system. On 42 RoboDojo tasks, their average success rates are 12.85% and 15.62%, with Scores of 17.86 and 20.59. Across 15 real-robot tasks, the complete system achieves 89.00% task-macro-average success, exceeding the strongest of five baselines by 37.67 percentage points. Across 315 fixed-output simulation windows, 45.21% of response-top20 positions fall outside error-top20, revealing information beyond prediction error.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2610.16242v1" target="_blank" class="paper-title">Same Goal, Different Words: Spatial Instruction Sensitivity in World-Action Models</a>
-                        <span class="paper-date">2026-10-12</span>
-                    </div>
-                                        <span class="paper-comment">📝 18 pages, including appendices</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>World-action models should preserve the intended manipulation across equivalent descriptions of a spatial goal. We evaluate this consistency in 864 rollouts from three models across four RoboLab scenes, holding initial states and task goals fixed. Describing relations through the reference object rather than the object-to-move lowers the rate of reaching a stable placement by 12.2 percentage points on average. The effect of instruction rephrasing varies across spatial relations, so aggregate scores can hide sensitivity to wording. Standalone tests of the policies' language understanding identify relation reversals and show that adding images can disrupt otherwise correct text-only interpretations. Rollout analysis also distinguishes spatial placement from instruction following: moving the wrong object can satisfy the requested relation, and rates of stable placement fall from 43.2% at any time to 21.8% at episode end. These findings motivate a more thorough evaluation of world-action models' steerability, language understanding, and grounding. Evaluations should test consistency across equivalent instructions, verify that the intended object moved, and check whether the requested arrangement persists to the end of the rollout.</p>
                     </details>
                 </div>
                 <div class="paper-card">
@@ -1425,18 +1509,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>World Action Models (WAMs) combine action generation with future prediction, allowing predicted futures to support action evaluation and robot decision making. However, the future associated with a candidate action may contain action-induced and environment-driven changes. Directly evaluating the predicted future may not fully characterize the future change associated with the candidate action. For example, a candidate action that worsens a favorable environmental future may still yield a favorable outcome, while one that improves an unfavorable environmental future may still yield an unfavorable outcome. To analyze this issue, we formulate a Structural Causal Model (SCM) for action evaluation in WAMs. The SCM formalizes how action-induced and environment-driven changes jointly shape future evaluation, and reveals a backdoor path through which environmental evolution can also affect the future evaluation associated with a candidate action. Intervention and backdoor adjustment account for this path, providing a causal basis for characterizing the future change associated with each candidate action. Based on this analysis, we propose Causal Action-Gain World Action Model (CAG-WAM). For each candidate action, CAG-WAM predicts an action-conditioned future and an environmental future under the same current observation, and defines their evaluation difference as causal action gain (CAG) for characterizing the future change associated with the candidate action. During training, we incorporate CAG into Group Relative Policy Optimization (GRPO) to guide robot policy learning. During inference, we evaluate the initial action with CAG and, when needed, revise it using predicted future information. Experiments on multiple benchmarks support the effectiveness of CAG-WAM.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2609.35445v3" target="_blank" class="paper-title">NeuronSifter: An Agent-in-Twin for Prioritizing Central Nervous System Interventions with World Action Models</a>
-                        <span class="paper-date">2026-10-10</span>
-                    </div>
-                                        <span class="paper-comment">📝 43 pages, including references and appendices</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Effective central nervous system (CNS) intervention requires more than predicting biological responses: a scientific system must determine which intervention, observation, or additional evidence can improve a decision under uncertainty. However, in partially observed neuronal microenvironments, identical predicted outcomes may correspond to different exposure states, biological mechanisms, and intervention risks. We propose NeuronSifter, a decision-centric Agent-in-Twin framework, where an AI agent operates with an evolving biological digital twin rather than a fixed predictive model. NeuronSifter compiles interventions into state-conditional target-occupancy representations, propagates them through a mechanism-grounded World Action Model (WAM), and selects informative measurements based on their expected reduction in decision uncertainty. A shared probabilistic belief state couples intervention simulation, observation selection, and outcome assimilation, enabling the digital twin to continuously refine its decision-relevant representations through externally verified evidence. We evaluate NeuronSifter in Alzheimer's disease intervention scenarios using mechanistic neuronal microenvironment simulations and retrospective clinical endpoint references. The evaluation framework examines adaptive evidence acquisition, uncertainty-aware intervention planning, and robustness under model discrepancy through controlled environments and independent comparisons. NeuronSifter demonstrates how an AI system can actively identify missing evidence, refine biological hypotheses, and optimize intervention decisions under limited experimental budgets. Code is available at https://anonymous.4open.science/r/NeuronSifter.</p>
                     </details>
                 </div>
                 <div class="paper-card">
@@ -1917,78 +1989,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Scaling robot data is crucial for building generalist Vision-Language-Action (VLA) models, yet robot trajectories are harder to scale than web-scale image-text data because embodied collection is costly and sparsely covers the physical world. This makes representation quality a central bottleneck: under a fixed robot-data budget, continued pre-training must turn limited trajectories into transferable visual-action knowledge rather than merely fit actions. We propose VLAct, a VLA-oriented VLM backbone trained on broad, heterogeneous, multi-embodiment robot data before task-specific fine-tuning. VLAct preserves the broad VLM prior and encourages shared action semantics across embodiments through VLM-prior preservation, multi-head continuous action co-supervision, and a partially unified cross-embodiment action layout, while allowing task-specific action heads during fine-tuning. Across simulation, real-world, and unseen-embodiment transfer, VLAct consistently improves downstream performance under fixed fine-tuning protocols. On LIBERO-Plus and RoboTwin 2.0, VLAct surpasses industrial VLA systems including ABot-M0 and LingBot-VLA, achieving success rates of 82.6% and 92.5%. On RoboDojo, VLAct ranks sixth among all policies by success rate and outperforms all explicitly designated world-action model (WAM) entries on both metrics. Most notably, on RoboCasa-GR1, an unseen humanoid embodiment, VLAct using only 20% of downstream trajectories outperforms the full-data GR00T-N1.6 baseline. These results are obtained using fully open-source data and only a 16-GPU training setup, showing that representation-centric continued pre-training can deliver highly competitive performance under a modest compute budget and is an important independent axis of VLA progress beyond data scaling.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2610.01559v2" target="_blank" class="paper-title">Completion Aware Guidance for World Action Models</a>
-                        <span class="paper-date">2026-10-06</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>World Action Models (WAMs) predict visual futures and robot actions, yet they remain susceptible to task-incomplete imagination, where plausible, action-consistent predictions omit the transition needed for task completion. In this paper, we show that this failure is not inherent to the world model backbone, but emerges when adapted for short-chunk control, which can repeatedly favor plausible local continuations over task-completing transitions. To address this, we introduce Completion Aware Guidance (CAG), a training-free sampling method that guides generation toward task completion. Across representative WAMs, CAG improves success from 64% to 70% on a RoboTwin 2.0 subset and from 69% to 75% in zero-shot simulation, while reducing task-incomplete imagination from 79% to 40%.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2605.07079v2" target="_blank" class="paper-title">Learning Visual Feature-Based World Models via Residual Latent Action</a>
-                        <span class="paper-date">2026-10-05</span>
-                    </div>
-                                        <span class="paper-comment">📝 NeurIPS 2026</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>World models predict future transitions from observations and actions. Existing works predominantly focus on image generation only. Visual feature-based world models, on the other hand, predict future visual features instead of raw video pixels, offering a promising alternative that is more efficient and less prone to hallucination. However, current feature-based approaches rely on direct regression, which leads to blurry or collapsed predictions in complex interactions, while generative modeling in high-dimensional feature spaces still remains challenging. In this work, we discover that a new type of latent action representation, which we refer to as Residual Latent Action (RLA), can be easily learned from DINO residuals. We also show that RLA is predictive, generalizable, and encodes temporal progression. Building on RLA, we propose RLA World Model (RLA-WM), which predicts RLA values via flow matching. RLA-WM outperforms both state-of-the-art feature-based and video-diffusion world models on simulation and real-world datasets, while being orders of magnitude faster than video diffusion. Furthermore, we develop two robot learning techniques that use RLA-WM to improve policy learning. The first one is a minimalist world action model with RLA that learns from actionless videos, and improves VLA on LIBERO and real robot. The second one is a visual RL framework trained entirely inside a world model learned from offline videos only, using a video-aligned reward and no online interactions. Project page: https://mlzxy.github.io/rla-wm</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2609.30247v2" target="_blank" class="paper-title">Rolling-WAM: World Action Models with Rolling Imagination</a>
-                        <span class="paper-date">2026-10-05</span>
-                    </div>
-                                        <span class="paper-comment">📝 10 pages, 7 figures, 5 tables. Under review. Project page: https://rolling-wam.github.io/</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>World Action Models (WAMs) couple action generation with future visual prediction for robotic manipulation. However, completing the joint video-action denoising process at each replanning cycle incurs substantial latency, delaying action updates and limiting closed-loop responsiveness. We present Rolling-WAM, a formulation that distributes joint denoising across successive replanning cycles. Our method maintains a sliding window of video-action chunks at staggered noise levels. At each step, a rolling noise schedule fully denoises the imminent action chunk for execution, while partially refining farther-future chunks. As the window advances with new camera observations, the retained future chunks continue their denoising process. This distributes the computational cost over time while carrying an evolving visual-action context across chunk boundaries. Evaluations on LIBERO, RoboTwin, and a real-world Unitree G1 humanoid show that Rolling-WAM achieves competitive manipulation performance. By removing the need to denoise the entire prediction horizon from scratch, it delivers a 4.5x steady-state replanning speedup over standard joint WAMs.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2610.06617v1" target="_blank" class="paper-title">RealtimeWAM: One-Step Asynchronous World Action Models</a>
-                        <span class="paper-date">2026-10-05</span>
-                    </div>
-                                        <span class="paper-comment">📝 The code and checkpoints are available at $\href{https://github.com/ModelTC/LightX2V/tree/main/examples/realtimewam}{\text{this https URL}}$</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>World Action Models (WAMs) incorporate visual representations from video generation backbones to guide action prediction. Recent efficient WAMs adopt Mixture-of-Transformers (MoT) architectures and compute video representations once for reuse by the action expert. However, intra-expert iteration (\ie, multi-step action denoising) and inter-expert waiting (\ie, sequential execution of the video and action experts) still limit inference efficiency. To this end, we present RealtimeWAM, an extremely efficient WAM variant with one-step action generation and asynchronous inference, addressing these two bottlenecks. To reduce intra-expert iteration, we propose Teacher-Anchored Consistency Distillation (TACD) to address a local-global error gap: low local consistency error alone does not guarantee accurate final actions. TACD supplements local consistency with explicit supervision from the frozen teacher's multi-step rollout endpoint, enabling accurate one-step action generation. Additionally, we propose Cross-Expert Wavefront Pipelining (CEWP) to eliminate unnecessary expert-level waiting. It overlaps the two experts through block-wise sharing of the video KV cache, synchronizing only immediately before the corresponding action attention consumes it. Extensive experiments across diverse benchmarks (\eg, LIBERO, LIBERO-Plus and RoboTwin) and model variants (\eg, Fast-WAM and Faster-WAM) demonstrate the superiority of RealtimeWAM. Notably, RealtimeWAM maintains near-lossless performance (\ie, $<1\%$ drop) across these benchmarks while delivering significant end-to-end speedup (\eg, $\sim25\times$ on H100). Our code and checkpoints are available via this \href{https://github.com/ModelTC/LightX2V/tree/main/examples/realtimewam}{link}.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2610.06280v1" target="_blank" class="paper-title">Future Anchored Verification and Online Recovery for World Action Models</a>
-                        <span class="paper-date">2026-10-05</span>
-                    </div>
-                                        <span class="paper-comment">📝 18 pages, 5 figures, 3 tables</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>World action models (WAMs) have emerged as a promising paradigm for robotic manipulation. They act by first predicting how a task should be performed and then decoding the actions from that future. However, the remaining actions are invalid once execution drifts from the prediction. Simply replanning from the already out of distribution state rarely restores what the task still requires; existing execution monitors decide when to stop, but not what to restore. We observe that the answer is already in hand: the future the WAM predicted before acting depicts exactly the states it intended to pass through. We introduce FAVOR (Future Anchored Verification and Online Recovery), a lightweight framework that keeps these predicted frames as anchors and uses them for verification and recovery. An Anchor Verifier compares each observation with its anchor, together with the executed actions, to flag deviations that break the task. Anchor-Guided Recovery uses a vision-language model to turn the flagged anchor into a short corrective instruction. Under strengthened instruction guidance, the WAM executes this instruction to return to the intended future. It then resumes the task. FAVOR raises the task success of the base WAM from 97.85% to 98.10% on LIBERO and from 72.60% to 72.98% on LIBERO-Plus without modifying the policy.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2610.06235v1" target="_blank" class="paper-title">Encoded but Not in Control: Revealing the Grounding Gap in Vision-Language Robot Policies</a>
-                        <span class="paper-date">2026-10-05</span>
-                    </div>
-                                        <span class="paper-comment">📝 30 pages, 7 figures</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Instruction following is central to language-conditioned robot policies: language should determine what to do when the same scene permits multiple valid actions. Yet successful execution alone cannot establish whether a policy follows the instruction or infers the task from the scene. We study this ambiguity through scene-preserving instruction interventions, using valid target substitutions, arbitrary nouns, and unrelated sentences while holding the scene fixed. We evaluate vision-language-action (VLA) policies and world-action models (WAMs) in simulation and in real-world experiments. Our analysis addresses three questions: (a) Does task success imply instruction following? When instructions request a different visible object, all evaluated policies predominantly approach and pick up the incorrect original target associated with the scene. (b) Is this failure caused by language insensitivity? Instruction perturbations affect task performance. A layerwise action lens shows intermediate action predictions respond to these perturbations. Linear probes accurately recover instructed targets, indicating modified instructions are encoded despite rarely determining target selection. (c) Why does encoded language fail to control action? Attention analysis indicates weak instruction-token contributions to action generation. Target-token attention can remain focused on the original object, revealing a mismatch between target encoding and visual grounding. UMAP and shared non-negative matrix factorization show target information remains accessible within representations increasingly organized by scene identity. Our findings expose a grounding gap concealed by nominal success and provide a diagnostic framework. They further establish a concrete criterion for progress: policies should reliably follow valid changes in user intent, even when they conflict with scene-favored behavior.</p>
                     </details>
                 </div>
             </div>

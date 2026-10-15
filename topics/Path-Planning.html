@@ -575,7 +575,7 @@
                 <a href="Feed-Forward-Reconstruction.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Feed Forward Reconstruction</span>
-                    <span class="nav-count">67</span>
+                    <span class="nav-count">68</span>
                 </a>
                 <a href="Vision-and-Language-Navigation.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -590,7 +590,7 @@
                 <a href="World-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">World Model</span>
-                    <span class="nav-count">78</span>
+                    <span class="nav-count">79</span>
                 </a>
                 <a href="3D-Foundation-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
@@ -690,12 +690,12 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">67</span>
+                    <span class="nav-count">59</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">78</span>
+                    <span class="nav-count">77</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -730,7 +730,7 @@
                 <a href="Model-Predictive-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#14b8a6"></span>
                     <span class="nav-label">Model Predictive Control</span>
-                    <span class="nav-count">55</span>
+                    <span class="nav-count">53</span>
                 </a>
                 <a href="Whole-Body-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#06b6d4"></span>
@@ -794,7 +794,7 @@
             <a href="Feed-Forward-Reconstruction.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Feed Forward Reconstruction</span>
-                <span class="nav-count">67</span>
+                <span class="nav-count">68</span>
             </a>
             <a href="Vision-and-Language-Navigation.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -809,7 +809,7 @@
             <a href="World-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">World Model</span>
-                <span class="nav-count">78</span>
+                <span class="nav-count">79</span>
             </a>
             <a href="3D-Foundation-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
@@ -909,12 +909,12 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">67</span>
+                <span class="nav-count">59</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">78</span>
+                <span class="nav-count">77</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -949,7 +949,7 @@
             <a href="Model-Predictive-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#14b8a6"></span>
                 <span class="nav-label">Model Predictive Control</span>
-                <span class="nav-count">55</span>
+                <span class="nav-count">53</span>
             </a>
             <a href="Whole-Body-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#06b6d4"></span>
@@ -1028,6 +1028,18 @@
                 <span class="topic-count">74 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.20476v1" target="_blank" class="paper-title">Tiered-Resolution Volumetric Mapping for Real-Time Simultaneous Planning and Mapping on Natural Outdoor Environments</a>
+                        <span class="paper-date">2026-10-14</span>
+                    </div>
+                                        <span class="paper-comment">📝 5 pages, 5 figures, 2 tables, IROS 2026 "Data in Field Robotics: From State Estimation to Navigation" workshop</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Real-time volumetric mapping for a planning robot is dominated by the cost of integrating and storing information at the finest resolution, yet only a small fraction of any map ever lies on or near a path the planner actually considers. We exploit this with a tiered-resolution mapping mechanism that integrates LiDAR into a single map structure at two resolutions simultaneously: fine inside a corridor around the robot's current plan, and coarse everywhere else. As opposed to traditional navigation pipelines where path planning uses the mapping result and provides no feedback, we propose a feedback loop where planning also informs mapping to dynamically integrate information at different leaf resolutions. Across two real-world teleoperated datasets, replayed and scored offline against an independent full-resolution map, the tiered maps are 13-15x smaller and require 6-8x less integration CPU time than a uniform fine map, while producing paths at a similar cost per meter as the ones generated from fine resolution maps on both scenarios. A uniform coarse map reaches the same size savings but its path quality collapses (+210% cost per meter) on the harder scenario, because it over-discretizes terrain the robot must traverse. Tiering approximates the coarse map's cheapness without its failure mode.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2607.00065v2" target="_blank" class="paper-title">Optimal any-angle path planning in static and dynamic environments</a>
@@ -1908,18 +1920,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Estimating environmental states with multi-robot systems becomes particularly challenging when robots are equipped with uncalibrated and therefore heterogeneous sensors, whose nonlinear and inconsistent responses prevent reliable information fusion. In this paper, we propose a distributed probabilistic framework for source localization tasks that enables calibration-free estimation in the presence of sensor heterogeneity. The key idea is that each robot independently estimates a local belief using a rank-based feature that captures the relative evolution of observations and is invariant to sensor scaling and nonlinearities. These local beliefs are then fused through a product of experts formulation to obtain a consistent global estimate across the team. To further improve the efficiency of team coordination, we introduce an informative region allocation and path planning strategy that reduces redundant exploration while balancing exploration and exploitation. We validate the proposed framework using high-fidelity simulations with realistic gas sensor models. Results demonstrate that our method significantly outperforms a benchmark method based on standard measurement aggregation, achieving reliable source localization accuracy despite strong sensor heterogeneity. More broadly, this work demonstrates how calibration-free sensing representations can be effectively extended to distributed robotic systems, paving the way for their application to other estimation tasks involving heterogeneous sensors.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2608.26939v1" target="_blank" class="paper-title">Dynamic Haven Selection for Multi-Agent Pickup and Delivery in Constrained Warehouses</a>
-                        <span class="paper-date">2026-08-27</span>
-                    </div>
-                                        <span class="paper-comment">📝 19 pages, 4 figures, and 3 tables. Accepted at the Joint Workshop on Planning for Complex Real-World Applications (CAIPI) and Bridging the Gap Between AI Planning and (Reinforcement) Learning (PRL), co-located with IJCAI-ECAI 2026</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Space-efficient warehouse layouts often contain single-agent-width aisles and dead-end workstations where robots have few places to wait without blocking others. In Multi-Agent Pickup and Delivery (MAPD) on such constrained layouts, robots must accept online pickup-delivery tasks while preserving protected waiting locations called Havens. The Safe HAven Retreat Planner (SHARP) introduced a mechanism that extends each committed task path with a validated retreat to the agent's dedicated initial Haven, but fixed-Haven commitments can send agents toward distant Havens after deliveries. We present A-sharp (Adaptive SHARP), which changes an agent's retreat target at task assignment time. A naive switch can cause two agents to rely on the same waiting location or let another committed path pass through a location that is still occupied or reserved. A-sharp prevents these failures with an availability test for candidate Havens and a pending-release rule that keeps the previous Haven protected until the agent departs. Under explicit Haven-structure and Safe Interval Path Planning (SIPP) assumptions, we prove invariant preservation and finite-release completeness: every task in any finite release sequence is delivered in finite time. Across 72,000 runs on 14,400 paired map-agent-count-rate-seed cases over four maps, both SHARP and A-sharp complete their respective 14,400 runs. For makespan (final delivery time), a prespecified paired comparison with Holm correction over all 138 configurations with more Havens than agents finds A-sharp significantly better in 107 configurations and never significantly worse than SHARP; on the tested tree map, the median reduction is 16.7%.</p>
                     </details>
                 </div>
             </div>

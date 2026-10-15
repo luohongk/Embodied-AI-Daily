@@ -575,7 +575,7 @@
                 <a href="Feed-Forward-Reconstruction.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Feed Forward Reconstruction</span>
-                    <span class="nav-count">67</span>
+                    <span class="nav-count">68</span>
                 </a>
                 <a href="Vision-and-Language-Navigation.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -590,7 +590,7 @@
                 <a href="World-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">World Model</span>
-                    <span class="nav-count">78</span>
+                    <span class="nav-count">79</span>
                 </a>
                 <a href="3D-Foundation-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
@@ -690,12 +690,12 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">67</span>
+                    <span class="nav-count">59</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">78</span>
+                    <span class="nav-count">77</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -730,7 +730,7 @@
                 <a href="Model-Predictive-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#14b8a6"></span>
                     <span class="nav-label">Model Predictive Control</span>
-                    <span class="nav-count">55</span>
+                    <span class="nav-count">53</span>
                 </a>
                 <a href="Whole-Body-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#06b6d4"></span>
@@ -794,7 +794,7 @@
             <a href="Feed-Forward-Reconstruction.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Feed Forward Reconstruction</span>
-                <span class="nav-count">67</span>
+                <span class="nav-count">68</span>
             </a>
             <a href="Vision-and-Language-Navigation.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -809,7 +809,7 @@
             <a href="World-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">World Model</span>
-                <span class="nav-count">78</span>
+                <span class="nav-count">79</span>
             </a>
             <a href="3D-Foundation-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
@@ -909,12 +909,12 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">67</span>
+                <span class="nav-count">59</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">78</span>
+                <span class="nav-count">77</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -949,7 +949,7 @@
             <a href="Model-Predictive-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#14b8a6"></span>
                 <span class="nav-label">Model Predictive Control</span>
-                <span class="nav-count">55</span>
+                <span class="nav-count">53</span>
             </a>
             <a href="Whole-Body-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#06b6d4"></span>
@@ -1030,6 +1030,120 @@
             <div class="paper-list">
                 <div class="paper-card">
                     <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.20504v1" target="_blank" class="paper-title">Graph-Reweighted Behavior Cloning with Human Interventions for Precise Robotic Manipulation</a>
+                        <span class="paper-date">2026-10-14</span>
+                    </div>
+                                        <span class="paper-comment">📝 Accepted at CoRL 2026. 25 pages, 16 figures, including appendix. Project page: https://gr-bc.github.io/</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Long-horizon precise manipulation produces mixed-quality data for post-training vision-language-action (VLA) models: even successful demonstrations and intervention-assisted rollouts may contain detours, hesitations, failed attempts, and imperfect recoveries. The key challenge is to identify which action chunks actually advance the task, rather than uniformly cloning or discarding imperfect trajectories. We propose Graph-Reweighted Behavior Cloning (GR-BC), an offline iterative post-training framework that builds a task-conditioned goal-reachability graph over demonstrations and iteratively collected rollouts, including both successful and failed episodes with human interventions. Reverse graph search computes minimal remaining steps to task success within the dataset support, and each action chunk is weighted by how much its execution reduces this potential. This consequence-based weighting reuses recoverable segments from failed trajectories, leverages interventions as recovery paths, and down-weights locally regressive chunks even inside successful trajectories. New rollouts are incorporated by appending them to the graph and rerunning search, without training a reward model, action-conditioned critic, or progress predictor. Across four precise manipulation tasks and three VLA backbones, GR-BC improves single-round supervised fine-tuning and reaches 91% success after a few offline iterations, without trajectory comparisons or progress labels. More details and videos are available at: https://gr-bc.github.io</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.20241v1" target="_blank" class="paper-title">Learning Navigation from Multimodal Demonstrations with Geometric Candidate Modes</a>
+                        <span class="paper-date">2026-10-14</span>
+                    </div>
+                                        <span class="paper-comment">📝 8 pages; 8 figures, under review</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Offline navigation demonstrations are multimodal, because one observation often allows several valid actions, such as passing an obstacle on either side. Behavior cloning averages these actions, potentially leading to unsafe routes. Multimodal policies must discover the alternatives from the data, but similar states can lead to different routes whose current actions overlap. In navigation, the alternatives have a geometric cause and can be computed from one observation. We propose a hierarchical neural-network policy that computes candidate modes from local geometry and learns from demonstrations which mode to follow and how. A high-level policy selects a mode using the goal and its previous choice among a set of candidate modes, and a low-level policy turns it into an action. In simulation, the policy succeeds in over 95\% of seen and unseen test cases, compared with at most 43\% and 20\% for four offline learning baselines and 79\% and 67\% for a heuristic that uses the same modes without learning. The simulation-trained policy also transfers to a LimX Tron 1 bipedal robot.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.20203v1" target="_blank" class="paper-title">Investigating Behavior Cloning from Few Demonstrations for Autonomous Driving based on Bird's-Eye View in Simulated Cities</a>
+                        <span class="paper-date">2026-10-14</span>
+                    </div>
+                                        <span class="paper-comment">📝 14 pages, 6 figures, 2 tables. Accepted manuscript (author version) of the paper published in the proceedings of BRACIS 2024 (34th Brazilian Conference on Intelligent Systems, Belém, Brazil, 17-21 November 2024). Project page: https://sites.google.com/view/weighted-bc</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>This paper investigates the use of Behavior Cloning (BC) for autonomous driving from a bird's-eye view (BEV) perspective in simulated urban environments. BC uses supervised learning to mimic expert driving behaviors. Previous works have applied BC in the CARLA simulator but did not fully address the challenges of traffic light compliance. Our approach enhances BC by integrating a kernel density estimator to adjust training sample weights based on action density, thereby improving the learning of rare but critical actions such as stopping at red lights and accelerating at green lights, specially in scenarios of scarce number of expert demonstrations. Using BEV inputs, which provide an abstract top-down view of the driving environment, our method simplifies the policy learning process. The trained convolutional neural network (CNN) outputs steering and acceleration actions based on these BEV inputs and additional state variables. Experimental results in the CARLA simulator demonstrate that our weighted BC method significantly improves driving performance, achieving higher route completion compared to standard BC. This weighted approach proved to be crucial in learning correct driving behaviors, particularly in test environments not encountered during training, highlighting its potential for enhancing autonomous vehicle navigation.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2605.12000v3" target="_blank" class="paper-title">Split the Differences, Pool the Rest: Provably Efficient Multi-Objective Imitation</a>
+                        <span class="paper-date">2026-10-14</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="好的，作为一名人工智能研究与学术论文分析专家，我将严格按照您的要求，对这篇论文进行详细的中文解读。&#10;&#10;---&#10;&#10;## 0. 概览（Concise Summary）&#10;&#10;- **主题（Topic）**：多目标模仿学习（Multi-Objective Imitation Learning, MOIL）。具体是在多目标马尔可夫决策过程（MOMDP）中，从多个帕累托最优（Pareto-optimal）专家的演示数据中学习策略。&#10;- **问题（Problem）**：现有模仿学习方法在处理多专家、多目标数据时存在两个关键失败模式：1）**Failure I**：将每个专家数据独立处理（Isolated BC），忽略了专家间共享的结构信息，导致样本效率低下；2）**Failure II**：将所有专家数据简单合并（Naive BC），由于专家目标冲突，学习到的策略会被帕累托占优（dominated），性能极差。&#10;- **方法（Method）**：提出**多输出增强行为克隆（Multi-Output Augmented Behavioral Cloning, MA-BC）** 算法。该算法首先识别并分离出专家行为冲突的状态（分歧状态），然后将所有无冲突的状态-动作对（共同状态）与每个专家的专属数据合并，为每个专家训练一个独立的策略。&#10;- **创新（Innovation）**：&#10;    1.  理论创新：证明了帕累托路径存在定理（Pareto Path Existence），揭示了帕累托前沿上的策略在状态空间上具有高度结构相似性。&#10;    2.  算法创新：提出了MA-BC，通过“分而治之”和“数据复用”的策略，巧妙地避免了上述两种失败模式。&#10;    3.  理论保证：证明了MA-BC能以比独立学习更快的统计速率收敛到帕累托最优策略，并建立了多目标模仿学习的下界，证明了MA-BC的极小化最优性（minimax optimal）。&#10;- **意义（Significance）**：首次为离线多目标模仿学习提供了严格的理论基础，解决了实际应用中（如机器人学习、LLM微调）处理多源、多偏好数据时的核心难题。MA-BC提供了一种既保证帕累托最优性又具有样本效率的可行方案。&#10;- **一句话总结**：本文提出MA-BC算法，通过智能地分割冲突专家数据并聚合一致数据，在理论上和实验上证明了其能高效、最优地从多目标专家演示中学习帕累托前沿策略。&#10;&#10;## 1. 研究动机（Motivation）&#10;&#10;在现实世界的复杂序列决策任务中（如机器人学习、大语言模型微调），训练数据通常来自多个不同的“专家”（如不同的人类操作员或算法）。这些专家各自拥有不同的、通常是隐含的偏好（utility function），导致其行为存在冲突。例如，自动驾驶数据集中，一个专家偏好速度，另一个偏好安全。&#10;&#10;当前的主流做法是**简单地将所有专家的轨迹数据合并（pooling）成一个数据集**，然后训练一个单一的、表达能力强的模型（如扩散模型）。然而，本文指出这种做法存在根本性问题：**合并冲突的专家数据会导致学习到的策略被帕累托占优**。例如，合并速度和安全的专家数据，学到的策略可能在所有状态下都表现平庸，既不够快也不够安全，无法优化任何一致的效用函数。&#10;&#10;另一种极端做法是**将问题简化为多个独立的单专家模仿学习**，为每个专家训练一个独立的模型。这虽然能保证策略落在帕累托前沿上，但完全忽略了专家间的共享结构。由于所有专家都在同一个MOMDP的帕累托前沿上，他们的最优策略在大量状态上会采取相同动作。独立学习丢弃了这些跨数据集的信息，导致样本效率极低（需要每个专家的数据集大小都与状态空间大小成线性关系）。&#10;&#10;因此，核心研究动机是：**能否设计一种算法，既能利用多专家数据间的共享结构来提高样本效率，又能保证学习到的策略是帕累托最优的？**&#10;&#10;## 2. 创新点（Innovation）&#10;&#10;本文的主要创新点如下：&#10;&#10;1.  **帕累托路径存在定理（Theorem 2.1）**：这是一个独立的理论贡献。该定理证明，在MOMDP中，任意两个相邻的帕累托最优策略，即使它们在多个状态上行为不同，也总存在一条由一系列中间帕累托最优策略组成的路径，其中每两个相邻策略**仅在一个状态上的动作不同**。这个定理揭示了帕累托前沿上的策略在状态-动作空间上具有高度的结构相似性，为MA-BC的数据复用策略提供了理论基础。&#10;&#10;2.  **多输出增强行为克隆（MA-BC）算法**：这是本文的核心方法创新。MA-BC的核心思想是“分而治之，聚合其余”。&#10;    -   **分而治之**：识别出专家行为发生冲突的状态（分歧状态），在这些状态上，每个专家必须独立学习。&#10;    -   **聚合其余**：将所有专家行为一致的状态（共同状态）上的数据聚合起来，形成一个共享数据集。这个共享数据集可以被所有专家复用。&#10;    -   通过这种方式，MA-BC既避免了Naive BC的“冲突”问题（Failure II），又通过数据复用解决了Isolated BC的“样本效率”问题（Failure I）。&#10;&#10;3.  **理论保证与极小化最优性**：&#10;    -   证明了MA-BC的收敛速率（Theorem 3.1）。该速率表明，每个专家所需的数据量仅与**分歧状态的数量（K）** 线性相关，而所有专家的总数据量才与**总状态数（|X|）** 线性相关。当K远小于|X|时，MA-BC显著优于独立学习。&#10;    -   建立了多目标模仿学习的**信息论下界（Theorem 3.2）**，证明了MA-BC的收敛速率是极小化最优的，即任何其他离线算法都无法在统计上显著优于MA-BC。&#10;&#10;## 3. 主要内容（Main Content）【重点】&#10;&#10;### 3.1 设计架构与方法&#10;&#10;MA-BC算法的核心架构非常清晰，如Algorithm 1所示：&#10;&#10;1.  **输入**：来自L个专家的数据集 $\{D_\ell\}_{\ell=1}^L$。&#10;2.  **识别分歧状态（Line 2）**：遍历所有数据，找出所有被至少两个专家访问过，但专家们采取了不同动作的状态。将这些状态及其对应的所有动作放入分歧数据集 $D_{div}$。&#10;3.  **定义共同状态（Line 3）**：从所有数据的并集中移除分歧状态，得到共同数据集 $D_{common}$。$D_{common}$ 包含了所有专家行为一致的状态-动作对。&#10;4.  **训练多个策略（Line 4-6）**：对于每个专家 $\ell$，使用其专属数据集 $D_\ell$ 和共同数据集 $D_{common}$ 的并集来训练一个行为克隆（BC）策略 $\hat{\pi}_\ell$。&#10;5.  **输出**：输出L个策略 $\{\hat{\pi}_\ell\}_{\ell=1}^L$。&#10;&#10;**核心思想**：$D_{common}$ 包含了来自其他专家的、在无冲突状态上的信息。这允许专家之间互相“帮助”，从而减少了每个专家所需的数据量。同时，由于分歧状态被分离，避免了在冲突数据上训练导致的策略退化。&#10;&#10;### 3.2 关键算法与数学推导&#10;&#10;**1. 帕累托路径存在定理（Theorem 2.1）**：&#10;- **定义**：$\pi_A$ 和 $\pi_B$ 是两个相邻的帕累托最优策略，它们在 $k$ 个状态上的动作不同。&#10;- **结论**：存在一个长度为 $k+1$ 的确定性帕累托最优策略序列 $(\pi_0, \pi_1, ..., \pi_k)$，其中 $\pi_0 = \pi_A$，$\pi_k = \pi_B$，并且对于任意 $i \in \{1, ..., k\}$，$\pi_{i-1}$ 和 $\pi_i$ 仅在**一个状态**上的动作不同。&#10;- **意义**：这个定理保证了帕累托前沿上的策略是“连通的”，并且结构相似，为数据复用提供了理论依据。&#10;&#10;**2. MA-BC的收敛性定理（Theorem 3.1）**：&#10;- **设定**：$\{\pi_\ell\}_{\ell=1}^L$ 是帕累托最优专家策略。$X_{common}$ 是所有专家行为一致的状态集合。$K = |X \setminus X_{common}|$ 是分歧状态的数量。$N = \sum_{\ell=1}^L N_\ell$ 是总数据量。&#10;- **结论**：MA-BC输出的策略 $\hat{\pi}_\ell$ 是 $\varepsilon_\ell$-帕累托最优的，其中：&#10;    $$ \varepsilon_\ell = \frac{ \left\| \frac{\nu^{\pi_\ell}}{\nu^{\pi_{data}}} \right\|_\infty |X_{common}| }{ e(1-\gamma)^2 N } + \frac{ |X \setminus X_{common}| }{ e(1-\gamma)^2 N_\ell } $$&#10;    其中 $\nu^{\pi_{data}}(x) = \frac{\sum_{\ell=1}^L N_\ell \nu^{\pi_\ell}(x)}{N}$ 是混合状态占用度量，$\left\| \frac{\nu^{\pi_\ell}}{\nu^{\pi_{data}}} \right\|_\infty$ 是集中度系数（concentrability coefficient）$C_{\pi_{data}}$。&#10;- **解读**：误差由两项组成。第一项与总数据量 $N$ 成反比，但受总状态数 $|X_{common}|$ 和集中度系数影响。第二项与专家专属数据量 $N_\ell$ 成反比，但仅受分歧状态数 $K$ 影响。当 $K \ll |X|$ 时，第二项远小于独立学习所需的误差。&#10;&#10;**3. 推论（Corollary 3.1）**：&#10;- 为了达到 $\varepsilon$-帕累托最优，所需的数据量满足：&#10;    $$ N = O\left( \frac{C_{\pi_{data}} |X|}{(1-\gamma)^2 \varepsilon} \right) $$&#10;    $$ N_\ell = O\left( \frac{K}{(1-\gamma)^2 \varepsilon} \right) $$&#10;- 这清晰地展示了MA-BC的优势：总数据量 $N$ 与总状态数 $|X|$ 相关，但每个专家的专属数据量 $N_\ell$ 仅与分歧状态数 $K$ 相关。&#10;&#10;**4. 下界定理（Theorem 3.2）**：&#10;- 对于任何离线多输出模仿算法，都存在一个MOMDP，使得其误差至少为：&#10;    $$ \varepsilon_\ell \ge \Omega\left( \max\left\{ \frac{ \left\| \frac{\nu^{\pi_\ell}}{\nu^{\pi_{data}}} \right\|_\infty |X_{common}| }{ N(1-\gamma)^2 }, \frac{ |X \setminus X_{common}| }{ N_\ell(1-\gamma) } \right\} \right) $$&#10;- 这个下界与Theorem 3.1的上界相匹配，证明了MA-BC的极小化最优性，并且说明对集中度系数 $C_{\pi_{data}}$ 的依赖是不可避免的。&#10;&#10;### 3.3 模型、训练与数据集&#10;&#10;- **模型**：在离散环境中，策略 $\pi: X \rightarrow \Delta(A)$ 是一个从状态到动作分布的映射。MA-BC使用行为克隆（BC）来学习策略，即最大化专家数据的对数似然 $\max_{\pi} \sum_{X,A \in D} \log \pi(A|X)$。&#10;- **训练**：训练过程如Algorithm 1所示，为每个专家独立运行BC，但训练数据被增强为 $D_{common} \cup D_\ell$。&#10;- **数据集**：每个专家 $\ell$ 的数据集 $D_\ell$ 包含从该专家策略 $\pi_\ell$ 的占用度量中采样的 $N_\ell$ 个状态-动作对。所有专家策略都是帕累托最优的。&#10;&#10;### 3.4 实验设置与结果&#10;&#10;- **环境**：三个离散环境（Deep Sea Treasure, Resource Gathering, Slippery Y-Maze）和一个连续控制任务（LQR Drone Control）。&#10;- **基线**：&#10;    - **Naive BC (Joint Dataset)**：将所有专家数据合并训练一个策略。&#10;    - **Isolated BC (Independent Experts)**：为每个专家独立训练一个策略。&#10;- **指标**：归一化的 $L_\infty$ 距离到真实的帕累托前沿。&#10;- **主要结果（Figure 3）**：&#10;    - **Naive BC**：在所有环境中，随着数据量增加，其性能无法收敛到帕累托前沿，验证了Failure II（Theorem 2.2）。&#10;    - **Isolated BC**：能够收敛到帕累托前沿，但样本效率低，需要大量数据。&#10;    - **MA-BC (Ours)**：不仅收敛到帕累托前沿，而且样本效率远高于Isolated BC，验证了Theorem 3.1。&#10;- **集中度影响（Figure 4）**：&#10;    - 通过改变初始状态分布的随机性来模拟不同的集中度系数 $C_{\pi_{data}}$。&#10;    - 结果表明，当专家轨迹重叠越多（$C_{\pi_{data}}$ 越小），MA-BC相对于Isolated BC的优势越明显，验证了Theorem 3.2。&#10;- **连续控制（Figure 5）**：&#10;    - 展示了MA-BC在连续域中的扩展。通过引入空间容忍度 $\delta$ 来定义“兼容”的状态-动作对。&#10;    - 实验结果揭示了**偏差-数据权衡**：较大的 $\delta$ 可以聚合更多数据（降低方差），但会引入偏差；较小的 $\delta$ 偏差小，但数据利用率低。存在一个最优的 $\delta$ 值。&#10;&#10;### 3.5 技术细节&#10;&#10;- **离散域**：假设专家策略是确定性的。论文附录C讨论了扩展到随机专家策略的情况。&#10;- **连续域扩展**：对于连续状态和动作空间，MA-BC通过定义“兼容”状态-动作对来扩展。一个状态-动作对 $(X', A')$ 来自专家 $\ell'$，如果它与专家 $\ell$ 的某个数据点 $(X, A)$ 满足 $\|X - X'\| \le \delta$ 且 $\|A - A'\| \le L_{\pi_\ell} \|X - X'\|$，则被认为是兼容的，可以加入专家 $\ell$ 的增强数据集 $D_\ell^+$。这里 $L_{\pi_\ell}$ 是专家 $\ell$ 策略的Lipschitz常数。&#10;- **集中度系数 $C_{\pi_{data}}$**：定义为 $\max_{\ell \in [L]} \left\| \frac{\nu^{\pi_\ell}}{\nu^{\pi_{data}}} \right\|_\infty$。它衡量了专家 $\ell$ 的状态占用度量与混合占用度量的最大比值。该系数越大，说明专家 $\ell$ 访问了一些其他专家很少访问的状态，因此从其他专家那里获得的信息帮助越小。&#10;&#10;## 4. 意义与影响（Significance and Impact）&#10;&#10;- **解决的问题与贡献**：&#10;    - 首次为**离线多目标模仿学习**提供了严格的理论框架和可证明的算法。&#10;    - 揭示了多目标模仿学习中的两个关键失败模式，并提出了一个优雅且有效的解决方案。&#10;    - 证明了帕累托路径存在定理，这是一个对MOMDP结构的新认识，具有独立的理论价值。&#10;    - 提供了MA-BC的收敛速率和极小化最优性证明，为后续研究奠定了理论基础。&#10;&#10;- **对未来研究/应用的影响**：&#10;    - **应用层面**：为处理多源、多偏好数据提供了可靠方法，可应用于机器人学习（从不同操作员数据中学习）、自动驾驶（融合不同驾驶风格）、大语言模型微调（处理来自不同偏好用户的反馈）等领域。&#10;    - **理论层面**：帕累托路径定理可能启发新的多目标强化学习（MORL）算法，例如用于高效遍历帕累托前沿的“遍历算法”（Traversal algorithms）。&#10;    - **算法层面**：MA-BC的“分而治之”思想可以启发其他多任务或多智能体学习场景。&#10;&#10;- **局限与开放问题**：&#10;    - **连续域的理论保证**：论文中连续域的MA-BC扩展缺乏严格的理论保证，作者将其称为启发式方法。为连续域提供收敛性证明是一个重要的未来方向。&#10;    - **函数近似**：当前的理论分析主要针对表格型（tabular）MDP。扩展到使用神经网络等函数近似器的情况是重要的下一步。&#10;    - **隐式专家身份**：论文附录D讨论了数据集未分割（即不知道哪个数据点来自哪个专家）的情况，但主要结果仍基于分割数据集。处理完全未标注的多源数据是一个更具挑战性的问题。&#10;&#10;## 5. 澄清与简化（Clarifications and Simplifications）&#10;&#10;- **帕累托最优（Pareto Optimality）**：可以类比为“没有免费的午餐”。如果一个策略是帕累托最优的，那么你无法在不损害至少一个目标的情况下，去改善另一个目标。例如，在自动驾驶中，你无法在不牺牲安全性的情况下，无限提高速度。帕累托前沿就是所有这类“最优权衡”策略的集合。&#10;&#10;- **Failure I vs. Failure II**：&#10;    - **Failure I (独立学习)**：就像让两个学生（专家）各自独立复习，即使他们复习的内容（状态）有大量重叠，也不互相分享笔记。这导致每个学生都需要花大量时间（数据）去覆盖所有知识点。&#10;    - **Failure II (合并学习)**：就像让一个学生同时学习一个“追求速度”的赛车手和一个“追求安全”的司机的驾驶记录。这个学生会感到困惑，因为他无法同时满足两个冲突的要求，最终学到的驾驶风格可能既不快也不安全。&#10;&#10;- **MA-BC的核心思想**：就像一个聪明的老师，他先观察所有学生的学习笔记，找出大家**答案一致**的题目（共同状态）。然后，他让所有学生都去学习这些“标准答案”，从而节省时间。对于**答案不一致**的题目（分歧状态），他让每个学生按照自己原来的思路去学习。这样，既利用了集体智慧，又保留了个人风格。&#10;&#10;- **集中度系数 $C_{\pi_{data}}$**：可以理解为“专家之间的相似度”。如果两个专家几乎总是访问相同的状态（例如，都在市中心开车），那么他们的">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>This work investigates multi-objective imitation learning: the problem of recovering policies that lie on the Pareto front given demonstrations from multiple Pareto-optimal experts in a Multi-Objective Markov Decision Process (MOMDP). Standard imitation approaches are ill-equipped for this regime, as naively aggregating conflicting expert trajectories can result in dominated policies. To address this, we introduce Multi-Output Augmented Behavioral Cloning (MA-BC), an algorithm that systematically partitions divergent expert data while pooling state-action pairs where no behavior conflict is observed. Theoretically, we prove that MA-BC converges to Pareto-optimal policies at a faster statistical rate than any learner that considers each expert dataset independently. Furthermore, we establish a novel lower bound for multi-objective imitation learning, demonstrating that MA-BC is minimax optimal. Finally, we empirically validate our algorithm across diverse discrete environments and, guided by our theoretical insights, extend and evaluate MA-BC on a continuous Linear Quadratic Regulator (LQR) control task.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.19834v1" target="_blank" class="paper-title">Teaching Agents in their Own Style: Blackbox Teacher Distillation for Web Agents</a>
+                        <span class="paper-date">2026-10-14</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Frontier web agents using closed models have high inference and computational costs. Smaller open models can be an alternative, but to be performant, they require training supervision from a human or teacher model. Token-level teacher distillation is not an option for closed teachers as it needs access to the model's logits. The standard approach is to imitate teacher demonstrations offline, but it trains the student on states it has never visited, and in a style it does not write in. We introduce WebKD, where the teacher is the editor of the student's failures. Given a failed episode, the teacher finds the first point of mistake, and rewrites the student's reasoning traces, harness states, and actions from that point onward. The editing reveals that the teacher's corrections can be more surprising to the student than the student's own text. WebKD instead aims to edit minimally. In the data space, the teacher writes each correction in the student's style. In the objective space, the reasoning is weighted by its contribution to the action. A role-asymmetric KL anchor allows the corrected action to move freely while keeping the reasoning near the student's prior. On the TimeWarp benchmark, WebKD students gain about 5.5-10.7 pp over behavior cloning, outcome-reward RL, and teacher editing baselines. The performance transfers to unseen versions and to the live web in the OnlineMind2Web benchmark. WebKD opens a new way of distilling black-box models to improve the capabilities of open-weight web agents.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.19367v1" target="_blank" class="paper-title">Beyond Corrected Actions: Training LLM Agents on Textual Critiques</a>
+                        <span class="paper-date">2026-10-14</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Large language models (LLMs) are increasingly used for multi-turn agentic tasks that require interactions with users and environments over extended sequences of actions. A common approach to improving LLM agents is to use more capable expert models to provide training supervision, either by behavior cloning the expert's trajectories or by using the expert to correct the actions in trajectories generated by the weaker student model. However, expert LLMs can provide richer supervision than actions alone: they can directly generate textual critique that explain why specific actions are incorrect. We study whether training on such feedback benefits LLM agents and propose Critique-Augmented Agentic Fine-Tuning (CAFT), a framework that elicits textual expert feedback on student-generated trajectories. For each incorrect action, the expert yields both a corrected action and a textual critique explaining the student's mistake--which we then use as the training target for fine-tuning. Across four student models from the Nemotron 3 and Gemma 4 families on the agentic domains $τ^2$-Bench Airline+Retail and WebShop, adding critiques to action-level supervision improves performance by 8% on average over action-only distillation. Additionally, CAFT checkpoints can also provide a better warm start for reinforcement learning than expert-trajectory distillation. Our results demonstrate that textual critiques can strengthen supervision for multi-turn LLM agents.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.19302v1" target="_blank" class="paper-title">DTDD: Divergence-Triggered Dynamic Distillation for Reliable On-Policy Supervision</a>
+                        <span class="paper-date">2026-10-13</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>On-policy distillation (OPD) provides dense token-level supervision on student rollouts, but this supervision can become unreliable when the student and teacher diverge, either because of a large initial policy gap or compounding errors in long-horizon reasoning and tool use. We introduce Divergence-Triggered Dynamic Distillation (DTDD), an adaptive OPD framework that uses segment-level student-teacher divergence to trigger teacher takeover during training. When divergence triggers an intervention during reasoning, the student prefix continues to receive standard OPD supervision. The teacher then generates a recovery suffix, which the student learns through behavior cloning, using cross-entropy on the teacher-generated tokens. We evaluate DTDD in three regimes: long-horizon reasoning, distillation from a base initialization without offline supervised fine-tuning (SFT), and multi-turn agents. We also compare alternative trigger designs and teacher-intervention rates. DTDD reduces the post-warmup peak gradient norm by $8.6\times$ and, from a base initialization, reaches $21.3\%$ held-out math accuracy in $2.6\times$ fewer optimizer updates than OPD; both methods finish near $22\%$. It improves best-observed performance by $4.8$ and $4.1$ percentage points on ALFWorld with LoRA and agentic code, respectively. Ablations show that segment-averaged triggers outperform token-spike triggers. Behavior cloning is also more effective than the tested OPD surrogate for training teacher-generated recoveries. Across 23 experimental arms, takeover tends to help when the teacher substantially outperforms the OPD-trained student, provided that the teacher can recover from student-visited states, the student can learn those recoveries, and teacher intervention is neither excessive nor insufficient.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.19141v1" target="_blank" class="paper-title">Collective Learning for Unified Robotic Manipulation via Predictive Dynamics Adaptation</a>
+                        <span class="paper-date">2026-10-13</span>
+                    </div>
+                                        <span class="paper-comment">📝 Accepted at IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2026)</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Learning a collective policy for state-based Cartesian manipulation across diverse robotic embodiments presents a fundamental challenge due to embodiment-dependent transition dynamics. Collective learning aggregates multi-robot experience to discover shared task structure, yet naive aggregation can average incompatible action modes when different embodiments realize the same Cartesian command through different transition behavior. This leads to strategy ambiguity and performance collapse on dynamically outlying embodiments. To address this, we propose PACE, a two-stage collective learning framework that separates shared task-space intent from embodiment-dependent transition dynamics. The first stage employs a representation layer pre-trained on offline trajectories to extract task-level context from collective data. The second stage introduces a decision layer equipped with a predictive dynamics adapter. By forcing the latent state to predict future transitions, this adapter acts as a latent regularizer that grounds the policy in the transition behavior of the executing robot while preserving real-time inference without online planning. Evaluations across simulated embodiments demonstrate that our method prevents performance collapse on distinct robots. It achieves over 93\% overall success and 89\% on dynamically out-of-distribution zero-shot simulated robots, outperforming the Transformer behavior cloning (82\%) and diffusion policy baselines (66\%). Physical KUKA deployment further validates the feasibility of the full state-based pipeline under zero-shot sim-to-real transfer.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2605.08434v3" target="_blank" class="paper-title">Failing Forward: Adaptive Failure-Informed Learning for Vision-Language-Action Models</a>
+                        <span class="paper-date">2026-10-13</span>
+                    </div>
+                                        <span class="paper-comment">📝 Accepted by NeurIPS 2026</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="好的，作为一名人工智能研究与学术论文分析专家，我将严格按照您的要求，对这篇论文进行详细的中文解读。&#10;&#10;---&#10;&#10;## 0. 概览（Concise Summary）&#10;&#10;- **主题（Topic）**：机器人操作领域的视觉-语言-动作（VLA）模型。&#10;- **问题（Problem）**：现有的VLA模型通常仅在成功轨迹上进行行为克隆训练，导致模型在面对微小执行错误时，无法有效纠正，错误会迅速累积并导致不可恢复的失败，鲁棒性差。&#10;- **方法（Method）**：提出**自适应失败信息学习（AFIL）** 框架。该框架利用在线生成的失败轨迹作为**自适应负向引导**，通过一个共享视觉-语言骨干网络的**双动作生成器（DAG）** 架构，同时学习成功和失败的行为分布。在推理采样时，根据成功与失败分布之间的差异动态调整引导强度，使动作生成远离失败区域。&#10;- **创新（Innovation）**：&#10;    1.  首次将**负向提示（Negative Prompting）** 的思想系统性地引入VLA模型的动作生成中，将失败轨迹作为“负向提示”来引导动作。&#10;    2.  提出**双动作生成器（DAG）** 架构，高效地联合学习成功与失败分布，避免了手工设计失败模式或依赖人工干预。&#10;    3.  提出**自适应引导机制**，根据扩散步骤中成功与失败预测的余弦相似度动态调整引导强度，实现了精细化的、状态依赖的引导。&#10;- **意义（Significance）**：显著提升了VLA模型在域内和域外（OOD）任务上的成功率和鲁棒性，尤其是在长时域任务中效果突出。该方法为构建更可靠、更能应对现实世界中错误和分布偏移的机器人操作策略提供了一个高效、可扩展的新方向。&#10;- **一句话总结**：本文提出AFIL框架，通过在线生成的失败轨迹作为自适应负向引导，让VLA模型学会“从失败中学习”，从而在操作任务中实现更鲁棒、更成功的动作生成。&#10;&#10;## 1. 研究动机（Motivation）&#10;&#10;- **核心问题**：当前主流的VLA模型（如OpenVLA, π0等）主要依赖**成功轨迹**进行行为克隆训练。这种“只看成功，不看失败”的训练方式存在根本性缺陷：模型只学会了在理想状态下的“标准动作”，但从未学习过如何从错误或非理想状态中恢复。这导致模型在部署时，一旦出现微小的执行偏差（如抓取位置偏了一点），就会陷入从未见过的状态（out-of-distribution），错误会像滚雪球一样累积，最终导致任务彻底失败。作者用“平静的大海永远造就不了熟练的水手”来比喻，生动地说明了缺乏失败训练信号的弊端。&#10;- **为什么重要**：在真实世界的机器人应用中，错误和意外是常态。一个无法从失败中恢复的机器人是脆弱的、不可靠的，难以应用于复杂的、非结构化的环境。提升VLA模型的鲁棒性和容错能力是实现通用机器人操作的关键一步。&#10;- **挑战在哪里**：&#10;    1.  **失败数据难以获取和定义**：手动设计失败模式（如抓取滑落、碰撞等）需要领域专家知识，且无法覆盖真实世界中多样化的、随机的失败情况。&#10;    2.  **恢复策略依赖人工**：许多现有方法依赖人工干预或任务特定的启发式规则来纠正错误，这限制了方法的可扩展性和泛化能力。&#10;    3.  **计算成本高**：直接将图像生成中的负向引导方法（如Classifier-Free Guidance）应用于VLA模型并非易事。VLA模型通常基于大型视觉-语言模型（VLM），训练两个独立的模型（一个用于成功，一个用于失败）会带来巨大的计算开销。&#10;&#10;## 2. 创新点（Innovation）&#10;&#10;论文的核心创新在于提出了一个**端到端**的、**高效**的、**自适应**的失败信息学习框架（AFIL），具体体现在以下三点：&#10;&#10;1.  **将失败轨迹作为自适应负向引导（Adaptive Negative Guidance）**：这是本文最核心的思想。受图像生成中“负向提示”（Negative Prompting）的启发，作者首次将其系统性地应用于VLA模型。不同于简单地让模型模仿成功动作，AFIL通过一个**失败动作生成器**显式地告诉模型“不要做什么”。在采样过程中，模型会同时参考成功和失败两个生成器的预测，并主动远离失败生成器所指示的“坏动作”区域。&#10;&#10;2.  **提出双动作生成器（Dual Action Generator, DAG）架构**：这是实现上述思想的高效架构。DAG包含两个轻量级的动作生成头（Action Head）：一个**成功动作生成器（G_succ）** 和一个**失败动作生成器（G_fail）**。这两个生成器**共享同一个大型的视觉-语言骨干网络（VLM backbone）**，只在最后的动作生成层有不同的参数。这种设计极大地减少了参数开销，使得在现有VLA模型上增加失败学习能力变得非常高效。同时，失败数据是通过让预训练的VLA模型在线执行任务并收集其失败轨迹得到的，避免了手工设计失败模式。&#10;&#10;3.  **提出自适应引导机制（Adaptive Guidance Mechanism）**：这是实现精细控制的关键。简单的固定强度负向引导（如“总是强烈避开失败动作”）可能是有害的。例如，在任务初期，成功和失败轨迹可能非常相似（都向目标移动），此时强引导会抑制正确的动作。AFIL通过计算每个扩散步骤中，成功和失败生成器预测的**余弦相似度**，来动态调整引导强度。当两者预测相似时（动作意图不明确），引导强度自动降低；当两者预测差异很大时（明确的失败模式出现），引导强度自动增强。这种自适应机制使得引导更加智能和有效。&#10;&#10;## 3. 主要内容（Main Content）【重点】&#10;&#10;### 3.1 设计架构与方法&#10;&#10;AFIL的整体架构如图1和图2所示，主要分为两个阶段：&#10;&#10;1.  **训练阶段（Training）**：&#10;    - **数据生成**：使用一个预训练的VLA模型（如π0.5）在目标任务上执行，收集其失败轨迹。这些失败轨迹可以通过运动规划器进行修正，形成“失败-修正”轨迹对。&#10;    - **DAG-VLA训练**：构建DAG-VLA模型。该模型共享一个VLM骨干网络（用于处理视觉和语言输入），并连接两个独立的动作生成头：`G_succ`（在成功轨迹上训练）和`G_fail`（在失败轨迹上训练）。两个生成头使用相同的生成式目标函数（如扩散损失或流匹配损失），但监督信号来自各自的数据集。&#10;&#10;2.  **推理/采样阶段（Sampling）**：&#10;    - **自适应失败信息引导**：在每一步扩散采样中，模型同时查询`G_succ`和`G_fail`，得到两个预测（如噪声或速度场）。然后，根据公式（6-8）计算一个**失败信息引导的得分**，该得分会引导采样过程远离`G_fail`预测的方向，并偏向`G_succ`预测的方向。引导强度由成功与失败预测之间的余弦距离动态决定。&#10;&#10;### 3.2 关键算法与数学推导&#10;&#10;- **预备知识：Classifier-Free Guidance (CFG) 与 Negative Prompting (NP)**&#10;    - CFG的引导得分公式：&#10;      $$s^*_{CFG} = s_{uc} + \lambda (s_c - s_{uc})$$&#10;      其中 $s_{uc}$ 是无条件得分，$s_c$ 是条件得分，$\lambda$ 是引导强度。&#10;    - 负向提示（NP）的引导得分公式：&#10;      $$s^*_{NP} = s_{uc} + \lambda (s_{c^-} - s_{uc})$$&#10;      其中 $s_{c^-}$ 是负向条件（如“失败”）的得分。&#10;&#10;- **AFIL的自适应失败信息引导（Adaptive Failure-Informed Sampling）**&#10;    - 论文提出的失败信息引导得分：&#10;      $$\epsilon^*_{FI} = \epsilon_{succ}(a_\eta, \emptyset) - \hat{\lambda}_\eta(a_\eta) (\epsilon_{fail}(a_\eta) - \epsilon_{succ}(a_\eta, \emptyset))$$&#10;      其中 $\epsilon_{succ}$ 和 $\epsilon_{fail}$ 分别是成功和失败生成器预测的噪声，$\hat{\lambda}_\eta(a_\eta)$ 是**自适应引导强度**。&#10;    - 自适应引导强度 $\hat{\lambda}_\eta(a_\eta)$ 的计算：&#10;      $$\hat{\lambda}_\eta(a_\eta) = \alpha (1 - \cos(\epsilon_{succ}, \epsilon_{fail}))$$&#10;      其中 $\alpha$ 是基础引导尺度，$\cos(\epsilon_{succ}, \epsilon_{fail})$ 是成功和失败预测噪声之间的**余弦相似度**。当两者方向一致（相似度高）时，$\hat{\lambda}$ 小，引导弱；当两者方向相反（相似度低）时，$\hat{\lambda}$ 大，引导强。&#10;&#10;- **训练目标（以扩散模型为例）**：&#10;  $$L_{diff}(\theta; D) = \mathbb{E}_{(o, \ell, a) \sim D} \mathbb{E}_{\eta, \epsilon} \left[ \| \epsilon - \epsilon_\theta(a_\eta, o, \ell, \eta) \|_2^2 \right]$$&#10;  成功和失败生成器分别在自己的数据集 $D_s$ 和 $D_f$ 上优化此目标。&#10;&#10;### 3.3 模型、训练与数据集&#10;&#10;- **基础模型**：论文基于 **π0.5** 架构，这是一个流匹配（Flow-Matching）VLA模型。作者强调AFIL是模型无关的，可以应用于任何扩散或流匹配VLA模型。&#10;- **DAG架构**：在π0.5的VLM骨干网络后，添加两个独立的、轻量级的动作生成头。这增加了少量参数（论文提到“moderate additional parameters”）。&#10;- **数据集**：&#10;    - **ManiSkill环境**：包含5个域内任务（3个短时域，2个长时域）和3个域外任务。训练数据包括1500条成功轨迹、1000条失败修正轨迹和1500条失败轨迹。&#10;    - **LIBERO基准**：包含4个任务套件（Spatial, Object, Goal, Long），每个套件10个任务，每个任务50条人类演示。失败轨迹从预训练的π0.5模型执行时收集。&#10;&#10;### 3.4 实验设置与结果&#10;&#10;- **评估指标**：任务成功率（Success Rate）。&#10;- **主要结果**：&#10;    - **域内任务（ManiSkill）**：如表1所示，AFIL（Adaptive-FIL）在所有任务上均优于Success Only、Success + Failure Correction和Static-FIL基线。在长时域任务上提升尤为显著（+7.4%和+12.0%）。&#10;    - **LIBERO基准**：如表3所示，DAG-VLA + AFIL在所有四个套件上均取得了最佳平均成功率（98.4%），显著优于OpenVLA、CoT-VLA等强基线，并超越了强大的π0.5基线（96.9%）。&#10;    - **域外任务（OOD）**：如表4所示，在面临未见物体、杂乱场景等分布偏移时，Success Only的π0.5性能急剧下降，而AFIL仍能保持较高的成功率，证明了其强大的泛化能力。&#10;- **消融实验**：如表2所示，对自适应引导尺度 $\alpha$ 进行了消融，发现 $\alpha=1.0$ 时性能最佳，过大或过小都会导致性能下降，验证了自适应机制的有效性。&#10;&#10;### 3.5 技术细节&#10;&#10;- **失败数据生成**：使用预训练的VLA模型进行在线rollout，收集其失败轨迹。然后，使用运动规划器（如基于采样的规划器）对失败轨迹进行修正，生成“失败-修正”轨迹对。这保证了失败数据是“在策略”（on-policy）的，更贴近模型实际部署时可能遇到的错误。&#10;- **自适应引导的动机**：作者通过一个例子解释了为什么需要自适应引导：在任务初期，成功和失败轨迹可能都执行相似的“接近目标”动作，此时强引导会抑制有效动作。只有当明确的失败模式（如物体滑落）出现时，才需要强引导来纠正。余弦相似度恰好能捕捉这种“语义”上的对齐程度。&#10;- **为什么选择余弦距离**：作者在文中比较了其他度量（如MMD、JSD、L1距离），并论证了余弦距离的优势：&#10;    1.  **计算效率高**：MMD/JSD需要批处理轨迹，计算开销大，不适合实时VLA。&#10;    2.  **语义对齐**：余弦距离关注的是动作向量的“方向”而非“大小”，更能反映动作的“意图”，与机器人控制的语义更相关。&#10;&#10;## 4. 意义与影响（Significance and Impact）&#10;&#10;- **解决的问题与贡献**：&#10;    - 解决了VLA模型因缺乏失败训练信号而导致的鲁棒性差、错误累积的核心问题。&#10;    - 提出了一种高效、通用、无需人工干预的失败学习框架（AFIL），为提升VLA模型的可靠性提供了新范式。&#10;    - 通过实验证明了该方法在多种场景下的有效性，尤其是在长时域和域外泛化任务上，展现了巨大的实用价值。&#10;&#10;- **对未来研究/应用的影响**：&#10;    - **研究方向**：为“从失败中学习”（Learning from Failure）在机器人领域的应用开辟了新道路。未来可以探索更复杂的失败模式建模、更精细的引导机制，以及将AFIL与强化学习等方法结合。&#10;    - **应用前景**：该方法有望显著提升服务机器人、工业机器人等在实际部署中的稳定性和安全性，使其能够更好地应对复杂、动态、不可预测的环境。&#10;&#10;- **局限与开放问题**：&#10;    - 论文未明确讨论失败数据生成的质量对最终性能的影响。如果预训练模型本身很差，生成的失败轨迹可能缺乏多样性或代表性。&#10;    - 自适应引导机制依赖于余弦相似度，虽然有效，但可能不是最优的度量。探索更复杂的、基于学习的动态引导策略是一个开放问题。&#10;    - 论文主要在仿真环境中进行验证，在真实机器人上的迁移效果和潜在挑战（如系统延迟、感知噪声）有待进一步研究。&#10;&#10;## 5. 澄清与简化（Clarifications and Simplifications）&#10;&#10;- **类比理解“负向引导”**：可以把VLA模型想象成一个正在学开车的新手。传统方法只教他“如何正确驾驶”（成功轨迹）。AFIL则额外给他一个“副驾驶”（失败生成器），这个副驾驶会不断说“别这样打方向盘”、“别离路沿太近”。模型在开车时，会同时听主教练（成功生成器）和副驾驶（失败生成器）的话，并自动调整，离副驾驶警告的危险区域远一点。自适应引导就像副驾驶的“音量”会根据危险程度自动调节：在直道上，他说话声音很小；在急转弯或接近障碍物时，他会大声警告。&#10;&#10;- **理解“双动作生成器（DAG）”**：可以把它想象成一个“双头”的神经网络。身体（VLM骨干网络）是共享的，负责看路和听指令。但有两个“头”（动作生成器），一个专门负责想“成功时该怎么做”，另一个专门负责想“失败时是怎么做的”。因为身体是共享的，所以增加第二个头并不会让模型变得非常臃肿，非常高效。&#10;&#10;- **理解“自适应引导”**：想象一下，在任务刚开始时，无论是成功还是失败，机器人的手臂都会先伸向物体。此时，成功和失败生成器预测的动作方向非常相似（都向前伸）。如果此时强行让机器人“远离失败动作”，它可能连手都不敢伸了。AFIL的自适应机制能识别出这种“动作意图模糊”的状态，自动降低引导强度。只有当机器人抓取失败，手臂开始往回缩（失败动作）时，成功和失败生成器的预测才会出现巨大分歧，此时引导强度自动升高，强力纠正动作，让机器人重新尝试抓取。&#10;&#10;## 6. 补充说明（Additional Notes）&#10;&#10;- **相关工作关联**：本文与以下研究方向紧密相关：&#10;    - **VLA模型**：建立在OpenVLA、π0等最新VLA模型之上，旨在解决其核心弱点。&#10;    - **从失败中学习**：与Fail2Progress、RoboFAC等工作目标一致，但AFIL通过在线生成失败数据和端到端学习，避免了手工设计失败模式。&#10;    - **引导扩散模型**：核心思想源于图像生成领域的Classifier-Free Guidance和Negative Prompting，但创造性地将其适配到序列化的机器人动作生成中，并提出了自适应机制。&#10;&#10;- **最重要的图表**：&#10;    - **图1（Overview）**：清晰地展示了AFIL的整体流程，从传统的“成功分布采样”到“失败信息引导的分布采样”，直观地说明了方法的核心思想。&#10;    - **图2（DAG Architecture）**：详细展示了DAG-VLA的训练和采样流程，是理解方法架构的关键。它清晰地画出了共享的VLM骨干、两个独立的动作生成器，以及采样时的自适应引导过程。&#10;    - **表1（In-domain Evaluation）**：通过消融实验，有力地证明了AFIL（Adaptive-FIL）相对于Success Only、Success + Failure Correction和Static-FIL的优越性，是支撑论文核心论点的关键证据。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Vision-language-action (VLA) models provide a promising paradigm for scalable robotic manipulation, yet their reliance on success-only behavioral cloning leaves them brittle; lacking corrective training signals, minor execution errors rapidly compound into unrecoverable, out-of-distribution failures. To address this limitation, we propose Adaptive Failure-Informed Learning (AFIL), an end-to-end framework that leverages failure trajectories as adaptive negative guidance for diffusion- and flow-based VLA policies. AFIL uses a pretrained VLA to generate failure rollouts online, avoiding the need for handcrafted failure-mode design or human-in-the-loop recovery. It then jointly trains Dual Action Generators (DAGs) for successful and failed behaviors while sharing a common vision-language backbone, enabling efficient failure-aware policy learning with limited parameter overhead. During sampling, the failure generator adaptively steers action generation away from failure-prone regions and toward more reliable success modes, with guidance strength determined by the per-diffusion-step distance between success and failure distributions. Experiments across in-domain and out-of-domain robotic manipulation tasks, covering both short- and long-horizon settings, show that AFIL consistently improves task success rates and robustness over existing VLA baselines, demonstrating its effectiveness, efficiency, and generality.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
                         <a href="https://arxiv.org/abs/2610.18869v1" target="_blank" class="paper-title">What Matters in Quality-Aware VLA Pretraining: A Benchmark and Empirical Study</a>
                         <span class="paper-date">2026-10-13</span>
                     </div>
@@ -1058,10 +1172,7 @@
                         <span class="paper-date">2026-10-13</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：如何利用第一人称人类视频数据训练机器人策略，同时避免人类形态、头部运动等不可迁移因素对机器人控制的干扰。&#10;&#10;🛠 **方法**：提出EgoWAM框架，通过世界动作模型（WAM）让策略不仅预测动作，还预测场景演化。对比三种世界表示（像素、DINO特征、3D运动流），在固定策略骨干、动作头和数据集混合的条件下进行人-机器人协同训练。&#10;&#10;✨ **主要贡献**：发现WAM协同训练比行为克隆更有效地利用野外人类数据；DINO表示将分布外物体和场景泛化能力提升最多4倍，3D运动流将域内性能提升20-30%，而像素级预测迁移效果最差。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Egocentric human data offers scalable supervision for robot manipulation. However, behavior cloning entangles transferable content like objects, scenes, and task semantics, with non-transferable factors like human morphology, head motion, and behavioral style. We study whether World Action Models (WAMs) provide a better training signal by requiring policies to predict not only actions, but also how the scene evolves. The central question is what world representation best enables human-to-robot transfer. We hypothesize that an effective world target should abstract appearance, capture agent-invariant physical effects, and separate camera motion from environment change. We introduce EgoWAM, a controlled human-robot co-training framework that fixes the policy backbone, action head, and data mixture while varying only the world prediction target, comparing Pixel, DINO, and 3D motion flow. Across three real-world bimanual tasks, WAM co-training scales more effectively with in-the-wild egocentric human data than behavior cloning. Pixel-based prediction transfers weakly, while DINO and 3D flow yield substantial gains: DINO improves out-of-distribution object and scene generalization by up to 4x, and 3D flow improves in-domain performance by 20-30%. More details: https://gatech-rl2.github.io/egowam.github.io</p>
@@ -1121,10 +1232,7 @@
                         <span class="paper-date">2026-10-10</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：行为克隆策略从演示数据中学习时，常包含不安全或不合期望的行为模式（如传递刀具时刀锋朝前），而现有解决方案（数据筛选、推理时引导）需重新训练或增加推理开销。&#10;&#10;🛠 **方法**：提出MoRE（模式重定向），通过短暂的“反克隆”步骤，将临时模式分类器的重定向信号蒸馏到策略权重中，并利用保留损失平衡编辑，使策略在零推理开销下抑制不良模式。&#10;&#10;✨ **主要贡献**：在8个模拟和真实任务中，MoRE将平均部署成功率提升44个百分点，性能接近基于筛选数据重新训练的参考方法，同时保持任务能力和推理速度，并适用于Diffusion Policy、Pi0.5 VLA等多种机器人策略主干。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Behavior-cloned policies often learn multiple behavior modes from demonstration datasets, including modes that are unsafe or otherwise undesired at deployment. For example, a policy trained on diverse handover demonstrations may learn to pass a knife blade-first. Standard remedies such as data curation and inference-time steering either require access to the original demonstrations for full retraining or add substantial inference-time overhead. To address this gap, we propose MoRE(Mode Redirection), which redirects policy rollouts toward desired behavior modes through a short "uncloning" step. Specifically, MoRE distills the redirection signal from a temporary mode classifier into the policy weights to steer behavior. A retain loss balances this edit by preserving desired-mode competence, allowing the standalone policy to suppress unwanted modes with zero inference-time overhead. Across eight simulated and real-world tasks, MoRE improves the average deployment success rate (SR) by 44 percentage points over the original mixed-mode policy. Among all compared adaptation and steering baselines, MoRE achieves the strongest SR and approaches the filtered-data retraining reference, while preserving task competence and inference speed. MoRE also generalizes across robot policy backbones, including Diffusion Policy and the Pi0.5 VLA, diverse task categories, and real-world deployments.</p>
@@ -1136,10 +1244,7 @@
                         <span class="paper-date">2026-10-09</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：当前视觉-语言-动作（VLA）模型无法将声明性知识（概念与实体语义）与程序性知识（操作技能）解耦，导致对未见物体的零样本技能迁移能力不足。&#10;&#10;🛠 **方法**：提出w²VLA模型，通过重构信息流，以组合式、可解释的方式将视觉、空间和技能信息调制到机器人状态序列中，替代传统将多模态令牌直接输入大型黑箱动作专家的做法。&#10;&#10;✨ **主要贡献**：成功实现知识表征的解耦，在保持鲁棒行为克隆的同时，首次展现出对不相似、未见物体的零样本技能迁移能力，显著优于现有VLA模型。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Deploying generalist robotic agents in the real world requires transferable skills. Specifically, a policy trained to clone a behavior from object-specific demonstrations must generalize beyond that object, otherwise data collection requirements become intractable. Recently, fine-tuning of pre-trained billion-parameter Vision-Language Models (VLMs), initially on large-scale robot datasets and then on fewer scenario-specific demonstrations, has emerged as the predominant paradigm for designing Vision-Language-Action (VLA) models. While these policies achieve state-of-the-art manipulation performance in-distribution, they remain brittle to minor spatial, semantic, and task variations. In this work, we address the inability of current models to decouple the declarative (i.e., concepts and entity semantics) from the procedural knowledge (i.e., how to do something) encoded in their parameters, which is a fundamental bottleneck for zero-shot skill transfer to novel objects. To address this, we propose w$^{2}$VLA, a new VLA model with restructured information flow. Rather than feeding all multimodal tokens from the VLM encoder into a large, opaque transformer-based action expert, our approach modulates the robot state sequence with visual, spatial, and skill information in a compositional and interpretable manner. Unlike popular, state-of-the-art VLAs, we show that our modular approach successfully decouples knowledge representations, enabling robust behavior cloning and unprecedented zero-shot skill transfer capabilities across dissimilar, unseen objects.</p>
@@ -1863,114 +1968,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Diffusion-based robot policies have become widely used in robotic manipulation, where they are typically trained with behavior cloning. However, policies trained purely from demonstrations are limited by the quality and coverage of the available data. Reinforcement learning can further improve the performance of these pretrained policies through interaction. A common approach is to use policy-gradient methods that formulate diffusion-policy fine-tuning as an outer environment MDP together with an inner denoising MDP. However, existing methods typically assign the same environment-level credit to all denoising steps used to construct an action chunk, without distinguishing which intermediate decisions contributed most to the final return. We introduce Denoising Intermediate Advantage (DIA), a policy-gradient method that learns a value function over partially denoised actions and uses it to construct a denoising level advantage for each step of the generative process. DIA combines this inner credit signal with the standard environment-level PPO advantage, providing state-dependent credit throughout the denoising chain. Across Robomimic, FurnitureBench, Franka Kitchen, and D3IL, DIA consistently improves final performance over existing diffusion-policy fine-tuning methods. Beyond final reward, DIA reaches successful states more efficiently and can shift farther from the pretrained behavior distribution, enabling it to discover more effective and efficient task-level strategies and subtask sequences that baseline methods fail to reach.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2609.12905v1" target="_blank" class="paper-title">Offline Reinforcement Learning for Wind Farm Control: A Wind Tunnel Study under Dynamic Wind Directions</a>
-                        <span class="paper-date">2026-09-11</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>This paper addresses the wind farm power maximization problem in the presence of wind direction changes. Specifically, a model-free Modified Twin Delayed Deep Deterministic Policy Gradient with Behavior Cloning (MTD3-BC) algorithm is proposed to tackle this task through yaw control under varying wind direction conditions. MTD3-BC is an offline reinforcement learning (RL) algorithm that aims to infer good behavior from only a precollected offline dataset. Additionally, to ensure smooth and moderate yaw adjustments, a new action consistency term is introduced into the policy optimization objective. Unlike online RL methods, MTD3-BC does not require extensive interactions with a wind farm simulator during training, significantly reducing computational costs and training time. A wind tunnel experiment is conducted to validate the effectiveness of the algorithm under varying wind directions. The results demonstrate that MTD3-BC successfully mitigates wake effects, delivering farm-level power gains of approximately 10\% over the baseline greedy strategy and performance on par with a data-calibrated model-based wake-steering benchmark, while requiring no wake model and only a small fraction of the training cost of online RL. To our knowledge, this is the first time an offline RL wind farm control policy has been validated and demonstrated experimentally.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2512.06956v2" target="_blank" class="paper-title">Statistical analysis of Inverse Entropy-regularized Reinforcement Learning</a>
-                        <span class="paper-date">2026-09-10</span>
-                    </div>
-                                        <span class="paper-comment">📝 44 pages</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Inverse reinforcement learning aims to infer the reward function that explains expert behavior observed through trajectories of state--action pairs. A long-standing difficulty in classical IRL is the non-uniqueness of the recovered reward: many reward functions can induce the same optimal policy, rendering the inverse problem ill-posed. In this paper, we develop a statistical framework for Inverse Entropy-regularized Reinforcement Learning that resolves this ambiguity by combining entropy regularization with a least-squares reconstruction of the reward from the soft Bellman residual. This combination yields a unique and well-defined so-called least-squares reward consistent with the expert policy. We model the expert demonstrations as a Markov chain with the invariant distribution defined by an unknown expert policy $π^\star$ and estimate the policy by a penalized maximum-likelihood procedure over a class of conditional distributions on the action space. We establish high-probability bounds for the excess Kullback--Leibler divergence between the estimated policy and the expert policy, accounting for statistical complexity through covering numbers of the policy class. These results lead to non-asymptotic minimax optimal convergence rates for the least-squares reward function, revealing the interplay between smoothing (entropy regularization), model complexity, and sample size. Our analysis bridges the gap between behavior cloning, inverse reinforcement learning, and modern statistical learning theory.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2609.09597v2" target="_blank" class="paper-title">Compact Visuotactile World Models for Lifting: Prediction, Reward Alignment, and Force Constraints</a>
-                        <span class="paper-date">2026-09-10</span>
-                    </div>
-                                        <span class="paper-comment">📝 8 pages, 2 figures. Code and tabulated results included as ancillary material</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Accurate tactile forecasts need not improve force-constrained control. We study a 652,157-parameter action-conditioned visuotactile world model with matched behavior cloning, policy learning in imagination, independent reactive implicit Q-learning, and model-assisted force feedback. A fixed protocol executes 34 policies on 120 fresh MuJoCo environments spanning geometry and physical-parameter shifts, plus 324 independently replayed action branches on 12 additional ID environments. Visuotactile dynamics reduce force action-effect MAE from 0.413 N for persistence to 0.338 N. Model-assisted feedback raises ID force-budgeted success from 73.3% to 93.3%, with paired difference +20.0 [+6.7,+33.4] percentage points (95% CI), with the difference occurring during scripted lowering. Its pooled difference is +3.9 [-4.5,+11.7] points. Imagined RL achieves 11.9% pooled joint success versus 25.0% for reactive IQL. An empirical tactile-residual stress test adds 330 executions. The evidence concerns rigid-box lifting after a common approach, without physical-robot transfer or a closed-loop safety guarantee.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2609.09630v1" target="_blank" class="paper-title">JEPA Policy: Diffusion-Free Imitation Learning via Paired Action and Future Representation Prediction</a>
-                        <span class="paper-date">2026-09-09</span>
-                    </div>
-                                        <span class="paper-comment">📝 17 pages. Code: https://github.com/jiejie567/JEPA-Policy . Project page: https://jiejie567.github.io/JEPA-Policy/</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Standard behavior cloning supervises actions without explicitly constraining the future representation paired with each demonstrated action chunk. We introduce JEPA Policy, a diffusion-free framework that uses the action chunk and its observed future representation as paired training targets. Action and future-representation tokens interact in a shared Transformer and are refined through two forward passes. Future prediction can therefore shape the representation used to generate actions. Dual-branch and gradient-routing controls attribute the gain to this shared topology rather than to an auxiliary prediction head alone. Across nine simulated tasks, JEPA Policy improves mean success over the action-only MIP baseline and outperforms Diffusion Policy under the evaluated configurations, while adding 0.29 ms to MIP's model latency. A five-task, 630-episode physical-robot study produces the same pooled ranking. Further audits find no complete representation collapse under action supervision and identify a task-conditioned failure-ranking signal in future-prediction error. These results support paired future-representation supervision as a practical approach to low-latency visuomotor imitation without iterative generative sampling.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2609.06930v1" target="_blank" class="paper-title">Distributed Dexterous Manipulation with Spatially Conditioned Multi-Agent Transformers</a>
-                        <span class="paper-date">2026-09-07</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Distributed Dexterous Manipulation (DDM) is a novel paradigm that presents significant control challenges due to high action-space redundancy, inter-robot cooperation, and dynamic object-robot interactions. This paper introduces a framework based on spatially conditioned Multi-Agent Transformers (MATs) to efficiently learn robust control policies for a DDM system grounded in an array of 64 soft delta robots arranged in an 8x8 grid. Our three core contributions are: (i) an MAT with adaptive layer norm for compute efficiency, (ii) spatial contrastive embeddings to ground transformer embeddings in the spatial configuration of the robots, and (iii) an MAT-based behavior cloning method fine-tuned using Soft Actor Critic. We also propose an action selection formulation to analyze the trade-off between task performance and the number of robots utilized. Our experiments show that MATs iteratively refine their actions through the stacked attention blocks. This further informs the benefit of spatial conditioning in transformers to learn DDM policies. We demonstrate long-horizon planar manipulation tasks with objects of various geometries in simulation and real-world. Finally, we show how action selection mitigates robot maintenance by reducing wear and tear due to inter-robot collisions while maintaining the ability to manipulate objects along various trajectories in the real-world, achieving an average error of ~1.5 cm, while using ~65% fewer robots.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.28320v4" target="_blank" class="paper-title">WARP-RM: A Warp-Augmented Relative Progress Reward Model for Data Curation</a>
-                        <span class="paper-date">2026-09-06</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Scaling imitation learning requires large datasets, yet human teleoperation inevitably produces mixed-quality demonstrations containing hesitations, retries, and pauses. Prior frame-level progress reward models supervise on absolute temporal progress proxies that suffer from label noise, or require costly human annotations to define subtask boundaries. We present WARP (Warp-Augmented Relative Progress), a novel fully self-supervised algorithm for learning dense, signed relative progress magnitudes directly from successful demonstrations. WARP generates per-frame progress targets via time-warp augmentations of demonstrations (variable playback speeds and reversals) and we train WARP-RM to predict normalized signed temporal displacement from the start of each sampled window. Aggregating these predictions across overlapping windows yields a dense frame-level progress signal. We then introduce WARP-BC, which uses these scalar reward estimates to filter and reweight action chunks during behavior cloning. We evaluate our approach on a physical bimanual robot system performing a long-horizon deformable object manipulation task: folding T-shirts from a random crumpled start. To evaluate policy robustness against suboptimal data, we construct training datasets of varying quality using episode length as a proxy for teleoperation sub-optimality. Across these training tiers, WARP-BC improves successful-folding throughput by up to ~18x over vanilla BC. Furthermore, we evaluate bottle-in-bin placement in the real world and in simulation. Across 512 paired simulated scenes, WARP-BC achieves 290 bottles/hr versus 237 for vanilla BC and 271 for DemInf, with all curation methods retaining 31.5% of the data. We release open simulation data, code, checkpoints, and evaluation artifacts for end-to-end reproduction of the WARP pipeline. Project page: https://uynitsuj.github.io/warp-rm/</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2609.06667v1" target="_blank" class="paper-title">Behavioral Cloning Outperforms Entropy-Regularized RL: Critic-Driven Failure of Actor-Critic Methods on Adaptive Tumor Treatment</a>
-                        <span class="paper-date">2026-09-06</span>
-                    </div>
-                                        <span class="paper-comment">📝 9 pages, 3 figures</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Adaptive dosing requires policies that reduce tumor burden without excessive toxicity. Learned dosing policies are typically judged against historical or heuristic comparators, which cannot show whether a policy has found the best behavior available. We instead study a three-population tumor-control ODE in which optimal-control analysis fixes the form of a good schedule -- bang-bang dosing punctuated by a singular arc -- and construct a numerical controller of that form as a proxy for near-optimal behavior. Judged against this reference under a sustained-cure criterion -- 200 consecutive days below 5% carrying capacity -- Soft Actor-Critic (SAC) trained from scratch never reaches cure. Behavioral cloning (BC) of the reference reproduces it (100% sustained cure, 30/30 seeds), but SAC fine-tuning of the cloned policy destroys it across five entropy coefficients, and TD3 and BC-regularized SAC fail identically; the pattern persists under multiplicative pharmacokinetic action noise. Along curative trajectories the post-collapse critic ranks the collapsed-policy action above the reference action in 96% of states, concentrated in the maintenance phase, and the policy settles into a non-curative adaptive-therapy equilibrium. The reference is what makes this legible: against a heuristic comparator the fine-tuned policy would read as a competent controller rather than a failure.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2609.06615v1" target="_blank" class="paper-title">MemCorr-DP: Counterfactual Correspondence Conditioning for a Diffusion Policy Guided by a Reference</a>
-                        <span class="paper-date">2026-09-06</span>
-                    </div>
-                                        <span class="paper-comment">📝 12 pages, 6 figures. Tan Su, Haoxiang Yang, and Ruxin Wang contributed equally. Corresponding author: Binghui Xie</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Behavior-cloned visuomotor policies can remain accurate near their training distribution yet fail when object position and camera viewpoint change together. A successful reference trajectory contains the geometry needed to transfer the same interaction, but the policy must align that geometry with the current scene and remain sensitive to it during denoising. To address these challenges, we present MemCorr-DP, a diffusion policy that lifts frozen RoMa v2 matches into explicit 3D relations between the current scene and the reference trajectory. A counterfactual paired objective assigns opposite behaviors the same physical state and noisy action while retaining reference-specific denoising targets. Mixed-condition fine-tuning then adapts the policy from ground-truth geometry to measured correspondence errors. Our strongest evaluation places the Door in the outermost position bands beyond the training support and changes the query camera by $\pm15^\circ$. Under this combined shift, MemCorr-DP achieves 96.67% closed-loop success, compared with 88.00% for a visual Transformer with the same action architecture. Objective ablations and reference interventions show that behavior responds to the selected reference, while matched controls favor the complete relation set over future motion or centroid geometry alone. These results support explicit 3D reference relations as a robust conditioning interface when spatial and viewpoint changes are compounded in the evaluated task.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2609.06522v1" target="_blank" class="paper-title">Knowledge-Guided Hierarchical Policy Learning for High-Precision Cylindrical Assembly under Tight Tolerances</a>
-                        <span class="paper-date">2026-09-06</span>
-                    </div>
-                                        <span class="paper-comment">📝 25 pages, 14 figures. Submitted to Robotics and Computer-Integrated Manufacturing (Elsevier)</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>A hybrid hierarchical learning framework is proposed to achieve high-precision assembly of 170mm cylindrical components with tolerance of 0.1mm. The lower-level network integrates expert experience through Behavior Cloning (BC), giving the robot human-like intuition, and incorporates the Twin Delayed Deep Deterministic Policy Gradient (TD3) algorithm to enhance training stability and robustness. The upper-level network dynamically adjusts the lower-level decisions based on heuristic rules, ensuring flexibility in operations. A simulated model is constructed to learn before transferring to real world. An efficient and safe training is allowed. Comparisons show that the reward curve converges within 500 episodes, indicating high learning efficiency. It also demonstrates better adaptability to initial conditions and pose errors, achieving satisfactory success rates even under extreme conditions. Moreover, the method exhibits good stability under Gaussian noise interference. In the real world, the assembly trajectory of the cylindrical segment shows smoother motion and less fluctuation.</p>
                     </details>
                 </div>
             </div>
