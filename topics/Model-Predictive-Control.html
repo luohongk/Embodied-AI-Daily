@@ -600,7 +600,7 @@
                 <a href="LLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
                     <span class="nav-label">LLM</span>
-                    <span class="nav-count">77</span>
+                    <span class="nav-count">80</span>
                 </a>
                 <a href="VLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f97316"></span>
@@ -670,7 +670,7 @@
                 <a href="Autonomous-Driving.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#6366f1"></span>
                     <span class="nav-label">Autonomous Driving</span>
-                    <span class="nav-count">80</span>
+                    <span class="nav-count">79</span>
                 </a>
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
@@ -690,12 +690,12 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">69</span>
+                    <span class="nav-count">71</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">79</span>
+                    <span class="nav-count">76</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -750,7 +750,7 @@
                 <a href="Multimodal-Fusion.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#6366f1"></span>
                     <span class="nav-label">Multimodal Fusion</span>
-                    <span class="nav-count">77</span>
+                    <span class="nav-count">76</span>
                 </a>
                 <a href="Scene-Understanding.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
@@ -819,7 +819,7 @@
             <a href="LLM.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
                 <span class="nav-label">LLM</span>
-                <span class="nav-count">77</span>
+                <span class="nav-count">80</span>
             </a>
             <a href="VLM.html" class="nav-item">
                 <span class="nav-dot" style="background:#f97316"></span>
@@ -889,7 +889,7 @@
             <a href="Autonomous-Driving.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
                 <span class="nav-label">Autonomous Driving</span>
-                <span class="nav-count">80</span>
+                <span class="nav-count">79</span>
             </a>
             <a href="Kalman-Filter.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
@@ -909,12 +909,12 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">69</span>
+                <span class="nav-count">71</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">79</span>
+                <span class="nav-count">76</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -969,7 +969,7 @@
             <a href="Multimodal-Fusion.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
                 <span class="nav-label">Multimodal Fusion</span>
-                <span class="nav-count">77</span>
+                <span class="nav-count">76</span>
             </a>
             <a href="Scene-Understanding.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
@@ -1028,6 +1028,42 @@
                 <span class="topic-count">58 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.16522v2" target="_blank" class="paper-title">Learning Reachability-Based Safety Representations for Real-Time Robot Navigation in Unknown and Dynamic Environments</a>
+                        <span class="paper-date">2026-10-20</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Safe robot navigation in unknown, dynamic environments requires more than geometric collision checking: a robot still far from an obstacle may be unable to avoid it because of its speed, orientation, or the obstacle's motion. Hamilton--Jacobi (HJ) reachability analysis captures this in a value function whose sign separates states that admit a safe continuation from those where collision is unavoidable, but computing it online for every newly observed environment is too expensive. This dissertation trains neural implicit representations offline on reachability solutions to give optimization-based controllers this information in real time. Since the value function never exceeds the constraint, it equals a directly computed constraint, such as a signed distance, minus a nonnegative dynamics correction. Learning only this correction keeps represented obstacles outside the predicted safe set despite approximation errors. The first two of five methods use the learned function as a terminal constraint in model predictive control, for static local environments and predicted obstacle motion. The next two use it as a barrier candidate in control barrier function safety filters, for static environments and, through pairwise barriers in relative coordinates, for a varying number of moving obstacles. Simulations and hardware experiments on ground and aerial robots show better collision avoidance than geometric and hand-designed baselines, especially for short horizons and moving obstacles. The fifth method replaces the grid-based offline solver, which limits the first four to low-dimensional models. For control-affine dynamics with polytopic inputs, the HJ Hamiltonian is maximized at a vertex, so a parallelizable tree search over vertex inputs can generate training labels. With a loss from the HJ variational inequality, these labels yield barrier candidates for systems with up to 13 states.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.27732v1" target="_blank" class="paper-title">Prescribed Performance Guided Safe Reinforcement Learning for Roundabout Navigation of Autonomous Vehicles</a>
+                        <span class="paper-date">2026-10-20</span>
+                    </div>
+                                        <span class="paper-comment">📝 8 pages, 10 figures</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Connected and Autonomous Vehicles (CAVs) face significant challenges in roundabout navigation due to dense traffic interactions and unpredictable agent behaviors, necessitating high levels of adaptability and safety. While the combination of Reinforcement Learning (RL) and Model Predictive Control (MPC) offers a promising approach, existing frameworks suffer from a structural mismatch where pointwise RL decisions fail to align with MPC's trajectory level optimization, and often lack rigorous safety guarantees. This work proposes RLTrajGen-PPMPC-CBF, a hierarchical framework for safe, smooth and comfort roundabout navigation, which regulates the coupling between RL-based planning and MPC-based control. We employ Prescribed Performance Constraints (PPC) to enforce a gradual, stable convergence between reference trajectories and control outputs, ensuring MPC tracking performance remains consistent with intended behavior from RL. Additionally, a Control Barrier Function (CBF) layer provides real-time safety corrections that are fed back into the RL process. Simulation results in the MetaDrive environment demonstrate that our method achieves a 6.25\% increase in average success rate and a 65.87\% reduction in Motion Sickness Dose Value (MSDV) compared to the optimal baseline, meanwhile accelerating training convergence.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.27414v1" target="_blank" class="paper-title">Real-Time Disturbance-Aware Koopman Model Predictive Control for Quadrotors in Spatially Varying Winds</a>
+                        <span class="paper-date">2026-10-20</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Reliable quadrotor flight in disturbed environments requires predictive models that remain accurate as unmodeled aerodynamic effects change during deployment. We introduce a disturbance-aware Koopman Control Family (DA-KCF) framework that preserves an offline-identified nominal model while learning only a disturbance-induced correction online. A reference-dependent KCF is first learned from simulation data and calibrated using limited hardware data. During deployment, the nominal KCF remains fixed while a lightweight residual ensemble learns a low-dimensional disturbance correction from causal state-command-state transitions. The Adaptive DA-KCF model is incorporated into MPC, where disturbance corrections are evaluated along the prediction horizon to optimize position and yaw references sent to the onboard stabilizing controller. Hardware experiments on a nano-quadrotor under uniform wind and a spatially varying wake demonstrate that online adaptation improves multi-step prediction and trajectory tracking as disturbance-induced model mismatch increases, while satisfying real-time control requirements.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2610.26810v1" target="_blank" class="paper-title">Bio-inspired Thrust-Assisted Trotting on a legged-Aerial Robot via Real-Time QP-MPC</a>
@@ -1142,10 +1178,7 @@
                         <span class="paper-date">2026-10-16</span>
                     </div>
                                         <span class="paper-comment">📝 https://amrl.cs.utexas.edu/optcar/ Selected at CORL 2026</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：高速越野自动驾驶中，通用车辆动力学模型在适应特定平台时，难以兼顾跨地形泛化能力与高精度控制，且需要大量真实数据。&#10;&#10;🛠 **方法**：提出OptCar方法，通过引入历史条件动力学适配模块，将近期状态-动作观测编码为动态上下文令牌，并利用少量真实数据与环境特定系统辨识生成的合成轨迹对通用模型进行微调。&#10;&#10;✨ **主要贡献**：在6m/s高速滑移主导场景下，OptCar在植被和泥土等滑移多变地形上将轨迹跟踪误差降低约55%；仅需每地形5分钟真实数据即可达到专业模型在道路上的性能，且在地形变化时显著超越后者。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>High-speed off-road autonomy requires precise closed-loop control for a target vehicle while remaining robust across changing terrains. Recent forward kinodynamic (FKD) prediction foundation models suggest a promising path, starting from a generalist model and specializing it to the target platform. However, effective specialization remains challenging, as it often requires substantial real-world data, and models adapted to one setting can still overfit to specific terrains or driving regimes. We present OptCar (Optimized Car), a recipe for bridging the gap from generalist to specialist FKD models that preserves cross-terrain generalization while optimizing performance for a specific vehicle. OptCar introduces a transformer FKD architecture that uses FiLM to condition multi-step predictions on a single dynamics context token summarizing recent state-action history. It then specializes the generalist model using limited real-world data and targeted synthetic rollouts from environment-specific system identification. In closed-loop model predictive control (MPC) experiments across three terrains and an out-of-distribution cart-pulling task, the largest gains appear at 6 m/s, the highest speed evaluated and the regime in which slip dominates tracking error. On vegetation + dirt, the most slip-diverse terrain, OptCar reduces 6 m/s trajectory tracking error by roughly 55% relative to AnyCar fine-tuned on real data alone, and remains the most accurate even when an unseen cart payload changes the dynamics. With 5 minutes of real data per terrain, OptCar is competitive on road with a specialist trained on 30 minutes of road data and outperforms it when the terrain changes. Project Page : https://amrl.cs.utexas.edu/optcar/</p>
@@ -1377,18 +1410,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Adaptive modulation and coding (AMC) improves the spectral efficiency of underwater acoustic (UWA) links, but its feedback is inevitably stale: sound propagates slowly, and by the time channel state information (CSI) arrives, the fast time-varying multipath channel has moved on. Predictive link adaptation therefore needs more than a point forecast: it needs a distribution over each candidate action's consequences. We propose PRB-WM, a physics-regularized Beta world model for predictive per-subcarrier link adaptation on real time-varying UWA channels. A persistence-anchored stochastic latent-space dynamics model learns how the channel evolves; a counterfactual outcome head evaluates, for every candidate modulation and coding scheme (MCS), a Beta-binomial distribution of bit errors on shared imagined futures; and a chance-constrained receding-horizon model predictive controller maximizes expected spectral efficiency subject to a bounded probability of violating the bit error rate (BER) target. To the best of our knowledge, PRB-WM is the first world model for UWA communications. In closed-loop replay of six measured sea-trial links from the public UWA Channel Library against a 24-method pool spanning the full methodological spectrum, PRB-WM attains a mean goodput 87% above the strongest baseline, ranks first on all six time-varying links at the longest lookahead, and is the only method whose realized frame risk decreases systematically with lookahead, meeting the BER-violation contract where no baseline does. Ablations confirm that rollout sampling dispersion is essential to the chance constraint and that the physics anchor is necessary for trainability.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2610.16522v1" target="_blank" class="paper-title">Learning Reachability-Based Safety Representations for Real-Time Robot Navigation in Unknown and Dynamic Environments</a>
-                        <span class="paper-date">2026-10-12</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Safe robot navigation in unknown, dynamic environments requires more than geometric collision checking: a robot still far from an obstacle may be unable to avoid it because of its speed, orientation, or the obstacle's motion. Hamilton--Jacobi (HJ) reachability analysis captures this in a value function whose sign separates states that admit a safe continuation from those where collision is unavoidable, but computing it online for every newly observed environment is too expensive. This dissertation trains neural implicit representations offline on reachability solutions to give optimization-based controllers this information in real time. Since the value function never exceeds the constraint, it equals a directly computed constraint, such as a signed distance, minus a nonnegative dynamics correction. Learning only this correction keeps represented obstacles outside the predicted safe set despite approximation errors. The first two of five methods use the learned function as a terminal constraint in model predictive control, for static local environments and predicted obstacle motion. The next two use it as a barrier candidate in control barrier function safety filters, for static environments and, through pairwise barriers in relative coordinates, for a varying number of moving obstacles. Simulations and hardware experiments on ground and aerial robots show better collision avoidance than geometric and hand-designed baselines, especially for short horizons and moving obstacles. The fifth method replaces the grid-based offline solver, which limits the first four to low-dimensional models. For control-affine dynamics with polytopic inputs, the HJ Hamiltonian is maximized at a vertex, so a parallelizable tree search over vertex inputs can generate training labels. With a loss from the HJ variational inequality, these labels yield barrier candidates for systems with up to 13 states.</p>
                     </details>
                 </div>
                 <div class="paper-card">
@@ -1701,30 +1722,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Repeated evaluation and differentiation of Signal Temporal Logic (STL) robustness can become a computational bottleneck in robot planning and control. Sequential temporal recurrences limit parallelism, while dense masking increases memory requirements. We propose ScanSTL, which combines associative temporal aggregation with parallel scans and ordered block reductions. Eventually and Always use range extrema, while inclusive strong Until composes compact segment representations. A common range engine handles bounded and shifted intervals, including the guards required before delayed Until witnesses. Each exact temporal operator computes complete robustness traces with linear work and storage and logarithmic parallel depth on uniformly sampled finite signals. An open source JAX implementation supports automatic differentiation, batching, and compilation. We compare ScanSTL with STLCG and STLCG++ using CPU and GPU operator benchmarks and nine composed specifications. Across these nine specifications at 512 samples, ScanSTL achieves geometric mean speedups of 243 times for forward evaluation and 104 times for gradient computation over STLCG++ in JAX on the CPU. On an RTX~5090 GPU, ScanSTL evaluates unbounded Until over more than two million samples with median times below 0.1 ms for forward evaluation and 0.25 ms for gradient computation. Simulated escort and patrol experiments with a robot dog further demonstrate faster repair of violating plans and greater solver capacity in model predictive control.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2610.07277v1" target="_blank" class="paper-title">Distribution-Transfer Safe-Horizon MPC under Mode Uncertainty</a>
-                        <span class="paper-date">2026-10-05</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Scenario-based MPC is an attractive strategy for chance-constrained motion planning that approximates uncertainty via a finite set of sampled scenarios. As a sampling-based method, scenario-based MPC is sensitive to distribution mismatch. We address this problem in the context of Safe-Horizon Model Predictive Control (SH-MPC) with obstacles governed by switching dynamic modes. From finite mode observations, we construct a confidence set for the unknown categorical mode law and derive a multiplicative domination bound that transfers a Safe-Horizon collision-risk certificate from a selected scenario-sampling distribution to every law in the confidence set. Wasserstein geometry is used to regularize probability reallocation among modes according to the similarity of their induced trajectory predictions, while a collision-risk surrogate biases sampling toward dangerous modes. The resulting certificate explicitly quantifies the additional tightening required under distribution mismatch and exposes the multiplicative conservatism that arises when several obstacle-wise transfer factors are combined</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2610.07245v1" target="_blank" class="paper-title">Robust Nonprehensile Object Transport with Quadruped Robots</a>
-                        <span class="paper-date">2026-10-05</span>
-                    </div>
-                                        <span class="paper-comment">📝 9 pages, 8 figures</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>In this paper, we present a robust nonprehensile object transportation framework for quadruped robots. An uncertainty-aware trajectory optimization method generates object motions with minimal closed-loop sensitivity to uncertain parameters. The resulting reference trajectory is tracked using a coupled convex model predictive controller that jointly predicts the CoM dynamics of the quadruped and the payload followed by a whole-body QP that enforces ground reaction constraints. The approach is evaluated through extensive simulations and real-world experiments under variations in the object's inertial parameters. Its performance is compared with fixed-orientation and straight-line trajectories as baseline. The results show that the optimized object motion reduces the sliding by approximately 50% compared with the fixed-orientation baseline and 30% compared with the straight-line baseline, while also achieving lower robot CoM tracking errors.</p>
                     </details>
                 </div>
             </div>

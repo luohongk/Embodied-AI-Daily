@@ -600,7 +600,7 @@
                 <a href="LLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
                     <span class="nav-label">LLM</span>
-                    <span class="nav-count">77</span>
+                    <span class="nav-count">80</span>
                 </a>
                 <a href="VLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f97316"></span>
@@ -670,7 +670,7 @@
                 <a href="Autonomous-Driving.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#6366f1"></span>
                     <span class="nav-label">Autonomous Driving</span>
-                    <span class="nav-count">80</span>
+                    <span class="nav-count">79</span>
                 </a>
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
@@ -690,12 +690,12 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">69</span>
+                    <span class="nav-count">71</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">79</span>
+                    <span class="nav-count">76</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -750,7 +750,7 @@
                 <a href="Multimodal-Fusion.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#6366f1"></span>
                     <span class="nav-label">Multimodal Fusion</span>
-                    <span class="nav-count">77</span>
+                    <span class="nav-count">76</span>
                 </a>
                 <a href="Scene-Understanding.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
@@ -819,7 +819,7 @@
             <a href="LLM.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
                 <span class="nav-label">LLM</span>
-                <span class="nav-count">77</span>
+                <span class="nav-count">80</span>
             </a>
             <a href="VLM.html" class="nav-item">
                 <span class="nav-dot" style="background:#f97316"></span>
@@ -889,7 +889,7 @@
             <a href="Autonomous-Driving.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
                 <span class="nav-label">Autonomous Driving</span>
-                <span class="nav-count">80</span>
+                <span class="nav-count">79</span>
             </a>
             <a href="Kalman-Filter.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
@@ -909,12 +909,12 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">69</span>
+                <span class="nav-count">71</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">79</span>
+                <span class="nav-count">76</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -969,7 +969,7 @@
             <a href="Multimodal-Fusion.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
                 <span class="nav-label">Multimodal Fusion</span>
-                <span class="nav-count">77</span>
+                <span class="nav-count">76</span>
             </a>
             <a href="Scene-Understanding.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
@@ -1028,6 +1028,69 @@
                 <span class="topic-count">80 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.06814v3" target="_blank" class="paper-title">TAPDreamer: Transferable Adversarial Patches for World Action Models</a>
+                        <span class="paper-date">2026-10-20</span>
+                    </div>
+                                        <span class="paper-comment">📝 Project Page: https://tapdreamer.github.io</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>World models learn to predict how their environment will evolve, making them an important foundation for general-purpose robotic control. Yet world action models depend on camera inputs whose manipulation can corrupt the visual representations used across tasks and action policies. Existing attacks on these models optimize against the victim's actions or predicted futures and therefore require access to target-model outputs. In this paper, we propose an attack, TAPDreamer, against world action models that instead uses a public encoder alone to construct a fixed local perturbation that transfers across tasks and action architectures. TAPDreamer requires no target-policy queries. Our key insight is that interactions between patch-induced changes in attention weights and value vectors broadcast a nearly identical representation shift far beyond the patch footprint, and this shift remains stable across task observations. Guided by this insight, TAPDreamer uses six frames from one source task to maximize the global L1 distance between clean and patched encoder representations. In closed-loop evaluation, one frozen patch per benchmark, covering about 6.5% of the input, reduces FastWAM's success rate from 97.7% to 0.0% across 40 LIBERO tasks and from 90.86% to 0.0% across 50 RoboTwin tasks; matched random patches retain 81.5% and 79.2% success. The same patches reduce success to 1.45% and 1.00% on two DreamWAM configurations and to 10.60% on Motus. These results show that protecting downstream action generation alone is insufficient: defenses for world action models must also secure shared visual encoders against persistent local perturbations.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.28431v1" target="_blank" class="paper-title">Plausible Future, Wrong Choice: Steering World-Action Models toward Intended Future</a>
+                        <span class="paper-date">2026-10-20</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>World-Action Models (WAMs) have emerged as a promising paradigm for embodied generalist policies by jointly modeling future world evolution and robot actions across diverse manipulation tasks. However, representing diverse futures is only the first step: a capable WAM must also generate futures that match the requirements of the current task and execution progress. In long-horizon manipulation where similar observation-action segments occur across different tasks and stages, existing approaches may generate locally plausible yet misdirected rollouts to drift toward wrong task stage, i.e., a phenomenon we term Stage Confusion. To address this problem, we propose TaskWAM, a closed-loop, stage-aware framework that represents fine-grained task requirements with Mode Tokens and tracks execution progress with State Tokens, forming a structured task state to steer world--action generation toward intended future. We further introduce StageBench, a controlled multi-stage manipulation benchmark with parameterized stage variations and automated evaluation.Extensive experiments on both simulation benchmarks and real-world tasks demonstrate that TaskWAM effectively reduces confusion and achieves competitive performance with state-of-the-art methods. Moreover, TaskWAM provides strong plug-and-play transfer across heterogeneous WAM architectures and robot embodiments, including single-arm robots, dual-arm grippers, dexterous hands, and humanoid robots.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.28122v1" target="_blank" class="paper-title">De-Diffusing WAMs: Action-Sufficient Direct Prediction for Robot Control</a>
+                        <span class="paper-date">2026-10-20</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Cascade world-action models (WAMs) use predicted visual futures to condition robot actions, but inherit costly iterative inference from diffusion-pretrained experts. We ask what a single-step predicted future must preserve to support accurate single-step action prediction. In the evaluated WAM, resampling video noise has little effect on downstream actions, yet naively truncating both streams to one step substantially reduces task success. Video-space supervision only partially closes this gap, and a local sensitivity analysis shows that vision prediction errors have highly unequal consequences for action accuracy. These findings motivate DirectWAM, which converts pretrained video and action experts into single-step predictors without stochastic sampling through action-sufficient distillation, while retaining the explicit future-to-action cascade. After learning a one-step action model, we train the future predictor by decoding actions from its own predicted futures and backpropagating demonstration action error through the expert, with an optional future-latent reconstruction loss. The resulting objective evaluates the student-generated future through its downstream control consequences rather than relying on representation matching alone. DirectWAM achieves 97.1% average success across four LIBERO suites and 85.4% on RoboTwin 2.0, outperforming Flash-WAM at the same one-evaluation-per-stream budget. This advantage has also extended to three real-world tasks that we designed. Compared with the full iterative teacher, it reduces inference latency by $28.0\times$.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.18840v3" target="_blank" class="paper-title">WorldScape Policy 2.0: Empowering Steerable World Action Modeling with Reasoning-Augmented Memory and In-Context Learning</a>
+                        <span class="paper-date">2026-10-20</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有世界动作模型（WAMs）受限于有限的时序上下文、粗粒度的语言监督和纯文本条件，难以实现任务进度跟踪、细粒度语言-视频-动作对齐及跨实体迁移。&#10;&#10;🛠 **方法**：提出WorldScape Policy 2.0，通过推理增强的长短期记忆机制，结合因果短期视觉记忆与长短期事件记忆，并构建包含近500万事件片段的Event-grounded预训练数据集ManipEvent-5M，实现多模态可控规划与执行。&#10;&#10;✨ **主要贡献**：在仿真和真实平台实验中，该方法在长程自主规划、细粒度指令跟随和上下文适应方面表现出显著优势，并提供了从高层指令到细粒度文本、目标图像或视频提示的统一控制接口。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>World Action Models (WAMs) offer a promising paradigm for robotic manipulation by jointly modeling visual state transitions and robot actions. However, existing WAMs are constrained by limited temporal context, coarse episode-level language supervision, and predominantly text-only conditioning, which hinder task-progress tracking and fine-grained language-video-action grounding while limiting visual-context reasoning and cross-embodiment transfer. In this paper, we introduce WorldScape Policy 2.0, a controllable WAM with reasoning-augmented long short-term memory. Its causal short-term visual memory supplies recent observations as DiT prefill to preserve local interaction dynamics, while its long short-term event memory organizes historical VLM outputs into global-history, local-active, and event-boundary representations for progress-aware retrieval. The retrieved history augments perception and autoregressively generated planning tokens, yielding an implicit subgoal condition for autonomous planning; semantic forcing further transfers event-level instruction semantics into this latent planning pathway. To establish fine-grained multimodal controllability, we construct ManipEvent-5M, an event-grounded embodied pretraining dataset containing nearly 5 million event segments with aligned action trajectories, episode-level task instructions, segment-level subtask captions, goal images, and video demonstrations. These designs provide a unified interface for autonomous planning from high-level instructions and controllable execution from fine-grained text, goal-image, or video-context prompts. Experiments in both simulation and real-world platforms demonstrate superior capabilities in long-horizon autonomous planning, fine-grained instruction following and in-context adaptation.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.27657v1" target="_blank" class="paper-title">PLaCA: Learning Patch-Level Future Latent Change for Action Generation</a>
+                        <span class="paper-date">2026-10-20</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Vision-Language-Action (VLA) models generate robot actions from visual observations and language instructions, but effective manipulation also requires anticipating how the environment will change. Existing world-action models explore future image prediction and latent dynamics modeling. However, generating complete future images can be computationally expensive, while highly compressed latent representations may obscure local changes. To address these challenges, we propose PLaCA, a world-to-action framework built around future latent change. PLaCA directly predicts spatially structured patch-level future latent change from the current multimodal input, preserving local information about expected environmental changes. We introduce patch-level change-aware supervision to emphasize regions undergoing larger changes and a future-to-action interface that explicitly incorporates predicted future latent change into action generation. Experiments on LIBERO-Long show that PLaCA achieves a 79.0% success rate, improving upon the Action-only baseline by 5.0 percentage points. On CALVIN, PLaCA improves the average sequence length from 2.784 to 3.564. These improvements are achieved while updating only 2.95% of the model parameters during the second training stage, demonstrating the effectiveness of future latent change modeling for downstream robotic manipulation.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2610.26855v1" target="_blank" class="paper-title">Ropedia W0: Scaling Loco-Manipulation World Models across Embodiments with Human Experience</a>
@@ -1126,6 +1189,18 @@
                 </div>
                 <div class="paper-card">
                     <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.19085v3" target="_blank" class="paper-title">DA-WAM: Decision-Aligned Future Latents for Driving World Models</a>
+                        <span class="paper-date">2026-10-18</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>World models for autonomous driving should anticipate the consequences that matter for driving decisions rather than reconstruct every detail of future scenes. However, predictive representations alone are not guaranteed to distinguish candidate actions that lead to different planning outcomes.We propose DA-WAM, a decision-aligned world action model that couples a Joint-Embedding Predictive Architecture (JEPA) with candidate-level trajectory scoring. During joint training, the JEPA objective grounds future representations in observed scene dynamics, while the planning objectives encourage these representations to capture distinctions relevant to safety and utility. An action-conditioned predictor generates a distinct future latent for each candidate trajectory, and a multi-head trajectory scorer uses the corresponding latent to estimate planning factors and overall utility. In addition, safety-critical post-training with hard negatives further improves discrimination between geometrically similar trajectories with different safety outcomes. DA-WAM achieves state-of-the-art performance among learned camera-based planners on NAVSIM-v1, NAVSIM-v2, and Bench2Drive. Ablation studies demonstrate the effectiveness of each component in driving decision-making.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
                         <a href="https://arxiv.org/abs/2609.22332v3" target="_blank" class="paper-title">AffordanceWAM: Affordance-Aware Joint World-Action Modeling for Robot Manipulation</a>
                         <span class="paper-date">2026-10-18</span>
                     </div>
@@ -1142,10 +1217,7 @@
                         <span class="paper-date">2026-10-18</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="好的，作为一名人工智能研究与学术论文分析专家，我将严格按照您的要求，对这篇论文《Latent-WAM: Latent World Action Modeling for End-to-End Autonomous Driving》进行详细的中文解读。&#10;&#10;---&#10;&#10;## 0. 概览（Concise Summary）&#10;&#10;- **主题（Topic）**：端到端自动驾驶中的轨迹规划。&#10;- **问题（Problem）**：现有基于世界模型的自动驾驶规划方法存在三个关键缺陷：1）场景表征压缩不充分，导致计算开销大；2）缺乏空间理解能力，或依赖外部深度估计模型引入额外延迟；3）对时序动态信息的利用不足，通常仅预测下一帧，限制了规划性能。&#10;- **方法（Method）**：提出一个名为 **Latent-WAM** 的端到端自动驾驶框架。它包含两个核心模块：**空间感知压缩世界编码器（SCWE）** 和 **动态潜世界模型（DLWM）**。SCWE 通过知识蒸馏将几何基础模型的空间理解能力注入视觉骨干网络，并使用可学习的查询（learnable queries）将多视图图像压缩为紧凑的场景令牌（scene tokens）。DLWM 使用因果 Transformer 自回归地预测未来世界状态，该状态融合了历史视觉和运动信息。&#10;- **创新（Innovation）**：1）提出 SCWE，通过蒸馏几何知识实现高效、紧凑且具有空间感知的场景表征。2）提出 DLWM，通过因果 Transformer 联合学习视觉和运动动态，构建具有动态场景理解能力的表征。3）在无需感知标注（perception-free）的设置下，在 NAVSIM v2 和 HUGSIM 基准测试上取得了新的最优结果。&#10;- **意义（Significance）**：这项工作证明了通过精心设计的潜空间世界模型，可以在极小的模型（104M参数）和较少的数据下，实现超越依赖复杂感知标注和视频生成方法的规划性能，为高效、可扩展的端到端自动驾驶提供了新范式。&#10;- **一句话总结**：Latent-WAM 通过一个空间感知的压缩编码器和一个动态潜世界模型，高效地学习紧凑且富含规划信息的场景表征，在多个自动驾驶基准测试中以更小的模型和数据量取得了最优的轨迹规划性能。&#10;&#10;## 1. 研究动机（Motivation）&#10;&#10;端到端自动驾驶因其数据驱动和可扩展性而备受关注。然而，现有方法面临以下挑战和空白：&#10;&#10;1.  **对感知标注的依赖**：早期方法（如 UniAD, VAD）依赖复杂的辅助任务和感知标注（如语义地图、占用网格），这限制了算法的进一步扩展和数据效率。&#10;2.  **世界模型方法的局限性**：近期基于世界模型的方法试图通过时序自监督学习来缓解对标注的依赖，但存在显著不足：&#10;    - **基于视频生成的方法**（如 Epona, DriveVLA-W0）：计算开销巨大，且学习到的中间表征往往关注与规划无关的视觉细节（如天空、远处建筑）。&#10;    - **基于潜空间预测的方法**（如 LAW, World4Drive）：虽然相对轻量，但表征质量不足。具体表现为：&#10;        - **压缩不充分**：表征仍然冗余。&#10;        - **空间理解弱**：缺乏对3D空间结构的理解，或需要在推理时依赖外部深度估计模型，增加了延迟。&#10;        - **动态信息利用不足**：通常仅从第T帧预测第T+1帧的表征，未能充分利用历史信息进行多步预测。&#10;&#10;**为什么重要？** 解决这些问题对于构建一个高效、可扩展且性能强大的端到端自动驾驶系统至关重要。一个理想的系统应该能够从数据中自主学习到与规划最相关的、紧凑的、具有空间和动态感知能力的场景表征，而无需昂贵的标注和巨大的计算资源。&#10;&#10;**挑战在哪里？** 核心挑战在于如何在**高度压缩**的表征中，同时保留对规划至关重要的**空间几何信息**和**时序动态信息**，并且这个过程必须是高效、可端到端训练的。&#10;&#10;## 2. 创新点（Innovation）&#10;&#10;本文的关键创新在于提出了一个名为 **Latent-WAM** 的框架，其核心创新点如下：&#10;&#10;1.  **空间感知压缩世界编码器（SCWE）**：&#10;    - **创新点**：提出了一种新的场景压缩方法。它通过**知识蒸馏**，将预训练的几何基础模型（WorldMirror）的空间理解能力注入到视觉骨干网络（DINOv2）中。然后，使用一组**可学习的场景查询（scene queries）** 与图像块令牌（patch tokens）进行交互，将丰富的视觉信息压缩成一组紧凑的、具有空间感知能力的场景令牌。&#10;    - **与现有方案的不同**：不同于直接使用稠密的BEV或图像特征，SCWE通过蒸馏和可学习查询实现了极高的压缩比（从数千个图像块令牌压缩到少量场景令牌），同时通过蒸馏获得了强大的3D空间理解能力，无需在推理时引入额外的深度估计模块。&#10;&#10;2.  **动态潜世界模型（DLWM）**：&#10;    - **创新点**：提出了一种新的潜空间世界建模方法。它采用**因果Transformer**，以自回归的方式预测未来的世界状态。该状态不仅包含压缩后的视觉场景令牌，还融合了**自车状态（ego status）** 信息（如速度、加速度、驾驶指令）。&#10;    - **与现有方案的不同**：不同于仅预测下一帧的方法，DLWM 进行多步自回归预测，迫使模型学习更长时序的动态演变。通过引入**3D-RoPE**位置编码，模型能够区分不同时间步、不同相机视角和不同令牌位置，增强了时空建模能力。此外，通过**教师强制（Teacher Forcing）** 和精心设计的**注意力掩码**，实现了高效的并行训练。&#10;&#10;3.  **整体框架的协同效应**：&#10;    - **为什么能奏效？** SCWE 提供了高质量、紧凑且富含空间信息的输入，使得 DLWM 能够高效地学习时序动态。DLWM 通过自监督学习，反过来又增强了视觉骨干网络对动态信息的建模能力。两者协同优化，最终学习到的世界状态表征直接服务于轻量级的轨迹解码器，实现了端到端的最优规划性能。在推理时，仅需 SCWE 和轨迹解码器，没有额外开销。&#10;&#10;## 3. 主要内容（Main Content）【重点】&#10;&#10;### 3.1 设计架构与方法&#10;&#10;Latent-WAM 的整体架构如图2所示，由三个核心模块组成：&#10;&#10;1.  **空间感知压缩世界编码器 (SCWE)**：&#10;    - **场景压缩**：输入多视图图像序列 $I \in \mathbb{R}^{T \times M \times H \times W \times 3}$，首先通过视觉编码器（DINOv2）提取图像块令牌 $X$。然后，一组可学习的场景查询 $Q_{scene}$ 与 $X$ 拼接，共同输入到一个 DINO 编码器 $E$ 中，通过自注意力机制将图像信息压缩到场景查询中，输出紧凑的场景令牌 $\hat{Q}_{scene}$。&#10;    - **几何对齐**：为了增强空间理解，使用一个冻结的几何基础模型 $f_g$（WorldMirror）从同一图像中提取几何特征 $f_g(I)$。然后，通过一个几何投影器 $\phi$ 将视觉编码器输出的图像令牌 $\hat{X}$ 投影到与几何特征相同的维度，并计算两者之间的余弦相似度损失 $L_{align}$，以此将几何知识蒸馏到视觉编码器中。&#10;&#10;2.  **动态潜世界模型 (DLWM)**：&#10;    - **世界潜状态聚合**：将来自不同相机的场景令牌 $\hat{Q}_{scene}$ 与编码后的自车状态嵌入 $S_{ego}$ 拼接，形成统一的帧级世界状态表征 $S_{world} \in \mathbb{R}^{T \times (M \times N + 1) \times D_l}$。&#10;    - **因果世界模型预测**：将 $S_{world}$ 序列视为帧级块，使用一个标准 Transformer 解码器进行自回归预测。输入是未来世界状态的查询 $Q_{future}$ 和历史世界状态的键值缓存 $KV_{future}$，输出是预测的未来世界状态 $S_{future}$。&#10;    - **教师强制注意力掩码**：如图3所示，采用帧级注意力掩码。同一帧内的令牌可以互相双向关注，而跨帧的令牌只能关注到时间上更早的令牌，保证了时序因果性，同时允许并行预测所有未来帧。&#10;    - **3D-RoPE**：将注意力头的维度分为三部分，分别编码时间坐标 $t$、相机索引 $m$ 和令牌索引 $n$，使模型能够区分不同时空位置的令牌。&#10;    - **自车状态监督**：从预测的未来世界状态中提取自车状态嵌入，通过三个独立的 MLP 解码器预测未来的驾驶指令、速度和加速度，并计算相应的损失 $L_{ego}$，为世界模型提供更精确的动态引导。&#10;&#10;3.  **轨迹规划器 (Trajectory Decoder)**：&#10;    - 使用一组可学习的轨迹查询 $Q_\tau$ 与当前时刻的世界状态 $S_{world}^t$ 进行交互，通过一个轻量级 MLP 解码出 $K$ 条候选轨迹。最后，根据当前的驾驶指令 $C$ 选择最终的轨迹 $\tau$。&#10;&#10;### 3.2 关键算法与数学推导&#10;&#10;1.  **场景压缩**：&#10;    $$ \hat{Q}_{scene}, \hat{X} = E([Q_{scene}; X]) $$&#10;    其中 $Q_{scene} \in \mathbb{R}^{T \times M \times N \times D_e}$ 是可学习的场景查询，$X \in \mathbb{R}^{T \times M \times S \times D_e}$ 是图像块令牌，$E$ 是 DINO 编码器。&#10;&#10;2.  **几何对齐损失**：&#10;    $$ L_{align} = 1 - \cos\left( \text{LN}(\phi(\hat{X})), \text{LN}(f_g(I)) \right) $$&#10;    其中 $\cos(\cdot, \cdot)$ 是余弦相似度，$\text{LN}$ 是层归一化，$\phi$ 是几何投影器，$f_g$ 是冻结的几何基础模型。&#10;&#10;3.  **因果世界模型预测**：&#10;    $$ S_{future} = \text{DLWM}(Q_{future}, KV_{future}) $$&#10;    其中 $Q_{future} \in \mathbb{R}^{(T-1) \times (M \times N + 1) \times D_l}$ 是可学习的未来状态查询，$KV_{future}$ 是历史世界状态 $S_{world}^{1:T-1}$ 的键值缓存。&#10;&#10;4.  **自车状态预测**：&#10;    $$ C_{pred} = \text{Softmax}(D_{cmd}(S'_{ego})), \quad V_{pred} = D_v(S'_{ego}), \quad A_{pred} = D_a(S'_{ego}) $$&#10;    其中 $S'_{ego}$ 是从预测的未来世界状态中提取的自车状态嵌入，$D_{cmd}, D_v, D_a$ 分别是驾驶指令、速度和加速度的解码器。&#10;&#10;5.  **总训练损失**：&#10;    $$ L = L_{traj} + \alpha L_{align} + \beta L_{wm} + \gamma L_{ego} $$&#10;    其中 $L_{traj}$ 是模仿专家轨迹的 L1 损失，$L_{wm}$ 是预测未来世界状态的 MSE 损失，$L_{ego} = L_{cmd} + L_v + L_a$，$\alpha=0.1, \beta=0.2, \gamma=0.1$ 是权重超参数。&#10;&#10;### 3.3 模型、训练与数据集&#10;&#10;- **模型**：&#10;    - **视觉骨干**：DINOv2-Base (86.6M 参数)。&#10;    - **场景令牌数量**：$N=16$ 个可学习查询。&#10;    - **潜空间维度**：$D_l = 256$。&#10;    - **时序窗口**：$T=4$ 帧。&#10;    - **相机视角**：左、前、右三个视角。&#10;    - **DLWM 和轨迹解码器**：4层 Transformer，8个注意力头，隐藏维度256。&#10;    - **总参数量**：推理时 104M，训练时 191M（包含 EMA 编码器）。&#10;- **训练**：&#10;    - **优化器**：AdamW，学习率 $2 \times 10^{-4}$，权重衰减 0.05。&#10;    - **学习率调度**：前10%步数线性预热，之后余弦退火至 $1 \times 10^{-6}$。&#10;    - **硬件**：32块 A100 GPU，总批次大小 512，训练约100个epoch（约2天）。&#10;    - **精度**：BF16 混合精度训练。&#10;- **数据集**：&#10;    - **NAVSIM v2**：基于 OpenScene 和 nuPlan 的真实世界数据集，包含 103k 训练场景和 12k 评估场景。用于评估开环规划性能，主要指标为 EPDMS。&#10;    - **HUGSIM**：基于 KITTI-360, nuScenes, PandaSet, Waymo 等数据集的逼真闭环仿真器。用于评估闭环规划性能，主要指标为 RC 和 HD-Score。&#10;&#10;### 3.4 实验设置与结果&#10;&#10;- **NAVSIM v2 结果 (表1)**：&#10;    - Latent-WAM 在所有方法中取得了最高的 **EPDMS (89.3)**，超越了包括依赖感知标注的方法（如 Drive-JEPA 的 87.8）。&#10;    - 在与同样无需感知标注的方法对比中，Latent-WAM 比第二名的 DriveVLA-W0 (86.1) 高出 **3.2 EPDMS**。&#10;    - 在规则合规性指标（DDC, TLC, LK）上表现优异，证明了其规划的安全性。&#10;&#10;- **HUGSIM 结果 (表2)**：&#10;    - 在零样本（zero-shot）设置下（模型仅在 NAVSIM 上训练），Latent-WAM 取得了最高的 **RC (45.9)** 和与最优方法持平的 **HD-Score (28.9)**。&#10;    - 这表明模型学习到的世界表征具有很强的泛化能力。&#10;&#10;- **消融实验 (表3, 4, 5, 6)**：&#10;    - **组件有效性 (表3)**：逐步添加场景压缩、几何信息、世界模型和自车状态，EPDMS 从 87.9 逐步提升至 89.3，证明了每个模块的贡献。&#10;    - **几何信息注入方式 (表4)**：直接拼接冻结的几何特征会降低性能（88.0），而通过蒸馏（Distillation）的方式则能显著提升性能（89.3），说明端到端微调对于对齐规划目标至关重要。&#10;    - **视觉骨干 (表5)**：DINO-Base 全参数微调效果最好（89.3），而使用 LoRA 等参数高效微调方法效果很差，说明蒸馏高维几何特征需要足够的模型容量和全参数更新的灵活性。&#10;    - **预测时间步长 (表6)**：多步预测（如 -3→0→4→8）比仅预测最后一帧（0→8）效果更好（89.3 vs 88.4），但过密的预测（步长2）没有带来额外收益，反而增加计算开销。&#10;&#10;### 3.5 技术细节&#10;&#10;- **教师强制与注意力掩码**：如图3所示，这是一种高效的并行训练策略。在训练时，模型使用真实的历史状态作为上下文来预测未来状态，避免了自回归推理时的误差累积。帧级注意力掩码允许同一帧内所有令牌互相通信，但强制跨帧的因果性，使得模型可以一次性并行预测所有未来帧。&#10;- **3D-RoPE**：这是一种将时间、视角和令牌位置信息编码到注意力计算中的方法。通过将注意力头的维度分割，分别用不同频率的正弦/余弦函数对三个坐标进行编码，使得模型能够感知到令牌在时空网格中的具体位置。&#10;- **几何特征预计算与缓存**：由于几何基础模型 $f_g$ 在训练中是冻结的，其输出的几何特征 $f_g(I)$ 可以在训练前预先计算并缓存到硬盘上。训练时直接加载，避免了重复的前向传播，大大节省了训练时间和GPU内存。&#10;- **推理效率**：如表7所示，推理时仅需运行 SCWE（100ms）和轨迹解码器（6ms），总延迟仅 107ms，内存占用 1.1GB，非常高效。&#10;&#10;## 4. 意义与影响（Significance and Impact）&#10;&#10;- **解决了什么问题**：&#10;    - 解决了现有基于世界模型的自动驾驶方法中**表征压缩不充分、空间理解弱、动态信息利用不足**这三大核心问题。&#10;    - 证明了通过精心设计的潜空间世界模型，可以在**无需感知标注**和**极小的模型与数据量**下，实现超越依赖复杂感知和视频生成方法的规划性能。&#10;&#10;- **贡献是什么**：&#10;    - 提出了 **SCWE**，一种新颖的、通过几何蒸馏实现空间感知的场景压缩方法。&#10;    - 提出了 **DLWM**，一种新颖的、通过因果Transformer联合学习视觉和运动动态的潜世界模型。&#10;    - 在 NAVSIM v2 和 HUGSIM 上取得了新的最优结果，为端到端自动驾驶领域树立了新的标杆。&#10;&#10;- **对未来研究/应用的影响**：&#10;    - **研究影响**：为高效、可扩展的端到端自动驾驶研究提供了新思路。未来的研究可以探索更强大的几何基础模型、更复杂的动态建模方法（如引入交互建模），以及如何将这种方法扩展到更长的时序预测和更复杂的驾驶场景。&#10;    - **应用影响**：由于其高效性（小模型、低延迟、少数据），Latent-WAM 非常适合部署在计算资源受限的实车平台上。它减少了对昂贵感知标注的依赖，使得自动驾驶系统更容易从大规模驾驶数据中学习。&#10;&#10;- **作者提到的局限与开放问题**：&#10;    - 论文未明确讨论局限性，但可以从实验中推断：&#10;        - **对几何基础模型的依赖**：SCWE 的性能受限于所蒸馏的几何基础模型（WorldMirror）的质量。&#10;        - **时序窗口有限**：当前使用4帧作为输入，对于需要更长历史信息的场景（如预测远处车辆的意图）可能不足。&#10;        - **闭环评估的挑战**：虽然在 HUGSIM 上取得了不错的零样本结果，但">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>We introduce Latent-WAM, an efficient end-to-end autonomous driving framework that achieves strong trajectory planning through spatially-aware and dynamics-informed latent world representations. Existing world-model-based planners suffer from inadequately compressed representations, limited spatial understanding, and underutilized temporal dynamics, resulting in sub-optimal planning under constrained data and compute budgets. Latent-WAM addresses these limitations with two core modules: a Spatial-Aware Compressive World Encoder (SCWE) that distills geometric knowledge from a foundation model and compresses multi-view images into compact scene tokens via learnable queries, and a Dynamic Latent World Model (DLWM) that employs a causal Transformer to autoregressively predict future world status conditioned on historical visual and ego status representations. Extensive experiments on NAVSIM v2 and HUGSIM demonstrate new state-of-the-art results: 89.3 EPDMS on NAVSIM v2 and 28.9 HD-Score on HUGSIM, surpassing the best prior perception-free method by 3.2 EPDMS with significantly less training data and a compact 104M-parameter model. The code and model weights have been open-sourced at https://github.com/yukki555/Latent-WAM.</p>
@@ -1917,78 +1989,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Teaching a humanoid to follow instructions with its whole body runs into two obstacles. Its action space is large and tightly coupled: legs, arms, and fingers must move together while the robot keeps its balance, which makes joint-level actions hard to learn. And humanoid demonstrations are scarce, so current humanoid generalist policies do not follow new instructions out of the box and are fine-tuned on teleoperated demonstrations of each task before deployment. Human demonstrations exist in far larger numbers, but a person's motion is not a robot command. We remove both obstacles by changing what the generalist policy predicts. We introduce VioLA, a generalist humanoid policy that predicts body and hand motion latents instead of joint commands. A pretrained body- and hand-controller execute these latents on the robot. Their corresponding motion encoders map human and robot motion into the same latent spaces. A human recording is therefore labeled in the policy's action space, and the training demonstration pool contains 140.6 million frames, 93.2% of them human. As a result, VioLA follows locomotion instructions on the real robot zero-shot, without task-specific fine-tuning, reaching 100% success where GR00T N1.7 and $Ψ_0$ reach 16.7% and 0%, respectively. It also reaches 88.6% manipulation success without task-specific fine-tuning. The same approach works across two VLA and one world-action model backbones. A generalist policy trained on human demonstrations alone performs locomotion tasks on the real robot zero-shot. Code and checkpoints will be released.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2610.12407v1" target="_blank" class="paper-title">LeWAM: A JEPA World Action Model with Diffusion-Steering-Based MPC</a>
-                        <span class="paper-date">2026-10-08</span>
-                    </div>
-                                        <span class="paper-comment">📝 14 pages, 6 figures</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>World action models (WAMs) predict actions and future observations, typically from a reconstruction-based representation that carries noisy, redundant information which can complicate downstream predictions. We introduce LeWAM, a bidirectional transformer for forward, backward, inverse dynamics and policy prediction, on a decoder-free JEPA latent trained end-to-end through all four modes. We see the following benefits: 1) Alignment: linear probes read robot and object state from LeWAM's latent better than from a regular Le World Model (a forward-only JEPA world model), while the latent ignores visual distractors as well as LeWM does and far better than a reconstruction-based WAM. 2) Acting: Closed-loop evaluations of LeWAM match a regular flow-matching policy trained on the same encoder at matched size, while also providing a world model. 3) Planning: Sampling raw actions when planning with WAMs lets MPC exploit dynamics-model inaccuracies; planning in the noise space of the policy head instead improves the closed-loop performance of these WAMs.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2610.12285v1" target="_blank" class="paper-title">PLaW-VLA: Predictive Latent World Modeling for Vision-Language-Action Policies</a>
-                        <span class="paper-date">2026-10-08</span>
-                    </div>
-                                        <span class="paper-comment">📝 Accepted to the 10th Conference on Robot Learning (CoRL 2026)</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Learning to predict how the world evolves can provide vision-language-action (VLA) policies with predictive context for long-horizon control, but its effectiveness depends on what future representation is modeled and how it conditions action generation. We introduce PLaW-VLA, which models task-relevant future states in a pretrained prediction-oriented representation space, reducing the need to predict control-irrelevant visual details. Built on a Mixture-of-Transformers architecture, PLaW-VLA conditions action generation on observation history, current task semantics, and predicted future states through structured causal attention. Experiments show a +11.8 percentage-point (pp) gain over reactive policies on RoboTwin Hard Horizon III and a +1.77 pp gain over reconstruction-oriented latent prediction on zero-shot LIBERO-Plus, supporting improved long-horizon control and generalization under distribution shift, respectively. By avoiding low-level visual reconstruction, PLaW-VLA lowers the burden of future prediction, enabling a lightweight latent world model with parallel future prediction and about 1/19 the inference latency of generative world-action modeling at comparable policy performance.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2610.12194v1" target="_blank" class="paper-title">MiniWAM: Learning Compact Future Targets for Efficient World-Action Modeling</a>
-                        <span class="paper-date">2026-10-08</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>World modeling has emerged as an effective co-training objective for robot policies, giving rise to World Action Models (WAMs) that jointly predict actions and future states. However, most WAMs predict future states in the native representation space of pretrained visual backbones, resulting in high-dimensional targets with substantial training cost. We introduce MiniWAM, which instead predicts compact future representations learned from privileged current-future transitions. To construct these targets, we propose Predictive Representations via Inverse Spatiotemporal Modeling (PRISM), which combines inverse-dynamics supervision with feature reconstruction to emphasize control-relevant transition information while preserving useful future-state information. With the learned PRISM encoder frozen, MiniWAM is trained to jointly predict the resulting targets and robot actions from current observations. With 65$\times$ fewer native future feature tokens, MiniWAM consistently outperforms native future-feature prediction with both DINOv3 and WAN2.1 VAE features, while achieving up to an 8$\times$ speedup in world-action training. At 0.25B parameters, MiniWAM is already competitive with substantially larger WAMs on LIBERO, LIBERO-Plus, and RoboTwin 2.0 simulation benchmarks. Representation analyses further show that PRISM contributes behavioral structure beyond feature reconstruction alone. These results demonstrate that effective world-action modeling does not require predicting native visual futures, and that compact predictive representations provide a strong and substantially more efficient target for policy learning. The project page is available at: https://j1dan.github.io/MiniWAM.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2610.04681v3" target="_blank" class="paper-title">RoboIRS: Inference-Time Internal Representation Steering for Generalist Robot Policies</a>
-                        <span class="paper-date">2026-10-08</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Vision-language-action (VLA) and world-action models (WAMs) often degrade under out-of-distribution task variations despite retaining partial task capability. To recover such capability, we propose RoboIRS, an inference-time internal representation steering method that uses successful and failed rollouts to train linear classifiers, select outcome-relevant intervention locations, and derive task-specific steering directions without updating policy parameters. On 15 simulation tasks with a frozen $π0.5$ policy, RoboIRS improves the average success rate from 44.4% to 66.2%, outperforming alternative inference-time intervention baselines while adding little inference time. We further validate RoboIRS on real-robot manipulation using the same $π0.5$ policy and demonstrate its applicability to a world-action model Cosmos Policy, where the average success rate improves from 35.4% to 55.4%. These results show that directly steering internal robot-policy representations can improve the performance of robot policies at inference time. Project website is available at https://rollingoat.github.io/roboirs/.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2610.12099v1" target="_blank" class="paper-title">UNITAS: A 3D-Native World Action Model for Embodied Manipulation</a>
-                        <span class="paper-date">2026-10-08</span>
-                    </div>
-                                        <span class="paper-comment">📝 27 pages, 11 figures and 13 tables. Under review</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>World action models (WAMs) aim to answer a coupled physical question: given a task instruction, what motion should the robot execute, and how will that motion change the surrounding world? Most existing WAMs build on pretrained video generators and represent world evolution through images or visual latents. Robotic interaction, however, takes place in metric three-dimensional space, while images are view-dependent projections whose pixel distances do not directly encode physical distances. We introduce UNITAS, to our knowledge the first 3D-native world action model that unifies observations, actions, and scene dynamics in a shared metric 3D frame within each interaction, using a common representation across robot embodiments and human hands. Action flow represents human hands and robot grippers as 3D point trajectories, while scene flow describes scene-point displacements conditioned on these trajectories. World-aligned 3D positional embeddings ground visual tokens with or without depth input, and a physical-time trajectory tokenizer encodes each point trajectory as one token anchored at its current 3D position. This interface supports both direct action execution and action-conditioned scene prediction. With 1.7B parameters, UNITAS achieves the best action-conditioned scene prediction on RoboTwin among the compared methods, with up to 49% lower displacement errors than PointWorld, and state-of-the-art manipulation success, including 99.8% on LIBERO and an average of 85% across real-world tasks. The code is available at https://github.com/DexForce/UNITAS.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2610.11401v1" target="_blank" class="paper-title">WAM-Cache: Staleness-Bounded KV Reuse for Efficient World Action Models</a>
-                        <span class="paper-date">2026-10-08</span>
-                    </div>
-                                        <span class="paper-comment">📝 19 pages, 5 figures, 7 tables. Project page: https://dingkai0302.github.io/wam-cache/</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>World Action Models (WAMs) enable generalist robot manipulation by conditioning an action expert on representations from a pretrained video Diffusion Transformer (DiT). In closed-loop control, the video DiT runs at every chunk to encode the current observation into layerwise key-value (KV) pairs that the action expert queries. This prefill dominates the per-chunk computational cost, yet existing training-free accelerations leave it fully dense. We present WAM-Cache, a training-free framework that retains layerwise key-value representations across chunks and recomputes only a sparse refresh set of tokens. Crucially, we find that the intuitive heuristic of refreshing visually drifted tokens plateaus far below the dense baseline, even with an oracle predicting ground-truth KV drift. Downstream action accuracy is instead governed by where the action expert attends, not by what moved. WAM-Cache therefore selects the refresh set by uniting the action expert's cross-attention with visual latent surprise, complemented by a strict age bound that suppresses compounding error. On Fast-WAM, WAM-Cache cuts video DiT prefill FLOPs by 32-42% across RoboTwin 2.0, LIBERO, and real-world experiments, while staying within 0.7-1.8 percentage points of the dense policy in simulation and 2.5 points on a real robot.</p>
                     </details>
                 </div>
             </div>

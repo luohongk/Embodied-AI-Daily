@@ -600,7 +600,7 @@
                 <a href="LLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
                     <span class="nav-label">LLM</span>
-                    <span class="nav-count">77</span>
+                    <span class="nav-count">80</span>
                 </a>
                 <a href="VLM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f97316"></span>
@@ -670,7 +670,7 @@
                 <a href="Autonomous-Driving.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#6366f1"></span>
                     <span class="nav-label">Autonomous Driving</span>
-                    <span class="nav-count">80</span>
+                    <span class="nav-count">79</span>
                 </a>
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
@@ -690,12 +690,12 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">69</span>
+                    <span class="nav-count">71</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">79</span>
+                    <span class="nav-count">76</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -750,7 +750,7 @@
                 <a href="Multimodal-Fusion.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#6366f1"></span>
                     <span class="nav-label">Multimodal Fusion</span>
-                    <span class="nav-count">77</span>
+                    <span class="nav-count">76</span>
                 </a>
                 <a href="Scene-Understanding.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
@@ -819,7 +819,7 @@
             <a href="LLM.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
                 <span class="nav-label">LLM</span>
-                <span class="nav-count">77</span>
+                <span class="nav-count">80</span>
             </a>
             <a href="VLM.html" class="nav-item">
                 <span class="nav-dot" style="background:#f97316"></span>
@@ -889,7 +889,7 @@
             <a href="Autonomous-Driving.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
                 <span class="nav-label">Autonomous Driving</span>
-                <span class="nav-count">80</span>
+                <span class="nav-count">79</span>
             </a>
             <a href="Kalman-Filter.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
@@ -909,12 +909,12 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">69</span>
+                <span class="nav-count">71</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">79</span>
+                <span class="nav-count">76</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -969,7 +969,7 @@
             <a href="Multimodal-Fusion.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
                 <span class="nav-label">Multimodal Fusion</span>
-                <span class="nav-count">77</span>
+                <span class="nav-count">76</span>
             </a>
             <a href="Scene-Understanding.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
@@ -1028,6 +1028,45 @@
                 <span class="topic-count">79 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2605.14211v6" target="_blank" class="paper-title">ASH: Agents that Self-Hone in Long-Horizon Worlds</a>
+                        <span class="paper-date">2026-10-20</span>
+                    </div>
+                                        <span class="paper-comment">📝 NeurIPS 2026</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="好的，作为一名人工智能研究与学术论文分析专家，我将严格按照您的要求，对这篇论文《ASH: Agents that Self-Hone via Embodied Learning》进行详细的中文解读。&#10;&#10;---&#10;&#10;## 0. 概览（Concise Summary）&#10;&#10;- **主题（Topic）**：长时域具身智能体（Long-horizon Embodied Agent）的自主学习与策略提升。&#10;- **问题（Problem）**：现有方法（如行为克隆、强化学习）依赖大量人工标注的演示数据或精心设计的奖励函数，难以扩展到需要数小时规划、环境复杂且开放的长时域任务。&#10;- **方法（Method）**：提出一个名为 **ASH** 的智能体系统，它通过一个“自我提升循环”工作：当智能体在任务中卡住时，它会从互联网上检索相关的无标签视频，利用自身轨迹训练一个逆动力学模型（IDM）来为这些视频生成伪动作标签，并从中提取关键帧作为长期记忆，最后用这些数据来更新自身的策略网络。&#10;- **创新（Innovation）**：&#10;    1.  **动态自举（Dynamic Bootstrapping）**：智能体在遇到瓶颈时主动触发学习，而非依赖固定的训练集或预定义的更新计划。&#10;    2.  **基于互联网视频的长期记忆（Long-term Memory from Internet Video）**：通过无监督聚类从大规模互联网视频中自动发现并存储关键视觉时刻，作为智能体的长期记忆，以解决长时域任务中的信息依赖问题。&#10;- **意义（Significance）**：证明了自我提升的智能体是解决长时域具身学习问题的一种可扩展方案，无需人工奖励或专家标注，仅通过利用互联网上的无标签视频即可持续进步，为构建能在开放世界中长期自主学习的智能体开辟了新路径。&#10;- **一句话总结**：ASH 通过一个“卡住-检索-学习”的自我提升循环，让智能体能够从互联网无标签视频中自主学习，从而在需要数小时规划的长时域游戏中取得远超现有方法的进展。&#10;&#10;## 1. 研究动机（Motivation）&#10;&#10;- **问题与空白**：当前AI在处理需要数小时甚至更长时间规划的长时域具身任务（如玩一个复杂的RPG游戏）时表现不佳。主要挑战在于：&#10;    1.  **行为克隆（BC）**：需要大规模、高质量、带动作标签的演示数据。对于长时域任务，收集和标注这样的数据成本极高，且大部分互联网视频是无标签的。此外，BC策略通常只依赖短期记忆，难以处理需要回忆很久以前信息的长程依赖。&#10;    2.  **强化学习（RL）**：极度依赖精心设计的密集奖励函数。在包含众多子任务的长时域环境中，为每个中间目标设计奖励函数是脆弱、领域特定且劳动密集的。同时，RL也难以建模跨越数小时的序列依赖。&#10;- **重要性**：解决长时域具身学习问题对于构建能够在真实世界或复杂虚拟环境中自主完成复杂、开放式任务的通用智能体至关重要。这些环境无法通过预先编程或人工标注来穷尽所有可能性。&#10;- **挑战**：核心挑战在于如何在没有人工干预（如奖励设计、动作标注）的情况下，让智能体从海量、嘈杂、无标签的互联网数据中自主学习并持续进步，同时克服长时域任务带来的记忆和规划难题。&#10;&#10;## 2. 创新点（Innovation）&#10;&#10;论文提出了三个关键创新，共同构成了 ASH 系统：&#10;&#10;1.  **动态自举（Dynamic Bootstrapping）**：&#10;    - **新方法**：ASH 不依赖一个固定的训练数据集。它部署多个智能体并行探索环境。当任何一个智能体在连续 `Δ` 步内没有遇到新的“关键时刻”（由无监督聚类定义）时，系统就认为它“卡住了”，并触发一个学习循环。&#10;    - **与现有方案的不同**：与 VPT 等一次性训练好模型的方法不同，ASH 的策略会随着探索的深入而不断更新。与 RL 不同，它的学习信号来自于检索到的相关视频，而非人工设计的奖励。&#10;    - **为何奏效**：这种“按需学习”的机制使得计算资源集中在智能体当前最薄弱的环节上，避免了在已经掌握的任务上浪费计算力，并能针对性地解决新出现的挑战。&#10;&#10;2.  **基于互联网视频的长期记忆（Long-term Memory from Internet Video）**：&#10;    - **新方法**：ASH 使用无监督聚类算法（HDBSCAN）从检索到的互联网视频中自动发现重复出现的、有意义的视觉场景（即“关键时刻”）。当智能体在游戏中遇到这些场景时，会将其存入一个长期记忆库。&#10;    - **与现有方案的不同**：不同于 VPT 或 DreamerV3 等使用固定长度的短期记忆窗口，也不同于 Voyager 等使用 LLM 生成的技能库，ASH 的长期记忆是从互联网数据中自主发现的、与任务相关的视觉快照。&#10;    - **为何奏效**：这些关键时刻充当了任务中的“路标”或“里程碑”。智能体通过记住这些路标，能够建立起对任务进程的长期理解，从而做出需要依赖遥远过去信息的决策。&#10;&#10;3.  **检索增强的策略自举（Retrieval-Augmented Policy Bootstrapping）**：&#10;    - **新方法**：当智能体卡住时，它使用当前轨迹的视觉嵌入去互联网视频库中检索最相似的视频片段。然后，用更新后的 IDM 为这些视频生成伪动作标签，并用这些数据来训练策略网络。&#10;    - **与现有方案的不同**：与 ReAct 等检索增强生成（RAG）方法不同，ASH 的检索不是为了给 LLM 提供上下文，而是为了构建一个针对当前瓶颈的、高质量的训练数据集。&#10;    - **为何奏效**：通过检索与当前困境最相关的视频，ASH 能够获得“对症下药”的示范数据，从而高效地学习如何克服眼前的障碍。&#10;&#10;## 3. 主要内容（Main Content）【重点】&#10;&#10;### 3.1 设计架构与方法&#10;&#10;ASH 的核心是一个三步骤的循环：**推理（Inference）→ 检索（Retrieval）→ 自举（Bootstrapping）**。&#10;&#10;1.  **推理（Inference）**：多个智能体（N=4）并行在环境中运行，共享同一个策略网络 `π`。每个智能体拥有自己的短期记忆（最近 `ws` 步的观察-动作对）和长期记忆（最近 `wl` 个关键时刻的观察）。一个关键时刻分类器 `K` 实时判断当前观察是否为新的关键时刻。当任何一个智能体连续 `Δ` 步没有发现新关键时刻时，推理阶段结束。&#10;2.  **检索（Retrieval）**：将卡住智能体的轨迹进行视觉嵌入，然后从互联网视频库 `DI` 中检索出 `k` 个最相似的视频，构成训练数据集 `DR`。&#10;3.  **自举（Bootstrapping）**：&#10;    - 用 `DR` 更新关键时刻分类器 `K`。&#10;    - 用智能体自身的轨迹 `τ1~N` 更新逆动力学模型（IDM）。&#10;    - 用更新后的 IDM 为 `DR` 中的视频生成伪动作，并用更新后的 `K` 从这些视频中提取长期记忆。最后，用这些处理好的数据训练策略网络 `π`。&#10;    - 训练完成后，所有智能体回到步骤1，使用更新后的策略继续探索。&#10;&#10;### 3.2 关键算法与数学推导&#10;&#10;- **策略网络训练损失函数**：&#10;    策略 `π` 的训练目标是最大化与 IDM 生成的伪动作 `˜A` 的相似度，使用交叉熵损失：&#10;    $$L = - \sum_{j=0}^{w_s} \tilde{A}_j^\top \log \text{softmax}(W_o H_{w_l + 2j + 1})$$&#10;    其中：&#10;    - `ws` 是短期记忆窗口长度。&#10;    - `˜A_j` 是第 `j` 步的伪动作（one-hot 向量）。&#10;    - `H` 是 Transformer 的输出隐藏状态。&#10;    - `W_o` 是将隐藏状态映射到动作类别的线性层。&#10;    - 索引 `wl + 2j + 1` 表示在 Transformer 输入序列中，长期记忆 token 之后，第 `j` 个观察 token 对应的输出位置。&#10;&#10;- **检索算法（Algorithm 3）**：&#10;    对于每个智能体轨迹 `τn` 和每个互联网视频 `τ_obs`：&#10;    1.  计算相似度矩阵 `S = Q E^T`，其中 `Q` 是轨迹的嵌入矩阵，`E` 是视频的嵌入矩阵。&#10;    2.  在视频上滑动一个长度为 `wr` 的窗口。&#10;    3.  对于每个窗口，执行**贪心一对一匹配**：为窗口内的每个视频帧，找到与其最相似的轨迹帧（取相似度最大值），并且每个轨迹帧只能被匹配一次。窗口的得分是所有匹配得分的总和。&#10;    4.  一个视频的最终得分是其所有窗口中得分最高的那个。&#10;    5.  检索得分最高的 `k` 个视频。&#10;&#10;### 3.3 模型、训练与数据集&#10;&#10;- **模型架构**：&#10;    - **视觉编码器 `ϕ`**：SigLIP，用于将观察图像转换为 token。&#10;    - **逆动力学模型（IDM）**：采用 VPT 的双向注意力架构，用于根据前后观察预测中间动作。&#10;    - **策略网络 `π`**：一个因果 Transformer（基于 Yang et al. 的架构，重复28层）。其输入序列由长期记忆 token（`T_l`）作为前缀，后跟交错的短期观察 token（`T_s`）和伪动作 token（`˜A`）。&#10;- **训练**：&#10;    - **IDM 训练**：使用智能体自身探索产生的轨迹 `τ1~N` 进行监督学习，输入是观察序列，标签是智能体执行的动作。&#10;    - **策略 `π` 训练**：使用从互联网检索到的视频 `DR`，通过 IDM 生成伪动作标签，并使用 `K` 构建长期记忆。训练时，将 `ws` 长度的观察-伪动作对与 `wl` 长度的长期记忆拼接，输入 Transformer 进行下一个动作的预测。&#10;- **数据集**：&#10;    - **互联网视频库 `DI`**：从 YouTube 爬取，宝可梦约 22,000 个视频，塞尔达约 17,000 个视频。这些视频是**无标签的**，仅包含观察序列。&#10;    - **智能体轨迹 `τ1~N`**：ASH 在环境中探索时产生的带动作标签的轨迹。&#10;&#10;### 3.4 实验设置与结果&#10;&#10;- **环境**：两个长时域游戏：**《宝可梦 绿宝石》**（回合制RPG）和 **《塞尔达传说：缩小帽》**（实时动作冒险）。&#10;- **评估指标**：**里程碑完成率**。每个游戏定义了12个人类专家认可的里程碑，代表游戏进程的关键节点。&#10;- **基线方法**：&#10;    - **Qwen3.5**：零样本多模态大模型。&#10;    - **VPT**：视频预训练，使用 ASH 训练出的最强 IDM 和人工精选的 400 小时数据。&#10;    - **Offline BC**：离线行为克隆，无长期记忆和自举。&#10;    - **RAEA**：检索增强的具身智能体，为短时域任务设计。&#10;- **主要结果（Figure 2）**：&#10;    - **ASH 持续进步**：在 8 小时的评估中，ASH 在宝可梦中平均完成 11.2/12 个里程碑，在塞尔达中完成 9.9/12 个。而最强的基线方法在两个环境中分别只能达到 6.5/12 和 6.0/12，并早早停滞。&#10;    - **基线方法停滞**：VPT 和 Offline BC 在遇到训练数据中未充分覆盖的新动态（如新区域、新战斗界面）时崩溃。RAEA 因频繁切换检索示例导致不稳定。Qwen3.5 产生幻觉。&#10;- **消融实验（Figure 4 左）**：在宝可梦环境中，逐步添加长期记忆和动态自举，智能体的里程碑完成率显著提升，证明了每个组件的有效性。&#10;- **IDM 适应性（Figure 4 右）**：随着自举循环的进行，IDM 在测试集上的准确率从 60% 提升到 81%，表明 IDM 能够适应环境的新动态。&#10;- **检索质量（Table 1）**：人工评估表明，ASH 的检索方法（贪心窗口匹配）检索到的视频有 94% 是相关的，远高于随机检索（8%），平均排名也最高（1.35）。&#10;- **离线回放（Figure 5）**：最终训练好的 ASH 策略在从头开始离线回放时，没有出现灾难性遗忘，反而因为积累了经验，比在线学习时更快地通过了早期里程碑。&#10;&#10;### 3.5 技术细节&#10;&#10;- **关键时刻发现**：使用 HDBSCAN 对 `DR` 中视频帧的 DINOv2 嵌入进行聚类。每个聚类代表一个“关键时刻”。要求每个聚类必须包含来自至少 `cmin` 个不同视频的帧，以确保其普遍性。&#10;- **长期记忆构建**：`K(τ_obs, t)` 是一个二分类器，它检查 `τ_obs` 在时间 `t` 的观察是否属于一个**新的**关键时刻（即该观察所属的聚类在之前的轨迹中从未出现过）。&#10;- **自举触发条件**：当任何一个智能体的“卡住计时器”超过阈值 `Δ`（设置为 20 分钟，即互联网视频的中位长度）时触发。&#10;- **计算资源**：ASH 模型有 12 亿参数（1亿视觉编码器 + 11亿 Transformer）。每个方法分配最多 288 GPU 小时（4天 * 4块 H100 SXM 80GB GPU）。&#10;&#10;## 4. 意义与影响（Significance and Impact）&#10;&#10;- **解决的问题与贡献**：&#10;    - 解决了长时域具身学习中数据标注和奖励设计的瓶颈问题。&#10;    - 提出了一种可扩展的、无需人工干预的智能体自我提升范式。&#10;    - 证明了从大规模、无标签、嘈杂的互联网视频中自主学习复杂技能是可行的。&#10;- **对未来研究/应用的影响**：&#10;    - 为构建能在开放世界（如机器人、游戏、模拟器）中长期自主学习的通用智能体提供了新思路。&#10;    - 其“检索-学习”框架可以启发其他领域，如机器人技能学习、自动驾驶策略适应等。&#10;    - 长期记忆的自主发现机制为处理长程依赖问题提供了新的解决方案。&#10;- **局限与开放问题**：&#10;    - **依赖数据可用性**：ASH 的有效性依赖于存在相关的互联网视频。在演示数据稀缺的领域（如专业机器人操作）可能难以应用。&#10;    - **IDM 的局限性**：IDM 难以标注从像素中难以推断的动作（如按下哪个按钮），这限制了策略可以学习的技能范围。&#10;    - **计算成本**：虽然比人工标注更可扩展，但 ASH 的训练和推理仍然需要大量的 GPU 计算资源。&#10;&#10;## 5. 澄清与简化（Clarifications and Simplifications）&#10;&#10;- **类比：一个自学成才的游戏玩家**&#10;    - **ASH** 就像一个刚开始玩《宝可梦》的新手玩家。&#10;    - **推理阶段**：玩家自己尝试玩，遇到打不过的对手或找不到路（卡住了）。&#10;    - **检索阶段**：玩家卡住后，去 YouTube 上搜索“宝可梦绿宝石 道馆馆主攻略”视频。&#10;    - **自举阶段**：&#10;        - **IDM**：玩家通过观察自己之前的操作（“我按了A键，然后对话就开始了”），学会了“看到对话气泡就按A”这个映射关系（IDM）。&#10;        - **长期记忆**：玩家从攻略视频中识别出关键场景，比如“道馆门口的样子”、“馆主的第一只宝可梦”。这些就是“关键时刻”。&#10;        - **策略更新**：玩家反复观看攻略视频，结合自己学会的“按键-画面”映射，学习在特定场景下应该按什么键。比如，“看到馆主放出大岩蛇，我应该先使用‘水枪’技能”。&#10;    - **循环**：玩家带着新学会的策略继续玩，直到遇到下一个瓶颈，再次重复“卡住-搜攻略-学习”的过程。&#10;&#10;- **关键概念解释**：&#10;    - **逆动力学模型（IDM）**：可以理解为“动作反推器”。给它看一段视频（观察序列 `o1, o2, o3`），它能猜出在 `o1` 和 `o2` 之间，智能体执行了什么动作 `a1`。它之所以能猜对，是因为它能看到 `o2`（未来的信息），从而推断出 `a1` 的效果。&#10;    - **长期记忆 vs. 短期记忆**：短期记忆就像你最近几秒钟的所见所闻，用于处理即时反应（如躲避攻击）。长期记忆就像你记住的“地图上的关键地标”，用于规划长途旅行（如知道要先去哪个城市）。ASH 的长期记忆是从互联网视频中自动提取的“地标”。&#10;&#10;## 6. 补充说明（Additional Notes）&#10;&#10;- **相关工作关联**：&#10;    - **与 VPT 的关系**：ASH 借鉴了 VPT 使用 IDM 为无标签视频生成伪动作的核心思想。但 ASH 的创新在于，它不依赖一个固定的、静态的 IDM 和训练集，而是让 IDM 和策略随着智能体的探索动态更新，并且通过检索机制聚焦于当前最相关的数据。&#10;    - **与 Voyager 的关系**：Voyager 也使用自我改进循环，但它依赖于 LLM 和代码执行，并且需要访问游戏的内存（特权状态）。ASH 则完全基于像素输入，不依赖任何内部状态，更接近“具身”学习的设定。&#10;    - **与 STaR 的关系**：ASH 属于“从模型生成数据中自我提升”这一大类方法（如 STaR 用于推理）。不同之处在于，ASH 的“教师信号”不是来自外部验证器，而是来自检索到的互联网视频，这使得它在缺乏明确奖励或验证器的开放环境中也能">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Long-horizon visuomotor tasks remain a fundamental challenge in AI, as current methods rely on hand-engineered rewards or action-labeled demonstrations, neither of which scales. We introduce ASH, an agentic system that learns a long-horizon policy from unlabeled, noisy internet video, without reward shaping or expert annotation. ASH follows a self-improvement loop; when it gets stuck, ASH learns an Inverse Dynamics Model (IDM) from its own trajectories, and uses its IDM to extract supervision from relevant internet video. ASH uses unsupervised learning to identify key moments from large-scale internet video and retains them as long-term memory - allowing it to tackle long-horizon problems. We evaluate ASH on two complementary environments demanding multi-hour planning: Pokemon Emerald, a turn-based RPG, and The Legend of Zelda: The Minish Cap, a real-time action-adventure game. In both games, behavioral cloning, retrieval-augmented and zero-shot foundation-model baselines plateau, while ASH sustains progression across our 8-hour evaluation. ASH reaches an average of 11.2/12 milestones in Pokemon Emerald and 9.9/12 in Legend of Zelda, while the strongest baseline gets stuck in both environments at an average of 9.3/12 and 7.8/12 milestones, respectively. We demonstrate that self-improving agents are a scalable recipe for learning in long-horizon worlds.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.27736v1" target="_blank" class="paper-title">AWLS: Advantage-Weighted Latent Steering for One-Step Generative Robotic Manipulation Policies</a>
+                        <span class="paper-date">2026-10-20</span>
+                    </div>
+                                        <span class="paper-comment">📝 Accepted at CoRL 2026</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Human-collected real-world robotic manipulation demonstrations often contain mixed-quality trajectories, including hesitant, indirect, or inefficient action segments. While diffusion- and flow-based policies can model such multimodal data, standard behavior cloning (BC) assigns equal likelihood to all demonstrated actions and may therefore reproduce suboptimal modes. Offline RL value estimates offer a natural signal for biasing policies toward higher-value behavioral modes, but directly fine-tuning the generative policy or using critic gradients for policy steering can amplify critic errors and induce prior drift. We propose Advantage-Weighted Latent Steering (AWLS), an offline post-training method for improving frozen one-step generative manipulation policies without updating their decoders. AWLS learns a residual noise shaper, an observation-conditioned residual correction to the policy's latent noise, and trains it with an advantage-weighted action reconstruction objective. The advantages are detached, scale-normalized, and used only as supervised weights on demonstrated actions, avoiding critic-gradient policy updates while preserving fast single-step inference. We further introduce a rollout-free decoder-sensitivity criterion for selecting pretrained checkpoints that remain responsive to latent-noise perturbations. Experiments on simulated and real-world robotic manipulation tasks with clean and mixed-quality demonstrations show that AWLS improves over the frozen base policy while limiting drift from the pretrained behavior prior. Project page: https://awls-corl2026.github.io/</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.27467v1" target="_blank" class="paper-title">Projected Distillation: On Learning to Solve Hard Problems from Close, Correct Targets</a>
+                        <span class="paper-date">2026-10-20</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>On-policy learning is central to post-training: training on a model's own generations limits distribution shift and helps preserve existing capabilities. On hard problems, however, on-policy RL provides no reward-based learning signal when all attempts fail. On-policy distillation provides next-token supervision from a teacher, but on hard problems, if a rollout goes wrong early, subsequent supervision is conditioned on prefixes that already contain the mistake. Correct behavior can instead come from a gold or teacher solution, but such off-policy targets can differ substantially from the model's generations and, as we show, may erode existing capabilities. We therefore treat on-policyness as a continuum and propose projected distillation, which minimally edits the student's failed attempts into correct targets. The method uses contrastive updates to favor corrections over failed attempts and refreshes these corrections as the student evolves, enabling near-on-policy learning even when all student attempts fail. Theoretically, we prove that the student's learning regret grows with the edit size: it scales linearly with the horizon under minimal correction, as in DAgger, and quadratically under full-answer replacement, as in behavior cloning. Empirically, across two students (Qwen3-8B and OLMo-2-7B) and five domains spanning math, code, science, and tool use, projected distillation gives the highest area under the specialization-retention frontier (best on 8 of 9 cells against GRPO and OPD, and 7 of 9 against SPOT and SODA). Our ablations highlight the importance of online corrections, the contrastive loss, and on-policyness: moving targets farther off-policy steadily worsens the specialization-retention trade-off, with retention falling from 0.916 to 0.744 when minimal corrections are replaced by student-agnostic gold solutions.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2610.26629v1" target="_blank" class="paper-title">VaDar: Implicit Goal Conditioning via Value Disaggregation</a>
@@ -1603,18 +1642,6 @@
                 </div>
                 <div class="paper-card">
                     <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2605.14211v5" target="_blank" class="paper-title">ASH: Agents that Self-Hone in Long-Horizon Worlds</a>
-                        <span class="paper-date">2026-10-01</span>
-                    </div>
-                                        <span class="paper-comment">📝 NeurIPS 2026</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Long-horizon visuomotor tasks remain a fundamental challenge in AI, as current methods rely on hand-engineered rewards or action-labeled demonstrations, neither of which scales. We introduce ASH, an agentic system that learns a long-horizon policy from unlabeled, noisy internet video, without reward shaping or expert annotation. ASH follows a self-improvement loop; when it gets stuck, ASH learns an Inverse Dynamics Model (IDM) from its own trajectories, and uses its IDM to extract supervision from relevant internet video. ASH uses unsupervised learning to identify key moments from large-scale internet video and retains them as long-term memory - allowing it to tackle long-horizon problems. We evaluate ASH on two complementary environments demanding multi-hour planning: Pokemon Emerald, a turn-based RPG, and The Legend of Zelda: The Minish Cap, a real-time action-adventure game. In both games, behavioral cloning, retrieval-augmented and zero-shot foundation-model baselines plateau, while ASH sustains progression across our 8-hour evaluation. ASH reaches an average of 11.2/12 milestones in Pokemon Emerald and 9.9/12 in Legend of Zelda, while the strongest baseline gets stuck in both environments at an average of 9.3/12 and 7.8/12 milestones, respectively. We demonstrate that self-improving agents are a scalable recipe for learning in long-horizon worlds.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
                         <a href="https://arxiv.org/abs/2606.20627v2" target="_blank" class="paper-title">Latent Goal Prediction from Language for Model-Based Planning</a>
                         <span class="paper-date">2026-10-01</span>
                     </div>
@@ -1959,30 +1986,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Online reinforcement learning fine-tuning of pretrained flow-matching vision-language-action (VLA) policies promises robots that keep learning after deployment, but continued updates often destroy competence on individual tasks while the aggregate still looks healthy. We study this failure mode, which we call task collapse, under a matched small-compute budget on LIBERO-10 with a 450M-parameter SmolVLA policy trained by PPO with stochastic (SDE) sampling. Three exploration-noise policies differ in one live variable: a fixed noise scale, a ReinFlow-style learned noise network, and an uncertainty-gated controller that redistributes exploration across task streams from task-agnostic novelty and competence signals, without task labels or episode boundaries. Under the pooled definition, fixed noise collapses tasks in two of three seeds and learned noise in every seed measured to iteration 200, while the controller collapses none in any of its three seeds. Measured parameter displacement shows the controller's action expert keeps changing, while its mean applied noise is close to the fixed scale in the available logs. The matched comparison supports the controller's effect on task preservation; the separate contributions of its adaptation across states and over time are not disentangled. A lower fixed scale slows the decline but does not stop it. No arm improves on the behavior-cloning baseline in this budget. Two properties of that regime are measured beside this result, not offered as its cause: following the reference recipe, training runs in bfloat16 with no fp32 master copy, under which 96.02% of the action expert's elements stay bit-identical across three consecutive iterations, and an fp32 master copy at the reference learning rate collapses both arms in a single-seed observation. We release tools measuring per-task collapse under four definitions, rescoring noise and instrument tares.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2609.28818v1" target="_blank" class="paper-title">KeyGen: Unsupervised Keypoint based Object-Centric Representations for Category-Level Policy Generalization</a>
-                        <span class="paper-date">2026-09-23</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Generalization in robotic manipulation requires policies to perform tasks across diverse unseen object instances that vary in shape, size, and pose. However, conventional behavior cloning (BC) methods often overfit to instance-specific geometry and appearance, limiting transfer to novel objects. We introduce KeyGen, a framework that learns canonicalized semantic 3D keypoints from point clouds and uses them as structured object-centric representations for policy learning. A visuomotor diffusion policy conditions on these keypoints together with object-centric geometry to predict full manipulation trajectories, enabling consistent geometric correspondence across object instances. To evaluate category-level generalization, we construct a photorealistic simulation benchmark with three manipulation tasks and a planning-driven data generation pipeline that produces expert trajectories across diverse object instances. Experiments show that KeyGen significantly outperforms prior methods on both seen and unseen objects under pose variation, scales effectively with additional demonstrations per object, maintains robustness to object rescaling, and achieves strong performance in both simulation and real-world manipulation.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2609.24996v1" target="_blank" class="paper-title">Learning Beyond What Humans Can Demonstrate</a>
-                        <span class="paper-date">2026-09-21</span>
-                    </div>
-                                        <span class="paper-comment">📝 Accepted to CoRL 2026. Project website: http://guardrail-policy.github.io/</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Behavior cloning for robot manipulation relies on expert demonstrations. However, for tasks that require dynamic stability, precise contact timing, or dexterous coordination, human operators may find it hard or even impossible to collect data. We study this infeasible-demonstration regime and propose GLIDE: Guardrails for Learning from Infeasible Demonstrations Efficiently, a framework that infers task-specific failure modes and converts them into executable guardrails for data collection and policy deployment. Given a task description and the conditioning teleoperation code, GLIDE writes guardrails that use system states to filter teleoperation and policy commands, constrain failure-prone actions, and iteratively improve from trajectory feedback. Across three tasks, GLIDE discovers emergent guardrails that go beyond domain-expert hardcoded ones, improving data collection over naive VR teleoperation and domain-expert hardcoded guardrails. After refinement, GLIDE raises data-collection success from 0-10 percent to 70-90 percent across the three tasks. During policy execution, mixed-data guarded policies reach 70 percent, 60 percent, and 60 percent success on Tomato plate transfer, Marker handover and stand, and Wine serving tasks. These results show that GLIDE can support policy learning when direct demonstrations are infeasible. Project website: http://guardrail-policy.github.io/</p>
                     </details>
                 </div>
             </div>
