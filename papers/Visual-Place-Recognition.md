@@ -2,7 +2,7 @@
 
 > **80 papers** fetched from arXiv for the keyword **Visual Place Recognition**.
 
-> Last update: 2026-10-21
+> Last update: 2026-10-24
 
 [← Back to README](../README.md)
 
