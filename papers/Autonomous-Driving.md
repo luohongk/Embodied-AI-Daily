@@ -2,7 +2,7 @@
 
 > **79 papers** fetched from arXiv for the keyword **Autonomous Driving**.
 
-> Last update: 2026-10-24
+> Last update: 2026-10-25
 
 [← Back to README](../README.md)
 
