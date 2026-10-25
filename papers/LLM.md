@@ -2,7 +2,7 @@
 
 > **78 papers** fetched from arXiv for the keyword **LLM**.
 
-> Last update: 2026-10-25
+> Last update: 2026-10-26
 
 [← Back to README](../README.md)
 
