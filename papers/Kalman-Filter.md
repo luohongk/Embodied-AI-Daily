@@ -2,7 +2,7 @@
 
 > **47 papers** fetched from arXiv for the keyword **Kalman Filter**.
 
-> Last update: 2026-10-26
+> Last update: 2026-10-27
 
 [← Back to README](../README.md)
 
