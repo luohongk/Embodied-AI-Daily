@@ -665,7 +665,7 @@
                 <a href="Gaussian-SLAM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#d946ef"></span>
                     <span class="nav-label">Gaussian SLAM</span>
-                    <span class="nav-count">30</span>
+                    <span class="nav-count">31</span>
                 </a>
                 <a href="Autonomous-Driving.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#6366f1"></span>
@@ -675,7 +675,7 @@
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Kalman Filter</span>
-                    <span class="nav-count">48</span>
+                    <span class="nav-count">47</span>
                 </a>
                 <a href="Loop-Closure-Detection.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -695,7 +695,7 @@
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">77</span>
+                    <span class="nav-count">78</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -730,7 +730,7 @@
                 <a href="Model-Predictive-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#14b8a6"></span>
                     <span class="nav-label">Model Predictive Control</span>
-                    <span class="nav-count">56</span>
+                    <span class="nav-count">54</span>
                 </a>
                 <a href="Whole-Body-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#06b6d4"></span>
@@ -740,7 +740,7 @@
                 <a href="Motion-Planning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#0ea5e9"></span>
                     <span class="nav-label">Motion Planning</span>
-                    <span class="nav-count">76</span>
+                    <span class="nav-count">77</span>
                 </a>
                 <a href="Path-Planning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#3b82f6"></span>
@@ -884,7 +884,7 @@
             <a href="Gaussian-SLAM.html" class="nav-item">
                 <span class="nav-dot" style="background:#d946ef"></span>
                 <span class="nav-label">Gaussian SLAM</span>
-                <span class="nav-count">30</span>
+                <span class="nav-count">31</span>
             </a>
             <a href="Autonomous-Driving.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
@@ -894,7 +894,7 @@
             <a href="Kalman-Filter.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Kalman Filter</span>
-                <span class="nav-count">48</span>
+                <span class="nav-count">47</span>
             </a>
             <a href="Loop-Closure-Detection.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -914,7 +914,7 @@
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">77</span>
+                <span class="nav-count">78</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -949,7 +949,7 @@
             <a href="Model-Predictive-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#14b8a6"></span>
                 <span class="nav-label">Model Predictive Control</span>
-                <span class="nav-count">56</span>
+                <span class="nav-count">54</span>
             </a>
             <a href="Whole-Body-Control.html" class="nav-item active">
                 <span class="nav-dot" style="background:#06b6d4"></span>
@@ -959,7 +959,7 @@
             <a href="Motion-Planning.html" class="nav-item">
                 <span class="nav-dot" style="background:#0ea5e9"></span>
                 <span class="nav-label">Motion Planning</span>
-                <span class="nav-count">76</span>
+                <span class="nav-count">77</span>
             </a>
             <a href="Path-Planning.html" class="nav-item">
                 <span class="nav-dot" style="background:#3b82f6"></span>
@@ -1030,6 +1030,42 @@
             <div class="paper-list">
                 <div class="paper-card">
                     <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.32909v1" target="_blank" class="paper-title">HoloBoxing: A Simple Recipe for Humanoid Boxing with 7 Minutes of Single-GPU Training</a>
+                        <span class="paper-date">2026-10-23</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>HoloBoxing presents a simple recipe for learning humanoid boxing by building on a pretrained whole-body controller. The recipe separates reusable motor skills from task decisions: a compact planner requests future body-point targets, while the frozen controller handles joint-level execution. A learned decoder maps 32-dimensional actions to structured target windows, and measured-state imitation initializes the planner before reinforcement learning. Task learning then refines interaction behavior while reusing the decoder and controller, avoiding the need to relearn whole-body control. This combination keeps task optimization focused on a compact upper policy and supplies an initial behavior before reward-driven exploration. Starting from that available controller, the recipe accounts for about seven minutes of additional training, including reused representation fitting and a single-GPU task run. This excludes controller pretraining, data preparation, evaluation, and search. Simulated boxing experiments and component controls evaluate the resulting behavior and the roles of imitation initialization and the target representation.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.29169v2" target="_blank" class="paper-title">SMR: Learning streaming motion retargeting for humanoids from human semantic</a>
+                        <span class="paper-date">2026-10-23</span>
+                    </div>
+                                        <span class="paper-comment">📝 17 pages, 6 figures. Project page: https://logosintelligencelab.github.io/SMR/</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Retargeting human motion to humanoids requires preserving motion semantics while accounting for the robot's physical constraints. Kinematic pipelines prescribe a robot trajectory through geometric matching, without establishing whether it can be executed under the robot's dynamics. Prior physics-supervised neural methods train bidirectional full-sequence models on physics-refined kinematic trajectories, remaining tied to prescribed kinematic solutions and requiring noncausal context. We propose SMR, a streaming neural motion retargeter learned from semantic-conditioned physics experts. We convert human motion into robot-aware task-space targets for body landmark positions, orientations, and velocities. Physics experts track these targets directly in simulation under contact, dynamics, and actuator constraints. We train a single strictly causal Transformer on their executed state trajectories that complete the motion and pass semantic and physical validity checks. At each incoming frame, the student uses only current and past human observations to generate a robot motion reference for a downstream whole-body controller. Experiments demonstrate that semantic-conditioned physics experts generate motion with higher semantic fidelity and physical validity than direct optimization-based retargeting, while the resulting streaming retargeter achieves improved closed-loop performance over kinematic and physics-refined baselines under a common whole-body controller.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.32460v1" target="_blank" class="paper-title">CoCarry: Contact-Support-Structured Retargeting for Dual-Humanoid Cooperative Carrying</a>
+                        <span class="paper-date">2026-10-23</span>
+                    </div>
+                                        <span class="paper-comment">📝 8 pages, 6 figures, 2 tables</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Recent advances in large-scale human motion data, motion retargeting, and motion imitation have enabled increasingly capable whole-body control for individual humanoids. Cooperative carrying is more challenging because successful coordination requires not only plausible individual motions, but also consistent cross-agent and agent-object relations, including shared grasp, relative configuration, and whole-body support. We introduce CoCarry, a cooperative-carrying dataset containing 220 synchronized two-person sequences across 21 task schemes, five shared-object geometries, four terrain types, and approximately 61 minutes of motion. We further propose Contact-Support-Structured Retargeting, which starts from nominal individual motions and jointly refines both humanoids around the same prescribed object trajectory. Cooperation-aware object-local hand anchors preserve compatible four-hand grasp relations, while complementary upper object-interaction and lower support structures retain object-relative geometry and coordinated support. Across all 220 CoCarry sequences retargeted to two A3 humanoids, our method achieves 0.9995 contact preservation, reduces penetration duration by 67.0% and 71.0% relative to GMR and OmniRetarget, respectively, and maintains a 100% retargeting success rate. On CORE4D with Unitree G1 humanoids, it achieves 0.9906 contact preservation with zero measured sliding. We further validate the generated references through physics simulation and multiple real-world cooperative carrying experiments on two physical A3 humanoids, demonstrating their usability for downstream dual-humanoid control.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
                         <a href="https://arxiv.org/abs/2604.07993v3" target="_blank" class="paper-title">HEX: Humanoid-Aligned Experts for Cross-Embodiment Whole-Body Manipulation</a>
                         <span class="paper-date">2026-10-22</span>
                     </div>
@@ -1080,18 +1116,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Humanoid loco-manipulation requires an effective interface between high-level task policies and whole-body control. Existing interfaces typically rely on a single action representation for both task intent and whole-body coordination. This may burden the high-level policy or leave one aspect underspecified. We present SP-HLM, a framework built on a sparse-pose-driven interface. The interface combines five task-critical body poses with a learned latent motion prior to represent spatial intent and whole-body coordination in complementary forms. SP-VLA, a vision-language-action model, first predicts task-relevant sparse poses and finger joint positions from multimodal observations and language instructions using asynchronous action-chunk inference. Given these sparse targets, SP-MGM, a motion generation model trained through two-stage distillation, reconstructs coordinated full-body motion in real time. A pretrained motion encoder maps this motion to a compact latent representation. SP-GMT, a general motion tracker, then integrates the explicit sparse targets with this implicit motion prior for whole-body control. Experiments in simulation and on a real humanoid robot demonstrate improved motion tracking, whole-body coordination, and loco-manipulation success over existing approaches. Additional results and videos are available on our \href{https://sp-hlm.github.io/}{\textcolor{blue}{project page}}.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2610.29169v1" target="_blank" class="paper-title">SMR: Learning streaming motion retargeting for humanoids from human semantic</a>
-                        <span class="paper-date">2026-10-21</span>
-                    </div>
-                                        <span class="paper-comment">📝 17 pages, 6 figures. Project page: https://logosroboticsgroup.github.io/SMR/</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Retargeting human motion to humanoids requires preserving motion semantics while accounting for the robot's physical constraints. Kinematic pipelines prescribe a robot trajectory through geometric matching, without establishing whether it can be executed under the robot's dynamics. Prior physics-supervised neural methods train bidirectional full-sequence models on physics-refined kinematic trajectories, remaining tied to prescribed kinematic solutions and requiring noncausal context. We propose SMR, a streaming neural motion retargeter learned from semantic-conditioned physics experts. We convert human motion into robot-aware task-space targets for body landmark positions, orientations, and velocities. Physics experts track these targets directly in simulation under contact, dynamics, and actuator constraints. We train a single strictly causal Transformer on their executed state trajectories that complete the motion and pass semantic and physical validity checks. At each incoming frame, the student uses only current and past human observations to generate a robot motion reference for a downstream whole-body controller. Experiments demonstrate that semantic-conditioned physics experts generate motion with higher semantic fidelity and physical validity than direct optimization-based retargeting, while the resulting streaming retargeter achieves improved closed-loop performance over kinematic and physics-refined baselines under a common whole-body controller.</p>
                     </details>
                 </div>
                 <div class="paper-card">
@@ -1151,10 +1175,7 @@
                         <span class="paper-date">2026-10-20</span>
                     </div>
                                         <span class="paper-comment">📝 IEEE ROBOTICS AND AUTOMATION LETTERS 2026</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：解决高自由度全身机器人在移动操作中高维动作控制、精确跟踪与冗余利用的挑战。  &#10;🛠 **方法**：提出部分运动嵌入框架，通过运动学归一化流（KNF）模型生成多样可行的参考运动，结合高层控制器探索潜在空间冗余解与低层控制器执行物理可行运动。  &#10;✨ **主要贡献**：在四足机器人（带六自由度臂）上，仿真中跟踪精度与可行工作空间覆盖显著优于现有方法；硬件实验中实现末端执行器位姿误差4.5 cm/0.14 rad，运动速度误差0.1 m/s/0.01 rad/s，验证了高精度泛化能力。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Loco-manipulation has recently shown promising capabilities; however, achieving high-precision control, managing the high-dimensional action space induced by many degrees of freedom (DoFs), and fully exploiting the inherent redundancy of whole-body systems remain challenging. In this paper, we propose a novel whole-body control framework that effectively addresses these challenges by decomposing the complex loco-manipulation problem into partial reference motion generation and low-level imitation control. We introduce a new Kinematic Normalizing Flow (KNF) model, trained on a large-scale kinematic dataset, that generates diverse partial kinematic references. A high-level controller is then trained to navigate the KNF's latent space to exploit redundant solutions, while a low-level controller learns dynamically consistent motion execution. We validate our approach on the quadrupedal robot equipped with a six-DoF robotic arm. In simulation, PAKE outperforms the evaluated baselines in tracking accuracy and feasible workspace coverage on the 4,000-target benchmark. For hardware deployment, we evaluate the system over 24 episodes across 8 different mobile loco-manipulation tasks. The system achieves end-effector pose-tracking errors of 4.5 cm and 0.14 rad, while maintaining accurate locomotion tracking with linear and angular velocity errors of 0.1 m/s and 0.01 rad/s, respectively. Our method represents a practical and powerful solution for accurate and generalized whole-body loco-manipulation in high-DoF robotic systems, with promising potential for diverse downstream robotic tasks.</p>
@@ -1974,30 +1995,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Realizing interactive whole-body control for multi-humanoid systems is critical for unlocking complex collaborative capabilities in shared environments. Although recent advancements have significantly enhanced the agility of individual robots, bridging the gap to physically coupled multi-humanoid interaction remains challenging, primarily due to severe kinematic mismatches and complex contact dynamics. To address this, we introduce Rhythm, the first unified framework enabling real-world deployment of dual-humanoid systems for complex, physically plausible interactions. Our framework integrates three core components: (1) an Interaction-Aware Motion Retargeting (IAMR) module that generates feasible humanoid interaction references from human data; (2) an Interaction-Guided Reinforcement Learning (IGRL) policy that masters coupled dynamics via graph-based rewards; and (3) a real-world deployment system that enables robust transfer of dual-humanoid interaction. Extensive experiments on physical Unitree G1 robots demonstrate that our framework achieves robust interactive whole-body control, successfully transferring diverse behaviors such as hugging and dancing from simulation to reality.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2609.09918v1" target="_blank" class="paper-title">ViBe: Visual Behavior Adaptation for Perceptive Humanoid Whole-Body Control</a>
-                        <span class="paper-date">2026-09-09</span>
-                    </div>
-                                        <span class="paper-comment">📝 project page: https://lok-i.github.io/vibe-control/</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Motion tracking provides a scalable recipe for humanoid whole-body control. By design, the resulting trackers lack exteroceptive feedback hence reacting to the environment remains the responsibility of a higher-level planner. Existing perceptive controllers train geometry-only encoders from scratch, trading semantics for sim-to-real ease, and typically rely on teacher-student distillation for a task of interest. We present ViBe, a post-training framework for adapting motion trackers to perceptive control tasks. We leverage pre-trained visual encoders with a multi-query extractor module to learn task-relevant perceptive feedback. This feedback is grafted onto the tracker's input via low-rank adapters, enabling parameter-efficient fine-tuning. Given a task reward and a reference dataset, this modular controller can be adapted directly via policy optimization. Across four tasks, ViBe shows zero-shot sim-to-real transfer spanning perceptive walking on curbs and parkour, Repose Cube, omni-object loco-manipulation, and dodgeball, with visually robust performance across outdoor, low-light, and RGB distractor conditions. Finally, we solve a goal-oriented Repose Cube task with a deliberately simple planner, demonstrating the efficacy of perceptive controllers, adapted by our approach.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2604.08508v3" target="_blank" class="paper-title">Sumo: Dynamic and Generalizable Whole-Body Loco-Manipulation</a>
-                        <span class="paper-date">2026-09-09</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>This paper presents a sim-to-real approach that enables legged robots to dynamically manipulate large and heavy objects with whole-body dexterity. Our key insight is that by performing test-time steering of a pre-trained whole-body control policy with a sample-based planner, we can enable these robots to solve a variety of dynamic loco-manipulation tasks. Interestingly, we find our method generalizes to a diverse set of objects and tasks with no additional tuning or training, and can be further enhanced by flexibly adjusting the cost function at test time. We demonstrate the capabilities of our approach through a variety of challenging loco-manipulation tasks on a Spot quadruped robot in the real world, including uprighting a tire heavier than the robot's nominal lifting capacity and dragging a crowd-control barrier larger and taller than the robot itself. Additionally, we show that the same approach can be generalized to humanoid loco-manipulation tasks, such as opening a door and pushing a table, in simulation. Project code and videos are available at https://sumo.rai-inst.com/.</p>
                     </details>
                 </div>
             </div>

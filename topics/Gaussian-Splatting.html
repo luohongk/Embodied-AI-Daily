@@ -665,7 +665,7 @@
                 <a href="Gaussian-SLAM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#d946ef"></span>
                     <span class="nav-label">Gaussian SLAM</span>
-                    <span class="nav-count">30</span>
+                    <span class="nav-count">31</span>
                 </a>
                 <a href="Autonomous-Driving.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#6366f1"></span>
@@ -675,7 +675,7 @@
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Kalman Filter</span>
-                    <span class="nav-count">48</span>
+                    <span class="nav-count">47</span>
                 </a>
                 <a href="Loop-Closure-Detection.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -695,7 +695,7 @@
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">77</span>
+                    <span class="nav-count">78</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -730,7 +730,7 @@
                 <a href="Model-Predictive-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#14b8a6"></span>
                     <span class="nav-label">Model Predictive Control</span>
-                    <span class="nav-count">56</span>
+                    <span class="nav-count">54</span>
                 </a>
                 <a href="Whole-Body-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#06b6d4"></span>
@@ -740,7 +740,7 @@
                 <a href="Motion-Planning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#0ea5e9"></span>
                     <span class="nav-label">Motion Planning</span>
-                    <span class="nav-count">76</span>
+                    <span class="nav-count">77</span>
                 </a>
                 <a href="Path-Planning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#3b82f6"></span>
@@ -884,7 +884,7 @@
             <a href="Gaussian-SLAM.html" class="nav-item">
                 <span class="nav-dot" style="background:#d946ef"></span>
                 <span class="nav-label">Gaussian SLAM</span>
-                <span class="nav-count">30</span>
+                <span class="nav-count">31</span>
             </a>
             <a href="Autonomous-Driving.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
@@ -894,7 +894,7 @@
             <a href="Kalman-Filter.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Kalman Filter</span>
-                <span class="nav-count">48</span>
+                <span class="nav-count">47</span>
             </a>
             <a href="Loop-Closure-Detection.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -914,7 +914,7 @@
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">77</span>
+                <span class="nav-count">78</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -949,7 +949,7 @@
             <a href="Model-Predictive-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#14b8a6"></span>
                 <span class="nav-label">Model Predictive Control</span>
-                <span class="nav-count">56</span>
+                <span class="nav-count">54</span>
             </a>
             <a href="Whole-Body-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#06b6d4"></span>
@@ -959,7 +959,7 @@
             <a href="Motion-Planning.html" class="nav-item">
                 <span class="nav-dot" style="background:#0ea5e9"></span>
                 <span class="nav-label">Motion Planning</span>
-                <span class="nav-count">76</span>
+                <span class="nav-count">77</span>
             </a>
             <a href="Path-Planning.html" class="nav-item">
                 <span class="nav-dot" style="background:#3b82f6"></span>
@@ -1028,6 +1028,57 @@
                 <span class="topic-count">80 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.25068v2" target="_blank" class="paper-title">Localization and Neural Splatting on the Edge: An FPGA Scene Memory for Robots</a>
+                        <span class="paper-date">2026-10-23</span>
+                    </div>
+                                        <span class="paper-comment">📝 8 pages</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Resource-constrained robots and autonomous vehicles need scene memories that localize a camera and render nearby views without a desktop GPU. Scene-coordinate regression (SCR) and 3D Gaussian splatting (3DGS) fit because they avoid an SfM stage, but ACEsplat-style pipelines are GPU-centered, and moving them to an edge FPGA is hard because SCR is pose-sensitive and 3DGS rendering is irregular and capacity-sensitive. We present LENS, an edge scene-memory acceleration system on the AMD KR260 that brings an ACEsplat-style workload to a low-power FPGA/ARM platform. Rather than proposing a new scene model, LENS co-designs the two dominant kernels with the board data path: an INT16 SCR accelerator that preserves pose accuracy, and a bit-exact fixed-point ordered 3DGS renderer that rewrites alpha transmittance as a log-sum-exp recurrence and removes provably useless streamed Gaussians. All LENS latency, power, and quality results are board-measured. The SCR engine preserves DSAC* localization accuracy at 25.42 ms, the on-board renderer reaches 34.11 dB on Cambridge against ACEsplat's 33.20, novel-view synthesis on RealEstate10K reaches 27.84 dB against 26.11, and all ten Wayspots scenes reach the ACEsplat rendering target. LENS wins performance per watt over a Jetson Orin NX on every deployment task, by 1.9x to 5.7x at about a quarter of the power, and is faster in absolute latency on localization and Wayspots rendering. On-device training reaches ACEsplat-level quality but not the GPU's time or energy, marking the remaining boundary for a future training accelerator.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.27712v2" target="_blank" class="paper-title">RLSplat: Resource-Linear Budget Control for Feed-forward 3D Gaussian Splatting</a>
+                        <span class="paper-date">2026-10-23</span>
+                    </div>
+                                        <span class="paper-comment">📝 Code available at https://github.com/mlvlab/RLSplat</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Feed-forward 3D Gaussian Splatting (FF3DGS) reconstructs 3D scenes from images in a single forward pass, making it well-suited to applications that must operate within limited resource budgets. To further improve its practicality, recent budget-controllable FF3DGS methods allow the number of Gaussians to be adjusted at inference, so that the output meets a given storage limit or rendering-latency constraint. However, these methods overlook the cost of inference itself: to produce a representation with the target number of Gaussians, they first predict a dense set of Gaussians and then prune or select from it, requiring nearly constant latency and peak memory regardless of the budget. We therefore propose RLSplat, a resource-linear budget-controllable FF3DGS framework whose representation size, inference latency, and peak memory all decrease linearly as the Gaussian budget is reduced. Instead of pruning or selection, RLSplat learns a Gaussian allocation policy that distributes the budget across local scene regions, so that exactly the requested number of Gaussians is generated. These Gaussians are then refined through resource-linear Gaussian decoding, in which each Gaussian attends only to nearby Gaussians found via an efficient hierarchical neighbor search, so that the decoding cost decreases linearly with fewer Gaussians. In zero-shot evaluation, RLSplat outperforms prior budget-controllable methods at every budget, surpassing the strongest baseline even with 4$\times$ fewer Gaussians, while running up to 4.1$\times$ faster with 9.6$\times$ less peak memory at low budgets.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2601.00705v4" target="_blank" class="paper-title">Rethinking Densification in Gaussian SLAM: A Stationary Sampling Perspective</a>
+                        <span class="paper-date">2026-10-23</span>
+                    </div>
+                                        <span class="paper-comment">📝 10 pages, 6 figures</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Gaussian Splatting enables high-fidelity differentiable SLAM by representing scenes as anisotropic Gaussian primitives. Most systems rely on residual-driven densification, which couples refinement with representation growth: accuracy saturates at a moderate primitive count, yet memory grows throughout the trajectory, degrading throughput. We introduce TopoGS-SLAM, a stationary-sampling formulation that decouples refinement from capacity through coverage-triggered Gaussian initialization and bounded-topology optimization, turning mapping into a bounded-dimensional problem with stable scaling. On standard indoor benchmarks, TopoGS-SLAM matches or surpasses densification-based pipelines in localization and reconstruction accuracy while substantially improving memory scalability and throughput, showing that iterative topology mutation is not required for accurate Gaussian SLAM in bounded-area static indoor scenes with sufficient multi-view coverage. Additional details and resources are available at this URL: https://breeze1124.github.io/rgs-slam-project-page/</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2606.06685v2" target="_blank" class="paper-title">RigPAPR: Rig-Based Animation of Static Neural Point Clouds from a Fixed-Viewpoint Video</a>
+                        <span class="paper-date">2026-10-22</span>
+                    </div>
+                                        <span class="paper-comment">📝 Project page is available at https://niopeng.github.io/RigPAPR/</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="好的，作为一名人工智能研究与学术论文分析专家，我将严格按照您的要求，对这篇论文《RigPAPR: Rig-Based Animation of Static Neural Point Clouds from a Fixed-Viewpoint Video》进行详细的中文解读。&#10;&#10;---&#10;&#10;## 0. 概览（Concise Summary）&#10;&#10;- **主题（Topic）**：3D视觉与图形学，具体为基于骨骼（Rig）的神经点云动画。&#10;- **问题（Problem）**：现有的基于3D高斯泼溅（3D Gaussian Splatting）的神经点云动画方法，在骨骼关节处会产生“间隙”和“尖刺”等伪影。作者指出，其根本原因在于高斯泼溅的表示方式本身与线性混合蒙皮（LBS）不兼容。&#10;- **方法（Method）**：提出RigPAPR框架，使用一种基于插值的神经点云表示——邻近注意力点渲染（PAPR）来替代高斯泼溅。该方法通过一个临时网格代理自动绑定骨骼，然后直接对PAPR点云应用LBS进行变形，并通过两阶段优化从单视角固定视角视频中学习关节旋转和蒙皮权重。&#10;- **创新（Innovation）**：&#10;    1.  首次将PAPR这种无形状参数的插值型点云表示用于骨骼动画，从根本上解决了高斯泼溅在关节处的伪影问题。&#10;    2.  提出了一种无需网格代理、无需姿态依赖修正、无需类别模板的自动绑定和驱动方法。&#10;    3.  设计了一个两阶段优化策略，利用单目深度和2D点跟踪作为“脚手架”来解决单视角下的深度-姿态歧义问题。&#10;- **意义（Significance）**：该方法能够从一张静态的多视角重建结果和一个单视角固定视角的驱动视频（可以是真实拍摄或I2V生成）中，生成一个可重复绑定、可重新摆姿势的3D资产。在关节处渲染质量显著优于基于网格和高斯泼溅的基线方法，尤其是在新视角下。&#10;- **一句话总结**：RigPAPR通过采用无形状参数的插值型点云表示（PAPR），从根本上解决了现有方法在骨骼动画中关节处的伪影问题，实现了从单视角视频到高质量可重用3D骨骼动画资产的生成。&#10;&#10;## 1. 研究动机（Motivation）&#10;&#10;- **核心问题**：如何将一个静态的高保真神经点云重建结果（如从多视角图像重建的）进行骨骼绑定和动画化，使其能够跟随一个单视角固定视角的驱动视频（如I2V生成的视频）运动，并最终得到一个可重新摆姿势的3D资产。&#10;- **现有方法的不足与挑战**：&#10;    1.  **关节伪影**：现有方法主要基于3D高斯泼溅（3DGS）。无论是直接对高斯泼溅应用LBS，还是将其绑定到变形的网格上，都会在关节处产生明显的“间隙”和“尖刺”伪影（如图1所示）。&#10;    2.  **根本原因分析**：作者将伪影归因于高斯泼溅的表示方式。每个高斯泼溅都有一个独立的、在标准姿态下与邻居“拼接”好的形状（协方差矩阵）。在LBS变形下，每个泼溅只能被其绑定的骨骼刚性旋转，无法弯曲。因此，在关节处，原本的拼接被破坏，导致间隙和尖刺。现有的修正方法（如双四元数蒙皮、局部刚性正则化、姿态依赖修正MLP）都只是“治标不治本”，没有解决表示层的问题。&#10;    3.  **单视角歧义性**：从单视角固定视角视频中驱动3D模型是一个高度欠约束的问题。深度和关节运动在2D图像上的变化是耦合的，仅靠渲染损失无法区分正确的3D姿态。&#10;    4.  **依赖问题**：许多现有方法依赖多视角运动捕捉、类别模板（如SMPL）或复杂的生成先验，限制了其通用性和易用性。&#10;&#10;## 2. 创新点（Innovation）&#10;&#10;- **核心创新：采用插值型点云表示（PAPR）**：这是本文最关键的创新。作者选择PAPR而非3DGS作为基础表示。PAPR的每个点只携带位置和特征，没有独立的形状参数。在渲染时，每个像素的颜色由其最近的K个点通过注意力机制插值得到。这种“无形状”的特性使得在LBS变形下，点云的位置改变会自动导致渲染结果改变，从而自然地适应关节处的变形，不会产生高斯泼溅那样的伪影（如图1右所示）。&#10;- **新颖的自动绑定与驱动流程**：&#10;    1.  **临时网格代理**：提出使用一个临时的网格代理（从PAPR点云中提取）来初始化骨骼和蒙皮权重，之后立即丢弃。这避免了在变形和渲染阶段使用网格，同时利用了成熟的网格自动绑定工具。&#10;    2.  **直接LBS**：在PAPR点上直接应用LBS，无需网格代理、姿态依赖修正MLP或类别模板。每个点都是一个持久的、外观稳定的“手柄”。&#10;    3.  **两阶段优化**：设计了一个巧妙的“脚手架”式优化策略来解决单视角歧义性。第一阶段利用单目深度估计作为强约束来初始化关节旋转；第二阶段引入2D点跟踪和ARAP正则化，并逐步衰减深度和跟踪损失的权重，最终让渲染损失主导优化，避免被深度/跟踪的噪声“钉死”。&#10;&#10;## 3. 主要内容（Main Content）【重点】&#10;&#10;### 3.1 设计架构与方法&#10;&#10;RigPAPR的整体流程如图2所示，主要分为三步：&#10;&#10;1.  **自动绑定（Auto-Rigging）**：输入一个预训练的静态PAPR点云。首先，使用OffsetOPT算法从点云中提取一个临时网格代理。然后，使用Puppeteer工具对这个网格进行自动绑定，得到骨骼和每个顶点的蒙皮权重。最后，将这些权重从网格顶点转移到PAPR点上。网格代理随后被丢弃。&#10;2.  **两阶段优化（Two-Phase Optimization）**：输入一个固定视角的驱动视频。优化目标是恢复每帧的关节旋转和全局平移，并细化蒙皮权重。&#10;    -   **Phase 1: 深度监督的关节旋转初始化**：冻结蒙皮权重，仅优化每帧的关节旋转和平移。损失函数包括渲染损失、相对深度损失和一个旋转正则化项。&#10;    -   **Phase 2: 姿态修正与蒙皮权重细化**：冻结Phase 1得到的关节旋转和平移，优化一个小的时序MLP产生的关节旋转修正量，以及蒙皮权重。损失函数在Phase 1的基础上增加了2D点跟踪损失和ARAP（As-Rigid-As-Possible）距离保持正则化项。关键的是，深度和跟踪损失的权重会逐渐衰减到零。&#10;3.  **推理（Inference）**：给定新的骨骼姿态，通过LBS变形标准姿态下的PAPR点云，然后使用冻结的PAPR渲染器从任意新视角渲染图像。&#10;&#10;### 3.2 关键算法与数学推导&#10;&#10;- **线性混合蒙皮（LBS）**：点 $i$ 在帧 $t$ 的变形后位置 $\mathbf{p}_i^t$ 由下式给出：&#10;    $$ \mathbf{p}_i^t = \mathbf{t}^t + \sum_{b=1}^{B} w_{i,b} \mathbf{T}_b(\mathbf{R}^t) \mathbf{p}_i^0 $$&#10;    其中 $\mathbf{p}_i^0$ 是标准姿态下的位置，$\mathbf{t}^t$ 是全局根平移，$w_{i,b}$ 是点 $i$ 对骨骼 $b$ 的蒙皮权重，$\mathbf{T}_b(\mathbf{R}^t)$ 是骨骼 $b$ 在帧 $t$ 的蒙皮变换矩阵（由旋转 $\mathbf{R}^t_b$ 通过正向运动学计算得到）。&#10;&#10;- **两阶段优化损失函数**：&#10;    - **Phase 1 损失**：&#10;        $$ \mathcal{L}_{Phase1} = \mathcal{L}_{rgb} + \lambda_{\Delta depth} \mathcal{L}_{\Delta depth} + \lambda_{rot} \mathcal{L}_{rot} $$&#10;        其中 $\mathcal{L}_{rgb}$ 是渲染图像与驱动视频帧之间的像素级损失（如L1损失），$\mathcal{L}_{\Delta depth}$ 是校准后的相对深度损失，$\mathcal{L}_{rot}$ 是后代加权旋转正则化项。&#10;    - **Phase 2 损失**：&#10;        $$ \mathcal{L}_{Phase2} = \mathcal{L}_{rgb} + \lambda_{\Delta depth} \mathcal{L}_{\Delta depth} + \lambda_{track} \mathcal{L}_{track} + \lambda_{ARAP} \mathcal{L}_{ARAP} + \lambda_{smooth} \mathcal{L}_{smooth} $$&#10;        其中 $\mathcal{L}_{track}$ 是CoTracker 3提供的2D点跟踪损失，$\mathcal{L}_{ARAP}$ 是保持点云局部几何结构的ARAP损失。关键点是 $\lambda_{\Delta depth}$ 和 $\lambda_{track}$ 会逐渐衰减到0。&#10;&#10;### 3.3 模型、训练与数据集&#10;&#10;- **模型**：&#10;    - **基础表示**：PAPR点云，包含N个点，每个点有位置 $\mathbf{p}_i \in \mathbb{R}^3$，视角无关特征 $\mathbf{u}_i \in \mathbb{R}^d$ 和影响分数 $\tau_i \in \mathbb{R}$。&#10;    - **骨骼**：B根骨骼，由自动绑定工具Puppeteer生成。&#10;    - **时序MLP**：一个小的MLP，输入是帧索引，输出是每根关节的旋转修正量（轴角表示）。&#10;- **训练**：&#10;    - **预训练**：PAPR点云从多视角图像中预训练得到。&#10;    - **两阶段优化**：在驱动视频上进行。Phase 1逐帧顺序优化，Phase 2整体优化。&#10;- **数据集**：&#10;    - **合成数据**：从Objaverse中选取5个物体（T-Rex, Simpsons, fox, wolf, spider），渲染固定视角视频作为驱动视频，并渲染多视角图像用于预训练。&#10;    - **真实数据**：拍摄两个真实物体（robot, statue）的视频。驱动视频由Kling 3.0从标准帧生成。&#10;&#10;### 3.4 实验设置与结果&#10;&#10;- **基线方法**：&#10;    - **Puppeteer**：基于网格的动画方法。&#10;    - **Mani-GS**：基于高斯泼溅的动画方法（作者对其进行了修改以增强其在固定视角下的性能）。&#10;- **定量结果（表1）**：&#10;    - **训练视角**：RigPAPR在PSNR上达到最高（29.07 dB），与Mani-GS在SSIM和LPIPS上相当，显著优于Puppeteer。&#10;    - **新视角**：RigPAPR在所有指标上均大幅领先基线方法，PSNR比Mani-GS高出3 dB以上（23.63 vs 20.51），证明了其在关节处渲染的优越性。&#10;- **定性结果（图3、4、5）**：&#10;    - **合成数据**：图3显示，Mani-GS在关节处（如头部、腹部）有可见的尖刺和间隙伪影，而RigPAPR渲染干净。&#10;    - **真实数据**：图4显示，Mani-GS在新视角下产生尖刺伪影，RigPAPR则保持清晰。&#10;    - **新姿态驱动**：图5显示，在驱动未见过的姿态序列时，Mani-GS产生严重伪影，而RigPAPR的蒙皮权重泛化良好，渲染结果干净。&#10;- **消融实验（表2）**：验证了两阶段优化的有效性。Phase 2显著提升了训练视角的指标，但新视角指标略有下降（轻微过拟合），但整体仍远优于基线。&#10;&#10;### 3.5 技术细节&#10;&#10;- **深度损失**：使用Depth Anything 3的度量深度版本，但存在尺度歧义。作者设计了一个闭式解，在每一步优化中计算一个每帧标量来校准深度，然后计算MSE损失。&#10;- **跟踪损失**：使用CoTracker 3。为了确保跟踪点与渲染相关，作者使用PAPR的注意力权重来引导跟踪点的选取，只跟踪那些对渲染贡献大的点。&#10;- **ARAP损失**：保持每个点的k近邻在变形前后距离不变，以维持局部几何结构。&#10;- **自动绑定**：使用OffsetOPT从PAPR点云提取网格，然后用Puppeteer进行绑定。&#10;&#10;## 4. 意义与影响（Significance and Impact）&#10;&#10;- **解决的问题与贡献**：&#10;    1.  **根本性解决了关节伪影问题**：通过理论分析和实验验证，揭示了高斯泼溅与LBS不兼容的根本原因，并提出了一个优雅的解决方案——使用PAPR。这是一个重要的学术贡献，为后续的神经点云动画研究指明了新方向。&#10;    2.  **提出了一种更通用、更鲁棒的动画框架**：RigPAPR无需网格代理、姿态依赖修正或类别模板，仅需一个单视角固定视角视频即可驱动，大大降低了应用门槛，使其更易于与I2V等生成模型结合。&#10;    3.  **实现了高质量的新视角渲染**：在新视角下的渲染质量显著优于现有方法，这对于生成可重用的3D资产至关重要。&#10;- **对未来研究/应用的影响**：&#10;    - 为基于点的神经渲染在动画领域的应用开辟了新道路，PAPR或类似的插值型表示可能成为未来研究的主流。&#10;    - 其“脚手架”式的两阶段优化策略为解决单视角下的欠约束问题提供了一个有效的范式。&#10;    - 在游戏、电影、虚拟现实、数字人等领域，该方法有望简化从真实世界捕捉或AI生成内容到可驱动3D资产的流程。&#10;- **局限与开放问题**：&#10;    1.  **依赖2D先验**：方法依赖单目深度和2D跟踪，这些先验的失败会直接传播到最终结果。&#10;    2.  **自动绑定质量**：初始的骨骼和蒙皮权重质量至关重要，如果自动绑定失败，后续优化难以完全纠正。&#10;    3.  **遮挡问题**：在标准姿态下被遮挡的区域，在动画中暴露出来时，由于缺乏外观信息，会渲染成空洞或错误颜色。&#10;&#10;## 5. 澄清与简化（Clarifications and Simplifications）&#10;&#10;- **为什么高斯泼溅在关节处会产生伪影？**&#10;    - **类比**：想象用许多不同形状的拼图块（高斯泼溅）拼成一个完整的平面（标准姿态下的表面）。每个拼图块都有自己固定的形状。现在，你把这个平面从中间折弯（关节运动）。每个拼图块是硬的，不能弯曲，所以它们只能跟着自己那一半平面移动。在折弯处，原来紧密拼接的拼图块就会分开（产生间隙），或者因为旋转而互相刺入对方（产生尖刺）。这就是高斯泼溅在关节处的伪影。&#10;- **为什么PAPR可以避免这个问题？**&#10;    - **类比**：想象用一堆完全相同的、没有固定形状的彩色橡皮泥球（PAPR点）来构成一个平面。每个球本身没有形状，平面的形状是由所有球的位置共同决定的。当你把平面折弯时，你只是移动了这些球的位置。在折弯处，球与球之间的相对位置变了，但渲染时，每个像素的颜色是由它附近最近的几个球“平均”出来的。因此，无论球怎么移动，渲染出的表面都能自然地适应新的形状，不会出现“硬拼接”导致的间隙或尖刺。&#10;- **什么是“脚手架”式优化？**&#10;    - **类比**：在建房子时，我们需要脚手架来支撑和定位墙体。房子建好后，脚手架就可以拆掉了。RigPAPR的两阶段优化也是如此。单目深度和2D跟踪就像是“脚手架”，它们在优化初期（Phase 1和Phase 2早期）提供强大的约束，帮助模型找到正确的姿态。但是，这些“脚手架”本身有噪声和偏差。因此，在优化后期（Phase 2后期），它们的权重被逐渐降低到零，让更可靠的渲染损失（“房子本身”）来主导最终的精细调整，从而避免被“脚手架”的缺陷所限制。&#10;&#10;## 6. 补充说明（Additional Notes）&#10;&#10;- **相关工作的关联**：本文与AnimaMimic [48] 最为相关，两者都使用单目先验（深度、跟踪）从单视角视频驱动3D模型。关键区别在于，AnimaMimic需要一个预先提供的网格，而RigPAPR直接从点云重建结果出发，避免了网格重建的瓶颈。与RigGS [53] 等基于高斯泼溅的方法相比，本文从根本上改变了表示方式，而不是添加修正模块。&#10;- **最重要的图表**：&#10;    - **图1**：**至关重要**。它直观地解释了本文的核心动机和创新点，清晰地对比了高斯泼溅（左）和PAPR（右）在LBS变形下的行为差异，是理解全文的关键。&#10;    - **图2**：展示了RigPAPR的完整流程，有助于理解各个模块之间的关系。&#10;    - **表1**：提供了关键的定量证据，证明了RigPAPR在新视角下的显著优势。&#10;    - **图3、4、5**：提供了有力的定性证据，直观地展示了RigPAPR在关节处渲染质量的提升。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Static neural point reconstructions capture a subject at high fidelity from posed images. Given such a reconstruction, we aim to animate it to follow a monocular fixed-viewpoint driving video of the subject, whether captured or produced by image-to-video (I2V) generation, and to recover a rigged, re-posable 3D asset. Existing methods deform Gaussian splats through direct linear blend skinning (LBS) or mesh proxies, both of which are prone to joint-boundary artifacts under articulation, even with per-primitive corrections. We trace the artifact to the representation: each splat carries an individual shape calibrated in the canonical pose to tile with its neighbours. Under LBS each splat can be moved, rotated, or rescaled but never bent, so the canonical tiling comes apart at joint boundaries. Proximity attention point rendering (PAPR) instead carries no per-primitive shape; each pixel is recomposed at render time from the deformed primitives' positions, so the surface re-forms naturally with the articulation. We present RigPAPR, which auto-rigs a static PAPR cloud and drives it under direct LBS from a single fixed-viewpoint video, without a category template or a pose-dependent correction network. RigPAPR is competitive with the strongest baseline at the supervised view and outperforms splatting-based and mesh-based baselines at novel views, by 3~dB PSNR on synthetic subjects and about 2~dB on real-world subjects, with cleaner joint-boundary renderings.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2610.31293v1" target="_blank" class="paper-title">RecallGS: Geometry-Grounded Recall for Online Semantic Gaussian Splatting</a>
@@ -1309,18 +1360,6 @@
                 </div>
                 <div class="paper-card">
                     <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2610.27712v1" target="_blank" class="paper-title">RLSplat: Resource-Linear Budget Control for Feed-forward 3D Gaussian Splatting</a>
-                        <span class="paper-date">2026-10-20</span>
-                    </div>
-                                        <span class="paper-comment">📝 Code available at https://github.com/mlvlab/RLSplat</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Feed-forward 3D Gaussian Splatting (FF3DGS) reconstructs 3D scenes from images in a single forward pass, making it well-suited to applications that must operate within limited resource budgets. To further improve its practicality, recent budget-controllable FF3DGS methods allow the number of Gaussians to be adjusted at inference, so that the output meets a given storage limit or rendering-latency constraint. However, these methods overlook the cost of inference itself: to produce a representation with the target number of Gaussians, they first predict a dense set of Gaussians and then prune or select from it, requiring nearly constant latency and peak memory regardless of the budget. We therefore propose RLSplat, a resource-linear budget-controllable FF3DGS framework whose representation size, inference latency, and peak memory all decrease linearly as the Gaussian budget is reduced. Instead of pruning or selection, RLSplat learns a Gaussian allocation policy that distributes the budget across local scene regions, so that exactly the requested number of Gaussians is generated. These Gaussians are then refined through resource-linear Gaussian decoding, in which each Gaussian attends only to nearby Gaussians found via an efficient hierarchical neighbor search, so that the decoding cost decreases linearly with fewer Gaussians. In zero-shot evaluation, RLSplat outperforms prior budget-controllable methods at every budget, surpassing the strongest baseline even with 4$\times$ fewer Gaussians, while running up to 4.1$\times$ faster with 9.6$\times$ less peak memory at low budgets.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
                         <a href="https://arxiv.org/abs/2610.27696v1" target="_blank" class="paper-title">PanoGraphGS: Unifying Panoptic Segmentation and Hierarchical 3D Scene Graphs with Gaussian Splatting</a>
                         <span class="paper-date">2026-10-20</span>
                     </div>
@@ -1497,18 +1536,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Recent advances in 3D Gaussian Splatting (3DGS) have achieved state-of-the-art results for novel view synthesis. However, efficiently capturing high-fidelity reconstructions of specific objects within complex scenes remains a significant challenge. A key limitation of existing active reconstruction methods is their reliance on scene-level uncertainty metrics, which are often biased by irrelevant background clutter and lead to inefficient view selection for object-centric tasks. We present OUGS, a novel framework that addresses this challenge with a more principled, physically-grounded uncertainty formulation for 3DGS. Our core innovation is to derive uncertainty directly from the explicit physical parameters of the 3D Gaussian primitives (e.g., position, scale, rotation). By propagating the covariance of these parameters through the rendering Jacobian, we establish a highly interpretable uncertainty model. This foundation allows us to then seamlessly integrate semantic segmentation masks to produce a targeted, object-aware uncertainty score that effectively disentangles the object from its environment. This allows for a more effective active view selection strategy that prioritizes views critical to improving object fidelity. Experimental evaluations on public datasets demonstrate that our approach significantly improves the efficiency of the 3DGS reconstruction process and achieves higher quality for targeted objects compared to existing state-of-the-art methods, while also serving as a robust uncertainty estimator for the global scene.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2610.25068v1" target="_blank" class="paper-title">Localization and Neural Splatting on the Edge: An FPGA Scene Memory for Robots</a>
-                        <span class="paper-date">2026-10-18</span>
-                    </div>
-                                        <span class="paper-comment">📝 8 pages</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Resource-constrained robots and autonomous vehicles need scene memories that localize a camera and render nearby views without a desktop GPU. Scene-coordinate regression (SCR) and 3D Gaussian splatting (3DGS) fit because they avoid an SfM stage, but ACEsplat-style pipelines are GPU-centered, and moving them to an edge FPGA is hard because SCR is pose-sensitive and 3DGS rendering is irregular and capacity-sensitive. We present LENS, an edge scene-memory acceleration system on the AMD KR260 that brings an ACEsplat-style workload to a low-power FPGA/ARM platform. Rather than proposing a new scene model, LENS co-designs the two dominant kernels with the board data path: an INT16 SCR accelerator that preserves pose accuracy, and a bit-exact fixed-point ordered 3DGS renderer that rewrites alpha transmittance as a log-sum-exp recurrence and removes provably useless streamed Gaussians. All LENS latency, power, and quality results are board-measured. The SCR engine preserves DSAC* localization accuracy at 25.42 ms, the on-board renderer reaches 34.11 dB on Cambridge against ACEsplat's 33.20, novel-view synthesis on RealEstate10K reaches 27.84 dB against 26.11, and all ten Wayspots scenes reach the ACEsplat rendering target. LENS wins performance per watt over a Jetson Orin NX on every deployment task, by 1.9x to 5.7x at about a quarter of the power, and is faster in absolute latency on localization and Wayspots rendering. On-device training reaches ACEsplat-level quality but not the GPU's time or energy, marking the remaining boundary for a future training accelerator.</p>
                     </details>
                 </div>
                 <div class="paper-card">
@@ -1965,30 +1992,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Existing 3D Gaussian Splatting (3DGS) codecs report reconstruction quality after compression, and give users little control over the distortion of individual primitives. We present PLEDGE, a training-free, progressive, error-bounded codec that translates four user-declared tolerances into per-primitive quantization bounds: screen-space position, footprint deformation due to rotation and scale, view-dependent color, and opacity. The bounds apply throughout a declared camera domain, including previously unseen viewpoints. Position and opacity are bounded directly; footprint deformation is bounded under the rasterizer's affine projection model, and color is bounded over all viewing directions. PLEDGE organizes quantized residuals into a progressive bitstream with explicit error bounds for every valid prefix. Experiments across thirteen scenes verify all declared per-mechanism bounds and demonstrate competitive rate-distortion performance. The four tolerances incur substantially different rate costs, so users can spend rate where their application needs it.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2610.04203v3" target="_blank" class="paper-title">Sparse-GS2Mesh: 3D Gaussian Splatting Guided by Novel Stereo Views and 2DGS for Sparse View Surface Reconstruction</a>
-                        <span class="paper-date">2026-10-13</span>
-                    </div>
-                                        <span class="paper-comment">📝 Accepted to NIPS 2026 PhysWorldAI workshops. Project Page: https://yhnoh8623.github.io/projects/s-gs2mesh/</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Surface reconstruction under sparse-view settings remains challenging due to limited geometric cues. Volume rendering methods based on signed distance functions often produce over-smoothed surfaces, while 3D Gaussian Splatting (3DGS), though time-efficient, suffers from incomplete geometry due to the lack of reliable depth supervision and the limitation of being optimized only from given input views. In this paper, we present Sparse-GS2Mesh, a stereo-aware framework for surface reconstruction from sparse views. While 3DGS and stereo matching have been leveraged for surface reconstruction under dense view settings, we extend them to operate effectively under sparse view conditions by first initializing 3DGS using epipolar depth priors to mitigate the 3DGS overfitting problem, followed by our three key components: (I) adaptive baseline selection, (II) fine-tuning with a stereo matching network, and (III) 2D/3D co-regularized fine-tuning. Given a warmed-up 3DGS initialized with epipolar depth, the adaptive baseline selection automatically determines a baseline to synthesize for each sparse view. We then fine-tune 3DGS by backpropagating depth-refining gradients from the stereo matching network, effectively specializing the 3DGS for stereo matching. The 2D/3D co-regularization further helps obtain stable reconstruction, addressing weak geometric cues in close stereo views. Sparse-GS2Mesh achieves a 15\% improvement over state-of-the-art methods in little-overlap settings and comparable results in large-overlap settings. Project page: https://yhnoh8623.github.io/projects/s-gs2mesh/.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2610.17521v1" target="_blank" class="paper-title">YUBI-Real2Sim: 3DGS Scene Verification for Reliable Policy Evaluation</a>
-                        <span class="paper-date">2026-10-13</span>
-                    </div>
-                                        <span class="paper-comment">📝 Under submission</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Evaluating VLA policies on real robots is costly, time-consuming, and difficult to reproduce, making real-to-sim simulation essential for scalable evaluation. While 3D Gaussian Splatting (3DGS) enables rapid real-to-sim scene generation, the reconstruction quality required for reliable policy evaluation remains unquantified. In particular, policies relying on wrist-mounted fisheye cameras (e.g., YUBI handheld gripper data) are heavily exposed to visual artifacts (holes, floaters) in wide-angle views, directly degrading task performance. To address this, we present YUBI-Real2Sim, a unified framework for 3DGS-based scene reconstruction and real-to-sim policy evaluation under dual fisheye wrist views. We develop an integrated pipeline combining 200-degree fisheye camera capture, 3DGS training, 3D foundation models for object modeling, and MuJoCo-based physical simulation, reproducing the observed real-world policy ordering in eight of nine scene-task comparisons. Using this framework, we construct a benchmark across two bimanual robot platforms, three scenes, three tasks, and dual pi0.5-based policies. This systematically measures real-to-sim rank agreement and evaluates policy sensitivity against counterfactual 3DGS artifacts (ceiling holes, floaters, warping) and capture disturbances. We further analyze whether novel-view quality scores can indicate policy-ranking reliability under a scene-held-out evaluation protocol. The results show task-dependent performance and limitations of quality-based reliability prediction, highlighting the need to assess reconstruction quality when using Real2Sim for policy evaluation. These results do not yet establish a generally reliable scene-acceptance rule. Project Page: https://yubi-real2sim.airoa.io.</p>
                     </details>
                 </div>
             </div>

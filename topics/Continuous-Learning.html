@@ -665,7 +665,7 @@
                 <a href="Gaussian-SLAM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#d946ef"></span>
                     <span class="nav-label">Gaussian SLAM</span>
-                    <span class="nav-count">30</span>
+                    <span class="nav-count">31</span>
                 </a>
                 <a href="Autonomous-Driving.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#6366f1"></span>
@@ -675,7 +675,7 @@
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Kalman Filter</span>
-                    <span class="nav-count">48</span>
+                    <span class="nav-count">47</span>
                 </a>
                 <a href="Loop-Closure-Detection.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -695,7 +695,7 @@
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">77</span>
+                    <span class="nav-count">78</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -730,7 +730,7 @@
                 <a href="Model-Predictive-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#14b8a6"></span>
                     <span class="nav-label">Model Predictive Control</span>
-                    <span class="nav-count">56</span>
+                    <span class="nav-count">54</span>
                 </a>
                 <a href="Whole-Body-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#06b6d4"></span>
@@ -740,7 +740,7 @@
                 <a href="Motion-Planning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#0ea5e9"></span>
                     <span class="nav-label">Motion Planning</span>
-                    <span class="nav-count">76</span>
+                    <span class="nav-count">77</span>
                 </a>
                 <a href="Path-Planning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#3b82f6"></span>
@@ -884,7 +884,7 @@
             <a href="Gaussian-SLAM.html" class="nav-item">
                 <span class="nav-dot" style="background:#d946ef"></span>
                 <span class="nav-label">Gaussian SLAM</span>
-                <span class="nav-count">30</span>
+                <span class="nav-count">31</span>
             </a>
             <a href="Autonomous-Driving.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
@@ -894,7 +894,7 @@
             <a href="Kalman-Filter.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Kalman Filter</span>
-                <span class="nav-count">48</span>
+                <span class="nav-count">47</span>
             </a>
             <a href="Loop-Closure-Detection.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -914,7 +914,7 @@
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">77</span>
+                <span class="nav-count">78</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -949,7 +949,7 @@
             <a href="Model-Predictive-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#14b8a6"></span>
                 <span class="nav-label">Model Predictive Control</span>
-                <span class="nav-count">56</span>
+                <span class="nav-count">54</span>
             </a>
             <a href="Whole-Body-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#06b6d4"></span>
@@ -959,7 +959,7 @@
             <a href="Motion-Planning.html" class="nav-item">
                 <span class="nav-dot" style="background:#0ea5e9"></span>
                 <span class="nav-label">Motion Planning</span>
-                <span class="nav-count">76</span>
+                <span class="nav-count">77</span>
             </a>
             <a href="Path-Planning.html" class="nav-item">
                 <span class="nav-dot" style="background:#3b82f6"></span>
@@ -1030,6 +1030,114 @@
             <div class="paper-list">
                 <div class="paper-card">
                     <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.32799v1" target="_blank" class="paper-title">CARES: Coverage-Aware Replay Exemplar Selection for Continual Learning</a>
+                        <span class="paper-date">2026-10-23</span>
+                    </div>
+                                        <span class="paper-comment">📝 17 pages, 2 figures. Includes supplementary material</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Replay-based Continual Learning mitigates catastrophic forgetting by keeping a buffer of past samples, making buffer composition critical under a fixed memory budget. Recent coreset-based replay methods improve buffer quality using model-derived gradients, losses, or auxiliary optimization, but incur substantial computational overhead as memory is repeatedly updated. We propose CARES, a continual model-optimization-free approach for buffer construction that instead exploits the geometry of a frozen pretrained feature space using class-aware, density-weighted coverage. We evaluate CARES across balanced, imbalanced, and label-noisy streams under online class- and task-incremental settings. On Tiny-ImageNet, CARES is 2.3 to 8.8 times faster than existing coreset-based selectors. Although CARES achieves this speedup using no training signal from the continual learner, it ranks among the state of the art across balanced, imbalanced, and label-noisy streams under online class- and task-incremental settings, outperforming the strongest baseline by up to 7.58 percentage points under class imbalance while also attaining higher average accuracy on Tiny-ImageNet. Code will be released upon publication</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.32708v1" target="_blank" class="paper-title">Score-Preserving Continual Lasso under Task Shift</a>
+                        <span class="paper-date">2026-10-23</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Continual learning (CL) aims to learn from sequential tasks while mitigating catastrophic forgetting when historical data are no longer accessible. We study continual learning for high-dimensional sparse linear regression, where $\ell_1$ regularization creates a difficulty absent from continual ridge regression: that recursively reusing an $\ell_1$-penalized estimator can propagate earlier shrinkage and accumulate regularization bias across tasks. We propose score-preserving continual Lasso (SP-CL), which separates sparse estimation from state transmission by preserving the historical squared-loss score. Under squared loss, its cumulative estimator exactly recovers a full-history Lasso minimizer. When task coefficients coincide, it inherits the full-history sparse rate. For related task-specific coefficients, SP-CL uses a regularized current-task correction that leaves the transmitted state unchanged and attains the offline source-assisted rate under an oracle related-task condition. We also derive Overall/BWT/FWT decompositions that distinguish historical information loss, task conflict, and current-task specialization, and validate the resulting regimes in simulation.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.32472v1" target="_blank" class="paper-title">Online Continual Learning in Edge-Cloud Applications</a>
+                        <span class="paper-date">2026-10-23</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Deployed machine learning models in real-world IoT and edge/cloud systems face a critical reliability bottleneck: the requirement for online adaptation to non-stationary data streams while operating without access to the full original training dataset. Performance is severely degraded when models encounter Out-of-Distribution (OOD) inputs or suffer from catastrophic forgetting. Addressing these challenges requires adaptation mechanisms capable of learning from evolving data streams while preserving previously acquired knowledge. This paper proposes an edge-cloud methodology for integrating Continual Learning (CL) with Out-of-Distribution (OOD) Detection and Concept Drift Detection in IoT applications. The methodology incorporates ODIN and ECDD as alternative mechanisms for identifying informative samples for annotation and triggering rehearsal-based model updates. Experimental results across automotive, healthcare, and agricultural datasets demonstrate the applicability of the proposed methodology and its potential to support model adaptation while mitigating catastrophic forgetting.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.32263v1" target="_blank" class="paper-title">LapaFM: A Laparoscopic Foundation Model via Multi-Stage Continual Learning</a>
+                        <span class="paper-date">2026-10-23</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Artificial intelligence-based analysis of intraoperative laparoscopic videos has the potential to improve surgical decision-making and precision. However, effective surgical assistance requires models that can generalize across diverse intraoperative tasks. Here we present LapaFM, a foundation model for laparoscopic surgery trained on more than 20,000 minutes of surgical videos using a multi-stage continual learning strategy that mitigates catastrophic forgetting and inter-task interference. LapaFM learns multimodal visual representations and supports multiple tasks, including smoke removal, surgical phase recognition, instrument and polyp segmentation, and lesion identification. The model was evaluated on 13 retrospective and two prospective cohorts collected from different imaging devices. LapaFM consistently outperformed task-specific models and existing foundation models across datasets, and also generalized to gastrointestinal endoscopy tasks, including polyp detection and classification. Notably, it recovered over 90% of smoke-obscured frames and achieved clinician-level or superior performance in lymph node metastasis prediction and prospective polyp classification.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.32101v1" target="_blank" class="paper-title">PRISM: Promoting Sampling Diversity of Large Language Models with Implicit Stochastic Modulation</a>
+                        <span class="paper-date">2026-10-23</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Large language models (LLMs) exhibit mode collapse, where their output distribution concentrates on familiar semantic modes. When diversity disappears, repeated sampling becomes semantic repetition rather than discovery, making rare but stronger solutions unlikely to surface and leaving self-evolution and continual learning difficult to sustain. Most remedies intervene only at inference time, shaping sam- ples without making diversity a model capability. We propose PRISM, a training-time framework that internalizes diversity within the model. PRISM combines (i) submodular curation that pairs each prompt with diverse-yet-correct multi-teacher solutions, and (ii) stochastic embedding modulation, which turns special-token perturbations into implicit signals for sampling distinct outputs. A theoretical analysis establishes the stability of this mechanism. On WritingPrompts and BookMIA, PRISM moves the quality-diversity frontier outward, achieving the best generation quality in all model-benchmark settings while maintaining the strongest or near-strongest semantic diversity across two open-weight model families. It also improves sampling efficiency on math and code benchmarks. Beyond inference, PRISM yields a stronger foundation for reinforcement learning, sustaining diverse rollouts and mitigating the diversity collapse commonly observed during RL training.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.31991v1" target="_blank" class="paper-title">REDAR: Reinforcement-Driven Adaptive Regularisation for Class Incremental Learning</a>
+                        <span class="paper-date">2026-10-22</span>
+                    </div>
+                                        <span class="paper-comment">📝 The 28th International Conference on Digital Image Computing: Techniques and Applications (DICTA 2026)</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Regularisation-based class-incremental learning (CIL) methods control the stability-plasticity trade-off through fixed coefficients tuned offline, independently of the continual learning objective and blind to phase-specific variations in data volume, task difficulty, and class similarity. We argue this is a fundamental mismatch and propose REDAR: Reinforcement-Driven Adaptive Regularisation for Class Incremental Learning, which treats regularisation strength selection as a sequential decision problem. At each incremental phase, a lightweight reinforcement learning (RL) agent observes a compact state of current performance metrics and incoming data statistics, and outputs the distillation coefficients for that phase. To respect CIL's constraint on historical data access, the policy is trained entirely on pseudo-CIL tasks constructed from the initial phase, then deployed on the incremental sequence without further adaptation. Experiments on CIFAR-100 and Tiny-ImageNet demonstrate that REDAR reduces forgetting and improves forward transfer over fixed and heuristic baselines, and that policies trained on short pseudo-task horizons transfer effectively to longer incremental runs.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.31954v1" target="_blank" class="paper-title">RobustNCL: Robustifying Neuromorphic Continual Learning under Transient Faults with Lightweight Detect-and-Cure Strategy</a>
+                        <span class="paper-date">2026-10-22</span>
+                    </div>
+                                        <span class="paper-comment">📝 12 pages, 6 figures, 3 tables</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>In neural networks, continual learning (CL) is a prominent approach for enabling deployed systems to adapt to dynamic operational environments by effectively learning from new unseen data at runtime. Recently, the neuromorphic continual learning (NCL) concept has emerged as an energy-efficient alternative to CL by leveraging sparse event-based operations. However, NCL performance can be undermined by transient faults in the hardware platforms, which may come from high-energy particle strikes at any time. Currently, NCL reliability under transient faults has not been studied, and hence the corresponding fault-tolerance techniques remain unexplored. To address this, we propose a novel RobustNCL framework to improve NCL reliability in the presence of transient faults in the DRAM-based off-chip memory of hardware platforms through a lightweight detect-and-cure strategy. Specifically, it first monitors the presence of faults during weight data access from off-chip memory, and then cures the accessed weights if anomalous signatures are detected. It provides three curing variants: replacement with zero, min/max value, and most-probable value from the original/clean weight distribution. To support this, the weight curing values are stored in the radiation-hardened memory. Experimental results show that, in the presence of high fault rates (e.g., 5x10^{-4} for memory replay), RobustNCL maintains high accuracy close to the accuracy of fault-free models (i.e., within -0.5% accuracy for the best RobustNCL variant) and significantly improves accuracy from the baseline without fault mitigation across different NCL methods and datasets (i.e., Split MNIST, Split Fashion-MNIST, Split CIFAR-10, and Split CIFAR-100), while incurring negligible latency and energy overheads. These results highlight that our RobustNCL framework is a promising approach for enabling reliable and energy-efficient NCL systems.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.31927v1" target="_blank" class="paper-title">ENCL: Enabling Efficient Neuromorphic Continual Learning with Local Learning Rule and Sub-Network Freezing Strategy</a>
+                        <span class="paper-date">2026-10-22</span>
+                    </div>
+                                        <span class="paper-comment">📝 9 pages, 6 figures</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Continual learning (CL) in neural networks is a promising learning approach for updating the knowledge of deployed systems based on new data encountered at run time, that have not been learned during the offline training phase. To enable their power/energy-efficient CL processing, neuromorphic continual learning (NCL) concept with sparse event-based operations have recently been introduced. However, state-of-the-art NCL methods typically employ the memory-hungry data/experience replay, coupled with costly global learning rule (i.e., backpropagation-based surrogate gradient). To address these limitations, we propose ENCL, a novel methodology that enables efficient NCL by employing a lightweight local learning rule and sub-network freezing strategy. ENCL leverages the temporally- and spatially-local learning rule to perform efficient credit assignment for training new tasks, alleviating the expensive cost of global learning rule. ENCL also employs a sub-network freezing strategy based on the given tasks to avoid the needs for network architecture expansion, hence further improving the efficiency and scalability of the NCL training process. To efficiently support this, we train each task with a small number of epochs as well as adjusted learning rate and timestep. Experiment results on task-incremental learning (TIL) scenario show that, our ENCL consistently achieves strong performance across different datasets as compared to state-of-the-art works. Specifically, ENCL achieves competitive accuracy comparable to that of the state-of-the-art data/experience replay, while reducing memory cost by up to 88%, NCL training time by up to 51%, average power consumption by up to 40%, and energy consumption by up to 65% across different benchmarking datasets (i.e., Split MNIST, Split Fashion MNIST, Split CIFAR-10, and Split CIFAR-100).</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.31818v1" target="_blank" class="paper-title">Nested Sparsity for Scalable Pretraining and Continual Learning</a>
+                        <span class="paper-date">2026-10-22</span>
+                    </div>
+                                        <span class="paper-comment">📝 10 pages main body</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Mixture-of-experts (MoE) transformers, the standard backbone for modern large-scale deep learning, employ conditional computation: only a sparse subset of model weights is used in each forward pass. In MoE transformers, this sparsity arises in the MoE operator, which generalizes the multi-layer perceptron in the classical transformer. In this work, we explore an alternative mechanism for conditional computation that analogously generalizes the attention operator. The sparsity induced by this mechanism naturally nests (i.e., hierarchically composes) with the sparsity induced by the MoE operator. We show that a transformer employing this nested sparsity mechanism, which we call Nestor, performs better than a conventional MoE transformer at equal compute and equal sparsity in language model pretraining. We also show that Nestor is well-suited for continual pretraining: it can be adapted to longer contexts more effectively than conventional MoEs, as well as adapt more efficiently to new domains while forgetting less on old domains. Furthermore, we demonstrate that these benefits persist as model size, dataset size, and context length grow. Our results demonstrate the potential of alternative conditional computation mechanisms for deep neural network architectures. Code and checkpoints are available on GitHub at https://github.com/Ma-Lab-Berkeley/Nestor .</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
                         <a href="https://arxiv.org/abs/2610.31551v1" target="_blank" class="paper-title">Fine-Grained Analysis of Catastrophic Forgetting in Continual Learning via Algorithmic Stability</a>
                         <span class="paper-date">2026-10-22</span>
                     </div>
@@ -1082,10 +1190,7 @@
                         <span class="paper-date">2026-10-21</span>
                     </div>
                                         <span class="paper-comment">📝 https://openreview.net/forum?id=C4zRmT9jYO</span>
-                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：挑战持续学习中“保留所有旧知识”的传统假设，指出在非平稳环境中过度保留会阻碍实时适应，并重新定义优化目标为平均终身误差（ALE）。&#10;&#10;🛠 **方法**：将持续学习形式化为在线优化问题，引入传递效率量化不稳定性和瞬态误差的权衡，推导出临界任务持续时间阈值，并提出预测持续学习算法（如窗口算法）来动态建模未来任务。&#10;&#10;✨ **主要贡献**：理论证明历史知识在超过临界时间后可能从优势变为优化负担，提出预测持续学习框架，窗口算法在分布漂移下优于联合任务学习和独立任务学习。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>The Continual Learning (CL) literature has long been driven by the goal of mitigating catastrophic forgetting. This objective rests on an often unstated assumption: that a lifelong learner should approximate the Joint-Task Learning (JTL) solution and retain all previously acquired knowledge. We challenge this retention-centered premise, arguing that in non-stationary environments prioritizing retention can impede real-time adaptation. Shifting the focus to the Average Lifelong Error (ALE), we formalize CL as an online optimization problem governed by the interaction between environmental and learning dynamics. We introduce Transfer Efficiency as a quantitative measure of the tension between Instability, the bias inherited from conflicting past experience, and Transient Error, the optimization cost of learning new tasks from scratch. Under mild convergence conditions, holding across linear and neural network models, this decomposition yields a Critical Task Duration: a closed-form threshold beyond which historical knowledge transitions from a warm-start advantage to an optimization liability whenever retention induces a positive stationary bias. We validate these theoretical predictions on continual image classification and reinforcement learning benchmarks. Finally, by connecting continual learning to the online learning framework of predictable sequences, we show that JTL is only one instance of a broader family of objectives, and we propose a new general class of continual learning algorithms, which we call Predictive Continual Learning. Predictive CL algorithms optimize expected future performance under an explicit, dynamically updated model of future tasks. As a proof of concept, we analyze a Window algorithm that interpolates between JTL and Independent-Task Learning (ITL), outperforming both under controlled distributional drift.</p>
@@ -1857,114 +1962,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Spiking Neural Networks (SNNs) are promising for energy-efficient neuromorphic computing, but they still suffer from catastrophic forgetting when learning tasks sequentially. This work investigates the integration of Experience Packing and Replay (EPR) as a memory-efficient continual learning strategy for deep SNNs under low-latency constraints. The proposed framework combines Batch Normalization Through Time stabilized VGG9 SNNs with Spike Activation Maps (SAM), which provide forward-only explanations based on spike activity. These explanations are temporally aggregated into spatial attention maps and used to select the most informative image patches for replay, instead of storing full images. Experiments on Split CIFAR10 and Split CIFAR100 show that SAM-guided EPR improves the accuracy-memory trade-off under tight memory budgets, and remains competitive while requiring substantially less storage.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2610.17904v1" target="_blank" class="paper-title">Stable-Plastic Subspace Construction for Differentially Private Continual LoRA</a>
-                        <span class="paper-date">2026-10-13</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Continual learning (CL) adapts pretrained models to a sequence of tasks while retaining knowledge acquired from earlier tasks. When task data are sensitive, differential privacy (DP) provides record-level protection, but maintaining both adaptation and retention under privacy constraints remains challenging. We study this problem in continual low-rank adaptation (LoRA) and observe that: 1) private training increases forgetting primarily during subsequent adaptation rather than initial task acquisition; 2) jointly perturbing both LoRA factors introduces a non-negligible bilinear noise interaction; and 3) DP aggravates the stability-plasticity dilemma, hindering both knowledge retention and adaptation to new tasks. Based on these observations, we propose DP-SPA, which constructs a stable subspace from previously privatized updates and a plastic subspace from pretrained weights within its orthogonal complement. The method fixes these bases and privately optimizes only the LoRA factor, eliminating the bilinear noise interaction within each step. Before merging each task update, it rescales stable-direction coefficients using historical and current update energies. We establish a privacy guarantee and show that recalibration does not increase historical overlap and tightens a conditional upper bound on old-task loss increase. Experiments across five datasets, eight settings, and multiple privacy budgets show that DP-SPA improves average accuracy and reduces forgetting compared with the evaluated baselines.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2610.17726v1" target="_blank" class="paper-title">TSRL: Trigger-based Supervised Reinforcement Learning for Continual Agent Training</a>
-                        <span class="paper-date">2026-10-13</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Large language model (LLM) agents excel at complex, multi-step tasks but suffer from catastrophic forgetting during continual learning--acquiring new skills often degrades previously mastered capabilities. Existing post-training paradigms face a fundamental trade-off: Supervised Fine-Tuning (SFT) is sample-efficient but prone to severe forgetting, while Reinforcement Learning (RL) preserves prior capabilities but converges slowly without expert guidance. To bridge this gap, we introduce Trigger-based Supervised Reinforcement Learning (TSRL), a framework that integrates the strengths of both paradigms through an adaptive, state-dependent expert supervision mechanism. TSRL employs RL as the optimization backbone, activating SFT selectively on "hard states" where the policy fails. Theoretically, we show that restricting supervision to failure states derives an upper bound on the cumulative parameter updates, thereby reducing forgetting compared to full SFT. Empirically, TSRL achieves consistent gains across three agent benchmarks (ALFWorld, WebShop, and Deep Search) at both 7B and 32B scales. In continual learning scenarios, our method retains up to 9.6 points more capability on prior tasks than SFT->RL baselines, while matching or exceeding target-task performance.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2610.17453v1" target="_blank" class="paper-title">Effect of Spherical Parameter Space on Number of Non-Forgetting Tasks and Capacity of Continual Learning</a>
-                        <span class="paper-date">2026-10-12</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>We propose a continuous learning formulation for $T$ non-forgetting tasks with the spherical parameter space $\mathbb{S}^{d-1}(\sqrt{d})$ in asymptotic regime $d\rightarrow \infty$. Each task $i$ has an optimum $\bmΘ_i$, minimizing its corresponding loss function $R_i(\bm{w})$ on sphere. We reduce each task $i$ to an acceptable loss region modeled by a geodesic ball $B_{\bmΘ_i}(r_i(d))$ on $\mathbb{S}^{d-1}(\sqrt{d})$ centered at $\bmΘ_i$ with radius $r_i(d)$. To model task dependencies (similarities), task optima $\bmΘ_i$ are distributed by a Neyman-Scott clustered point process $Φ$. Cluster centers $\{\bm{Y}_j\}_{j=1}^{N_p}$ form a homogeneous Poisson point process on sphere, while intra-cluster task optima follow a von Mises-Fisher distribution with mean $\bm{Y}_j$ and concentration $κ$. Each task $t\in \{1, ..., T\}$ learning algorithm is considered to be a channel $Q_{t}(\mathrm{d}\bm{w}_t | \bm{w}_{t-1}, \mathcal{K}_{t-1}(\bmθ_{1:t-1}), \bmθ_t)$, where $\bm{W}_t$ is the learned parameter of task $t$ and $\mathcal{K}_{t-1}(\bmΘ_{1:t-1})=\bigcap_{i=1}^{t-1}B_{\bmΘ_i}(r_i(d))$. Since in continual learning, the learner does not need to reach $\bmΘ_t$ exactly to successfully learn task $t$, to avoid forgetting as well as reliable learning, it only needs for the learned parameter vector $\bm{W}_{t}$ to enter $B_{\bmΘ_t}(r_t(d)) \cap \mathcal{K}_{t-1}(\bmΘ_{1:t-1})$. Using this model, we derive an upper bound on $T$ ensuring $\mathbb{P}[\mathcal{K}_{T}(\bmΘ_{1:T}) \neq \emptyset] \rightarrow 1$ as $d\rightarrow \infty$ and $κ/d \rightarrow α$, where $α>0$ is a constant. Finally, for $T$ tasks sampled uniformly from $Φ$, we derive an upper bound for total information theoretic capacity under the non-forgetting constraint for each task.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2610.16664v1" target="_blank" class="paper-title">Making LoRA Identifiable: Orthogonal Alignment for Continual Learning</a>
-                        <span class="paper-date">2026-10-12</span>
-                    </div>
-                                        <span class="paper-comment">📝 Accepted at NeurIPS 2026</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>There is growing interest in applying Parameter-Efficient Fine-Tuning (PEFT) to Continual Learning, as it enables faster training, mitigates catastrophic forgetting, and facilitates better adaptation to new tasks. Prior approaches have explored a range of strategies, including extending new LoRA branches for each incoming task, training under orthogonal loss objectives across all task-specific LoRA modules, and employing gating mechanisms to integrate new and existing LoRA modules. However, these methods incur memory costs that grow linearly with the number of tasks, limiting their scalability. More recent approaches investigate training a single LoRA by leveraging asymmetries in its parameterization; however, they often suffer from insufficient representational alignment across the LoRA parameter space. To address these limitations, we propose Stiefel Optimization and Aligned Rotation (SOAR), a two-stage framework for continual LoRA learning. First, we constrain the A matrix to lie on the Stiefel manifold, thereby reducing coordinate misalignment to the space of orthogonal rotation matrices. Second, we introduce an Orthogonal Procrustes alignment procedure for the B matrix to estimate the optimal rotation, coupled with a per-rank retention merging strategy that quantifies directional agreement between representations of new and previously learned tasks. We conduct extensive experiments across multiple models and benchmarks, demonstrating that SOAR achieves strong continual learning performance without incurring additional memory overhead.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2511.05420v4" target="_blank" class="paper-title">ProDER: A Continual Learning Approach for Fault Classification and Localization in Evolving Smart Grids</a>
-                        <span class="paper-date">2026-10-12</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Data-driven fault diagnosis models for smart grids are usually trained once on a fixed dataset, whereas in operation new fault types appear and monitoring is extended to new grid zones. Retraining from scratch on all accumulated data is costly, while naively updating the model on new data causes catastrophic forgetting. To address this problem, we formulate fault type classification and fault zone localization as continual learning (CL) problems and design four evaluation scenarios on the IEEE 13-node test feeder, three class-incremental and one domain-incremental. We then propose Prototype-based Dark Experience Replay (ProDER), which extends DER++ with prototype attraction and prototype-level repulsion losses that stabilize the feature space, temperature-scaled logit distillation, and a prototype-aware replay memory that retains both core and boundary samples of each class. ProDER achieves the highest accuracy among the tested CL methods in all scenarios, with an average accuracy of 58.2%, 6.6 points above the strongest competing method (DPDMR, 51.6%) and only 3.2 points below joint training (61.4%). Per scenario, it improves over the strongest competitor by 4.2 to 7.4 points and closes the gap to joint training to as little as 1.0 point in fault type classification, while matching it in fault zone localization. Moreover, it remains the best method when the replay buffer is substantially reduced. These results show that prototype-guided replay is an effective, memory-bounded way to keep fault diagnosis models up to date as the grid evolves, while validation on field measurements remains a necessary next step.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.20064v3" target="_blank" class="paper-title">PRO-LONG: Programmatic Memory Enables Long-Horizon Reasoning</a>
-                        <span class="paper-date">2026-10-12</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Long-horizon tasks require sustained perception, reasoning, and exploration, and are a persistent challenge for large language model (LLM) agents. This gap is reflected in their limited performance on continual learning benchmarks such as ARC-AGI-3 and NetHack, especially when evaluated without specialized harnesses. Various agent harnesses have been proposed to close the gap, and each commits to a strategy for handling long sequences of observations, i.e., what information to save from the environment and how to load it into model context, a choice we argue is particularly consequential. Existing methods for context management have typically been designed around a tradeoff, where preserving more information makes relevant details harder to retrieve. Recent progress in coding agents, however, makes new approaches to memory viable. We propose PRO-LONG, a minimal context management framework built around programmatic memory for LLM agents in long-horizon, exploratory settings. PRO-LONG addresses the tradeoff by keeping a complete, structured interaction log and using programmatic tools to search this history efficiently. On NetHack, we find increasing gains from using PRO-LONG for cross-episodic memory, with scores reaching up to 2.2x those of a base coding agent. On the full ARC-AGI-3 public game set, PRO-LONG improves over this baseline agent by an average of 18.0 percentage points across frontier models, and matches or exceeds state-of-the-art specialized harnesses (up to 97.4% best@2) while using 4.2-5.8x fewer tokens. Relevant code and logs are available at https://github.com/alexisfox7/PRO-LONG.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2610.15677v1" target="_blank" class="paper-title">Knowledge Interaction in Hypernetwork-based Continual Learning: Conflict and Composition</a>
-                        <span class="paper-date">2026-10-11</span>
-                    </div>
-                                        <span class="paper-comment">📝 23 pages</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Continual learning aims to adapt pretrained large language models (LLMs) to evolving data while preserving their pretrained capabilities. A central challenge is catastrophic forgetting: adaptation to new data can impair performance on previously learned knowledge. Since continual learning commonly changes model parameters, the model's predictions may draw on knowledge from the base model, the parameter update, and the input context. Understanding how these sources interact is essential: conflicts reveal whether new knowledge can override outdated knowledge, while multi-hop reasoning tests whether new knowledge can be composed with existing knowledge to support generalization. We study these interactions in a hypernetwork-based adaptation framework, where a shared network generates adapters from context, allowing a frozen base model to adapt without task-specific updates. We find that, under knowledge conflict, models preferentially follow the context, and their choices depend more on where knowledge is presented than on its content. We also show that context and adapter knowledge perturb the base model's representations along directions orthogonal to its clean hidden states, enabling us to derive steering vectors that control which source the model follows. In multi-hop reasoning, we find that models fail to reliably compose knowledge across the three sources, with the key breakdown arising from the interaction of the hypernetwork with both the base model and the context. Code and reproduction materials: https://github.com/missswiftie/Knowledge-Interaction-in-CL</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2605.09640v2" target="_blank" class="paper-title">Overcoming Catastrophic Forgetting in Visual Continual Learning with Reinforcement Fine-Tuning</a>
-                        <span class="paper-date">2026-10-11</span>
-                    </div>
-                                        <span class="paper-comment">📝 Accepted by NeurIPS 2026</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Recent studies suggest that Reinforcement Fine-Tuning (RFT) is inherently more resilient to catastrophic forgetting than Supervised Fine-Tuning (SFT). However, whether RFT (e.g., GRPO) can overcome forgetting in challenging visual continual learning settings, such as class-incremental learning (CIL) and domain-incremental learning (DIL), remains an open problem. Through a pilot study, we confirm that while RFT consistently outperforms SFT, it still suffers from non-negligible forgetting. We empirically trace this bottleneck to Trajectory-level Drift Agnosticism: among candidate rollouts achieving identical task rewards, the KL divergence from the preceding-task policy varies substantially, which strongly correlates with catastrophic forgetting across sequential tasks. Motivated by this insight, we propose Retention-aware Policy Optimization (RaPO), a simple yet effective RFT method that mitigates forgetting through trajectory-level reward shaping. Specifically, RaPO comprises two core components: (1) Retention Reward that converts trajectory-level distribution drift into a continuous reward signal, preferentially reinforcing knowledge-preserving rollouts; (2) Cross-Task Advantage Normalization (CTAN), which maintains a persistent exponential moving average of reward statistics across task boundaries to stabilize the optimization progress during continual learning. Leveraging the free-form textual generalization of MLLMs, we comprehensively evaluate RaPO across five visual continual learning settings. Extensive experiments demonstrate that RaPO achieves leading performance, substantially reducing catastrophic forgetting while preserving strong plasticity. To the best of our knowledge, this work represents the first systematic exploration of RFT in visual continual learning, offering insights that we hope will inspire future research. Code is available at https://github.com/LMMMEng/RaPO.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2610.15032v1" target="_blank" class="paper-title">InCLAD: A Continual Learning Benchmark for Industrial Visual Anomaly Detection</a>
-                        <span class="paper-date">2026-10-10</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Industrial anomaly detection benchmarks have advanced rapidly, yet they remain largely static and therefore underrepresent deployment settings in which inspection systems must be extended from one industrial component to another over time. In our setting, continual industrial anomaly detection is framed as a task-incremental problem: each component defines a task, while the learning objective remains semi-supervised. The goal extends beyond conventional anomaly detection, since models should preserve their performance on all components as they are sequentially exposed to new components. This framing is especially relevant because many existing industrial pipelines either assume fully supervised defect labels or study only isolated datasets, leaving open the question of how semi-supervised anomaly detectors behave across a sequence of heterogeneous components. We address this gap by organizing the benchmark as a sequence of related component-level tasks and by defining multiple scenarios, including random, easy-to-hard, and hard-to-easy. In addition to single-dataset continual scenarios, we propose challenging scenarios spanning across multiple datasets. We further evaluate continual performance from two complementary perspectives: image-level anomaly detection and pixel-level anomaly localization. By recasting industrial anomaly detection as a continual benchmark rather than a static train/test problem, our work establishes a concrete path toward studying knowledge retention, adaptation, and generalization in evolving industrial environments.</p>
                     </details>
                 </div>
             </div>

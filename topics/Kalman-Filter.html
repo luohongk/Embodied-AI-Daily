@@ -665,7 +665,7 @@
                 <a href="Gaussian-SLAM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#d946ef"></span>
                     <span class="nav-label">Gaussian SLAM</span>
-                    <span class="nav-count">30</span>
+                    <span class="nav-count">31</span>
                 </a>
                 <a href="Autonomous-Driving.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#6366f1"></span>
@@ -675,7 +675,7 @@
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
                     <span class="nav-label">Kalman Filter</span>
-                    <span class="nav-count">48</span>
+                    <span class="nav-count">47</span>
                 </a>
                 <a href="Loop-Closure-Detection.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#a855f7"></span>
@@ -695,7 +695,7 @@
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">77</span>
+                    <span class="nav-count">78</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -730,7 +730,7 @@
                 <a href="Model-Predictive-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#14b8a6"></span>
                     <span class="nav-label">Model Predictive Control</span>
-                    <span class="nav-count">56</span>
+                    <span class="nav-count">54</span>
                 </a>
                 <a href="Whole-Body-Control.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#06b6d4"></span>
@@ -740,7 +740,7 @@
                 <a href="Motion-Planning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#0ea5e9"></span>
                     <span class="nav-label">Motion Planning</span>
-                    <span class="nav-count">76</span>
+                    <span class="nav-count">77</span>
                 </a>
                 <a href="Path-Planning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#3b82f6"></span>
@@ -884,7 +884,7 @@
             <a href="Gaussian-SLAM.html" class="nav-item">
                 <span class="nav-dot" style="background:#d946ef"></span>
                 <span class="nav-label">Gaussian SLAM</span>
-                <span class="nav-count">30</span>
+                <span class="nav-count">31</span>
             </a>
             <a href="Autonomous-Driving.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
@@ -894,7 +894,7 @@
             <a href="Kalman-Filter.html" class="nav-item active">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
                 <span class="nav-label">Kalman Filter</span>
-                <span class="nav-count">48</span>
+                <span class="nav-count">47</span>
             </a>
             <a href="Loop-Closure-Detection.html" class="nav-item">
                 <span class="nav-dot" style="background:#a855f7"></span>
@@ -914,7 +914,7 @@
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">77</span>
+                <span class="nav-count">78</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -949,7 +949,7 @@
             <a href="Model-Predictive-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#14b8a6"></span>
                 <span class="nav-label">Model Predictive Control</span>
-                <span class="nav-count">56</span>
+                <span class="nav-count">54</span>
             </a>
             <a href="Whole-Body-Control.html" class="nav-item">
                 <span class="nav-dot" style="background:#06b6d4"></span>
@@ -959,7 +959,7 @@
             <a href="Motion-Planning.html" class="nav-item">
                 <span class="nav-dot" style="background:#0ea5e9"></span>
                 <span class="nav-label">Motion Planning</span>
-                <span class="nav-count">76</span>
+                <span class="nav-count">77</span>
             </a>
             <a href="Path-Planning.html" class="nav-item">
                 <span class="nav-dot" style="background:#3b82f6"></span>
@@ -1025,7 +1025,7 @@
         <section class="topic-section">
             <div class="topic-header">
                 <span class="topic-badge" style="background:#8b5cf6">Kalman Filter</span>
-                <span class="topic-count">48 papers</span>
+                <span class="topic-count">47 papers</span>
             </div>
             <div class="paper-list">
                 <div class="paper-card">
@@ -1593,18 +1593,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Group relative policy optimization (GRPO) learns only from prompts whose sampled responses disagree: a group that is entirely correct or entirely incorrect has zero reward variance, contributes no gradient, and still consumes its rollouts. Prompt-selection methods reduce this waste by steering sampling toward intermediate pass rates, but they choose the target, its width, and the uncertainty model heuristically, in raw pass-rate or logit coordinates. We show that GRPO comes with a natural coordinate for pass rates: the arc length $ψ=\arcsin\sqrt{p}$ on the Bernoulli Fisher--Rao manifold. In arc length, the expected GRPO update is uniform up to two boundary ramps; the probability of a zero-variance group is bounded by two Gaussian boundary layers of width $1/\sqrt{2G}$; pass-rate evidence has constant noise; and the gradients of the pass@$k$ and pass$^k$ objectives are Gaussians whose center and width follow from $k$ in closed form. A prompt curriculum for GRPO is therefore a Gaussian in arc length, and choosing its center amounts to choosing the objective. We turn this observation into ARCUS, a drop-in sampler that tracks every prompt with a Kalman filter in arc length, scores prompts by an objective-matched Gaussian kernel times the predicted probability of an informative group, keeps only informative groups for the unchanged GRPO update, and paces the target toward the hardest objective whose predicted yield stays within a small slack of the best. Across six mathematical reasoning benchmarks and three backbones, ARCUS improves the average accuracy of GRPO by 2.8--2.9 points and that of dynamic sampling by 1.1--1.2 points, while generating 48--57\% fewer rollouts than dynamic sampling.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2609.31559v2" target="_blank" class="paper-title">Online Learning via Learned Latent Bayesian Tracking</a>
-                        <span class="paper-date">2026-09-28</span>
-                    </div>
-                                        <span class="paper-comment">📝 Accepted at NeurIPS 2026</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Online learning in non-stationary environments requires models to adapt rapidly from streaming data under strict computational constraints. A principled approach casts online learning as Bayesian state tracking, where model parameters are updated sequentially via Bayesian filtering. However, applying Bayesian filters directly to modern deep models is computationally prohibitive due to the high dimensionality of parameter space, forcing existing methods to rely on restrictive approximations or manually designed low-dimensional subspaces. In this work, we identify the absence of a suitable low-dimensional dynamical representation as the core bottleneck in Bayesian filtering-based online learning. Accordingly, we propose Adaptive Update through Representation Adaptation (AURA), a meta-learning framework that learns offline a low-dimensional latent state-space model governing the evolution of optimal model parameters under distribution shift. Online adaptation is then performed via extended Kalman filtering in this learned latent space followed by reconstruction of the full model parameters through a learned lifting map, enabling efficient single-step online adaptation while preserving model expressiveness. Evaluated on online adaptation of neural wireless receivers under time-varying channels and on non-stationary image classification, AURA shows substantial improvements in adaptation speed, accuracy, and computational efficiency over existing online learning and Bayesian filtering baselines, demonstrating that an adaptation-aware latent geometry is beneficial for effective Bayesian online learning in high-dimensional models.</p>
                     </details>
                 </div>
             </div>
