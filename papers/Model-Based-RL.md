@@ -2,7 +2,7 @@
 
 > **77 papers** fetched from arXiv for the keyword **Model-Based RL**.
 
-> Last update: 2026-10-28
+> Last update: 2026-10-29
 
 [← Back to README](../README.md)
 
