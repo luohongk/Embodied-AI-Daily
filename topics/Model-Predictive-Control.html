@@ -1,0 +1,1763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Predictive Control — Embodied AI Daily</title>
+    <style>
+        :root {
+            --bg: #f8fafc;
+            --surface: #ffffff;
+            --text: #1e293b;
+            --text-secondary: #64748b;
+            --border: #e2e8f0;
+            --accent: #6366f1;
+            --sidebar-width: 280px;
+            --radius: 12px;
+            --shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04);
+            --shadow-md: 0 4px 12px rgba(0,0,0,.08);
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0f172a;
+                --surface: #1e293b;
+                --text: #e2e8f0;
+                --text-secondary: #94a3b8;
+                --border: #334155;
+                --shadow: 0 1px 3px rgba(0,0,0,.3);
+                --shadow-md: 0 4px 12px rgba(0,0,0,.4);
+            }
+        }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        html { scroll-behavior:smooth; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            display: flex;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            position: fixed;
+            top: 0; left: 0;
+            width: var(--sidebar-width);
+            height: 100vh;
+            background: var(--surface);
+            border-right: 1px solid var(--border);
+            overflow-y: auto;
+            padding: 24px 20px;
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        .sidebar-header {
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 8px;
+        }
+        .sidebar-header h1 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #6366f1, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 4px;
+        }
+        .sidebar-header h1 a { text-decoration: none; }
+        .sidebar-header .update {
+            font-size: .75rem;
+            color: var(--text-secondary);
+        }
+        .nav-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 12px;
+            border-radius: 8px;
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: .85rem;
+            transition: all .15s;
+        }
+        .nav-item:hover {
+            background: var(--bg);
+            color: var(--text);
+        }
+        .nav-item.active {
+            background: var(--bg);
+            color: var(--text);
+            font-weight: 600;
+        }
+        .nav-dot {
+            width: 8px; height: 8px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+        .nav-label {
+            flex: 1;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .nav-count {
+            font-size: .72rem;
+            background: var(--bg);
+            padding: 2px 7px;
+            border-radius: 10px;
+            font-weight: 600;
+        }
+
+        /* Main content */
+        .main {
+            margin-left: var(--sidebar-width);
+            flex: 1;
+            padding: 40px 48px;
+            max-width: calc(100% - var(--sidebar-width));
+        }
+        .hero {
+            text-align: center;
+            padding: 40px 0 48px;
+        }
+        .hero h2 {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+        .hero .subtitle {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            margin-bottom: 16px;
+        }
+        .author-line {
+            margin-top: 14px;
+            font-size: .88rem;
+            color: var(--text-secondary);
+        }
+        .author-line a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .author-line a:hover {
+            text-decoration: underline;
+        }
+        .author-sep {
+            color: var(--border);
+            margin: 0 8px;
+        }
+        .badges {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .badges img {
+            height: 20px;
+        }
+
+        /* Topic directory grid (index page) */
+        .topic-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 16px;
+            margin-bottom: 40px;
+        }
+        .topic-card {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 18px 20px;
+            text-decoration: none;
+            color: var(--text);
+            box-shadow: var(--shadow);
+            transition: box-shadow .2s, transform .15s;
+        }
+        .topic-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+        .topic-card-name {
+            font-weight: 700;
+            font-size: 1rem;
+        }
+        .topic-card-count {
+            font-size: .8rem;
+            color: var(--text-secondary);
+        }
+        .topic-card-go {
+            margin-top: 4px;
+            font-size: .82rem;
+            font-weight: 600;
+            color: var(--accent);
+        }
+
+        /* Topic page header */
+        .topic-section {
+            margin-bottom: 48px;
+        }
+        .topic-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--border);
+            flex-wrap: wrap;
+        }
+        .topic-badge {
+            display: inline-block;
+            color: #fff;
+            padding: 5px 14px;
+            border-radius: 20px;
+            font-size: .85rem;
+            font-weight: 600;
+            letter-spacing: .01em;
+        }
+        .topic-count {
+            font-size: .82rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 18px;
+            font-size: .85rem;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .back-link:hover { text-decoration: underline; }
+
+        /* Paper cards */
+        .paper-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .paper-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 16px 20px;
+            box-shadow: var(--shadow);
+            transition: box-shadow .2s, transform .15s;
+        }
+        .paper-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-1px);
+        }
+        .paper-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .paper-title {
+            font-weight: 600;
+            font-size: .95rem;
+            color: var(--text);
+            text-decoration: none;
+            flex: 1;
+            min-width: 0;
+        }
+        .paper-title:hover {
+            color: var(--accent);
+            text-decoration: underline;
+        }
+        .paper-date {
+            font-size: .78rem;
+            color: var(--text-secondary);
+            white-space: nowrap;
+            font-variant-numeric: tabular-nums;
+        }
+        .paper-comment {
+            display: inline-block;
+            margin-top: 6px;
+            font-size: .78rem;
+            color: var(--text-secondary);
+            background: var(--bg);
+            padding: 2px 10px;
+            border-radius: 6px;
+        }
+        .paper-abstract {
+            margin-top: 10px;
+            font-size: .85rem;
+            color: var(--text-secondary);
+        }
+        .paper-abstract summary {
+            cursor: pointer;
+            font-weight: 500;
+            color: var(--accent);
+            font-size: .82rem;
+            user-select: none;
+        }
+        .paper-abstract summary:hover {
+            text-decoration: underline;
+        }
+        .paper-abstract p {
+            margin-top: 8px;
+            line-height: 1.7;
+            padding: 12px 16px;
+            background: var(--bg);
+            border-radius: 8px;
+            border-left: 3px solid var(--accent);
+        }
+
+        /* AI Summary */
+        .ai-summary {
+            margin-top: 10px;
+            padding: 10px 14px;
+            background: linear-gradient(135deg, rgba(99,102,241,0.07), rgba(168,85,247,0.07));
+            border-radius: 8px;
+            border-left: 3px solid var(--accent);
+        }
+        .ai-label {
+            font-size: .8rem;
+            font-weight: 600;
+            color: var(--accent);
+            cursor: pointer;
+            user-select: none;
+            letter-spacing: .02em;
+        }
+        .ai-label:hover {
+            text-decoration: underline;
+        }
+        .ai-content {
+            font-size: .85rem;
+            color: var(--text);
+            line-height: 1.75;
+            margin-top: 10px;
+            max-height: 480px;
+            overflow-y: auto;
+            padding-right: 6px;
+        }
+        /* Rendered markdown inside AI summary */
+        .markdown-body h2 {
+            font-size: 1rem;
+            margin: 14px 0 6px;
+            padding-bottom: 4px;
+            border-bottom: 1px solid var(--border);
+            color: var(--text);
+        }
+        .markdown-body h3 {
+            font-size: .9rem;
+            margin: 10px 0 4px;
+            color: var(--accent);
+        }
+        .markdown-body p { margin: 6px 0; }
+        .markdown-body ul, .markdown-body ol { margin: 6px 0 6px 20px; }
+        .markdown-body li { margin: 3px 0; }
+        .markdown-body strong { color: var(--text); }
+        .markdown-body code {
+            background: var(--bg);
+            padding: 1px 5px;
+            border-radius: 4px;
+            font-size: .82em;
+        }
+        .markdown-body pre {
+            background: var(--bg);
+            padding: 10px 12px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-size: .8em;
+        }
+        .markdown-body table {
+            border-collapse: collapse;
+            margin: 8px 0;
+            font-size: .82em;
+        }
+        .markdown-body th, .markdown-body td {
+            border: 1px solid var(--border);
+            padding: 4px 8px;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 40px 0 20px;
+            color: var(--text-secondary);
+            font-size: .82rem;
+            border-top: 1px solid var(--border);
+            margin-top: 20px;
+        }
+
+        /* Sponsor banner */
+        .sponsor {
+            margin: 0 auto 8px;
+            max-width: 640px;
+            background: linear-gradient(135deg, rgba(16,185,129,0.10), rgba(99,102,241,0.10));
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 16px 20px;
+            text-align: center;
+        }
+        .sponsor-title {
+            font-size: .95rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 6px;
+        }
+        .sponsor-desc {
+            font-size: .82rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        .sponsor details { margin-top: 4px; }
+        .sponsor summary {
+            cursor: pointer;
+            display: inline-block;
+            background: #07c160;
+            color: #fff;
+            font-size: .82rem;
+            font-weight: 600;
+            padding: 7px 18px;
+            border-radius: 20px;
+            user-select: none;
+            list-style: none;
+        }
+        .sponsor summary::-webkit-details-marker { display: none; }
+        .sponsor summary:hover { opacity: .9; }
+        .sponsor-qr {
+            margin-top: 14px;
+        }
+        .sponsor-qr img {
+            width: 220px;
+            max-width: 80%;
+            border-radius: 10px;
+            box-shadow: var(--shadow-md);
+        }
+
+        /* Mobile top bar */
+        .mobile-bar {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            height: 52px;
+            background: var(--surface);
+            border-bottom: 1px solid var(--border);
+            z-index: 200;
+            padding: 0 16px;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .mobile-bar .mobile-title {
+            font-weight: 700;
+            font-size: .95rem;
+            background: linear-gradient(135deg, #6366f1, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .menu-toggle {
+            background: none;
+            border: none;
+            font-size: 1.4rem;
+            cursor: pointer;
+            color: var(--text);
+            padding: 4px 8px;
+            border-radius: 6px;
+            line-height: 1;
+            transition: background .15s;
+        }
+        .menu-toggle:hover {
+            background: var(--bg);
+        }
+
+        /* Mobile nav overlay */
+        .mobile-nav-overlay {
+            display: none;
+            position: fixed;
+            top: 52px; left: 0; right: 0; bottom: 0;
+            background: var(--surface);
+            z-index: 199;
+            overflow-y: auto;
+            padding: 8px 16px 24px;
+            flex-direction: column;
+        }
+        .mobile-nav-overlay.open {
+            display: flex;
+        }
+        .mobile-nav-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0 12px;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 4px;
+            font-weight: 600;
+            font-size: .85rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: .04em;
+        }
+        .mobile-nav-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 13px 8px;
+            border-radius: 8px;
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: .88rem;
+            border-bottom: 1px solid var(--border);
+            transition: background .1s;
+        }
+        .mobile-nav-item:active {
+            background: var(--bg);
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .sidebar {
+                display: none;
+            }
+            .mobile-bar {
+                display: flex;
+            }
+            .main {
+                margin-left: 0;
+                max-width: 100%;
+                padding: 68px 16px 20px;
+            }
+            .hero h2 {
+                font-size: 1.4rem;
+            }
+            .hero {
+                padding: 20px 0 32px;
+            }
+            .paper-header {
+                flex-direction: column;
+                gap: 4px;
+            }
+        }
+    </style>
+    <!-- MathJax for rendering LaTeX math in AI summaries -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true
+            },
+            options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'] }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+</head>
+<body>
+    <!-- Mobile top bar -->
+    <div class="mobile-bar">
+        <span class="mobile-title">🚀 Embodied AI Daily</span>
+        <button class="menu-toggle" id="menuToggle" onclick="toggleMenu()" aria-label="Toggle menu">☰</button>
+    </div>
+
+    <!-- Mobile nav overlay -->
+    <div class="mobile-nav-overlay" id="mobileNav">
+        <div class="mobile-nav-header">
+            <span>Topics</span>
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Close menu">✕</button>
+        </div>
+                <a href="Continuous-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#6366f1"></span>
+                    <span class="nav-label">Continuous Learning</span>
+                    <span class="nav-count">78</span>
+                </a>
+                <a href="Feed-Forward-Reconstruction.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#8b5cf6"></span>
+                    <span class="nav-label">Feed Forward Reconstruction</span>
+                    <span class="nav-count">72</span>
+                </a>
+                <a href="Vision-and-Language-Navigation.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#a855f7"></span>
+                    <span class="nav-label">Vision and Language Navigation</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="Vision-Language-Action.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#d946ef"></span>
+                    <span class="nav-label">Vision Language Action</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="World-Model.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#ec4899"></span>
+                    <span class="nav-label">World Model</span>
+                    <span class="nav-count">79</span>
+                </a>
+                <a href="3D-Foundation-Model.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#f43f5e"></span>
+                    <span class="nav-label">3D Foundation Model</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="LLM.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#ef4444"></span>
+                    <span class="nav-label">LLM</span>
+                    <span class="nav-count">79</span>
+                </a>
+                <a href="VLM.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#f97316"></span>
+                    <span class="nav-label">VLM</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="World-Action-Model.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#f59e0b"></span>
+                    <span class="nav-label">World Action Model</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="Gaussian-Splatting.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#84cc16"></span>
+                    <span class="nav-label">Gaussian Splatting</span>
+                    <span class="nav-count">78</span>
+                </a>
+                <a href="Visual-SLAM.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#22c55e"></span>
+                    <span class="nav-label">Visual SLAM</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="Visual-Inertial-SLAM.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#10b981"></span>
+                    <span class="nav-label">Visual Inertial SLAM</span>
+                    <span class="nav-count">78</span>
+                </a>
+                <a href="Visual-Inertial-Odometry.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#14b8a6"></span>
+                    <span class="nav-label">Visual Inertial Odometry</span>
+                    <span class="nav-count">78</span>
+                </a>
+                <a href="Lidar-SLAM.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#06b6d4"></span>
+                    <span class="nav-label">Lidar SLAM</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="LiDAR-Odometry.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#0ea5e9"></span>
+                    <span class="nav-label">LiDAR Odometry</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="GNSS.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#3b82f6"></span>
+                    <span class="nav-label">GNSS</span>
+                    <span class="nav-count">44</span>
+                </a>
+                <a href="Graph-Optimization.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#6366f1"></span>
+                    <span class="nav-label">Graph Optimization</span>
+                    <span class="nav-count">73</span>
+                </a>
+                <a href="Dynamic-SLAM.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#8b5cf6"></span>
+                    <span class="nav-label">Dynamic SLAM</span>
+                    <span class="nav-count">48</span>
+                </a>
+                <a href="Semantic-SLAM.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#a855f7"></span>
+                    <span class="nav-label">Semantic SLAM</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="Gaussian-SLAM.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#d946ef"></span>
+                    <span class="nav-label">Gaussian SLAM</span>
+                    <span class="nav-count">32</span>
+                </a>
+                <a href="Autonomous-Driving.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#6366f1"></span>
+                    <span class="nav-label">Autonomous Driving</span>
+                    <span class="nav-count">77</span>
+                </a>
+                <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#8b5cf6"></span>
+                    <span class="nav-label">Kalman Filter</span>
+                    <span class="nav-count">51</span>
+                </a>
+                <a href="Loop-Closure-Detection.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#a855f7"></span>
+                    <span class="nav-label">Loop Closure Detection</span>
+                    <span class="nav-count">79</span>
+                </a>
+                <a href="Visual-Place-Recognition.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#d946ef"></span>
+                    <span class="nav-label">Visual Place Recognition</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#ec4899"></span>
+                    <span class="nav-label">Deep Learning</span>
+                    <span class="nav-count">72</span>
+                </a>
+                <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#f43f5e"></span>
+                    <span class="nav-label">Reinforcement Learning</span>
+                    <span class="nav-count">73</span>
+                </a>
+                <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#ef4444"></span>
+                    <span class="nav-label">PPO</span>
+                    <span class="nav-count">76</span>
+                </a>
+                <a href="Hierarchical-Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#f97316"></span>
+                    <span class="nav-label">Hierarchical Reinforcement Learning</span>
+                    <span class="nav-count">78</span>
+                </a>
+                <a href="Model-Based-RL.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#f59e0b"></span>
+                    <span class="nav-label">Model-Based RL</span>
+                    <span class="nav-count">77</span>
+                </a>
+                <a href="Imitation-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#84cc16"></span>
+                    <span class="nav-label">Imitation Learning</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="Behavior-Cloning.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#22c55e"></span>
+                    <span class="nav-label">Behavior Cloning</span>
+                    <span class="nav-count">79</span>
+                </a>
+                <a href="Diffusion-Policy.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#10b981"></span>
+                    <span class="nav-label">Diffusion Policy</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="Model-Predictive-Control.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#14b8a6"></span>
+                    <span class="nav-label">Model Predictive Control</span>
+                    <span class="nav-count">53</span>
+                </a>
+                <a href="Whole-Body-Control.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#06b6d4"></span>
+                    <span class="nav-label">Whole-Body Control</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="Motion-Planning.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#0ea5e9"></span>
+                    <span class="nav-label">Motion Planning</span>
+                    <span class="nav-count">78</span>
+                </a>
+                <a href="Path-Planning.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#3b82f6"></span>
+                    <span class="nav-label">Path Planning</span>
+                    <span class="nav-count">73</span>
+                </a>
+                <a href="Multimodal-Fusion.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#6366f1"></span>
+                    <span class="nav-label">Multimodal Fusion</span>
+                    <span class="nav-count">75</span>
+                </a>
+                <a href="Scene-Understanding.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#8b5cf6"></span>
+                    <span class="nav-label">Scene Understanding</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="Domain-Randomization.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#a855f7"></span>
+                    <span class="nav-label">Domain Randomization</span>
+                    <span class="nav-count">74</span>
+                </a>
+                <a href="Bipedal-Locomotion.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#d946ef"></span>
+                    <span class="nav-label">Bipedal Locomotion</span>
+                    <span class="nav-count">79</span>
+                </a>
+                <a href="Dexterous-Manipulation.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#6366f1"></span>
+                    <span class="nav-label">Dexterous Manipulation</span>
+                    <span class="nav-count">80</span>
+                </a>
+                <a href="Mobile-Manipulation.html" class="mobile-nav-item" onclick="closeMenu()">
+                    <span class="nav-dot" style="background:#8b5cf6"></span>
+                    <span class="nav-label">Mobile Manipulation</span>
+                    <span class="nav-count">80</span>
+                </a>
+    </div>
+
+    <!-- Desktop sidebar -->
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <h1><a href="../index.html" style="background:linear-gradient(135deg,#6366f1,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">🚀 Embodied AI Daily</a></h1>
+            <div class="update">by <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent);text-decoration:none;font-weight:500;">Hongkun Luo</a> (罗宏昆)</div>
+            <div class="update" style="margin-top:2px">Last update: 2026-10-31</div>
+        </div>
+            <a href="Continuous-Learning.html" class="nav-item">
+                <span class="nav-dot" style="background:#6366f1"></span>
+                <span class="nav-label">Continuous Learning</span>
+                <span class="nav-count">78</span>
+            </a>
+            <a href="Feed-Forward-Reconstruction.html" class="nav-item">
+                <span class="nav-dot" style="background:#8b5cf6"></span>
+                <span class="nav-label">Feed Forward Reconstruction</span>
+                <span class="nav-count">72</span>
+            </a>
+            <a href="Vision-and-Language-Navigation.html" class="nav-item">
+                <span class="nav-dot" style="background:#a855f7"></span>
+                <span class="nav-label">Vision and Language Navigation</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="Vision-Language-Action.html" class="nav-item">
+                <span class="nav-dot" style="background:#d946ef"></span>
+                <span class="nav-label">Vision Language Action</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="World-Model.html" class="nav-item">
+                <span class="nav-dot" style="background:#ec4899"></span>
+                <span class="nav-label">World Model</span>
+                <span class="nav-count">79</span>
+            </a>
+            <a href="3D-Foundation-Model.html" class="nav-item">
+                <span class="nav-dot" style="background:#f43f5e"></span>
+                <span class="nav-label">3D Foundation Model</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="LLM.html" class="nav-item">
+                <span class="nav-dot" style="background:#ef4444"></span>
+                <span class="nav-label">LLM</span>
+                <span class="nav-count">79</span>
+            </a>
+            <a href="VLM.html" class="nav-item">
+                <span class="nav-dot" style="background:#f97316"></span>
+                <span class="nav-label">VLM</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="World-Action-Model.html" class="nav-item">
+                <span class="nav-dot" style="background:#f59e0b"></span>
+                <span class="nav-label">World Action Model</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="Gaussian-Splatting.html" class="nav-item">
+                <span class="nav-dot" style="background:#84cc16"></span>
+                <span class="nav-label">Gaussian Splatting</span>
+                <span class="nav-count">78</span>
+            </a>
+            <a href="Visual-SLAM.html" class="nav-item">
+                <span class="nav-dot" style="background:#22c55e"></span>
+                <span class="nav-label">Visual SLAM</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="Visual-Inertial-SLAM.html" class="nav-item">
+                <span class="nav-dot" style="background:#10b981"></span>
+                <span class="nav-label">Visual Inertial SLAM</span>
+                <span class="nav-count">78</span>
+            </a>
+            <a href="Visual-Inertial-Odometry.html" class="nav-item">
+                <span class="nav-dot" style="background:#14b8a6"></span>
+                <span class="nav-label">Visual Inertial Odometry</span>
+                <span class="nav-count">78</span>
+            </a>
+            <a href="Lidar-SLAM.html" class="nav-item">
+                <span class="nav-dot" style="background:#06b6d4"></span>
+                <span class="nav-label">Lidar SLAM</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="LiDAR-Odometry.html" class="nav-item">
+                <span class="nav-dot" style="background:#0ea5e9"></span>
+                <span class="nav-label">LiDAR Odometry</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="GNSS.html" class="nav-item">
+                <span class="nav-dot" style="background:#3b82f6"></span>
+                <span class="nav-label">GNSS</span>
+                <span class="nav-count">44</span>
+            </a>
+            <a href="Graph-Optimization.html" class="nav-item">
+                <span class="nav-dot" style="background:#6366f1"></span>
+                <span class="nav-label">Graph Optimization</span>
+                <span class="nav-count">73</span>
+            </a>
+            <a href="Dynamic-SLAM.html" class="nav-item">
+                <span class="nav-dot" style="background:#8b5cf6"></span>
+                <span class="nav-label">Dynamic SLAM</span>
+                <span class="nav-count">48</span>
+            </a>
+            <a href="Semantic-SLAM.html" class="nav-item">
+                <span class="nav-dot" style="background:#a855f7"></span>
+                <span class="nav-label">Semantic SLAM</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="Gaussian-SLAM.html" class="nav-item">
+                <span class="nav-dot" style="background:#d946ef"></span>
+                <span class="nav-label">Gaussian SLAM</span>
+                <span class="nav-count">32</span>
+            </a>
+            <a href="Autonomous-Driving.html" class="nav-item">
+                <span class="nav-dot" style="background:#6366f1"></span>
+                <span class="nav-label">Autonomous Driving</span>
+                <span class="nav-count">77</span>
+            </a>
+            <a href="Kalman-Filter.html" class="nav-item">
+                <span class="nav-dot" style="background:#8b5cf6"></span>
+                <span class="nav-label">Kalman Filter</span>
+                <span class="nav-count">51</span>
+            </a>
+            <a href="Loop-Closure-Detection.html" class="nav-item">
+                <span class="nav-dot" style="background:#a855f7"></span>
+                <span class="nav-label">Loop Closure Detection</span>
+                <span class="nav-count">79</span>
+            </a>
+            <a href="Visual-Place-Recognition.html" class="nav-item">
+                <span class="nav-dot" style="background:#d946ef"></span>
+                <span class="nav-label">Visual Place Recognition</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="Deep-Learning.html" class="nav-item">
+                <span class="nav-dot" style="background:#ec4899"></span>
+                <span class="nav-label">Deep Learning</span>
+                <span class="nav-count">72</span>
+            </a>
+            <a href="Reinforcement-Learning.html" class="nav-item">
+                <span class="nav-dot" style="background:#f43f5e"></span>
+                <span class="nav-label">Reinforcement Learning</span>
+                <span class="nav-count">73</span>
+            </a>
+            <a href="PPO.html" class="nav-item">
+                <span class="nav-dot" style="background:#ef4444"></span>
+                <span class="nav-label">PPO</span>
+                <span class="nav-count">76</span>
+            </a>
+            <a href="Hierarchical-Reinforcement-Learning.html" class="nav-item">
+                <span class="nav-dot" style="background:#f97316"></span>
+                <span class="nav-label">Hierarchical Reinforcement Learning</span>
+                <span class="nav-count">78</span>
+            </a>
+            <a href="Model-Based-RL.html" class="nav-item">
+                <span class="nav-dot" style="background:#f59e0b"></span>
+                <span class="nav-label">Model-Based RL</span>
+                <span class="nav-count">77</span>
+            </a>
+            <a href="Imitation-Learning.html" class="nav-item">
+                <span class="nav-dot" style="background:#84cc16"></span>
+                <span class="nav-label">Imitation Learning</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="Behavior-Cloning.html" class="nav-item">
+                <span class="nav-dot" style="background:#22c55e"></span>
+                <span class="nav-label">Behavior Cloning</span>
+                <span class="nav-count">79</span>
+            </a>
+            <a href="Diffusion-Policy.html" class="nav-item">
+                <span class="nav-dot" style="background:#10b981"></span>
+                <span class="nav-label">Diffusion Policy</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="Model-Predictive-Control.html" class="nav-item active">
+                <span class="nav-dot" style="background:#14b8a6"></span>
+                <span class="nav-label">Model Predictive Control</span>
+                <span class="nav-count">53</span>
+            </a>
+            <a href="Whole-Body-Control.html" class="nav-item">
+                <span class="nav-dot" style="background:#06b6d4"></span>
+                <span class="nav-label">Whole-Body Control</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="Motion-Planning.html" class="nav-item">
+                <span class="nav-dot" style="background:#0ea5e9"></span>
+                <span class="nav-label">Motion Planning</span>
+                <span class="nav-count">78</span>
+            </a>
+            <a href="Path-Planning.html" class="nav-item">
+                <span class="nav-dot" style="background:#3b82f6"></span>
+                <span class="nav-label">Path Planning</span>
+                <span class="nav-count">73</span>
+            </a>
+            <a href="Multimodal-Fusion.html" class="nav-item">
+                <span class="nav-dot" style="background:#6366f1"></span>
+                <span class="nav-label">Multimodal Fusion</span>
+                <span class="nav-count">75</span>
+            </a>
+            <a href="Scene-Understanding.html" class="nav-item">
+                <span class="nav-dot" style="background:#8b5cf6"></span>
+                <span class="nav-label">Scene Understanding</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="Domain-Randomization.html" class="nav-item">
+                <span class="nav-dot" style="background:#a855f7"></span>
+                <span class="nav-label">Domain Randomization</span>
+                <span class="nav-count">74</span>
+            </a>
+            <a href="Bipedal-Locomotion.html" class="nav-item">
+                <span class="nav-dot" style="background:#d946ef"></span>
+                <span class="nav-label">Bipedal Locomotion</span>
+                <span class="nav-count">79</span>
+            </a>
+            <a href="Dexterous-Manipulation.html" class="nav-item">
+                <span class="nav-dot" style="background:#6366f1"></span>
+                <span class="nav-label">Dexterous Manipulation</span>
+                <span class="nav-count">80</span>
+            </a>
+            <a href="Mobile-Manipulation.html" class="nav-item">
+                <span class="nav-dot" style="background:#8b5cf6"></span>
+                <span class="nav-label">Mobile Manipulation</span>
+                <span class="nav-count">80</span>
+            </a>
+    </nav>
+
+    <main class="main">
+        <a href="../index.html" class="back-link">← 返回汇总 / Back to all topics</a>
+        <section class="hero" style="padding:20px 0 24px">
+            <div class="sponsor">
+                <div class="sponsor-title">☕ 支持本项目 · Support this project</div>
+                <div class="sponsor-desc">
+                    每篇论文的 AI 深度总结都会调用大量 DeepSeek API（需付费）。<br>
+                    如果这个项目对你有帮助，欢迎请作者喝杯咖啡，支持服务器与 API 开销 🙏
+                </div>
+                <details>
+                    <summary>💚 微信赞助 / Sponsor via WeChat Pay</summary>
+                    <div class="sponsor-qr" style="display:flex;gap:16px;align-items:flex-start;flex-wrap:wrap;">
+                        <div style="text-align:center;">
+                            <img src="../images/qr_code.png" alt="QR Code" style="max-width:180px;">
+                            <div style="font-size:13px;color:#888;">🔗 二维码</div>
+                        </div>
+                        <div style="text-align:center;">
+                            <img src="../images/wechat_pay.jpg" alt="WeChat Pay QR code" style="max-width:180px;">
+                            <div style="font-size:13px;color:#888;">💚 微信赞助</div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </section>
+        <section class="topic-section">
+            <div class="topic-header">
+                <span class="topic-badge" style="background:#14b8a6">Model Predictive Control</span>
+                <span class="topic-count">53 papers</span>
+            </div>
+            <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.40257v1" target="_blank" class="paper-title">Learned Terminal Costs for Short-Horizon Model Predictive Control of Autonomous Trucks in Interactive Highway Traffic</a>
+                        <span class="paper-date">2026-10-29</span>
+                    </div>
+                                        <span class="paper-comment">📝 13 pages, 2 figures, 8 tables</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Autonomous highway driving for heavy-duty trucks is a challenging control problem. The greater mass, dimensions and intricate dynamics increase the requirements for cooperation from surrounding traffic in critical maneuvers, requiring a careful balance between safety constraints and efficient long-horizon decision making. Model Predictive Control (MPC) provides rigorous constraint satisfaction but relies on terminal cost which can limit its effectiveness at short, computationally affordable horizons. Reinforcement Learning (RL) captures long-term driving behavior but offers no constraint guarantees and tends toward overly conservative policies when trained under sparse collision penalties. In this paper, we propose a hybrid MPC and RL framework for highway driving in autonomous trucks, where a finite-horizon MPC, solved via dynamic programming, uses a pre-trained RL model for terminal cost estimation. We evaluate the framework in a simulation environment with reactive surrounding traffic and compare it against pure MPC with zero terminal cost, rollout with terminal cost estimation using a base policy, and pure RL. Results show that the hybrid approach achieves zero collisions with the lowest cost of any configuration.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.39775v1" target="_blank" class="paper-title">Teaching a Tree to Recover: Online Distillation of an LLM Supervisor with Counterfactual Replay</a>
+                        <span class="paper-date">2026-10-29</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Autonomous mobile robots commonly pair a global planner with a local model predictive controller (MPC), but nonconvex obstacle avoidance and a limited horizon can make the robot freeze in complex layouts. Deciding whether to replan, wait, or call for help is a supervisory decision. Recent work queries a large language model (LLM) supervisor on every anomaly, which is slow and costly. We instead distill the LLM online into a decision tree. After each training episode, counterfactual replay labels recoveries as needed, unnecessary, or harmful. These labels retire unhelpful rules. In simulation, on 20 unseen layouts where the MPC alone freezes, the tree handles at least 18 correctly across all seeds, either by reaching the goal or by calling for help when no feasible path exists. The tree matches both an always-query LLM supervisor and expert-designed rules, while issuing no LLM queries at test time. Handwritten rules cannot anticipate the long tail of situations a physical robot will encounter. Online distillation is a promising remedy: the tree handles familiar cases, and the LLM is consulted only for new ones, whose validated recoveries become new rules. Language models can thus also serve as designers of supervisors rather than only as runtime supervisors.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.22225v2" target="_blank" class="paper-title">Safe and Fuel-Efficient Motion Planning for Lunar Propulsive Drones</a>
+                        <span class="paper-date">2026-10-28</span>
+                    </div>
+                                        <span class="paper-comment">📝 This work has been submitted to the 2027 IEEE Aerospace Conference</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Propulsive drones are a promising new technology for generating high-resolution terrain models of the Moon. In future lunar missions, propulsive drones will complete a series of hops across the lunar surface while capturing images with downward-facing cameras. We present an autonomous motion planning framework that uses a vision-guided optimal control strategy for performing safe, efficient hops between specified waypoints. The drone plans parabolic hops between waypoints generated by a global-level planner; if a nominal waypoint is unsafe or unreachable, the drone then completes a diversion maneuver to safely land. To evaluate the validity of potential landing sites, we develop a custom semantic segmentation model for identifying obstacles from aerial images, and we introduce an approach for rapidly calculating reachable terrain. We then use model predictive control (MPC) to robustly track hop trajectories that guide the drone towards safe landing sites. We test the optimal hop planner in a high-fidelity lunar simulation environment. Our results demonstrate that our unified motion planning framework yields safe, fuel-efficient hop trajectories which can be tracked rapidly and with low error via MPC.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.38569v1" target="_blank" class="paper-title">A Multi-Layer Navigation System for Smart Wheelchairs with a Limited Input Interface</a>
+                        <span class="paper-date">2026-10-28</span>
+                    </div>
+                                        <span class="paper-comment">📝 8 pages, 6 figures, 3 tables. Presented at IROS 2026 (IEEE/RSJ International Conference on Intelligent Robots and Systems); to appear in the conference proceedings</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Smart wheelchairs are robotic devices that gather information from the surroundings and allow people to safely drive through various environments. They usually rely on the interpretation of high-level user's intentions, typically decoded through human-robot interface (HRI) or brain-machine interface (BMI). However, navigating in an unknown environment and accurately understanding user commands remain significant challenges. Misinterpretation of commands or the environment can lead to user frustration, distrust of the system, or even unsafe situations. In this paper, we present a novel Multi-Layer Navigation System (MLNS) for a smart wheelchair that enables navigation in unknown environments while interpreting and safely contextualizing user's intentions even in the case of limited and faulty commands. The stack relies on a Virtual Sensors-Driven Potential Fields (ViSPF) method for obstacle detection that accounts for the wheelchair's actual size, a Model Predictive Control (MPC) module for trajectory generation, and an open-vocabulary computer vision algorithm for target identification. Finally, a system based on Priority Queue (PQ) was implemented for target selection. We validated our system on a real smart wheelchair with experiments involving 10 participants without disabilities, including scenarios with faulty input interfaces. The results demonstrate the robustness and effectiveness of our system in real-world environments, proving its potential for practical applications in assistive technologies.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.38197v1" target="_blank" class="paper-title">Convex-SKM-Net: Low-Latency Block Halfspace Corrections for Neural Convex Constraint Satisfaction</a>
+                        <span class="paper-date">2026-10-28</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Fast inference and strict constraint satisfaction are essential for learning-based decision-making. Existing methods often rely on constraint-specific projections or feasible-set parameterizations, while iterative repair can be costly. We introduce Convex-SKM-Net, a convex constraint-satisfaction layer that forms linearization halfspaces from residual and (sub)gradient oracles without constraint-specific inequality projectors. It applies fixed-depth dual projected-gradient descent (dual PGD) to minimum-displacement block problems using GPU-friendly matrix operations. We jointly learn the predictor and a positive-definite mobility, adapting the correction geometry to improve objective quality. We prove convergence of the outer iterates at fixed dual depth and linear convergence in distance under Slater's condition and bounded subgradients. All our test outputs on three second-order-cone model-predictive control (SOC-MPC) horizons and six power-system convex relaxations satisfy a $10^{-3}$ feasibility tolerance. Comparisons with the latest constraint-satisfaction methods show inference speedups of up to $144.3\times$ on SOC-MPC and $7.7\times$ on a convex quadratically constrained quadratic programming (QCQP) benchmark with joint training. On QCQP, the mean objective gap is $0.012\%$, with full test feasibility at $10^{-4}$. Learning mobility reduces the five-seed affine-task mean gap by $22.4\%$ and improves gaps in matched power-system comparisons.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.38079v1" target="_blank" class="paper-title">Neural Compression of Long ADMM Trajectory for Multiparametric Quadratic Program</a>
+                        <span class="paper-date">2026-10-27</span>
+                    </div>
+                                        <span class="paper-comment">📝 Accepted at NeurIPS 2026. Code: https://github.com/SOLARIS-JHU/TQPNet</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Solving large-scale multiparametric quadratic programs (mpQPs) in real time often requires thousands of iterative optimization updates, creating a major computational bottleneck in model predictive control and learning-enabled systems. This paper proposes TQPNet, a self-supervised neural compression framework that learns to compress long ADMM optimization trajectories into a compact neural warm start followed by a few refinement iterations. We derive a low-dimensional ADMM scheme operating on the primal-dual variables $(x,β)$ and show that its iteration admits an equivalent ReLU-layer representation, termed ADMM(ReLU). Building on this insight, TQPNet combines a multilayer perceptron with ReLU activations (MLP(ReLU)) and a small number of unrolled ADMM(ReLU) refinement layers. The network is trained offline using an optimality-condition-informed residual loss, eliminating the need for solver-generated labels. The proposed residual-based framework enables both self-supervised training and online solution certification through adaptive ADMM(ReLU) refinement. Experiments on large-scale mpQPs and real-time MPC applications demonstrate that TQPNet achieves high accuracy, strong generalization, and substantially faster inference than conventional optimization-based methods.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.25233v2" target="_blank" class="paper-title">Beyond Single-Episode Optimization: Sliding-Window Aware Generative Auto-Bidding for Long-Term Advertising Effectiveness</a>
+                        <span class="paper-date">2026-10-27</span>
+                    </div>
+                                        <span class="paper-comment">📝 Temporarily withdrawn to comply with an internal company compliance requirement; it will be resubmitted once that process is complete</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：现有自动竞价系统将每天视为独立优化单元，但广告主价值稀疏时，单日效率统计不可靠，而平台采用滑动窗口（如7天）评估效果，导致跨天决策相互耦合，需解决长期广告效果优化问题。&#10;&#10;🛠 **方法**：提出SWAG-Bid分层框架，包含规划器（使用掩码轨迹模型预测市场并生成候选计划）和执行器（通过多窗口模型预测控制采样与指数置信衰减评分，并采用逐步门控自适应层归一化调整对规划的依赖，同时引入Return-to-Go和Cost-to-Go通道传递预算与约束信息）。&#10;&#10;✨ **主要贡献**：在AuctionNet-Sparse数据集和AliExpress线上A/B测试中，SWAG-Bid在滑动窗口评估下实现了竞争性的约束满足和价值获取，有效处理了跨天耦合的长期广告效果优化问题。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Auto-bidding systems optimize bids to maximize value under efficiency constraints such as Cost-Per-Action (CPA). Existing methods treat each day as an independent episode. However, many advertisers produce value so sparsely that per-day efficiency ratios become statistically unreliable, undermining advertiser retention. Platforms therefore evaluate window-level efficiency over sliding windows of $W{=}7$ days, ensuring fair evaluation and long-term advertising effectiveness. This creates cross-episode coupling: each day's bidding decisions affect up to $W$ overlapping windows, so setting daily targets requires anticipating future market conditions. We propose SWAG-Bid (Sliding-Window Aware Generative Auto-Bidding), a hierarchical framework decomposing this challenge into episode-level planning and step-level execution. The planner uses a Masked Trajectory Model to forecast markets and generate candidate plans, scored across all overlapping windows by Multi-Window Model Predictive Control Sampling (MWMS) with exponential confidence decay. The controller adjusts reliance on this guidance through a state-adaptive gate, Per-Step Gated Adaptive Layer Normalization (PSG-AdaLN), complemented by Return-to-Go and Cost-to-Go channels carrying budget and constraint information. Experiments on AuctionNet-Sparse and online A/B tests on AliExpress show that SWAG-Bid achieves competitive constraint satisfaction and value acquisition under sliding-window evaluation.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.35851v1" target="_blank" class="paper-title">Nonprehensile Robotic Catching Using Virtual Constraints</a>
+                        <span class="paper-date">2026-10-26</span>
+                    </div>
+                                        <span class="paper-comment">📝 9 pages, 6 figures; an abridged version of this article has been submitted to the 2027 American Control Conference (ACC)</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>The problem of nonprehensile robotic catching is addressed using virtual nonholonomic constraints (VNHCs); the motion of the robot end-effector is designed and controlled directly in terms of the states of the object before it is caught on the surface of the end-effector. In contrast to contemporary approaches, our approach avoids the need for object trajectory prediction, and consequent time-varying robot trajectory generation. With a focus on the planar case, we demonstrate that our VNHC approach can be used to catch an object on an end-effector at a desired height, with minimal relative normal velocity at the contact instant. Moreover, the VNHC function depends only on the desired catching height, and the same VNHC can be used for a range of initial conditions. We use model predictive control (MPC) to bring the object and end-effector to rest at a desired location after contact is made. The approach is validated in simulation.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2606.01950v2" target="_blank" class="paper-title">Learning Action-Conditional and Object-Centric Gaussian Splatting World Models for Rigid Objects</a>
+                        <span class="paper-date">2026-10-26</span>
+                    </div>
+                    
+                                        <details class="ai-summary" data-lazy="1" data-md="好的，作为一名人工智能研究与学术论文分析专家，我将严格按照您的要求，对这篇论文进行详细的中文解读。&#10;&#10;## 0. 概览（Concise Summary）&#10;&#10;- **主题（Topic）**：机器人学习、世界模型、3D视觉、非抓取式操作。具体任务是基于3D高斯泼溅（3D Gaussian Splatting）表示，学习刚性物体在机器人操作下的动作条件动力学。&#10;- **问题（Problem）**：现有世界模型在处理多物体场景时，面临物体形状多样、相互遮挡、以及需要预测动作对多个物体未来状态影响等挑战。基于物理的模拟器受限于模型假设，而纯视觉预测方法难以处理3D空间中的复杂交互。&#10;- **方法（Method）**：提出**MRO-GWM**（多刚性物体高斯世界模型）。该方法使用**以物体为中心的高斯泼溅**（Object-Centric Gaussian Splatting）表示场景，并提出一种**时空Transformer架构**，该架构以历史物体高斯和未来末端执行器动作为条件，预测未来物体姿态（刚体运动）。&#10;- **创新（Innovation）**：&#10;    1.  首次将**以物体为中心的高斯泼溅**作为世界模型的核心表示，支持任意形状和多个物体。&#10;    2.  提出一种**新颖的时空Transformer**，包含空间注意力、时间注意力和一个**全新的时空注意力层**，用于建模物体间的交互和时序动态。&#10;    3.  将学习到的世界模型成功集成到**模型预测控制（MPC）** 中，用于解决非抓取式操作任务。&#10;- **意义（Significance）**：这项工作为机器人提供了一种可学习的、基于3D视觉的动力学模型，能够预测复杂多物体场景下的交互结果，为在模拟环境中进行零样本或小样本的规划与控制提供了新的有效途径，有望推广到真实世界的机器人操作。&#10;- **一句话总结**：本文提出了MRO-GWM，一个基于物体中心高斯泼溅和时空Transformer的3D世界模型，能够有效预测多刚性物体在机器人操作下的动力学，并成功用于模型预测控制。&#10;&#10;## 1. 研究动机（Motivation）&#10;&#10;- **解决的问题**：在机器人操作中，尤其是在日常家庭场景中，机器人需要与多个形状各异、紧密排列的刚性物体进行交互。一个关键挑战是**预测这些物体在机器人动作（如推动）下的未来状态**。这要求世界模型能够：&#10;    1.  **处理任意形状的物体**：从简单的立方体到复杂的工具。&#10;    2.  **处理多物体场景**：物体间可能发生碰撞和相互作用。&#10;    3.  **处理部分遮挡**：从多视角重建的场景中，物体可能因相互遮挡而不完整。&#10;    4.  **以动作为条件**：预测结果必须依赖于机器人将要执行的动作。&#10;- **为什么重要**：拥有一个准确的世界模型是机器人实现自主规划和决策的基础。它允许机器人“在脑海中”模拟不同动作的后果，从而选择最优策略，这对于非抓取式操作（如推动、拨动）尤为重要。&#10;- **挑战在哪里**：&#10;    - **表示方法**：需要一种既能精确表示物体几何形状，又能方便地应用刚体变换，并且能处理部分观测的3D表示。&#10;    - **动力学建模**：物体间的交互（如碰撞、摩擦）非常复杂，难以用简单的物理公式精确建模。基于物理的模拟器（如MuJoCo）虽然精确，但需要知道物体的完整形状和物理参数，且计算成本高，难以处理与真实世界的差异。&#10;    - **动作条件化**：模型需要将机器人的动作（末端执行器轨迹）作为输入，并预测其对所有物体的影响。&#10;&#10;## 2. 创新点（Innovation）&#10;&#10;- **关键创新**：&#10;    1.  **以物体为中心的高斯泼溅场景表示**：借鉴ObjectGS，将场景中的每个高斯（或锚点）与一个特定的物体ID关联。这使得可以对每个物体独立应用刚体变换，从而轻松编码物体在不同时间步的位姿历史。这种表示是显式的、可微的，并且能够处理任意形状。&#10;    2.  **新颖的时空Transformer架构**：这是论文的核心技术贡献。该架构专门设计用于处理由物体中心高斯组成的动态点云序列。它包含三个关键注意力模块：&#10;        - **空间注意力（Spatial Attention）**：在同一时间步内，让物体上的不同高斯点之间交换信息，以理解物体的当前形状和局部几何。&#10;        - **时间注意力（Temporal Attention）**：在不同时间步之间，让同一个物体的对应高斯点交换信息，以学习其自身的运动轨迹。&#10;        - **时空注意力（Spatio-Temporal Attention）**：这是**全新的设计**。它允许一个时间步上的一个高斯点，与**其他时间步上的邻近高斯点**（不一定是同一个物体的对应点）交换信息。这直接建模了物体间的接触和相互作用（例如，一个物体上的点与另一个物体上的点在下一时刻发生碰撞）。&#10;    3.  **集成到模型预测控制（MPC）**：展示了学习到的世界模型如何被用于下游任务。通过将模型嵌入到采样优化的MPC框架（iCEM）中，机器人可以规划出能够成功完成非抓取式操作任务的末端执行器轨迹。&#10;- **与现有方案的不同**：&#10;    - 与基于物理模拟的方法（如PIN-WM, ContactGaussian-WM）相比，MRO-GWM是**纯数据驱动的学习模型**，不依赖于预定义的物理引擎，因此可以学习更复杂或非物理的动力学，并且对物体形状的完整观测要求更低。&#10;    - 与基于NeRF的方法（如Driess et al.）相比，高斯泼溅是**显式表示**，计算效率更高，且更容易进行刚体变换和后续处理。&#10;    - 与同样使用高斯表示的方法（如3DGSim, ManiGaussian）相比，MRO-GWM是**以物体为中心**的，预测的是**物体级别的刚体运动**（位姿），而不是每个高斯点的独立运动。这使得预测更稳定、更具泛化性，并且直接适用于规划。同时，其**多步预测**能力和**时空注意力**机制是其独特优势。&#10;&#10;## 3. 主要内容（Main Content）【重点】&#10;&#10;### 3.1 设计架构与方法&#10;&#10;MRO-GWM的整体流程如图1所示，分为两个主要阶段：&#10;&#10;1.  **场景表示构建**：首先，使用ObjectGS方法从多视角RGB-D图像中重建出以物体为中心的2D高斯泼溅场景。每个高斯（或锚点）都关联一个物体ID。然后，通过将每个物体的所有高斯点根据其历史位姿进行刚体变换，来编码过去h个时间步的场景状态。同时，根据未来的末端执行器动作，变换末端执行器的高斯表示。最终，模型输入是一个包含 `h+p` 个时间步的、经过变换的3D点云序列。&#10;&#10;2.  **时空Transformer预测**：这个序列化的点云被送入一个多阶段的时空Transformer。每个阶段包含池化（Pooling）、位置编码（PE）和多个残差块（Residual Blocks）。每个残差块内部依次包含：空间注意力层、时空注意力层、时间注意力层和MLP层。经过多个阶段的处理，模型最终为每个物体预测一个相对位姿变化（平移和旋转），从而得到未来p个时间步的物体轨迹。&#10;&#10;### 3.2 关键算法与数学推导&#10;&#10;- **场景表示与变换**：&#10;    设物体 $i$ 在时间 $t$ 的位姿为 $\xi_{i,t} \in SE(3)$。物体 $i$ 的锚点或高斯点在规范帧（canonical frame）中的位置为 $\mathbf{p}_i^c$。则其在世界坐标系下时间 $t$ 的位置为：&#10;    $$\mathbf{p}_{i,t} = \xi_{i,t} \cdot \mathbf{p}_i^c$$&#10;    模型输入的历史状态通过将规范帧中的点应用历史位姿 $\xi_{i,1:h}$ 得到。&#10;&#10;- **预测表示与损失函数**：&#10;    模型预测的是相对运动。对于物体 $i$，从时间 $t$ 到 $t+1$ 的相对位姿为 $\Delta \xi_{i,t} = \xi_{i,t}^{-1} \circ \xi_{i,t+1}$。&#10;    - **旋转表示**：使用9D旋转矩阵 $\mathbf{R} \in SO(3)$。为了便于学习，对相对旋转矩阵进行归一化：&#10;        $$\tilde{\mathbf{R}} = (\mathbf{R} - \mathbf{I}) \div \Sigma_{rot}$$&#10;        其中 $\div$ 表示逐元素除法，$\Sigma_{rot}$ 是训练集上 $(\mathbf{R} - \mathbf{I})$ 每个元素的标准差。损失函数为预测值 $\tilde{\mathbf{R}}_{pred}$ 与真实值 $\tilde{\mathbf{R}}_{gt}$ 之间的 $l_2$ 范数。推理时，逆归一化后通过正交化得到有效的旋转矩阵。&#10;    - **平移表示**：相对平移 $\mathbf{t}_{rel}$ 除以训练集上其平均范数 $\mu_{trans}$ 进行归一化。损失函数为归一化后的 $l_2$ 范数。&#10;&#10;- **时空Transformer架构**：&#10;    模型由多个阶段（stage）组成。每个阶段 $s_i$ 可以表示为：&#10;    $$s_i = b_{i, N_{blocks}} \circ \dots \circ b_{i,1} \circ pe \circ pool_i$$&#10;    - **池化（Pooling）**：类似于PTv2，但**按物体独立进行**。将同一物体上空间邻近的点聚合，减少点数，扩大感受野。由于不同时间步的物体点云只差一个刚体变换，池化操作在所有时间步上共享，保证了点之间的对应关系。&#10;    - **残差块（Residual Block）**：每个块 $b_{i,j}$ 包含四种层，按固定顺序堆叠：&#10;        1.  **空间注意力（Spatial Attention）**：基于PTv2的向量注意力，每个点与其k个最近邻（同一时间步内）交换信息。&#10;        2.  **时空注意力（Spatio-Temporal Attention）**：**核心创新**。与空间注意力机制相同，但邻居定义为**其他时间步上的点**。这使得模型可以直接学习点与点之间的相对运动模式，从而建模交互。&#10;        3.  **时间注意力（Temporal Attention）**：标准的多头自注意力，每个点只与**自身在其他时间步的对应点**交换信息，学习物体的自身运动轨迹。&#10;        4.  **MLP**：逐点的多层感知机，进行特征变换。&#10;&#10;### 3.3 模型、训练与数据集&#10;&#10;- **模型**：MRO-GWM。默认配置：历史长度 `h=3`，预测步数 `p=4`，时间步长 `5Hz` 或 `10Hz`。模型使用锚点（anchor）作为输入，每个锚点有16维空间特征。&#10;- **训练**：&#10;    - 优化器：AdamW，学习率 `4.4e-4`，余弦退火调度，3000步预热。&#10;    - 训练步数：60,000步。&#10;    - 批量大小：30。&#10;    - 训练数据：从交互轨迹中随机采样长度为 `h+p` 的片段。&#10;- **数据集**：使用Maniskill模拟器生成。&#10;    - **场景**：桌面上放置1-5个来自YCB数据集的物体。&#10;    - **训练/验证/测试集**：使用**互斥的物体集合**，以测试模型对未见物体的泛化能力。&#10;        - **YCB-V**：小物体池（16个训练，5个验证）。&#10;        - **YCB**：大物体池（65个训练）。&#10;    - **数据增强**：对同一个重建场景，通过改变物体初始位姿生成多个“布局”（layout），以增加数据量。主要训练集为 `YCB-100-100`（100个原始场景，每个100个增强布局）。&#10;    - **交互数据**：使用启发式方法生成机器人末端执行器的推动轨迹，记录物体位姿变化。&#10;&#10;### 3.4 实验设置与结果&#10;&#10;- **预测性能评估**：&#10;    - **指标**：位置误差（欧氏距离，cm）和旋转误差（测地线角度，度）。&#10;    - **主要结果（图2）**：模型在不同预测时间范围（horizon）下的表现。关键发现是**决定预测误差的主要因素是预测的物理时间长度，而非步数**。例如，`4@10Hz`（0.4秒）和 `8@5Hz`（1.6秒）在相同物理时间（如0.4秒）下表现相似。&#10;    - **消融实验（表1）**：&#10;        - **训练数据**：使用更大的物体池（YCB vs YCB-V）和更多的增强布局能提升性能。&#10;        - **表示**：使用锚点（anchor）比直接使用显式高斯（Explicit Gaussians）效果略好，因为锚点提供了压缩的几何信息。锚点分辨率（0.01m）是最优的。&#10;        - **观测视角**：仅使用180度视角（Limited view）与360度视角性能几乎相同，表明模型学会了处理部分遮挡。&#10;        - **架构**：移除时空注意力（No spatio-temporal attn.）和移除多尺度下采样（No multiscale downsampling）都会导致性能显著下降，验证了这两个设计的有效性。&#10;    - **定性结果（图3）**：展示了模型预测的轨迹与真实轨迹的对比。对于简单交互，预测非常准确；对于复杂的多物体交互，预测难度增大，但整体趋势合理。&#10;&#10;- **规划性能评估（MPC）**：&#10;    - **任务**：&#10;        1.  **推动物体到目标位置**：将指定物体推到桌面上的一个目标点。&#10;        2.  **清空中央区域**：将所有物体推出桌面中央的一个圆形区域。&#10;    - **指标**：成功率（SR）、成功时间、最终目标距离等。&#10;    - **结果（表2）**：模型在MPC中表现良好。任务1（单物体）的成功率（77%）高于任务2（多物体，66%）。随着成功阈值放宽，成功率提升。定性分析（图4）展示了成功的规划案例。失败案例分析指出，主要失败原因包括：机器人到达运动学极限、难以预测细长物体（如螺丝刀、勺子）的运动、以及规划器在多个目标间切换导致超时。&#10;&#10;### 3.5 技术细节&#10;&#10;- **锚点初始化**：扩展了ObjectGS的投票机制，增加了深度一致性检查，确保只有实际看到物体的视角才参与投票，这对于处理紧密排列的物体至关重要。&#10;- **视图无关解码**：移除了ScaffoldGS中的视图相关解码部分，因为世界模型需要的是与视角无关的、稳定的几何表示。&#10;- **背景过滤**：为了减少计算量，过滤掉距离物体或末端执行器超过10cm的背景锚点。&#10;- **旋转预测的归一化**：对相对旋转矩阵进行归一化处理，使其均值为0，方差为1，有助于网络训练。推理时通过逆归一化和正交化保证输出是有效的旋转矩阵。&#10;- **MPC实现**：使用iCEM算法，通过采样优化末端执行器的关键点轨迹。规划频率为2Hz，每次迭代更新采样分布的均值。&#10;&#10;## 4. 意义与影响（Significance and Impact）&#10;&#10;- **解决的问题与贡献**：&#10;    - 提出了一种新颖的、基于学习的世界模型范式，该模型以**物体中心高斯泼溅**为核心表示，结合**时空Transformer**，成功解决了多刚性物体在机器人操作下的动力学预测问题。&#10;    - 证明了该模型可以有效地集成到MPC框架中，用于解决实际的非抓取式操作任务，为机器人规划提供了新的工具。&#10;    - 通过详尽的消融实验，验证了模型各个组件（如时空注意力、多尺度池化、数据增强）的有效性。&#10;&#10;- **对未来研究/应用的影响**：&#10;    - 为**基于3D视觉的机器人学习**提供了一个强大的基线方法。未来的工作可以在此基础上，探索更复杂的物体（如可变形物体）、更复杂的交互（如抓取、堆叠）以及真实世界的应用。&#10;    - 提出的**时空注意力机制**为建模点云序列中的交互提供了一个通用且有效的思路，可能被应用于其他需要理解动态3D场景的领域。&#10;    - 展示了**数据增强**（布局增强）对于学习泛化性动力学模型的重要性。&#10;&#10;- **局限与开放问题**：&#10;    - **对真实世界的依赖**：当前方法依赖于模拟器中提供的**真实物体分割掩码和位姿**。这是最大的局限。作者指出，未来需要集成**分割基础模型**（如SAM）和**位姿追踪器**来摆脱这一限制。&#10;    - **仅限刚体**：模型目前只处理刚性物体。扩展到可变形物体是一个重要的未来方向。&#10;    - **实时性**：模型的推理速度（0.65秒/30个样本）和MPC的规划频率（2Hz）对于实时控制仍有提升空间。作者也提到了这一点。&#10;&#10;## 5. 澄清与简化（Clarifications and Simplifications）&#10;&#10;- **什么是“以物体为中心的高斯泼溅”？**&#10;    - **类比**：想象你用一堆彩色的小球（高斯）来拼凑出一个场景。传统的3D高斯泼溅就像把所有小球混在一起，只知道它们的位置和颜色。而“以物体为中心”的方法，就像给每个小球贴上一个标签，比如“这个球属于杯子”，“那个球属于螺丝刀”。这样，当你移动杯子时，你只需要移动所有贴着“杯子”标签的小球，非常方便。&#10;&#10;- **时空注意力是如何工作的？**&#10;    - **类比**：想象你在看一段两个球碰撞的视频。&#10;        - **空间注意力**：在某一帧，你观察每个球上的点，看看它们和球上其他点的关系，从而理解这个球的形状。&#10;        - **时间注意力**：你追踪球A上的一个点，看它在过去几帧中的位置变化，从而知道球A是怎么移动的。&#10;        - **时空注意力**：这是最聪明的部分。你不仅追踪球A上的点，还会看**球A上的点**和**前一帧中球B上离它最近的点**之间的关系。如果它们非常接近，模型就能“学到”它们即将发生碰撞。这直接建模了物体间的相互作用。&#10;&#10;- **为什么用锚点（Anchor）而不是">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>World models enable intelligent agents to predict the consequences of their actions on the environment. In this paper, we propose Multi Rigid Object Gaussian World Model (MRO-GWM), a novel model that learns action-conditional dynamics of rigid objects in 3D. Using object-centric Gaussians, we can represent arbitrary object shapes and multi-object scenes. We develop a novel temporal-spatial transformer architecture that predicts future rigid body motion from a history of object Gaussians and future actions. Objects are represented by Gaussians in an object-centric frame, which allows to describe object motion as a rigid body transformation. Our model is trained on reconstructions from multiple viewpoints, which requires the model to also handle partial observations of objects due to occlusions. We analyze prediction performance of our approach on synthetic datasets composed of typical household objects with multi-object dynamics and interactions by a robot end effector. We also evaluate our model in model-predictive control for non-prehensile manipulation in simulation and for image-based tracking and prediction of object motion in simulated and real-world scenes.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.35582v1" target="_blank" class="paper-title">Distributed Predictive Flocking for a Swarm of Miniature Vibration-Driven Robots in a Confined Arena</a>
+                        <span class="paper-date">2026-10-26</span>
+                    </div>
+                                        <span class="paper-comment">📝 Submitted to Robotics and Autonomous Systems</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Coordinating many miniature robots in a confined arena, with no leader, central planner, or global map, is a core challenge for swarm robotics. As the swarm grows denser, collision avoidance becomes the limiting factor, and the number of safely coexisting robots depends on the formulation of the inter-robot safety constraint. We present a distributed predictive flocking controller in which each robot solves its own nonlinear model predictive control (NMPC) problem, optimizing swarm cohesion and alignment costs, inter-robot and obstacle safety, and a task objective, while exchanging only predicted trajectories with local neighbors. Within this generalized controller architecture, solved in real time, we compare six barrier and control-barrier-function (CBF) safety formulations on a digital twin of an open-source vibration-driven bristlebot in a $0.64\,\mathrm{m^2}$ arena. A look-ahead discrete-time CBF performs best overall, with the fewest collisions and the widest inter-robot margins across nearly every swarm size tested. We deploy it on phototaxis, phototactic orbiting, and cohesion without a stimulus tasks, using swarm sizes starting from ten robots and up to the geometric packing limit. The swarm holds well: collisions stay low in small swarms, rising steeply as the packing limit approaches, while coordination and cohesion degrade gently rather than collapsing. The swarm is found not to trade safety for order, keeping both across the confined arena, with local alignment high at every swarm size.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.35342v1" target="_blank" class="paper-title">VisGeo-PipeTrack: A Visual Geometric Servo Control Framework with MPC-RCAPID Control for UAV-Based Dynamic Pipes Tracking</a>
+                        <span class="paper-date">2026-10-26</span>
+                    </div>
+                                        <span class="paper-comment">📝 Submit to IEEE Transactions on Intelligent Transportation Systems IEEE TITS</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>While unmanned aerial vehicles (UAVs) are increasingly deployed for pipeline inspection, prevailing research predominantly assumes static pipes. In real-world industrial environments, pipes often exhibit dynamic movements, such as vibrations. This imposes more stringent requirements on UAVs' adaptive control and computational efficiency than in static scenarios. Therefore, this paper proposes a servo control framework named VisGeo-PipeTrack, which utilizes geometric constraints to enable UAV tracking of dynamic pipes. To achieve efficient UAV positioning, YOLOv5 is employed to detect labels on the pipe. The positions are derived from visual geometric constraints based on these detected labels to enable precise localization. To address tracking control challenges, a model predictive control based real-time corrected adaptive PID (MPC-RCAPID) controller is proposed. This controller employs the Recursive Least Squares method for real-time model estimation and integrates rolling horizon optimization to dynamically adjust PID parameters. Experiments conducted on both the AirSim simulator and the Tello UAV platform validate the effectiveness of the proposed framework. Simulation comparisons with standard PID, fractional-order PID, adaptive PID, and fuzzy PID demonstrate that MPC-RCAPID achieves the shortest settling time (3.26 s) and the lowest average tracking error (3.52%). In physical experiments on the Tello platform, compared with standard PID control, MPC-RCAPID reduces the average tracking error by 55.52%, 26.72%, and 26.52% across the three test dimensions. These results demonstrate that VisGeo-PipeTrack facilitates efficient autonomous tracking in dynamic pipe environments.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.12063v2" target="_blank" class="paper-title">Learning Loco-Manipulation From SMPC Demonstrations With Sparse Offline-to-Online RL</a>
+                        <span class="paper-date">2026-10-26</span>
+                    </div>
+                                        <span class="paper-comment">📝 CoRL 2026 Camera-ready version</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Integrating locomotion and manipulation is essential for robot autonomy, but scaling standard Reinforcement Learning (RL) to complex tasks is severely bottlenecked by the slow, manual process of dense reward shaping. To bypass this limitation, we leverage Sample-based Model Predictive Control (SMPC) entirely in simulation as an automated, rapidly tunable expert to generate massive offline datasets. Because this data solves the fundamental exploration problem, we can train an off-policy RL agent using purely sparse task rewards, drastically reducing the time required to learn new skills and eliminating the need for manual tuning. Integrating this high-level agent with a low-level dynamic stability controller yields more optimal behaviors that strictly align with true task objectives, ultimately allowing the learned policies to surpass the original optimal control teacher. We validate the robustness of this sim-to-real framework by successfully deploying complex loco-manipulation skills across different morphologies, including an arm-equipped Spot quadruped and a G1 humanoid.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.22340v2" target="_blank" class="paper-title">PlayPolicy: Dexterity from Supervised Play</a>
+                        <span class="paper-date">2026-10-26</span>
+                    </div>
+                                        <span class="paper-comment">📝 Project page: https://play-policy.github.io/</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>How can robots autonomously collect the contact-rich experience needed to learn dexterous manipulation? We present PlayPolicy: Dexterity from supervised play (DSP), a framework in which a robot learns a play policy from minutes of human play through behavior cloning, then deploys it autonomously to collect hours of interaction data to train a world model. During inference, the same play policy then guides model-predictive control (MPC) by proposing candidate action sequences for evaluation under the learned world model. To accelerate inference, we also introduce a method for distilling a closed-loop, goal-conditioned policy through self-play within the learned world model. We evaluate this framework on underactuated pushing and any-to-any in-hand pose reorientation with a multifingered hand, in simulation and real world. In real world experiment, our method outperforms hindsight behavior cloning by 69.6% in success rate and achieves comparable success to reinforcement learning with 490 times less interaction data. These results demonstrate that supervised play can autonomously collect interaction data, guide model-based planning, and enable policy learning without any task-specific demonstrations or sim-to-real transfer. Project page: https://play-policy.github.io/</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.34913v1" target="_blank" class="paper-title">Quantile-Based Command-Reserve MPC for Current-Command Gimbal Pointing</a>
+                        <span class="paper-date">2026-10-26</span>
+                    </div>
+                                        <span class="paper-comment">📝 10 pages, 4 figures. Supplementary hardware trial data and recomputation scripts included as ancillary files. Submitted to Journal of the Franklin Institute</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>This paper studies the constrained line-of-sight pointing control problem of a two-axis current-command gimbal subjected to mismatched mechanical disturbances. Friction, torque ripple, current-response lag, model mismatch, and limited drive commands make accurate pointing more challenging yet interesting. A quantile disturbance predictor is proposed to compensate predictable acceleration residuals and describe their remaining uncertainty, with the aid of learning median and outer quantiles from state, command, and reference histories. A tube-inspired model predictive controller is proposed to reserve command headroom according to prediction uncertainty, with the aid of calibrated radii and stage-dependent input margins. The median improves the nominal prediction, while the radius adapts the command reserve without adding optimization variables. A finite-horizon tube inclusion result is established for a specified linear error model and fixed ancillary policy; its conditions are distinguished from the approximations used in hardware. Native command bounds and a final command limiter keep the sent commands within their prescribed range. On a two-axis embedded platform, four controller configurations are compared in seven repeated trials each. The proposed configuration achieves a two-dimensional pointing root-mean-square error of $3.94 \pm 0.10$ mrad with no command-limit samples in the evaluation windows. Its performance supports the combined use of residual prediction and adaptive command margins in the tested operating condition. Solver times and logged loop overruns are reported separately for the nominal 100 Hz implementation.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.34849v1" target="_blank" class="paper-title">Physics-Informed and Data-Driven Composite Disturbance Separation and Predictive Control for Airborne Electro-Optical Gimbals with Multiple Constraints</a>
+                        <span class="paper-date">2026-10-26</span>
+                    </div>
+                                        <span class="paper-comment">📝 20 pages, 8 figures. Includes supplementary derivations and proofs. Demonstration video included as an ancillary file</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>This paper studies the constrained pointing control problem of airborne electro-optical gimbals subjected to composite periodic and aperiodic disturbances. Under carrier vibration, input delay, and actuator constraints, achieving line-of-sight stabilization and tracking is challenging. A disturbance-separated model predictive control (MPC) scheme is proposed to compensate these heterogeneous disturbances according to their physical characteristics. An adaptive periodic observer predicts multi-harmonic vibrations over the MPC horizon using linear-regression frequency estimation. A linear observer estimates the aperiodic disturbance, and a bounded long short-term memory (LSTM) network predicts its change over the input delay. Embedding periodic predictions into the MPC model while applying aperiodic compensation outside the optimizer limits amplification of aperiodic estimation errors and improves pointing accuracy under frequency changes and parameter mismatch. On the stated headroom envelope, input-set tightening provides feasible commands within the prescribed limits, and a regional practical tracking bound is established under explicit input-sequence and predicted-state margin conditions. A UAV-mounted two-axis gimbal platform is assembled for comparative indoor hovering experiments, complemented by simulations under frequency changes and parameter mismatch. In the reported trials, the proposed method achieves yaw and pitch relative-angle root-mean-square errors (RMSEs) of 0.770 degrees and 0.350 degrees, reducing tracking errors by 25.1% and 45.9% compared with linear active disturbance rejection control.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.34789v1" target="_blank" class="paper-title">ISB-NMPC: Interception-Oriented Spherical-Bearing Nonlinear Model Predictive Control for Quadrotors</a>
+                        <span class="paper-date">2026-10-26</span>
+                    </div>
+                                        <span class="paper-comment">📝 9 pages, 10 figures, and 1 table. Submitted to IEEE/ASME Transactions on Mechatronics</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Quadrotor interceptors equipped with strapdown cameras offer a low-cost solution for physically countering unauthorized UAVs. However, this configuration inherently couples vehicle maneuvering and camera pointing, creating a conflict between rapid closing and maintaining target visibility. We present interception-oriented spherical-bearing nonlinear model predictive control (ISB-NMPC), which couples spherical-bearing prediction with nonlinear quadrotor dynamics to jointly optimize target-directed closing motion and visibility. An attitude-compensated extended Kalman filter on S^2 estimates target bearing motion, compensates for perception delay, and predicts target bearings to guide scale-adaptive detection. Across 30 paired simulation trials, ISB-NMPC achieves an interception success rate of 86.7%, the highest among the evaluated controllers, with a mean per-trial target-visible time of 99.11%. Outdoor flights demonstrate acquisition of a 30 cm target at approximately 150 m, with interceptor speed reaching 17 m/s in the long-range flight and approximately 14 m/s while pursuing a quadrotor-towed maneuvering target. The software and hardware are open source at https://github.com/HOLYNOTBAD/ISB-NMPC and https://github.com/HOLYNOTBAD/holydrone, respectively.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2606.12019v2" target="_blank" class="paper-title">MPPI-based Informative Trajectory Planning for Search and Capture of Drifting Targets with ASVs</a>
+                        <span class="paper-date">2026-10-25</span>
+                    </div>
+                                        <span class="paper-comment">📝 8 pages; Accepted for publication in IEEE RA-L</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Autonomous surface vehicles (ASVs) offer an efficient solution for environmental cleanup as well as search and rescue operations in open waters. Targets in these settings drift continuously, so efficient search must balance exploration of unobserved regions with tracking of known targets. However, most target tracking and pursuit scenarios consider simple guidance behaviours and short-term predictions for decision-making. In this letter, we address the problem of search and capture of multiple drifting targets, such as litter, in marine environments, using an adaptive informative planning approach. A key aspect of our strategy is a spatiotemporal informative planning method based on model predictive path integral (MPPI) control, a sampling-based model predictive control method. Our planner balances search and tracking objectives with a cost design that couples spatiotemporal target drift predictions and exploration objectives. The planner directly generates kinematic-level commands by optimising continuous trajectories over long horizons. In the interception stage, we use pure pursuit guidance for physical capture of the targets. Simulations show that our planner captures up to 18% more targets than the strongest baseline, proving its efficiency for environmental cleanup. Finally, we validate our approach in field trials with an ASV.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2601.10418v2" target="_blank" class="paper-title">Reinforcement Learning with Multi-Step Lookahead Information Via Adaptive Batching</a>
+                        <span class="paper-date">2026-10-25</span>
+                    </div>
+                                        <span class="paper-comment">📝 Accepted to NeurIPS 2026</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>We study tabular finite-horizon reinforcement learning problems with multiple steps of lookahead information. Before acting, the learner observes $\ell$ steps of future transition and reward realizations: the exact state the agent would reach and the rewards it would collect under any possible course of action. While it has been shown that such information can drastically boost the value, finding the optimal policy is NP-hard, and it is common to apply one of two tractable heuristics: processing the lookahead in chunks of predefined sizes ('fixed batching policies'), and model predictive control. We first illustrate the problems with these two approaches and propose utilizing the lookahead in adaptive (state-dependent) batches; we refer to such policies as adaptive batching policies (ABPs). We derive the optimal Bellman equations for these strategies and design an optimistic regret-minimizing algorithm that enables learning the optimal ABP when interacting with unknown environments. Our regret bounds are order-optimal up to a potential factor of the lookahead horizon $\ell$, which can usually be considered a small constant.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.33679v1" target="_blank" class="paper-title">Energy-Based Fault Detection and Isolation Framework for Flat Port-Hamiltonian Mechanical Systems</a>
+                        <span class="paper-date">2026-10-24</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Fault diagnosis during regulated motion requires informative signals even when feedback attenuates tracking deviations. This paper develops an energy-based diagnostic framework that constructs mechanical port-power residuals without a dedicated dynamic observer. Spectral Hamiltonian Algebraic Power Evaluation (SHAPE) combines port-Hamiltonian variables and differential flatness to generate nominal power references from planned motion for fully actuated mechanical systems with collocated actuation. Subtracting these references from commanded effort multiplied by measured flow yields residuals whose final evaluation requires neither recursive observer updates nor measured-state dynamics calculations. Continuous wavelet transform (CWT) scalograms and a shared-encoder convolutional neural network are used to distinguish nominal operation, actuator loss of effectiveness, anomalous friction, and vibration from complete trajectories. Evaluation uses a simulated six degree of freedom Kinova manipulator under model predictive control and fixed plant-model mismatch, with single faults at a specified joint. Across five training seeds and 3000 held-out test runs, SHAPE-CWT achieves a mean accuracy of 84.69 percent, versus 81.67 percent for torque residuals and 97.17 percent for the generalized momentum observer under common CWT processing. The respective sample standard deviations are 0.70, 0.70, and 0.37 percentage points. These results demonstrate useful fault-type discrimination from algebraic power residuals, while severity-excitation profiles and offline velocity perturbations reveal limits to their diagnostic capability.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2606.18883v2" target="_blank" class="paper-title">ZiMPedance: Impedance-Aware ZMP Modeling and Control for Payload Carrying with Quadruped Robots</a>
+                        <span class="paper-date">2026-10-24</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Load transportation with quadruped robots is strongly affected by the dynamics of the physical interface between the robot and the load. Passive spring-based arms provide a lightweight and mechanically compliant alternative to active manipulators, but their dynamics can store and release energy during locomotion, producing oscillatory interaction forces that reduce robot stability. This paper develops a passive-arm-aware ZMP model for a quadruped carrying a payload through a passive arm. The reduced analytical model relates passive-interface stiffness, damping, and payload mass to the ZMP response under both external payload forcing and locomotion-induced base excitation, showing that lightly damped passive modes can overlap with gait harmonics. We then propose an arm-aware MPC (ARMPC), a passive-arm Model Predictive Control approach based on extended Single Rigid Body Dynamics that combines reduced floating-base dynamics with passive-arm joint states, internal torsional springs and dampers, and base-arm inertial coupling. Simulation ablations show that ARMPC consistently reduces ZMP-margin violations and prevents failures across all tested conditions, while Nominal MPC, which neither models nor compensates the passive arm, and Baseline MPC, which compensates it through an estimated wrench, exhibit higher violation percentages and failures under disturbances. Hardware pull-release experiments with a 2 kg payload show that the proposed ARMPC completes all longitudinal and diagonal disturbance trials without failure, whereas Baseline MPC fails in 7/15 and 8/15 trials, respectively. The same model also enables passive-arm end-effector tracking while maintaining a positive ZMP margin.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.32914v1" target="_blank" class="paper-title">A Tutorial on Physics Constrained Machine Learning for Hybrid Modeling, Optimization, and Control</a>
+                        <span class="paper-date">2026-10-23</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Physics-constrained machine learning (PCML) integrates domain knowledge, first-principles, and physical constraints into AI/ML models. In this work, we present a step-by-step tutorial of a modular PCML framework, KKT-HardNet, and illustrate how it could be used for hybrid modeling, process simulation, optimization and model predictive control in a single platform. KKT-HardNet combines fast inference capabilities of neural networks with guaranteed satisfaction of algebraic constraints through differential projection. It can handle heterogeneous data and enforce both linear and nonlinear equality and inequality constraints. The modular design supports custom neural-network backbones and user-defined projection mechanisms for PCML. To enable efficient end-to-end training, KKT-HardNet exploits implicit function theorem to backpropagate through the projection layer. This avoids computationally expensive automatic differentiation. This work also introduces an exact reduced-order Fischer-Burmeister reformulation and a primal-dual interior-point method as an alternative projection solve strategy. We also provide a diverse set of benchmarking problems for PCML in engineering applications. KKT-HardNet achieves orders of magnitude better performance in terms of both constraint satisfaction and inference time. The KKT-HardNet code and the benchmark datasets are available at https://github.com/souls-tamu/kkt-hardnet .</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2609.31868v3" target="_blank" class="paper-title">Metro-WM: Long-Horizon Latent Planning with Realisable Sub-Goals</a>
+                        <span class="paper-date">2026-10-23</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Model-predictive control with Joint-Embedding Predictive Architectures (JEPAs) provides a strong zero-shot goal-reaching planner, but it is only effective over short planning horizons. Hierarchical extensions attempt to bridge this gap by learning a macro planner to predict intermediate latent sub-goals to guide the micro planner. In this work, we demonstrate that unconstrained latent sub-goal prediction is fundamentally flawed. A rigorous evaluation reveals that leading hierarchical macro planners routinely emit physically unrealisable sub-goals. To resolve this, we introduce Metro-WM, a hierarchical framework that issues sub-goals by retrieving genuine states from prior experience rather than generating ungrounded latent vectors. Specifically, Metro-WM constructs a graph whose vertices are observed frames from offline expert demonstrations or random-action trajectories, allowing frames from different episodes to be connected and stitched into routes to the goal. Planning over the full graph also makes the system highly robust to execution errors: if the micro planner drifts off course, Metro-WM instantly finds a new optimal path from the current state. Our experiments show that Metro-WM achieves superior long-horizon success rates of up to 37.33 percentage points over the strongest hierarchical baseline on the same world model while being up to 10.9 times faster, requiring both 13-56 times less offline compute and fewer tuned hyperparameters. Additional analysis reveals that Metro-WM frequently finds shorter paths than the offline demonstrations, outperforms an oracle relying on the query's own demonstration on most benchmarks, and maintains robust performance under extremely sparse dataset conditions.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.32666v1" target="_blank" class="paper-title">Robust Offset-Free Lane-Keeping Control Framework for Vision-Only Automated Vehicles</a>
+                        <span class="paper-date">2026-10-23</span>
+                    </div>
+                                        <span class="paper-comment">📝 13 pages, 10 figures</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Achieving accurate, real-time lane-keeping control during high-speed cornering on large-curvature roads while ensuring robust vehicle stability is a critical challenge in autonomous driving. To address this challenge, this study developed a robust offset-free model predictive control (OF-MPC) framework for vision-based autonomous vehicle lane-keeping. The regulation problem in this framework is solved using several algorithms. Numerical simulation results indicated that the interpolation-tube-based constrained iterative linear quadratic regulator (itube-CILQR) algorithm outperformed solvers based on the standard Interior Point Optimizer (IPOPT) and Operator Splitting Quadratic Program (OSQP), achieving a mean computation time of less than 5 ms. The itube-CILQR algorithm was then used for vehicle control in vision-based lane-keeping experiments in a simulation environment to quantify the perceptual uncertainty of a visual perception model (multitask UNet). This quantification was performed using the OF-MPC framework for traffic scenes that were not encountered during model training. Overall, the developed OF-MPC framework and the proposed method for characterizing the perceptual uncertainty of a visual perception system in unseen environments can contribute to the future development of advanced autonomous driving systems.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.27414v2" target="_blank" class="paper-title">Real-Time Disturbance-Aware Koopman Model Predictive Control for Quadrotors in Spatially Varying Winds</a>
+                        <span class="paper-date">2026-10-21</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Reliable quadrotor flight in disturbed environments requires predictive models that remain accurate as unmodeled aerodynamic effects change during deployment. We introduce a disturbance-aware Koopman Control Family (DA-KCF) framework that preserves an offline-identified nominal model while learning only a disturbance-induced correction online. A reference-dependent KCF is first learned from simulation data and calibrated using limited hardware data. During deployment, the nominal KCF remains fixed while a lightweight residual ensemble learns a low-dimensional disturbance correction from causal state-command-state transitions. The Adaptive DA-KCF model is incorporated into MPC, where disturbance corrections are evaluated along the prediction horizon to optimize position and yaw references sent to the onboard stabilizing controller. Hardware experiments on a nano-quadrotor under uniform wind and a spatially varying wake demonstrate that online adaptation improves multi-step prediction and trajectory tracking as disturbance-induced model mismatch increases, while satisfying real-time control requirements.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.29964v1" target="_blank" class="paper-title">Object- and Task-Aware Active Perception for Safe Navigation of Mobile Manipulators in Semi-Static Environments</a>
+                        <span class="paper-date">2026-10-21</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Mobile manipulators must navigate safely in cluttered, partially unknown environments across logistics, manufacturing, and service applications. Semi-static changes between robot visits can lead to outdated scene knowledge and increased collision risk. We propose an active perception framework that enables a high degree-of-freedom (DoF) mobile manipulator to inspect uncertain or safety-critical regions with its hand camera during navigation. A probabilistic, object- and task-aware next-best-view (NBV) formulation prioritizes observations near the desired path and around uncertain or potentially changing objects. The perception objective is integrated into hierarchical-task model predictive control (HTMPC), exploiting kinematic redundancy for viewpoint adjustment while preserving the higher priority of base-trajectory tracking. The system unifies navigation, map maintenance, and active perception in a closed loop. Real-world tests show improved map consistency, reduced task-dependent map entropy, and lower navigation risk than passive or non-task-aware baselines. Additional simulation and real-world sequences demonstrate responses to controlled semi-static scene changes.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.29559v1" target="_blank" class="paper-title">Certified Neural Approximation of Robust Nonlinear Model Predictive Control</a>
+                        <span class="paper-date">2026-10-21</span>
+                    </div>
+                                        <span class="paper-comment">📝 12-page article plus 4-page supplement, 3 figures</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Model predictive control is a high-performance control method, but it incurs comparatively high online computational costs across many control tasks and is challenging to realize in low-level hardware settings. To address this, we present a framework for generating neural network controllers that provably inherit the safety and stability guarantees of a robust model predictive policy. In contrast to approaches based on post-verification or additional online safety filters, our method provides constructive, a priori design conditions that ensure preservation of recursive feasibility and stability before deployment. We treat the approximation error as a bounded input disturbance, which is addressed in the MPC design. This allows the neural network controller to directly inherit robustness from the underlying model predictive controller, which enables the transfer of guarantees to the approximation. The design process is an offline, constructive synthesis pipeline and can be implemented once Lipschitz bounds are specified. We further demonstrate in simulation that the learned controller reproduces the closed-loop behavior of the original controller while reducing online computation.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.29377v1" target="_blank" class="paper-title">Integrating Flow Matching and Model Predictive Control for Safe Robot Navigation</a>
+                        <span class="paper-date">2026-10-21</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Learning-based path planners based on diffusion and flow matching can generate diverse trajectories from demonstrations but typically lack mechanisms for constraint satisfaction and collision avoidance during deployment. This work proposes a framework that combines flow-matching-based path planning with model predictive path-following control to integrate data-driven path generation with real-time, constraint-aware execution. The flow-matching model captures multimodal path distributions, while the predictive controller adapts motion online to satisfy state and input constraints and avoid obstacles using updated local sensor information. An event-triggered re-planning scheme incorporates predictive control solutions into subsequent path generation, promoting collision-free navigation in environments with previously unseen obstacles. Simulation results for mobile robot navigation demonstrate robust performance across cluttered environments. The framework provides a systematic approach to combining flow matching with predictive control for adaptive, data-driven navigation.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.16522v2" target="_blank" class="paper-title">Learning Reachability-Based Safety Representations for Real-Time Robot Navigation in Unknown and Dynamic Environments</a>
+                        <span class="paper-date">2026-10-20</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Safe robot navigation in unknown, dynamic environments requires more than geometric collision checking: a robot still far from an obstacle may be unable to avoid it because of its speed, orientation, or the obstacle's motion. Hamilton--Jacobi (HJ) reachability analysis captures this in a value function whose sign separates states that admit a safe continuation from those where collision is unavoidable, but computing it online for every newly observed environment is too expensive. This dissertation trains neural implicit representations offline on reachability solutions to give optimization-based controllers this information in real time. Since the value function never exceeds the constraint, it equals a directly computed constraint, such as a signed distance, minus a nonnegative dynamics correction. Learning only this correction keeps represented obstacles outside the predicted safe set despite approximation errors. The first two of five methods use the learned function as a terminal constraint in model predictive control, for static local environments and predicted obstacle motion. The next two use it as a barrier candidate in control barrier function safety filters, for static environments and, through pairwise barriers in relative coordinates, for a varying number of moving obstacles. Simulations and hardware experiments on ground and aerial robots show better collision avoidance than geometric and hand-designed baselines, especially for short horizons and moving obstacles. The fifth method replaces the grid-based offline solver, which limits the first four to low-dimensional models. For control-affine dynamics with polytopic inputs, the HJ Hamiltonian is maximized at a vertex, so a parallelizable tree search over vertex inputs can generate training labels. With a loss from the HJ variational inequality, these labels yield barrier candidates for systems with up to 13 states.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.27732v1" target="_blank" class="paper-title">Prescribed Performance Guided Safe Reinforcement Learning for Roundabout Navigation of Autonomous Vehicles</a>
+                        <span class="paper-date">2026-10-20</span>
+                    </div>
+                                        <span class="paper-comment">📝 8 pages, 10 figures</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Connected and Autonomous Vehicles (CAVs) face significant challenges in roundabout navigation due to dense traffic interactions and unpredictable agent behaviors, necessitating high levels of adaptability and safety. While the combination of Reinforcement Learning (RL) and Model Predictive Control (MPC) offers a promising approach, existing frameworks suffer from a structural mismatch where pointwise RL decisions fail to align with MPC's trajectory level optimization, and often lack rigorous safety guarantees. This work proposes RLTrajGen-PPMPC-CBF, a hierarchical framework for safe, smooth and comfort roundabout navigation, which regulates the coupling between RL-based planning and MPC-based control. We employ Prescribed Performance Constraints (PPC) to enforce a gradual, stable convergence between reference trajectories and control outputs, ensuring MPC tracking performance remains consistent with intended behavior from RL. Additionally, a Control Barrier Function (CBF) layer provides real-time safety corrections that are fed back into the RL process. Simulation results in the MetaDrive environment demonstrate that our method achieves a 6.25\% increase in average success rate and a 65.87\% reduction in Motion Sickness Dose Value (MSDV) compared to the optimal baseline, meanwhile accelerating training convergence.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.26810v1" target="_blank" class="paper-title">Bio-inspired Thrust-Assisted Trotting on a legged-Aerial Robot via Real-Time QP-MPC</a>
+                        <span class="paper-date">2026-10-19</span>
+                    </div>
+                                        <span class="paper-comment">📝 To be published in IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2026)</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>This paper presents the hardware implementation of a quadratic program-based controller on Harpy: thruster-assisted bipedal robot to perform thruster-assisted trotting. This is inspired by wing-assisted locomotion observed in birds such as the chukar partridge, which employ thrust vectoring to manipulate the ground reaction force. The proposed controller formulates the thruster-assisted spring-loaded inverted pendulum dynamics as a condensed QP-based model predictive control problem, enabling simultaneous regulation of ground contact force and active thrust vectoring at 500 Hz. A decoupled control architecture is used, where the robot's sagittal dynamics are controlled using QP-MPC while the frontal dynamics is regulated using a cascade orientation stabilization controller. Two experiments were conducted with different forward reference velocities of 0 m/s and 0.1 m/s. While the instantaneous velocity oscillates, the mean velocities can track their respective reference. Additionally, joint tracking error remains within 1 deg while tracking the desired leg length given by the leg trajectory controller and desired swing trajectory given by Raibert's heuristic. The QP-MPC problem is consistently solved with 0.18ms, which is well within the 2ms computation budget while satisfying the GRF friction cone constraint.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.25511v1" target="_blank" class="paper-title">Dynamics-Aligned Representation Learning under Induced Partial Observability</a>
+                        <span class="paper-date">2026-10-18</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Model-based reinforcement learning (MBRL) has enabled sample-efficient learning of continuous control policies from high-dimensional observations through learned latent dynamics models. These models are typically trained with observation reconstruction objectives, which provide strong supervision but can bias representations toward visual fidelity leading to an undertrained prior and unreliable long-horizon predictions. We propose a stochastic gating mechanism that induces controlled partial observability during training by sampling a spatial binary mask from a Beta--Bernoulli random field and applying it to the raw observation. The gate probability is resampled at each time step, exposing the encoder to conditions ranging from near-total occlusion to near-full visibility. Integration of our method requires minimal architectural changes from existing dynamics models: the gated observation and the binary mask are channel-wise concatenated and passed to the encoder as a single augmented input, with no modifications to the broader training pipeline. We evaluate the proposed approach on a set of pixel-based continuous control tasks selected from the DeepMind Control Suite. Using model predictive control for evaluation, which relies solely on open-loop model rollouts, we show that stochastic gating improves planning performance and data efficiency across tasks. Further analysis demonstrates that performance is robust to the spatial scale of the mask, and a balanced observability during training outperforms configurations biased toward either sparser or denser observations.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.25436v1" target="_blank" class="paper-title">Intent-Informed Model Predictive Control for Shared Autonomy in Remote Manipulation Tasks</a>
+                        <span class="paper-date">2026-10-18</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Shared autonomy is a control paradigm that combines human cognitive abilities with robot precision to enable effective remote manipulation in complex environments. A key challenge is how to adapt the level of autonomy using information extracted from the human, task, and/or environment. In this paper, we propose a novel arbitration strategy that dynamically adjusts the level of autonomy in the system using the entropy of a belief distribution derived from a multimodal intent inference. Human intent is modeled with a Dynamic Bayesian Network (DBN), which updates beliefs over goals given real-time operator gaze data and robot arm motion during teleoperation. We then formulate the blending of human input and autonomous control as a Model Predictive Control (MPC) problem, where the system's autonomous behavior is guided by the belief distribution. This approach enables continuous, gradual transitions across the full spectrum of autonomy levels, from direct teleoperation to full autonomy. To validate our approach, we conducted experiments to compare the performance of our proposed algorithm against two MPC-based shared autonomy methods. Compared to the baselines, our approach achieved reductions of at least 61% in object retrieval time, 44% in trajectory length, and 60% in human control input. Participants reported high perceived control, predictability, intent recognition, and responsiveness, along with low workload.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2510.13114v2" target="_blank" class="paper-title">Safe Driving in Occluded Environments</a>
+                        <span class="paper-date">2026-10-16</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Ensuring safe autonomous driving in the presence of occlusions poses a significant challenge in its policy design. While existing model-driven control techniques based on set invariance can handle visible risks, occlusions create latent risks in which safety-critical states are not observable. Data-driven techniques also struggle to handle latent risks because direct mappings from risk-critical objects in sensor inputs to safe actions cannot be learned without visible risk-critical objects. Motivated by these challenges, in this paper, we propose a probabilistic safety certificate for latent risk. Our key technical enabler is the application of probabilistic invariance: It relaxes the strict observability requirements imposed by set-invariance methods that demand the knowledge of risk-critical states. The proposed techniques provide linear action constraints that confine the latent risk probability within tolerance. Such constraints can be integrated into model predictive controllers or embedded in data-driven policies to mitigate latent risks. The proposed method is tested using the CARLA simulator and compared with a few existing techniques. The theoretical and empirical analysis jointly demonstrate that the proposed methods assure long-term safety in real-time control in occluded environments without being overly conservative and with transparency to exposed risks.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.24125v1" target="_blank" class="paper-title">Switch-Time-Aware Hybrid Model Predictive Control Using the Hybrid Minimum Principle</a>
+                        <span class="paper-date">2026-10-16</span>
+                    </div>
+                                        <span class="paper-comment">📝 8 pages; 4 figures, 2 tables</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>This article presents a time-aware hybrid model predictive control (MPC) framework that simultaneously optimizes the objective with respect to both continuous control inputs and event switching times. Rather than relying on a fixed time grid, the switching instant is lifted into the decision vector and treated as an explicit optimization variable. The resulting transcription is a smooth nonlinear program whose Karush-Kuhn-Tucker (KKT) conditions are consistent with the Hybrid Minimum Principle (HMP) event-time stationarity condition, so first-order hybrid sensitivities are recovered implicitly through the KKT system rather than by evaluating saltation matrices. Each MPC step solves a single sparse Quadratic Program (QP), jointly optimizing control inputs and impact timing in real time. On a bouncing mass landing on an oscillating platform, the method attaches in half the time of fixed-grid saltation MPC, reduces cumulative control effort by 30%, and removes the post-impact rebounds, at a 15% increase in per-cycle solve time. It matches the cumulative effort of offline time-aware solvers to within 4% while running at 2.4 ms per cycle against 281 ms for a complementarity-based formulation of the same problem, of which a 10.6x reduction is attributable to the transcription alone at a fixed solver.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2605.14805v2" target="_blank" class="paper-title">Learning Cross-Coupled and Regime Dependent Dynamics for Aerial Manipulation</a>
+                        <span class="paper-date">2026-10-16</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Accurate dynamics modeling of aerial manipulators is challenging because platform--manipulator coupling, history-dependent interactions, and changing payload or manipulator configurations produce cross-coupled, temporal, and nonstationary residual dynamics. We propose a structured encoder--decoder framework in which a nonlinear history encoder captures temporal and cross-variable dependencies, while a lightweight linear latent decoder supports efficient deployment-time adaptation. Its linear-in-parameter structure enables closed-form Bayesian updates with consistency-driven covariance inflation and integration with real-time model predictive control (MPC). Experiments on a real aerial-manipulation platform demonstrate improved residual-prediction accuracy, rapid adaptation following dynamics changes, and lower MPC tracking error under changing payload conditions. The results show that combining structured history-dependent representation learning with lightweight online adaptation provides an effective predictive model for aerial manipulation under coupled and nonstationary dynamics.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2310.16659v3" target="_blank" class="paper-title">Multi-Agent Reinforcement Learning-Based UAV Pathfinding for Obstacle Avoidance in Stochastic Environment</a>
+                        <span class="paper-date">2026-10-16</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Traditional methods plan feasible paths for multiple agents in the stochastic environment. However, the methods' iterations with the changes in the environment result in computation complexities, especially for the decentralized agents without a centralized planner. Although reinforcement learning provides a plausible solution because of the generalization for different environments, it struggles with enormous agent-environment interactions in training. Here, we propose a novel centralized training with decentralized execution method based on multi-agent reinforcement learning, which is improved based on the idea of model predictive control. In our approach, agents communicate only with the centralized planner to make decentralized decisions online in the stochastic environment. Furthermore, considering the communication constraint with the centralized planner, each agent plans feasible paths through the extended observation, which combines information on neighboring agents based on the distance-weighted mean field approach. Inspired by the rolling optimization approach of model predictive control, we conduct multi-step value convergence in multi-agent reinforcement learning to enhance the training efficiency, which reduces the expensive interactions in convergence. Experiment results in both comparison, ablation, and real-robot studies validate the effectiveness and generalization performance of our method.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.23156v1" target="_blank" class="paper-title">ORD-WM: Learning Object-Centric Rigid Dynamics for 3D World Modeling in Robotic Manipulation</a>
+                        <span class="paper-date">2026-10-16</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>World models provide robots with a predictive mechanism for reasoning about how actions change object states in manipulation tasks. However, existing image-based and dense 3D world models do not explicitly impose object-level rigid motion, leaving rigid-object geometry preservation to be learned implicitly and making multi-step rollouts susceptible to shape drift or object-level motion inconsistency. To address this, we propose ORD-WM, a 3D world model that learns object-centric rigid dynamics for robotic manipulation. ORD-WM learns a vector-neuron variational autoencoder supervised by signed distance fields, which encodes each object point cloud as a geometry-aware latent representation composed of 3D vector features, and uses an action-conditioned dynamics model to predict object-wise SE(3) motion increments. Rather than generating unconstrained next latent states, ORD-WM analytically applies predicted object-wise rigid transformations to the current latent states, separating persistent object geometry from pose changes. Experiments show that ORD-WM enables stable, geometry-preserving multi-step prediction and supports efficient real-time replanning for closed-loop model predictive control in simulated and real-world manipulation scenarios.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.13319v4" target="_blank" class="paper-title">Adapting Generalist Vehicle Models for High-Speed MPC Across Terrains</a>
+                        <span class="paper-date">2026-10-16</span>
+                    </div>
+                                        <span class="paper-comment">📝 https://amrl.cs.utexas.edu/optcar/ Selected at CORL 2026</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>High-speed off-road autonomy requires precise closed-loop control for a target vehicle while remaining robust across changing terrains. Recent forward kinodynamic (FKD) prediction foundation models suggest a promising path, starting from a generalist model and specializing it to the target platform. However, effective specialization remains challenging, as it often requires substantial real-world data, and models adapted to one setting can still overfit to specific terrains or driving regimes. We present OptCar (Optimized Car), a recipe for bridging the gap from generalist to specialist FKD models that preserves cross-terrain generalization while optimizing performance for a specific vehicle. OptCar introduces a transformer FKD architecture that uses FiLM to condition multi-step predictions on a single dynamics context token summarizing recent state-action history. It then specializes the generalist model using limited real-world data and targeted synthetic rollouts from environment-specific system identification. In closed-loop model predictive control (MPC) experiments across three terrains and an out-of-distribution cart-pulling task, the largest gains appear at 6 m/s, the highest speed evaluated and the regime in which slip dominates tracking error. On vegetation + dirt, the most slip-diverse terrain, OptCar reduces 6 m/s trajectory tracking error by roughly 55% relative to AnyCar fine-tuned on real data alone, and remains the most accurate even when an unseen cart payload changes the dynamics. With 5 minutes of real data per terrain, OptCar is competitive on road with a specialist trained on 30 minutes of road data and outperforms it when the terrain changes. Project Page : https://amrl.cs.utexas.edu/optcar/</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.22176v1" target="_blank" class="paper-title">Inertially Significant Humanoid Teleoperation via Whole Body Model Predictive Control and Online Parameter Estimation</a>
+                        <span class="paper-date">2026-10-15</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>The effective deployment of humanoid robots in practical tasks of interest will require a capability of sensing and adapting to variations in inertial parameters, as occurs during heavy tool use or when carrying significant payload. Such payloads constitute a significant proportion of the combined payload-robot system, the effects of which cannot be ignored by delegating to feedback control. This paper showcases a general solution to this problem by integrating a whole body model predictive controller (WB-MPC) with an extended Kalman filter (EKF) for online estimation of fully physically consistent time-varying inertial parameters. These estimates are fed through to the WB-MPC's full rigid body dynamics model, resulting in more accurate feedforward torques for task demands under external load. Additionally, a virtual reality (VR) interface is provided that enables an operator to provide task-specific references without regard to payload while delegating dynamic balance to the WB-MPC. The framework is validated with simulation and hardware experiments on a humanoid system.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.21349v1" target="_blank" class="paper-title">CQDC-Warp: GPU-Accelerated Differentiable Quasi-Dynamic Simulation for Contact-Rich Manipulation</a>
+                        <span class="paper-date">2026-10-15</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Efficient synthesis of contact-rich manipulation trajectories is essential for downstream robot learning. Gradient-based planning offers a promising approach, but jointly optimizing motion and contact decisions remains challenging. Meanwhile, many existing planners run on CPUs with limited throughput. We present CQDC-Warp, a GPU-accelerated differentiable quasi-dynamic simulator for batched model predictive control (MPC). We use it to study contact-guided trajectory optimization, in which intended robot--object contacts are specified before planning and encouraged through soft costs, while the simulated dynamics determine contact geometry and frictional response without a prescribed contact-mode schedule. Across $17{,}408$ trials on the $17$-object Allegro in-hand rotation benchmark, our framework achieves $79.8\%$ success, compared with $73.7\%$ for CFree and $65.2\%$ for IMPACT, and reduces mean trajectory-generation time by factors of $27.0$ and $50.2$, respectively. On a single NVIDIA RTX 4090 with $2{,}048$ parallel worlds, forward and backward throughput reach $2.06\times10^5$ and $2.25\times10^5$ world-steps per second, respectively. Further experiments cover manipulation with LEAP and Shadow hands, environmental contact exploitation, bimanual manipulation, whole-body control, and real-world trajectory replay on a Sharpa hand.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.21292v1" target="_blank" class="paper-title">MR-MPCC: Model Predictive Contouring Control for Robotic Manipulator Tracking under Moving Reference Frames</a>
+                        <span class="paper-date">2026-10-15</span>
+                    </div>
+                                        <span class="paper-comment">📝 Accepted by The IEEE/RSJ International Conference on Intelligent Robots and Systems 2026 (IROS 2026)</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Maintaining small path-tracking errors under moving reference frames is essential for robotic manipulation tasks with tight execution tolerances, such as machining and surgical automation. Conventional time-indexed controllers, including tracking Model Predictive Control (MPC), rely on a fixed temporal correspondence with the reference trajectory and may therefore accumulate path-relative error under abrupt reference-frame motion or timing mismatch. This paper presents MR-MPCC, a Model Predictive Contouring Control (MPCC) framework for velocity-controlled robotic manipulators with 6-DoF end-effector pose regulation under Moving-Reference disturbances. A hierarchical control architecture is adopted, in which an upper-level MPCC optimizes path progress while penalizing contouring and orientation errors, and a constrained resolved motion rate control (RMRC) layer maps the commanded Cartesian twist to feasible joint velocities under joint-level and safety constraints. MR-MPCC is implemented in a ROS2--MuJoCo pipeline and validated on a UR5e platform under moving-reference disturbances, where the path frame is perturbed and tracked by electromagnetic sensors. Compared with PI control and time-indexed tracking MPC under matched disturbance, MR-MPCC achieves lower geometric path-following error and smaller deviations in the moving path frame, demonstrating improved path-following performance under reference-frame motion.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2605.12653v2" target="_blank" class="paper-title">Plan Before You Trade: Inference-Time Optimization for RL Trading Agents</a>
+                        <span class="paper-date">2026-10-15</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Reinforcement learning agents for portfolio management are typically trained and deployed as static policies, with no mechanism for policy adjustments using price forecasts at inference time. We propose FinPILOT (Financial Plugin Inference-time Learning for Optimal Trading), a plugin inference-time policy optimization framework inspired by Model Predictive Control (MPC). Under the price-taker assumption, portfolio actions do not affect future market prices, allowing a multi-step price forecaster to provide imagined market trajectories without iterative action-conditioned rollouts. At each decision step, FinPILOT uses the forecaster's predicted price trajectory to construct an allocation-based imagined return objective and optimizes the pretrained policy at inference time before executing one step of the trade. Our framework is compatible with any pretrained policy and adapts the policy using the forecaster's predictions without modifying the original RL training pipeline. Evaluated with five pretrained policies (PPO, SAC, A2C, TD3, DDPG) across DJ30 equities and foreign exchange (FX) over three rolling held-out test years (30 settings in total), FinPILOT improves Total Return in 28 of 30 settings and Sharpe ratio in 27 of 30, with gains spanning both stochastic and deterministic policies. Direct single- and multi-period portfolio optimizers supplied with the same forecasts do not reproduce these aggregate gains under our evaluation protocol. Further, using controlled forecasts at calibrated quality levels, we show that both the magnitude and consistency of FinPILOT's performance increase as forecast error is reduced.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.20925v1" target="_blank" class="paper-title">Planning to Learn: Real-Time Robust Adaptive Control on the GPU with Guaranteed Future Learning</a>
+                        <span class="paper-date">2026-10-14</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Robust adaptive control is vital for keeping robots safe while actively reducing uncertainty in unfamiliar settings. However, traditional methods are often conservative since they fail to account for guaranteed future parameter learning during planning and struggle to scale to high-dimensional systems. In this work, we present A-SLS, a learning-aware robust adaptive model predictive control (RAMPC) framework based on system-level synthesis. A-SLS forecasts future parameter uncertainty and preserves correlations between process disturbances, parameter error, and estimate updates to construct tight, guaranteed reachable sets that account for future information gain. We also develop a GPU-accelerated A-SLS solver to enable real-time performance. Across nonlinear robotic systems, A-SLS reduces reachable-tube conservativeness, maintains real-time performance, and scales to whole-body control for a quadruped with 61 states, 8 uncertain parameters, and 12 control inputs. We further demonstrate the approach on hardware, where a physical Crazyflie drone learns an uncertain dynamics parameter online to stabilize on the fly.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.20873v1" target="_blank" class="paper-title">Race to Recovery: Designing Advanced Safety Systems for Autonomous Driving via Learning Autonomous Racing</a>
+                        <span class="paper-date">2026-10-14</span>
+                    </div>
+                                        <span class="paper-comment">📝 13 pages, 6 figures, 8 tables. Submitted to IEEE Transactions on Intelligent Vehicles</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Vehicles that lose control at the handling limit through icing, hydroplaning, or an abrupt evasive maneuver fall outside the operating envelope of production safety systems such as electronic stability control, which focus on preventing instability rather than recovering from it. Expert drivers regain authority in these conditions by drifting. Existing autonomous recovery approaches are validated on idealized scenarios, define "recovered" states empirically and inconsistently, or rely on offline-planned trajectories rather than acting online. We address these gaps by first training a racing policy with reinforcement learning that learns drifting as a time-optimal maneuver, then adapting it to recovery through continued training with a minimum-time reward. We define recovery relative to a phase-plane-grounded stable equilibrium and introduce Gym-Khana for controller training and evaluation. Across 294 initial loss-of-control states, the transferred policy improves recovery by 186.8% over a Stanley path tracker and outperforms both a nonlinear model predictive controller and a recovery-only policy trained from scratch, while also recovering faster on states the baseline can already handle. An ablation shows that racing pretraining, rather than broader initial-state exposure alone, drives this gain. Deployed on a physical 1:10-scale F1TENTH vehicle using system identification, actuator-lag modelling, and domain randomization, the transferred policy outperforms Stanley on every tested loss-of-control state, including recovering 50% of the time from a hard state the baseline never recovers from.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2402.05203v3" target="_blank" class="paper-title">Bellman Conformal Inference: Calibrating Prediction Intervals For Time Series</a>
+                        <span class="paper-date">2026-10-14</span>
+                    </div>
+                                        <span class="paper-comment">📝 36 pages, 5 figures</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>We introduce Bellman Conformal Inference (BCI), a framework that wraps around any time series forecasting models and provides calibrated prediction intervals. Unlike the existing methods, BCI is able to leverage multi-step ahead forecasts and explicitly optimize the average interval lengths by solving a one-dimensional stochastic control problem (SCP) at each time step. In particular, we use the dynamic programming algorithm to find the optimal policy for the SCP. We prove that BCI achieves long-term coverage under arbitrary distribution shifts and temporal dependence, even with poor multi-step ahead forecasts. When the raw forecast intervals are approximately calibrated, we prove that BCI is near optimal for its surrogate model predictive control problem. We find empirically that BCI avoids uninformative intervals with infinite lengths under our main experimental configuration and generates substantially shorter prediction intervals when the raw forecast intervals are poorly calibrated.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.20280v1" target="_blank" class="paper-title">Learning-Based Adaptive MPC for Magnetorquer-Only Satellite Attitude Control</a>
+                        <span class="paper-date">2026-10-14</span>
+                    </div>
+                                        <span class="paper-comment">📝 8 pages, 8 figures, 1 table, Accepted for publication at the International Conference on Space Robotics (iSpaRo) 2026</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Nanosatellites (e.g., CubeSats) have the potential to carry out useful science and exploration activities for outer solar system exploration, but their small size leads to tradeoffs between attitude control and science capabilities. Magnetorquers offer a unique compromise as compact actuators that enable three-axis attitude control, but suffer from a loss of control authority and require full knowledge of the planetary magnetic field. In this work, we present a learning-based adaptive model predictive control (MPC) algorithm that plans rotational trajectories for the satellite while accounting for this loss of control authority. Key to our approach is the inclusion of a learned magnetic field model that is trained in simulation using low-fidelity magnetic field data. Using measurements collected online, our proposed algorithm adapts this learned magnetic field model using a simple last-layer update scheme, allowing the MPC controller to quickly adapt to the true planetary magnetic field model and more effectively plan attitude trajectories. We demonstrate the results of our proposed approach for two use cases, (1) Earth-orbit and (2) Uranus-orbit, and show that our learning-based adaptive MPC algorithm improves controller success for these system simulations by 5% and 61%, respectively.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.19250v1" target="_blank" class="paper-title">Full-Order Safety for Nonlinear Reduced-Order MPC</a>
+                        <span class="paper-date">2026-10-13</span>
+                    </div>
+                                        <span class="paper-comment">📝 8 pages, 4 figures</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Reduced-order models (ROMs) make model predictive control (MPC) of high-dimensional nonlinear systems tractable, but the resulting modeling error can lead to constraint violations on the real system. We introduce CoRE-MPC, a robust MPC formulation that plans with a nonlinear ROM and guarantees recursive feasibility and constraint satisfaction for the full-order system. It can be applied with a broad class of nonlinear model reduction techniques and the resulting MPC does not require evaluating the full-order model online, thus ensuring computational efficiency. The key insight is in how the ROM affects the dynamics of the prediction error. We account for this with two error radii that are propagated alongside the ROM and provide a guaranteed bound on the prediction error. The approach is validated in simulation on an 80-state oscillator chain, a Burgers equation, and a 9,768-state finite-element soft robot, where a two-state ROM with data-driven bounds keeps all 1,628 nodes clear of a wall at a median solve time below 1 ms for a 20 ms control period. Across these examples, CoRE-MPC is 13 to 61 times faster than full-order robust MPC at only 27 to 35% higher closed-loop cost, whereas existing certified schemes are either infeasible or at least twice as conservative. Code: [released upon publication].</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2607.18760v2" target="_blank" class="paper-title">Koopman DCM: Unstable Eigenfunctions as Data-driven Representations for Legged Balancing</a>
+                        <span class="paper-date">2026-10-13</span>
+                    </div>
+                                        <span class="paper-comment">📝 14 pages, 4 figures</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>In legged locomotion, divergent components of motion (DCMs) have emerged as characteristic states for balance control. They isolate the unstable mode of the dynamics but, in existing formulations, apply only to reduced models such as the linear inverted pendulum. In this study, we show how DCMs can be more generally formulated as Koopman eigenfunctions. Whereas Koopman analysis typically targets eigenvalues near zero, which capture conserved or slowly varying quantities, our investigation leads us to deliberately search for unstable eigenpairs with large eigenvalues. The resulting Koopman DCMs are data-driven observables trained using only real-robot data. On a real biped, DCMs learned from one hour of robot data improve tracking of reference walking patterns. We further show how learned DCMs provide state-based viability constraints when combined with model predictive control.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.17799v1" target="_blank" class="paper-title">Beyond Safe Execution: Safe Online Reinforcement Learning for Autonomous Driving with Value Calibration and Adaptive Guidance</a>
+                        <span class="paper-date">2026-10-13</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Online reinforcement learning (RL) enables driving policies to adapt to changing deployment conditions, but requires safe exploration throughout training. Safety filtering alone does not ensure stable policy improvement or reduced dependence on corrections. We propose Safe Online Adaptive Refinement (SOAR-Flow), a framework for safe and stable online fine-tuning of offline-initialized Flow-based driving policies. A control barrier function (CBF)--model predictive control (MPC) filter corrects potentially unsafe actions before execution. To support stable policy updates, we introduce Gaussian-return-aware value calibration based on calibrated Q-learning (Cal-QL), using recorded behavior returns and predicted return variability to smooth conservative critic updates and mitigate policy degradation. Paired corrective learning teaches feasible action adjustments, while an intervention-to-go predictor encourages decisions requiring fewer future corrections. Its predictions also regulate guidance strength, allowing recovery supervision to weaken as predicted dependence decreases. Together with gradually reduced calibration regularization, this supports continued task improvement while preserving hard execution constraints. We analyze conditions for safe execution at control steps and diminishing auxiliary learning influences. We evaluate SOAR-Flow in simulation and on an uncrewed ground vehicle (UGV). The results demonstrate improved driving performance and reduced reliance on safety corrections during protected online fine-tuning. The demonstration video and project overview are available at https://lzqw.github.io/SOAR-Flow/.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2604.03208v3" target="_blank" class="paper-title">Hierarchical Planning with Latent World Models</a>
+                        <span class="paper-date">2026-10-12</span>
+                    </div>
+                                        <span class="paper-comment">📝 Accepted at CoRL 2026. 27 pages, including references and appendices. Project page: https://kevinghst.github.io/HWM/</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>World models are a promising path to zero-shot embodied control through planning. However, existing world model planners struggle on long-horizon, multi-stage tasks: prediction errors compound and naive search is exponential in the planning horizon. Hierarchy mitigates both by decomposing tasks into shorter, tractable subproblems; yet prior hierarchical approaches either amortize control into task-specific policies (hierarchical RL) or assume low-dimensional states and known dynamics (classical hierarchical MPC). We present Hierarchical Planning with Latent World Models (HWM), an architecture and planning paradigm for hierarchical model predictive control directly on visual world models trained solely via next-latent prediction. HWM learns world models at multiple temporal scales within a shared latent space, so predictions from the long horizon model serve as subgoals for the short horizon model via latent matching, without task-specific rewards or hierarchical policies. To keep long-horizon search tractable, HWM learns an action encoder that compresses primitive action chunks into latent macro-actions. On real-world Franka manipulation, HWM solves pick-and-place from a single goal image at 70% success vs. 0% for single-level planning. Across simulated push manipulation and maze navigation, HWM consistently improves performance on long-horizon tasks while requiring up to 3x less planning compute.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2609.25257v2" target="_blank" class="paper-title">Higher-Order Approximation of Exit Functionals in Sampling-Based Stochastic Model Predictive Control</a>
+                        <span class="paper-date">2026-10-12</span>
+                    </div>
+                                        <span class="paper-comment">📝 Accepted for publication in the proceedings of the 2026 IEEE Conference on Decision and Control (CDC 2026). Minor correction to Assumption A4 and a typo fix relative to the conference version. Results are unchanged</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Safety evaluation in sampling-based stochastic model predictive control often requires numerical estimation of exit functionals. The approximation of first-exit times and exit indicators is therefore a key numerical bottleneck, and discretization error in these quantities directly affects the resulting controller. This paper studies how existing higher-order methods for strong approximation of exit times can be brought into safe control. Two cases are highlighted. For general noncommutative dynamics, an adaptive order-1 Milstein discretization is used together with Lévy-area simulation via Wiktorsson's method. For commutative dynamics, an adaptive order-1.5 construction achieves a stronger exit-time rate. Under a local anti-concentration condition on the exit-time law, we show that strong exit-time approximation transfers to strong approximation of the failure indicator. The methods are then studied in the context of chance-constrained path integral control, which provides an exact continuous-time representation of safety through exit events. Numerical experiments compare the two cases in terms of strong exit-time error, failure-indicator error, and closed-loop constraint satisfaction, showing improvement over Euler-Maruyama and thereby enabling existing and future techniques whose applicability depends on improved strong approximation.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2604.01477v2" target="_blank" class="paper-title">Soft MPCritic: Value-Based Reinforcement Learning for Non-Differentiable Predictive Control</a>
+                        <span class="paper-date">2026-10-12</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Reinforcement learning (RL) and model predictive control (MPC) offer complementary strengths, yet existing MPC-RL frameworks commonly rely on gradient-based optimization and therefore cannot handle the non-differentiable dynamics and objectives common in RL. We propose Soft MPCritic, an MPC-RL framework that learns a soft value function and uses sampling-based planning both for online control and for generating value targets. Specifically, Soft MPCritic instantiates MPC with model predictive path integral control (MPPI) and learns a terminal Q-function through fitted value iteration. Because the value targets are computed by the same planner used for control, the learned value function is aligned with the planner and implicitly extends its effective horizon. To keep target generation tractable, we introduce an amortized warm-start strategy that reuses the open-loop action sequences planned during online control to initialize batched MPPI computations of value targets, reducing computational cost without sacrificing solution quality. For robustness to model error, Soft MPCritic plans over scenarios drawn from an ensemble of dynamics models trained for next-step prediction. On both classical and constrained control tasks, Soft MPCritic learns effective policies with non-differentiable objectives, particularly where finite-horizon MPPI alone falls short. Soft MPCritic thus offers a practical blueprint for synthesizing MPC policies directly from black-box objectives, without differentiable surrogates.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.17069v1" target="_blank" class="paper-title">Task-Space Motion-Force Nonlinear Model Predictive Control for Precise and Compliant Control under Uncertainties</a>
+                        <span class="paper-date">2026-10-12</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>In Nonlinear Model Predictive Control (NMPC), the control law is implicitly determined by the solution of an Optimal Control Problem (OCP). Consequently, OCP design is often tailored to specific platforms and tasks, demanding extensive expert knowledge and tuning effort. To address this, we propose a unified NMPC framework that directly plans and controls the robot joints subject to task-space motion and force requirements and is capable of seamlessly generalizing across multiple robotic platforms and diverse tasks. Furthermore, optimization-based methods often treat interactions as rigid contacts, making the torque solution sensitive to the modeling errors of the robot dynamics and the environment. We study the intrinsic task-space impedance of our proposed controller, its partial contraction for differential stability and differential passivity under unmodeled interactions. As a result, our framework enables closing the force-feedback loop in the high-level planning layer to achieve precise motion-force tracking performance, addressing the long-standing challenge of force-feedback NMPC. Finally, we validate our framework on physical hardware, demonstrating hybrid motion-force control on a redundant manipulator and compliant locomotion on a quadruped, while preserving core NMPC advantages such as hard constraint satisfaction, optimal redundancy exploitation, and real-time planning under unforeseen interactions.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>👤 <strong>Hongkun Luo (罗宏昆)</strong> · <a href="https://luohongkun.top/scholar/" target="_blank" style="color:var(--accent)">Academic Page</a> · <a href="https://github.com/luohongk" target="_blank" style="color:var(--accent)">GitHub</a></p>
+            <p style="margin-top:8px">🤖 Generated automatically from <a href="https://arxiv.org" style="color:var(--accent)">arXiv</a> · <a href="https://github.com/luohongk/Embodied-AI-Daily" style="color:var(--accent)">GitHub Repo</a></p>
+            <p style="margin-top:4px">Last update: 2026-10-31 (Beijing Time)</p>
+        </footer>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+        /* ── Mobile menu ── */
+        function toggleMenu() {
+            var overlay = document.getElementById('mobileNav');
+            var btn = document.getElementById('menuToggle');
+            var open = overlay.classList.toggle('open');
+            btn.textContent = open ? '✕' : '☰';
+            document.body.style.overflow = open ? 'hidden' : '';
+        }
+        function closeMenu() {
+            var overlay = document.getElementById('mobileNav');
+            var btn = document.getElementById('menuToggle');
+            overlay.classList.remove('open');
+            btn.textContent = '☰';
+            document.body.style.overflow = '';
+        }
+
+        /* ── Lazy AI-summary renderer ── */
+        // Render markdown + re-typeset MathJax only when a summary is opened.
+        // Math spans ($...$, $$...$$, \(...\), \[...\]) are stashed as
+        // placeholders before marked runs so Markdown never mangles LaTeX.
+        function renderAISummary(details) {
+            if (!details.dataset.lazy) return;   // already rendered
+            var rawMd = details.dataset.md || '';
+
+            // Decode HTML entities we encoded in Python.
+            // Order matters: &amp; must be last (it re-encodes other entities).
+            rawMd = rawMd
+                .replace(/&#10;/g, '\n')
+                .replace(/&quot;/g, '"')
+                .replace(/&lt;/g, '<')
+                .replace(/&gt;/g, '>')
+                .replace(/&amp;/g, '&');
+
+            // 1. Stash math spans.
+            var store = [];
+            function stash(m) { store.push(m); return '\x02MATH' + (store.length - 1) + 'END\x03'; }
+            var protected_ = rawMd
+                .replace(/\$\$[\s\S]+?\$\$/g, stash)
+                .replace(/\\\[[\s\S]+?\\\]/g, stash)
+                .replace(/\$[^$\n]+?\$/g, stash)
+                .replace(/\\\([\s\S]+?\\\)/g, stash);
+
+            // 2. Render markdown.
+            var html = (typeof marked !== 'undefined')
+                ? marked.parse(protected_)
+                : '<pre>' + protected_.replace(/</g, '&lt;') + '</pre>';
+
+            // 3. Restore math spans verbatim.
+            store.forEach(function(expr, i) {
+                html = html.split('\x02MATH' + i + 'END\x03').join(expr);
+            });
+
+            // 4. Inject into DOM.
+            var container = details.querySelector('.ai-content');
+            if (container) container.innerHTML = html;
+
+            // 5. Ask MathJax to typeset just this element.
+            if (window.MathJax && MathJax.typesetPromise) {
+                MathJax.typesetPromise([container]).catch(function(e) {
+                    console.warn('MathJax typeset error:', e);
+                });
+            }
+
+            // Mark done so we never re-render.
+            delete details.dataset.lazy;
+            delete details.dataset.md;
+        }
+
+        // Wire up all existing .ai-summary elements.
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('details.ai-summary[data-lazy]').forEach(function(det) {
+                det.addEventListener('toggle', function () {
+                    if (det.open) renderAISummary(det);
+                }, { once: true });
+            });
+        });
+    </script>
+</body>
+</html>
