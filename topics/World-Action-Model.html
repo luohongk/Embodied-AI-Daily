@@ -615,7 +615,7 @@
                 <a href="Gaussian-Splatting.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#84cc16"></span>
                     <span class="nav-label">Gaussian Splatting</span>
-                    <span class="nav-count">79</span>
+                    <span class="nav-count">78</span>
                 </a>
                 <a href="Visual-SLAM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#22c55e"></span>
@@ -690,12 +690,12 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">69</span>
+                    <span class="nav-count">70</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">78</span>
+                    <span class="nav-count">76</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -834,7 +834,7 @@
             <a href="Gaussian-Splatting.html" class="nav-item">
                 <span class="nav-dot" style="background:#84cc16"></span>
                 <span class="nav-label">Gaussian Splatting</span>
-                <span class="nav-count">79</span>
+                <span class="nav-count">78</span>
             </a>
             <a href="Visual-SLAM.html" class="nav-item">
                 <span class="nav-dot" style="background:#22c55e"></span>
@@ -909,12 +909,12 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">69</span>
+                <span class="nav-count">70</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">78</span>
+                <span class="nav-count">76</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -1028,6 +1028,30 @@
                 <span class="topic-count">80 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.39367v1" target="_blank" class="paper-title">Utility-WAM: Correcting Future-Induced Action Changes</a>
+                        <span class="paper-date">2026-10-29</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>World Action Models (WAMs) can condition robot actions on generated visual futures, but this additional context is neither cost-free nor uniformly beneficial. We examine what a predicted future actually changes: the action delta $Δa$ between the future-conditioned and future-free execution paths of the same model. Under a shared WAM checkpoint, this delta barely shifts average benchmark success ($+0.8$ points on LIBERO, $-0.8$ on RoboTwin~2.0), while generating visual futures increases inference latency by 1.7--1.9$\times$. These aggregate metrics conceal a concentrated failure mode that we term \emph{future-induced negative transfer}: while predictive deltas benefit long-horizon tasks ($+2.4$ points on LIBERO-Long) and remain negligible on most routine manipulations, they induce severe degradation on precision tasks---with \emph{Press Stapler} and \emph{Place Can Basket} losing 54.0 and 34.0 points, recurring as top failure modes across independently trained WAM variants. We introduce \textbf{Utility-WAM} for in-place correction of future-conditioned control. Its primary learning component is a residual adapter that repairs future-induced velocity deltas under a frozen shared WAM by aligning them with ground-truth dynamic guidance and penalizing excess error beyond the future-free baseline. The adapter selectively eliminates the majority of severe task drops (reducing losses to 6.0 and 14.0 points) while preserving long-horizon foresight. To eliminate superfluous video computation, a lightweight pre-generation gate reuses counterfactual action outcomes to selectively bypass video generation on 75.5\% of RoboTwin queries, cutting latency by 38\% while improving average success to 93.3\% on RoboTwin~2.0 and 98.9\% on LIBERO. On physical bimanual manipulation across three real-world tasks, Utility-WAM succeeds in 53 of 60 trials, compared to 43 for FAST-WAM.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.39306v1" target="_blank" class="paper-title">CAD-WAM: Anticipating Geometry for Text-to-CAD Generation</a>
+                        <span class="paper-date">2026-10-29</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Generating editable computer-aided design (CAD) models from text requires selecting operations that produce the intended changes to the geometry constructed so far. An incorrect operation can compromise subsequent steps, making reliable multi-step generation challenging. Existing methods based on large language models (LLMs) primarily learn to predict commands, without explicit supervision of the geometric states those commands should produce. Inspired by world-action models, we introduce CAD-WAM, which couples geometry-conditioned action generation with next-state prediction. We define complete modeling operations as actions in a CAD domain-specific language (DSL) and encode surface point clouds of intermediate solids into compact latent states using a pretrained variational autoencoder. An LLM backbone generates the next action from the target description and current geometric state, while an auxiliary head on the same backbone predicts the next state to provide geometric supervision during training. We construct step-wise training trajectories from parametric CAD models in the DeepCAD dataset, pairing each trajectory with an expert-level textual description. At inference, each generated action is executed by a CAD kernel, and the resulting solid is re-encoded to inform the next decision. On the DeepCAD test set, CAD-WAM outperforms the task-specific baselines in geometric accuracy and output validity, with larger gains on models requiring more operations, and produces more accurate geometry than general-purpose LLMs prompted with the same DSL. Ablations further show that next-state supervision reduces mean Chamfer distance by 13.2\% relative to an otherwise identical model trained only to predict actions. Code is available at https://github.com/Lzy-1037/CAD-WAM.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2608.23927v3" target="_blank" class="paper-title">GlanceWAM: Sparse Test-Time Imagination for World-Action Models</a>
@@ -1145,10 +1169,7 @@
                         <span class="paper-date">2026-10-27</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="好的，作为一名人工智能研究与学术论文分析专家，我将严格按照您要求的章节和格式，对这篇论文进行详细的中文解读。&#10;&#10;---&#10;&#10;## 0. 概览（Concise Summary）&#10;&#10;- **主题（Topic）**：机器人学中的接触丰富操作（Contact-Rich Manipulation），特别是利用力觉信号进行闭环控制。&#10;- **问题（Problem）**：现有方法大多将力信号仅作为额外的观测模态，未能充分利用其预测未来交互动态和指导执行时反馈修正的潜力，导致在接触状态变化时鲁棒性不足。&#10;- **方法（Method）**：提出了一个名为 **FAWAM** 的力感知世界动作模型。该模型在三个层次上系统性地整合力信息：**感知**（编码历史力/力矩信号）、**预测**（联合预测未来动作和末端执行器力/力矩）和**闭环执行**（利用预测的力轨迹作为参考，通过残差修正模块在线修正动作）。&#10;- **创新（Innovation）**：&#10;    1.  提出了一个**力预见动作模型**，将力信号通过 AdaLN-Zero 调制注入动作生成，并联合预测未来动作和力轨迹。&#10;    2.  提出了一个**力引导残差修正器**，利用预测力与实时力反馈的差异，在动作块执行期间在线修正后续动作。&#10;- **意义（Significance）**：FAWAM 在多个真实世界的接触丰富操作任务上，平均成功率比纯视觉基线提升 **36.25%**，比现有力感知基线提升 **21.25%**。这证明了系统性整合力信号（感知、预测、修正）对于实现鲁棒的接触丰富操作至关重要。&#10;- **一句话总结**：本文提出 FAWAM，通过将力信号系统性地整合到感知、预测和闭环执行三个层面，显著提升了机器人在接触丰富操作任务中的鲁棒性和成功率。&#10;&#10;## 1. 研究动机（Motivation）&#10;&#10;- **问题与空白**：接触丰富操作（如擦拭、剥离、推动）需要机器人持续与环境互动。然而，仅依赖视觉观测往往不足，因为关键的交互状态（如微弱接触、过大压力、卡住）难以从图像中推断。虽然已有工作将力觉融入策略，但大多将其视为**额外的观测输入**，或仅用于**低层反应式控制**。它们没有显式地建模未来接触状态的演化（如接触力的变化），因此缺乏预测性的力/力矩参考来指导执行时的修正。&#10;- **为什么重要**：人类在执行接触任务时，会持续**预判**动作的接触结果，并在感觉反馈偏离预期时进行调整。这表明接触丰富操作不仅是反应式的“观测-动作”映射，更是一个**主动预测**范式。机器人需要预判其计划动作序列下视觉和接触状态的演化。&#10;- **挑战**：如何设计一个框架，既能利用力信号进行**前瞻性预测**（预测未来接触状态），又能将这些预测作为**在线参考**，在偏差发生时及时修正动作，防止失败发生。&#10;&#10;## 2. 创新点（Innovation）&#10;&#10;- **关键创新**：提出了一个**三层次力整合框架**，将力信号从单一的观测模态提升为预测和修正的核心驱动力。&#10;- **与现有方案的不同**：&#10;    - **现有方法**：仅将力作为额外输入（如 ForceVLA），或仅用于辅助任务（如 TA-VLA 的辅助力预测），缺乏对力信号的系统性利用，特别是**执行时的闭环修正**。&#10;    - **FAWAM**：&#10;        1.  **感知层**：通过编码历史力/力矩来估计当前接触状态。&#10;        2.  **预测层**：联合预测未来动作和未来力/力矩，显式地学习动作与接触后果之间的耦合关系。&#10;        3.  **执行层**：引入一个轻量级的残差修正器，利用**预测力与实测力之间的差异**作为在线反馈信号，动态调整动作块中的剩余动作。&#10;- **为什么能奏效**：这种设计模仿了人类“感知-预判-反应”的闭环控制模式。联合预测迫使模型学习物理上合理的动作-力关系；而残差修正则提供了一个“安全网”，使系统能够适应未建模的接触变化（如物体位置偏移、表面倾斜变化），从而显著提升鲁棒性。&#10;&#10;## 3. 主要内容（Main Content）【重点】&#10;&#10;### 3.1 设计架构与方法&#10;&#10;FAWAM 包含两个主要模块，如图 2 所示：&#10;&#10;1.  **力预见动作模型 (Force-Envisioned Action Model)**：运行在 **1 Hz** 的低频策略。它负责根据历史观测（视觉、语言指令、力/力矩）生成一个**动作块**（action chunk），并同时预测该动作块对应的**未来力/力矩轨迹**。&#10;2.  **力引导残差修正器 (Force-Guided Residual Corrector)**：运行在 **10 Hz** 的高频修正模块。在动作块执行期间，它利用预测的力轨迹作为参考，对比实时力反馈，计算出**残差动作**，对原始动作块进行在线修正。&#10;&#10;### 3.2 关键算法与数学推导&#10;&#10;**1. 力预见动作模型**&#10;&#10;- **力特征编码**：将最近 $H_f$ 步的 6 轴力/力矩历史 $w_{t-H_f+1:t}$ 编码为紧凑的接触特征 $c_t$。&#10;  $$c_t = \text{Enc}_f(w_{t-H_f+1:t})$$&#10;  其中 $\text{Enc}_f$ 是一个轻量级 MLP。&#10;&#10;- **力条件化动作生成**：基于 GE-Act 架构，将接触特征 $c_t$ 通过 **AdaLN-Zero** 调制注入到动作解码器的 DiT 块中。原始 AdaLN-Zero 参数 $u_t^{(i)}$ 被加上一个由 $c_t$ 预测的偏移量：&#10;  $$\bar{u}_t^{(i)} = u_t^{(i)} + \text{MLP}_f^{(i)}(c_t)$$&#10;  其中 $\text{MLP}_f^{(i)}$ 的最后一层初始化为零，以保证训练开始时模型行为不变。&#10;&#10;- **联合动作-力预测**：将原始的动作投影层替换为一个联合线性投影，输出拼接后的动作轨迹 $A_t$ 和力/力矩轨迹 $W_t$，即 $Z_t = [A_t, W_t]$。&#10;&#10;- **两阶段训练**：&#10;    - **第一阶段**：基于 GE-Base 微调视频生成模型，使用潜空间流匹配目标：&#10;      $$L_{\text{stage1}} = \mathbb{E} \left[ \left\| v_\psi^O(\hat{O}_t^\alpha, \alpha, L_t, I_{t-K:t}) - (O_t - \epsilon_O) \right\|_2^2 \right]$$&#10;    - **第二阶段**：冻结视频世界模型，训练力感知动作解码器。解码器预测联合速度 $[\hat{v}_t^A, \hat{v}_t^W] = v_\theta^Z(\hat{Z}_t^\alpha, \alpha, \tilde{o}_t, q_t, c_t)$，损失函数为：&#10;      $$L_{\text{action}} = \mathbb{E} \left[ \left\| \hat{v}_t^A - (A_t - \epsilon_A) \right\|_2^2 \right], \quad L_{\text{force}} = \mathbb{E} \left[ \left\| \hat{v}_t^W - (W_t - \epsilon_W) \right\|_2^2 \right]$$&#10;      $$L_{\text{stage2}} = L_{\text{action}} + \lambda_F L_{\text{force}}$$&#10;&#10;**2. 力引导残差修正器**&#10;&#10;- **输入**：力/力矩跟踪误差 $e_{t-H_e+1:t}^w$，接触特征 $c_t$，未来基础动作块 $a_{t+1:t+H_p}^{\text{base}}$，预测的未来力块 $w_{t+1:t+H_p}^{\text{pred}}$，当前本体状态 $q_t$。&#10;  $$e_{t-H_e+1:t}^w = w_{t-H_e+1:t}^{\text{meas}} - w_{t-H_e+1:t}^{\text{pred}}$$&#10;&#10;- **修正过程**：残差模型 $\text{Res}_\phi$ 输出残差动作 $\Delta a_{t+1:t+H_r}^{\text{res}}$ 和一个门控标量 $g_t^{\text{res}}$：&#10;  $$\Delta a_{t+1:t+H_r}^{\text{res}}, g_t^{\text{res}} = \text{Res}_\phi(e_{t-H_e+1:t}^w, c_t, a_{t+1:t+H_p}^{\text{base}}, w_{t+1:t+H_p}^{\text{pred}}, q_t)$$&#10;  门控 $g_t^{\text{res}}$ 通过阈值 $\tau=0.8$ 转换为二进制掩码 $\kappa_t$。最终修正后的动作为：&#10;  $$a_{t+1:t+H_r}^{\text{cor}} = a_{t+1:t+H_r}^{\text{base}} + \kappa_t \Delta a_{t+1:t+H_r}^{\text{res}}$$&#10;&#10;- **训练**：通过人类干预收集修正数据。损失函数包含残差回归和门控分类两部分：&#10;  $$L_{\text{res}} = \mathbb{E} \left[ \left\| \Delta a^{\text{res}} - \Delta a^{\text{gt}} \right\|_2^2 + \lambda_{\text{gate}} \text{BCE}(g_t^{\text{res}}, y_t) \right]$$&#10;  其中 $y_t$ 表示该样本是否来自人类干预。&#10;&#10;### 3.3 模型、训练与数据集&#10;&#10;- **模型**：基于 **GE-Act** 的视觉-语言-动作模型作为骨干。力编码器为 3 层 MLP。残差修正器为 3 层 MLP。&#10;- **训练**：&#10;    - **硬件**：8 块 NVIDIA A100 GPU。&#10;    - **阶段一**：微调视频生成模型 30,000 步，学习率 $3 \times 10^{-5}$。&#10;    - **阶段二**：训练力感知动作解码器 30,000 步，学习率 $1.5 \times 10^{-4}$，$\lambda_F=1$。&#10;    - **残差修正器**：单独训练 500 个 epoch，使用平衡的干预/非干预样本（各 64 个），学习率 $3 \times 10^{-4}$，$\lambda_{\text{gate}}=1$。&#10;- **数据集**：&#10;    - **任务**：四种接触丰富操作任务（擦白板、剥黄瓜、推箱子、擦花瓶），如图 3 所示。&#10;    - **数据量**：每个任务 90 个演示用于训练基础模型，20 个人类干预片段用于训练残差修正器。&#10;    - **数据采集**：使用 FACTR 力反馈主从遥操作系统。视觉（30 Hz，3 个 Intel RealSense D435i 相机）、本体状态（30 Hz）、6 轴力/力矩（120 Hz，ATI Axia80-M8 传感器）。&#10;&#10;### 3.4 实验设置与结果&#10;&#10;- **基线**：纯视觉基线（π0.5, GE-Act）和力感知基线（ForceVLA, TA-VLA）。&#10;- **主要结果（表 1）**：&#10;    - FAWAM 在所有任务上平均成功率 **85%**，远超其他基线。&#10;    - 相比最佳纯视觉基线（GE-Act, 48.75%）提升 **36.25%**。&#10;    - 相比最佳力感知基线（ForceVLA/TA-VLA, 63.75%）提升 **21.25%**。&#10;    - 即使没有残差修正（FAWAM w/o Res），平均成功率也达到 **73.75%**，证明了力预见动作模型的有效性。&#10;- **消融实验（表 2）**：&#10;    - 仅将力作为观测（Obs）提升有限（+7.5%）。&#10;    - 联合动作-力预测（Pre）带来显著提升（+17.5%）。&#10;    - 残差修正（Res）同样带来显著提升（+18.75%）。&#10;    - 三者结合（Obs+Pre+Res）达到最佳效果（85%），证明其互补性。&#10;- **鲁棒性测试（表 3，图 5）**：&#10;    - 在执行过程中引入外部扰动（如倾斜板子、移动盒子）。&#10;    - 有残差修正的 FAWAM 能显著恢复并完成任务，而无修正的模型则几乎全部失败。&#10;&#10;### 3.5 技术细节&#10;&#10;- **力信号处理**：使用 10 Hz 截止频率的二阶巴特沃斯低通滤波器抑制高频噪声。&#10;- **力编码器输入**：使用最近 0.5 秒的力/力矩历史，对应 60 帧数据（120 Hz）。&#10;- **残差修正器输入**：包括 60 帧滤波后的力历史、预测的未来力块、即将执行的基础动作块、过去的力跟踪误差和当前本体状态。&#10;- **门控阈值**：通过实验（附录 A.6，图 15）确定 $\tau=0.8$ 为最佳，既能选择性激活修正，又避免过度扰动基础策略。&#10;&#10;## 4. 意义与影响（Significance and Impact）&#10;&#10;- **解决的问题与贡献**：&#10;    - 解决了现有力感知方法中力信号利用不充分的问题，提出了一个从感知、预测到执行的**系统性力整合框架**。&#10;    - 证明了**联合预测未来动作和力**可以学习到更物理一致的动作表示。&#10;    - 提出了一个新颖的**力引导残差修正机制**，利用预测力作为在线参考，实现了对未建模接触变化的鲁棒适应。&#10;- **对未来研究/应用的影响**：&#10;    - 为接触丰富操作提供了一个新的范式，即从“观测-动作”映射转向“感知-预测-修正”的闭环控制。&#10;    - 其模块化设计（基础策略 + 残差修正器）易于与其他策略结合，有望提升现有机器人系统的鲁棒性。&#10;    - 为未来在更复杂、更动态的环境中部署机器人提供了思路。&#10;- **局限与开放问题**：&#10;    - **缺乏大规模力觉视频数据**：无法将力整合到视频生成模型中，限制了模型的泛化能力。&#10;    - **修正数据有限**：残差修正器仅从少量人类干预中学习，可能无法覆盖所有失败模式，尤其是在大偏差情况下。&#10;    - **间接接触信息**：末端执行器力/力矩预测仅提供间接接触信息。未来工作可考虑整合更直接的接触状态表示，如局部接触框架和密集触觉信号。&#10;&#10;## 5. 澄清与简化（Clarifications and Simplifications）&#10;&#10;- **类比：开车**：&#10;    - **纯视觉策略**：相当于一个新手司机，只看着路（视觉），但不知道方向盘和油门踩下去会有什么感觉（力）。遇到路面湿滑或侧风（接触变化）时，很容易失控。&#10;    - **现有力感知策略**：相当于司机能感觉到方向盘上的阻力（力作为额外观测），但只能被动反应，比如感觉方向盘重了才去修正。&#10;    - **FAWAM**：相当于一个有经验的司机。他不仅看路，还能**预判**（预测）在某个弯道打多少方向会产生多大的侧向力。当实际感觉到的侧向力与预判不符时（比如有侧风），他会**主动、平滑地**修正方向盘（残差修正），而不是等到车跑偏了才猛打方向。这个“预判-对比-修正”的闭环就是 FAWAM 的核心。&#10;- **AdaLN-Zero 调制**：可以理解为一种“注意力调节器”。基础模型（GE-Act）有自己的“注意力”分配方式。FAWAM 通过力信号计算出一些“调节参数”，告诉模型：“嘿，现在接触很紧，你的注意力应该更多地放在力信号上，相应地调整你的动作生成。” 初始化为零保证了模型不会一开始就“乱调”。&#10;- **残差修正器**：可以看作一个“微调旋钮”。基础策略生成一个“大致正确”的动作计划（动作块）。残差修正器则像一个“纠错员”，它看着预测的力（理想情况）和实际的力（真实情况），如果两者有差异，它就拧一下“微调旋钮”，对后续动作进行小幅修正，确保机器人始终走在正确的“接触路径”上。门控机制则像一个“开关”，只在必要时才启用这个“微调旋钮”，避免不必要的干扰。&#10;&#10;## 6. 补充说明（Additional Notes）&#10;&#10;- **相关工作关联**：&#10;    - **力感知策略**：本文与 ForceVLA、TA-VLA 等工作同属力感知策略领域，但 FAWAM 的创新在于将力用于预测和闭环修正，而非仅仅作为输入。&#10;    - **世界模型**：本文与 GE-Act、WorldVLA 等世界动作模型相关，但 FAWAM 首次将力/力矩预测纳入世界模型的预测范畴。&#10;    - **残差策略与数据聚合**：本文与 CR-DAgger 等残差策略学习工作相关，但 FAWAM 的创新在于使用**预测的力轨迹**作为残差修正的参考信号，而非仅依赖当前观测。&#10;- **最重要的图表**：&#10;    - **图 1**：直观地对比了“仅将力作为观测”和 FAWAM “系统性力整合”在擦拭任务中的效果差异，清晰地展示了 FAWAM 的核心优势。&#10;    - **图 2**：FAWAM 的整体架构图，是理解整个方法设计的关键。它清晰地展示了两个核心模块（力预见动作模型和力引导残差修正器）及其输入输出关系。&#10;    - **表 1**：主要实验结果，用数据证明了 FAWAM 相对于所有基线的显著优势。&#10;    - **表 2**：消融实验结果，定量分析了每个力相关组件（观测、预测、修正）的贡献，证明了它们之间的互补性。&#10;    - **图 5**：鲁棒性测试的定性结果，直观地展示了在外部扰动下，有无残差修正模块的显著性能差异。">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Force signals provide critical interaction cues for contact-rich robotic manipulation. However, existing methods mostly use force as an additional observation modality, without fully exploiting its role in modeling future interaction dynamics or guiding execution-time feedback correction. In this paper, we propose FAWAM, a force-aware world action model that incorporates force information at three levels: perception, prediction, and closed-loop execution. FAWAM first encodes historical 6-axis force/torque signals to modulate action generation, then jointly predicts future actions and end-effector wrenches to explicitly model contact evolution. It further introduces a residual correction module that uses the predicted wrench trajectory as an execution-time reference to refine actions online based on real-time force feedback. Real-world experiments across multiple contact-rich tasks show that FAWAM improves the average success rate by 36.25% over vision-only baselines and 21.25% over existing force-aware baselines, demonstrating the effectiveness of our force-aware framework for robust contact-rich manipulation.</p>
@@ -1968,30 +1989,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>World-action models have recently improved autonomous driving by jointly learning future scene prediction and trajectory generation. Most existing approaches model the future primarily through RGB appearance, and recent works have begun to incorporate geometric prediction to improve spatial understanding. However, dense geometry describes the spatial layout of the entire scene without indicating which parts are most relevant to the ego vehicle's action. For driving, the model must also identify and anticipate where it can safely move and which regions may pose collision risks. Jointly modeling action-relevant regions and future geometry can provide the policy with both driving-relevant cues and their corresponding spatial structure. We therefore propose AffordDrive3D, an affordance- and geometry-aware world-action model that jointly learns future action-relevant regions and spatial structure. In order to capture the scene semantics and driving context needed for driving affordance prediction, we build AffordDrive3D on a VLM backbone to forecast drivable areas and collision-critical regions that directly affect ego motion, while predicting future geometry from RGB world-model latents. On NAVSIM, AffordDrive3D achieves state-of-the-art performance with 91.3 PDMS and 89.9 EPDMS, demonstrating the effectiveness of jointly modeling future affordances and geometry for trajectory planning. Project Page: https://afforddrive3d.github.io/</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.08436v2" target="_blank" class="paper-title">EgoWAM: World Action Models Beyond Pixels with In-the-Wild Egocentric Human Data</a>
-                        <span class="paper-date">2026-10-13</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Egocentric human data offers scalable supervision for robot manipulation. However, behavior cloning entangles transferable content like objects, scenes, and task semantics, with non-transferable factors like human morphology, head motion, and behavioral style. We study whether World Action Models (WAMs) provide a better training signal by requiring policies to predict not only actions, but also how the scene evolves. The central question is what world representation best enables human-to-robot transfer. We hypothesize that an effective world target should abstract appearance, capture agent-invariant physical effects, and separate camera motion from environment change. We introduce EgoWAM, a controlled human-robot co-training framework that fixes the policy backbone, action head, and data mixture while varying only the world prediction target, comparing Pixel, DINO, and 3D motion flow. Across three real-world bimanual tasks, WAM co-training scales more effectively with in-the-wild egocentric human data than behavior cloning. Pixel-based prediction transfers weakly, while DINO and 3D flow yield substantial gains: DINO improves out-of-distribution object and scene generalization by up to 4x, and 3D flow improves in-domain performance by 20-30%. More details: https://gatech-rl2.github.io/egowam.github.io</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2610.17688v1" target="_blank" class="paper-title">OccWAM: Occupancy World-Action Models with Joint Scene-to-Ego Flow Matching</a>
-                        <span class="paper-date">2026-10-13</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Occupancy world models provide a structured, metric representation of future driving scenes, making them a promising basis for end-to-end autonomous driving. However, existing occupancy-aware planners typically couple occupancy prediction and action generation through either hierarchical coupling or parallel multi-task learning. Hierarchical methods use occupancy either as a fully predicted future preceding action generation or as an action-conditioned rollout for trajectory evaluation, whereas parallel multi-task methods predict occupancy alongside planning through a separate branch or auxiliary objective. These interfaces retain either an explicit generation order or a role asymmetry, limiting reciprocal interaction between world prediction and action generation during trajectory formation. We propose OccWAM, an occupancy-native world-action model that jointly generates dense future occupancy and continuous ego trajectories via flow matching conditioned on scene representations. Building on this joint formulation, we introduce scene-to-ego world-action flow matching, a two-stage formulation. The first stage predicts scene-centric occupancy together with an absolute ego trajectory, providing a stable representation of future scene evolution. The same predicted world is then re-indexed into the future ego frames induced by the initial trajectory, where ego motion is represented through adjacent pose increments and a second joint flow refines ego-centric occupancy and motion for action-aligned planning. Unlike video-based world-action models, OccWAM preserves explicit semantic geometry for direct planning reasoning without pixel synthesis. Extensive experiments on Bench2Drive and nuScenes demonstrate state-of-the-art performance in closed-loop driving, open-loop planning, and future occupancy prediction.</p>
                     </details>
                 </div>
             </div>

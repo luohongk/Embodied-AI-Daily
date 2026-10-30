@@ -615,7 +615,7 @@
                 <a href="Gaussian-Splatting.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#84cc16"></span>
                     <span class="nav-label">Gaussian Splatting</span>
-                    <span class="nav-count">79</span>
+                    <span class="nav-count">78</span>
                 </a>
                 <a href="Visual-SLAM.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#22c55e"></span>
@@ -690,12 +690,12 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">69</span>
+                    <span class="nav-count">70</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
                     <span class="nav-label">Reinforcement Learning</span>
-                    <span class="nav-count">78</span>
+                    <span class="nav-count">76</span>
                 </a>
                 <a href="PPO.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ef4444"></span>
@@ -834,7 +834,7 @@
             <a href="Gaussian-Splatting.html" class="nav-item">
                 <span class="nav-dot" style="background:#84cc16"></span>
                 <span class="nav-label">Gaussian Splatting</span>
-                <span class="nav-count">79</span>
+                <span class="nav-count">78</span>
             </a>
             <a href="Visual-SLAM.html" class="nav-item">
                 <span class="nav-dot" style="background:#22c55e"></span>
@@ -909,12 +909,12 @@
             <a href="Deep-Learning.html" class="nav-item active">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">69</span>
+                <span class="nav-count">70</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
                 <span class="nav-label">Reinforcement Learning</span>
-                <span class="nav-count">78</span>
+                <span class="nav-count">76</span>
             </a>
             <a href="PPO.html" class="nav-item">
                 <span class="nav-dot" style="background:#ef4444"></span>
@@ -1025,9 +1025,81 @@
         <section class="topic-section">
             <div class="topic-header">
                 <span class="topic-badge" style="background:#ec4899">Deep Learning</span>
-                <span class="topic-count">69 papers</span>
+                <span class="topic-count">70 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2602.12183v2" target="_blank" class="paper-title">Data-Efficient Unknown Attack Detection in IoT Networks Using Pretrained Language Models</a>
+                        <span class="paper-date">2026-10-29</span>
+                    </div>
+                                        <span class="paper-comment">📝 19 pages, 2 figures</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>The rapid evolution of cyberattacks continues to drive the emergence of unknown (zero-day) threats, posing significant challenges for network intrusion detection systems in Internet of Things (IoT) networks. Existing machine learning and deep learning approaches typically rely on large labeled datasets, payload inspection, or closed-set classification, limiting their effectiveness under data scarcity, encrypted traffic, and distribution shifts. To address these limitations, we propose SiamXBERT, a data-efficient, open-set Siamese meta-learning framework built on a pretrained language model for unknown-attack detection. The framework constructs a dual-modality feature representation by integrating flow-level and packet-level information, enabling richer behavioral modeling while remaining compatible with encrypted traffic. The model learns similarity patterns for known benign and attack classes using 100 labeled samples per class. It flags traffic that does not sufficiently match any known class as potentially unknown, using a threshold set without unknown-attack data. We evaluate SiamXBERT on two IoT intrusion detection datasets against five state-of-the-art detection methods. When training and testing are performed on the same dataset at this labeling budget, SiamXBERT attains the highest unknown F1-score, exceeding the strongest competing method on each dataset by 84.8% and 37.4%; the improvement is statistically significant against all five methods on one dataset and against four of the five on the other. When a model trained on one dataset is tested on another, SiamXBERT transfers effectively in one direction but degrades in the reverse, reflecting the rejection behavior learned from the source traffic rather than the choice of threshold. These results highlight the practicality of SiamXBERT for data-efficient unknown attack detection in real-world IoT environments.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.39300v1" target="_blank" class="paper-title">Multi-Solution Inverse Design of Pixelated Patch Antennas Using an Autoregressive Transformer</a>
+                        <span class="paper-date">2026-10-29</span>
+                    </div>
+                                        <span class="paper-comment">📝 16 pages, 28 figures, 7 tables</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Deep-learning-based inverse design has emerged as a promising framework for pixelated patch antenna synthesis by enabling broader exploration of discrete geometry spaces and reducing design time compared with conventional template-based methods. Existing methods, including surrogate-assisted metaheuristic optimization, tandem inverse networks, and diffusion models, have advanced the field but still face practical limitations. Metaheuristic methods such as binary particle swarm optimization (BPSO) are sensitive to initialization and search hyperparameters and are often time-consuming, tandem networks have difficulty capturing the one-to-many nature of inverse antenna design, and diffusion models may require excessive complexity and data for moderate-scale binary layout synthesis. In this paper, an autoregressive (AR) transformer is presented for the inverse design of 10 x 10 pixelated patch antennas. Its sequential discrete generation process enables the synthesis of multiple feasible structures for a given target response. The pretrained model is further fine-tuned for dual-band design using step-shaped target responses with sharp spectral transitions, allowing intuitive band specification without manually constructing detailed S11 curves. Compared with BPSO, our proposed method generates valid and diverse antenna candidates more efficiently. Fabricated and measured examples confirm that distinct pixelated layouts can realize the desired antenna responses, thereby demonstrating the multi-solution capability of the proposed framework.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2602.22488v2" target="_blank" class="paper-title">Explainability-Aware Evaluation of Transfer Learning Models for IoT DDoS Detection Under Resource Constraints</a>
+                        <span class="paper-date">2026-10-29</span>
+                    </div>
+                                        <span class="paper-comment">📝 Updated version with several corrections, contains more clarification, and corrected typos in at the text and references</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Distributed denial of service (DDoS) attacks threaten the availability of Internet of Things (IoT) infrastructures, particularly under resource-constrained deployment conditions. Although transfer learning models have shown promising detection accuracy, their reliability, computational feasibility, and interpretability in operational environments remain insufficiently explored. This study presents an explainability aware empirical evaluation of seven pre-trained convolutional neural network architectures for multi-class IoT DDoS detection using the CICDDoS2019 dataset and an image-based traffic representation. The analysis integrates performance metrics, reliability-oriented statistics (MCC, Youden Index, confidence intervals), latency and training cost assessment, and interpretability evaluation using Grad-CAM and SHAP. Results indicate that DenseNet and MobileNet based architectures achieve strong detection performance while demonstrating superior reliability and compact, class-consistent attribution patterns. DenseNet169 offers the strongest reliability and interpretability alignment, whereas MobileNetV3 provides an effective latency-accuracy trade-off for fog-level deployment. The findings emphasize the importance of combining performance, reliability, and explainability criteria when selecting deep learning models for IoT DDoS detection.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.39195v1" target="_blank" class="paper-title">Analyzing Condensation on Patterned Surfaces via Deep Learning</a>
+                        <span class="paper-date">2026-10-29</span>
+                    </div>
+                                        <span class="paper-comment">📝 13 pages, 4 figures</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Dropwise condensation is key to power and water systems. State-of-the-art condensation surfaces are often inhomogeneous, either patterned by design or random defects. Inhomogeneous surface features dictate the rates of each stage of dropwise condensation-nucleation, growth, coalescence, and shedding. Characterizing these rates requires the precise detection of thousands of droplets. Yet, existing segmentation methods are unable to detect droplets on inhomogeneous surfaces. We developed TileSAM3, a universal droplet segmentation tool built on the Segment Anything Model 3 (SAM3). Hierarchical tiling with per-tile inference followed by post-processing extended SAM3's detection cap and raised the effective resolution of small droplets. We created two datasets: High Quality Droplet Dataset (N=365,826; HQDD) with homogeneous surfaces and Low Quality Droplet Dataset (N=63,577; LQDD) with patterned, defect-laden surfaces under adverse lighting. TileSAM3 closely reproduced thresholding annotations on HQDD, surpassed it over sixfold on LQDD (Average Precision 0.57 versus 0.088), and outperformed other deep learning models on all metrics evaluated. Combined with KD-tree tracking, TileSAM3 identified localized nucleation and coalescence in narrow active bands on a stiffness-patterned surface. TileSAM3 enables analysis of understudied inhomogeneous substrates with poor lighting and videography which facilitates faster, lower cost research of condensation materials.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.38976v1" target="_blank" class="paper-title">The Utility of Physics-Informed Machine Learning in Solar Power Production Forecasting</a>
+                        <span class="paper-date">2026-10-28</span>
+                    </div>
+                                        <span class="paper-comment">📝 Submitted to Solar Energy</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Physics-informed machine learning (PIML) and hybrid modeling have attracted significant attention as approaches for combining physical knowledge with the flexibility of deep learning. In this work, we investigate whether these approaches deliver their commonly claimed benefits for large-scale photovoltaic (PV) power forecasting. We develop two hybrid forecasting architectures that integrate the ADR physical PV efficiency model with the TSMixer neural forecasting architecture through feature augmentation and residual learning. The proposed models are evaluated on a dataset comprising over 3 million samples from 3,713 PV installations across 33 European countries. We assess convergence speed, forecasting accuracy, transferability across geographical regions, and data efficiency. Although the physics-informed models seem to exhibit slightly faster convergence during training, they do not achieve consistent improvements in test-set accuracy, generalization, or performance under limited training data compared to the purely data-driven baseline. These findings suggest that, for modern deep forecasting architectures trained on large datasets, explicitly incorporating the ADR physical model provides limited practical benefit for day-ahead PV forecasting.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.38890v1" target="_blank" class="paper-title">IDSForge: Self-Explaining Network Intrusion Detection Through Neural Behavioral Rule Learning</a>
+                        <span class="paper-date">2026-10-28</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Anomaly-based network intrusion detection systems (NIDS) can detect previously unseen attacks by identifying deviations from benign traffic. However, deep learning-based anomaly detectors typically rely on implicit decision boundaries, and post-hoc explanations may not faithfully reflect the detection logic. This makes alerts difficult to interpret and audit. To address this issue, we present IDSForge, an anomaly-based NIDS that directly learns explicit, executable behavioral rules from benign traffic, making its detection logic interpretable by design. IDSForge uses the same rule set for detection and explanation, ensuring explanation fidelity by construction. It uses an explicit distributional autoencoder trained only on benign samples to learn axis-aligned regions of benign traffic. A high-speed rule compiler then consolidates these instance-specific regions into a compact set of feature-level interval constraints. These rules can be executed directly by popular NIDS engines, supporting high-throughput inspection with low overhead. To adapt to changes in traffic, a self-distillation co-evolver updates the model and rule set incrementally when the false-positive rate on analyst-verified traffic exceeds a target threshold. Our evaluation shows that IDSForge reduces F1 error by $5.7\times$ to $47\times$ relative to state-of-the-art anomaly-based baselines. Deployed in Suricata, IDSForge sustains a throughput of 7.8 Gbps with a median per-packet latency overhead of 3.1 $μ\text{s}$.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2610.38773v1" target="_blank" class="paper-title">Rennala NSGD: Asynchronous Stochastic Optimization Beyond Euclidean Geometry</a>
@@ -1797,66 +1869,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Deep learning models are increasingly subject to explicit requirements, or constraints, such as safety levels, fairness limits, and sparsity budgets. In practice, such requirements are often handled through fixed weighted-sum penalization: the constraints are added to the task loss with fixed coefficients, and the resulting scalarized objective is minimized. This position paper argues that fixed penalization is often ill-suited to deep learning problems with non-negotiable requirements, for three main reasons. First, in non-convex settings, the penalized and constrained problems are not, in general, equivalent, so a minimizer of the penalized objective need not solve the constrained problem. Second, a penalty coefficient sets an objective-constraint trade-off rather than the constraint level, so finding an acceptable coefficient often takes trial and error, each trial a full training run. Third, fixed penalization weakens hard requirements into soft penalties to be traded off against task performance. As a result, compliance is no longer built into the problem, and requirements can be quietly relaxed. We therefore argue that, when a deep learning problem specifies non-negotiable requirements, one should solve the constrained problem itself instead of a surrogate defined by fixed penalization.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2610.32730v2" target="_blank" class="paper-title">Cross-Architectural Feature Fusion for Coronary Artery Stenosis Detection in X-ray Angiography</a>
-                        <span class="paper-date">2026-10-26</span>
-                    </div>
-                                        <span class="paper-comment">📝 12 pages, 3 figures</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Coronary artery disease remains a leading cause of mortality, with stenosis detection from invasive X-ray Coronary Angiography (XCA) critical for diagnosis. Manual interpretation is time-consuming, subjective, and variable, especially under low contrast and vessel overlap. Existing deep learning methods often rely solely on detection or segmentation, limiting performance. We propose a hybrid framework, Fusion-YOLOv11-L, combining a YOLOv11-L detector with a pretrained UNet++ via a channel attention gating module. This enables fusion of semantic and vessel-aware structural features, improving localisation of stenotic regions. The UNet++ is pretrained on ARCADE vessel segmentation dataset to provide anatomically informed representations. Experiments on the relabeled ARCADE (ARCADE*) dataset show improved performance over YOLOv11-L, achieving AP@50 of 0.585 and F1-score of 0.596. Cross-domain evaluation on a dataset from the Oxford Acute Myocardial Infarction (OxAMI) Study reveals performance degradation due to domain shift, mitigated using test-time adaptation and augmentation. Test-time augmentation improves AP@50 from 0.434 to 0.480, indicating better generalisability. These results show that cross-architecture feature fusion and lightweight adaptation improve robustness and generalisability of automated stenosis detection in XCA.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2601.21893v2" target="_blank" class="paper-title">WADBERT: Dual-Channel Web Attack Detection via Permutation-Invariant Parameter Modeling</a>
-                        <span class="paper-date">2026-10-26</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Web attack detection is the first line of defense for securing web applications, designed to preemptively identify malicious activities. Deep learning-based approaches are increasingly popular for their advantages: automatically learning complex patterns and extracting semantic features from HTTP requests to achieve superior detection performance. However, existing methods are less effective at representing irregular HTTP requests and introduce unnecessary sensitivity to payload parameter order. To tackle this issue, in this paper, we propose WADBERT, a structure-aware dual-channel framework for web attack detection built on two complementary designs. First, we introduce \textit{Hybrid Granularity Embedding (HGE)}, which combines WordPiece embeddings with token-aligned character representations to capture fine-grained patterns in symbol-dense URLs and payload parameters. Second, we develop \textit{structure-aware feature extraction}, with separate branches for the sequential URL and the unordered collection of payload parameters. Each parameter is encoded independently, and position-free multi-head attention followed by mean pooling produces a payload representation invariant to parameter reordering. The URL and payload features are fused for request classification, while the learned parameter-level attention weights support inspection of potentially malicious parameters. Experiments on CSIC2010 and SR-BH2020 validate the effectiveness of our method: WADBERT achieves F1-scores of 99.64\% and 99.59\%, respectively, outperforming the evaluated state-of-the-art baselines.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2609.13453v2" target="_blank" class="paper-title">A Machine Learning API for Earth Observation Data Cubes Based on openEO</a>
-                        <span class="paper-date">2026-10-26</span>
-                    </div>
-                                        <span class="paper-comment">📝 35 pages, 12 figures</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Earth Observation (EO) data are increasingly organized as spatio-temporal data cubes, while machine learning (ML) methods operate on tabular feature matrices or structured tensor inputs. This mismatch forces platform-specific transformations that are difficult to reproduce or transfer across cloud infrastructures. The openEO specification provides a unified interface for EO data access and processing across heterogeneous backends, but lacks a standardized approach for ML integration. We propose a process-level ML specification for openEO structured into three stages: model initialization, model actions (training, tuning, inference, validation), and model management. It supports classical algorithms such as Random Forest and SVM, as well as deep learning architectures for time-series and spatial patch-based modeling, including TempCNN, Temporal Attention Encoders, and foundation model inference. Three prototype implementations in R and Python demonstrate feasibility across diverse technology stacks. A crop type mapping use case demonstrates cross-backend interoperability by submitting an identical process graph to independent R and Python backends and comparing predictions and evaluation metrics. Two further use cases demonstrate deep learning on time series and foundation model inference, each executed on a dedicated backend. The prototypes reveal, however, that full cross-backend portability requires deeper harmonization of serialization formats and execution semantics than the process level alone can enforce; backend library versions and preprocessing conventions outside the specification's boundary also affect reproducibility. Addressing both through explicit backend conformance profiles represents the most important near-term direction. The specification advances the reproducibility, portability, and accessibility of ML workflows on EO data cubes across cloud platforms.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2410.21657v6" target="_blank" class="paper-title">A-UTE: Advection Informed, Uncertainty Aware Temperature Emulator</a>
-                        <span class="paper-date">2026-10-26</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Physics-based Earth system models (ESMs) are essential for attributing climate change and generating scenario projections, yet their reliance on high-resolution numerical integration makes multi-decadal experiments expensive. In parallel, deep learning has delivered strong gains in short-range weather forecasting; however, auto-regressive roll-outs can accumulate error and become unstable when extended to decade-scale climate emulation. We introduce A-UTE: Advection Informed, Uncertainty Aware Temperature Emulator, aimed at stable multi-year emulation across heterogeneous climate models and grid resolutions. A-UTE is trained on various physics-based models at varying spatial resolutions to emulate temperature fields over a 10-year horizon. A-UTE formulates climate emulation as a forward-time stochastic dynamical system. We propose an auto-regressive ODE-SDE surrogate in which transport dynamics are constrained by an advection consistent ODE component, while a learned neural SDE term models coarse-grained variability and cross-model discrepancy at monthly resolution. We train A-UTE under negative log-likelihood objective for principled uncertainty estimates and probabilistic evaluation. Experiments across 20 climate models show that A-UTE improves long roll-out stability and accuracy relative to relevant baselines, advancing data-driven climate emulation with explicit physical structure and uncertainty-aware predictions.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2610.34833v1" target="_blank" class="paper-title">Streaming Recurrent Memory</a>
-                        <span class="paper-date">2026-10-26</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Natural intelligence learns from a continuous stream of sensorimotor experience: data can arrive at high bandwidth, and behavior adapts to feedback as soon as it arrives, even when it is delayed. In contrast, most modern deep learning systems rely on stored datasets, replay buffers, and retained contexts through which credit is later assigned. At high data rates, storing and revisiting past experience can be impractical under tight memory and computational constraints. This paper studies recurrent memory under a streaming learning constraint: the learner learns from experience as soon as it arrives without storing raw experience. We ask whether a streaming learner can maintain a state that remains useful for future prediction and control from delayed feedback. We introduce Streaming Recurrent Memory (SRM), a recurrent memory designed for the streaming setting which preserves information that may matter later while remaining trainable with one-step backpropagation through time (BPTT). SRM provides a streaming-compatible recurrence that is designed to recall past information by content or time, track elapsed steps, and compose transformations whose outcome depends on the order in which inputs are observed. Across controlled memory tasks and streaming applications, SRM learns effectively with one-step BPTT, outperforming recurrent baselines in associative recall and online language modeling while achieving near-perfect success in associative T-Maze with delayed rewards. These results suggest that fixing how inputs are stored in the recurrent state, while learning how that state is read out, enables effective streaming learning without long-range backpropagation.</p>
                     </details>
                 </div>
             </div>
