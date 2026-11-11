@@ -4,7 +4,8 @@ import pytz
 import shutil
 import datetime
 from typing import List, Dict
-import urllib, urllib.request
+import urllib.parse
+import urllib.request
 from urllib.error import URLError, HTTPError
 import logging
 import socket
@@ -26,10 +27,17 @@ def escape_nunjucks(text: str) -> str:
     text = text.replace("{#", "{ #")
     return text
 
-def request_paper_with_arXiv_api(keyword: str, max_results: int, link: str = "OR", retries: int = 3, delay: int = 10) -> List[Dict[str, str]]:
+def request_paper_with_arXiv_api(
+    keyword: str,
+    max_results: int,
+    link: str = "OR",
+    retries: int = 5,
+    delay: int = 5,
+    timeout: int = 60,
+) -> List[Dict[str, str]]:
     assert link in ["OR", "AND"], "link should be 'OR' or 'AND'"
     keyword = f"\"{keyword}\""
-    url = "http://export.arxiv.org/api/query?search_query=ti:{0}+{2}+abs:{0}&max_results={1}&sortBy=lastUpdatedDate".format(
+    url = "https://export.arxiv.org/api/query?search_query=ti:{0}+{2}+abs:{0}&max_results={1}&sortBy=lastUpdatedDate".format(
         keyword, max_results, link
     )
     url = urllib.parse.quote(url, safe="%/:=&?~#+!$,;'@()*[]")
@@ -37,18 +45,28 @@ def request_paper_with_arXiv_api(keyword: str, max_results: int, link: str = "OR
     headers = {'User-Agent': 'Mozilla/5.0 (compatible; ArxivFetcher/1.0)'}
     req = urllib.request.Request(url, headers=headers)
 
-    MAX_RETRIES = 10
-    for attempt in range(MAX_RETRIES):
+    if retries < 1:
+        raise ValueError("retries must be at least 1")
+
+    for attempt in range(1, retries + 1):
         try:
-            req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
-            response = urllib.request.urlopen(req, timeout=20).read().decode('utf-8')
-            break  # 成功则跳出循环
+            with urllib.request.urlopen(req, timeout=timeout) as http_response:
+                response = http_response.read().decode('utf-8')
+            break
         except (ConnectionResetError, URLError, HTTPError, socket.timeout) as e:
-            logging.warning(f"Attempt {attempt+1}/{MAX_RETRIES} failed: {e}")
-            if attempt < MAX_RETRIES - 1:
-                time.sleep(2 * (attempt + 1))  # 指数退避
-            else:
-                raise  # 重试结束后仍失败，抛出异常
+            if attempt == retries:
+                logging.warning("Attempt %s/%s failed: %s", attempt, retries, e)
+                raise
+
+            wait_seconds = min(delay * (2 ** (attempt - 1)), 60)
+            logging.warning(
+                "Attempt %s/%s failed: %s; retrying in %ss",
+                attempt,
+                retries,
+                e,
+                wait_seconds,
+            )
+            time.sleep(wait_seconds)
     
     feed = feedparser.parse(response)
     papers = []
