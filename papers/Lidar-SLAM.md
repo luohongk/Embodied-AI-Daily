@@ -2,7 +2,7 @@
 
 > **80 papers** fetched from arXiv for the keyword **Lidar SLAM**.
 
-> Last update: 2026-11-06
+> Last update: 2026-11-11
 
 [← Back to README](../README.md)
 
