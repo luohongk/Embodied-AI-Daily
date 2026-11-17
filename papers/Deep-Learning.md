@@ -2,7 +2,7 @@
 
 > **66 papers** fetched from arXiv for the keyword **Deep Learning**.
 
-> Last update: 2026-11-16
+> Last update: 2026-11-17
 
 [← Back to README](../README.md)
 
