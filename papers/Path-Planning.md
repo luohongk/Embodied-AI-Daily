@@ -2,7 +2,7 @@
 
 > **71 papers** fetched from arXiv for the keyword **Path Planning**.
 
-> Last update: 2026-11-21
+> Last update: 2026-11-22
 
 [← Back to README](../README.md)
 
