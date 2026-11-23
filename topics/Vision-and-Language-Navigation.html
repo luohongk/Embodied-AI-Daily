@@ -590,7 +590,7 @@
                 <a href="World-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">World Model</span>
-                    <span class="nav-count">80</span>
+                    <span class="nav-count">79</span>
                 </a>
                 <a href="3D-Foundation-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
@@ -670,7 +670,7 @@
                 <a href="Autonomous-Driving.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#6366f1"></span>
                     <span class="nav-label">Autonomous Driving</span>
-                    <span class="nav-count">79</span>
+                    <span class="nav-count">80</span>
                 </a>
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
@@ -690,7 +690,7 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">65</span>
+                    <span class="nav-count">66</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
@@ -809,7 +809,7 @@
             <a href="World-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">World Model</span>
-                <span class="nav-count">80</span>
+                <span class="nav-count">79</span>
             </a>
             <a href="3D-Foundation-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
@@ -889,7 +889,7 @@
             <a href="Autonomous-Driving.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
                 <span class="nav-label">Autonomous Driving</span>
-                <span class="nav-count">79</span>
+                <span class="nav-count">80</span>
             </a>
             <a href="Kalman-Filter.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
@@ -909,7 +909,7 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">65</span>
+                <span class="nav-count">66</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
@@ -1030,6 +1030,42 @@
             <div class="paper-list">
                 <div class="paper-card">
                     <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2611.27499v1" target="_blank" class="paper-title">NavRSI: Recursive Harness Self-Improvement for Vision-and-Language Navigation</a>
+                        <span class="paper-date">2026-11-20</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Frontier large language models (LLMs) have enabled vision-and-language navigation (VLN) through direct closed-loop perception and action. However, navigation performance depends strongly on the harness governing LLM-environment interactions, while existing harnesses largely rely on manually designed navigation tools, memory, and agent roles. We introduce NavRSI, a harness-centric recursive self-improvement framework that optimizes the navigation behavior of frozen LLMs through closed-loop experience. In each round, NavRSI iteratively collects navigation trajectories and failure diagnostics, employs a designer agent to rewrite the harness, and retains the revisions that prove effective, while the designer accumulates experience from previous revisions so that the harness and this experience co-evolve. Privileged simulator diagnostics guide only the designer and remain inaccessible to the navigating LLM, enabling deployment with a single RGB camera and primitive actions, without task-specific model training or additional navigation tools. Experiments demonstrate consistent improvements across LLMs from four vendors, with 85.64% success rate on the full R2R-CE val-unseen split with GPT-6-Astra, surpassing the previously reported best by 4.13%. Evaluations on RxR-CE, NavRAG-CE, and a real humanoid robot further demonstrate its generalizability.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2604.24391v2" target="_blank" class="paper-title">Frequency-Enhanced Token Caching for Efficient Streaming VLN Models</a>
+                        <span class="paper-date">2026-11-20</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Streaming vision-and-language navigation (VLN) repeatedly encodes overlapping views. Robot motion can shift a reusable patch to a different position, while small residual shifts near an edge can change its feature. These effects complicate both patch selection and the choice of a reuse budget for each frame. We present FreqCache, a streaming VLN caching framework that integrates frequency-domain characteristics from raw observations with token-level redundancy identification. We analyze their complementarity in cross-frame correspondence, reuse validity, and cache budgeting. Our analysis shows that spectral magnitude and phase cues can recover spatially shifted correspondences, local high-frequency characteristics can reveal structurally sensitive tokens, and single-frame spectral entropy can guide the budget among eligible patches. Based on these insights, FreqCache introduces frequency-enhanced token alignment, selective token refresh, and adaptive cache budgeting to reduce redundant computation while preserving navigation performance. On R2R-CE, FreqCache cuts per-step latency by 6.7--12.0\% relative to VLN-Cache and speeds up inference by up to $1.64\times$ over the original models. Across R2R-CE and RxR-CE, success rate drops by at most 0.7 percentage points.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2611.27219v1" target="_blank" class="paper-title">NavTTT: Adaptive Parametric Memory via Hierarchical Test-Time Training for Vision-and-Language Navigation</a>
+                        <span class="paper-date">2026-11-20</span>
+                    </div>
+                                        <span class="paper-comment">📝 Project page: https://gamepeopleplay.github.io/NavTTT/</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Vision-and-language navigation (VLN) demands that agents accumulate and reason over streaming visual observations throughout long navigation episodes. Existing approaches struggle to maintain long-term history, constrained by the finite context capacity of transformer architectures. To solve the problem, fast-weight test-time training (TTT) provides a mechanism for encoding streaming observations into an evolving parameter state. However, existing TTT does not distinguish informative observations from repetitive visual content, allowing redundant tokens to interfere with the retention of information needed for subsequent decisions. We propose Navigation-Conditioned Test-Time Training (NavTTT), which introduces adaptive memory formation and hierarchical memory integration for vision-and-language navigation. NavTTT leverages global navigation context to prioritize informative visual evidence and integrates language instructions with spatial information to construct spatially grounded memory representations. Episode-local nonlinear fast weights store these representations as Adaptive Parametric Memory (APM), preserving history beyond the visual context for later decisions. To reduce cross-layer coupling in memory formation, NavTTT maintains independent fast-weight memories across multiple decoder depths. This decoupled design prevents errors or biases from spreading across different memory levels. Meanwhile, it enables shared historical information to be independently represented at various levels of abstraction. Experiments demonstrate strong navigation performance on VLN-CE benchmarks and effective instruction following on a real robot.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
                         <a href="https://arxiv.org/abs/2611.27166v1" target="_blank" class="paper-title">Mem-X: A Memory-Dependent Cross-Episode Benchmark for Vision-and-Language Navigation</a>
                         <span class="paper-date">2026-11-20</span>
                     </div>
@@ -1124,10 +1160,7 @@
                         <span class="paper-date">2026-11-02</span>
                     </div>
                     
-                                        <details class="ai-summary" data-lazy="1" data-md="好的，作为一名人工智能研究与学术论文分析专家，我将严格按照您的要求，对这篇论文《HaltNav: Reactive Visual Halting over Lightweight Topological Priors for Robust Vision-Language Navigation》进行详细的中文解读。&#10;&#10;---&#10;&#10;## 0. 概览（Concise Summary）&#10;&#10;- **主题（Topic）**：视觉语言导航（VLN），特别是面向长距离、目标导向的鲁棒导航。&#10;- **问题（Problem）**：现有VLN方法依赖密集的逐步指令或计算量大的度量地图，在真实动态环境中（如门被关闭、通道被堵塞）缺乏鲁棒性，且难以处理用户给出的简洁、目标导向的指令。&#10;- **方法（Method）**：提出一个名为**HaltNav**的分层导航框架。该框架结合了轻量级的文本化拓扑先验地图（osmAG）用于全局规划，和一个现成的VLN模型用于局部执行。核心创新在于一个基于多模态大语言模型（MLLM）的“大脑”模块，它包含一个**图接地任务调度器（GGTD）** 和一个**反应式视觉暂停（RVH）** 机制。RVH能实时检测局部异常，中断执行，更新地图并触发全局重规划。&#10;- **创新（Innovation）**：&#10;    1.  提出分层框架，将轻量级拓扑先验与VLN局部执行解耦并协同工作。&#10;    2.  设计**反应式视觉暂停（RVH）** 机制，使系统能主动监测并响应环境动态变化。&#10;    3.  开发**故障注入数据合成管线**，利用生成模型生成多样化的障碍物场景，用于微调RVH的异常检测能力。&#10;    4.  构建了**鲁棒性导向的基准测试**，评估在静态先验与动态环境冲突下的导航性能。&#10;- **意义（Significance）**：这项工作推动了VLN从理想化的、依赖详细指令的设定向更实用、鲁棒的目标导向自主导航迈进。它证明了轻量级先验知识与主动异常监测相结合是解决真实世界部署中“规划-执行”鸿沟的有效途径，对服务机器人、辅助导航等应用有重要价值。&#10;- **一句话总结**：本文提出HaltNav，通过将轻量级拓扑先验地图与具备反应式暂停和重规划能力的MLLM大脑相结合，显著提升了视觉语言导航在动态环境中的鲁棒性和对简洁指令的适应性。&#10;&#10;## 1. 研究动机（Motivation）&#10;&#10;- **问题**：传统的视觉语言导航（VLN）研究通常假设机器人能获得**密集、逐步的“路线式”指令**，并在静态、已知的环境中进行导航。然而，在真实应用场景中，用户（如视障人士）只会给出简洁的目标（如“带我去洗手间”），且环境是动态变化的（如门被锁、走廊被堵）。&#10;- **重要性**：解决这个问题对于将VLN技术从实验室推向实际应用至关重要。一个实用的导航机器人必须能够：&#10;    1.  **理解抽象指令**：从“去卧室的白色床”这样的目标指令中推断出全局路径。&#10;    2.  **利用结构先验**：利用建筑平面图等先验知识进行高效的长距离规划，而不是完全依赖实时探索。&#10;    3.  **应对动态变化**：当先验地图与实际情况不符时（例如，规划路径上的门被意外关闭），能够自主检测、适应并重新规划。&#10;- **挑战**：&#10;    1.  **先验地图的获取与维护**：构建和维护高精度的2D/3D度量地图计算成本高，且容易过时。而纯文本的拓扑地图（如osmAG）虽然轻量，但本身是静态的，无法反映动态变化。&#10;    2.  **规划与执行的鸿沟**：基于静态先验的全局规划在动态环境中是脆弱的。如何将全局规划与局部感知、执行能力有效结合，并处理两者之间的冲突，是一个核心挑战。&#10;    3.  **异常检测与重规划**：如何让机器人自主、可靠地检测到“规划路径不可通行”这一异常情况，并触发有效的重规划，而不是陷入死循环或失败。&#10;&#10;## 2. 创新点（Innovation）&#10;&#10;论文提出了一个名为**HaltNav**的分层导航框架，其关键创新点如下：&#10;&#10;1.  **分层规划与执行架构**：将导航任务解耦为两个层次：&#10;    - **宏观层（全局规划）**：由MLLM大脑驱动，基于轻量级文本拓扑地图（osmAG）进行房间级别的全局路径规划。&#10;    - **微观层（局部执行）**：由一个现成的、端到端的VLN模型负责，根据宏观层下达的“原子指令”（如“向前走，同时向左看”）进行具体的物理动作执行。&#10;    - **创新点**：这种解耦使得全局规划可以利用地图先验进行高效推理，而局部执行可以专注于实时的视觉感知和避障，两者各司其职，避免了单一模型处理所有任务的复杂性。&#10;&#10;2.  **反应式视觉暂停（Reactive Visual Halting, RVH）机制**：这是本文最核心的创新。RVH是一个基于微调后VLM的模块，它持续监控局部执行过程中的视觉输入。&#10;    - **功能**：当检测到阻碍通行的异常（如关闭的门、堵塞的走廊）时，RVH会**主动中断**局部VLN控制循环，而不是被动地等待其失败。&#10;    - **触发后动作**：中断后，RVH会通知MLLM大脑，后者会**更新osmAG地图**（将受阻的通道标记为不可通行），并**触发全局重规划**，生成一条绕开障碍物的新路径。&#10;    - **创新点**：将“监测”和“失败检测”提升为自主导航的一等公民，实现了从被动执行到主动适应的转变。&#10;&#10;3.  **故障注入数据合成管线**：为了训练RVH的异常检测能力，论文提出了一种自动化的数据合成方法。&#10;    - **方法**：结合物理仿真引擎（在Habitat中注入3D障碍物）和**生成式扰动引擎**（利用扩散模型对真实导航图像进行视觉修补，如添加人群、破碎窗户等）。&#10;    - **创新点**：解决了真实世界异常数据稀缺和多样性不足的问题，通过生成高质量的“硬负样本”（即看起来可通行但实际上被阻塞的场景），有效提升了VLM的鲁棒性和泛化能力。&#10;&#10;4.  **鲁棒性导向的基准测试**：不同于现有VLN基准（假设无先验地图且使用密集指令），本文构建了新的评估任务。&#10;    - **特点**：任务中，智能体可以访问一个静态的osmAG先验地图，但环境中会动态注入障碍物，故意制造先验与现实的冲突。&#10;    - **创新点**：该基准更贴近真实世界的挑战，能够有效评估系统在“规划-执行”冲突下的鲁棒性。&#10;&#10;## 3. 主要内容（Main Content）【重点】&#10;&#10;### 3.1 设计架构与方法&#10;&#10;HaltNav的整体架构如图1所示，是一个分层系统，核心是MLLM大脑。&#10;&#10;1.  **MLLM大脑**：作为系统的决策核心，包含两个关键组件：&#10;    - **图接地任务调度器（GGTD）**：接收用户的抽象指令（如“去卧室的白色床”）和osmAG地图。它利用LLM的推理能力，将全局路径分解为一系列**原子指令**（如“向前走，同时向左看”...“找到你的床”）。这些指令是目标导向的、门到门的执行片段。&#10;    - **反应式视觉暂停（RVH）模块**：一个经过微调的VLM，负责监控局部执行器的视觉输入。它判断当前路径是否被阻塞，并决定是否触发暂停。&#10;&#10;2.  **局部执行器**：一个现成的、端到端的VLN模型（如InternVLA-N1）。它接收来自GGTD的当前原子指令和实时视觉观测，输出具体的动作命令（前进、左转、右转等）。它对全局地图完全无感，专注于局部指令接地和避障。&#10;&#10;3.  **osmAG地图代理**：负责维护和更新osmAG地图。当接收到RVH的暂停信号后，MLLM大脑会指示osmAG代理更新地图（例如，将受阻的通道边权重设为无穷大），然后基于更新后的地图进行全局重规划。&#10;&#10;### 3.2 关键算法与数学推导&#10;&#10;**问题形式化**：任务被建模为一个分层半马尔可夫决策过程。&#10;&#10;- 先验地图定义为动态加权有向图 $G_t = (V, E, W_t)$，其中 $V$ 是语义节点（房间），$E$ 是可通行通道，$W_t: E \rightarrow \mathbb{R}^+$ 是时变通行成本。&#10;- **宏观策略** $\pi_{high}$（GGTD）在离散步骤 $i$ 生成宏观动作（原子指令） $m_i$。&#10;- **微观策略** $\pi_{low}$（VLN执行器）在控制步骤 $t$ 根据观测 $o_t$ 和当前指令 $m_i$ 生成动作 $a_t$：&#10;  $$a_t \sim \pi_{low}(\cdot | o_t, m_i; \theta), \quad t \in [t_i, t_i + \Delta t_i)$$&#10;  其中 $\Delta t_i$ 是执行 $m_i$ 的持续时间，由终止指示器 $\beta(o_t, m_i)$ 动态决定。&#10;&#10;**反应式视觉暂停（RVH）机制**：终止函数 $\beta(o_t, m_i)$ 由两部分组成（公式3）：&#10;$$\beta(o_t, m_i) = \left[ \sum_{j=0}^{k-1} c_{t-j} \geq \tau_c \right] \lor \left[ s_{MLLM}(o_t, m_i) \right]$$&#10;&#10;- **自底向上启发式暂停**：$\sum_{j=0}^{k-1} c_{t-j} \geq \tau_c$。$c_t \in \{0,1\}$ 是碰撞指示器。当在滑动窗口 $k$ 内累积碰撞次数超过阈值 $\tau_c$ 时触发。这是一个物理安全网。&#10;- **自顶向下反思性暂停**：$s_{MLLM}(o_t, m_i) \in \{\text{True}, \text{False}\}$。这是由MLLM（VLM）判断的可通行性得分。当VLM识别出未在地图中标记的障碍物（如关闭的门、拥挤的走廊）时，返回True，触发暂停。&#10;&#10;**动态拓扑信念更新**：当RVH触发后，地图更新规则（公式4）：&#10;$$C_{t+1}(p_i, p_j) = \begin{cases} \infty, &amp; \text{if visual anomaly is detected}, \\ C_t(p_i, p_j), &amp; \text{otherwise}. \end{cases}$$&#10;其中 $C_t(p_i, p_j)$ 是通道 $p_i$ 和 $p_j$ 之间的通行成本。将检测到异常的通道成本设为无穷大，相当于从图中“剪除”该连接，迫使全局规划器寻找绕行路线。&#10;&#10;**监督微调损失函数**：用于微调RVH的VLM（公式5）：&#10;$$\mathcal{L}_{SFT} = - \sum_{(X,Y) \in \mathcal{D}} \sum_{j=1}^{|Y|} \log p_{MLLM}(y_j | y_{&lt;j}, X; \Theta_{MLLM})$$&#10;其中 $\mathcal{D}$ 是包含正常样本 $(X_p, Y_{no-halt})$ 和异常样本 $(X_a, Y_{halt})$ 的数据集。&#10;&#10;### 3.3 模型、训练与数据集&#10;&#10;- **模型**：&#10;    - **GGTD**：使用Google Gemini 3 Flash作为LLM。&#10;    - **RVH**：使用Qwen-2.5-VL-7B作为VLM，并通过LoRA进行微调。&#10;    - **局部执行器**：使用InternVLA-N1，一个单摄像头的VLN策略模型。&#10;- **训练**：主要对RVH模块进行监督微调。训练数据来自论文提出的**故障注入数据合成管线**。&#10;- **数据集**：&#10;    - **仿真环境**：基于Habitat-Matterport 3D Research Dataset (HM3D) 中的5个室内场景。&#10;    - **自定义数据集**：手动标注了176个物理导航任务，分为三个难度级别（易、中、难），并为每个任务提供了3种不同粒度的语言指令（L0: 详细步骤，L1: 地标描述，L2: 仅目标），共528个任务。此外，还包含专门注入障碍物的任务。&#10;    - **真实环境**：在一栋大学建筑内进行测试，环境拓扑结构比仿真家庭环境更复杂。&#10;&#10;### 3.4 实验设置与结果&#10;&#10;- **设置**：在仿真和真实机器人（Fetch）上进行测试。对比了Navid, OmniNav, StreamVLN, Uni-navid, InternVLA-N1等5种基线方法。评估指标包括成功率（SR）、SPL、Oracle成功率（OS）和导航误差（NE）。实验分为标准场景（B）和障碍物注入场景（O）。&#10;- **仿真结果（表I）**：&#10;    - **指令鲁棒性**：当指令从详细（L0）变为简洁（L2）时，所有方法性能下降，但HaltNav下降最平缓（SR从79.38%降至55.63%，相对下降30%），优于其他基线（40-44%）。这表明osmAG先验减少了对详细指令的依赖。&#10;    - **重规划鲁棒性**：在障碍物注入场景下，大多数基线方法的SR骤降至13%以下。HaltNav在L0-O下仍保持50.00%的SR，在所有级别中性能下降（Drop）最小，证明了RVH的有效性。&#10;- **真实世界结果（表II）**：&#10;    - 在真实世界中，基线方法（StreamVLN, InternVLA-N1）在简洁指令（L2）和障碍物注入（O）场景下性能急剧恶化，甚至降至0% SR。&#10;    - HaltNav在L0-O下保持了56.66%的SR，在L2-O下保持了46.66%的SR，性能下降远小于基线。这证实了在复杂真实环境中，轻量级拓扑先验对于鲁棒导航是**必要**的，而不仅仅是锦上添花。&#10;&#10;### 3.5 技术细节&#10;&#10;- **osmAG地图**：是一种基于OpenStreetMap格式的层次化、语义化、拓扑化的区域图。它将环境表示为节点（房间）和边（通道，如门）。地图以文本形式（XML/JSON）存储，天然适合LLM处理。&#10;- **全局规划**：在osmAG的通道级图上使用A*算法进行路径搜索。通行成本是预先计算并存储的。&#10;- **数据合成**：物理引擎在Habitat中注入3D障碍物；生成式引擎使用扩散模型对RGB图像进行修补，生成如“人群”、“液体泼洒”等语义障碍物（图3）。&#10;- **算法流程（Algorithm 1）**：详细描述了HaltNav的完整执行流程，包括初始化、GGTD生成指令、局部执行、RVH监测、触发暂停、更新地图、重规划等步骤。&#10;&#10;## 4. 意义与影响（Significance and Impact）&#10;&#10;- **解决了什么问题**：&#10;    1.  解决了VLN在**动态环境**下，静态先验地图与实时状况冲突导致的执行失败问题。&#10;    2.  解决了VLN对**密集、逐步指令**的依赖，使其能够处理更自然的、目标导向的用户指令。&#10;    3.  提供了一种**轻量级、可扩展**的解决方案，避免了构建和维护高成本度量地图的负担。&#10;&#10;- **贡献**：&#10;    1.  提出了一个新颖的、鲁棒的分层导航框架HaltNav。&#10;    2.  设计了反应式视觉暂停（RVH）机制，这是一种有效的在线异常检测和重规划触发方法。&#10;    3.  开发了创新的故障注入数据合成管线，解决了训练数据瓶颈。&#10;    4.  构建了更贴近真实挑战的鲁棒性基准测试。&#10;&#10;- **对未来研究/应用的影响**：&#10;    - 为**服务机器人、导盲机器人、仓储物流机器人**等需要长期自主导航的应用提供了更可靠的方案。&#10;    - 启发了将**轻量级先验知识**与**主动监测/重规划**相结合的研究思路，可能成为未来鲁棒自主系统设计的一个范式。&#10;    - 其数据合成方法可以推广到其他需要检测罕见或动态异常的机器人任务中。&#10;&#10;- **局限与开放问题**：&#10;    - 论文未明确讨论在**完全未知**（无任何先验地图）环境下的表现。&#10;    - RVH的决策依赖于VLM的推理能力，其**计算延迟**和**幻觉问题**可能成为实际部署的瓶颈。&#10;    - 当前实验主要在室内环境进行，在**大规模、室外、非结构化**环境中的泛化能力有待验证。&#10;    - 地图更新策略目前是“硬性”剪除（成本设为无穷大），未来可以考虑更**细粒度的成本调整**（如部分阻塞时增加成本而非完全禁止）。&#10;&#10;## 5. 澄清与简化（Clarifications and Simplifications）&#10;&#10;- **类比：一个聪明的导游**&#10;    - **HaltNav框架**：就像一个经验丰富的导游（MLLM大脑）带着一张景区地图（osmAG）和一位实习导游（VLN执行器）。&#10;    - **GGTD**：导游根据地图和游客的抽象要求（“我想去看瀑布”），规划出一条大致的路线，并分解成一系列小任务（“先走到湖边，然后沿着小路向上”）。&#10;    - **局部执行器**：实习导游负责执行这些小任务，他专注于眼前的路，边走边看。&#10;    - **RVH机制**：实习导游在带路时，突然发现地图上标注的“小路”被施工围挡堵住了。他不会傻傻地撞上去，而是会**立刻停下来**，通过对讲机（RVH信号）告诉老导游：“前面路堵了！”&#10;    - **重规划**：老导游收到消息后，立刻在**地图上把那条路划掉**，然后根据地图寻找另一条通往瀑布的路，并告诉实习导游新的走法。这样，整个团队就能绕过障碍，成功到达目的地。&#10;&#10;- **为什么RVH比">
-                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
-                        <div class="ai-content markdown-body"></div>
-                    </details>
+                    
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Vision-and-Language Navigation (VLN) is shifting from rigid, step-by-step instruction following toward open-vocabulary, goal-oriented autonomy. Achieving this transition without exhaustive routing prompts requires agents to leverage structural priors. While prior work often assumes computationally heavy 2D/3D metric maps, we instead exploit a lightweight, text-based osmAG (OpenStreetMap Area Graph), a floorplan-level topological representation that is easy to obtain and maintain. However, global planning over a prior map alone is brittle in real-world deployments, where local connectivity can change (e.g., closed doors or crowded passages), leading to execution-time failures. To address this gap, we propose a hierarchical navigation framework HaltNav that couples the robust global planning of osmAG with the local exploration and instruction-grounding capability of VLN. Our approach features an MLLM-based brain module, which is capable of high-level task grounding and obstruction awareness. Conditioned on osmAG, the brain converts the global route into a sequence of localized execution snippets, providing the VLN executor with prior-grounded, goal-centric sub-instructions. Meanwhile, it detects local anomalies via a mechanism we term Reactive Visual Halting (RVH), which interrupts the local control loop, updates osmAG by invalidating the corresponding topology, and triggers replanning to orchestrate a viable detour. To train this halting capability efficiently, we introduce a data synthesis pipeline that leverages generative models to inject realistic obstacles into otherwise navigable scenes, substantially enriching hard negative samples. Extensive experiments demonstrate that our hierarchical framework outperforms several baseline methods without tedious language instructions, and significantly improves robustness for long-horizon vision-language navigation under environmental changes.</p>
@@ -1959,42 +1992,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Vision-and-language navigation (VLN) in continuous environments requires an agent to ground instructions in egocentric observations while maintaining spatial understanding across long action sequences. Recent navigation foundation models have shown strong progress by scaling vision-language models, but they often learn navigation primarily as direct action generation, without explicitly modeling world states or predicting their future evolution. We introduce FutureNav, a VLM-based unified world-action modeling framework for vision-and-language navigation. Specifically, FutureNav jointly encodes text, visual, and spatial features and feeds them into the LLM, and optimizes four objectives for simultaneous world and action modeling: an action policy objective for navigation action prediction, inverse and forward dynamics objectives for modeling state transitions, and a future generation objective for predicting future spatial states. This unified architecture strengthens action prediction while explicitly modeling the world, without sacrificing inference speed. Extensive experiments show that, with only a 4B-scale backbone, FutureNav achieves state-of-the-art performance on multiple VLN benchmarks and substantially outperforms prior VLN methods, paving the way toward future world-action models for VLN. We will release the code and models to support future research.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.30151v1" target="_blank" class="paper-title">AERIS: Aerial-Edge Role-Driven Intelligence at Runtime via Orchestrated Language-Model Swarm</a>
-                        <span class="paper-date">2026-06-29</span>
-                    </div>
-                                        <span class="paper-comment">📝 10 pages, 11 figures. Preprint version of the submitted manuscript</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Integrating large language models into robotic systems holds promise for enhancing autonomy, yet practical deployment remains constrained by strict heartbeat-constrained scheduling and limited computational power. We propose AERIS: an edge deployment framework for aerial platforms. It organizes dedicated small language models combined with lightweight perception and control modules into roles that can be instantiated at runtime, and dynamically rebinds them across different executors as resources change, thereby pushing intelligent capabilities to the edge. AERIS achieves long-horizon instruction decomposition through an attention-subgoal alignment mechanism, which involves annotating the currently active instruction step in messages, thereby progressively approaching long-term objectives. We evaluate AERIS on a high-fidelity UAV Vision-and-Language Navigation benchmark. Under a heartbeat-timed execution mechanism, AERIS maintains a stable perception-decision-control loop between a low-frequency planner and a high-frequency controller, supporting real-time closed-loop operation. We further validate its deployability through two real-world experiments focused on planning and fast response. A demonstration video is provided in the supplementary materials.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.08992v1" target="_blank" class="paper-title">SpaceVLN: A Zero-Shot Vision-and-Language Navigation Agent with Online Spatial Cognitive Memory and Reasoning</a>
-                        <span class="paper-date">2026-06-08</span>
-                    </div>
-                                        <span class="paper-comment">📝 23 pages, 9 figures, 7 tables</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Vision-and-Language Navigation in continuous environments requires agents to understand the spatial structure of previously unseen environments in order to follow language instructions. Although foundation models have opened a promising path toward zero-shot navigation without task-specific policy training, many navigators still rely on local visual cues and linear history-based reasoning, overlooking the spatial nature of navigation across explored regions, traversed paths, landmarks, and their spatial relations. In this paper, we propose SpaceVLN, a navigation agent built around Spatial Cognitive Memory and Task-Guided Spatial Reasoning. Specifically, SpaceVLN introduces an efficient stagewise closed-loop framework where planning and execution are organized around verifiable space--landmark stages. During navigation, the agent progressively abstracts explored regions into Spatial Waypoints and dynamically maintains subtask-grounded landmark evidence, forming a hierarchical Spatial Cognitive Memory for progress localization and spatial-relation understanding. Built on this memory, Spatial-CoT integrates task-progress reasoning with spatial perception, analysis, and prediction, enabling Task-Guided Spatial Reasoning for embodied navigation. The unified stage interface enables SpaceVLN to address both Vision-and-Language Navigation and Object-Goal Navigation under a unified zero-shot setting, without task-specific policy training. Across R2R-CE, RxR-CE, GN-Bench, and HM3D-OVON, SpaceVLN achieves state-of-the-art zero-shot performance, and real-robot deployment further validates its applicability. These results highlight Spatial Cognitive Memory and Task-Guided Spatial Reasoning as a practical foundation for stronger embodied navigation agents.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2606.03682v1" target="_blank" class="paper-title">GN0: Toward a Unified Paradigm for Generation, Evaluation, and Policy Learning in Visual-Language Navigation</a>
-                        <span class="paper-date">2026-06-02</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Embodied navigation connects intelligent agents with the physical world and is fundamental for general robotic intelligence. Limited availability and quality of navigation data have constrained Vision-and-Language Navigation (VLN) systems' generalization and long-horizon capabilities. To address this, we curate diverse 3D scenes and develop an automated pipeline for large-scale navigation data, resulting in the GN-Matrix dataset. Building on a 3D Gaussian Splatting (3DGS) engine, we introduce a high-fidelity simulation platform supporting interactive roaming and collision-aware navigation. We further propose GN-Bench, the first BEV-based benchmark incorporating dynamic 3DGS avatars for human-robot interaction evaluation. To leverage the simulator, we develop an RL-driven navigation foundation model, Break and Establish (BAE). After supervised learning, DAgger exposes the model to rollout-induced states, breaking narrow expert-centric distributions and enabling downstream RL exploration. This unified VLN paradigm integrates map-based and map-free tasks, including instruction following, human following, and goal navigation. GN-BAE formalizes high-fidelity 3DGS-rendered Bird's Eye View representations as compact memory, unlocking latent spatial reasoning in VLMs. Extensive evaluations on GN-Bench and VLN-CE show that GN0 outperforms state-of-the-art VLN methods. Overall, GN-Matrix offers a unified framework spanning data, simulation, and learning, advancing embodied navigation in research and industrial applications.</p>
                     </details>
                 </div>
             </div>

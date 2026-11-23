@@ -590,7 +590,7 @@
                 <a href="World-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">World Model</span>
-                    <span class="nav-count">80</span>
+                    <span class="nav-count">79</span>
                 </a>
                 <a href="3D-Foundation-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
@@ -670,7 +670,7 @@
                 <a href="Autonomous-Driving.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#6366f1"></span>
                     <span class="nav-label">Autonomous Driving</span>
-                    <span class="nav-count">79</span>
+                    <span class="nav-count">80</span>
                 </a>
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
@@ -690,7 +690,7 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">65</span>
+                    <span class="nav-count">66</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
@@ -809,7 +809,7 @@
             <a href="World-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">World Model</span>
-                <span class="nav-count">80</span>
+                <span class="nav-count">79</span>
             </a>
             <a href="3D-Foundation-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
@@ -889,7 +889,7 @@
             <a href="Autonomous-Driving.html" class="nav-item active">
                 <span class="nav-dot" style="background:#6366f1"></span>
                 <span class="nav-label">Autonomous Driving</span>
-                <span class="nav-count">79</span>
+                <span class="nav-count">80</span>
             </a>
             <a href="Kalman-Filter.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
@@ -909,7 +909,7 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">65</span>
+                <span class="nav-count">66</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
@@ -1025,9 +1025,21 @@
         <section class="topic-section">
             <div class="topic-header">
                 <span class="topic-badge" style="background:#6366f1">Autonomous Driving</span>
-                <span class="topic-count">79 papers</span>
+                <span class="topic-count">80 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2611.27804v1" target="_blank" class="paper-title">Generalist Action Critic: Harnessing Frontier Models in Autonomous Driving</a>
+                        <span class="paper-date">2026-11-20</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Frontier models have demonstrated remarkable general-purpose reasoning capabilities, opening new possibilities for intelligent decision making in the physical world. In autonomous driving, many recent approaches seek to leverage these capabilities through additional adaptation for action output, particularly in scenarios where existing models underperform. We introduce Generalist Action Critic (GAC), a zero-shot framework that combines frontier models' general-purpose reasoning with the planning competence of specialized driving models through an inference-time harness. In GAC, specialized planners generate multiple candidate trajectories and make an initial selection, while a frozen frontier model serves as an action critic that assesses the selected trajectory against scene evidence and either retains it or reselects from the available candidates. The harness combines camera images with spatial overlays, provides driving context and reasoning principles through textual instructions, and regulates the information available at each stage to support trajectory assessment and reselection. On HUGSIM, GAC raises DrivoR's HD-Score to 43.2, achieving state-of-the-art performance among methods trained without additional simulation data. GAC also consistently improves closed-loop driving safety across three planners, with relative HD-Score gains of up to 32.1%. Experiments on NAVSIM v1 further reveal how GAC improves planning performance by correcting up to 52.13% of eligible unsafe trajectory selections while introducing new failures in only 0.67% of originally high-quality selections. These results demonstrate the potential of harnessing frontier models to improve driving safety through inference-time cooperation with specialized planners.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2611.27691v1" target="_blank" class="paper-title">To Own or Not to Own? Endogenous Ownership in Peer-to-Peer Sharing of Private Autonomous Vehicles</a>

@@ -590,7 +590,7 @@
                 <a href="World-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">World Model</span>
-                    <span class="nav-count">80</span>
+                    <span class="nav-count">79</span>
                 </a>
                 <a href="3D-Foundation-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
@@ -670,7 +670,7 @@
                 <a href="Autonomous-Driving.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#6366f1"></span>
                     <span class="nav-label">Autonomous Driving</span>
-                    <span class="nav-count">79</span>
+                    <span class="nav-count">80</span>
                 </a>
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
@@ -690,7 +690,7 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">65</span>
+                    <span class="nav-count">66</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
@@ -809,7 +809,7 @@
             <a href="World-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">World Model</span>
-                <span class="nav-count">80</span>
+                <span class="nav-count">79</span>
             </a>
             <a href="3D-Foundation-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
@@ -889,7 +889,7 @@
             <a href="Autonomous-Driving.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
                 <span class="nav-label">Autonomous Driving</span>
-                <span class="nav-count">79</span>
+                <span class="nav-count">80</span>
             </a>
             <a href="Kalman-Filter.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
@@ -909,7 +909,7 @@
             <a href="Deep-Learning.html" class="nav-item active">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">65</span>
+                <span class="nav-count">66</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
@@ -1025,9 +1025,105 @@
         <section class="topic-section">
             <div class="topic-header">
                 <span class="topic-badge" style="background:#ec4899">Deep Learning</span>
-                <span class="topic-count">65 papers</span>
+                <span class="topic-count">66 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2611.27978v1" target="_blank" class="paper-title">A Methodologically Rigorous Benchmark of Linear Regression,RNN, and LSTM for S&P 500 Forecasting:Identifying Sources of Performance Inflation in Financial DeepLearning</a>
+                        <span class="paper-date">2026-11-20</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>This study examines one-day-ahead forecasting of the S&P 500 closing level using a 2006-2025 dataset that includes fundamental price data, macroeconomic indicators, and engineered technical features. We benchmark three model families, namely linear regression, vanilla recurrent neural networks (RNN), and long short-term memory networks (LSTM), within a unified preprocessing and chronological evaluation pipeline. A central contribution of this work is a methodological audit of common practices in the deep-learning-for-stock-prediction literature. We identify three sources of result inflation that frequently appear in published methodologies: wavelet-denoised evaluation targets, the absence of a naive persistence baseline, and best-of-N replicate reporting. We then re-evaluate all model families under a corrected protocol that controls for each. Performance is reported using root mean squared error, mean absolute percentage error, and the Pearson correlation coefficient, averaged across N = 30 independent replicates per configuration. We compare models on accuracy, stability across replicates, and architectural depth sensitivity, using the naive persistence forecast (predicting today's close as tomorrow's close) as a primary baseline against which all candidate models must demonstrate improvement.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2611.27953v1" target="_blank" class="paper-title">Real-time neuromorphic audio and vision perception for autonomous robotic applications: Integration and experimental evaluation on a rover platform</a>
+                        <span class="paper-date">2026-11-20</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Neuromorphic sensing and computing offer a promising alternative to conventional deep learning pipelines for mobile robots, where perception must run continuously under tight latency and energy constraints. However, most neuromorphic solutions are still evaluated offline or on isolated benchmarks, and their integration into complete robotic systems remains largely unexplored. In this technical report, a four-wheel rover platform is presented that combines three real-time perception pipelines: a classical audio tagging pipeline based on Pretrained Audio Neural Networks (PANNs) running on an NVIDIA Jetson GPU, a neuromorphic audio pipeline in which a spiking neural network (SNN) is deployed on the SynSense Xylo Audio~2 chip, and a neuromorphic vision pipeline in which events from an event-based camera are processed by the SpikeYOLO spiking detector for traffic cone detection. On the Xylo chip, the whole processing chain---from the microphone signal to the classification of low- and high-pitched sounds---is performed on-chip, while the host only configures the device and reads the output neurons. All models are deployed as containerised services and integrated through ROS~2, and a configurable action dispatcher maps the detected classes to robot behaviours, closing the loop between perception and actuation. The platform is demonstrated in a proof-of-concept scenario in which the robot reacts to sound classes detected by both audio pipelines and detects traffic cones with the event camera, showing the feasibility of integrating neuromorphic hardware into a multimodal robotic platform operating in real time.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2611.27862v1" target="_blank" class="paper-title">OpenAHBU: Open-sourced Automatic Human Behaviour Understanding Toolkit Through Facial Behaviour Analysis</a>
+                        <span class="paper-date">2026-11-20</span>
+                    </div>
+                                        <span class="paper-comment">📝 Main paper including appendix</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Automatic facial behaviour understanding (AFBU) is fundamental to various human-centred applications, yet existing academically available toolkits offer limited functionality, closed training pipelines, and weak generalisation. This paper presents OpenAHBU, a fully open-sourced, generalisable toolkit integrating 11 AFBU functions across three semantic levels: (i) short-term external facial attributes, including landmarks, blendshapes, Action Units, and expressions; (ii) short-term facial behaviour-related human psychological states, including valence/arousal and pain; and (iii) long-term facial behaviour-related psychological traits, including depression and personality. Particularly, we re-developed eight functions, where at least four deep learning models covering different computational complexities are developed for each function, providing flexible deployment on resource-constrained and high-throughput computing scenarios. More importantly, models of most functions are trained on a comprehensive corpus aggregating multiple academically available datasets, ensuring robust cross-dataset generalisability.In addition, we include a Synergistic Multi-task Enhancement (SMTE) module to efficiently and adaptively enhance each OpenAHBU function by leveraging the complementary cues contained in its most-related support function's predictions.Extensive evaluations demonstrate that our OpenAHBU outperformed existing open-source toolkits not only in functional coverage but also the predictive performances, while providing superior deployment flexibility across diverse computational scenarios.With fully publicly available training and inference scripts, pre-trained weights, user-friendly GUI, Python library, and cross-platform compatibility, our OpenAHBU provides a reproducible, scalable and extensible toolkit at https://github.com/OpenAHBU/OpenAHBU.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2609.38372v3" target="_blank" class="paper-title">Multi-Task Self-Evolving Harnesses with the Agent as Its Own Optimizer</a>
+                        <span class="paper-date">2026-11-20</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>A harness is the code around a language model agent that organizes prompts, calls tools, manages context, and controls execution. As models grow stronger, recent work has begun to let agents improve their own harnesses, a line of work known as self-evolving harnesses. In most existing methods, a separate proposer running on a human-designed harness modifies the solver's harness, and a separate harness is evolved for each benchmark. Real-world tasks come from many domains, so both the evolution and the evaluation of a harness should cover a diverse range of tasks. We propose a framework close to recursive self-improvement: the same frozen model, on the same version of the harness, first solves tasks as the solver and then, as the proposer, reads the complete run records and directly edits the harness that runs it. Each evolution batch draws tasks from five benchmarks in different domains. To measure generalization, training and held-out tasks are strictly separated, and we additionally evaluate on five out-of-distribution benchmarks not used in the first stage. The design borrows from deep learning training and has two stages, multi-task pretraining and continual training. Starting from a 49-line seed harness, the harnesses evolved by GLM-5.3 and GPT-5.6 Sol gain about 5 points on the in-distribution benchmarks. They are on par with Claude Code and Codex on these benchmarks, and the GPT-5.6 Sol harness is also on par with Codex on five out-of-distribution benchmarks. The weaker model of each family benefits less: GLM-5.3-Flash gains less than 2 points, and the harness evolved by GPT-5.6 Luna scores below the seed. Continued evolution on Claw-Eval in the second stage further improves GPT-5.6 Sol and GLM-5.3-Flash on its multimodal tasks. We also analyze where the gains come from and the mechanisms that emerged during evolution. Code: https://github.com/xqkkk/self-evolving-harness.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2611.27811v1" target="_blank" class="paper-title">Redesigning Neural Networks to Not be Confidently Wrong even to Strong Adversarial Attacks</a>
+                        <span class="paper-date">2026-11-20</span>
+                    </div>
+                                        <span class="paper-comment">📝 Code: https://codeberg.org/mwspratling/STEAL/</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Early deep learning models attempted to simulate visual perception using a neural hierarchy that alternated between two types of layer: one modelled on cortical simple cells (that was designed to increase selectivity), and one modelled on cortical complex cells (that aimed to increase tolerance). We show that such a neural network (NN) architecture, when implemented with novel components that are better able to learn selective and tolerant representations, is capable of accurate and robust image classification and improved alignment between the behaviour of the model and the perceptual abilities of humans. Firstly, the proposed models are shallow, fewer than ten layer-pairs, which is more consistent with the rapid feedforward object categorisation performed by the biological visual system. Secondly, they are far less prone to producing classification predictions with high confidence for samples from unknown classes or for image consisting of pure noise, and hence, like humans are not easily fooled into perceiving objects that are not present in the image. Thirdly, for the proposed NNs adversarial samples cause predictions with low confidence, enabling them to be accurately identified. In contrast to humans, our networks still do not correctly classify adversarial samples. However, the behaviour of our networks is a significant step towards human-like behaviour compared to standard DNNs that produce highly confident, but incorrect, classification predictions for adversarial samples. The increased robustness to adversarial and unknown samples is achieved while maintaining competitive performance in terms of generalisation to novel samples from the training categories. This enables models of this type to be competitive with state-of-the-art DNNs across multiple different evaluation metrics and benchmark tasks.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2605.15383v2" target="_blank" class="paper-title">MorphoHELM: A Comprehensive Benchmark for Evaluating Representations for Microscopy-Based Morphology Assays</a>
+                        <span class="paper-date">2026-11-20</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Microscopy images contain rich information about how cells respond to perturbations, making them essential to applications like drug screening. To quantify images, researchers often use representation extraction methods, and recent years have seen a proliferation of deep learning methods. While measuring the quality of these representations is essential, evaluation remains fragmented, with each proposed model evaluated on different tasks and datasets, using custom pipelines and metrics, making it difficult to fairly compare models. Here, we introduce MorphoHELM, a comprehensive open benchmark for evaluating feature extraction methods for Cell Painting, the most widely-used morphological profiling assay. MorphoHELM consolidates evaluation standards in the field, extends and corrects them to be more robust, and evaluates on the widest range of methods to date. A defining feature of the benchmark is that each task is evaluated at different degrees of batch effects (or technical noise), directly quantifying how the ability of methods to detect biological signal degrades as noise increases. Together, these properties enable MorphoHELM to detect trade-offs between methods, and we demonstrate that models that excel at certain kinds of biological signal are weaker at others. We show that no existing model outperforms classic computer vision analytic strategies across all settings, which remain the strongest general use-case representations. All datasets, code, and evaluation tools are publicly available at https://github.com/microsoft/MorphoHELM.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2611.27792v1" target="_blank" class="paper-title">Feasibility of Multifrequency Neural Network-Based Wave Inversion in Ultrasound Time-Harmonic Elastography</a>
+                        <span class="paper-date">2026-11-20</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Ultrasound time-harmonic elastography (THE) is a non-invasive imaging technique that measures soft-tissue stiffness. Relying on the same principle of time-harmonic shear wave excitation as established magnetic resonance elastography (MRE), THE offers full field-of-view stiffness mapping at short acquisition times and sub-second temporal resolution across organs. However, reconstruction of shear wave speed maps from acquired tissue wavefields remains challenging due to speckle noise and sparse spatial coverage of the lateral component. Deep learning methods have shown promising results for image reconstruction in transient-based ultrasound elastography modalities but remain unexplored in THE. In MRE, MF-ElastoNet, a 2D multifrequency neural network-based wave reconstruction method trained on synthetic physics-based wave data, has shown high generalizability across dynamic ranges and resolutions. We investigated the potential of a multifrequency neural network-based wave inversion for THE, by performing a first feasibility analysis. To this end, we adapted the processing pipeline of MF-ElastoNet from MRE to THE. We tested our approach on THE acquired phantom data from the algorithms for mapping elastic modulus Challenge, as well as on in vivo liver THE in 4 healthy volunteers and 14 patients with focal liver lesions, including benign focal nodular hyperplasia, and malignant hepatocellular carcinoma and adenocarcinoma. MF-ElastoNet was successfully adapted to THE with in vivo liver testing. Compared with k-MDEV, the state-of-the-art wave inversion method for THE, Bland-Altman analysis showed a mean bias of -0.02 m/s (95% limits of agreement: -0.36 to 0.33 m/s).</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2611.14207v3" target="_blank" class="paper-title">DailyWildfireCAN: A Dataset and Benchmark for Next-Day Wildfire Spread Prediction in Canada</a>
+                        <span class="paper-date">2026-11-20</span>
+                    </div>
+                                        <span class="paper-comment">📝 Preprint; under review. Project page: https://dailywildfirecan.github.io/</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Wildfires represent a critical ecological and socio-economic challenge in Canada, where vast boreal forests and a warming climate have amplified the frequency and severity of extreme fire seasons. Predicting next-day wildfire spread can support fire management, but requires capturing complex interactions among weather, fuels, and terrain. Deep learning has emerged as a promising approach to learning these relationships from heterogeneous environmental data, yet its development and evaluation depend on representative datasets. Existing deep learning research on wildfire spread relies predominantly on US-focused datasets, leaving Canadian fire environments underrepresented. To address this gap, we present DailyWildfireCAN, a multi-modal, multi-temporal dataset and benchmark for predicting next-day wildfire spread across Canada. The dataset tracks continuous fire progression over multi-day events at a high spatial and temporal resolution of 90-m and 24-hour, respectively. This resolution preserves fine-scale information relevant to fire-edge geometry, local fuel variations, and terrain effects, supporting research toward improved daily wildfire spread forecasting. DailyWildfireCAN covers 2,440 wildfire events across eight fire seasons 2017-2024 and integrates 33 features across diverse modalities, including topography, meteorology, land cover, vegetation and forest structure, human influence indices, and satellite imagery. We establish a comprehensive benchmark comparing mono-temporal and multi-temporal prediction models, accompanied by a multi-dimensional evaluation framework assessing robustness across wildfire characteristics, geographic regions, and temporal conditions, spatial prediction quality, and sensitivity to reference label variations.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2607.22139v2" target="_blank" class="paper-title">A Multi-Center Dataset and Benchmark for SYNTAX Segmentation of Coronary Angiograms</a>
@@ -1185,18 +1281,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Barrett's esophagus dysplasia grading suffers substantial inter-observer variability, particularly for low-grade dysplasia, complicating clinical decision-making. We conducted a retrospective multi-institutional diagnostic accuracy study of a foundation model-based deep learning system for dysplasia grading, using 969 H\&E-stained whole slide images from four institutions. Patch-level classifiers trained on expert annotations identified diagnostically relevant regions, followed by attribute-aware multiple instance learning for slide-level classification as non-dysplastic Barrett's esophagus (NDBE), low-grade dysplasia, or high-grade dysplasia. On a held-out test set (n = 130), macro-averaged AUC was 0.96 (95\% CI 0.93--0.98). For binary dysplasia detection, sensitivity was 98\% (80/82) and specificity 81\% (39/48), with a negative likelihood ratio of 0.030 and quadratic-weighted \kap{} of 0.83 against expert consensus. No high-grade dysplasia case was misclassified as NDBE. Performance was consistent across institutions without stain normalization, indicating that stain-robust foundation-model representations may remove the site-specific preprocessing that has constrained prior systems to institution-specific deployment.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2611.14207v2" target="_blank" class="paper-title">DailyWildfireCAN: A Dataset and Benchmark for Next-Day Wildfire Spread Prediction in Canada</a>
-                        <span class="paper-date">2026-11-19</span>
-                    </div>
-                                        <span class="paper-comment">📝 Preprint; under review</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Wildfires represent a critical ecological and socio-economic challenge in Canada, where vast boreal forests and a warming climate have amplified the frequency and severity of extreme fire seasons. Predicting next-day wildfire spread can support fire management, but requires capturing complex interactions among weather, fuels, and terrain. Deep learning has emerged as a promising approach to learning these relationships from heterogeneous environmental data, yet its development and evaluation depend on representative datasets. Existing deep learning research on wildfire spread relies predominantly on US-focused datasets, leaving Canadian fire environments underrepresented. To address this gap, we present DailyWildfireCAN, a multi-modal, multi-temporal dataset and benchmark for predicting next-day wildfire spread across Canada. The dataset tracks continuous fire progression over multi-day events at a high spatial and temporal resolution of 90-m and 24-hour, respectively. This resolution preserves fine-scale information relevant to fire-edge geometry, local fuel variations, and terrain effects, supporting research toward improved daily wildfire spread forecasting. DailyWildfireCAN covers 2,440 wildfire events across eight fire seasons 2017-2024 and integrates 33 features across diverse modalities, including topography, meteorology, land cover, vegetation and forest structure, human influence indices, and satellite imagery. We establish a comprehensive benchmark comparing mono-temporal and multi-temporal prediction models, accompanied by a multi-dimensional evaluation framework assessing robustness across wildfire characteristics, geographic regions, and temporal conditions, spatial prediction quality, and sensitivity to reference label variations.</p>
                     </details>
                 </div>
                 <div class="paper-card">
@@ -1737,78 +1821,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>The pursuit of improved performance in deep learning has often been accompanied by increasing architectural complexity and computational demands. We explore an alternative direction: achieving more with less through structured supervision. We introduce LightSEAD, a lightweight SE(3)-aware keypoint detector initialised with calibrated Harris pseudo-labels and enriched through viewpoint-aware and appearance-aware supervision and selective knowledge distillation. LightSEAD comprises only six convolutional layers and 84,289 learnable parameters, achieving competitive repeatability across HPatches, KITTI 06 and 4Seasons while demonstrating its downstream applicability to relative pose estimation on MegaDepth-1500. Further optimised for mixed-precision inference, LightSEAD Coarse achieves approximately 909 FPS on an NVIDIA RTX 4090 and 139 FPS on a Jetson Orin Nano Super.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2305.10299v4" target="_blank" class="paper-title">Binarized Spectral Compressive Imaging</a>
-                        <span class="paper-date">2026-11-18</span>
-                    </div>
-                                        <span class="paper-comment">📝 NeurIPS 2023; The first work to study binarized spectral compressive imaging reconstruction problem</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Existing deep learning models for hyperspectral image (HSI) reconstruction achieve good performance but require powerful hardwares with enormous memory and computational resources. Consequently, these methods can hardly be deployed on resource-limited mobile devices. In this paper, we propose a novel method, Binarized Spectral-Redistribution Network (BiSRNet), for efficient and practical HSI restoration from compressed measurement in snapshot compressive imaging (SCI) systems. Firstly, we redesign a compact and easy-to-deploy base model to be binarized. Then we present the basic unit, Binarized Spectral-Redistribution Convolution (BiSR-Conv). BiSR-Conv can adaptively redistribute the HSI representations before binarizing activation and uses a scalable hyperbolic tangent function to closer approximate the Sign function in backpropagation. Based on our BiSR-Conv, we customize four binarized convolutional modules to address the dimension mismatch and propagate full-precision information throughout the whole network. Finally, our BiSRNet is derived by using the proposed techniques to binarize the base model. Comprehensive quantitative and qualitative experiments manifest that our proposed BiSRNet outperforms state-of-the-art binarization methods and achieves comparable performance with full-precision algorithms. Code and models are publicly available at https://github.com/caiyuanhao1998/BiSCI and https://github.com/caiyuanhao1998/MST . An online Gradio demo is available on Hugging Face at https://huggingface.co/spaces/CaiYuanhao/MST</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2203.04845v4" target="_blank" class="paper-title">Coarse-to-Fine Sparse Transformer for Hyperspectral Image Reconstruction</a>
-                        <span class="paper-date">2026-11-17</span>
-                    </div>
-                                        <span class="paper-comment">📝 ECCV 2022</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Many algorithms have been developed to solve the inverse problem of coded aperture snapshot spectral imaging (CASSI), i.e., recovering the 3D hyperspectral images (HSIs) from a 2D compressive measurement. In recent years, learning-based methods have demonstrated promising performance and dominated the mainstream research direction. However, existing CNN-based methods show limitations in capturing long-range dependencies and non-local self-similarity. Previous Transformer-based methods densely sample tokens, some of which are uninformative, and calculate the multi-head self-attention (MSA) between some tokens that are unrelated in content. This does not fit the spatially sparse nature of HSI signals and limits the model scalability. In this paper, we propose a novel Transformer-based method, coarse-to-fine sparse Transformer (CST), firstly embedding HSI sparsity into deep learning for HSI reconstruction. In particular, CST uses our proposed spectra-aware screening mechanism (SASM) for coarse patch selecting. Then the selected patches are fed into our customized spectra-aggregation hashing multi-head self-attention (SAH-MSA) for fine pixel clustering and self-similarity capturing. Comprehensive experiments show that our CST significantly outperforms state-of-the-art methods while requiring cheaper computational costs. The code and models will be released at https://github.com/caiyuanhao1998/MST . An online Gradio demo is available at https://huggingface.co/spaces/CaiYuanhao/MST</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2203.02149v3" target="_blank" class="paper-title">HDNet: High-resolution Dual-domain Learning for Spectral Compressive Imaging</a>
-                        <span class="paper-date">2026-11-17</span>
-                    </div>
-                                        <span class="paper-comment">📝 CVPR 2022</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>The rapid development of deep learning provides a better solution for the end-to-end reconstruction of hyperspectral image (HSI). However, existing learning-based methods have two major defects. Firstly, networks with self-attention usually sacrifice internal resolution to balance model performance against complexity, losing fine-grained high-resolution (HR) features. Secondly, even if the optimization focusing on spatial-spectral domain learning (SDL) converges to the ideal solution, there is still a significant visual difference between the reconstructed HSI and the truth. Therefore, we propose a high-resolution dual-domain learning network (HDNet) for HSI reconstruction. On the one hand, the proposed HR spatial-spectral attention module with its efficient feature fusion provides continuous and fine pixel-level features. On the other hand, frequency domain learning (FDL) is introduced for HSI reconstruction to narrow the frequency domain discrepancy. Dynamic FDL supervision forces the model to reconstruct fine-grained frequencies and compensate for excessive smoothing and distortion caused by pixel-level losses. The HR pixel-level attention and frequency-level refinement in our HDNet mutually promote HSI perceptual quality. Extensive quantitative and qualitative evaluation experiments show that our method achieves SOTA performance on simulated and real HSI datasets. Code and models will be released at https://github.com/caiyuanhao1998/MST . An online Gradio demo is available on HuggingFace at https://huggingface.co/spaces/CaiYuanhao/MST</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2303.06705v4" target="_blank" class="paper-title">Retinexformer: One-stage Retinex-based Transformer for Low-light Image Enhancement</a>
-                        <span class="paper-date">2026-11-17</span>
-                    </div>
-                                        <span class="paper-comment">📝 ICCV 2023; The first Transformer-based method for low-light image enhancement</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>When enhancing low-light images, many deep learning algorithms are based on the Retinex theory. However, the Retinex model does not consider the corruptions hidden in the dark or introduced by the light-up process. Besides, these methods usually require a tedious multi-stage training pipeline and rely on convolutional neural networks, showing limitations in capturing long-range dependencies. In this paper, we formulate a simple yet principled One-stage Retinex-based Framework (ORF). ORF first estimates the illumination information to light up the low-light image and then restores the corruption to produce the enhanced image. We design an Illumination-Guided Transformer (IGT) that utilizes illumination representations to direct the modeling of non-local interactions of regions with different lighting conditions. By plugging IGT into ORF, we obtain our algorithm, Retinexformer. Comprehensive quantitative and qualitative experiments demonstrate that our Retinexformer significantly outperforms state-of-the-art methods on thirteen benchmarks. The user study and application on low-light object detection also reveal the latent practical values of our method. Code, models, and results are available at https://github.com/caiyuanhao1998/Retinexformer . An online Gradio demo is available on Hugging Face at https://huggingface.co/spaces/CaiYuanhao/Retinexformer</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2611.23543v1" target="_blank" class="paper-title">Stability of Parallel Transport Convolution under Riemannian Metric Perturbations</a>
-                        <span class="paper-date">2026-11-17</span>
-                    </div>
-                                        <span class="paper-comment">📝 78 pages. Comments welcome!</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Geometric convolutions on Riemannian manifolds depend on the geometry of the underlying domain, making stability under metric perturbations a fundamental question in geometric deep learning. This paper studies this question for parallel transport convolution through methods from differential geometry and analysis. On a fixed compact manifold, we establish that, for a continuous input signal and a continuous reference kernel supported in a sufficiently small normal neighborhood, the convolution output depends continuously in $L^2$ on the Riemannian metric in the $C^2$-topology, under the specified localization and transport-path conventions. The analysis develops perturbation estimates for geodesics, parallel transport, Jacobi fields, and exponential maps, and uses these estimates to compare the transported kernels. A central difficulty is the cut locus, which obstructs uniform comparison of the transport construction over the entire manifold. We address this difficulty by combining uniform estimates away from the cut locus with integral bounds on neighborhoods of arbitrarily small volume, while also controlling the change in the Riemannian volume measure. The resulting qualitative stability theorem connects perturbation theory for Riemannian geometric constructions with the analysis of spatial convolution operators in geometric deep learning.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2608.25903v2" target="_blank" class="paper-title">MetaSieve: Faster Relational Deep Learning through SQL-Based Metapath Selection</a>
-                        <span class="paper-date">2026-11-17</span>
-                    </div>
-                                        <span class="paper-comment">📝 Extended version of: Fahim Shahriar Khan and Ashraf Aboulnaga. "MetaSieve: Faster Relational Deep Learning through SQL-Based Metapath Selection," Proceedings of the VLDB Endowment (PVLDB), volume 20, number 3, pp. 636-648, November 2026</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Relational Deep Learning (RDL) is an effective approach to machine learning over multi-table relational databases. In RDL, a database is modeled as a graph in which each row is a node and each foreign-key relation is an edge, and a graph neural network (GNN) is trained on this graph. Training a GNN requires sampling a subgraph around every seed node in the training set, and the cost of training is largely determined by the size of these subgraphs. This paper aims to reduce subgraph size by leveraging the join and aggregation capabilities of relational database systems. We observe that sampled subgraphs are obtained by following metapaths composed of foreign-key links, and that many of these metapaths can be pruned without loss of accuracy. We present MetaSieve, a metapath selection layer that determines which metapaths to retain and which to prune. For each candidate metapath extension, MetaSieve computes statistics via SQL join and aggregation queries and evaluates the extension based on a novel scoring function that prefers lightweight but informative candidates. Metapaths whose scores fall below a threshold are deemed uninformative and pruned. Metapath selection in MetaSieve is lightweight since it relies only on database statistics and task labels, and it is independent of GNN parameters, so it integrates with diverse GNN architectures for classification and regression. Our evaluation on the RelBench benchmark with multiple GNN backbones shows that MetaSieve consistently reduces per-epoch training time by large margins while maintaining and often improving accuracy.</p>
                     </details>
                 </div>
             </div>

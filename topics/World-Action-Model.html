@@ -590,7 +590,7 @@
                 <a href="World-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">World Model</span>
-                    <span class="nav-count">80</span>
+                    <span class="nav-count">79</span>
                 </a>
                 <a href="3D-Foundation-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
@@ -670,7 +670,7 @@
                 <a href="Autonomous-Driving.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#6366f1"></span>
                     <span class="nav-label">Autonomous Driving</span>
-                    <span class="nav-count">79</span>
+                    <span class="nav-count">80</span>
                 </a>
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
@@ -690,7 +690,7 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">65</span>
+                    <span class="nav-count">66</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
@@ -809,7 +809,7 @@
             <a href="World-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">World Model</span>
-                <span class="nav-count">80</span>
+                <span class="nav-count">79</span>
             </a>
             <a href="3D-Foundation-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
@@ -889,7 +889,7 @@
             <a href="Autonomous-Driving.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
                 <span class="nav-label">Autonomous Driving</span>
-                <span class="nav-count">79</span>
+                <span class="nav-count">80</span>
             </a>
             <a href="Kalman-Filter.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
@@ -909,7 +909,7 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">65</span>
+                <span class="nav-count">66</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
@@ -1030,6 +1030,18 @@
             <div class="paper-list">
                 <div class="paper-card">
                     <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2611.08156v2" target="_blank" class="paper-title">La-JEPA: Compact Robot Policies with Latent World Modeling</a>
+                        <span class="paper-date">2026-11-20</span>
+                    </div>
+                                        <span class="paper-comment">📝 31 pages, 6 figures. v2: full-RoboTwin results with scaling to 2.1B parameters, leave-one-out ablation, revised figures and text. Code: https://github.com/mt-clemente/lajepa</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>World-action models adapt pretrained video generators, and vision-language-action models build on vision-language backbones, tying policy architecture and inference cost to large transformers designed for generation rather than control. While recent world-action models mostly scale the video backbone and its data, we argue that the choice of latent space is just as critical, and that the policy should be trained natively in that space. We introduce Latent Action JEPA (La-JEPA), a compact world-action model whose policy transformer is trained from scratch in the feature space of a pretrained V-JEPA 2.1 encoder; it predicts future features with actions during training and generates only actions at inference. Among policies without embodied pretraining, La-JEPA achieves state-of-the-art average RoboTwin 2.0 success under both clean-only and full training, and state-of-the-art LIBERO-Plus success with corrected instructions, while using far fewer parameters than the strongest competitors; with full training, its success scales with model size up to 2.1B. Its S and B policies run two to five times faster than Fast-WAM and Faster-WAM while outperforming both on LIBERO-Plus and RoboTwin 2.0, and La-JEPA outperforms the closest JEPA-based methods, LeapBot-WA and JEPA-WAM, without their pretrained policy backbones. On four real-robot tasks, its average success is comparable to $π_{0.5}$. A design study shows that JEPA features outperform video VAE latents, most clearly out of distribution, and that training-time future prediction improves the policy even when skipped at inference. Tailoring the policy's design, including its latent space, to control can thus matter more than the knowledge transferred from a pretrained generative backbone, suggesting that robot foundation models may benefit from architectures designed for control rather than inherited from generation.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
                         <a href="https://arxiv.org/abs/2611.25105v2" target="_blank" class="paper-title">MAWAM: A Multi-Agent World-Action Model for Coordinated Manipulation</a>
                         <span class="paper-date">2026-11-20</span>
                     </div>
@@ -1062,6 +1074,21 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>World-action models (WAMs) often generate future visual states alongside robot actions, introducing substantial computational overhead during inference. During closed-loop execution, consecutive inference cycles often predict similar action sequences, leading to redundant computation. However, reducing this redundancy requires distinguishing consistent actions from changes that demand fresh computation. To address these challenges, we propose ReActWAM, a training-free framework that combines action-intent-guided prefix skipping with inner-chunk prediction reuse. A coarse-to-fine assessment evaluates motion changes, visual consistency, and action prediction conflicts. For eligible chunks, we draw on first-step differences to adapt the cached latent and network features to the current condition, providing an estimate at a later denoising step that bypasses the redundant prefix. Subsequent inference refines this estimate while reusing stable denoising predictions within the chunk. Experiments across LingBot-VA, FastWAM and the Cosmos family on LIBERO-Long and RoboTwin 2.0 demonstrate $1.41\times$--$5.44\times$ GPU inference speedup, with minimal degradation in task success rates. Real-world experiments on a Franka Research 3 (FR3) robot further achieve $1.46\times$ end-to-end speedup while maintaining success rate.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2609.15570v4" target="_blank" class="paper-title">DIDO: Distilling Interaction-Centric Dynamics into One-Step Denoising for World Action Models</a>
+                        <span class="paper-date">2026-11-20</span>
+                    </div>
+                                        <span class="paper-comment">📝 Preprint. 22 pages, 8 figures, 5 tables</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：世界动作模型（WAMs）依赖多步迭代去噪生成视频来预测机器人操作动态，但迭代去噪带来闭环控制的额外延迟；而简单截断为单步虽保留场景结构，却丢失了对操作最关键的交互动态（夹爪与被操作物体）。&#10;&#10;🛠 **方法**：提出 DIDO，将多步视频模型收敛后的动态蒸馏进单步去噪，结合分布匹配蒸馏与以交互为中心的表示引导——用监督式边界框视觉推理 token 显式建模夹爪、被操作物体及其交互，并将目标物体多层表示与预训练 DINOv3 编码器特征对齐。&#10;&#10;✨ **主要贡献**：在单步推理下同时保留关键实体及其未来动态，大幅降低延迟；在 LIBERO 达 99.0%、LIBERO-Plus 达 76.6%、RoboTwin 达 92.0% 的平均成功率，并有效迁移到真实机器人长时程与泛化任务。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>World Action Models (WAMs) use video generation models to predict future visual dynamics for robotic manipulation, but iterative denoising introduces additional latency for closed-loop control. We empirically find that visual content converges at different rates during denoising. Static background structure forms early, whereas the gripper and manipulated object remain blurry after the first step, with their interaction dynamics emerging only through subsequent denoising. Consequently, naively truncating a multi-step video model to one step preserves scene structure but loses the interaction-centric dynamics most critical for manipulation. To address this issue, we propose DIDO, which distills the converged dynamics of a multi-step video model into a single denoising step. DIDO combines distribution matching distillation with interaction-centric representation guidance. Beyond compressing multi-step generation into one forward pass, DIDO explicitly models the gripper, manipulated object, and their interaction using supervised bounding-box visual reasoning tokens. Additionally, DIDO aligns the target object's representations across multiple model layers with features from a pretrained DINOv3 encoder. This interaction-centric guidance helps the distilled model preserve both the relevant entities and their future dynamics in a single step, while substantially reducing inference latency. DIDO achieves an average success rate of 99.0\% on LIBERO, 76.6\% on LIBERO-Plus, and 92.0\% on RoboTwin, while also demonstrating effective transfer to long-horizon and generalization tasks in real-world robotic manipulation.</p>
                     </details>
                 </div>
                 <div class="paper-card">
@@ -1918,18 +1945,6 @@
                 </div>
                 <div class="paper-card">
                     <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2611.08156v1" target="_blank" class="paper-title">La-JEPA: Compact Robot Policies with Latent World Modeling</a>
-                        <span class="paper-date">2026-11-05</span>
-                    </div>
-                                        <span class="paper-comment">📝 30 pages, 6 figures. Code: https://github.com/mt-clemente/lajepa</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>World-action models adapt pretrained video generators, and vision-language-action models build on pretrained vision-language backbones; both tie policy architecture and inference cost to large transformers designed for generation rather than control. It remains unclear how much these generation-oriented choices affect control. In this work, we introduce Latent Action JEPA (La-JEPA), a compact world-action model whose policy transformer is trained from scratch in the feature space of a pretrained V-JEPA 2.1 encoder. Following Fast-WAM, La-JEPA learns to predict future features jointly with actions during training and generates only actions at inference. Among policies without embodied pretraining, La-JEPA achieves state-of-the-art performance in clean and randomized RoboTwin 2.0 scenes and on LIBERO-Plus with correct instructions, while using far fewer parameters than the strongest competing policies. It runs substantially faster than Fast-WAM at comparable performance and outperforms the closest JEPA-based methods, LeapBot-WA and JEPA-WAM, on LIBERO-Plus and RoboTwin 2.0 without their pretrained policy backbones. On four real-robot tasks, its average success is comparable to pi0.5 and above non-embodied-pretrained baselines. Through a design study of the choices behind La-JEPA, we show that JEPA features outperform video VAE latents, most clearly out of distribution, and that training-time future prediction choices significantly impact the policy even when future prediction is skipped at inference. We correct the LIBERO-Plus instructions, as the officially released evaluator corrupts them for most variants, and re-evaluate several strong open baselines. Without a generative pretrained policy backbone, La-JEPA is better and faster than far larger policies, suggesting that robot foundation models may benefit from architectures designed for control rather than inherited from generation.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
                         <a href="https://arxiv.org/abs/2611.08111v1" target="_blank" class="paper-title">Reinforcing End-to-End Autonomous Driving Safety via Negative-Aware Planning in a Unified World-Action Model</a>
                         <span class="paper-date">2026-11-05</span>
                     </div>
@@ -1974,18 +1989,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>The Universal Manipulation Interface (UMI) enables scalable demonstration collection independently of a specific robot. However, its moving, close-range gripper cameras entangle camera and object motion without a stable external view, leaving the metric geometry needed for precise manipulation implicit in RGB. We introduce Spatial-UMI-Dream, a 5B spatial World Action Model (WAM) pretrained on 605 hours of RGB-D UMI data through two-stage training -- world-only adaptation followed by joint world-action learning -- to jointly predict future RGB, fisheye-aligned metric depth, and actions. Stereo-derived depth makes scene scale and spatial relationships explicit within a unified dual-gripper RGB-D representation. Furthermore, evaluating UMI policies requires testing whether UMI's robot-independent demonstration collection translates into policy generalization across robot embodiments, alongside robustness to environmental changes. We introduce RoboTwin-UMI, a twenty-task simulation benchmark built on RoboTwin with UMI wrist-mounted fisheye observations, enabling controlled, repeatable evaluation of UMI policies under environment and embodiment changes separately and jointly without additional fine-tuning. On RoboTwin-UMI, Spatial-UMI-Dream achieves 79.10% in-domain success and 72.15% under combined embodiment and environment shifts, exceeding the strongest evaluated baseline in each setting by 4.65 and 10.30 percentage points, respectively. It also exhibits the smallest success-rate drop under embodiment transfer among the evaluated policies. In a matched pretraining ablation, RGB-only pretraining leads to a 5.75-percentage-point decrease in in-domain success compared with RGB-D pretraining. Across six real-world tasks, Spatial-UMI-Dream achieves 85.0% average success, exceeding the strongest baseline by 24.2 percentage points. Project page: https://weiduoyuan.com/spatial-umi-dream/</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2611.02474v2" target="_blank" class="paper-title">Gnomon4D: Learning Where and When to Focus for Geometric Motion-Grounded World-Action Modeling</a>
-                        <span class="paper-date">2026-11-04</span>
-                    </div>
-                                        <span class="paper-comment">📝 Project page: https://droliven.github.io/Gnomon4D</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>World-action models (WAMs) predict scene changes to guide robot actions, yet their RGB futures entangle state changes with appearance and lack 3D geometry. Recent WAMs add geometry as a training signal or a control interface, or build native 3D models, but decide what geometry to model rather than how the action should read it. Intuitively, control-relevant cues lie at embodiment--object interactions and their transitions, yet probing existing WAMs reveals that their action attention underweights these interactions in favor of the rest of the embodiment. To focus the action on these interactions, we present Gnomon4D, a WAM that jointly generates future video, robot actions, and GeoDelta, a video-aligned 4D geometric motion field recording the image-plane displacement and depth change of embodiment and object points. With the embodiment and objects in one field, their relative motion, which marks an interaction, can be read off. Guided by this motion and the task, Interaction-Salient Attention (InSAttn) selects where the action reads, and Transition-Anchored Aggregation (TransAgg) selects when, around grasp and release. As GeoDelta encodes surface motion rather than embodiment-specific controls, it serves as a human--robot quasi-action that links action-free pretraining on EgoManip-5000H, which we curate, to robot mid-training on Robot-30H. Gnomon4D leads on RoboTwin~2.0, VLABench, and RoboDojo, and outperforms real-robot baselines, especially under visual shifts. Project page: https://droliven.github.io/Gnomon4D.</p>
                     </details>
                 </div>
             </div>

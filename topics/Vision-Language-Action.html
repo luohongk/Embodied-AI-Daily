@@ -590,7 +590,7 @@
                 <a href="World-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">World Model</span>
-                    <span class="nav-count">80</span>
+                    <span class="nav-count">79</span>
                 </a>
                 <a href="3D-Foundation-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
@@ -670,7 +670,7 @@
                 <a href="Autonomous-Driving.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#6366f1"></span>
                     <span class="nav-label">Autonomous Driving</span>
-                    <span class="nav-count">79</span>
+                    <span class="nav-count">80</span>
                 </a>
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
@@ -690,7 +690,7 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">65</span>
+                    <span class="nav-count">66</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
@@ -809,7 +809,7 @@
             <a href="World-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">World Model</span>
-                <span class="nav-count">80</span>
+                <span class="nav-count">79</span>
             </a>
             <a href="3D-Foundation-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
@@ -889,7 +889,7 @@
             <a href="Autonomous-Driving.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
                 <span class="nav-label">Autonomous Driving</span>
-                <span class="nav-count">79</span>
+                <span class="nav-count">80</span>
             </a>
             <a href="Kalman-Filter.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
@@ -909,7 +909,7 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">65</span>
+                <span class="nav-count">66</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
@@ -1028,6 +1028,66 @@
                 <span class="topic-count">80 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2611.08156v2" target="_blank" class="paper-title">La-JEPA: Compact Robot Policies with Latent World Modeling</a>
+                        <span class="paper-date">2026-11-20</span>
+                    </div>
+                                        <span class="paper-comment">📝 31 pages, 6 figures. v2: full-RoboTwin results with scaling to 2.1B parameters, leave-one-out ablation, revised figures and text. Code: https://github.com/mt-clemente/lajepa</span>
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>World-action models adapt pretrained video generators, and vision-language-action models build on vision-language backbones, tying policy architecture and inference cost to large transformers designed for generation rather than control. While recent world-action models mostly scale the video backbone and its data, we argue that the choice of latent space is just as critical, and that the policy should be trained natively in that space. We introduce Latent Action JEPA (La-JEPA), a compact world-action model whose policy transformer is trained from scratch in the feature space of a pretrained V-JEPA 2.1 encoder; it predicts future features with actions during training and generates only actions at inference. Among policies without embodied pretraining, La-JEPA achieves state-of-the-art average RoboTwin 2.0 success under both clean-only and full training, and state-of-the-art LIBERO-Plus success with corrected instructions, while using far fewer parameters than the strongest competitors; with full training, its success scales with model size up to 2.1B. Its S and B policies run two to five times faster than Fast-WAM and Faster-WAM while outperforming both on LIBERO-Plus and RoboTwin 2.0, and La-JEPA outperforms the closest JEPA-based methods, LeapBot-WA and JEPA-WAM, without their pretrained policy backbones. On four real-robot tasks, its average success is comparable to $π_{0.5}$. A design study shows that JEPA features outperform video VAE latents, most clearly out of distribution, and that training-time future prediction improves the policy even when skipped at inference. Tailoring the policy's design, including its latent space, to control can thus matter more than the knowledge transferred from a pretrained generative backbone, suggesting that robot foundation models may benefit from architectures designed for control rather than inherited from generation.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2611.27645v1" target="_blank" class="paper-title">Efficient VLA Reinforcement Learning via Subchunk Rollouts in Latent World Models</a>
+                        <span class="paper-date">2026-11-20</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Model-based reinforcement learning (MBRL) can improve pretrained vision-language-action (VLA) policies through imagined experiences. However, existing VLA-MBRL methods primarily rely on large-scale image or video generation world models, incurring large computational overhead. Latent world models offer a more efficient alternative but face two challenges: compounding errors during recursive prediction and incompatibility with VLAs' visual input interfaces. In this work, we propose LS-MBPO, a lightweight residual MBRL framework that leverages latent world models to improve upon pretrained VLAs. LS-MBPO introduces two key techniques: (1) Hierarchical Forcing, which combines dense causal supervision with autoregressive feedback to mitigate compounding prediction errors; and (2) Latent Subchunk Rollouts, which leverage action chunks from a frozen VLA policy and a latent residual policy for successive subchunk refinement, bridging the gap between latent imagination and VLA policy execution. We further introduce a Progress-Conditioned Branch-Start Curriculum that progressively shifts rollout starting points from later to earlier task stages, enabling effective policy learning from short imagined rollouts. Extensive experiments on LIBERO, RoboTwin, and a real-world ALOHA robot show that LS-MBPO achieves superior task performance and training efficiency compared to existing methods.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2609.36774v2" target="_blank" class="paper-title">LexiconVLA: Learning Reusable Atomic Action Codebooks for Manipulation</a>
+                        <span class="paper-date">2026-11-20</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Vision-language-action (VLA) models struggle to reuse recurring atomic actions across manipulation tasks. Our diagnostic study reveals that reliable task completion does not imply consistent execution of constituent atomic actions across task contexts. We present LexiconVLA, a retrievable atomic-action lexicon for cross-task reuse. Global and detail codebooks capture shared interaction structure and fine-grained execution variation respectively, preserving both reusable patterns and execution details. Visual-Atomic Action Alignment couples trajectory reconstruction from visual state changes with visual outcome prediction from action codes, grounding the lexicon in motion and its effects. We learn these codebooks with trajectory reconstruction and visual alignment on our AtomAction Dataset of 57,803 segments from 69 tasks. A planner and scene-aware adapter translate new goals into code-conditioned subtasks for a shared policy, without skill-specific experts or deployment-time parameter updates. Across five policy backbones on 26 RLBench tasks, LexiconVLA largely maintains performance on 18 seen tasks while improving success on 8 tasks held out from policy training. With BridgeVLA, unseen-task success rises from 16.67% to 34.17% (+17.50 percentage points), and overall success reaches 71.08%, the highest among methods with reported results. Real-robot experiments demonstrate stepwise execution and failure recovery.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2611.18562v2" target="_blank" class="paper-title">Training Reasoning Models in Simulation to Natively Use Real Robots</a>
+                        <span class="paper-date">2026-11-20</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Robot-use agents (RUAs) have emerged as a promising approach to general-purpose robot control. However, strong performance has so far been achieved only by frontier proprietary models such as GPT-6 Astra and Claude Fable 5.2, whereas open-weight models remain substantially less capable. We show that an open-weight 27B reasoning model can be trained to use real robots natively through reinforcement learning, entirely in simulation and without demonstrations. Like a computer-use agent (CUA), the model observes the environment, reasons in a chain of thought, and generates the next end-effector pose, without any harness. We build a Post-training Engine for Agentic Robotics (PEAR) and use it to train the model on simulated robot tasks at scale with robot-use reinforcement learning (RURL), mirroring how frontier models acquire computer use. We find that the skills acquired in simulation generalize well beyond the training tasks: they transfer to an unseen robot, to the real world, and to novel instructions. After training on LIBERO and RoboDojo in simulation, the model succeeds in 60% of our trials on a real dual-arm robot, whereas the base model succeeds in none. On LIBERO, training raises the success rate from 1.6% to 74.4%, approaching GPT-6 Astra and GPT-6.1 Sol at maximum reasoning effort. Compared with $π_{0.5}$, a vision-language-action model fine-tuned on demonstrations, our model is substantially more robust to changes in the task itself. On LIBERO-Pro, $π_{0.5}$ succeeds in only 0.75% of episodes when assigned a new task in a familiar scene whereas our model succeeds in 57.4%. Finally, the model retains its general capabilities, with no measurable degradation on nine reasoning, coding and vision benchmarks. These results highlight robot-use reinforcement learning as a promising component of foundation-model post-training.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2604.09244v3" target="_blank" class="paper-title">2D or 3D? Rethinking Token Pruning in 3D VLAs with Cross-Modal Correlation Awareness</a>
+                        <span class="paper-date">2026-11-20</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>3D vision-language-action (VLA) models process both image and point cloud tokens at each control step, increasing the cost of action prediction. Token pruning can reduce this cost, but a token's contribution depends on which other tokens remain. We present 2Dor3D, a framework that jointly selects which 2D and 3D tokens to retain under a fixed token budget. Our analysis shows that either modality can compensate for the other within a patch, that neighboring correlations help explain differences in pruning risk, and that shared tokens couple pruning decisions across patches. In one box-closing observation, two patches with nearly identical interaction scores differed eightfold in the action deviation caused by removing their image token. Guided by these findings, 2Dor3D transfers cross-modal prediction residuals to retained tokens, uses neighborhood correlation entropy to explore more retention choices at local outliers, and updates pruning costs after each proposed exchange between coupled regions. A fused GPU kernel packs the selected tokens into a shorter sequence for subsequent Transformer layers. Across RLBench and LIBERO, 2Dor3D speeds up end-to-end inference by $2.06$--$2.10\times$ on MLA and $1.86$--$1.91\times$ on FiS-VLA, with task success rates 0.5--0.6 percentage points below the corresponding unpruned models.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2611.27187v1" target="_blank" class="paper-title">SCAP: Stochastic Context for Action Expert Pretraining</a>
@@ -1926,66 +1986,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Vision-Language-Action (VLA) models achieve high success rates on the LIBERO benchmark but remain sensitive to paraphrasing. Existing VLAs ranging from 0.6B to 7.5B parameters experience a 22-52 point performance drop on LIBERO-Para while SmolVLA exhibits an even larger decline, from 83\% to 8\%. Because most VLAs jointly learn language understanding and action generation, it is difficult to determine whether a failure originates from misunderstanding an instruction or executing it incorrectly. To address these challenges, we introduce CoBoVLA, or CodeBookVLA, a 250M-parameter VLA that decouples language understanding, planning, and control through learned discrete interpretable codes. A text encoder maps the instructions to shared step codes, which a visual planner then converts into action code sequences executed by a language-independent actor. This design improves robustness to instruction paraphrasing while allowing failures to be traced to individual stages. It also enables efficient real-time control on resource-constrained hardware by encoding instructions only once and using compact discrete representations to keep each component lightweight. CoBoVLA achieves 91.4\% success on LIBERO-Goal, compared with 82.8\% for SmolVLA, under a matched protocol, with 17 ms per control step latency. On LIBERO-Para, it achieves 81.1\% across 4,092 unseen paraphrases and 78.5\% on matched episodes, compared with 36.5\% for SmolVLA LoRA fine-tuned on paraphrases. Without two-step demonstrations, CoBoVLA completes 48.8\% of 160 free-form two-step tasks. Finally, success reaches 91\% when instructions are correctly encoded but falls to 27.2\% otherwise, identifying language understanding as the main source of remaining failures. Together, these results demonstrate that decoupling language understanding and control can improve instruction robustness while making VLA failures easier to diagnose.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2611.22356v1" target="_blank" class="paper-title">SR-VLA: Stall-Reduced VLA Execution via Predicted-Input Lookahead and Selective KV Cache Repair</a>
-                        <span class="paper-date">2026-11-17</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Vision-language-action (VLA) policies incur control stalls when inference blocks the next action chunk. Asynchronous early inference can hide latency, but its results may be inconsistent with the arriving actual inputs. Unconditional reuse risks acting on mismatched inputs, whereas full recomputation discards useful precomputation. We propose SR-VLA, combining predicted-input lookahead with selective KV cache repair. During current chunk execution, a lightweight action-conditioned predictor generates next-boundary visual observations and proprioceptive state. These predictions, together with the task instruction, drive the frozen VLA to precompute a speculative KV cache and action chunk. After real inputs are available to VLA, predicted--real differences and task conditions determine whether to accept the action chunk or trigger selective KV repair. On LIBERO, SR-VLA achieves $2.67\times$ and $1.27\times$ query speedups over the respective synchronous $π_{0.5}$ and OpenVLA-OFT baselines, while maintaining competitive average task success rates. Under target-motion perturbation, success remains baseline-comparable, with $1.52\times$--$1.93\times$ query speedup.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2611.16246v3" target="_blank" class="paper-title">What Can a VLA Learn from the Agent That Calls It? Task-Level Experience Distillation for Embodied Navigation</a>
-                        <span class="paper-date">2026-11-17</span>
-                    </div>
-                                        <span class="paper-comment">📝 17 pages, 8 figures, 13 tables; v2 adds NavRAG-CE results, second-round recovery sessions and an extended appendix</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Vision-language-action (VLA) models drive the robot directly from camera views, yet a VLA alone shows three typical failures. It walks past the goal, stops before reaching it, and rarely recovers after going off track. Pairing a VLA with a large language model (LLM) planner fixes these failures, but queries the LLM throughout every episode, adding token costs and latency. We introduce Harness-to-Executor (H2E), a task-level distillation method that pairs an LLM planner and a frozen VLA as a heterogeneous training agent, keeps only sessions that reach the goal, and then trains a VLA alone on them so no LLM is used at test time. In these sessions, the planner gives sub-instructions and moves the robot with its own tools, detours are common, and the planner decides when to stop. H2E therefore labels every motion as a VLA action for the original task, whoever made it. It masks the loss on steps moving away from the goal and assigns end labels to states near it, so the VLA learns where the task ends. H2E sets a new state of the art on REVERIE-CE and NavRAG-CE. It raises an 8B VLA's success rate by 15.6% and 11.1% respectively, surpassing a method trained on 10M samples. The distilled VLA exceeds its agent on unseen episodes with zero LLM tokens and runs 3.7 times faster.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2611.22295v1" target="_blank" class="paper-title">Similar Is Not Useful: Selecting In-Context Demonstrations by Closed-Loop Utility</a>
-                        <span class="paper-date">2026-11-17</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Retrieval-augmented vision-language-action (VLA) policies fill their context with the demonstrations whose frames look most like the current observation under frozen DINOv2 embeddings. We ask whether visual similarity selects the demonstrations that make the policy succeed. For a frozen retrieval-augmented VLA (RICL on $π_0$-FAST, LIBERO), we make the demonstration pool swappable at run time and score each demonstration's utility by regressing the closed-loop success of 60 fixed-size pools on their membership. On initial states disjoint from those used for scoring, pools of the five highest-utility demonstrations succeed on 66.4% of 760 paired episodes across 19 tasks, pools of the five most similar on 55.7%, and random pools on 55.5%. Utility beats similarity by 10.8 points ($p=3.2\times10^{-6}$; positive on 15 of 18 untied tasks), including on 12 tasks the policy was never primed on, and similarity-selected pools do no better than random ($+0.1$ points). Within a task, a pool's visual similarity to the test scenes tracks its success at Spearman 0.10; across tasks, similarity separates tasks whose scenes differ and falls to chance when two tasks share a scene. The gain comes from on-task closed-loop evidence: best-of-ten direct search over pools recovers two-thirds of it with 100 rollouts. Against the shipped 20-demonstration pool, utility-curated pools of five lead by 7.0 points over 560 paired episodes from two evaluation runs ($p=0.006$), and utility-ordered retrieval inside the full pool leads by 4.5 points ($p=0.055$).</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2609.39514v2" target="_blank" class="paper-title">Spike-driven Vision-Language-Action Model</a>
-                        <span class="paper-date">2026-11-17</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Vision-language-action (VLA) models bridge multimodal understanding and robotic control, advancing the dominant paradigm for embodied intelligence. However, most existing models rely on large Transformers, whose latency and energy costs hinder deployment on resource-constrained platforms. Through sparse event-driven computation, spiking neural networks offer a promising paradigm for high-performance and energy-efficient computing. Here, we propose the first Spike-driven VLA framework enabling end-to-end direct training for robotic manipulation, which mainly comprises three core components. First, we develop spiking visual and instruction encoders for multimodal perception, encoding visual observations and language instructions into sparse, reliable spike representations for subsequent cross-modal fusion. Then, we introduce Multi-Winner Spike Fusion for instruction-guided scene understanding, using bidirectional top-$k$ winner-take-all spike routing to suppress background interference and yield fused memory. Finally, we propose a Spike Action Chunking Transformer that incorporates spiking cross-attention over the fused memory and the current robot state, enabling efficient end-to-end generation of continuous action chunks for robotic control. Extensive experiments on LIBERO and Meta-World demonstrate that Spike-driven VLA achieves competitive performance with fewer parameters and lower estimated inference energy than conventional VLA models. This work establishes a foundational framework for neuromorphic VLA modeling, paving the way for future advances in resource-efficient embodied intelligence.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2611.21607v1" target="_blank" class="paper-title">ScaleVLA: Scaling Vision-Language-Action Models to 552 Billion Parameters</a>
-                        <span class="paper-date">2026-11-16</span>
-                    </div>
-                                        <span class="paper-comment">📝 Tech Report</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Frontier Vision-Language Models (VLMs) such as GPT-6 Astra have demonstrated remarkable capabilities in robot control, suggesting that broad pretraining provides knowledge valuable for physical action. Yet most Vision-Language-Action (VLA) policies still rely on much smaller VLM backbones, leaving this potential largely untapped. We ask whether frontier-scale representations can provide a stronger foundation for robot learning. We introduce ScaleVLA, which connects a 552B DeepSeek-V4.1-Flash backbone to a trainable action DiT, and systematically compare VLMs from 2B to 552B under a shared training setup. We evaluate three fundamental capabilities of robot foundation models. In sample efficiency, just 10 demonstrations outperform a 2B backbone trained with 50 (87.8% vs. 85.6%). In generalization, LIBERO-PRO success reaches 45.1%, compared with at most 31.3% for smaller backbones. In precise manipulation, real-world charger insertion improves from 4/10 to 9/10 successes, with gains concentrated in contact-sensitive alignment. Despite its scale, ScaleVLA achieves 216 ms median latency per action chunk. Our findings suggest that frontier VLMs can serve not only as reasoning agents, but also as powerful representational foundations for efficient and generalizable robot policies.</p>
                     </details>
                 </div>
             </div>

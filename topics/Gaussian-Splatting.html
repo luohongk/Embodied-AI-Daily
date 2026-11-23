@@ -590,7 +590,7 @@
                 <a href="World-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">World Model</span>
-                    <span class="nav-count">80</span>
+                    <span class="nav-count">79</span>
                 </a>
                 <a href="3D-Foundation-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
@@ -670,7 +670,7 @@
                 <a href="Autonomous-Driving.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#6366f1"></span>
                     <span class="nav-label">Autonomous Driving</span>
-                    <span class="nav-count">79</span>
+                    <span class="nav-count">80</span>
                 </a>
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
@@ -690,7 +690,7 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">65</span>
+                    <span class="nav-count">66</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
@@ -809,7 +809,7 @@
             <a href="World-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">World Model</span>
-                <span class="nav-count">80</span>
+                <span class="nav-count">79</span>
             </a>
             <a href="3D-Foundation-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
@@ -889,7 +889,7 @@
             <a href="Autonomous-Driving.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
                 <span class="nav-label">Autonomous Driving</span>
-                <span class="nav-count">79</span>
+                <span class="nav-count">80</span>
             </a>
             <a href="Kalman-Filter.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
@@ -909,7 +909,7 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">65</span>
+                <span class="nav-count">66</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
@@ -1030,6 +1030,18 @@
             <div class="paper-list">
                 <div class="paper-card">
                     <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2609.31248v2" target="_blank" class="paper-title">TailorGS: Made-to-Measure Density Control for 3D Gaussian Splatting</a>
+                        <span class="paper-date">2026-11-20</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>3D Gaussian Splatting reconstructs a scene from a set of posed photographs called the capture; Gaussian count affects reconstruction quality, storage, and rendering cost. How to select this number automatically across capture scales remains unresolved: density control techniques effective on standard benchmarks can leave larger captures with too few Gaussians to reconstruct fine details. We observe that the surface to represent, given by capture extent and resolution, is known before training, whereas the capacity needed to reconstruct its content depends strongly on the 3D optimization trajectory and becomes apparent during reconstruction. We introduce TailorGS, which unifies coverage-scaled exploration and coverage-weighted self-distillation under a non-redundant 3D scene coverage measure. Before training, TailorGS groups observed surface points into coarse voxels and shares each voxel's weight among views observing it from the same side. Combined with image resolution, these weights set a generous exploration cap that limits budget inflation from repeated observations. During the first 80% of training, TailorGS grows toward this cap. The resulting model serves as teacher for a single closed-form self-distillation step, balancing fidelity to its renderings against Gaussian count under the same coverage measure. The retained primitives are refined over the remaining 20% of training. On 13 standard scenes, TailorGS matches the mean PSNR of the best-performing evaluated baseline, LeGS, with 48% fewer Gaussians. On eight large captures, the same configuration automatically scales to larger models when necessary, achieving the highest mean PSNR across 13 evaluated baselines: 0.63 dB above the runner-up by allocating 2.8 times as many Gaussians.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
                         <a href="https://arxiv.org/abs/2611.27719v1" target="_blank" class="paper-title">VeilGS: Solving Darkness as a Veil of 2D Basis Maps over Retinex 3DGS</a>
                         <span class="paper-date">2026-11-20</span>
                     </div>
@@ -1062,6 +1074,18 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>The structural integrity of wind turbine blades is critical for safe, efficient energy production. Accurate 3D reconstruction allows precise localization and quantification of wear and early damage detection. While drone-based inspections are standard, their high-resolution imagery poses challenges such as weak texture, lighting variability, and high computational cost. We present BladeR, a scalable pipeline for high-quality 3D reconstruction from inspection imagery. A hierarchical sparse reconstruction strategy leverages GPS/IMU data and blade shape priors to guide advanced keypoint matchers on full-resolution images. For dense reconstruction, a tiled Gaussian Splatting framework processes 45 MP images at native resolution, isolates the blade from background, and adaptively enhances detail recovery along the leading edge. Validation against commercial and open-source baselines shows significant improvements in model completeness and detail.</p>
+                    </details>
+                </div>
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2610.38951v2" target="_blank" class="paper-title">GradSplat: Gradients Inside the Forward Pass for Feed-Forward 3D Gaussian Splatting</a>
+                        <span class="paper-date">2026-11-20</span>
+                    </div>
+                    
+                    
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Feed-forward 3D Gaussian Splatting (3DGS) reconstructs a scene from a few images in a single pass, yet per-scene optimization on the same images can still improve its predicted Gaussians substantially. We show that refining the Gaussian shapes (scales and rotations) recovers nearly all of this improvement. Building upon this finding, we propose $\textbf{GradSplat}$, a feed-forward model that performs gradient-conditioned Gaussian refinement within its forward pass, without requiring target views. It combines $\textit{log-anisotropy correction}$, which changes the aspect ratios of each Gaussian at constant volume, with $\textit{gradient-conditioned refinement}$, which feeds the gradient of the input-view loss to a learned recurrent update, first for opacity and color and then for the shape. GradSplat achieves the best PSNR and SSIM on RealEstate10K with input poses. Without input poses, it leads from $12$ views onward and, at six views, it only trails YoNoSplat, which, unlike GradSplat, requires ground-truth intrinsics. It also achieves the best results on DL3DV and the best PSNR and SSIM on ScanNet++ without fine-tuning. Project page: https://jingong-chen.github.io/GradSplat/</p>
                     </details>
                 </div>
                 <div class="paper-card">
@@ -1938,30 +1962,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>3D Gaussian Splatting (3DGS) enables photorealistic, real-time rendering on commodity GPUs and is increasingly adopted in generative world models and autonomous driving simulators. However, existing optimizations rely on algorithmic changes that often require retraining, or on specialized accelerators that lack flexibility across evolving 3DGS variants. In this paper, we identify a fundamental inefficiency in GPU-based 3DGS rendering: severe SM-level load imbalance caused by uneven workloads across screen tiles. This imbalance creates a long execution tail, leaving most SMs idle while a few process computationally intensive tiles, particularly in large-scale urban scenes. To address this, we present a software-defined GPU scheduling approach that mitigates the execution tail. Our approach uses a persistent kernel to schedule heavy tiles first and selectively chunks outlier tiles across multiple CTAs. A lightweight per-frame policy determines when and how much to chunk using tile statistics already available in the rendering pipeline. Our approach requires neither retraining nor specialized hardware and can be applied orthogonally to existing optimizations across diverse 3DGS variants. Averaged per scene, it accelerates alpha blending by up to 2.93x on a large-scale urban scene, and by up to 5.6x on its most imbalanced frames, while retaining the original alpha blending formulation.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2605.11594v2" target="_blank" class="paper-title">PointForward: Feedforward Driving Reconstruction through Point-Aligned Representations</a>
-                        <span class="paper-date">2026-11-09</span>
-                    </div>
-                                        <span class="paper-comment">📝 Accepted by NeurIPS 2026</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>High-fidelity reconstruction of driving scenes is crucial for autonomous driving. While recent feedforward 3D Gaussian Splatting (3DGS) methods enable fast reconstruction, their per-pixel Gaussian prediction paradigm often suffers from multi-view inconsistency and layering artifacts. Moreover, existing methods often model dynamic instances via dense flow prediction, which lacks explicit cross-view correspondence and instance-level consistency. In this paper, we propose PointForward, a feedforward driving reconstruction framework through point-aligned representations. Unlike pixel-aligned methods, we initialize sparse 3D queries in world space and aggregate multi-view image information via spatial-temporal fusion onto these queries, enforcing explicit cross-view consistency in a single feedforward pass. To handle scene dynamics, we introduce scene graphs that explicitly organize moving instances during reconstruction. By leveraging 3D bounding boxes, our method enables instance-level motion propagation and temporally consistent dynamic representations. Extensive experiments show that PointForward achieves state-of-the-art performance on large-scale driving benchmarks.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2611.11951v1" target="_blank" class="paper-title">UltraVoxelGS: Voxel-First Feed-Forward Gaussian Splatting for 3D Ultrasound Reconstruction</a>
-                        <span class="paper-date">2026-11-09</span>
-                    </div>
-                    
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>We present UltraVoxelGS, a 3D ultrasound reconstruction method that achieves both fast reconstruction and physically faithful rendering for the first time, bringing live spatial feedback during 2D ultrasound scanning within reach. This is made possible by a feed-forward design that predicts a complete Gaussian scene representation from posed ultrasound images directly, entirely bypassing the per-scene optimization bottleneck that has confined prior methods to offline use. Realising such feed-forward prediction in this setting is non-trivial: unlike natural images, ultrasound slices share at most one-dimensional intersections and exhibit view-dependent appearance due to acoustic propagation and attenuation, violating the dense overlap and photometric consistency assumed by existing feed-forward Gaussian methods. Hence, to achieve fast reconstruction, we introduce a feed-forward voxel-to-Gaussian pass that decouples representation size from input count by lifting all posed slices into a fixed-size voxel support and predicting Gaussian parameters directly. For faithful rendering, we propose ultrasound-aware appearance rendering strategy factorize reflection from cumulative attenuation during training and exploit appearance continuity among spatially adjacent slices for efficient Render-time Appearance Adaptation. On both real-world and simulated datasets, UltraVoxelGS achieves best PSNR/SSIM compared with per-scene optimization baselines while reducing inference from 10-20 minutes to approximately 10 seconds (over 35 times faster) and scales to sequences exceeding 1,000 frames. Code is available at https://github.com/YuebyYue/UltraVoxelGS-camera-ready.</p>
                     </details>
                 </div>
             </div>

@@ -590,7 +590,7 @@
                 <a href="World-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">World Model</span>
-                    <span class="nav-count">80</span>
+                    <span class="nav-count">79</span>
                 </a>
                 <a href="3D-Foundation-Model.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
@@ -670,7 +670,7 @@
                 <a href="Autonomous-Driving.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#6366f1"></span>
                     <span class="nav-label">Autonomous Driving</span>
-                    <span class="nav-count">79</span>
+                    <span class="nav-count">80</span>
                 </a>
                 <a href="Kalman-Filter.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#8b5cf6"></span>
@@ -690,7 +690,7 @@
                 <a href="Deep-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#ec4899"></span>
                     <span class="nav-label">Deep Learning</span>
-                    <span class="nav-count">65</span>
+                    <span class="nav-count">66</span>
                 </a>
                 <a href="Reinforcement-Learning.html" class="mobile-nav-item" onclick="closeMenu()">
                     <span class="nav-dot" style="background:#f43f5e"></span>
@@ -809,7 +809,7 @@
             <a href="World-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">World Model</span>
-                <span class="nav-count">80</span>
+                <span class="nav-count">79</span>
             </a>
             <a href="3D-Foundation-Model.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
@@ -889,7 +889,7 @@
             <a href="Autonomous-Driving.html" class="nav-item">
                 <span class="nav-dot" style="background:#6366f1"></span>
                 <span class="nav-label">Autonomous Driving</span>
-                <span class="nav-count">79</span>
+                <span class="nav-count">80</span>
             </a>
             <a href="Kalman-Filter.html" class="nav-item">
                 <span class="nav-dot" style="background:#8b5cf6"></span>
@@ -909,7 +909,7 @@
             <a href="Deep-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#ec4899"></span>
                 <span class="nav-label">Deep Learning</span>
-                <span class="nav-count">65</span>
+                <span class="nav-count">66</span>
             </a>
             <a href="Reinforcement-Learning.html" class="nav-item">
                 <span class="nav-dot" style="background:#f43f5e"></span>
@@ -1028,6 +1028,21 @@
                 <span class="topic-count">80 papers</span>
             </div>
             <div class="paper-list">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <a href="https://arxiv.org/abs/2608.04196v3" target="_blank" class="paper-title">SiMDex: Mining Similar Egocentric Videos for Cross-Embodiment Dexterous Manipulation</a>
+                        <span class="paper-date">2026-11-20</span>
+                    </div>
+                                        <span class="paper-comment">📝 38 pages, 12 figures, 16 tables. Project page: https://lin-nie.github.io/SiMDex/</span>
+                                        <details class="ai-summary" data-lazy="1" data-md="🔍 **核心问题**：如何从海量第一视角人类视频中筛选出对灵巧操作真正有用的数据，以提升机器人VLA模型的训练效果。&#10;&#10;🛠 **方法**：提出SiMDex框架，将人类数据筛选建模为推荐问题，采用“召回-排序-重排”三层流水线，在形态无关的动作空间中从约3200万条人类样本中提取任务相关子集，无需修改VLA架构或训练流程。&#10;&#10;✨ **主要贡献**：仅用约149万条（&lt;5%）筛选样本，将灵巧操作成功率从47.7%提升至61.1%，显著优于随机混合等量人类数据的基线，证明选择性数据筛选优于盲目数据混合。">
+                        <summary class="ai-label">🤖 AI 深度总结（DeepSeek 全文阅读）· 点击展开</summary>
+                        <div class="ai-content markdown-body"></div>
+                    </details>
+                                        <details class="paper-abstract">
+                        <summary>Show abstract</summary>
+                        <p>Recent years have witnessed an explosive trend of scaling ego-centric human videos for robot manipulation, yet it remains unclear which data actually benefits dexterous manipulation. We present SiMDex, a similarity-based data mining framework that casts human data selection for VLA post-training in dexterous manipulation as a recommendation problem. For each robot demonstration, SiMDex runs a recall-ranking-re-ranking cascade over ~32M egocentric human samples: two stages, recall and ranking, select a task-relevant subset in a morphology-agnostic action space, and re-ranking verifies it on pixels, with no change to VLA architecture or training. Against a strong baseline trained with an equal amount of randomly sampled human data, SiMDex uses only ~1.49M mined samples (<5% of the pool) yet improves the overall success rate from 47.7% to 61.7%, showing that selective curation outperforms indiscriminate data mixing.</p>
+                    </details>
+                </div>
                 <div class="paper-card">
                     <div class="paper-header">
                         <a href="https://arxiv.org/abs/2611.24938v2" target="_blank" class="paper-title">Phoenix: Learning Scene Structure Representations for Generalizable World-Action Models</a>
@@ -1974,18 +1989,6 @@
                                         <details class="paper-abstract">
                         <summary>Show abstract</summary>
                         <p>Tactile sensing provides robots with direct access to physical interactions at the contact interface, making it a critical modality for robust and dexterous manipulation. Over the past several decades, tactile-based manipulation research has evolved from mechanics-driven approaches, which explicitly interpret tactile signals through contact mechanics and task-specific reasoning, to data-driven approaches that learn tactile representations and manipulation policies directly from data. This paper reviews the development of tactile-based manipulation from these two complementary perspectives. We first introduce the fundamentals of tactile sensing, and then review, from a mechanics-driven perspective, how those signals form manipulation-relevant state representations and subsequently influence the robot action. We then examine the recent advances in data-driven tactile manipulation, covering imitation learning, reinforcement learning, vision-language-action models, and predictive models. Finally, we discuss open challenges and future opportunities toward scalable, generalizable, and robust tactile-enabled robotic systems.</p>
-                    </details>
-                </div>
-                <div class="paper-card">
-                    <div class="paper-header">
-                        <a href="https://arxiv.org/abs/2607.07968v3" target="_blank" class="paper-title">Soft Robotic Exogloves for Dexterous Mobility -- Towards Personalized Rehabilitation</a>
-                        <span class="paper-date">2026-10-21</span>
-                    </div>
-                                        <span class="paper-comment">📝 8 pages, 14 figures. Accepted in IEEE Transactions on Medical Robotics and Bionics (T-MRB) 2026</span>
-                    
-                                        <details class="paper-abstract">
-                        <summary>Show abstract</summary>
-                        <p>Soft robotic exogloves can provide hand rehabilitation and assistance. Fitting these gloves often relies on standardized measurements not tailored to the individual, limiting their effectiveness, especially for fine articulation necessary for dexterous manipulation. We present the design, fabrication, modeling, and testing of a personalized pneumatically-actuated soft robotic exoglove. The glove was fit to a user's hand with topological scans and fabricated with silicone mold casting. Finite element analysis (FEA) was performed to evaluate actuator bending and forces from physical human-robot interaction (pHRI) between an actuator and a simplified personalized biomechanical finger model. Pneumatic pressure control experiments were conducted to flex the user's finger with static and dynamic references. Fabrication results show that topological scans enable precise tailoring to hand anatomy. Simulations showed that anatomical personalization enables analysis of pHRI contact forces, and results indicate sufficient joint mobilization with non-ideal compression on the proximal phalanx. Pneumatic testing indicates that pressure control allows accurate and targeted mobility of the metacarpophalangeal (MCP) and proximal interphalangeal (PIP) joints with intrinsic stiffness. Testing of multiple designs showed that relaxing the strain-limiting layer improves actuator-to-finger joint alignment during actuation. This work presents personalization to the human hand in structural conformability, joint topology, modeling of pHRI contact, and time-dependent actuation-deformation profiles. This lays the groundwork for informing exoglove design optimization to enable assistance in dexterous manipulation and neuromuscular rehabilitation of fine motor skills.</p>
                     </details>
                 </div>
             </div>
