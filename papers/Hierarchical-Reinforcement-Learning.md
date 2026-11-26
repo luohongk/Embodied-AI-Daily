@@ -2,7 +2,7 @@
 
 > **77 papers** fetched from arXiv for the keyword **Hierarchical Reinforcement Learning**.
 
-> Last update: 2026-11-25
+> Last update: 2026-11-26
 
 [← Back to README](../README.md)
 
